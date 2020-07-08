@@ -1,0 +1,105 @@
+\documentclass[10pt]{article}
+
+\usepackage{amssymb,amsmath}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{ebgaramond-maths}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+
+\newtheorem{innercustomproposition}{Proposition}
+\crefname{innercustomproposition}{Proposition}{Propositions}
+\newenvironment{proposition}[1]
+  {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+  {\endinnercustomproposition}
+
+\newtheorem{innercustomlemma}{Lemma}
+\crefname{innercustomlemma}{Lemma}{Lemmas}
+\newenvironment{lemma}[1]
+  {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
+  {\endinnercustomlemma}
+
+\newtheorem{innercustomcorollary}{Corollary}
+\crefname{innercustomcorollary}{Corollary}{Corollaries}
+\newenvironment{corollary}[1]
+  {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
+  {\endinnercustomcorollary}
+
+
+\theoremstyle{definition}
+\newtheorem*{remark}{Remark}
+\newtheorem*{definition}{Definition}
+
+
+%% Shortcuts %%
+
+\newcommand{\sh}{\mathscr}
+\usepackage{aurical}
+\newcommand{\shHom}{\sh{H}\textup{\kern-2.2pt{\Fontauri\slshape om}}}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\todo}{\textbf{ !TODO! }}
+\newcommand{\oldpage}[1]{\marginpar{\textit{p.~#1}}}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\title{On coherent algebraic and analytic sheaves}
+\author{A. Grothendieck}
+\date{4\textsuperscript{th} and 11\textsuperscript{th} of February, 1957}
+\maketitle
+
+\begin{abstract}
+  What follows is a translation of the French paper:
+
+  \smallskip\noindent
+  \textsc{Grothendieck, A.}. Sur les faisceaux algébriques et les faisceaux analytiques cohérents. \emph{Séminaire Henri Cartan}, Volume 9 (1956-1957), Talk no.~2, pp.~1–16. {\footnotesize\url{http://www.numdam.org/item/SHC_1956-1957__9__A2_0/}}
+
+  \smallskip
+  This translation is one of a series: {\footnotesize\url{https://github.com/thosgood/translations}.}
+\end{abstract}
+
+\tableofcontents
+
+
+%% Content %%
+
+\bigskip
+\oldpage{2-01}
+The aim of this expose is to generalise certain theorems of Serre.
+It makes fundamental use of the techniques of Serre \cite{1,2,3}.
+
+
+\section{Generalities on coherent algebraic sheaves}
+
+Let $X$ be a topological space endowed with a sheaf of rings $\sh{O}$.
+A sheaf of $\sh{O}$-modules $A$ (or simply an $\sh{O}$-module) is said to be \emph{of finite type} if, on every small-enough open subset, it is isomorphic to a quotient of $\sh{O}^n$ (for some finite integer $n\geq0$), and \emph{coherent} if it is of finite type and if, for every homomorphism $\sh{O}^m\to A$ on an open subset $U$ of $X$, the kernel is of finite type.
+If $0\to A'\to A\to A''\to0$ is an exact sequence of $\sh{O}$-modules, and if two of the modules are coherent, then so too is the third;
+the kernel, cokernel, image, and coimage of a homomorphism of coherent $\sh{O}$-modules is a coherent $\sh{O}$-module.
+If $A$ and $B$ are coherent $\sh{O}$-modules, then so too is the sheaf $\shHom_\sh{O}(A,B)$ of germs of homomorphisms from $A$ to $B$.
+If $\sh{O}$ itself is coherent, then coherent $\sh{O}$-modules are exactly the $\sh{O}$-modules that, on small-enough open subsets, are isomorphic to the cokernel of some homomorphism $\sh{O}^m\to\sh{O}^n$.
+For all of this, and other elementary properties, see \cite[chapitre~1, paragraphe~2]{1}.
+
+
+%% Bibliography %%
+
+\nocite{*}
+\bibliographystyle{acm}
+\bibliography{\jobname}
+
+\end{document}
