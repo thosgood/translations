@@ -1,12 +1,15 @@
-\documentclass[10pt]{scrartcl}
-\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\documentclass[10pt]{article}
 
 \usepackage{amssymb,amsmath}
-\usepackage{mathrsfs}
+\usepackage{hyperref}
 \usepackage{cleveref}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{ebgaramond-maths}
 
 
-% Theorem environments
+%% Theorem environments %%
 
 \usepackage{amsthm}
 
@@ -22,39 +25,52 @@
   {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
   {\endinnercustomlemma}
 
+\newtheorem{innercustomcorollary}{Corollary}
+\newenvironment{corollary}[1]
+  {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
+  {\endinnercustomcorollary}
+
 
 \theoremstyle{definition}
 \newtheorem*{remark}{Remark}
+\newtheorem*{definition}{Definition}
 
 
-% Shortcuts
+%% Shortcuts %%
 
 \newcommand{\sh}{\mathscr}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 
 
+%% Document %%
+
+\usepackage{embedall}
 \begin{document}
 
+\renewcommand{\abstractname}{Translator's note.}
+
 \title{The Riemann-Roch theorem}
-\subtitle{Following some unpublished results by A.~Grothendieck}
-\author{Armand BOREL and Jean-Pierre SERRE}
-\date{1958}
+\author{Armand BOREL and Jean-Pierre SERRE\\(Following some unpublished results by A.~Grothendieck)}
+\date{}
 \maketitle
 
+        \todo \textbf{old pages}
+        \todo \textbf{cref for innercustomlemma etc.}
+
 \begin{abstract}
-\todo
+  What follows is a translation, by Timothy Hosgood\footnote{\url{https://thosgood.com}}, of the French paper:
 
-\textbf{Translator's note.}
-{What follows is a translation of the paper ``{Le théorème de Riemann-Roch}'', Armand Borel and Jean-Pierre Serre. \emph{Bulletin de la S.M.F.}, tome~86 (1958), p.~97--136}.
-
-\todo \textbf{old pages}
-
-\todo \textbf{cref for innercustomlemma etc.}
+  \smallskip\noindent
+  \textsc{Borel, Armand}; \textsc{Serre, Jean-Pierre}. Le théorème de Riemann-Roch. \emph{Bulletin de la Société Mathématique de France}, Volume 86 (1958) , pp. 97-136. \textsc{doi}: \href{https://www.doi.org/10.24033/bsmf.1500}{10.24033/bsmf.1500}.
 \end{abstract}
 
+\tableofcontents
 
-% Content
+
+%% Content %%
 
 \section*{Introduction}
 What follows constitutes the notes from a seminar that took place in Princeton in the autumn of 1957 on the works of Grothendieck;
@@ -69,7 +85,7 @@ Sections 1 to 6 contain some preliminaries on coherent algebraic sheaves \cite{1
 The terminology that we follow is the same as in \cite{12}, up to one difference: to conform with a custom which is becoming more and more widespread, we use the word ``morphism'' instead of ``regular maps''.
 
 
-\section{Auxiliary results on sheaves}
+\section{Supplementary results about sheaves}
 
 (All the varieties considered below are algebraic varieties over an algebraically closed field $k$ of arbitrary characteristic. Unless otherwise mentioned, all the sheaves considered are coherent algebraic sheaves.)
 
@@ -161,10 +177,110 @@ We briefly recall the principal of the proof:
 
 \begin{proof}
   Since the question is local with respect to $U$, we can assume that $U$ is affine, and even that $U$ is as affine open of the space $k^n$.
+  We can also assume that $G$ is irreducible.
+  So we choose projective coordinates $x_i$ in $P$ such that $G$ meets the set $P_0\times U$ of points where $x_0\neq0$.
+  If $A$ denotes the coordinate ring of $U$, then the coordinate ring of the affine variety $P_0\times U$ is $A[x_i/x_0]=B_0$;
+  the set $G$ defines (and is defined by) a prime ideal $\mathfrak{p}$ of $B_0$.
+  If $\mathfrak{p}'$ denotes $A\cap\mathfrak{p}$, then the prime ideal $\mathfrak{p}'$ corresponds to the closure of the projection $G'$ of $G$ in $U$.
+  A point in this closure is thus a homomorphism $f\colon A\to k$ (where $k$ denotes the base field) that is zero on $\mathfrak{p}'$;
+  this point is the image of a point in $G$ that lies in $P_0\times U$ if and only if $f$ can be extended to a homomorphism $g\colon B_0\to k$ that is zero on $\mathfrak{p}$.
+  So let $L$ be the field of functions of $G$;
+  the field $L$ contains $A/\mathfrak{p}'$ as a subring.
+  By the theorem of extension of specialisations, there exists a valuation $v$ of $L$, with values in $k$, that extends $f$.
+  Let $\Phi$ be the place associated to this valuation.
+  If $v(x_i/x_0)\geq0$ for all $i$, then the place $\Phi$ is finite over the $x_i/x_0$, and thus induces, on $B_0/\mathfrak{p}\subset L$, a homomorphism $g$ that extends $f$.
+  If $v(x_i/x_0)<0$ for some $i$, then we replace $x_0$ by the $x_i$ that gives the smallest possible value of $v(x_i/x_0)$, and we are then back in the previous case.
+\end{proof}
+
+If $f\colon X\to Y$ is a morphism, then we write $G_f$ to denote its graph.
+It is trivial that $G_f$ is closed in $X\times Y$.
+
+\begin{lemma}{4}
+\label{lemma4}
+  Let $f\colon X\to Y$ and $g\colon Y\to Z$ be morphisms, where $X$ and $Y$ are subvarieties of projective spaces $P$ and $P'$ (respectively).
+  Suppose that $G_f$ is closed in $P\times Y$, and that $G_g$ is closed in $P'\times Z$.
+  Then $G_{gf}$ is closed in $P\times Z$.
+\end{lemma}
+
+\begin{proof}
+  We have $G_f \subset P\times Y = P\times G_g \subset P\times P'\times Z$, and since each one is closed in the next, we see that $G_f$ can be identified with a closed subset of $P\times P'\times Z$.
+  Since $G_{gf}$ is exactly the projection of $G_f$ to the factor $P\times Z$, the lemma follows from \cref{lemma3}.
+\end{proof}
+
+\begin{lemma}{5}
+\label{lemma5}
+  Let $f\colon X\to Y$ be a morphism, and let $X\subset P$ and $X\subset P'$ be embeddings of $X$ into projective spaces.
+  If $G_f$ is closed in $P\times Y$, then it is also closed in $P'\times Y$.
+\end{lemma}
+
+\begin{proof}
+  We apply \cref{lemma4} to the morphisms $X\xrightarrow{i}X\xrightarrow{f}Y$, where $i$ denotes the identity morphism.
+  Everything then reduces to showing that the graph $G_i$ of $i$ in $P\times X$ is closed, which follows from the fact that it is given by the intersection of $P\times X$ with the diagonal of $P\times P$.
+\end{proof}
+
+\Cref{lemma5} justifies the following definition:
+
+\begin{definition}
+  A map $f\colon X\to Y$ is said to be \emph{proper} if it is a morphism and if its graph $G_f$ is closed in $P\times Y$, where $P$ is a projective space containing $X$.
+\end{definition}
+
+We can give a definition of proper maps that is analogous to the definition of complete varieties:
+
+\begin{proposition}{3}
+\label{proposition3}
+  For a morphism $f\colon X\to Y$ to be proper, it is necessary and sufficient, for every variety $Z$, and every closed subset $T$ of $X\times Z$, for the image of $T$ in $Y\times Z$ to be closed.
+\end{proposition}
+
+\begin{proof}
+  Let $P$ be a projective space inside which $X$ can be embedded;
+  since $G_f$ is closed in $P\times Y$, the product $G_f\times Z$ is closed in $P\times Y\times Z$, and so $T$ can be embedded as a closed subset into $P\times Y\times Z$.
+  Applying \cref{lemma3}, we see that the projection of $T$ to $Y\times Z$ (which is exactly $(f\times1)(T)$) is closed.
+  Conversely, suppose that this property holds true, and apply it to $Z=P$, with the set $T$ being the diagonal of $X\times X$, embedded into $X\times P$.
+  The image of $T$ in $Y\times Z=Y\times P$ is then exactly $G_f$, which is indeed closed.
+\end{proof}
+
+\begin{proposition}{4}
+\label{proposition4}
+  \begin{enumerate}[(i)]
+    \item The identity morphism $i\colon X\to X$ is proper.
+    \item The composition of two proper maps is proper.
+    \item The direct product of two proper maps is proper.
+    \item The image of a closed subset by a proper map is a closed subset.
+    \item An injection $Y\to X$ is proper if and only if $Y$ is closed in $X$.
+    \item Every morphism from a projective variety is proper.
+    \item A projection $Y\times Z\to Y$ is proper if and only if $Z$ is projective (assuming the variety $Y$ to be non-empty).
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  We indicate, as an example, how to prove \emph{(vii)} (since the other claims are even easier to prove).
+  If $Z$ is projective, then we apply the criteria of \cref{proposition3};
+  so let $Z'$ be an arbitrary variety, and $T$ a closed subset of $Y\times Z\times Z'$;
+  we need to show that the projection of $T$ in $Y\times Z'$ is closed, which follows from \cref{lemma3}.
+  Conversely, if $Y\times Z\to Y$ is proper, then the composition $Z\to Y\times Z\to Y$ is proper.
+  Since the image of this map is a point, we immediately deduce that $Z$ is projective (by returning to the definition).
+\end{proof}
+
+\begin{corollary}{5}
+  For a morphism $f\colon X\to Y$ to be proper, it is necessary and sufficient for it to factor as $X\to P\times Y\to Y$, where $X\to P\times Y$ is an injection into a closed subvariety, and $P\times Y\to Y$ is the projection onto the second factor (where $P$ denotes some projective space).
+\end{corollary}
+
+\begin{proof}
+  By the definition of a proper map, this condition is necessary (if we take $P$ to be a projective space into which we can embed $X$).
+  It is sufficient by \emph{(ii)}, \emph{(v)}, and \emph{(vii)}.
+\end{proof}
+
+\begin{proposition}{5}
+  Suppose that the base field $k$ is the field of complex numbers.
+  For a morphism $f\colon X\to Y$ to be proper (in the above sense), it is necessary and sufficient for it to be proper (in the topological sense) when we endow $X$ and $Y$ with the ``usual'' topology.
+\end{proposition}
+
+\begin{proof}
+  Suppose that
 \end{proof}
 
 
-% Bibliography
+%% Bibliography %%
 
 \nocite{*}
 \bibliographystyle{acm}
