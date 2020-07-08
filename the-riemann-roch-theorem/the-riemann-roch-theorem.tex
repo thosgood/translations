@@ -2,7 +2,7 @@
 
 \usepackage{amssymb,amsmath}
 \usepackage{hyperref}
-\usepackage{cleveref}
+\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
@@ -16,29 +16,36 @@
 \theoremstyle{plain}
 
 \newtheorem{innercustomproposition}{Proposition}
+\crefname{innercustomproposition}{Proposition}{Propositions}
 \newenvironment{proposition}[1]
   {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
   {\endinnercustomproposition}
 
 \newtheorem{innercustomlemma}{Lemma}
+\crefname{innercustomlemma}{Lemma}{Lemmas}
 \newenvironment{lemma}[1]
   {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
   {\endinnercustomlemma}
 
 \newtheorem{innercustomcorollary}{Corollary}
+\crefname{innercustomcorollary}{Corollary}{Corollaries}
 \newenvironment{corollary}[1]
   {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
   {\endinnercustomcorollary}
 
 
 \theoremstyle{definition}
+
 \newtheorem*{remark}{Remark}
 \newtheorem*{definition}{Definition}
+\newtheorem*{examples}{Examples}
 
 
 %% Shortcuts %%
 
 \newcommand{\sh}{\mathscr}
+\newcommand{\HH}{\mathrm{H}}
+\newcommand{\RR}{\mathrm{R}}
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
@@ -58,7 +65,6 @@
 \maketitle
 
         \todo \textbf{old pages}
-        \todo \textbf{cref for innercustomlemma etc.}
 
 \begin{abstract}
   What follows is a translation of the French paper:
@@ -157,7 +163,7 @@ The terminology that we follow is the same as in \cite{12}, up to one difference
 \end{proof}
 
 \begin{remark}
-  \Cref{proposition1} and \cref{proposition2} correspond to the geometric fact that the closure of any algebraic subvariety of $U$ is an algebraic subvariety of $V$.
+  \Cref{proposition1,proposition2} correspond to the geometric fact that the closure of any algebraic subvariety of $U$ is an algebraic subvariety of $V$.
   These propositions do not extend \emph{as is} to the ``analytic'' case.
   The most we can hope for (by results of Rothstein) is that they still hold true if we make certain restrictions on the dimensions of $V\setminus U$ and the varieties appearing in the local primary decomposition of the sheaf $\sh{F}$.
 \end{remark}
@@ -265,6 +271,7 @@ We can give a definition of proper maps that is analogous to the definition of c
 \end{proof}
 
 \begin{corollary}{5}
+\label{corollary5}
   For a morphism $f\colon X\to Y$ to be proper, it is necessary and sufficient for it to factor as $X\to P\times Y\to Y$, where $X\to P\times Y$ is an injection into a closed subvariety, and $P\times Y\to Y$ is the projection onto the second factor (where $P$ denotes some projective space).
 \end{corollary}
 
@@ -274,6 +281,7 @@ We can give a definition of proper maps that is analogous to the definition of c
 \end{proof}
 
 \begin{proposition}{5}
+\label{proposition5}
   Suppose that the base field $k$ is the field of complex numbers.
   For a morphism $f\colon X\to Y$ to be proper (in the above sense), it is necessary and sufficient for it to be proper (in the topological sense) when we endow $X$ and $Y$ with the ``usual'' topology.
 \end{proposition}
@@ -285,6 +293,42 @@ We can give a definition of proper maps that is analogous to the definition of c
   Conversely, assume that this condition is satisfied, and aim to prove that the condition of \cref{proposition3} is satisfied:
   the image of $T$ in $Y\times Z$ is closed for the usual topology, and thus also for the Zariski topology \cite[proposition~7, p.~12]{13}.
 \end{proof}
+
+\begin{remark}
+  The notion of a proper map can be extended to ``abstract'' (that is, non-quasi-projective) varieties:
+  it suffices to take the criteria of \cref{proposition3} as a definition \cite{4}.
+  \Cref{proposition4,proposition5} still hold true (if we replace ``projective'' with ``complete'' in item~\emph{(vii)} of \cref{proposition4}).
+  The proofs are essentially the same:
+  instead of using embeddings into projective spaces, we use the fact that every variety is the image of a quasi-projective variety under a proper map (Chow's lemma \cite{4,14}).
+\end{remark}
+
+
+\section{Image of a sheaf under a proper map}
+
+Let $f\colon X\to Y$ be a morphism, with $Y$ a variety, and let $\sh{F}$ be a (coherent algebraic, as always) sheaf on $X$.
+We define, by the classical procedure of Leray, sheaves $\RR^qf(\sh{F})$ on $Y$ by setting
+\[
+  \RR^qf(\sh{F})_U = \HH^q(f^{-1}(U),\sh{F})
+  \quad\mbox{for every open subset $U$ of $Y$.}
+\]
+For $q=0$, we have the sheaf associated to the presheaf given by the $\HH^0(f^{-1}(U),\sh{F})$;
+this is the \emph{direct image} of the sheaf $\sh{F}$.
+We can show \cite{7} that the $\RR^qf$ are the \emph{derived functors} of the functor $\sh{F}\to\RR^0f(\sh{F})$ (where $\sh{F}$ runs over the category of all sheaves on $X$, coherent or not).
+
+\begin{examples}
+  \begin{enumerate}
+    \item If $X\to Y$ is an injection of a closed subvariety, then the sheaf $\RR^0f(\sh{F})$ is exactly the sheaf $\sh{F}$ extended by $0$ outside of $X$, and the sheaves $\RR^qf(\sh{F})$, for $q\geq1$, are zero (let $U$ be an affine open; then $f^{-1}(U)=U\cap X$ is affine, whence $\RR^qf(\sh{F})=0$).
+    \item Let $Y$ be a point.
+      A sheaf on a point is simply a group (or a $k$-vector space, if we are talking about algebraic sheaves).
+      The $\RR^qf(\sh{F})$ are then simply the cohomology groups $\HH^q(X,\sh{F})$;
+      we note that these are not necessarily vector spaces \emph{of finite dimension} (or, in other words, not necessarily \emph{coherent} sheaves on $Y$).
+    \item Suppose that $f\colon X\to Y$ defines a birational isomorphism between the varieties $X$ and $Y$ (assumed to be projective and non-singular).
+      Take $\sh{F}$ to be the sheaf $\sh{O}_X$ of local rings of $X$;
+      we immediately see that $\RR^0f(\sh{O}_X)=\sh{O}_Y$.
+      Is it true that $\RR^qf(\sh{O}_X)=0$ for $q\geq1$?
+      We can at least verify this for ``blow-ups'', and it would be interesting to know the answer in the general case.
+  \end{enumerate}
+\end{examples}
 
 
 %% Bibliography %%
