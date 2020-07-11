@@ -6,6 +6,7 @@
 \usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{tikz-cd}
+\usepackage{graphicx}
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
@@ -69,6 +70,7 @@
 \newcommand{\EE}{\mathrm{E}}
 \newcommand{\RR}{\mathrm{R}}
 \newcommand{\supp}{\operatorname{supp}}
+\newcommand{\bigsqcap}{\rotatebox[origin=c]{180}{$\bigsqcup$}\,}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -457,7 +459,7 @@ Since $A\to A^h$ sends coherent algebraic sheaves to coherent analytic sheaves (
 
 \oldpage{2-10}
 It is very plausible that, more generally, if $g\colon V\to W$ is a proper holomorphic map of analytic spaces, and if $\sh{F}$ is a coherent analytic sheaf on $V$, then $g_*(\sh{F})$ is a coherent analytic sheaf.
-This is indeed true if the sets $f^{-1}(y)$ (for $y\in W$) are finite (as we can see by a classical theorem of Oka; see the 1953/54 \emph{Séminaire Cartan}), or if $W$ consists of a single point (by a result of Serre-Cartan, \todo)
+This is indeed true if the sets $f^{-1}(y)$ (for $y\in W$) are finite (as we can see by a classical theorem of Oka; see the 1953/54 \emph{Séminaire Cartan}), or if $W$ consists of a single point (by a result of Serre-Cartan, \emph{loc. cit.}).
 
 \begin{corollary}{3}
 \label{corollary3}
@@ -469,6 +471,69 @@ This is indeed true if the sets $f^{-1}(y)$ (for $y\in W$) are finite (as we can
     \tag{5}
   \]
 \end{corollary}
+
+We have already said that $\HH^q(X,\sh{A})$ can be identified with the module of sections of $\RR^qf_*(\sh{A})$ over $Y$, and, similarly, we say that $\HH^q(X^h,\sh{A}^h)$ can be identified with the module of sections of $\RR^qf_*^h(\sh{A}^h)$ over $Y$.
+To prove this, it suffices to use the Leray spectral sequence of $f^h$ (see \cref{section3}), and to note that, identifying $Y^h$ with a closed analytic subset of some $\mathbf{C}^n$, its cohomology with values in the coherent analytic sheaves $\RR^qf_*^h(\sh{A}^h)$ is zero in dimensions $>0$, by a fundamental theorem of Cartan (see the 1951/52 \emph{Séminaire Cartan}).
+It thus suffices, by \cref{theorem5}, to prove that, if $\sh{B}$ is a coherent $\sh{O}_Y$-module on an affine variety $Y$, then
+\[
+\label{equation6}
+  \HH^0(Y^h,\sh{B}) = \HH^0(Y,\sh{B})\otimes_{A(Y)}\sh{A}^h(Y).
+  \tag{6}
+\]
+But we note that both sides of this equation are exact functors in $\sh{B}$, which means we only need to verify \cref{equation6} in the case where $\sh{B}=\sh{O}_Y$, but then it is trivial.
+
+
+\section{Proof of Theorems 4 and 5}
+\label{section7}
+
+The proofs follow mainly from \cref{theorem3}, the ``dévissage'' of \cref{theorem2} (which is necessary since there is no reason for $X$ to be isomorphic to a locally closed subset of a projective space), and the following:
+
+\begin{lemma}{4}
+\label{lemma4}
+\emph{(Chow's lemma.) ---}
+  Let $X$ be a an irreducible algebraic set
+  Then there exists an algebraic set $X'$ that is locally closed in some projective space $\mathbf{P}$, and a proper birational morphism $g\colon X'\to X$.
+\end{lemma}
+
+Recall (\cref{section5}) that ``proper'' implies, in this case, that the graph of $g$
+\oldpage{2-11}
+is a \emph{closed} subset of $\mathbf{P}\times X$.
+Here we only make use of the fact that $g$ is \emph{proper} and \emph{surjective}.
+
+\begin{proof}
+  We cover $X$ by affine open subsets $X_i$, with each $X_i$ locally closed in some projective space $\mathbf{P}_i$, whence we have a diagonal map $\bigcap X_i\to\bigsqcap\mathbf{P}_i$.
+  We take $X'$ to be the closure in $X\times\bigsqcap\mathbf{P}_i$ of the graph of this diagonal map (or, really, its normalisation \todo\emph{\textbf{??}}).
+
+  \Cref{theorem4,theorem5} say that every coherent algebraic sheaf $\sh{A}$ on $X$ satisfies a certain property.
+  But we immediately see that, in both cases, the class $\cat{K}$ of the $\sh{A}\in K(X)$ having the property in question is an \emph{exact} subcategory (\cref{section2}, \cref{definition1}), by using the exact sequence of the $\RR^qf_*$ (and the $\RR^qf_*^h$) corresponding to an exact sequence of sheaves $0\to\sh{A}'\to\sh{A}\to\sh{A}''\to0$, and by using either the fact that, if in an exact sequence of $\sh{O}_X$-modules $\sh{A}\to\sh{B}\to\sh{C}\to\sh{D}\to\sh{E}$, the four outer terms are coherent, then so too is $\sh{C}$, or (in the case of \cref{theorem5}) the classical 5 lemma.
+  By \cref{theorem2}, it thus suffices to find, for every irreducible closed subset $Z$ of $X$, a coherent algebraic sheaf \emph{on $Z$}, with support equal to $Z$, and belonging to $K$.
+  Note that the restriction of $f$ to $Z$ is again proper, and so we can assume that $Z=X$, which means it suffices to find \emph{one} coherent $\sh{O}_Y$-module $\sh{A}$, with support equal to $X$, such that $\sh{A}\in\cat{K}$.
+  Consider the morphism $f'\colon X'\to X$ described in \cref{lemma4}.
+  Since $X'$ is embedded into $\mathbf{P}$, we can consider the sheaves $\sh{O}_{X'}(n)$ on $X'$ given by reducing the $\sh{O}_\mathbf{P}(n)$ (see \cref{section4}) modulo the sheaf of ideals defined by $X'$ in $\mathbf{P}$.
+  We claim that, for $n$ large enough, the sheaf $\sh{A}=f(\sh{O}_{X'}(n))$ is in $\cat{K}$ (which will finish the proof, since the support of this sheaf is clearly equal to $X$).
+  This will follow from:
+
+  \begin{lemma}{5}
+  \label{lemma5}
+    Let $g\colon V\to W$ be a \emph{proper} morphism of algebraic sets, with $V$ a locally closed subset of a projective space $\mathbf{P}$.
+    Let $\sh{G}$ be a coherent algebraic sheaf on $V$.
+    Then, for $n$ large enough, $\RR^pf_*(\sh{G}(n))=0$ for $p>0$, and $f_*(\sh{G}(n))$ is coherent.
+    Furthermore, if $k=\mathbf{C}$, then $\RR^pf_*^h(\sh{G}(n)^h)=0$ for $p>0$, and $(f_*(\sh{G}(n)))^h\to f_*^h(\sh{G}(n)^h)$ is an isomorphism.
+  \end{lemma}
+
+  First we will show how this lemma will imply the previous one.
+  Applying the lemma to $f'\colon X'\to X$, we immediately see, from the definitions, and from the fact that $\RR^pf_*(\sh{O}(n))=0$ for $p>0$, that
+  \[
+    \RR^p(ff')_*(\sh{O}(n)) = \RR^pf_*(f'(\sh{O}(n))) = \RR^pf_*(\sh{A}).
+  \]
+  But the first object is zero for $p>0$ and large enough $n$, by \cref{lemma5} applied to $ff'\colon X'\to Y$, and so $\RR^pf_*(\sh{A})=0$ for $p>0$, and, a fortiori, $\RR^pf_*(\sh{A})$ is coherent for $p>0$;
+  similarly, $f_*(\sh{A})$ is coherent, since $f_*(\sh{A})=(ff')_*(\sh{O}(n))$, and so it suffices to apply \cref{lemma5} to $ff'$.
+  This thus proves that $\sh{A}\in\cat{K}$ in the setting of \cref{theorem4}.
+  In the setting of \cref{theorem5}, the same argument proves that, if $n$ is large enough, $\RR^pf_*^h(\sh{A}^h)=0$ for $p>0$, and, a fortiori, the homomorphisms in \cref{equation4} are isomorphisms for $q>0$;
+  similarly, the homomorphism $(f_*(\sh{A}))^h\to f_*^h(\sh{A}^h)$ is an isomorphism, since both the domain and codomain can be identified (respectively) with $((ff')_*(\sh{O}(n)))^h$ and $f^h(\sh{A}^h)=f_*'^h(\sh{O}(n)^h)$ (since $\sh{A}^h=(f'(\sh{O}(n)))^h=f_*'^h(\sh{O}(n)^h)$, by \cref{lemma5} applied to $ff'\colon X'\to Y$).
+
+  It thus remains only to prove \cref{lemma5}.
+\end{proof}
 
 
 %% Bibliography %%
