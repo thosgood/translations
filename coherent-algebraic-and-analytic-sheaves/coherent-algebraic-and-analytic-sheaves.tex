@@ -70,6 +70,7 @@
 \newcommand{\EE}{\mathrm{E}}
 \newcommand{\RR}{\mathrm{R}}
 \newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Ext}{\operatorname{Ext}}
 \newcommand{\bigsqcap}{\rotatebox[origin=c]{180}{$\bigsqcup$}\,}
 
 \renewcommand{\geq}{\geqslant}
@@ -178,7 +179,7 @@ This is a sheaf of rings, and even of $k$-algebras.
   By ``compactness'' reasons, we can restrict to the case where $X$ is affine, and then apply part \emph{b)} of \cref{theorem1}, noting that, if $\sh{A}$ is defined by the $A(X)$-module $M=\Gamma(X,\sh{A})$, then the ideal of support $\sh{A}$ \todo(?) is the intersection of the minimal prime ideals associated to the annihilator of $M$, whence the result.
 \end{proof}
 
-\begin{corollary}{—}
+\begin{corollary}{1}
   Under the above conditions, $\sh{A}$ admits a composition series with each composition factor $\sh{A}_i/\sh{A}_{i+1}$ lying in $K(Y)$.
 \end{corollary}
 
@@ -307,7 +308,8 @@ this is itself endowed with a sheaf of analytic local rings, which we denote by 
 finally, we can define, as above, the sheaves $\sh{O}^h(n)$.
 With this, we have:
 
-\begin{corollary}{—}
+\begin{corollary}{1}
+\label{corollary-3}
   \oldpage{2-07}
   \begin{enumerate}[(a)]
     \item Let $\sh{A}^h$ be a coherent $\sh{O}^h$-module on $\mathbf{P}^h$.
@@ -362,7 +364,7 @@ compare with \cite[proposition~12, proposition~6]{2}, where a particular case is
 
 We state here the following corollary, obtained by taking $Y$ to be a single point:
 
-\begin{corollary}{—}
+\begin{corollary}{1}
   Let $\sh{A}$ be a coherent algebraic sheaf on a complete algebraic set.
   Then the $\HH^i(X,\sh{A})$ are vector spaces of finite dimension.
 \end{corollary}
@@ -612,7 +614,7 @@ We are going to complete \cref{corollary1-5} of \cref{theorem5}:
   Then every coherent analytic sheaf $\sh{F}$ on $X^h$ is isomorphic to a sheaf $\sh{A}^h$, where $\sh{A}$ is an essentially unique coherent algebraic sheaf on $X$.
 \end{theorem}
 
-The uniqueness of $\sh{A}$ follows from
+The uniqueness of $\sh{A}$ follows from:
 
 \begin{corollary}{1}
 \label{corollary1-6}
@@ -627,8 +629,38 @@ The uniqueness of $\sh{A}$ follows from
 \end{corollary}
 
 \begin{proof}
-  This homomorphism
+  This homomorphism comes from, by taking sections, the monomorphism of sheaves
+  \[
+    i_X^{-1}(\shHom_{\sh{O}_X}(\sh{A},\sh{B})) \to \shHom_{\sh{O}_X^h}(\sh{A},\sh{B})
+  \]
+  (where $\shHom$ denotes the sheaf of germs of homomorphisms), but we already know that
+  \[
+  \label{equation8}
+    (\shHom_{\sh{O}_X}(\sh{A},\sh{B}))^h = \shHom_{\sh{O}_X^h}(\sh{A}^h,\sh{B}^h)
+    \tag{8}
+  \]
+  (an almost immediate consequence of the fact that $\cat{C}\to\cat{C}^h$ is exact), and so, by applying \cref{corollary1-5} of \cref{theorem5} to the sheaf $\shHom_{\sh{O}_X}(\sh{A},\sh{B})$ with $i=0$, the result follows.
 \end{proof}
+
+From \cref{corollary1-6} and the exactness of the functor $\cat{C}\to\cat{C}^h$ also follows the fact that, if $\sh{F}$ and $\sh{G}$ are coherent analytic sheaves on $X$ that come from algebraic sheaves, and if $u$ is a homomorphism from $\sh{F}$ to $\sh{G}$, then the kernel, cokernel, image, and coimage of $u$ all also come
+\oldpage{2-15}
+from algebraic sheaves.
+In particular, if $X$ is embedded into a projective space $\mathbf{P}$, then every coherent analytic sheaf on $X$ is isomorphic to the cokernel of a homomorphism $\sh{L}^h\to\sh{L}'^h$, where $\sh{L}$ and $\sh{L}'$ are direct sums of finitely many sheaves of the form $\sh{O}(k)$ (part~(a) of \cref{corollary-3} of \cref{theorem3});
+it thus follows that \cref{theorem6} is also true if $X$ is \emph{projective} (Serre).
+
+Let $0\to\sh{F}'\to\sh{F}\to\sh{F}''\to0$ be an exact sequence of coherent analytic sheaves on $X^h$, and suppose that $\sh{F}'$ and $\sh{F}''$ come from coherent algebraic sheaves;
+we then claim that so too does $\sh{F}$.
+Suppose that $\sh{F}'=\sh{A}'^h$ and $\sh{F}''=\sh{A}''$, where $\sh{A}'$ and $\sh{A}''$ are coherent algebraic sheaves;
+it suffices to show that the set $\Ext_{\sh{O}_X}^1(X;\sh{A}'',\sh{A}')$ of classes of $\sh{O}$-module extensions of $\sh{A}''$ by $\sh{A}'$ can be identified with the analogous set $\Ext_{\sh{O}_X^h}^1(X^h;\sh{A}''^h,\sh{A}'^h)$.
+But, more generally, we have canonical homomorphisms
+\[
+\label{equation9}
+  \Ext_{\sh{O}_X}^i(X;\sh{A}'',\sh{A}')
+  \to 
+  \Ext_{\sh{O}_X^h}^i(X;\sh{A}''^h,\sh{A}'^h)
+  \tag{9}
+\]
+(defined without any restrictions on $X$, $\sh{A}'$, or $\sh{A}''$), which are here isomorphisms, as follows from the spectral sequence of $\Ext$ of sheaves of modules (see the 1957 \emph{Séminaire Grothendieck}), 
 
 \begin{proof}[Proof of \cref{theorem6}.]
 \end{proof}
