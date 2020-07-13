@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass{article}
 
 \usepackage{amssymb,amsmath}
 
@@ -10,9 +10,8 @@
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
-% \usepackage{ebgaramond-maths}
-% \usepackage{Baskervaldx}
-\usepackage{boisik}
+\usepackage{ebgaramond-maths}
+\usepackage{mathpazo}
 
 
 \crefname{section}{Section}{Sections}
@@ -65,11 +64,13 @@
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
 \newcommand{\BB}{\mathcal{B}}
+\newcommand{\LL}{\mathcal{L}}
 \newcommand{\projotimes}{\widehat{\otimes}_\pi}
 \newcommand{\tr}{\operatorname{Tr}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
+\renewcommand{\rangle}{\rotatebox[origin=c]{180}{$\langle$}}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -108,6 +109,41 @@
 Let $E$ be a \emph{Banach} space, whose dual we will call $E'$.
 We know, by definition, that there exists a bijective and isometric correspondence between the space $\BB(E,E')$ of continuous bilinear forms on $E\times E'$ and the dual $E\projotimes E'$.
 To the canonical bilinear form $(x,x')\mapsto\langle x,x'\rangle$ thus corresponds a continuous linear form on $E\projotimes E'$ that we call ``the trace'', and that we denote by $\tr$.
+If $u=\sum_v x_v\otimes y'_v$ then, by definition, $\tr(u)=\sum_v\langle x_v,y'_v\rangle$.
+The trace form is of norm $1$.
+Furthermore, every $u\in E\projotimes E'$ can be written in the form $u=\sum_{n\geq0}x_n\otimes y'_n$ with $\sum_{n\geq0}\|x_n\|\|y'_n\|$ finite, and so the series $\sum_{n\geq0}\langle x_n,y'_n\rangle$ converges absolutely, and, since the trace is continuous, we have that
+\[
+  \tr(u) = \sum_{n\geq0} \langle x_n, y'_n \rangle.
+\]
+
+To justify the name ``trace'', recall that we can identify $E\otimes E'$ with the space of endomorphisms of finite rank of $E$, and that, if $E$ is of finite dimensions, then the trace form agrees with the usual trace of operators.
+
+There exists a canonical continuous map $E'\projotimes E\to\LL(E;E)$.
+If we do not know whether or not it is bijective, we can only speak of the trace of an element of $E'\projotimes E$, and not the trace of the image of the operator in $\LL(E;E)$.
+
+Recall as well that there exists an isomorphism $S$ (for symmetry) between $E\otimes E'$ and $E'\otimes E$, defined by
+\[
+  S\colon \sum_v x_v\otimes y'_v \mapsto \sum_v y'_v\otimes x_v
+\]
+for $x_v\in E$ and $y'_v\in E'$.
+
+If we identify $E\otimes E'$ with the space of maps of finite rank from $E$ to $E$, and $E'\otimes E\subset E'\otimes(E')'$ with a space of transformations of $E'$,
+\oldpage{2}
+then the map $S$ corresponds to the transposition of operators.
+Thanks to $S$, the trace is also defined on $E'\projotimes E$.
+We can thus understand the duality between $E\projotimes F$ and $\BB(E,F)$ by means of the trace: let $A\in\BB(E,F)\subset\LL(E;F')$.
+If $1$ is the identity in $F$, then $A\otimes1$ sends $E\projotimes F$ to $F'\projotimes F$.
+So if $u\in E\projotimes F$, then we can take the trace of $(A\otimes1)(u)\in\LL(F;F')$, and we have
+\[
+\label{equation1}
+  \langle u,A \rangle = \tr((A\otimes1)(u)).
+  \tag{1}
+\]
+Indeed, both sides of the equation (for fixed $A$) are continuous linear forms in $u$, and are equal for $u=x\otimes y$.
+
+
+\section{The map $E'\projotimes F\to\LL_b(E_\tau;F)$ for $E$ and $F$ locally convex}
+\label{section2}
 
 
 \end{document}
