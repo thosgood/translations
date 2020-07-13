@@ -72,7 +72,6 @@
 \newcommand{\RR}{\mathrm{R}}
 \newcommand{\supp}{\operatorname{supp}}
 \newcommand{\Ext}{\operatorname{Ext}}
-\newcommand{\bigsqcap}{\rotatebox[origin=c]{180}{$\bigsqcup$}\,}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -162,11 +161,11 @@ This is a sheaf of rings, and even of $k$-algebras.
   Then every \emph{exact} subcategory $\cat{K}$ of $K(X)$ containing the $\sh{F}_Y$ is identical to $K(X)$.
 \end{theorem}
 
-\begin{proof}
-  The proof is done by induction on $n=\dim X$, with the case $n=0$ being immediate, by the second condition of \cref{definition1}.
-  So suppose that $n>0$, and that the theorem is true in dimension $<n$.
-  We can consider $K(Y)$ as a subcategory of $K(X)$ (where $Y$ is some given closed subset of $X$), and then $\cat{K}\cap K(Y)$ is a subcategory of $K(Y)$ satisfying the conditions of \cref{theorem2}, and so, if $\dim Y<n$, then the induction hypothesis implies that $K(Y)=K(Y)\cap\cat{K}$, i.e. $K(Y)\subset\cat{K}$.
-\end{proof}
+The proof is done by induction on $n=\dim X$, with the case $n=0$ being immediate, by the second condition of \cref{definition1}.
+So suppose that $n>0$, and that the theorem is true in dimension $<n$.
+We can consider $K(Y)$ as a subcategory of $K(X)$ (where $Y$ is some given closed subset of $X$), and then $\cat{K}\cap K(Y)$ is a subcategory of $K(Y)$ satisfying the conditions of \cref{theorem2}, and so, if $\dim Y<n$, then the induction hypothesis implies that $K(Y)=K(Y)\cap\cat{K}$, i.e. $K(Y)\subset\cat{K}$.
+
+\medskip\noindent\emph{([Translator]. The rest of this section is dedicated to finishing the proof of \cref{theorem2}.)}
 
 \begin{lemma}{1}
 \label{lemma1}
@@ -180,6 +179,7 @@ This is a sheaf of rings, and even of $k$-algebras.
 \end{proof}
 
 \begin{corollary}{1}
+\label{corollary-1}
   Under the above conditions, $\sh{A}$ admits a composition series with each composition factor $\sh{A}_i/\sh{A}_{i+1}$ lying in $K(Y)$.
 \end{corollary}
 
@@ -223,8 +223,31 @@ Consider the exact sequence
 where $\sh{Q}$ is defined as the cokernel of the injection homomorphism.
 We immediately see that $\sh{Q}\otimes_{\sh{O}}\sh{R}=0$, and so $\sh{Q}$ is a torsion module, and so $\supp\sh{Q}\neq X$ (\cref{lemma2}), whence $\sh{Q}\in\cat{K}$.
 (We implicitly make use of the fact that $\sh{A}_0+\sh{O}_X^k$ is a coherent $\sh{O}$-module, which can be easily verified).
+Then $\sh{A}_0\in\cat{K}$ \emph{if and only if} $\sh{A}_0+\sh{O}_X^k\in\cat{K}$.
+Similarly, the analogous exact sequence
+\oldpage{2-04}
+$0\to\sh{O}_X^k\to\sh{A}_0+\sh{O}_X^k\to\sh{Q}'\to0$, where $\supp\sh{Q}\neq X$, and whence $\sh{Q}'\in\cat{K}$, implies that $\sh{A}_0+\sh{O}_X^k\in\cat{K}$ \emph{if and only if} $\sh{O}_X^k\in\cat{K}$.
+Finally, suppose that $k>0$, i.e. that $\sh{A}$ is not a torsion $\sh{O}$-module, i.e. that $\supp\sh{A}=X$;
+then $\sh{O}_X^k\in\cat{K}$ \emph{if and only if} $\sh{O}_X\in\cat{K}$, as follows immediately from \cref{definition1}.
+So the above ``if and only if''s imply that, if $\sh{A}$ is such that $\supp\sh{A}\neq X$, then $\sh{A}\in\cat{K}$ \emph{if and only if} $\sh{O}_X\in\cat{K}$.
+Taking $\sh{A}=\sh{F}_X$, we thus see that $\sh{O}_X\in\cat{K}$, whence every $\sh{A}\in K(X)$ with support equal to $X$ is in $\cat{K}$, and since the same is true for the $\sh{A}\in K(X)$ with suppose not equal to $X$, we indeed have that $K(X)\subseteq\cat{K}$.
 
-\todo\emph{\textbf{FINISH}}
+Now if $X$ is not necessarily irreducible, let $X_i$ be its irreducible components.
+For every coherent algebraic sheaf $\sh{A}$ on $X$, let $A_i$ be the sheaf that agrees with $\sh{A}$ on $X_i$, and with $0$ on $X\setminus X_i$;
+then $\sh{A}_i$ is a coherent $\sh{O}$-module that can be identified with a quotient of $\sh{A}$.
+We have a natural homomorphism $\sh{A}\to\coprod_i\sh{A}_i$ from $\sh{A}$ to the direct sum of the $\sh{A}_i$ that is \emph{injective};
+let $\sh{Q}$ be its cokernel;
+we thus have an exact sequence $0\to\sh{A}\to\coprod_i\sh{A}_i\to\sh{Q}\to0$.
+Since $\supp\sh{Q}\subset\bigcup_{i\neq j}X_i\cap X_j$, we have that $\sh{Q}\in\cat{K}$;
+to prove that $\sh{A}\in\cat{K}$, it suffices to prove that $\coprod_i\sh{A}_i\in\cat{K}$, or even that each $\sh{A}_i$ is in $\cat{K}$.
+But, by what we have already seen, applied to $X_i$, we have that $K(X_i)\in\cat{K}$, whence we again conclude that $\supp\sh{A}_i\subset X_i$ implies that $\sh{A}_i\in\cat{K}$, by using \cref{corollary-1} of \cref{lemma1}.
+This proves \cref{theorem2}.
+
+\begin{remark}
+  We say that the subcategory $\cat{K}$ of $K(X)$ is \emph{left exact} if, for every exact sequence $0\to\sh{A}'\to\sh{A}\to\sh{A}''\to0$ in $K(X)$, we have that $\sh{A}'$ (respectively $\sh{A}$) is in $\cat{K}$ provided that the two other terms are in $\cat{K}$.
+  The proof of \cref{theorem2} proves that the conclusion still holds true if we suppose that $\cat{K}$ is only left exact, \emph{provided that} the $\sh{F}_Y$ considered as $\sh{O}_Y$-modules are torsion free.
+  This suffices to prove that, if $X$ is complete, then the $\Gamma(X,\sh{A})$, for $\sh{A}\in K(X)$, are vector spaces of finite dimension (since the category $\cat{K}$ of $\sh{A}\in K(X)$ having this property is left exact, and contains the $\sh{O}_Y$): this is the proof by Serre.
+\end{remark}
 
 
 \section{Complements on sheaf cohomology}
@@ -505,8 +528,8 @@ is a \emph{closed} subset of $\mathbf{P}\times X$.
 Here we only make use of the fact that $g$ is \emph{proper} and \emph{surjective}.
 
 \begin{proof}
-  We cover $X$ by affine open subsets $X_i$, with each $X_i$ locally closed in some projective space $\mathbf{P}_i$, whence we have a diagonal map $\bigcap X_i\to\bigsqcap\mathbf{P}_i$.
-  We take $X'$ to be the closure in $X\times\bigsqcap\mathbf{P}_i$ of the graph of this diagonal map (or, really, $X'$ is its normalisation).
+  We cover $X$ by affine open subsets $X_i$, with each $X_i$ locally closed in some projective space $\mathbf{P}_i$, whence we have a diagonal map $\bigcap X_i\to\coprod\mathbf{P}_i$.
+  We take $X'$ to be the closure in $X\times\coprod\mathbf{P}_i$ of the graph of this diagonal map (or, really, $X'$ is its normalisation).
 
   \Cref{theorem4,theorem5} say that every coherent algebraic sheaf $\sh{A}$ on $X$ satisfies a certain property.
   But we immediately see that, in both cases, the class $\cat{K}$ of the $\sh{A}\in K(X)$ having the property in question is an \emph{exact} subcategory (\cref{section2}, \cref{definition1}), by using the exact sequence of the $\RR^qf_*$ (and the $\RR^qf_*^h$) corresponding to an exact sequence of sheaves $0\to\sh{A}'\to\sh{A}\to\sh{A}''\to0$, and by using either the fact that, if in an exact sequence of $\sh{O}_X$-modules $\sh{A}\to\sh{B}\to\sh{C}\to\sh{D}\to\sh{E}$, the four outer terms are coherent, then so too is $\sh{C}$, or (in the case of \cref{theorem5}) the classical 5 lemma.

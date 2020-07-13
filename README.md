@@ -1,6 +1,6 @@
 Here are some papers that I've translated into English. Any comments or corrections are greatly appreciated! I've tried to refrain from "rewriting" them too much; generally the sentence structure etc. is pretty close to the original.
 
-- [ ] `coherent-algebraic-and-analytic-sheaves` — Grothendieck, A. Sur les faisceaux algébriques et les faisceaux analytiques cohérents. _Séminaire Henri Cartan_, Volume 9 (1956-1957) , Talk no. 2, pp. 1–16. http://www.numdam.org/item/SHC_1956-1957__9__A2_0/
+- [x] `coherent-algebraic-and-analytic-sheaves` — Grothendieck, A. Sur les faisceaux algébriques et les faisceaux analytiques cohérents. _Séminaire Henri Cartan_, Volume 9 (1956-1957) , Talk no. 2, pp. 1–16. http://www.numdam.org/item/SHC_1956-1957__9__A2_0/
 - [ ] `divisors-in-algebraic-geometry` — Seshadri, C. S. Diviseurs en géométrie algébrique. _Séminaire Claude Chevalley_, Volume 4 (1958-1959), Talk no. 4, 9 p. http://www.numdam.org/item/SCC_1958-1959__4__A4_0/
 - [ ] `gauge-transformations-in-general-relativity` — Winogradzki, J. Les transformations de jauge en relativité généralisée. _Séminaire L. de Broglie. Théories physiques_, Volume 24 (1954-1955), Talk no. 10, 10 p. http://www.numdam.org/item/SLDB_1954-1955__24__A9_0/
 - [ ] `quasi-coherent-sheaves` — Gabriel, Pierre. Faisceaux quasi-cohérents. _Séminaire Claude Chevalley_, Volume 4 (1958-1959), Talk no. 1, 12 p. http://www.numdam.org/item/SCC_1958-1959__4__A1_0/
