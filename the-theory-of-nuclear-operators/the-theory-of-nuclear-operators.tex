@@ -71,6 +71,7 @@
 \newcommand{\cinjotimes}{\widehat{\otimes}_\varepsilon}
 \newcommand{\cotimes}{\widehat{\otimes}}
 \newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\transpose}[1]{{}^t\!{#1}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -192,7 +193,122 @@ So $E'\otimes F\subset\LL(E_\tau;F)$, since the latter is the space of weakly co
 
 We do not know a case where $\varphi$ is not bijective, but we do not know how to prove this in general.
 
-Since
+Since $E'\otimes F$ is dense in $E'\cotimes F$, and $\varphi$ is continuous, every nuclear operator is the \emph{``uniform'' limit} (in $\LL_b$) \emph{of operators of finite rank}, and is thus, in particular, \emph{compact} (since the image in $F$ of a ball in $E$ is relatively compact).
+
+\begin{remark}
+  If $E=F$ is a Hilbert space, then the \emph{hermitian} nuclear operators are exactly the completely continuous operators $u$ such that the sequence $(\lambda_n)$ of eigenvalues is summable and such that
+  \[
+    \|u\|_1 = \sum_n|\lambda_n|.
+  \]
+
+  In the general Banach case, every nuclear operator $u$ admits a decomposition
+  \[
+    u = \sum\lambda_i x'_i\otimes y_i
+  \]
+  where $x'_i\in E'$ are such that $\|x'_i\|_1\leq1$ and $y_i\in F$ are such that $\|y_i\|\leq1$, and such that $\sum|\lambda_i|<\infty$;
+  the lower bound of $\sum|\lambda_i|$ for any such decomposition is exactly $\|u\|_1$.
+\end{remark}
+
+\begin{proposition}{2}
+\label{proposition2}
+  Let $u\colon E\to F$ be a nuclear operator, and let $A\colon H\to E$ and $B\colon F\to G$ be continuous maps.
+  Then $B\circ u\circ A$ is a nuclear operator, and $\|B\circ u\circ A\|_1 \leq \|A\|\|u\|_1\|B\|$.
+\end{proposition}
+
+\begin{proof}
+  We have the commutative diagram
+  \[
+    \begin{tikzcd}[column sep=huge]
+      E'\cotimes F \ar[r,"t_{A\otimes B}"] \ar[d,swap,"\varphi"]
+      & H'\cotimes G \ar[d,"\varphi"]
+    \\\LL(E;F) \ar[r,swap,"u\mapsto B\circ u\circ A"]
+      & \LL(H;G)
+    \end{tikzcd}
+  \]
+  (since the two maps from $E'\cotimes F$ to $\LL(H;G)$ that define this diagram are continuous, and agree for $u_0\in E'\cotimes F$ of the form $x'\otimes y$).
+  So, if $u$ is nuclear, with $u_0$ an element of $E\cotimes F$ such that $\varphi(u_0)=u$, then $(\transpose{A}\otimes B)u_0\in H'\cotimes G$, and $B\circ u\circ A=\varphi((\transpose{A}\otimes B)(u_0))$, and so $B\circ u\circ A$ is nuclear.
+  Taking into account the fact that $\|\transpose{A}\otimes B\|=\|A\|\|B\|$,
+\oldpage{4}
+  we have that
+  \[
+    \|B\circ u\circ A\|_1
+    \leq \inf_{\varphi(u_0)=u}(\transpose{A}\otimes B)(u_0)
+    \leq \inf_{\varphi(u_0)=u}\|A\|\|B\|\|u_0\|
+    = \|A\|\|B\|\|u\|_1.
+  \]
+\end{proof}
+
+
+\section{Definition of nuclear operators — the general case}
+\label{section4}
+
+\begin{definition}{2}
+\label{definition2}
+  We say that a linear map $u\colon E\to F$, where $E$ and $F$ are locally convex separated spaces, is \emph{nuclear} if there exist Banach spaces $E_1$ and $F_1$, a nuclear operator $\beta\colon E_1\to F_1$, and continuous operators $\alpha\colon E\to E_1$ and $\gamma\colon F_1\to F$ such that $u=\gamma\circ\beta\circ\alpha$, i.e. such that
+  \[
+    \begin{tikzcd}[column sep=small]
+      E \ar[r,"\alpha"] \ar[rrr,bend right,swap,"u"]
+      & E_1 \ar[r,"\beta"]
+      & F_1 \ar[r,"\gamma"]
+      & F
+    \end{tikzcd}
+  \]
+  commutes.
+\end{definition}
+
+\begin{remark}
+  It suffices for $F_1$ to be Banach and $E_1$ to be normed, since we can extend $\beta$ to $\widehat{E_1}$.
+\end{remark}
+
+To simplify, we call any convex balanced set a \emph{disc}.
+By replacing $E_1$ with $\alpha(E)$, and $F_1$ with $F_1/\gamma^{-1}(0)$, we can assume that $\alpha$ is an epijection and $\gamma$ is an injection;
+but we know (exposé~7) that $E_1$ will be isomorphic to $E_{U_1}$, and $F_1$ to $F_{B_1}$, for $U_1$ some open disc of $E$, and $B_1$ some \todo!!!!!! of $F$.
+Since the dual of $E_{U_1}$ is $\widehat{E'_{A'_1}}$, where $A'_1=U_1^0$, we know that $\beta$ comes from an element $\beta_0$ of $E'_{A'_1}\cotimes F_{B_1}$, and that $u=\gamma\circ\beta\circ\alpha$ comes from an element $u_0=(\transpose{\alpha}\otimes\gamma)(\beta_0)$ of $E'\cotimes F$;
+but $\transpose{\alpha}\otimes\gamma$ is exactly the canonical map from $E'_{A'_1}\cotimes F_{B_1}$ in $E'\cotimes F$.
+Even stronger: $u$ comes from some $u_0\in E'_{A'_1}\cotimes F_{B_1}$, but we know (exposé~5) that $u_0$ belongs to a set of the form $\Gamma(A'\otimes B)$, where $A$ and $B$ are compact subsets of $E'_{A'_1}$ and $F_{B_1}$ (respectively).
+Whence:
+
+\begin{proposition}{3}
+\label{proposition3}
+  An operator $u\colon E\to F$ is nuclear if and only if it is defined by an element of some $E'_{A'}\otimes F_B$, where $A'$ and $B$ are compact convex balanced (and thus \todo!!!!!!!) subsets.
+  We can thus suppose, in \cref{definition2}, that $\alpha$ and $\beta$ are compact maps.
+\end{proposition}
+
+Note also that, since $E'_{A'}$ is the dual of $E_{A'_0}$, we have two ``canonical'' continuous maps:
+\[
+  E'_{A'}\cotimes F_B \to \LL_b(E_{A'_0};F_B) \to \LL_b(E;F).
+\]
+Since any element of $E'_{A'}\cotimes F_B$ can be written in the form
+\[
+  u = \sum\lambda_i x'_i\otimes y_i
+\]
+\oldpage{5}
+we have such an equality in $\LL_b(E;F)$.
+
+Conversely, if $\sum|\lambda_i|<+\infty$, if $(x'_i)$ is an equicontinuous sequence, and if $(y_i)$ is contained inside a \todo!!!!!!!! subset of $F$, then $\sum\lambda_i x'_i\otimes y_i$ converges in $\LL_b(E;F)$, and defines a nuclear operator.
+
+\begin{proposition}{4}
+\label{proposition4}
+  For an operator $u$ to be nuclear, it is necessary and sufficient for it to be of the form $u=\sum\lambda_i x'_i\otimes y_i$, where $\sum|\lambda_i|<+\infty$, $(x'_i)$ is an equicontinuous sequence, and $(y_i)$ a sequence contained inside some \todo!!!!!!! subset.
+\end{proposition}
+
+\begin{proposition}{5}
+\label{proposition5}
+  If $u$ is nuclear, then $B\circ u\circ A$ is nuclear (\cref{proposition2}).
+\end{proposition}
+
+\begin{corollary}{1}
+\label{corollary-5}
+  If $u\colon E\to F$ is nuclear, then it remains nuclear when we strengthen the topology of $E$ and weaken the topology of $F$;
+  if $E_1$ is a subspace of $E$, and $F$ a subspace of $F_1$, then the restriction $u\colon E_1\to F_1$ is nuclear.
+\end{corollary}
+
+However, if $u$ is a nuclear map from $E$ to $F$, and if $u(E)$ is contained in a subspace $F_2$ of $F$, then $u\colon E\to F_2$ is not necessarily nuclear.
+Similarly, if $u$ is zero on a subspace $E_2$ of $E$, then $u\colon E/E_2\to F$ is not necessarily nuclear.
+
+
+\section{Transpose of a nuclear map}
+\label{section5}
 
 
 \end{document}
