@@ -177,16 +177,12 @@ This is a sheaf of rings, and even of $k$-algebras.
 \end{lemma}
 
 \begin{proof}
-  By ``compactness'' reasons, we can restrict to the case where $X$ is affine, and then apply part \emph{b)} of \cref{theorem1}, noting that, if $\sh{A}$ is defined by the $A(X)$-module $M=\Gamma(X,\sh{A})$, then the ideal of support $\sh{A}$ \todo(?) is the intersection of the minimal prime ideals associated to the annihilator of $M$, whence the result.
+  By ``compactness'' reasons, we can restrict to the case where $X$ is affine, and then apply part \emph{b)} of \cref{theorem1}, noting that, if $\sh{A}$ is defined by the $A(X)$-module $M=\Gamma(X,\sh{A})$, then the ideal of $\supp\sh{A}$ is the intersection of the minimal prime ideals associated to the annihilator of $M$, whence the result.
 \end{proof}
 
 \begin{corollary}{1}
   Under the above conditions, $\sh{A}$ admits a composition series with each composition factor $\sh{A}_i/\sh{A}_{i+1}$ lying in $K(Y)$.
 \end{corollary}
-
-\begin{proof}
-  \todo?
-\end{proof}
 
 This implies that $\sh{A}_i/\sh{A}_{i+1}$ is annihilated by $\sh{I}_Y$;
 we take $\sh{A}_i=\sh{I}_Y^i\sh{A}$.
@@ -195,22 +191,21 @@ In the case where $\dim Y<n$, by induction on the length of
 this composition series, using \cref{definition1} and the fact that $K(Y)\subset\cat{K}$, we see that, \emph{if $\dim\supp\sh{A}<n$, then $\sh{A}\in\cat{K}$.}
 
 Suppose first of all that $X$ is irreducible.
-For \todo\textbf{\emph{(not $\sh{A}$...)}} $\sh{A}\in K(X)$, let $T(A)$ be the torsion submodule of $A$ (whose stalks are the torsion submodules of $\sh{A}_X$).
+For $\sh{A}\in K(X)$, let $T(\sh{A})$ be the torsion submodule of $\sh{A}$ (whose stalks are the torsion submodules of $\sh{A}_x$).
 
 \begin{lemma}{2}
 \label{lemma2}
-  If $\sh{A}\in K(X)$, then the torsion submodule $T(A)$ is also in $K(X)$, and $A=T(A)$ if and only if $\supp\sh{A}\neq X$.
+  If $\sh{A}\in K(X)$, then the torsion submodule $T(\sh{A})$ is also in $K(X)$, and $\sh{A}=T(\sh{A})$ if and only if $\supp\sh{A}\neq X$.
 \end{lemma}
 
 \begin{proof}
   We can immediately restrict to the case where $X$ is affine, where it is evident, by the interpretation of coherent $\sh{O}$-modules as $A(X)$-modules of finite type.
 \end{proof}
 
-Using the exact sequence $0\to T(A)\to A\to A_0\to 0$\todo\emph{\textbf{($A$ or $\sh{A}$ or what??)}}, and that $T(A)\in\cat{K}$, we see that $A\in\cat{K}$ if and only if $A_0\in\cat{K}$.
+Using the exact sequence $0\to T(\sh{A})\to \sh{A}\to \sh{A}_0\to 0$, and that $T(\sh{A})\in\cat{K}$, we see that $\sh{A}\in\cat{K}$ if and only if $\sh{A}_0\in\cat{K}$.
 
-Let $\sh{R}$ be the sheaf of fields over $X$ given by the fields of fractions of the $\sh{O}_{X,x}$, i.e. the sheaf of germs of rational functions, which is a constant sheaf, and we have an injective homomorphism $A_0\to A_0\otimes_{\sh{O}_X}\sh{R}$ \todo\emph{\textbf{again.... what is $A$?}}
-
-\todo\emph{\textbf{finish}}
+Let $\sh{R}$ be the sheaf of fields over $X$ given by the fields of fractions of the $\sh{O}_{X,x}$, i.e. the sheaf of germs of rational functions, which is a constant sheaf, and we have an injective homomorphism $\sh{A}_0\to\sh{A}_0\otimes_{\sh{O}_X}\sh{R}$
+Representing $\sh{A}_0$ locally as the cokernel of a homomorphism $\sh{O}_X^m\to\sh{O}_X^{m'}$, we see that the tensor product $\sh{A}_0\otimes_{\sh{O}_X}\sh{R}$ is locally isomorphic (as sheaves of $\sh{R}$-modules) to a sheaf of the form $\sh{R}^k$, and thus conclude that it is \emph{globally} isomorphic to $\sh{R}^k$ thanks to:
 
 \begin{lemma}{3}
 \label{lemma3}
@@ -221,9 +216,7 @@ Let $\sh{R}$ be the sheaf of fields over $X$ given by the fields of fractions of
   This is an easy consequence of the fact that every open subset of $X$ is connected (consider a maximal open subset where the sheaf in question is constant!).
 \end{proof}
 
-We will thus identify \todo
-
-\todo\emph{\textbf{finish all this}}
+We will thus identify \todo\emph{\textbf{finish all this}}
 
 
 \section{Complements on sheaf cohomology}
@@ -285,7 +278,7 @@ For the results of this section, see the 1957 \emph{Séminaire Grothendieck}.
 \label{section4}
 
 Let $V$ be a finite-dimensional $k$-vector space, and $\mathbf{P}$ the associated projective space, the quotient of $V\setminus\{0\}$ by the algebraic group $k^\times=k\setminus\{0\}$.
-We see that $V\setminus\{0\}$ is a \todo\emph{\textbf{algebraic?}} principal $k^\times$-bundle on $\mathbf{P}$, and so it defines an associated vector bundle on $P$, with fibres of dimension $1$;
+We see that $V\setminus\{0\}$ is a principal algebraic $k^\times$-bundle on $\mathbf{P}$, and so it defines an associated vector bundle on $P$, with fibres of dimension $1$;
 the sheaf of germs of regular sections of the \emph{dual} bundle is denoted $\sh{O}(1)$, and we denote by $\sh{O}(n)$ the $n$-fold tensor product of $\sh{O}(1)$ with itself if $n\geq0$, and the $(-n)$-fold tensor product of the dual sheaf if $n<0$ (in particular then, $\sh{O}(0)=\sh{0}_\mathbf{P}$).
 If $\sh{A}$ is an algebraic sheaf on $\mathbf{P}$, then we let $\sh{A}(n)=\sh{A}\otimes_{\sh{O}_\mathbf{P}}\sh{O}_n$, and so $\sh{A}(m)(n)=\sh{A}(m+n)$.
 The definitions of $\sh{O}(n)$ and of the operation $\sh{A}\mapsto\sh{A}(n)$ can immediately be extended to sheaves on a product $\mathbf{P}\times Y$, where $Y$ is an arbitrary algebraic set.
@@ -505,7 +498,7 @@ Here we only make use of the fact that $g$ is \emph{proper} and \emph{surjective
 
 \begin{proof}
   We cover $X$ by affine open subsets $X_i$, with each $X_i$ locally closed in some projective space $\mathbf{P}_i$, whence we have a diagonal map $\bigcap X_i\to\bigsqcap\mathbf{P}_i$.
-  We take $X'$ to be the closure in $X\times\bigsqcap\mathbf{P}_i$ of the graph of this diagonal map (or, really, its normalisation \todo\emph{\textbf{??}}).
+  We take $X'$ to be the closure in $X\times\bigsqcap\mathbf{P}_i$ of the graph of this diagonal map (or, really, $X'$ is its normalisation).
 
   \Cref{theorem4,theorem5} say that every coherent algebraic sheaf $\sh{A}$ on $X$ satisfies a certain property.
   But we immediately see that, in both cases, the class $\cat{K}$ of the $\sh{A}\in K(X)$ having the property in question is an \emph{exact} subcategory (\cref{section2}, \cref{definition1}), by using the exact sequence of the $\RR^qf_*$ (and the $\RR^qf_*^h$) corresponding to an exact sequence of sheaves $0\to\sh{A}'\to\sh{A}\to\sh{A}''\to0$, and by using either the fact that, if in an exact sequence of $\sh{O}_X$-modules $\sh{A}\to\sh{B}\to\sh{C}\to\sh{D}\to\sh{E}$, the four outer terms are coherent, then so too is $\sh{C}$, or (in the case of \cref{theorem5}) the classical 5 lemma.
@@ -547,7 +540,6 @@ Here we only make use of the fact that $g$ is \emph{proper} and \emph{surjective
     \HH^i(\mathbf{P}\times W,\sh{O}_{\mathbf{P}\times W}(n))
     = \HH^i(\mathbf{P},\sh{O}_\mathbf{P}(n))\otimes_\sh{F} A(W)
   \]
-  (\todo $\sh{F}$??)
   is zero for $i>0$ and $n$ large enough, and is of finite type over $A(W)$ when $i=0$, since $\HH^0(\mathbf{P},\sh{O}_\mathbf{P}(n))$ is clearly of finite dimension.
   When $k=\mathbf{C}$, we must prove that, for $n$ large enough, \[\HH^i(\mathbf{P}^h\times W',\sh{O}(n)^h)=0\] for $i>0$ and $W'$ any Stein open subset of $W^h$, and also that $f_*(\sh{O}(n)^h)$ can be identified with $(f_*(\sh{O}(n)))^h$, i.e. with $\HH^0(\mathbf{P},\sh{O}(n))\otimes\sh{O}_W^h$;
   or, in other words, that
@@ -687,7 +679,7 @@ this implies that the initial terms of the spectral sequences of both the domain
   \[
     \sh{F} \to f_*^h(\sh{F}')
   \]
-  and, in the current setting, this homomorphism is bijective outside of an algebraic set $Y$ of dimension $<n$ (the set of points of $X$ over which $f$ is not biregular \todo\emph{\textbf{???}}).
+  and, in the current setting, this homomorphism is bijective outside of an algebraic set $Y$ of dimension $<n$ (where $Y$ is the set of points of $X$ over which $f$ is not biregular).
   We thus have an exact sequence
   \[
     0 \to \sh{T} \to \sh{F} \to f_*^h(\sh{F}') \to \sh{T}' \to 0
