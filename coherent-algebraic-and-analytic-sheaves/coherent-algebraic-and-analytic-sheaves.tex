@@ -66,6 +66,7 @@
 \newcommand{\cat}{\mathcal}
 \usepackage{aurical}
 \newcommand{\shHom}{\sh{H}\textup{\kern-2.2pt{\Fontauri\slshape om}}}
+\newcommand{\shExt}{\sh{E}\textup{\kern-2.2pt{\Fontauri\slshape xt}}}
 \newcommand{\HH}{\mathrm{H}}
 \newcommand{\EE}{\mathrm{E}}
 \newcommand{\RR}{\mathrm{R}}
@@ -660,9 +661,44 @@ But, more generally, we have canonical homomorphisms
   \Ext_{\sh{O}_X^h}^i(X;\sh{A}''^h,\sh{A}'^h)
   \tag{9}
 \]
-(defined without any restrictions on $X$, $\sh{A}'$, or $\sh{A}''$), which are here isomorphisms, as follows from the spectral sequence of $\Ext$ of sheaves of modules (see the 1957 \emph{Séminaire Grothendieck}), 
+(defined without any restrictions on $X$, $\sh{A}'$, or $\sh{A}''$), which are here isomorphisms, as follows from the spectral sequence of $\Ext$ of sheaves of modules (see the 1957 \emph{Séminaire Grothendieck}), from the elementary local relations
+\[
+\label{equation10}
+  (\shExt_{\sh{O}_X}^i(\sh{A},\sh{B}))^h
+  = \shExt_{\sh{O}_X^h}^i(\sh{A}^h,\sh{B}^h)
+  \tag{10}
+\]
+that generalise \cref{equation8} (with $\shExt$ denoting the \emph{sheaf} $\Ext$s), and from \cref{corollary1-5} of \cref{theorem5};
+this implies that the initial terms of the spectral sequences of both the domain and codomain of the morphism in \cref{equation9} are identical.
 
 \begin{proof}[Proof of \cref{theorem6}.]
+  We can now prove \cref{theorem6}, by induction on $n=\dim X$, with the theorem being trivial when $n=0$.
+  So suppose that $n>0$, and that the theorem is true in dimensions $<n$.
+  Proceeding as in the end of the proof of \cref{theorem2}, we can restrict to the case where $X$ is irreducible.
+  So consider the map $f\colon X'\to X$ considered in Chow's lemma (\cref{lemma4}), with $X'$ a \emph{projective} variety, and $f$ a \emph{birational} morphism.
+  For every analytic sheaf $\sh{F}$ on $X$, let
+  \[
+    \sh{F}' = f^{-1}(\sh{F})\otimes_{f^{-1}(\sh{O}_X^h)}\sh{O}_X^h
+  \]
+  (where the tensor product makes sense, since $\sh{O}_X^h$ is a module over $f^{-1}(\sh{O}_X^h)$, which can be identified with a subsheaf (of rings) of $\sh{O}_X^h$).
+  It is easy to prove that, if $\sh{F}$ is coherent, then so too is $\sh{F}'$.
+  Furthermore, there is a natural homomorphism
+  \oldpage{2-16}
+  \[
+    \sh{F} \to f_*^h(\sh{F}')
+  \]
+  and, in the current setting, this homomorphism is bijective outside of an algebraic set $Y$ of dimension $<n$ (the set of points of $X$ over which $f$ is not biregular \todo\emph{\textbf{???}}).
+  We thus have an exact sequence
+  \[
+    0 \to \sh{T} \to \sh{F} \to f_*^h(\sh{F}') \to \sh{T}' \to 0
+  \]
+  where $\sh{T}$ and $\sh{T'}$ have support contained inside $Y$.
+  Using the analogue of \cref{lemma1} of \cref{section2} (thanks to the compactness of $X$), we find that $\sh{T}$ (and even $\sh{T}'$) admits a composition series with composition factors that are coherent analytic sheaves \emph{on $Y$}.
+  These quotients are in fact ``algebraic'', by the induction hypothesis;
+  thus so too are their extensions $\sh{T}$ and $\sh{T}'$.
+  Furthermore, since $X'$ is projective, $\sh{F}'$ is also ``algebraic'', by what we have already said, and thus so too is $f_*^h(\sh{F}')$, by \cref{theorem5} applied to $f\colon X'\to X$ and $\sh{F}'=\sh{B}^h$.
+  Thus the kernel of $f_*^h(\sh{F}')\to\sh{T}'$ is also algebraic, and thus so too is $\sh{F}$, which is an extension of this kernel by $\sh{T}$.
+  Thus we have proved \cref{theorem6}.
 \end{proof}
 
 
