@@ -94,13 +94,11 @@
 \maketitle
 
 \begin{abstract}
-  What follows is a translation of the French paper:
+  \emph{This text is one of a series\footnote{\url{https://github.com/thosgood/translations}} of translations of various papers into English.}
+  \emph{What follows is a translation of the French paper:}
 
-  \smallskip\noindent
+  \medskip\noindent
   \textsc{Grothendieck, A.}. Sur les faisceaux algébriques et les faisceaux analytiques cohérents. \emph{Séminaire Henri Cartan}, Volume 9 (1956-1957), Talk no.~2, pp.~1–16. {\footnotesize\url{http://www.numdam.org/item/SHC_1956-1957__9__A2_0/}}
-
-  \smallskip
-  This translation is one of a series: {\footnotesize\url{https://github.com/thosgood/translations}.}
 \end{abstract}
 
 \tableofcontents
@@ -108,7 +106,8 @@
 
 %% Content %%
 
-\bigskip\bigskip
+% \bigskip\bigskip
+\clearpage
 The aim of this exposé is to generalise certain theorems of Serre.
 \oldpage{2-01}
 It makes fundamental use of the techniques of Serre \cite{1,2,3}.
@@ -216,7 +215,16 @@ Representing $\sh{A}_0$ locally as the cokernel of a homomorphism $\sh{O}_X^m\to
   This is an easy consequence of the fact that every open subset of $X$ is connected (consider a maximal open subset where the sheaf in question is constant!).
 \end{proof}
 
-We will thus identify \todo\emph{\textbf{finish all this}}
+We will thus identify $\sh{A}_0\otimes_{\sh{O}_X}\sh{R}$ with some $\sh{R}^k$, which contains the sub-$\sh{O}_X$-module $\sh{O}_X^k$.
+Consider the exact sequence
+\[
+  0 \to \sh{A}_0 \to \sh{A}_0+\sh{O}_X^k \to \sh{Q} \to 0
+\]
+where $\sh{Q}$ is defined as the cokernel of the injection homomorphism.
+We immediately see that $\sh{Q}\otimes_{\sh{O}}\sh{R}=0$, and so $\sh{Q}$ is a torsion module, and so $\supp\sh{Q}\neq X$ (\cref{lemma2}), whence $\sh{Q}\in\cat{K}$.
+(We implicitly make use of the fact that $\sh{A}_0+\sh{O}_X^k$ is a coherent $\sh{O}$-module, which can be easily verified).
+
+\todo\emph{\textbf{FINISH}}
 
 
 \section{Complements on sheaf cohomology}
