@@ -65,7 +65,11 @@
 \newcommand{\cat}{\mathcal}
 \newcommand{\BB}{\mathcal{B}}
 \newcommand{\LL}{\mathcal{L}}
-\newcommand{\projotimes}{\widehat{\otimes}_\pi}
+\newcommand{\projotimes}{{\otimes}_\pi}
+\newcommand{\injotimes}{{\otimes}_\varepsilon}
+\newcommand{\cprojotimes}{\widehat{\otimes}_\pi}
+\newcommand{\cinjotimes}{\widehat{\otimes}_\varepsilon}
+\newcommand{\cotimes}{\widehat{\otimes}}
 \newcommand{\tr}{\operatorname{Tr}}
 
 \renewcommand{\geq}{\geqslant}
@@ -107,19 +111,19 @@
 \oldpage{1}
 
 Let $E$ be a \emph{Banach} space, whose dual we will call $E'$.
-We know, by definition, that there exists a bijective and isometric correspondence between the space $\BB(E,E')$ of continuous bilinear forms on $E\times E'$ and the dual $E\projotimes E'$.
-To the canonical bilinear form $(x,x')\mapsto\langle x,x'\rangle$ thus corresponds a continuous linear form on $E\projotimes E'$ that we call ``the trace'', and that we denote by $\tr$.
+We know, by definition, that there exists a bijective and isometric correspondence between the space $\BB(E,E')$ of continuous bilinear forms on $E\times E'$ and the dual $E\cprojotimes E'$.
+To the canonical bilinear form $(x,x')\mapsto\langle x,x'\rangle$ thus corresponds a continuous linear form on $E\cprojotimes E'$ that we call ``the trace'', and that we denote by $\tr$.
 If $u=\sum_v x_v\otimes y'_v$ then, by definition, $\tr(u)=\sum_v\langle x_v,y'_v\rangle$.
 The trace form is of norm $1$.
-Furthermore, every $u\in E\projotimes E'$ can be written in the form $u=\sum_{n\geq0}x_n\otimes y'_n$ with $\sum_{n\geq0}\|x_n\|\|y'_n\|$ finite, and so the series $\sum_{n\geq0}\langle x_n,y'_n\rangle$ converges absolutely, and, since the trace is continuous, we have that
+Furthermore, every $u\in E\cprojotimes E'$ can be written in the form $u=\sum_{n\geq0}x_n\otimes y'_n$ with $\sum_{n\geq0}\|x_n\|\|y'_n\|$ finite, and so the series $\sum_{n\geq0}\langle x_n,y'_n\rangle$ converges absolutely, and, since the trace is continuous, we have that
 \[
   \tr(u) = \sum_{n\geq0} \langle x_n, y'_n \rangle.
 \]
 
 To justify the name ``trace'', recall that we can identify $E\otimes E'$ with the space of endomorphisms of finite rank of $E$, and that, if $E$ is of finite dimensions, then the trace form agrees with the usual trace of operators.
 
-There exists a canonical continuous map $E'\projotimes E\to\LL(E;E)$.
-If we do not know whether or not it is bijective, we can only speak of the trace of an element of $E'\projotimes E$, and not the trace of the image of the operator in $\LL(E;E)$.
+There exists a canonical continuous map $E'\cprojotimes E\to\LL(E;E)$.
+If we do not know whether or not it is bijective, we can only speak of the trace of an element of $E'\cprojotimes E$, and not the trace of the image of the operator in $\LL(E;E)$.
 
 Recall as well that there exists an isomorphism $S$ (for symmetry) between $E\otimes E'$ and $E'\otimes E$, defined by
 \[
@@ -130,10 +134,10 @@ for $x_v\in E$ and $y'_v\in E'$.
 If we identify $E\otimes E'$ with the space of maps of finite rank from $E$ to $E$, and $E'\otimes E\subset E'\otimes(E')'$ with a space of transformations of $E'$,
 \oldpage{2}
 then the map $S$ corresponds to the transposition of operators.
-Thanks to $S$, the trace is also defined on $E'\projotimes E$.
-We can thus understand the duality between $E\projotimes F$ and $\BB(E,F)$ by means of the trace: let $A\in\BB(E,F)\subset\LL(E;F')$.
-If $1$ is the identity in $F$, then $A\otimes1$ sends $E\projotimes F$ to $F'\projotimes F$.
-So if $u\in E\projotimes F$, then we can take the trace of $(A\otimes1)(u)\in\LL(F;F')$, and we have
+Thanks to $S$, the trace is also defined on $E'\cprojotimes E$.
+We can thus understand the duality between $E\cprojotimes F$ and $\BB(E,F)$ by means of the trace: let $A\in\BB(E,F)\subset\LL(E;F')$.
+If $1$ is the identity in $F$, then $A\otimes1$ sends $E\cprojotimes F$ to $F'\cprojotimes F$.
+So if $u\in E\cprojotimes F$, then we can take the trace of $(A\otimes1)(u)\in\LL(F;F')$, and we have
 \[
 \label{equation1}
   \langle u,A \rangle = \tr((A\otimes1)(u)).
@@ -142,8 +146,53 @@ So if $u\in E\projotimes F$, then we can take the trace of $(A\otimes1)(u)\in\LL
 Indeed, both sides of the equation (for fixed $A$) are continuous linear forms in $u$, and are equal for $u=x\otimes y$.
 
 
-\section{The map $E'\projotimes F\to\LL_b(E_\tau;F)$ for $E$ and $F$ locally convex}
+\section{The map $E'\cprojotimes F\to\LL_b(E_\tau;F)$ for $E$ and $F$ locally convex}
 \label{section2}
+
+The subscript ${}_b$ denotes the uniform convergence topology on bounded subsets of a space of linear maps.
+
+Let $E$ and $F$ be arbitrary locally convex separated spaces.
+Elements of $E'\otimes F$ correspond to continuous linear maps of finite rank from $E$ to $F$.
+So $E'\otimes F\subset\LL(E_\tau;F)$, since the latter is the space of weakly continuous maps (see Exposé~8, §1).
+
+\begin{proposition}{1}
+\label{proposition1}
+  The topology induced on $E'\otimes F$ by $\LL_b(E_\tau;F)$ is identical to the topology of $E'_b\injotimes F$.
+\end{proposition}
+
+\begin{proof}
+  The topology of $E'_b\injotimes F$ is, by definition, the topology induced on $E'\otimes F$ by $\LL_\varepsilon((E'')_\tau;F)$.
+  But an equicontinuous subset of $E''$ is the  polar of a neighbourhood of $0$ in $E'$, which is itself the polar of a bounded subset of $E$, and thus (by the bipolar theorem) is the weakly closed convex balanced hull of a bounded subset of $E$.
+  But, in a \todo!!!!!!-topology, we can replace the sets of \todo!!!!!! by their closed convex balanced hull.
+  Thus $\LL_\varepsilon((E'')_\tau;F)$ and $\LL_b(E_\tau;F)$ induce the same topology on $E'\otimes F$.
+\end{proof}
+
+\begin{corollary}{1}
+\label{corollary-1}
+  If $E$ and $F$ are complete, then there exists a continuous map $\varphi$ from $E'\projotimes F$ to $\LL_b(E_\tau;F)$ that extends the identity on $E'\otimes F$.
+\end{corollary}
+
+\begin{proof}
+  Indeed, the $\pi$-topology being finer than the $\varepsilon$-topology, there exists a canonical map $E'\cprojotimes F\to E'\cinjotimes F$ which we can compose with the map $E'\cinjotimes F\to \LL_b(E_\tau;F)$.
+\end{proof}
+
+\section{Definition of nuclear maps — the case of Banach spaces}
+\label{section3}
+
+\oldpage{3}
+\emph{From now on, the only tensor product that we will consider is the $\pi$-product; thus $E\cotimes F$ means $E\cprojotimes F$.}
+
+\begin{definition}{1}
+\label{definition1}
+  If $E$ and $F$ are Banach spaces, then we write $L^1(E;F)$ to denote the subspace $\varphi(E'\cotimes F)$ of $\LL(E;F)$.
+  The elements of $L^1(E;F)$ are called \emph{nuclear} (or \emph{Fredholm}) operators.
+  Note that $L^1(E;F)$ is a \emph{quotient space} of $E\cotimes F$.
+  The quotient norm of the $\pi$-norm will be called the \emph{trace norm}, or the \emph{nuclear norm}, denoted by $\|\cdot\|_1$ or $\|\cdot\|_{\tr}$.
+\end{definition}
+
+We do not know a case where $\varphi$ is not bijective, but we do not know how to prove this in general.
+
+Since
 
 
 \end{document}
