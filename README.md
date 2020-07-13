@@ -31,7 +31,7 @@ Here are some papers that I've translated into English. Any comments or correcti
 
 ## Séminaire Schwartz
 
-- [ ] `the-theory-of-nuclear-operators`
+- [x] `the-theory-of-nuclear-operators`
 
   Schwartz, L. La théorie des opérateurs nucléaires. _Séminaire Schwartz_, Volume 1 (1953-1954), Talk no. 12, 7 p. http://www.numdam.org/item/SLS_1953-1954__1__A13_0/
 

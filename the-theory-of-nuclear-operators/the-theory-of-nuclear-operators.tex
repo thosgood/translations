@@ -17,6 +17,7 @@
 \crefname{section}{Section}{Sections}
 \crefname{equation}{}{}
 
+
 %% Theorem environments %%
 
 \usepackage{amsthm}
@@ -164,7 +165,7 @@ So $E'\otimes F\subset\LL(E_\tau;F)$, since the latter is the space of weakly co
 \begin{proof}
   The topology of $E'_b\injotimes F$ is, by definition, the topology induced on $E'\otimes F$ by $\LL_\varepsilon((E'')_\tau;F)$.
   But an equicontinuous subset of $E''$ is the  polar of a neighbourhood of $0$ in $E'$, which is itself the polar of a bounded subset of $E$, and thus (by the bipolar theorem) is the weakly closed convex balanced hull of a bounded subset of $E$.
-  But, in a \todo!!!!!!-topology, we can replace the sets of \todo!!!!!! by their closed convex balanced hull.
+  But, in a $\mathfrak{G}$-topology, we can replace the sets of $\mathfrak{G}$ by their closed convex balanced hull.
   Thus $\LL_\varepsilon((E'')_\tau;F)$ and $\LL_b(E_\tau;F)$ induce the same topology on $E'\otimes F$.
 \end{proof}
 
@@ -262,7 +263,7 @@ Since $E'\otimes F$ is dense in $E'\cotimes F$, and $\varphi$ is continuous, eve
 
 To simplify, we call any convex balanced set a \emph{disc}.
 By replacing $E_1$ with $\alpha(E)$, and $F_1$ with $F_1/\gamma^{-1}(0)$, we can assume that $\alpha$ is an epijection and $\gamma$ is an injection;
-but we know (exposé~7) that $E_1$ will be isomorphic to $E_{U_1}$, and $F_1$ to $F_{B_1}$, for $U_1$ some open disc of $E$, and $B_1$ some \todo!!!!!! of $F$.
+but we know (exposé~7) that $E_1$ will be isomorphic to $E_{U_1}$, and $F_1$ to $F_{B_1}$, for $U_1$ some open disc of $E$, and $B_1$ some \textbf{complétante}\footnote{\emph{[Translator]. I was unable to find a translation for this term, but I \textbf{think} it refers to the following property: an absolutely convex subset $S$ of a topological vector space is said to be \textbf{complétante} if $S_A$ is a Banach space, where $S_A$ is the subset absorbed by $S$.}} subset of $F$.
 Since the dual of $E_{U_1}$ is $\widehat{E'_{A'_1}}$, where $A'_1=U_1^0$, we know that $\beta$ comes from an element $\beta_0$ of $E'_{A'_1}\cotimes F_{B_1}$, and that $u=\gamma\circ\beta\circ\alpha$ comes from an element $u_0=(\transpose{\alpha}\otimes\gamma)(\beta_0)$ of $E'\cotimes F$;
 but $\transpose{\alpha}\otimes\gamma$ is exactly the canonical map from $E'_{A'_1}\cotimes F_{B_1}$ in $E'\cotimes F$.
 Even stronger: $u$ comes from some $u_0\in E'_{A'_1}\cotimes F_{B_1}$, but we know (exposé~5) that $u_0$ belongs to a set of the form $\Gamma(A'\otimes B)$, where $A$ and $B$ are compact subsets of $E'_{A'_1}$ and $F_{B_1}$ (respectively).
@@ -270,7 +271,7 @@ Whence:
 
 \begin{proposition}{3}
 \label{proposition3}
-  An operator $u\colon E\to F$ is nuclear if and only if it is defined by an element of some $E'_{A'}\otimes F_B$, where $A'$ and $B$ are compact convex balanced (and thus \todo!!!!!!!) subsets.
+  An operator $u\colon E\to F$ is nuclear if and only if it is defined by an element of some $E'_{A'}\otimes F_B$, where $A'$ and $B$ are compact convex balanced (and thus \textbf{complétante}) subsets.
   We can thus suppose, in \cref{definition2}, that $\alpha$ and $\beta$ are compact maps.
 \end{proposition}
 
@@ -285,11 +286,11 @@ Since any element of $E'_{A'}\cotimes F_B$ can be written in the form
 \oldpage{5}
 we have such an equality in $\LL_b(E;F)$.
 
-Conversely, if $\sum|\lambda_i|<+\infty$, if $(x'_i)$ is an equicontinuous sequence, and if $(y_i)$ is contained inside a \todo!!!!!!!! subset of $F$, then $\sum\lambda_i x'_i\otimes y_i$ converges in $\LL_b(E;F)$, and defines a nuclear operator.
+Conversely, if $\sum|\lambda_i|<+\infty$, if $(x'_i)$ is an equicontinuous sequence, and if $(y_i)$ is contained inside a \textbf{complétante} subset of $F$, then $\sum\lambda_i x'_i\otimes y_i$ converges in $\LL_b(E;F)$, and defines a nuclear operator.
 
 \begin{proposition}{4}
 \label{proposition4}
-  For an operator $u$ to be nuclear, it is necessary and sufficient for it to be of the form $u=\sum\lambda_i x'_i\otimes y_i$, where $\sum|\lambda_i|<+\infty$, $(x'_i)$ is an equicontinuous sequence, and $(y_i)$ a sequence contained inside some \todo!!!!!!! subset.
+  For an operator $u$ to be nuclear, it is necessary and sufficient for it to be of the form $u=\sum\lambda_i x'_i\otimes y_i$, where $\sum|\lambda_i|<+\infty$, $(x'_i)$ is an equicontinuous sequence, and $(y_i)$ a sequence contained inside some \textbf{complétante} subset.
 \end{proposition}
 
 \begin{proposition}{5}
@@ -309,6 +310,101 @@ Similarly, if $u$ is zero on a subspace $E_2$ of $E$, then $u\colon E/E_2\to F$ 
 
 \section{Transpose of a nuclear map}
 \label{section5}
+
+\begin{proposition}{6}
+\label{proposition6}
+  Let $E$ and $F$ be Banach spaces, and $u\in L^1(E;F)$.
+  Then $\transpose{u}\in L^1(F';E')$, and $\|\transpose{u}\|_1\leq\|u\|_1$.
+  Conversely, if $F$ is reflexive, and $\transpose{u}$ is nuclear, then $u$ is nuclear, and $\|\transpose{u}\|_1=\|u\|)1$.
+\end{proposition}
+
+\begin{proof}
+  Let $u\in L^1(E;F)$ with $u=\varphi(u_0)$, where $u_0\in E'\cotimes F$.
+  Let $i$ be the injection from $F\cotimes E'$ to $F''\cotimes E'$.
+  Then $\transpose{u}\colon F'\to E'$ is given by $\transpose{u}=\varphi(i(S(u_0)))$, and so $\transpose{u}$ is nuclear.
+  Since $S$ is an isometry, and $\|i\|\leq1$ (in fact, we can even show that $i$ is an isometry), we have that
+  \[
+    \|\transpose{u}\|_1
+    \leq \inf_{\varphi(u_0)=u} \|i(S(u_0))\|
+    \leq \inf_{\varphi(u_0)=u} \|u_0\|
+    = \|u\|_1.
+  \]
+  Finally, if $F$ is \emph{reflexive}, and $\transpose{u}$ is nuclear, then $\transpose{\,\transpose{u}}\colon E''\to F''=F$ is nuclear, and so $u\colon E\to F$ is nuclear.
+  In all known cases, this property still holds true even without the reflexivity hypothesis on $F$.
+\end{proof}
+
+\begin{corollary}{1}
+\label{corollary-6}
+  Let $E$ and $F$ be locally convex separated spaces;
+  if $u\colon E\to F$ is nuclear, then $\transpose{u}\colon F'_c\to E'_b$ is nuclear, and, a fortiori, $\transpose{u}\colon F'_b\to E'_b$ or $\transpose{u}\colon F'_c\to E'_c$.
+\end{corollary}
+
+\begin{proof}
+  Indeed, $\transpose{u}=\transpose{\alpha}\transpose{\beta}\transpose{\gamma}$ (see \cref{definition2}), with $\transpose{\beta}$ nuclear, $\transpose{\alpha}$ continuous, and $\transpose{\gamma}$ continuous from $F'_c$ to $F'_1$ if $\gamma$ is compact, which we have the right to assume.
+\end{proof}
+
+
+\section{Lifting properties}
+\label{section6}
+
+\oldpage{6}
+\begin{proposition}{7}
+\label{proposition7}
+  Let $E$, $F$, and $G$ be locally convex separated spaces, with $E\subset F$;
+  let $u\colon E\to G$ be a nuclear map.
+  Then there exists a nuclear map $v\colon F\to G$ extending $u$.
+  Furthermore, in the Banach case, we can assume that $\|v\|_1\leq\|u\|_1+\varepsilon$.
+\end{proposition}
+
+\begin{proof}
+  We restrict ourselves to proving the Banach case.
+
+  Consider the diagram that we have already seen (\cref{proposition2}):
+  \[
+    \begin{tikzcd}[column sep=huge]
+      F'\cotimes G \ar[r,"t_{i\otimes1}"] \ar[d,swap,"\varphi"]
+      & E'\cotimes G \ar[d,"\varphi"]
+    \\L^1(F;G) \ar[r,swap,"u\mapsto i\circ u"]
+      & L^1(E;G)
+    \end{tikzcd}
+  \]
+  where $i$ is the injection of $E$ into $F$.
+  Then the path \rotatebox[origin=c]{270}{$\Rsh$} is a metric epimorphism, and thus so too is the path \rotatebox[origin=c]{180}{$\Lsh$}.
+\end{proof}
+
+\begin{proposition}{8}
+\label{proposition8}
+  Let $E$, $F$, and $G$ be locally convex separated spaces, with $F\subset E$, and $F$ closed;
+  suppose that every compact disc of $E/F$ is the image of a \textbf{complétante} subset of $E$.
+  Then every nuclear map $u\colon G\to E/F$ comes from the image (under taking the quotient) of a nuclear map $v\colon G\to E$.
+  Furthermore, in the Banach case, we can assume that $\|v\|_1\leq\|u\|1+\varepsilon$.
+\end{proposition}
+
+\begin{proof}
+  Let $H=E/F$.
+  Suppose that $u$ comes from some element $u_0$ of $G'_{A'}\cotimes H_B$, where $B$ is a \emph{compact} \textbf{complétante} subset of $H$ (\cref{proposition3}).
+  Let $B_1$ be a \textbf{complétante} subset of $E$ that projects onto $B$.
+  We have an epimorphism $E_{B_1}\to H_B$, and it suffices to show that $u_0$ can be obtained from an element of $G'_{A'}\cotimes E_{B_1}$ by projection, i.e. that we can reduce to the Banach case.
+  But in this case, we have the following diagram:
+  \[
+    \begin{tikzcd}[column sep=huge]
+      G'\cotimes E \ar[r,"1\otimes P"] \ar[d,swap,"\varphi"]
+      & G'\cotimes H \ar[d,"\varphi"]
+    \\L^1(G;E) \ar[r,swap,"u\mapsto P\circ u"]
+      & L^1(G;H)
+    \end{tikzcd}
+  \]
+  and, again, \rotatebox[origin=c]{270}{$\Rsh$} is a epimorphism, and thus so too is \rotatebox[origin=c]{180}{$\Lsh$}.
+\end{proof}
+
+\begin{remark}
+  \begin{enumerate}
+    \item The conditions of \cref{proposition8} are satisfied if $E$ is a Fréchet space (or if $E$ is a dual of a Fréchet space) and $F$ is weakly
+\oldpage{7}
+      closed.
+    \item Returning to \cref{proposition7}: if we use \cref{proposition4}, then we can write $u$ in the form $u=\sum\lambda_i y'_i\otimes z_i$, and, if we simultaneously extend (by Hahn-Banach) the $y'_i$ to equicontinuous forms $\overline{y'_i}$ on $F$, then we can set $v=\sum\lambda_i\overline{y'_i}\otimes z_i$, and $v$ extends $u$, which gives another proof of the proposition (and similarly for \cref{proposition8})
+  \end{enumerate}
+\end{remark}
 
 
 \end{document}
