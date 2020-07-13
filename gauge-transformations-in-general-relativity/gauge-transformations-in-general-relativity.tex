@@ -1,0 +1,162 @@
+\documentclass{article}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+\usepackage{graphicx}
+
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{ebgaramond-maths}
+\usepackage{mathpazo}
+
+
+\crefname{section}{Section}{Sections}
+\crefname{equation}{}{}
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+  \theoremstyle{plain}
+
+  \newtheorem{innercustomtheorem}{Theorem}
+  \crefname{innercustomtheorem}{Theorem}{Theorems}
+  \newenvironment{theorem}[1]
+    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
+    {\endinnercustomtheorem}
+
+  \newtheorem{innercustomproposition}{Proposition}
+  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \newenvironment{proposition}[1]
+    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+    {\endinnercustomproposition}
+
+  \newtheorem{innercustomlemma}{Lemma}
+  \crefname{innercustomlemma}{Lemma}{Lemmas}
+  \newenvironment{lemma}[1]
+    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
+    {\endinnercustomlemma}
+
+  \newtheorem{innercustomcorollary}{Corollary}
+  \crefname{innercustomcorollary}{Corollary}{Corollaries}
+  \newenvironment{corollary}[1]
+    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
+    {\endinnercustomcorollary}
+
+
+  \theoremstyle{definition}
+
+  \newtheorem*{remark}{Remark}
+
+  \newtheorem{innercustomdefinition}{Definition}
+  \crefname{innercustomdefinition}{Definition}{Definitions}
+  \newenvironment{definition}[1]
+    {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
+    {\endinnercustomdefinition}
+
+
+%% Shortcuts %%
+
+\renewcommand{\gg}{\mathfrak{g}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\todo}{\textbf{ !TODO! }}
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\title{Gauge transformations in general relativity}
+\author{J. Winogradzki}
+\date{18\textsuperscript{th} of January, 1955}
+\maketitle
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://github.com/thosgood/translations}} of translations of various papers into English.}
+  \emph{What follows is a translation (last updated \today) of the French paper:}
+
+  \medskip\noindent
+  \textsc{Winogradzki, J}. Les transformations de jauge en relativité généralisée. \emph{Séminaire L. de Broglie. Théories physiques}, Volume~24 (1954-1955), Talk no.~10, 10~p. {\footnotesize\url{http://www.numdam.org/item/SLDB_1954-1955__24__A9_0/}}
+\end{abstract}
+
+\renewcommand*{\thefootnote}{(\arabic{footnote})}
+\setcounter{footnote}{0}
+
+\tableofcontents
+
+
+%% Content %%
+
+\bigskip\bigskip
+\oldpage{10-01}
+The Universe of the theory of General Relativity is a quadri-dimensional affine and metric space, with the metric being given by a second-order tensor which represents the field.
+In general, the affine connection and the metric tensor are asymmetric.
+The equations of the field were established in different ways, one of which, due to Einstein, is particularly interesting.
+The principal of General Relativity being insufficient to determine the equations of the generalised field, Einstein substituted the principal of General Relativity with a stricter theory of Relativity, and it is from this principal that he deduced the field equations.
+He showed that, effectively, the field equations are practically determined if we ask for them to be invariant under $\lambda$-transformations.
+\footnote{\textsc{A. Einstein}. Generalization of Gravitation Theory. Appendix II of \emph{the Meaning of Relativity}. Princeton, 1953. \emph{(We will use the notation from this paper.)}\\\textsc{A. Einstein}. Extension du group relativiste. Dans \emph{Louis de Broglie Physicien et Penseur}. Albin Michel, 1953.}
+
+It is not necessary to impose a priori the precise nature of the extension of the relativistic group; some simple consideration suggests a postulate from which it can be determined.
+The same postulate leads to the field equations.
+\footnote{\textsc{J. Winogradzki}, \emph{C.R. Acad. Sc.}, \textbf{239}, 1954, p.~1359.}
+
+
+\section{Axiomatic foundations}
+\label{section1}
+
+One of the classical methods for establishing the pure gravitational field equations consists of deducing them from the set (E) of the following postulates:
+\begin{enumerate}[I.]
+  \item The universe is a quadri-dimensional affine and metric space, with the metric being given by a second-order tensor.
+  \item The affine connection and the metric tensor are symmetric.
+  \item The field equations derive from a variational principle.
+\oldpage{10-02}
+    We vary the affine connection and the metric tensor.
+  \item The Hamiltonian is given by the curvature density.
+  \item The variations take place without any a priori conditions.
+\end{enumerate}
+
+If we remove postulate~II, then the Universe has multiple curvature densities that can be deduced from one another by transposition, either of the metric tensor, or of the affine connection, or both:
+\[
+  \gg^{ik}R_{ik}, \,\,
+  \gg^{ik}R_{ki}, \,\,
+  \gg^{ik}\widetilde{R}_{ik}, \,\,
+  \gg^{ik}\widetilde{R}_{ki}
+\]
+with $\gg^ik$ the density of the metric tensor, and $R_{ik}$ and $\widetilde{R}_{ik}$ the two Ricci tensors:
+\[
+\label{equation1}
+  R_{ik} = \Gamma_{ik,m}^m - \Gamma_{im,k}^m + \Gamma_{pm}^m\Gamma_{ik}^p - \Gamma_{ip}^m\Gamma_{mk}^p
+  \tag{1}
+\]
+\[
+\label{equation2}
+  \widetilde{R}_{ik} = \Gamma_{ki,m}^m - \Gamma_{mi,k}^m + \Gamma_{mp}^m\Gamma_{ki}^p - \Gamma_{pi}^m\Gamma_{km}^p.
+  \tag{2}
+\]
+Avoiding any arbitrary choice, we modify postulate~IV:
+\begin{enumerate}
+  \item[IVa.] The Hamiltonian is given by any one of the curvature densities.
+\end{enumerate}
+
+The set (E'), consisting of postulates~I, III, IVa, and V, does not determine the field equations in an unequivocal way, since the field equations then depend on the choice of the Hamiltonian.
+The set (E') of postulates is thus unacceptable.
+We will try to modify it whilst staying as close as possible to (E).
+
+The set (E) of postulates is equivalent to the set containing postulates~I, III, IVa, and another postulate that combines II and V:
+\begin{enumerate}
+  \item[Va.] The variations take places under the a priori conditions $g_{ik}=g_{ki}$ and $\Gamma_{km}^i=\Gamma_{mk}^i$.
+\end{enumerate}
+
+
+\end{document}
