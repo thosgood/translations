@@ -1,6 +1,6 @@
 Here are some papers that I've translated into English. Any comments or corrections are greatly appreciated! I've tried to refrain from "rewriting" them too much; generally the sentence structure etc. is pretty close to the original.
 
-# IHES seminars
+# Seminars
 
 ## Séminaire Claude Chevalley
 
