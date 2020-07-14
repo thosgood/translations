@@ -96,7 +96,7 @@ But the decomposition of the spin states is also the covariant decomposition of 
 \section{Free fields}
 \label{section1}
 
-The Lagrangian of a tensor field $(\Psi_{\alpha_1\ldots\alpha_n})$ of rank $n$ is
+The Lagrangian of a tensor field $(\Psi_{\alpha_1\ldots\alpha_n})$ of rank~$n$ is
 \[
   \LL = -\frac12\left(
     \diffp{\Psi}{{x_\lambda}} \diffp{\Psi}{{x_\lambda}} + \HH^2\Psi\Psi
@@ -134,7 +134,86 @@ where
 \end{align*}
 
 \oldpage{13-03}
-First we will study a vector field
+First we will study a vector field or \todo $(A_\lambda)$ to show how the spin states can be explicitly decomposed.
+In this case,
+\[
+  \Big(\square-\HH^2\Big)A_\lambda = 0.
+\]
+Then
+\begin{gather*}
+  \HH^2 A_\lambda = \diffp{{F_{\rho\lambda}}}{{x_\rho}} + \diffp{X}{{x_\lambda}}
+\\\mbox{where $F_{\lambda\rho} = \diffp{{A_\rho}}{{x_\lambda}} - \diffp{{A_\lambda}}{{x_\rho}}$ and $X = \diffp{{A_\lambda}}{{x_\lambda}}$.}
+\end{gather*}
+We can decompose $A_\lambda$ into two component fields: $A_\lambda=B_\lambda+C_\lambda$, so that $B_\lambda$ determines $F_{\lambda\rho}$, and $C_\lambda$ determines $X$, in a separated independent way.
+To do this, we need
+\[
+  \diffp{{B_\lambda}}{{x_\lambda}} = 0,
+  \quad
+  \diffp{{C_\rho}}{{x_\lambda}} - \diffp{{C_\lambda}}{{x_\rho}} = 0.
+\]
+But the zero rotation reduces $C_\lambda$ to a scalar: $C_\lambda=\HH^{-1}\diffp{\Sigma}{{x_\lambda}}$.
+Finally,
+\[
+\label{equation1}
+  \begin{gathered}
+    A_\lambda = B_\lambda + \HH^{-1}\diffp{\Sigma}{{x_\lambda}},
+    \\\diffp{{B_\lambda}}{{x_\lambda}} = 0.
+  \end{gathered}
+  \tag{1}
+\]
+Then $F_{\lambda\rho}=\diffp{{B_\rho}}{{x_\lambda}}-\diffp{{B_\lambda}}{{x_\rho}}$ and $X=\HH\Sigma$.
+So $B_\lambda$ determines $F_{\lambda\rho}$, and $\Sigma$ determines $X$ separately.
+With \cref{equation1}, $\LL$, $P_\nu$, and $M_{\mu\nu}+S_{\mu\nu}$ all decompose into two independent parts, one of which corresponds to $B_\lambda$ and the other to $\Sigma$.
+But $S_{\mu\nu}^{(\Sigma)}=0$, $P_0^{(\Sigma)}<0$, and $P_0^{(\Sigma)}>0$.
+The field $A_\lambda$ thus decomposes explicitly in terms of $B_\lambda$ and $\Sigma$, with $B_\lambda$ a vector field of zero divergence, and thus of total spin~$1$, and $\Sigma$ a spinorial field of spin~$0$.
+
+\medskip\hrulefill\bigskip
+
+This decomposition, thanks to the zero divergence, can be generalised to a tensor field $(\Omega_{\alpha\beta})$ of rank~$2$ without any additional conditions, by applying the procedure in \cref{equation1} to each of the two indices.
+The schema of decomposition is then
+\begin{gather*}
+  \Omega_{\alpha\beta} = \omega_{\alpha\beta} + \HH^{-1}\left(
+    \diffp{{B_\beta}}{{x_\alpha}} + \diffp{{C_\alpha}}{{x_\beta}}
+  \right) + \HH^{-2}\diffp{\Sigma}{{{x_\alpha}}{{x_\beta}}},
+\\\diffp{{\omega_{\alpha\beta}}}{{x_\alpha}} = \diffp{{\omega_{\beta\alpha}}}{{x_\alpha}} = 0,
+\\\diffp{{B_\alpha}}{{x_\alpha}} = \diffp{{C_\alpha}}{{x_\alpha}} = 0.
+\end{gather*}
+But $\omega_{\alpha\beta}$ can be decomposed into a symmetric tensor $\theta_{\alpha\beta}$ and an antisymmetric tensor $\varphi_{\alpha\beta}$.
+Then
+\oldpage{13-04}
+\begin{gather*}
+  \Omega_{\alpha\beta} = \theta_{\alpha\beta} + \varphi_{\alpha\beta} + \HH^{-1}\left(
+    \diffp{{B_\beta}}{{x_\alpha}} + \diffp{{C_\alpha}}{{x_\beta}}
+  \right) + \HH^{-2}\diffp{\Sigma}{{x_\alpha}{x_\beta}},
+\\\diffp{{\theta_{\alpha\beta}}}{{x_\alpha}} = 0,
+  \quad \diffp{{\varphi_{\alpha\beta}}}{{x_\alpha}} = 0,
+\\\diffp{{B_\alpha}}{{x_\alpha}} = 0,
+  \quad \diffp{{C_\alpha}}{{x_\alpha}} = 0.
+\end{gather*}
+If $\Phi_{\alpha\beta}$ is an antisymmetric field of rank~$2$, then, without any additional conditions, the decomposition can evidently follow the schema
+\[
+\label{equation2}
+  \Phi_{\alpha\beta} = \varphi_{\alpha\beta} + \HH^{-1}\left(
+    \diffp{{B_\beta}}{{x_\alpha}} - \diffp{{B_\alpha}}{{x_\beta}}
+  \right).
+  \tag{2}
+\]
+For a symmetric field $\Theta_{\alpha\beta}$ of rank~$2$, the decomposition schema is
+\[
+  \Theta_{\alpha\beta} = \theta_{\alpha\beta} + \HH^{-1}\left(
+    \diffp{{B_\beta}}{{x_\alpha}} - \diffp{{B_\alpha}}{{x_\beta}}
+  \right) + \HH^{-2} \diffp{\Sigma}{{x_\alpha}{x_\beta}}.
+\]
+The composite fields $\Sigma$, $\varphi_{\alpha\beta}$, and $\theta_{\alpha\beta}$ all have a positive defined total energy, and $B_\alpha$ and $C_\alpha$ have a negative total energy.
+The positive and negative parts of the total energy and thus completely separated in a covariant way, thanks to the zero divergence.
+$\Sigma$ is a spinorial field; $B_\alpha$ and $C_\alpha$ are vector fields with zero divergence, and thus both of spin~$1$.
+The antisymmetric field $\varphi_{\alpha\beta}$ of zero divergence has only three independent components.
+It is equivalent to a \todo field of zero divergence, and it thus also a field of spin~$1$.
+$\theta_{\alpha\beta}$, having six independent components, does not represent a specific well-defined spin.
+
+\medskip\hrulefill\bigskip
+
+The field
 
 
 \end{document}
