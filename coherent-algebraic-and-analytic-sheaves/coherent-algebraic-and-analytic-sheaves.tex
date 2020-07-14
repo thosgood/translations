@@ -6,6 +6,7 @@
 \usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{tikz-cd}
+\usepackage{graphicx}
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
@@ -21,51 +22,53 @@
 
 \usepackage{amsthm}
 
-\theoremstyle{plain}
+  \theoremstyle{plain}
 
-\newtheorem{innercustomtheorem}{Theorem}
-\crefname{innercustomtheorem}{Theorem}{Theorems}
-\newenvironment{theorem}[1]
-  {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
-  {\endinnercustomtheorem}
+  \newtheorem{innercustomtheorem}{Theorem}
+  \crefname{innercustomtheorem}{Theorem}{Theorems}
+  \newenvironment{theorem}[1]
+    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
+    {\endinnercustomtheorem}
 
-\newtheorem{innercustomproposition}{Proposition}
-\crefname{innercustomproposition}{Proposition}{Propositions}
-\newenvironment{proposition}[1]
-  {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-  {\endinnercustomproposition}
+  \newtheorem{innercustomproposition}{Proposition}
+  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \newenvironment{proposition}[1]
+    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+    {\endinnercustomproposition}
 
-\newtheorem{innercustomlemma}{Lemma}
-\crefname{innercustomlemma}{Lemma}{Lemmas}
-\newenvironment{lemma}[1]
-  {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
-  {\endinnercustomlemma}
+  \newtheorem{innercustomlemma}{Lemma}
+  \crefname{innercustomlemma}{Lemma}{Lemmas}
+  \newenvironment{lemma}[1]
+    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
+    {\endinnercustomlemma}
 
-\newtheorem{innercustomcorollary}{Corollary}
-\crefname{innercustomcorollary}{Corollary}{Corollaries}
-\newenvironment{corollary}[1]
-  {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
-  {\endinnercustomcorollary}
+  \newtheorem{innercustomcorollary}{Corollary}
+  \crefname{innercustomcorollary}{Corollary}{Corollaries}
+  \newenvironment{corollary}[1]
+    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
+    {\endinnercustomcorollary}
 
 
-\theoremstyle{definition}
+  \theoremstyle{definition}
 
-\newtheorem*{remark}{Remark}
+  \newtheorem*{remark}{Remark}
 
-\newtheorem{innercustomdefinition}{Definition}
-\crefname{innercustomdefinition}{Definition}{Definitions}
-\newenvironment{definition}[1]
-  {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
-  {\endinnercustomdefinition}
+  \newtheorem{innercustomdefinition}{Definition}
+  \crefname{innercustomdefinition}{Definition}{Definitions}
+  \newenvironment{definition}[1]
+    {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
+    {\endinnercustomdefinition}
 
 
 %% Shortcuts %%
 
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
-\usepackage{aurical}
-\newcommand{\shHom}{\sh{H}\textup{\kern-2.2pt{\Fontauri\slshape om}}}
-\newcommand{\shExt}{\sh{E}\textup{\kern-2.2pt{\Fontauri\slshape xt}}}
+% \usepackage{aurical}
+% \newcommand{\shHom}{\sh{H}\textup{\kern-2.2pt{\Fontauri\slshape om}}}
+% \newcommand{\shExt}{\sh{E}\textup{\kern-2.2pt{\Fontauri\slshape xt}}}
+\newcommand{\shHom}{\underline{\operatorname{Hom}}}
+\newcommand{\shExt}{\underline{\operatorname{Ext}}}
 \newcommand{\HH}{\mathrm{H}}
 \newcommand{\EE}{\mathrm{E}}
 \newcommand{\RR}{\mathrm{R}}
@@ -729,6 +732,7 @@ this implies that the initial terms of the spectral sequences of both the domain
 
 \nocite{*}
 \bibliographystyle{acm}
+
 \begin{thebibliography}{1}
 
   \bibitem{1}
