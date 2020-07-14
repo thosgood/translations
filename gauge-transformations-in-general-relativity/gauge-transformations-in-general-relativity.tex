@@ -16,6 +16,8 @@
 
 \crefname{section}{Section}{Sections}
 \crefname{equation}{}{}
+\crefformat{footnote}{#2\footnotemark[#1]#3}
+
 
 %% Theorem environments %%
 
@@ -90,7 +92,6 @@
   \textsc{Winogradzki, J}. Les transformations de jauge en relativité généralisée. \emph{Séminaire L. de Broglie. Théories physiques}, Volume~24 (1954-1955), Talk no.~10, 10~p. {\footnotesize\url{http://www.numdam.org/item/SLDB_1954-1955__24__A9_0/}}
 \end{abstract}
 
-\renewcommand*{\thefootnote}{(\arabic{footnote})}
 \setcounter{footnote}{0}
 
 \tableofcontents
@@ -103,9 +104,9 @@
 The Universe of the theory of General Relativity is a quadri-dimensional affine and metric space, with the metric being given by a second-order tensor which represents the field.
 In general, the affine connection and the metric tensor are asymmetric.
 The equations of the field were established in different ways, one of which, due to Einstein, is particularly interesting.
-The principal of General Relativity being insufficient to determine the equations of the generalised field, Einstein substituted the principal of General Relativity with a stricter theory of Relativity, and it is from this principal that he deduced the field equations.
+The principle of General Relativity being insufficient to determine the equations of the generalised field, Einstein substituted the principle of General Relativity with a stricter theory of Relativity, and it is from this principle that he deduced the field equations.
 He showed that, effectively, the field equations are practically determined if we ask for them to be invariant under $\lambda$-transformations.
-\footnote{\textsc{A. Einstein}. Generalization of Gravitation Theory. Appendix II of \emph{the Meaning of Relativity}. Princeton, 1953. \emph{(We will use the notation from this paper.)}\\\textsc{A. Einstein}. Extension du group relativiste. Dans \emph{Louis de Broglie Physicien et Penseur}. Albin Michel, 1953.}
+\footnote{\label{footnote1}\textsc{A. Einstein}. Generalization of Gravitation Theory. Appendix II of \emph{the Meaning of Relativity}. Princeton, 1953. \emph{(We will use the notation from this paper.)}\\\textsc{A. Einstein}. Extension du group relativiste. Dans \emph{Louis de Broglie Physicien et Penseur}. Albin Michel, 1953.}
 
 It is not necessary to impose a priori the precise nature of the extension of the relativistic group; some simple consideration suggests a postulate from which it can be determined.
 The same postulate leads to the field equations.
@@ -156,6 +157,22 @@ We will try to modify it whilst staying as close as possible to (E).
 The set (E) of postulates is equivalent to the set containing postulates~I, III, IVa, and another postulate that combines II and V:
 \begin{enumerate}
   \item[Va.] The variations take places under the a priori conditions $g_{ik}=g_{ki}$ and $\Gamma_{km}^i=\Gamma_{mk}^i$.
+\end{enumerate}
+
+So (E') differs from (E) only by the last postulate; it is thus this postulate that we will modify.
+We will base our modification on the Einsteinian idea of an extension of the relativistic group\cref{footnote1}, but without imposing a priori, as Einstein did, the precise nature of this extension.
+
+The numerous systems of field equations following from (E') are already invariant, not only under coordinate transformations, but also under certain other transformations.
+The hypothesis that the field equations satisfy a stricter principle of Relativity than that of General Relativity is thus not sufficient to indicate how we must modify postulate~V.
+So, short of introducing an arbitrary limitation, the only option left is to accept the validity of a principle of Relativity
+\oldpage{10-03}
+that is as strict as possible, i.e. the invariance of the field equations with respect to the largest group possible.
+To give the hypothesis the necessary precision, it suffices to accept that the transformations that constitute the extension of the relativistic group (that we will call ``gauge transformations'', to evoke the analogy with electromagnetism) posses certain general properties.
+Denote by $J$ the group of transformations possessing these general properties of gauge transformation.
+To obtain the field equations that satisfy the stricter principle of Relativity, all whilst modifying postulate~V as little as possible, we will replace postulate~V by the following:
+\begin{enumerate}
+  \item[Vb.] The variations take place without any a priori conditions, unless a variation linked to the metric tensor or the affine connection does not give field equations that satisfy a stricter principle of Relativity than the equations obtained by free variation\todo.
+    In this case, we impose \todo
 \end{enumerate}
 
 
