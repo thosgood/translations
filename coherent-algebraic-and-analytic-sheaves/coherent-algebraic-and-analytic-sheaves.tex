@@ -18,6 +18,7 @@
 \crefname{section}{Section}{Sections}
 \crefname{equation}{}{}
 
+
 %% Theorem environments %%
 
 \usepackage{amsthm}
@@ -83,7 +84,6 @@
 %% Document %%
 
 \usepackage{embedall}
-\embedfile{\jobname.bib}
 \begin{document}
 
 \renewcommand{\abstractname}{Translator's note.}
@@ -99,7 +99,7 @@
   \emph{What follows is a translation (last updated \today) of the French paper:}
 
   \medskip\noindent
-  \textsc{Grothendieck, A.}. Sur les faisceaux algébriques et les faisceaux analytiques cohérents. \emph{Séminaire Henri Cartan}, Volume~9 (1956-1957), Talk no.~2, pp.~1–16. {\footnotesize\url{http://www.numdam.org/item/SHC_1956-1957__9__A2_0/}}
+  \textsc{Grothendieck, A}. Sur les faisceaux algébriques et les faisceaux analytiques cohérents. \emph{Séminaire Henri Cartan}, Volume~\textbf{9} (1956-1957), Talk no.~2, pp.~1–16. {\footnotesize\url{http://www.numdam.org/item/SHC_1956-1957__9__A2_0/}}
 \end{abstract}
 
 \tableofcontents
@@ -731,6 +731,25 @@ this implies that the initial terms of the spectral sequences of both the domain
 
 \nocite{*}
 \bibliographystyle{acm}
-\bibliography{\jobname}
+\begin{thebibliography}{1}
+
+  \bibitem{1}
+  {\sc Serre, J.~P.}
+  \newblock Faisceaux algébriques cohérents.
+  \newblock {\em Annals of Mathematics 61\/} (1955), 197--278.
+
+  \bibitem{2}
+  {\sc Serre, J.~P.}
+  \newblock Géométrie algébrique et géométrie analytique.
+  \newblock {\em Annales de l'Institut Fourier 6\/} (1955--56), 1--42.
+
+  \bibitem{3}
+  {\sc Serre, J.~P.}
+  \newblock Sur la cohomologie des variétés algébriques.
+  \newblock {\em Journal de Math. p. et appl.\/} (1957).
+  \newblock To appear.
+
+\end{thebibliography}
+
 
 \end{document}

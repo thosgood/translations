@@ -29,13 +29,13 @@ Compiled PDFs of completed translations can be found at [https://thosgood.com/pa
   WINOGRADZKI, J. Les transformations de jauge en relativité généralisée. _Séminaire L. de Broglie. Théories physiques_, Volume **24** (1954-1955), Talk no. 10, 10 p. http://www.numdam.org/item/SLDB_1954-1955__24__A9_0/
 - [ ] [`tensor-fields`](https://github.com/thosgood/translations/tree/master/tensor-fields)
 
-  TZOU, K. H. Les champs tensoriels. _Séminaire L. de Broglie. Théories physiques_, Volume 24 (1954-1955), Talk no. **13**, 9 p. http://www.numdam.org/item/SLDB_1954-1955__24__A12_0/
+  TZOU, K. H. Les champs tensoriels. _Séminaire L. de Broglie. Théories physiques_, Volume **24** (1954-1955), Talk no. 13, 9 p. http://www.numdam.org/item/SLDB_1954-1955__24__A12_0/
 
 ## Séminaire Schwartz
 
 - [x] [`the-theory-of-nuclear-operators`](https://github.com/thosgood/translations/tree/master/the-theory-of-nuclear-operators)
 
-  SCHWARTZ, L. La théorie des opérateurs nucléaires. _Séminaire Schwartz_, Volume 1 (1953-1954), Talk no. **12**, 7 p. http://www.numdam.org/item/SLS_1953-1954__1__A13_0/
+  SCHWARTZ, L. La théorie des opérateurs nucléaires. _Séminaire Schwartz_, Volume **1** (1953-1954), Talk no. 12, 7 p. http://www.numdam.org/item/SLS_1953-1954__1__A13_0/
 
 # Other
 
