@@ -31,7 +31,7 @@ Here are some papers that I've translated into English. Any comments or correcti
 
 ## Séminaire Schwartz
 
-- [x] [`the-theory-of-nuclear-operators`](https://github.com/thosgood/translations/tree/master/the-theory-of-nuclear-operators) [live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=the-theory-of-nuclear-operators%2Fthe-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1594735239381)
+- [x] [`the-theory-of-nuclear-operators`](https://github.com/thosgood/translations/tree/master/the-theory-of-nuclear-operators) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=the-theory-of-nuclear-operators%2Fthe-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1594735239381)
 
   SCHWARTZ, L. La théorie des opérateurs nucléaires. _Séminaire Schwartz_, Volume **1** (1953-1954), Talk no. 12, 7 p. http://www.numdam.org/item/SLS_1953-1954__1__A13_0/
 
