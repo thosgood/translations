@@ -10,59 +10,24 @@
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
+\usepackage{newtxmath} %% necessary to get \partial with ebgaramond-maths
 \usepackage{ebgaramond-maths}
 \usepackage{mathpazo}
+
+\makeatletter
+  \DeclareSymbolFont{ntxletters}{OML}{ntxmi}{m}{it}
+  \SetSymbolFont{ntxletters}{bold}{OML}{ntxmi}{b}{it}
+  \re@DeclareMathSymbol{\partial}{\mathord}{ntxletters}{"40}
+\makeatother
 
 
 \crefname{section}{Section}{Sections}
 \crefname{equation}{}{}
 
-%% Theorem environments %%
-
-\usepackage{amsthm}
-
-  \theoremstyle{plain}
-
-  \newtheorem{innercustomtheorem}{Theorem}
-  \crefname{innercustomtheorem}{Theorem}{Theorems}
-  \newenvironment{theorem}[1]
-    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
-    {\endinnercustomtheorem}
-
-  \newtheorem{innercustomproposition}{Proposition}
-  \crefname{innercustomproposition}{Proposition}{Propositions}
-  \newenvironment{proposition}[1]
-    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-    {\endinnercustomproposition}
-
-  \newtheorem{innercustomlemma}{Lemma}
-  \crefname{innercustomlemma}{Lemma}{Lemmas}
-  \newenvironment{lemma}[1]
-    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
-    {\endinnercustomlemma}
-
-  \newtheorem{innercustomcorollary}{Corollary}
-  \crefname{innercustomcorollary}{Corollary}{Corollaries}
-  \newenvironment{corollary}[1]
-    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
-    {\endinnercustomcorollary}
-
-
-  \theoremstyle{definition}
-
-  \newtheorem*{remark}{Remark}
-
-  \newtheorem{innercustomdefinition}{Definition}
-  \crefname{innercustomdefinition}{Definition}{Definitions}
-  \newenvironment{definition}[1]
-    {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
-    {\endinnercustomdefinition}
-
 
 %% Shortcuts %%
 
-\newcommand{\sh}{\mathscr}
-\newcommand{\cat}{\mathcal}
+\newcommand{\ham}{\mathscr{H}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -98,23 +63,15 @@
 %% Content %%
 
 \bigskip\bigskip
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\oldpage{13-01}
+The theory of elementary particles consists of associating, to each type of particle, a field.
+The field is chosen according to the spin of the particle.
+According to the means of description, the fields can be classified into two categories.
+Firstly, there are the \emph{spinorial fields}, whose variables are spinors ($\psi_{\alpha\beta\ldots}$) that satisfy first-order differential equations of the following type:
+\[
+  \left(\gamma_\lambda \frac{\partial}{\partial x_\lambda} + \ham\right)\psi = 0
+\]
+where $\gamma_\lambda$ is
 
-
-\section{!!!!!!!!!!!!!!!!!!!}
-\label{section1}
-
-
-
-%% Bibliography %%
-
-\nocite{*}
-\bibliographystyle{acm}
-\bibliography{\jobname}
 
 \end{document}
