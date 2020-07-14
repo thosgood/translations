@@ -10,16 +10,9 @@
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
-\usepackage{newtxmath} %% necessary to get \partial with ebgaramond-maths
-\usepackage{ebgaramond-maths}
+\usepackage{Baskervaldx}
 \usepackage{mathpazo}
-
-\makeatletter
-  \DeclareSymbolFont{ntxletters}{OML}{ntxmi}{m}{it}
-  \SetSymbolFont{ntxletters}{bold}{OML}{ntxmi}{b}{it}
-  \re@DeclareMathSymbol{\partial}{\mathord}{ntxletters}{"40}
-\makeatother
-
+\usepackage{esdiff}
 
 \crefname{section}{Section}{Sections}
 \crefname{equation}{}{}
@@ -27,8 +20,10 @@
 
 %% Shortcuts %%
 
-\newcommand{\ham}{\mathscr{H}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\LL}{\mathscr{L}}
 
+\renewcommand{\d}{\,\mathrm{d}}
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
@@ -69,9 +64,77 @@ The field is chosen according to the spin of the particle.
 According to the means of description, the fields can be classified into two categories.
 Firstly, there are the \emph{spinorial fields}, whose variables are spinors ($\psi_{\alpha\beta\ldots}$) that satisfy first-order differential equations of the following type:
 \[
-  \left(\gamma_\lambda \frac{\partial}{\partial x_\lambda} + \ham\right)\psi = 0
+  \left(\gamma_\lambda \diffp{}{{x_\lambda}} + \HH\right)\psi = 0
 \]
-where $\gamma_\lambda$ is
+where $\gamma_\lambda$ is four matrices belonging to a certain non-commutative algebra [L.~de~Broglie, N.~Kemmer].
+With spinorial fields, we can account for half-integer-spin particles as well as integer-spin particles.
+A spinor with a single index $(\psi_\alpha)$ represents a field of spin~$\frac12$.
+A spinorial field with two indices $(\psi_{\alpha\beta})$ does not correspond to a specific well-defined spin, but it can be reduced to a field of total spin~$1$ and a field of spin~$0$ with a zero component.
+It is thus a field of maximum total spin~$1$.
+
+In the particular case of integer spin, the description of fields can be given, in a different way, by means of tensors $(\Psi_{\lambda,\rho})$ satisfying second-order differential equations [A.~Proca, N.~Kemmer, M. Fierz].
+Since the fundamental second-order differential operator is $\square-\HH^2$, the field equations are equations of Dalembertien type:
+\[
+  \Big(\square-\HH^2\Big)\Psi = 0.
+\]
+If $\Psi$ is a scalar, then the field represents particles of spin~$0$.
+A vector field does not correspond to a well-defined spin.
+If we also require it to satisfy the condition of zero divergence, then it will be a field of total spin~$1$.
+If not, it has four independent components, and we can prove that it represents a superposition of four states of well-defined spin: three states of spin~$1$, and one of spin~$0$.
+These spin states can be separated in an explicit way (for $\HH\neq0$).
+The vector field is thus also, like the spinorial field with two indices,
+\oldpage{13-02}
+a field of maximum total spin~$1$.
+
+In general, a tensor field without additional conditions does not represent a well-defined spin, but a mixture of certain well-defined spins.
+Each non-zero component of the tensor corresponds to a certain spin states.
+The spin states can be decomposed in an explicit way (for $\HH\neq0$).
+Also, the field does not have a positive defined total energy.
+But the decomposition of the spin states is also the covariant decomposition of the positive and negative parts of the total energy.
+
+
+\section{Free fields}
+\label{section1}
+
+The Lagrangian of a tensor field $(\Psi_{\alpha_1\ldots\alpha_n})$ of rank $n$ is
+\[
+  \LL = -\frac12\left(
+    \diffp{\Psi}{{x_\lambda}} \diffp{\Psi}{{x_\lambda}} + \HH^2\Psi\Psi
+  \right).
+\]
+The stress-energy tensor of the field can then be written as
+\[
+  T_{\mu\nu} = \frac12\left[
+    \diffp{\Psi}{{x_\mu}} \diffp{\Psi}{{x_\nu}}
+    + \diffp{\Psi}{{x_\mu}} \diffp{\Psi}{{x_\nu}}
+    -\delta_{\mu\nu}\left(
+      \diffp{\Psi}{{x_\lambda}} \diffp{\Psi}{{x_\lambda}} + \HH^2\Psi\Psi
+    \right)
+  \right],
+\]
+and the total stress-energy as
+\[
+  P_\nu = \frac1c \int_\sigma T_{\mu\nu}\d\sigma_\mu.
+\]
+By the general principle of variation of the Lagrangian formalism, the total angular momentum of the field is composed of two parts: $M_{\mu\nu}+S_{\mu\nu}$, where $M_{\mu\nu}$ is the orbital angular momentum
+\[
+  M_{\mu\nu} = \frac1c \int_\sigma (x_\mu T_{\lambda\nu} - x_\nu T_{\lambda\mu}) \d\sigma_\lambda
+\]
+and $S_{\mu\nu}$ is the spin of the field
+\[
+  S_{\mu\nu} = \frac1c \int_\sigma S_{\lambda\mu\nu} \d\sigma_\lambda
+\]
+where
+\begin{align*}
+  S_{\lambda\mu\nu} = \sum_{i=1}^n \Bigg[
+    &\diffp{{\Psi_{\alpha_1\ldots\alpha_{i-1}\alpha_\mu\alpha_{i+1}\ldots\alpha_n}}}{{x_\lambda}} \Psi_{\alpha_1\ldots\alpha_{i-1}\alpha_\nu\alpha_{i+1}\ldots\alpha_n}
+    \\-&
+    \diffp{{\Psi_{\alpha_1\ldots\alpha_{i-1}\alpha_\nu\alpha_{i+1}\ldots\alpha_n}}}{{x_\lambda}} \Psi_{\alpha_1\ldots\alpha_{i-1}\alpha_\mu\alpha_{i+1}\ldots\alpha_n}
+  \Bigg]
+\end{align*}
+
+\oldpage{13-03}
+First we will study a vector field
 
 
 \end{document}
