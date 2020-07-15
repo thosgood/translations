@@ -13,8 +13,9 @@
 \usepackage{Baskervaldx}
 \usepackage{mathpazo}
 
-\crefname{section}{Section}{Sections}
+
 \crefname{equation}{}{}
+\renewcommand{\thesection}{\Roman{section}}
 
 
 %% Shortcuts %%
@@ -63,14 +64,14 @@
 The theory of elementary particles consists of associating, to each type of particle, a field.
 The field is chosen according to the spin of the particle.
 According to the means of description, the fields can be classified into two categories.
-Firstly, there are the \emph{spinorial fields}, whose variables are spinors ($\psi_{\alpha\beta\ldots}$) that satisfy first-order differential equations of the following type:
+Firstly, there are the \emph{spinor fields}, whose variables are spinors ($\psi_{\alpha\beta\ldots}$) that satisfy first-order differential equations of the following type:
 \[
   \left(\gamma_\lambda \diffp{}{{x_\lambda}} + \HH\right)\psi = 0
 \]
 where $\gamma_\lambda$ is four matrices belonging to a certain non-commutative algebra [L.~de~Broglie, N.~Kemmer].
-With spinorial fields, we can account for half-integer-spin particles as well as integer-spin particles.
+With spinor fields, we can account for half-integer-spin particles as well as integer-spin particles.
 A spinor with a single index $(\psi_\alpha)$ represents a field of spin~$\frac12$.
-A spinorial field with two indices $(\psi_{\alpha\beta})$ does not correspond to a specific well-defined spin, but it can be reduced to a field of total spin~$1$ and a field of spin~$0$ with a zero component.
+A spinor field with two indices $(\psi_{\alpha\beta})$ does not correspond to a specific well-defined spin, but it can be reduced to a field of total spin~$1$ and a field of spin~$0$ with a zero component.
 It is thus a field of maximum total spin~$1$.
 
 In the particular case of integer spin, the description of fields can be given, in a different way, by means of tensors $(\Psi_{\lambda,\rho})$ satisfying second-order differential equations [A.~Proca, N.~Kemmer, M. Fierz].
@@ -83,7 +84,7 @@ A vector field does not correspond to a well-defined spin.
 If we also require it to satisfy the condition of zero divergence, then it will be a field of total spin~$1$.
 If not, it has four independent components, and we can prove that it represents a superposition of four states of well-defined spin: three states of spin~$1$, and one of spin~$0$.
 These spin states can be separated in an explicit way (for $\HH\neq0$).
-The vector field is thus also, like the spinorial field with two indices,
+The vector field is thus also, like the spinor field with two indices,
 \oldpage{13-02}
 a field of maximum total spin~$1$.
 
@@ -166,7 +167,7 @@ Then $F_{\lambda\rho}=\diffp{{B_\rho}}{{x_\lambda}}-\diffp{{B_\lambda}}{{x_\rho}
 So $B_\lambda$ determines $F_{\lambda\rho}$, and $\Sigma$ determines $X$ separately.
 With \cref{equation1}, $\LL$, $P_\nu$, and $M_{\mu\nu}+S_{\mu\nu}$ all decompose into two independent parts, one of which corresponds to $B_\lambda$ and the other to $\Sigma$.
 But $S_{\mu\nu}^{(\Sigma)}=0$, $P_0^{(\Sigma)}<0$, and $P_0^{(\Sigma)}>0$.
-The field $A_\lambda$ thus decomposes explicitly in terms of $B_\lambda$ and $\Sigma$, with $B_\lambda$ a vector field of zero divergence, and thus of total spin~$1$, and $\Sigma$ a spinorial field of spin~$0$.
+The field $A_\lambda$ thus decomposes explicitly in terms of $B_\lambda$ and $\Sigma$, with $B_\lambda$ a vector field of zero divergence, and thus of total spin~$1$, and $\Sigma$ a spinor field of spin~$0$.
 
 \medskip\hrulefill\bigskip
 
@@ -207,7 +208,7 @@ For a symmetric field $\Theta_{\alpha\beta}$ of rank~$2$, the decomposition sche
 \]
 The composite fields $\Sigma$, $\varphi_{\alpha\beta}$, and $\theta_{\alpha\beta}$ all have a positive defined total energy, and $B_\alpha$ and $C_\alpha$ have a negative total energy.
 The positive and negative parts of the total energy and thus completely separated in a covariant way, thanks to the zero divergence.
-$\Sigma$ is a spinorial field; $B_\alpha$ and $C_\alpha$ are vector fields with zero divergence, and thus both of spin~$1$.
+$\Sigma$ is a spinor field; $B_\alpha$ and $C_\alpha$ are vector fields with zero divergence, and thus both of spin~$1$.
 The antisymmetric field $\varphi_{\alpha\beta}$ of zero divergence has only three independent components.
 It is equivalent to a \todo field of zero divergence, and it thus also a field of spin~$1$.
 $\theta_{\alpha\beta}$, having six independent components, does not represent a specific well-defined spin.
@@ -215,7 +216,7 @@ $\theta_{\alpha\beta}$, having six independent components, does not represent a 
 \medskip\hrulefill\bigskip
 
 The field $\theta_{\alpha\beta}$ in fact represents a mixture of two spins: $2$ and $0$.
-The trace $\theta_{\alpha\alpha}$ constitutes a component spinorial field, and can be explicitly separated from the other components of the field.
+The trace $\theta_{\alpha\alpha}$ constitutes a component spinor field, and can be explicitly separated from the other components of the field.
 The decomposition follows the schema
 \begin{gather*}
   \theta_{\alpha\beta} = \overline{\theta}_{\alpha\beta} + \d_{\alpha\beta}\overline{\Sigma},
@@ -224,7 +225,7 @@ The decomposition follows the schema
 \\\mbox{where $\d_{\alpha\beta}=\delta_{\alpha\beta}-\HH^{-2}\diffp{}{{x_\alpha}{x_\beta}}$.}
 \end{gather*}
 
-Then $\theta_{\alpha\alpha}=3\overline{\Sigma}$ constitutes a spinorial field, and $\overline{\theta}_{\alpha\beta}$, satisfying the zero divergence and zero trace conditions, and having five independent components, is indeed a field of total spin~$2$.
+Then $\theta_{\alpha\alpha}=3\overline{\Sigma}$ constitutes a spinor field, and $\overline{\theta}_{\alpha\beta}$, satisfying the zero divergence and zero trace conditions, and having five independent components, is indeed a field of total spin~$2$.
 The two fields have a positive total energy.
 Finally, the complete decomposition schema of the symmetric field $\theta_{\alpha\beta}$ with respect to the spin states can be written as
 \oldpage{13-05}
@@ -267,6 +268,46 @@ If $A_\lambda$ satisfies the zero divergence conditions, then \cref{equation5} c
 So \cref{equation5} is thus the gauge transformation, and $A_\lambda$ is gauge invariant.
 The gauge invariance is a necessary condition for being able to define the spin of quanta with zero proper mass.
 
-If $\Theta_{\alpha\beta}$ is a symmetric field of rank~$2$ of zero proper mass, then the trace $\Theta_{\alpha\alpha}$ constitutes
+If $\Theta_{\alpha\beta}$ is a symmetric field of rank~$2$ of zero proper mass, then the trace $\Theta_{\alpha\alpha}$ constitutes a component spinor field, and can be explicitly separated, despite the zero proper mass.
+This follows from the fact that the trace is only a simple algebraic relation between certain components of the field.
+The separation of the trace follows the schema
+\[
+\label{equation6}
+  \Theta_{\alpha\beta} = \overline{\Theta}_{\alpha\beta} + \delta_{\alpha\beta}\overline{\Sigma},
+  \quad
+  \overline{\Theta}_{\alpha\alpha} = 0.
+  \tag{6}
+\]
+
+\oldpage{13-06}
+$\Theta_{\alpha\beta}$ constitutes a spinor field of zero proper mass.
+$\overline{\Theta}_{\alpha\beta}$ has again nine independent components, and does not correspond to a specific well-defined spin.
+But it is impossible to decompose it again by using the zero divergence, as we did in the non-zero proper mass case.
+If $\overline{\Theta}_{\alpha\beta}$ satisfies the zero-divergence condition, then it will be gauge invariant with respect to the following gauge transformation (see \cref{equation3}):
+\[
+\label{equation7}
+  \left\{
+  \begin{gathered}
+    \overline{\Theta}_{\alpha\beta} = \overline{\theta}_{\alpha\beta} + \diffp{{B_\beta}}{{x_\alpha}} + \diffp{{B_\alpha}}{{x_\beta}} + \diffp{\Sigma}{{x_\alpha}{x_\beta}},
+  \\\overline{\Theta}_{\alpha\alpha} = 0,
+    \quad \diffp{{\overline{\theta}_{\alpha\beta}}}{{x_\alpha}} = 0,
+    \quad \diffp{{B_\alpha}}{{x_\alpha}} = 0.
+  \end{gathered}
+  \right.
+  \tag{7}
+\]
+$\overline{\Theta}_{\alpha\beta}$ is equivalent to $\overline{\theta}_{\alpha\beta}$ and $B_\alpha$, and $\Sigma$ does not constitute a field.
+In this case, $\overline{\Theta}_{\alpha\beta}$ has only two independent components, corresponding to the two possible states of spin~$2$ in the case of zero proper mass.
+This approach can be easily generalised to tensor fields of zero proper mass of arbitrary rank.
+
+
+\section{Interactions with the spinor field}
+\label{section2}
+
+The interaction of a vector (or \todo) field $(A_\lambda)$ with the Dirac spinor field $(\Psi)$ can be introduced with the Lagrangian of the interaction
+\[
+  \LL' = \HH^{-1}\SS X + \
+\]
+
 
 \end{document}
