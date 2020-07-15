@@ -14,32 +14,32 @@
 
 \usepackage{amsthm}
 
-\theoremstyle{plain}
+  \theoremstyle{plain}
 
-\newtheorem{innercustomproposition}{Proposition}
-\crefname{innercustomproposition}{Proposition}{Propositions}
-\newenvironment{proposition}[1]
-  {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-  {\endinnercustomproposition}
+  \newtheorem{innercustomproposition}{Proposition}
+  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \newenvironment{proposition}[1]
+    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+    {\endinnercustomproposition}
 
-\newtheorem{innercustomlemma}{Lemma}
-\crefname{innercustomlemma}{Lemma}{Lemmas}
-\newenvironment{lemma}[1]
-  {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
-  {\endinnercustomlemma}
+  \newtheorem{innercustomlemma}{Lemma}
+  \crefname{innercustomlemma}{Lemma}{Lemmas}
+  \newenvironment{lemma}[1]
+    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
+    {\endinnercustomlemma}
 
-\newtheorem{innercustomcorollary}{Corollary}
-\crefname{innercustomcorollary}{Corollary}{Corollaries}
-\newenvironment{corollary}[1]
-  {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
-  {\endinnercustomcorollary}
+  \newtheorem{innercustomcorollary}{Corollary}
+  \crefname{innercustomcorollary}{Corollary}{Corollaries}
+  \newenvironment{corollary}[1]
+    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
+    {\endinnercustomcorollary}
 
 
-\theoremstyle{definition}
+  \theoremstyle{definition}
 
-\newtheorem*{remark}{Remark}
-\newtheorem*{definition}{Definition}
-\newtheorem*{examples}{Examples}
+  \newtheorem*{remark}{Remark}
+  \newtheorem*{definition}{Definition}
+  \newtheorem*{examples}{Examples}
 
 
 %% Shortcuts %%
@@ -324,17 +324,33 @@ We can show \cite{7} that the $\RR^qf$ are the \emph{derived functors} of the fu
 \begin{examples}
   \begin{enumerate}
     \item If $X\to Y$ is an injection of a closed subvariety, then the sheaf $\RR^0f(\sh{F})$ is exactly the sheaf $\sh{F}$ extended by $0$ outside of $X$, and the sheaves $\RR^qf(\sh{F})$, for $q\geq1$, are zero (let $U$ be an affine open; then $f^{-1}(U)=U\cap X$ is affine, whence $\RR^qf(\sh{F})=0$).
+      \label{example1}
     \item Let $Y$ be a point.
       A sheaf on a point is simply a group (or a $k$-vector space, if we are talking about algebraic sheaves).
       The $\RR^qf(\sh{F})$ are then simply the cohomology groups $\HH^q(X,\sh{F})$;
       we note that these are not necessarily vector spaces \emph{of finite dimension} (or, in other words, not necessarily \emph{coherent} sheaves on $Y$).
+        \label{example2}
     \item Suppose that $f\colon X\to Y$ defines a birational isomorphism between the varieties $X$ and $Y$ (assumed to be projective and non-singular).
       Take $\sh{F}$ to be the sheaf $\sh{O}_X$ of local rings of $X$;
       we immediately see that $\RR^0f(\sh{O}_X)=\sh{O}_Y$.
       Is it true that $\RR^qf(\sh{O}_X)=0$ for $q\geq1$?
       We can at least verify this for ``blow-ups'', and it would be interesting to know the answer in the general case.
+      \label{example3}
   \end{enumerate}
 \end{examples}
+
+We note that Leray's theory can be translated without any changes (see \cite{7});
+there is a spectral sequence abutting $\HH^\bullet(X,\sh{F})$, and with $E_2^{p,q}=\HH^p(Y,\RR^qf(\sh{F}))$.
+If we apply, for example, this spectral sequence
+\oldpage{103}
+to \hyperref[example3]{Example~3} above, then we see that $\RR^qf(\sh{O}_X)=0$ for $q\geq1$ implies that $\HH^\bullet(X,\sh{O}_X)=\HH^\bullet(Y,\sh{O}_Y)$.
+
+We have seen (\hyperref[example2]{Example~2}) that the $\RR^qf(\sh{F})$ are not, in general, coherent sheaves on $Y$.
+However:
+
+\begin{theorem}{1}
+  If $f\colon X\to Y$ is proper, then the $\RR^qf(\sh{F})$, for $q>0$, are coherent sheaves on $Y$, for any coherent sheaf $\sh{F}$ on $X$.
+\end{theorem}
 
 
 %% Bibliography %%

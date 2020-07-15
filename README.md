@@ -20,15 +20,6 @@ Here are some papers that I've translated into English. Any comments or correcti
 
   GROTHENDIECK, A. Sur les faisceaux algébriques et les faisceaux analytiques cohérents. _Séminaire Henri Cartan_, Volume **9** (1956-1957) , Talk no. 2, pp. 1–16. http://www.numdam.org/item/SHC_1956-1957__9__A2_0/
 
-## Séminaire L. de Broglie. Théories physiques
-
-- [ ] [`gauge-transformations-in-general-relativity`](https://github.com/thosgood/translations/tree/master/gauge-transformations-in-general-relativity)
-
-  WINOGRADZKI, J. Les transformations de jauge en relativité généralisée. _Séminaire L. de Broglie. Théories physiques_, Volume **24** (1954-1955), Talk no. 10, 10 p. http://www.numdam.org/item/SLDB_1954-1955__24__A9_0/
-- [ ] [`tensor-fields`](https://github.com/thosgood/translations/tree/master/tensor-fields)
-
-  TZOU, K. H. Les champs tensoriels. _Séminaire L. de Broglie. Théories physiques_, Volume **24** (1954-1955), Talk no. 13, 9 p. http://www.numdam.org/item/SLDB_1954-1955__24__A12_0/
-
 ## Séminaire Schwartz
 
 - [x] [`the-theory-of-nuclear-operators`](https://github.com/thosgood/translations/tree/master/the-theory-of-nuclear-operators) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=the-theory-of-nuclear-operators%2Fthe-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1594735239381)
