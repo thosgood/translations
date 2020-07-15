@@ -12,13 +12,14 @@
 %% Fancy fonts --- feel free to remove! %%
 \usepackage{Baskervaldx}
 \usepackage{mathpazo}
-\usepackage{esdiff}
 
 \crefname{section}{Section}{Sections}
 \crefname{equation}{}{}
 
 
 %% Shortcuts %%
+
+\usepackage{esdiff}
 
 \newcommand{\HH}{\mathscr{H}}
 \newcommand{\LL}{\mathscr{L}}
@@ -223,5 +224,49 @@ The decomposition follows the schema
 \\\mbox{where $\d_{\alpha\beta}=\delta_{\alpha\beta}-\HH^{-2}\diffp{}{{x_\alpha}{x_\beta}}$.}
 \end{gather*}
 
+Then $\theta_{\alpha\alpha}=3\overline{\Sigma}$ constitutes a spinorial field, and $\overline{\theta}_{\alpha\beta}$, satisfying the zero divergence and zero trace conditions, and having five independent components, is indeed a field of total spin~$2$.
+The two fields have a positive total energy.
+Finally, the complete decomposition schema of the symmetric field $\theta_{\alpha\beta}$ with respect to the spin states can be written as
+\oldpage{13-05}
+\[
+\label{equation3}
+  \Theta_{\alpha\beta} = \overline{\theta}_{\alpha\beta} + \HH^{-1}\left(
+    \diffp{{B_\beta}}{{x_\alpha}} + \diffp{{B_\alpha}}{{x_\beta}}
+  \right) + \HH^{-2} \diffp{\Sigma}{{x_\alpha}{x_\beta}} + \d_{\alpha\beta}\overline{\Sigma}.
+  \tag{3}
+\]
+For the general rank-$2$ field $\Omega_{\alpha\beta}$, the complete schema is
+\[
+\label{equation4}
+  \Omega_{\alpha\beta} = \overline{\theta}_{\alpha\beta} + \varphi_{\alpha\beta} + \HH^{-1}\left(
+    \diffp{{B_\beta}}{{x_\alpha}} + \diffp{{C_\alpha}}{{x_\beta}}
+  \right) + \HH^{-2} \diffp{\Sigma}{{x_\alpha}{x_\beta}} + \d_{\alpha\beta}\overline{\Sigma}.
+  \tag{4}
+\]
+
+The explicit decomposition of the spin states can be generalised to tensor fields of arbitrary rank.
+
+\medskip\hrulefill\bigskip
+
+Up until now we have assumed that the proper mass of the quanta is different from zero ($\HH\neq0$).
+If the proper mass is strictly zero, then the problem is very different.
+For a vector field $(A_\lambda)$, for example, if we try the same ``decomposition'' as in the non-zero mass case, the schema should be
+\[
+\label{equation5}
+  A_\lambda = B_\lambda + \diffp{\Sigma}{{x_\lambda}},
+  \quad
+  \diffp{{B_\lambda}}{{x_\lambda}} = 0.
+  \tag{5}
+\]
+But then $\diffp{{A_\lambda}}{{x_\lambda}}=0$ as well, and $A_\lambda$ is, from the physical point of view, equivalent to $B_\lambda$, whereas $\Sigma$ does not constitute a field.
+The schema in \cref{equation5} automatically imposes upon $A_\lambda$ the zero-divergence condition.
+$B_\lambda$ has only two independent components, corresponding to the two possible states of total spin~$1$, in the case of zero proper mass.
+Then, if $A_\lambda$ does not satisfy any additional conditions, the procedure in \cref{equation5} cannot be applied to it.
+There is thus no way of decomposing the spin states of the field $A_\lambda$, and it is impossible to say which spin, or which mixture of spins, can represent this field.
+If $A_\lambda$ satisfies the zero divergence conditions, then \cref{equation5} can be applied, and $A_\lambda$ is then equivalent to $B_\lambda$.
+So \cref{equation5} is thus the gauge transformation, and $A_\lambda$ is gauge invariant.
+The gauge invariance is a necessary condition for being able to define the spin of quanta with zero proper mass.
+
+If $\Theta_{\alpha\beta}$ is a symmetric field of rank~$2$ of zero proper mass, then the trace $\Theta_{\alpha\alpha}$ constitutes
 
 \end{document}
