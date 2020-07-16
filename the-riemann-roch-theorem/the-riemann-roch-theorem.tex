@@ -62,6 +62,8 @@
 \renewcommand{\leq}{\leqslant}
 
 \DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\rank}{rank}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -69,6 +71,7 @@
 
 \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 \crefname{equation}{}{}
+\crefname{subsection}{§}{§§}
 
 
 %% Document %%
@@ -857,6 +860,71 @@ whence finally the fact that $(fg)_!=f_!g_!$.
 
 \section{Chern classes}
 \label{section6}
+
+The fact that $K_1(X)=K(X)$ allows us to extend the definition of Chern classes to arbitrary coherent sheaves.
+
+First consider the case where the base field is $\mathbb{C}$;
+every vector bundle $E$ over $X$ defines Chern classes $c_i(E)\in\HH^{2i}(X,\mathbb{Z})$.
+If we have an exact sequence
+\[
+  0\to E'\to E\to E''\to0
+\]
+then we know that $c_p(E)=\sum_{r+s=p}c_r(E')\cdot c_s(E'')$.
+
+As in \cref{subsection5b}, this can be understood as a multiplicative property of the Chern polynomial $c_t(E)=\sum c_p(E)t^p$, and allows us to define $c_t(x)$ for all $x\in K(X)$.
+The $c_p(x)$ are homogeneous elements of degree $2p$ of $\HH^\bullet(X,\mathbb{Z})$.
+
+In the case of an arbitrary base field, Grothendieck proceeded in the same way, but replacing $\HH^\bullet(X)$ with the graded ring $A(X)$ of \emph{cycle classes} on $X$, under linear equivalent (à la Chow).
+We recall only that a cycle $Z$ on $X$< of codimension $p$ [i.e. a degree-$p$ element of $A(X)$] is said to be linearly equivalent to zero if there exists a cycle $H$ on $X\times\mathbf{D}$ (where $\mathbf{D}$ denotes the projective line) such that $Z=H_a-H_b$ for points $a,b\in\mathbf{D}$;
+we denote by $H_a$ the projection to $X$ of $H\cdot(X\times\{a\})$ if it is proper.
+Chow and Samuel\footnote{See Chow~\cite{5} and Samuel~\cite{10}. See also the \emph{Séminaire Chevalley}~\cite{11}.} have shown that
+\oldpage{112}
+this equivalence relation possesses all sorts of reasonable properties, and Chow has shown (unpublished) that we could also construct a theory of Chern classes for vector bundles\footnote{See the paper by Grothendieck which follows this present work \cite{8}.}, with these classes being elements of $A(X)$.
+Note that, even in the classical case, this definition is somehow \emph{finer} than the cohomological definition (since two cycles can indeed be homologous without being linearly equivalent).
+
+In what follows, we denote by $A(X)$ either this ring of cycle classes or $\HH^\bullet(X)$, and leave it to the reader to choose between the two theories.
+
+Note that, in all cases, if $f\colon Y\to X$ is a morphism (resp. a proper morphism), then we can associate to it a homomorphism $f^*\colon A(X)\to A(Y)$ (resp. a homomorphism $f_*\colon A(Y)\to A(X)$).
+The formula
+\[
+  f_*(y\cdot f^*(x)) = f_*(y)\cdot x
+\]
+holds true.
+
+All of the usual formal constructions explained in the work by Hirzebruch \cite{9} can be applied to the Chern classes $c_p(x)$ of an element $x\in K(X)$.
+We can, for example, define the \emph{Todd class $T(x)\in A(X)\otimes\mathbb{Q}$} of an element $x$:
+we write $c_t(x)$ formally in the form $\prod(1+a_it)$, and let $T(x)=\prod a_i/(1-e^{-a_i})$.
+Then
+\[
+  T(x+y) = T(x)\cdot T(y).
+\]
+
+Similarly, we can define the ``exponential'' Chern class, denoted by $\ch(x)$ (which is also an element of $A(X)\otimes\mathbb{Q}$), by
+\[
+  \ch(x) = \rank(x)+\sum(e^{a_i}-1)
+\]
+where $\rank(x)$ is the \emph{rank} of $x$ [it is the unique homomorphism from $K(X)$ to $\mathbb{Z}$ that sends a vector bundle to its dimension].
+Then
+\begin{align*}
+  \ch(x+y) &= \ch(x)+\ch(y)
+\\\ch(xy) &= \ch(x)\cdot\ch(y)
+\end{align*}
+by the analogous properties of vector bundles.
+With this, we can calculate $\ch(x)$ in terms of $c_t(x)$ and $\rank(x)$ by ``universal'' formulas.
+If $f\colon Y\to X$ is a morphism, then
+\begin{align*}
+  c_p(f^!(x)) &= f^*(c_p(x))
+\\\ch(f^!(x)) = f^*(\ch(x))
+\end{align*}
+for $x\in K(X)$.
+
+These formulas are well known when $x=\gamma(E)$, with $E$ a vector bundle on $X$, and the general case follows from linearity, by applying \cref{theorem2}.
+
+
+\section{Statement of the Riemann-Roch theorem. First simplifications}
+\label{section7}
+
+\oldpage{113}
 
 
 %% Bibliography %%
