@@ -36,11 +36,7 @@
     {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
     {\endinnercustomlemma}
 
-  \newtheorem{innercustomcorollary}{Corollary}
-  \crefname{innercustomcorollary}{Corollary}{Corollaries}
-  \newenvironment{corollary}[1]
-    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
-    {\endinnercustomcorollary}
+  \newtheorem*{corollary}{Corollary}
 
 
   \theoremstyle{definition}
@@ -299,8 +295,9 @@ We can give a definition of proper maps that is analogous to the definition of c
   Since the image of this map is a point, we immediately deduce that $Z$ is projective (by returning to the definition).
 \end{proof}
 
-\begin{corollary}{5}
+\begin{corollary}
 \label{corollary5}
+  \footnote{\emph{[Translator]. This corollary is labelled \emph{Corollary 5} in the original, but this seems to be a numbering error.}}
   For a morphism $f\colon X\to Y$ to be proper, it is necessary and sufficient for it to factor as $X\to \PP\times Y\to Y$, where $X\to \PP\times Y$ is an injection into a closed subvariety, and $\PP\times Y\to Y$ is the projection onto the second factor (where $\PP$ denotes some projective space).
 \end{corollary}
 
@@ -549,7 +546,7 @@ We will need a certain number of auxiliary results on the relation between $\cat
   By restriction to $X$, we obtain the desired result.
 \end{proof}
 
-\begin{corollary}{\!\!}
+\begin{corollary}
   For every $\sh{F}\in\cat{C}$, there exists an exact sequence
   \[
     0\to\sh{L}_n\to\sh{L}_{n-1}\to\ldots\to\sh{L}_0\to\sh{F}\to0
@@ -1022,8 +1019,42 @@ By an abuse of language, we also denote by $y\otimes y'$ the image in $K(Y\times
   we have to use the following formulas:
   \begin{enumerate}[(i)]
     \item $(f\times f')_!(y\otimes y') = f_!(y)\otimes f'_!(y')$;
+      \label{lemma16equation1}
+    \item $(f\times f')_*(x\otimes x') = f_*(x)\otimes f'_*(x')$, where $x\in A(Y)$ and $x\in A(Y')$;
+      \label{lemma16equation2}
+    \item $\ch(y\otimes y') = \ch(y)\otimes\ch(y')$.
+      \label{lemma16equation3}
   \end{enumerate}
+
+  \hyperref[lemma16equation1]{Formula~(i)} can be proven by taking $y=\gamma(\sh{F})$ and $y'=\gamma(\sh{F}')$, and applying the Künneth formula to calculate $(f\times f')_!(y\otimes y')$;
+  the validity of the Künneth formula for coherent sheaves follows from the calculation of the cohomology by covers and from the Eilenberg-Zilber theorem (see the book by Godement on sheaves).
+
+  \hyperref[lemma16equation2]{Formula~(ii)} is immediate, \todo
+
+  \oldpage{115}
+  \hyperref[lemma16equation3]{Formula~(iii)} is a consequence of the multiplicative property of $\ch$.
 \end{proof}
+
+[In fact, we will only use the above lemma in the case where one of the varieties $X'$ and $Y'$ consists of a single point.]
+
+\Cref{lemma15}, along with the \hyperref[corollary5]{corollary} to \cref{proposition4}, shows that \emph{it suffices to prove \hyperref[theoremriemannroch]{R-R} in the two following cases:}
+\begin{enumerate}[(a)]
+  \item $Y=X\times\PP$, with $\PP$ a projective space, and $f\colon X\times\PP\to X$ the projection onto the first factor.
+  \item an injection $f\colon Y\to X$ of a closed subvariety $Y$ of $X$.
+\end{enumerate}
+
+By \cref{lemma16}, (a) follows from:
+\begin{enumerate}
+  \item[\rm{(a')}] The homomorphism $K(X)\otimes K(\PP)\to K(X\times\PP)$ is surjective;
+  \item[\rm{(a'')}] \hyperref[theoremriemannroch]{R-R} is true for the map from $\PP$ to a point (or, in other words, the R-R-Hirzebruch formula is true for $\PP$).
+\end{enumerate}
+
+The next two sections are dedicated to the proof of (a') and (a'').
+The case of an injection (which is more difficult) will be covered later on.
+
+
+\section{Exactness and homotopy properties of $K(X)$}
+\label{section8}
 
 
 %% Bibliography %%
