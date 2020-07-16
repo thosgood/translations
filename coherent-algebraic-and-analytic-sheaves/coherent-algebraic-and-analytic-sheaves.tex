@@ -162,87 +162,87 @@ This is a sheaf of rings, and even of $k$-algebras.
   Then every \emph{exact} subcategory $\cat{K}$ of $K(X)$ containing the $\sh{F}_Y$ is identical to $K(X)$.
 \end{theorem}
 
-The proof is done by induction on $n=\dim X$, with the case $n=0$ being immediate, by the second condition of \cref{definition1}.
-So suppose that $n>0$, and that the theorem is true in dimension $<n$.
-We can consider $K(Y)$ as a subcategory of $K(X)$ (where $Y$ is some given closed subset of $X$), and then $\cat{K}\cap K(Y)$ is a subcategory of $K(Y)$ satisfying the conditions of \cref{theorem2}, and so, if $\dim Y<n$, then the induction hypothesis implies that $K(Y)=K(Y)\cap\cat{K}$, i.e. $K(Y)\subset\cat{K}$.
-
-\medskip\noindent\emph{([Translator]. The rest of this section is dedicated to finishing the proof of \cref{theorem2}.)}
-
-\begin{lemma}{1}
-\label{lemma1}
-  Let $Y$ be a closed subset of $X$, and $\sh{A}$ a coherent $\sh{O}_X$-module such that $\supp\sh{A}\subset Y$.
-  Let $\sh{I}_Y$ be the sheaf of ideals of $\sh{O}_X$ defined by $Y$.
-  Then there exists an integer $k$ such that $\sh{I}_Y^k\sh{A}=0$.
-\end{lemma}
-
 \begin{proof}
-  By ``compactness'' reasons, we can restrict to the case where $X$ is affine, and then apply part \emph{b)} of \cref{theorem1}, noting that, if $\sh{A}$ is defined by the $A(X)$-module $M=\Gamma(X,\sh{A})$, then the ideal of $\supp\sh{A}$ is the intersection of the minimal prime ideals associated to the annihilator of $M$, whence the result.
+  The proof is done by induction on $n=\dim X$, with the case $n=0$ being immediate, by the second condition of \cref{definition1}.
+  So suppose that $n>0$, and that the theorem is true in dimension $<n$.
+  We can consider $K(Y)$ as a subcategory of $K(X)$ (where $Y$ is some given closed subset of $X$), and then $\cat{K}\cap K(Y)$ is a subcategory of $K(Y)$ satisfying the conditions of \cref{theorem2}, and so, if $\dim Y<n$, then the induction hypothesis implies that $K(Y)=K(Y)\cap\cat{K}$, i.e. $K(Y)\subset\cat{K}$.
+
+  \begin{lemma}{1}
+  \label{lemma1}
+    Let $Y$ be a closed subset of $X$, and $\sh{A}$ a coherent $\sh{O}_X$-module such that $\supp\sh{A}\subset Y$.
+    Let $\sh{I}_Y$ be the sheaf of ideals of $\sh{O}_X$ defined by $Y$.
+    Then there exists an integer $k$ such that $\sh{I}_Y^k\sh{A}=0$.
+  \end{lemma}
+
+  \begin{proof}
+    By ``compactness'' reasons, we can restrict to the case where $X$ is affine, and then apply part \emph{b)} of \cref{theorem1}, noting that, if $\sh{A}$ is defined by the $A(X)$-module $M=\Gamma(X,\sh{A})$, then the ideal of $\supp\sh{A}$ is the intersection of the minimal prime ideals associated to the annihilator of $M$, whence the result.
+  \end{proof}
+
+  \begin{corollary}{\!\!}
+  \label{corollary-1}
+    Under the above conditions, $\sh{A}$ admits a composition series with each composition factor $\sh{A}_i/\sh{A}_{i+1}$ lying in $K(Y)$.
+  \end{corollary}
+
+  This implies that $\sh{A}_i/\sh{A}_{i+1}$ is annihilated by $\sh{I}_Y$;
+  we take $\sh{A}_i=\sh{I}_Y^i\sh{A}$.
+  In the case where $\dim Y<n$, by induction on the length of
+  \oldpage{2-03}
+  this composition series, using \cref{definition1} and the fact that $K(Y)\subset\cat{K}$, we see that, \emph{if $\dim\supp\sh{A}<n$, then $\sh{A}\in\cat{K}$.}
+
+  Suppose first of all that $X$ is irreducible.
+  For $\sh{A}\in K(X)$, let $T(\sh{A})$ be the torsion submodule of $\sh{A}$ (whose stalks are the torsion submodules of $\sh{A}_x$).
+
+  \begin{lemma}{2}
+  \label{lemma2}
+    If $\sh{A}\in K(X)$, then the torsion submodule $T(\sh{A})$ is also in $K(X)$, and $\sh{A}=T(\sh{A})$ if and only if $\supp\sh{A}\neq X$.
+  \end{lemma}
+
+  \begin{proof}
+    We can immediately restrict to the case where $X$ is affine, where it is evident, by the interpretation of coherent $\sh{O}$-modules as $A(X)$-modules of finite type.
+  \end{proof}
+
+  Using the exact sequence $0\to T(\sh{A})\to \sh{A}\to \sh{A}_0\to 0$, and that $T(\sh{A})\in\cat{K}$, we see that $\sh{A}\in\cat{K}$ if and only if $\sh{A}_0\in\cat{K}$.
+
+  Let $\sh{R}$ be the sheaf of fields over $X$ given by the fields of fractions of the $\sh{O}_{X,x}$, i.e. the sheaf of germs of rational functions, which is a constant sheaf, and we have an injective homomorphism $\sh{A}_0\to\sh{A}_0\otimes_{\sh{O}_X}\sh{R}$
+  Representing $\sh{A}_0$ locally as the cokernel of a homomorphism $\sh{O}_X^m\to\sh{O}_X^{m'}$, we see that the tensor product $\sh{A}_0\otimes_{\sh{O}_X}\sh{R}$ is locally isomorphic (as sheaves of $\sh{R}$-modules) to a sheaf of the form $\sh{R}^k$, and thus conclude that it is \emph{globally} isomorphic to $\sh{R}^k$ thanks to:
+
+  \begin{lemma}{3}
+  \label{lemma3}
+    On any irreducible algebraic set $X$, every locally constant sheaf is constant.
+  \end{lemma}
+
+  \begin{proof}
+    This is an easy consequence of the fact that every open subset of $X$ is connected (consider a maximal open subset where the sheaf in question is constant!).
+  \end{proof}
+
+  We will thus identify $\sh{A}_0\otimes_{\sh{O}_X}\sh{R}$ with some $\sh{R}^k$, which contains the sub-$\sh{O}_X$-module $\sh{O}_X^k$.
+  Consider the exact sequence
+  \[
+    0 \to \sh{A}_0 \to \sh{A}_0+\sh{O}_X^k \to \sh{Q} \to 0
+  \]
+  where $\sh{Q}$ is defined as the cokernel of the injection homomorphism.
+  We immediately see that $\sh{Q}\otimes_{\sh{O}}\sh{R}=0$, and so $\sh{Q}$ is a torsion module, and so $\supp\sh{Q}\neq X$ (\cref{lemma2}), whence $\sh{Q}\in\cat{K}$.
+  (We implicitly make use of the fact that $\sh{A}_0+\sh{O}_X^k$ is a coherent $\sh{O}$-module, which can be easily verified).
+  Then $\sh{A}_0\in\cat{K}$ \emph{if and only if} $\sh{A}_0+\sh{O}_X^k\in\cat{K}$.
+  Similarly, the analogous exact sequence
+  \oldpage{2-04}
+  $0\to\sh{O}_X^k\to\sh{A}_0+\sh{O}_X^k\to\sh{Q}'\to0$, where $\supp\sh{Q}\neq X$, and whence $\sh{Q}'\in\cat{K}$, implies that $\sh{A}_0+\sh{O}_X^k\in\cat{K}$ \emph{if and only if} $\sh{O}_X^k\in\cat{K}$.
+  Finally, suppose that $k>0$, i.e. that $\sh{A}$ is not a torsion $\sh{O}$-module, i.e. that $\supp\sh{A}=X$;
+  then $\sh{O}_X^k\in\cat{K}$ \emph{if and only if} $\sh{O}_X\in\cat{K}$, as follows immediately from \cref{definition1}.
+  So the above ``if and only if''s imply that, if $\sh{A}$ is such that $\supp\sh{A}\neq X$, then $\sh{A}\in\cat{K}$ \emph{if and only if} $\sh{O}_X\in\cat{K}$.
+  Taking $\sh{A}=\sh{F}_X$, we thus see that $\sh{O}_X\in\cat{K}$, whence every $\sh{A}\in K(X)$ with support equal to $X$ is in $\cat{K}$, and since the same is true for the $\sh{A}\in K(X)$ with suppose not equal to $X$, we indeed have that $K(X)\subseteq\cat{K}$.
+
+  Now if $X$ is not necessarily irreducible, let $X_i$ be its irreducible components.
+  For every coherent algebraic sheaf $\sh{A}$ on $X$, let $A_i$ be the sheaf that agrees with $\sh{A}$ on $X_i$, and with $0$ on $X\setminus X_i$;
+  then $\sh{A}_i$ is a coherent $\sh{O}$-module that can be identified with a quotient of $\sh{A}$.
+  We have a natural homomorphism $\sh{A}\to\coprod_i\sh{A}_i$ from $\sh{A}$ to the direct sum of the $\sh{A}_i$ that is \emph{injective};
+  let $\sh{Q}$ be its cokernel;
+  we thus have an exact sequence $0\to\sh{A}\to\coprod_i\sh{A}_i\to\sh{Q}\to0$.
+  Since $\supp\sh{Q}\subset\bigcup_{i\neq j}X_i\cap X_j$, we have that $\sh{Q}\in\cat{K}$;
+  to prove that $\sh{A}\in\cat{K}$, it suffices to prove that $\coprod_i\sh{A}_i\in\cat{K}$, or even that each $\sh{A}_i$ is in $\cat{K}$.
+  But, by what we have already seen, applied to $X_i$, we have that $K(X_i)\in\cat{K}$, whence we again conclude that $\supp\sh{A}_i\subset X_i$ implies that $\sh{A}_i\in\cat{K}$, by using the \hyperref[corollary-1]{Corollary of Lemma~1}.
+  This proves \cref{theorem2}.
 \end{proof}
-
-\begin{corollary}{1}
-\label{corollary-1}
-  Under the above conditions, $\sh{A}$ admits a composition series with each composition factor $\sh{A}_i/\sh{A}_{i+1}$ lying in $K(Y)$.
-\end{corollary}
-
-This implies that $\sh{A}_i/\sh{A}_{i+1}$ is annihilated by $\sh{I}_Y$;
-we take $\sh{A}_i=\sh{I}_Y^i\sh{A}$.
-In the case where $\dim Y<n$, by induction on the length of
-\oldpage{2-03}
-this composition series, using \cref{definition1} and the fact that $K(Y)\subset\cat{K}$, we see that, \emph{if $\dim\supp\sh{A}<n$, then $\sh{A}\in\cat{K}$.}
-
-Suppose first of all that $X$ is irreducible.
-For $\sh{A}\in K(X)$, let $T(\sh{A})$ be the torsion submodule of $\sh{A}$ (whose stalks are the torsion submodules of $\sh{A}_x$).
-
-\begin{lemma}{2}
-\label{lemma2}
-  If $\sh{A}\in K(X)$, then the torsion submodule $T(\sh{A})$ is also in $K(X)$, and $\sh{A}=T(\sh{A})$ if and only if $\supp\sh{A}\neq X$.
-\end{lemma}
-
-\begin{proof}
-  We can immediately restrict to the case where $X$ is affine, where it is evident, by the interpretation of coherent $\sh{O}$-modules as $A(X)$-modules of finite type.
-\end{proof}
-
-Using the exact sequence $0\to T(\sh{A})\to \sh{A}\to \sh{A}_0\to 0$, and that $T(\sh{A})\in\cat{K}$, we see that $\sh{A}\in\cat{K}$ if and only if $\sh{A}_0\in\cat{K}$.
-
-Let $\sh{R}$ be the sheaf of fields over $X$ given by the fields of fractions of the $\sh{O}_{X,x}$, i.e. the sheaf of germs of rational functions, which is a constant sheaf, and we have an injective homomorphism $\sh{A}_0\to\sh{A}_0\otimes_{\sh{O}_X}\sh{R}$
-Representing $\sh{A}_0$ locally as the cokernel of a homomorphism $\sh{O}_X^m\to\sh{O}_X^{m'}$, we see that the tensor product $\sh{A}_0\otimes_{\sh{O}_X}\sh{R}$ is locally isomorphic (as sheaves of $\sh{R}$-modules) to a sheaf of the form $\sh{R}^k$, and thus conclude that it is \emph{globally} isomorphic to $\sh{R}^k$ thanks to:
-
-\begin{lemma}{3}
-\label{lemma3}
-  On any irreducible algebraic set $X$, every locally constant sheaf is constant.
-\end{lemma}
-
-\begin{proof}
-  This is an easy consequence of the fact that every open subset of $X$ is connected (consider a maximal open subset where the sheaf in question is constant!).
-\end{proof}
-
-We will thus identify $\sh{A}_0\otimes_{\sh{O}_X}\sh{R}$ with some $\sh{R}^k$, which contains the sub-$\sh{O}_X$-module $\sh{O}_X^k$.
-Consider the exact sequence
-\[
-  0 \to \sh{A}_0 \to \sh{A}_0+\sh{O}_X^k \to \sh{Q} \to 0
-\]
-where $\sh{Q}$ is defined as the cokernel of the injection homomorphism.
-We immediately see that $\sh{Q}\otimes_{\sh{O}}\sh{R}=0$, and so $\sh{Q}$ is a torsion module, and so $\supp\sh{Q}\neq X$ (\cref{lemma2}), whence $\sh{Q}\in\cat{K}$.
-(We implicitly make use of the fact that $\sh{A}_0+\sh{O}_X^k$ is a coherent $\sh{O}$-module, which can be easily verified).
-Then $\sh{A}_0\in\cat{K}$ \emph{if and only if} $\sh{A}_0+\sh{O}_X^k\in\cat{K}$.
-Similarly, the analogous exact sequence
-\oldpage{2-04}
-$0\to\sh{O}_X^k\to\sh{A}_0+\sh{O}_X^k\to\sh{Q}'\to0$, where $\supp\sh{Q}\neq X$, and whence $\sh{Q}'\in\cat{K}$, implies that $\sh{A}_0+\sh{O}_X^k\in\cat{K}$ \emph{if and only if} $\sh{O}_X^k\in\cat{K}$.
-Finally, suppose that $k>0$, i.e. that $\sh{A}$ is not a torsion $\sh{O}$-module, i.e. that $\supp\sh{A}=X$;
-then $\sh{O}_X^k\in\cat{K}$ \emph{if and only if} $\sh{O}_X\in\cat{K}$, as follows immediately from \cref{definition1}.
-So the above ``if and only if''s imply that, if $\sh{A}$ is such that $\supp\sh{A}\neq X$, then $\sh{A}\in\cat{K}$ \emph{if and only if} $\sh{O}_X\in\cat{K}$.
-Taking $\sh{A}=\sh{F}_X$, we thus see that $\sh{O}_X\in\cat{K}$, whence every $\sh{A}\in K(X)$ with support equal to $X$ is in $\cat{K}$, and since the same is true for the $\sh{A}\in K(X)$ with suppose not equal to $X$, we indeed have that $K(X)\subseteq\cat{K}$.
-
-Now if $X$ is not necessarily irreducible, let $X_i$ be its irreducible components.
-For every coherent algebraic sheaf $\sh{A}$ on $X$, let $A_i$ be the sheaf that agrees with $\sh{A}$ on $X_i$, and with $0$ on $X\setminus X_i$;
-then $\sh{A}_i$ is a coherent $\sh{O}$-module that can be identified with a quotient of $\sh{A}$.
-We have a natural homomorphism $\sh{A}\to\coprod_i\sh{A}_i$ from $\sh{A}$ to the direct sum of the $\sh{A}_i$ that is \emph{injective};
-let $\sh{Q}$ be its cokernel;
-we thus have an exact sequence $0\to\sh{A}\to\coprod_i\sh{A}_i\to\sh{Q}\to0$.
-Since $\supp\sh{Q}\subset\bigcup_{i\neq j}X_i\cap X_j$, we have that $\sh{Q}\in\cat{K}$;
-to prove that $\sh{A}\in\cat{K}$, it suffices to prove that $\coprod_i\sh{A}_i\in\cat{K}$, or even that each $\sh{A}_i$ is in $\cat{K}$.
-But, by what we have already seen, applied to $X_i$, we have that $K(X_i)\in\cat{K}$, whence we again conclude that $\supp\sh{A}_i\subset X_i$ implies that $\sh{A}_i\in\cat{K}$, by using \cref{corollary-1} of \cref{lemma1}.
-This proves \cref{theorem2}.
 
 \begin{remark}
   We say that the subcategory $\cat{K}$ of $K(X)$ is \emph{left exact} if, for every exact sequence $0\to\sh{A}'\to\sh{A}\to\sh{A}''\to0$ in $K(X)$, we have that $\sh{A}'$ (respectively $\sh{A}$) is in $\cat{K}$ provided that the two other terms are in $\cat{K}$.
@@ -334,7 +334,7 @@ this is itself endowed with a sheaf of analytic local rings, which we denote by 
 finally, we can define, as above, the sheaves $\sh{O}^h(n)$.
 With this, we have:
 
-\begin{corollary}{1}
+\begin{corollary}{\!\!}
 \label{corollary-3}
   \oldpage{2-07}
   \begin{enumerate}[(a)]
@@ -390,7 +390,7 @@ compare with \cite[proposition~12, proposition~6]{2}, where a particular case is
 
 We state here the following corollary, obtained by taking $Y$ to be a single point:
 
-\begin{corollary}{1}
+\begin{corollary}{\!\!}
   Let $\sh{A}$ be a coherent algebraic sheaf on a complete algebraic set.
   Then the $\HH^i(X,\sh{A})$ are vector spaces of finite dimension.
 \end{corollary}
@@ -670,7 +670,7 @@ The uniqueness of $\sh{A}$ follows from:
 From \cref{corollary1-6} and the exactness of the functor $\cat{C}\to\cat{C}^h$ also follows the fact that, if $\sh{F}$ and $\sh{G}$ are coherent analytic sheaves on $X$ that come from algebraic sheaves, and if $u$ is a homomorphism from $\sh{F}$ to $\sh{G}$, then the kernel, cokernel, image, and coimage of $u$ all also come
 \oldpage{2-15}
 from algebraic sheaves.
-In particular, if $X$ is embedded into a projective space $\mathbf{P}$, then every coherent analytic sheaf on $X$ is isomorphic to the cokernel of a homomorphism $\sh{L}^h\to\sh{L}'^h$, where $\sh{L}$ and $\sh{L}'$ are direct sums of finitely many sheaves of the form $\sh{O}(k)$ (part~(a) of \cref{corollary-3} of \cref{theorem3});
+In particular, if $X$ is embedded into a projective space $\mathbf{P}$, then every coherent analytic sheaf on $X$ is isomorphic to the cokernel of a homomorphism $\sh{L}^h\to\sh{L}'^h$, where $\sh{L}$ and $\sh{L}'$ are direct sums of finitely many sheaves of the form $\sh{O}(k)$ (part~(a) of the \hyperref[corollary-3]{Corollary of Theorem~3});
 it thus follows that \cref{theorem6} is also true if $X$ is \emph{projective} (Serre).
 
 Let $0\to\sh{F}'\to\sh{F}\to\sh{F}''\to0$ be an exact sequence of coherent analytic sheaves on $X^h$, and suppose that $\sh{F}'$ and $\sh{F}''$ come from coherent algebraic sheaves;
@@ -693,7 +693,7 @@ But, more generally, we have canonical homomorphisms
   \tag{10}
 \]
 that generalise \cref{equation8} (with $\shExt$ denoting the \emph{sheaf} $\Ext$s), and from \cref{corollary1-5} of \cref{theorem5};
-this implies that the initial terms of the spectral sequences of both the domain and codomain of the morphism in \cref{equation9} are identical.
+this implies that the initial pages of the spectral sequences of both the domain and codomain of the morphism in \cref{equation9} are identical.
 
 \begin{proof}[Proof of \cref{theorem6}.]
   We can now prove \cref{theorem6}, by induction on $n=\dim X$, with the theorem being trivial when $n=0$.

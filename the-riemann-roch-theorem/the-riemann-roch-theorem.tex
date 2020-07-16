@@ -16,6 +16,12 @@
 
   \theoremstyle{plain}
 
+  \newtheorem{innercustomtheorem}{Theorem}
+  \crefname{innercustomtheorem}{Theorem}{Theorems}
+  \newenvironment{theorem}[1]
+    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
+    {\endinnercustomtheorem}
+
   \newtheorem{innercustomproposition}{Proposition}
   \crefname{innercustomproposition}{Proposition}{Propositions}
   \newenvironment{proposition}[1]
@@ -38,6 +44,7 @@
   \theoremstyle{definition}
 
   \newtheorem*{remark}{Remark}
+  \newtheorem*{remarks}{Remarks}
   \newtheorem*{definition}{Definition}
   \newtheorem*{examples}{Examples}
 
@@ -45,8 +52,10 @@
 %% Shortcuts %%
 
 \newcommand{\sh}{\mathscr}
+\newcommand{\cat}{\mathcal}
 \newcommand{\HH}{\mathrm{H}}
 \newcommand{\RR}{\mathrm{R}}
+\newcommand{\PP}{\mathbf{P}}
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
@@ -180,7 +189,7 @@ It is said to be \emph{projective} if it is isomorphic to a closed subvariety of
 
 \begin{lemma}{3}
 \label{lemma3}
-  Let $P$ be a projective space, $U$ an arbitrary variety, and $G$ a closed subset of $P\times U$.
+  Let $\PP$ be a projective space, $U$ an arbitrary variety, and $G$ a closed subset of $\PP\times U$.
   Then the projection of $G$ in $U$ is closed.
 \end{lemma}
 
@@ -190,13 +199,13 @@ We briefly recall the principal of the proof:
 \begin{proof}
   Since the question is local with respect to $U$, we can assume that $U$ is affine, and even that $U$ is as affine open of the space $k^n$.
   We can also assume that $G$ is irreducible.
-  So we choose projective coordinates $x_i$ in $P$ such that $G$ meets the set $P_0\times U$ of points where $x_0\neq0$.
-  If $A$ denotes the coordinate ring of $U$, then the coordinate ring of the affine variety $P_0\times U$ is $A[x_i/x_0]=B_0$;
+  So we choose projective coordinates $x_i$ in $\PP$ such that $G$ meets the set $\PP_0\times U$ of points where $x_0\neq0$.
+  If $A$ denotes the coordinate ring of $U$, then the coordinate ring of the affine variety $\PP_0\times U$ is $A[x_i/x_0]=B_0$;
   the set $G$ defines (and is defined by) a prime ideal $\mathfrak{p}$ of $B_0$.
   If $\mathfrak{p}'$ denotes $A\cap\mathfrak{p}$, then the prime ideal $\mathfrak{p}'$ corresponds to the closure of the projection $G'$ of $G$ in $U$.
   A point in this closure is thus a homomorphism $f\colon A\to k$ (where $k$ denotes the base field) that is zero on $\mathfrak{p}'$;
 \oldpage{100}
-  this point is the image of a point in $G$ that lies in $P_0\times U$ if and only if $f$ can be extended to a homomorphism $g\colon B_0\to k$ that is zero on $\mathfrak{p}$.
+  this point is the image of a point in $G$ that lies in $\PP_0\times U$ if and only if $f$ can be extended to a homomorphism $g\colon B_0\to k$ that is zero on $\mathfrak{p}$.
   So let $L$ be the field of functions of $G$;
   the field $L$ contains $A/\mathfrak{p}'$ as a subring.
   By the theorem of extension of specialisations, there exists a valuation $v$ of $L$, with values in $k$, that extends $f$.
@@ -210,31 +219,31 @@ It is trivial that $G_f$ is closed in $X\times Y$.
 
 \begin{lemma}{4}
 \label{lemma4}
-  Let $f\colon X\to Y$ and $g\colon Y\to Z$ be morphisms, where $X$ and $Y$ are subvarieties of projective spaces $P$ and $P'$ (respectively).
-  Suppose that $G_f$ is closed in $P\times Y$, and that $G_g$ is closed in $P'\times Z$.
-  Then $G_{gf}$ is closed in $P\times Z$.
+  Let $f\colon X\to Y$ and $g\colon Y\to Z$ be morphisms, where $X$ and $Y$ are subvarieties of projective spaces $\PP$ and $\PP'$ (respectively).
+  Suppose that $G_f$ is closed in $P\times Y$, and that $G_g$ is closed in $\PP'\times Z$.
+  Then $G_{gf}$ is closed in $\PP\times Z$.
 \end{lemma}
 
 \begin{proof}
-  We have $G_f \subset P\times Y = P\times G_g \subset P\times P'\times Z$, and since each one is closed in the next, we see that $G_f$ can be identified with a closed subset of $P\times P'\times Z$.
-  Since $G_{gf}$ is exactly the projection of $G_f$ to the factor $P\times Z$, the lemma follows from \cref{lemma3}.
+  We have $G_f \subset \PP\times Y = \PP\times G_g \subset \PP\times \PP'\times Z$, and since each one is closed in the next, we see that $G_f$ can be identified with a closed subset of $\PP\times \PP'\times Z$.
+  Since $G_{gf}$ is exactly the projection of $G_f$ to the factor $\PP\times Z$, the lemma follows from \cref{lemma3}.
 \end{proof}
 
 \begin{lemma}{5}
 \label{lemma5}
-  Let $f\colon X\to Y$ be a morphism, and let $X\subset P$ and $X\subset P'$ be embeddings of $X$ into projective spaces.
-  If $G_f$ is closed in $P\times Y$, then it is also closed in $P'\times Y$.
+  Let $f\colon X\to Y$ be a morphism, and let $X\subset \PP$ and $X\subset \PP'$ be embeddings of $X$ into projective spaces.
+  If $G_f$ is closed in $\PP\times Y$, then it is also closed in $\PP'\times Y$.
 \end{lemma}
 
 \begin{proof}
   We apply \cref{lemma4} to the morphisms $X\xrightarrow{i}X\xrightarrow{f}Y$, where $i$ denotes the identity morphism.
-  Everything then reduces to showing that the graph $G_i$ of $i$ in $P\times X$ is closed, which follows from the fact that it is given by the intersection of $P\times X$ with the diagonal of $P\times P$.
+  Everything then reduces to showing that the graph $G_i$ of $i$ in $\PP\times X$ is closed, which follows from the fact that it is given by the intersection of $\PP\times X$ with the diagonal of $\PP\times \PP$.
 \end{proof}
 
 \Cref{lemma5} justifies the following definition:
 
 \begin{definition}
-  A map $f\colon X\to Y$ is said to be \emph{proper} if it is a morphism and if its graph $G_f$ is closed in $P\times Y$, where $P$ is a projective space containing $X$.
+  A map $f\colon X\to Y$ is said to be \emph{proper} if it is a morphism and if its graph $G_f$ is closed in $\PP\times Y$, where $\PP$ is a projective space containing $X$.
 \end{definition}
 
 We can give a definition of proper maps that is analogous to the definition of complete varieties:
@@ -245,12 +254,12 @@ We can give a definition of proper maps that is analogous to the definition of c
 \end{proposition}
 
 \begin{proof}
-  Let $P$ be a projective space inside which $X$ can be embedded;
-  since $G_f$ is closed in $P\times Y$, the product $G_f\times Z$ is closed in $P\times Y\times Z$, and so $T$ can be embedded as a closed subset into $P\times Y\times Z$.
+  Let $\PP$ be a projective space inside which $X$ can be embedded;
+  since $G_f$ is closed in $\PP\times Y$, the product $G_f\times Z$ is closed in $\PP\times Y\times Z$, and so $T$ can be embedded as a closed subset into $\PP\times Y\times Z$.
 \oldpage{101}
   Applying \cref{lemma3}, we see that the projection of $T$ to $Y\times Z$ (which is exactly $(f\times1)(T)$) is closed.
-  Conversely, suppose that this property holds true, and apply it to $Z=P$, with the set $T$ being the diagonal of $X\times X$, embedded into $X\times P$.
-  The image of $T$ in $Y\times Z=Y\times P$ is then exactly $G_f$, which is indeed closed.
+  Conversely, suppose that this property holds true, and apply it to $Z=\PP$, with the set $T$ being the diagonal of $X\times X$, embedded into $X\times \PP$.
+  The image of $T$ in $Y\times Z=Y\times \PP$ is then exactly $G_f$, which is indeed closed.
 \end{proof}
 
 \begin{proposition}{4}
@@ -277,11 +286,11 @@ We can give a definition of proper maps that is analogous to the definition of c
 
 \begin{corollary}{5}
 \label{corollary5}
-  For a morphism $f\colon X\to Y$ to be proper, it is necessary and sufficient for it to factor as $X\to P\times Y\to Y$, where $X\to P\times Y$ is an injection into a closed subvariety, and $P\times Y\to Y$ is the projection onto the second factor (where $P$ denotes some projective space).
+  For a morphism $f\colon X\to Y$ to be proper, it is necessary and sufficient for it to factor as $X\to \PP\times Y\to Y$, where $X\to \PP\times Y$ is an injection into a closed subvariety, and $\PP\times Y\to Y$ is the projection onto the second factor (where $\PP$ denotes some projective space).
 \end{corollary}
 
 \begin{proof}
-  By the definition of a proper map, this condition is necessary (if we take $P$ to be a projective space into which we can embed $X$).
+  By the definition of a proper map, this condition is necessary (if we take $\PP$ to be a projective space into which we can embed $X$).
   It is sufficient by \emph{(ii)}, \emph{(v)}, and \emph{(vii)}.
 \end{proof}
 
@@ -293,8 +302,8 @@ We can give a definition of proper maps that is analogous to the definition of c
 
 \begin{proof}
   Suppose that $f$ is proper in the algebraic sense, and let $K$ be a compact subset of $Y$ (for the usual topology).
-  Suppose that $X$ is embedded into some projective space $P$.
-  Since $P$ is compact, we know that $f^{-1}(K)=G_f\cap(P\times K)$ is compact, which shows that $f$ is proper in the topological sense.
+  Suppose that $X$ is embedded into some projective space $\PP$.
+  Since $\PP$ is compact, we know that $f^{-1}(K)=G_f\cap(\PP\times K)$ is compact, which shows that $f$ is proper in the topological sense.
   Conversely, assume that this condition is satisfied, and aim to prove that the condition of \cref{proposition3} is satisfied:
 \oldpage{102}
   the image of $T$ in $Y\times Z$ is closed for the usual topology, and thus also for the Zariski topology \cite[proposition~7, p.~12]{13}.
@@ -349,8 +358,202 @@ We have seen (\hyperref[example2]{Example~2}) that the $\RR^qf(\sh{F})$ are not,
 However:
 
 \begin{theorem}{1}
+\label{theorem1}
   If $f\colon X\to Y$ is proper, then the $\RR^qf(\sh{F})$, for $q>0$, are coherent sheaves on $Y$, for any coherent sheaf $\sh{F}$ on $X$.
 \end{theorem}
+
+Let $\PP$ be a projective space into which we can embed $X$, and let $G_f$ be the graph of $f$ in $\PP\times Y$.
+By definition of what it means to be a proper map, $G_f$ is closed in $\PP\times Y$.
+Let $\sh{F}'$ be the sheaf on $\PP\times Y$ obtained by extending $\sh{F}$ by $0$ outside of $G_f=X$ (see \hyperref[example2]{Example~2});
+if $\pi$ denotes the projection from $\PP\times Y$ to $Y$, then we immediately see that $\RR^q\pi(\sh{F}')=\RR^qf(\sh{F})$.
+\emph{We can thus restrict to proving \cref{theorem1} for $\pi\colon \PP\times Y\to Y$}.
+Furthermore, since the question is local with respect to $Y$, we can assume that $Y$ is an affine variety.
+
+On $\PP$ we have a ``standard'' bundle $L$ of dimension~$1$, whose sections are the linear forms (see \cite[chap.~III, §~2]{12});
+this fibre defines a fibre on $X=\PP\times Y$ that we denote also by $L$.
+The sheaf associated to $L^n$ on $\PP\times Y$ will be denoted $\sh{O}_X(n)$.
+We then have:
+
+\begin{lemma}{6}
+\label{lemma6}
+  Every coherent algebraic sheaf $\sh{F}$ on $X=\PP\times Y$, with $Y$ affine, is isomorphic to a quotient of some direct sum of sheaves of the form $\sh{O}_X(n)$.
+\end{lemma}
+
+\begin{proof}
+  When $Y$ consists of a single point, this is théorème~1 of FAC, p.~247.  
+  We are going to reduce to this particular case: let $Y\subset\PP'$ be an embedding of $Y$ into a projective space, and let $\overline{Y}$ be the closure of $Y$.
+  By \cref{proposition2}, the sheaf $\sh{F}$ can be extended to a sheaf $\overline{\sh{F}}$ on $\PP\times\overline{Y}$.
+  The embedding of $\overline{Y}$ into $\PP'$ defines, on $\overline{Y}$ (and thus also on $\PP\times\overline{Y}$), a bundle $L'$ of dimension $1$.
+  The product bundle $LL'$ corresponds to the well known embedding of $\PP\times\PP'$ into a projective space $P''$ (the ``Segre'' embedding, given by the products $x_i y_j$ of the homogeneous coordinates of the two projective spaces).
+  Then applying the result from \cite{12} cited above to $\overline{\sh{F}}$ and $\PP''$, we see that $\overline{\sh{F}}$ is a quotient of a direct sum of sheaves of the form $\sh{O}_{\PP\times\overline{Y}}(L^nL'^n)$;
+  by restricting to $\PP\times Y$, and taking into account the fact that $\PP'$ is \emph{trivial} on $Y$, we indeed obtain the desired result.
+\end{proof}
+
+  [Of course, we could also give a direct proof, copied from the one in \cite{12}.]
+
+\begin{lemma}{7}
+\label{lemma7}
+  The $\RR^q\pi(\sh{O}_X(n))$ are coherent sheaves on $Y$.
+\end{lemma}
+
+\begin{proof}
+  We explicitly calculate the sheaves $\RR^q\pi(\sh{O}_X(n))$.
+  If $U$ is an affine open
+  \oldpage{104}
+  subset of $Y$, then
+  \[
+    \RR^q\pi(\sh{O}_X(n))_U = \HH^q(\PP\times U,\sh{O}_X(n)).
+  \]
+
+  If $\mathfrak{U}=\{U_i\}$ is an affine cover of $\PP$, then the $U_i\times U$ form an affine cover $\mathfrak{U}'$ of $\PP\times U$;
+  taking into account the fact that $\sh{O}_X(n)$ ``comes from'' $\PP$, we see that the complex $C(\mathfrak{U}',\sh{O}_X(n))$ is isomorphic to the tensor product $C(\mathfrak{U}',\sh{O}_{\PP}(n))\otimes_k\HH^0(U,\sh{O}_U)$.
+  The universal coefficient formula then shows that
+  \[
+    \HH^q(\PP\times U,\sh{O}_X(n)) = \HH^q(\PP,\sh{O}_{\PP}(n))\otimes_k\HH^0(U,\sh{O}_U).
+  \]
+
+  This latter equality implies that $\RR^q\pi(\sh{O}_X(n))$ is isomorphic to the sheaf $\sh{O}_Y\otimes_k V^q$, where $V^q=\HH^q(\PP,\sh{O}_P(n))$.
+  Since $V^q$ is a vector space of finite dimension over $k$, it is indeed a coherent sheaf on $Y$, which proves the lemma.
+\end{proof}
+
+  [The above proof applies more general to any projection $\pi\colon Y\times Z\to Y$ with $Z$ projective, whenever the sheaf $\sh{F}$ is of the form $\sh{G}\otimes\sh{H}$, with $\sh{G}$ coherent on $Y$ and $\sh{H}$ coherent on $Z$.
+  We then find that $\RR^q\pi(\sh{F})=\sh{G}\otimes\HH^q(Z,\sh{H})$.
+  We could consider, even more generally, the case of a product map $Y\times Z\to Y'\times Z'$ ...]
+
+\begin{proof}[Proof of \cref{theorem1}]
+  We can now prove \cref{theorem1} for an arbitrary sheaf $\sh{F}$ on $X=\PP\times Y$.
+  We argue by decreasing induction on the integer $q$.
+  If $q>\dim X$, then it is clear that $\RR^q\pi(\sh{F})=0$.
+  So suppose that the theorem is proven for $q+1$.
+  By \cref{lemma6}, there exists an exact sequence $0\to\sh{R}\to\sh{L}\to\sh{F}\to0$, where $\sh{L}$ is isomorphic to a direct sum of sheaves of the form $\sh{O}_X(n)$.
+  The exact sequence of cohomology (or the exact sequence of derived functors) shows that we have an exact sequence
+  \[
+    \RR^q\pi(\sh{R}) \to
+    \RR^q\pi(\sh{L}) \to
+    \RR^q\pi(\sh{F}) \to
+    \RR^{q+1}\pi(\sh{R}) \to
+    \RR^{q+1}\pi(\sh{L}).
+  \]
+
+  Given the induction hypothesis and \cref{lemma7}, the sheaves $\RR^q\pi(\sh{L})$, $\RR^{q+1}\pi(\sh{R})$, and $\RR^{q+1}\pi(\sh{L})$ are coherent.
+  It follows that $\RR^q\pi(\sh{F})$ admits a subsheaf of finite type, with the quotient being coherent.
+  An immediate argument then shows that $\RR^q\pi(\sh{F})$ is of finite type.
+  This result, having been proven for any coherent sheaf, also holds for $\sh{R}$.
+  The image of $\RR^q\pi(\sh{R})$ in $\RR^q\pi(\sh{L})$ is then a coherent sheaf (\cite[p.~208]{12}), and $\RR^q\pi(\sh{F})$ is an extension of two coherent sheaves, and is thus coherent (\emph{id.}).
+\end{proof}
+
+\begin{remarks}
+  \begin{enumerate}
+    \item \Cref{theorem1} holds true even if we don't suppose that $X$ is quasi-projective (we can restrict to this case by using Chow's lemma and the ``devissage'' of coherent sheaves, see \cite{6}).
+    \item Grauert and Remmert have proven the analytic analogue of \cref{theorem1} for the projection $\pi\colon\PP\times Y\to Y$.
+      Needless to say that the proof is more difficult!
+  \end{enumerate}
+\end{remarks}
+
+
+\section{The group $K(X)$ of classes of sheaves on a variety $X$}
+\label{section4}
+
+\oldpage{105}
+Let $X$ be an algebraic variety, and let $F(X)$ be the free abelian group generated by the set $\cat{C}$ of (coherent algebraic, as always) sheaves on $X$.
+An element of $F(X)$ is thus a formal linear combination
+\[
+  x = \sum n_i\sh{F}_i
+  \quad
+  \mbox{where $n_i\in\mathbb{Z}$ and $\sh{F}_i\in\cat{C}$.}
+\]
+We agree, of course, to identify isomorphic sheaves [if not, then $F(X)$ would not even be a ``set''!].
+
+Let
+\[
+  (E)\quad
+  0\to\sh{F}'\to\sh{F}\to\sh{F''}\to0
+\]
+be an exact sequence of sheaves.
+To this exact sequence we associate the element $Q(E)=\sh{F}-\sh{F}'-\sh{F}''$ of $F(X)$.
+
+\begin{definition}
+  We define the \emph{group of classes of sheaves on $X$} to be the quotient of $F(X)$ by the subgroup generated by the $Q(E)$, where $E$ runs over all short exact sequences.
+\end{definition}
+
+This group will be denoted $K(X)$ in what follows.
+If $\sh{F}$ is a group on $X$, then its canonical image in $K(X)$ will be denoted $\gamma_X(\sh{F})$, or $\gamma(\sh{F})$, or simply $\sh{F}$, depending on the risk of confusion.
+The $\gamma(\sh{F})$ generate $K(X)$, and the map $\sh{F}\to\gamma(\sh{F})$ is ``additive'';
+in other words, if we have the exact sequence (E), then $\gamma(\sh{F})=\gamma(\sh{F}')+\gamma(\sh{F}'')$.
+Conversely, by the very definition of $K(X)$, every additive map from the set of sheaves into an abelian group $G$ can be written in the form $\sh{F}\mapsto\pi(\gamma(\sh{F}))$, where $\pi\colon K(X)\to G$ is a uniquely determined homomorphism.
+
+We can apply the above to construction to many other situations, apart from that of sheaves.
+We will need, in particular, to apply it to the case of \emph{vector bundles} on $X$.
+So let $\cat{V}$ be the set of vector bundles;
+we define $F_1(X)$ to be the free group generated by $\cat{V}$, and $K_1(X)$ to be the quotient of $F_1(X)$ by the subgroup generated by the $Q_1(E)=\sh{F}-\sh{F}'-\sh{F}''$, where (E) now denotes a short exact sequence of vector bundles.
+If $X$ is connected (which we will assume), then we know that we can identify vector bundles with locally free sheaves on $X$;
+we thus have $\cat{V}\subset\cat{C}$, and the injection $\cat{V}\to\cat{C}$ defines a canonical homomorphism $\varepsilon\colon K_1(X)\to K(X)$.
+
+\begin{theorem}{2}
+\label{theorem2}
+  Suppose that $X$ is an irreducible non-singular quasi-projective variety.
+  Then the homomorphism $\varepsilon\colon K_1(X)\to K(X)$ defined above is a bijection.
+\end{theorem}
+
+We will need a certain number of auxiliary results on the relation between $\cat{V}$ and $\cat{C}$:
+
+\begin{lemma}{8}
+\label{lemma8}
+  Let $0\to\sh{Z}\to\sh{L}'\to\sh{L}\to0$ be an exact sequence such that $\sh{L}',\sh{L}\in\cat{V}$.
+  Then $\sh{Z}\in\cat{V}$.
+\end{lemma}
+
+\begin{proof}
+  \oldpage{106}
+  If $P\in X$, then the local module $\sh{L}_P$ is free over $\sh{O}_P$, and so a direct factor of $\sh{L}'_P$, which proves that $\sh{Z}_P$ is a projective $\sh{O}_P$-module, and thus free, since $\sh{O}_P$ is a local ring.
+  But a coherent algebraic sheaf such that all its stalks are free is itself locally free (see \cite[p.~242, lines~10--11 from the bottom]{12}).
+\end{proof}
+
+\begin{lemma}{9}
+\label{lemma9}
+  Let $n=\dim X$, and let $0\to\sh{Z}\to\sh{L}_p\to\ldots\to\sh{L}_0\to\sh{F}\to0$ be an exact sequence, with $\sh{L}_i\in\cat{V}$.
+  If $p\geq n-1$, then $\sh{Z}\in\cat{V}$.
+\end{lemma}
+
+\begin{proof}
+  This is again a local question.
+  So let $P\in X$;
+  the fact that the local ring $\sh{O}_P$ is a \emph{regular} local ring of dimension $n$ means that we can apply the syzygy theorem, and show that $\sh{Z}_P$ is $\sh{O}_P$-free, whence the desired result (noting that the hypothesis that $X$ is non-singular is used in an essential way).
+\end{proof}
+
+\begin{lemma}{10}
+\label{lemma10}
+  Every $\sh{F}\in\cat{C}$ is a quotient of some $\sh{L}\in\cat{V}$.
+\end{lemma}
+
+\begin{proof}
+  Let $X\subset \PP$ be a projective embedding of $X$, and let $\overline{X}$ be its closure in $P$.
+  By \cref{proposition2}, $\sh{F}$ can be extended to a sheaf $\sh{F}'$ on $\overline{X}$.
+  By \cite[théorème~1, p.~247]{12} (and see also \cref{lemma6}), the sheaf $\sh{F}'$ is the quotient of a direct sum of sheaves of the form $\sh{O}_{\overline{X}}(n)$, and thus a locally free sheaf on $\overline{X}$.
+  By restriction to $X$, we obtain the desired result.
+\end{proof}
+
+\begin{corollary}{\!\!}
+  For every $\sh{F}\in\cat{C}$, there exists an exact sequence
+  \[
+    0\to\sh{L}_n\to\sh{L}_{n-1}\to\ldots\to\sh{L}_0\to\sh{F}\to0
+  \]
+  with $\sh{L}_i\in\cat{V}$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+\begin{proof}[Proof of \cref{theorem2}]
+  We now pass to the proof of \cref{theorem2}.
+\end{proof}
 
 
 %% Bibliography %%
