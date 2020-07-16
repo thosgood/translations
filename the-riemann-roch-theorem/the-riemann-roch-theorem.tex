@@ -925,6 +925,71 @@ These formulas are well known when $x=\gamma(E)$, with $E$ a vector bundle on $X
 \label{section7}
 
 \oldpage{113}
+Let $f\colon Y\to X$ be a proper morphism, with $X$ and $Y$ irreducible non-singular quasi-projective varieties.
+We denote by $T(X)$ the Todd class of the tangent bundle of $X$;
+it is an element of $A(X)\otimes\mathbb{Q}$.
+Now let $y\in K(Y)$.
+Then:
+
+\begin{theorem}{(Riemann-Roch)}
+\label{theoremriemannroch}
+  $f_*(\ch(y)\cdot T(Y)) = \ch(f_!(y))\cdot T(X)$.
+\end{theorem}
+
+[The two sides of the equality are thought of as elements of $A(X)\otimes\mathbb{Q}$;
+with this in mind, we can say that R-R is a formula ``module torsion'';
+Grothendieck has more precise formulas, without torsion --- i.e. that hold in $A(X)$ --- but he does not yet know how to prove them except in characteristic zero.]
+
+We now show how the \hyperref[theoremriemannroch]{Riemann-Roch theorem}, in Grothendieck's form, \emph{implies the Riemann-Roch formula of Hirzebruch \cite{9}}:
+
+We apply \hyperref[theoremriemannroch]{R-R} to a projective $Y$, with $X$ consisting of a single point, and $y$ the class of a coherent sheaf $\sh{F}$ on $Y$.
+Since $A(X)$ is simply $\mathbb{Z}$ in dimension $0$, and is zero in higher dimensions, $f_*(u)$, for $u\in A(Y)$, is simply the terms $x_n(u)$ of degree $n=\dim Y$ in $u$.
+Also, $T(X)=1$, and $f_!(y)$ is the alternating sum of the sheaves $\RR^qf(\sh{F})$;
+a sheaf on a point is simply a vector space of finite dimension;
+in particular, $\RR^qf(\sh{F})$ is the vector space $\HH^q(Y,\sh{F})$.
+On $X$, the map $\sh{G}\mapsto\ch(\sh{G})$ consists simply of taking the \emph{rank} of a sheaf;
+the right-hand side of \hyperref[theoremriemannroch]{R-R} thus becomes $\sum(-1)^p\dim\HH^p(Y,\sh{F}) = \chi(Y,\sh{F})$, and \hyperref[theoremriemannroch]{R-R} then reduces to the form given by Hirzebruch:
+\[
+  x_n(\ch(\sh{F})\cdot T(Y)) = \chi(Y,\sh{F}).
+\]
+
+We note that this formula is proven for any coherent sheaf, and not simply for vector bundles;
+this generality is somewhat illusory, by the linear character of \hyperref[theoremriemannroch]{R-R} and by \cref{theorem2}.
+
+The proof of \hyperref[theoremriemannroch]{R-R} proceeds by reduction to particular cases of a projection and an injection.
+For this, we use the following lemma:
+
+\begin{lemma}{15}
+\label{lemma15}
+  Let $Z\xrightarrow{g}Y\xrightarrow{f}X$ be proper morphisms.
+  Let $z\in K(Z)$ and let $y=g^!(z)$. Then:
+  \begin{enumerate}[(a)]
+    \item If \hyperref[theoremriemannroch]{R-R} is true for $\{g,z\}$ and $\{f,y\}$, then it is also true for $\{fg,z\}$.
+    \item If \hyperref[theoremriemannroch]{R-R} is true of $\{fg,z\}$ and $\{f,y\}$, and if $f_*$ is injective, then \hyperref[theoremriemannroch]{R-R} is also true for $\{g,z\}$.
+  \end{enumerate}
+\end{lemma}
+
+\begin{proof}[Proof of (a)]
+  By \hyperref[theoremriemannroch]{R-R} for $g$, we have
+  \[
+    g_*(\ch(z)\cdot T(Z)) = \ch(y)\cdot T(Y).
+  \]
+  \oldpage{114}
+  Applying $f_*$ to both sides, and taking into account the fact that $(fg)_*=f_*g_*$, we see that
+  \[
+    (fg)_*(\ch(z)\cdot T(Z)) = f_*(\ch(y)\cdot T(Y)).
+  \]
+
+  Applying \hyperref[theoremriemannroch]{R-R} for $\{f,y\}$, we see that the right-hand side of the above is equal to $\ch((fg)_!(z)\cdot T(X))$, which indeed proves \hyperref[theoremriemannroch]{R-R} for $\{fg,z\}$.
+\end{proof}
+
+\begin{proof}[Proof of (b)]
+  Let
+  \begin{align*}
+    u &= g_*(\ch(z)\cdot T(Z))
+  \\v &= \ch(y)\cdot T(Y).
+  \end{align*}
+\end{proof}
 
 
 %% Bibliography %%
