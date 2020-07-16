@@ -89,6 +89,8 @@
 \begin{abstract}
   \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
   \emph{This text is one of a series\footnote{\url{https://github.com/thosgood/translations}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+  
   \emph{What follows is a translation (last updated \today) of the French paper:}
 
   \medskip\noindent
@@ -989,6 +991,38 @@ For this, we use the following lemma:
     u &= g_*(\ch(z)\cdot T(Z))
   \\v &= \ch(y)\cdot T(Y).
   \end{align*}
+  We wish to show that $u=v$.
+  Given the hypothesis on $f_*$, it suffices to prove that $f_*(u)=f_*(v)$.
+  But \hyperref[theoremriemannroch]{R-R} for $\{fg,z\}$ proves that
+  \[
+    f_*(u) = \ch(x)\cdot T(X)
+    \quad
+    \mbox{where $x=(fg)_!(z)=f_!(y)$.}
+  \]
+  Similarly, \hyperref[theoremriemannroch]{R-R} for $\{f,y\}$ proves that
+  \[
+    f_*(v) = \ch(x)\cdot T(X).
+  \]
+\end{proof}
+
+Now let $Y$ and $Y'$ be varieties, and consider their product $Y\times Y'$.
+The projections $Y\times Y'\to Y$ and $Y\times Y'\to Y'$ define homomorphisms $K(Y)\to K(Y\times Y')$ and $K(Y')\to K(Y\times Y')$, whence a homomorphism $K(Y)\otimes K(Y')\to K(Y\times Y')$.
+By an abuse of language, we also denote by $y\otimes y'$ the image in $K(Y\times Y')$ of the tensor product of two elements $y\in K(Y)$ and $y'\in K(Y')$.
+
+\begin{lemma}{16}
+\label{lemma16}
+  Let $f\colon Y\to X$ and $f'\colon Y'\to X'$ be proper morphisms, and let $y\in K(Y)$ and $y'\in K(Y')$.
+  If \hyperref[theoremriemannroch]{R-R} is true for $\{f,y\}$ and $\{f',y'\}$, then it is true for $\{f\times f',y\otimes y'\}$.
+\end{lemma}
+
+(We denote by $f\times f'\colon Y\times Y'\to X\times X'$ the product of $f$ and $f'$.)
+
+\begin{proof}
+  The proof consists of a calculation analogous to that for \cref{lemma15};
+  we have to use the following formulas:
+  \begin{enumerate}[(i)]
+    \item $(f\times f')_!(y\otimes y') = f_!(y)\otimes f'_!(y')$;
+  \end{enumerate}
 \end{proof}
 
 

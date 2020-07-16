@@ -31,3 +31,6 @@ Here are some papers that I've translated into English. Any comments or correcti
 - [ ] [`the-riemann-roch-theorem`](https://github.com/thosgood/translations/tree/master/the-riemann-roch-theorem)
 
   BOREL, Armand; SERRE, Jean-Pierre. Le théorème de Riemann-Roch. _Bulletin de la Société Mathématique de France_, Volume **86** (1958), pp. 97–136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
+- [ ] [`the-theory-of-chern-classes`](https://github.com/thosgood/translations/tree/master/the-theory-of-chern-classes)
+
+  GROTHENDIECK, Alexander. La théorie des classes de Chern. _Bulletin de la Société Mathématique de France_, Volume **86** (1958) , pp. 137-154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
