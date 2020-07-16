@@ -61,8 +61,14 @@
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
+\DeclareMathOperator{\Tor}{Tor}
+
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\crefname{equation}{}{}
 
 
 %% Document %%
@@ -107,6 +113,7 @@ The terminology that we follow is the same as in \cite{12}, up to one difference
 
 
 \section{Supplementary results concerning sheaves}
+\label{section1}
 
 (All the varieties considered below are algebraic varieties over an algebraically closed field $k$ of arbitrary characteristic. Unless otherwise mentioned, all the sheaves considered are coherent algebraic sheaves.)
 
@@ -184,6 +191,7 @@ The terminology that we follow is the same as in \cite{12}, up to one difference
 
 
 \section{Proper maps of quasi-projective varieties}
+\label{section2}
 
 A variety $X$ is said to be \emph{quasi-projective} is it is isomorphic to a locally closed subvariety of a projective space.
 It is said to be \emph{projective} if it is isomorphic to a closed subvariety of a projective space.
@@ -321,6 +329,7 @@ We can give a definition of proper maps that is analogous to the definition of c
 
 
 \section{Image of a sheaf under a proper map}
+\label{section3}
 
 Let $f\colon X\to Y$ be a morphism, with $Y$ a variety, and let $\sh{F}$ be a (coherent algebraic, as always) sheaf on $X$.
 We define, by the classical procedure of Leray, sheaves $\RR^qf(\sh{F})$ on $Y$ by setting
@@ -659,8 +668,7 @@ We will need a certain number of auxiliary results on the relation between $\cat
 
     Now let $\sh{L}_3\to\sh{Z}$ and $\sh{L}'_3\to\sh{Z}'$ be surjective, and set
     \[
-      \sh{L}'' = \sh{L}_2+\sh{L}_3+\sh{L}'_3
-      \quad\text{(direct sum)}.
+      \sh{L}'' = \sh{L}_2\oplus\sh{L}_3\oplus\sh{L}'_3.
     \]
     We define $\sh{L}''\to\sh{B}''$ as being $0$ on $\sh{L}_3$ and $\sh{L}'_3$, and equal to $\sh{L}_2\to\sh{L}_1\to\sh{B}$ on $\sh{L}_2$;
     we define $\sh{L}''\to\sh{L}$ as being equal to $\sh{L}_2\to\sh{L}_1\to\sh{L}$ on $\sh{L}_2$, to $0$ on $\sh{L}'_3$, and to $\sh{L}_2\to\sh{Z}\to\sh{L}$ on $\sh{L}_3$;
@@ -675,7 +683,180 @@ We will need a certain number of auxiliary results on the relation between $\cat
 
 \begin{proof}[Proof of \cref{lemma12}]
   Let $0\to\sh{F}'\to\sh{F}\to\sh{F}''\to0$ be an exact sequence.
+  We are going to show that there exists resolutions $\sh{L}'$, $\sh{L}$, and $\sh{L}''$ of these sheaves, such that we also have an exact sequence $0\to\sh{L}'\to\sh{L}\to\sh{L}''\to0$.
+  The additivity of $\gamma_1(\sh{L})$ will then be evident.
+  To construct these resolutions, we proceed, again, dimension by dimension.
+  Everything relies on proving that, given an exact sequence as above, we can extend it to a commutative diagram
+  \[
+    \begin{tikzcd}
+      0 \rar
+      & \sh{F}' \rar
+      & \sh{F} \rar
+      & \sh{F}'' \rar
+      & 0
+    \\0 \rar
+      & \sh{L}' \rar\uar
+      & \sh{L} \rar\uar
+      & \sh{L}'' \rar\uar
+      & 0
+    \end{tikzcd}
+  \]
+  with $\sh{L}',\sh{L},\sh{L}''\in\cat{V}$, and where the $\sh{L}\to\sh{F}$ are surjective.
+
+  For this, we first take some surjective $\sh{L}''\to\sh{F}''$, and apply \cref{lemma13} to $\sh{F}\to\sh{F}''$ and $\sh{L}\to\sh{F}''$.
+  From this we obtain surjective $\sh{L}_1\to\sh{F}$ and $\sh{L}_1\to\sh{L}''$ that make the diagram commute.
+  Next, we take some surjective $\sh{L}_2\to\sh{F}'$, and set $\sh{L}=\sh{L}_2\oplus\sh{L}_1$.
+  We define $\sh{L}\to\sh{F}$ and $\sh{L}\to\sh{L}''$ in the evident way, and we take $\sh{L}'$ to be the kernel of $\sh{L}\to\sh{L}''$.
+  Then $\sh{L}_2\subset\sh{L}'$, which shows that $\sh{L}'$ maps to $\sh{F}'$, and all the desired conditions are satisfied.
 \end{proof}
+
+This completes the proof of \cref{theorem2}.
+
+\begin{remark}
+  The hypothesis that $X$ is quasi-projective was used only in \cref{lemma10}, to prove that every coherent sheaf on $X$ is the quotient of some locally free sheaf.
+  We do not know if this lemma can be extended to ``abstract'' algebraic varieties.
+\end{remark}
+
+
+\section{Operations on $K(X)$}
+\label{section5}
+
+\subsection{Ring structure on $K(X)$}
+\label{subsection5a}
+
+Let $\sh{F}$ and $\sh{G}$ be (coherent) sheaves on $X$.
+The $\Tor_p(\sh{F},\sh{G})$ ($p=0,1,\ldots$) are coherent sheaves on $X$ (of course, the $\Tor$
+\oldpage{109}
+are taken over the sheaf of local rings of $X$).
+Since $X$ is non-singular, $\Tor_p(\sh{F},\sh{G})=0$ when $p>\dim X$, which means that the alternating sum $\chi(\sh{F},\sh{G})=\sum(-1)^p\Tor_p(\sh{F},\sh{G})$ is a well-defined element of $K(X)$.
+The exact sequence of $\Tor$ shows that $\chi(\sh{F},\sh{G})$ is bilinear in $\sh{F}$ and $\sh{G}$, and so extends to a bilinear map from $K(X)\times K(X)$ to $K(X)$, that we will denote by $(x,x')\mapsto x\cdot x'$.
+
+\begin{proposition}{6}
+\label{proposition6}
+  The product defined above is commutative and associative.
+\end{proposition}
+
+\begin{proof}
+  Commutativity is trivial, since each $\Tor$ is commutative.
+  The associativity follows from the ``associativity formula'' of the $\Tor$ (see \cite{3}):
+  we define the ``simultaneous $\Tor$'' $\Tor(\sh{F},\sh{G},\sh{H})$, and two spectral sequences abutting to $\Tor(\sh{F},\sh{G},\sh{H})$, and with $E_2$ pages $\Tor(\sh{F},\Tor(\sh{G},\sh{H}))$ and $\Tor(\Tor(\sh{F},\sh{G}),\sh{H})$ (respectively);
+  we use the fact that the Euler-Poincaré characteristics are invariant in a spectral sequence.
+
+  We can give a simpler proof by using \cref{theorem2}:
+  note that, if $\sh{F}$ and $\sh{G}$ are locally free, then
+  \[
+    \chi(\sh{F},\sh{G}) = \gamma(\sh{F}\otimes\sh{G})
+  \]
+  which means that associativity is evident when $\sh{F}$, $\sh{G}$, and $\sh{H}$ are locally free.
+  Since $K(X)$ is generated by the $\gamma(\sh{F})$, with $\sh{F}$ locally free, this proves associativity.
+\end{proof}
+
+[The above product thus corresponds to the tensor product of vector bundles.]
+
+
+\subsection{The exterior power operations}
+\label{subsection5b}
+
+Let $E$ be a vector bundle.
+The exterior powers $\bigwedge^p E$ are vector bundles, and their class in $K(X)=K_1(X)$ will be denoted by $\lambda^p(E)$.
+If we have an exact sequence
+\[
+  0\to E'\to E\to E''\to0
+\]
+then we define, by a well known procedure (Koszul's thesis!) a filtration of $\bigwedge(E)$ with quotients $\bigwedge(E')\otimes\bigwedge(E'')$.
+From this we obtain the following formula:
+\[
+  \lambda^p(E) = \sum_{r+s=p} \lambda^r(E')\cdot\lambda^s(E'').
+\]
+
+This formula can be understood as an additivity formula by introducing the formal series (in $t$)
+\[
+  \lambda_t(E) = \sum \lambda^p(E)t^p;
+\]
+this is an element of $K(X)[[t]]$, starting with $1$.
+The above formula
+\oldpage{110}
+implies that
+\[
+  \lambda_t(E) = \lambda_t(E')\lambda_t(E'').
+\]
+
+The map $E\mapsto\lambda_t(E)$ can thus be extended to a homomorphism $x\mapsto\lambda_t$ from $K(X)=K_1(X)$ to the multiplicative group $U$ of formal series
+\[
+  1+a_1t+\ldots+a_nt^n+\ldots
+  \quad
+  \mbox{with $a_i\in K(X)$.}
+\]
+By definition, $\lambda^p(x)$ is the coefficient of $t^p$ in $\lambda_t(x)$.
+
+In characteristic $0$, Grothendieck has shown that, for every sheaf $\sh{F}$, $\lambda^p(\sh{F})$ is equal to the alternating sum of the ``alternating $\Tor$'' of $p$ copies of $\sh{F}$.
+In characteristic $\neq0$, we do not know any analogous formula.
+
+
+\subsection{The operation $f^!$}
+\label{subsection5c}
+
+Let $f\colon Y\to X$ be a morphism.
+If $E$ is a vector bundle over $X$, then the bundle $f^{-1}(E)$ is a vector bundle over $Y$.
+This operation is additive, and thus extends to a homomorphism $f^!\colon K(X)\to K(Y)$.
+By arguing on the fibres, we immediately see that \emph{$f^!$ is a ring homomorphism, compatible with the operation $\lambda^p$, and such that $(fg)^!=g^!f^!$}.
+
+If $\sh{F}$ is a coherent sheaf on $X$, then we can directly define $f^!(\sh{F})$ as the alternating sum of the $\Tor_p^{\sh{O}_X}(\sh{O}_Y,\sh{F})$;
+indeed, this expression is additive in $\sh{F}$ (by the exact sequence of $\Tor$), and reduces to $\sh{O}_Y\otimes\sh{F}$ when $\sh{F}$ is locally free.
+
+
+\subsection{The operation $f_!$}
+\label{subsection5d}
+
+Again, let $f\colon Y\to X$ be a morphism, that we now assume to be \emph{proper}.
+If $\sh{F}$ is coherent on $Y$, then we have seen (\cref{theorem1}, \cref{section3}) that the $\RR^qf(\sh{F})$ ($q=0,1,\ldots$) are coherent sheaves on $X$, and their alternating sum is a well-defined element of $K(X)$.
+Since this alternating sum is additive in $\sh{F}$ (by the exact sequence of cohomology), we thus obtain an additive homomorphism $f_!\colon K(Y)\to K(X)$.
+In the particular case where $Y$ is a closed subvariety of $X$, and $f$ is the canonical injection $Y\to X$, this operation reduces to extending by $0$ outside of $Y$.
+
+The map $f_!$ is not compatible with multiplication.
+We do, however, have the following formula:
+\[
+  f_!(y\cdot f^!(x)) = f_!(y)\cdot x
+  \quad
+  \mbox{for $x\in K(X)$ and $y\in K(Y)$.}
+\]
+
+It suffices to prove this formula when $y=\gamma_Y(\sh{F})$ and $x=\gamma_X(\sh{L})$, where $\sh{F}$ (resp. $\sh{L}$) is a coherent sheaf on $Y$ (resp. a locally free sheaf on $X$).
+In this case, we even have the more precise formula
+\[
+\label{equation*}
+  \RR^qf(\sh{F}\otimes_{\sh{O}_Y}f^{-1}(\sh{L})) = \RR^qf(\sh{F})\otimes_{\sh{O}_X}\sh{L}
+  \tag{$\star$}
+\]
+where we set
+\[
+  f^{-1}(\sh{L}) = \sh{L}\otimes_{\sh{O}_X}\sh{O}_Y.
+\]
+
+\oldpage{111}
+To prove \cref{equation*}, we first note that
+\[
+  \sh{F}\otimes_{\sh{O}_Y}f^{-1}(\sh{L}) = \sh{F}\otimes_{\sh{O}_X}\sh{L}.
+\]
+Returning to the definition of $\RR^qf$, we define a canonical homomorphism from the right-hand side of \cref{equation*} to the left-hand side;
+to show that it is an isomorphism we can argue locally.
+We can thus restrict to the case where $\sh{L}=\sh{O}_X$, and in this case our claim is trivial.
+
+If we have to proper maps $Z\xrightarrow{g}Y\xrightarrow{f}X$, and if $\sh{F}$ is a coherent sheaf on $Z$, then we can construct a spectral sequence with second page
+\[
+  E_2^{p,q} = \RR^pf(\RR^qg(\sh{F}))
+\]
+that abuts to $\RR^n(fg)(\sh{F})$:
+this is a particular case of the spectral sequence of composition of functors (see \cite{7}).
+From this, we obtain the formula
+\[
+  (fg)_!(\sh{F}) = f_!(g_!(\sh{F}))
+\]
+whence finally the fact that $(fg)_!=f_!g_!$.
+
+
+\section{Chern classes}
+\label{section6}
 
 
 %% Bibliography %%
