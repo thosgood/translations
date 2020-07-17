@@ -1056,6 +1056,44 @@ The case of an injection (which is more difficult) will be covered later on.
 \section{Exactness and homotopy properties of $K(X)$}
 \label{section8}
 
+\begin{proposition}{7}
+\label{proposition7}
+  Let $X$ be an algebraic variety (singular or not), and $X'$ a closed subvariety of $X$, and set $U=X\setminus X'$.
+  Then we have an exact sequence
+  \[
+    K(X') \to K(X) \to K(U) \to 0.
+  \]
+\end{proposition}
+
+[The homomorphism $K(X')\to K(X)$ is that given by extending a sheaf on $X'$ by zero outside of $X'$;
+in the case where $X$ and $X'$ are non-singular, and denoting the canonical injection $X'\to X$ by $i$, this homomorphism is $i_!$.
+As for $K(X)\to K(U)$, this is the restriction homomorphism;
+in the case where $X$ is non-singular, and denoting the canonical injection $U\to X$ by $j$, this homomorphism is $j^!$.]
+
+\begin{proof}
+  Let $A=K(X)/\operatorname{Im} K(X')$.
+  We will define a homomorphism from $K(U)$ to $A$.
+  For this, let $\sh{F}$ be a coherent sheaf on $U$;
+  by \cref{proposition2}, we can extend $\sh{F}$ to a sheaf $\sh{G}$ on $X$.
+  We will show that the image of $\gamma_X(\sh{G})$ in $A$ does not depend on $\sh{G}$, but only on $\sh{F}$.
+  So let $\sh{G}$ and $\sh{G}'$ be extensions of $\sh{F}$.
+  Embed $\sh{F}$ diagonally into $\sh{F}\times\sh{F}=(\sh{G}\times\sh{G}')|U$;
+  by \cref{proposition1}, there exists a subsheaf $\sh{G}''$ of $\sh{G}\times\sh{G}'$ such that its restriction to $U$ is $\sh{F}$, and everything then relies on proving that
+  \[
+    \gamma_X(\sh{G}'') \equiv \gamma_X(\sh{G}') \mod \operatorname{Im}K(X')
+  \]
+  and similarly for $\sh{G}'$.
+  But, since $\sh{G}''\subset\sh{G}\times\sh{G}'$, we have a homomorphism $f\colon\sh{G}''\to\sh{G}$ that is bijective over $U$.
+  Let $\sh{N}$ and $\sh{Q}$ be the kernel and cokernel (respectively) of $f$;
+  then
+  \[
+    \gamma_X(\sh{G}'') - \gamma_X(\sh{G})
+    \equiv \gamma_X(\sh{N}) - \gamma_X(\sh{Q}).
+  \]
+  But $\sh{N}$ and $\sh{Q}$ are 
+
+\end{proof}
+
 
 %% Bibliography %%
 
