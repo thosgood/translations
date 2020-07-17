@@ -1209,6 +1209,7 @@ Thus:
 \end{remark}
 
 \begin{corollary}
+\label{corollary-8}
   If $Y$ is an affine space $k^n$, then
   \[
     K(X) = K(X\times Y).
@@ -1222,6 +1223,66 @@ Thus:
 
 \section{Proof of the Riemann-Roch theorem for $f\colon X\times P\to X$}
 \label{section9}
+
+We fill first prove claim~(a') from the end of \cref{section7}:
+
+\begin{proposition}{9}
+\label{proposition9}
+  For every variety $X$, and every projective space $\PP$, the homomorphism $K(X)\otimes K(\PP)\to K(X\times \PP)$ is surjective.
+\end{proposition}
+
+\begin{proof}
+  We argue by induction on $\dim\PP$.
+  For $\dim\PP=0$, the proposition is trivial.
+  So let $\PP'$ be a hyperplane in $\PP$, and let $U=\PP\setminus\PP'$.
+  We then have a diagram of exact sequences
+  \[
+    \begin{tikzcd}
+      K(X)\otimes K(\PP') \rar \dar[swap,"\varepsilon_1"]
+      & K(X)\otimes K(\PP) \rar \dar[swap,"\varepsilon_2"]
+      & K(X)\otimes K(U) \rar \dar[swap,"\varepsilon_3"]
+      & 0
+    \\K(X\times\PP') \rar
+      & K(X\times\PP) \rar
+      & K(X\times U) \rar
+      & 0
+    \end{tikzcd}
+  \]
+
+  This diagram commutes:
+  this is trivial for the second and third squares, and, for the first square, it suffices to verify locally, on affine opens, for example.
+  Given the induction hypothesis, $\varepsilon_1$ is surjective.
+  But $U$ is an affine space;
+  the \hyperref[corollary-8]{corollary} to \cref{proposition8} then shows that $K(U)=\mathbb{Z}$, and that $K(X\times U)=K(X)$, whence the fact that $\varepsilon_3$ is bijective.
+  The five lemma then shows that $\varepsilon_2$ is surjective.
+\end{proof}
+
+\begin{remark}
+  The above proof shows that
+  \[
+    K(X)\otimes K(Y) \to K(X\times Y)
+  \]
+  is surjective whenever $Y$ admits an \emph{algebraic cellular decomposition}, where the cells are \emph{affine spaces}.
+  This is notably the case if $Y$ is a Grassmannian.
+\end{remark}
+
+We now proceed to the proof of claim~(a''):
+
+\begin{proposition}{10}
+\label{proposition10}
+  Let $\sh{F}$ be a coherent sheaf on a projective space $\PP$
+\oldpage{119}
+  of dimension $r$.
+  Then the R-R-Hirzebruch formula
+  \[
+    x_r(\ch(\sh{F})\cdot T(\PP)) = \chi(\PP,\sh{F})
+  \]
+  is true.
+\end{proposition}
+
+\begin{proof}
+  Let $H$ be a hyperplane, and $x$ its class in $A^\lambda(\PP)$ \todo???.
+\end{proof}
 
 
 %% Bibliography %%
