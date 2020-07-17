@@ -60,6 +60,7 @@
 \DeclareMathOperator{\Tor}{Tor}
 \DeclareMathOperator{\ch}{ch}
 \DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\proj}{proj}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -67,6 +68,7 @@
 
 \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 \crefname{equation}{}{}
+\crefname{section}{§}{§§}
 \crefname{subsection}{§}{§§}
 
 
@@ -1090,9 +1092,136 @@ in the case where $X$ is non-singular, and denoting the canonical injection $U\t
     \gamma_X(\sh{G}'') - \gamma_X(\sh{G})
     \equiv \gamma_X(\sh{N}) - \gamma_X(\sh{Q}).
   \]
-  But $\sh{N}$ and $\sh{Q}$ are 
-
+  But $\sh{N}$ and $\sh{Q}$ are supported outside of $X'$;
+  if $\sh{I}$ denotes the sheaf
+\oldpage{116}
+  of ideals of $X'$ in $\sh{O}_X$, then there exists an integer $n>0$ such that $\sh{I}^n\sh{N}=0$, and similarly for $\sh{Q}$ (this is a local statement that is essentially equivalent to the ``Nullstellensatz'', see \cite{14});
+  we thus conclude that $\sh{N}$ and $\sh{Q}$ admit composition series whose successive quotients are annihilated by $\sh{I}$, i.e. are coherent on $X'$, and so
+  \[
+    \gamma_X(\sh{Q}) \equiv \gamma_X(\sh{N}) \equiv 0 \mod \operatorname{Im}K(X').
+  \]
+  The independence of $\gamma_X(\sh{G}) \mod\operatorname{Im}K(X)$ is thus proven, and so we obtain a well-defined element $\eta(\sh{F})\in A$.
+  If $0\to\sh{F}'\to\sh{F}\to\sh{F}''\to0$ is an exact sequence on $U$, then we can extend $\sh{F}$ and $\sh{G}$ to $X$, and $\sh{F}'$ to a subsheaf $\sh{G}'$ of $\sh{G}$ (see \cref{proposition1}).
+  The sheaf $\sh{G}''=\sh{G}/\sh{G}'$ extends $\sh{F}''$, which proves that $\eta(\sh{F})=\eta(\sh{F}')+\eta(\sh{F}'')$.
+  The operation $\eta$, being additive, defines $\eta\colon K(U)\to A$.
+  If we denote by $\varepsilon$ the canonical homomorphism from $A$ to $K(U)$, we immediately see that $\eta\circ\varepsilon=1$ and $\varepsilon\circ\eta=1$, which finishes the proof.
 \end{proof}
+
+Now let $X$ and $Y$ be varieties.
+Denote by $p\colon X\times Y\to X$ the canonical projection.
+If $X$ and $Y$ are \emph{non-singular}, then the homomorphism $p^!\colon K(X)\to K(X\times Y)$ is defined (see \cref{subsection5c}, as well as \cref{section7}).
+In fact, this homomorphism can be defined \emph{in the general case}.
+This comes from the fact that $\sh{O}_{X\times Y}$ is $\sh{O}_X$-flat (i.e. an annihilator of $\Tor$), since it is a ring of fractions of the usual tensor product $\sh{O}_X\otimes_k\sh{O}_Y$.
+We can thus set $p^!(\sh{F})=\sh{F}\otimes_{\sh{O}_X}\sh{O}_{X\times Y}$ for any coherent sheaf $\sh{F}$ on $X$, and $p^!(\sh{F})$ is additive, and so defines some $K(X)\to K(X\times Y)$.
+Thus:
+
+\begin{proposition}{8}
+\label{proposition8}
+  If $Y$ is an affine line, then the homomorphism $p^!\colon K(X)\to K(X\times Y)$ is bijective.
+\end{proposition}
+
+\begin{proof}
+  Let $a$ be the origin in $Y$, and identify $X$ with $X\times\{a\}\subset X\times Y$.
+  We have an exact sequence:
+  \[
+    0 \to \sh{O}_{X\times Y} \xrightarrow{t} \sh{O}_{X\times Y} \to \sh{O}_X \to 0
+  \]
+  where $t$ denotes the projection $X\times Y\to Y$, considered as a function to $X\times Y$.
+  This exact sequence shows that $\Tor_p^{\sh{O}_{X\times Y}}(\sh{O}_X,\sh{F})=0$ for $p\geq2$, if $\sh{F}$ is a coherent sheaf on $X\times Y$.
+  We can thus define $\pi_a\colon K(X\times Y)\to K(X)$ by setting
+  \[
+    \pi_a(\sh{F}) = \Tor_0(\sh{O}_X,\sh{F}) - \Tor_1(\sh{O}_X,\sh{F});
+  \]
+  we see, furthermore, that $\pi_a\circ p^1=1$, which already shows that $p^1$ is \emph{injective}.
+  From now on, we will consider $K(X)$ as \emph{embedded} into $K(X\times Y)$.
+
+  To prove that $K(X)=K(X\times Y)$, we argue by induction on $n=\dim X$, and we use the following diagram (where $X'$ is closed in $X$, and $U=X\setminus X'$):
+  \[
+    \begin{tikzcd}
+      K(X') \rar \dar
+      & K(X) \rar \dar
+      & K(U) \rar \dar
+      & 0
+    \\K(X'\times Y) \rar
+      & K(X\times Y) \rar
+      & K(U\times Y) \rar
+      & 0
+    \end{tikzcd}
+  \]
+
+\oldpage{117}
+  By \cref{proposition7}, the rows of this diagram are exact.
+  We thus conclude that, if $K(X')=K(X'\times Y)$ (which is the case, by the induction hypothesis, if $\dim X'<n$), every element of $K(X\times Y)$ whose restriction to $U\times Y$ is in $K(U)$ is also an element of $K(X)$.
+  In other words, we can ``neglect'' the subvarieties of $X$ of dimension $<n$.
+  In particular, we can suppose $X$ to be \emph{affine, non-singular, and irreducible} (since the complement of the set of singular points is a union of disjoint irreducible varieties).
+  We will make use of the following d\'{e}vissage lemma:
+
+  \begin{lemma}{17}
+  \label{lemma17}
+    Let $Z$ be an algebraic variety.
+    Then the $\gamma_Z(\sh{O}_T)$ generate $K(Z)$, where $T$ runs over the set of irreducible subvarieties of $Z$.
+  \end{lemma}
+
+  \begin{proof}
+    We argue by induction on $\dim Z$;
+    using \cref{proposition7}, we can assume that $Z$ is irreducible.
+    Let $\sh{F}$ be a sheaf on $Z$;
+    if $\sh{F}$ is a torsion sheaf, then it is concentrated on a subvariety, and the induction hypothesis shows that it is contained in the subgroup $K'(Z)$ of $K(Z)$ generated by the $\gamma_Z(\sh{O}_T)$.
+    In the case where $\sh{F}$ is torsion-free, we embed it into $\sh{F}\otimes_{\sh{O}_Z}K$, where $K$ is the field of rational functions on $Z$;
+    we then have that $\sh{F}\otimes K=K^n$, and from this we conclude that $\sh{F}$ is isomorphic to $(\sh{O}_Z)^n$ modulo a torsion sheaf;
+    whence the result.
+    (For more details, see \cite{14}, or \cite{6}.)
+  \end{proof}
+
+  By applying \cref{lemma17} to the case that interests us, we see that it suffices to show that $\gamma(\sh{O}_T)\in K(X)$ for every irreducible subvariety $T$ of $X\times Y$.
+  If $\proj_X(T)\neq X$, then it is evident, by the induction hypothesis;
+  if $T=X\times Y$, then it is even more evident.
+  Thus the only remaining case is when $\dim T=n$, and $\proj_X(T)$ is dense in $X$.
+  If $A$ denotes the coordinate ring of $X$, then $T$ corresponds to a minimal prime ideal $\mathfrak{p}$ in the coordinate ring $A[t]$ of $X\times Y$;
+  the fact that the projection from $T$ to $X$ is dense implies that $A\cap\mathfrak{p}=0$.
+  Let $S$ be the set of invertible elements of $A$, and let $K=A_S$ te bhe field of fractions of $A$.
+  We have that $A[t]_S=K[t]$, and the fact that $\mathfrak{p}\cap S=\varnothing$ implies that $\mathfrak{p}$ is of the form $\mathfrak{p}'\cap A[t]$, where $\mathfrak{p}'$ is a non-zero prime ideal of $K[t]$.
+  There thus exists an irreducible polynomial $P(t)$, with coefficients in $A$ if we want, such that $\mathfrak{p}$ is the set of polynomials of $A[t]$ that are divisible by $P(t)$ in $K[t]$.
+  Then
+  \[
+    A[t] \supset \mathfrak{p} \supset P(t)\cdot A[t] = \mathfrak{q}.
+  \]
+  The sheaf $\sh{O}_T$ corresponds to the module $A[t]/\mathfrak{p}$;
+  let $\sh{F}$ be the sheaf that corresponds to $A[t]/\mathfrak{q}$.
+  Since $\mathfrak{p}_S=\mathfrak{q}_S$, there exists some $a\in S$ such that $a\cdot(\mathfrak{p}/\mathfrak{q})=0$, which shows that $\sh{O}_T$ is congruent to $\sh{F}$ modulo an element of $K(X'\times Y)$, with $\dim X'<\dim X$.
+  Also, the exact sequence
+  \[
+    0 \to \sh{O}_{X\times Y} \xrightarrow{P(t)} \sh{O}_{X\times Y} \to \sh{F} \to 0
+  \]
+  shows that $\gamma(\sh{F})=0$ in $K(X\times Y)$, whence
+  \[
+    \gamma(\sh{O}_T) \in \operatorname{Im} K(X'\times Y) = \operatorname{Im} K(X') \subset K(X)
+  \]
+  which finishes the proof.
+\end{proof}
+
+\oldpage{118}
+\begin{remark}[Cartier]
+  We can avoid the need for the d\'{e}vissage lemma by applying, to an arbitrary module $M$ over $A[t]$, the procedure applied above to the prime ideal $\mathfrak{p}$.
+  We form $M\otimes_A K=M_S$, which is a $K[t]$-module.
+  The structure of modules over principal rings shows that the group of classes of $K[t]$-modules is infinite cyclic, generated by the module $A[t]$.
+  Since passing to $M_S$ consists of ``neglecting'' everything that is concentrated on $X'\times Y$, the result follows.
+\end{remark}
+
+\begin{corollary}
+  If $Y$ is an affine space $k^n$, then
+  \[
+    K(X) = K(X\times Y).
+  \]
+\end{corollary}
+
+\begin{proof}
+  This is immediate, by induction on $\dim Y$.
+\end{proof}
+
+
+\section{Proof of the Riemann-Roch theorem for $f\colon X\times P\to X$}
+\label{section9}
 
 
 %% Bibliography %%
