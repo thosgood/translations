@@ -765,7 +765,7 @@ The exact sequence of $\Tor$ shows that $\chi(\sh{F},\sh{G})$ is bilinear in $\s
 \label{subsection5b}
 
 Let $E$ be a vector bundle.
-The exterior powers $\bigwedge^p E$ are vector bundles, and their class in $K(X)=K_1(X)$ will be denoted by $\lambda^p(E)$.
+The exterior powers $\bigwedge\nolimits^p E$ are vector bundles, and their class in $K(X)=K_1(X)$ will be denoted by $\lambda^p(E)$.
 If we have an exact sequence
 \[
   0\to E'\to E\to E''\to0
@@ -1380,7 +1380,7 @@ By using the local parameters, we see that
 \subsection{Local resolution of $\sh{O}_Y$ over $\sh{O}_X$}
 \label{subsection10c}
 
-Let $V$ be a vector space over $k$ of dimension $p$, and $e_1,\ldots,e_p$ be a basis of $V$, and define $\mathfrak{M}_i = \sh{O}_X\otimes_k\bigwedge^i V$.
+Let $V$ be a vector space over $k$ of dimension $p$, and $e_1,\ldots,e_p$ be a basis of $V$, and define $\mathfrak{M}_i = \sh{O}_X\otimes_k\bigwedge\nolimits^i V$.
 We endow the direct sum $\mathfrak{M}$ of the $\mathfrak{M}_i$ with a differential $\dd$ defined by
 \footnote{As usual, the notation $\,\,\widehat{\,}\,\,\,$ indicates that the symbol below should be omitted.}
 \[
@@ -1438,7 +1438,7 @@ For $b\in U\setminus(U\cap Y)$, we have that $\sh{O}_{b,Y}=0$, and the exactness
   \]
   which can also be written as
   \[
-    0 \to \sh{O}_Z\otimes_k\bigwedge^p V \to \ldots \to \sh{O}_Z\otimes_k V \to \sh{O}_Z
+    0 \to \sh{O}_Z\otimes_k\bigwedge\nolimits^p V \to \ldots \to \sh{O}_Z\otimes_k V \to \sh{O}_Z
   \]
   endowed with the same differential as above, with the $f_i$ being considered as element of $\sh{O}_Z$.
   Since $\sh{O}_{a,Z} = \sh{O}_{a,X}/(g_1,\ldots,g_q)$, the $f_i$ generate a perfect ideal inside;
@@ -1467,6 +1467,77 @@ For $b\in U\setminus(U\cap Y)$, we have that $\sh{O}_{b,Y}=0$, and the exactness
 
 \subsection{}
 \label{subsection10d}
+
+We will use, here and later on, the following remark;
+let $\sh{F}$ and $\sh{G}$ be sheaves of algebras on $X$.
+Then the direct sum of the $\Tor_i^{\sh{O}_X}(\sh{F},\sh{G})$ canonically admits the structure of a sheaf of graded (by $i$) algebras.
+If $\sh{F}$ admits, on $U$, a resolution $\sh{L}$ over $\sh{O}_X$ that is a sheaf of graded algebras, then the product in the homology of $\sh{L}\otimes\sh{G}$ induced by the products in $\sh{L}$ and $\sh{G}$ coincides, on $U$< the the aforementioned coupling of the $\Tor_i$.
+[Details left to the read;
+see \cite[chap.~IX]{3} for some analogous and more general considerations.
+This follows from the classical result on maps from an acyclic complex (\cite[proposition~11, p.~76]{3}).]
+
+\begin{proposition}{12}
+\label{proposition12}
+  We have that $i^!i_!(y)=y\cdot\lambda_{-1}(E^*)$ for all $y\in K(Y)$.
+  In particular, $i^!\gamma(Y)=\lambda_{-1}(E^*)$.
+\end{proposition}
+
+\begin{proof}
+  By linearity, and \cref{theorem2}, we can restrict to proving \cref{proposition12} in the case where $y=\sh{F}$ is a locally free sheaf.
+  By definition, $i^!i_!(\sh{F})$ is the alternating sum of the $\Tor_i^{\sh{O}_X}(\sh{F},\sh{O}_Y)$, and, since $\sh{F}$ and the $\lambda^i E^*$ are locally free, $\sh{F}\cdot\lambda_{-1}E^*$ is the alternating sum of the $\sh{F}\otimes_{\sh{O}_Y}\lambda^i E^*$.
+  Recalling \cref{subsection10b}, it thus suffices, to prove \cref{proposition12}, to show that
+  \[
+  \label{equation4}
+    \Tor_1^{\sh{O}_X}(\sh{F},\sh{O}_Y)
+    = \sh{F} \otimes_{\sh{O}_Y} \sh{I}(Y)/\sh{I}(Y)^2
+    \tag{4}
+  \]
+  \[
+  \label{equation5}
+    \Tor_i^{\sh{O}_X}(\sh{F},\sh{O}_Y)
+    = \sh{F} \otimes_{\sh{O}_Y} \lambda^i(\Tor_1^{\sh{O}_X}(\sh{O}_Y,\sh{O}_Y)).
+    \tag{5}
+  \]
+  [In \cref{equation5}, $\lambda^i$ is the $i$th exterior power of a sheaf which is locally free, given \cref{equation4}.]
+
+  Unless otherwise mentioned, $\Tor$ and $\otimes$ are taken over $\sh{O}_X$.
+  The exact sequence of $\Tor$, applied to \cref{equation1}, gives the exact sequence
+  \[
+    0 \to \Tor_1(\sh{F},\sh{O}_Y) \to \sh{I}(Y)\otimes\sh{F} \xrightarrow{g} \sh{F}
+  \]
+  where $g$ is defined by $g(u\otimes v)=u\cdot v$.
+  Since $\sh{I}(Y)$ annihilates $\sh{F}$, $g$ has a zero image, and so
+  \[
+    \Tor_1(\sh{F},\sh{O}_Y) = \sh{I}(Y)\otimes\sh{F}.
+  \]
+  But, since $\sh{F}$ is a sheaf on $Y$, it is annihilated by $\sh{I}(Y)$, and so the image of $\sh{I}(Y)^2\otimes\sh{F}$ in $\sh{I}(Y)\otimes\sh{F}$ is zero, and $\sh{I}(Y)\otimes\sh{F}$ can be identified with $\sh{I}(Y)/\sh{I}(Y)^2\otimes\sh{F}$.
+  Finally, since, in this product, the two sheaves are
+\oldpage{123}
+  over $\sh{O}_Y$, their $\otimes$ over $\sh{O}$ can be identified with their tensor product over $\sh{O}_Y$, which finishes the proof of \cref{equation4}.
+
+  Using the notation of \cref{subsection10b}, the $\Tor_i(\sh{F},\sh{O}_Y)$ are, on $U$, the homology groups of the complex
+  \[
+    0\to\mathfrak{M}_p\otimes\sh{F}\to\mathfrak{M}_{p-1}\otimes\sh{F}\to\ldots\to\sh{F}
+  \]
+  which can also be written as
+  \[
+  \label{equation6}
+    0 \to \sh{F}\otimes_k\bigwedge\nolimits^p V \to \sh{F}\otimes_k\bigwedge\nolimits^{p-1}V \to \ldots \to \sh{F}
+    \tag{6}
+  \]
+  endowed with the differential that extends $\dd$ and is zero on $\sh{F}$.
+  Since the $f_i$ are local sections of $\sh{I}(Y)$, and this sheaf annihilates $\sh{F}$, it follows that, in \cref{equation6}, the differential is identically zero, and so
+  \[
+    \Tor_i(\sh{F},\sh{O}_Y) = \sh{F}\otimes_k\bigwedge\nolimits^iV = \sh{F}\otimes_{\sh{O}_Y}\sh{O}_Y\otimes_k\bigwedge\nolimits^i V
+    \quad\mbox{($i\geq0$).}
+  \]
+  In the particular case where $\sh{F}=\sh{O}_Y$, this formula shows that
+  \[
+    \Tor_1(\sh{O}_Y,\sh{O}_Y) = \sh{O}_Y\otimes_k V
+  \]
+  whence we have an isomorphism (for the moment, local, defined by the use of the parameters $f_i$) of the two sides of \cref{equation5}.
+  But $\mathfrak{M}$, thought of as a tensor product of the algebras $\sh{O}_Y$ and $\bigwedge V$, is clearly a differential graded algebra, \todo
+\end{proof}
 
 
 %% Bibliography %%
