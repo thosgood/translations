@@ -1284,7 +1284,7 @@ We now proceed to the proof of claim~(a''):
 \end{proposition}
 
 \begin{proof}
-  Let $H$ be a hyperplane, and $x$ its class in $A^?(\PP)$ \todo???.
+  Let $H$ be a hyperplane, and $x$ its class in $A^1(\PP)$ \todo???.
   We know that the Chern polynomial of $\PP$ is $(1+tx)^{r+1}$;
   thus
   \[
@@ -1363,12 +1363,8 @@ Recall that $c([Z])=1+Z$.
 \subsection{Local parameters. Normal bundle}
 \label{subsection10b}
 
-\todo(check subsection title: parameters?)
-
-\todo(check `parameters' everywhere then)
-
 Let $a\in Y$.
-Then there exists an affine open subset $U\subset X$ containing $a$, and functions $f_1,\ldots,f_p$ that are regular on $U$, and that form a system of local parameters, or a system of ``uniformising \todo'' parameters, for $Y$.
+Then there exists an affine open subset $U\subset X$ containing $a$, and functions $f_1,\ldots,f_p$ that are regular on $U$, and that form a system of local parameters, or a system of ``uniformising'' parameters, for $Y$.
 This implies that $Y\cap U$ is defined by the equations $f_1=\ldots=f_p=0$, that $\dd f_1,\ldots,\dd f_p$ are linearly independent at every point in $Y\cap U$, that the $f_i$ form a basis for the ideal $\sh{I}(Y)_b$ of $Y$ in $\sh{O}_{b,X}(b\in Y\cap U)$, and, finally, that this ideal is ``perfect'', i.e. that the annihilator of $f_i$ in $\sh{O}_{b,X}/(f_1,\ldots,f_{i-1})$ is zero ($1\leq i\leq p$; $f_0=0$).
 
 At every point $b\in Y\cap U$, the $\dd f_i$ form a basis for $E_b^*$.
@@ -1434,7 +1430,7 @@ For $b\in U\setminus(U\cap Y)$, we have that $\sh{O}_{b,Y}=0$, and the exactness
   It is clear that these sheaves, and the sheaf $\sh{O}_{Y\cap Z}$, are equal (and zero) at any point not contained inside $Y\cap Z$, which, in particular, proves our claim if $Y\cap Z=\varnothing$.
 
   Now let $a\in Y\cap Z$.
-  Since $Y$ and $Z$ intersect transversally, we can find an affine open subset $U$ containing $a$, and functions $f_1,\ldots,f_p$ and $g_1,\ldots,g_q$ that are regular on $U$ such that the $f_i$ (resp. the $g_j$; resp, the $f_i$ and the $g_j$) form a system of uniformising \todo for $Y$ (resp. for $Z$; resp. for $Y\cap Z$).
+  Since $Y$ and $Z$ intersect transversally, we can find an affine open subset $U$ containing $a$, and functions $f_1,\ldots,f_p$ and $g_1,\ldots,g_q$ that are regular on $U$ such that the $f_i$ (resp. the $g_j$; resp, the $f_i$ and the $g_j$) form a system of uniformising parameters for $Y$ (resp. for $Z$; resp. for $Y\cap Z$).
   To calculate the $\Tor_i(\sh{O}_Y,\sh{O}_Z)$, we resolve $\sh{O}_Y$ by using \cref{equation2}.
   We must thus determine the homology of the complex
   \[
