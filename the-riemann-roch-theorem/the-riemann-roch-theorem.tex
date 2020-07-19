@@ -96,6 +96,8 @@
   \textsc{Borel, Armand}; \textsc{Serre, Jean-Pierre}. Le th\'{e}or\`{e}me de Riemann-Roch. \emph{Bulletin de la Soci\'{e}t\'{e} Math\'{e}matique de France}, Volume~\textbf{86} (1958) , pp.~97-136. \textsc{doi}: \href{https://www.doi.org/10.24033/bsmf.1500}{10.24033/bsmf.1500}.
 \end{abstract}
 
+\setcounter{footnote}{0}
+
 \tableofcontents
 
 
@@ -113,7 +115,7 @@ in the classical case, where the base field is $\mathbb{C}$, this theorem encaps
 
 The full statement and proof of the Riemann-Roch theorem can be found in sections 7 to 16, with the last section being devoted to an application.
 Sections 1 to 6 contain some preliminaries on coherent algebraic sheaves \cite{12}.
-The terminology that we follow is the same as in \cite{12}, up to one difference: to conform with a custom which is becoming more and more widespread, we use the word ``morphism'' instead of ``regular maps''.
+The terminology that we follow is the same as in \cite{12}, up to one difference: to conform with a custom which is becoming more and more widespread, we use the word ``morphism'' instead of ``regular map''.
 
 
 \section{Supplementary results concerning sheaves}
@@ -1342,8 +1344,133 @@ Since we have proven (a') and (a''), we can state:
 \label{subsection10a}
 
 \oldpage{120}
-Before following the proof of \hyperref[theoremriemannroch]{R-R}, we first discuss the local resolution of the sheaf of local rings of a subvariety, and study some of its consequences.
+Before continuing the proof of \hyperref[theoremriemannroch]{R-R}, we first discuss the local resolution of the sheaf of local rings of a subvariety, and study some of its consequences.
 Some of these will be more general than necessary for our purposes, but they are interesting in their own right, and are no more difficult than the particular cases that we will need.
+
+In what follows, $Y$ is a (non-singular) subvariety of $X$, $i$ the injection of $Y$ into $X$, $p$ the codimension of $Y$ in $X$, $E$ the normal bundle of $Y$, and $\sh{I}(Y)$ the sheaf of local ideals of $Y$.
+We thus have the exact sequence
+\[
+\label{equation1}
+  0 \to \sh{I}(Y) \to \sh{O}_X \xrightarrow{r} \sh{O}_Y \to 0
+  \tag{1}
+\]
+where $r$ is the restriction.
+
+Finally, write $F^*$ to mean the dual of a vector bundle $F$, and $[Z]$ to mean the bundle associated to a divisor $Z$.
+Recall that $c([Z])=1+Z$.
+
+
+\subsection{Local parameters. Normal bundle}
+\label{subsection10b}
+
+\todo(check subsection title: parameters?)
+
+\todo(check `parameters' everywhere then)
+
+Let $a\in Y$.
+Then there exists an affine open subset $U\subset X$ containing $a$, and functions $f_1,\ldots,f_p$ that are regular on $U$, and that form a system of local parameters, or a system of ``uniformising \todo'' parameters, for $Y$.
+This implies that $Y\cap U$ is defined by the equations $f_1=\ldots=f_p=0$, that $\dd f_1,\ldots,\dd f_p$ are linearly independent at every point in $Y\cap U$, that the $f_i$ form a basis for the ideal $\sh{I}(Y)_b$ of $Y$ in $\sh{O}_{b,X}(b\in Y\cap U)$, and, finally, that this ideal is ``perfect'', i.e. that the annihilator of $f_i$ in $\sh{O}_{b,X}/(f_1,\ldots,f_{i-1})$ is zero ($1\leq i\leq p$; $f_0=0$).
+
+At every point $b\in Y\cap U$, the $\dd f_i$ form a basis for $E_b^*$.
+Also, $\sh{I}(Y)/\sh{I}(Y)^2$ is a sheaf concentrated on $Y$, and annihilated by $\sh{I}(Y)$, and is thus a sheaf of $\sh{O}_Y$-modules.
+It is immediate that $f\mapsto\dd f$ is a homomorphism of $\sh{O}_Y$-modules from $\sh{I}(Y)/\sh{I}(Y)^2$ to the sheaf $\sh{O}_Y(E^*)$ of germs of sections of $E^*$.
+By using the local parameters, we see that
+
+\medskip
+
+\emph{the map $D\colon\sh{I}(Y)/\sh{I}(Y)^2 \to \sh{O}_Y(E^*)$ defined by $f\mapsto\dd f$ is an isomorphism of $\sh{O}_Y$-modules.}
+
+
+\subsection{Local resolution of $\sh{O}_Y$ over $\sh{O}_X$}
+\label{subsection10c}
+
+Let $V$ be a vector space over $k$ of dimension $p$, and $e_1,\ldots,e_p$ be a basis of $V$, and define $\mathfrak{M}_i = \sh{O}_X\otimes_k\bigwedge^i V$.
+We endow the direct sum $\mathfrak{M}$ of the $\mathfrak{M}_i$ with a differential $\dd$ defined by
+\footnote{As usual, the notation $\,\,\widehat{\,}\,\,\,$ indicates that the symbol below should be omitted.}
+\[
+  \dd\,(f\otimes e_{i_1}\wedge\ldots\wedge e_{i_k})
+  = \sum_j (-1)^i f\cdot f_{i_j}\otimes e_{i_1}\wedge\ldots\wedge \widehat{e_{i_j}} \wedge\ldots\wedge e_{i_k}.
+\]
+Then the sequence
+\[
+\label{equation2}
+  0 \to \mathfrak{M}_p \xrightarrow{\mathrm{d}} \mathfrak{M}_{p-1} \to \ldots \to \mathfrak{M}_1 \xrightarrow{\mathrm{d}} \sh{O}_X \xrightarrow{r} \sh{O}_Y \to 0
+  \tag{2}
+\]
+is exact at every point of $U$, and $\mathfrak{M}$ is thus, on $U$ a
+\oldpage{121}
+projective resolution of $\sh{O}_Y$ over $\sh{O}_X$.
+The exactness of \cref{equation2} at a point $b\in U\cap Y$ is a well-known result (see, for example, \cite[proposition~4.3, p.~151]{3}, taking into account the fact that $\sh{O}_{b,Y}=\sh{O}_{b,X}/(f_1,\ldots,f_p)$).
+For $b\in U\setminus(U\cap Y)$, we have that $\sh{O}_{b,Y}=0$, and the exactness of \cref{equation2} is then an elementary exercise left to the reader.
+
+\begin{remark}
+  If $Y$ is a divisor, the \cref{equation1} is exactly another way of writing the exact sequence of sheaves (which is exact on any $X$)
+  \[
+  \label{equation3}
+    0 \to \sh{O}_X([Y]^{-1}) \xrightarrow{f} \sh{O}_X \to \sh{O}_Y \to 0,
+    \tag{3}
+  \]
+  where $f$ is the multiplication by a local equation on $Y$.
+  This exact sequence thus shows that $\gamma(Y)=1-[Y]^{-1}$.
+\end{remark}
+
+\begin{proposition}{11}
+\label{proposition11}
+  Let $Y_1,\ldots,Y_m$ be non-singular subvarieties of $X$ such that $Y_i$ intersects transversally with
+  \[
+    Y_{i-1} \cap\ldots\cap Y_1
+  \]
+  ($i=2,\ldots,m$).
+  Then
+  \[
+    \gamma(Y_1\cap\ldots\cap Y_m) = \prod_i\gamma(Y_i).
+  \]
+\end{proposition}
+
+\begin{proof}
+  An evident induction on $m$ shows that it suffices to consider the case of two subvarieties $Y$ and $Z$ that intersect transversally.
+
+  By definition, $\gamma(Y)\cdot\gamma(Z)$ is the alternating sum of the $\Tor_i^{\sh{O}_X}(\sh{O}_Y,\sh{O}_Z)$.
+  It is clear that these sheaves, and the sheaf $\sh{O}_{Y\cap Z}$, are equal (and zero) at any point not contained inside $Y\cap Z$, which, in particular, proves our claim if $Y\cap Z=\varnothing$.
+
+  Now let $a\in Y\cap Z$.
+  Since $Y$ and $Z$ intersect transversally, we can find an affine open subset $U$ containing $a$, and functions $f_1,\ldots,f_p$ and $g_1,\ldots,g_q$ that are regular on $U$ such that the $f_i$ (resp. the $g_j$; resp, the $f_i$ and the $g_j$) form a system of uniformising \todo for $Y$ (resp. for $Z$; resp. for $Y\cap Z$).
+  To calculate the $\Tor_i(\sh{O}_Y,\sh{O}_Z)$, we resolve $\sh{O}_Y$ by using \cref{equation2}.
+  We must thus determine the homology of the complex
+  \[
+    0 \to \mathfrak{M}_n\otimes_{\sh{O}_X}\sh{O}_Z \to \ldots \to \sh{O}_X\otimes_{\sh{O}_X}\sh{O}_Z
+  \]
+  which can also be written as
+  \[
+    0 \to \sh{O}_Z\otimes_k\bigwedge^p V \to \ldots \to \sh{O}_Z\otimes_k V \to \sh{O}_Z
+  \]
+  endowed with the same differential as above, with the $f_i$ being considered as element of $\sh{O}_Z$.
+  Since $\sh{O}_{a,Z} = \sh{O}_{a,X}/(g_1,\ldots,g_q)$, the $f_i$ generate a perfect ideal inside;
+  so this complex is acyclic (see \cref{subsection10c}) and its $0$th homology group is $\sh{O}_{a,Z}(f_1,\ldots,f_p)$, i.e. $\sh{O}_{a,Y\cap Z}$.
+  Thus
+  \[
+    \Tor_0 = \sh{O}_{Y\cap Z}
+    \quad\text{and}\quad
+    \Tor_i = 0
+    \quad\mbox{(for $i\geq1$),}
+  \]
+  which finishes the proof.
+\end{proof}
+
+\oldpage{122}
+\begin{corollary}
+  Let $Y$ be a non-singular hyperplane section of $Z$, and let $k$ be the dimension of $X$.
+  Then $(1-[Y])^{k+1}=0$.
+\end{corollary}
+
+\begin{proof}
+  We take the non-singular hyperplane sections $Y_1,\ldots,Y_{k+1}$ whose intersection is empty, and such that the $Y_i$ intersect transversally with $Y_{i-1}\cap\ldots\cap Y_1$ ($i=2,\ldots,k+1$).
+  Since $[Y_i]=[Y]$, \cref{proposition11} and the preceding remark show that $(1-[Y]^{-1})^{k+1} = 0$, whence the corollary, since $[Y]$ is invertible in $K(X)$.
+\end{proof}
+
+
+\subsection{}
+\label{subsection10d}
 
 
 %% Bibliography %%
@@ -1359,12 +1486,12 @@ Some of these will be more general than necessary for our purposes, but they are
   \newblock {\em Proc. London math. Soc. 7\/} (1957), 414--452.
 
   \bibitem{2}
-  {\sc Borel, A., and Hirzebruch, F.}
+  {\sc Borel, A. and Hirzebruch, F.}
   \newblock Characteristic classes and homogeneous spaces, {II}.
   \newblock {\em Amer. J. Math.\/} (to appear).
 
   \bibitem{3}
-  {\sc Cartan, H., and Eilenberg, S.}
+  {\sc Cartan, H. and Eilenberg, S.}
   \newblock {\em Homological algebra}, vol.~19 of {\em Princeton Math. Series}.
   \newblock Princeton University Press, 1956.
 
@@ -1393,6 +1520,7 @@ Some of these will be more general than necessary for our purposes, but they are
 
   \bibitem{8}
   {\sc Grothendieck, A.}
+  \newblock La th\'{e}orie des classes de Chern.
   \newblock {\em Bull. Soc. math. France 80\/} (1958), 137--154.
 
   \bibitem{9}
