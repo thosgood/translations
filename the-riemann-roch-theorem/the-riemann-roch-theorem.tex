@@ -1722,7 +1722,7 @@ If we let $f'_j=f_j\circ f$, then the local equation of $Y'$ in $U'_i$ is $f'_i=
 The differentials $\dd f_i$ are linearly independent at every point of $Y\cap U$, and, on $Y\cap U$, we will identify $E^*$ with $U\times k^p$, by applying $\dd f_1,\ldots\dd f_p$ to the canonical basis of $k^p$.
 Let $b=(t_1,\ldots,t_p)\in g^{-1}(a)$ for $a\in Y\cap U$, and suppose that $t_i\neq 0$.
 Then the equations in $\PP\times U$ of the plane tangent to $Y$ at $b$ are $\dd f_j=(t_j/t_i)\dd f_i$;
-it follows that $f$ sends, bijectively, the normal space of $Y$ at $b$ to the line $t_1X_1+\ldots+t_pX_p$, where $(X_i)$ is the dual basis of $(\dd f_j)$, whence we have a bijection $\mu_U$ from $g^{-1}(a)$ to the projective associated to $E_a$, and an inclusion of $L$ into $E'$, given by sending the fibre $L_b$ of $L$ to the line of $E'_b$ that maps to $t_1X_1+\ldots+t_pX_p$ under the canonical identification of $E'_b$ with $E_a$.
+it follows that $f$ sends, bijectively, the normal space of $Y$ at $b$ to the line $t_1X_1+\ldots+t_pX_p$, where $(X_i)$ is the dual basis of $(\dd f_j)$, whence we have a bijection $\mu_U$ from $g^{-1}(a)$ to the projective space associated to $E_a$, and an inclusion of $L$ into $E'$, given by sending the fibre $L_b$ of $L$ to the line of $E'_b$ that maps to $t_1X_1+\ldots+t_pX_p$ under the canonical identification of $E'_b$ with $E_a$.
 
 Let $V$ be a second affine open subset of $X$ that meets $Y$, and in which $Y$ has local parameters $g_1,\ldots,g_p$.
 Let $\PP'$ be a projective space with homogeneous coordinates $s_1,\ldots,s_p$.
@@ -1730,7 +1730,7 @@ Then
 \[
   V' = f^{-1}(V) = \big\{(s,v) \mid s_ig_j(v)-s_jg_i(v)=0\big\}
 \]
-and we will have, as before, a canonical map $\mu_V$ from $g^{-1}(a)$ to the projective of $E_a$.
+and we will have, as before, a canonical map $\mu_V$ from $g^{-1}(a)$ to the projective space of $E_a$.
 This leads us to define the change of charts in $U'\times V'$ by the rule:
 \[
   (t,u) = (s,v)
@@ -1755,6 +1755,114 @@ and it easily follows that the correspondence in question is an isomorphism.
 
 \subsection{Projective embedding of $X'$}
 \label{subsection12c}
+
+We consider an embedding of $X$ into some projective space $\PP_N$ of dimension $N$, with homogeneous coordinates $(z_i)$.
+Let $\varphi_i$ ($1\leq i\leq s$) be a basis for the ideal of $Y$ consisting of homogeneous polynomials, and let $m$ be an integer $\geq$ the maximum of the degrees of the $\varphi_i$.
+Let $(h_1,\ldots,h_M)$ be a basis for the $k$-vector space of forms of degree $m$ in the $z_i$ that are zero on $Y$.
+We can then take $h_i$ to be the products of the form $\varphi_j\cdot\mu$ ($1\leq j\leq s$) where $\mu$ runs over the set of monomials in the $z_i$ whose degrees are equal to $m-\deg(\varphi_j)$.
+It follows immediately that:
+\begin{enumerate}[(i)]
+  \item Given $x\in X\setminus Y$, there exists some $j$ such that $h_j(x)\neq0$.
+    Given $y\in Y$, there exists some form $g$ of degree $m$, and a set $I$ of $p$ elements of $\{0,1,\ldots,M\}$ such that the $h_i/g$ ($i\in I$) form, in a suitable affine open neighbourhood of $y$, a system of local parameters for $Y$, and such that the $h_i/g\in\sh{O}_{y,X}$ ($i=0,\ldots,M$).
+\end{enumerate}
+
+The $h_i$ are  sections of the bundle $H^m$, where $H$ is the bundle associated to a hyperplane section of $X$.
+We denote by $h'_i$ the corresponding sections of the inverse-image bundle, and we consider, in the usual way, ``the map'' $h\colon x'\mapsto(h'_0(x'),\ldots,h'_M(x'))$ from $X$ to $\PP_M$ defined by this space of sections.
+\emph{A priori}, this is not really a map, since it is not defined at the points where all the $h'_i$ vanish simultaneously.
+However, we want to show that:
+
+\begin{enumerate}[(i)]
+  \setcounter{enumi}{1}
+  \item $h$ is a morphism;
+  \item if $u',v'\in Y'$ have the same image in $Y$, and are distinct, then $h(u')\neq h(v')$.
+\end{enumerate}
+
+To prove (ii), it suffices to show that, given $x'\in X'$, there exists some index $k$ such that $h'_i/h'_k\in\sh{O}_{x,X}$ ($0\leq i\leq M$), since the $h'_i(x')/h'_k(x')$ will then be the coordinates of $h(x')$, and at least one of these quotients is non-zero.
+Given (i), the existence of $h'_i$ is evident if $x'\not\in Y$.
+Now let $x'\in Y$.
+We can apply the second claim of (i), and, to simplify notation,
+\oldpage{128}
+we suppose that the $f_i=h_i/g$ ($i=1,\ldots,p$) form a system of local parameters;
+let $t_1,\ldots,t_p$ be the homogeneous coordinates of $x'$ in $\PP$ (the notation from the start of \cref{subsection12b}), and suppose that $t_k\neq0$.
+Then $f'_k=0$ is a local equation for $Y'$, and so the $h'_j/g'$ are all divisible by $f'_k$ in $\sh{O}_{x',X'}$, and so $h$ is a morphism in $x'$.
+We also see that the $i$th homogeneous coordinate of $h(x')$ is $t_i/t_k$ ($1\leq i\leq p$), which evidently implies (iii).
+
+With this in mind, consider the map $\Psi$ from $X'$ to $X\times\PP_M$ defined by $\Psi(x')=(f(x'),(x'))$.
+Given (ii) and (iii), $\Psi$ is a bijective morphism, and it is clear that $\Psi$ is an isomorphism outside of $Y'$.
+By the projective normalisation and the Main Theorem of Zariski, we thus deduce that $X'$ is quasi-projective.
+
+
+\section{Finishing the proof of R-R}
+\label{section13}
+
+\begin{lemma}{18}
+\label{lemma18}
+  Let $G$ be a vector bundle of rank $k$ on a variety $X$.
+  Then
+  \[
+    \ch(\lambda_{-1}G) = c_k(G^*)T(G^*)^{-1}.
+  \]
+\end{lemma}
+
+\begin{proof}
+  Write the Chern class $c(G)$ of $G$ in the form
+  \[
+    c(G) = \prod_{i=1}^k (1+a_i).
+  \]
+  Then (see \cite{9})
+  \begin{align*}
+    c(G^*) &= \prod (1-a_i),
+  \\c(\wedge^sG) &= \prod_{i_1<\ldots<i_s} (1+a_{i_1}+\ldots+a_{i_s}),
+  \end{align*}
+  whence
+  \begin{align*}
+    c_k(G^*) &= (-1)^k a_1\ldots a_k,
+  \\\ch(\lambda_{-1}G) &= \prod (1-e^{a_i}),
+  \end{align*}
+  and so
+  \[
+    \ch(\lambda_{-1}G) = c_k(G^*)T(G^*)^{-1}.
+  \]
+\end{proof}
+
+\begin{lemma}{19}
+\label{lemma19}
+  In the notation of \cref{section12a}, we have:
+  \begin{enumerate}[(a)]
+    \item $f_*(1) = 1$, and so $f_*f^*$ is the identity;
+    \item $g_*(c_{p-1}(F)) = 1$;
+    \item $f^!i_!(y) = j_!(g^!(y)\cdot\lambda_{-1}F^*)$ [$y\in K(Y)$];
+    \item $\lambda_{-1}F\equiv0 \mod(1-L^*)$ if $p\geq\dim Y+2$.
+  \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+  This lemma will be proven in \cref{section14,section15,section16}.
+\end{proof}
+
+\oldpage{129}
+\begin{proposition}{15}
+\label{proposition15}
+  \hyperref[theoremriemannroc]{R-R} is true for an injection.
+\end{proposition}
+
+\begin{proof}
+  We must (see \cref{section11}) establish the equality
+  \[
+  \label{proposition15equation1}
+    \ch i_!(y) = i_*(\ch y\cdot T(E)^{-1}),
+    \tag{1}
+  \]
+  and it suffices to do this in the case where $p\geq\dim Y+2$ (\cref{corollary2} of \cref{proposition15}).
+  In this case, $g^!(y)\cdot\lambda_{-1}F^*\equiv0\mod(1-L^*)$, by part~(d) of \cref{lemma19}, and so is in the image of $K(X')$ under $j^!$ (\cref{proposition13}), and (\cref{proposition14}) we can apply \hyperref[theoremriemannroc]{R-R} to $g^!(y)\cdot\lambda_{-1}F^*$ and $j$.
+  This gives
+  \[
+  \label{proposition15equation2}
+    \ch j_!(g^! y\cdot\lambda_{-1}F^*)
+    = j_*(\ch(g^! y\cdot \lambda_{-1}F^*)\cdot T(L)^{-1}).
+    \tag{2}
+  \]
+\end{proof}
 
 
 %% Bibliography %%
