@@ -1684,6 +1684,41 @@ where the first was proven in \cref{subsection5c}, and the second was mentioned 
 \subsection{Notation}
 \label{section12a}
 
+We will write $X'$ to mean the variety obtained by blowing up $X$ along $Y$, $f$ to mean the projection from $X'$ to $X$, $g$ to mean the restriction of $f$ to $Y'=f^{-1}(Y)$, and $j$ to mean the injection from $Y'$ to $X'$.
+We will thus have the commutative diagram
+\[
+\label{section12aequation1}
+  \begin{tikzcd}
+    Y' \rar["j"] \dar[swap,"g"]
+    & X' \dar["f"]
+  \\ Y \rar[swap,"i"]
+    & X
+  \end{tikzcd}
+  \tag{1}
+\]
+As before, $E$ is the normal bundle of $Y$ in $X$, and $p=\codim_XY$.
+We will sometimes write $E'$ to mean the inverse image of $E$.
+We will see that $f$ is an isomorphism outside of $Y'$, that $g$ is the projection into a fibration
+\oldpage{126}
+with fibre equal to the projective space $\PP_{p-1}$ of dimension $(p-1)$, that $\codim_{X'}Y'=1$, and that $E'$ contains the restriction of $[Y']$ to $Y'$, which will be denoted $L$.
+Finally, we let $F=E'/L$, which is a vector bundle of rank $(p-1)$.
+
+
+\subsection{Definition of $X'$ by local charts}
+\label{subsection12b}
+
+Over an affine open subset $U$ that does not meet $Y$, we take $U$ itself as a local chart.
+Now suppose that $U\cap Y\neq\varnothing$, and that $Y$ admits, in $U$, uniformising parameters $f_i$ ($1\leq i\leq p$).
+Let $t_i$ be homogeneous coordinates of $\PP_{p-1}$.
+Then $f^{-1}(U)$ is the subvariety of $\PP_{p-1}\times U$ defined by
+\[
+  U' = f^{-1}(U) = \big\{(t,u) \mid t_if_j(u)-t_jf_i(u)=0\big\}
+\]
+(with the $t_i$ being the homogeneous coordinates of $t$) and $f$ is the projection onto the second factor.
+It is evident that $f$ is a morphism, that it is an isomorphism outside of $f^{-1}(Y\cap U)$, and that, if $u\in Y$, then $f^{-1}(u)=\PP_{p-1}$.
+The variety $U'$ is the union of affine open subsets $U'_i$, where $U'_i$ is the set of points $(t,u)$ such that $t_i\neq 0$.
+If we let $f'_j=f_j\circ f$, then the local equation of $Y'$ in $U'_i$ is $f'_i=0$, and $\dd f'_i$ is a basis for the bundle $L$ at each point of $U'_i$ (see the proof of \cref{proposition13}).
+
 
 %% Bibliography %%
 
