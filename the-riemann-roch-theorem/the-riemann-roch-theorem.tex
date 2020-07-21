@@ -1613,7 +1613,7 @@ We will use, without explanation, the formulas
 \label{section11equation2}
   \begin{aligned}
     f_!(y\cdot f^!(x)) = f_!(y)\cdot x
-  \\f*!(y\cdot f^*(x)) = f_*(y)\cdot x
+  \\f_*(y\cdot f^*(x)) = f_*(y)\cdot x
   \end{aligned}
   \tag{2}
 \]
@@ -1843,7 +1843,7 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
 \oldpage{129}
 \begin{proposition}{15}
 \label{proposition15}
-  \hyperref[theoremriemannroc]{R-R} is true for an injection.
+  \hyperref[theoremriemannroch]{R-R} is true for an injection.
 \end{proposition}
 
 \begin{proof}
@@ -1854,7 +1854,7 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
     \tag{1}
   \]
   and it suffices to do this in the case where $p\geq\dim Y+2$ (\cref{corollary2} of \cref{proposition15}).
-  In this case, $g^!(y)\cdot\lambda_{-1}F^*\equiv0\mod(1-L^*)$, by part~(d) of \cref{lemma19}, and so is in the image of $K(X')$ under $j^!$ (\cref{proposition13}), and (\cref{proposition14}) we can apply \hyperref[theoremriemannroc]{R-R} to $g^!(y)\cdot\lambda_{-1}F^*$ and $j$.
+  In this case, $g^!(y)\cdot\lambda_{-1}F^*\equiv0\mod(1-L^*)$, by part~(d) of \cref{lemma19}, and so is in the image of $K(X')$ under $j^!$ (\cref{proposition13}), and (\cref{proposition14}) we can apply \hyperref[theoremriemannroch]{R-R} to $g^!(y)\cdot\lambda_{-1}F^*$ and $j$.
   This gives
   \[
   \label{proposition15equation2}
@@ -1862,7 +1862,118 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
     = j_*(\ch(g^! y\cdot \lambda_{-1}F^*)\cdot T(L)^{-1}).
     \tag{2}
   \]
+  To deduce \cref{proposition15equation1} from this, it evidently suffices to show that
+  \begin{align*}
+  \label{proposition15equation3}
+    f_*(\ch j_!(g^!y\cdot\lambda_{-1}F^*)) &= \ch i_! y
+    \tag{3}
+  \\
+  \label{proposition15equation4}f_*j_*(\ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1}) &= i_*(\ch y\cdot T(E)^{-1}).
+    \tag{4}
+  \end{align*}
+  Part~(c) of \cref{lemma19} shows that the left-hand side of \cref{proposition15equation3} is equal to
+  \[
+    f_*(\ch f^!i_!y) = f_*^*(\ch i_!y)
+  \]
+  and thus equal to the right-hand side of \cref{proposition15equation3}, given part~(a) of \cref{lemma19}.
+
+  Since $\ch$ is multiplicative, we have that
+  \[
+    \ch(g^!y\cdot\lambda_{-1}F^*)
+    = \ch g^!y\cdot\ch\lambda_{-1}F^*
+    = g^*(\ch y)\cdot\ch\lambda_{-1}F^*
+  \]
+  and so (\cref{lemma18})
+  \[
+    \ch(g^!y\cdot\lambda_{-1}F^*) = g^*(\ch y)c_{p-1}(F)\cdot T(F)^{-1}.
+  \]
+  But $E'/L=F$, so
+  \[
+    g^*(T(E)) = T(E') = T(F)\cdot T(L)
+  \]
+  whence
+  \[
+    \ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1} = c_{p-1}(F)\cdot g^*(\ch y\cdot T(E)^{-1}).
+  \]
+  Given \cref{section11equation2} (in \cref{section11}) and part~(b) of \cref{lemma19}, the image under $g_*$ of the right-hand side is equal to $\ch y\cdot T(E)^{-1}$, and the equality in \cref{proposition15equation4} then follows from the fact that $f_*j_*=i_*g_*$.
 \end{proof}
+
+
+\section{Proof of parts (a) and (b) of Lemma 19}
+\label{section14}
+
+The map $f$ if an isomorphism outside of $Y'$, and so is of local degree $1$, and so sends a fundamental cycle to a fundamental cycle, whence part~(a) of \cref{lemma19}.
+
+The map $g_*$ lowers the degree (which is the geometric codimension) by $p-1$, and corresponds to integration on the fibre.
+But also, the restriction of $L$ to a fibre $\PP_{p-1}$ of $g$ can be thought of as $k^p\setminus\{0\}$, the principal $k^*$-bundle, on the base $\PP_{p-1}$.
+We know that the first Chern class of this latter bundle is the opposite of the class of a hyperplane.
+If we
+\oldpage{130}
+set $-u=c_1(L)$, then this implies that
+\[
+  g_*(u^{p-1}) = 1,
+\]
+and we evidently have that $g_*(u^i)=0$ ($0\leq i<p-1$) for dimension reasons.
+
+Since $E'/L=F$, we have that
+\begin{align*}
+  c(E') &= c(F)(1-u)
+\\c(F) &= g^*(c(E))\cdot(1+u+u^2+\ldots)
+\\c_{p-1}(F) &= u^{p-1}+g^*(c_1(E))\cdot u^{p-2} +\ldots+ g^*(c_{p-1}(E))
+\\g_*(c_{p-1}(F)) &= g_*(u^{p-1})+c_1(E)g_*(u^{p-2}) +\ldots+ c_{p-1}(E)g_*(1)
+\end{align*}
+whence
+\[
+  g_*(c_{p-1}(F)) = 1.
+\]
+
+
+\section{Proof of part (c) of Lemma 19}
+\label{section15}
+
+In this section, we will write $\sh{J}$ to mean $\sh{I}(Y)$, and $\sh{J}'$ to mean $\sh{I}(Y')$.
+As we remarked in \cref{subsection10b}, $\sh{J}'/\sh{J}'^2$ (resp. $\sh{J}/\sh{J}^2$) is the sheaf of germs of sections of $L^*$ (resp. $E^*$), and so $\sh{J}/\sh{J}^2\otimes_{\sh{O}_Y}\sh{O}_{Y'}$ is the sheaf of germs of sections of $g^!(E^*)=E'^*$.
+
+By associating, to an element $u\in\sh{J}_x$, the element $u\circ f\in\sh{J}'_{x'}(f(x')=x)$, we evidently define a surjective homomorphism of $\sh{O}_{Y'}$-modules $\mu\colon\sh{J}/\sh{J}^2\otimes_{\sh{O}_Y}\sh{O}_{Y'}\to\sh{J}'/\sh{J}'^2$.
+This again shows that $E'^*$ is sent to $L^*$, and thus that $L$ injects into $E'$;
+the kernel of $\mu$ is the sheaf $\sh{O}_{Y'}(F^*)$ of germs of sections of $F^*$, as we can easily verify;
+in fact, this verification is superfluous, since we know that the kernel of $\mu$ is locally free (see \cref{lemma8}, \cref{section4}), and thus corresponds to a subbundle $N$ of $E'^*$ such that $E'^*/N=L^*$, and thus necessarily represents the same element as $F^*$ in $K(Y')$.
+We thus have the exact sequence
+\[
+\label{section15equation1}
+  - \to \sh{O}_{Y'}(F^*) \to \sh{J}/\sh{J}^2\otimes_{\sh{O}_Y}\sh{O}_{Y'} \xrightarrow{\mu} \sh{J}'/\sh{J}'^2 \to 0.
+  \tag{1}
+\]
+
+By linearity, and \cref{theorem2}, it suffices to prove part~(c) of \cref{lemma19} in the case where $y=\sh{G}$ is a locally free sheaf.
+In this case, $g^!(y)=\sh{G}\otimes_{\sh{O}_Y}\sh{O}_{Y'}$ is locally free over $\sh{O}_Y$, and $g^!(y)\cdot\lambda_{-1}F^*$ is the alternating sum of the
+\[
+  \sh{G} \otimes_{\sh{O}_Y} \sh{O}_{Y'} \sh{O}_{Y'}(\lambda^i F^*)
+  = \sh{G} \otimes_{\sh{O}_Y} \sh{O}_{Y'}(\lambda^i F^*).
+\]
+Also, $f^!i_!(y)$ is the alternating sum of the $\Tor_i^{\sh{O}_X}(\sh{G},\sh{O}_{X'})$;
+it thus suffices to prove that
+\begin{align*}
+  \label{section15equation2}
+    \Tor_i^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'}) &= \lambda^i\Tor_1^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'})
+    \qquad\quad\mbox{($i\geq1$)}
+    \tag{2}
+\\
+  \label{section15equation3}
+    \Tor_1^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'}) &= \sh{O}_{Y'}(F^*)
+    \tag{3}
+\\
+  \label{section15equation4}
+    \Tor_j^{\sh{O}_X}(\sh{G},\sh{O}_{X'}) &= \sh{G}\otimes_{\sh{O}_Y}\Tor_j^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'})
+    \quad\mbox{($j\geq1$).}
+    \tag{4}
+\end{align*}
+\oldpage{131}
+The equalities \cref{section15equation3} and \cref{section15equation4} correspond to the particular case of part~(c) of \cref{lemma19} where $y=1$;
+their proof will be analogous to that of \cref{proposition12} (\cref{section10}).
+We will first prove \cref{section15equation2}, as well as the fact that $\Tor_i^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'})$ is annihilated by $\sh{J}'$, and can thus be identified with a sheaf on $Y'$.
+
+It is clear that
 
 
 %% Bibliography %%
