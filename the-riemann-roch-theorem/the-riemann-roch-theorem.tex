@@ -1719,6 +1719,43 @@ It is evident that $f$ is a morphism, that it is an isomorphism outside of $f^{-
 The variety $U'$ is the union of affine open subsets $U'_i$, where $U'_i$ is the set of points $(t,u)$ such that $t_i\neq 0$.
 If we let $f'_j=f_j\circ f$, then the local equation of $Y'$ in $U'_i$ is $f'_i=0$, and $\dd f'_i$ is a basis for the bundle $L$ at each point of $U'_i$ (see the proof of \cref{proposition13}).
 
+The differentials $\dd f_i$ are linearly independent at every point of $Y\cap U$, and, on $Y\cap U$, we will identify $E^*$ with $U\times k^p$, by applying $\dd f_1,\ldots\dd f_p$ to the canonical basis of $k^p$.
+Let $b=(t_1,\ldots,t_p)\in g^{-1}(a)$ for $a\in Y\cap U$, and suppose that $t_i\neq 0$.
+Then the equations in $\PP\times U$ of the plane tangent to $Y$ at $b$ are $\dd f_j=(t_j/t_i)\dd f_i$;
+it follows that $f$ sends, bijectively, the normal space of $Y$ at $b$ to the line $t_1X_1+\ldots+t_pX_p$, where $(X_i)$ is the dual basis of $(\dd f_j)$, whence we have a bijection $\mu_U$ from $g^{-1}(a)$ to the projective associated to $E_a$, and an inclusion of $L$ into $E'$, given by sending the fibre $L_b$ of $L$ to the line of $E'_b$ that maps to $t_1X_1+\ldots+t_pX_p$ under the canonical identification of $E'_b$ with $E_a$.
+
+Let $V$ be a second affine open subset of $X$ that meets $Y$, and in which $Y$ has local parameters $g_1,\ldots,g_p$.
+Let $\PP'$ be a projective space with homogeneous coordinates $s_1,\ldots,s_p$.
+Then
+\[
+  V' = f^{-1}(V) = \big\{(s,v) \mid s_ig_j(v)-s_jg_i(v)=0\big\}
+\]
+and we will have, as before, a canonical map $\mu_V$ from $g^{-1}(a)$ to the projective of $E_a$.
+This leads us to define the change of charts in $U'\times V'$ by the rule:
+\[
+  (t,u) = (s,v)
+  \quad\mbox{if [$v=u\not\in Y$] or [$v=u\in Y$ and $\mu_U(t)=\mu_V(s)$].}
+\]
+We must show that this correspondence is an isomorphism.
+Let $c\in U\cap V$.
+Since the $(f_i)$ and the $(g_i($ are two systems of local parameters for $Y$, the exist elements $a_{ij}\in\sh{O}_{c,X}$ that form an invertible matrix in $\sh{O}_{c,X}$
+\oldpage{127}
+such that
+\[
+  f_i = \sum_j a_{ij}g_j
+\]
+which also implies that $\dd f_i = \sum_j a_{ij}\dd g_j$ on $Y$.
+In the neighbourhood of a point $c'\in f^{-1}(c)$, the above correspondence is then defined by $(s,v)\mapsto(t,u)$, with $v=u$ and $t_i=\sum a_{ij}(u)s_j$.
+We see that
+\[
+  f_it_j-f_jt_i = \sum_{m,n} a_{im}a_{jn}(g_ms_n-g_ns_m)
+\]
+and it easily follows that the correspondence in question is an isomorphism.
+
+
+\subsection{Projective embedding of $X'$}
+\label{subsection12c}
+
 
 %% Bibliography %%
 
