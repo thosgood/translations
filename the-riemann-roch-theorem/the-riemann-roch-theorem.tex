@@ -36,6 +36,12 @@
     {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
     {\endinnercustomlemma}
 
+  \newtheorem{innercustomcor}{Corollary}
+  \crefname{innercustomcor}{Corollary}{Corollary}
+  \newenvironment{cor}[1]
+    {\renewcommand\theinnercustomcor{#1}\innercustomcor}
+    {\endinnercustomcor}
+
   \newtheorem*{corollary}{Corollary}
 
 
@@ -54,6 +60,7 @@
 \newcommand{\HH}{\mathrm{H}}
 \newcommand{\RR}{\mathrm{R}}
 \newcommand{\PP}{\mathbf{P}}
+\newcommand{\dd}{\operatorname{d}\!}
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
@@ -61,7 +68,7 @@
 \DeclareMathOperator{\ch}{ch}
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\proj}{proj}
-\DeclareMathOperator{\dd}{d\!}
+\DeclareMathOperator{\codim}{codim}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -69,8 +76,8 @@
 
 \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 \crefname{equation}{}{}
-\crefname{section}{§}{§§}
-\crefname{subsection}{§}{§§}
+\crefname{section}{§\!\!}{§§\!\!}
+\crefname{subsection}{§\!\!}{§§\!\!}
 
 
 %% Document %%
@@ -1350,7 +1357,7 @@ Some of these will be more general than necessary for our purposes, but they are
 In what follows, $Y$ is a (non-singular) subvariety of $X$, $i$ the injection of $Y$ into $X$, $p$ the codimension of $Y$ in $X$, $E$ the normal bundle of $Y$, and $\sh{I}(Y)$ the sheaf of local ideals of $Y$.
 We thus have the exact sequence
 \[
-\label{equation1}
+\label{section10aequation1}
   0 \to \sh{I}(Y) \to \sh{O}_X \xrightarrow{r} \sh{O}_Y \to 0
   \tag{1}
 \]
@@ -1389,18 +1396,18 @@ We endow the direct sum $\mathfrak{M}$ of the $\mathfrak{M}_i$ with a differenti
 \]
 Then the sequence
 \[
-\label{equation2}
+\label{section10cequation2}
   0 \to \mathfrak{M}_p \xrightarrow{\mathrm{d}} \mathfrak{M}_{p-1} \to \ldots \to \mathfrak{M}_1 \xrightarrow{\mathrm{d}} \sh{O}_X \xrightarrow{r} \sh{O}_Y \to 0
   \tag{2}
 \]
 is exact at every point of $U$, and $\mathfrak{M}$ is thus, on $U$ a
 \oldpage{121}
 projective resolution of $\sh{O}_Y$ over $\sh{O}_X$.
-The exactness of \cref{equation2} at a point $b\in U\cap Y$ is a well-known result (see, for example, \cite[proposition~4.3, p.~151]{3}, taking into account the fact that $\sh{O}_{b,Y}=\sh{O}_{b,X}/(f_1,\ldots,f_p)$).
-For $b\in U\setminus(U\cap Y)$, we have that $\sh{O}_{b,Y}=0$, and the exactness of \cref{equation2} is then an elementary exercise left to the reader.
+The exactness of \cref{section10cequation2} at a point $b\in U\cap Y$ is a well-known result (see, for example, \cite[proposition~4.3, p.~151]{3}, taking into account the fact that $\sh{O}_{b,Y}=\sh{O}_{b,X}/(f_1,\ldots,f_p)$).
+For $b\in U\setminus(U\cap Y)$, we have that $\sh{O}_{b,Y}=0$, and the exactness of \cref{section10cequation2} is then an elementary exercise left to the reader.
 
 \begin{remark}
-  If $Y$ is a divisor, the \cref{equation1} is exactly another way of writing the exact sequence of sheaves (which is exact on any $X$)
+  If $Y$ is a divisor, the \cref{section10aequation1} is exactly another way of writing the exact sequence of sheaves (which is exact on any $X$)
   \[
   \label{equation3}
     0 \to \sh{O}_X([Y]^{-1}) \xrightarrow{f} \sh{O}_X \to \sh{O}_Y \to 0,
@@ -1431,7 +1438,7 @@ For $b\in U\setminus(U\cap Y)$, we have that $\sh{O}_{b,Y}=0$, and the exactness
 
   Now let $a\in Y\cap Z$.
   Since $Y$ and $Z$ intersect transversally, we can find an affine open subset $U$ containing $a$, and functions $f_1,\ldots,f_p$ and $g_1,\ldots,g_q$ that are regular on $U$ such that the $f_i$ (resp. the $g_j$; resp, the $f_i$ and the $g_j$) form a system of uniformising parameters for $Y$ (resp. for $Z$; resp. for $Y\cap Z$).
-  To calculate the $\Tor_i(\sh{O}_Y,\sh{O}_Z)$, we resolve $\sh{O}_Y$ by using \cref{equation2}.
+  To calculate the $\Tor_i(\sh{O}_Y,\sh{O}_Z)$, we resolve $\sh{O}_Y$ by using \cref{section10cequation2}.
   We must thus determine the homology of the complex
   \[
     0 \to \mathfrak{M}_n\otimes_{\sh{O}_X}\sh{O}_Z \to \ldots \to \sh{O}_X\otimes_{\sh{O}_X}\sh{O}_Z
@@ -1501,7 +1508,7 @@ This follows from the classical result on maps from an acyclic complex (\cite[pr
   [In \cref{equation5}, $\lambda^i$ is the $i$th exterior power of a sheaf which is locally free, given \cref{equation4}.]
 
   Unless otherwise mentioned, $\Tor$ and $\otimes$ are taken over $\sh{O}_X$.
-  The exact sequence of $\Tor$, applied to \cref{equation1}, gives the exact sequence
+  The exact sequence of $\Tor$, applied to \cref{section10aequation1}, gives the exact sequence
   \[
     0 \to \Tor_1(\sh{F},\sh{O}_Y) \to \sh{I}(Y)\otimes\sh{F} \xrightarrow{g} \sh{F}
   \]
@@ -1536,8 +1543,146 @@ This follows from the classical result on maps from an acyclic complex (\cite[pr
     \Tor_1(\sh{O}_Y,\sh{O}_Y) = \sh{O}_Y\otimes_k V
   \]
   whence we have an isomorphism (for the moment, local, defined by the use of the parameters $f_i$) of the two sides of \cref{equation5}.
-  But $\mathfrak{M}$, thought of as a tensor product of the algebras $\sh{O}_Y$ and $\bigwedge V$, is clearly a differential graded algebra, \todo
+  But $\mathfrak{M}$, thought of as a tensor product of the algebras $\sh{O}_Y$ and $\bigwedge V$, is clearly a differential graded algebra, and so the remark made at the start of \cref{subsection10d} applies, and shows that, in fact, this isomorphism is intrinsic (and, in particular, does not depend on the chosen system of local parameters) and holds true over $X$.
 \end{proof}
+
+
+\subsection{Particular case of the divisor}
+\label{subsection10e}
+
+In this case, we can use the resolution \cref{equation3}, which is global.
+The $\Tor_i(\sh{F},\sh{O}_Y)$ are thus the homology groups of the complex
+\[
+  \ldots \to 0 \to \sh{O}_Y([Y]^{-1})\otimes\sh{F} \xrightarrow{f}\sh{F}
+\]
+where $\sh{F}$ is the multiplication by a local equation;
+since $\sh{F}$ is annihilated by $\sh{I}(Y)$, the homomorphism $f$ has a zero image, which implies that
+\begin{align*}
+  \Tor_0(\sh{F},\sh{O}_Y) &= \sh{F}
+\\\Tor_1(\sh{F},\sh{O}_Y) &= [Y]^{-1}\cdot\sh{F}
+\\\Tor_i(\sh{F},\sh{O}_Y) &= 0 \qquad\mbox{($i\geq2$).}
+\end{align*}
+By comparing with \cref{proposition12}, we see that the restrictions of $[Y]^{-1}$ to $Y$ and to $E^*$ define the same element of $K(Y)$.
+In fact,
+\begin{proposition}{13}
+\label{proposition13}
+  Suppose that $\codim Y=1$, and denote by $L$ the restriction of $[Y]$ to $Y$.
+  Then:
+  \begin{enumerate}[(a)]
+    \item $L=E$;
+    \item $\gamma(Y) = 1-[Y]^{-1}$;
+    \item $i^!i_!(y) = y\cdot(1-L^*).$
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\oldpage{124}
+  Claim~(c) was proven above, and (b) was proven in the remark of \cref{subsection10b}.
+  It remains only to prove (a).
+
+  Let $(U_i)$ be a cover of $U$ such that, on $U_i$, $Y$ is defined by one equation $f_i=0$, with the differential $\dd f_i$ being non-zero at every point of $Y\cap U_i$, and let $f_{ij}=f_i/f_j$ on $U_i\cap U_j$.
+  We know that $[Y]$ is defined by the system $\{f_{ij}\}$ of transition functions.
+  Also, on $U_i$, we can identify $E^*$ with the product $U_i\times k$ by applying $\dd f_i$ to the unit section.
+  But, on $Y\cap U_i\cap U_j$, we have that $\dd f_i=f_{ij}\cdot\dd f_j$ (since $f_j=0$ on $Y$), and so we can define $E^*$ by the system of transition functions $\{f_{ij}^{-1}\}$, which proves (a).
+\end{proof}
+
+
+\section{Proof of R-R in the particular case of an injection}
+\label{section11}
+
+Given the results of \cref{section7} and \cref{section9}, it remains only to prove \hyperref[theoremriemannroch]{R-R} for an injection.
+In the notation of \cref{subsection10a}, the formula to prove is then equivalent to
+\[
+\label{section11equation1}
+  \ch i_!y = i_*(\ch y\cdot T(E)^{-1})
+  \qquad\mbox{[$y\in K(Y)$].}
+  \tag{1}
+\]
+Indeed, $E$ is the quotient of the tangent bundle of $X$ (restricted to $Y$) by the tangent bundle of $Y$, so $i^*T(X) = T(Y)\cdot T(E)$, whence
+\begin{align*}
+  i_*(\ch y T^(E){-1}) &= i_*(\ch y\cdot T(Y)\cdot i^*(T(X))^{-1})
+\\i_*(\ch y T^(E){-1}) &= i_*(\ch y\cdot T(Y))\cdot T(X)^{-1}
+\end{align*}
+and so \cref{section11equation1} gives \hyperref[theoremriemannroch]{R-R} if we multiply both sides by $T(X)$.
+
+To prove \cref{section11equation1}, Grothendieck first considers the case where $Y$ is a divisor and $y\in i^!(K(X))$, and then reduces to this case by blowing up $X$ along $Y$.
+This first particular case will be covered below, and the general case of the injection will be covered in \cref{section13}, where we will assume certain properties of blow ups that will be proven in \cref{section14,section15,section16}.
+
+We will use, without explanation, the formulas
+\[
+\label{section11equation2}
+  \begin{aligned}
+    f_!(y\cdot f^!(x)) = f_!(y)\cdot x
+  \\f*!(y\cdot f^*(x)) = f_*(y)\cdot x
+  \end{aligned}
+  \tag{2}
+\]
+where the first was proven in \cref{subsection5c}, and the second was mentioned in \cref{section6} (whose notation we also continue to use).
+
+\begin{proposition}{14}
+\label{proposition14}
+  The equality \cref{section11equation1} is true if $\codim_XY=1$ and $y=i^!(x)$ ($x\in K(X)$).
+\end{proposition}
+
+\begin{proof}
+  By using \cref{section11equation2} and \cref{proposition13}, we see that
+  \[
+    \ch(i_!i^!(x)) = \ch(x\cdot i_!(1)) = \ch(x\cdot(1-[Y]^{-1})).
+  \]
+  Since $x\mapsto\ch x$ is a ring homomorphism, and since $c([Y])=1+Y$,
+\oldpage{125}
+  this implies that
+  \[
+    \ch(i_!) = \ch x\cdot\ch(1-[Y]^{-1}) = \ch x\cdot(1-e^{-Y}).
+  \]
+  The right-hand side of \cref{section11equation1} is
+  \begin{align*}
+    i_*(\ch(i^!x)\cdot T(L)^{-1})
+    &= i_*(i^*(\ch x)\cdot i^*(T([Y])^{-1}))
+  \\&= \ch x\cdot T([Y])^{-1}\cdot i_*(1)
+  \\&= \ch x\cdot T([Y])^{-1}\cdot Y
+  \end{align*}
+  and \cref{section11equation1} then follows from $T([Y])=Y/(1-e^{-Y})$.
+\end{proof}
+
+\begin{cor}{1}
+\label{corollary1}
+  \hyperref[theoremriemannroch]{R-R} is true if $X=Y\times\PP$, where $\PP$ is a projective space, and $i$ is the map $a\mapsto(a,p_0)$, with $p_0$ some fixed point of $\PP$.
+\end{cor}
+
+\begin{proof}
+  The map $i$ is the product of the identity on $Y$ with the injection of a point into $\PP$.
+  Given \cref{lemma16}, it suffices to prove \hyperref[theoremriemannroch]{R-R} in this latter case.
+  If $Y$ is a point, then $K(Y)=\mathbb{Z}$, and it suffices to consider the case where $y=1$.
+  Since $1\in i^!(\PP)$, our claim follows from \cref{proposition14} if $\dim\PP=1$.
+  Arguing by induction, we can assume that our claim is true for the injection $u\colon Y\to H$ of $Y$ into a hyperplane of $\PP$;
+  given part~(a) of \cref{lemma15}, it suffices to prove that \hyperref[theoremriemannroch]{R-R} is true for $u_!(1)$ and the injection $v\colon H\to \PP$;
+  this, itself, follows from \cref{proposition14} if we know that $u_!(1)\in v^!(K(\PP))$.
+  But let $Z$ be a second hyperplane and $D$ a line of $H$ such that $Y=D\cap Z\cap H$.
+  Then (\cref{proposition11}) $\gamma_H(Y) = \gamma_H(D)\cdot\gamma_H(H\cap Z)$.
+  By part~(b) of \cref{proposition13}, $\gamma_H(H\cap Z)=1-[H\cap Z]^{-1}$;
+  since $[H\cap Z]$ can be identified with the restriction of $[H]$ to $H$, part~(c) of \cref{proposition13} then shows that
+  \[
+    u_!(1) = \gamma_H(Y) = v^!v_!(\gamma_H(D)) = v^!(\gamma_{\PP}(D)).
+  \]
+\end{proof}
+
+\begin{cor}{2}
+\label{corollary2}
+  If the equality \cref{section11equation1} is true whenever $2\dim Y\leq\dim X-2$, then it is true in general.
+\end{cor}
+
+\begin{proof}
+  It suffices to compose $i$ with an injection $X\to X\times\PP$, where $\PP$ is of large dimension, and the apply \cref{corollary1} and part~(b) of \cref{lemma15}.
+\end{proof}
+
+
+\section{Blowing up along a subvariety}
+\label{section12}
+
+
+\subsection{Notation}
+\label{section12a}
 
 
 %% Bibliography %%
