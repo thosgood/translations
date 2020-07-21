@@ -59,6 +59,7 @@
 \newcommand{\cat}{\mathcal}
 \newcommand{\HH}{\mathrm{H}}
 \newcommand{\RR}{\mathrm{R}}
+\newcommand{\LL}{\mathrm{L}}
 \newcommand{\PP}{\mathbf{P}}
 \newcommand{\dd}{\operatorname{d}\!}
 \renewcommand{\geq}{\geqslant}
@@ -1971,9 +1972,98 @@ it thus suffices to prove that
 \oldpage{131}
 The equalities \cref{section15equation3} and \cref{section15equation4} correspond to the particular case of part~(c) of \cref{lemma19} where $y=1$;
 their proof will be analogous to that of \cref{proposition12} (\cref{section10}).
-We will first prove \cref{section15equation2}, as well as the fact that $\Tor_i^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'})$ is annihilated by $\sh{J}'$, and can thus be identified with a sheaf on $Y'$.
+We will first prove \cref{section15equation2}, as well as the fact that the $\Tor_i^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'})$ are annihilated by $\sh{J}'$, and can thus be identified with sheaves on $Y'$.
 
-It is clear that
+It is clear that the two sides of \cref{section15equation2} are zero on an open subset that does not meet $Y'$.
+To prove \cref{section15equation2} in the neighbourhood of a point $b'\in Y'$, we reuse the notation from \cref{subsection10c} and \cref{subsection12b}.
+So we need to calculate the homology of the complex
+\[
+  0 \to \mathfrak{M}_p\otimes_{\sh{O}_X}\sh{O}_{X'} \to \ldots \to \sh{O}_{X'}
+\]
+which can also be written as
+\[
+  0 \to \sh{O}_{X'}\otimes_k\bigwedge\nolimits^p V \to \ldots \to \sh{O}_{X'}.
+\]
+Suppose that $b'$ is in the open subset $U'_j$ where $t_j\neq0$.
+Then it is clear that this complex of sheaves is isomorphic to the complex
+\[
+  0 \to \sh{O}_{X'}\otimes_k\bigwedge\nolimits^p V' \to \ldots \to \sh{O}_{X'}
+\]
+where $V'$ has a basis $(e'_i)$, and where the differential is characterised by
+\begin{align*}
+  \dd(1\otimes e'_j) &= f_j\otimes1
+\\\dd(1\otimes e'_i) &= (f_i-t_if_j/t_j)\otimes1
+\end{align*}
+and by the fact that it extends to a differential of algebras.
+In this new complex, it is immediate that the cycles of exterior degree $s$ form $\sh{O}_{X'}\otimes_k\bigwedge\nolimits^s(e'_1,\ldots,\widehat{e'_j},\ldots,e'_p)$ and that the boundaries of exterior degree $s$ form the ideal
+\[
+  f_j\cdot\sh{O}_{X'}\otimes_k\bigwedge\nolimits^s(e'_1,\ldots,\widehat{e'_j},\ldots,e'_p).
+\]
+Consequently,
+\[
+  \Tor_i^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'})
+  \cong
+  \sh{O}_{Y'}\otimes_k\bigwedge\nolimits^i(e'_1,\ldots,\widehat{e'_j},\ldots,e'_p),
+\]
+which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial remark of \cref{subsection10d} into account, also gives \cref{section15equation2}.
+
+\begin{proof}{Proof of \cref{section15equation3}}
+  The exact sequence of $\Tor$, applied to
+  \[
+    0\to\sh{J}\to\sh{O}_X\to\sh{O}_Y\to0,
+  \]
+  gives the exact sequence
+  \[
+    0 \to \Tor_1^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'}) \to \sh{J}\otimes_{\sh{O}_X}\sh{O}_{X'} \xrightarrow{g} \sh{O}_{X'}.
+  \]
+  It is clear that, if $b=f(b')$, then $\sh{J}'_{b'}=\sh{J}_b\cdot\sh{O}_{b',X'}$, and so the image of $g$ is $\sh{J}'$, and we obtain the exact sequence
+  \[
+  \label{section15equation5}
+    0 \to \Tor_1^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'}) \to \sh{J}\otimes_{\sh{O}_X}\sh{O}_{X'} \to \sh{J}' \to 0.
+    \tag{5}
+  \]
+\newpage{132}
+  Since $\Tor_1(\sh{O}_Y,\sh{O}_{X'})$ is a sheaf on $Y'$, we can write
+  \[
+    \Tor_1^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'})\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}
+    = \Tor_1^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'})\otimes_{\sh{O}_{Y'}}\sh{O}_{Y'}
+    = \Tor_1(\sh{O}_Y,\sh{O}_{X'}).
+  \]
+  Also, $\sh{J}'$ can be identified with $\sh{O}_{X'}([Y']^{-1})$, and is locally free, and so $\Tor_1^{\sh{O}_{X'}}(\sh{J}',\sh{O}_{Y'}) = 0$, and the exact sequence of $\Tor$, applied to \cref{section15equation5}, gives the exact sequence
+  \[
+  \label{section15equation6}
+    0 \to \Tor_1^{\sh{O}_X}(\sh{O}_Y,\sh{O}_{X'}) \to \sh{J}\otimes_{\sh{O}_X}\sh{O}_{Y'} \xrightarrow{g} \sh{J}'\otimes_{\sh{O}_{X'}}\sh{O}_{Y'} \to 0.
+    \tag{6}
+  \]
+  It is immediate that the canonical image of $\sh{J}^2\otimes_{\sh{O}_X}\sh{O}_{Y'}$ (resp. $\sh{J}'^2\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}$) in $\sh{J}\otimes_{\sh{O}_X}\otimes\sh{O}_{Y'}$ (resp. $\sh{J}'\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}$) is zero, whence we have canonical isomorphisms
+  \begin{gather*}
+    \sh{J}\otimes_{\sh{O}_X}\sh{O}_{Y'}
+    = \sh{J}/\sh{J}^2\otimes_{\sh{O}_X}\sh{O}_{Y'}
+    = \sh{J}/\sh{J}^2\otimes_{\sh{O}_Y}\sh{O}_{Y'}
+  \\\sh{J}'\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}
+    = \sh{J}'/\sh{J}'^2\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}
+    = \sh{J}'/\sh{J}'^2
+  \end{gather*}
+  which send $g$ to the homomorphism $\mu$ from the sequence \cref{section15equation1}.
+  The equality \cref{section15equation2} then follows from \cref{section15equation1} and \cref{section15equation6}.
+
+  The equality \cref{section15equation4} then follows from an associativity formula of $\Tor$ (see \cite[p.~345]{3}).
+  We consider $T(\sh{G},\sh{O}_{X'}) = \sh{G}\otimes_{\sh{O}_Y}\sh{O}_Y\otimes\sh{O}_{X'}$ as a functor in $\sh{G}$ and $\sh{O}_{X'}$.
+  To calculate its left-derived functors $\LL_iT$, we have two spectral sequences, with respective $E_2$ pages
+  \begin{align*}
+    E_2^{ij} &= \Tor_i^{\sh{O}_Y}(\Tor_j^{\sh{O}_X}(\sh{O}_{X'},\sh{O}_Y),\sh{G})
+  \\E'^{ij}_2 &= \Tor_j^{\sh{O}_X}(\Tor_i^{\sh{O}_Y}(\sh{G},\sh{O}_Y),\sh{O}_{X'}).
+  \end{align*}
+  From this, it evidently follows that $E_2^{ij}=E'^{ji}_2=0$ if $i>0$, and thus that
+  \[
+    E_2^{0j} = E'^{j0}_2 = \LL_jT(\sh{G},\sh{O}_{X'})[]
+  \]
+  since $E_2^{0j}$ and $E'^{j0}_2$ are equal to the right- and left-hand sides (respectively) of \cref{section15equation4}, this proves the equality.
+\end{proof}
+
+
+\section{Proof of part (d) of Lemma 19}
+\label{section16}
 
 
 %% Bibliography %%
