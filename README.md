@@ -28,7 +28,7 @@ Here are some papers that I've translated into English. Any comments or correcti
 
 # Other
 
-- [ ] [`the-riemann-roch-theorem`](https://github.com/thosgood/translations/tree/master/the-riemann-roch-theorem) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=the-riemann-roch-theorem%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595186565526)
+- [x] [`the-riemann-roch-theorem`](https://github.com/thosgood/translations/tree/master/the-riemann-roch-theorem) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=the-riemann-roch-theorem%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595186565526)
 
   BOREL, Armand; SERRE, Jean-Pierre. Le théorème de Riemann-Roch. _Bulletin de la Société Mathématique de France_, Volume **86** (1958), pp. 97–136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
 - [ ] [`the-theory-of-chern-classes`](https://github.com/thosgood/translations/tree/master/the-theory-of-chern-classes)
