@@ -1042,7 +1042,7 @@ By an abuse of language, we also denote by $y\otimes y'$ the image in $K(Y\times
   \hyperref[lemma16equation1]{Formula~(i)} can be proven by taking $y=\gamma(\sh{F})$ and $y'=\gamma(\sh{F}')$, and applying the K\"{u}nneth formula to calculate $(f\times f')_!(y\otimes y')$;
   the validity of the K\"{u}nneth formula for coherent sheaves follows from the calculation of the cohomology by covers and from the Eilenberg-Zilber theorem (see the book by Godement on sheaves).
 
-  \hyperref[lemma16equation2]{Formula~(ii)} is immediate, \todo
+  \hyperref[lemma16equation2]{Formula~(ii)} is immediate, whether we consider the point of view of classes of cycles (for linear equivalence), or the cohomological point of view (in the classical case).
 
   \oldpage{115}
   \hyperref[lemma16equation3]{Formula~(iii)} is a consequence of the multiplicative property of $\ch$.
@@ -1292,7 +1292,7 @@ We now proceed to the proof of claim~(a''):
 \end{proposition}
 
 \begin{proof}
-  Let $H$ be a hyperplane, and $x$ its class in $A^1(\PP)$ \todo???.
+  Let $H$ be a hyperplane, and $x$ its class in $A^1(\PP)$.
   We know that the Chern polynomial of $\PP$ is $(1+tx)^{r+1}$;
   thus
   \[
@@ -2200,7 +2200,62 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
 \section{An application of R-R}
 \label{section17}
 
+The following application (pointed out by Hirzebruch) is about ``integration on the fibre'' in an algebraic bundle.
+We place ourselves in the classical case, i.e. $k=\mathbb{C}$.
 
+\begin{proposition}{16}
+\label{proposition16}
+  Let $(E,B,F,g)$ be an algebraic bundle, where $E$, $B$, and $F$ are projective, irreducible, and non-singular, and let $\xi$ be the tangent bundle along the fibres.
+  Then
+  \[
+    g_*(T(\xi)) = \operatorname{To}(F)\cdot1.
+  \]
+\end{proposition}
+[Here $\operatorname{To}(X)$ denotes the Todd genus of $X$.]
+
+\begin{proof}
+  The tangent bundle to $E$ is an extension of $\xi$ by the fibre induced by the tangent bundle to $B$, so
+  \[
+    T(X) = g^*(T(B))\cdot T(\xi),
+  \]
+  whence
+  \[
+    g_*(T(X)) = T(B)\cdot g_*(T(\xi)).
+  \]
+  We apply \hyperref[theoremriemannroch]{R-R} to $g$ and the bundle $1$ on $X$, which gives us that
+  \[
+    g_*(T(X)) = \ch g_!(1)\cdot T(B),
+  \]
+  and so, given the above,
+  \[
+    g_*(T(\xi)) = \ch g_!(1).
+  \]
+  We need to calculate $g_!(1)$.
+  Let $U$ be an affine open subset of $B$ over which the bundle is trivial.
+  By K\"{u}nneth (see the proof of \cref{lemma16}), we have that
+  \[
+    \HH^q(U\times F,\sh{O}_X)
+    = \sum_{i+j=q} \HH^i(U,\sh{O}_U)\otimes\HH^j(F,\sh{O}_F).
+  \]
+  Since $U$ is affine, $\HH^i(U,\sh{O}_U)=0$ for $i>0$, and $\HH^0$ can be identified with regular functions on $U$.
+  But, in an algebraic bundle, the structure group $G$ is connected (by hypothesis), and so acts trivially on $\HH^j(F,\sh{O}_F)$, which is the type-$(0,j)$ component of $\HH^j(F,\mathbb{C})$.
+  \footnote{We do not know if the fact that $G$ acts trivially on the $\HH^j(F,\sh{O}_F)$ remains true in characteristic $p>0$. This is why we had to assume that $k=\mathbb{C}$.}
+  It thus follows that
+  \[
+    g_!(1)
+    = \sh{O}_B \otimes \left(
+      \sum_q (-1)^q \HH^q(F,\sh{O}_F)
+    \right).
+  \]
+  Then $g_!(1)$ is the alternating sum of trivial bundles, and so $g_!(1)$ has exactly one component, which is in degree $0$, and which is the alternating sum of the $\dim\HH^q(F,\sh{O}_F)$, which proves the proposition.
+\end{proof}
+
+\oldpage{136}
+\begin{remark}
+  This proposition implies that the multiplicative sequence that defines the Todd class is ``strictly multiplicative'' for algebraic fibres, in the terminology of Borel-Hirzebruch \cite{2}.
+  In particular, it thus follows that $\operatorname{To}(E)=\operatorname{To}(B)\cdot\operatorname{To}(F)$.
+  In \cite{2}, this property, of strict multiplicativity, is proven in the differentiable, almost-complex case, and where also the fibre is some $G/T$ or associated space.
+\end{remark}
 
 
 %% Bibliography %%
