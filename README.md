@@ -34,3 +34,7 @@ Here are some papers that I've translated into English. Any comments or correcti
 - [ ] [`the-theory-of-chern-classes`](https://github.com/thosgood/translations/tree/master/the-theory-of-chern-classes)
 
   GROTHENDIECK, Alexander. La théorie des classes de Chern. _Bulletin de la Société Mathématique de France_, Volume **86** (1958) , pp. 137-154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
+- [ ] [`sum-of-squares`](https://github.com/thosgood/translations/tree/master/sum-of-squares)
+
+    HILBERT, D. Ueber die Darstellung definiter Formen als Summen von Formenquadraten. _Mathematische Annalen_, Volume **32** (1888), pp. 342–350. <http://eudml.org/doc/157385>.
+
