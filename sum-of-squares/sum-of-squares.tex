@@ -96,11 +96,14 @@
 \end{abstract}
 
 \setcounter{footnote}{0}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 
 %% Content %%
 
-\bigskip\bigskip
+\bigskip
+
+\oldpage{342}
 
 An algebraic form of even order $n$ with real coefficients and $m$ homogeneous variables is said to be \emph{definite} if it takes a positive value for every system of real values of the $m$ variables and, moreover, has a non-zero discriminant.
 A form with real coefficients is also called a \emph{real form} for short.
@@ -112,6 +115,69 @@ For the case where $n=4$, $m=3$, we have the following theorem:
 
 \emph{Every definite ternary quartic form can be written as the sum of the squares of three quadratic forms.}
 
+To proof this, consider a ternary quartic form $F$ that can be written as the sum of the squares of three quadratic forms $\varphi$, $\psi$, and $\chi$.
+If the form $F$ can also be written as the sum of the squares of three quadratic forms $\varphi+\varepsilon\varphi'$, $\psi+\varepsilon\psi'$, and $\chi+\varepsilon\chi'$, where $\varepsilon$ is an infinitely small constant, then the comparison of the two expressions leads to the relation
+\[
+\label{equation1}
+  \varphi\varphi' + \psi\psi' + \chi\chi' = 0.
+  \tag{1}
+\]
+The three equations
+\[
+\label{equation2}
+  \varphi=0,
+  \quad\psi=0,
+  \quad\chi=0
+  \tag{2}
+\]
+cannot have a common solution.
+By \cref{equation1}, \todo
+\oldpage{343}
+the quadratic form $\varphi'$ must vanish;
+thus
+\[
+  \varphi' = \alpha\psi+\gamma\chi,
+\]
+and, similarly,
+\begin{align*}
+  \psi' &= \beta\varphi+\zeta\chi,
+\\\chi' &= \delta\varphi+\vartheta\psi.
+\end{align*}
+By substituting these equations into \cref{equation1}, we obtain the following relations for the introduced constants:
+\[
+  \alpha+\beta = 0,
+  \quad\gamma+\delta = 0,
+  \quad\zeta+\vartheta = 0.
+\]
+As soon as the resultant of the three equations \cref{equation2} is non-zero, the identity \cref{equation1} can only be satisfied by a linear combination of the three solutions:
+\[
+  \left\{
+    \begin{array}{rcr}
+      \varphi' &= &0
+    \\\psi' &= &\chi
+    \\\chi' &= &-\psi
+    \end{array}
+  \right\}
+  \quad
+  \left\{
+    \begin{array}{rcr}
+      \varphi' &= &-\chi
+    \\\psi' &= &0
+    \\\chi' &= &\varphi
+    \end{array}
+  \right\}
+  \quad
+  \left\{
+    \begin{array}{rcr}
+      \varphi' &= &\psi
+    \\\psi' &= &-\varphi
+    \\\chi' &= &0
+    \end{array}
+  \right\}
+\]
+i.e. all possible solution systems represent the same form $F$, and so all representations of $F$ as the sum of the squares of three forms consist only of $\varphi$, $\psi$, and $\chi$.
+Since the system of these three quadratic forms has 18 coefficients, whereas the quartic form $F$ has 15 coefficients, it follows from the above remarks that every ternary quartic form can be expressed as the sum of the squares of three forms.
+\footnote{The general principle on which this is based comes from L.~Kronecker, c.f. \emph{Mathematische Annalen} Bd.~\textbf{13}, p.~549.}
 
 
 %% Bibliography %%
