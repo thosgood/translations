@@ -242,7 +242,14 @@ With this notation, we have the following theorem:
   Thus the sheaf $\sh{M}_{P_i}$ on $P_i$ that we have, by hypothesis, is a vector space of finite dimension over $K$.
   By the axioms of a left-exact subcategory, it is trivial to show that every system $\{N_i\}_{i=1,\ldots,r}$, where $N_i$ is a vector space of finite dimension over $K$, considered as a coherent sheaf on $X$, belongs to $\cat{D}$.
 
-  Now
+  Now assume that we have proven the theorem for all dimensions $\leq (n-1)$.
+  Let $\dim X=n$.
+  Let $Y$ be a closed subset of $X$ such that $\dim Y\leq(n-1)$.
+  We can easily show that $\cat{D}\cap\cat{C}(Y)$ is a left-exact subcategory of $\cat{C}(Y)$ that satisfies the hypotheses of the theorem.
+  So, by the induction hypothesis, $\cat{D}\supset\cat{C}(Y)$.
+
+  We will now prove that, if $\sh{F}$ is a coherent sheaf on $X$ with $\supp\sh{F}=Y$, then $\sh{F}\in\cat{D}$.
+  If $\sh{I}_Y\cdot\sh{F}=0$ \todo, then $\sh{F}\in\cat{C}(Y)$, and, by the above, $\sh{F}\in\cat{D}$.
 \end{proof}
 
 
