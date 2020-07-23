@@ -63,11 +63,13 @@
 
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
+\newcommand{\HH}{\mathrm{H}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
 \DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\supp}{supp}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -80,9 +82,9 @@
 
 \renewcommand{\abstractname}{Translator's note.}
 
-\title{TITLE}
-\author{AUTHOR}
-\date{DATE}
+\title{Divisors in algebraic geometry}
+\author{C.S. Seshadri}
+\date{}
 \maketitle
 
 \begin{abstract}
@@ -104,6 +106,7 @@
 %% Content %%
 
 \bigskip\bigskip
+\oldpage{4-01}
 In the first part of this exposé, we will prove a theorem of Serre on complete varieties \cite{6}, following the methods of Grothendieck \cite{4}.
 The second part is dedicated to generalities on divisors.
 In the literature, we often call the divisors studied here ``locally principal'' divisors.
@@ -125,6 +128,23 @@ We say that $M$ is a \emph{torsion module} (resp. \emph{torsion-free module}) if
 The torsion elements of $M$ form a torsion submodule of $M$ (denoted by $T(M)$);
 if $M\neq0$, then $M/T(M)$ is a torsion-free module.
 If $M$ is a torsion module of finite type over $A$, then the ideal $\ann M$ of $A$ (the ideal of $A$ given by the elements $a\in A$ such that $aM=0$) is non-zero.
+
+Let $X$ be an algebraic space and $\sh{F}$ a sheaf of $\sh{O}$-modules on $X$.
+We define $\supp\sh{F}$ to be the set of points $x\in X$ such that $\sh{F}_x\neq0$.
+If $\sh{F}$ is coherent, then $\supp\sh{F}$ is a closed subset of $X$.
+If $X$ is affine, then $\supp\sh{F}$ is the set defined by the ideal $\ann\HH^0(X,\sh{F})$ of the affine algebra $\HH^0(X,\sh{O})$, where $\HH^0(X,\sh{F})$ is considered as a module over $\HH^0(X,\sh{O})$.
+
+A sheaf $\sh{F}$ of $\sh{O}$-modules on a \emph{variety} $X$ is said to be a \emph{torsion sheaf} (resp. \emph{torsion-free sheaf}) if, for every $x\in X$, the module $\sh{F}_x$ over the ring $\sh{O}_x$ is a torsion module (resp. torsion-free module).
+
+\oldpage{4-02}
+\begin{proposition}{1}
+\label{proposition1}
+  If $\sh{F}$ is a coherent sheaf on a variety $X$, then there exists a coherent subsheaf $T(\sh{F})$ of $\sh{F}$ (and only one) such that $(T(\sh{F}))_x = T(\sh{F}_x)$.
+\end{proposition}
+
+\begin{proof}
+  \todo
+\end{proof}
 
 
 %% Bibliography %%
