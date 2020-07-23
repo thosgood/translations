@@ -4,13 +4,13 @@ Here are some papers that I've translated into English. Any comments or correcti
 
 ## Séminaire Claude Chevalley
 
-- [ ] [`quasi-coherent-sheaves`](https://github.com/thosgood/translations/tree/master/quasi-coherent-sheaves)
+- [ ] [`quasi-coherent-sheaves`](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves)
   
   GABRIEL, Pierre. Faisceaux quasi-cohérents. _Séminaire Claude Chevalley_, Volume **4** (1958-1959), Talk no. 1, 12 p. http://www.numdam.org/item/SCC_1958-1959__4__A1_0/
-- [ ] [`serre's-theorem`](https://github.com/thosgood/translations/tree/master/serre's-theorem)
+- [ ] [`serre's-theorem`](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/2-serre's-theorem)
 
   GABRIEL, Pierre. Le théorème de Serre. _Séminaire Claude Chevalley_, Volume **4** (1958-1959), Talk no. 2, 8 p. http://www.numdam.org/item/SCC_1958-1959__4__A2_0/
-- [ ] [`divisors-in-algebraic-geometry`](https://github.com/thosgood/translations/tree/master/divisors-in-algebraic-geometry)
+- [ ] [`divisors-in-algebraic-geometry`](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry)
 
   SESHADRI, C. S. Diviseurs en géométrie algébrique. _Séminaire Claude Chevalley_, Volume **4** (1958-1959), Talk no. 4, 9 p. http://www.numdam.org/item/SCC_1958-1959__4__A4_0/
 
@@ -22,16 +22,16 @@ Here are some papers that I've translated into English. Any comments or correcti
 
 ## Séminaire Schwartz
 
-- [x] [`the-theory-of-nuclear-operators`](https://github.com/thosgood/translations/tree/master/the-theory-of-nuclear-operators) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=the-theory-of-nuclear-operators%2Fthe-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1594735239381)
+- [x] [`the-theory-of-nuclear-operators`](https://github.com/thosgood/translations/tree/master/seminaire-schwartz/12-the-theory-of-nuclear-operators) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=the-theory-of-nuclear-operators%2Fthe-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1594735239381)
 
   SCHWARTZ, L. La théorie des opérateurs nucléaires. _Séminaire Schwartz_, Volume **1** (1953-1954), Talk no. 12, 7 p. http://www.numdam.org/item/SLS_1953-1954__1__A13_0/
 
 # Other
 
-- [x] [`the-riemann-roch-theorem`](https://github.com/thosgood/translations/tree/master/the-riemann-roch-theorem) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=the-riemann-roch-theorem%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595186565526)
+- [x] [`the-riemann-roch-theorem`](https://github.com/thosgood/translations/tree/master/bsmf-86/the-riemann-roch-theorem) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=the-riemann-roch-theorem%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595186565526)
 
   BOREL, Armand; SERRE, Jean-Pierre. Le théorème de Riemann-Roch. _Bulletin de la Société Mathématique de France_, Volume **86** (1958), pp. 97–136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
-- [ ] [`the-theory-of-chern-classes`](https://github.com/thosgood/translations/tree/master/the-theory-of-chern-classes)
+- [ ] [`the-theory-of-chern-classes`](https://github.com/thosgood/translations/tree/master/bsmf-86/the-theory-of-chern-classes)
 
   GROTHENDIECK, Alexander. La théorie des classes de Chern. _Bulletin de la Société Mathématique de France_, Volume **86** (1958) , pp. 137-154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
 - [ ] [`sum-of-squares`](https://github.com/thosgood/translations/tree/master/sum-of-squares)
