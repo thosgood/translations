@@ -23,12 +23,6 @@
 
   \theoremstyle{plain}
 
-  \newtheorem{innercustomtheorem}{Theorem}
-  \crefname{innercustomtheorem}{Theorem}{Theorems}
-  \newenvironment{theorem}[1]
-    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
-    {\endinnercustomtheorem}
-
   \newtheorem{innercustomproposition}{Proposition}
   \crefname{innercustomproposition}{Proposition}{Propositions}
   \newenvironment{proposition}[1]
@@ -46,6 +40,8 @@
   \newenvironment{corollary}[1]
     {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
     {\endinnercustomcorollary}
+
+  \newtheorem{theorem}{Theorem}
 
 
   \theoremstyle{definition}
@@ -70,6 +66,7 @@
 
 \DeclareMathOperator{\ann}{ann}
 \DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\rank}{rank}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -143,7 +140,109 @@ A sheaf $\sh{F}$ of $\sh{O}$-modules on a \emph{variety} $X$ is said to be a \em
 \end{proposition}
 
 \begin{proof}
-  \todo
+  The uniqueness is trivial.
+  The exists is a consequence of the fact that, if $X$ is affine, then $T(\sh{F}_x)$ is given by localisation of the module $T(\HH^0*(X,\sh{F}))$ with respect to the maximal ideal of $\HH^0(X,\sh{O})$ that defines $x$.
+\end{proof}
+
+\begin{corollary}
+  If $\sh{F}\neq0$ \todo then $\sh{F}/T(\sh{F})$ is a torsion-free coherent sheaf.
+\end{corollary}
+
+\begin{proposition}{2}
+\label{proposition2}
+  If $\sh{F}$ is a coherent sheaf on the variety $X$, then $\supp\sh{F}\neq X$ if and only if $\sh{F}$ is a torsion sheaf.
+\end{proposition}
+
+\begin{proof}
+  This is a trivial consequence of the fact that, if $U$ is an affine open subset, then $\supp\sh{F}\cap U$ is defined by the ideal $\ann\HH^0(U,\sh{F})$ of $\HH^0(U,\sh{O})$, where $\HH^0(U,\sh{F})$ is considered as a module over $\HH^0(U,\sh{O})$.
+\end{proof}
+
+\begin{proposition}{3}
+\label{proposition3}
+  If $\sh{F}$ is a torsion-free coherent sheaf on a variety $X$, with $\sh{F}\subset\sh{R}^n$, then there exists a coherent sheaf $\sh{I}\neq0$ of ideals of $\sh{O}$ such that $\sh{I}\cdot\sh{F}\subset\sh{O}^n$.
+\end{proposition}
+
+\begin{proof}
+  Let $\sh{I}_x$ be the ideal $[\sh{O}_X^n:\sh{F}_x]$ of $\sh{O}_x$, i.e. the ideal of elements $i_x$ of $\sh{O}_x$ such that $i_x\sh{F}_x\subset\sh{O}_x^n$.
+  Since $\sh{F}_x$ is of finite type over $\sh{O}_x$, we know that $\sh{I}_x\neq0$.
+  If we take an affine open subset $U$ of $X$, then we can prove that $\sh{I}_x$ is given by localisation of the ideal $[\HH^0(U,\sh{O}^n):\HH^0(U,\sh{F})]$ of $\HH^0(U,\sh{O})$ by the maximal ideal of $\HH^0(U,\sh{O})$ that defines $x$.
+  Thus $\{\sh{I}_x\}_{x\in X}$ defines a coherent sheaf $\sh{I}$ of ideals of $\sh{O}$ such that $\sh{I}\cdot\sh{F}\subset\sh{O}^n$.
+\end{proof}
+
+Let $\sh{F}$ be a torsion-free coherent sheaf on a variety $X$.
+Then the canonical homomorphism $\sh{F}\to\sh{F}\otimes_{\sh{O}}\sh{R}$ is injective.
+The sheaves $\sh{R}$ and $\sh{F}\otimes_{\sh{O}}\sh{R}$ are locally constant sheaves, and thus constant (\cite[page~229]{5}).
+We can then identify $\sh{F}\otimes_{\sh{O}}\sh{R}$ with a vector space of finite dimension over $\sh{R}$ (we identify the field of rational functions with the sheaf $\sh{R}$ since $\sh{R}$ is constant).
+We call this dimension the \emph{rank of $\sh{F}$}, and we can then consider $\sh{F}$ as a subsheaf of $\sh{R}^n$, where $n=\rank\sh{F}$.
+
+\begin{proposition}{4}
+\label{proposition4}
+  Under the same hypotheses as in \cref{proposition3}, there exists a coherent sheaf $\sh{I}\neq0$\todo of ideals of $\sh{O}$ such that $\sh{I}\cdot\sh{F}\subset\sh{O}^n$, where $n=\rank\sh{F}$;
+  then $\sh{O}^n/\sh{I}\cdot\sh{F}$ and $\sh{F}/\sh{I}\cdot\sh{F}$ are torsion sheaves.
+\end{proposition}
+
+\begin{proof}
+  The proof is immediate.
+\end{proof}
+
+\oldpage{4-03}
+If $Y$ is a closed subset of an algebraic space $X$, then we denote by $\sh{I}_Y$ the coherent sheaf of ideals of $\sh{O}$ defined by $Y$.
+
+\begin{proposition}{5}
+\label{proposition5}
+  Let $Y$ be a closed subset of an algebraic space $X$, and $\sh{F}$ a coherent sheaf on $X$, with $\supp\sh{F}\subset Y$;
+  then there exists an integer $k$ such that $\sh{I}_Y^k\sh{F}=0$.
+\end{proposition}
+
+\begin{proof}
+  We can reduce to the case where $X$ is affine, since there exists a finite cover of $X$ by affine opens.
+  In this case, the hypothesis implies that the set defined by the ideal $\ann\HH^0(X,\sh{F})$ is contained in $Y$.
+  This implies, as is well known, that $\ann\HH^0(X,\sh{F})\supset\sh{I}_Y^k$.
+\end{proof}
+
+\begin{proposition}{6}
+\label{proposition6}
+  Let $\sh{F}$ be a coherent sheaf of fractional ideals on a variety $X$ (i.e. a coherent subsheaf of $\sh{R}$) such that, for every $x$ outside of a closed subset $Y$ of $X$, $\sh{F}_x$ is an ideal of $\sh{O}_x$.
+  Then there exists an integer $k$ such that $\sh{I}_Y^k\cdot\sh{F}\subset\sh{O}$.
+\end{proposition}
+
+\begin{proof}
+  By \cref{proposition3} and the hypothesis, there exists a coherent sheaf $\sh{J}$ of ideals of $\sh{O}$ such that $\sh{J}_x=\sh{O}_x$ if $x\not\in Y$, and such that $\sh{J}\cdot\sh{F}\subset\sh{O}$.
+  Thus $\supp(\sh{O}/sh{J})\subset Y$, and, by \cref{proposition5}, there exists an integer $k$ such that $\sh{I}_Y^k(\sh{O}/\sh{J})=0$ \todo.
+  This implies that $\sh{I}_Y^k\subset\sh{J}$.
+\end{proof}
+
+
+\section{D\'{e}vissage theorem}
+\label{section2}
+
+Let $\cat{C}$ be an abelian category, and $\cat{C}'$ a subcategory of objects of $\cat{C}$.
+We say that $\cat{C}'$ is \emph{left exact in $\cat{C}$} if
+\begin{enumerate}
+  \item every subobject of an object of $\cat{C}'$ is in $\cat{C}'$;
+  \item for every exact sequence $0\to\sh{A}'\to\sh{A}\to\sh{A}''\to0$ in $\cat{C}$, the object $\sh{A}$ is in $\cat{C}'$ if the other two objects are in $\cat{C}'$.
+  \footnote{The axioms here that define a left-exact subcategory are slightly stronger than those of Grothendieck \cite{4}.}
+\end{enumerate}
+
+Let $X$ be an algebraic space.
+We denote by $\cat{C}(X)$ the abelian category of coherent sheaves on $X$.
+If $Y$ is a closed subset of $X$, then a coherent sheaf on $Y$ has a canonical extension to a coherent sheaf on $X$ (extending by $0$ outside of $Y$), and so we can consider $\cat{C}(Y)$ as a subcategory of $\cat{C}(X)$.
+With this notation, we have the following theorem:
+
+\oldpage{4-04}
+\begin{theorem}[D\'{e}vissage]
+  Let $\cat{D}$ be a left-exact subcategory of $\cat{C}(X)$ that has the following property:
+  for every closed irreducible subset $Y$ of $X$, there exists a coherent sheaf $\sh{M}_Y$ of $\cat{C}(Y)$ that belongs to $\cat{D}$, and that is torsion-free as a sheaf on $Y$.
+  Then $\cat{D}=\cat{C}(X)$.
+\end{theorem}
+
+\begin{proof}
+  The proof works by induction on the dimension of $X$.
+  If $\dim X=0$, then $X$ consists of a finite number of points $P_1,\ldots,P_r$, and a coherent sheaf on $X$ can be identified with a system $\{N_i\}_{i=1,\ldots,r}$, where $N_i$ is a vector space of finite dimension over $K$.
+  Thus the sheaf $\sh{M}_{P_i}$ on $P_i$ that we have, by hypothesis, is a vector space of finite dimension over $K$.
+  By the axioms of a left-exact subcategory, it is trivial to show that every system $\{N_i\}_{i=1,\ldots,r}$, where $N_i$ is a vector space of finite dimension over $K$, considered as a coherent sheaf on $X$, belongs to $\cat{D}$.
+
+  Now
 \end{proof}
 
 
