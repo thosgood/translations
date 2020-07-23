@@ -67,6 +67,8 @@
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
+\DeclareMathOperator{\ann}{ann}
+
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
@@ -74,7 +76,6 @@
 %% Document %%
 
 \usepackage{embedall}
-\embedfile{\jobname.bib}
 \begin{document}
 
 \renewcommand{\abstractname}{Translator's note.}
@@ -103,23 +104,77 @@
 %% Content %%
 
 \bigskip\bigskip
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+In the first part of this exposé, we will prove a theorem of Serre on complete varieties \cite{6}, following the methods of Grothendieck \cite{4}.
+The second part is dedicated to generalities on divisors.
+In the literature, we often call the divisors studied here ``locally principal'' divisors.
+
+The algebraic spaces considered here are defined over an algebraically closed field $K$.
+By ``variety'', we mean an irreducible algebraic space.
+If $X$ is an algebraic space, we denote by $\sh{O}(X)$, $\sh{R}(X)$, etc. (or simply $\sh{O}$, $\sh{R}$, etc.) the sheaf of local rings, of regular functions, etc. on $X$ (to define $\sh{R}(X)$ we assume that $X$ is a variety).
+By ``coherent sheaf'' on $X$, we mean a coherent sheaf of $\sh{O}$-modules on $X$.
 
 
-\section{!!!!!!!!!!!!!!!!!!!}
+\section{Preliminaries}
 \label{section1}
 
+\cite{4,5,6}
+\medskip
+
+If $M$ is a module over an integral ring $A$ (commutative and with $1$), then we say that an element $m\in M$ is a \emph{torsion element} if there exists some non-zero $a\in A$ such that $a\cdot m=0$.
+We say that $M$ is a \emph{torsion module} (resp. \emph{torsion-free module}) if every element of $M$ is a torsion element (resp. if $M\neq0$ and no non-zero element of $M$ is a torsion element).
+The torsion elements of $M$ form a torsion submodule of $M$ (denoted by $T(M)$);
+if $M\neq0$, then $M/T(M)$ is a torsion-free module.
+If $M$ is a torsion module of finite type over $A$, then the ideal $\ann M$ of $A$ (the ideal of $A$ given by the elements $a\in A$ such that $aM=0$) is non-zero.
 
 
 %% Bibliography %%
 
 \nocite{*}
 \bibliographystyle{acm}
-\bibliography{\jobname}
+
+\begin{thebibliography}{10}
+
+  \bibitem{1}
+  {\sc Cartier, P.}
+  \newblock Diviseurs et d\'{e}rivations en g\'{e}om\'{e}trie alg\'{e}brique.
+  \newblock {({\em Th\`{e}se Sc. math. Paris.} 1958)}
+  \newblock (To appear in {\em Bull. Soc. math. France}).
+
+  \bibitem{2}
+  {\sc Chevalley, C.}
+  \newblock Fondements de la G\'{e}om\'{e}trie alg\'{e}brique
+  \newblock Paris, Secr\'{e}tariat math\'{e}matique, 1958, multigraphed.
+  \newblock (Class taught at the Sorbonne in 1957--58).
+
+  \bibitem{3}
+  {\sc Godement, R.}
+  \newblock Propri\'{e}t\'{e}s analytiques des localit\'{e}s
+  \newblock In {\em S\'{e}minarie Cartan-Chevalley}, vol.~8, 1955--56.
+  \newblock (Talk number 19).
+
+  \bibitem{4}
+  {\sc Grothendieck, A.}
+  \newblock Sur les faisceaux alg\'{e}briques et les faisceaux analytiques
+    coh\'{e}rents.
+  \newblock In {\em S\'{e}minaire H. Cartan}, vol.~9.
+  \newblock (Talk number 2).
+
+  \bibitem{5}
+  {\sc Serre, J.-P.}
+  \newblock Faisceaux alg\'{e}briques coh\'{e}rents.
+  \newblock {\em Ann. Math. (2)\/}, vol.~61 (1955), 197--279.
+
+  \bibitem{6}
+  {\sc Serre, J.-P.}
+  \newblock Sur la cohomologie des vari\'{e}t\'{e}s alg\'{e}briques.
+  \newblock {\em J. Math. pures et appl. (9)\/}, vol.~36 (1957), 1--16.
+
+  \bibitem{7}
+  {\sc Weil, A.}
+  \newblock Fibre spaces in algebraic geometry
+  \newblock (Notes taken by A. Wallace, 1952)
+  \newblock Chicago, University of Chicago, 1955.
+
+\end{thebibliography}
 
 \end{document}
