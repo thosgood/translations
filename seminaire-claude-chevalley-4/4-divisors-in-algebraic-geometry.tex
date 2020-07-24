@@ -181,7 +181,7 @@ We call this dimension the \emph{rank of $\sh{F}$}, and we can then consider $\s
 \begin{proposition}{4}
 \label{proposition4}
   Under the same hypotheses as in \cref{proposition3}, there exists a coherent sheaf $\sh{I}\neq0$\todo of ideals of $\sh{O}$ such that $\sh{I}\cdot\sh{F}\subset\sh{O}^n$, where $n=\rank\sh{F}$;
-  then $\sh{O}^n/\sh{I}\cdot\sh{F}$ and $\sh{F}/\sh{I}\cdot\sh{F}$ are torsion sheaves.
+  then $\sh{O}^n/(\sh{I}\cdot\sh{F})$ and $\sh{F}/(\sh{I}\cdot\sh{F})$ are torsion sheaves.
 \end{proposition}
 
 \begin{proof}
@@ -253,6 +253,18 @@ With this notation, we have the following theorem:
 
   We will now prove that, if $\sh{F}$ is a coherent sheaf on $X$ with $\supp\sh{F}=Y$, then $\sh{F}\in\cat{D}$.
   If $\sh{I}_Y\cdot\sh{F}=0$ \todo, then $\sh{F}\in\cat{C}(Y)$, and, by the above, $\sh{F}\in\cat{D}$.
+  No matter what, by \cref{proposition5}, there exists an integer $k\geq1$ such that $\sh{I}_Y^k\sh{F}=0$.
+  We will complete the proof by induction on $k$.
+  Suppose that that claim has been proven for every coherent sheaf $\sh{G}$ on $X$ such that $\sh{I}_Y^{k-1}\sh{G}=0$.
+  For $\sh{F}$, we have an exact sequence
+  \[
+    0 \to \sh{I}_Y\cdot\sh{F} \to \sh{F} \to \sh{F}/(\sh{I}_Y\cdot\sh{F}) \to 0.
+  \]
+  The sheaf $\sh{I}_Y\sh{F}$ is annihilated by $\sh{I}_Y^{k-1}$, and the sheaf $\sh{F}/(\sh{I}_Y\sh{F})$ is annihilated by $\sh{I}_Y$.
+  Thus $\sh{I}_Y\sh{F}$ and $\sh{F}/(\sh{I}_Y\sh{F})$ belong to $\cat{D}$.
+  This implies that $\sh{F}\in\cat{D}$.
+
+  Suppose that $X$ is a variety, and that $\sh{F}$ is a torsion-free sheaf on $X$.
 \end{proof}
 
 
