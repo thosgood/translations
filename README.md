@@ -4,13 +4,15 @@ Here are some papers that I've translated into English. Any comments or correcti
 
 ## Séminaire Claude Chevalley
 
-- [ ] [`1-quasi-coherent-sheaves`](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex)
+[ ] [`1-quasi-coherent-sheaves`](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex)
   
   GABRIEL, Pierre. "Faisceaux quasi-cohérents". _Séminaire Claude Chevalley_, Volume **4** (1958-1959), Talk no. 1, 12 p. http://www.numdam.org/item/SCC_1958-1959__4__A1_0/
-- [ ] [`2-serre's-theorem`](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/2-serre's-theorem.tex)
+
+[ ] [`2-serre's-theorem`](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/2-serre's-theorem.tex)
 
   GABRIEL, Pierre. "Le théorème de Serre". _Séminaire Claude Chevalley_, Volume **4** (1958-1959), Talk no. 2, 8 p. http://www.numdam.org/item/SCC_1958-1959__4__A2_0/
-- [ ] [`4-divisors-in-algebraic-geometry`](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex)
+
+[ ] [`4-divisors-in-algebraic-geometry`](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex)
 
   SESHADRI, C. S. "Diviseurs en géométrie algébrique". _Séminaire Claude Chevalley_, Volume **4** (1958-1959), Talk no. 4, 9 p. http://www.numdam.org/item/SCC_1958-1959__4__A4_0/
 
