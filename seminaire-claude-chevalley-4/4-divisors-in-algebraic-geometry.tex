@@ -41,7 +41,8 @@
     {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
     {\endinnercustomcorollary}
 
-  \newtheorem{theorem}{Theorem}
+  \newtheorem*{theorem}{Theorem}
+  \newtheorem*{cor}{Corollary}
 
 
   \theoremstyle{definition}
@@ -67,6 +68,7 @@
 \DeclareMathOperator{\ann}{ann}
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Ker}{Ker}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -234,6 +236,7 @@ With this notation, we have the following theorem:
 
 \oldpage{4-04}
 \begin{theorem}[D\'{e}vissage]
+\label{theorem-devissage}
   Let $\cat{D}$ be a left-exact subcategory of $\cat{C}(X)$ that has the following property:
   for every closed irreducible subset $Y$ of $X$, there exists a coherent sheaf $\sh{M}_Y$ of $\cat{C}(Y)$ that belongs to $\cat{D}$, and that is torsion-free as a sheaf on $Y$.
   Then $\cat{D}=\cat{C}(X)$.
@@ -275,7 +278,45 @@ With this notation, we have the following theorem:
   If we repeat the same argument for the torsion-free sheaf $\sh{M}_X$, which we have by hypothesis, then we see that $\sh{O}\in\cat{D}$, which implies that $\sh{F}\in\cat{D}$.
 
   Suppose again that $X$ is a variety, but now that $\sh{F}$ is an arbitrary coherent sheaf.
+  We will show that $\sh{F}\in\cat{D}$.
+  We can assume that $\sh{F}\neq0$\todo, and we then have
+  \[
+    0 \to T(\sh{F}) \to \sh{F} \to \sh{F}/T(\sh{F}) \to 0
+  \]
+  where $T(\sh{F})$ is a torsion sheaf, and $\sh{F}/T(\sh{F})$ is a torsion-free sheaf.
+  By \cref{proposition2}, $\supp T(\sh{F})\neq X$, and, since $X$ is a variety, $\dim\supp T(\sh{F})<\dim T(X)$.
+  We then have, by the induction hypothesis, that $T(\sh{F})\in\cat{D}$, and we have just proven that $\sh{F}/T(\sh{F})\in\cat{D}$.
+  Thus $\sh{F}\in\cat{D}$.
+
+  Now let $X$ be an arbitrary algebraic space, and $X_1,\ldots,X_p$ its irreducible components.
+  If $\sh{F}$ is a coherent sheaf on $X$, then $\sh{F}/(\sh{I}_{X_i}\sh{F})$ can be identified with a sheaf on the variety $X_i$ (where $\sh{I}_{X_i}$ is the sheaf of ideals of $\sh{O}(X)$ determined by $X_i$), and, by the above, $\sh{F}/(\sh{I}_{X_i}\sh{F})\in\cat{D}$.
+  Thus the sheaf $\sh{G}=\sum_{i=1}^p\sh{F}/(\sh{I}_{X_i}\sh{F})$ belongs to $\cat{D}$.
+  We have a canonical homomorphism $\varphi\colon\sh{F}\to\sh{G}$.
+  The image of $\varphi$ is a coherent subsheaf of $\sh{G}$, and so the image of $\varphi$ belongs to $\cat{D}$.
+
+  We know that $\supp\Ker\varphi\subset\bigcup_{i\neq j}X_i\cap X_j$, and so $\dim\supp\Ker\varphi<\dim X$, and, by the induction hypothesis, $\Ker\varphi\in\cat{D}$.
+  Thus $\sh{F}\in\cat{D}$, and the theorem is proven.
 \end{proof}
+
+\begin{cor}[Serre's Theorem]
+  If $\sh{F}$ is a coherent sheaf on a complete algebraic space $X$, then $\HH^0(X,\sh{F})$ is a vector space of finite dimension over $K$.
+\end{cor}
+
+\begin{proof}
+  We take $\cat{D}$ to be the category of all coherent sheaves $\sh{F}$ on $X$ such that $\HH^0(X,\sh{F})$ is of finite dimension over $K$.
+  We can prove that $\cat{D}$ is a left-exact subcategory of $\cat{C}(X)$.
+  Also, we know that, if $Y$ is an irreducible closed subset of $X$, then $Y$ is a complete variety.
+  Thus the coherent sheaf $\sh{O}(Y)$ on $Y$ is a torsion-free sheaf with the property that $\HH^0(Y,\sh{O}(Y))\cong K$, and so $\HH^0(X,\sh{O}(Y))=\HH^0(Y,\sh{O}(Y))$ is of finite dimension over $K$ (we denote also by $\sh{O}(Y)$ the canonical extension of $\sh{O}(Y)$ to $X$).
+  By \hyperref[theorem-devissage]{the theorem}, the corollary is proven.
+\end{proof}
+
+
+\section{Divisors (Generalities)}
+\label{section3}
+
+\oldpage{4-06}
+Let $X$ be an algebraic variety, and $\sh{R}^\times(X)$ and $\sh{O}^\times(X)$ (or simply $\sh{R}^\times$ and $\sh{O}^\times$) the constant sheaf on $X$ of non-zero rational functions and the sheaf on $X$ of invertible regular functions (respectively).
+The sheaves $\sh{R}^\times$ and $\sh{O}^\times$, endowed with their multiplicative structure, are sheaves of abelian groups.
 
 
 %% Bibliography %%
