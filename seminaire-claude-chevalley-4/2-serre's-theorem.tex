@@ -23,12 +23,6 @@
 
   \theoremstyle{plain}
 
-  \newtheorem{innercustomtheorem}{Theorem}
-  \crefname{innercustomtheorem}{Theorem}{Theorems}
-  \newenvironment{theorem}[1]
-    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
-    {\endinnercustomtheorem}
-
   \newtheorem{innercustomproposition}{Proposition}
   \crefname{innercustomproposition}{Proposition}{Propositions}
   \newenvironment{proposition}[1]
@@ -46,6 +40,8 @@
   \newenvironment{corollary}[1]
     {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
     {\endinnercustomcorollary}
+
+  \newtheorem*{theorem}{Theorem}
 
 
   \theoremstyle{definition}
@@ -218,6 +214,37 @@ Then $\sh{K}(V)$ is the product of the sheaves $\sh{K}_i$.
 
 \section{Characterisation of affine algebraic sets}
 \label{section4}
+
+Let $(V,\sh{A})$ be an algebraic set endowed with its sheaf of rings, and let $A=\Gamma(V,\sh{A})$ be the coordinate ring of $V$.
+We know that we then have a canonical morphism $(V,\sh{A})\to(S(V),S(\sh{A}))$, and that $(V,\sh{A})$ is affine if and only if $(S(V),S(\sh{A}))$ is the prime spectrum of an algebra over $K$, of finite type and with no nilpotent elements.
+
+We will now define a morphism $(S(V),S(\sh{A}))\to(V(A),\sh{U})$.
+For this, let $x$ be an arbitrary element of $S(V)$, and let $S(\sh{A})_x$ be the fibre of $S(\sh{A})$ at $x$: this an a local ring, and we have a restriction homomorphism $A\to S(\sh{A})_x$.
+We denote by $\mathfrak{p}_x$ the prime ideal of $A$ given by the inverse image under this homomorphism of the maximal ideal of $S(\sh{A})_x$.
+It is an ideal of functions on $V$ that are zero on the closed point $x$.
+
+The map $\varphi\colon x\mapsto\mathfrak{p}_x$ is a continuous map from $S(V)$ to $V(A)$.
+Indeed, it suffices to show that the inverse image of a special open subset $U_f$ of $V(A)$ is an open subset of $S(V)$.
+But $\varphi^{-1}(U_f)$ consists of points $x$ of $S(V)$ such that the image $f_x$ of $f$ in $\sh{A}_x$ is invertible, and if $f_x$ is invertible at $x$, then $f_y$ is invertible for $y$ in a neighbourhood of $x$.
+QED.
+
+It follows from the above that $1/f$ is a section of $S(\sh{A})$ over $\varphi^{-1}(U_f)$, and so the canonical map from $A$ to $\Gamma(\varphi^{-1}(U_f),S(\sh{A}))$ extends to a homomorphism:
+\[
+  \varphi_{U_f}\colon A_f \to \Gamma(\varphi^{-1}(U_f), S(\sh{A})).
+\]
+
+The $\varphi_{U_f}$ are compatible with the restriction maps, and, by ``passing to the inductive limit'', they define a morphism of ringed topological spaces:
+\oldpage{2-05}
+\[
+  \varphi\colon (S(V),S(\sh{A})) \to (V(A),\sh{U}).
+\]
+
+It is clear that $\varphi$ is an isomorphism if and only if $(V,\sh{A})$ is an affine algebraic set.
+The following theorem examines this case:
+
+\begin{theorem}[Serre's Theorem]
+  The following are equivalent:
+\end{theorem}
 
 
 %% Bibliography %%
