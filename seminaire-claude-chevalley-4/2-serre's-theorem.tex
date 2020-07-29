@@ -144,12 +144,109 @@ Of course,
 \oldpage{2-02}
 the scheme of $(S(V),S(\sh{A}))$ is isomorphic to $(S(V),S(\sh{A}))$.
 
-If $A$ is a Noetherian Jacobson ring, and
+If $A$ is a Noetherian Jacobson ring, and $(\Omega(A),\sh{U})$ is the ringed topological space defined by its maximal spectrum, then the associated scheme is exactly $(V(A),\sh{U})$ (see Talk no.~1).
+If $(V,\sh{A})$ is an algebraic set endowed with the sheaf of germs of regular functions, then the associated scheme has been defined by Chevalley in \cite{3} and \cite{4}.
+In this case, $V$ is the subspace of $S(V)$ given by the closed points, and $\sh{A}$ is the restriction of $S(\sh{A})$ to $V$.
+From now on, we will almost always restrict to the case of algebraic sets over an algebraically closed field.
+
+
+\section{Sheaves of ideals of an algebraic set}
+\label{section2}
+
+If $V$ is an algebraic set, and $\sh{A}$ its sheaf of germs of regular functions, then the notion of quasi-coherent (resp. coherent) sheaves generalises the notion of a module (resp. module of finite type) over the ring of coordinates of an affine algebraic set.
+We similarly generalise the notions of support and dimension: if $\sh{F}$ is a coherent algebraic sheaf on $V$, then its \emph{support} is the set of points $x$ of $V$ where the fibre $\sh{F}_x$ of $\sh{F}$ is not zero (if the fibre of $\sh{F}$ is zero at $x$, then it is zero on a neighbourhood of $x$, since $\sh{F}$ is coherent, and thus the support is closed).
+We then define the \emph{dimension of $\sh{F}$} to be the dimension of its support.
+When $V$ is affine and the coherent sheaf $\sh{F}$ is associated to a module $M$ of finite type, then the support of $\sh{F}$ is given by the set of maximal ideals of the coordinate ring that contain the annihilator of $M$.
+
+The notion of an ideal generalises in the following way: we define a \emph{sheaf of ideals} of $(V,\sh{A})$ to be any quasi-coherent (and thus coherent) subsheaf of $\sh{A}$.
+We then find the inevitable correspondence between ideals and closed subsets:
+
+If $\sh{I}$ is a sheaf of ideals, then we associate to it the following closed subset $W(\sh{I})$ of $V$:
+
+$x\in W(\sh{I})$ if and only if $\sh{I}_x$, the fibre of $\sh{I}$ at $x$, is a proper ideal of $\sh{O}_x$ (i.e. $\sh{I}_x\neq\sh{O}_x$), or if and only if the germs of the functions defined by $\sh{I}$ at $x$ are zero.
+$W(\sh{I})$ is thus the support of $\sh{A}|\sh{I}$.
+
+Conversely, if $W$ is a closed subset of $V$, then we associate to it the following sheaf of ideals $\sh{I}(W)$:
+
+The sections of $\sh{I}(W)$ on an open subset $U$ are the regular functions defined on $U$ that are zero on $U\cap W$.
+If $\sh{I}(U,x)$ denotes the inverse image in $\sh{A}(U)$ of the maximal ideal of $\sh{O}_x$, then $\Gamma(U,\sh{I}(W))$ is the intersection
+\oldpage{2-03}
+of the $\sh{I}(U,x)$ where $x$ runs over $U\cap W$.
+If $U$ is an affine open subset, then the sheaf of ideals $\sh{I}(W)|U$ is exactly the sheaf associated to the ideal $\Gamma(U,\sh{I}(W))$ of $\sh{A}(U)$, which shows that $\sh{I}(W)$ is coherent.
+
+\begin{proposition}{1}
+\label{proposition1}
+  \begin{enumerate}[(a)]
+    \item The map $W\mapsto\sh{I}(W)$ gives a bijective correspondence between the closed subsets of $V$ and the sheaves of ideals $\sh{I}$ that satisfy the following condition:
+      for every $x\in V$, $\sh{I}_x$ is either equal to $\sh{O}_x$ or equal to an intersection of prime ideals of $\sh{O}_x$.
+    \item The map $W\mapsto\sh{I}(W)$ associates the closed subsets whose connected components are all irreducible to the sheaves of prime ideals (for every $x$, $\sh{I}_x$ is either equal to $\sh{O}_x$ or equal to a prime ideal).
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  \begin{enumerate}[(a)]
+    \item It suffices to give a proof in the case where $(V,\sh{A})$ is an affine algebraic set.
+      So let $A=\sh{A}(V)$, and $\mathfrak{a}=\Gamma(V,\sh{I}(W))$.
+      We have already seen that $\mathfrak{a}$ is then the intersection of the prime ideals $\sh{I}(V,x)$, where $x$ runs over $W$.
+      So $\mathfrak{a}$ is an intersection of prime ideals.
+      Since the correspondence between intersections of prime ideals of $A$ and closed subsets of $V$ is bijective, so too is the correspondence between ideals of $A$ and sheaves of ideals of $(V,\sh{A})$;
+      it remains only to show, conversely, that the sheaf associated to an intersection $\mathfrak{a}$ of prime ideals satisfies the condition of the proposition: this follows from the conservation properties of the prime decomposition under localisation.
+    \item The proof is analogous.
+  \end{enumerate}
+\end{proof}
+
+
+\section{The ring of rational functions of an algebraic set}
+\label{section3}
+
+We recall that, if $V$ is an algebraic set, then we define a \emph{rational function on $V$} to be a regular map $f$ from an everywhere-dense open subset of $V$ to the field of constants $K$.
+We further suppose that the domain of definition of $f$ cannot be extended.
+The rational functions on $V$ form an algebra $K(V)$ over $K$.
+If we denote by $V_i$ the irreducible components of $V$, then $K(V)$ is isomorphic to the product $\prod_i K(V_i)$, with the isomorphism being the obvious one.
+Finally, if $V$ is irreducible, and if $U$ is an affine open subset of $V$, then $K(V)$ is exactly the field of fractions of the coordinate ring of $U$.
+
+The sheaf $\sh{K}(V)$ of rational functions on $V$ is then defined in the following way:
+to every open subset $U$ of $V$, we associate the ring $K(U)$ of
+\oldpage{2-04}
+rational functions on $U$, with the restrictions being obvious.
+It is clear that this defines a quasi-coherent sheaf on $V$.
+Furthermore, if we denote by $V_i$ the irreducible components of $V$, then $K(U)$ is exactly the product $\prod_{V_i\cap U\neq\varnothing}K(V_i)$.
+It thus follows that the sheaf $\sh{K}(V)$ is obtained in the following way:
+let $\sh{K}_i$ be the sheaf on $V$ that is zero outside of $V_i$, and that is constant with fibre $K(V_i)$ on $V_i$.
+Then $\sh{K}(V)$ is the product of the sheaves $\sh{K}_i$.
+
+
+\section{Characterisation of affine algebraic sets}
+\label{section4}
 
 
 %% Bibliography %%
 
 \nocite{*}
 \bibliographystyle{acm}
+
+\begin{thebibliography}{10}
+
+  \bibitem{1}
+  {\sc Borel, A. and Serre, J.-P.}
+  \newblock Le th\'{e}or\`{e}m de Riemann-Roch.
+  \newblock {\em Bull. Soc. math. France 86\/} (1958), 97--136.
+
+  \bibitem{2}
+  {\sc Grothendieck, A.}
+  \newblock La th\'{e}orie des classes de Chern.
+  \newblock {\em Bull. Soc. math. France 86\/} (1958), 137--154.
+
+  \bibitem{3}
+  {\sc S\'{e}minaire Cartan-Chevalley:}
+  \newblock G\'{e}om\'{e}trie alg\'{e}brique.
+  \newblock {\em Volume~8} (1955/56).
+
+  \bibitem{4}
+  {\sc S\'{e}minaire Chevalley:}
+  \newblock Classification des groupes de Lie alg\'{e}brique.
+  \newblock {\em Volume~1} (1958).
+
+\end{thebibliography}
 
 \end{document}
