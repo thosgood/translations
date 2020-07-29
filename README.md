@@ -1,4 +1,6 @@
-Here are some papers that I've translated into English. Any comments or corrections are greatly appreciated! I've tried to refrain from "rewriting" them too much; generally the sentence structure etc. is pretty close to the original.
+Here are some papers that I've translated into English. Any comments or corrections are greatly appreciated.
+
+I've tried to refrain from "rewriting" too much: generally the sentence structure etc. is pretty close to the original. As a consequence, some of the language (in particular, any categorical statement) is slightly wordy, but hey ho.
 
 For each paper, there is a link to the `.tex` source file (and I've tried to keep these self-contained, i.e with internal bibliographies), a link to a PDF which is built from the latest version of the `.tex` file every time you load the page (many thanks to <https://github.com/aslushnikov/latex-online>), and the original (non-English language) paper.
 
