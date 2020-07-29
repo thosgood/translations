@@ -153,7 +153,7 @@ A sheaf $\sh{F}$ of $\sh{O}$-modules on a \emph{variety} $X$ is said to be a \em
 \end{proof}
 
 \begin{cor}
-  If $\sh{F}\neq0$ \todo then $\sh{F}/T(\sh{F})$ is a torsion-free coherent sheaf.
+  If $\sh{F}\neq0$ then $\sh{F}/T(\sh{F})$ is a torsion-free coherent sheaf.
 \end{cor}
 
 \begin{proposition}{2}
@@ -185,7 +185,7 @@ We call this dimension the \emph{rank of $\sh{F}$}, and we can then consider $\s
 
 \begin{proposition}{4}
 \label{proposition4}
-  Under the same hypotheses as in \cref{proposition3}, there exists a coherent sheaf $\sh{I}\neq0$\todo of ideals of $\sh{O}$ such that $\sh{I}\cdot\sh{F}\subset\sh{O}^n$, where $n=\rank\sh{F}$;
+  Under the same hypotheses as in \cref{proposition3}, there exists a coherent sheaf $\sh{I}\neq0$ of ideals of $\sh{O}$ such that $\sh{I}\cdot\sh{F}\subset\sh{O}^n$, where $n=\rank\sh{F}$;
   then $\sh{O}^n/(\sh{I}\cdot\sh{F})$ and $\sh{F}/(\sh{I}\cdot\sh{F})$ are torsion sheaves.
 \end{proposition}
 
@@ -211,12 +211,12 @@ If $Y$ is a closed subset of an algebraic space $X$, then we denote by $\sh{I}_Y
 \begin{proposition}{6}
 \label{proposition6}
   Let $\sh{F}$ be a coherent sheaf of fractional ideals on a variety $X$ (i.e. a coherent subsheaf of $\sh{R}$) such that, for every $x$ outside of a closed subset $Y$ of $X$, $\sh{F}_x$ is an ideal of $\sh{O}_x$.
-  Then there exists an integer $k$ such that $\sh{I}_Y^k\cdot\sh{F}\subset\sh{O}$\todo.
+  Then there exists an integer $k$ such that $\sh{I}_Y^k\cdot\sh{F}\subset\sh{O}$.
 \end{proposition}
 
 \begin{proof}
   By \cref{proposition3} and the hypothesis, there exists a coherent sheaf $\sh{J}$ of ideals of $\sh{O}$ such that $\sh{J}_x=\sh{O}_x$ if $x\not\in Y$, and such that $\sh{J}\cdot\sh{F}\subset\sh{O}$.
-  Thus $\supp(\sh{O}/sh{J})\subset Y$, and, by \cref{proposition5}, there exists an integer $k$ such that $\sh{I}_Y^k(\sh{O}/\sh{J})=0$ \todo.
+  Thus $\supp(\sh{O}/\sh{J})\subset Y$, and, by \cref{proposition5}, there exists an integer $k$ such that $\sh{I}_Y^k(\sh{O}/\sh{J})=0$.
   This implies that $\sh{I}_Y^k\subset\sh{J}$.
 \end{proof}
 
@@ -258,7 +258,7 @@ With this notation, we have the following theorem:
   So, by the induction hypothesis, $\cat{D}\supset\cat{C}(Y)$.
 
   We will now prove that, if $\sh{F}$ is a coherent sheaf on $X$ with $\supp\sh{F}=Y$, then $\sh{F}\in\cat{D}$.
-  If $\sh{I}_Y\cdot\sh{F}=0$ \todo, then $\sh{F}\in\cat{C}(Y)$, and, by the above, $\sh{F}\in\cat{D}$.
+  If $\sh{I}_Y\cdot\sh{F}=0$, then $\sh{F}\in\cat{C}(Y)$, and, by the above, $\sh{F}\in\cat{D}$.
   No matter what, by \cref{proposition5}, there exists an integer $k\geq1$ such that $\sh{I}_Y^k\sh{F}=0$.
   We will complete the proof by induction on $k$.
   Suppose that that claim has been proven for every coherent sheaf $\sh{G}$ on $X$ such that $\sh{I}_Y^{k-1}\sh{G}=0$.
@@ -282,7 +282,7 @@ With this notation, we have the following theorem:
 
   Suppose again that $X$ is a variety, but now that $\sh{F}$ is an arbitrary coherent sheaf.
   We will show that $\sh{F}\in\cat{D}$.
-  We can assume that $\sh{F}\neq0$\todo, and we then have
+  We can assume that $\sh{F}\neq0$, and we then have
   \[
     0 \to T(\sh{F}) \to \sh{F} \to \sh{F}/T(\sh{F}) \to 0
   \]
