@@ -53,7 +53,7 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
 
 - BOREL, Armand; SERRE, Jean-Pierre. "Le théorème de Riemann-Roch". _Bulletin de la Société Mathématique de France_, Volume **86** (1958), pp. 97–136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/bsmf-86/the-riemann-roch-theorem.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595524110173)
+  [[TeX]](https://github.com/thosgood/translations/tree/master/bsmf-86/the-riemann-roch-theorem.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595524110173) [[original]](http://www.numdam.org/item/?id=BSMF_1958__86__97_0)
   
 <!---
 - [ ] GROTHENDIECK, Alexander. "La théorie des classes de Chern". _Bulletin de la Société Mathématique de France_, Volume **86** (1958) , pp. 137-154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
