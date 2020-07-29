@@ -82,12 +82,16 @@
 %% Content %%
 
 \bigskip\bigskip
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+We assume knowledge of the definitions and elementary properties of sheaves of modules on a topological space, i.e. \cite[chapitre~I, \S1; chapitre~II, \S\S1--2]{2}.
+We define a presheaf $\sh{P}$ on a base $\sh{B}$ of open subsets of a topological space $X$, with values in a category $\cat{C}$, to be the following data:
+\begin{enumerate}[(a)]
+  \item for every open subset $U$ in $\sh{B}$, an object $\sh{P}(U)$ of $\cat{C}$, that we may also denote by $\Gamma(U,\sh{P})$;
+  \item for every pair $(U,V)$ of open subsets $U$ in $\sh{B}$ such that $U\subset V$, a morphism $\rho_{UV}\colon\sh{P}(V)\to\sh{P}(U)$.
+    The morphism $\rho_{UV}$ will be called the restriction of $V$ to $U$.
+    We further suppose that, if $U\subset V\subset W$ are open subsets in $\sh{B}$, then $\rho_{UV}\circ\rho_{VW}=\rho_{UW}$.
+\end{enumerate}
+
+The construction of the sheaf $\widetilde{\sh{P}}$ associated to a presheaf $\sh{P}$ can be easily generalised to the case of \todo
 
 
 %% Bibliography %%
