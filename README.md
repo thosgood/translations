@@ -1,4 +1,4 @@
-Here are some papers that I've translated into English. Any comments or corrections are greatly appreciated.
+Here are some papers that I've translated into English. Any comments or corrections are greatly appreciated. For contact details, see [my website](https://thosgood.com).
 
 I've tried to refrain from "rewriting" too much: generally the sentence structure etc. is pretty close to the original. As a consequence, some of the language (in particular, any categorical statement) is slightly wordy, but hey ho.
 
