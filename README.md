@@ -1,20 +1,27 @@
 Here are some papers that I've translated into English. Any comments or corrections are greatly appreciated! I've tried to refrain from "rewriting" them too much; generally the sentence structure etc. is pretty close to the original.
 
+For each paper, there is a link to the `.tex` source file (and I've tried to keep these self-contained, i.e with internal bibliographies), a link to a PDF which is built from the latest version of the `.tex` file every time you load the page (many thanks to <https://github.com/aslushnikov/latex-online>), and the original (non-English language) paper.
+
+
 # Seminars
 
 ## Séminaire Claude Chevalley (ENS)
 ### Volume 4 (1958--59), "Variétés de Picard"
 
 <!---
-- GABRIEL, Pierre. "Faisceaux quasi-cohérents". _Séminaire Claude Chevalley_, Volume **4** (1958-1959), Talk no. 1, 12 p. <http://www.numdam.org/item/SCC_1958-1959__4__A1_0/>
+- GABRIEL, Pierre. "Faisceaux quasi-cohérents".
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex)
+  Talk no. 1.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F1-quasi-coherent-sheaves.tex&command=pdflatex&trackId=1596036033972) [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A1_0/)
 --->
 
 <!---
-- GABRIEL, Pierre. "Le théorème de Serre". _Séminaire Claude Chevalley_, Volume **4** (1958-1959), Talk no. 2, 8 p. <http://www.numdam.org/item/SCC_1958-1959__4__A2_0/>
+- GABRIEL, Pierre. "Le théorème de Serre".
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/2-serre's-theorem.tex)
+  Talk no. 2.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/2-serre's-theorem.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F2-serre%27s-theorem.tex&command=pdflatex&trackId=1596035916115) [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A2_0/)
 --->
 
 
