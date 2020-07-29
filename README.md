@@ -2,7 +2,7 @@ Here are some papers that I've translated into English. Any comments or correcti
 
 # Seminars
 
-## Séminaire Claude Chevalley
+## Séminaire Claude Chevalley, Volume 4 (Variétés de Picard)
 
 <!---
 - GABRIEL, Pierre. "Faisceaux quasi-cohérents". _Séminaire Claude Chevalley_, Volume **4** (1958-1959), Talk no. 1, 12 p. <http://www.numdam.org/item/SCC_1958-1959__4__A1_0/>
@@ -21,13 +21,13 @@ Here are some papers that I've translated into English. Any comments or correcti
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F4-divisors-in-algebraic-geometry.tex&command=pdflatex&trackId=1596027138553)
 
-## Séminaire Henri Cartan
+## Séminaire Henri Cartan, Volume 9 (Quelques questions de topologie)
 
 - GROTHENDIECK, A. "Sur les faisceaux algébriques et les faisceaux analytiques cohérents". _Séminaire Henri Cartan_, Volume **9** (1956-1957) , Talk no. 2, pp. 1–16. <http://www.numdam.org/item/SHC_1956-1957__9__A2_0/>
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-henri-cartan-9%2F2-coherent-algebraic-analytic-sheaves.tex&command=pdflatex&trackId=1595524113730)
 
-## Séminaire Schwartz
+## Séminaire Schwartz, Volume 1 (Produits tensoriels topologiques d'espaces vectoriels topologiques. Espaces vectoriels topologiques nucléaires)
 
 - SCHWARTZ, L. "La théorie des opérateurs nucléaires". _Séminaire Schwartz_, Volume **1** (1953-1954), Talk no. 12, 7 p. <http://www.numdam.org/item/SLS_1953-1954__1__A13_0/>
   <br/>
