@@ -339,7 +339,31 @@ It follows from \hyperref[corollary3]{this corollary}, along with the exactness 
 \end{theorem}
 
 \begin{proof}
-  We have already seen that (a) implies (b), (a) implies (c), and (a) implies (d).
+  We have already seen that (a)$\implies$(b), (a)$\implies$(c), and (a)$\implies$(d).
+
+  We will first show that (b)$\implies$(a):
+  Let $M=\Gamma(V,\sh{F})$.
+  Then, for every affine open subset $U_f$ we have restrictions: $M\to\Gamma(U_f,\sh{F})$, and since $\Gamma(U_f,\sh{F})$ is an $A_f$-module, it follows that we have a map:
+\oldpage{1-08}
+  \[
+    M_f = M\otimes_A A_f \to \Gamma(U_f,\sh{F}).
+  \]
+
+  These maps induce a morphism of sheaves: $\mathfrak{M}\to\sh{F}$.
+
+  This morphism will be bijective if the induced maps $\mathfrak{M}(U_f)\to\sh{F}(U_f)$ are bijective (and so (b)$\implies$(a)) or if the induced maps $\mathfrak{M}_\mathfrak{p}\to\sh{F}_\mathfrak{p}$ are bijective (and so (c)$\implies$(a)).
+
+  It remains only to show that (d)$\implies$(a).
+  The proof that follows is due to Grothendieck.
+
+  We note first of all that the map $A\to A_f$ endows every $A_f$-module with an $A$-module structure, and thus associates, to every quasi-coherent sheaf $\sh{F}$ on $U_f$, a quasi-coherent sheaf $\overline{\sh{F}}$ on $V$ (we will return later to this operation).
+  Furthermore, if $U_g$ is an affine open subset of $V$, then:
+  \[
+    \Gamma(U_g,\overline{\sh{F}})
+    = \Gamma(V,\overline{\sh{F}})_g
+    = \Gamma(U_f,\sh{F})_g
+    = \Gamma(U_f\cap U_g,\sh{F}).
+  \]
 \end{proof}
 
 
