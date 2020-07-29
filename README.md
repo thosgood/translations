@@ -4,7 +4,7 @@ I've tried to refrain from "rewriting" too much: generally the sentence structur
 
 For each paper, there is a link to the `.tex` source file (and I've tried to keep these self-contained, i.e with internal bibliographies), a link to a PDF which is built from the latest version of the `.tex` file every time you load the page (many thanks to <https://github.com/aslushnikov/latex-online>), and the original (non-English language) paper.
 
-* TOC {:toc}
+{:toc}
 
 
 # Seminars
