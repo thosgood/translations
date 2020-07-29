@@ -2,7 +2,7 @@ Here are some papers that I've translated into English. Any comments or correcti
 
 # Seminars
 
-<!--- ## Séminaire Claude Chevalley --->
+## Séminaire Claude Chevalley
 
 <!---
 - GABRIEL, Pierre. "Faisceaux quasi-cohérents". _Séminaire Claude Chevalley_, Volume **4** (1958-1959), Talk no. 1, 12 p. <http://www.numdam.org/item/SCC_1958-1959__4__A1_0/>
@@ -16,11 +16,10 @@ Here are some papers that I've translated into English. Any comments or correcti
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/2-serre's-theorem.tex)
 --->
 
-<!---
+
 - SESHADRI, C. S. "Diviseurs en géométrie algébrique". _Séminaire Claude Chevalley_, Volume **4** (1958-1959), Talk no. 4, 9 p. <http://www.numdam.org/item/SCC_1958-1959__4__A4_0/>
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex)
---->
+  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F4-divisors-in-algebraic-geometry.tex&command=pdflatex&trackId=1596027138553)
 
 ## Séminaire Henri Cartan
 
