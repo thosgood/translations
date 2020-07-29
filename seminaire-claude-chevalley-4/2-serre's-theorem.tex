@@ -374,9 +374,41 @@ The following theorem further examines this case:
   is a resolution of $M$ by free $A$-modules, then we have the diagram
   \[
     \begin{tikzcd}
-      
+      L_1\otimes_A\sh{U}(U) \rar \dar["w"]
+      & L_0\otimes_A\sh{U}(U) \rar \dar["v"]
+      & M\otimes_A\sh{U}(U) \rar \dar["u"]
+      & 0
+    \\\sh{L}_1(U) \rar
+      & \sh{L}_0(U) \rar
+      & \sh{M}(U) \rar
+      & 0
     \end{tikzcd}
   \]
+
+  Since $v$ and $w$ are isomorphisms, so too is $u$.
+
+  \bigskip
+  (b)$\implies$(a):
+  We will show that, if
+  \[
+    0 \to \sh{F}' \to\sh{G}' \to \sh{H}' \to 0
+  \]
+  is an exact sequence of coherent sheaves on $U$, then the sections on $U$ give an exact sequence.
+
+  But there exists an exact sequence
+  \[
+    0 \to \sh{F} \to \sh{G} \to \sh{H} \to 0
+  \]
+  of coherent sheaves on $V$ such that $\sh{F}|U=\sh{F}'$, $\sh{G}|U=\sh{G}'$, and $\sh{H}|U=\sh{H}'$ (see \cite{1}, with the proof in the appendix of \cite{2}).
+  So, if $M$, $N$, and $P$ are the modules associated to $\sh{F}$, $\sh{G}$, and $\sh{H}$, then the sequence
+  \[
+    M\otimes_A\sh{U}(U) \to N\otimes_A\sh{U}(U) \to P\otimes_A\sh{U}(U) \to 0
+  \]
+  is exact, which proves that the homomorphism
+  \[
+    \sh{G}'(U) = N\otimes_A\sh{U}(U) \to \sh{H}'(U) = P\otimes_A\sh{U}(U)
+  \]
+  is surjective.
 \end{proof}
 
 
