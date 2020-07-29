@@ -29,18 +29,18 @@ Here are some papers that I've translated into English. Any comments or correcti
 
 - GROTHENDIECK, A. "Sur les faisceaux algébriques et les faisceaux analytiques cohérents".
   <br/>
-  Talk no. 2, pp. 1–16.
+  Talk no. 2.
   <br/>
-  <http://www.numdam.org/item/SHC_1956-1957__9__A2_0/>
-  <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-henri-cartan-9%2F2-coherent-algebraic-analytic-sheaves.tex&command=pdflatex&trackId=1595524113730)
+  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-henri-cartan-9%2F2-coherent-algebraic-analytic-sheaves.tex&command=pdflatex&trackId=1595524113730) [[original]](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
 
 ## Séminaire Schwartz (FSP)
-### Volume 1 (Produits tensoriels topologiques d'espaces vectoriels topologiques. Espaces vectoriels topologiques nucléaires)
+### Volume 1 (1953--54), "Produits tensoriels topologiques d'espaces vectoriels topologiques. Espaces vectoriels topologiques nucléaires"
 
-- SCHWARTZ, L. "La théorie des opérateurs nucléaires". _Séminaire Schwartz_, Volume **1** (1953-1954), Talk no. 12, 7 p. <http://www.numdam.org/item/SLS_1953-1954__1__A13_0/>
+- SCHWARTZ, L. "La théorie des opérateurs nucléaires".
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/12-the-theory-of-nuclear-operators.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F12-the-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1595524106537)
+  Talk no. 12.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/12-the-theory-of-nuclear-operators.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F12-the-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1595524106537) [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A13_0/)
 
 # Other
 
