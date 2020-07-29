@@ -220,9 +220,70 @@ For every prime ideal $\mathfrak{p}$, we denote by $A_\mathfrak{p}$ and $M_\math
 \begin{theorem}{1}
 \label{theroem1}
   \begin{enumerate}[(a)]
-    \item If
+    \item If $\mathfrak{p}$ is a point of $V(A)$, then the localised ring $\sh{A}_\mathfrak{p}$ (the fibre of the sheaf $\sh{A}$ over $\mathfrak{p}$) is canonically isomorphic to $A_\mathfrak{p}$;
+      Identifying $\sh{A}_\mathfrak{p}$ with $A_\mathfrak{p}$, the localised module $\sh{M}_\mathfrak{p}$ of the sheaf $\sh{M}$ at $\mathfrak{p}$ is canonically isomorphic to $M_\mathfrak{p}$, and thus to $M\otimes_A A_\mathfrak{p}$.
+    \item The canonical map from $M_f=\sh{M}^*(U_f)$ to $\sh{M}(U_f)$ is an isomorphism.
   \end{enumerate}
 \end{theorem}
+
+\begin{proof}
+  The first claim of (a) follows from the fact that
+  \[
+    \sh{A}_\mathfrak{p}
+    = \varinjlim_{U_f\ni\mathfrak{p}} \sh{A}^*(U_f)
+    = \varinjlim_{f\not\in\mathfrak{p}} A_f
+    = A_\mathfrak{p};
+  \]
+  the second claim of (a) can be proven in the same way.
+
+  We now show that the map $M_f\to\sh{M}(U_f)$ is \emph{injective}:
+  Since $U_f=V(A_f)$, we can always assume that $f=1$ and $U_f=V(A)$.
+  The kernel of the map $M\to\sh{M}(V)$ then consists of the $m$ such that $m\otimes_A1_{A_\mathfrak{p}}=0$ for every prime ideal $\mathfrak{p}$, i.e. the $m$ whose annihilator is not contained in any prime ideal:
+  the kernel is thus zero.
+
+  Similarly, the map $M_f\to\sh{M}(U_f)$ is \emph{surjective}:
+  it suffices to prove this in the case where $f=1$ and $U_f=V$.
+  By the above, $\sh{M}(V)=\Gamma(\sh{M})$ is the union of the $\HH^0(\mathfrak{U},\sh{M}^*)$ where $\mathfrak{U}$ runs over the finite covers of $V$ by special open subsets;
+  it thus suffices to prove that the map $M\to\HH^0(\mathfrak{U},\sh{M})$ is surjective for every finite cover by special open subsets.
+
+  For this, let $(f_i)_{i=1,\ldots,p}$ be elements of $A$ such that $V=\bigcup U_{f_i}$, and let $X_i$ be the elements of $M_{f_i}$ such that $X_i$ and $X_j$ have the same image in $M_{f_i\cdot f_j}$;
+  even if we replace $f_i$ by one of its powers, we can still suppose that $X_i$ is of the form $m_i/f_i$, where $m_i\in M$.
+  Since $X_i$ and $X_j$ have the same image in $M_{f_i\cdot f_j}$,
+  \[
+    \frac{m_i f_j - m_j f_i}{f_i f_j} = 0 \in M_{f_i\cdot f_j}.
+  \]
+\oldpage{1-06}
+  In other words,
+  \[
+    (f_i\cdot f_j)^r(m_if_j\cdot m_jf_i) = 0 \in M\mbox{ for $r$ large enough.}
+  \]
+
+  Also, the $U_{f_i}=U_{f_i^{r+1}}$ cover $V$, i.e. the $f_i^{r+1}$ generate $A$, i.e. we have a relation of the form $1=\sum_{i=1}^p a_i f_i^{r+1}$, where $a_i\in A$.
+  It follows that, if $m=\sum_i m_ia_if_i^{r+1}$, then
+  \[
+    f_j^{r+1}
+    = \sum_i a_im_if_i^rf_j^{r+1}
+    = \sum_i a_im_jf_j^rf_i^{r+1}
+    = m_jf_j^r
+  \]
+  and, in $M_{f_j}$, we have the equality $X_j=m_j/f_j=m/1$ for all $j$.
+\end{proof}
+
+\begin{corollary}{1}
+\label{corollary1}
+  If $S$ is a multiplicatively-stable subset of $A$, then the restriction of the sheaf $\sh{M}$ to $E_S$ can be identified with the sheaf $\sh{M}_S$ on $V(A_S)$ associated to $M_S$.
+\end{corollary}
+
+\begin{proof}
+  Let $f$ be an element of $A$.
+  The open subset $E_S\cap U_f$ of $E_S$ can then be identified with $E_{S\cdot S_f}$, and, consequently,
+  \[
+    \sh{M}_S(E_S\cap U_f)
+    = M_{S\cdot S_f}
+    = (M_S)_f
+    = \varinjlim_{U_g\supset E_S}M_{f\cdot g}.
+  \]
+\end{proof}
 
 
 %% Bibliography %%
