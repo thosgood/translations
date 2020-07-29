@@ -84,7 +84,8 @@
 %% Content %%
 
 \bigskip\bigskip
-We assume knowledge of the definitions and elementary properties of sheaves of modules on a topological space, i.e. \cite[chapitre~I, \S1; chapitre~II, \S\S1--2]{2}.
+\oldpage{1-01}
+We assume prior knowledge of the definitions and elementary properties of sheaves of modules on a topological space, i.e. \cite[chapitre~I, \S1; chapitre~II, \S\S1--2]{2}.
 We define a presheaf $\sh{P}$ on a base $\mathfrak{B}$ of open subsets of a topological space $X$, with values in a category $\cat{C}$, to be the following data:
 \begin{enumerate}[(a)]
   \item for every open subset $U$ in $\mathfrak{B}$, an object $\sh{P}(U)$ of $\cat{C}$, that we may also denote by $\Gamma(U,\sh{P})$;
@@ -106,6 +107,47 @@ if these maps are injective for every cover $\mathfrak{U}$ satisfying the condit
 \label{section1}
 
 Let $A$ be a unital commutative ring.
+A submonoid $S$ of the multiplicative monoid of $A$ (i.e. a non-empty subset of $A$ such that, if it contains $s$ and $t$, then it contains $s\cdot t$) is said to be \emph{complete} if it satisfies the following condition:
+if $s\cdot t\in S$, then $s\in S$ and $t\in S$.
+To every multiplicative submonoid
+\oldpage{1-02}
+$S$, we associate a complete monoid $\widetilde{S}$ in the following way:
+$s\in\widetilde{S}$ if and only if there exists some $t$ in $A$ such that $s\cdot t\in S$.
+The prime ideals that meet $S$ also meet $\widetilde{S}$, and vice versa.
+Furthermore, the complement of $\widetilde{S}$ in $A$ is a union of prime ideals (the ideals that are maximal amongst those that do not meet $\widetilde{S}$ are prime).
+
+If now $M$ denotes a unital $A$-module, and $S$ a multiplicative submonoid of $A$, then we denote by $M_S$ the following abelian group:
+
+The set $M_S$ is the quotient of $M\times S$ by the equivalence relation
+\[
+  (m,s) = (n,t) \iff \exists r\in S\mbox{ such that }r(mt-ns)=0.
+\]
+
+The addition in $M\times S$ is defined by $(m,s)+(n,t)=(mt+ns,st)$;
+our equivalence relation is compatible with the addition, whence we get the structure of an abelian group on $M_S$.
+We denote by $m/s$ the class of $(m,s)$ in $M_S$.
+
+We have a bilinear map $A_S\otimes_\mathbb{Z}M_S\to M_S$ defined by passing to quotients from the map $((a,s),(m,t))\mapsto(am,st)$.
+Taking $M=A$, we see that $A_S$ is a ring and, more generally, $M_S$ is an $A_S$-module.
+The map $\psi\colon m\mapsto m/1$ from $M$ to $M_S$ is compatible with the ring homomorphism $\varphi\colon a\mapsto a/1$ from $A$ to $A_S$ (i.e. it is a homomorphism of abelian groups such that $\psi(a\cdot m)=\varphi(a)\cdot\psi(m)$).
+
+We can furthermore easily prove the following claims:
+the correspondence $M\mapsto M_S$ is functorial (in the evident way);
+the functor $M\mapsto M_S$ is exact (i.e. if $0\to M\to M'\to M''\to 0$ is an exact sequence of $A$-modules, then $0\to M_S\to M'_S\to M''_S\to 0$ is an exact sequence of $A$-modules) and commutes with inductive limits (i.e. if $(M_i)_{i\in I}$ is an inductive system of $A$-modules, and $L$ an inductive limit of this system, then the $(M_i)_S$ form an inductive system of $A_S$-modules, and the homomorphisms $(M_i)_S\to L_S$ induced by the $M_i\to L$ define $L_S$ as an inductive limit of the system $((M_i)_S)$); the canonical map $M\otimes_A A_S\to M_S$ is bijective.
+
+If $S$ and $T$ are submonoids, then the abelian groups $(M_S)_T$, $(M_T)_S$, and $M_{S\cdot T}$ are all canonically isomorphic to one another, where $S\cdot T$ denotes the monoid given by products $s\cdot t$ with $s\in S$ and $t\in T$.
+Identifying the rings $(A_S)_T$, $(A_T)_S$, and $A_{S\cdot T}$, which are themselves all canonically isomorphic to one another, the isomorphisms between $(M_S)_T$, $(M_T)_S$, and $M_{S\cdot T}$ are isomorphisms of modules.
+
+\oldpage{1-03}
+If $S$ is contained in a submonoid $S'$ of the multiplicative monoid of $A$, then there is a canonical map from $M_S$ to $M_{S'}$ that sends each element $m_s$ of $M_S$ (where $m\in M$ and $s\in S$) to the element of $M_{S'}$ denoted by the same symbol.
+The map $A_S\to A_{S'}$ is a ring homomorphism;
+the map $M_S\to M_{S'}$ is that which corresponds to the map $M\otimes_A A_S\to M\otimes_A A_{S'}$, induced by $A_S\to A_{S'}$.
+If $S'=\widetilde{S}$ is the smallest complete monoid containing $S$, then the map $M_S\to M_{\widetilde{S}}$ is bijective.
+Finally, if $S$ is the union of an increasingly-ordered filtered family of monoids $S_i$, then $M_S$ can be identified with $\varinjlim M_{S_i}$.
+
+
+\section{The prime spectrum of a commutative ring}
+\label{section2}
 
 
 %% Bibliography %%
