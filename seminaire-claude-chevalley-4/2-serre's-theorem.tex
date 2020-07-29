@@ -70,11 +70,11 @@
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
+\renewcommand{\thepart}{\Alph{part}}
 
 %% Document %%
 
 \usepackage{embedall}
-\embedfile{\jobname.bib}
 \begin{document}
 
 \renewcommand{\abstractname}{Translator's note.}
@@ -92,7 +92,7 @@
   \emph{What follows is a translation (last updated \today) of the French paper:}
 
   \medskip\noindent
-  \textcs{Gabriel, P.}
+  \textsc{Gabriel, P.}
   ``Le th\'{e}or\`{e}me de Serre''.
   \emph{S\'{e}minaire Claude Chevalley}, Volume~\textbf{4} (1958-1959), Talk no.~2, 8~p.
   {\footnotesize\url{http://www.numdam.org/item/SCC_1958-1959__4__A2_0/}}
@@ -106,23 +106,50 @@
 %% Content %%
 
 \bigskip\bigskip
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-\section{!!!!!!!!!!!!!!!!!!!}
+\part{Affine algebraic sets and classical functors}
+\label{chapterA}
+
+
+\section{Ringed topological spaces}
 \label{section1}
 
+\oldpage{2-01}
+
+From now on, and unless otherwise mentioned, the rings we consider will be assumed to be commutative, with a unit element, and \emph{Noetherian}.
+We define a \emph{ringed topological space} $(V,\sh{A})$ to be a topological space $V$ endowed with the structure defined by the data of a sheaf of rings $\sh{A}$.
+If $(V,\sh{A})$ and $(W,\sh{B})$ are two ringed topological spaces, then we define a morphism from the first to the second by the data of:
+\begin{enumerate}[(a)]
+  \item a continuous map $\psi\colon V\to W$;
+  \item for every open subset $U$ of $W$, a ring homomorphism
+    \[
+      \varphi_U\colon\sh{B}(U)\to\sh{A}(\varphi^{-1}(U))
+    \]
+    that is compatible with the restriction maps.
+\end{enumerate}
+
+The composition of two morphisms is defined in the evident way, and we speak of the category of ringed topological spaces.
+In what follows, $V$ will almost always be a Zariski space.
+To such a $V$, we often associate a topological space $S(V)$, which is \emph{the scheme of $V$}, and which is defined in the following way:
+\begin{itemize}
+  \item the points of $S(V)$ are the closed irreducible subsets of $V$;
+  \item the closed subsets of $S(V)$ are the sets $\sh{F}$, where $F$ is a closed subset of $V$, and $\sh{F}$ denotes the set of closed irreducible subsets of $V$ that are contained in $F$.
+\end{itemize}
+
+It is then clear that the correspondence $F\mapsto\sh{F}$ between closed subsets of $V$ and closed subsets of $S(V)$ is bijective, that $S(V)$ is a Zariski space, and that every closed irreducible subset of $S(V)$ is the closure of a unique point.
+To every sheaf on $V$, we canonically associate a sheaf on $S(V)$.
+In particular, if $(V,\sh{A})$ is a ringed topological space, and if $V$ is a Zariski space, then we denote by $(S(V),S(\sh{A}))$ the \emph{scheme of $(V,\sh{A})$}, which is defined to be the ringed topological space given by $S(V)$ and the sheaf associated to $\sh{A}$.
+Of course,
+\oldpage{2-02}
+the scheme of $(S(V),S(\sh{A}))$ is isomorphic to $(S(V),S(\sh{A}))$.
+
+If $A$ is a Noetherian Jacobson ring, and
 
 
 %% Bibliography %%
 
 \nocite{*}
 \bibliographystyle{acm}
-\bibliography{\jobname}
 
 \end{document}
