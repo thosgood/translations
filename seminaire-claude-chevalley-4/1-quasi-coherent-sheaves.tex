@@ -44,6 +44,8 @@
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
+\DeclareMathOperator{\HH}{H}
+
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
@@ -83,15 +85,27 @@
 
 \bigskip\bigskip
 We assume knowledge of the definitions and elementary properties of sheaves of modules on a topological space, i.e. \cite[chapitre~I, \S1; chapitre~II, \S\S1--2]{2}.
-We define a presheaf $\sh{P}$ on a base $\sh{B}$ of open subsets of a topological space $X$, with values in a category $\cat{C}$, to be the following data:
+We define a presheaf $\sh{P}$ on a base $\mathfrak{B}$ of open subsets of a topological space $X$, with values in a category $\cat{C}$, to be the following data:
 \begin{enumerate}[(a)]
-  \item for every open subset $U$ in $\sh{B}$, an object $\sh{P}(U)$ of $\cat{C}$, that we may also denote by $\Gamma(U,\sh{P})$;
-  \item for every pair $(U,V)$ of open subsets $U$ in $\sh{B}$ such that $U\subset V$, a morphism $\rho_{UV}\colon\sh{P}(V)\to\sh{P}(U)$.
+  \item for every open subset $U$ in $\mathfrak{B}$, an object $\sh{P}(U)$ of $\cat{C}$, that we may also denote by $\Gamma(U,\sh{P})$;
+  \item for every pair $(U,V)$ of open subsets $U$ in $\mathfrak{B}$ such that $U\subset V$, a morphism $\rho_{UV}\colon\sh{P}(V)\to\sh{P}(U)$.
     The morphism $\rho_{UV}$ will be called the restriction of $V$ to $U$.
-    We further suppose that, if $U\subset V\subset W$ are open subsets in $\sh{B}$, then $\rho_{UV}\circ\rho_{VW}=\rho_{UW}$.
+    We further suppose that, if $U\subset V\subset W$ are open subsets in $\mathfrak{B}$, then $\rho_{UV}\circ\rho_{VW}=\rho_{UW}$.
 \end{enumerate}
 
-The construction of the sheaf $\widetilde{\sh{P}}$ associated to a presheaf $\sh{P}$ can be easily generalised to the case of \todo
+The construction of the sheaf $\widetilde{\sh{P}}$ associated to a presheaf $\sh{P}$ can be easily generalised to the case of presheaves on a base of open subsets.
+If $\mathfrak{U}=(U_i)_{i\in I}$ is a cover of the open subset $U\in\mathfrak{B}$, where $U_i\in\mathfrak{B}$, and $U_i\cap U_j\in\mathfrak{B}$, and if $\sh{P}$ is a presheaf of rings (resp. of modules) on the base $\mathfrak{B}$, then we write $\HH^0(\mathfrak{U},\sh{P})$ to mean the subring (resp. submodule) of $\prod_{i\in I}\sh{P}(U_i)$ given by the $(X_i)_{i\in I}$ such that $\rho_{U_i\cap U_j,U_i}(X_i) = \rho_{U_i\cap U_j,U_j}(X_j)$ for every pair $i,j\in I$.
+We then have canonical maps:
+\[
+  \sh{P}(U) \to \HH^0(\mathfrak{U},\sh{P}) \to \widetilde{\sh{P}}(U);
+\]
+if these maps are injective for every cover $\mathfrak{U}$ satisfying the conditions above, then $\widetilde{\sh{P}}(U)$ is the union of the $\HH^0(\mathfrak{U},\sh{P})$.
+
+
+\section{Preliminaries on localisation}
+\label{section1}
+
+Let $A$ be a unital commutative ring.
 
 
 %% Bibliography %%
