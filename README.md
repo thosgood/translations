@@ -20,16 +20,18 @@ Here are some papers that I've translated into English. Any comments or correcti
 
 - SESHADRI, C. S. "Diviseurs en géométrie algébrique".
   <br/>
-  Talk no. 4, 9 p.
+  Talk no. 4.
   <br/>
-  <http://www.numdam.org/item/SCC_1958-1959__4__A4_0/>
-  <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F4-divisors-in-algebraic-geometry.tex&command=pdflatex&trackId=1596027138553)
+  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F4-divisors-in-algebraic-geometry.tex&command=pdflatex&trackId=1596027138553) [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A4_0/)
 
 ## Séminaire Henri Cartan (ENS)
-### Volume 9 (Quelques questions de topologie)
+### Volume 9 (1956--57), "Quelques questions de topologie"
 
-- GROTHENDIECK, A. "Sur les faisceaux algébriques et les faisceaux analytiques cohérents". _Séminaire Henri Cartan_, Volume **9** (1956-1957) , Talk no. 2, pp. 1–16. <http://www.numdam.org/item/SHC_1956-1957__9__A2_0/>
+- GROTHENDIECK, A. "Sur les faisceaux algébriques et les faisceaux analytiques cohérents".
+  <br/>
+  Talk no. 2, pp. 1–16.
+  <br/>
+  <http://www.numdam.org/item/SHC_1956-1957__9__A2_0/>
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-henri-cartan-9%2F2-coherent-algebraic-analytic-sheaves.tex&command=pdflatex&trackId=1595524113730)
 
