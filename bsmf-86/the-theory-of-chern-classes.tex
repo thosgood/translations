@@ -66,6 +66,8 @@
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
+\DeclareMathOperator{\HH}{H}
+
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
@@ -108,9 +110,30 @@
 
 \section*{Introduction}
 
+\oldpage{137}
 In this appendix, we will develop an axiomatic theory of Chern classes that will allow us, in particular, to define the Chern classes of an algebraic vector bundle $E$ on a non-singular quasi-projective algebraic variety $X$ as elements of the Chow ring $A(X)$ of $X$, i.e. as classes of cycles under rational equivalence.
 This expos\'{e} is inspired by the book of Hirzebruch on one hand (where the essential \emph{formal properties} characterising a theory of Chern classes was brought to light), and by an idea of Chern \cite{2} that consists of using the multiplicative structure of the ring of classes of cycles on bundle of projective spaces $P(E)$ associated to $E$, to reach an effective \emph{construction} of Chern classes.
-We note that the exposition given here \todo
+We note that the exposition given here also applies to other settings than algebraic geometry, and recovers, for example, an entirely elementary theory of Chern classes for complex vector bundles on topological manifold (and, from this, on any space for which the classification theorem of principal bundles with a structure group via a ``classifying space'' holds true).
+Similarly, we will obtain, for a complex-analytic vector bundle $E$ on a (non-singular) complex-analytic manifold $X$, Chern classes
+\[
+  c_p(E) \in \HH^p(X,\Omega_X^p),
+\]
+where $\Omega_X^p$ is the sheaf of germs of holomorphic differential forms of degree $p$ on $X$.
+[And it is certainly easy to prove that this definition agrees with that given recently by Atiyah \cite{1}, and that it is linked to the topological definition of Chern classes via the spectral sequence linking $\HH^p(X,\Omega_X^q)$ and $\HH^\bullet(X,\mathbb{C})$.]
+Similarly, the theory of
+\oldpage{138}
+Stiefel-Whitney classes in cohomology mod~$2$ fits into the framework that we will describe here.
+
+It appears that a satisfying theory of Chern classes in algebraic geometry has been given, for the first time, by W.L.~Chow (unpublished), using the Grassmannian.
+The main aim of the current paper has been to eliminate the Grassmannian from the theory.
+I have already shown \cite{4} how the theory of Chern classes allows us to \emph{recover} the structure of $A(X)$ when $X$ is a Grassmannian.
+
+
+\section{Notation}
+\label{section1}
+
+In order to
+
 
 
 
