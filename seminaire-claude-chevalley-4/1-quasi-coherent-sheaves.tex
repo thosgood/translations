@@ -364,7 +364,40 @@ It follows from \hyperref[corollary3]{this corollary}, along with the exactness 
     = \Gamma(U_f,\sh{F})_g
     = \Gamma(U_f\cap U_g,\sh{F}).
   \]
+
+  So take some algebraic sheaf $\sh{G}$ on $V$ such that there exists a cover of $V$ by special open subsets $U_{f_i}$ with the condition that $\sh{G}|U_{f_i}$ is quasi-coherent.
+  We will now show that $\sh{G}$ is quasi-coherent.
+
+  Since $\sh{G}$ is a sheaf, we have, for all $U_g$, an exact sequence of the form:
+  \[
+    0
+    \to \Gamma(U_g,\sh{G})
+    \to \prod_i \Gamma(U_g\cap U_i,\sh{G})
+    \to \prod_{i<j} \Gamma(U_g\cap U_i\cap U_j,\sh{G})
+  \]
+  or even
+  \[
+    0
+    \to \Gamma(U_g,\sh{G})
+    \to \prod_i \Gamma)U_g,\overline{\sh{G}|U_i})
+    \to \prod_{i\leq j} \Gamma(U_g,\overline{\sh{G}|U_i\cap U_j}).
+  \]
+
+  The two latter terms of the exact sequence are the sections over $U_g$ of the sheaves associated to the modules
+  \[
+    M = \prod_i \Gamma(U_i,\sh{G}|U_i)
+    \mbox{ and }
+    N = \prod_{i<j} \Gamma(U_i\cap U_j,\sh{G}).
+  \]
+  Letting $g$ vary, we obtain, by taking the limit, an ``exact sequence of sheaves'': $0\to\sh{G}\to\mathfrak{M}\to\mathfrak{N}$.
+  The sheaf $\sh{G}$ is thus the kernel of a morphism of quasi-coherent sheaves: $\sh{G}$ is quasi-coherent.
 \end{proof}
+
+
+\section{Coherent sheaves on $V(A)$}
+\label{section4}
+
+\oldpage{1-09}
 
 
 %% Bibliography %%
