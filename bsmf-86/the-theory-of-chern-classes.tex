@@ -62,11 +62,13 @@
 
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
+\newcommand{\PP}{\mathbb{P}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
 \DeclareMathOperator{\HH}{H}
+\DeclareMathOperator{\rank}{rank}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -132,9 +134,31 @@ I have already shown \cite{4} how the theory of Chern classes allows us to \emph
 \section{Notation}
 \label{section1}
 
-In order to
+In order to not expose ourselves to the complications arising from the theory of intersections, we will limit ourselves in what follows to considering only \emph{non-singular} topological spaces.
+The base field $k$ will be fixed once and for all, and to better understand the ideas, the reader can assume it to be algebraically closed.
+All the bundles, subvarieties, morphisms, etc. that we consider in what follows will be defined over $k$.
 
+If $X$ is an algebraic space, and $E$ a vector bundle on $X$, then we denote by $\PP(E)$ the associated projective bundle.
+The fibre $\PP(E)_x$ of $\PP(E)$ at a point $x\in X$ is thus the projective space associated to the vector space $E_x$, and so a point of $\PP(E)_x$ over a point $x\in X$ is exactly a homogeneous line in $E_x$.
+Let $f\colon\PP(E)\to X$ be the projection of the bundle;
+we will consider the inverse image of $E$ under $f$, which is the vector bundle $f^{-1}(E)$ on $\PP(E)$.
+There is a canonical rank~$1$ subbundle of $f^{-1}(E)$, whose fibre at a point $d$ of $\PP(E)$ (over a point $x\in X$) is the line $d$ in $E_x=f^{-1}(E)_d$.
+The dual bundle of this subbundle of $f^{-1}(E)$ is denoted $L_E$, and we thus have the inclusion
+\[
+  \check{L}_E \subset f^{-1}(E).
+\]
 
+Let $p$ be the rank of $E$ (assumed to be constant, which is always the case if $X$ is connected).
+Then $E^{(1)}=f^{-1}(E)/L_E$ is a vector bundle of rank $p-1$ on $X^{(1)}=\PP(E)$, and we can thus construct $X^{(2)}=\PP(E^{(1)})$ and the analogous bundle $E^{(2)}=(E^{(1)})^{(1)}$ of rank $p-2$ on $X^{(2)}$.
+We thus inductively construct manifolds $X^{(i)}$ and vector bundles $E^{(i)}$ of rank $p-i$ on $X^{(i)}$ ($1\leq i\leq p$), where $X^{(i)}$ is the bundle $\PP(E^{(i-1)})$ on $X^{(i-1)}$.
+We define a \emph{flag of length $i$} in a vector space $V$ to be an increasing sequence $(V_j)_{0\leq j\leq i}$ of vector subspaces $V_j$, with $\dim V_j=j$.
+Then $X^{(i)}$ can also be understood as the \emph{bundle on $X$ of flags of length $i$} in $E$, and if $f^{(i)}$ is the projection from $X^{(i)}$ to $X$, then we directly define, as in the definition of $L_E$, an increasing sequence of subbundles $(V_j)_{0\leq j\leq i}$ of $E_i=(f^{(i)})^{(-1)}(E)$, with $\rank(V_j)=j$, and the quotient of $E_i$ by $V_i$ being exactly the vector bundle $E^{(i)}$.
+In particular, $X^{(p)}$ is the \emph{flag manifold} (of maximum length $p$) $D(E)$ of $E$, which thus appears as a ``multiple extension'' of $X$ by fibrations in projective spaces associated to vector bundles\todo;
+the inverse image $E_p$ of $E$ in $X^{(p)}=D(E)$ is further \emph{completely split}.
+By this, we mean that this vector bundle of rank~$p$ is endowed with a sequence $(V_i)_{0\leq i\leq p}$ of vector subbundles,
+\oldpage{139}
+with $\rank(V_i)=i$.
+Then the $V_i/V_{i-1}$ ($1\leq i\leq p$) are vector bundles of rank~$1$, and are called the \emph{factors} of the given splitting.
 
 
 %% Bibliography %%
