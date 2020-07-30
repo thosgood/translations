@@ -46,6 +46,46 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
 ## Séminaire Schwartz (FSP)
 ### Volume 1 (1953--54), "Produits tensoriels topologiques d'espaces vectoriels topologiques. Espaces vectoriels topologiques nucléaires"
 
+
+- SCHWARTZ, L. "Produit tensoriel topologique d'espaces vectoriels topologiques".
+  <br/>
+  Talk no. 1.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/1-topological-tensor-product.tex)
+  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F1-topological-tensor-product.tex&command=pdflatex&trackId=1596132290863)
+  [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A2_0/)
+
+
+<!--
+- SCHWARTZ, L. "Cas des espaces normés. Produit tensoriel d'applications linéaires".
+  <br/>
+  Talk no. 2.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/2-normed-space-case.tex)
+  [[live PDF]]()
+  [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A3_0/)
+-->
+
+<!--
+- SCHWARTZ, L. "N° 1. Rappels sur les espaces $L^p$".
+  <br/>
+  Talk no. 3.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/3-Lp-space-recap.tex)
+  [[live PDF]]()
+  [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A4_0/)
+-->
+
+<!--
+- SCHWARTZ, L. "L'espace $L^1\widehat{\otimes}E$ (suite et fin)".
+  <br/>
+  Talk no. 4.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/4-L1-otimes-E.tex)
+  [[live PDF]]()
+  [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A5_0/)
+-->
+
 - SCHWARTZ, L. "La théorie des opérateurs nucléaires".
   <br/>
   Talk no. 12.
@@ -56,13 +96,13 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
 
 # Other
 
-<!---
+<!--
 - HILBERT, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten". _Mathematische Annalen_, Volume **32** (1888), pp. 342–350. <http://eudml.org/doc/157385>.
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/ma-32/sum-of-squares.tex)
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-32%2Fsum-of-squares.tex&command=pdflatex&trackId=1596040205463)
   [[original]](http://eudml.org/doc/157385)
---->
+-->
 
 - BOREL, Armand; SERRE, Jean-Pierre. "Le théorème de Riemann-Roch". _Bulletin de la Société Mathématique de France_, Volume **86** (1958), pp. 97–136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
   <br/>
@@ -70,26 +110,26 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595524110173)
   [[original]](http://www.numdam.org/item/?id=BSMF_1958__86__97_0)
   
-<!---
+<!--
 - GROTHENDIECK, Alexander. "La théorie des classes de Chern". _Bulletin de la Société Mathématique de France_, Volume **86** (1958) , pp. 137-154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/bsmf-86/the-theory-of-chern-classes.tex)
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-theory-of-chern-classes.tex&command=pdflatex&trackId=1596040216373)
   [[original]](https://www.doi.org/10.24033/bsmf.1501)
---->
+-->
 
-<!---
+<!--
 - GRAUERT, H. "Über Modifikationen und exzeptionelle analytische Mengen". _Math. Ann._, Volume **146** (1962), pp. 331--368. <http://eudml.org/doc/160940>
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/ma-146/exceptional-analytic-sets.tex)
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1596040221056)
   [[original]](http://eudml.org/doc/160940)
---->
+-->
 
-<!---
+<!--
 - DELIGNE, P. _Equations Différentielles à Points Singuliers Réguliers._ Springer-Verlag, Lecture Notes in Mathematics **163** (1970). <https://publications.ias.edu/node/355>
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/lnm-163/de-regular-singular-points.tex)
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=lnm-163%2Fde-regular-singular-points.tex&command=pdflatex&trackId=1596040243159)
   [[original]](https://publications.ias.edu/node/355)
---->
+-->
