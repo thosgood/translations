@@ -4,29 +4,24 @@ I've tried to refrain from "rewriting" too much: generally the sentence structur
 
 For each paper, there is a link to the `.tex` source file (and I've tried to keep these self-contained, i.e with internal bibliographies), a link to a PDF which is built from the latest version of the `.tex` file every time you load the page (many thanks to <https://github.com/aslushnikov/latex-online>), and the original (non-English language) paper.
 
+---
 
 # Seminars
 
 ## Séminaire Claude Chevalley (ENS)
 ### Volume 4 (1958--59), "Variétés de Picard"
 
-- GABRIEL, Pierre. "Faisceaux quasi-cohérents".
-  <br/>
-  Talk no. 1.
+- Talk no. 1: "Faisceaux quasi-cohérents" (P. Gabriel).
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F1-quasi-coherent-sheaves.tex&command=pdflatex&trackId=1596036033972) [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A1_0/)
 
-- GABRIEL, Pierre. "Le théorème de Serre".
-  <br/>
-  Talk no. 2.
+- Talk no. 2: "Le théorème de Serre" (P. Gabriel).
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/2-serre's-theorem.tex)
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F2-serre%27s-theorem.tex&command=pdflatex&trackId=1596035916115)
   [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A2_0/)
 
-- SESHADRI, C. S. "Diviseurs en géométrie algébrique".
-  <br/>
-  Talk no. 4.
+- Talk no. 4: "Diviseurs en géométrie algébrique" (C.S. Seshadri).
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex)
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F4-divisors-in-algebraic-geometry.tex&command=pdflatex&trackId=1596027138553)
@@ -35,9 +30,7 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
 ## Séminaire Henri Cartan (ENS)
 ### Volume 9 (1956--57), "Quelques questions de topologie"
 
-- GROTHENDIECK, A. "Sur les faisceaux algébriques et les faisceaux analytiques cohérents".
-  <br/>
-  Talk no. 2.
+- Talk no. 2: "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex)
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-henri-cartan-9%2F2-coherent-algebraic-analytic-sheaves.tex&command=pdflatex&trackId=1595524113730)
@@ -47,9 +40,7 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
 ### Volume 1 (1953--54), "Produits tensoriels topologiques d'espaces vectoriels topologiques. Espaces vectoriels topologiques nucléaires"
 
 
-- SCHWARTZ, L. "Produit tensoriel topologique d'espaces vectoriels topologiques".
-  <br/>
-  Talk no. 1.
+- Talk no. 1 "Produit tensoriel topologique d'espaces vectoriels topologiques" (L. Schwartz).
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/1-topological-tensor-product.tex)
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F1-topological-tensor-product.tex&command=pdflatex&trackId=1596132290863)
@@ -57,9 +48,7 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
 
 
 <!--
-- SCHWARTZ, L. "Cas des espaces normés. Produit tensoriel d'applications linéaires".
-  <br/>
-  Talk no. 2.
+- Talk no. 2: "Cas des espaces normés. Produit tensoriel d'applications linéaires" (L. Schwartz).
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/2-normed-space-case.tex)
   [[live PDF]]()
@@ -67,9 +56,7 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
 -->
 
 <!--
-- SCHWARTZ, L. "N° 1. Rappels sur les espaces $L^p$".
-  <br/>
-  Talk no. 3.
+- Talk no. 3: "N° 1. Rappels sur les espaces $L^p$" (L. Schwartz).
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/3-Lp-space-recap.tex)
   [[live PDF]]()
@@ -77,18 +64,14 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
 -->
 
 <!--
-- SCHWARTZ, L. "L'espace $L^1\widehat{\otimes}E$ (suite et fin)".
-  <br/>
-  Talk no. 4.
+- Talk no. 4: "L'espace $L^1\widehat{\otimes}E$ (suite et fin)" (L. Schwartz).
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/4-L1-otimes-E.tex)
   [[live PDF]]()
   [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A5_0/)
 -->
 
-- SCHWARTZ, L. "La théorie des opérateurs nucléaires".
-  <br/>
-  Talk no. 12.
+- Talk no. 12: "La théorie des opérateurs nucléaires" (L. Schwartz).
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/12-the-theory-of-nuclear-operators.tex)
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F12-the-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1595524106537)
