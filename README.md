@@ -8,7 +8,7 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
 
 For translations of the EGA, see <https://github.com/ryankeleti/ega>.
 
-News on SGA and FGA ''coming soon&trade;''.
+News on SGA and FGA translations "coming soon&trade;".
 
 ---
 
