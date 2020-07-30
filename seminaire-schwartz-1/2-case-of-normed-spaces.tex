@@ -1,0 +1,92 @@
+\documentclass{article}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{Baskervaldx}
+\usepackage{mathpazo}
+
+
+\crefname{section}{Section}{Sections}
+\crefname{equation}{}{}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+  \theoremstyle{plain}
+
+  \newtheorem{innercustomproposition}{Proposition}
+  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \newenvironment{proposition}[1]
+    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+    {\endinnercustomproposition}
+
+  \newtheorem*{theorem}{Theorem}
+
+  \theoremstyle{definition}
+
+  \newtheorem*{remark}{Remark}
+  \newtheorem*{definition}{Definition}
+
+
+%% Shortcuts %%
+
+\newcommand{\sh}{\mathscr}
+\newcommand{\cat}{\mathcal}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\cotimes}{\widehat{\otimes}}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\todo}{\textbf{ !TODO! }}
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\title{The case of normed spaces. Tensor product of linear maps}
+\author{L. Schwartz}
+\date{25\textsuperscript{th} of November, 1953}
+\maketitle
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://github.com/thosgood/translations}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+  
+  \emph{What follows is a translation (last updated \today) of the French paper:}
+
+  \medskip\noindent
+  \textsc{Schwartz, L.}
+  ``Cas des espaces norm\'{e}s. Produit tensoriel d'applications lin\'{e}aires''.
+  \emph{S\'{e}minaire Schwartz}, Volume~\textbf{1} (1953-1954), Talk no.~2, pp.~3--7.
+  {\footnotesize\url{http://www.numdam.org/item/SLS_1953-1954__1__A3_0/}}
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+
+%% Content %%
+
+\oldpage{3}
+\begin{proposition}{1}
+  If $U$ (resp. $V$) is
+\end{proposition}
+
+
+\end{document}
