@@ -62,13 +62,14 @@
 
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
-\newcommand{\PP}{\mathbb{P}}
+\newcommand{\PP}{\mathbf{P}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
 \DeclareMathOperator{\HH}{H}
 \DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\cl}{cl}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -138,19 +139,19 @@ In order to not expose ourselves to the complications arising from the theory of
 The base field $k$ will be fixed once and for all, and to better understand the ideas, the reader can assume it to be algebraically closed.
 All the bundles, subvarieties, morphisms, etc. that we consider in what follows will be defined over $k$.
 
-If $X$ is an algebraic space, and $E$ a vector bundle on $X$, then we denote by $\PP(E)$ the associated projective bundle.
-The fibre $\PP(E)_x$ of $\PP(E)$ at a point $x\in X$ is thus the projective space associated to the vector space $E_x$, and so a point of $\PP(E)_x$ over a point $x\in X$ is exactly a homogeneous line in $E_x$.
-Let $f\colon\PP(E)\to X$ be the projection of the bundle;
-we will consider the inverse image of $E$ under $f$, which is the vector bundle $f^{-1}(E)$ on $\PP(E)$.
-There is a canonical rank~$1$ subbundle of $f^{-1}(E)$, whose fibre at a point $d$ of $\PP(E)$ (over a point $x\in X$) is the line $d$ in $E_x=f^{-1}(E)_d$.
+If $X$ is an algebraic space, and $E$ a vector bundle on $X$, then we denote by $\mathbb{P}(E)$ the associated projective bundle.
+The fibre $\mathbb{P}(E)_x$ of $\mathbb{P}(E)$ at a point $x\in X$ is thus the projective space associated to the vector space $E_x$, and so a point of $\mathbb{P}(E)_x$ over a point $x\in X$ is exactly a homogeneous line in $E_x$.
+Let $f\colon\mathbb{P}(E)\to X$ be the projection of the bundle;
+we will consider the inverse image of $E$ under $f$, which is the vector bundle $f^{-1}(E)$ on $\mathbb{P}(E)$.
+There is a canonical rank~$1$ subbundle of $f^{-1}(E)$, whose fibre at a point $d$ of $\mathbb{P}(E)$ (over a point $x\in X$) is the line $d$ in $E_x=f^{-1}(E)_d$.
 The dual bundle of this subbundle of $f^{-1}(E)$ is denoted $L_E$, and we thus have the inclusion
 \[
   \check{L}_E \subset f^{-1}(E).
 \]
 
 Let $p$ be the rank of $E$ (assumed to be constant, which is always the case if $X$ is connected).
-Then $E^{(1)}=f^{-1}(E)/L_E$ is a vector bundle of rank $p-1$ on $X^{(1)}=\PP(E)$, and we can thus construct $X^{(2)}=\PP(E^{(1)})$ and the analogous bundle $E^{(2)}=(E^{(1)})^{(1)}$ of rank $p-2$ on $X^{(2)}$.
-We thus inductively construct manifolds $X^{(i)}$ and vector bundles $E^{(i)}$ of rank $p-i$ on $X^{(i)}$ ($1\leq i\leq p$), where $X^{(i)}$ is the bundle $\PP(E^{(i-1)})$ on $X^{(i-1)}$.
+Then $E^{(1)}=f^{-1}(E)/L_E$ is a vector bundle of rank $p-1$ on $X^{(1)}=\mathbb{P}(E)$, and we can thus construct $X^{(2)}=\mathbb{P}(E^{(1)})$ and the analogous bundle $E^{(2)}=(E^{(1)})^{(1)}$ of rank $p-2$ on $X^{(2)}$.
+We thus inductively construct manifolds $X^{(i)}$ and vector bundles $E^{(i)}$ of rank $p-i$ on $X^{(i)}$ ($1\leq i\leq p$), where $X^{(i)}$ is the bundle $\mathbb{P}(E^{(i-1)})$ on $X^{(i-1)}$.
 We define a \emph{flag of length $i$} in a vector space $V$ to be an increasing sequence $(V_j)_{0\leq j\leq i}$ of vector subspaces $V_j$, with $\dim V_j=j$.
 Then $X^{(i)}$ can also be understood as the \emph{bundle on $X$ of flags of length $i$} in $E$, and if $f^{(i)}$ is the projection from $X^{(i)}$ to $X$, then we directly define, as in the definition of $L_E$, an increasing sequence of subbundles $(V_j)_{0\leq j\leq i}$ of $E_i=(f^{(i)})^{(-1)}(E)$, with $\rank(V_j)=j$, and the quotient of $E_i$ by $V_i$ being exactly the vector bundle $E^{(i)}$.
 In particular, $X^{(p)}$ is the \emph{flag manifold} (of maximum length $p$) $D(E)$ of $E$, which thus appears as a ``multiple extension'' of $X$ by fibrations in projective spaces associated to vector bundles\todo;
@@ -159,6 +160,52 @@ By this, we mean that this vector bundle of rank~$p$ is endowed with a sequence 
 \oldpage{139}
 with $\rank(V_i)=i$.
 Then the $V_i/V_{i-1}$ ($1\leq i\leq p$) are vector bundles of rank~$1$, and are called the \emph{factors} of the given splitting.
+
+If $X$ is an algebraic space, then we denote by $\PP(X)$ the group of isomorphism classes of vector bundles of rank~$1$ on $X$ (the composition law of the group being given by the tensor product of bundles).
+If $L$ is such a vector bundle of rank~$1$, then we denote by $\cl_X(L)$ the element of $\PP(X)$ that it defines.
+We thus have
+\begin{gather*}
+  \cl_X(L\otimes L') = \cl_X(L) + \cl_X(L')
+\\\cl_X(\check{L}) = -\cl_X(L).
+\end{gather*}
+
+If $f\colon X\to Y$ is a morphism, then the formula
+\[
+  f^*(\cl_X(L)) = \cl_X(f^{-1}(L))
+\]
+defines a homomorphism $f^*$ from $\PP(Y)$ to $\PP(X)$.
+In this way, $\PP(X)$ can be considered as a \emph{contravariant functor} in $X$.
+
+With $f\colon X\to Y$ still a morphism, let $F$ be a vector bundle of rank~$p$ on $Y$, and set $E=f^{-1}(F)$.
+This is a vector bundle of rank~$p$ on $X$, and we have a canonical isomorphism $\mathbb{P}(E)=f^{-1}(\mathbb{P}(F))$, whence a natural morphism
+\[
+  \overline{f}\colon \mathbb{P}(E) \to \mathbb{P}(F)
+  \quad\mbox{[$E=f^{-1}(F)$].}
+\]
+
+With this, we can immediately verify that \emph{$L_e$ is canonically isomorphic to the inverse image $\overline{f}^{-1}(L_F)$}.
+We thus have the formula
+\[
+  \cl(L_E) = \overline{f}^*(\cl(L_F)).
+\]
+
+Let $E$ be a vector bundle of rank~$p$ on $X$, and $s$ a regular section of $E$.
+This is then a morphism from $X$ to $E$, and even an isomorphism from $X$ to a closed subspace of $E$ of codimension~$p$.
+In particular, the image of $X$ under the zero section is a closed non-singular subspace $X'$ of $E$ of codimension~$p$.
+Evidently, the inverse image $s^{-1}(X')$ is exactly the set of zeros of $s$.
+For the \emph{cycle} $s^{-1}(X')$ to be defined, it is necessary and sufficient for the set of zeros of $s$ to be everywhere empty, or of codimension~$p$ in $X$.
+In this case, we can then spaek of the \emph{cycle of zeros} of the section $s$.
+Recall also that the morphism $s$ is said to be \emph{transversal} to the subvariety $X'$ of $X$ if, at every point of the inverse image of $X'$ under $s$, the tangent map to $s$ is surjective mod the tangent space to $X'$.
+In this case, $s^{-1}(X')$ is a non-singular algebraic subspace of $X$ that is everywhere of codimension~$p$, and all its components are of multiplicity~$1$ in the cycle of zeros of $s$.
+We will say, for brevity, that the section $s$ is \emph{transversal to the zero section}.
+To express this property by a calculation, since it is local on $X$, we can assume that $E$ is the trivial bundle $X\times k^p$, so that $s$ is defined by the data of $p$ regular functions $(f_1,\ldots,f_p)$ on $X$.
+For $s$ to be transversal to the zero section, it is necessary and sufficient for the functions $f_1,\ldots,f_p$ to give a regular system of parameters of $\sh{O}_x$ at every point $x$.
+
+
+\section{The functor $A(X)$}
+\label{section2}
+
+\oldpage{140}
 
 
 %% Bibliography %%
