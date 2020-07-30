@@ -10,13 +10,11 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
 ## Séminaire Claude Chevalley (ENS)
 ### Volume 4 (1958--59), "Variétés de Picard"
 
-<!---
 - GABRIEL, Pierre. "Faisceaux quasi-cohérents".
   <br/>
   Talk no. 1.
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F1-quasi-coherent-sheaves.tex&command=pdflatex&trackId=1596036033972) [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A1_0/)
---->
 
 - GABRIEL, Pierre. "Le théorème de Serre".
   <br/>

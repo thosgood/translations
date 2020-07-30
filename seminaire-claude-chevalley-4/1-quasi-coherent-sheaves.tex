@@ -37,6 +37,11 @@
   \newtheorem*{proposition}{Proposition}
 
 
+  \theoremstyle{definition}
+
+  \newtheorem*{remark}{Remark}
+
+
 %% Shortcuts %%
 
 \newcommand{\sh}{\mathscr}
@@ -408,7 +413,7 @@ Such a surjection induces a map
 \[
   \Gamma(U,\mathfrak{A}^p) = \Gamma(U,\mathfrak{A})^p \to \Gamma(U,\sh{F})
 \]
-and defines $p$ surjections from $\sh{F}$ to $U$, \todo.
+and defines $p$ surjections from $\sh{F}$ to $U$, i.e. the images of the basis vectors of $\Gamma(U,\mathfrak{A})^p$.
 Conversely, the data of $p$ sections of $\sh{F}$ over $U$ defines a map $A^p|U\to\sh{F}|U$).
 
 \begin{theorem}{3}
@@ -476,6 +481,7 @@ Conversely, the data of $p$ sections of $\sh{F}$ over $U$ defines a map $A^p|U\t
 \end{proof}
 
 \begin{remark}
+\label{remark-theorem3}
 \oldpage{1-11}
   Claim (c) gives a characterisation of coherent sheaves, which does not require the base of special open subsets of $V(A)$.
   In fact, if $V$ is an arbitrary topological space, and $\mathfrak{A}$ a sheaf of rings on $V$, then the sheaves of $\mathfrak{A}$-modules that satisfy (c) are the objects of an abelian subcategory of the category of sheaves of $\mathfrak{A}$-modules (see Serre \cite{4}).
@@ -485,6 +491,51 @@ Conversely, the data of $p$ sections of $\sh{F}$ over $U$ defines a map $A^p|U\t
 
 \section{The maximal spectrum of a Jacobson ring}
 \label{section5}
+
+We are going to apply the above to algebraic geometry.
+For this, we denote by $\Omega(A)$ the \emph{maximal spectrum of $A$}, which is defined to be the topological subspace of $V(A)$ consisting of the maximal ideals of $A$.
+We further suppose that $A$ is a \emph{Jacobson ring}, i.e. that every prime ideal is the intersection of maximal ideals (see \cite{1} and \cite{3}).
+The following proposition then holds true:
+
+\begin{proposition}
+  The following are equivalent:
+  \begin{enumerate}[(a)]
+    \item $A$ is a Jacobson ring.
+    \item The correspondence $U\mapsto U\cap\Omega(A)$ between open subsets of $V(A)$ and of $\Omega(A)$ is bijective.
+    \item The correspondence $W\mapsto W\cap\Omega(A)$ between closed subsets of $V(A)$ and of $\Omega(A)$ is bijective.
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  The equivalence of (b) and (c) is trivial.
+  On the other hand, the closed subsets of $V$ correspond to the ideals of $A$ that are intersections of prime ideals.
+  The closed subsets of $\Omega$ correspond to the ideals of $A$ that are intersections of maximal ideals.
+  The two families of ideals agree if and only if $A$ is a Jacobson ring.
+\end{proof}
+
+Under this last hypothesis, the spaces $V(A)$ and $\Omega(A)$ thus have the same lattice of open subsets.
+It clearly follows that the sheaves on $V$ and on $\Omega$ ``are in bijective correspondence''.
+In particular, we define a \emph{special open subset of $\Omega$} to be the restriction of any special open subset of $V$, and a \emph{quasi-coherent} (resp. \emph{coherent}) \emph{algebraic sheaf on $\Omega$} to be the restriction of any quasi-coherent (resp. coherent) algebraic sheaf on $V$.
+The properties of these sheaves on $V$ extend (up to evident modifications) to their restrictions to $\Omega$.
+
+In particular, every algebra of finite type over a field is a Jacobson ring.
+If $k$ is an algebraically closed field, $V$ an affine algebraic set over $k$, and $A$ its coordinate ring, then $V$ is homeomorphic to the maximal spectrum
+\oldpage{1-12}
+$\Omega(A)$ of $A$.
+The sheaf of rings $\mathfrak{A}|\Omega(A)$ is called the \emph{sheaf of germs of regular functions on $V$}.
+
+Similarly, a sheaf of modules over this sheaf of rings is said to be \emph{algebraic} (resp. \emph{quasi-coherent algebraic}, resp. \emph{coherent algebraic}) if it is the restriction of a sheaf on $V(A)$ with the named property.
+
+
+\section{Quasi-coherent sheaves on an algebraic variety}
+\label{section6}
+
+More generally, if $X$ is an arbitrary algebraic set over $k$, then we define a \emph{quasi-coherent} (resp. \emph{coherent}) \emph{algebraic sheaf on $X$} to be any sheaf $\sh{F}$ such that there exists a cover of $X$ by affine open subsets $U_i$ such that $\sh{F}|U_i$ is quasi-coherent (resp. coherent).
+By \hyperref[remark-theorem3]{the remark} that follows \cref{theorem3}, this is equivalent to saying that, for every affine open subset $U$, the sheaf $\sh{F}|U$ is quasi-coherent (resp. coherent).
+
+In particular, the sheaf of rings $\mathfrak{A}$ that is such that, for every affine open subset $U$, $\mathfrak{A}(U)$ is the ring of regular functions on $U$ (with the evident restrictions), is a coherent sheaf.
+We call it the \emph{sheaf of germs of regular functions}.
+Every sheaf of modules over $\mathfrak{A}$ is said to be \emph{algebraic}.
 
 
 %% Bibliography %%
