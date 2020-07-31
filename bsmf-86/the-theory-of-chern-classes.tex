@@ -379,7 +379,79 @@ We now given some particular cases where the conditions in this section are sati
 
   \item
     The base field $k$ is the field of complex numbers, $\cat{V}$ is the category of non-singular algebraic spaces, and $A(X)=\HH^\bullet(X,\mathbb{Z})$ (with $X$ being endowed with its ``usual'' topology).
+    The definition of \hyperref[datab]{b.} (either by Poincar\'{e} duality on divisor classes, or as an obstruction class in the classical exact sequence $0\to\mathbb{Z}\to\sh{O}_X\to\sh{O}_X^\times\to0$ of sheaves on $X$, endowed with its usual topology) is well known.
+    The definition of \hyperref[datac]{c.} classical comes
+\oldpage{144}
+    from Poincar\'{e} duality, and properties \hyperref[axiomA1]{(A1)} to \hyperref[axiomA4]{(A4)} are well known (with \hyperref[axiomA2]{(A2)} again following from the Leray spectral sequence).
 \end{enumerate}
+
+
+\section{Definition and fundamental properties of Chern classes}
+\label{section3}
+
+Let $X\in\cat{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $\xi_E=p_X(\cl(L_E))$ the fundamental class in $A^2(\mathbb{P}(E))$.
+By axiom~\hyperref[axiomA1]{(A1)} of the \hyperref[section2]{previous section}, $(\xi_E)^p$ can be written as a unique linear combination of the $(\xi_E)^i$ (for $0\leq i\leq p-1$) with coefficients in $A(X)$.
+This means that we can find, in a unique way, elements $c_i(E)\in A^{2i}(X)$ (defined for every integer $i\geq0$) satisfying the conditions
+\[
+\label{equation1}
+  \begin{gathered}
+    \sum_{i=0}^p c_i(E)(\xi_E)^{p-i} = 0,
+  \\c_0(E)=1,\quad\text{and}\quad c_i(E)=0\mbox{ for $i>p$.}
+  \end{gathered}
+\tag{1}
+\]
+The $c_i(E)$ are called the \emph{Chern classes} of $E$, with $c_i(E)$ being the $i$th Chern class.
+We set
+\[
+\label{equation2}
+  c(E) = \sum_i c_i(E)
+\tag{2}
+\]
+and $c(E)$ is called the \emph{(total) Chern class} of $E$;
+its data is thus equivalent to the data of all the $c_i(E)$.
+
+\begin{theorem}{1}
+\label{theorem1}
+  Suppose that we have the data of \hyperref[dataa]{\rm{a.}}, \hyperref[datab]{\rm{b.}}, and \hyperref[datac]{\rm{c.}} of the \hyperref[section2]{previous section}, satisfying axioms \hyperref[axiomA1]{\rm{(A1)}} to \hyperref[axiomA4]{\rm{(A4)}}.
+  Then the Chern classes (defined by \cref{equation1}) satisfy the following conditions:
+  \begin{enumerate}[\rm(i)]
+    \item\label{theorem1i}
+      \emph{Functoriality. ---}
+      Let $f\colon X\to Y$ be a morphism in $\cat{V}$, and let $E$ be a vector bundle on $Y$.
+      Then
+      \[
+      \label{equation3}
+        c(f^{-1}(E)) = f^*(c(E))
+      \tag{3}
+      \]
+      [where $f^{-1}(E)$ denotes the vector bundle on $X$ given by the inverse image of $E$ under $f$].
+    \item\label{theorem1ii}
+      \emph{Normalisation. ---}
+      If $E$ is a rank-$1$ vector bundle on $X\in\cat{V}$, then
+      \[
+      \label{equation4}
+        c(E) = 1+p_X(\cl_X(E)).
+      \tag{4}
+      \]
+    \item\label{theorem1iii}
+      \emph{Additivity. ---}
+      Let $X\in\cat{V}$, and let $0\to E'\to E\to E''\to 0$ be an exact sequence of vector bundles on $X$.
+      Then
+      \[
+      \label{equation5}
+        c(E) = c(E')c(E'').
+      \tag{5}
+      \]
+  \end{enumerate}
+
+  Furthermore, properties \hyperref[theorem1i]{\rm{(i)}}, \hyperref[theorem1ii]{\rm{(ii)}}, and \hyperref[theorem1iii]{\rm{(iii)}} entirely \emph{characterise} Chern classes.
+\end{theorem}
+
+\begin{proof}
+\oldpage{145}
+  We first prove the \emph{uniqueness} of a theory of Chern classes satisfying \hyperref[theorem1i]{\rm{(i)}}, \hyperref[theorem1ii]{\rm{(ii)}}, and \hyperref[theorem1iii]{\rm{(iii)}}.
+\end{proof}
+
 
 
 %% Bibliography %%
