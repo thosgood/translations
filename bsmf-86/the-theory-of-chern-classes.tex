@@ -210,7 +210,8 @@ For $s$ to be transversal to the zero section, it is necessary and sufficient fo
 In what follows, suppose that we have a category $\cat{V}$ of non-singular algebraic spaces (the morphisms in this category being the morphisms of algebraic spaces).
 The only condition that we impose on $\cat{V}$ is that
 \begin{enumerate}
-  \item[(V1)] If $X\in\cat{V}$, and if $E$ is a vector bundle on $X$, then $\mathbb{P}(E)\in\cat{V}$.
+  \item[\rm{(V1)}]\label{axiomV1}
+    If $X\in\cat{V}$, and if $E$ is a vector bundle on $X$, then $\mathbb{P}(E)\in\cat{V}$.
 \end{enumerate}
 
 Suppose further that we have the following data:
@@ -228,8 +229,9 @@ If $f\colon X\to Y$ is a morphism in $\cat{V}$, then the corresponding homomorph
 The unit element of $A(X)$ will be denoted by $1_X$, and if $X,Y\in\cat{V}$, and if $Y$ is a closed subspace of $X$ of constant codimension~$p$, then we define $p_X(Y)=i_*(1_Y)$, where $i$ is (again) the injection morphism from $Y$ into $X$.
 
 With this, we suppose that the following conditions are satisfied:
-\begin{enumerate}[({A}1)]
-  \item Let $X\in\cat{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $\mathbb{P}(E)$ the associated projective bundle, and $\xi_E$ the element of $A(\mathbb{P}(E))$ defined by
+\begin{enumerate}
+  \item[\rm{(A1)}]\label{axiomA1}
+    Let $X\in\cat{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $\mathbb{P}(E)$ the associated projective bundle, and $\xi_E$ the element of $A(\mathbb{P}(E))$ defined by
     \[
       \xi_E = p(\cl(L_E)).
     \]
@@ -240,14 +242,17 @@ With this, we suppose that the following conditions are satisfied:
       \quad\mbox{(for $0\leq i\leq p-1$)}
     \]
     form a basis of $A(\mathbb{P}(E))$ over $A(X)$.
-  \item Let $X\in\cat{V}$, and let $L$ be a rank-$1$ vector bundle on $X$, and $s$ a regular section of $L$ that is transversal to the zero section, and such that the space $Y$ of zeros of $s$ belongs to $\cat{V}$.
+  \item[\rm{(A2)}]\label{axiomA2}
+    Let $X\in\cat{V}$, and let $L$ be a rank-$1$ vector bundle on $X$, and $s$ a regular section of $L$ that is transversal to the zero section, and such that the space $Y$ of zeros of $s$ belongs to $\cat{V}$.
     Then
     \[
       p_X(Y) = p_X(\cl_X(L)).
     \]
-  \item Let $X,Y,Z\in\cat{V}$, with $Z\subset Y\subset X$, and let $i$ and $j$ be the injection morphisms $Z\to Y$ and $Y\to X$ (respectively).
+  \item[\rm{(A3)}]\label{axiomA3}
+    Let $X,Y,Z\in\cat{V}$, with $Z\subset Y\subset X$, and let $i$ and $j$ be the injection morphisms $Z\to Y$ and $Y\to X$ (respectively).
     Then $(ji)_* = j_*i_*$.
-  \item Let $X,Y\in\cat{V}$, with $Y\subset X$, and let $i$ be the injection morphism of $Y$
+  \item[\rm{(A4)}]\label{axiomA4}
+    Let $X,Y\in\cat{V}$, with $Y\subset X$, and let $i$ be the injection morphism of $Y$
 \oldpage{141}
   into $X$.
     Then
@@ -261,8 +266,41 @@ From these axioms we will prove two lemmas that will be useful in the next secti
 
 \begin{lemma}{1}
 \label{lemma1}
-
+  Let $X\in\cat{V}$, and let $E$ be a rank-$p$ vector bundle on $X$.
+  Consider, for all $i$ with $1\leq i\leq p$, the bundle $X^{(i)}$ of flags of length $i$ in $E$.
+  Then $X^{(i)}\in\cat{V}$, and the homomorphism $A(X)\to A(X^{(i)})$ induced by the projection $X^{(i)}\to X$ is \emph{injective}.
 \end{lemma}
+
+\begin{proof}
+  By what was said in \cref{section1}, we can restrict, by induction on $i$, to the case of the projective bundle $X^{(1)}=\mathbb{P}(E)$ associated to $E$.
+  Then our claims are an immediate consequence of \hyperref[axiomV1]{(V1)} and \hyperref[axiomA1]{(A1)} [the element $1_{\mathbb{P}(E)}=(\xi_E)^0$ being free over the ring $A(X)$].
+\end{proof}
+
+\begin{lemma}{2}
+\label{lemma2}
+  Let $X\in\cat{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $s$ a regular section of $E$, and $(E_i)_{0\leq i\leq p}$ a decreasing sequence of vector subbundles of $E$, with $\rank E_i=p-i$.
+  Define
+  \[
+    \xi_i = p_X\cl_X(E_{i-1}/E_i)
+    \quad\mbox{($1\leq i\leq p$).}
+  \]
+  For every $1\leq i\leq p$, let $Y_i$ be the subset of $X$ consisting of those $x\in X$ such that $s(x)\in E_i$.
+  Suppose that, for all $i$, $Y_i$ is a non-singular subvariety of $X$, and that $Y_i\in\cat{V}$.
+  Let $s_i$ be the section of $(E_i/E_{i+1})|Y_i$ defined by $s$, and suppose that, for $1\leq i\leq p-1$, $s_i$ is transversal to the zero section.
+  Then, under these conditions,
+  \[
+    p_X(Y_p) = \prod_{1\leq i\leq p}\xi_i.
+  \]
+\end{lemma}
+
+\begin{proof}
+  We will proceed by induction on $j$ (where $1\leq j\leq p$) that
+  \[
+    \label{lemma2equationstar}
+    p_X(Y_j) = \prod_{1\leq i\leq j}\xi_i.
+    \tag{$\star$}
+  \]
+\end{proof}
 
 
 %% Bibliography %%
