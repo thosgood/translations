@@ -46,6 +46,8 @@
     {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
     {\endinnercustomcorollary}
 
+  \newtheorem*{corollary*}{Corollary}
+
 
   \theoremstyle{definition}
 
@@ -115,7 +117,7 @@
 
 \oldpage{137}
 In this appendix, we will develop an axiomatic theory of Chern classes that will allow us, in particular, to define the Chern classes of an algebraic vector bundle $E$ on a non-singular quasi-projective algebraic variety $X$ as elements of the Chow ring $A(X)$ of $X$, i.e. as classes of cycles under rational equivalence.
-This expos\'{e} is inspired by the book of Hirzebruch on one hand (where the essential \emph{formal properties} characterising a theory of Chern classes was brought to light), and by an idea of Chern \cite{2} that consists of using the multiplicative structure of the ring of classes of cycles on bundle of projective spaces $P(E)$ associated to $E$, to reach an effective \emph{construction} of Chern classes.
+This expos\'{e} is inspired by the book of Hirzebruch on one hand (where the essential \emph{formal properties} characterising a theory of Chern classes was brought to light), and by an idea of Chern \cite{2} that consists of using the multiplicative structure of the ring of cycle classes on the bundle of projective spaces $P(E)$ associated to $E$, to reach an effective \emph{construction} of Chern classes.
 We note that the exposition given here also applies to other settings than algebraic geometry, and recovers, for example, an entirely elementary theory of Chern classes for complex vector bundles on topological manifold (and, from this, on any space for which the classification theorem of principal bundles with a structure group via a ``classifying space'' holds true).
 Similarly, we will obtain, for a complex-analytic vector bundle $E$ on a (non-singular) complex-analytic manifold $X$, Chern classes
 \[
@@ -209,16 +211,19 @@ For $s$ to be transversal to the zero section, it is necessary and sufficient fo
 
 In what follows, suppose that we have a category $\cat{V}$ of non-singular algebraic spaces (the morphisms in this category being the morphisms of algebraic spaces).
 The only condition that we impose on $\cat{V}$ is that
-\begin{enumerate}
-  \item[\rm{(V1)}]\label{axiomV1}
+\begin{enumerate}[({V}1)]
+  \item\label{axiomV1}
     If $X\in\cat{V}$, and if $E$ is a vector bundle on $X$, then $\mathbb{P}(E)\in\cat{V}$.
 \end{enumerate}
 
 Suppose further that we have the following data:
 \begin{enumerate}[a.]
-  \item a contravariant functor $X\mapsto A(X)$ from $\cat{V}$ to the category of unital anticommutative graded rings;
-  \item a functorial homomorphism $p_X\colon\PP(X)\to A^2(X)$ (for $X\in\cat{V}$);
-  \item for all $X\in\cat{V}$, and for every closed algebraic subspace $Y$ of $X$, of constant codimension~$p$ in $X$, with $Y\in\cat{V}$, a group homomorphism
+  \item\label{dataa}
+    a contravariant functor $X\mapsto A(X)$ from $\cat{V}$ to the category of unital anticommutative graded rings;
+  \item\label{datab}
+    a functorial homomorphism $p_X\colon\PP(X)\to A^2(X)$ (for $X\in\cat{V}$);
+  \item\label{datac}
+    for all $X\in\cat{V}$, and for every closed algebraic subspace $Y$ of $X$, of constant codimension~$p$ in $X$, with $Y\in\cat{V}$, a group homomorphism
     \[
       i_*\colon A(Y)\to A(X)
     \]
@@ -229,8 +234,8 @@ If $f\colon X\to Y$ is a morphism in $\cat{V}$, then the corresponding homomorph
 The unit element of $A(X)$ will be denoted by $1_X$, and if $X,Y\in\cat{V}$, and if $Y$ is a closed subspace of $X$ of constant codimension~$p$, then we define $p_X(Y)=i_*(1_Y)$, where $i$ is (again) the injection morphism from $Y$ into $X$.
 
 With this, we suppose that the following conditions are satisfied:
-\begin{enumerate}
-  \item[\rm{(A1)}]\label{axiomA1}
+\begin{enumerate}[({A}1)]
+  \item\label{axiomA1}
     Let $X\in\cat{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $\mathbb{P}(E)$ the associated projective bundle, and $\xi_E$ the element of $A(\mathbb{P}(E))$ defined by
     \[
       \xi_E = p(\cl(L_E)).
@@ -242,16 +247,16 @@ With this, we suppose that the following conditions are satisfied:
       \quad\mbox{(for $0\leq i\leq p-1$)}
     \]
     form a basis of $A(\mathbb{P}(E))$ over $A(X)$.
-  \item[\rm{(A2)}]\label{axiomA2}
+  \item\label{axiomA2}
     Let $X\in\cat{V}$, and let $L$ be a rank-$1$ vector bundle on $X$, and $s$ a regular section of $L$ that is transversal to the zero section, and such that the space $Y$ of zeros of $s$ belongs to $\cat{V}$.
     Then
     \[
       p_X(Y) = p_X(\cl_X(L)).
     \]
-  \item[\rm{(A3)}]\label{axiomA3}
+  \item\label{axiomA3}
     Let $X,Y,Z\in\cat{V}$, with $Z\subset Y\subset X$, and let $i$ and $j$ be the injection morphisms $Z\to Y$ and $Y\to X$ (respectively).
     Then $(ji)_* = j_*i_*$.
-  \item[\rm{(A4)}]\label{axiomA4}
+  \item\label{axiomA4}
     Let $X,Y\in\cat{V}$, with $Y\subset X$, and let $i$ be the injection morphism of $Y$
 \oldpage{141}
   into $X$.
@@ -262,7 +267,7 @@ With this, we suppose that the following conditions are satisfied:
     \]
 \end{enumerate}
 
-From these axioms we will prove two lemmas that will be useful in the next section.
+From these axioms we will prove two lemmas that will be useful in the \hyperref[section3]{next section}.
 
 \begin{lemma}{1}
 \label{lemma1}
@@ -300,7 +305,81 @@ From these axioms we will prove two lemmas that will be useful in the next secti
     p_X(Y_j) = \prod_{1\leq i\leq j}\xi_i.
     \tag{$\star$}
   \]
+
+  For $j=1$, this equation is exactly axiom~\hyperref[axiomA2]{(A2)}.
+  Suppose that the equation has been proven for some $j<p$, and we will prove it for $j+1$.
+  Applying \hyperref[axiomA2]{(A2)} to the section $s_j$ of $(E_j/E_{j+1})|Y_j$, we see that
+  \[
+    p_{Y_j}(Y_{j+1}) = p_{Y_j}\cl_{Y_j}((E_j/E_{j+1})|Y_j).
+  \]
+  Let $u_j$ be the injection morphism $Y_j\to X$.
+  From the functoriality of $\cl$ and $p$ we see that the right-hand side of the above equation is $u_j^*(p_X\cl_X(E_j/E_{j+1}))$, whence
+  \[
+    p_{Y_j}(Y_{j+1}) = u_j^*(\xi_{j+1}).
+  \]
+
+  \oldpage{142}
+  Using \hyperref[axiomA3]{(A3)}, we thus conclude that
+  \[
+    p_X(Y_{j+1}) = (u_j)_*(u_j^*(\xi_{j+1})).
+  \]
+
+  The right-hand side can also be written as $(u_j)_*(1_{y_j}u_j^*(\xi_{j+1}))$, which is equal, by \hyperref[axiomA4]{(A4)}, to $(u_j)_*(1_{Y_j})\xi_{j+1} = p_X(Y_j)\xi_{j+1}$.
+  Using the induction hypothesis \hyperref[lemma2equationstar]{($\star$)}, we indeed recover the analogous formula with $j+1$ instead of $j$.
 \end{proof}
+
+It is only in \cref{section3} that we will need the following corollary.
+\begin{corollary*}
+\phantomsection
+\label{lemma2corollary}
+  Under the conditions of \cref{lemma2}, if $s$ is non-zero at every point (i.e. everywhere non-zero), then $\prod_{1\leq i\leq p}\xi_i=0$.
+\end{corollary*}
+
+\begin{remark}
+  The introduction of the operation $i$ in \hyperref[datac]{c.}, and the axioms \hyperref[axiomA2]{(A2)}, \hyperref[axiomA3]{(A3)}, and \hyperref[axiomA4]{(A4)} concerning this operation, only serve to provide us with technical means of being able to prove \hyperref[lemma2corollary]{the corollary} to \cref{lemma2}.
+  (In \hyperref[axiomA4]{(A4)}, it would have sufficed to suppose that $b=1_Y$.)
+  We will only need to use the data of \hyperref[dataa]{a.} and \hyperref[datab]{b.}, axiom~\hyperref[axiomA2]{(A1)}, and \hyperref[lemma2corollary]{the corollary} to \cref{lemma2}.
+\end{remark}
+
+
+\subsection*{Particular cases}
+
+Note first of all that the condition \hyperref[axiomV1]{(V1)} is satisfied for all reasonable categories of algebraic spaces, and, anyway, for the category of all non-singular algebraic spaces, for the category of non-singular quasi-projective algebraic spaces, and for the category of non-singular projective algebraic spaces.
+The verification in these two latter cases presents no difficulty, and is left to the reader (this result being a particular case of a more general result on blow-up varieties).
+
+We now given some particular cases where the conditions in this section are satisfied.
+
+\begin{enumerate}
+  \item
+    $\cat{V}$ is the category of non-singular quasi-projective algebraic spaces, and $A(X)$ is the ring of cycle classes on $X$ under \emph{rational equivalence}, with the usual definition of $f^*$ and $f_*$.
+    Of course, we grade $A(X)$ by taking the class of a cycle on $X$ that is everywhere of codimension~$p$ to be of degree~$2p$ [so that $A(X)$ has only even degrees, as we would expect, in a cohomological theory, for a graded \emph{commutative} ring].
+    The homomorphism $\PP(X)\to A^2(X)$ is an isomorphism, given by sending any rank-$1$ vector bundle $L$ on $X$ to the set of divisors of rational sections of $L$ that are not zero on any component of $X$.
+    For the theory of linear equivalence, including the verification of properties \hyperref[axiomA1]{(A1)} to \hyperref[axiomA4]{(A4)} (with only \hyperref[axiomA1]{(A1)} not being immediate), see the expos\'{e}s by Chevalley and Grothendieck in \cite{4}.
+
+    The conditions that we demand are also satisfied by taking $A(X)$ to be the ring of cycle classes under \emph{algebraic} equivalence.
+    But for a theory
+\oldpage{143}
+    of Chern classes, we rather prefer to work with rational equivalence, which gives a finer theory.
+
+    We cannot yet define a ring structure on the group $A(X)$ of cycle classes on an \emph{arbitrary} (not necessarily quasi-projective) non-singular variety, nor, for a morphism $f\colon X\to Y$, a morphism $f^*\colon A(Y)\to A(X)$ in such a way that the necessary conditions are satisfied.
+    Further, it is not even certain that this might be possible.
+    We can think of replacing the ring of cycle classes (under rational equivalence) by the graded ring associated to the ring $K(X)$ of classes of coherent algebraic sheaves on $X$, filtered in the natural way (by considering the dimension of the supports of the sheaves).
+    Unfortunately, we would have to prove that this filtration is compatible with the ring ring structure (and with the ``inverse image'' homomorphisms), which I do not know how to do in the quasi-projective case, by using the rational equivalence\todo.
+    However, it seems that these difficulties disappear when we tensor with the field of rationals $\mathbb{Q}$, i.e. if we ignore the phenomenons of torsion.
+
+  \item
+    $\cat{V}$ is the category of all non-singular algebraic spaces.
+    If $X$ is such a variety, then we denote by $\Omega_X^\bullet$ the sheaf of germs of regular differential forms on $X$, and by $A(X)$ the cohomology group $\HH^\bullet(X,\Omega_X^\bullet)$.
+    We grade this group by taking $\HH^p(X,\Omega_X^q)$ to be of degree $p+q$, and we make this an algebra by means of the cup product.
+    We thus obtain an anticommutative graded algebra, which is clearly a contravariant functor with respect to $X$.
+    By following the formalism developed by Grothendieck in \cite{3}, we define in a natural way the homomorphisms $i_*\colon A(Y)\to A(X)$ associated to an injection $i\colon Y\to X$ (and it is probably possible to define $i_*$ for every \emph{proper} morphism $i\colon Y\to X$).
+    \renewcommand*{\thefootnote}{\fnsymbol{footnote}}\footnote{(Note added during editing). This homomorphism $i_*$ is now defined in full generality.}
+    Finally, we define a morphism $\PP(X)\to\HH^1(X,\Omega_X^1)\subset A^2(X)$ in a classical way, by writing, for example, $\PP(X)=\HH^1(X,\sh{O}_X^\times)$ (where $\sh{O}_X^\times$ denotes the sheaf of germs of invertible regular functions on $X$), and by considering the homomorphism $f\mapsto\mathrm{d}f/f$ from $\sh{O}_X^\times$ to $\Omega_X^1$.
+    We can again easily verify that conditions \hyperref[axiomA1]{(A1)} to \hyperref[axiomA4]{(A4)} are satisfied, with \hyperref[axiomA1]{(A1)} being a consequence of the Leray spectral sequence of the continuous map $\mathbb{P}(E)\to X$ [the spectral sequence being trivial, as follows from considering from the class $\xi_E$ on $\mathbb{P}(E)$.]
+
+  \item
+    The base field $k$ is the field of complex numbers, $\cat{V}$ is the category of non-singular algebraic spaces, and $A(X)=\HH^\bullet(X,\mathbb{Z})$ (with $X$ being endowed with its ``usual'' topology).
+\end{enumerate}
 
 
 %% Bibliography %%
