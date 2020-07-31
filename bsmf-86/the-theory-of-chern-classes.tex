@@ -40,13 +40,7 @@
     {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
     {\endinnercustomlemma}
 
-  \newtheorem{innercustomcorollary}{Corollary}
-  \crefname{innercustomcorollary}{Corollary}{Corollaries}
-  \newenvironment{corollary}[1]
-    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
-    {\endinnercustomcorollary}
-
-  \newtheorem*{corollary*}{Corollary}
+  \newtheorem*{corollary}{Corollary}
 
 
   \theoremstyle{definition}
@@ -329,11 +323,11 @@ From these axioms we will prove two lemmas that will be useful in the \hyperref[
 \end{proof}
 
 It is only in \cref{section3} that we will need the following corollary.
-\begin{corollary*}
+\begin{corollary}
 \phantomsection
 \label{lemma2corollary}
   Under the conditions of \cref{lemma2}, if $s$ is non-zero at every point (i.e. everywhere non-zero), then $\prod_{1\leq i\leq p}\xi_i=0$.
-\end{corollary*}
+\end{corollary}
 
 \begin{remark}
   The introduction of the operation $i$ in \hyperref[datac]{c.}, and the axioms \hyperref[axiomA2]{(A2)}, \hyperref[axiomA3]{(A3)}, and \hyperref[axiomA4]{(A4)} concerning this operation, only serve to provide us with technical means of being able to prove \hyperref[lemma2corollary]{the corollary} to \cref{lemma2}.
@@ -450,8 +444,60 @@ its data is thus equivalent to the data of all the $c_i(E)$.
 \begin{proof}
 \oldpage{145}
   We first prove the \emph{uniqueness} of a theory of Chern classes satisfying \hyperref[theorem1i]{\rm{(i)}}, \hyperref[theorem1ii]{\rm{(ii)}}, and \hyperref[theorem1iii]{\rm{(iii)}}.
+  Let $X\in\cat{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $X'$ the flag variety associated to $E$, with $f'\colon X\to X$ the canonical projection.
+  By \cref{lemma1}, we know that $X'\in\cat{V}$ and that $f^*\colon A(X)\to A(X')$ is injective.
+  Thus $c(E)$ is known if we known $f(c(E))$, which, by \hyperref[theorem1i]{\rm{(i)}}, is equal to $c(f^{-1}(E))$.
+  But $f^{-1}(E)$ splits completely.
+  We are thus reduced to determining $c(E)$ when $E$ is a rank-$p$ vector bundle, which splits completely, and is thus endowed with a composition series $(E_i)_{0\leq i\leq p}$, with $\rank E_i=p-i$,
+  But then the additivity formula \hyperref[theorem1iii]{\rm{(iii)}} proves (by induction on $p$) that $c(E)=\prod_{i=1}^p c(E_{i-1}/E_i)$, and finally the normalisation formula \hyperref[theorem1ii]{\rm{(ii)}} implies that
+  \[
+  \label{equation6}
+    c(E) = \prod_{i=1}^p (1+p_X\cl_X(E_{i-1}/E_i)).
+  \tag{6}
+  \]
+
+  We now show that the Chern classes defined by \cref{equation1} do indeed satisfy \hyperref[theorem1i]{\rm{(i)}}, \hyperref[theorem1ii]{\rm{(ii)}}, and \hyperref[theorem1iii]{\rm{(iii)}}.
+
+  \begin{proof}[Proof of \rm{(i)}]
+    \todo
+  \end{proof}
+
+  \begin{proof}[Proof of \rm{(ii)}]
+    \todo
+  \end{proof}
+
+  \begin{proof}[Proof of \rm{(iii)}]
+    \todo
+  \end{proof}
+
+  So we are under the conditions of \hyperref[lemma2corollary]{the corollary} to \cref{lemma2} of the \hyperref[section2]{previous section}, which implies that
+  \[
+    \prod_{i=1}^p (\xi_E+\xi'_i) = 0.
+  \]
+  This proves, by the definition of the $c_i(E)$, that the $c_i(E)$ are the elementary symmetric functions in the $\xi_i$, which is exactly \cref{equation6}.
+
+  This finishes the proof of \cref{theorem1}.
 \end{proof}
 
+\begin{corollary}
+  Let $X\in\cat{V}$, and let $E$ and $F$ be vector bundles on $X$.
+  Then
+  \[
+  \label{equation7}
+    c_i(\check{E}) = (-1)^i c_i(E)
+  \tag{7}
+  \]
+  and, similarly, the Chern classes of the exterior powers $\bigwedge E$ (resp. of the tensor product $E\otimes F$) can be expressed in terms of the Chern classes of $E$ and the rank of $E$ (resp. in terms of the Chern classes of $E$ and $F$ and the ranks of $E$ and $F$) by the well-known calculation of elementary functions (see the book by Hirzebruch).
+\end{corollary}
+
+\begin{proof}
+  Passing to a flag variety, as per usual, we can restrict to the case where $E$ and $F$ are completely split.
+  In this case, the formulas follow immediately from \cref{equation6}.
+\end{proof}
+
+
+\section{Remarks and various supplements}
+\label{section4}
 
 
 %% Bibliography %%
