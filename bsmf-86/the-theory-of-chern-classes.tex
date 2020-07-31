@@ -143,7 +143,7 @@ If $X$ is an algebraic space, and $E$ a vector bundle on $X$, then we denote by 
 The fibre $\mathbb{P}(E)_x$ of $\mathbb{P}(E)$ at a point $x\in X$ is thus the projective space associated to the vector space $E_x$, and so a point of $\mathbb{P}(E)_x$ over a point $x\in X$ is exactly a homogeneous line in $E_x$.
 Let $f\colon\mathbb{P}(E)\to X$ be the projection of the bundle;
 we will consider the inverse image of $E$ under $f$, which is the vector bundle $f^{-1}(E)$ on $\mathbb{P}(E)$.
-There is a canonical rank~$1$ subbundle of $f^{-1}(E)$, whose fibre at a point $d$ of $\mathbb{P}(E)$ (over a point $x\in X$) is the line $d$ in $E_x=f^{-1}(E)_d$.
+There is a canonical rank-$1$ subbundle of $f^{-1}(E)$, whose fibre at a point $d$ of $\mathbb{P}(E)$ (over a point $x\in X$) is the line $d$ in $E_x=f^{-1}(E)_d$.
 The dual bundle of this subbundle of $f^{-1}(E)$ is denoted $L_E$, and we thus have the inclusion
 \[
   \check{L}_E \subset f^{-1}(E).
@@ -156,13 +156,13 @@ We define a \emph{flag of length $i$} in a vector space $V$ to be an increasing 
 Then $X^{(i)}$ can also be understood as the \emph{bundle on $X$ of flags of length $i$} in $E$, and if $f^{(i)}$ is the projection from $X^{(i)}$ to $X$, then we directly define, as in the definition of $L_E$, an increasing sequence of subbundles $(V_j)_{0\leq j\leq i}$ of $E_i=(f^{(i)})^{(-1)}(E)$, with $\rank(V_j)=j$, and the quotient of $E_i$ by $V_i$ being exactly the vector bundle $E^{(i)}$.
 In particular, $X^{(p)}$ is the \emph{flag manifold} (of maximum length $p$) $D(E)$ of $E$, which thus appears as a ``multiple extension'' of $X$ by fibrations in projective spaces associated to vector bundles\todo;
 the inverse image $E_p$ of $E$ in $X^{(p)}=D(E)$ is further \emph{completely split}.
-By this, we mean that this vector bundle of rank~$p$ is endowed with a sequence $(V_i)_{0\leq i\leq p}$ of vector subbundles,
+By this, we mean that this rank-$p$ vector bundle is endowed with a sequence $(V_i)_{0\leq i\leq p}$ of vector subbundles,
 \oldpage{139}
 with $\rank(V_i)=i$.
 Then the $V_i/V_{i-1}$ ($1\leq i\leq p$) are vector bundles of rank~$1$, and are called the \emph{factors} of the given splitting.
 
-If $X$ is an algebraic space, then we denote by $\PP(X)$ the group of isomorphism classes of vector bundles of rank~$1$ on $X$ (the composition law of the group being given by the tensor product of bundles).
-If $L$ is such a vector bundle of rank~$1$, then we denote by $\cl_X(L)$ the element of $\PP(X)$ that it defines.
+If $X$ is an algebraic space, then we denote by $\PP(X)$ the group of isomorphism classes of rank-$1$ vector bundles on $X$ (the composition law of the group being given by the tensor product of bundles).
+If $L$ is such a rank-$1$ vector bundle, then we denote by $\cl_X(L)$ the element of $\PP(X)$ that it defines.
 We thus have
 \begin{gather*}
   \cl_X(L\otimes L') = \cl_X(L) + \cl_X(L')
@@ -176,8 +176,8 @@ If $f\colon X\to Y$ is a morphism, then the formula
 defines a homomorphism $f^*$ from $\PP(Y)$ to $\PP(X)$.
 In this way, $\PP(X)$ can be considered as a \emph{contravariant functor} in $X$.
 
-With $f\colon X\to Y$ still a morphism, let $F$ be a vector bundle of rank~$p$ on $Y$, and set $E=f^{-1}(F)$.
-This is a vector bundle of rank~$p$ on $X$, and we have a canonical isomorphism $\mathbb{P}(E)=f^{-1}(\mathbb{P}(F))$, whence a natural morphism
+With $f\colon X\to Y$ still a morphism, let $F$ be a rank-$p$ vector bundle on $Y$, and set $E=f^{-1}(F)$.
+This is a rank-$p$ vector bundle on $X$, and we have a canonical isomorphism $\mathbb{P}(E)=f^{-1}(\mathbb{P}(F))$, whence a natural morphism
 \[
   \overline{f}\colon \mathbb{P}(E) \to \mathbb{P}(F)
   \quad\mbox{[$E=f^{-1}(F)$].}
@@ -189,7 +189,7 @@ We thus have the formula
   \cl(L_E) = \overline{f}^*(\cl(L_F)).
 \]
 
-Let $E$ be a vector bundle of rank~$p$ on $X$, and $s$ a regular section of $E$.
+Let $E$ be a rank-$p$ vector bundle on $X$, and $s$ a regular section of $E$.
 This is then a morphism from $X$ to $E$, and even an isomorphism from $X$ to a closed subspace of $E$ of codimension~$p$.
 In particular, the image of $X$ under the zero section is a closed non-singular subspace $X'$ of $E$ of codimension~$p$.
 Evidently, the inverse image $s^{-1}(X')$ is exactly the set of zeros of $s$.
@@ -206,6 +206,63 @@ For $s$ to be transversal to the zero section, it is necessary and sufficient fo
 \label{section2}
 
 \oldpage{140}
+
+In what follows, suppose that we have a category $\cat{V}$ of non-singular algebraic spaces (the morphisms in this category being the morphisms of algebraic spaces).
+The only condition that we impose on $\cat{V}$ is that
+\begin{enumerate}
+  \item[(V1)] If $X\in\cat{V}$, and if $E$ is a vector bundle on $X$, then $\mathbb{P}(E)\in\cat{V}$.
+\end{enumerate}
+
+Suppose further that we have the following data:
+\begin{enumerate}[a.]
+  \item a contravariant functor $X\mapsto A(X)$ from $\cat{V}$ to the category of unital anticommutative graded rings;
+  \item a functorial homomorphism $p_X\colon\PP(X)\to A^2(X)$ (for $X\in\cat{V}$);
+  \item for all $X\in\cat{V}$, and for every closed algebraic subspace $Y$ of $X$, of constant codimension~$p$ in $X$, with $Y\in\cat{V}$, a group homomorphism
+    \[
+      i_*\colon A(Y)\to A(X)
+    \]
+    (where $i$ denotes the injection $Y\to X$) that raises the degree by $2p$.
+\end{enumerate}
+
+If $f\colon X\to Y$ is a morphism in $\cat{V}$, then the corresponding homomorphism from $A(Y)$ to $A(X)$ is denoted by $f^*$.
+The unit element of $A(X)$ will be denoted by $1_X$, and if $X,Y\in\cat{V}$, and if $Y$ is a closed subspace of $X$ of constant codimension~$p$, then we define $p_X(Y)=i_*(1_Y)$, where $i$ is (again) the injection morphism from $Y$ into $X$.
+
+With this, we suppose that the following conditions are satisfied:
+\begin{enumerate}[({A}1)]
+  \item Let $X\in\cat{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $\mathbb{P}(E)$ the associated projective bundle, and $\xi_E$ the element of $A(\mathbb{P}(E))$ defined by
+    \[
+      \xi_E = p(\cl(L_E)).
+    \]
+    We can think of $A(\mathbb{P}(E))$ as a left module over $A(X)$ via the homomorphism $f^*\colon A(X)\to A(\mathbb{P}(E))$ associated to the projection $f\colon\mathbb{P}(E)\to X$.
+    Then the elements
+    \[
+      (\xi_E)^i
+      \quad\mbox{(for $0\leq i\leq p-1$)}
+    \]
+    form a basis of $A(\mathbb{P}(E))$ over $A(X)$.
+  \item Let $X\in\cat{V}$, and let $L$ be a rank-$1$ vector bundle on $X$, and $s$ a regular section of $L$ that is transversal to the zero section, and such that the space $Y$ of zeros of $s$ belongs to $\cat{V}$.
+    Then
+    \[
+      p_X(Y) = p_X(\cl_X(L)).
+    \]
+  \item Let $X,Y,Z\in\cat{V}$, with $Z\subset Y\subset X$, and let $i$ and $j$ be the injection morphisms $Z\to Y$ and $Y\to X$ (respectively).
+    Then $(ji)_* = j_*i_*$.
+  \item Let $X,Y\in\cat{V}$, with $Y\subset X$, and let $i$ be the injection morphism of $Y$
+\oldpage{141}
+  into $X$.
+    Then
+    \[
+      i_*(bi^*(a)) = i_*(b)a
+      \quad\mbox{[$a\in A(X),b\in A(Y)$].}
+    \]
+\end{enumerate}
+
+From these axioms we will prove two lemmas that will be useful in the next section.
+
+\begin{lemma}{1}
+\label{lemma1}
+
+\end{lemma}
 
 
 %% Bibliography %%
