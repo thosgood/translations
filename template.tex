@@ -20,6 +20,7 @@
 
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage{xstring}
 \makeatletter
 \ifx\pdfmdfivesum\undefined
   \let\pdfmdfivesum\mdfivesum
@@ -32,7 +33,7 @@
 \makeatother
 \fancyhf{}
 \lhead{\footnotesize\runtitle}
-\rhead{\footnotesize Version: \texttt{\filesum}}
+\rhead{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 

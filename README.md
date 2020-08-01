@@ -4,6 +4,8 @@ I've tried to refrain from "rewriting" too much: generally the sentence structur
 
 For each paper, there is a link to the `.tex` source file (and I've tried to keep these self-contained, i.e with internal bibliographies), a link to a PDF which is built from the latest version of the `.tex` file every time you load the page (many thanks to <https://github.com/aslushnikov/latex-online>), and the original (non-English language) paper.
 
+Each PDF has a version number (the first 8 characters of the MD5 hash of the source code). This makes it easy to tell at a glance whether or not there have been any changes.
+
 ---
 
 For translations of the EGA, see <https://github.com/ryankeleti/ega>.
