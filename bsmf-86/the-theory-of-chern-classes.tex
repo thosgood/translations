@@ -151,7 +151,7 @@ Then $E^{(1)}=f^{-1}(E)/L_E$ is a vector bundle of rank $p-1$ on $X^{(1)}=\mathb
 We thus inductively construct manifolds $X^{(i)}$ and vector bundles $E^{(i)}$ of rank $p-i$ on $X^{(i)}$ ($1\leq i\leq p$), where $X^{(i)}$ is the bundle $\mathbb{P}(E^{(i-1)})$ on $X^{(i-1)}$.
 We define a \emph{flag of length $i$} in a vector space $V$ to be an increasing sequence $(V_j)_{0\leq j\leq i}$ of vector subspaces $V_j$, with $\dim V_j=j$.
 Then $X^{(i)}$ can also be understood as the \emph{bundle on $X$ of flags of length $i$} in $E$, and if $f^{(i)}$ is the projection from $X^{(i)}$ to $X$, then we directly define, as in the definition of $L_E$, an increasing sequence of subbundles $(V_j)_{0\leq j\leq i}$ of $E_i=(f^{(i)})^{(-1)}(E)$, with $\rank(V_j)=j$, and the quotient of $E_i$ by $V_i$ being exactly the vector bundle $E^{(i)}$.
-In particular, $X^{(p)}$ is the \emph{flag manifold} (of maximum length $p$) $D(E)$ of $E$, which thus appears as a ``multiple extension'' of $X$ by fibrations in projective spaces associated to vector bundles\todo;
+In particular, $X^{(p)}$ is the \emph{flag manifold} (of maximum length $p$) $D(E)$ of $E$, which thus looks like a ``multiple extension'' of $X$ by fibrations in projective spaces associated to vector bundles;
 the inverse image $E_p$ of $E$ in $X^{(p)}=D(E)$ is further \emph{completely split}.
 By this, we mean that this rank-$p$ vector bundle is endowed with a sequence $(V_i)_{0\leq i\leq p}$ of vector subbundles,
 \oldpage{139}
@@ -359,7 +359,7 @@ We now given some particular cases where the conditions in this section are sati
     We cannot yet define a ring structure on the group $A(X)$ of cycle classes on an \emph{arbitrary} (not necessarily quasi-projective) non-singular variety, nor, for a morphism $f\colon X\to Y$, a morphism $f^*\colon A(Y)\to A(X)$ in such a way that the necessary conditions are satisfied.
     Further, it is not even certain that this might be possible.
     We can think of replacing the ring of cycle classes (under rational equivalence) by the graded ring associated to the ring $K(X)$ of classes of coherent algebraic sheaves on $X$, filtered in the natural way (by considering the dimension of the supports of the sheaves).
-    Unfortunately, we would have to prove that this filtration is compatible with the ring ring structure (and with the ``inverse image'' homomorphisms), which I do not know how to do in the quasi-projective case, by using the rational equivalence\todo.
+    Unfortunately, we would have to prove that this filtration is compatible with the ring ring structure (and with the ``inverse image'' homomorphisms), which I only know how to do in the quasi-projective case, by using the rational equivalence.
     However, it seems that these difficulties disappear when we tensor with the field of rationals $\mathbb{Q}$, i.e. if we ignore the phenomenons of torsion.
 
   \item
@@ -876,12 +876,12 @@ From this we deduce, for example:
   Equation~\cref{equation17} holds true even if we replace the zero section $s_0$ by an arbitrary section of $E$.
   We can see this by slightly modifying the proof of \cref{lemma3}, but it is easy to deduce this formula from
 \oldpage{154}
-  \cref{theorem2}, noting that $s(X)$ is the set of zeros of a section (which is transversal to the zero section) of a suitable vector bundle on $\mathbb{P}(\widetilde{E})$, \todo the bundle $L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)$, where $S$ is the (trivial) rank-$1$ subbundle of $\widetilde{E}$ defined by the section $s$.
+  \cref{theorem2}, noting that $s(X)$ is the set of zeros of a section (which is transversal to the zero section) of a suitable vector bundle on $\mathbb{P}(\widetilde{E})$, i.e. the bundle $L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)$, where $S$ is the (trivial) rank-$1$ subbundle of $\widetilde{E}$ defined by the section $s$.
   The right-hand side of \cref{equation17} is exactly
   \[
     c_p(L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)) = c_p(L_{\widetilde{E}}\otimes f^{-1}(E)),
   \]
-  as follows from the \todo of \cref{section3}.
+  as follows from the formulas of \cref{section3}.
 \end{remark}
 
 
