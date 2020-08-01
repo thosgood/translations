@@ -755,6 +755,43 @@ its data is thus equivalent to the data of all the $c_i(E)$.
 \section{The cycle of zeros of a regular section of a vector bundle}
 \label{section5}
 
+In this section, we assume that the category $\cat{V}$ satisfies the following condition:
+\begin{enumerate}[({V}2)]
+  \item\label{axiomV2}
+    For all $X\in\cat{V}$ and every non-singular closed subspace $Y$ of $X$, we have that $Y\in\cat{V}$.
+\end{enumerate}
+
+Furthermore, we assume that the following axiom is verified:
+\begin{enumerate}[({A}5)]
+  \item\label{axiomA5}
+    Let $X,Y\in\cat{V}$, and let $Y'$ be a non-singular closed subspace of $Y$, $f$ a morphism from $X$ to $Y$ that is transversal to $Y'$, and $X'=f^{-1}(Y')$ [so $X'$ is a non-singular closed subspace of $X$, and so $X'\in\cat{V}$ and $p_X(X')$ is defined].
+    Under these conditions,
+    \[
+      p_X(X') = f^*(p_Y(Y')).
+    \]
+\end{enumerate}
+
+\oldpage{152}
+Let $X\in V$, and let $E$ be a rank-$p$ vector bundle on $X$.
+Denote by $\mathbf{e}$ the constant vector bundle $X\times k$ on $X$, let $\widetilde{E}=E+\mathbf{e}$ be the vector bundle given by the direct sum of $E$ and $\mathbf{e}$, and define $\widehat{E}=\mathbb{P}(\widetilde{E})$.
+The injection $E\to\widetilde{E}$ defines an injection of bundles $\mathbb{P}(E)\subset\mathbb{P}(\widetilde{E})=\widehat{E}$, and the complement $\widehat{E}\setminus\mathbb{P}(E)$ is canonically isomorphic to $E$, since $\widehat{E}$ can be understood as the bundle induced by projectively completing all the fibres of $E$.
+Let $s$ be a regular section of $E$.
+Then $s(X)$ is a non-singular closed subspace of $\widehat{E}$, and so $s(X)\in\cat{V}$, and we propose to determine $p_{\widehat{E}}(s(X))$.
+We will prove:
+\begin{lemma}{3}
+\label{lemma3}
+  With the above notation, if $s_0$ is the zero section of $E$, then
+  \[
+  \label{equation17}
+    p_{\widehat{E}}(s_0(X)) = \sum_{i=0}^p c_i(E)(\xi_{\widetilde{E}})^{p-i}.
+  \tag{17}
+  \]
+\end{lemma}
+
+\begin{proof}
+  
+\end{proof}
+
 
 %% Bibliography %%
 
