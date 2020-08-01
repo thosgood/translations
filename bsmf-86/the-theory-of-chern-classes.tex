@@ -789,8 +789,43 @@ We will prove:
 \end{lemma}
 
 \begin{proof}
-  
+  Let $X'$ be the flag variety of $E$, $f$ the projection from $X'$ to $X$, $E'$ the vector bundle $f^{-1}(E)$ on $X'$, and $s'_0$ the section of $E'$ given by the inverse image of $s_0$ under $f$.
+  \todo
 \end{proof}
+
+From this, we will deduce:
+
+\begin{theorem}{2}
+\label{theorem2}
+  \todo
+\end{theorem}
+
+In fact, the above proof proves the following formula, which holds for \emph{every} regular section $s$ of $E$:
+\[
+\label{equation18bis}
+  s^*(p_{\widetilde{E}}(s_0(X))) = c_p(E)
+\tag{18 \emph{bis}}
+\]
+(where $s_0$ denotes the zero section of $E$).
+From this we deduce, for example:
+
+\begin{corollary}
+  Suppose that we are in the setting of the theory of Chow ($\cat{V}$ being the category of non-singular quasi-projective algebraic spaces; $A(X)$ being the ring of cycle classes under rational equivalence).
+  Let $X\in\cat{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $s$ a regular section of $E$ such that the cycle of zeros $Z$ of $s$ exists.
+  Then the class of $Z$ is $c_p(E)$.
+\end{corollary}
+
+\begin{remark}
+  Equation~\cref{equation17} holds true even if we replace the zero section $s_0$ by an arbitrary section of $E$.
+  We can see this by slightly modifying the proof of \cref{lemma3}, but it is easy to deduce this formula from
+\oldpage{154}
+  \cref{theorem2}, noting that $s(X)$ is the set of zeros of a section (which is transversal to the zero section) of a suitable vector bundle on $\mathbb{P}(\widetilde{E})$, \todo the bundle $L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)$, where $S$ is the (trivial) rank-$1$ subbundle of $\widetilde{E}$ defined by the section $s$.
+  The right-hand side of \cref{equation17} is exactly
+  \[
+    c_p(L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)) = c_p(L_{\widetilde{E}}\otimes f^{-1}(E)),
+  \]
+  as follows from the \todo of \cref{section3}.
+\end{remark}
 
 
 %% Bibliography %%
