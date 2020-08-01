@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{report}
 
 \usepackage{amssymb,amsmath}
 
@@ -23,6 +23,8 @@
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
+
+\DeclareMathOperator{\Spec}{Spec}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -61,6 +63,85 @@
 
 %% Content %%
 
+
+\setcounter{chapter}{-1}
+
+\chapter{Introduction}
+\label{0}
+
+\oldpage{1}
+If $X$ is a (non-singular) complex analytic manifold, then there is an equivalence between the notions of
+\begin{enumerate}[a)]
+  \item local systems of complex vectors on $X$; and
+  \item vector bundles on $X$ endowed with an integrable connection.
+\end{enumerate}
+
+The latter of these two notions can be adapted in an evident way to the case where $X$ is a non-singular algebraic variety over a field $k$ (which we will take here to be of characteristic $0$).
+However, general algebraic vector bundles with integrable connections are pathological (see \cref{II.6.19});
+we only obtain a reasonable theory if we impose a ``regularity'' condition at infinity.
+By a theorem of Griffiths \cite{8}, this condition is automatically satisfied for ``Gauss-Manin connections'' (see \cref{II.7}).
+In dimension one, this is closely linked to the idea of regular singular points of a differential equation (see \cref{I.4} and \cref{II.1}).
+
+In Chapter~I, we explain the different forms that the notion of an integrable connection can take.
+In Chapter~II, we prove the fundamental facts concerning regular connections.
+In Chapter~III, we translate certain results that we have obtained into the language of Nilsson class functions, and, as an application of the regularity theorem (\cref{II.7}), we explain the proof by Brieskorn \cite{5} of the monodromy theorem.
+
+These notes came from the non-crystalline part of a seminar given at Harvard during the autumn of 1969, under the title: ``Regular singular differential equations and crystalline cohomology''.
+
+I thank the assistants of this seminar, who had to be subjected to often unclear expos\'{e}s, and who allowed me to bring numerous simplifications.
+
+I also thank N.~Katz, with whom I had numerous and useful conversations, and to whom are due the principal results of section~\cref{II.1}.
+
+
+\section*{Notations and terminology}
+
+\oldpage{2}
+Within a single chapter, the references follow the decimal system.
+A reference to a different chapter (resp. to the current introduction) is preceded by the Roman numeral of the chapter (resp. by 0).
+
+We will use the following definitions:
+\begin{enumerate}[({0.}1)]
+  \item \emph{analytic space}:
+    the analytic spaces are complex and of locally-finite dimension.
+    They are assumed to be $\sigma$-compact, but not necessarily separated.
+  \item \emph{multiform function}:
+    a synonym for multivalued function --- see a precise definition in \cref{I.6.2}.
+  \item \emph{immersion}:
+    following the tradition of algebraic geometers, immersion is a synonym for ``embedding''.
+  \item \emph{smooth}:
+    a morphism $f\colon X\to S$ of analytic spaces is smooth if, locally on $X$, it is isomorphic to the projection from $D^n\times S$ to $S$, where $D^n$ is an open polydisc.
+  \item \emph{locally paracompact}:
+    a topological space is locally paracompact if every point has a paracompact neighbourhood (and thus a fundamental system of paracompact neighbourhoods).
+  \item non-singular (or smooth) \emph{complex algebraic variety}:
+    a smooth scheme of finite type over $\Spec(\mathbb{C})$.
+  \item (complex) \emph{analytic manifold}:
+    a non-singular (or smooth) analytic space.
+  \item \emph{covering}:
+    following the tradition of topologists, a covering is a continuous map $f\colon X\to Y$ such that every point $y\in Y$ has a neighbourhood $V$ such that $f|V$ is isomorphic to the projection from $F\times V$ to $V$, where $F$ is discrete.
+\end{enumerate}
+
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+\chapter{Dictionary}
+\label{I}
+
+\oldpage{3}
+In this chapter, we explain the relations between various aspects and various uses of the notion of ``local systems of complex vectors''.
+The equivalence between the points of view considered has been well known for a long time.
+
+The ``crystalline'' point of view has not been considered;
+see \cite{4,10}.
+
+
+\section{Local systems and the fundamental group}
+\label{I.1}
+
+\begin{definition}{1.1}
+\label{I.1.1}
+  Let $X$ be a topological space.
+  A \emph{local complex system} on $X$ is a sheaf of complex vectors on $X$ that, locally on $X$, is isomorphic to a constant sheaf $\mathbb{C}^n$ (n$\in\mathbb{N}$).
+\end{definition}
 
 
 %% Bibliography %%
