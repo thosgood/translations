@@ -106,8 +106,70 @@
 
 \oldpage{3}
 \begin{proposition}{1}
-  If $U$ (resp. $V$) is
+  If $U$ (resp. $V$) is a closed balanced convex neighbourhood of $0$ in $E$ (resp. in $F$), of gauge $p$ (resp. $q$), then the gauge of $\Gamma(U\otimes V)$ is given by
+  \[
+  \label{equation1}
+    p\otimes q(u) = \inf\sum_\nu p(\xi_\nu)q(\eta_\nu)
+    \quad\text{for}\quad
+    u=\sum_\nu\xi_\nu\otimes\eta_\nu.
+  \tag{1}
+  \]
+  If $p$ (resp. $q$) runs over a fundamental system of continuous seminorms of $E$ (resp. $F$), then the $p\otimes q$ form a fundamental system of continuous seminorms on $E\otimes F$.
+  Then
+  \[
+  \label{equation2}
+    p\otimes q(\xi\otimes\eta) = p(\xi)q(\eta).
+  \tag{2}
+  \]
 \end{proposition}
+
+\begin{proof}
+\oldpage{4}
+  We will show that $\Gamma(U\otimes V)$ has exactly $r=p\otimes q$ as its gauge.
+  This gauge is defined by
+  \[
+  \label{equation3}
+    r(u) = \inf_{\substack{u\in\lambda\Gamma(U\otimes V)\\\lambda>0}}(\lambda).
+  \tag{3}
+  \]
+  But $u\in\lambda\Gamma(U\otimes V)$ if and only if $u=\sum_{\nu=1}^N t_\nu x_\nu \otimes y_\nu$, $p(x_\nu)\leq1$, $q(y_\nu)\leq1$, and $\sum|t_\nu|\leq\lambda$.
+  This implies that $u=\sum_{\nu=1}^N\xi_\nu\otimes\eta_\nu$ and $\sum_{\nu=1}^N p(\xi_\nu)q(\eta_\nu)\leq\lambda$, by taking $\xi_\nu=t_\nu x_\nu$ and $\eta_\nu=y_\nu$.
+
+  Conversely, let $u=\sum_{\nu=1}^N \xi_\nu\otimes\eta_\nu$, with $\sum p(\xi_\nu)q(\eta_\nu)\leq\lambda$.
+  Let $x_\nu$, $y_\nu$, and $t_\nu$ be given, depending on the value of $\nu$, by
+  \[
+    (x_\nu,y_\nu,t_\nu) =
+    \begin{cases}
+      \left(
+        \frac{\xi_\nu}{p(\xi_\nu)}, \frac{\eta_\nu}{p(\eta_\nu)}, p(\xi_\nu)q(\eta_\nu)
+      \right) &\mbox{if }
+      p(\xi_\nu)q(\eta_\nu)\neq0;
+    \\\left(
+        N\frac{\xi_\nu q(\eta_\nu)}{\varepsilon}, \frac{\eta_\nu}{q(\eta_\nu)}, \frac{\varepsilon}{N}
+      \right) &\mbox{if }
+      \begin{cases}
+        p(\xi_\nu)=0,
+      \\q(\eta_\nu)\neq0;
+      \end{cases}
+    \\\left(
+        \frac{\xi_\nu}{p(\xi_\nu)}, N\frac{\eta_\nu p(\xi_\nu)}{\varepsilon}, \frac{\varepsilon}{N}
+      \right) &\mbox{if }
+      \begin{cases}
+        p(\xi_\nu)\neq0,
+      \\q(\eta_\nu)=0;
+      \end{cases}
+    \\\left(
+        N\frac{\xi_\nu}{\varepsilon}, \eta_\nu, \frac{\varepsilon}{N}
+      \right) &\mbox{if }
+      p(\xi_\nu) = q(\eta_\nu) = 0;
+    \end{cases}
+  \]
+  we then obtain a decomposition $u=\sum_{\nu=1}^N t_\nu x_\nu\otimes y_\nu$, with $p(x_\nu)\leq1$, $q(y_\nu)\leq1$, and $\sum_{\nu=1}^N|t_\nu|\leq\lambda+\varepsilon$.
+
+  Since $\varepsilon$ can be as small as we like, $r(u)$ defined by \cref{equation3} is indeed equal to $p\otimes q(u)$ defined by \cref{equation1}.
+
+  We now prove \cref{equation2}.
+\end{proof}
 
 
 \end{document}
