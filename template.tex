@@ -1,5 +1,9 @@
 \documentclass{article}
 
+\title{TITLE}
+\author{AUTHOR}
+\date{DATE}
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
@@ -14,6 +18,24 @@
 \usepackage{mathpazo}
 
 
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\rhead{\footnotesize Version: \texttt{\filesum}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
 \crefname{section}{Section}{Sections}
 \crefname{equation}{}{}
 
@@ -21,43 +43,6 @@
 %% Theorem environments %%
 
 \usepackage{amsthm}
-
-  \theoremstyle{plain}
-
-  \newtheorem{innercustomtheorem}{Theorem}
-  \crefname{innercustomtheorem}{Theorem}{Theorems}
-  \newenvironment{theorem}[1]
-    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
-    {\endinnercustomtheorem}
-
-  \newtheorem{innercustomproposition}{Proposition}
-  \crefname{innercustomproposition}{Proposition}{Propositions}
-  \newenvironment{proposition}[1]
-    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-    {\endinnercustomproposition}
-
-  \newtheorem{innercustomlemma}{Lemma}
-  \crefname{innercustomlemma}{Lemma}{Lemmas}
-  \newenvironment{lemma}[1]
-    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
-    {\endinnercustomlemma}
-
-  \newtheorem{innercustomcorollary}{Corollary}
-  \crefname{innercustomcorollary}{Corollary}{Corollaries}
-  \newenvironment{corollary}[1]
-    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
-    {\endinnercustomcorollary}
-
-
-  \theoremstyle{definition}
-
-  \newtheorem*{remark}{Remark}
-
-  \newtheorem{innercustomdefinition}{Definition}
-  \crefname{innercustomdefinition}{Definition}{Definitions}
-  \newenvironment{definition}[1]
-    {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
-    {\endinnercustomdefinition}
 
 
 %% Shortcuts %%
@@ -77,12 +62,10 @@
 \usepackage{embedall}
 \begin{document}
 
-\renewcommand{\abstractname}{Translator's note.}
-
-\title{TITLE}
-\author{AUTHOR}
-\date{DATE}
 \maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
 
 \begin{abstract}
   \renewcommand*{\thefootnote}{\fnsymbol{footnote}}

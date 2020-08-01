@@ -1,5 +1,9 @@
 \documentclass{article}
 
+\title{On modifications and exceptional analytic sets}
+\author{Hans Grauert}
+\date{}
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
@@ -10,6 +14,24 @@
 %% Fancy fonts --- feel free to remove! %%
 \usepackage{Baskervaldx}
 \usepackage{mathpazo}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\rhead{\footnotesize Version: \texttt{\filesum}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
 \crefname{section}{Section}{Sections}
@@ -46,12 +68,6 @@
 
 %% Shortcuts %%
 
-\newcommand{\sh}{\mathscr}
-\newcommand{\cat}{\mathcal}
-
-\renewcommand{\geq}{\geqslant}
-\renewcommand{\leq}{\leqslant}
-
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
@@ -61,12 +77,10 @@
 \usepackage{embedall}
 \begin{document}
 
-\renewcommand{\abstractname}{Translator's note.}
-
-\title{On modifications and exceptional analytic sets}
-\author{Hans Grauert}
-\date{}
 \maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
 
 \begin{abstract}
   \renewcommand*{\thefootnote}{\fnsymbol{footnote}}

@@ -1,5 +1,9 @@
 \documentclass{article}
 
+\title{The topological tensor product of topological vector spaces}
+\author{L. Schwartz}
+\date{18\textsuperscript{th} of November, 1953}
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
@@ -11,6 +15,24 @@
 %% Fancy fonts --- feel free to remove! %%
 \usepackage{Baskervaldx}
 \usepackage{mathpazo}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\rhead{\footnotesize Version: \texttt{\filesum}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
 \crefname{section}{Section}{Sections}
@@ -57,12 +79,10 @@
 \usepackage{embedall}
 \begin{document}
 
-\renewcommand{\abstractname}{Translator's note.}
-
-\title{The topological tensor product of topological vector spaces}
-\author{L. Schwartz}
-\date{18\textsuperscript{th} of November, 1953}
 \maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
 
 \begin{abstract}
   \renewcommand*{\thefootnote}{\fnsymbol{footnote}}

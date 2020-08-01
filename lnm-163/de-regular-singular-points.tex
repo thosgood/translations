@@ -1,5 +1,9 @@
 \documentclass{report}
 
+\title{Regular singular differential equations}
+\author{Pierre Deligne}
+\date{}
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
@@ -10,6 +14,20 @@
 %% Fancy fonts --- feel free to remove! %%
 \usepackage{Baskervaldx}
 \usepackage{mathpazo}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+% \pagestyle{fancy}
+% \fancyhf{}
+% \lhead{\footnotesize\thechapter\thesection}
+% \rhead{\footnotesize Version: \texttt{\filesum}}
+% \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
 \crefname{section}{Section}{Sections}
@@ -35,12 +53,9 @@
 \usepackage{embedall}
 \begin{document}
 
-\renewcommand{\abstractname}{Translator's note.}
-
-\title{Regular singular differential equations}
-\author{Pierre Deligne}
-\date{}
 \maketitle
+
+\renewcommand{\abstractname}{Translator's note.}
 
 \begin{abstract}
   \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
@@ -137,11 +152,13 @@ see \cite{4,10}.
 \section{Local systems and the fundamental group}
 \label{I.1}
 
-\begin{definition}{1.1}
-\label{I.1.1}
-  Let $X$ be a topological space.
-  A \emph{local complex system} on $X$ is a sheaf of complex vectors on $X$ that, locally on $X$, is isomorphic to a constant sheaf $\mathbb{C}^n$ (n$\in\mathbb{N}$).
-\end{definition}
+% \begin{definition}{1.1}
+% \label{I.1.1}
+%   Let $X$ be a topological space.
+%   A \emph{local complex system} on $X$ is a sheaf of complex vectors on $X$ that, locally on $X$, is isomorphic to a constant sheaf $\mathbb{C}^n$ (n$\in\mathbb{N}$).
+% \end{definition}
+
+\todo\textbf{SORT OUT HEADERS/FOOTERS}
 
 
 %% Bibliography %%
