@@ -797,8 +797,29 @@ From this, we will deduce:
 
 \begin{theorem}{2}
 \label{theorem2}
-  \todo
+  Let $X\in\cat{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $s$ a regular section of $E$ that is transversal to the zero section, and $Y$ the set of zeros of $s$ (which is thus a non-singular closed subspace of codimension~$p$ of $X$).
+  Under these conditions,
+  \[
+  \label{equation18}
+    p_X(Y) = c_p(E).
+  \tag{18}
+  \] 
 \end{theorem}
+
+\begin{proof}
+  Consider $s$ as a morphism from $X$ to $\widehat{E}$, so that $s$ is transversal to the non-singular closed subspace $s_0(X)$ of $\widehat{E}$ (where $s_0$ denotes the zero section), and so, by \hyperref[axiomA5]{(A5)}, since $Y=s^{-1}(s_0(X))$,
+  \[
+    p_X(Y) = s^*(p_{\widehat{E}}(s_0(X))).
+  \]
+
+  Equation~\cref{equation18} then follows from \cref{equation17}, since
+  \[
+    s^*(c_i(E)) = c_i(E)
+    \quad\text{and}\quad
+    s^*(\xi_{\widetilde{E}}) = 0.
+  \]
+  (This latter equation follows immediately from the fact that $L_{\widetilde{E}}$ induces a trivial bundle on $E$, and so the inverse image of $L_{\widetilde{E}}$ under $s$ is the trivial bundle on $X$.)
+\end{proof}
 
 In fact, the above proof proves the following formula, which holds for \emph{every} regular section $s$ of $E$:
 \[
