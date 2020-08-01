@@ -5,6 +5,7 @@
 \usepackage{hyperref}
 \usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
+\usepackage{tikz-cd}
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
@@ -459,15 +460,93 @@ its data is thus equivalent to the data of all the $c_i(E)$.
   We now show that the Chern classes defined by \cref{equation1} do indeed satisfy \hyperref[theorem1i]{\rm{(i)}}, \hyperref[theorem1ii]{\rm{(ii)}}, and \hyperref[theorem1iii]{\rm{(iii)}}.
 
   \begin{proof}[Proof of \rm{(i)}]
-    \todo
+    Let $X,Y\in\cat{V}$, and let $E$ be a vector bundle on $Y$, and $F$ its inverse image under $f$.
+    Then $\mathbb{P}(F)$ is the inverse image of $\mathbb{P}(E)$ under $f$, and so we have a commutative diagram of morphisms
+    \[
+      \begin{tikzcd}
+        \mathbb{P}(F) \rar["\overline{f}"] \dar[swap,"p"]
+        & \mathbb{P}(E) \dar["q"]
+      \\X \rar[swap,"f"]
+        & Y
+      \end{tikzcd}
+    \]
+    We also know that $L_F$ is the inverse image of $L_E$ under $\overline{f}$.
+    It thus follows that
+    \[
+      \xi_F = \overline{f}^*(\xi_E).
+    \]
+    Equation~\cref{equation3} is trivially satisfied in dimensions $i=0$ and $i>p$, and so it suffices to verify it in dimensions $1\leq i\leq p$.
+    By definition,
+    \[
+      \sum_{i=0}^p q^*(c_i(E))(\xi_E)^{p-i} = 0
+    \]
+    which implies, by applying the homomorphism $\overline{f}^*$, and noting that
+    \[
+      \begin{gathered}
+        \overline{f}^*q^* = (q\overline{f})^* = (fp)^* = p^*f^*
+      \\\text{and}\quad\overline{f}^*(\xi_E) = \xi_F
+      \end{gathered}
+    \]
+    the relation
+    \[
+      \sum_{i=0}^p p^*(f^*(c_i(E)))(\xi_F)^{p-i} = 0
+    \]
+\oldpage{146}
+    which proves, by definition, that
+    \[
+      c_i(F) = f^*(c_i(E))
+      \quad\mbox{for $1\leq i\leq p$.}\qedhere
+    \]
   \end{proof}
 
   \begin{proof}[Proof of \rm{(ii)}]
-    \todo
+    Suppose that $E$ is of rank~$1$, so that $\mathbb{P}(E)=X$, $L_E=\check{E}$, and $\xi_E = p_X\cl_X(\check{E}) = -p_X\cl_X(E)$.
+    The first equation \cref{equation1} can then be written as
+    \[
+      \xi_E + c_1(E) = 0
+    \]
+    whence
+    \[
+      c_1(E) = -\xi_E = p_X\cl_X(E).\qedhere
+    \]
   \end{proof}
 
   \begin{proof}[Proof of \rm{(iii)}]
-    \todo
+    Under the conditions of the statement of \hyperref[theorem1i]{(i)}, let $P$ be the product bundle on $X$ of the flag variety of $E'$ and the flag variety of $E''$.
+    Then $P$ can also be identified with the flag variety of $f^{-1}(E'')$, where $f\colon D(E')\to X$ is the canonical projection to $X$ from the flag variety $D(E')$ of $E'$.
+    Using \cref{lemma1} of the \hyperref[section2]{previous section} twice, we find that $P\in\cat{V}$, and that the homomorphism $g^*\colon A(X)\to A(P)$ associated to the projection $g\colon P\to X$ is injective.
+    Then, to prove \cref{equation5}, it suffices to prove the formula that follows from it by applying $g^*$ to both sides, which, by functoriality \hyperref[theorem1i]{(i)}, reduces to proving the multiplicativity formula for the inverse image of the exact sequence $0\to E'\to E\to E''\to 0$ under $g$.
+    But it is immediate that $g^{-1}(E')$ and $g^{-1}(E'')$ split completely.
+    We can thus restrict to proving the additivity formula in the case where the factors $E'$ and $E''$ split completely.
+    But then the splittings of $E'$ and $E''$ define a splitting of $E$, and it clearly suffices to prove \cref{equation6} for each of the composition series of $E'$, $E''$, and $E$ thus obtained.
+    This leads us to prove \cref{equation6} for a completely split vector bundle.
+
+    So let $X'=\mathbb{P}(E)$, with $f'$ the projection from $X'$ to $X$, and define
+    \[
+      \begin{aligned}
+        E' &= f^{-1}(E),
+      \\E'_i &= f^{-1}(E_i),
+      \\L &= L_E,
+      \\\xi_i &= p_X\cl_X(E_{i-1}/E_i)\quad(1\leq i\leq p),
+      \\\xi'_i &= f^*(\xi_i) = p_X\cl_{X'}(E'_i/E'_{i+1}).
+      \end{aligned}
+    \]
+    The (rank-$1$) bundle $\check{L}$ can be identified with a vector subbundle of $E'$, and the injection homomorphism $\check{L}\to E'$ can be understood as a regular section $s$ of the bundle $F'=L\otimes E'$.
+    Since $s$ corresponds to an injection morphism, we immediately see that $s$ does not vanish.
+    Letting $F'_i=L\otimes E'_i$, we obtain a splitting of $F'$, whose factors are $F'_i/F'_{i+1} = L\otimes(E'_i/E'_{i+1})$, whence
+    \[
+      p_X\cl_{X'}(F'_{i-1}/F'_{i}) = \xi_E+\xi'_i.
+    \]
+
+    Let $Y_i$ be the set of points $x'$ of $X'$ such that $s(x')\in F'_i$, which is also the set of points $x'$ such that the fibre of $\check{L}$ at $x'$ is contained in $E'_i$, and can thus be identified with $\mathbb{P}(E_i)$.
+    Thus $Y_i$ is a non-singular closed subspace of $X'$, and $Y'\in\cat{V}$.
+    Now let $s_i$ be the section of $(F'_{i-1}|F'_i)|Y_{i-1}$ induced by $s|Y_{i-1}$, which I claim is transversal to the zero section.
+    Since the question is local, we
+\oldpage{147}
+    can assume that $E=X\times k^n$ and $E_i=X\times k^{n-i}$, so then $Y_i=X\times\mathbb{P}(k^{n-i})$, $E_j|Y_i$ is the constant bundle with fibre $k^{n-j}$ on $Y_i$, and $L|Y_i$ is the subbundle (of the constant bundle with fibre $k^{n-i}$) given by the inverse image, under the projection map from $Y_i$ to its factor $\mathbb{P}(k^{n-i})$, of the well-known rank-$1$ subbundle $l$ of the constant bundle with fibre $k^{n-i}$.
+    Then the bundle $(F'_i|F'_{i+1})|Y_i$ on $Y_i$, and its section $s_{i+1}$, are the inverse images, under the projection map from $Y_i$ to its factor $\mathbb{P}(k^{n-i})$, of a specific section $\sigma$ of $l$.
+    But it is well known (and immediate to verify) that every non-zero section of $l$ is transversal to the zero section (its cycle of zeros then being a linear hyperplane of the projective space).
+    This proves our claim.
   \end{proof}
 
   So we are under the conditions of \hyperref[lemma2corollary]{the corollary} to \cref{lemma2} of the \hyperref[section2]{previous section}, which implies that
@@ -480,6 +559,8 @@ its data is thus equivalent to the data of all the $c_i(E)$.
 \end{proof}
 
 \begin{corollary}
+\phantomsection
+\label{theorem1corollary}
   Let $X\in\cat{V}$, and let $E$ and $F$ be vector bundles on $X$.
   Then
   \[
@@ -498,6 +579,125 @@ its data is thus equivalent to the data of all the $c_i(E)$.
 
 \section{Remarks and various supplements}
 \label{section4}
+
+\begin{enumerate}
+  \item
+    In all the above, we have only needed to work with elements of even degree in $A(X)$, which implies, in particular, that all the calculations were essentially commutative.
+    We note also that the axioms \hyperref[axiomA1]{(A1)} to \hyperref[axiomA4]{(A4)} remain satisfied if we replace each $A(X)$ with the direct sum of the $A^{2i}(X)$.
+    But then it seems sensible to divide all the degrees by $2$, and thus to assume from the start that the $A(X)$ were commutative, and that the homomorphism $p_X$ from $\PP(X)$ took its values, not in $A^2(X)$, but in $A^1(X)$.
+    This is what we assume in the following remark.
+  \item
+    Let $A$ be a commutative positively-graded ring with unit.
+    Let $\widehat{A}$ be
+\oldpage{148}
+    the ring given by the product of the $A^i$ (for $i\geq0$).
+    Then the set of elements of $\widehat{A}$ of augmentation~$1$ (i.e. whose degree-$0$ component is $1$) is a group under multiplication, which we denote by $1+\widehat{A}^+$.
+    Consider the group given by the product
+    \[
+      \widetilde{A} = \mathbb{Z}\times(1+\widehat{A}^+)
+    \]
+    whose composition is written additivity;
+    then $(0,1+\widehat{A}^+)$ is a subgroup of this group, isomorphic to the multiplicative group $1+\widehat{A}^+$.
+    With this in mind, we can define a (commutative unital) ring structure on $\widetilde{A}$, compatible with the additive structure, whose unit is $(1,1)$, and that is given, on the $(0,1+\widehat{A}^+)$ factor by universal polynomial formulas (with integer coefficients).
+    We will then have that
+    \[
+    \label{equation8}
+      (1,1+x_1)(1,1+y_1) = (1,1+(x_1+y_1))
+    \tag{8}
+    \]
+    for $x_1,y_1\in A^1$, and these formulas suffice to characterise the polynomials that define the composition law (taking into account the associativity of the composition law).
+
+    We can also define (non-additive!) maps
+    \[
+      \lambda^i\colon \widetilde{A}\to\widetilde{A}
+      \quad(i\geq0)
+    \]
+    which make $\widetilde{A}$ a $\lambda$-ring, by which we mean that the following conditions are satisfied:
+    \[
+    \label{equation9}
+      \begin{aligned}
+        \lambda^0(x) &= 1,
+      \\\lambda^1(x) &= x,
+      \\\lambda^n(x+y) &= \sum_{i+j=n}\lambda^i(x)\lambda^j(y)\quad\mbox{if $n\geq0$}
+      \end{aligned}
+    \tag{9}
+    \]
+    which also implies that the map
+    \[
+      \lambda\colon \widetilde{A} \to 1+\widetilde{A}[[t]]^+
+    \]
+    defined by the formula
+    \[
+    \label{equation10}
+      \lambda(x) = \sum_{i\geq0} \lambda^i(x)t^i
+    \tag{10}
+    \]
+    is an additive homomorphism from $\widetilde{A}$ to the multiplicative group of formal series of augmentation~$1$, and is a right inverse to the natural homomorphism $(1+a_1t+\ldots)\mapsto a_1$ from this latter group to $\widetilde{A}$.
+    The restriction of the maps $\lambda^i$ to the factor $(0,1+\widetilde{A}^+)$ is defined by universal polynomial formulas (with integer coefficients), and
+    \[
+    \label{equation11}
+      \lambda^i(1,1+x_1) = 0
+      \quad\mbox{for $i>1$}
+    \tag{11}
+    \]
+    if $x_1\in A^1$, and this formula suffices to characterise the polynomials defining the $\lambda^i$ [taking into account the formulas in \cref{equation9}].
+
+\oldpage{149}
+    In fact, the $\lambda$-ring $A$ is a \emph{special} $\lambda$-ring, by which we mean that the $\lambda^i(xy)$ can be expressed in terms of universal polynomials (with integer coefficients) in the $\lambda^j(x)$ and $\lambda^k(y)$, and that the $\lambda^j(\lambda^i(x))$ can be expressed in terms of universal polynomials (with integer coefficients) in the $\lambda^k(x)$.
+    We will not go into more details of the polynomials here, and we content ourselves with information below.
+    The fact that a $\lambda$-ring $K$ is special also implies that the homomorphism $\lambda\colon K\to 1+K[[t]]^+$ is furthermore a homomorphism of $\lambda$-rings, by which we mean that, for every commutative unital ring $K$, we can define a canonical $\lambda$-ring law on $1+K[[t]]^+$ (whose additive structure is the usual multiplication of formal series), whose composition laws are given by universal polynomial formulas (with integer coefficients).
+    If the multiplication of this ring is denoted by $f\circ g$, then
+    \[
+    \label{equation12}
+      (1+at)\circ(1+bt) = 1+abt
+    \tag{12}
+    \]
+    \[
+    \label{equation13}
+      \lambda^i(1+at) = 1
+      \quad\mbox{(the zero element of $1+K[[t]]^+$)}
+      \quad\mbox{if $i>1$}
+    \tag{13}
+    \]
+    [these formulas being the ``multiplicative'' analogues to \cref{equation8} and \cref{equation11}].
+    These formulas suffice to characterise [taking into account \cref{equation9} and the associativity of the multiplication] the polynomials that define $f\circ g$ and the $\lambda^i(f)$.
+
+    It is the detailed study of $\lambda$-rings in general, and of certain specific $\lambda$-rings (the ring of classes of vector bundles on an algebraic variety, and the ring of classes of representations of an algebraic group) that held the key to the first algebraic proof of the Riemann-Roch theorem, in the form given in the paper preceding this one.
+    \setcounter{footnote}{0}\renewcommand*{\thefootnote}{\fnsymbol{footnote}}\footnote{\emph{[Translator.] This is referring to} {\sc Borel, A; Serre, J.P.} ``Le th\'{e}or\`{e}me de Riemann-Roch''. \emph{Bull. Soc. Math. France} {\bf 86} (1958), pp.~  97--136.}
+    This proof is, for now, only valid in characteristic~$0$, but it gives, however, finer results than the second method, which uses blow-up varieties.
+    In any case, $\lambda$-rings exist in large numbers in nature, the formalism to which they give rise is more amenable, and the author of these sentences cannot recommend enough that the reader makes use of them.
+
+    That said, we now return to the commutative graded rings $A(X)$.
+    If $E$ is a rank-$p$ vector bundle on $X$, then we denote by $\widetilde{c}(E)$ the \emph{completed Chern class} of $E$, which is the element of $\widetilde{A(X)}$ defined by
+    \[
+    \label{equation14}
+      \widetilde{c}(E) = (p,c(E))
+      \quad\mbox{[$p=\rank(E)$].}
+    \tag{14}
+    \]
+    With this notation, the two formulas that were not explicitly given in \hyperref[theorem1corollary]{the corollary} to \cref{theorem1} can be written simply as
+    \[
+    \label{equation7bis}
+      \begin{aligned}
+        \widetilde{c}\left(\wedge^i E\right) &= \lambda^i(\widetilde{c}(E)),
+      \\\widetilde{c}(E\otimes F) &= \widetilde{c}(E)\widetilde{c}(F),
+      \end{aligned}
+    \tag{7 \emph{bis}}
+    \]
+    and the additivity formula can be written as
+    \[
+    \label{equation5bis}
+      \widetilde{c}(E) = \widetilde{c}(E') + \widetilde{c}(E'').
+    \tag{5 \emph{bis}}
+    \]
+
+\oldpage{150}
+    We can thus also say that \emph{the completed Chern class $\widetilde{c}(E)$ defines a homomorphism of $\lambda$-rings from $K(X)$ to $\widetilde{A(X)}$.}
+
+  \item
+    \emph{Application to the Chow ring. ---}
+    Let $X$ be a non-singular algebraic space.
+\end{enumerate}
 
 
 %% Bibliography %%
