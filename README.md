@@ -12,6 +12,45 @@ News on SGA and FGA translations "coming soon&trade;".
 
 ---
 
+# Articles
+
+<!--
+- HILBERT, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten". _Mathematische Annalen_, Volume **32** (1888), pp. 342–350. <http://eudml.org/doc/157385>.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/ma-32/sum-of-squares.tex)
+  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-32%2Fsum-of-squares.tex&command=pdflatex&trackId=1596040205463)
+  [[original]](http://eudml.org/doc/157385)
+-->
+
+- BOREL, Armand; SERRE, Jean-Pierre. "Le théorème de Riemann-Roch". _Bulletin de la Société Mathématique de France_, Volume **86** (1958), pp. 97--136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/bsmf-86/the-riemann-roch-theorem.tex)
+  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595524110173)
+  [[original]](http://www.numdam.org/item/?id=BSMF_1958__86__97_0)
+
+- GROTHENDIECK, Alexander. "La théorie des classes de Chern". _Bulletin de la Société Mathématique de France_, Volume **86** (1958) , pp. 137--154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/bsmf-86/the-theory-of-chern-classes.tex)
+  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-theory-of-chern-classes.tex&command=pdflatex&trackId=1596040216373)
+  [[original]](https://www.doi.org/10.24033/bsmf.1501)
+
+<!--
+- GRAUERT, H. "Über Modifikationen und exzeptionelle analytische Mengen". _Math. Ann._, Volume **146** (1962), pp. 331--368. <http://eudml.org/doc/160940>
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/ma-146/exceptional-analytic-sets.tex)
+  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1596040221056)
+  [[original]](http://eudml.org/doc/160940)
+-->
+
+<!--
+- DELIGNE, P. _Equations Différentielles à Points Singuliers Réguliers._ Springer-Verlag, Lecture Notes in Mathematics **163** (1970). <https://publications.ias.edu/node/355>
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/lnm-163/de-regular-singular-points.tex)
+  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=lnm-163%2Fde-regular-singular-points.tex&command=pdflatex&trackId=1596040243159)
+  [[original]](https://publications.ias.edu/node/355)
+-->
+
+
 # Seminars
 
 ## Séminaire Claude Chevalley (ENS)
@@ -82,41 +121,3 @@ News on SGA and FGA translations "coming soon&trade;".
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/12-the-theory-of-nuclear-operators.tex)
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F12-the-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1595524106537)
   [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A13_0/)
-
-# Other
-
-<!--
-- HILBERT, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten". _Mathematische Annalen_, Volume **32** (1888), pp. 342–350. <http://eudml.org/doc/157385>.
-  <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/ma-32/sum-of-squares.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-32%2Fsum-of-squares.tex&command=pdflatex&trackId=1596040205463)
-  [[original]](http://eudml.org/doc/157385)
--->
-
-- BOREL, Armand; SERRE, Jean-Pierre. "Le théorème de Riemann-Roch". _Bulletin de la Société Mathématique de France_, Volume **86** (1958), pp. 97--136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
-  <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/bsmf-86/the-riemann-roch-theorem.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595524110173)
-  [[original]](http://www.numdam.org/item/?id=BSMF_1958__86__97_0)
-
-- GROTHENDIECK, Alexander. "La théorie des classes de Chern". _Bulletin de la Société Mathématique de France_, Volume **86** (1958) , pp. 137--154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
-  <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/bsmf-86/the-theory-of-chern-classes.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-theory-of-chern-classes.tex&command=pdflatex&trackId=1596040216373)
-  [[original]](https://www.doi.org/10.24033/bsmf.1501)
-
-<!--
-- GRAUERT, H. "Über Modifikationen und exzeptionelle analytische Mengen". _Math. Ann._, Volume **146** (1962), pp. 331--368. <http://eudml.org/doc/160940>
-  <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/ma-146/exceptional-analytic-sets.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1596040221056)
-  [[original]](http://eudml.org/doc/160940)
--->
-
-<!--
-- DELIGNE, P. _Equations Différentielles à Points Singuliers Réguliers._ Springer-Verlag, Lecture Notes in Mathematics **163** (1970). <https://publications.ias.edu/node/355>
-  <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/lnm-163/de-regular-singular-points.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=lnm-163%2Fde-regular-singular-points.tex&command=pdflatex&trackId=1596040243159)
-  [[original]](https://publications.ias.edu/node/355)
--->
