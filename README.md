@@ -48,6 +48,9 @@ News on SGA and FGA translations "coming soon&trade;".
   [[original]](http://eudml.org/doc/160940)
 -->
 
+
+<!-- # Books -->
+
 <!--
 - Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._ Springer-Verlag, Lecture Notes in Mathematics **163** (1970). <https://publications.ias.edu/node/355>
   <br/>
@@ -59,13 +62,63 @@ News on SGA and FGA translations "coming soon&trade;".
 
 # Seminars
 
+<!--
 
-## Séminaire Claude Chevalley (ENS)
+## Séminaire Bourbaki
+### Extracts (1957--92), "Fondements de la Géométrie Algébrique"
+
+_All of the following are by A. Grothendieck. An PDF copy of the original notes can be found at <https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf>._
+
+- "Théorème de dualité pour les faisceaux algébriques cohérents". _Séminaire Bourbaki_, Volume **9** (1956--57), Talk no. 149.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/1-coherent-duality.tex)
+  [[live PDF]]()
+
+- "Géométrie formelle et géométrie algébrique". _Séminaire Bourbaki_, Volume **11** (1958--59), Talk no. 182.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/2-formal-geometry.tex)
+  [[live PDF]]()
+
+- "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". _Séminaire Bourbaki_, Volume **12** (1959--60), Talk no. 190.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/3-descent-I.tex)
+  [[live PDF]]()
+
+- "Technique de descente et théorèmes d'existence en géométrie algébrique. II. Le théorème d'existence en théorie formelle des modules". _Séminaire Bourbaki_, Volume **12** (1959--60), Talk no. 195.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/3-descent-II.tex)
+  [[live PDF]]()
+
+- "Technique de descente et théorèmes d'existence en géométrie algébrique. III. Préschémas quotients". _Séminaire Bourbaki_, Volume **13** (1960--61), Talk no. 212.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/3-descent-III.tex)
+  [[live PDF]]()
+
+- "Technique de descente et théorèmes d'existence en géométrie algébrique. IV. Les schémas de Hilbert". _Séminaire Bourbaki_, Volume **13** (1960--61), Talk no. 221.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/3-descent-IV.tex)
+  [[live PDF]]()
+
+- "Technique de descente et théorèmes d'existence en géométrie algébrique. V. Let schémas de Picard. Théorèmes d'existence". _Séminaire Bourbaki_, Volume **14** (1961--62), Talk no. 132.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/3-descent-V.tex)
+  [[live PDF]]()
+
+- "Technique de descente et théorèmes d'existence en géométrie algébrique. VI. Let schémas de Picard. Propriétés générales". _Séminaire Bourbaki_, Volume **14** (1961--62), Talk no. 136.
+  <br/>
+  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/3-descent-VI.tex)
+  [[live PDF]]()
+
+-->
+
+## Séminaire Claude Chevalley
 ### Volume 4 (1958--59), "Variétés de Picard"
 
 - Talk no. 1: "Faisceaux quasi-cohérents" (P. Gabriel).
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex) [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F1-quasi-coherent-sheaves.tex&command=pdflatex&trackId=1596036033972) [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A1_0/)
+  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex)
+  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F1-quasi-coherent-sheaves.tex&command=pdflatex&trackId=1596036033972)
+  [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A1_0/)
 
 - Talk no. 2: "Le théorème de Serre" (P. Gabriel).
   <br/>
@@ -80,7 +133,7 @@ News on SGA and FGA translations "coming soon&trade;".
   [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A4_0/)
 
 
-## Séminaire Henri Cartan (ENS)
+## Séminaire Henri Cartan
 ### Volume 9 (1956--57), "Quelques questions de topologie"
 
 - Talk no. 2: "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
@@ -90,7 +143,7 @@ News on SGA and FGA translations "coming soon&trade;".
   [[original]](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
 
 
-## Séminaire Schwartz (FSP)
+## Séminaire Schwartz
 ### Volume 1 (1953--54), "Produits tensoriels topologiques d'espaces vectoriels topologiques. Espaces vectoriels topologiques nucléaires"
 
 - Talk no. 1 "Produit tensoriel topologique d'espaces vectoriels topologiques" (L. Schwartz).
