@@ -45,6 +45,20 @@
 
 \usepackage{amsthm}
 
+  \theoremstyle{plain}
+
+  \newtheorem{innercustomproposition}{Proposition}
+  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \newenvironment{proposition}[1]
+    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+    {\endinnercustomproposition}
+
+  \newtheorem{innercustomcorollary}{Corollary}
+  \crefname{innercustomcorollary}{Corollary}{Corollary}
+  \newenvironment{corollary}[1]
+    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
+    {\endinnercustomcorollary}
+
 
 %% Shortcuts %%
 
@@ -53,6 +67,13 @@
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
+
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\shExt}{\underline{Ext}}
+\DeclareMathOperator{\shHom}{\underline{Hom}}
+\DeclareMathOperator{\RR}{R}
+\DeclareMathOperator{\HH}{H}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -89,6 +110,81 @@
 
 %% Content %%
 
+\oldpage{149-01}
+The results that follow, inspired by Serre's ``theorem of algebraic duality'', were discovered in the winter of 1955 and the winter of 1956.
+They can be established very simply, thanks to reasonably elementary results on the cohomology of projective spaces \cite{3} and an intensive use of Cartan--Eilenberg's homological algebra, in the form given in \cite{2}.
+
+
+\section{$\Ext$ of sheaves of modules}
+\label{section1}
+
+(\cite[chap.~3 and 4]{2}).
+
+Let $X$ be a topological space endowed with a sheaf $\sh{O}$ of unital (but not necessarily commutative) rings.
+We consider the abelian category $\cat{C}^\sh{O}$ of sheaves of $\sh{O}$-modules, which also referred to as $\sh{O}$-modules.
+We know that every object of this category admits an injective resolution, which allows us to define the $\Ext$ functors that have the well-known formal properties.
+More precisely, to avoid confusion, we denote by $\Hom_\sh{O}(X;\sh{A},\sh{B})$, or simply $\Hom(X;\sh{A},\sh{B})$, the abelian \emph{groups} of $\sh{O}$-homomorphisms from $\sh{A}$ to $\sh{B}$, whereas $\shHom_\sh{O}(\sh{A},\sh{B})$ denotes the \emph{sheaf} of germs of homomorphisms from $\sh{A}$ to $\sh{B}$ (where $\sh{A},\sh{B}\in \cat{C}^\sh{O}$).
+We define, for fixed $\sh{A}\in \cat{C}^\sh{O}$, functors $h_\sh{A}$ and $\underline{h}_\sh{A}$, with values in the category $\cat{C}$ of abelian groups and the category $\cat{C}^Z$ of abelian sheaves on $X$ (respectively), by the formulas:
+\[
+\label{equation1.1}
+  \begin{aligned}
+    h_\sh{A}(\sh{B}) &= \Hom_\sh{O}(X;\sh{A},\sh{B})
+  \\\underline{h}_\sh{A}(\sh{B}) &= \shHom_\sh{O}(\sh{A},\sh{B}).
+  \end{aligned}
+\tag{1.1}
+\]
+
+The functors $h_\sh{A}$ and $\underline{h}_\sh{A}$ are left exact and covariant, and so we consider their right-derived functors, denoted by $\Ext_\sh{O}^p(X;\sh{A},\sh{B})$ and $\shExt_\sh{O}^p(\sh{A},\sh{B})$ (respectively).
+We then have, by definition,
+\[
+\label{equation1.2}
+  \begin{gathered}
+    \Ext_\sh{O}^p(X;\sh{A},\sh{B}) = (\RR^p h_\sh{A})(\sh{B}) = \HH^p(\Hom_\sh{O}(X;\sh{A},C(\sh{B})))
+  \\\shExt_\sh{O}^p(\sh{A},\sh{B}) = (\RR^p \underline{h}_\sh{A})(\sh{B}) = \HH^p(\shHom_\sh{O}(\sh{A},C(\sh{B})))
+  \end{gathered}
+\tag{1.2}
+\]
+where $\RR^p$ denotes the passage to right-derived functors, and where $C(\sh(B)$ denotes in arbitrary injective resolution of $\sh{B}$ in $\cat{C}^\sh{O}$.
+We denote by $\Gamma\colon\cat{C}^Z\to\cat{C}$ the ``sections'' functor.
+Recall that its right-derived functors are denoted by $B\mapsto\HH^p(X,\sh{B})$:
+\oldpage{149-02}
+\[
+\label{equation1.3}
+  \HH^p(X,\sh{B}) = (\RR^p\Gamma)(\sh{B}) = \HH^p(\Gamma(C(\sh{B}))).
+\tag{1.3}
+\]
+We evidently have $h_\sh{A}=\Gamma\underline{h}_\sh{A}$;
+we can also show that $\underline{h}_\sh{A}$ sends injective objects to $\Gamma$-acyclic objects.
+From this, it is a well-known result that:
+
+\begin{proposition}{1}
+\label{proposition1}
+  There exists, for every $\sh{O}$-module $\sh{A}$, a cohomological spectral functor on $\cat{C}^\sh{O}$, abutting to the graded functor $(\Ext_\sh{O}^\bullet(X;\sh{A},\sh{B}))$, and whose initial page is
+  \[
+  \label{equation1.4}
+    E_2^{p,q}(\sh{A},\sh{B}) = \HH^p(X,\shExt_\sh{O}^q(\sh{A},\sh{B})).
+  \tag{1.4}
+  \]
+\end{proposition}
+
+From this, we obtain ``\emph{boundary homomorphisms}'', and a short exact sequence, which we will not write.
+
+\begin{corollary}{1}
+\label{corollary1}
+  If $\sh{A}$ is locally isomorphism to $\sh{O}^n$, then we have canonical isomorphisms
+  \[
+  \label{equation1.5}
+    \Ext_\sh{O}^p(X;\sh{A},\sh{B}) \xleftarrow{\sim} \HH^p(x,\shHom_\sh{O}(\sh{A},\sh{B}))
+  \tag{1.5}
+  \]
+  (given by the boundary homomorphisms of the spectral sequence).
+  In particular, we have a canonical isomorphism
+  \[
+  \label{equation1.6}
+    \Ext_\sh{O}^p(X;\sh{O},\sh{B}) = \HH^p(X,\sh{B}).
+  \tag{1.6}
+  \]
+\end{corollary}
 
 
 %% Bibliography %%
