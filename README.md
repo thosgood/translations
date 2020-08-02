@@ -30,6 +30,10 @@ News on SGA and FGA translations "coming soon&trade;".
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595524110173)
   [[original]](http://www.numdam.org/item/?id=BSMF_1958__86__97_0)
 
+<!--
+- Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". _Annales de l'institut Fourier_, Volume **4** (1952), pp. 73--112. <http://www.numdam.org/item/?id=AIF_1952__4__73_0>
+-->
+
 - Grothendieck, A. "La théorie des classes de Chern". _Bulletin de la Société Mathématique de France_, Volume **86** (1958) , pp. 137--154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/bsmf-86/the-theory-of-chern-classes.tex)
@@ -55,6 +59,7 @@ News on SGA and FGA translations "coming soon&trade;".
 
 # Seminars
 
+
 ## Séminaire Claude Chevalley (ENS)
 ### Volume 4 (1958--59), "Variétés de Picard"
 
@@ -74,6 +79,7 @@ News on SGA and FGA translations "coming soon&trade;".
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F4-divisors-in-algebraic-geometry.tex&command=pdflatex&trackId=1596027138553)
   [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A4_0/)
 
+
 ## Séminaire Henri Cartan (ENS)
 ### Volume 9 (1956--57), "Quelques questions de topologie"
 
@@ -83,9 +89,9 @@ News on SGA and FGA translations "coming soon&trade;".
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-henri-cartan-9%2F2-coherent-algebraic-analytic-sheaves.tex&command=pdflatex&trackId=1595524113730)
   [[original]](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
 
+
 ## Séminaire Schwartz (FSP)
 ### Volume 1 (1953--54), "Produits tensoriels topologiques d'espaces vectoriels topologiques. Espaces vectoriels topologiques nucléaires"
-
 
 - Talk no. 1 "Produit tensoriel topologique d'espaces vectoriels topologiques" (L. Schwartz).
   <br/>
@@ -108,14 +114,6 @@ News on SGA and FGA translations "coming soon&trade;".
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/3-Lp-space-recap.tex)
   [[live PDF]]()
   [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A4_0/)
--->
-
-<!--
-- Talk no. 4: "L'espace $L^1\widehat{\otimes}E$ (suite et fin)" (L. Schwartz).
-  <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/4-L1-otimes-E.tex)
-  [[live PDF]]()
-  [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A5_0/)
 -->
 
 - Talk no. 12: "La théorie des opérateurs nucléaires" (L. Schwartz).

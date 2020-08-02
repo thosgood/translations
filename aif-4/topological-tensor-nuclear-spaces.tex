@@ -1,0 +1,152 @@
+\documentclass{article}
+
+\title{Summary of essential results in the theory of topological tensor products and nuclear spaces}
+\author{A.~Grothendieck}
+\date{}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{Baskervaldx}
+\usepackage{mathpazo}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle\\}
+\rhead{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+  \theoremstyle{plain}
+
+  \newtheorem{innercustomtheorem}{Theorem}
+  \crefname{innercustomtheorem}{Theorem}{Theorems}
+  \newenvironment{theorem}[1]
+    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
+    {\endinnercustomtheorem}
+
+  \newtheorem{innercustomproposition}{Proposition}
+  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \newenvironment{proposition}[1]
+    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+    {\endinnercustomproposition}
+
+  \newtheorem{innercustomlemma}{Lemma}
+  \crefname{innercustomlemma}{Lemma}{Lemmas}
+  \newenvironment{lemma}[1]
+    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
+    {\endinnercustomlemma}
+
+  \newtheorem{innercustomcor}{Corollary}
+  \crefname{innercustomcor}{Corollary}{Corollary}
+  \newenvironment{cor}[1]
+    {\renewcommand\theinnercustomcor{#1}\innercustomcor}
+    {\endinnercustomcor}
+
+  \newtheorem*{corollary}{Corollary}
+
+
+  \theoremstyle{definition}
+
+  \newtheorem*{remark}{Remark}
+  \newtheorem*{remarks}{Remarks}
+  \newtheorem*{definition}{Definition}
+  \newtheorem*{examples}{Examples}
+
+
+%% Shortcuts %%
+
+\newcommand{\sh}{\mathscr}
+\newcommand{\cat}{\mathcal}
+\newcommand{\HH}{\mathrm{H}}
+\newcommand{\RR}{\mathrm{R}}
+\newcommand{\LL}{\mathrm{L}}
+\newcommand{\PP}{\mathbf{P}}
+\newcommand{\dd}{\operatorname{d}\!}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\codim}{codim}
+
+\newcommand{\todo}{\textbf{ !TODO! }}
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\crefname{equation}{}{}
+\crefname{section}{\S\!\!}{\S\S\!\!}
+\crefname{subsection}{\S\!\!}{\S\S\!\!}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://github.com/thosgood/translations}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+  
+  \emph{What follows is a translation of the French paper:}
+
+  \medskip\noindent
+  \textsc{Grothendieck, Alexander}.
+  ``R\'{e}sum\'{e} des r\'{e}sultats essentiels dans la th\'{e}orie des produits tensoriels topologiques et des espaces nucl\'{e}aires''.
+  \emph{Annales de l'institut Fourier}, Volume~\textbf{4} (1952) , pp.~73--112.
+  {\footnotesize\url{http://www.numdam.org/item/?id=AIF_1952__4__73_0}}
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\tableofcontents
+\bigskip
+
+
+%% Content %%
+
+
+
+%% Bibliography %%
+
+\nocite{*}
+\bibliographystyle{acm}
+
+\begin{thebibliography}{10}
+
+\end{thebibliography}
+
+
+\end{document}
