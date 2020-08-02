@@ -308,7 +308,37 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   Let $X$ be a complex analytic manifold \hyperref[0.7]{(0.7)} and $\sh{V}$ a vector bundle on $X$.
   The elders would have defined a (holomorphic) connection on $\sh{V}$ as the data, for every pair of points $(x,y)$ that are first order infinitesimal neighbours in $X$, of an isomorphism $\gamma_{y,x}\colon\sh{V}_x\to\sh{V}_y$ that depends holomorphically on $(x,y)$ and is such that $\gamma_{x,x}=\id$.
 
-  Suitably interpreted, 
+  Suitably interpreted, this ``definition'' coincides with the currently fashionable definition (\cref{I.2.2.4}) given below (which we not be use in the rest of the section).
+
+  It suffices to understand ``point'' to mean ``point with values in any analytic space'':
+
+\oldpage{6}
+  \begin{env}{2.2.1}
+  \label{I.2.2.1}
+    \emph{A point in an analytic space $X$ with values in an analytic space $S$} is a morphism from $S$ to $X$.
+  \end{env}
+
+  \begin{env}{2.2.2}
+  \label{I.2.2.2}
+    If $Y$ is a subspace of $X$, then the \emph{$n$th infinitesimal neighbourhood} of $Y$ in $X$ is the subspace of $X$ defined locally by the $(n+1)$th power of the ideal of $\sh{O}_X$ that defines $Y$.
+  \end{env}
+
+  \begin{env}{2.2.3}
+  \label{I.2.2.3}
+    Two points $x,y\in X$ with values in $S$ are said to be \emph{first order infinitesimal neighbours} if the map $(x,y)\colon S\to X\times X$ that they define factors through the first order infinitesimal neighbourhood of the diagonal of $X\times X$.
+  \end{env}
+
+  \begin{env}{2.2.4}
+  \label{I.2.2.4}
+    If $X$ is a complex-analytic manifold and $\sh{V}$ is a vector bundle on $X$, then a (\emph{holomorphic}) \emph{connection} $\gamma$ on $\sh{V}$ consists of the following data:
+
+    for every pair $(x,y)$ of points of $X$ with values in an arbitrary analytic space $S$, with $x$ and $y$ first order infinitesimal neighbours, an isomorphism $\gamma_{x,y}\colon x^*\sh{V}\to y^*\sh{V}$;
+    this data is subject to the conditions:
+    \begin{enumerate}[(i)]
+      \item (functoriality) For any $f\colon T\to S$ and any first order infinitesimal neighbours $x,y\colon S\rightrightarrows X$, we have $f^*(\gamma_{y,x})=\gamma_{yf,xf}$.
+      \item We have $\gamma_{x,x}=\id$.
+    \end{enumerate}
+  \end{env}
 \end{env}
 
 
