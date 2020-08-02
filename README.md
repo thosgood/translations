@@ -10,7 +10,7 @@ Each PDF has a version number (the first 8 characters of the MD5 hash of the sou
 
 For translations of the EGA, see <https://github.com/ryankeleti/ega>.
 
-News on SGA and FGA translations "coming soon&trade;".
+News on SGA and FGA translations "coming soon&trade;" (with the latter coming sooner than the former, I imagine).
 
 ---
 
