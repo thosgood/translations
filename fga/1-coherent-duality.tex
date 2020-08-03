@@ -128,7 +128,7 @@ We know that every object of this category admits an injective resolution, which
 More precisely, to avoid confusion, we denote by $\Hom_\sh{O}(X;\sh{A},\sh{B})$, or simply $\Hom(X;\sh{A},\sh{B})$, the abelian \emph{groups} of $\sh{O}$-homomorphisms from $\sh{A}$ to $\sh{B}$, whereas $\shHom_\sh{O}(\sh{A},\sh{B})$ denotes the \emph{sheaf} of germs of homomorphisms from $\sh{A}$ to $\sh{B}$ (where $\sh{A},\sh{B}\in \cat{C}^\sh{O}$).
 We define, for fixed $\sh{A}\in \cat{C}^\sh{O}$, functors $h_\sh{A}$ and $\underline{h}_\sh{A}$, with values in the category $\cat{C}$ of abelian groups and the category $\cat{C}^Z$ of abelian sheaves on $X$ (respectively), by the formulas:
 \[
-\label{equation1.1}
+\label{1.1}
   \begin{aligned}
     h_\sh{A}(\sh{B}) &= \Hom_\sh{O}(X;\sh{A},\sh{B})
   \\\underline{h}_\sh{A}(\sh{B}) &= \shHom_\sh{O}(\sh{A},\sh{B}).
@@ -139,7 +139,7 @@ We define, for fixed $\sh{A}\in \cat{C}^\sh{O}$, functors $h_\sh{A}$ and $\under
 The functors $h_\sh{A}$ and $\underline{h}_\sh{A}$ are left exact and covariant, and so we consider their right-derived functors, denoted by $\Ext_\sh{O}^p(X;\sh{A},\sh{B})$ and $\shExt_\sh{O}^p(\sh{A},\sh{B})$ (respectively).
 We then have, by definition,
 \[
-\label{equation1.2}
+\label{1.2}
   \begin{gathered}
     \Ext_\sh{O}^p(X;\sh{A},\sh{B}) = (\RR^p h_\sh{A})(\sh{B}) = \HH^p(\Hom_\sh{O}(X;\sh{A},C(\sh{B})))
   \\\shExt_\sh{O}^p(\sh{A},\sh{B}) = (\RR^p \underline{h}_\sh{A})(\sh{B}) = \HH^p(\shHom_\sh{O}(\sh{A},C(\sh{B})))
@@ -151,7 +151,7 @@ We denote by $\Gamma\colon\cat{C}^Z\to\cat{C}$ the ``sections'' functor.
 Recall that its right-derived functors are denoted by $B\mapsto\HH^p(X,\sh{B})$:
 \oldpage{149-02}
 \[
-\label{equation1.3}
+\label{1.3}
   \HH^p(X,\sh{B}) = (\RR^p\Gamma)(\sh{B}) = \HH^p(\Gamma(C(\sh{B}))).
 \tag{1.3}
 \]
@@ -163,7 +163,7 @@ From this, it is a well-known result that:
 \label{proposition1}
   There exists, for every $\sh{O}$-module $\sh{A}$, a cohomological spectral functor on $\cat{C}^\sh{O}$, abutting to the graded functor $(\Ext_\sh{O}^\bullet(X;\sh{A},\sh{B}))$, and whose initial page is
   \[
-  \label{equation1.4}
+  \label{1.4}
     E_2^{p,q}(\sh{A},\sh{B}) = \HH^p(X,\shExt_\sh{O}^q(\sh{A},\sh{B})).
   \tag{1.4}
   \]
@@ -172,17 +172,17 @@ From this, it is a well-known result that:
 From this, we obtain ``\emph{boundary homomorphisms}'', and a short exact sequence, which we will not write.
 
 \begin{corollary}{1}
-\label{corollary1}
+\label{proposition1corollary1}
   If $\sh{A}$ is locally isomorphism to $\sh{O}^n$, then we have canonical isomorphisms
   \[
-  \label{equation1.5}
+  \label{1.5}
     \Ext_\sh{O}^p(X;\sh{A},\sh{B}) \xleftarrow{\sim} \HH^p(x,\shHom_\sh{O}(\sh{A},\sh{B}))
   \tag{1.5}
   \]
   (given by the boundary homomorphisms of the spectral sequence).
   In particular, we have a canonical isomorphism
   \[
-  \label{equation1.6}
+  \label{1.6}
     \Ext_\sh{O}^p(X;\sh{O},\sh{B}) = \HH^p(X,\sh{B}).
   \tag{1.6}
   \]
@@ -196,20 +196,20 @@ They are functors that we calculate locally, i.e. if $V$ is an open subset of $X
 as follows from the fact that the restriction to $U$ of an injective $\sh{O}$-module is an injective $(\sh{O}|U)$-module.
 Furthermore, for fixed $x\in X$, we have functorial homomorphisms,
 \[
-\label{equation1.7}
+\label{1.7}
   \shHom_\sh{O}(\sh{A},\sh{B})_x \to \Hom_{\sh{O}_x}(\sh{A}_x,\sh{B}_x)
 \tag{1.7}
 \]
 that uniquely extend to a homomorphism of cohomological functors (in $\sh{B}$):
 \[
-\label{equation1.8}
+\label{1.8}
   \shExt_\sh{O}^p(\sh{A},\sh{B})_x \to \Ext_{\sh{O}_x}^p(\sh{A}_x,\sh{B}_x).
 \tag{1.8}
 \]
 
 \begin{proposition}{2}
 \label{proposition2}
-  If, in a neighbourhood of $x$, $\sh{A}$ is isomorphic to the cokernel of a homomorphism $\sh{O}^m\to\sh{O}^n$, then \cref{equation1.7} is an isomorphism for all $p$.
+  If, in a neighbourhood of $x$, $\sh{A}$ is isomorphic to the cokernel of a homomorphism $\sh{O}^m\to\sh{O}^n$, then \cref{1.7} is an isomorphism for all $p$.
   This is the case, in particular, if $\sh{A}$ is a coherent $\sh{O}$-module \cite{3}.
 \end{proposition}
 
@@ -224,7 +224,7 @@ that uniquely extend to a homomorphism of cohomological functors (in $\sh{B}$):
   The proof is standard: we consider the bicomplex $\shHom_\sh{O}(\sh{L}_\bullet,C(\sh{B}))$, where $C(\sh{B})$ is an injective resolution of $\sh{B}$, as well as the natural homomorphisms into this bicomplex from $\shHom_\sh{O}(\sh{L}_\bullet,\sh{B}))$ and $\shHom_\sh{O}(\sh{A},C,\sh{B}))$.
 \end{proof}
 
-To finish, we note that the two $\Ext$ functors introduced in \cref{equation1.2} are not only cohomological functors in $\sh{B}$, but in fact \emph{cohomological bifunctors}, covariant in $\sh{B}$ and contravariant in $\sh{A}$.
+To finish, we note that the two $\Ext$ functors introduced in \cref{1.2} are not only cohomological functors in $\sh{B}$, but in fact \emph{cohomological bifunctors}, covariant in $\sh{B}$ and contravariant in $\sh{A}$.
 
 
 \section{The composition law in $\Ext$}
@@ -237,7 +237,7 @@ Let $K$ and $L$ be two graded objects of $\cat{C}$.
 We denote by $\Hom(K,L)$ the graded abelian group whose degree-$n$ component consists of homogeneous homomorphisms of degree~$n$ from $K$ to $L$ (i.e. systems $(u_i)$ of homomorphisms $K^i\to L^{i+n}$).
 If $K$ and $L$ are complexes (with differentials of degree~$+1$, to fix conventions), then we endow $\Hom(K,L)$ with the differential operator given by
 \[
-\label{equation2.1}
+\label{2.1}
   \delta(u) = \mathrm{d}u + (-1)^{n+1}u\mathrm{d}
   \quad\text{where }n=\deg(u)
 \tag{2.1}
@@ -247,19 +247,19 @@ The cycles of degree~$n$ are the maps of degree~$n$ that anticommute with $u$ (a
 We can then consider $\HH^\bullet(\Hom(K,L))$, which is an invariant of the homotopy types of $K$ and $L$< and which we may denote by $\HH^\bullet(K,L)$.
 If we have a third complex $M$, then the composition of homomorphisms defines a pairing $\Hom(K,L)\times\Hom(L,M)\to\Hom(K,M)$ that is compatible with the differential maps, whence, by passing to the cohomology of pairings,
 \[
-\label{equation2.2}
+\label{2.2}
   \HH^\bullet(K,L)\times\HH^\bullet(L,M) \to \HH^\bullet(K,M)
 \tag{2.2}
 \]
 which we write as $(u,v)\mapsto vu$.
 These pairings satisfy an evident associativity property.
 In particular, $\HH^\bullet(K,K)$ is an associative graded unital ring, and $\HH^\bullet(K,L)$ (resp. $\HH^\bullet(L,K)$) is a graded right (resp. left) module over this ring, etc.
-In dimension~$0$, \cref{equation2.2} reduces to the composition of permissible homomorphisms of complexes.
+In dimension~$0$, \cref{2.2} reduces to the composition of permissible homomorphisms of complexes.
 Finally, an exact sequence of complexes
 \oldpage{149-04}
 $0\to K'\to K\to K''\to0$, such that, for all $i$, $K'^i$ can be identified with a direct factor of $K^i$, gives rise to an exact sequence of complexes of groups $\Hom(K'',L)$, etc., whence a coboundary map $\HH^i(K',L)\to\HH^{i+1}(K'',L)$.
 We similarly define the boundary maps relative to an exact sequence in $L$.
-The pairings in \cref{equation2.2} are compatible, in the usual sense, with these coboundary maps.
+The pairings in \cref{2.2} are compatible, in the usual sense, with these coboundary maps.
 
 Now suppose that $\cat{C}$ is a category such that every element $A$ of $C$ admits an injective resolution $C(A)$.
 We then note that, using one of the many variants of the theorem of bicomplexes,
@@ -271,9 +271,9 @@ is canonically isomorphic to
   \HH^\bullet(\Hom(A,C(B))) = \Ext^\bullet(A,B).
 \]
 The coboundary maps described above give coboundary maps of the $\Ext$.
-Furthermore, the pairings in \cref{equation2.2} give associative pairings here:
+Furthermore, the pairings in \cref{2.2} give associative pairings here:
 \[
-\label{equation2.3}
+\label{2.3}
   \Ext^\bullet(A,B)\times\Ext^\bullet(B,C) \to \Ext^\bullet(A,C)
 \tag{2.3}
 \]
@@ -284,36 +284,36 @@ we do not make use of this fact here).
 
 In the case where the category in question is the category $\cat{C}^\sh{O}$ of $\sh{O}$-modules on $X$, we then obtain pairings
 \[
-\label{equation2.4}
+\label{2.4}
   \Ext_\sh{O}^p(X;\sh{A},\sh{B})\times\Ext_\sh{O}^q(X;\sh{B},\sh{C}) \to \Ext_\sh{O}^{p+q}(X;\sh{A},\sh{C})
 \tag{2.4}
 \]
 that can be calculated as has already been said.
 The same method, but replacing the category of abelian groups with the category of abelian sheaves on $X$, and the $\Hom$ functors by the $\shHom$ functors, again defines pairings, having the same formal properties, and of a ``local nature'' this time:
 \[
-\label{equation2.5}
+\label{2.5}
   \shExt_\sh{O}^p(\sh{A},\sh{B})\times\shExt_\sh{O}^q(\sh{B},\sh{C}) \to \shExt_\sh{O}^{p+q}(\sh{A},\sh{C}).
 \tag{2.5}
 \]
-These can be understood by noting that the homomorphisms in \cref{equation1.8} are compatible with the pairings between the $\Ext$.
+These can be understood by noting that the homomorphisms in \cref{1.8} are compatible with the pairings between the $\Ext$.
 
 \oldpage{149-05}
 Finally, recall that we also have a multiplicative structure between functors $\HH^p(X,A)$ (the cup product).
 We note then that the spectral sequences of \cref{proposition1} are compatible with the multiplicative structures;
-more precisely, we have a pairing from the spectral sequence $E(A,B)$ with the spectral sequence $E(B,C)$ to the spectral sequence $E(A,C)$ that abuts to the pairing between the global $\Ext$, and whose \todo initial page comes from the cup product and the local $\Ext$ pairings in the right-hand side of \cref{equation1.4}.
+more precisely, we have a pairing from the spectral sequence $E(A,B)$ with the spectral sequence $E(B,C)$ to the spectral sequence $E(A,C)$ that abuts to the pairing between the global $\Ext$, and whose \todo initial page comes from the cup product and the local $\Ext$ pairings in the right-hand side of \cref{1.4}.
 It then follows, in particular, that the ``boundary homomorphisms''
 \[
-\label{equation2.6}
+\label{2.6}
   \Ext_\sh{O}^n(X;\sh{A},\sh{B}) \to \HH^0(X;\shExt_\sh{O}^n(\sh{A},\sh{B}))
 \tag{2.6}
 \]
 \[
-\label{equation2.7}
+\label{2.7}
   \HH^n(X,\shHom_\sh{O}(\sh{A},\sh{B})) \to \Ext_\sh{O}^n(X;\sh{A},\sh{B})
 \tag{2.7}
 \]
 are compatible with the multiplicative structures.
-So if we restrict to sheaves that are locally isomorphic to some $\sh{O}^m$, then this completely explains the composition of the global $\Ext$ by means of the cup product, taking into account the isomorphism of \cref{equation1.5}.
+So if we restrict to sheaves that are locally isomorphic to some $\sh{O}^m$, then this completely explains the composition of the global $\Ext$ by means of the cup product, taking into account the isomorphism of \cref{1.5}.
 
 
 \section{Results on local cohomology}
@@ -322,7 +322,7 @@ So if we restrict to sheaves that are locally isomorphic to some $\sh{O}^m$, the
 Let $A$ be a unital commutative ring endowed with an ideal $\mathfrak{J}$.
 We will define, for any $A$-module $M$, functorial homomorphisms
 \[
-\label{equation3.1}
+\label{3.1}
   \begin{aligned}
     \Ext_A^p(A/\mathfrak{J},M) &\to \Hom_A(\wedge^p\mathfrak{J}/\mathfrak{J}^2,M\otimes A/\mathfrak{J})
   \\\Tor_p^A(A/\mathfrak{J},M) &\from (\wedge^p\mathfrak{J}/\mathfrak{J}^2)\otimes\Hom_A(A/\mathfrak{J},M)
@@ -331,9 +331,9 @@ We will define, for any $A$-module $M$, functorial homomorphisms
 \]
 where the tensor and exterior products are taken over the ring $A$;
 note also that $\mathfrak{J}/\mathfrak{J}^2$ is in fact an $A/\mathfrak{J}$-module, and that its exterior powers as an $A$-module agree with its exterior powers as an $A/\mathfrak{J}$-module.
-The definition of the homomorphisms in \cref{equation3.1} come from the definition, for every system $x=(x_1,\ldots,x_p)$ of points of $\mathfrak{J}$, of homomorphisms $\varphi_x$
+The definition of the homomorphisms in \cref{3.1} come from the definition, for every system $x=(x_1,\ldots,x_p)$ of points of $\mathfrak{J}$, of homomorphisms $\varphi_x$
 \[
-\label{equation3.2}
+\label{3.2}
   \begin{aligned}
     \varphi_x\colon \Ext_A^p(A/\mathfrak{J},M) &\to M\otimes A/\mathfrak{J}
   \\\varphi_x\colon \Hom_A(A/\mathfrak{J},M) &\to \Tor_p^A(A/\mathfrak{J},M)
@@ -347,9 +347,111 @@ such that the following conditions are satisfied:
   \item $\varphi_{x_1,\ldots,x_p}$ is zero when any of the $x_i$ is in $\mathfrak{J}^2$.
 \end{enumerate}
 
-In fact, ii. follows from i., since $a\varphi_x=0$ for $a\in\mathfrak{J}$, as we see by noting that all the modules in \cref{equation3.2} are annihilated by $\mathfrak{J}$.
+In fact, ii. follows from i., since $a\varphi_x=0$ for $a\in\mathfrak{J}$, as we see by noting that all the modules in \cref{3.2} are annihilated by $\mathfrak{J}$.
 
-To define the $\varphi_x$, we consider the complex $K_x$ whose underlying $A$-modules are
+To define the $\varphi_x$, we consider the complex $K_x$ whose underlying $A$-modules are the $\wedge A^p$, and whose differential is the interior product $i_x$ by $x$, considered as a linear form on $A^p$ with components $x_1,\ldots,x_p$.
+The differential is of degree~$-1$, the degrees of the complex are positive, and the cohomology of this complex in dimension~$0$ is $A/(x_1A+\ldots+x_pA)$.
+Since the $x_i$ are in $\mathfrak{J}$, we obtain an augmentation $K_{x,0}\to A/\mathfrak{J}$.
+Thus $K_x$ is a \emph{free} augmented complex, with augmentation module $A/\mathfrak{J}$.
+We thus obtain known homomorphisms
+\[
+  \begin{aligned}
+    \Ext_A^\bullet(\HH_0(K_x),M) &\to \HH^\bullet(\Hom_A(K_x,M))
+  \\\Tor_\bullet^A(\HH_0(K_x),M) &\from \HH_\bullet(K_x\otimes M)
+  \end{aligned}
+\]
+whence, by composing with the homomorphisms to the $\Ext$ and the $\Tor$ induced by the augmentation homomorphism $\HH_0(K_x)\to A/\mathfrak{J}$, we obtain homomorphisms
+\[
+\label{3.3}
+  \begin{aligned}
+    \psi_x\colon \Ext_A^\bullet(A/\mathfrak{J},M) &\to \HH^\bullet(\Hom_A(K_x,M))
+  \\\psi_x\colon \Tor_\bullet^A(A/\mathfrak{J},M) &\from \HH_\bullet(K_x\otimes M).
+  \end{aligned}
+\tag{3.3}
+\]
+But we immediately note that, in maximal dimension $p$, the cohomology of the right-hand side is $M(x_1M+\ldots+x_pM)$ (resp. the set o felements of $M$ that are annihilated by each of the $x_i$).
+Since the $x_i$ are in $\mathfrak{J}$, we thus obtain homomorphisms
+\[
+\label{3.4}
+  \begin{aligned}
+    \HH^p(\Hom_A(K_x,M)) &\to M\otimes A/\mathfrak{J}
+  \\\HH_p(K_x\otimes M) &\from \Hom_A(A/\mathfrak{J},M).
+  \end{aligned}
+\tag{3.4}
+\]
+By composing the homomorphisms in \cref{3.3} and \cref{3.4} we obtain the homomorphisms in \cref{3.2} that we wanted to define.
+The verification of i. is tedious, but does not present any difficulties.
+
+\oldpage{149-07}
+\begin{proposition}{4}
+\label{proposition4}
+  Let $A$ be a commutative unital ring, and let $(x_1,\ldots,x_p)$  be a sequence of elements of $A$ such that, for $1\leq i\leq p$, the image of $x_i$ in the quotient of $A$ by the ideal generated by $(x_1,\ldots,x_{i-1})$ is not a zero divisor.
+  Let $\mathfrak{J}$ be the ideal generated by the $x_i$.
+  Then $\mathfrak{J}/\mathfrak{J}^2$ is a free $(A/\mathfrak{J})$-module, with basis given by the canonical images of the $x_i$;
+  the complex $K_x$ is a free resolution of $A/\mathfrak{J}$;
+  and, for every $A$-modules $M$, the homomorphisms in \cref{3.1} in dimension~$p$ are bijective.
+  The same is true for the analogous homomorphisms defined for arbitrary degree~$i$ as long as $\mathfrak{J}\cdot M=0$.
+\end{proposition}
+
+(The essential point, from which all others follow, is the acyclicity of $K_x$, which is a well-known fact under the conditions given).
+
+\begin{corollary}{1}
+\label{proposition4corollary1}
+  With $A$ and $\mathfrak{J}$ as above, suppose further that $A$ is a regular affine algebra of $\dim n$ over a perfect field $k$, and that $A/\mathfrak{J}$ is a regular affine algebra.
+  Denote by $\Omega^i(A)$ and $\Omega^i(A/\mathfrak{J})$ the modules of K\"{a}hler differentials.
+  Then there is a canonical isomorphism
+  \[
+  \label{3.5}
+    \Ext_A^p(\Omega^{n-p}(A/\mathfrak{J}),\Omega^n(A)) \cong A/\mathfrak{J}.
+  \tag{3.5}
+  \]
+  that is compatible with localisation.
+\end{corollary}
+
+\begin{proof}
+  Indeed, $\Omega^{n-p}(A/\mathfrak{J})$ is a free $(A/\mathfrak{J})$-module of rank~$1$, and similarly $\Omega^n(A)$ is a free $A$-module of rank~$n$, and so the left-hand side is equal to
+  \[
+    \Ext_A^p(A/\mathfrak{J},A) \otimes \Omega^{n-p}(A/\mathfrak{J})' \otimes \Omega^n(A)
+  \]
+  (where the "'" notation denotes the dual $(A/\mathfrak{J})$-module).
+  The tensor product of these last two factors can be identified with $\wedge^p(\mathfrak{J}/\mathfrak{J}^2)$, and so the whole thing can be identified with $\Ext_A^p(A/\mathfrak{J},\wedge^p(\mathfrak{J}/\mathfrak{J}^2))$, and thus, by the proposition, with
+  \[
+    \Hom_A(\wedge^p \mathfrak{J}/\mathfrak{J}^2,\wedge^p \mathfrak{J}/\mathfrak{J}^2)
+  \]
+  i.e. to $A/\mathfrak{J}$.
+\end{proof}
+
+In particular, there is a distinguished element in $\Ext_A^p(\Omega^{n-p}(A/\mathfrak{J}),\Omega^n(A))$, corresponding to the unit of $A/\mathfrak{J}$, called the \emph{fundamental class} of the ideal $\mathfrak{J}$ in $A$.
+(It can in fact be defined under rather more general conditions).
+We can write \cref{proposition4corollary1} in a more geometric and more global form:
+
+\begin{corollary}{2}
+\label{proposition4corollary2}
+  Let $X$ be a non-singular variety over an algebraically-closed field $k$, $Y$ a closed non-singular subvariety of $X$, $\sh{O}_X$ the structure sheaf of $X$, and $\sh{O}_Y$ the structure sheaf of $Y$, considered as a quotient sheaf of $\sh{O}_X$.
+  Let $n$ be the dimension of $X$, and $n-p$ the dimension of $Y$.
+\oldpage{149-08}
+  Let $\Omega_X$ (resp. $\Omega_Y$) be the sheaf of germs of regular differential forms on $X$ (resp. $Y$).
+  Then there are canonical isomorphisms
+  \[
+  \label{3.6}
+    \shExt_{\sh{O}_X}^p(\Omega_Y^{n-p},\Omega_X^n) \cong \sh{O}_Y
+  \tag{3.6}
+  \]
+  as well as
+  \[
+  \label{3.6bis}
+    \Ext_{\sh{O}_X}^p(\sh{O}_Y,\Omega_X^n) \cong \Omega_Y^{n-p}.
+  \tag{3.6 \emph{bis}}
+  \]
+\end{corollary}
+
+Equation~\cref{3.6bis} can serve as the \emph{definition} of $\Omega_Y^{n-p}$ when $Y$ is a singular variety.
+More precisely:
+
+\begin{proposition}{5}
+\label{proposition5}
+\end{proposition}
+
 
 
 %% Bibliography %%
