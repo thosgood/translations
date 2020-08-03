@@ -299,7 +299,7 @@ We can give a definition of proper maps that is analogous to the definition of c
 
 \begin{proposition}{3}
 \label{proposition3}
-  For a morphism $f\colon X\to Y$ to be proper, it is necessary and sufficient that for every variety $Z$ and every closed subset $T$ of $X\times Z$, the image of $T$ in $Y\times Z$ is closed.
+  For a morphism $f\colon X\to Y$ to be proper, it is necessary and sufficient, for every variety $Z$ and every closed subset $T$ of $X\times Z$, for the image of $T$ in $Y\times Z$ to be closed.
 \end{proposition}
 
 \begin{proof}
@@ -912,7 +912,7 @@ As in \cref{subsection5b}, this can be understood as a multiplicative property o
 The $c_p(x)$ are homogeneous elements of degree $2p$ of $\HH^\bullet(X,\mathbb{Z})$.
 
 In the case of an arbitrary base field, Grothendieck proceeded in the same way, but replacing $\HH^\bullet(X)$ with the graded ring $A(X)$ of \emph{cycle classes} on $X$, under linear equivalence (\`{a} la Chow).
-We recall only that a cycle $Z$ on $X$ of codimension $p$ [i.e. a degree-$p$ element of $A(X)$] is said to be linearly equivalent to zero if there exists a cycle $H$ on $X\times\mathbf{D}$ (where $\mathbf{D}$ denotes the projective line) such that $Z=H_a-H_b$ for two points $a,b\in\mathbf{D}$;
+We recall only that a cycle $Z$ on $X$ of codimension $p$ [i.e. a degree-$p$ element of $A(X)$] is said to be linearly equivalent to zero if there exists a cycle $H$ on $X\times\mathbf{D}$ (where $\mathbf{D}$ denotes the projective line) such that $Z=H_a-H_b$ for points $a,b\in\mathbf{D}$;
 we denote by $H_a$ the projection to $X$ of $H\cdot(X\times\{a\})$ if it is proper.
 Chow and Samuel\footnote{See Chow~\cite{5} and Samuel~\cite{10}. See also the \emph{S\'{e}minaire Chevalley}~\cite{11}.} have shown that
 \oldpage{112}
@@ -943,15 +943,19 @@ Similarly, we can define the ``exponential'' Chern class, denoted by $\ch(x)$ (w
 where $\rank(x)$ is the \emph{rank} of $x$ [it is the unique homomorphism from $K(X)$ to $\mathbb{Z}$ that sends a vector bundle to its dimension].
 Then
 \[
-  \ch(x+y) = \ch(x)+\ch(y)\quad\text{and}\quad
-  \ch(xy) = \ch(x)\cdot\ch(y),
+  \begin{aligned}
+    \ch(x+y) &= \ch(x)+\ch(y)
+  \\\ch(xy) &= \ch(x)\cdot\ch(y)
+  \end{aligned}
 \]
 by the analogous properties of vector bundles.
 With this, we can calculate $\ch(x)$ in terms of $c_t(x)$ and $\rank(x)$ by ``universal'' formulas.
 If $f\colon Y\to X$ is a morphism, then
 \[
-  c_p(f^!(x)) = f^*(c_p(x))\quad\text{and}\quad
-  \ch(f^!(x)) = f^*(\ch(x)),
+  \begin{aligned}
+    c_p(f^!(x)) &= f^*(c_p(x))
+    \ch(f^!(x)) &= f^*(\ch(x))
+  \end{aligned}
 \]
 for $x\in K(X)$.
 
