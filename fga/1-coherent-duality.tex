@@ -64,12 +64,14 @@
 
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
+\newcommand{\from}{\leftarrow}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
 \DeclareMathOperator{\Ext}{Ext}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Tor}{Tor}
 \DeclareMathOperator{\shExt}{\underline{Ext}}
 \DeclareMathOperator{\shHom}{\underline{Hom}}
 \DeclareMathOperator{\RR}{R}
@@ -228,6 +230,126 @@ To finish, we note that the two $\Ext$ functors introduced in \cref{equation1.2}
 \section{The composition law in $\Ext$}
 \label{section2}
 
+The results of this section are due, independently, to Cartier and Yoneda;
+see an expos\'{e} by Cartier \cite{1} for more details.
+Let $\cat{C}$ be an abelian category.
+Let $K$ and $L$ be two graded objects of $\cat{C}$.
+We denote by $\Hom(K,L)$ the graded abelian group whose degree-$n$ component consists of homogeneous homomorphisms of degree~$n$ from $K$ to $L$ (i.e. systems $(u_i)$ of homomorphisms $K^i\to L^{i+n}$).
+If $K$ and $L$ are complexes (with differentials of degree~$+1$, to fix conventions), then we endow $\Hom(K,L)$ with the differential operator given by
+\[
+\label{equation2.1}
+  \delta(u) = \mathrm{d}u + (-1)^{n+1}u\mathrm{d}
+  \quad\text{where }n=\deg(u)
+\tag{2.1}
+\]
+which makes it a complex with a differential of degree~$+1$.
+The cycles of degree~$n$ are the maps of degree~$n$ that anticommute with $u$ (as homogeneous maps).
+We can then consider $\HH^\bullet(\Hom(K,L))$, which is an invariant of the homotopy types of $K$ and $L$< and which we may denote by $\HH^\bullet(K,L)$.
+If we have a third complex $M$, then the composition of homomorphisms defines a pairing $\Hom(K,L)\times\Hom(L,M)\to\Hom(K,M)$ that is compatible with the differential maps, whence, by passing to the cohomology of pairings,
+\[
+\label{equation2.2}
+  \HH^\bullet(K,L)\times\HH^\bullet(L,M) \to \HH^\bullet(K,M)
+\tag{2.2}
+\]
+which we write as $(u,v)\mapsto vu$.
+These pairings satisfy an evident associativity property.
+In particular, $\HH^\bullet(K,K)$ is an associative graded unital ring, and $\HH^\bullet(K,L)$ (resp. $\HH^\bullet(L,K)$) is a graded right (resp. left) module over this ring, etc.
+In dimension~$0$, \cref{equation2.2} reduces to the composition of permissible homomorphisms of complexes.
+Finally, an exact sequence of complexes
+\oldpage{149-04}
+$0\to K'\to K\to K''\to0$, such that, for all $i$, $K'^i$ can be identified with a direct factor of $K^i$, gives rise to an exact sequence of complexes of groups $\Hom(K'',L)$, etc., whence a coboundary map $\HH^i(K',L)\to\HH^{i+1}(K'',L)$.
+We similarly define the boundary maps relative to an exact sequence in $L$.
+The pairings in \cref{equation2.2} are compatible, in the usual sense, with these coboundary maps.
+
+Now suppose that $\cat{C}$ is a category such that every element $A$ of $C$ admits an injective resolution $C(A)$.
+We then note that, using one of the many variants of the theorem of bicomplexes,
+\[
+  \HH^\bullet(C(A),C(B)) = \HH^\bullet(\Hom(C(A),C(B)))
+\]
+is canonically isomorphic to
+\[
+  \HH^\bullet(\Hom(A,C(B))) = \Ext^\bullet(A,B).
+\]
+The coboundary maps described above give coboundary maps of the $\Ext$.
+Furthermore, the pairings in \cref{equation2.2} give associative pairings here:
+\[
+\label{equation2.3}
+  \Ext^\bullet(A,B)\times\Ext^\bullet(B,C) \to \Ext^\bullet(A,C)
+\tag{2.3}
+\]
+and these are compatible with the coboundary maps.
+In particular, $\Ext^\bullet(A,A)$ is an associative graded unital ring, etc.
+(We show in an analogous manner that the $\Ext$ functors \todo;
+we do not make use of this fact here).
+
+In the case where the category in question is the category $\cat{C}^\sh{O}$ of $\sh{O}$-modules on $X$, we then obtain pairings
+\[
+\label{equation2.4}
+  \Ext_\sh{O}^p(X;\sh{A},\sh{B})\times\Ext_\sh{O}^q(X;\sh{B},\sh{C}) \to \Ext_\sh{O}^{p+q}(X;\sh{A},\sh{C})
+\tag{2.4}
+\]
+that can be calculated as has already been said.
+The same method, but replacing the category of abelian groups with the category of abelian sheaves on $X$, and the $\Hom$ functors by the $\shHom$ functors, again defines pairings, having the same formal properties, and of a ``local nature'' this time:
+\[
+\label{equation2.5}
+  \shExt_\sh{O}^p(\sh{A},\sh{B})\times\shExt_\sh{O}^q(\sh{B},\sh{C}) \to \shExt_\sh{O}^{p+q}(\sh{A},\sh{C}).
+\tag{2.5}
+\]
+These can be understood by noting that the homomorphisms in \cref{equation1.8} are compatible with the pairings between the $\Ext$.
+
+\oldpage{149-05}
+Finally, recall that we also have a multiplicative structure between functors $\HH^p(X,A)$ (the cup product).
+We note then that the spectral sequences of \cref{proposition1} are compatible with the multiplicative structures;
+more precisely, we have a pairing from the spectral sequence $E(A,B)$ with the spectral sequence $E(B,C)$ to the spectral sequence $E(A,C)$ that abuts to the pairing between the global $\Ext$, and whose \todo initial page comes from the cup product and the local $\Ext$ pairings in the right-hand side of \cref{equation1.4}.
+It then follows, in particular, that the ``boundary homomorphisms''
+\[
+\label{equation2.6}
+  \Ext_\sh{O}^n(X;\sh{A},\sh{B}) \to \HH^0(X;\shExt_\sh{O}^n(\sh{A},\sh{B}))
+\tag{2.6}
+\]
+\[
+\label{equation2.7}
+  \HH^n(X,\shHom_\sh{O}(\sh{A},\sh{B})) \to \Ext_\sh{O}^n(X;\sh{A},\sh{B})
+\tag{2.7}
+\]
+are compatible with the multiplicative structures.
+So if we restrict to sheaves that are locally isomorphic to some $\sh{O}^m$, then this completely explains the composition of the global $\Ext$ by means of the cup product, taking into account the isomorphism of \cref{equation1.5}.
+
+
+\section{Results on local cohomology}
+\label{section3}
+
+Let $A$ be a unital commutative ring endowed with an ideal $\mathfrak{J}$.
+We will define, for any $A$-module $M$, functorial homomorphisms
+\[
+\label{equation3.1}
+  \begin{aligned}
+    \Ext_A^p(A/\mathfrak{J},M) &\to \Hom_A(\wedge^p\mathfrak{J}/\mathfrak{J}^2,M\otimes A/\mathfrak{J})
+  \\\Tor_p^A(A/\mathfrak{J},M) &\from (\wedge^p\mathfrak{J}/\mathfrak{J}^2)\otimes\Hom_A(A/\mathfrak{J},M)
+  \end{aligned}
+\tag{3.1}
+\]
+where the tensor and exterior products are taken over the ring $A$;
+note also that $\mathfrak{J}/\mathfrak{J}^2$ is in fact an $A/\mathfrak{J}$-module, and that its exterior powers as an $A$-module agree with its exterior powers as an $A/\mathfrak{J}$-module.
+The definition of the homomorphisms in \cref{equation3.1} come from the definition, for every system $x=(x_1,\ldots,x_p)$ of points of $\mathfrak{J}$, of homomorphisms $\varphi_x$
+\[
+\label{equation3.2}
+  \begin{aligned}
+    \varphi_x\colon \Ext_A^p(A/\mathfrak{J},M) &\to M\otimes A/\mathfrak{J}
+  \\\varphi_x\colon \Hom_A(A/\mathfrak{J},M) &\to \Tor_p^A(A/\mathfrak{J},M)
+  \end{aligned}
+\tag{3.2}
+\]
+such that the following conditions are satisfied:
+\oldpage{149-06}
+\begin{enumerate}[i.]
+  \item $\varphi_{x_1,\ldots,x_p}$ depends on the system of the $x_i\in\mathfrak{J}$ in an alternating $A$-multilinear way;
+  \item $\varphi_{x_1,\ldots,x_p}$ is zero when any of the $x_i$ is in $\mathfrak{J}^2$.
+\end{enumerate}
+
+In fact, ii. follows from i., since $a\varphi_x=0$ for $a\in\mathfrak{J}$, as we see by noting that all the modules in \cref{equation3.2} are annihilated by $\mathfrak{J}$.
+
+To define the $\varphi_x$, we consider the complex $K_x$ whose underlying $A$-modules are the $\wedge$
 
 %% Bibliography %%
 
