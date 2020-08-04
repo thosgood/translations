@@ -490,6 +490,7 @@ More precisely:
 \end{proof}
 
 \begin{corollary*}
+\label{proposition5corollary}
   Denote by $\omega_Y^q$ the sheaf $\Ext_{\sh{O}_X}^p(\sh{O}_Y,\Omega_X^n)$.
   Then there is a functorial isomorphism for coherent algebraic sheaves $\sh{F}$ on $Y$:
   \[
@@ -507,12 +508,55 @@ In all that follows, $X$ denotes an algebraic set of dimension~$n$, defined over
 Except in \cref{section6}, $X$ is assumed to be non-singular.
 We denote by $\sh{O}_X$ the structure sheaf of $X$, and by $\Omega_X^\bullet=\bigcup_p\Omega_X^p$ the sheaf of germs of differential forms on $X$.
 If $Y$ is a closed subset of $X$, then we identify coherent algebraic sheaves on $Y$ with coherent algebraic sheaves on $X$ that are zero outside of $Y$;
-in particular, we do this with $\sh{O}_Y$ and $\Omega_Y$.
+we do this, in particular, with $\sh{O}_Y$ and $\Omega_Y$.
 
 \begin{lemma}{1}
 \label{lemma1}
-  \todo
+  Let $\sh{F}$ be a coherent algebraic sheaf on $X$ whose support is of dimension~$\leq n-p$, and let $\sh{L}$ be a coherent algebraic sheaf on $X$ that is locally free.
+  Then $\shExt_{\sh{O}_X}^i(X;\sh{F},\sh{L})$ is zero for $i<p$, and there is a canonical isomorphism
+  \[
+  \label{4.1}
+    \Ext_\sh{O}^p(X;\sh{F},\sh{L}) = \HH^0(X,\shExt_\sh{O}^p(\sh{F},\sh{L})).
+  \tag{4.1}
+  \]
+  If $\sh{F}$ is a coherent algebraic sheaf on a closed subset $W$ of $X$ of dimension~$\leq n-p$, then there is a canonical isomorphism
+  \[
+  \label{4.1bis}
+    \shExt_{\sh{O}_X}^p(\sh{F},\sh{L}) = \shHom_{\sh{O}_X}(\sh{F}\otimes\sh{L}'\otimes\Omega_X^n,\omega_Y^{n-p})
+  \tag{4.1 \emph{bis}}
+  \]
+  where $\omega_Y^{n-p}$ is the sheaf on $Y$ defined in \hyperref[proposition5corollary]{the corollary} to \cref{proposition5} (which can be identified with $\Omega_Y^{n-p}$ if $Y$ is non-singular).
 \end{lemma}
+
+\begin{proof}
+  The formula in \cref{4.1} is an immediate consequence of the spectral sequence from \cref{proposition1}, as well as \cref{proposition5};
+  by the formula in \cref{3.8}, we can write
+\oldpage{149-10}
+  \[
+    \begin{gathered}
+      \shExt_{\sh{O}_X}^p(\sh{F},\sh{L})
+      = \sh{L}\otimes(\Omega_X^n)'\otimes\shExt_{\sh{O}_X}(\sh{F},\Omega_X^n)
+    \\= \sh{L}\otimes(\Omega_X^n)'\otimes\shHom_{\sh{O}_X}(\sh{F},\omega_Y^q)
+    \\= \shHom_{\sh{O}_X}(\sh{F}\otimes\sh{L}'\otimes\Omega_X^n,\omega_Y^q)
+    \end{gathered}
+  \]
+  where $q=n-p$, whence the formula in \cref{4.1bis}.
+\end{proof}
+
+Setting, in particular, $\sh{F}=\sh{O}_Y$ and $\sh{L}=\Omega_X^p$, we find, taking into account the fact that $\Omega_X^n\otimes(\Omega_X^p)'=\Omega_X^{n-p}$, a canonical isomorphism
+\[
+\label{4.2}
+  \Ext_{\sh{O}_X}^p(X;\sh{O}_Y,\Omega_X^p) = \Hom_{\sh{O}_X}(X;\Omega_X^{n-p},\omega_Y^{n-p}).
+\tag{4.2}
+\]
+Now suppose, for simplicity, that $Y$ is \emph{non-singular}, so that $\omega_Y^{n-p}=\Omega_Y^{n-p}$.
+There is a natural homomorphism from $\Omega_X^{n-p}$ to $\Omega_Y^{n-p}$, whence a canonical section $s_Y$ of the sheaf $\shExt_{\sh{O}_X}^p(\sh{O}_Y,\Omega_X^p)$, that we call, if all the components of $Y$ are of dimension~$n-p$, the \emph{fundamental section} of the sheaf $\shExt_{\sh{O}_X}^p(\sh{O}_Y,\Omega_X^p)$.
+By \cref{4.1}, this section defines an element of $\Ext_{\sh{O}_X}^p(X;\sh{O}_Y,\Omega_X^p)$.
+But the natural homomorphism $\sh{O}_X\to\sh{O}_Y$ defines a homomorphism
+\[
+  \Ext_{\sh{O}_X}^p(X;\sh{O}_Y,\Omega_X^p) \to \Ext_{\sh{O}_X}^p(X;\sh{O}_X,\Omega_X^p) = \HH^p(X,\Omega_X^p).
+\]
+We thus obtain an element of $\HH^p(X,\Omega_X^p)$, denoted by $P_X(Y)$, that we call the \emph{cohomology class of $Y$ in $X$}.
 
 
 
@@ -520,5 +564,29 @@ in particular, we do this with $\sh{O}_Y$ and $\Omega_Y$.
 
 \nocite{*}
 \bibliographystyle{acm}
+\begin{thebibliography}{4}
+
+  \bibitem{1}
+  {\sc Cartier, P.}
+  \newblock Des groups $\Ext^s(A,B)$.
+  \newblock {\em S\'{e}minaire A.~Grothendieck: Alg\'{e}bre homologique}, Volume~1 (1957), Talk no.~3.
+
+  \bibitem{2}
+  {\sc Grothendieck, A.}
+  \newblock Sur quelques points d'alg\'{e}bre homologique.
+  \newblock {\em Tohoku math. J.} {\bf 9} (1957), pp.~119--183.
+
+  \bibitem{3}
+  {\sc Serre, J.-P.}
+  \newblock Faisceux alg\'{e}briques coh\'{e}rents.
+  \newblock {\em Annals of Math.} {\bf 61} (1955), pp.197--278.
+
+  \bibitem{4}
+  {\sc Serre, J.-P.}
+  \newblock Sur la dimension homologique des anneaux et des modules noeth\'{e}riens.
+  \newblock {\em Proc. Intern. Symp. on alg. number Theory [1955, Tokyo et Nikko]}.
+  \newblock Tokyo, Science Council of Japan (1956), pp.~175--189.
+
+\end{thebibliography}
 
 \end{document}
