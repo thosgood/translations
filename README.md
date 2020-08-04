@@ -68,11 +68,12 @@ News on SGA and FGA translations "coming soon&trade;" (with the latter coming so
 ### Extracts (1957--92), "Fondements de la Géométrie Algébrique"
 
 _All of the following are by A. Grothendieck. An PDF copy of the original notes can be found at <https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf>._
+_We have taken the comments and errata from the May 1962 "Commentaires" (_Séminaire Bourbaki_, Volume **14**, 1961--62, Complément) and inserted them into the relevant places in the notes themselves, although we have tried to make it clear when this has been done._
 
 - "Théorème de dualité pour les faisceaux algébriques cohérents". _Séminaire Bourbaki_, Volume **9** (1956--57), Talk no. 149.
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/fga/1-coherent-duality.tex)
-  [[live PDF]]()
+  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215)
 
 - "Géométrie formelle et géométrie algébrique". _Séminaire Bourbaki_, Volume **11** (1958--59), Talk no. 182.
   <br/>
