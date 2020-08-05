@@ -78,7 +78,7 @@ _We have taken the comments and errata from the May 1962 "Commentaires" (_Sémin
 - "Géométrie formelle et géométrie algébrique". _Séminaire Bourbaki_, Volume **11** (1958--59), Talk no. 182.
   <br/>
   [[TeX]](https://github.com/thosgood/translations/tree/master/fga/2-formal-geometry.tex)
-  [[live PDF]]()
+  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1596585546758)
 
 - "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". _Séminaire Bourbaki_, Volume **12** (1959--60), Talk no. 190.
   <br/>
