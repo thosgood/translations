@@ -73,6 +73,8 @@
 
   \newtheorem*{corollary*}{Corollary}
 
+  \newtheorem*{denv}{(D)}
+
 
   \theoremstyle{definition}
 
@@ -418,7 +420,7 @@ The verification of i. is tedious, but does not present any difficulties.
 \label{proposition4corollary1}
   With $A$ and $\mathfrak{J}$ as above, suppose further that $A$ is a regular affine algebra of $\dim n$ over a perfect field $k$, and that $A/\mathfrak{J}$ is a regular affine algebra.
   Denote by $\Omega^i(A)$ and $\Omega^i(A/\mathfrak{J})$ the modules of K\"{a}hler differentials.
-  Then there is a canonical isomorphism
+  Then we have a canonical isomorphism
   \[
   \label{3.5}
     \Ext_A^p(\Omega^{n-p}(A/\mathfrak{J}),\Omega^n(A)) = A/\mathfrak{J}.
@@ -450,7 +452,7 @@ We can write \cref{proposition4corollary1} in a more geometric and more global f
   Let $n$ be the dimension of $X$, and $n-p$ the dimension of $Y$.
 \oldpage{149-08}
   Let $\Omega_X$ (resp. $\Omega_Y$) be the sheaf of germs of regular differential forms on $X$ (resp. $Y$).
-  Then there are canonical isomorphisms
+  Then we have canonical isomorphisms
   \[
   \label{3.6}
     \shExt_{\sh{O}_X}^p(\Omega_Y^{n-p},\Omega_X^n) = \sh{O}_Y
@@ -530,7 +532,7 @@ we do this, in particular, with $\sh{O}_Y$ and $\Omega_Y$.
     \Ext_\sh{O}^p(X;\sh{F},\sh{L}) = \HH^0(X,\shExt_\sh{O}^p(\sh{F},\sh{L})).
   \tag{4.1}
   \]
-  If $\sh{F}$ is a coherent algebraic sheaf on a closed subset $W$ of $X$ of dimension $\leq n-p$, then there is a canonical isomorphism
+  If $\sh{F}$ is a coherent algebraic sheaf on a closed subset $W$ of $X$ of dimension $\leq n-p$, then we have a canonical isomorphism
   \[
   \label{4.1bis}
     \shExt_{\sh{O}_X}^p(\sh{F},\sh{L}) = \shHom_{\sh{O}_X}(\sh{F}\otimes\sh{L}'\otimes\Omega_X^n,\omega_Y^{n-p})
@@ -615,7 +617,7 @@ This last hypothesis is used only to be able to conclude that every coherent alg
     \end{tikzcd}
   \]
   where $\beta$ is an isomorphism, and where $\Gamma$ is the ``group of sections'' functor on the category of abelian sheaves on $X$, $\underline{\RR}^p\Gamma$ is its hypercohomology in dimension~$p$, and $\RR^p\Gamma$ is its $p$th derived functor.
-  For simplicity, we assume that $\sh{L}_0=\sh{O}_X$, and that the augmentation $\sh{L}_0\to\sh{O}_Y$ is the natural homomorphism (which we can do), so then $\alpha$ is induced from the homomorphism of complexes $\sh{O}_X\to\sh{L}$ (with $\sh{O}_X$ being thought of as a complex concentrated in degree~$0$), taking into account the fact that $\underline{\RR}^p\Gamma(\sh{K})=\RR^p\Gamma(\sh{K}_0)$ if $\sh{K}$ is a complex of sheaves concentrated in degree~$0$.
+  For simplicity, we assume that $\sh{L}_0=\sh{O}_X$, and that the augmentation $\sh{L}_0\to\sh{O}_Y$ is the natural homomorphism (which we can do), so then $\alpha$ is induced by the homomorphism of complexes $\sh{O}_X\to\sh{L}$ (with $\sh{O}_X$ being thought of as a complex concentrated in degree~$0$), taking into account the fact that $\underline{\RR}^p\Gamma(\sh{K})=\RR^p\Gamma(\sh{K}_0)$ if $\sh{K}$ is a complex of sheaves concentrated in degree~$0$.
   The homomorphism $\beta$ is a well-known ``boundary map''.
   Consider an analogous diagram, relative to a locally-free resolution $\sh{L}'_\bullet$ of $\sh{O}_Y$, and consider the commutative diagram of pairings:
   \[
@@ -643,7 +645,7 @@ This last hypothesis is used only to be able to conclude that every coherent alg
   \tag{4.5}
   \]
 \oldpage{149-12}
-  The pairings in the two columns on the right are induced from the pairing of complexes of sheaves
+  The pairings in the two columns on the right are induced by the pairing of complexes of sheaves
   \[
     \shHom_{\sh{O}_X}(\sh{L}_\bullet,\Omega_X^p) \times \shHom_{\sh{O}_X}(\sh{L}'_\bullet,\Omega_X^{p'}) \to \shHom_{\sh{O}_X}(\sh{L}_\bullet\otimes\sh{L}',\Omega_X^{p+p'})
   \]
@@ -719,6 +721,68 @@ If $X$ is a non-singular projective variety, then it follows from the above \hyp
 
 \section{The duality theorem}
 \label{section5}
+
+In this section, $X$ denotes a non-singular projective variety of dimension~$n$.
+
+\begin{theorem}{2}
+\label{theorem2}
+  The fundamental class $\varepsilon_X$ of $\HH^n(X,\Omega_X^n)$ is a basis of this vector space.
+\end{theorem}
+
+(The proof of this will be given later on).
+With the preceding theorem, we can thus identify $\HH^n(X,\Omega_X^n)$ with the field $k$.
+We now consider the pairings described in \cref{section2}, which give, in particular, a pairing
+\oldpage{149-14}
+\[
+  \Ext_{\sh{O}_X}^p(X;\sh{O}_X,\sh{F})\times\Ext_{\sh{O}_X}^{n-p}(X;\sh{F},\Omega_X^n) \to \Ext_{\sh{O}_X}^n(X;\sh{O}_X,\Omega_X^n)
+\]
+i.e.
+\[
+\label{5.1}
+  \HH^p(X,\sh{F})\times\Ext_{\sh{O}_X}^{n-p}(X;\sh{F},\Omega_X^n) \to \HH^n(X,\Omega_X^n).
+\tag{5.1}
+\]
+Taking \cref{theorem2} into account, this pairing defines a homomorphism
+\[
+\label{5.2}
+  \Ext_{\sh{O}_X}^{n-p}(X;\sh{F},\Omega_X^n) \to (\HH^p(X,\sh{F}))'.
+\tag{5.2}
+\]
+This homomorphism is functorial in $\sh{F}$, and commutes with the coboundary maps relative to the exact sequences $0\to\sh{F}'\to\sh{F}\to\sh{F}''\to0$.
+
+\begin{theorem}{3}
+\label{theorem3}
+  The homomorphism in \cref{5.2} is an isomorphism.
+\end{theorem}
+
+In particular, we recover the result of Serre:
+
+\begin{corollary*}
+\label{theorem3corollary}
+  Let $E$ be an algebraic vector bundle on $X$, and $\sh{O}_X(E)$ the sheaf of germs of regular sections of $X$.
+  Then we have canonical isomorphisms
+  \[
+  \label{5.3}
+    (\HH^p(X,\sh{O}_X(E)))' = \HH^{n-p}(X,\Omega_X^n\otimes\sh{O}_X(E')).
+  \tag{5.3}
+  \]
+\end{corollary*}
+
+\begin{proof}
+  It suffices to apply \cref{theorem3} and \hyperref[proposition1corollary1]{corollary~1} to \cref{proposition1}.
+\end{proof}
+
+\Cref{theorem2} and \cref{theorem3} will follow from the following claim:
+
+\begin{denv}
+  The homomorphism
+  \[
+  \label{5.2bis}
+    \Ext_{\sh{O}_X}^{n-p}(X;\sh{F},\Omega_X^n) \to (\HH^p(X,\sh{F}))'\otimes\sh{L}
+  \tag{5.2 \emph{bis}}
+  \]
+  (where $\sh{L}=\HH^n(X,\Omega_X^n)$) induced by the pairing in \cref{5.1} is an isomorphism.
+\end{denv}
 
 
 
