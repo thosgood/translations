@@ -149,9 +149,9 @@ _We have taken the comments and errata from the May 1962 "Commentaires" (_Sémin
 
 - Talk no. 1 "Produit tensoriel topologique d'espaces vectoriels topologiques" (L. Schwartz).
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/1-topological-tensor-product.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F1-topological-tensor-product.tex&command=pdflatex&trackId=1596132290863)
-  [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A2_0/)
+  [[<img alt="file" src="_images/file-alt-solid.svg" height="12px"/> TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/1-topological-tensor-product.tex)
+  [[<img alt="pdf" src="_images/file-pdf-solid.svg" height="12px"/> live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F1-topological-tensor-product.tex&command=pdflatex&trackId=1596132290863)
+  [[<img alt="book" src="_images/book-solid.svg" height="12px"/> original]](http://www.numdam.org/item/SLS_1953-1954__1__A2_0/)
 
 
 <!--
@@ -175,3 +175,7 @@ _We have taken the comments and errata from the May 1962 "Commentaires" (_Sémin
   [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/12-the-theory-of-nuclear-operators.tex)
   [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F12-the-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1595524106537)
   [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A13_0/)
+
+---
+
+<!-- icons from fontawesome.com under [their licence](https://fontawesome.com/license). -->
