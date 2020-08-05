@@ -149,9 +149,9 @@ _We have taken the comments and errata from the May 1962 "Commentaires" (_Sémin
 
 - Talk no. 1 "Produit tensoriel topologique d'espaces vectoriels topologiques" (L. Schwartz).
   <br/>
-  [[<img alt="file-icon" src="/images/file-alt-solid.svg" height="12px"/> TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/1-topological-tensor-product.tex)
-  <img alt="pdf-icon" src="/images/file-pdf-solid.svg" height="12px"/>[[<img alt="pdf-icon" src="/images/file-pdf-solid.svg" height="12px"/> live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F1-topological-tensor-product.tex&command=pdflatex&trackId=1596132290863)
-  [[<img alt="book-icon" src="/images/book-solid.svg" height="12px"/> original]](http://www.numdam.org/item/SLS_1953-1954__1__A2_0/)
+  [[<img alt="file-icon" src="images/file-alt-solid.svg" height="12px"/> TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/1-topological-tensor-product.tex)
+  <img alt="pdf-icon" src="images/file-pdf-solid.svg" height="12px"/>[<img alt="pdf-icon" src="images/file-pdf-solid.svg" height="12px"/>[<img alt="pdf-icon" src="images/file-pdf-solid.svg" height="12px"/> live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F1-topological-tensor-product.tex&command=pdflatex&trackId=1596132290863)
+  [[<img alt="book-icon" src="images/book-solid.svg" height="12px"/> original]](http://www.numdam.org/item/SLS_1953-1954__1__A2_0/)
 
 
 <!--
