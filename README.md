@@ -19,16 +19,20 @@ News on SGA and FGA translations "coming soon&trade;" (with the latter coming so
 <!--
 - Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten". _Mathematische Annalen_, Volume **32** (1888), pp. 342–350. <http://eudml.org/doc/157385>.
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/ma-32/sum-of-squares.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-32%2Fsum-of-squares.tex&command=pdflatex&trackId=1596040205463)
-  [[original]](http://eudml.org/doc/157385)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/ma-32/sum-of-squares.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-32%2Fsum-of-squares.tex&command=pdflatex&trackId=1596040205463)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/157385)
 -->
 
 - Borel, A. and Serre, J.-P. "Le théorème de Riemann-Roch". _Bulletin de la Société Mathématique de France_, Volume **86** (1958), pp. 97--136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/bsmf-86/the-riemann-roch-theorem.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595524110173)
-  [[original]](http://www.numdam.org/item/?id=BSMF_1958__86__97_0)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/bsmf-86/the-riemann-roch-theorem.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595524110173)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/?id=BSMF_1958__86__97_0)
 
 <!--
 - Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". _Annales de l'institut Fourier_, Volume **4** (1952), pp. 73--112. <http://www.numdam.org/item/?id=AIF_1952__4__73_0>
@@ -36,16 +40,20 @@ News on SGA and FGA translations "coming soon&trade;" (with the latter coming so
 
 - Grothendieck, A. "La théorie des classes de Chern". _Bulletin de la Société Mathématique de France_, Volume **86** (1958) , pp. 137--154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/bsmf-86/the-theory-of-chern-classes.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-theory-of-chern-classes.tex&command=pdflatex&trackId=1596040216373)
-  [[original]](https://www.doi.org/10.24033/bsmf.1501)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/bsmf-86/the-theory-of-chern-classes.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-theory-of-chern-classes.tex&command=pdflatex&trackId=1596040216373)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://www.doi.org/10.24033/bsmf.1501)
 
 <!--
 - Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen". _Math. Ann._, Volume **146** (1962), pp. 331--368. <http://eudml.org/doc/160940>
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/ma-146/exceptional-analytic-sets.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1596040221056)
-  [[original]](http://eudml.org/doc/160940)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/ma-146/exceptional-analytic-sets.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1596040221056)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/160940)
 -->
 
 
@@ -54,9 +62,11 @@ News on SGA and FGA translations "coming soon&trade;" (with the latter coming so
 <!--
 - Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._ Springer-Verlag, Lecture Notes in Mathematics **163** (1970). <https://publications.ias.edu/node/355>
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/lnm-163/de-regular-singular-points.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=lnm-163%2Fde-regular-singular-points.tex&command=pdflatex&trackId=1596040243159)
-  [[original]](https://publications.ias.edu/node/355)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/lnm-163/de-regular-singular-points.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=lnm-163%2Fde-regular-singular-points.tex&command=pdflatex&trackId=1596040243159)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355)
 -->
 
 
@@ -72,43 +82,51 @@ _We have taken the comments and errata from the May 1962 "Commentaires" (_Sémin
 
 - "Théorème de dualité pour les faisceaux algébriques cohérents". _Séminaire Bourbaki_, Volume **9** (1956--57), Talk no. 149.
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/1-coherent-duality.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/1-coherent-duality.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215)
 
 - "Géométrie formelle et géométrie algébrique". _Séminaire Bourbaki_, Volume **11** (1958--59), Talk no. 182.
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/2-formal-geometry.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1596585546758)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/2-formal-geometry.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1596585546758)
 
 - "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". _Séminaire Bourbaki_, Volume **12** (1959--60), Talk no. 190.
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/3-descent-I.tex)
-  [[live PDF]]()
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-I.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
 
 - "Technique de descente et théorèmes d'existence en géométrie algébrique. II. Le théorème d'existence en théorie formelle des modules". _Séminaire Bourbaki_, Volume **12** (1959--60), Talk no. 195.
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/3-descent-II.tex)
-  [[live PDF]]()
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-II.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
 
 - "Technique de descente et théorèmes d'existence en géométrie algébrique. III. Préschémas quotients". _Séminaire Bourbaki_, Volume **13** (1960--61), Talk no. 212.
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/3-descent-III.tex)
-  [[live PDF]]()
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-III.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
 
 - "Technique de descente et théorèmes d'existence en géométrie algébrique. IV. Les schémas de Hilbert". _Séminaire Bourbaki_, Volume **13** (1960--61), Talk no. 221.
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/3-descent-IV.tex)
-  [[live PDF]]()
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-IV.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
 
 - "Technique de descente et théorèmes d'existence en géométrie algébrique. V. Let schémas de Picard. Théorèmes d'existence". _Séminaire Bourbaki_, Volume **14** (1961--62), Talk no. 132.
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/3-descent-V.tex)
-  [[live PDF]]()
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-V.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
 
 - "Technique de descente et théorèmes d'existence en géométrie algébrique. VI. Let schémas de Picard. Propriétés générales". _Séminaire Bourbaki_, Volume **14** (1961--62), Talk no. 136.
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/fga/3-descent-VI.tex)
-  [[live PDF]]()
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-VI.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
 
 -->
 
@@ -117,21 +135,27 @@ _We have taken the comments and errata from the May 1962 "Commentaires" (_Sémin
 
 - Talk no. 1: "Faisceaux quasi-cohérents" (P. Gabriel).
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F1-quasi-coherent-sheaves.tex&command=pdflatex&trackId=1596036033972)
-  [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A1_0/)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F1-quasi-coherent-sheaves.tex&command=pdflatex&trackId=1596036033972)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A1_0/)
 
 - Talk no. 2: "Le théorème de Serre" (P. Gabriel).
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/2-serre's-theorem.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F2-serre%27s-theorem.tex&command=pdflatex&trackId=1596035916115)
-  [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A2_0/)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/2-serre's-theorem.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F2-serre%27s-theorem.tex&command=pdflatex&trackId=1596035916115)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A2_0/)
 
 - Talk no. 4: "Diviseurs en géométrie algébrique" (C.S. Seshadri).
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F4-divisors-in-algebraic-geometry.tex&command=pdflatex&trackId=1596027138553)
-  [[original]](http://www.numdam.org/item/SCC_1958-1959__4__A4_0/)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F4-divisors-in-algebraic-geometry.tex&command=pdflatex&trackId=1596027138553)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A4_0/)
 
 
 ## Séminaire Henri Cartan
@@ -139,9 +163,11 @@ _We have taken the comments and errata from the May 1962 "Commentaires" (_Sémin
 
 - Talk no. 2: "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-henri-cartan-9%2F2-coherent-algebraic-analytic-sheaves.tex&command=pdflatex&trackId=1595524113730)
-  [[original]](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-henri-cartan-9%2F2-coherent-algebraic-analytic-sheaves.tex&command=pdflatex&trackId=1595524113730)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
 
 
 ## Séminaire Schwartz
@@ -149,34 +175,40 @@ _We have taken the comments and errata from the May 1962 "Commentaires" (_Sémin
 
 - Talk no. 1 "Produit tensoriel topologique d'espaces vectoriels topologiques" (L. Schwartz).
   <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="12px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/1-topological-tensor-product.tex)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/1-topological-tensor-product.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="12px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F1-topological-tensor-product.tex&command=pdflatex&trackId=1596132290863)
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F1-topological-tensor-product.tex&command=pdflatex&trackId=1596132290863)
   |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="12px"/> original](http://www.numdam.org/item/SLS_1953-1954__1__A2_0/)
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SLS_1953-1954__1__A2_0/)
 
 
 <!--
 - Talk no. 2: "Cas des espaces normés. Produit tensoriel d'applications linéaires" (L. Schwartz).
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/2-normed-space-case.tex)
-  [[live PDF]]()
-  [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A3_0/)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/2-normed-space-case.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SLS_1953-1954__1__A3_0/)
 -->
 
 <!--
 - Talk no. 3: "N° 1. Rappels sur les espaces $L^p$" (L. Schwartz).
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/3-Lp-space-recap.tex)
-  [[live PDF]]()
-  [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A4_0/)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/3-Lp-space-recap.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SLS_1953-1954__1__A4_0/)
 -->
 
 - Talk no. 12: "La théorie des opérateurs nucléaires" (L. Schwartz).
   <br/>
-  [[TeX]](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/12-the-theory-of-nuclear-operators.tex)
-  [[live PDF]](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F12-the-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1595524106537)
-  [[original]](http://www.numdam.org/item/SLS_1953-1954__1__A13_0/)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/12-the-theory-of-nuclear-operators.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F12-the-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1595524106537)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SLS_1953-1954__1__A13_0/)
 
 ---
 
