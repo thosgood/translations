@@ -604,11 +604,24 @@ With this, we have:
 \oldpage{149-13}
 \begin{corollary}{1}
 \label{theorem1corollary1}
-  \todo
+  Let $X$ and $X'$ be non-singular varieties that are locally-closed in a projective space, and suppose that $X'$ is complete.
+  Let $U$ be a non-singular cycle on $X\times X'$, and let $a$ and $b$ be points of $X'$ such that $U$ intersects transversally with the cycles $X\times(a)$ and $X\times(b)$.
+  Let $Z$ and $Z'$ be non-singular cycles on $X$ such that $Z\times(a)=(X\times(a))\cdot U$ and $Z\times(b)=(X\times(b))\cdot U$.
+  Then
+  \[
+    P_X(Z) = P_X(Z').
+  \]
 \end{corollary}
 
 \begin{proof}
-  \todo
+  Let $f_a\colon X\to X\times X'$ be defined by $f_a(x)=(x,a)$.
+  Then, by \cref{4.8}, we have $P(Z)=f_a^*(P(U))$; similarly $P(Z')=f_b^*(P(U))$.
+  But then, using the K\"{u}nneth formula
+  \[
+    \HH^\bullet(X\times X',\Omega_{X\times X'}^\bullet)
+    = \HH^\bullet(X,\Omega_X^\bullet)\otimes\HH^\bullet(X',\\Omega_{X'}^\bullet)
+  \]
+  and the fact that $\HH^0(X',\Omega_{X'})$ is simply the scalar, we easily see that $f_a^*=f_b^*$, whence the result.
 \end{proof}
 
 For all $x\in X$, $(x)$ is a non-singular subvariety of $X$ of codimension $n$, and thus defines an element $\varepsilon_x$ of $\HH^n(X,\Omega_X^n)$.
