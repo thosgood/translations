@@ -615,7 +615,40 @@ This last hypothesis is used only to be able to conclude that every coherent alg
     \end{tikzcd}
   \]
   where $\beta$ is an isomorphism, and where $\Gamma$ is the ``group of sections'' functor on the category of abelian sheaves on $X$, $\underline{\RR}^p\Gamma$ is its hypercohomology in dimension~$p$, and $\RR^p\Gamma$ is its $p$th derived functor.
-
+  For simplicity, we assume that $\sh{L}_0=\sh{O}_X$, and that the augmentation $\sh{L}_0\to\sh{O}_Y$ is the natural homomorphism (which we can do), so then $\alpha$ is induced from the homomorphism of complexes $\sh{O}_X\to\sh{L}$ (with $\sh{O}_X$ being thought of as a complex concentrated in degree~$0$), taking into account the fact that $\underline{\RR}^p\Gamma(\sh{K})=\RR^p\Gamma(\sh{K}_0)$ if $\sh{K}$ is a complex of sheaves concentrated in degree~$0$.
+  The homomorphism $\beta$ is a well-known ``boundary map''.
+  Consider an analogous diagram, relative to a locally-free resolution $\sh{L}'_\bullet$ of $\sh{O}_Y$, and consider the commutative diagram of pairings:
+  \[
+  \label{4.5}
+    \footnotesize
+    \begin{tikzcd}
+      \RR^p\Gamma(\Omega_X^p)
+        \dar[phantom,"\times"]
+      & \underline{\RR}^p\Gamma(\shHom_{\sh{O}_X}(\sh{L}_\bullet,\Omega_X^p))
+        \lar \rar["\sim"] \dar[phantom,"\times"]
+      & \Gamma(\HH^p(\shHom_{\sh{O}_X}(\sh{L}_\bullet,\Omega_X^p)))
+        \dar[phantom,"\times"]
+    \\\RR^{p'}\Gamma(\Omega_X^{p'})
+        \dar
+      & \underline{\RR}^{p'}\Gamma(\shHom_{\sh{O}_X}(\sh{L}'_\bullet,\Omega_X^{p'}))
+        \lar \rar["\sim"] \dar
+      & \Gamma(\HH^{p'}(\shHom_{\sh{O}_X}(\sh{L}'_\bullet,\Omega_X^{p'})))
+        \dar
+    \\\RR^{p+p'}\Gamma(\Omega_X^{p+p'})
+      & \underline{\RR}^{p+p'}\Gamma(\shHom_{\sh{O}_X}(\sh{L}_\bullet\otimes\sh{L}'_\bullet,\Omega_X^{p+p'}))
+        \lar \rar["\sim"]
+      & \Gamma(\HH^{p+p'}(\shHom_{\sh{O}_X}(\sh{L}_\bullet\otimes\sh{L}'_\bullet,\Omega_X^{p+p'})))
+    \end{tikzcd}
+    \normalsize
+  \tag{4.5}
+  \]
+\oldpage{149-12}
+  The pairings in the two columns on the right are induced from the pairing of complexes of sheaves
+  \[
+    \shHom_{\sh{O}_X}(\sh{L}_\bullet,\Omega_X^p) \times \shHom_{\sh{O}_X}(\sh{L}'_\bullet,\Omega_X^{p'}) \to \shHom_{\sh{O}_X}(\sh{L}_\bullet\otimes\sh{L}',\Omega_X^{p+p'})
+  \]
+  that we define by using the exterior product $\Omega_X^p\times\Omega_X^{p'}\to\Omega_X^{p+p'}$.
+  The pairing in the first column
 
 
 
