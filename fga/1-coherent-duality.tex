@@ -74,6 +74,11 @@
   \newtheorem*{corollary*}{Corollary}
 
 
+  \theoremstyle{definition}
+
+  \newtheorem*{remark}{Remark}
+
+
 %% Shortcuts %%
 
 \newcommand{\sh}{\mathscr}
@@ -597,7 +602,23 @@ With this, we have:
   (We assume that $X$ is isomorphic to a locally closed subset of a projective space).
 \end{theorem}
 
+This last hypothesis is used only to be able to conclude that every coherent algebraic sheaf on $X$ is a quotient of a locally-free coherent algebraic sheaf (Serre), and thus admits a left resolution by locally-free sheaves.
+
 \begin{proof}
+  To prove \cref{theorem1}, we can assume that $Z$ and $Z'$ are irreducible non-singular subvarieties $Y$ and $Y'$ that intersect transversally.
+  Let $\sh{L}_\bullet$ be a left resolution of $\sh{O}_Y$ by locally-free sheaves;
+  then, by \cref{proposition3}, the diagram of homomorphisms in \cref{4.3} can be identified with the diagram
+  \[
+    \begin{tikzcd}[column sep=tiny]
+      & (\underline{\RR}^p\Gamma)(\shHom_{\sh{O}_X}(\sh{L}_\bullet,\Omega_X^p)) \ar[dl,swap,"\alpha"] \ar[dr,"\beta"]
+    \\(\RR^p\Gamma)(\Omega_X^p) && \Gamma(\HH^p(\shHom_{\sh{O}_X}(\sh{L}_\bullet,\Omega_X^p)))
+    \end{tikzcd}
+  \]
+  where $\beta$ is an isomorphism, and where $\Gamma$ is the ``group of sections'' functor on the category of abelian sheaves on $X$, $\underline{\RR}^p\Gamma$ is its hypercohomology in dimension~$p$, and $\RR^p\Gamma$ is its $p$th derived functor.
+
+
+
+
   \todo
 \end{proof}
 
