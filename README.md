@@ -59,78 +59,63 @@ This should go without saying, but I'll say it anyway: I am making no claim to a
 -->
 
 
-<!-- # Books -->
-
-<!--
-- Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._ Springer-Verlag, Lecture Notes in Mathematics **163** (1970). <https://publications.ias.edu/node/355>
-  <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/lnm-163/de-regular-singular-points.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=lnm-163%2Fde-regular-singular-points.tex&command=pdflatex&trackId=1596040243159)
-  |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355)
--->
-
-
 # Seminars
 
-<!--
 
-## Séminaire Bourbaki
+<!-- ## Séminaire Bourbaki
 ### Extracts (1957--92), "Fondements de la Géométrie Algébrique"
 
 _All of the following are by A. Grothendieck. An PDF copy of the original notes can be found at <https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf>._
-_We have taken the comments and errata from the May 1962 "Commentaires" (_Séminaire Bourbaki_, Volume **14**, 1961--62, Complément) and inserted them into the relevant places in the notes themselves, although we have tried to make it clear when this has been done._
+_We have taken the comments and errata from the May 1962 "Commentaires" (_Séminaire Bourbaki_, Volume **14**, 1961--62, Complément) and inserted them into the relevant places in the notes themselves, although we have tried to make it clear when this has been done._ -->
 
-- "Théorème de dualité pour les faisceaux algébriques cohérents". _Séminaire Bourbaki_, Volume **9** (1956--57), Talk no. 149.
+<!-- - "Théorème de dualité pour les faisceaux algébriques cohérents". _Séminaire Bourbaki_, Volume **9** (1956--57), Talk no. 149.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/1-coherent-duality.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215)
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215) -->
 
-- "Géométrie formelle et géométrie algébrique". _Séminaire Bourbaki_, Volume **11** (1958--59), Talk no. 182.
+<!-- - "Géométrie formelle et géométrie algébrique". _Séminaire Bourbaki_, Volume **11** (1958--59), Talk no. 182.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/2-formal-geometry.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1596585546758)
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1596585546758) -->
 
-- "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". _Séminaire Bourbaki_, Volume **12** (1959--60), Talk no. 190.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". _Séminaire Bourbaki_, Volume **12** (1959--60), Talk no. 190.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-I.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-- "Technique de descente et théorèmes d'existence en géométrie algébrique. II. Le théorème d'existence en théorie formelle des modules". _Séminaire Bourbaki_, Volume **12** (1959--60), Talk no. 195.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. II. Le théorème d'existence en théorie formelle des modules". _Séminaire Bourbaki_, Volume **12** (1959--60), Talk no. 195.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-II.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-- "Technique de descente et théorèmes d'existence en géométrie algébrique. III. Préschémas quotients". _Séminaire Bourbaki_, Volume **13** (1960--61), Talk no. 212.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. III. Préschémas quotients". _Séminaire Bourbaki_, Volume **13** (1960--61), Talk no. 212.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-III.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-- "Technique de descente et théorèmes d'existence en géométrie algébrique. IV. Les schémas de Hilbert". _Séminaire Bourbaki_, Volume **13** (1960--61), Talk no. 221.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. IV. Les schémas de Hilbert". _Séminaire Bourbaki_, Volume **13** (1960--61), Talk no. 221.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-IV.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-- "Technique de descente et théorèmes d'existence en géométrie algébrique. V. Let schémas de Picard. Théorèmes d'existence". _Séminaire Bourbaki_, Volume **14** (1961--62), Talk no. 132.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. V. Let schémas de Picard. Théorèmes d'existence". _Séminaire Bourbaki_, Volume **14** (1961--62), Talk no. 132.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-V.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-- "Technique de descente et théorèmes d'existence en géométrie algébrique. VI. Let schémas de Picard. Propriétés générales". _Séminaire Bourbaki_, Volume **14** (1961--62), Talk no. 136.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. VI. Let schémas de Picard. Propriétés générales". _Séminaire Bourbaki_, Volume **14** (1961--62), Talk no. 136.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-VI.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
--->
 
 ## Séminaire Claude Chevalley
 ### Volume 4 (1958--59), "Variétés de Picard"
@@ -211,6 +196,25 @@ _We have taken the comments and errata from the May 1962 "Commentaires" (_Sémin
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F12-the-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1595524106537)
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SLS_1953-1954__1__A13_0/)
+
+
+# In progress
+
+Some of the longer papers take a while to translate, but, once they reach a certain level of completion, I'll share them here so that at least what I have done can be available.
+
+- Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._ Springer-Verlag, Lecture Notes in Mathematics **163** (1970). <https://publications.ias.edu/node/355>
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/lnm-163/de-regular-singular-points.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=lnm-163%2Fde-regular-singular-points.tex&command=pdflatex&trackId=1596040243159)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355)
+
+<!-- - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points." In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications, Volume **16** (1989), pp. 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
+  </br>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/msrip-16/projective-line-minus-three-points.tex)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://publications.ias.edu/node/407) -->
 
 ---
 
