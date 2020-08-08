@@ -200,7 +200,7 @@ _We have taken the comments and errata from the May 1962 "Commentaires" (_Sémin
 
 # In progress
 
-Some of the longer papers take a while to translate, but, once they reach a certain level of completion, I'll share them here so that at least what I have done can be available.
+Some of the longer papers take a while to translate, but, once they reach a certain level of completion, I'll share them here so that at least what I have done can be available. The papers that make up Grothendieck's FGA will just be released one at a time.
 
 - Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._ Springer-Verlag, Lecture Notes in Mathematics **163** (1970). <https://publications.ias.edu/node/355>
   <br/>
@@ -213,6 +213,8 @@ Some of the longer papers take a while to translate, but, once they reach a cert
 <!-- - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points." In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications, Volume **16** (1989), pp. 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
   </br>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/msrip-16/projective-line-minus-three-points.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=msrip-16%2Fprojective-line-minus-three-points.tex&command=pdflatex&trackId=1596902018703)
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://publications.ias.edu/node/407) -->
 
