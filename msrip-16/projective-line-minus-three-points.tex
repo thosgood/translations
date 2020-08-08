@@ -10,7 +10,7 @@
 \usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{tikz-cd}
-\usepackage{graphicx}
+\usepackage{mathtools}
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
@@ -50,9 +50,12 @@
 
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
+\newcommand{\bb}{\mathbb}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
+
+\DeclareMathOperator{\Gal}{Gal}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -90,6 +93,29 @@
 
 %% Content %%
 
+
+\section*{Leitfaden}
+\[
+  \begin{tikzcd}
+    1 \ar[dd, no head] & 4 \ar[d, no head] & & 9 \ar[d, no head] &
+  \\& 5 \ar[d, no head] & & 10 \ar[dl, no head] \ar[dr, no head] &
+  \\2 \ar[dd, no head] \ar[dr, no head] & 6 \ar[d, no head] & 11 \ar[ddr, no head] & & 12 \ar[ddl, no head]
+  \\& 7 \ar[d, no head] \ar[drr, no head] & & &
+  \\3 \ar[dddddrr, no head] & 8 & & 13 \ar[d, no head] &
+  \\ & & & 14 \ar[d, no head] &
+  \\ & & & 15 \ar[d, no head] &
+  \\ & & & 16 \ar[d, no head] \ar[dr, no head] \ar[ddl, no head] &
+  \\ & & & 17 \ar[dl, no head, dashed] & 18
+  \\ & & 19 & &
+  \end{tikzcd}
+\]
+
+
+\section*{}
+
+The present article owes much to A.~Grothendieck.
+He invented the philosophy of motives, which is our guiding thread.
+Around five years ago, he also said to me, with force, that the profinite completion $\hat{\pi}_1$ of the fundamental group of $X\coloneqq\bb{P}^1(\bb{C})\setminus\{0,1,\infty\}$, with the action of $\Gal(\overline{\bb{Q}}/\bb{Q})$, is a remarkable object, and that it must be studied.
 
 
 %% Bibliography %%
