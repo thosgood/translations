@@ -1,4 +1,4 @@
-Here are some papers that I've translated into English. Any comments or corrections are greatly appreciated. For contact details, see [my website](https://thosgood.com).
+Here are some maths papers that I've translated into English. Any comments or corrections are greatly appreciated. For contact details, see [my website](https://thosgood.com).
 
 I've tried to refrain from "rewriting" too much: generally the sentence structure etc. is pretty close to the original. As a consequence, some of the language (in particular, any categorical statement) is slightly wordy, but hey ho.
 
@@ -12,7 +12,7 @@ News on SGA and FGA translations "coming soon&trade;" (with the latter coming so
 
 ---
 
-This should go without saying, but I'll say it anyway: I am making no claim to any of the mathematics or ideas contained in any of these translations; the only things that are mine are the errors introduced during the passage from one language to another.
+This should go without saying, but I'll say it anyway: _I am making no claim to any of the mathematics or ideas contained in any of these translations; the only things that are mine are the errors introduced during the passage from one language to another._
 
 ---
 
