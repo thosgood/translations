@@ -86,6 +86,7 @@
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
 \newcommand{\from}{\leftarrow}
+\newcommand{\bb}{\mathbf}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -759,12 +760,11 @@ In particular, we recover the result of Serre:
 
 \begin{corollary*}
 \label{theorem3corollary}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
   Let $E$ be an algebraic vector bundle on $X$, and $\sh{O}_X(E)$ the sheaf of germs of regular sections of $X$.
-  Then we have canonical isomorphisms
+  Then we have canonical isomorphisms\footnote{\emph{[Translator.] This equation is labelled (5.3) in the original, but this seems to be a typo, since a later equation shares the same number, and any references to this number seem to indeed point to the later equation instead of this one.}}
   \[
-  \label{5.3}
     (\HH^p(X,\sh{O}_X(E)))' = \HH^{n-p}(X,\Omega_X^n\otimes\sh{O}_X(E')).
-  \tag{5.3}
   \]
 \end{corollary*}
 
@@ -774,7 +774,9 @@ In particular, we recover the result of Serre:
 
 \Cref{theorem2} and \cref{theorem3} will follow from the following claim:
 
+\phantomsection
 \begin{denv}
+\label{(D)}
   The homomorphism
   \[
   \label{5.2bis}
@@ -783,6 +785,33 @@ In particular, we recover the result of Serre:
   \]
   (where $\sh{L}=\HH^n(X,\Omega_X^n)$) induced by the pairing in \cref{5.1} is an isomorphism.
 \end{denv}
+
+We will show that \hyperref[(D)]{(D)} implies \cref{theorem2}.
+Let $k_x=\sh{O}_{(x)}$ be the structure sheaf of the variety consisting of a single point $x\in X$, and consider the canonical homomorphism $\sh{O}_X\to k_x$, and the associated homomorphism
+\[
+\label{5.3}
+  \HH^0(X,\sh{O}_X) \to \HH^0(X,k_x).
+\tag{5.3}
+\]
+Its \todo can be identified with the homomorphism
+\[
+\label{5.4}
+  \Ext_{\sh{O}_X}^n(X;k_x,\Omega_X^n)\otimes\sh{L}' \to \Ext_{\sh{O}_X}^n(X;\sh{O}_X,\Omega_X^n)\otimes\sh{L}'
+\tag{5.4}
+\]
+induced by the homomorphism between the $\Ext^n$ associated to $\sh{O}_X\to k_x$, i.e.
+\[
+\label{5.5}
+  \Ext_{\sh{O}_X}^n(X;k_x,\Omega_X^n) \to \Ext_{\sh{O}_X}^n(X;\sh{O}_X,\Omega_X^n)
+\tag{5.5}
+\]
+\oldpage{149-15}
+Since \cref{5.3} is an isomorphism, so too is \cref{5.4}, and thus \cref{5.5}.
+Since $s_{(x)}$ is a basis of $\Ext_{\sh{O}_X}^n(X;k_x,\Omega_X^n)$ by \cref{4.2}, it indeed follows that its image $\varepsilon_X$ is a basis of $\HH^n(X,\Omega_X^n)$.
+
+It remains only to prove the statement of \hyperref[(D)]{(D)}, which will follow in a purely formal way from some elementary facts summarised in the following lemmas.
+We here suppose that $X$ is a closed subset (singular or not) of the projective space $\bb{P}$ of dimension $r$.
+We use the notation $\sh{O}_\bb{P}(m)$ to denote the sheaf on $\bb{P}$ denoted by $\sh{O}(m)$ in \cite{3}, and the notation $\sh{O}_X(m)$ for the analogous sheaf on $X$.
 
 
 
