@@ -882,6 +882,57 @@ Combining the previous two lemmas, we find:
 
 We now prove \hyperref[(D)]{(D)} in the case where $X=\bb{P}$.
 We will first prove that \cref{5.2bis} is an isomorphism for $p=n$;
+since both sides are then left-exact functors (since $\HH^{r+i}(\bb{P},\sh{F})=0$), it follows from \cref{lemma3} that it suffices to prove the claim for $\sh{F}=\sh{O}_\bb{P}(-m)$, but it is then contained in \cref{lemma2}.
+Since the homomorphisms in \cref{5.2bis} are functorial and compatible with the coboundary maps, and since, for $p<n$, both sides of \cref{5.2bis} are coeffaceable functors in $\sh{F}$ (the \hyperref[lemma3andlemma4corollary]{corollary} of \cref{lemma4}), it follows, by a standard argument, that \cref{5.2bis} is an isomorphism for all $p$.
+This proves the duality theorem for the projective space.
+
+Now suppose that $X$ is arbitrary, but non-singular.
+By the duality theorem for $\bb{P}$, we have an isomorphism
+\[
+  \HH^n(X,\sh{F})
+  = \HH^n(\bb{P},\sh{F})'
+  = \Ext_{\sh{O}_\bb{P}}^{r-n}(\bb{P};\sh{F},\Omega_\bb{P}^r).
+\]
+By \cref{lemma1} (in \cref{section4}), the far-right-hand side can be identified with
+\[
+  \Hom_{\sh{O}_\bb{P}}(\bb{P};\sh{F},\omega_X^n)
+  = \Hom_{\sh{O}_X}(X;\sh{F},\Omega_X^n)
+  = \Ext_{\sh{O}_X}^0(X;\sh{F},\Omega_X^n)
+\]
+whence we have an isomorphism
+\[
+\label{5.6}
+  \HH^n(X,\sh{F})'
+  = \Hom_{\sh{O}_X}(X;\sh{F},\Omega_X^n)
+  = \Ext_{\sh{O}_X}^0(X;\sh{F},\Omega_X^n).
+\tag{5.6}
+\]
+Taking $\sh{F}=\Omega_X^n$, we obtain an isomorphism
+\[
+\label{5.7}
+  \eta\colon \HH^n(X,\Omega_X^n) \xrightarrow{\sim} k.
+\tag{5.7}
+\]
+\oldpage{149-17}
+We can prove that the isomorphism in \cref{5.6} is exactly \cref{5.2bis} with $p=n$, and with $\sh{L}=k$, by \cref{5.7}.
+Subsequently, \cref{5.2bis} is an isomorphism for $p=n$.
+To prove that it is an isomorphism for all $p$, it again suffices to prove that, for $p<n$, the two sides of \cref{5.2bis} are coeffaceable functors in $\sh{F}$, and, a fortiori (taking \cref{lemma3} into account), that the two sides are zero when we take $\sh{F}=\sh{O}_X(-m)$ with $m$ large enough.
+But, for the left-hand side, this is true by \cref{lemma4}, and for the right-hand side we write, using the duality theorem for $\bb{P}$,
+\[
+  \HH^p(X,\sh{O}_X(-m))'
+  = \Ext_{\sh{O}_\bb{P}}^{r-p}(\bb{P};\sh{O}_X(-m),\Omega_\bb{P}^r).
+\]
+The right-hand side is zero for $p<n$ and $m$ large enough, as follows from \cref{lemma5} (where in fact $X=\bb{P}$) and from the fact that $\sh{O}_X$ is of cohomological dimension $\leq r-n$ when thought of as a coherent algebraic sheaf on $\bb{P}$ (since $X$ is non-singular), whence
+\[
+  \shExt_{\sh{O}_\bb{P}}^{r-p}(\sh{O}_X,\Omega_\bb{P}^r) = 0
+  \quad\mbox{for $p<n$.}
+\]
+
+
+\section{The duality theorem for singular varieties}
+\label{section6}
+
+Let $X$ be a closed subset of dimension~$n$ of the projective space $\bb{P}$ of dimension~$r$.
 
 
 
