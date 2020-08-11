@@ -933,7 +933,63 @@ The right-hand side is zero for $p<n$ and $m$ large enough, as follows from \cre
 \label{section6}
 
 Let $X$ be a closed subset of dimension~$n$ of the projective space $\bb{P}$ of dimension~$r$.
+Equation~\cref{5.6} is then written as
+\[
+\label{6.1}
+  \HH^n(X,\sh{F})'
+  \simeq \Hom_{\sh{O}_X}(X;\sh{F},\omega_X^n)
+  = \Ext_{\sh{O}_X}^0(X;\sh{F},\omega_X^n)
+\tag{6.1}
+\]
+where we set\footnote{\emph{[Translator.] This equation is labelled (6.2) in the original, but this seems to be a typo, since a later equation shares the same number, and any references to this number seem to indeed point to the later equation instead of this one.}}
+\[
+  \omega_X^n = E^0(\sh{O}_X) = \shExt_{\sh{O}_\bb{P}}^{r-n}(\sh{O}_X,\Omega_\bb{P}^r).
+\]
+As mentioned in \cref{proposition5}, the sheaf thus defined does not depend on the chosen immersion of $X$ into the non-singular variety $\bb{P}$.
+Taking $\sh{F}=\omega_X^n$ in \cref{6.1}, we find that
+\[
+\label{6.2}
+  \HH^n(X,\omega_X^n)' \simeq \Hom_{\sh{O}_X}(X;\omgea_X^n,\omega_X^n)
+\tag{6.2}
+\]
+whence the existence of a distinguished element in $\HH^n(X,\omega_X^n)$, corresponding to the identity morphism from $\omega_X^n$ to itself:
+\[
+\label{6.3}
+  \eta\colon \HH^n(X,\Omega_X^n) \to k.
+\tag{6.3}
+\]
+\oldpage{149-18}
+Then consider the pairings defined by the composition of the $\Ext$:
+\[
+\label{6.4}
+  \HH^p(X,\sh{F}) \times \Ext_{\sh{O}_X}^{n-p}(X;\sh{F},\omega_X^n)
+  \to \HH^n(X,\omega_X^n)
+\tag{6.4}
+\]
+and compose them with the homomorphism $\eta$ in \cref{6.3}; we thus obtain functorial homomorphisms, compatible with the boundary maps,
+\[
+\label{6.5}
+  \Ext_{\sh{O}_X}^{n-p}(X;\sh{F},\omega_X^n) \to \HH^p(X,\sh{F})'
+\tag{6.5}
+\]
+(generalising \cref{5.2}).
+We can prove that, for $p=n$, we thus obtain the isomorphism in \cref{6.1}.
+With this, we have:
 
+\begin{theorem}{3~bis}
+\label{theorem3bis}
+  For any given integer $k\geq0$, the following four conditions on $X$ are equivalent:
+  \begin{enumerate}[i.]
+    \item The functorial homomorphism in \cref{6.5} is an isomorphism for $n-k\leq p\leq n$.
+    \item $\HH^p(X,\sh{O}_X(-m)) = 0$ for $m$ large enough and $n-k\leq p<n$.
+    \item The functor $\HH^p(X,\sh{F})$ on the category of coherent algebraic sheaves on $X$ is coeffaceable for $n-k\leq p<n$.
+    \item $E^i(\sh{O}_X) = \shExt_{\sh{O}_\bb{P}}^{r-n+i}(\sh{O}_X,\omega_\bb{P}^r) = 0$ for $0<i\leq k$.
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  \todo
+\end{proof}
 
 
 %% Bibliography %%
