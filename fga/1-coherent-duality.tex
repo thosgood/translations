@@ -949,7 +949,7 @@ As mentioned in \cref{proposition5}, the sheaf thus defined does not depend on t
 Taking $\sh{F}=\omega_X^n$ in \cref{6.1}, we find that
 \[
 \label{6.2}
-  \HH^n(X,\omega_X^n)' \simeq \Hom_{\sh{O}_X}(X;\omgea_X^n,\omega_X^n)
+  \HH^n(X,\omega_X^n)' \simeq \Hom_{\sh{O}_X}(X;\omega_X^n,\omega_X^n)
 \tag{6.2}
 \]
 whence the existence of a distinguished element in $\HH^n(X,\omega_X^n)$, corresponding to the identity morphism from $\omega_X^n$ to itself:
@@ -988,8 +988,54 @@ With this, we have:
 \end{theorem}
 
 \begin{proof}
-  \todo
+  i.$\implies$ii. by \cref{lemma4};
+  ii.$\implies$iii. by \cref{lemma3};
+  iii.$\implies$i. by a well-known standard argument, taking into account the fact that the two sides of \cref{6.5} are then coeffaceable functors for $n-k\leq p< n$ (the first being so by \cref{lemma4});
+  finally, ii.$\iff$iv. follows from \hyperref[proposition6corollary]{the corollary} to the \hyperref[proposition6]{following proposition}.
 \end{proof}
+
+\begin{proposition}{6}
+\label{proposition6}
+  Let $\sh{F}$ be a coherent algebraic sheaf on $X$, and let $i$ be an integer.
+  Then, for $m$ large enough, we have an isomorphism
+  \[
+  \label{6.6}
+    \HH^i(X,\sh{F}(-m))' \simeq \HH^0(X,E^{n-i}(\sh{F})(m))
+  \tag{6.6}
+  \]
+  where we set
+  \[
+  \label{6.7}
+    E^j(\sh{F}) = \shExt_{\sh{O}_\bb{P}}^{r-n+j}(\sh{F},\Omega_\bb{P}^r)
+  \tag{6.7}
+  \]
+  (compare with \cref{proposition5} in \cref{section3}).
+\end{proposition}
+
+\begin{proof}
+  Indeed, by the duality theorem for $\bb{P}$, the left-hand side of \cref{6.6} is isomorphic to $\Ext_{\sh{O}_\bb{P}}^{r-i}(\bb{P};\sh{F}(-m),\Omega_\bb{P}^r)$, and so \cref{6.6} follows from \cref{lemma5}.
+\end{proof}
+
+\oldpage{149-19}
+\begin{corollary*}
+\label{proposition6corollary}
+  In order to have that $\HH^i(X,\sh{F}(-m))=0$ for $m$ large enough, it is necessary and sufficient to have that $E^{n-i}(\sh{F})=0$.
+\end{corollary*}
+
+Recall that the $E^j(\sh{F})$ do not depend on the projective immersion in question.
+The condition of the corollary is purely local, and so, if it is satisfied for $\sh{F}$, then it is also satisfied for every sheaf that is locally isomorphism to some $\sh{F}^n$.
+In particular, if this condition is satisfied for $\sh{O}_X$, then it is satisfied for every locally-free coherent algebraic sheaf.
+This is, for example, the case for all $i<n$ if $X$ is non-singular; for $i=0$ if no component of $X$ consists of a single point; for $i=0,1$ if $S$ is normal and all its components are of dimension~$>1$ (see \cite{3}).
+For it to be satisfied for $i<k$, it is necessary and sufficient, by definition, for the local rings $\sh{O}_x$ ($x\in X$) to be of ``homological codimension~$\geq k$'' (see \cite{4} for this notion).
+If $k=n$, then this implies, by \cref{theorem3bis}, that the duality theorem is true for $X$, i.e. that \cref{6.5} is an isomorphism for all $p$ and for all $\sh{F}$.
+We can give many equivalent conditions on the local rings $\sh{O}_x$ for this to be the case (NAGATA);
+for example, those that satisfy the Cohen-Macaulay equidimensionality theorem.
+It is also the case, for example, if $X$ is locally a ``complete intersection'' in a non-singular ambient variety.
+
+
+\section{Poincar\'{e} duality}
+\label{section7}
+
 
 
 %% Bibliography %%
