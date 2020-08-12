@@ -65,8 +65,8 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
 ## Séminaire Bourbaki
 ### Extracts (1957--92), "Fondements de la Géométrie Algébrique"
 
-_All of the following are by A. Grothendieck. An PDF copy of the original notes can be found at <https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf>._
-_We have taken the comments and errata from the May 1962 "Commentaires" (_Séminaire Bourbaki_, Volume **14**, 1961--62, Complément) and inserted them into the relevant places in the notes themselves, although we have tried to make it clear when this has been done._
+_All of the following are by A. Grothendieck. A PDF copy of the original notes can be found at <https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf>._
+_We have taken the comments and errata from the May 1962 "Commentaires"_ (_Séminaire Bourbaki_, Volume **14**, 1961--62, Complément) _and inserted them into the relevant places in the notes themselves, making clear when this has been done._
 
 - "Théorème de dualité pour les faisceaux algébriques cohérents". _Séminaire Bourbaki_, Volume **9** (1956--57), Talk no. 149.
   <br/>
