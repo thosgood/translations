@@ -316,6 +316,31 @@ The asymptotic representation and the estimates of $\GG(z)$, with which we now c
 Different areas of the $z$-plane have to be examined on a case-by-case basis.
 Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\geq0$; if $y>0$, then we assume that $0<\varphi<\pi$; $x-iy = \overline{z}$.
 
+\begin{enumerate}[I.]
+  \item \emph{For $|y|\geq1$ and $a\leq A$,}
+    \[
+    \label{17}
+      \GG(z)
+      = a^{-z} \Gamma(z) \left(
+        1 + \frac{\chi(z)}{z}
+      \right) + a^z \Gamma(z) \left(
+        1 - \frac{\chi(-z)}{z}
+      \right)
+    \tag{17}
+    \]
+    \emph{where the absolute value of the function $\chi(z)=\chi(z;a)$ is bounded above by a value depending only on $A$.}
+
+    We know, by \cref{11}, that
+    \[
+      \chi(z)
+      = \frac{za^2}{1-z} \left(
+        1 + \sum_{n=2}^\infty \frac{a^{2n-2}}{n!(2-z)(3-z)\ldots(n-z)}
+      \right)
+    \]
+    whence, without further ado, the claim.
+  \item !
+\end{enumerate}
+
 
 
 %% Bibliography %%
