@@ -35,7 +35,7 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{section}{Section}{Sections}
+\crefname{section}{\S}{\SS}
 \crefname{equation}{}{}
 
 
@@ -48,6 +48,7 @@
 
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
+\newcommand{\dd}{\operatorname{d}\!}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -84,13 +85,17 @@
 
 \setcounter{footnote}{0}
 
-\tableofcontents
 \bigskip
 
 
 %% Content %%
 
+\emph{[Translator.] The numbering of the footnotes in the original has not been replicated in this translation, since this would have resulted in multiple footnotes with the same number on one page.}
+
+\bigskip
+
 The Riemann $\xi$-function, defined by the formula
+\oldpage{305}
 \[
 \label{1}
   \xi(iz)
@@ -101,8 +106,63 @@ The Riemann $\xi$-function, defined by the formula
     \frac{z}{2} + \frac14
   \right) \zeta \left(
     \frac12 + z
-  \right)
+  \right),
 \tag{1}
+\]
+was represented by Riemann himself by an infinite trigonometric integral, namely\footnote{\textsc{B. Riemann}, Werke (1876), S.~138.}
+\[
+\label{2}
+  \xi(z) = 2\int_0^\infty \Phi(u)\cos(zu)\dd u
+\tag{2}
+\]
+\[
+\label{3}
+  \Phi(u) = 2\pi e^{\frac{5u}{2}} \sum_{n=1}^\infty (2\pi e^{2u}n^2 - 3) n^2 e^{-n^2\pi e^{2u}}.
+\tag{3}
+\]
+It is evident that
+\[
+\label{4}
+  \Phi(u) \sim 4\pi^2 e^{\frac{9u}{2}-\pi e^{2u}}
+  \quad\mbox{as $u\to+\infty$.}
+\tag{4}
+\]
+Furthermore (see \cref{section4}), $\Phi(u)$ is an even function.
+Therefore
+\[
+\label{5}
+  \Phi(u) \sim 4\pi^2 \left(
+    e^{\frac{9u}{2}} + e^{-\frac{9u}{2}}
+  \right) e^{-\pi(e^{2u}+e^{-2u})}
+  \quad\mbox{as $u\to\pm\infty$.}
+\tag{5}
+\]
+
+\oldpage{306}
+With regards to the Riemann hypothesis, one could ask the following question\footnote{This was casually mentioned by Prof.~Landau in a conversation in 1913.}: does the function given by replacing $\Phi(u)$ in the right-hand side of \cref{2} with the right-hand side of \cref{4} have only real zeros?
+
+The answer is no (see \cref{section4}): the resulting function has infinitely many imaginary zeros.
+If, however, the right-hand side of \cref{5} is used, instead of the right-hand side of \cref{4}, then we obtain the function
+\[
+\label{6}
+  \xi^*(z) = 8\pi^2 \int_0^\infty \left(
+    e^{\frac{9u}{2}} + e^{-\frac{9u}{2}}
+  \right) e^{-\pi(e^{2u}+e^{-2u})} \cos(zu) \dd u,
+\tag{6}
+\]
+which one could call the ``modified $\xi$-function'', and $\xi^*(z)$ in fact \emph{only has real zeros}.
+Incidentally,
+\[
+  \xi(z) \sim \xi^*(z)
+\]
+if $z$ tends towards $\infty$ in some closed ray based at the point $0$ and not containing the real axis.
+If we denote by $N(r)$ the number of zeros of $\xi(z)$ in the circular region $|z|\leq r$, and by $N^*(r)$ the number of zeros of $\xi^*(z)$ in the same region, then
+\[
+  N(r) \sim N^*(r)
+\]
+and even
+\[
+  N(r) - N^*(r) = O(\log r).
 \]
 
 
