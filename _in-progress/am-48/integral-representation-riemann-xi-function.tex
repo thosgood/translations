@@ -55,6 +55,7 @@
 \renewcommand{\leq}{\leqslant}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
+\newcommand{\unsure}[1]{\underline{\emph{#1 (?)}}}
 \newcommand{\oldpage}[1]{\marginpar{\phantom{.}\\\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
 
@@ -338,7 +339,131 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
       \right)
     \]
     whence, without further ado, the claim.
-  \item !
+  \item \emph{Let $\varepsilon$ and $A$ be fixed positive numbers.}
+    \emph{Set}
+    \[
+    \label{18}
+      \frac{a^z\GG(z)}{\Gamma(z)} - 1
+      = \psi(z) = \psi(z;a).
+    \tag{18}
+    \]
+    \emph{Then, in the half-plane $x\geq\varepsilon$,}
+    \[
+    \label{19}
+      \lim_{|z|\to\infty} \psi(z) = 0,
+    \tag{19}
+    \]
+    \emph{and, in fact, if $a\leq A$, then this convergence is uniform in $z$ and $a$.}
+
+    It follows, from Stirling's formula, that there exists some constant $C$ such that, for $y\geq1$, $x\geq\varepsilon$, and $r\geq ae$,
+    \[
+    \label{20}
+      \left\vert
+        a^{2z} \frac{\Gamma(-z)}{\Gamma(z)}
+      \right\vert \leq a^{2x}Cr^{-2x}e^{-(\pi-2\varphi)y+2x}
+      \leq C\left(
+        \frac{ae}{r}
+      \right)^{2\varepsilon}.
+    \tag{20}
+    \]
+    In the part of the half-plane where $x\geq\varepsilon$, where $y\geq1$, claim~II follows directly from \cref{17}, \cref{18}, and \cref{20};
+    it also follows, by symmetry, in the part where $y\leq-1$.
+    Then the only remaining part is the half-strip
+    \[
+      x\geq\varepsilon,
+      \quad -1\leq y\leq 1.
+    \]
+    By the already-proven part of claim~II, function~\cref{18} tends to zero as $z\to\infty$.
+    Since function~\cref{18} is entire and
+\oldpage{310}
+    of finite order, by well-known general theorems\footnote{See \textsc{G.~P\'{o}lya and G.~Szeg\"{o}}, Aufgaben und Lehrs\"{a}tze aus der Analysis (Berlin 1925), Bd.~1, Aufgaben~III~333, III~339.}, it must tend uniformly to zero in \todo half-strips as $z\to\infty$;
+    this completes the proof of claim~II.
+    Of course, instead of using general theorems, function~\cref{18} could also be used on suitable curves intersecting the half-strip, e.g. to estimate on the straight lines $x=k+\frac12$, for $k=0,1,2,3,\ldots$.
+    In the case where $k=0$, we investigate such an estimation for a different purpose, c.f. \cref{22}.
+  \item \emph{If $a\leq\frac14$, then there are no zeros of $\GG(z;a)$ outside of the strip $-\frac12<x<\frac12$.}
+
+    Since $\GG(z)$ is even, it suffices to consider the half-plane $x\geq\frac12$.
+    On the straight line $x=\frac12$,
+    \[
+      z+\overline{z} = 1,
+      \quad \overline{z} = 1-z
+    \]
+    and so, by the symmetry of \unsure{?} with respect to the real axis,
+    \[
+      |\Gamma(1-z)| = |\Gamma(z)|,
+    \]
+    whence
+    \[
+      \left\vert
+        \frac{\Gamma(-z)}{\Gamma(z)}
+      \right\vert = \left\vert
+        \frac{\Gamma(1-z)}{-z\Gamma(z)}
+      \right\vert = \frac{1}{|z|} \leq 2
+      \qquad\left(
+        x=\frac12
+      \right).
+    \]
+    Using \cref{21}, it follows from \cref{11} that, on the straight line $x=\frac12$,
+    \[
+    \label{22}
+      \begin{aligned}
+        |\psi(z)|
+        &= \left\vert
+          \frac{a^z\GG(z)}{\Gamma(z)} - 1
+        \right\vert
+      \\&= \left\vert
+          \sum_{n=1}^\infty \frac{a^{2n}}{n!(1-z)\ldots(n-z)}
+          + \frac{a^{2z}\Gamma(-z)}{\Gamma(z)} \left(
+            1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!(1+z)\ldots(n+z)}
+          \right)
+        \right\vert
+      \\&\leq \sum_{n=1}^\infty \frac{a^{2n}}{n!\frac12\cdot\frac32\cdot\ldots\cdot\frac{2n-1}{2}} + a\cdot2 \left(
+        1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!\frac32\cdot\frac52\cdot\ldots\cdot\frac{2n+1}{2}}
+      \right)
+      \\&= \sum_{n=1}^\infty \frac{(2a)^{2n}}{(2n)!} + \sum_{n=0}^\infty \frac{(2a)^{2n+1}}{(2n+1)!}
+      \\&= e^{2a}-1.
+      \end{aligned}
+    \tag{22}
+    \]
+
+  \oldpage{311}
+    It then follows from \cref{22} that
+    \[
+    \label{23}
+      |\psi(z)| = |\psi(z;a)| < 1
+      \qquad\mbox{for $x=\frac12$ and $a\leq\frac14$.}
+    \tag{23}
+    \]
+    It follows from claim~II that there exists some number $R$ such that
+    \[
+    \label{24}
+      |\psi(z)| = |\psi(z;a)| <1
+      \qquad\mbox{for $x\geq\frac12$, $r\geq R$, and $a\leq\frac14$.}
+    \tag{24}
+    \]
+    Furthermore, $|\psi(z)|<1$ is also satisfied in the circle segment $\{x\geq\frac12,r\leq R\}$, since the inequality in question, by \cref{23} and \cref{24}, is satisfied on the boundary of the circle segment.
+    Thus $|\psi(z)|<1$ is satisfied in the whole half-plane $x\geq\frac12$;
+    thus $\GG(z)$, cf.~\cref{18}, does not disappear in this half-plane.
+
+    \todo (PICTURE)
+
+    For what follows, it is useful to have in mind a certain partition of the plane (cf. the above figure): the strip $-1\leq x\leq 1$ is denoted by $S$; the part of the plane where both $r\leq R$ and $|x|>1$ is denoted by $T$; the remaining part, which extends to infinity, is denoted by $U$.
+    We pick the number $R=R(A)$ depending on a certain positive number $A$ such that, inside, and on the boundary of, $U$, the inequality $|\psi(z)|<1$ is satisfied for $a\leq A$.
+    From \cref{18} it follows that $\GG(z)$ does not vanish inside, or on the boundary of, $U$.
+\end{enumerate}
+
+
+\section{}
+\label{section3}
+
+We will now study consequences of the difference equation in \cref{9}, and link them to those that we have just obtained from the representation in \cref{11}.
+
+\begin{enumerate}[I.]
+\setcounter{enumi}{3}
+  \item \emph{$\GG(z)$ has no zeros on the straight lines $x=1$ or $x=-1$, i.e. on the boundary of $S$.}
+
+\oldpage{312}
+    There are two things that we have to consider:
 \end{enumerate}
 
 
