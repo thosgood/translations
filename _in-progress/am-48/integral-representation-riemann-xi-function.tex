@@ -1,7 +1,7 @@
 \documentclass{article}
 
 \title{A comment about the integral representation of the Riemann $\xi$-function}
-\author{P\'{o}lya, G.}
+\author{George P\'{o}lya}
 \date{}
 
 \usepackage{amssymb,amsmath}
@@ -49,6 +49,7 @@
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
 \newcommand{\dd}{\operatorname{d}\!}
+\newcommand{\GG}{\mathfrak{G}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -150,7 +151,7 @@ If, however, the right-hand side of \cref{5} is used, instead of the right-hand 
   \right) e^{-\pi(e^{2u}+e^{-2u})} \cos(zu) \dd u,
 \tag{6}
 \]
-which one could call the ``modified $\xi$-function'', and $\xi^*(z)$ in fact \emph{only has real zeros}.
+which one could call the ``modified $\xi$-function'', and $\xi^*(z)$ in fact \emph{has only real zeros}.
 Incidentally,
 \[
   \xi(z) \sim \xi^*(z)
@@ -165,6 +166,38 @@ and even
   N(r) - N^*(r) = O(\log r).
 \]
 
+In what follows, I provide a proof of the fact that all the zeros of $\xi^*(z)$ are real.
+The proof focuses on another entire function, namely the function
+\[
+\label{7}
+  \GG(z) = \GG(z;a) = \int_{-\infty}^{+\infty} e^{-a(e^u+e^{-u})+zu} \dd u,
+\tag{7}
+\]
+which has some nice, simple properties.
+The parameter $a$ is always a positive value.
+We can express $\xi^*(z)$ in terms of $\GG(z)$.
+Indeed,
+\[
+\label{8}
+  \xi^*(z) = 2\pi^2 \left\{
+    \GG\left(
+      \frac{iz}{2} - \frac94; \pi
+    \right) +
+    \GG\left(
+      \frac{iz}{2} + \frac94; \pi
+    \right)
+  \right\}
+\tag{8}
+\]
+
+\oldpage{307}
+as one can easily derive from \cref{6} and \cref{7}.
+I will show that $\GG(iz)$ \emph{has only real zeros}.
+From this, the same property then easily follows for $\xi^*(z)$.
+
+
+\section{}
+\label{section1}
 
 
 %% Bibliography %%
