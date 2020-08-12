@@ -163,50 +163,9 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
 
 
-## Séminaire Schwartz
-### Volume 1 (1953--54), "Produits tensoriels topologiques d'espaces vectoriels topologiques. Espaces vectoriels topologiques nucléaires"
-
-- Talk no. 1 "Produit tensoriel topologique d'espaces vectoriels topologiques" (L. Schwartz).
-  <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/1-topological-tensor-product.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F1-topological-tensor-product.tex&command=pdflatex&trackId=1596132290863)
-  |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SLS_1953-1954__1__A2_0/)
-
-
-<!--
-- Talk no. 2: "Cas des espaces normés. Produit tensoriel d'applications linéaires" (L. Schwartz).
-  <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/2-normed-space-case.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
-  |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SLS_1953-1954__1__A3_0/)
--->
-
-<!--
-- Talk no. 3: "N° 1. Rappels sur les espaces $L^p$" (L. Schwartz).
-  <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/3-Lp-space-recap.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
-  |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SLS_1953-1954__1__A4_0/)
--->
-
-- Talk no. 12: "La théorie des opérateurs nucléaires" (L. Schwartz).
-  <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-schwartz-1/12-the-theory-of-nuclear-operators.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-schwartz-1%2F12-the-theory-of-nuclear-operators.tex&command=pdflatex&trackId=1595524106537)
-  |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SLS_1953-1954__1__A13_0/)
-
-
 # In progress
 
-Some of the longer papers take a while to translate, but, once they reach a certain level of completion, I'll share them here so that at least what I have done can be available. The papers that make up Grothendieck's FGA will just be released one at a time.
+Some of the longer papers take a while to translate, but, once they reach a certain level of completion, I'll share them here so that at least what I have done can be available. The papers that make up Grothendieck's FGA will just be released one at a time when completed.
 
 <!-- - Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._ Springer-Verlag, Lecture Notes in Mathematics **163** (1970). <https://publications.ias.edu/node/355>
   <br/>
