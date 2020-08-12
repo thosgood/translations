@@ -264,6 +264,52 @@ From this it follows, by \cref{14}, after exchanging the order of summation and 
   + a^z\sum_{n=0}^\infty \frac{(-1)^n a^{2n}}{n!} Q(-n-z).
 \tag{15}
 \]
+On the other hand, evidently
+\[
+  \begin{aligned}
+    0
+    &= \sum_{k=0}^\infty \sum_{l=0}^\infty \frac{(-1)^{k+l}a^{k+l}}{k!l!} \left(
+      \frac{1}{-k+z+l} + \frac{1}{k-z-l}
+    \right)
+  \\&= a^{-z} \sum_{k=0}^\infty \frac{(-1)^ka^{2k}}{k!} \sum_{l=0}^\infty \frac{(-1)^la^{-k+z+l}}{l!(-k+z+l)}
+  \\&+ a^z \sum_{l=0}^\infty \frac{(-1)^la^{2l}}{l!} \sum_{k=0}^\infty \frac{(-1)^ka^{-l-z+k}}{k!(-l-z+k)}
+  \end{aligned}
+\]
+and so, by \cref{13},
+\[
+\label{16}
+  \GG(z)
+  = a^{-z} \sum_{k=0}^\infty \frac{(-1)^ka^{2k}}{k!} P(-k+z)
+  + a^z \sum_{l=0}^\infty \frac{(-1)^la^{2l}}{l!} P(-l-z).
+\tag{16}
+\]
+It follows from \cref{12}, \cref{15}, and \cref{16} that
+\[
+  \GG(z)
+  = a^{-z} \sum_{n=0}^\infty \frac{(-1)^na^{2n}}{n!} \Gamma(-n+z)
+  + a^z \sum_{n=0}^\infty \frac{(-1)^na^{2n}}{n!} \Gamma(-n-z),
+\]
+which is equivalent to \cref{11}.
+
+I will also state here, without proof, the two following representations, which will not be used in what follows:
+\[
+  \begin{aligned}
+    \GG(z)
+    &= \frac{1}{2\pi i} \int_{a-i\infty}^{a+i\infty} \Gamma\left(
+      s - \frac{z}{2}
+    \right) \Gamma \left(
+      s + \frac{z}{2}
+    \right) a^{-2s} \dd s,
+  \\\GG(z)
+    &= \frac{\pi}{\sin(\pi z)} e^{\frac{i\pi z}{2}} J_{-z}(2ia) - \frac{\pi}{\sin(\pi z)} e^{-\frac{i\pi z}{2}} J_z(2ia).
+  \end{aligned}
+\]
+In the first one, $2a>|\Re z|$; in the second, both terms on the right-hand side satisfy the same difference equation, which is also satisfied by $\GG(z)$, by \cref{9}.
+
+
+\section{}
+\label{section2}
+
 
 
 %% Bibliography %%
