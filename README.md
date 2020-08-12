@@ -55,7 +55,13 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
 -->
 
 <!--
-- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion." _Acta Math._, Volume **48** (1926), pp. 305--317.
+- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion." _Acta Math._, Volume **48** (1926), pp. 305--317. DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/am-48/integral-representation-riemann-xi-function.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://doi.org/10.1007/BF02565336)
 -->
 
 

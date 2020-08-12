@@ -199,6 +199,72 @@ From this, the same property then easily follows for $\xi^*(z)$.
 \section{}
 \label{section1}
 
+The most important property of the entire function $\GG(z)$ is that is satisfies a simple difference equation;
+namely
+\[
+\label{9}
+  z\GG(z) = a(\GG(z+1) - \GG(z-1))
+\tag{9}
+\]
+as can easily be proven by partial integration.
+Note also that $\GG(z)$ is even:
+\[
+\label{10}
+  \GG(-z) = \GG(z).
+\tag{10}
+\]
+Furthermore, if $z$ is not an integer, then
+\[
+\label{11}
+  \begin{aligned}
+    \GG(z)
+    &= a^{-z}\Gamma(z) \left(
+      1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!(1-z)(2-z)\ldots(n-z)}
+    \right)
+  \\&+ a^z\Gamma(-z) \left(
+      1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!(1+z)(2+z)\ldots(n+z)}
+    \right).
+  \end{aligned}
+\tag{11}
+\]
+
+The proof of \cref{11} goes as follows: write
+\[
+\label{12}
+  \Gamma(z)
+  = \int_0^a e^{-v} v^{z-1} \dd v + \int_a^\infty e^{-v} v^{z-1} \dd v
+  = P(z) + Q(z),
+\tag{12}
+\]
+\[
+\label{13}
+  P(z) = P(z;a) = \sum_{n=0}^\infty \frac{(-1)^n a^{z+n}}{n!(z+n)},
+\tag{13}
+\]
+\[
+\label{14}
+  Q(z) = Q(z;a) = a^z \int_0^\infty e^{-ae^u+uz} \dd u.
+\tag{14}
+\]
+
+Now,
+\[
+  \begin{aligned}
+    \GG(z)
+    &= \int_0^\infty e^{-a(e^u+e^{-u})} (e^{uz}+e^{-uz}) \dd u
+  \\&= \int_0^\infty \sum_{n=0}^\infty e^{-ae^u} \frac{(-a)^n}{n!} (e^{(-n+z)u}+e^{(-n-z)u}) \dd u.
+  \end{aligned}
+\]
+From this it follows, by \cref{14}, after exchanging the order of summation and integration (which can easily be justified by absolute convergence), that
+\oldpage{308}
+\[
+\label{15}
+  \GG(z)
+  = a^{-z}\sum_{n=0}^\infty \frac{(-1)^n a^{2n}}{n!} Q(-n+z)
+  + a^z\sum_{n=0}^\infty \frac{(-1)^n a^{2n}}{n!} Q(-n-z).
+\tag{15}
+\]
+
 
 %% Bibliography %%
 
