@@ -1,15 +1,14 @@
 \documentclass{article}
 
-\title{Reminders on $L^p$ spaces}
-\author{L. Schwartz}
-\date{2\textsuperscript{nd} of December, 1953}
+\title{A comment about the integral representation of the Riemann $\xi$-function}
+\author{P\'{o}lya, G.}
+\date{}
 
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
 \usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
-\usepackage{tikz-cd}
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
@@ -44,29 +43,11 @@
 
 \usepackage{amsthm}
 
-  \theoremstyle{plain}
-
-  \newtheorem{innercustomproposition}{Proposition}
-  \crefname{innercustomproposition}{Proposition}{Propositions}
-  \newenvironment{proposition}[1]
-    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-    {\endinnercustomproposition}
-
-  \newtheorem*{theorem}{Theorem}
-
-  \theoremstyle{definition}
-
-  \newtheorem*{remark}{Remark}
-  \newtheorem*{definition}{Definition}
-
 
 %% Shortcuts %%
 
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
-\newcommand{\BB}{\mathcal{B}}
-\newcommand{\LL}{\mathcal{L}}
-\newcommand{\cotimes}{\widehat{\otimes}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -90,21 +71,45 @@
   \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations/}} of translations of various papers into English.}
   \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
   
-  \emph{What follows is a translation of the French paper:}
+  \emph{What follows is a translation of the German paper:}
 
   \medskip\noindent
-  \textsc{Schwartz, L.}
-  ``N° 1. Rappels sur les espaces $L^p$''.
-  \emph{S\'{e}minaire Schwartz}, Volume~\textbf{1} (1953-1954), Talk no.~3, 4~p.
-  {\footnotesize\url{http://www.numdam.org/item/SLS_1953-1954__1__A4_0/}}
+  \textsc{P\'{o}lya, G.}
+  ``Bemerkung \"{U}ber die Integraldarstellung der Riemannschen $\xi$-Funktion.''
+  \emph{Acta Math.}, Volume~\textbf{48} (1926), pp.~305--317.
+  \textsc{DOI:} \href{https://doi.org/10.1007/BF02565336}{10.1007/BF02565336}.
+  % \emph{Journal}, Volume~\textbf{X} (Date), pp.~Y--Z.
+  % {\footnotesize\url{URL}}
 \end{abstract}
 
 \setcounter{footnote}{0}
 
+\tableofcontents
+\bigskip
+
 
 %% Content %%
 
-\oldpage{1}
+The Riemann $\xi$-function, defined by the formula
+\[
+\label{1}
+  \xi(iz)
+  =
+  \frac12 \left(
+    z^2 - \frac14
+  \right) \pi^{-\frac{z}{2}-\frac14} \Gamma \left(
+    \frac{z}{2} + \frac14
+  \right) \zeta \left(
+    \frac12 + z
+  \right)
+\tag{1}
+\]
 
+
+
+%% Bibliography %%
+
+\nocite{*}
+\bibliographystyle{acm}
 
 \end{document}

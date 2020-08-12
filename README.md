@@ -54,6 +54,10 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/160940)
 -->
 
+<!--
+- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion." _Acta Math._, Volume **48** (1926), pp. 305--317.
+-->
+
 
 # Seminars
 
