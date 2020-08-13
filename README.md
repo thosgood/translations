@@ -32,10 +32,6 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/?id=BSMF_1958__86__97_0)
 
-<!--
-- Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". _Annales de l'institut Fourier_, Volume **4** (1952), pp. 73--112. <http://www.numdam.org/item/?id=AIF_1952__4__73_0>
--->
-
 - Grothendieck, A. "La théorie des classes de Chern". _Bulletin de la Société Mathématique de France_, Volume **86** (1958) , pp. 137--154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/bsmf-86/the-theory-of-chern-classes.tex)
@@ -169,20 +165,28 @@ Some of the longer papers take a while to translate, but, once they reach a cert
 
 <!-- - Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._ Springer-Verlag, Lecture Notes in Mathematics **163** (1970). <https://publications.ias.edu/node/355>
   <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/lnm-163/de-regular-singular-points.tex)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/lnm-163/de-regular-singular-points.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=lnm-163%2Fde-regular-singular-points.tex&command=pdflatex&trackId=1596040243159)
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355) -->
 
 <!-- - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points." In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications, Volume **16** (1989), pp. 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
   </br>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/msrip-16/projective-line-minus-three-points.tex)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/msrip-16/projective-line-minus-three-points.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=msrip-16%2Fprojective-line-minus-three-points.tex&command=pdflatex&trackId=1596902018703)
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://publications.ias.edu/node/407) -->
 
----
+<!--
+- Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". _Annales de l'institut Fourier_, Volume **4** (1952), pp. 73--112. <http://www.numdam.org/item/?id=AIF_1952__4__73_0>
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/aif-4/topological-tensor-nuclear-spaces.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/?id=AIF_1952__4__73_0)
+-->
 
 <!-- icons from fontawesome.com under [their licence](https://fontawesome.com/license). -->
