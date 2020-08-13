@@ -41,16 +41,6 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://www.doi.org/10.24033/bsmf.1501)
 
 <!--
-- Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen". _Math. Ann._, Volume **146** (1962), pp. 331--368. <http://eudml.org/doc/160940>
-  <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/ma-146/exceptional-analytic-sets.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1596040221056)
-  |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/160940)
--->
-
-<!--
 - Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion." _Acta Math._, Volume **48** (1926), pp. 305--317. DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/am-48/integral-representation-riemann-xi-function.tex)
@@ -178,6 +168,16 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://publications.ias.edu/node/407) -->
+
+<!--
+- Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen". _Math. Ann._, Volume **146** (1962), pp. 331--368. <http://eudml.org/doc/160940>
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/ma-146/exceptional-analytic-sets.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latex.aslushnikov.com/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1596040221056)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/160940)
+-->
 
 <!--
 - Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". _Annales de l'institut Fourier_, Volume **4** (1952), pp. 73--112. <http://www.numdam.org/item/?id=AIF_1952__4__73_0>
