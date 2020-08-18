@@ -40,16 +40,6 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://www.doi.org/10.24033/bsmf.1501)
 
-<!--
-- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion." _Acta Math._, Volume **48** (1926), pp. 305--317. DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
-  <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/am-48/integral-representation-riemann-xi-function.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
-  |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://doi.org/10.1007/BF02565336)
--->
-
 
 # Seminars
 
@@ -152,6 +142,15 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
 # In progress
 
 Some of the longer papers take a while to translate, but, once they reach a certain level of completion, I'll share them here so that at least what I have done can be available. The papers that make up Grothendieck's FGA will just be released one at a time when completed.
+
+- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion." _Acta Math._, Volume **48** (1926), pp. 305--317. DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/am-48/integral-representation-riemann-xi-function.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://doi.org/10.1007/BF02565336)
+
 
 <!-- - Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._ Springer-Verlag, Lecture Notes in Mathematics **163** (1970). <https://publications.ias.edu/node/355>
   <br/>
