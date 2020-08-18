@@ -50,6 +50,9 @@
 \newcommand{\cat}{\mathcal}
 \newcommand{\dd}{\operatorname{d}\!}
 \newcommand{\GG}{\mathfrak{G}}
+\newcommand{\UU}{\mathscr{U}}
+\newcommand{\TT}{\mathscr{T}}
+\renewcommand{\SS}{\mathscr{S}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -330,6 +333,7 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
     \tag{17}
     \]
     \emph{where the absolute value of the function $\chi(z)=\chi(z;a)$ is bounded above by a value depending only on $A$.}
+    \label{I}
 
     We know, by \cref{11}, that
     \[
@@ -354,6 +358,7 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
     \tag{19}
     \]
     \emph{and, in fact, if $a\leq A$, then this convergence is uniform in $z$ and $a$.}
+    \label{II}
 
     It follows, from Stirling's formula, that there exists some constant $C$ such that, for $y\geq1$, $x\geq\varepsilon$, and $r\geq ae$,
     \[
@@ -381,6 +386,7 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
     Of course, instead of using general theorems, function~\cref{18} could also be used on suitable curves intersecting the half-strip, e.g. to estimate on the straight lines $x=k+\frac12$, for $k=0,1,2,3,\ldots$.
     In the case where $k=0$, we investigate such an estimation for a different purpose, c.f. \cref{22}.
   \item \emph{If $a\leq\frac14$, then there are no zeros of $\GG(z;a)$ outside of the strip $-\frac12<x<\frac12$.}
+    \label{III}
 
     Since $\GG(z)$ is even, it suffices to consider the half-plane $x\geq\frac12$.
     On the straight line $x=\frac12$,
@@ -447,9 +453,9 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
 
     \todo (PICTURE)
 
-    For what follows, it is useful to have in mind a certain partition of the plane (cf. the above figure): the strip $-1\leq x\leq 1$ is denoted by $S$; the part of the plane where both $r\leq R$ and $|x|>1$ is denoted by $T$; the remaining part, which extends to infinity, is denoted by $U$.
-    We pick the number $R=R(A)$ depending on a certain positive number $A$ such that, inside, and on the boundary of, $U$, the inequality $|\psi(z)|<1$ is satisfied for $a\leq A$.
-    From \cref{18} it follows that $\GG(z)$ does not vanish inside, or on the boundary of, $U$.
+    For what follows, it is useful to have in mind a certain partition of the plane (cf. the above figure): the strip $-1\leq x\leq 1$ is denoted by $\SS$; the part of the plane where both $r\leq R$ and $|x|>1$ is denoted by $\TT$; the remaining part, which extends to infinity, is denoted by $\UU$.
+    We pick the number $R=R(A)$ depending on a certain positive number $A$ such that, inside, and on the boundary of, $\UU$, the inequality $|\psi(z)|<1$ is satisfied for $a\leq A$.
+    From \cref{18} it follows that $\GG(z)$ does not vanish inside, or on the boundary of, $\UU$.
 \end{enumerate}
 
 
@@ -460,10 +466,34 @@ We will now study consequences of the difference equation in \cref{9}, and link 
 
 \begin{enumerate}[I.]
 \setcounter{enumi}{3}
-  \item \emph{$\GG(z)$ has no zeros on the straight lines $x=1$ or $x=-1$, i.e. on the boundary of $S$.}
+  \item \emph{$\GG(z)$ has no zeros on the straight lines $x=1$ or $x=-1$, i.e. on the boundary of $\SS$.}
+    \label{IV}
 
 \oldpage{312}
     There are two things that we have to consider:
+    firstly, the difference equation and the symmetry of $\GG(z)$; secondly, the asymptotic properties of $\GG(z)$.
+
+    Firstly:
+    the function $\GG(z)$ is even, and takes real values for all $z$.
+    From this it follows that, if $y$ is real, then $\GG(iy)$ is real, and the two values $\GG(1+iy)$ and $\GG(-1+iy)$ are complex conjugate.
+    So \cref{9} implies, for $z=iy$, that
+    \[
+    \label{25}
+      y\GG(iy) = 2a\Im\GG(1+iy).
+    \tag{25}
+    \]
+
+    Secondly:
+    it is not possible for $\GG(z)$ to vanish at two points simultaneously if the line connecting them is parallel to the real axis and is of length~$1$.
+    This is since, if $\GG(c)=0$ and $\GG(c-1)=0$, then \cref{9} would imply that $\GG(c+1)=0$ as well, and thus that $\GG(c+2)=0$, $\GG(c+3)=0$, ..., and so $\GG(z)$ would have zeros in the region $\UU$ (see the figure); but this would be a contradiction.
+
+    For real $z$, $\GG(z)$ is positive (cf. \cref{7}).
+    On one hand, $\GG(1+iy)=0$ implies that $y\neq0$, and, on the other hand, $\GG(1+iy)=0$ implies that $\Im\GG(1+iy)=0$, and thus \cref{25} implies that $\GG(iy)=0$.
+    However, the simultaneous vanishing of $\GG(1+iy)$ and $\GG(iy)$ is impossible, and thus $\GG(1+iy)\neq0$.
+  \item \emph{There are no zeros of $\GG(z)$ outside of the strip $\SS$.}
+    \label{V}
+
+    This has already been proven for $a\leq\frac14$, cf. \hyperref[III]{III}.
 \end{enumerate}
 
 
