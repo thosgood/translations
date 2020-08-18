@@ -516,6 +516,27 @@ We will now study consequences of the difference equation in \cref{9}, and link 
 \oldpage{313}
   \item \emph{All the zeros of $\GG(z)$ lying inside the strip $\SS$ are simple and purely imaginary.}
     \label{VI}
+
+    It follows from \cref{17} and from Stirling's formula that, in the strip $1\leq x\leq 1$, for $y\to+\infty$, \todo
+    \[
+    \label{28}
+      \GG(x+iy)
+      =
+      \frac{1}{\sqrt{2\pi y}} e^{-\frac\pi2 y+ i\frac\pi2 x}
+      \left\{
+        \left(\frac{y}{a}\right)^x e^{i\Phi} + 
+        \left(\frac{y}{a}\right)^{-x} e^{-i\Phi}
+      \right\} + O\left(
+        e^{-\frac\pi2 y} y^{|z| - \todo}
+      \right)
+    \tag{28}
+    \]
+    where, for abbreviation, we set
+    \[
+    \label{29}
+      \Phi = y\log\frac{y}{a} - y - \frac\pi4.
+    \tag{29}
+    \]
 \end{enumerate}
 
 
