@@ -15,7 +15,7 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
 # Articles
 
 <!--
-- Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten". _Mathematische Annalen_, Volume **32** (1888), pp. 342–350. <http://eudml.org/doc/157385>.
+- Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten". _Mathematische Annalen_ **32** (1888), pp. 342–350. <http://eudml.org/doc/157385>.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/ma-32/sum-of-squares.tex)
   |
@@ -24,7 +24,7 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/157385)
 -->
 
-- Borel, A. and Serre, J.-P. "Le théorème de Riemann-Roch". _Bulletin de la Société Mathématique de France_, Volume **86** (1958), pp. 97--136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
+- Borel, A. and Serre, J.-P. "Le théorème de Riemann-Roch". _Bulletin de la Société Mathématique de France_ **86** (1958), pp. 97--136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/bsmf-86/the-riemann-roch-theorem.tex)
   |
@@ -32,7 +32,7 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/?id=BSMF_1958__86__97_0)
 
-- Grothendieck, A. "La théorie des classes de Chern". _Bulletin de la Société Mathématique de France_, Volume **86** (1958) , pp. 137--154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
+- Grothendieck, A. "La théorie des classes de Chern". _Bulletin de la Société Mathématique de France_ **86** (1958) , pp. 137--154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/bsmf-86/the-theory-of-chern-classes.tex)
   |
@@ -48,51 +48,51 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
 ### Extracts (1957--92), "Fondements de la Géométrie Algébrique"
 
 _All of the following are by A. Grothendieck. A PDF copy of the original notes can be found at <https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf>._
-_We have taken the comments and errata from the May 1962 "Commentaires"_ (_Séminaire Bourbaki_, Volume **14**, 1961--62, Complément) _and inserted them into the relevant places in the notes themselves, making clear when this has been done._
+_We have taken the comments and errata from the May 1962 "Commentaires"_ (_Séminaire Bourbaki_ **14**, 1961--62, Complément) _and inserted them into the relevant places in the notes themselves, making clear when this has been done._
 
-- "Théorème de dualité pour les faisceaux algébriques cohérents". _Séminaire Bourbaki_, Volume **9** (1956--57), Talk no. 149.
+- "Théorème de dualité pour les faisceaux algébriques cohérents". _Séminaire Bourbaki_ **9** (1956--57), Talk no. 149.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/1-coherent-duality.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215)
 
-<!-- - "Géométrie formelle et géométrie algébrique". _Séminaire Bourbaki_, Volume **11** (1958--59), Talk no. 182.
+<!-- - "Géométrie formelle et géométrie algébrique". _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/2-formal-geometry.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1596585546758) -->
 
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". _Séminaire Bourbaki_, Volume **12** (1959--60), Talk no. 190.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". _Séminaire Bourbaki_ **12** (1959--60), Talk no. 190.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-I.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. II. Le théorème d'existence en théorie formelle des modules". _Séminaire Bourbaki_, Volume **12** (1959--60), Talk no. 195.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. II. Le théorème d'existence en théorie formelle des modules". _Séminaire Bourbaki_ **12** (1959--60), Talk no. 195.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-II.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. III. Préschémas quotients". _Séminaire Bourbaki_, Volume **13** (1960--61), Talk no. 212.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. III. Préschémas quotients". _Séminaire Bourbaki_ **13** (1960--61), Talk no. 212.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-III.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. IV. Les schémas de Hilbert". _Séminaire Bourbaki_, Volume **13** (1960--61), Talk no. 221.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. IV. Les schémas de Hilbert". _Séminaire Bourbaki_ **13** (1960--61), Talk no. 221.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-IV.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. V. Let schémas de Picard. Théorèmes d'existence". _Séminaire Bourbaki_, Volume **14** (1961--62), Talk no. 132.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. V. Let schémas de Picard. Théorèmes d'existence". _Séminaire Bourbaki_ **14** (1961--62), Talk no. 132.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-V.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. VI. Let schémas de Picard. Propriétés générales". _Séminaire Bourbaki_, Volume **14** (1961--62), Talk no. 136.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. VI. Let schémas de Picard. Propriétés générales". _Séminaire Bourbaki_ **14** (1961--62), Talk no. 136.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-VI.tex)
   |
@@ -143,7 +143,7 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
 
 Some of the longer papers take a while to translate, but, once they reach a certain level of completion, I'll share them here so that at least what I have done can be available. The papers that make up Grothendieck's FGA will just be released one at a time when completed.
 
-- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion." _Acta Math._, Volume **48** (1926), pp. 305--317. DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
+- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion." _Acta Math._ **48** (1926), pp. 305--317. DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/am-48/integral-representation-riemann-xi-function.tex)
   |
@@ -160,7 +160,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355) -->
 
-<!-- - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points." In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications, Volume **16** (1989), pp. 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
+<!-- - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points." In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), pp. 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
   </br>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/msrip-16/projective-line-minus-three-points.tex)
   |
@@ -169,7 +169,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://publications.ias.edu/node/407) -->
 
 <!--
-- Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen". _Math. Ann._, Volume **146** (1962), pp. 331--368. <http://eudml.org/doc/160940>
+- Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen". _Math. Ann._ **146** (1962), pp. 331--368. <http://eudml.org/doc/160940>
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/ma-146/exceptional-analytic-sets.tex)
   |
@@ -179,7 +179,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
 -->
 
 <!--
-- Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". _Annales de l'institut Fourier_, Volume **4** (1952), pp. 73--112. <http://www.numdam.org/item/?id=AIF_1952__4__73_0>
+- Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". _Annales de l'institut Fourier_ **4** (1952), pp. 73--112. <http://www.numdam.org/item/?id=AIF_1952__4__73_0>
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/aif-4/topological-tensor-nuclear-spaces.tex)
   |
