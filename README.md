@@ -24,8 +24,12 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/157385)
 -->
 
-- Borel, A. and Serre, J.-P. "Le théorème de Riemann-Roch". _Bulletin de la Société Mathématique de France_ **86** (1958), pp. 97--136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
+- Borel, A. and Serre, J.-P. "Le théorème de Riemann-Roch".
   <br/>
+  _Bulletin de la Société Mathématique de France_ **86** (1958), pp. 97--136.
+  <br/>
+  DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/bsmf-86/the-riemann-roch-theorem.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595524110173)
@@ -143,7 +147,7 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
 
 Some of the longer papers take a while to translate, but, once they reach a certain level of completion, I'll share them here so that at least what I have done can be available. The papers that make up Grothendieck's FGA will just be released one at a time when completed.
 
-- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion." _Acta Math._ **48** (1926), pp. 305--317. DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
+- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion". _Acta Math._ **48** (1926), pp. 305--317. DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/am-48/integral-representation-riemann-xi-function.tex)
   |
@@ -160,7 +164,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355) -->
 
-<!-- - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points." In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), pp. 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
+<!-- - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points". In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), pp. 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
   </br>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/msrip-16/projective-line-minus-three-points.tex)
   |
