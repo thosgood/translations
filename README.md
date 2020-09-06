@@ -184,16 +184,24 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://doi.org/10.1007/BF02565336)
 
 
-<!-- - Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._ Springer-Verlag, Lecture Notes in Mathematics **163** (1970). <https://publications.ias.edu/node/355>
+<!-- - Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>
+  Springer-Verlag, Lecture Notes in Mathematics **163** (1970).
+  <br/>
+  <https://publications.ias.edu/node/355>
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/lnm-163/de-regular-singular-points.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355) -->
 
-<!-- - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points". In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), pp. 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
-  </br>
+<!-- - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points".
+  <br/>
+  In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), pp. 79--297.
+  <br/>
+  DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
+  </br><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/msrip-16/projective-line-minus-three-points.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
@@ -201,8 +209,11 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://publications.ias.edu/node/407) -->
 
 <!--
-- Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen". _Math. Ann._ **146** (1962), pp. 331--368. <http://eudml.org/doc/160940>
+- Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen".
   <br/>
+  _Math. Ann._ **146** (1962), pp. 331--368.
+  <br/><http://eudml.org/doc/160940>
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/ma-146/exceptional-analytic-sets.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1596040221056)
@@ -211,8 +222,12 @@ Some of the longer papers take a while to translate, but, once they reach a cert
 -->
 
 <!--
-- Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". _Annales de l'institut Fourier_ **4** (1952), pp. 73--112. <http://www.numdam.org/item/?id=AIF_1952__4__73_0>
+- Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires".
   <br/>
+  _Annales de l'institut Fourier_ **4** (1952), pp. 73--112.
+  <br/>
+  <http://www.numdam.org/item/?id=AIF_1952__4__73_0>
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/aif-4/topological-tensor-nuclear-spaces.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
