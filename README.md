@@ -8,15 +8,19 @@ For translations of the EGA, see <https://github.com/ryankeleti/ega>; for FGA tr
 
 ---
 
-This should go without saying, but I'll say it anyway: _I am making no claim to any of the mathematics or ideas contained in any of these translations; the only things that are mine are the errors introduced during the passage from one language to another._
+This should go without saying, but I'll say it anyway: _I am making no claim to any of the mathematics or ideas contained in any of these translations; the only things that are mine are the errors introduced during the hazardous journey from one language to another._
 
 ---
 
 # Articles
 
 <!--
-- Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten". _Mathematische Annalen_ **32** (1888), pp. 342–350. <http://eudml.org/doc/157385>.
+- Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
   <br/>
+  _Mathematische Annalen_ **32** (1888), pp. 342–350.
+  <br/>
+  <http://eudml.org/doc/157385>.
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/ma-32/sum-of-squares.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-32%2Fsum-of-squares.tex&command=pdflatex&trackId=1596040205463)
@@ -36,8 +40,12 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/?id=BSMF_1958__86__97_0)
 
-- Grothendieck, A. "La théorie des classes de Chern". _Bulletin de la Société Mathématique de France_ **86** (1958) , pp. 137--154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
+- Grothendieck, A. "La théorie des classes de Chern".
   <br/>
+  _Bulletin de la Société Mathématique de France_ **86** (1958) , pp. 137--154.
+  <br/>
+  DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/bsmf-86/the-theory-of-chern-classes.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-theory-of-chern-classes.tex&command=pdflatex&trackId=1596040216373)
@@ -54,50 +62,66 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
 _All of the following are by A. Grothendieck. A PDF copy of the original notes can be found at <https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf>._
 _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Séminaire Bourbaki_ **14**, 1961--62, Complément) _and inserted them into the relevant places in the notes themselves, making clear when this has been done._
 
-- "Théorème de dualité pour les faisceaux algébriques cohérents". _Séminaire Bourbaki_ **9** (1956--57), Talk no. 149.
+- "Théorème de dualité pour les faisceaux algébriques cohérents".
   <br/>
+  _Séminaire Bourbaki_ **9** (1956--57), Talk no. 149.
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/1-coherent-duality.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215)
 
-<!-- - "Géométrie formelle et géométrie algébrique". _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
+<!-- - "Géométrie formelle et géométrie algébrique".
   <br/>
+  _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/2-formal-geometry.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1596585546758) -->
 
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". _Séminaire Bourbaki_ **12** (1959--60), Talk no. 190.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats".
   <br/>
+  _Séminaire Bourbaki_ **12** (1959--60), Talk no. 190.
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-I.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. II. Le théorème d'existence en théorie formelle des modules". _Séminaire Bourbaki_ **12** (1959--60), Talk no. 195.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. II. Le théorème d'existence en théorie formelle des modules".
   <br/>
+  _Séminaire Bourbaki_ **12** (1959--60), Talk no. 195.
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-II.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. III. Préschémas quotients". _Séminaire Bourbaki_ **13** (1960--61), Talk no. 212.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. III. Préschémas quotients".
   <br/>
+  _Séminaire Bourbaki_ **13** (1960--61), Talk no. 212.
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-III.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. IV. Les schémas de Hilbert". _Séminaire Bourbaki_ **13** (1960--61), Talk no. 221.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. IV. Les schémas de Hilbert".
   <br/>
+  _Séminaire Bourbaki_ **13** (1960--61), Talk no. 221.
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-IV.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. V. Let schémas de Picard. Théorèmes d'existence". _Séminaire Bourbaki_ **14** (1961--62), Talk no. 132.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. V. Les schémas de Picard. Théorèmes d'existence".
   <br/>
+  _Séminaire Bourbaki_ **14** (1961--62), Talk no. 132.
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-V.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
 
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. VI. Let schémas de Picard. Propriétés générales". _Séminaire Bourbaki_ **14** (1961--62), Talk no. 136.
+<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. VI. Les schémas de Picard. Propriétés générales".
   <br/>
+  _Séminaire Bourbaki_ **14** (1961--62), Talk no. 136.
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-VI.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
@@ -107,7 +131,7 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
 ### Volume 4 (1958--59), "Variétés de Picard"
 
 - Talk no. 1: "Faisceaux quasi-cohérents" (P. Gabriel).
-  <br/>
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F1-quasi-coherent-sheaves.tex&command=pdflatex&trackId=1596036033972)
@@ -115,7 +139,7 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A1_0/)
 
 - Talk no. 2: "Le théorème de Serre" (P. Gabriel).
-  <br/>
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/2-serre's-theorem.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F2-serre%27s-theorem.tex&command=pdflatex&trackId=1596035916115)
@@ -123,7 +147,7 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A2_0/)
 
 - Talk no. 4: "Diviseurs en géométrie algébrique" (C.S. Seshadri).
-  <br/>
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F4-divisors-in-algebraic-geometry.tex&command=pdflatex&trackId=1596027138553)
@@ -135,7 +159,7 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
 ### Volume 9 (1956--57), "Quelques questions de topologie"
 
 - Talk no. 2: "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
-  <br/>
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-henri-cartan-9%2F2-coherent-algebraic-analytic-sheaves.tex&command=pdflatex&trackId=1595524113730)
@@ -147,8 +171,12 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
 
 Some of the longer papers take a while to translate, but, once they reach a certain level of completion, I'll share them here so that at least what I have done can be available. The papers that make up Grothendieck's FGA will just be released one at a time when completed.
 
-- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion". _Acta Math._ **48** (1926), pp. 305--317. DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
+- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion".
   <br/>
+  _Acta Math._ **48** (1926), pp. 305--317.
+  <br/>
+  DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/am-48/integral-representation-riemann-xi-function.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fam-48%2Fintegral-representation-riemann-xi-function.tex&command=pdflatex&trackId=1597792974805)
