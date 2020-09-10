@@ -1104,10 +1104,16 @@ where $\varepsilon_Y$ is the fundamental element of $\HH^m(Y,\Omega_Y^m)$, and t
   as the homomorphism
   \[
   \label{7.5}
-    \HH^{n-m}(X,\Omega_X^{n-m})
-    \xrightarrow{\sim} \Ext_{\sh{O}_X}^{n-m}(X;\Omega_X^m,\Omega_X^n)
-    \from \Ext_{\sh{O}_X}^{n-m}(X;\Omega_Y^m,\Omega_X^n)
-    \xrightarrow{\sim} \Hom_{\sh{O}_X}(X;\Omega_Y^m,\Omega_Y^m).
+    \begin{tikzcd}
+      &\Ext_{\sh{O}_X}^{n-m}(X;\Omega_Y^m,\Omega_X^n)
+        \rar["\sim"] \dar
+      &\Hom_{\sh{O}_X}(X;\Omega_Y^m,\Omega_Y^m)
+    \\
+      \HH^{n-m}(X,\Omega_X^{n-m})
+        \rar["\sim"]
+      &\Ext_{\sh{O}_X}^{n-m}(X;\Omega_X^m,\Omega_X^n)
+      &
+    \end{tikzcd}
   \tag{7.5}
   \]
   We can verify that the element $1_Y$ of the dual of $\HH^m(Y,\Omega_Y^m)$ is identified with the element of the right-hand side corresponding to the identity endomorphism of $\Omega_Y^m$, and also that the image of this element in $\HH^{n-m}(X,\Omega_X^{n-m})$ is indeed $P_X(Y)$.
@@ -1118,17 +1124,19 @@ These compatibilities, which could have been given in \cref{section4}, can be st
 for example, following from the commutativity of the following diagram of canonical endomorphisms:
 \[
 \label{7.6}
-  \begin{tikzcd}
-    \Ext_{\sh{O}_X}^{n-m}(X;\Omega_X^m,\Omega_X^n)
-      \dar
+  \begin{tikzcd}[column sep=tiny]
     & \Ext_{\sh{O}_X}^{n-m}(X;\Omega_Y^m,\Omega_X^n)
-      \lar \rar["\sim"]
-    & \Hom_{\sh{O}_X}(X;\Omega_Y^m,\Omega_Y^m)
-      \dar
+      \ar[ld] \ar[dr,"\sim"]
+    &
+  \\\Ext_{\sh{O}_X}^{n-m}(X;\Omega_X^m,\Omega_X^n)
+      \ar[dd]
+    && \Hom_{\sh{O}_X}(X;\Omega_Y^m,\Omega_Y^m)
+      \ar[dd]
+  \\& \Ext_{\sh{O}_X}^{n-m}(X;\sh{O}_Y,\Omega_X^{n-m})
+      \ar[ld] \ar[dr,"\sim"]
+    &
   \\\Ext_{\sh{O}_X}^{n-m}(X;\sh{O}_X,\Omega_X^{n-m})
-    & \Ext_{\sh{O}_X}^{n-m}(X;\sh{O}_Y,\Omega_X^{n-m})
-      \lar \rar["\sim"]
-    & \Hom_{\sh{O}_X}(X;\Omega_X^m,\Omega_Y^m)
+    && \Hom_{\sh{O}_X}(X;\Omega_X^m,\Omega_Y^m)
   \end{tikzcd}
 \tag{7.6}
 \]
@@ -1160,10 +1168,10 @@ We define them by the formulas
 \[
 \label{8.1}
   \begin{aligned}
-    \underline{T}_r^{s\bullet}(\sh{A}_1,\ldots,\sh{A}_r;\sh{B}_1,\ldots,\sh{B}_s)
-    &= \HH^\bullet(\shHom_{\sh{O}_X}(\underline{L}(\sh{A}_1)\otimes\ldots\otimes\underline{L}(\sh{A}_r), \underline{L}(\sh{B}_1)\otimes\ldots\otimes\underline{L}(\sh{B}_s)))
-  \\T_r^{s\bullet}(\sh{A}_1,\ldots,\sh{A}_r;\sh{B}_1,\ldots,\sh{B}_s)
-    &= \underline{\RR}^\bullet\Gamma(\shHom_{\sh{O}_X}(\underline{L}(\sh{A}_1)\otimes\ldots\otimes\underline{L}(\sh{A}_r), \underline{L}(\sh{B}_1)\otimes\ldots\otimes\underline{L}(\sh{B}_s)))
+    &\underline{T}_r^{s\bullet}(\sh{A}_1,\ldots,\sh{A}_r;\sh{B}_1,\ldots,\sh{B}_s)
+  \\&= \HH^\bullet(\shHom_{\sh{O}_X}(\underline{L}(\sh{A}_1)\otimes\ldots\otimes\underline{L}(\sh{A}_r), \underline{L}(\sh{B}_1)\otimes\ldots\otimes\underline{L}(\sh{B}_s))),
+  \\&T_r^{s\bullet}(\sh{A}_1,\ldots,\sh{A}_r;\sh{B}_1,\ldots,\sh{B}_s)
+  \\&= \underline{\RR}^\bullet\Gamma(\shHom_{\sh{O}_X}(\underline{L}(\sh{A}_1)\otimes\ldots\otimes\underline{L}(\sh{A}_r), \underline{L}(\sh{B}_1)\otimes\ldots\otimes\underline{L}(\sh{B}_s)))
   \end{aligned}
 \tag{8.1}
 \]
@@ -1221,9 +1229,11 @@ Let $n$ be the dimension of $X$.
 By successively applying a tensor composition \cref{8.3} and contractions \cref{8.4} on repeated arguments, we obtain a pairing
 \[
 \label{8.6}
-  (T_r^s)^p(\sh{A}_1,\ldots;\sh{B}_1,\ldots)
-  \times (T_r^s)^{n-p}(\sh{B}_1,\ldots;\sh{A}_1,\ldots,\sh{A}_r\otimes\Omega_X^n)
-  \to\HH^n(X,\Omega_X^n).
+  \begin{gathered}
+    (T_r^s)^p(\sh{A}_1,\ldots;\sh{B}_1,\ldots)
+    \times (T_r^s)^{n-p}(\sh{B}_1,\ldots;\sh{A}_1,\ldots,\sh{A}_r\otimes\Omega_X^n)
+  \\\longrightarrow\HH^n(X,\Omega_X^n).
+  \end{gathered}
 \tag{8.6}
 \]
 
