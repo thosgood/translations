@@ -1,0 +1,99 @@
+\documentclass{article}
+
+\title{Action of a torus in a projective variety}
+\author{Michel BRION and Claudio PROCESI}
+\date{}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{Baskervaldx}
+\usepackage{mathpazo}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\rhead{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
+\crefname{section}{Section}{Sections}
+\crefname{equation}{}{}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+
+%% Shortcuts %%
+
+\newcommand{\sh}{\mathscr}
+\newcommand{\cat}{\mathcal}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\todo}{\textbf{ !TODO! }}
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations/}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+  
+  \emph{What follows is a translation of the French book chapter:}
+
+  \medskip\noindent
+  \textsc{Brion, M. and Procesi, C.}
+  ``Action d'un tore dans une vari\'{e}t\'{e} projective''
+  in \emph{Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)}, Birkhäuser Boston, Progress in mathematics \textbf{92} (1990), pp.~509--539.
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\tableofcontents
+\bigskip
+
+
+%% Content %%
+
+\section*{Introduction}
+\label{section:introduction}
+
+
+%% Bibliography %%
+
+\nocite{*}
+\bibliographystyle{acm}
+
+\end{document}
