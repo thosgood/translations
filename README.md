@@ -195,7 +195,6 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
 -->
 
-
 <!-- - Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>
   Springer-Verlag, Lecture Notes in Mathematics **163** (1970).

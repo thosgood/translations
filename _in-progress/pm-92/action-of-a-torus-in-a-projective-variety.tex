@@ -48,6 +48,8 @@
 
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Proj}{Proj}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -89,6 +91,24 @@
 
 \section*{Introduction}
 \label{section:introduction}
+
+If a reductive algebraic group $G$ acts on a projective algebraic variety $X$, all over an algebraically closed field, the data of an $G$-linearised ample line bundle $L$ on $X$ allows us to define the open subset of stable points of $X$.
+The quotient (in the usual sense of orbit spaces) of this open subset $X^s=X^s(L)$ by $G$ exists;
+it is a quasi-projective variety, denoted by $X^s/G$.
+Furthermore, $X^s$ is contained in the open subset $X^{ss}=X^{ss}(L)$ of semi-stable points, and we can again define a ``quotient'' $Y$ of $X^{ss}$ by $G$ (it is the space of closed orbits of $G$ in $X^{ss}$).
+The variety $Y$ is projective, and contains $X^s/G$ as an open sub set.
+To define it, we introduce the algebra $A:=\oplus_{n=0}^\infty \Gamma(X,L^n)$ and its sub-algebra $A^G$ consisting of invariants of $G$;
+then $Y$ is the $\Proj$ of the graded algebra $A^G$.
+Thus $Y$ is endowed with a sheaf $\sh{O}(n)$ for every integer $n$, and one of them is invertible.
+So we can define the class $1/n[\sh{O}(n)]$ in the Picard group of $Y$, tensored with $\mathbb{Q}$.
+This class is ample, and depends only on $X$ and $L$.
+
+Our goal is to study these objects, introduced by Mumford in \cite{MF}, when $G$ is a torus (denoted by $T$).
+The idea is to simultaneously consider all the quotients associated to the $T$-linearised bundles $L^n\otimes\sh{O}(\chi)$, where $n$ is a positive integer, and $\sh{O}(\chi)$ is the trivial line bundle on $X$, with the torus acting on each fibre of $\sh{O}(\chi)$ by multiplication by the character $\chi$.
+The notion of a stable or semi-stable point for $L^n\otimes\sh{O}(\chi)$ depends only, in fact, on $\chi/n$.
+\oldpage{510}
+To every quotient $p$ of a character of $T$ by an integer, we can thus associated $X^s(p)$, $X^{ss}(p)$, $Y(p)$, and an ample class $L_p$ in $\Pic_\mathbb{Q}(Y(p))$;
+when $p=0$, we recover the above notions.
 
 
 %% Bibliography %%
