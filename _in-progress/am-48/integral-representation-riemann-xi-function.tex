@@ -9,6 +9,7 @@
 \usepackage{hyperref}
 \usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
+\usepackage{tikz}
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
@@ -400,6 +401,7 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
     \]
     whence
     \[
+    \label{21}
       \left\vert
         \frac{\Gamma(-z)}{\Gamma(z)}
       \right\vert = \left\vert
@@ -408,6 +410,7 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
       \qquad\left(
         x=\frac12
       \right).
+    \tag{21}
     \]
     Using \cref{21}, it follows from \cref{11} that, on the straight line $x=\frac12$,
     \[
@@ -451,7 +454,28 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
     Thus $|\psi(z)|<1$ is satisfied in the whole half-plane $x\geq\frac12$;
     thus $\GG(z)$, cf.~\cref{18}, does not disappear in this half-plane.
 
-    \todo (PICTURE)
+    \[
+      \begin{tikzpicture}[scale=1.1]
+        \draw[thick] (0,0) circle (2.5cm);
+        \draw[white,fill=white] (-0.5,-4) rectangle (0.5,4);
+        %
+        \draw[->] (-4,0) to (4,0) node[label=right:{$\Re(z)$}]{};
+        \draw[->] (0,-4) to (0,4) node[label=above:{$\Im(z)$}]{};;
+        %
+        \draw[thick,dashed] (-0.5,-4) to (-0.5,-3);
+        \draw[thick,dashed] (-0.5,3) to (-0.5,4);
+        \draw[thick] (-0.5,-3) to (-0.5,3);
+        \draw[thick,dashed] (0.5,-4) to (0.5,-3);
+        \draw[thick,dashed] (0.5,3) to (0.5,4);
+        \draw[thick] (0.5,-3) to (0.5,3);
+        %
+        \node at (-3.25,0) {\huge$\UU$};
+        \node at (-1.5,0) {\huge$\TT$};
+        \node at (0,0) {\huge$\SS$};
+        \node at (1.5,0) {\huge$\TT$};
+        \node at (3.25,0) {\huge$\UU$};
+      \end{tikzpicture}
+    \]
 
     For what follows, it is useful to have in mind a certain partition of the plane (cf. the above figure): the strip $-1\leq x\leq 1$ is denoted by $\SS$; the part of the plane where both $r\leq R$ and $|x|>1$ is denoted by $\TT$; the remaining part, which extends to infinity, is denoted by $\UU$.
     We pick the number $R=R(A)$ depending on a certain positive number $A$ such that, inside, and on the boundary of, $\UU$, the inequality $|\psi(z)|<1$ is satisfied for $a\leq A$.
@@ -537,6 +561,22 @@ We will now study consequences of the difference equation in \cref{9}, and link 
       \Phi = y\log\frac{y}{a} - y - \frac\pi4.
     \tag{29}
     \]
+    A weakened form of claim~\hyperref[VI]{VI}, in which we replace ``\emph{all} the zeros'' with ``\emph{all but finitely many} zeros'', can be proved using only \cref{28} and \cref{29}; a proof of the full result needs more.
+
+    Consider the branch of $\log\GG(z)$ that is real for $z=1$;
+    by \hyperref[IV]{IV}, it can be extended indefinitely along the straight line $x=1$.
+    Consider $\Im\log\GG(1+iy)$ as $y$ goes from $0$ to $+\infty$, and denote the \emph{smallest} positive value of $y$ for which
+    \[
+      \Im\log\GG(1+iy) = (2n+1)\frac\pi2
+    \]
+    does \emph{not} hold by $y_n$ ($n=0,1,2,3,\ldots$).
+    In the curly brackets on the right-hand side of \cref{28}, the $a^{-x}y^xe^{i\Phi}$ term dominates when $x=1$;
+    by \cref{29}, we can exclude the possibility that
+    \[
+      \Im\log\GG(1+iy) \to +\infty
+      \qquad\mbox{as $y\to\infty$}.
+    \]
+    Thus the $y_n$ exist for $n=0,1,2,3,\ldots$.
 \end{enumerate}
 
 
