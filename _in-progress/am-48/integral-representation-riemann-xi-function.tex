@@ -551,7 +551,7 @@ We will now study consequences of the difference equation in \cref{9}, and link 
       \left\{
         \left(\frac{y}{a}\right)^x e^{i\Phi} + 
         \left(\frac{y}{a}\right)^{-x} e^{-i\Phi}
-      \right\} + O\left(
+      \right\} + \mathcal{O}\left(
         e^{-\frac\pi2 y} y^{|z| - 3/2}
       \right)
     \tag{28}
@@ -647,8 +647,21 @@ We will now study consequences of the difference equation in \cref{9}, and link 
     Since $\Phi_n=n\pi-\varepsilon_n$, for $y=y_n$ with $n$ large enough, the value of $e^{i\Phi_n}$ is almost $(-1)^n$, and the term in the curly brackets in \cref{28} is almost real.
     Two things follow from this:
     \begin{enumerate}[1)]
-      \item \todo
+      \item For $y=y_n$ in \cref{28}, the leading term in \cref{28} dominates over the error term $\mathcal{O}$ in all of the segment $-1\leqslant x\leqslant 1$, and so $\GG(z)$ has no zeros on the horizontal sides of $R_n$, as we had previously claimed.
+      \item Moving along an arc in this segment, the $e^{1\pi x/2}$ factor dominates in $\GG(z)$, or, more precisely, for arbitrary $\varepsilon$ we have
+        \[
+        \label{33}
+          H_n < -\pi + \varepsilon
+        \tag{33}
+        \]
+        for $n$ sufficiently large.
+        Then \cref{32} and \cref{33} give
+        \[
+          2\pi N_n^* < 2\varepsilon.
+        \]
     \end{enumerate}
+    Thus $N_n^*$ is a non-negative integer, and equal to $0$ for sufficiently large $n$, and thus always equal to $0$, since $N_n^*$ is non-decreasing for increasing $n$;
+    so we have proven \hyperref[VI]{VI}.
 \end{enumerate}
 
 
