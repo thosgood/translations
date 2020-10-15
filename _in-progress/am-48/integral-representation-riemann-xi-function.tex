@@ -684,6 +684,7 @@ The above observation also shows that the number of zeros with ordinate between 
 In order to be able to prove all of the claims in the introduction, we will need two simple, general lemmas.
 
 \begin{lemma}{1}
+\label{lemma1}
   Let $F(u)$ be analytic, and taking real values for any non-negative real $u$.
   Further, let
   \[
@@ -717,6 +718,52 @@ In order to be able to prove all of the claims in the introduction, we will need
   \]
   whence our claim.
 \end{proof}
+
+If we take $F(u)$ to be the right-hand side of \cref{4}, or, more generally, take $F(u)$ in \cref{35} to be the sum of finitely many terms of the series in \cref{3}, then we obtain an entire function $G(x)$ which, by the theory of Hadamard, can easily be proven to have infinitely many zeros.
+Of these zeros, by \cref{lemma1}, only finitely many are real, since the function $F(u)$ is clearly not even.
+The function $\Phi(u)$ in the integral representation \cref{2} of the $\xi$-function must, by \cref{lemma1}, be even (which could also be shown directly).
+
+\begin{lemma}{II}
+  Let $a$ be a positive constant, and $G(z)$ an entire function of genus $0$ or $1$, that takes real values for real $z$, with no complex zeros and at least one real zero.
+  Then the function
+  \[
+  \label{36}
+    G(z-ia) + G(z+ia)
+  \tag{36}
+  \]
+  has only real zeros.
+  \footnote{The corresponding result for polynomials is a special case of a theorem of \textsc{Ch.~Biehler}. See e.g. \textsc{G. P\'{o}lya and G.~Szeg\"{o}}, op. cit., Aufgabe~III~25.}
+\end{lemma}
+\begin{proof}
+  The hypotheses on $G(z)$ imply that
+  \[
+    G(z) = c z^q e^{\alpha z} \prod\left(1-\frac{z}{\alpha_n}\right)e^{z/\alpha_n},
+  \]
+  where $c,\alpha,\alpha_1,\alpha_2,\ldots$ are real constants, with $\alpha_n\neq0$ for $n=1,2,\ldots$ such that $\alpha_1^{-2}+\alpha_2^{-2}+\ldots$ converges, and where $q$ is a non-negative integer.
+  (If $G(z)$ has no zeros, i.e. when $G(z)$ reduces to $ce^{\alpha z}$, then \cref{36} can be identically zero.)
+  Let $z=x+iy$ be a zero of the function \cref{36}, so that
+  \[
+    |G(z-ia)| = |G(z+ia)|
+  \]
+  and thus
+  \[
+    1
+    =
+    \left\vert
+      \frac{G(z-ia)}{G(z+ia)}
+    \right\vert^2
+    =
+    \left(
+      \frac{x^2+(y-a)^2}{x^2+(y+a)^2}
+    \right)^q
+    \prod \frac{(x-\alpha_n)^2+(y-a)^2}{(x-\alpha_n)^2+(y+a)^2}.
+  \]
+\oldpage{317}
+  If $y>0$ then all the factors of the right-hand side are $<1$, and if $y<0$ then all the factors of the right-hand side are $>1$.
+  Thus, for there to be at least one factor, it must be the case that $y=0$.
+\end{proof}
+
+The fact that
 
 
 \end{document}
