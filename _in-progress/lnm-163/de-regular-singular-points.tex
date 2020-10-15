@@ -88,6 +88,13 @@
 \renewcommand{\leq}{\leqslant}
 
 \DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\iHom}{\underline{Hom}}
+\DeclareMathOperator{\iEnd}{\underline{End}}
+\DeclareMathOperator{\DD}{D}
+\DeclareMathOperator{\dd}{d\!}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -112,7 +119,7 @@
   \medskip\noindent
   \textsc{Deligne, P.}
   \emph{Equations Diff\'{e}rentielles \`{a} Points Singuliers R\'{e}guliers.}
-  Springer-Verlag, Lecture Notes in Mathematics \textbf{163} (1970).
+  Springer--Verlag, Lecture Notes in Mathematics \textbf{163} (1970).
   {\footnotesize\url{https://publications.ias.edu/node/355}}
 
   \medskip
@@ -133,7 +140,7 @@
 \label{0}
 
 \oldpage{1}
-If $X$ is a (non-singular) complex analytic manifold, then there is an equivalence between the notions of
+If $X$ is a (non-singular) complex-analytic manifold, then there is an equivalence between the notions of
 \begin{enumerate}[a)]
   \item local systems of complex vectors on $X$; and
   \item vector bundles on $X$ endowed with an integrable connection.
@@ -305,7 +312,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 
 \begin{env}{2.2}
 \label{I.2.2}
-  Let $X$ be a complex analytic manifold \hyperref[0.7]{(0.7)} and $\sh{V}$ a vector bundle on $X$.
+  Let $X$ be a complex-analytic manifold \hyperref[0.7]{(0.7)} and $\sh{V}$ a vector bundle on $X$.
   The elders would have defined a (holomorphic) connection on $\sh{V}$ as the data, for every pair of points $(x,y)$ that are first order infinitesimal neighbours in $X$, of an isomorphism $\gamma_{y,x}\colon\sh{V}_x\to\sh{V}_y$ that depends holomorphically on $(x,y)$ and is such that $\gamma_{x,x}=\id$.
 
   Suitably interpreted, this ``definition'' coincides with the currently fashionable definition (\cref{I.2.2.4}) given below (which we not be use in the rest of the section).
@@ -339,6 +346,154 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
       \item We have $\gamma_{x,x}=\id$.
     \end{enumerate}
   \end{env}
+\end{env}
+
+\begin{env}{2.3}
+\label{I.2.3}
+  Let $X_1$ be the first-order infinitesimal neighbourhood of the diagonal $X_0$ of $X\times X$, and let $p_1$ and $p_2$ be the two projections of $X_1$ to $X$.
+  By definition, the vector bundle $P^1(\sh{V})$ of first-order jets of sections of $\sh{V}$ is the bundle $(p_1)_*p_2^*\sh{V}$.
+  We denote by $j^1$ the first-order differential operator that sends each section of $\sh{V}$ to its first-order jet:
+  \[
+    j^1\colon \sh{V} \to P^1(\sh{V}) \simeq \sh{O}_{X_1}\otimes_{\sh{O}_X}\sh{V}.
+  \]
+
+  A connection (\cref{I.2.2.4}) can be understood as a homomorphism (which is automatically an isomorphism)
+  \[
+  \label{I.2.3.1}
+    \gamma = p_1^*\sh{V} \to p_2^*\sh{V}
+  \tag{2.3.1}
+  \]
+  which induces the identity over $X_0$.
+  Since
+  \[
+    \Hom_{X_1}(p_1^*\sh{V},p_2^*\sh{V}) \simeq \Hom(\sh{V},(p_1)_*p_2^*\sh{V}),
+  \]
+\oldpage{7}
+  a connection can also be understood as a ($\sh{O}$-linear) homomorphism
+  \[
+  \label{I.2.3.2}
+    \DD\colon \sh{V} \to P^1(\sh{V})
+  \tag{2.3.2}
+  \]
+  such that the obvious composite arrow
+  \[
+    \sh{V}\xrightarrow{\DD} P^1(\sh{V}) \to \sh{V}
+  \]
+  is the identity.
+  The sections $\DD s$ and $j^1(s)$ of $P^1(v)$ thus have the same image in $\sh{V}$, and $j^1(s)-\DD(s)$ can be identified with a section $\nabla s$ of $\Omega_X^1\otimes\sh{V} \simeq \Ker(P^1(\sh{V})\to\sh{V})$:
+  \[
+  \label{I.2.3.3}
+    \nabla\colon \sh{V} \to \Omega^1(X)
+  \tag{2.3.3}
+  \]
+  \[
+  \label{I.2.3.4}
+    j^1(s) = \DD(s)+\nabla s.
+  \tag{2.3.4}
+  \]
+
+  In other words, a connection (\cref{I.2.2.4}), allowing us to compare two neighbouring fibres of $\sh{V}$, also allows us to define the differential $\nabla s$ of a section of $\sh{V}$.
+
+  Conversely, equation~\cref{I.2.3.4} allows us to define $\DD$, and thus $\gamma$, from the covariant derivative $\nabla$.
+  For $\DD$ to be linear, it is necessary and sufficient for $\nabla$ to satisfy the identity
+  \[
+  \label{I.2.3.5}
+    \nabla(fs) = \dd f\cdot s + f\cdot\nabla s
+  \tag{2.3.5}
+  \]
+
+  Definition~\cref{I.2.2.4} is thus equivalent to the following definition, due to J.L.~Koszul.
+\end{env}
+
+\begin{definition}{2.4}
+\label{I.2.4}
+  Let $\sh{V}$ be a (holomorphic) vector bundle on a complex-analytic manifold $X$.
+  A \emph{holomorphic connection} (or simply, \emph{connection}) on $\sh{V}$ is a $\mathbb{C}$-linear homomorphism
+  \[
+    \nabla\colon \sh{V} \to \Omega_X^1(\sh{V}) = \Omega_X^1\otimes_{\sh{O}}\sh{V}
+  \]
+  that satisfies the Leibniz identity (\cref{I.2.3.5}) for local sections $f$ of $\sh{O}$ and $s$ of $\sh{V}$.
+  We call $\nabla$ the \emph{covariant derivative} defined by the connection.
+\end{definition}
+
+\begin{env}{2.5}
+\label{I.2.5}
+  If the vector bundle $\sh{V}$ is endowed with a connection $\Gamma$ with covariant derivative $\nabla$, and if $w$ is a holomorphic vector field on $X$, then we set, for every local section $v$ of $\sh{V}$ over an open subset $U$ of $X$,
+  \[
+    \nabla_w(v) = \langle \nabla v,w \rangle \in \sh{V}(U).
+  \]
+  We call $\nabla_w\colon \sh{V} \to \sh{V}$ the \emph{covariant derivative along the vector field $w$}.
+\end{env}
+
+\oldpage{8}
+\begin{env}{2.6}
+\label{I.2.6}
+  If ${}_1\!\Gamma$ and ${}_2\!\Gamma$ are connections on $X$, with covariant derivatives ${}_1\!\nabla$ and ${}_2\!\nabla$ (respectively), then ${}_2\!\nabla-{}_1\!\nabla$ is a $\sh{O}$-linear homomorphism from $\sh{V}$ to $\Omega_X^1(\sh{V})$.
+  Conversely, the sum of ${}_1\!\nabla$ and such a homomorphism defines a connection on $\sh{V}$.
+  Thus connections on $\sh{V}$ form a principal homogeneous space (or torsor) on $\iHom(\sh{V},\Omega_X^1(\sh{V})) \simeq \Omega_X^1(\iEnd(\sh{V}))$.
+\end{env}
+
+\begin{env}{2.7}
+\label{I.2.7}
+  If vector bundles are endowed with connections, then every vector bundle obtained by a ``tensor operation'' is again endowed with a connection.
+  This is evident with \cref{I.2.2.4}.
+  More precisely, let $\sh{V}_1$ and $\sh{V}_2$ be vector bundles endowed with connections with covariant derivatives $\nabla_1$ and $\nabla_2$.
+
+  \begin{env}{2.7.1}
+  \label{I.2.7.1}
+    We define a connection on $\sh{V}_1\oplus\sh{V}_2$ by the formula
+    \[
+      \nabla_w(v_1+v_2) = {}_1\!\nabla_w(v_1) + {}_2\!\nabla_w(v_2)
+    \]
+  \end{env}
+
+  \begin{env}{2.7.2}
+  \label{I.2.7.2}
+    We define a connection on $\sh{V}_1\otimes\sh{V}_2$ by the Leibniz formula
+    \[
+      \nabla_w(v_1\otimes v_2) = \nabla_w v_1\cdot v_2 + v_1\cdot\nabla_w v_2.
+    \]
+  \end{env}
+
+  \begin{env}{2.7.3}
+  \label{I.2.7.3}
+    We define a connection on $\iHom(\sh{V}_1,\sh{V}_2)$ by the formula
+    \[
+      (\nabla_w f)(v_1) = {}_2\!\nabla_2(f(v_1)) - f({}_1\!\nabla v_1).
+    \]
+  \end{env}
+
+  The canonical connection on $\sh{O}$ is the connection for which $\nabla f=\dd f$.
+  
+  Let $\sh{V}$ be a vector bundle endowed with a connection.
+  \begin{env}{2.7.4}
+  \label{I.2.7.4}
+    We define a connection on the dual $\sh{V}^\vee$ of $\sh{V}$ via \cref{I.2.7.3} and the defining isomorphism $\sh{V}^\vee = \iHom(\sh{V},\sh{O})$.
+    We have
+    \[
+      \langle \nabla_w v',v \rangle = \partial_w\langle v',v \rangle - \langle v',\nabla_w v \rangle.
+    \]
+  \end{env}
+
+  We leave it to the reader to verify that these formulas do indeed define connections.
+  For \cref{I.2.7.2}, for example, one must verify that, firstly, the given formula defines a $\mathbb{C}$-bilinear map from $(\sh{V}_1\otimes\sh{V}_2)$, which means that the right-hand side $II(v_1,v_2)$ is $\mathbb{C}$-bilinear and such that $II(fv_1,v_2)=II(v_1,fv_2)$;
+  secondly, one must also verify identity~\cref{I.2.3.5}.
+\end{env}
+
+\begin{env}{2.8}
+\label{I.2.8}
+  An $\sh{O}$-homomorphism $f$ between vector bundles $\sh{V}_1$ and $\sh{V}_2$ endowed with connections
+\oldpage{9}
+  is said to be \emph{compatible with the connections} if
+  \[
+    {}_2\!\nabla\cdot f = f\cdot{}_1\!\nabla.
+  \]
+  By \cref{I.2.7.3}, this reduces to saying that $\nabla f=0$, if $f$ is thought of as a section of $\iHom(\sh{V}_1,\sh{V}_2)$.
+  For example, by \cref{I.2.7.3}, the canonical map
+  \[
+    \Hom(\sh{V}_1,\sh{V}_2)\otimes\sh{V}_1 \to \sh{V}_2
+  \]
+  is compatible with the connections.
 \end{env}
 
 
