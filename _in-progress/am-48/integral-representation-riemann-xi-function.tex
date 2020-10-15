@@ -724,6 +724,7 @@ Of these zeros, by \cref{lemma1}, only finitely many are real, since the functio
 The function $\Phi(u)$ in the integral representation \cref{2} of the $\xi$-function must, by \cref{lemma1}, be even (which could also be shown directly).
 
 \begin{lemma}{II}
+\label{lemma2}
   Let $a$ be a positive constant, and $G(z)$ an entire function of genus $0$ or $1$, that takes real values for real $z$, with no complex zeros and at least one real zero.
   Then the function
   \[
@@ -763,7 +764,27 @@ The function $\Phi(u)$ in the integral representation \cref{2} of the $\xi$-func
   Thus, for there to be at least one factor, it must be the case that $y=0$.
 \end{proof}
 
-The fact that
+The fact that $\GG(\frac12 iz)$ has only real zeros has already been proven.
+That $\GG(\frac12 iz)$ also satisfies the genus hypothesis of \cref{lemma2} follows easily from the theory of Hadamard.
+If we apply \cref{lemma2} to $G(z)=\GG(\frac12 iz;\pi)$ and $a=9/2$, then, by \cref{8}, we obtain that all the zeros of $\xi^*(z)$ are real.
+
+By \cref{8}, \cref{17}, and \cref{19}, we also see that, in the half-plane $y\geqslant\varepsilon$ (for fixed $\varepsilon>0$), as $z\to\infty$,
+\[
+  \xi^*(iz) \sim \frac12 z^2 \pi^{-\frac{z}{2}-\frac14} \Gamma\left(\frac{z}{2}+\frac14\right).
+\]
+This formula should be compared with \cref{1}.\footnote{\emph{Note added during editing (5th February, 1926).} By suitably extending \cref{lemma2}, we can prove that the function%
+\[%
+  \xi^{**}(z) = 4\pi\int_0^\infty\left[%
+    2\pi\left(%
+      e^{\frac{9u}{2}} + e^{-\frac{9u}{2}}%
+    \right)%
+    -3\left(%
+      e^{\frac{5u}{2}} + e^{-\frac{5u}{2}}%
+    \right)%
+  \right]%
+  e^{-\pi(e^{2u}+e^{-2u})} \cos zu \dd u,%
+\]%
+which ``better'' approximates the true $\xi$-function, also has only real zeros.}
 
 
 \end{document}
