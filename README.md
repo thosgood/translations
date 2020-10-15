@@ -38,6 +38,18 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://www.doi.org/10.24033/bsmf.1501)
 
+- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion".
+  <br/>
+  _Acta Math._ **48** (1926), pp. 305--317.
+  <br/>
+  DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
+  <br/><br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/am-48/integral-representation-xi-function.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fam-48%2Fintegral-representation-riemann-xi-function.tex&command=pdflatex&trackId=1597792974805)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://doi.org/10.1007/BF02565336)
+
 
 # Seminars
 
@@ -156,18 +168,6 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
 # In progress
 
 Some of the longer papers take a while to translate, but, once they reach a certain level of completion, I'll share them here so that at least what I have done can be available. The papers that make up Grothendieck's FGA will just be released one at a time when completed.
-
-- Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion".
-  <br/>
-  _Acta Math._ **48** (1926), pp. 305--317.
-  <br/>
-  DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
-  <br/><br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/am-48/integral-representation-riemann-xi-function.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fam-48%2Fintegral-representation-riemann-xi-function.tex&command=pdflatex&trackId=1597792974805)
-  |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://doi.org/10.1007/BF02565336)
 
 <!--
 - Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
