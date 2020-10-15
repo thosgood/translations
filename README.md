@@ -171,7 +171,6 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
 
 Some of the longer papers take a while to translate, but, once they reach a certain level of completion, I'll share them here so that at least what I have done can be available. The papers that make up Grothendieck's FGA will just be released one at a time when completed.
 
-<!--
 - Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
   <br/>
   _Mathematische Annalen_ **32** (1888), pp. 342–-350.
@@ -183,7 +182,6 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/157385)
--->
 
 - Brion, M. and Procesi, C. "Action d'un tore dans une variété projective".
   <br/>
