@@ -604,6 +604,51 @@ We will now study consequences of the difference equation in \cref{9}, and link 
     \tag{30}
     \]
     as follows from the definitions of $y_n$ and $H_n$ and from symmetry.
+
+    By definition, $\Im\log\GG(1+iy)$ takes the value $(v-1/2)\pi$ for $y=y_{v-1}$, and the value $(v+1/2)\pi$ for $y=y_v$;
+    there thus exists at least one $\eta$ with $y_{v-1}<\eta<y_v$ such that
+    \[
+      \Im\log\GG(1+i\eta) = v\pi.
+    \]
+    From this it follows that
+    \[
+      \Im\GG(1+i\eta) = 0
+    \]
+    and, by \cref{25}, that
+    \[
+      \GG(i\eta) = 0.
+    \]
+
+    Then $-i\eta$, along with $i\eta$, is also a zero of $\GG(z)$, and so, for $v=1,2,3,\ldots$ and $n$ fixed, we have proven the existence of at least $2n$ purely imaginary zeros in the rectangle $R_n$;
+    i.e. we have
+    \[
+    \label{31}
+      N_n \geqslant 2n.
+    \tag{31}
+    \]
+    So \cref{30} and \cref{31} give
+    \[
+    \label{32}
+      2\pi N_n^* \leqslant 2H_n + 2\pi.
+    \tag{32}
+    \]
+    Denote by $\Phi_n$ the value of \cref{29} at $y=y_n$.
+    Since, as mentioned above, the first term in the curly brackets of \cref{28} dominates when $x=1$, we have that
+    \[
+      \Im\log\GG(1+iy_n)
+      = (2n+1)\frac\pi2
+      \equiv \Phi_n + \frac\pi2 + \varepsilon_n \mod2\pi,
+    \]
+    where
+    \[
+      \lim_{n\to\infty}\varepsilon_n = 0.
+    \]
+\oldpage{315}
+    Since $\Phi_n=n\pi-\varepsilon_n$, for $y=y_n$ with $n$ large enough, the value of $e^{i\Phi_n}$ is almost $(-1)^n$, and the term in the curly brackets in \cref{28} is almost real.
+    Two things follow from this:
+    \begin{enumerate}[1)]
+      \item \todo
+    \end{enumerate}
 \end{enumerate}
 
 
