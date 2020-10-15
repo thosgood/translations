@@ -172,7 +172,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
 <!--
 - Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
   <br/>
-  _Mathematische Annalen_ **32** (1888), pp. 342–350.
+  _Mathematische Annalen_ **32** (1888), pp. 342–-350.
   <br/>
   <http://eudml.org/doc/157385>.
   <br/><br/>
@@ -183,17 +183,15 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/157385)
 -->
 
-<!--
 - Brion, M. and Procesi, C. "Action d'un tore dans une variété projective".
   <br/>
-  In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in mathematics **92** (1990), pp. 509–539.
+  In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in mathematics **92** (1990), pp. 509--539.
   <br/>
   <https://mathscinet.ams.org/mathscinet-getitem?mr=1103602>.
   <br/><br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/pm-92/action-of-a-torus-in-a-projective-variety.tex)
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/pm-92/projective-torus-action.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
--->
 
 <!-- - Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>

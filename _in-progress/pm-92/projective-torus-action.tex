@@ -47,7 +47,8 @@
 %% Shortcuts %%
 
 \newcommand{\sh}{\mathscr}
-\newcommand{\cat}{\mathcal}
+\newcommand{\PP}{\mathbf{P}}
+\newcommand{\QQ}{\mathbf{Q}}
 \DeclareMathOperator{\Pic}{Pic}
 \DeclareMathOperator{\Proj}{Proj}
 
@@ -109,6 +110,19 @@ The notion of a stable or semi-stable point for $L^n\otimes\sh{O}(\chi)$ depends
 \oldpage{510}
 To every quotient $p$ of a character of $T$ by an integer, we can thus associated $X^s(p)$, $X^{ss}(p)$, $Y(p)$, and an ample class $L_p$ in $\Pic_\mathbb{Q}(Y(p))$;
 when $p=0$, we recover the above notions.
+
+For simplicity, we assume $L$ to be very ample, that is, we consider the case where $X$ is a subvariety of a projective space $\PP(V)$, with the torus $T$ acting linearly on $V$, and where $L$ is the restriction of $\sh{O}(1)$ to $X$.
+We will show that $X^s(p)$, $X^{ss}(p)$, and $Y(p)$ depend only on the position of $p$ relative to a certain finite set $\Pi$ of characters of $T$ (the set of weights of $T$ in $V$).
+More precisely, we will define \cref{1.1,1.2} a partition of the convex hull $\mathcal{C}$ of $\Pi$ into ``faces''.
+Each face is the interior of a convex polyhedron, and $X^s(p)$, $X^{ss}(p)$, and $Y(p)$ depend only on the face of $p$;
+for every face $F$, we can define $X^s(F)$, $X^{ss}(F)$, and $Y(F)$.
+We will further show \cref{1.3} that the map $p\in F\mapsto L_p\in\Pic_\QQ(Y(F))$ is affine.
+
+Let $F$ be an open face of $\mathcal{C}$.
+We will show that every point that is semistable for $F$ is stable;
+thus, if $X$ is smooth, then $Y(F)$ only has singularities from quotients by finite abelian groups.
+The quotients associated to the open faces are thus relatively simply.
+For an arbitrary face $F$, let $F'$ be an open face whose closure contains $F$.
 
 
 %% Bibliography %%
