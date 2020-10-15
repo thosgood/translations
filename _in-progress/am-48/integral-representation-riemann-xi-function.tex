@@ -36,7 +36,7 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{section}{\S}{\SS}
+\crefname{section}{\S\!}{\SS\!}
 \crefname{equation}{}{}
 
 
@@ -44,16 +44,23 @@
 
 \usepackage{amsthm}
 
+\theoremstyle{plain}
+
+\newtheorem{innercustomlemma}{Lemma}
+\crefname{innercustomlemma}{Lemma}{Lemmas}
+\newenvironment{lemma}[1]
+  {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
+  {\endinnercustomlemma}
+
 
 %% Shortcuts %%
 
-\newcommand{\sh}{\mathscr}
-\newcommand{\cat}{\mathcal}
 \newcommand{\dd}{\operatorname{d}\!}
 \newcommand{\GG}{\mathfrak{G}}
 \newcommand{\UU}{\mathscr{U}}
 \newcommand{\TT}{\mathscr{T}}
 \renewcommand{\SS}{\mathscr{S}}
+\newcommand{\error}{\mathcal{O}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -97,7 +104,7 @@
 %% Content %%
 
 \emph{[Translator.] The numbering of the footnotes in the original has not been replicated in this translation, since this would have resulted in multiple footnotes with the same number on one page.}
-\emph{We also thank Juan Arias de Reyna for their Spanish translation of this paper, which helped greatly.}
+\emph{We also thank \href{https://personal.us.es/arias/}{Juan Arias de Reyna} for their Spanish translation of this paper, which helped greatly.}
 
 \bigskip
 
@@ -551,8 +558,8 @@ We will now study consequences of the difference equation in \cref{9}, and link 
       \left\{
         \left(\frac{y}{a}\right)^x e^{i\Phi} + 
         \left(\frac{y}{a}\right)^{-x} e^{-i\Phi}
-      \right\} + \mathcal{O}\left(
-        e^{-\frac\pi2 y} y^{|z| - 3/2}
+      \right\} + \error\left(
+        e^{-\frac\pi2 y} y^{|z| - \frac32}
       \right)
     \tag{28}
     \]
@@ -647,8 +654,8 @@ We will now study consequences of the difference equation in \cref{9}, and link 
     Since $\Phi_n=n\pi-\varepsilon_n$, for $y=y_n$ with $n$ large enough, the value of $e^{i\Phi_n}$ is almost $(-1)^n$, and the term in the curly brackets in \cref{28} is almost real.
     Two things follow from this:
     \begin{enumerate}[1)]
-      \item For $y=y_n$ in \cref{28}, the leading term in \cref{28} dominates over the error term $\mathcal{O}$ in all of the segment $-1\leqslant x\leqslant 1$, and so $\GG(z)$ has no zeros on the horizontal sides of $R_n$, as we had previously claimed.
-      \item Moving along an arc in this segment, the $e^{1\pi x/2}$ factor dominates in $\GG(z)$, or, more precisely, for arbitrary $\varepsilon$ we have
+      \item For $y=y_n$ in \cref{28}, the leading term in \cref{28} dominates over the error term $\error$ in all of the segment $-1\leqslant x\leqslant 1$, and so $\GG(z)$ has no zeros on the horizontal sides of $R_n$, as we had previously claimed.
+      \item Moving along an arc in this segment, the $e^{i\pi x/2}$ factor dominates in $\GG(z)$, or, more precisely, for arbitrary $\varepsilon$ we have
         \[
         \label{33}
           H_n < -\pi + \varepsilon
@@ -664,11 +671,38 @@ We will now study consequences of the difference equation in \cref{9}, and link 
     so we have proven \hyperref[VI]{VI}.
 \end{enumerate}
 
+Now, \hyperref[IV]{IV}, \hyperref[V]{V}, and \hyperref[VI]{VI} form a complete partition of the plane, and show that \emph{all the zeros of $\GG(z)$ are purely imaginary and simple}.
+The above observation also shows that the number of zeros with ordinate between $0$ and $y$ is
+\[
+  \frac{y}{\pi}\log\frac{y}{a} - \frac{y}{\pi} + \error(1).
+\]
 
 
-%% Bibliography %%
+\section{}
+\label{section4}
 
-\nocite{*}
-\bibliographystyle{acm}
+In order to be able to prove all of the claims in the introduction, we will need two simple, general lemmas.
+
+\begin{lemma}{1}
+  Let $F(u)$ be analytic, and taking real values for any non-negative real $u$.
+  Further, let
+  \[
+  \label{34}
+    \lim_{u\to\infty} u^2 F^{(n)}(u) = 0
+  \tag{34}
+  \]
+  for $n=0,1,2,\ldots$ (with $F^{(0)}(u)=F(u)$).
+  If $F(u)$ is not an even function, then the function
+  \[
+  \label{35}
+    G(x) = \int_0^\infty F(u)\cos xu \dd u
+  \tag{35}
+  \]
+  is non-zero for sufficiently large real $x$.
+\end{lemma}
+\begin{proof}
+  \todo
+\end{proof}
+
 
 \end{document}
