@@ -701,13 +701,21 @@ In order to be able to prove all of the claims in the introduction, we will need
   is non-zero for sufficiently large real $x$.
 \end{lemma}
 \begin{proof}
-  Since $F(u)$ is not even, for a suitable integer $q$ we have
+  Since $F(u)$ is not even, there exists some integer $q$ such that
   \[
     F'(0) = F'''(0) = \ldots = F^{(2q-3)}(0) = 0,
     \qquad F^{(2q-1)}(0) \neq 0.
   \]
 \oldpage{316}
-  \todo
+  Taking \cref{34} into account, we obtain, by repeated partial integration,
+  \[
+    G(x) = (-1)^q \frac{F^{(2q-1)}(0)}{x^{2q}} + \frac{{(-1)^{q+1}}}{x^{2q+1}} \int_0^\infty F^{(2q+1)}(u)\sin xu \dd u.
+  \]
+  From this it follows, again using \cref{34}, that
+  \[
+    \lim_{x\to\infty} x^{2q}G(x) = (-1)^q F^{(2q-1)}(0) \neq 0,
+  \]
+  whence our claim.
 \end{proof}
 
 
