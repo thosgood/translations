@@ -1,3 +1,5 @@
+## Tim Hosgood --- translations
+
 Here are some maths papers that I've translated into English. Any comments or corrections are greatly appreciated. For contact details, see [my website](https://thosgood.com). I've tried to refrain from "rewriting" too much: generally the sentence structure etc. is pretty close to the original. As a consequence, some of the language (in particular, certain phrases from papers pre-dating the standardisation of the language of category theory) is slightly wordy, but hey ho.
 
 For each paper, there is a link to the `.tex` source file (and I've tried to keep these self-contained, i.e with internal bibliographies), a link to a PDF which is built from the latest version of the `.tex` file every time you load the page (many thanks to <https://github.com/aslushnikov/latex-online>), and the original (non-English language) paper. Each PDF has a version number (the first 8 characters of the MD5 hash of the source code). This makes it easy to tell at a glance whether or not there have been any changes.
@@ -187,7 +189,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   <br/>
   In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in mathematics **92** (1990), pp. 509--539.
   <br/>
-  <https://mathscinet.ams.org/mathscinet-getitem?mr=1103602>.
+  [MR1103602](https://mathscinet.ams.org/mathscinet-getitem?mr=1103602).
   <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/pm-92/projective-torus-action.tex)
   |
