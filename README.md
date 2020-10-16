@@ -9,11 +9,13 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
 This should go without saying, but I'll say it anyway: _I am making no claim to any of the mathematics or ideas contained in any of these translations; the only things that are mine are the errors introduced during the hazardous journey from one language to another._
 
 ---
+
 ## The Grothendieck trilogy
 
 - **EGA**: see [github.com/ryankeleti/ega](https://github.com/ryankeleti/ega).
 - **FGA**: see [below](#extracts-195792-fondements-de-la-géométrie-algébrique) (under "Séminaire Bourbaki").
 - **SGA**: "coming soon&trade;".
+
 
 # Articles
 
@@ -56,8 +58,8 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
 
 # Seminars
 
-
 ## Séminaire Bourbaki
+
 ### Extracts (1957--92), "Fondements de la Géométrie Algébrique"
 
 _All of the following are by A. Grothendieck. A PDF copy of the original notes can be found at <https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf>._
@@ -129,6 +131,7 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
 
 
 ## Séminaire Claude Chevalley
+
 ### Volume 4 (1958--59), "Variétés de Picard"
 
 - Talk no. 1: "Faisceaux quasi-cohérents" (P. Gabriel).
@@ -157,6 +160,7 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
 
 
 ## Séminaire Henri Cartan
+
 ### Volume 9 (1956--57), "Quelques questions de topologie"
 
 - Talk no. 2: "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
