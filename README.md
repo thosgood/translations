@@ -18,7 +18,7 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
 
 - Borel, A. and Serre, J.-P. "Le théorème de Riemann-Roch".
   <br/>
-  _Bulletin de la Société Mathématique de France_ **86** (1958), pp. 97--136.
+  _Bulletin de la Société Mathématique de France_ **86** (1958), 97--136.
   <br/>
   DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
   <br/><br/>
@@ -30,7 +30,7 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
 
 - Grothendieck, A. "La théorie des classes de Chern".
   <br/>
-  _Bulletin de la Société Mathématique de France_ **86** (1958) , pp. 137--154.
+  _Bulletin de la Société Mathématique de France_ **86** (1958) , 137--154.
   <br/>
   DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
   <br/><br/>
@@ -42,7 +42,7 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
 
 - Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion".
   <br/>
-  _Acta Math._ **48** (1926), pp. 305--317.
+  _Acta Math._ **48** (1926), 305--317.
   <br/>
   DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
   <br/><br/>
@@ -173,7 +173,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
 
 - Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
   <br/>
-  _Mathematische Annalen_ **32** (1888), pp. 342–-350.
+  _Mathematische Annalen_ **32** (1888), 342–-350.
   <br/>
   <http://eudml.org/doc/157385>.
   <br/><br/>
@@ -185,7 +185,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
 
 - Brion, M. and Procesi, C. "Action d'un tore dans une variété projective".
   <br/>
-  In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in mathematics **92** (1990), pp. 509--539.
+  In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in mathematics **92** (1990), 509--539.
   <br/>
   [MR1103602](https://mathscinet.ams.org/mathscinet-getitem?mr=1103602).
   <br/><br/>
@@ -207,7 +207,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
 
 <!-- - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points".
   <br/>
-  In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), pp. 79--297.
+  In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), 79--297.
   <br/>
   DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
   </br><br/>
@@ -220,7 +220,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
 <!--
 - Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen".
   <br/>
-  _Math. Ann._ **146** (1962), pp. 331--368.
+  _Math. Ann._ **146** (1962), 331--368.
   <br/><http://eudml.org/doc/160940>
   <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/ma-146/exceptional-analytic-sets.tex)
@@ -233,7 +233,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
 <!--
 - Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires".
   <br/>
-  _Annales de l'institut Fourier_ **4** (1952), pp. 73--112.
+  _Annales de l'institut Fourier_ **4** (1952), 73--112.
   <br/>
   <http://www.numdam.org/item/?id=AIF_1952__4__73_0>
   <br/><br/>
