@@ -16,6 +16,7 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
 - **FGA**: see [below](#extracts-195792-fondements-de-la-géométrie-algébrique) (under "Séminaire Bourbaki").
 - **SGA**: "coming soon&trade;".
 
+---
 
 # Articles
 
