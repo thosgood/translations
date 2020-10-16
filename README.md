@@ -215,10 +215,10 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
 
 - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points".
   <br/>
-  In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), 79--297.
+  In _Galois Groups over ℚ_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), 79--297.
   <br/>
   DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
-  </br><br/>
+  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/msrip-16/projective-line-minus-three-points.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fmsrip-16%2Fprojective-line-minus-three-points.tex&command=pdflatex&trackId=1602812188930)
@@ -232,7 +232,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/ma-146/exceptional-analytic-sets.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1596040221056)
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1602812494395)
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/160940)
 
@@ -247,6 +247,5 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Faif-4%2Ftopological-tensor-nuclear-spaces.tex&command=pdflatex&trackId=1602812258122)
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/?id=AIF_1952__4__73_0)
-
 
 <!-- icons from fontawesome.com under [their licence](https://fontawesome.com/license). -->
