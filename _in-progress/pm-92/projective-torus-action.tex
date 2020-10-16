@@ -35,13 +35,20 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{section}{Section}{Sections}
+\crefname{section}{\S\!}{\S\S\!}
 \crefname{equation}{}{}
 
 
 %% Theorem environments %%
 
 \usepackage{amsthm}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{proposition}{Proposition}
+
+\theoremstyle{definition}
+\newtheorem*{remark}{Remark}
 
 
 %% Shortcuts %%
@@ -52,6 +59,8 @@
 \newcommand{\NN}{\mathbf{N}}
 \newcommand{\ZZ}{\mathbf{Z}}
 \newcommand{\RR}{\mathbf{R}}
+\newcommand{\s}{\mathrm{s}}
+\renewcommand{\ss}{\mathrm{ss}}
 \DeclareMathOperator{\Pic}{Pic}
 \DeclareMathOperator{\Proj}{Proj}
 
@@ -99,10 +108,10 @@
 \label{introduction}
 
 If a reductive algebraic group $G$ acts on a projective algebraic variety $X$, all over an algebraically closed field, the data of an $G$-linearised ample line bundle $L$ on $X$ allows us to define the open subset of stable points of $X$.
-The quotient (in the usual sense of orbit spaces) of this open subset $X^s=X^s(L)$ by $G$ exists;
-it is a quasi-projective variety, denoted by $X^s/G$.
-Furthermore, $X^s$ is contained in the open subset $X^{ss}=X^{ss}(L)$ of semi-stable points, and we can again define a ``quotient'' $Y$ of $X^{ss}$ by $G$ (it is the space of closed orbits of $G$ in $X^{ss}$).
-The variety $Y$ is projective, and contains $X^s/G$ as an open sub set.
+The quotient (in the usual sense of orbit spaces) of this open subset $X^\s=X^\s(L)$ by $G$ exists;
+it is a quasi-projective variety, denoted by $X^\s/G$.
+Furthermore, $X^\s$ is contained in the open subset $X^\ss=X^\ss(L)$ of semi-stable points, and we can again define a ``quotient'' $Y$ of $X^\ss$ by $G$ (it is the space of closed orbits of $G$ in $X^\ss$).
+The variety $Y$ is projective, and contains $X^\s/G$ as an open sub set.
 To define it, we introduce the algebra $A:=\oplus_{n=0}^\infty \Gamma(X,L^n)$ and its sub-algebra $A^G$ consisting of invariants of $G$;
 then $Y$ is the $\Proj$ of the graded algebra $A^G$.
 Thus $Y$ is endowed with a sheaf $\sh{O}(n)$ for every integer $n$, and one of them is invertible.
@@ -113,14 +122,14 @@ Our goal is to study these objects, introduced by Mumford in \cite{MF}, when $G$
 The idea is to simultaneously consider all the quotients associated to the $T$-linearised bundles $L^n\otimes\sh{O}(\chi)$, where $n$ is a positive integer, and $\sh{O}(\chi)$ is the trivial line bundle on $X$, with the torus acting on each fibre of $\sh{O}(\chi)$ by multiplication by the character $\chi$.
 The notion of a stable or semi-stable point for $L^n\otimes\sh{O}(\chi)$ depends only, in fact, on $\chi/n$.
 \oldpage{510}
-To every quotient $p$ of a character of $T$ by an integer, we can thus associated $X^s(p)$, $X^{ss}(p)$, $Y(p)$, and an ample class $L_p$ in $\Pic_\mathbb{Q}(Y(p))$;
+To every quotient $p$ of a character of $T$ by an integer, we can thus associated $X^\s(p)$, $X^\ss(p)$, $Y(p)$, and an ample class $L_p$ in $\Pic_\mathbb{Q}(Y(p))$;
 when $p=0$, we recover the above notions.
 
 For simplicity, we assume $L$ to be very ample, i.e. we consider the case where $X$ is a subvariety of a projective space $\PP(V)$, with the torus $T$ acting linearly on $V$, and where $L$ is the restriction of $\sh{O}(1)$ to $X$.
-We show that $X^s(p)$, $X^{ss}(p)$, and $Y(p)$ depend only on the position of $p$ relative to a certain finite set $\Pi$ of characters of $T$ (the set of weights of $T$ in $V$).
+We show that $X^\s(p)$, $X^\ss(p)$, and $Y(p)$ depend only on the position of $p$ relative to a certain finite set $\Pi$ of characters of $T$ (the set of weights of $T$ in $V$).
 More precisely, we define \cref{1.1,1.2} a partition of the convex hull $\mathcal{C}$ of $\Pi$ into ``faces''.
-Each face is the interior of a convex polyhedron, and $X^s(p)$, $X^{ss}(p)$, and $Y(p)$ depend only on the face of $p$;
-for every face $F$, we can define $X^s(F)$, $X^{ss}(F)$, and $Y(F)$.
+Each face is the interior of a convex polyhedron, and $X^\s(p)$, $X^\ss(p)$, and $Y(p)$ depend only on the face of $p$;
+for every face $F$, we can define $X^\s(F)$, $X^\ss(F)$, and $Y(F)$.
 We further show \cref{1.3} that the map $p\in F\mapsto L_p\in\Pic_\QQ(Y(F))$ is affine.
 
 Let $F$ be an open face of $\mathcal{C}$.
@@ -146,7 +155,7 @@ Every $(\NN\times\ZZ^l)$-graded $A$-module defines
 \oldpage{511}
 a $T$-linearised sheaf $\sh{M}$ on the projective space $\PP(V)$ associated to $A$.
 Let $\Pi$ be the set of weights of $T$ in $V$, i.e. \unsure{opposites? duals? of $\ZZ^l$-degrees?} of generators of $A$.
-For every face $F$ associated to $\Pi$, let $\sh{M}^{(F)}$ be the sheaf given by invariants of $T$ in $(\pi_F)_*(\sh{M})$, where $\pi_F\colon X^{ss}(F)\to Y(F)$ is the ``quotient''.
+For every face $F$ associated to $\Pi$, let $\sh{M}^{(F)}$ be the sheaf given by invariants of $T$ in $(\pi_F)_*(\sh{M})$, where $\pi_F\colon X^\ss(F)\to Y(F)$ is the ``quotient''.
 We show that, if $M$ is an $A$-module of finite type, then $\sh{M}^{(F)}$ is a coherent sheaf on $Y(F)$.
 For every $p\in F$, we denote by $\mu_M(p)$ the degree of $\sh{M}^{(F)}$ relative to the ample class $L_p$ (see \cite[I.3]{Kle}).
 We show that the function $\mu_M$ is polynomial on each face.
@@ -198,10 +207,50 @@ Every affine hyperplane generated by a face of codimension one is also generated
 \subsection{Faces and quotients}
 \label{1.2}
 
-For all $p\in E$, we denote by $X^{ss}(p)$ (resp. $X^s(p)$) the set of $x\in X$ such that the convex hull of $\Pi(x)$ contains $p$ (resp. contains $p$ in its interior).
+For all $p\in E$, we denote by $X^\ss(p)$ (resp. $X^\s(p)$) the set of $x\in X$ such that the convex hull of $\Pi(x)$ contains $p$ (resp. contains $p$ in its interior).
 It is clear that these two sets depend only on the face of $p$;
-for every face $F$, we can thus define $X^{ss}(F)$ and $X^s(F)$.
+for every face $F$, we can thus define $X^\ss(F)$ and $X^\s(F)$.
 The following claim is evident.
+
+\begin{proposition}
+  \begin{enumerate}[(i)]
+    \item $X^\s(F)$ and $X^\ss(F)$ are open subsets of $X$, stable under $T$.
+    \item $X^\ss(F)$ is non-empty $\iff$ $F$ is non-empty.
+    \item $X^\s(F)$ is non-empty $\iff$ $F$ is in the interior of $\mathcal{C}$.
+    \item $X^\ss(F)=X^\s(F)$ if $F$ is open in $E$.
+      Conversely, if $X=\PP(V)$ and $X^\ss(F)=X^\s(F)$, then $F$ is open in $E$.
+  \end{enumerate}
+\end{proposition}
+
+A point of $X^\s(F)$ (rep $X^\ss(F)$) is said to be \emph{stable} (resp. \emph{semistable}) for $F$.
+The below theorem, and its proof, justify this terminology.
+
+\begin{theorem}
+  There exists a projective variety $Y(F)$, with the trivial action
+\oldpage{513}
+  of $T$, and a $T$-equivariant affine morphism $\pi_F\colon X^\ss(F)\to Y(F)$, such that $\sh{O}_{Y(F)}$ consists of the invariants of $T$ in $(\pi_F)_*(\sh{O}_{X^\ss(F)})$.
+  The restriction of $\pi_F$ to $X^\s(F)$ has the orbits of $T$ as its fibres.
+\end{theorem}
+
+\begin{proof}
+  Note first of all that, if $0\in\mathcal{C}$, then $X^\ss(0)$ (resp. $X^\s(0)$) is the set of semistable (resp. stable) points of $X\subset\PP(V)$;
+  this follows from \cite[Theorem~2.1]{MF}.
+
+  Let $p$ be a point in $F\cap E_\QQ$ (such a point exists since $F$ is a convex polyhedron with vertices in $E_\QQ$).
+  Write $p=\chi/n$, where $n$ is the smallest positive integer such that $np\in\mathfrak{X}(T)$.
+  Define a linear action of $T$ on the $n$th symmetric power $S^nV$ by $t\cdot m^n = \chi(t)^{-1}(t\cdot m)^n$.
+  Embed $X$ into $\PP(S^nV)$ by the Veronese embedding.
+  We immediately see that $X^\ss(F)=X^\ss(p)$ is the set of semistable points of $X\subset\PP(S^nV)$, and that $X^\s(F)$ is the set of stable points.
+  The claim then follows from \cite[1.4]{MF}.
+\end{proof}
+
+\begin{remark}
+  In the language of \cite[Chapter~1]{MF}, which we adopt, $\pi_F$ is a universal categorical quotient, and its restriction to $X^\s(F)$ is a universal geometric quotient.
+\end{remark}
+
+
+\section{A class of sheaves on the quotients}
+\label{1.3}
 
 
 %% Bibliography %%
