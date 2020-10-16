@@ -63,8 +63,8 @@ This should go without saying, but I'll say it anyway: _I am making no claim to 
 
 ### Extracts (1957--92), "Fondements de la Géométrie Algébrique"
 
-_All of the following are by A. Grothendieck. A PDF copy of the original notes can be found at <https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf>._
-_We have taken the comments and errata from the May 1962 "Commentaires"_ (_Séminaire Bourbaki_ **14**, 1961--62, Complément) _and inserted them into the relevant places in the notes themselves, making clear when this has been done._
+All of the following are by A. Grothendieck. A PDF copy of the original notes can be found at <https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf>.
+We have taken the comments and errata from the May 1962 "Commentaires" (_Séminaire Bourbaki_ **14**, 1961--62, Complément) and inserted them into the relevant places in the notes themselves, making clear when this has been done.
 
 - "Théorème de dualité pour les faisceaux algébriques cohérents".
   <br/>
@@ -175,7 +175,7 @@ _We have taken the comments and errata from the May 1962 "Commentaires"_ (_Sémi
 
 # In progress
 
-Some of the longer papers take a while to translate, but, once they reach a certain level of completion, I'll share them here so that at least what I have done can be available. The papers that make up Grothendieck's FGA will just be released one at a time when completed.
+Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
 
 - Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
   <br/>
@@ -199,7 +199,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fpm-92%2Fprojective-torus-action.tex&command=pdflatex&trackId=1602776678752)
 
-<!-- - Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
+- Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>
   Springer-Verlag, Lecture Notes in Mathematics **163** (1970).
   <br/>
@@ -209,9 +209,9 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
   |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355) -->
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355)
 
-<!-- - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points".
+- Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points".
   <br/>
   In _Galois Groups over $\mathbb{Q}$_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), 79--297.
   <br/>
@@ -221,9 +221,8 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
   |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://publications.ias.edu/node/407) -->
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://publications.ias.edu/node/407)
 
-<!--
 - Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen".
   <br/>
   _Math. Ann._ **146** (1962), 331--368.
@@ -234,9 +233,7 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=ma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1596040221056)
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/160940)
--->
 
-<!--
 - Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires".
   <br/>
   _Annales de l'institut Fourier_ **4** (1952), 73--112.
@@ -248,6 +245,6 @@ Some of the longer papers take a while to translate, but, once they reach a cert
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/?id=AIF_1952__4__73_0)
--->
+
 
 <!-- icons from fontawesome.com under [their licence](https://fontawesome.com/license). -->
