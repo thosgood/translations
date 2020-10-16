@@ -6,13 +6,14 @@ For each paper, there is a link to the `.tex` source file (and I've tried to kee
 
 ---
 
-For translations of the EGA, see <https://github.com/ryankeleti/ega>; for FGA translations, see below (under "Séminaire Bourbaki"); news on SGA translations "coming soon&trade;".
-
----
-
 This should go without saying, but I'll say it anyway: _I am making no claim to any of the mathematics or ideas contained in any of these translations; the only things that are mine are the errors introduced during the hazardous journey from one language to another._
 
 ---
+## The Grothendieck trilogy
+
+- **EGA**: see [github.com/ryankeleti/ega](https://github.com/ryankeleti/ega).
+- **FGA**: see [below](#extracts-195792-fondements-de-la-géométrie-algébrique) (under "Séminaire Bourbaki").
+- **SGA**: "coming soon&trade;".
 
 # Articles
 
