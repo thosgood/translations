@@ -38,6 +38,18 @@
 \crefname{section}{\S\!}{\S\S\!}
 \crefname{equation}{}{}
 
+\usepackage{titlesec}
+\titleformat{\section}[block]
+  {\bfseries\Large\filcenter}
+  {\S\thesection}
+  {1em}
+  {}
+\titleformat{\subsection}[hang]
+  {\large}
+  {\bfseries\arabic{subsection}}
+  {1em}
+  {}
+
 
 %% Theorem environments %%
 
@@ -102,6 +114,7 @@
 
 \setcounter{footnote}{0}
 
+\setcounter{tocdepth}{1}
 \tableofcontents
 
 
@@ -178,9 +191,6 @@ In contrast, as is well known, Kodaira and Chow \cite{4} have shown that every c
 \label{1.1}
 
 Complexes spaces are defined as in \cite{10}.
-
-...
-\todo \textbf{MAKE SECTION TITLES HAVE \S; SUBSECTION TITLES SHOULD NOT HAVE SECTION NUMBER}
 
 
 %% Bibliography %%
