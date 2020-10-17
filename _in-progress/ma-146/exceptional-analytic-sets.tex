@@ -69,6 +69,7 @@
 
 %% Shortcuts %%
 
+\newcommand{\unsure}[1]{\textbf{TODO: \underline{#1}}}
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
@@ -108,11 +109,34 @@
 
 \section*{}
 
+\emph{The author was supported by US Air Force Grant No.~AF-EOAR-61-50.}
+
+\bigskip
+
 \oldpage{331}
 The term ``modification'' first appeared in a 1951 publication \cite{1} by H.~Behnke and K.~Stein.
-The authors use it to refer to a process that allows a given complex space to be modified.
+The authors used it to refer to a process that allows a given complex space to be modified.
 If $X$ is a complex space, and $N\subset X$ a low-dimensional analytic set, then $N$ is replaced by another set $N'$ such that the complex structure on $X\setminus N$ can be extended to the entire space $X'=(X\setminus N)\cup N'$.
-The newly obtained complex space $X'$ is called a \emph{modification} of $X$.
+The newly obtained complex space $X'$ is then called a \emph{modification} of $X$.
+
+As already demonstrated in \cite{1}, modifications can be very pathological.
+The interest therefore turned towards special classes of modifications.
+In \cite{12}, H.~Hopf considered so-called ``$\sigma$-processes'' on $n$-dimensional complex manifolds $M$.
+These modifications made it possible to replace any point $x\in M$ with a complex projective space $P^{n-1}$ of dimension $n-1$.
+The result is a new singularity-free complex manifold $M'$.
+There are more general modifications that modify the manifold $M$ at only one point $x\in M$, but the space thus obtained can then contain singular points, i.e. is just a complex space.
+
+This present work deals with the following question.
+Let $X$ be a complex space, and $A\subset X$ a complex-analytic set.
+Then when does there exist a modification $Y$ of $X$ where $A$ is replaced by a point $y$, and such that $X\setminus A=Y\setminus y$?
+
+If such a $Y$ exists, then $A$ is said to be an \emph{exceptional analytic set} in $X$, and we say that $A$ can be ``\unsure{\emph{collapsed}}'' to a point.
+
+In general, such a $Y$ does not exist.
+If $X$ is a complex space, and $A\subset X$ is a compact connected analytic set, then, from a set-theoretic point of view, $A$ can of course always be replaced by a point $y_0$.
+Then $Y=(X\setminus A)\cup y_0$ has a canonical topological structure, $Y\setminus y_0=X\setminus A$ has a complex structure $\mathfrak{S}$, and the identity $X\setminus A\to X\setminus y_0$ can be extended to a continuous map $\lambda\colon X\to Y$.
+Then $\lambda$ maps $X\setminus A$ topologically (and even biholomorphically) to $Y$, and sends $A$ to $y_0$.
+If $A$ can now be \unsure{collapsed} to a point, then $\mathfrak{S}$ can be extended to the entire space $Y$, and $\lambda$ becomes a holomorphic map $X\to Y$.
 
 
 %% Bibliography %%
