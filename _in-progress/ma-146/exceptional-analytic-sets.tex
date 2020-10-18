@@ -81,8 +81,8 @@
 
 %% Shortcuts %%
 
-\newcommand{\CC}{\mathbf{C}}
-\newcommand{\PP}{\mathbf{P}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\PP}{\mathbb{P}}
 \newcommand{\sh}{\mathcal}
 \newcommand{\fk}{\mathfrak}
 
@@ -148,13 +148,13 @@ This present work deals with the following question.
 Let $X$ be a complex space, and $A\subset X$ a complex-analytic set.
 Then when does there exist a modification $Y$ of $X$ where $A$ is replaced by a point $y$, and such that $X\setminus A=Y\setminus y$?
 
-If such a $Y$ exists, then $A$ is said to be an \emph{exceptional analytic set} in $X$, and we say that $A$ can be ``\unsure{\emph{collapsed}}'' to a point.
+If such a $Y$ exists, then $A$ is said to be an \emph{exceptional analytic set} in $X$, and we say that $A$ can be ``\emph{collapsed}'' to a point.
 
 In general, such a $Y$ does not exist.
 If $X$ is a complex space, and $A\subset X$ is a compact connected analytic set, then, from a set-theoretic point of view, $A$ can of course always be replaced by a point $y_0$.
 Then $Y=(X\setminus A)\cup y_0$ has a canonical topological structure, $Y\setminus y_0=X\setminus A$ has a complex structure $\fk{S}$, and the identity $X\setminus A\to X\setminus y_0$ can be extended to a continuous map $\lambda\colon X\to Y$.
 Then $\lambda$ maps $X\setminus A$ topologically (and even biholomorphically) to $Y$, and sends $A$ to $y_0$.
-If $A$ can now be \unsure{collapsed} to a point, then $\fk{S}$ can be extended to the entire space $Y$, and $\lambda$ becomes a holomorphic map $X\to Y$.
+If $A$ can now be collapsed to a point, then $\fk{S}$ can be extended to the entire space $Y$, and $\lambda$ becomes a holomorphic map $X\to Y$.
 
 \oldpage{332}
 We now give an overview of the present work.
@@ -166,7 +166,7 @@ The structure of $N_\fk{m}$ is then critical: $A$ is exceptional if $N$ is weakl
 We use the word ``negative'' here in the sense of Kodaira's definition; our result shows that it can be defined in a purely algebraic way in the world of algebraic geometry.
 Also in \cref{3}, we obtain simple criteria for positive (negative) line bundles and characterising projective algebraic spaces.
 The well-known theorem of Kodaira (that every Hodge manifold $X$ is projective algebraic) is generalised to the case where $X$ is a normal complex space.
-Then \cref{4} deals with the complex structure of neighbourhoods of analytic sets $A\subset X$, which can be \unsure{collapsed to a point}.
+Then \cref{4} deals with the complex structure of neighbourhoods of analytic sets $A\subset X$, which can be collapsed to a point.
 The main result of this section is that the neighbourhoods of (special) exceptional analytic sets $A\subset X$ and $A'\subset X'$ are analytically equivalent if (\unsure{and only if??}) they are equivalent in a formal sense.
 This means that the complex structure can be ``calculated'', which makes it possible to solve one of Hirzebruch's problems \cite{11}, and to transfer the propositions of Enriques and Kodaira from algebraic geometry to complex analysis.
 --- It should also be mentioned that, using the main results of \cref{4}, we construct a complex space $X$ with the following properties:
@@ -199,32 +199,61 @@ Complexes spaces are defined as in \cite{10}.
 We always assume that they are reduced: their local rings contain no nilpotent elements.
 If $X$ is a complex space, $U=U(x)$ a neighbourhood, $A\subset G\subset \CC^n$ an analytic set in a domain $G$ of the space $\CC^n$ of the $n$-dimensional complex numbers, and $\tau$ a biholomorphic map $U\to A$, then $(U,\tau,A)$ is called a chart in $X$, and $\tau$ a biholomorphic embedding of $U$ in $G$.
 
-We always denote by $\sh{O}=\sh{O}(X)$ the sheaf of germs of \unsure{locally holomorphic} functions on $X$.
-If $A\subset X$ is an analytic subset, then we denote by $\fk{m}=\fk{m}(A)\subset\sh{O}$ the sheaf of germs of \unsure{locally holomorphic} functions that vanish on $A$.
+We always denote by $\sh{O}=\sh{O}(X)$ the sheaf of germs of locally holomorphic functions on $X$.
+If $A\subset X$ is an analytic subset, then we denote by $\fk{m}=\fk{m}(A)\subset\sh{O}$ the sheaf of germs of locally holomorphic functions that vanish on $A$.
 By a theorem of Cartan, $\fk{m}$ is coherent.
-For every subsheaf $\sh{I}\subset\sh{O}$, let $\sh{I}^k$ be the sheaf given by the \unsure{Funktionskeimen} $f_x=f_{1x}\cdot\ldots\cdot f_{kx}$, with $f_{1x},\ldots,f_{kx}\in\sh{I}_x$ for $x\in X$, $k=1,2,\ldots$.
+For every subsheaf $\sh{I}\subset\sh{O}$, let $\sh{I}^k$ be the sheaf consisting of germs $f_x=f_{1x}\cdot\ldots\cdot f_{kx}$, where $f_{1x},\ldots,f_{kx}\in\sh{I}_x$ for $x\in X$, $k=1,2,\ldots$.
 
 Now\footnote{
   A subscript $x$ always denotes the stalk of the sheaf at the point $x$.
-  If $s$ is a \unsure{Schnittfläch}, then $s_x$ denotes its value at $x$.
-  Holomorphic functions and \unsure{Schnittflächen} in $\sh{O}$ are always considered to be the same thing.
-  --- If $F$ is a complex-analytic vector bundle, then $\underline{F}$ always denotes the sheaf of germs of \unsure{locally holomorphic Schnittfläch} in $F$.
+  If $s$ is a section, then $s_x$ denotes its value at $x$.
+  Holomorphic functions and sections in $\sh{O}$ are always considered to be the same thing.
+  --- If $F$ is a complex-analytic vector bundle, then $\underline{F}$ always denotes the sheaf of germs of locally holomorphic sections in $F$.
 }%
 let $x\in X$, $\fk{m}=\fk{m}(x)$, and $d(x)=\dim_\CC\fk{m}_x/\fk{m}_x^2$.
 If $\psi\colon X\to\CC^n$ is a holomorphic map, then $\psi$ defines, at each point $x\in X$, a homomorphism $\psi_x^*\colon\sh{O}_z(\CC^n)\to\sh{O}_x(X)$.
 This homomorphism maps the maximal ideal $\fk{m}_z\subset\sh{O}_z(\CC^n)$ to the maximal ideal $\fk{m}_x\subset\sh{O}_x(X)$.
 If the induced map $\fk{m}_z/\fk{m}_z^2\to\fk{m}_x/\fk{m}_x^2$ is surjective, then we say that $\psi$ is a \emph{regular map} at $x$.
 In the case where $X$ is a complex manifold, we see that $\fk{m}_x/\fk{m}_x^2$ is exactly the covariant tangent space of $X$.
-Then $\psi$ is regular at $x\in X$ if and only if the derivative matrix of $\psi$ at $x$ has rank equal to $\dim_x X$.
+Then $\psi$ is regular at $x\in X$ if and only if the Jacobian matrix of $\psi$ at $x$ has rank equal to $\dim_x X$.
 
-We call a map $\psi\colon X\to\CC^n$ a \emph{biholomorphic map} if it is a bijection that is regular at every point $x\in X$.
+We say that a map $\psi\colon X\to\CC^n$ is \emph{biholomorphic} if it is a bijection that is regular at every point $x\in X$.
 
 \begin{enumerate}[(1)]
   \itshape
   \item Let $x$ be a point of a complex space $X$.
     Then there exists a neighbourhood $U=U(x)$ and a chart $(U,\tau,A)$ with $A\subset G$ and $\dim G=d(x)$.
     If $(U,\tau,A)$ is any such chart, and $\psi\colon U\to\CC^n$ is a regular holomorphic map, then there exists an open neighbourhood $V=V(z)$ of $z=\tau(x)$ in $G$, and a biholomorphic map $\hat{\psi}\colon V\to\CC^n$ such that $\psi|W=\hat{\psi}\circ\tau$ (where $W=\tau^{-1}(V)$).\footnote{This statement (1) and its proof were communicated to me by A.~Andreotti.}
+    \label{(1)}
 \end{enumerate}
+
+Of course, $\psi|W$ is then also biholomorphic.
+
+\begin{proof}
+To prove \hyperref[(1)]{(1)}, we may assume that $X$ is an analytic set in a domain $D\subset\CC^m$.
+Let $\hat{\fk{m}}_x$ be the maximal ideal in $\sh{O}_x(\CC^m)$, and $\fk{i}_x\subset\sh{O}_x(\CC^m)$ the ideal of germs of holomorphic functions that vanish on $X\subset D$.
+Let $r$ be the dimension of the image $\sh{F}$ of $\fk{i}_x$ under the natural homomorphism $\lambda\colon\fk{i}_x\to\hat{\fk{m}}_x/\hat{\fk{m}}_x^2$.
+Clearly $m=r+d(x)$.
+Let $f_1,\ldots,f_r$ be functions that are holomorphic on a neighbourhood of $x$, with $f_{vx}\in\fk{i}_x$, so that the elements $\lambda(f_{vx})$ for $v=1,\ldots,r$ span the complex vector space $\sh{F}$.
+Then the rank of the Jacobian matrix of $(f_1,\ldots,f_r)$ in $X$ is equal to $r$.
+Then, in a neighbourhood $W=W(x)$, the following properties apply:
+\oldpage{334}
+\begin{enumerate}[1)]
+  \item The functions $f_1,\ldots,f_r$ are holomorphic on $W$, and vanish on $X\cap W$;
+  \item $\hat{G}=\{z\in W\mid \mbox{$f_v(z)=0$ for $v=1,2\ldots,r$}\}$ is a $d(x)$-dimensional analytic subset of $W$ that contains no singularities, and which is mapped to a domain in $\CC^{d(x)}$ under some biholomorphic map $\tau$.
+\end{enumerate}
+
+Now let $A=\tau(X\cap W)$ and $U'=W\cap X$, and we obtain a chart satisfying the required properties.
+
+To prove the second claim of \hyperref[(1)]{(1)}, let $(U,\tau,A)$ be a chart with $A\subset G$ and $\dim G=d(x)$.
+We may assume that $U=A$ and that $\tau$ is the identity.
+Then $\lambda(\fk{i}_x)=0$, since $r=0$.
+If $f_1,\ldots,f_n$ are holomorphic functions on $U$ that define a holomorphic map $\psi\colon U\to\CC^n$, and if $\hat{f}_1,\ldots,\hat{f}_n$ are holomorphic continuations in an open neighbourhood of $x$ in $G$, then the rank of the Jacobian matrix of $(\hat{f}_1,\ldots,\hat{f}_n)$ at $x$ is equal to $d(x)=\dim G$.
+There thus exists a neighbourhood $W=W(x)$ in which the $\hat{f}_1,\ldots,\hat{f}_n$ are holomorphic and give a biholomorphic map $\psi\colon W\to\CC^n$.
+\end{proof}
+
+By the definition of a complex space, for every point $x\in X$ there is a non-empty system of charts $(U,\tau,A)$ such that $x\in U$.
+As we will show in this section, it is thus possible to transfer the concept of strictly plurisubharmonic functions to the setting of complex spaces.
 
 
 %% Bibliography %%
