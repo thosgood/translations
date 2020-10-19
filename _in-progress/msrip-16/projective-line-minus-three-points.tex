@@ -48,15 +48,28 @@
 
 %% Shortcuts %%
 
+\newcommand{\mot}{\mathrm{mot}}
 \newcommand{\sh}{\mathscr}
 \newcommand{\cat}{\mathcal}
 \newcommand{\bb}{\mathbb}
+\newcommand{\PP}{\bb{P}}
+\newcommand{\ZZ}{\bb{Z}}
+\newcommand{\RR}{\bb{R}}
+\newcommand{\CC}{\bb{C}}
+\newcommand{\FF}{\bb{F}}
+\newcommand{\QQ}{\bb{Q}}
+\newcommand{\cQQ}{\overline{\QQ}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
 \DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Hom}{Hom}
 
+\newcommand{\unsure}[1]{TODO: \underline{\textbf{#1}}}
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
@@ -117,7 +130,97 @@
 
 The present article owes much to A.~Grothendieck.
 He invented the philosophy of motives, which is our guiding thread.
-Around five years ago, he also said to me, with force, that the profinite completion $\hat{\pi}_1$ of the fundamental group of $X\coloneqq\bb{P}^1(\bb{C})\setminus\{0,1,\infty\}$, with the action of $\Gal(\overline{\bb{Q}}/\bb{Q})$, is a remarkable object, and that it must be studied.
+Around five years ago, he also said to me, with force, that the profinite completion $\hat{\pi}_1$ of the fundamental group of $X\coloneqq\PP^1(\CC)\setminus\{0,1,\infty\}$, with the action of $\Gal(\cQQ/\QQ)$, is a remarkable object, and that it must be studied.
+
+Every finite cover of $X$ can be described by equations with coefficients in the algebraic numbers.
+Applying an element of $\Gal(\cQQ/\QQ)$ to these coefficients, we obtain the equations of another cover.
+Understanding how $\Gal(\cQQ/\QQ)$ permutes the isomorphism classes of finite covers essentially reduces to understanding the Galois action on $\hat{\pi}_1$.
+``Essentially'': since I have omitted mentioning the base points, and since the Galois covers have not been thought of as $G$-covers, for $G$ their automorphism group.
+
+Up until now, we do not have the language to study the Galois action on $\hat{\pi}_1$.
+A.~Grothendieck and his students have developed a combinatorial description (``charts'') of finite covers of $X$, based on a decomposition of $\PP^1(\CC)$ into the two ``spherical triangles'' $\Im(z)\geq0$ and $\Im(z)\leq0$, with sides $[\infty,0]$, $[0,1]$, and $[1,\infty]$.
+This has not helped in understanding the Galois action.
+We have only a few unresolved examples of covers whose Galois conjugates have been calculated.
+
+In this article, we only consider when $\hat{\pi}_1$ is rendered nilpotent, i.e. quotients $\hat{\pi}_1^{(N)}$ of $\hat{\pi}_1$ by the subgroups of its decreasing central series.
+The profinite group $\hat{\pi}_1^{(N)}$ is a product over primes $\ell$ of nilpotent pro-$\ell$-groups: $\hat{\pi}_1^{(N)} = \prod_\ell \hat{\pi}_1^{(N)}{}\!_\ell$.
+Each $\hat{\pi}_1^{(N)}{}\!_\ell$ is an $\ell$-adic Lie group.
+It admits a Lie algebra $\Lie\hat{\pi}_1^{(N)}{}\!_\ell$, which is a Lie algebra over $\QQ_\ell$.
+If we choose a base point $x\in X(\QQ)=\QQ\setminus\{0,1\}$, then $\Gal(\cQQ/\QQ)$ acts on these Lie algebras.
+The action, up to inner automorphism, does not depend on the choice of $x$.
+We would like to understand these actions.
+
+The nilpotent versions of $\pi_1$ is very close to cohomology.
+This is most visible in the theory of D.~Sullivan (\cite{Su}, \cite{Mo}).
+Notation: for $\Gamma$ a finitely generated group, let $Z^i\Gamma$ be the decreasing central series, let $\Gamma^{(N)}=\Gamma/Z^{N+1}\Gamma$, and let $\Gamma^{[N]}=\Gamma^{(N)}/\mathrm{torsion}$ \cref{9.3}.
+The theory of Malcev (\cite{Mal}) attaches a nilpotent Lie algebra over $\QQ$, denoted $\Lie\Gamma^{[N]}$, to $\Gamma^{[N]}$, such that $\Gamma^{[N]}$ is a congruence subgroup of the unipotent algebraic group over $\QQ$ of the Lie algebra $\Lie\Gamma^{[N]}$.
+By D.~Sullivan, if $X$ is a differentiable manifold, then $\Lie\pi_1(X)^{[N]}\otimes\RR$ is determined, up to inner automorphism, by the differential-graded algebra $\Omega_X^\bullet$, taken
+\oldpage{82}
+up to quasi-isomorphism.
+
+This close relation with cohomology hints that the study of nilpotent versions of $\hat{\pi}_1$ is far from the ``anabelian'' dream of A.~Grothendieck.
+It allows us, however, to use his philosophy of motives.
+
+Let $k$ be a number field.
+If $X$ is an algebraic variety over $k$, then we have a whole series of parallel cohomology theories for $X$: the classical cohomology of $X(\CC)$ (for each complex embedding of $k$), crystalline cohomology (which is equal to de Rham cohomology if $X$ is smooth), $\ell$-adic cohomology, \ldots.
+The groups thus obtained are endowed with various additional structures (Hodge mixed, Galois action, \ldots) and are linked by comparison isomorphism.
+In \cref{1}, we axiomatise the situation by defining ``realisation systems over $k$''.
+The exact definition is not to be taken seriously: considering the applications --- and what we are capable of doing --- it could be wise to either add or remove data as much as axioms.
+The essential, for us, is that
+\begin{enumerate}[(i)]
+  \item The category of realisation systems is endowed with a $\otimes$ satisfying the usual properties: it is a Tannakian category over $\QQ$.
+  \item Conjecturally, the category of motives is a full subcategory of the category of realisation systems.
+\end{enumerate}
+
+Condition~(ii) requires, in particular, that, for every variety $X$ over $k$ and for every $i$, the available cohomology theories, applied to $X$, give a realisation system $H^i(X)$ over $k$ (which we will denote by $H^i(X)_\mot$, and call the motivic $H^i$ of $X$).
+
+Analogous ideas have been independently developed by U.~Jannsen \cite{J}.
+In \cite{J}, U.~Jannsen defines (mixed) motives over $k$ as constituting the Tannakian subcategory (of the category of realisation systems) generated by the $H^i(X)$ for $X$ smooth and quasi-projective.
+Here we are still being imprecise, saying that a motive over $k$ is a realisation system ``of geometric origin''.
+For $X$ over $k$ and $x\in X(k)$, we want, for example, to regard $\Lie\pi_1(X(\CC),x)^{[N]}$ as a realisation of a motive over $k$.
+
+This article owes much to an unpublished work of Z.~Wojtkoviak.
+For $X=\PP^1\setminus\{0,1,\infty\}$ and $x\in X(\CC)$, I proposed to him a definition of the mixed Hodge structure of $\Lie\pi_1(X(\CC),x)^{[N]}$.
+He calculated it in part, for small $N$, and, to my extreme surprise, show that, for $N=4$, its description involves $\zeta(3)$.
+A decanted form of the calculations appear in \cref{19}.
+In fact, the whole article originates from my desire to
+\oldpage{83}
+understand the result of Z.~Wojtkoviak.
+I have also been helped by the answer by O.~Gabber to my question ``How can we construct an extension of $\ZZ_\ell$ by $\ZZ_\ell(3)$, uniformly in $\ell$?'': ``By a class in $K_5(\QQ)$'', as well as by the conjectures of A.~Beilinson on the values of $L$-functions.
+
+If $X$ is an algebraic variety over a number field $k$, $x\in X(k)$, and $N$ an integer, then we want to have a realisation system $\Lie\pi_1(X,x)^{(N)}_\mot$.
+We can only succeed in constructing this under additional hypotheses on $X$: in the general case, certain realisations are missing.
+The case of $\PP^1$ minus some points --- more generally, of smooth rational varieties --- is nonetheless covered.
+
+Let $k=\QQ$, $X=\PP^1\setminus\{0,1,\infty\}$, and $x\in X(\QQ)$.
+The \unsure{gradu\'{e}} for the weight filtration of $\Lie\pi_1(X,x)^{(N)}_\mot$ is the free Lie algebra on $H_1(X)_\mot$, modulo its $Z^{N+1}$ (decreasing central series).
+$H_1(X)_\mot$ is the sum of two copies of the Tate motive $\QQ(1)$.
+We thus deduce that $\Lie\pi_1(X,x)^{(N)}_\mot$ is an iterated extension of Tate motives $\QQ(n)$.
+The fact that non-trivial extensions appear is what gives it its charm.
+
+I conjecture that, over a number field $k$, the group of motivic extensions of $\QQ$ by $\QQ(n)$ ($n>0$) is $K_{2n-1}(k)\otimes\QQ$.
+For a general framework into which we can place this conjecture, see \cite[§5]{B}.
+In particular, for $k=\QQ$, we want $\Ext^1(\QQ,\QQ(n))$ to be zero for $n$ even, and of dimension~$1$ for $n\geq3$ odd.
+This is the motivic $\Ext^1$: extensions as realisation systems that ``come from algebraic geometry''.
+This conjecture places severe restrictions on $\Lie\pi_1(X,x)^{(N)}_\mot$, which are far from having been verified.
+What we know concerns, up to now, only the quotient by the second derived group.
+A large part of this article is dedicated to developing a language in which the consequences of the conjecture affecting $\Lie\pi_1(X,x)^{(N)}_\mot$ can be clearly stated.
+
+We now go through this article, pointing out several shortcuts.
+
+In \cref{1}, we describe the category of realisation systems over a base $S$.
+The base $S$ can be: $\Spec(\QQ)$, $\Spec(\FF)$ for $\FF$ a number field, an open subset of the spectrum of the ring of integers of a number field, or smooth over $\Spec(\ZZ)$.
+In this category, the $\Hom$ are $\QQ$-vector spaces.
+We also define a notion of integer structure;
+in the category of realisation systems with integer coefficients (= endowed with an integer structure), the $\Hom$ are free $\ZZ$-modules of finite type.
+The definition has a crystalline component.
+The reader is invited to ignore this for a first approximation.
+The theory coincides with that of U.~Jannsen
+\oldpage{84}
+\cite{J}.
+The crystalline aspect will be neglected in the rest of the introduction.
+
+In \cref{2} we give examples.
 
 
 %% Bibliography %%
