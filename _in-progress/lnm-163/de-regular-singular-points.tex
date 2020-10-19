@@ -83,6 +83,8 @@
 \newcommand{\cat}{\mathcal}
 \newcommand{\sbullet}{{\mathbin{\vcenter{\hbox{\scalebox{.5}{$\bullet$}}}}}}
 \newcommand{\id}{\mathrm{Id}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\dd}{\mathrm{d}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -94,7 +96,6 @@
 \DeclareMathOperator{\iHom}{\underline{Hom}}
 \DeclareMathOperator{\iEnd}{\underline{End}}
 \DeclareMathOperator{\DD}{D}
-\DeclareMathOperator{\dd}{d\!}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -478,7 +479,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   \end{env}
 
   We leave it to the reader to verify that these formulas do indeed define connections.
-  For \cref{I.2.7.2}, for example, one must verify that, firstly, the given formula defines a $\mathbb{C}$-bilinear map from $(\sh{V}_1\otimes\sh{V}_2)$, which means that the right-hand side $II(v_1,v_2)$ is $\mathbb{C}$-bilinear and such that $II(fv_1,v_2)=II(v_1,fv_2)$;
+  For \cref{I.2.7.2}, for example, one must verify that, firstly, the given formula defines a $\mathbb{C}$-bilinear map from $(\sh{V}_1\otimes\sh{V}_2)$, which means that the right-hand side $\mathrm{II}(v_1,v_2)$ is $\mathbb{C}$-bilinear and such that $\mathrm{II}(fv_1,v_2)=\mathrm{II}(v_1,fv_2)$;
   secondly, one must also verify identity~\cref{I.2.3.5}.
 \end{env}
 
@@ -496,6 +497,119 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
     \Hom(\sh{V}_1,\sh{V}_2)\otimes\sh{V}_1 \to \sh{V}_2
   \]
   is compatible with the connections.
+\end{env}
+
+\begin{env}{2.9}
+\label{I.2.9}
+  A local section $v$ of $\sh{V}$ is said to be \emph{horizontal} if $\nabla v=0$.
+  If $f$ is a homomorphism between bundles $\sh{V}_1$ and $\sh{V}_2$ endowed with connections, then it is equivalent to say either that $f$ is horizontal, or that $f$ is compatible with the connections \cref{I.2.8}.
+\end{env}
+
+\begin{env}{2.10}
+\label{I.2.10}
+  Let $\sh{V}$ be a holomorphic vector bundle on $X$.
+  Define $\Omega_X^p=\wedge^p\Omega_X^1$ and $\Omega_X^p(\sh{V})=\Omega_X^p\otimes_\sh{O}\sh{V}$ (the sheaf of \emph{exterior differential $p$-forms with values in $\sh{V}$}).
+  Suppose that $\sh{V}$ is endowed with a holomorphic connection.
+  We then define $\CC$-linear morphisms
+  \[
+  \label{I.2.10.1}
+    \nabla\colon \Omega_X^p(\sh{V}) \to \Omega_X^{p+1}(\sh{V})
+  \tag{2.10.1}
+  \]
+  characterised by the following formula:
+  \[
+  \label{I.2.10.2}
+    \nabla(\alpha,v) = \dd\alpha\cdot v + (-1)^p\alpha\wedge\nabla v,
+  \tag{2.10.2}
+  \]
+  where $\alpha$ is a local section of $\Omega^p$, $v$ is a local section of $\sh{V}$, and $\dd$ is the exterior differential.
+  To prove that the right-hand side $\mathrm{II}(\alpha,v)$ of \cref{I.2.10.2} defines a homomorphism \cref{I.2.10.1}, it suffices to show that $\mathrm{II}(\alpha,v)$ is $\CC$-bilinear and satisfies
+  \[
+    \mathrm{II}(f\alpha,v) = \mathrm{II}(\alpha,fv).
+  \]
+  But we have that
+  \[
+    \begin{aligned}
+      \mathrm{II}(f\alpha,v)
+      &= \dd(f\alpha)v + (-1)^pf\alpha\wedge\nabla v
+    \\&= \dd\alpha\cdot fv + \dd f\wedge\alpha v + (-1)^pf\alpha\wedge\nabla v
+    \\&= \dd\alpha\cdot fv + (-1)^p\alpha\wedge(f\nabla v+\dd f\cdot v)
+    \\&= \mathrm{II}(\alpha,fv).
+    \end{aligned}
+  \]
+
+  Let $\sh{V}_1$ and $\sh{V}_2$ be vector bundles endowed with connections, and let $\sh{V}$ be their tensor product \cref{I.2.7.2}.
+  We denote by $\wedge$ the evident maps
+  \[
+    \wedge\colon \Omega^p(\sh{V}_1)\otimes\Omega^1(\sh{V}_2) \to \Omega^{p+q}(\sh{V})
+  \]
+\oldpage{10}
+  such that, for a local section $\alpha$ (resp. $\beta$, resp. $v_1$, resp. $v_2$) of $\Omega^p$ (resp. $\Omega^q$, resp. $\sh{V}_1$, resp. $\sh{V}_2$), we have that $(\alpha\otimes v_1)\wedge(\beta\otimes v_2) = (\alpha\wedge\beta)\otimes(v_1\otimes v_2)$.
+  If $\eta_1$ (resp. $\eta_2$) is a local section of $\Omega^p(\sh{V}_1)$ (resp. $\Omega^q(\sh{V}_2)$), then
+  \[
+  \label{I.2.10.3}
+    \nabla(\eta_1\wedge\eta_2) = \eta_1\wedge\eta_2 + (-1)^p\eta_1\wedge\eta_2.
+  \tag{2.10.3}
+  \]
+  Indeed, if $\eta_1=\alpha v_1$ and $\eta_2=\beta v_2$, then
+  \[
+    \begin{aligned}
+      \nabla(\eta_1\wedge\eta_2)
+      &= \nabla(\alpha\wedge\beta\otimes v_1\otimes v_2)
+    \\&= \dd(\alpha\wedge\beta)v_1\otimes v_2 + (-1)^{p+q}\alpha\wedge\beta\wedge\nabla(v_1\otimes v_2)
+    \\&= \dd\alpha\wedge\beta v_1\otimes v_2 + (-1)^p\alpha\wedge\dd\beta v_1\otimes v_2 + (-1)^{p+q}\alpha\wedge\beta\wedge\nabla v_1\otimes v_2 + (-1)^{p+q}\alpha\wedge\beta v_1\wedge\nabla v_2
+    \\&= \dd\alpha v_1\wedge\eta_2 + (-1)^p\eta_1\wedge\dd\beta v_2 + (-1)^p\alpha\wedge\nabla v_1\wedge\eta_2 + (-1)^{p+q}\eta_2\wedge\beta\wedge\nabla v_2
+    \\&= (\dd\alpha v_1 + (-1)^p\alpha\wedge\nabla v_1)\wedge\eta_2 + (-1)^p\eta_1\wedge(\dd\beta v_2 + (-1)^q\beta\wedge\nabla v_2)
+    \\&= \nabla\eta_1\wedge\eta_2 +(-1)^p\eta_1\wedge\nabla\eta_2.
+    \end{aligned}
+  \]
+
+  Let $\sh{V}$ be a vector bundle endowed with a connection.
+  If we apply the above formula to $\sh{O}$ and $\sh{V}$, then, for a local section $\alpha$ (resp. $\eta$) of $\Omega^p$ (resp. $\Omega^q(\sh{V})$), we have that
+  \[
+  \label{I.2.10.4}
+    \nabla(\alpha\wedge\eta) = \dd\alpha\wedge\eta + (-1)^p\alpha\wedge\nabla\eta.
+  \tag{2.10.4}
+  \]
+
+  Iterating this formula gives
+  \[
+  \label{I.2.10.5}
+    \begin{aligned}
+      \nabla\nabla(\alpha\wedge\eta)
+      &= \nabla(\dd\alpha\wedge\eta + (-1)^p\alpha\wedge\nabla\eta)
+      \\&= \dd\alpha\wedge\eta + (-1)^{p+1}\dd\alpha\wedge\nabla\eta + (-1)^p\dd\alpha\wedge\nabla\eta + \alpha\wedge\nabla\nabla\eta
+      \\&= \alpha\wedge\nabla\nabla\eta.
+    \end{aligned}
+  \tag{2.10.5}
+  \]
+\end{env}
+
+\begin{definition}{2.11}
+\label{I.2.11}
+  Under the hypotheses of \cref{I.2.10}, the \emph{curvature} $R$ of the given connection on $\sh{V}$ is the composite homomorphism
+  \[
+    R\colon \sh{V} \to \Omega_X^2(\sh{V})
+  \]
+  considered as a section of $\Hom(\sh{V},\Omega_X^2(\sh{V})) \simeq \Omega_X^2(\End(\sh{V}))$.
+\end{definition}
+
+\begin{env}{2.12}
+\label{I.2.12}
+  Taking $q=0$ in \cref{I.2.10.4} gives
+  \[
+  \label{I.2.12.1}
+    \nabla\nabla(\alpha v) = \alpha\wedge R(v),
+  \tag{2.12.1}
+  \]
+  which we write as
+\oldpage{11}
+  \[
+  \label{I.2.12.2}
+    \nabla\nabla(\eta) = R\wedge\eta
+    \qquad\mbox{(the \emph{Ricci identity}).}
+  \tag{2.12.2}
+  \]
 \end{env}
 
 
