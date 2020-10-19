@@ -79,21 +79,7 @@
 
 %% Shortcuts %%
 
-\newcommand{\sh}{\mathscr}
-\newcommand{\cat}{\mathcal}
-\newcommand{\HH}{\mathrm{H}}
-\newcommand{\RR}{\mathrm{R}}
-\newcommand{\LL}{\mathrm{L}}
-\newcommand{\PP}{\mathbf{P}}
-\newcommand{\dd}{\operatorname{d}\!}
-\renewcommand{\geq}{\geqslant}
-\renewcommand{\leq}{\leqslant}
-
-\DeclareMathOperator{\Tor}{Tor}
-\DeclareMathOperator{\ch}{ch}
-\DeclareMathOperator{\rank}{rank}
-\DeclareMathOperator{\proj}{proj}
-\DeclareMathOperator{\codim}{codim}
+\newcommand{\aster}[1]{$^\star\;$#1$\;{}_\star$}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -139,6 +125,37 @@
 
 %% Content %%
 
+\section{Introduction}
+\label{section:introduction}
+
+\subsection*{Subject}
+\label{subsection:subject}
+
+\oldpage{73}
+
+\footnote{The numbers in brackets refer to the bibliography found at the end of this article.}
+This article aims to give a summary, without proofs, of the principal results found in my work ``Produits tensoriels topologiques et espaces nucl\'{e}aires'', which will be published in the \emph{Memoirs of the Amer. Math. Society} (and which I will refer to as PTT).
+The main concern throughout PTT was that of being exhaustive, both in terms of studying all the questions raised by the topics covered, as well as trying to state the more difficult results as theorems that were the most general possible.
+This work was also very dense, and the important simple ideas risked being sometimes hidden by technical details.
+This is why this bowlderised summary is possibly useful in giving a more assimilable outline of the theory.
+Some extra comments, interesting but not necessary for the general understanding of this summary, as well as some hints on certain proofs, have been placed between asterisks, like \aster{\ldots}.
+
+The importance of topological tensor products shows itself in many different settings:
+\begin{enumerate}[a)]
+  \item The notion of the topological tensor product forms the foundations of a simple and general formulation of \emph{Fredholm theory}, including, alongside the classical case of an integral operator defined by a continuous kernel, many other operators that are defined in the most important functional spaces.%
+    \footnote{Such a formulation of Fredholm theory seems to have appeared for the first time in \textsc{A.~Ruston}, ``Direct product of Banach spaces and linear functional equations'', \emph{Proc. of the London Math. Soc.} \textbf{3} (1951), 1. My work on this subject was conceived independently of his (in the autumn of 1951), and is rather different.}
+  \item The many variants of the notion of topological tensor product give rise, by duality, to the definition of many remarkable classes of bilinear forms and linear operators, whose
+\oldpage{74}
+    study is only just barely covered in PTT, chap.~1, §4.
+    In particular, the techniques introduced there, conveniently systematised and exploited, allow us to obtain entirely unexpected results in the \emph{theory of linear transformations between the space $L^1$, $L^2$, and $L^\infty$}, and their topological-vectorial analogues (these results being, as of yet, not definitive, and thus unpublished).
+    I might return to this subject, and restrict myself to explaining, in a rather different way, the systematic work of von Neumann--Schatten on the remarkable classes of compact operators in a Hilbert space \cite[chap.~4]{8}.
+  \item From the point of view of this current work, the most important application of topological tensor products is the theory of \emph{nuclear spaces}.
+    We explain this theory, generalise it, and make precise the famous ``theory of kernels'' of L.~Schwartz, and further discover new properties, even for the most classical of spaces.
+    Here the topological tensor
+\end{enumerate}
+
+
+\todo\textbf{subsection titles left hung}
 
 
 %% Bibliography %%
@@ -146,7 +163,6 @@
 \nocite{*}
 
 \begin{thebibliography}{10}
-
 \end{thebibliography}
 
 
