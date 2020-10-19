@@ -1,5 +1,7 @@
 \documentclass{report}
 
+\usepackage[margin=1.65in]{geometry}
+
 \title{Regular singular differential equations}
 \author{Pierre Deligne}
 \date{}
@@ -35,6 +37,7 @@
 
 \crefname{section}{\S\!}{\S\S\!}
 \crefname{equation}{}{}
+\crefdefaultlabelformat{#2(#1)#3}
 
 
 %% Theorem environments %%
@@ -44,19 +47,25 @@
   \theoremstyle{plain}
 
   \newtheorem{innercustomproposition}{Proposition}
-  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \crefname{innercustomproposition}{}{}
   \newenvironment{proposition}[1]
     {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
     {\endinnercustomproposition}
 
   \newtheorem{innercustomlemma}{Lemma}
-  \crefname{innercustomlemma}{Lemma}{Lemmas}
+  \crefname{innercustomlemma}{}{}
   \newenvironment{lemma}[1]
     {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
     {\endinnercustomlemma}
 
+  \newtheorem{innercustomtheorem}{Theorem}
+  \crefname{innercustomtheorem}{}{}
+  \newenvironment{theorem}[1]
+    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
+    {\endinnercustomlemma}
+
   \newtheorem{innercustomcorollary}{Corollary}
-  \crefname{innercustomcorollary}{Corollary}{Corollaries}
+  \crefname{innercustomcorollary}{}{}
   \newenvironment{corollary}[1]
     {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
     {\endinnercustomcorollary}
@@ -65,7 +74,7 @@
   \theoremstyle{definition}
 
   \newtheorem{innercustomdefinition}{Definition}
-  \crefname{innercustomdefinition}{Definition}{Definitions}
+  \crefname{innercustomdefinition}{}{}
   \newenvironment{definition}[1]
     {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
     {\endinnercustomdefinition}
@@ -166,7 +175,7 @@ I thank the assistants of this seminar, who had to be subjected to often unclear
 I also thank N.~Katz, with whom I had numerous and useful conversations, and to whom are due the principal results of section~\cref{II.1}.
 
 
-\section*{Notations and terminology}
+\section*{Notation and terminology}
 
 \oldpage{2}
 Within a single chapter, the references follow the decimal system.
@@ -211,7 +220,7 @@ We will use the following definitions:
 In this chapter, we explain the relations between various aspects and various uses of the notion of ``local systems of complex vectors''.
 The equivalence between the points of view considered has been well known for a long time.
 
-The ``crystalline'' point of view has not been considered;
+We do not consider the ``crystalline'' point of view;
 see \cite{4,10}.
 
 
@@ -522,7 +531,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
     \nabla(\alpha,v) = \dd\alpha\cdot v + (-1)^p\alpha\wedge\nabla v,
   \tag{2.10.2}
   \]
-  where $\alpha$ is a local section of $\Omega^p$, $v$ is a local section of $\sh{V}$, and $\dd$ is the exterior differential.
+  where $\alpha$ is any local section of $\Omega^p$, $v$ is any local section of $\sh{V}$, and $\dd$ is the exterior differential.
   To prove that the right-hand side $\mathrm{II}(\alpha,v)$ of \cref{I.2.10.2} defines a homomorphism \cref{I.2.10.1}, it suffices to show that $\mathrm{II}(\alpha,v)$ is $\CC$-bilinear and satisfies
   \[
     \mathrm{II}(f\alpha,v) = \mathrm{II}(\alpha,fv).
@@ -544,31 +553,33 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
     \wedge\colon \Omega^p(\sh{V}_1)\otimes\Omega^1(\sh{V}_2) \to \Omega^{p+q}(\sh{V})
   \]
 \oldpage{10}
-  such that, for a local section $\alpha$ (resp. $\beta$, resp. $v_1$, resp. $v_2$) of $\Omega^p$ (resp. $\Omega^q$, resp. $\sh{V}_1$, resp. $\sh{V}_2$), we have that $(\alpha\otimes v_1)\wedge(\beta\otimes v_2) = (\alpha\wedge\beta)\otimes(v_1\otimes v_2)$.
-  If $\eta_1$ (resp. $\eta_2$) is a local section of $\Omega^p(\sh{V}_1)$ (resp. $\Omega^q(\sh{V}_2)$), then
+  such that, for any local section $\alpha$ (resp. $\beta$, resp. $v_1$, resp. $v_2$) of $\Omega^p$ (resp. $\Omega^q$, resp. $\sh{V}_1$, resp. $\sh{V}_2$), we have that $(\alpha\otimes v_1)\wedge(\beta\otimes v_2) = (\alpha\wedge\beta)\otimes(v_1\otimes v_2)$.
+  If $\nu_1$ (resp. $\nu_2$) is any local section of $\Omega^p(\sh{V}_1)$ (resp. $\Omega^q(\sh{V}_2)$), then
   \[
   \label{I.2.10.3}
-    \nabla(\eta_1\wedge\eta_2) = \eta_1\wedge\eta_2 + (-1)^p\eta_1\wedge\eta_2.
+    \nabla(\nu_1\wedge\nu_2) = \nu_1\wedge\nu_2 + (-1)^p\nu_1\wedge\nu_2.
   \tag{2.10.3}
   \]
-  Indeed, if $\eta_1=\alpha v_1$ and $\eta_2=\beta v_2$, then
+  Indeed, if $\nu_1=\alpha v_1$ and $\nu_2=\beta v_2$, then
   \[
     \begin{aligned}
-      \nabla(\eta_1\wedge\eta_2)
+      \nabla(\nu_1\wedge\nu_2)
       &= \nabla(\alpha\wedge\beta\otimes v_1\otimes v_2)
     \\&= \dd(\alpha\wedge\beta)v_1\otimes v_2 + (-1)^{p+q}\alpha\wedge\beta\wedge\nabla(v_1\otimes v_2)
-    \\&= \dd\alpha\wedge\beta v_1\otimes v_2 + (-1)^p\alpha\wedge\dd\beta v_1\otimes v_2 + (-1)^{p+q}\alpha\wedge\beta\wedge\nabla v_1\otimes v_2 + (-1)^{p+q}\alpha\wedge\beta v_1\wedge\nabla v_2
-    \\&= \dd\alpha v_1\wedge\eta_2 + (-1)^p\eta_1\wedge\dd\beta v_2 + (-1)^p\alpha\wedge\nabla v_1\wedge\eta_2 + (-1)^{p+q}\eta_2\wedge\beta\wedge\nabla v_2
-    \\&= (\dd\alpha v_1 + (-1)^p\alpha\wedge\nabla v_1)\wedge\eta_2 + (-1)^p\eta_1\wedge(\dd\beta v_2 + (-1)^q\beta\wedge\nabla v_2)
-    \\&= \nabla\eta_1\wedge\eta_2 +(-1)^p\eta_1\wedge\nabla\eta_2.
+    \\&= \dd\alpha\wedge\beta v_1\otimes v_2 + (-1)^p\alpha\wedge\dd\beta v_1\otimes v_2
+    \\&\quad+ (-1)^{p+q}\alpha\wedge\beta\wedge\nabla v_1\otimes v_2 + (-1)^{p+q}\alpha\wedge\beta v_1\wedge\nabla v_2
+    \\&= \dd\alpha v_1\wedge\nu_2 + (-1)^p\nu_1\wedge\dd\beta v_2 + (-1)^p\alpha\wedge\nabla v_1\wedge\nu_2
+    \\&\quad+ (-1)^{p+q}\nu_2\wedge\beta\wedge\nabla v_2
+    \\&= (\dd\alpha v_1 + (-1)^p\alpha\wedge\nabla v_1)\wedge\nu_2 + (-1)^p\nu_1\wedge(\dd\beta v_2 + (-1)^q\beta\wedge\nabla v_2)
+    \\&= \nabla\nu_1\wedge\nu_2 +(-1)^p\nu_1\wedge\nabla\nu_2.
     \end{aligned}
   \]
 
   Let $\sh{V}$ be a vector bundle endowed with a connection.
-  If we apply the above formula to $\sh{O}$ and $\sh{V}$, then, for a local section $\alpha$ (resp. $\eta$) of $\Omega^p$ (resp. $\Omega^q(\sh{V})$), we have that
+  If we apply the above formula to $\sh{O}$ and $\sh{V}$, then, for any local section $\alpha$ (resp. $\nu$) of $\Omega^p$ (resp. $\Omega^q(\sh{V})$), we have that
   \[
   \label{I.2.10.4}
-    \nabla(\alpha\wedge\eta) = \dd\alpha\wedge\eta + (-1)^p\alpha\wedge\nabla\eta.
+    \nabla(\alpha\wedge\nu) = \dd\alpha\wedge\nu + (-1)^p\alpha\wedge\nabla\nu.
   \tag{2.10.4}
   \]
 
@@ -576,10 +587,10 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   \[
   \label{I.2.10.5}
     \begin{aligned}
-      \nabla\nabla(\alpha\wedge\eta)
-      &= \nabla(\dd\alpha\wedge\eta + (-1)^p\alpha\wedge\nabla\eta)
-      \\&= \dd\alpha\wedge\eta + (-1)^{p+1}\dd\alpha\wedge\nabla\eta + (-1)^p\dd\alpha\wedge\nabla\eta + \alpha\wedge\nabla\nabla\eta
-      \\&= \alpha\wedge\nabla\nabla\eta.
+      \nabla\nabla(\alpha\wedge\nu)
+      &= \nabla(\dd\alpha\wedge\nu + (-1)^p\alpha\wedge\nabla\nu)
+      \\&= \dd\alpha\wedge\nu + (-1)^{p+1}\dd\alpha\wedge\nabla\nu + (-1)^p\dd\alpha\wedge\nabla\nu + \alpha\wedge\nabla\nabla\nu
+      \\&= \alpha\wedge\nabla\nabla\nu.
     \end{aligned}
   \tag{2.10.5}
   \]
@@ -606,11 +617,163 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 \oldpage{11}
   \[
   \label{I.2.12.2}
-    \nabla\nabla(\eta) = R\wedge\eta
+    \nabla\nabla(\nu) = R\wedge\nu
     \qquad\mbox{(the \emph{Ricci identity}).}
   \tag{2.12.2}
   \]
+
+  We endow $\iEnd(\sh{V})$ with the connection given in \cref{I.2.7.3}.
+  The equation $\nabla(\nabla\nabla)=(\nabla\nabla)\nabla$ can be written as $\nabla(R\wedge\nu) = R\wedge\nabla\nu$.
+  By \cref{I.2.7.3}, we have that $\nabla R\wedge\nu = \nabla(R\wedge\nu) - R\wedge\nabla\nu$, so that
+  \[
+  \label{I.2.12.3}
+    \nabla R=0
+    \qquad\mbox{(the \emph{Bianchi identity}).}
+  \tag{2.12.3}
+  \]
 \end{env}
+
+\begin{env}{2.13}
+\label{I.2.13}
+  If $\alpha$ is an exterior differential $p$-form, then we know that
+  \[
+    \begin{aligned}
+      \langle \dd\alpha, X_0\wedge\ldots\wedge X_p \rangle
+      &= \sum_i(-1)^i j_{X_i}\langle \alpha, X_0\wedge\ldots\wedge\widehat{X_i}\wedge\ldots\wedge X_p \rangle
+    \\&\quad+ \sum_{i<j})(-1)^{i+j} \langle \alpha, [X_i,X_j]\wedge X_0\wedge\ldots\wedge\widehat{X_i}\wedge\ldots\wedge\widehat{X_j}\wedge\ldots\wedge X_p \rangle.
+    \end{aligned}
+  \]
+  From this formula, and from \cref{I.2.10.2}, we see that, for any local section $\nu$ of $\Omega_X^p(\sh{V})$, and holomorphic vector fields $X_0,\ldots,X_p$,
+  \[
+  \label{I.2.13.1}
+    \begin{aligned}
+      \langle \nabla\nu, X_0\wedge\ldots\wedge X_p \rangle
+      &= \sum_i(-1)^i \nabla_{X_i}\langle \nu, X_0\wedge\ldots\wedge\widehat{X_i}\wedge\ldots\wedge X_p \rangle
+    \\&\quad+ \sum_{i<j})(-1)^{i+j} \langle \nu, [X_i,X_j]\wedge X_0\wedge\ldots\wedge\widehat{X_i}\wedge\ldots\wedge\widehat{X_j}\wedge\ldots\wedge X_p \rangle.
+    \end{aligned}
+  \tag{2.13.1}
+  \]
+
+  In particular, for any local section $v$ of $\sh{V}$, we have that
+  \[
+    \langle \nabla\nabla v, X_1\wedge X_2 \rangle
+    = \nabla_{X_1}\langle \nabla v, X_2 \rangle - \nabla_{X_2}\langle v, X_1 \rangle - \langle \nabla v, [X_1,X_2] \rangle.
+  \]
+  That is,
+  \[
+  \label{I.2.13.2}
+    R(X_1,X_2)(v) = \nabla_{X_1}\nabla_{X_2}v - \nabla_{X_2}\nabla_{X_1}v - \nabla_{[X_1,X_2]}v.
+  \tag{2.13.2}
+  \]
+\end{env}
+
+\begin{definition}{2.14}
+\label{I.2.14}
+  A connection is said to be \emph{integrable} if its curvature is zero, i.e. \cref{I.2.13.2} if the following holds identically:
+  \[
+    \nabla_{[X,Y]} = [\nabla_X,\nabla_Y].
+  \]
+\end{definition}
+If $\dim(X)\leq1$, then every connection is integrable.
+
+If $\Gamma$ is an integrable connection on $\sh{V}$, then the morphism $\nabla$ of \cref{I.2.10.1} satisfy $\nabla\nabla=0$, and so the $\Omega^p(\sh{V})$ give a differential complex $\Omega^\bullet(\sh{V})$.
+
+\begin{definition}{2.15}
+\label{I.2.15}
+  Under the above hypotheses, the complex $\Omega^\bullet(\sh{V})$ is called the \emph{holomorphic de Rham complex} with values in $\sh{V}$.
+\end{definition}
+
+\oldpage{12}
+The results \cref{I.2.16} to \cref{I.2.19} that follow will be proven in a more general setting in \cref{I.2.23}.
+
+\begin{proposition}{2.16}
+\label{I.2.16}
+  Let $V$ be a local complex system on a complex-analytic variety $X$ \hyperref[0.6]{(0.6)}, and let $\sh{V}=\sh{O}\otimes_\CC V$.
+  \begin{enumerate}[(i)]
+    \item There exists, on the vector bundle $\sh{V}$, exactly one connection (said to be \emph{canonical}) whose horizontal sections are the local sections of the subsheaf $V$ of $\sh{V}$.
+    \item The canonical connection on $\sh{V}$ is integrable.
+    \item For any local section $f$ (resp. $v$) of $\sh{O}$ (resp. $V$),
+      \[
+      \label{I.2.16.1}
+        \nabla(fv) = \dd f\cdot v.
+      \tag{2.16.1}
+      \]
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  If $\nabla$ satisfies (i), then \cref{I.2.16.1} is a particular case of \cref{I.2.3.5}.
+  Conversely, the right-hand side $\mathrm{II}(f,v)$ of \cref{I.2.16.1} is $\CC$-bilinear, and thus extends uniquely to a $\CC$-linear map $\nabla\colon\sh{V}\to\Omega^1(\sh{V})$, which we can show defines a connection.
+  Claim~(ii) is local on $X$, which allows us to reduce to the case where $V=\underline{\CC}$.
+  Then $\sh{V}=\sh{O}$, $\nabla=\dd$, and $\nabla_{[X,Y]}=[\nabla_X,\nabla_Y]$ by the definition of $[X,Y]$.
+\end{proof}
+
+It is well known that:
+\begin{theorem}{2.17}
+\label{I.2.17}
+  Let $X$ be a complex-analytic variety.
+  Then the following functors are equivalences of categories, quasi-inverse to one another, between the category of complex local systems on $X$ and the category of holomorphic vector bundles with on $X$ with integrable connections (with the morphisms being the horizontal morphisms of vector bundles):
+  \begin{enumerate}[a)]
+    \item the complex local system $V$ is sent to $\sh{V}=\sh{O}\otimes V$ endowed with its canonical connection;
+    \item the holomorphic vector bundle $\sh{V}$ endowed with its integrable connection is sent to the subsheaf $V$ of $\sh{V}$ consisting of horizontal sections (i.e. those $v$ such that $\nabla v=0$).
+  \end{enumerate}
+\end{theorem}
+
+These equivalences are compatible with taking the tensor product, the internal $\Hom$, and the dual;
+to the unit complex local system $\underline{\CC}$ corresponds the bundle $\sh{O}$ endowed with the connection $\nabla$ such that $\nabla f=\dd f$.
+
+Definition~\cref{I.2.10.2} implies the following:
+\begin{proposition}{2.18}
+\label{I.2.18}
+  If $V$ is a complex local system on $X$, and if $\sh{V}=\sh{O}\otimes_\CC V$,
+\oldpage{13}
+  then the system of isomorphisms
+  \[
+    \Omega_X^p\otimes_\CC V
+    \simeq
+    \Omega_X^p\otimes_\sh{O}\sh{O}\otimes_\CC V
+    \simeq
+    \Omega_X^p\otimes_\sh{O}\sh{V}
+  \]
+  is an isomorphism of complexes
+  \[
+    \Omega_X^\bullet\otimes_\CC V \to \Omega_X^\bullet(\sh{V}).
+  \]
+\end{proposition}
+From this, the holomorphic Poincar\'{e} lemma gives the following:
+\begin{proposition}{2.19}
+\label{I.2.19}
+  Under the hypotheses of \cref{I.2.16}, the complex $\Omega_X^\bullet(\sh{V})$ is a resolution of the sheaf $\sh{V}$.
+\end{proposition}
+
+\begin{env}{2.20}
+\label{I.2.20}
+  \textbf{Variants.}
+  
+  \begin{env}{2.20.1}
+  \label{I.2.20.1}
+    If $X$ is a differentiable manifold, and we consider $C^\infty$ connections on $C^\infty$ vector bundles, then all of the above results still hold true, mutatis mutandis.
+    We will not use this fact.
+  \end{env}
+
+  \begin{env}{2.20.2}
+  \label{I.2.20.2}
+    Theorem~\cref{I.2.17} makes essential use of the non-singularity of $X$;
+    it is thus unimportant to note that this hypothesis has not been used in an essential way before \cref{I.2.17}
+  \end{env}
+
+  \begin{env}{2.20.3}
+  \label{I.2.20.3}
+    The definition \cref{I.2.4} of a connection and the definition \cref{I.2.11} of an integrable connection are formal enough that we can transport them to the category of schemes, or in relative settings:
+  \end{env}
+\end{env}
+
+\begin{definition}{2.21}
+\label{I.2.21}
+  \begin{enumerate}[(i)]
+    \item Let
+  \end{enumerate}
+\end{definition}
 
 
 %% Bibliography %%
