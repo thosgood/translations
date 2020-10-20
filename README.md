@@ -22,10 +22,8 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
 
 - Borel, A. and Serre, J.-P. "Le théorème de Riemann-Roch".
   <br/>
-  _Bulletin de la Société Mathématique de France_ **86** (1958), 97--136.
+  _Bull. Soc. Math. Fr_ **86** (1958), 97--136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
   <br/>
-  DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).
-  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/bsmf-86/the-riemann-roch-theorem.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-riemann-roch-theorem.tex&command=pdflatex&trackId=1595524110173)
@@ -34,10 +32,8 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
 
 - Grothendieck, A. "La théorie des classes de Chern".
   <br/>
-  _Bulletin de la Société Mathématique de France_ **86** (1958) , 137--154.
+  _Bull. Soc. Math. Fr_ **86** (1958) , 137--154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
   <br/>
-  DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
-  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/bsmf-86/the-theory-of-chern-classes.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=bsmf-86%2Fthe-theory-of-chern-classes.tex&command=pdflatex&trackId=1596040216373)
@@ -46,10 +42,8 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
 
 - Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion".
   <br/>
-  _Acta Math._ **48** (1926), 305--317.
+  _Acta Math._ **48** (1926), 305--317. DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
   <br/>
-  DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).
-  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/am-48/integral-representation-xi-function.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=am-48%2Fintegral-representation-xi-function.tex&command=pdflatex&trackId=1602774883000)
@@ -69,7 +63,7 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
 1. "Théorème de dualité pour les faisceaux algébriques cohérents".
   <br/>
   _Séminaire Bourbaki_ **9** (1956--57), Talk no. 149.
-  <br/><br/>
+  <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/1-coherent-duality.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215)
@@ -77,7 +71,7 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
 2. "Géométrie formelle et géométrie algébrique".
   <br/>
   _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
-  <!-- <br/><br/>
+  <!-- <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/2-formal-geometry.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1596585546758) -->
@@ -108,7 +102,7 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
 ### Volume 4 (1958--59), "Variétés de Picard"
 
 1. "Faisceaux quasi-cohérents" (P. Gabriel).
-  <br/><br/>
+  <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F1-quasi-coherent-sheaves.tex&command=pdflatex&trackId=1596036033972)
@@ -116,7 +110,7 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A1_0/)
 
 2. "Le théorème de Serre" (P. Gabriel).
-  <br/><br/>
+  <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/2-serre's-theorem.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F2-serre%27s-theorem.tex&command=pdflatex&trackId=1596035916115)
@@ -126,7 +120,7 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
 3. "Les foncteurs dérivés des foncteurs classiques" (P. Gabriel).
 
 4. "Diviseurs en géométrie algébrique" (C.S. Seshadri).
-  <br/><br/>
+  <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-claude-chevalley-4%2F4-divisors-in-algebraic-geometry.tex&command=pdflatex&trackId=1596027138553)
@@ -143,7 +137,7 @@ Note that we have included any changes made in the Errata.
 1. "Sur la théorie de Kan" (H. Cartan).
 
 2. "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
-  <br/><br/>
+  <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-henri-cartan-9%2F2-coherent-algebraic-analytic-sheaves.tex&command=pdflatex&trackId=1595524113730)
@@ -168,8 +162,6 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   <br/>
   _Mathematische Annalen_ **32** (1888), 342–-350.
   <br/>
-  <http://eudml.org/doc/157385>.
-  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/ma-32/sum-of-squares.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fma-32%2Fsum-of-squares.tex&command=pdflatex&trackId=1602812137443)
@@ -178,10 +170,8 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
 
 - Brion, M. and Procesi, C. "Action d'un tore dans une variété projective".
   <br/>
-  In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in mathematics **92** (1990), 509--539.
+  In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in mathematics **92** (1990), 509--539. [MR1103602](https://mathscinet.ams.org/mathscinet-getitem?mr=1103602).
   <br/>
-  [MR1103602](https://mathscinet.ams.org/mathscinet-getitem?mr=1103602).
-  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/pm-92/projective-torus-action.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fpm-92%2Fprojective-torus-action.tex&command=pdflatex&trackId=1602776678752)
@@ -190,8 +180,6 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   <br/>
   Springer-Verlag, Lecture Notes in Mathematics **163** (1970).
   <br/>
-  <https://publications.ias.edu/node/355>
-  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/lnm-163/de-regular-singular-points.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Flnm-163%2Fde-regular-singular-points.tex&command=pdflatex&trackId=1602812233423)
@@ -200,10 +188,8 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
 
 - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points".
   <br/>
-  In _Galois Groups over ℚ_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), 79--297.
+  In _Galois Groups over ℚ_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
   <br/>
-  DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
-  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/msrip-16/projective-line-minus-three-points.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fmsrip-16%2Fprojective-line-minus-three-points.tex&command=pdflatex&trackId=1602812188930)
@@ -213,8 +199,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
 - Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen".
   <br/>
   _Math. Ann._ **146** (1962), 331--368.
-  <br/><http://eudml.org/doc/160940>
-  <br/><br/>
+  <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/ma-146/exceptional-analytic-sets.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1602812494395)
@@ -225,8 +210,6 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   <br/>
   _Annales de l'institut Fourier_ **4** (1952), 73--112.
   <br/>
-  <http://www.numdam.org/item/?id=AIF_1952__4__73_0>
-  <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/aif-4/topological-tensor-nuclear-spaces.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Faif-4%2Ftopological-tensor-nuclear-spaces.tex&command=pdflatex&trackId=1602812258122)
