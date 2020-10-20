@@ -57,8 +57,10 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
 
 ### Extracts (1957--92), "Fondements de la Géométrie Algébrique"
 
-All of the following are by A. Grothendieck. A PDF copy of the original notes can be found at [The Grothendieck Circle](https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf).
-We have taken the comments and errata from the May 1962 "Commentaires" (_Séminaire Bourbaki_ **14**, 1961--62, Complément) and inserted them into the relevant places in the notes themselves, making clear when this has been done.
+A PDF copy of the original notes can be found at [The Grothendieck Circle](https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf).
+We have included any comments and errata from the May 1962 "Commentaires" (_Séminaire Bourbaki_ **14**, 1961--62, Complément).
+
+All of the following are by A. Grothendieck.
 
 1. "Théorème de dualité pour les faisceaux algébriques cohérents".
   <br/>

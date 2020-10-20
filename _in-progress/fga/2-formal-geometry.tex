@@ -53,6 +53,12 @@
   {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
   {\endinnercustomtheorem}
 
+\newtheorem{innercustomproposition}{Proposition}
+\crefname{innercustomproposition}{Proposition}{Propositions}
+\newenvironment{proposition}[1]
+  {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+  {\endinnercustomproposition}
+
 \newtheorem{innercustomcorollary}{Corollary}
 \crefname{innercustomcorollary}{Corollary}{Corollaries}
 \newenvironment{corollary}[1]
@@ -386,7 +392,46 @@ in other words, we have that
   = \sh{F}_y\otimes_{\kres(y)}(\fk{m}_y^n/\fk{m}_y^{n+1})
 \]
 for every integer $n$, where $\sh{F}_y$ denotes the sheaf $\sh{F}/\fk{m}_y\sh{F}$ induced by $\sh{F}$ on $X_y$ (with $X_y$ denoting the fibre $f^{-1}(y)$ considered as a proper scheme over the residue field $\kres(y)$ of $y$).
-Taking this isomorphism, as well as \cref{theorem2}, into account,
+Taking this isomorphism, as well as \cref{theorem2}, into account, we obtain augmentations, and sometimes computations, of the $\RR^q f_*(\sh{F})$ in a neighbourhood of $y$, knowing the cohomology of $X_y$ with coefficients in $\sh{F}_y$.
+Here \cref{theorem2} takes the form
+\[
+  \overline{\RR^q f_*(\sh{F})} = \varprojlim_n H^q(\sh{F}_y,\sh{F}/\fk{m}_y^n\sh{F}).
+\]
+We will mention here only the following consequence:
+
+\begin{proposition}{1}
+\label{proposition1}
+  Let $f\colon X\to Y$ be a proper morphism, and $\sh{F}$ a coherent $Y$-flat sheaf on $X$.
+  Let $y\in Y$, let $q$ be an integer, and suppose that $H^q(X_y,\sh{F}_y)=0$.
+  Then $\RR^q f_*(\sh{F})$ is zero on a a neighbourhood of $y$, and, for every $n$, the natural homomorphism
+  \[
+    \RR^{q-1}f_*(\sh{F})_y \to H^{q-1}(X_y,\sh{F}_y/\fk{m}_y^n\sh{F}_y)
+  \]
+  is surjective.
+\end{proposition}
+
+In particular, if $f$ is a flat morphism (i.e. if $\sh{O}_X$ is $Y$-flat), then every locally free coherent sheaf $\sh{F}$ on $X$ is $Y$-flat.
+Let $\sh{F}$ and $\sh{G}$ be two such sheaves, and apply \cref{proposition1} to $\shHom_{\sh{O}_X}(\sh{F},\sh{G})$ and $q=1$ to obtain:
+
+\begin{theorem}{7}
+\label{theorem7}
+  Let $f$ be a flat proper morphism, $\sh{F}$ and $\sh{G}$ locally free coherent sheaves on $X$, and $y\in Y$;
+  suppose that $H^1(X_y,\shHom_{\sh{O}_X}(\sh{F}_y,\sh{G}))=0$.
+  Then every homomorphism $u_0\colon\sh{F}_y\to\sh{G}_y$ is induced by a homomorphism $u\colon\sh{F}|V\to\sh{G}|V$, where $V=f^{-1}(U)$ is the inverse image of a neighbourhood $U$ of $y$.
+\end{theorem}
+
+\begin{corollary}{1}
+\label{theorem7corollary1}
+  If $u_0$ is an isomorphism (resp. a monomorphism, resp. an epimorphism), then so too is $u$, for small enough $U$.
+\end{corollary}
+
+In particular:
+
+\oldpage{182-10}
+\begin{corollary}{2}
+\label{theorem7corollary2}
+  Let
+\end{corollary}
 
 
 %% Bibliography %%
