@@ -201,8 +201,11 @@ Note that we have included any changes made in the Errata.
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
 
 3. "Sur le foncteur Hom(X,Y) en théorie simpliciale" (H. Cartan).
+
 4. "Théorie des fibrés principaux" (H. Cartan).
+
 5. "Les singularités des applications différentiables" (A. Haefliger).
+
 6. "Un théorème de Thom sur les singularités des applications différentiables" (A. Haefliger and A. Kosinski)
 
 
