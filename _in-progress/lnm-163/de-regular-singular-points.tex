@@ -102,8 +102,8 @@
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\End}{End}
-\DeclareMathOperator{\iHom}{\underline{Hom}}
-\DeclareMathOperator{\iEnd}{\underline{End}}
+\DeclareMathOperator{\shHom}{\underline{Hom}}
+\DeclareMathOperator{\shEnd}{\underline{End}}
 \DeclareMathOperator{\DD}{D}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
@@ -442,7 +442,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 \label{I.2.6}
   If ${}_1\!\Gamma$ and ${}_2\!\Gamma$ are connections on $X$, with covariant derivatives ${}_1\!\nabla$ and ${}_2\!\nabla$ (respectively), then ${}_2\!\nabla-{}_1\!\nabla$ is a $\sh{O}$-linear homomorphism from $\sh{V}$ to $\Omega_X^1(\sh{V})$.
   Conversely, the sum of ${}_1\!\nabla$ and such a homomorphism defines a connection on $\sh{V}$.
-  Thus connections on $\sh{V}$ form a principal homogeneous space (or torsor) on $\iHom(\sh{V},\Omega_X^1(\sh{V})) \simeq \Omega_X^1(\iEnd(\sh{V}))$.
+  Thus connections on $\sh{V}$ form a principal homogeneous space (or torsor) on $\shHom(\sh{V},\Omega_X^1(\sh{V})) \simeq \Omega_X^1(\shEnd(\sh{V}))$.
 \end{env}
 
 \begin{env}{2.7}
@@ -469,7 +469,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 
   \begin{env}{2.7.3}
   \label{I.2.7.3}
-    We define a connection on $\iHom(\sh{V}_1,\sh{V}_2)$ by the formula
+    We define a connection on $\shHom(\sh{V}_1,\sh{V}_2)$ by the formula
     \[
       (\nabla_w f)(v_1) = {}_2\!\nabla_2(f(v_1)) - f({}_1\!\nabla v_1).
     \]
@@ -480,7 +480,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   Let $\sh{V}$ be a vector bundle endowed with a connection.
   \begin{env}{2.7.4}
   \label{I.2.7.4}
-    We define a connection on the dual $\sh{V}^\vee$ of $\sh{V}$ via \cref{I.2.7.3} and the defining isomorphism $\sh{V}^\vee = \iHom(\sh{V},\sh{O})$.
+    We define a connection on the dual $\sh{V}^\vee$ of $\sh{V}$ via \cref{I.2.7.3} and the defining isomorphism $\sh{V}^\vee = \shHom(\sh{V},\sh{O})$.
     We have
     \[
       \langle \nabla_w v',v \rangle = \partial_w\langle v',v \rangle - \langle v',\nabla_w v \rangle.
@@ -500,7 +500,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   \[
     {}_2\!\nabla\cdot f = f\cdot{}_1\!\nabla.
   \]
-  By \cref{I.2.7.3}, this reduces to saying that $\nabla f=0$, if $f$ is thought of as a section of $\iHom(\sh{V}_1,\sh{V}_2)$.
+  By \cref{I.2.7.3}, this reduces to saying that $\nabla f=0$, if $f$ is thought of as a section of $\shHom(\sh{V}_1,\sh{V}_2)$.
   For example, by \cref{I.2.7.3}, the canonical map
   \[
     \Hom(\sh{V}_1,\sh{V}_2)\otimes\sh{V}_1 \to \sh{V}_2
@@ -622,7 +622,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   \tag{2.12.2}
   \]
 
-  We endow $\iEnd(\sh{V})$ with the connection given in \cref{I.2.7.3}.
+  We endow $\shEnd(\sh{V})$ with the connection given in \cref{I.2.7.3}.
   The equation $\nabla(\nabla\nabla)=(\nabla\nabla)\nabla$ can be written as $\nabla(R\wedge\nu) = R\wedge\nabla\nu$.
   By \cref{I.2.7.3}, we have that $\nabla R\wedge\nu = \nabla(R\wedge\nu) - R\wedge\nabla\nu$, so that
   \[

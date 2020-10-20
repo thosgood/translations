@@ -84,7 +84,7 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1596585546758) -->
 
-3. "Technique de descente et théorèmes d'existence en géométrie algébrique."
+<!-- 3. "Technique de descente et théorèmes d'existence en géométrie algébrique."
     1. "Généralités. Descente par morphismes fidèlement plats".
         <br/>
         _Séminaire Bourbaki_ **12** (1959--60), Talk no. 190.
@@ -102,55 +102,7 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
         _Séminaire Bourbaki_ **14** (1961--62), Talk no. 132.
     6. "Les schémas de Picard. Propriétés générales".
         <br/>
-        _Séminaire Bourbaki_ **14** (1961--62), Talk no. 136.
-
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats".
-  <br/>
-  _Séminaire Bourbaki_ **12** (1959--60), Talk no. 190.
-  <br/><br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-I.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
-
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. II. Le théorème d'existence en théorie formelle des modules".
-  <br/>
-  _Séminaire Bourbaki_ **12** (1959--60), Talk no. 195.
-  <br/><br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-II.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
-
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. III. Préschémas quotients".
-  <br/>
-  _Séminaire Bourbaki_ **13** (1960--61), Talk no. 212.
-  <br/><br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-III.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
-
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. IV. Les schémas de Hilbert".
-  <br/>
-  _Séminaire Bourbaki_ **13** (1960--61), Talk no. 221.
-  <br/><br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-IV.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
-
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. V. Les schémas de Picard. Théorèmes d'existence".
-  <br/>
-  _Séminaire Bourbaki_ **14** (1961--62), Talk no. 132.
-  <br/><br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-V.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
-
-<!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. VI. Les schémas de Picard. Propriétés générales".
-  <br/>
-  _Séminaire Bourbaki_ **14** (1961--62), Talk no. 136.
-  <br/><br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/3-descent-VI.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
+        _Séminaire Bourbaki_ **14** (1961--62), Talk no. 136. -->
 
 
 ## Séminaire Claude Chevalley

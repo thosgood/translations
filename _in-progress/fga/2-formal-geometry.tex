@@ -72,6 +72,8 @@
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\RR}{R}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\shHom}{\underline{\Hom}}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -184,7 +186,7 @@ the kernel of $\sh{O}_m\to\sh{O}_0$.
 We will show that $\sh{O}_{\fk{X}}$ is a \emph{coherent} sheaf of \emph{local Noetherian} rings.
 
 By the definitions, a formal completion $\overline{X}$ as above is a formal scheme, and, conversely, every formal scheme is \emph{locally} of this type.
-In fact, the data of a formal \emph{affine} scheme (i.e. such that $\fk{X}_0$ is affine, which implies that all the $\fk{X}_n$ are affine) is equivalent to the data of a Noetherian topological ring that is $\sh{J}$-adic separated and complete.
+In fact, the data of a formal \emph{affine} scheme (i.e. such that $\fk{X}_0$ is affine, which implies that all the $\fk{X}_n$ are affine) is equivalent to the data of a separated complete $\sh{J}$-adic Noetherian topological ring.
 
 The usual definitions (morphism, morphism of finite type, proper morphism, etc.) for ordinary schemes generalise without problem to formal schemes.
 
@@ -232,6 +234,59 @@ relates it with ``algebraic cohomology'', and resembles a well-known theorem of 
 \begin{corollary}{1}
 \label{theorem2corollary1}
   There are canonical isomorphisms $\overline{\RR^q f_*(\sh{F})} = \RR^q\overline{f}_*(\overline{\sh{F}})$.
+\end{corollary}
+
+This corollary is, for $q=0$, a generalisation of Zariski's ``fundamental theorem of holomorphic functions'', from which we will deduce a generalisation of Zariski's ``connection theorem''.
+We also note that, while \cref{theorem1}~(ii) is trivial for $q=$, this is not at all the case for \cref{theorem2} nor for its equivalent formulation (\hyperref[theorem2corollary1]{Corollary~1}).
+In fact, the proof proceeds by decreasing induction on $q$ (being trivial for large $q$, since then both sides of the equation are zero), and the case $q=0$ thus appears as the last induction step, and so could be called the ``most difficult'' case.
+
+\begin{corollary}{2}
+\label{theorem2corollary2}
+  Let $Y=\Spec(A)$, and let $Y'$ be defined by an ideal $\sh{J}$ of $A$.
+  Then, for every coherent sheaf $\sh{F}$ on $X$, the $H^q(X,\sh{F})$ are $A$-modules of finite type, whose $\sh{J}$-adic completions are the $H^q(\overline{X},\overline{\sh{F}})$.
+\end{corollary}
+
+Finally, applying this corollary to $H=\shHom_{\sh{O}_X}(\sh{F},\sh{G})$, we obtain:
+
+\begin{corollary}{3}
+\label{theorem2corollary3}
+  Let $Y=\Spec(A)$, and let $Y'$ be defined by an ideal $\sh{J}$ of $A$.
+  Let $\sh{F}$ and $\sh{G}$ be coherent sheaves on $X$.
+  Then $\Hom(\sh{F},\sh{G})$ is an $A$-module of finite type, whose $\sh{J}$-adic completion can be identified with $\Hom(\overline{\sh{F}},\overline{\sh{G}})$.
+\end{corollary}
+
+Of course, the natural map $\Hom(\sh{F},\sh{G})\to\Hom(\overline{\sh{F}},\overline{\sh{G}})$ is that which sends a homomorphism $u\colon\sh{F}\to\sh{G}$ to its extension ``by continuity'' $\overline{u}\colon\overline{\sh{F}}\to\overline{\sh{G}}$ (so that $\overline{\sh{F}}$ becomes a functor in $\sh{F}$).
+
+Now suppose that $A$ is separated and complete for its $\sh{J}$-adic topology.
+Then the above corollaries \hyperref[theorem2corollary2]{2} and \hyperref[theorem2corollary3]{3} give:
+\[
+  \begin{aligned}
+    H^q(X,\sh{F}) &= H^q(\overline{X},\overline{\sh{F}}),
+  \\\Hom(\sh{F},\sh{G}) &= \Hom(\overline{\sh{F}},\overline{\sh{G}}).
+  \end{aligned}
+\]
+\oldpage{182-06}
+This latter identity shows that the category of coherent sheaves on $X$ can be identified with a \emph{subcategory} (with morphisms being the induced morphisms) of the category of coherent sheaves on $\overline{X}$.
+In fact, we even have:
+
+\begin{theorem}{3}
+\label{theorem3}
+  For a sheaf of modules on $\overline{X}$ to be coherent, it is necessary and sufficient for it to be isomorphic to a sheaf of the form $\overline{\sh{F}}$, where $\sh{F}$ is a coherent sheaf on $X$ (determined up to canonical isomorphism, by \hyperref[theorem2corollary3]{Corollary~3} of \cref{theorem2}).
+  [We recall that now $Y=\Spec(A)$, with $A$ being a complete and separated $\sh{J}$-adic Noetherian topological ring].
+\end{theorem}
+
+\begin{corollary}{1}
+\label{theorem3corollary1}
+  The closed subschemes of $X$ are in bijective correspondence with the closed formal subschemes of $\overline{X}$.
+\end{corollary}
+
+Indeed, they correspond to coherent subsheaves of $\sh{O}_X$ (resp. of $\sh{O}_{\overline{X}}$).
+Considering the graphs of morphisms as closed subschemes, \hyperref[theorem3corollary1]{Corollary~1} implies:
+
+\begin{corollary}{2}
+\label{theorem3corollary2}
+  Let $X$ and $Z$ be proper schemes over $A$ (which is a separated complete $\sh{J}$-adic Noetherian ring).
+  Then the map $g\mapsto\overline{g}$ defines a bijective correspondence between $Y$-morphism from $X$ to $Z$ and $\overline{Y}$-morphisms from $\overline{X}$ to $\overline{Z}$.
 \end{corollary}
 
 
