@@ -140,7 +140,7 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
 
 ### Volume 4 (1958--59), "Variétés de Picard"
 
-- Talk no. 1: "Faisceaux quasi-cohérents" (P. Gabriel).
+1. "Faisceaux quasi-cohérents" (P. Gabriel).
   <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex)
   |
@@ -148,7 +148,7 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A1_0/)
 
-- Talk no. 2: "Le théorème de Serre" (P. Gabriel).
+2. "Le théorème de Serre" (P. Gabriel).
   <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/2-serre's-theorem.tex)
   |
@@ -156,7 +156,9 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A2_0/)
 
-- Talk no. 4: "Diviseurs en géométrie algébrique" (C.S. Seshadri).
+3. "Les foncteurs dérivés des foncteurs classiques" (P. Gabriel).
+
+4. "Diviseurs en géométrie algébrique" (C.S. Seshadri).
   <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex)
   |
@@ -169,13 +171,23 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
 
 ### Volume 9 (1956--57), "Quelques questions de topologie"
 
-- Talk no. 2: "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
+Note that we have included any changes made in the Errata.
+
+1. "Sur la théorie de Kan" (H. Cartan).
+
+2. Talk no. 2: "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
   <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=seminaire-henri-cartan-9%2F2-coherent-algebraic-analytic-sheaves.tex&command=pdflatex&trackId=1595524113730)
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
+
+3. "Sur le foncteur Hom(X,Y) en théorie simpliciale" (H. Cartan).
+4. "Théorie des fibrés principaux" (H. Cartan).
+5. "Les singularités des applications différentiables" (A. Haefliger).
+6. "Un théorème de Thom sur les singularités des applications différentiables" (A. Haefliger and A. Kosinski)
+
 
 
 # In progress
