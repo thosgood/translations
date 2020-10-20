@@ -70,7 +70,7 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
 
 - "Théorème de dualité pour les faisceaux algébriques cohérents".
   <br/>
-  _Séminaire Bourbaki_ **9** (1956--57), Talk no. 149.
+  _Séminaire Bourbaki_ **9** (1956--57), Talk no. 149. (a.k.a. FGA 1)
   <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/1-coherent-duality.tex)
   |
