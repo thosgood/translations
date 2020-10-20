@@ -68,21 +68,24 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
 All of the following are by A. Grothendieck. A PDF copy of the original notes can be found at [The Grothendieck Circle](https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf).
 We have taken the comments and errata from the May 1962 "Commentaires" (_Séminaire Bourbaki_ **14**, 1961--62, Complément) and inserted them into the relevant places in the notes themselves, making clear when this has been done.
 
-- "Théorème de dualité pour les faisceaux algébriques cohérents".
+1. "Théorème de dualité pour les faisceaux algébriques cohérents".
   <br/>
-  _Séminaire Bourbaki_ **9** (1956--57), Talk no. 149. (a.k.a. FGA 1)
+  _Séminaire Bourbaki_ **9** (1956--57), Talk no. 149.
   <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/1-coherent-duality.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215)
 
-<!-- - "Géométrie formelle et géométrie algébrique".
+<!-- 2. "Géométrie formelle et géométrie algébrique".
   <br/>
   _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
   <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/2-formal-geometry.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1596585546758) -->
+
+<!-- TODO: make the below all part of number 3 of the <ol> and 
+           put them in their own <ol> with I., II., etc. -->
 
 <!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats".
   <br/>
