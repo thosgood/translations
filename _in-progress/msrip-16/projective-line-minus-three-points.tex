@@ -9,6 +9,7 @@
 \usepackage{hyperref}
 \usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
+\usepackage{tikz}
 \usepackage{tikz-cd}
 \usepackage{mathtools}
 
@@ -40,10 +41,26 @@
 \crefname{section}{\S\!}{\S\S\!}
 \crefname{equation}{}{}
 
+\setcounter{section}{-1}
+\usepackage{titlesec}
+\titleformat{\section}[block]
+  {\bfseries\Large\filcenter}
+  {\S\thesection.}
+  {1em}
+  {}
+
 
 %% Theorem environments %%
 
 \usepackage{amsthm}
+
+\theoremstyle{definition}
+
+  \newtheorem{innercustomenv}{}
+  \crefname{innercustomenv}{}{}
+  \newenvironment{env}[1]
+    {\renewcommand\theinnercustomenv{(#1)}\innercustomenv}
+    {\endinnercustomenv}
 
 
 %% Shortcuts %%
@@ -54,7 +71,9 @@
 \newcommand{\bb}{\mathbb}
 \newcommand{\PP}{\bb{P}}
 \newcommand{\ZZ}{\bb{Z}}
+\newcommand{\hZZ}{\widehat{\bb{Z}}}
 \newcommand{\RR}{\bb{R}}
+\renewcommand{\AA}{\bb{A}}
 \newcommand{\CC}{\bb{C}}
 \newcommand{\FF}{\bb{F}}
 \newcommand{\QQ}{\bb{Q}}
@@ -68,6 +87,8 @@
 \DeclareMathOperator{\Ext}{Ext}
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\limind}{lim\,ind}
+\DeclareMathOperator{\limproj}{lim\,proj}
 
 \newcommand{\unsure}[1]{TODO: \underline{\textbf{#1}}}
 \newcommand{\todo}{\textbf{ !TODO! }}
@@ -188,23 +209,23 @@ In fact, the whole article originates from my desire to
 understand the result of Z.~Wojtkoviak.
 I have also been helped by the answer by O.~Gabber to my question ``How can we construct an extension of $\ZZ_\ell$ by $\ZZ_\ell(3)$, uniformly in $\ell$?'': ``By a class in $K_5(\QQ)$'', as well as by the conjectures of A.~Beilinson on the values of $L$-functions.
 
-If $X$ is an algebraic variety over a number field $k$, $x\in X(k)$, and $N$ an integer, then we want to have a realisation system $\Lie\pi_1(X,x)^{(N)}_\mot$.
+If $X$ is an algebraic variety over a number field $k$, $x\in X(k)$, and $N$ an integer, then we want to have a realisation system $\Lie\pi_1(X,x)_\mot^{(N)}$.
 We can only succeed in constructing this under additional hypotheses on $X$: in the general case, certain realisations are missing.
 The case of $\PP^1$ minus some points --- more generally, of smooth rational varieties --- is nonetheless covered.
 
 Let $k=\QQ$, $X=\PP^1\setminus\{0,1,\infty\}$, and $x\in X(\QQ)$.
-The \unsure{gradu\'{e}} for the weight filtration of $\Lie\pi_1(X,x)^{(N)}_\mot$ is the free Lie algebra on $H_1(X)_\mot$, modulo its $Z^{N+1}$ (decreasing central series).
+The \unsure{gradu\'{e}} for the weight filtration of $\Lie\pi_1(X,x)_\mot^{(N)}$ is the free Lie algebra on $H_1(X)_\mot$, modulo its $Z^{N+1}$ (decreasing central series).
 $H_1(X)_\mot$ is the sum of two copies of the Tate motive $\QQ(1)$.
-We thus deduce that $\Lie\pi_1(X,x)^{(N)}_\mot$ is an iterated extension of Tate motives $\QQ(n)$.
+We thus deduce that $\Lie\pi_1(X,x)_\mot^{(N)}$ is an iterated extension of Tate motives $\QQ(n)$.
 The fact that non-trivial extensions appear is what gives it its charm.
 
 I conjecture that, over a number field $k$, the group of motivic extensions of $\QQ$ by $\QQ(n)$ ($n>0$) is $K_{2n-1}(k)\otimes\QQ$.
 For a general framework into which we can place this conjecture, see \cite[§5]{B}.
 In particular, for $k=\QQ$, we want $\Ext^1(\QQ,\QQ(n))$ to be zero for $n$ even, and of dimension~$1$ for $n\geq3$ odd.
 This is the motivic $\Ext^1$: extensions as realisation systems that ``come from algebraic geometry''.
-This conjecture places severe restrictions on $\Lie\pi_1(X,x)^{(N)}_\mot$, which are far from having been verified.
+This conjecture places severe restrictions on $\Lie\pi_1(X,x)_\mot^{(N)}$, which are far from having been verified.
 What we know concerns, up to now, only the quotient by the second derived group.
-A large part of this article is dedicated to developing a language in which the consequences of the conjecture affecting $\Lie\pi_1(X,x)^{(N)}_\mot$ can be clearly stated.
+A large part of this article is dedicated to developing a language in which the consequences of the conjecture affecting $\Lie\pi_1(X,x)_\mot^{(N)}$ can be clearly stated.
 
 We now go through this article, pointing out several shortcuts.
 
@@ -221,6 +242,129 @@ The theory coincides with that of U.~Jannsen
 The crystalline aspect will be neglected in the rest of the introduction.
 
 In \cref{2} we give examples.
+We also explain what an extension of the unit realisation system $\ZZ$ by a realisation system $M$ with integer coefficients is.
+\emph{Terminologie:} \unsure{$M$-torsor}, or torsor under $M$.
+\emph{Example:} the Kummer \unsure{$\ZZ(1)$-torsor}, where $\ZZ(1)$ is the Tate motive.
+
+In \cref{3} we describe certain remarkable torsors, which can be said to be cyclotomic, under the Tate motive $\ZZ(k)$.
+\cref{16} explains how these torsors naturally appear in the study of $\pi_1$ of $\PP^1\setminus\{0,1,\infty\}$.
+The description here is direct, but unmotivated.
+The claim that some of these torsors are of finite order (\cref{3.5}, \cref{3.14}) lets us recover the known formulas expressing the Dirichlet $L$-functions in negative integers as integrals of distributions over $\hZZ$ with values in $\hZZ$: a version of Kummer congruences.
+In \cref{18}, we prove \cref{3.5} and \cref{3.14} using the geometric interpretation of \cref{16}.
+In \cref{3}, we give a direct proof, by using the known formulas for $L(\chi,1-k)$.
+
+\cref{4} is a pot-pourri of reminders on Ind-objects and pro-objects.
+The reader is invited to consult this only when needed.
+
+We want to give a motivic sense to an assertion like the following: the fundamental group of $\PP^1(\CC)\setminus\{0,1,\infty\}$ (at base point $b$) is freely generated by the following loops:
+\todo
+\[
+\label{figure1}
+  \begin{tikzpicture}
+    \node[label=below:{$b$}] at (0,0) {$\bullet$};
+    \node[label={[label distance=-3mm]below right:{\scriptsize$1$}}] at (2,1) {$\bullet$};
+    \node[label={[label distance=-3mm]below right:{\scriptsize$0$}}] at (-2,1) {$\bullet$};
+  \end{tikzpicture}
+\tag{1}
+\]
+The purpose of \cref{5}, \cref{7}, and \cref{15} is to construct the language which allows us to do this.
+This consists of
+\begin{enumerate}[(a)]
+  \item giving a motivic sense to $\pi_1(X,x)^{(N)}$, not only to its Lie algebra;
+  \item giving a motivic sense to the torsor \cref{0.6} of homotopy classes of paths from $b_1$ to $b_2$;
+  \item in \cref{figure1}, the ``monodromy around $0$'' loop is only unambiguously determined
+\oldpage{85}
+    for $b$ ``close to $0$''.
+    We must define what it means for a base point to be ``close to $0$''.
+\end{enumerate}
+
+Our solution will be to define a motivic linear group as being an Ind-object in the category of motives, endowed with the structure of a commutative Hopf algebra.
+To avoid speculation: consider the group in realisation systems, and replace ``motive'' by ``realisation system''.
+There is an analogous definition for \unsure{torsors under a group}.
+We separately define a notion of ``\unsure{integer}'' structures.
+This definition has the advantage that the standard constructions in algebraic geometry (decreasing central series, quotients, pushing forward a $G$-torsor by $G\to H$, \unsure{torsor torsion},\ldots) all pass automatically to the motivic case.
+This, in an arbitrary Tannakian category, is explained in \cref{5}.
+
+In \cref{7}, we reinterpret these definitions in a language that is closer to that of our applications.
+The reader who is displeased by the general nonsense of \cref{5} and \cref{7} can take the interpretations given in \cref{7} as the definition of groups, torsors, \ldots in realisation systems.
+Drawback: every standard construction must be redefined in this case.
+
+In the classical definition of $\pi_1$, the role of the base point $b$ can be played by a contractible subset $B$.
+It can also be played by a \unsure{filter} $\mathcal{B}$ on $X$ whose base if given by contractible subsets.
+For example, if $X$ is a Riemann surface $\overline{X}$ minus a point $s$, and $v$ is a non-zero tangent vector at $s$, with $z$ being a local coordinates centred at $s$, then we can take the contractible subsets
+\[
+  \begin{gathered}
+    0<|z/v|<\varepsilon,
+    \quad
+    |\arg(z/v)|<\eta:
+  \\\begin{tikzpicture}
+      \node at (0,0) {\todo};
+    \end{tikzpicture}
+  \end{gathered}
+\]
+The \emph{filter} $\mathcal{B}(v)$ that they generate is independent of the chosen coordinate.
+By this construction, a non-zero tangent vector at $s$ can act as a base point in the definition of $\pi_1$ of $X$.
+
+The same phenomenon occurs in the profinite theory of $\pi_1$, and in the ``de Rham'' theory.
+Be aware that $\mathcal{B}(v)=\mathcal{B}(\lambda v)$ for real $\lambda>0$, but that this fact has no analogue in the other theories.
+There constructions are explained in \cref{15}.
+They allow us,
+\oldpage{86}
+in the definition of the motivic $\pi_1$ of $X$, to take a base point ``at infinity'', like the tangent vector $v$ at $s$.
+
+Let $X=\PP^1\setminus\{0,1,\infty\}$.
+An algebraic meaning of ``base point close to $0$'' is ``non-zero tangent vector at $0$''.
+For such a base point $b$, the monodromy around $0$ has a motivic meaning: it is a morphism of motivic groups
+\[
+  \ZZ(1) \to \pi_1(X,b)_\mot.
+\]
+Here and later on, $\pi_1$ is the pro-unipotent $\pi_1$, defined as the projective limit of the motivic groups $\pi_1(X,b)_\mot^{(N)}$.
+
+We take the base point to be the tangent vector $1$ at $0$.
+We have a good reduction $\mod p$ for every $p$, and $\pi_1(X,b)_\mot^{(N)}$ is a linear group in the Tannakian category of motives over $\Spec(\ZZ)$ that are iterated extensions of Tate motives.
+\cref{8} states a conjecture on the $\Ext^1(\QQ,\QQ(k))$ in this category, as well as some consequences.
+At the end of \cref{16}, we make these explicit in the case of $\pi_1(X,b)_\mot^{(N)}$.
+I hope that this places the $\zeta(3)$ discovered by Z.~Wojtkoviak in its natural setting.
+\cref{6} is preliminary.
+For the essential idea, see \cref{6.2}.
+
+To define the motivic $\pi_1$, we need to patch together the various theories of $\pi_1$ that we have at our disposal, guided by the goal of constructing a motivic group in the sense of \cref{5}, explained in \cref{7}.
+This is done in \cref{10} to \cref{13}, after a reminder (\cref{9}) on the Mal\u{c}ev theory of nilpotent groups and their Lie algebras.
+The result leaves much to be desired.
+It is only completely studied for smooth algebraic varieties whose smooth compactifications $\overline{X}$ satisfy $H^1(\overline{X},\sh{O})=0$.
+Another complaint: I sometimes only sketch the definition of structures that will be used in future calculations.
+
+In \cref{16}, we finally explain what the \unsure{torsors under $\ZZ(k)$} from \cref{3} have to do with the $\pi_1$ of the projective line minus three points.
+The justifying calculations are given in \cref{19}.
+We given, in \cref{17} and \cref{18}, a geometric explanation of some of their properties.
+
+\oldpage{87}
+\section{Terminology and notation}
+\label{0}
+
+\begin{env}{0.1}
+\label{0.1}
+  We denote inductive limits and projective limits by $\limind$ and $\limproj$.
+\end{env}
+
+\begin{env}{0.2}
+\label{0.2}
+  For a prime number $\ell$, we denote by $\ZZ_\ell$ and $\QQ_\ell$ the completions of $\ZZ$ and $\QQ$ for the $\ell$-adic topology:
+  \[
+    \begin{aligned}
+      \ZZ_\ell &= \limproj \ZZ/\ell^n\ZZ,
+    \\\QQ_\ell &= \ZZ_\ell\otimes\QQ.
+    \end{aligned}
+  \]
+  We denote by $\hZZ$ the profinite completion of $\ZZ$, and by $\AA^f$ the ring of finite adeles:
+  \[
+    \begin{gathered}
+      \hZZ \xrightarrow{\sim} \prod_\ell \ZZ_\ell,
+    \\\AA^f = \hZZ\otimes\QQ.
+    \end{gathered}
+  \]
+  We denote by $\cQQ$ the algebraic closure of $\QQ$ in $\CC$.
+\end{env}
 
 
 %% Bibliography %%
