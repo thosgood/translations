@@ -76,16 +76,33 @@ We have taken the comments and errata from the May 1962 "Commentaires" (_Sémina
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215)
 
-<!-- 2. "Géométrie formelle et géométrie algébrique".
+2. "Géométrie formelle et géométrie algébrique".
   <br/>
   _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
-  <br/><br/>
+  <!-- <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/2-formal-geometry.tex)
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1596585546758) -->
 
-<!-- TODO: make the below all part of number 3 of the <ol> and 
-           put them in their own <ol> with I., II., etc. -->
+3. "Technique de descente et théorèmes d'existence en géométrie algébrique."
+    1. "Généralités. Descente par morphismes fidèlement plats".
+        <br/>
+        _Séminaire Bourbaki_ **12** (1959--60), Talk no. 190.
+    2. "Le théorème d'existence en théorie formelle des modules".
+        <br/>
+        _Séminaire Bourbaki_ **12** (1959--60), Talk no. 195.
+    3. "Préschémas quotients".
+        <br/>
+        _Séminaire Bourbaki_ **13** (1960--61), Talk no. 212.
+    4. "Les schémas de Hilbert".
+        <br/>
+        _Séminaire Bourbaki_ **13** (1960--61), Talk no. 221.
+    5. "Les schémas de Picard. Théorèmes d'existence".
+        <br/>
+        _Séminaire Bourbaki_ **14** (1961--62), Talk no. 132.
+    6. "Les schémas de Picard. Propriétés générales".
+        <br/>
+        _Séminaire Bourbaki_ **14** (1961--62), Talk no. 136.
 
 <!-- - "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats".
   <br/>
@@ -175,7 +192,7 @@ Note that we have included any changes made in the Errata.
 
 1. "Sur la théorie de Kan" (H. Cartan).
 
-2. Talk no. 2: "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
+2. "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
   <br/><br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex)
   |
