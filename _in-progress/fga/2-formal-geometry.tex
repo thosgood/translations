@@ -65,6 +65,7 @@
 \newcommand{\cat}{\mathcal}
 \newcommand{\fk}{\mathfrak}
 \newcommand{\PP}{\mathbb{P}}
+\newcommand{\kres}{\kappa}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -322,7 +323,70 @@ For the proof of \cref{theorem1,theorem2,theorem3}, we refer the reader to \cite
 \section{Application to Zariski's connection theorem and ``main theorem''}
 \label{section4}
 
-Let $f\colon X\to Y$
+Let $f\colon X\to Y$ be a proper morphism of schemes.
+Then, by the \hyperref[theorem1]{finiteness theorem}, $f_*(\sh{O}_X)=\underline{A}$ is a coherent sheaf on $Y$, and is also a sheaf of commutative algebras, and thus corresponds to a $Y$-scheme $g\colon Y'\to Y$ that is finite over $Y$ (defined by the condition of being affine over $Y$, i.e. the inverse image of an affine open is affine, and $g_*(\sh{O}_{Y'})=\underline{A}$).
+It is immediate that $f$ then canonically factors as $f=gf'$, where $f'\colon X\to Y'$ is a morphism from $X$ to $Y$ that is now such that $f'_*(\sh{O}_X)=\sh{O}_{Y'}$.
+This factorisation of $f$ is called \emph{the Stein factorisation} of $f$.
+Applying the \hyperref[theorem2]{first comparison theorem} and \hyperref[theorem2corollary1]{Corollary~1} to $f'$ and the subset $Y'$ consisting of a single point $y'$, we see that $(f')^{-1}(y')=X'$ is connected (or, said differently, the formal sections of $X$ along $X'$ do not form a local ring, but the completion $f'_*(\sh{O}_X)_{y'}=\sh{O}_{y'}$ is local!)
+We have proven:
+
+\begin{theorem}{5}
+\label{theorem5}
+  \emph{(Zariski's ``connection theorem'').}
+  Let $f\colon X\to Y$ be a proper morphism.
+  Then $f$ factors uniquely (up to isomorphism) as $f=gf'$, where $g\colon Y'\to Y$ is finite, and $f'\colon X\to Y'$ is such that $f'_*(\sh{O}_X)=\sh{O}_{Y'}$ (whence $g_*(\sh{O}_{Y'})=f_*(\sh{O}_X)$).
+  The fibres of $f'$ are connected,
+\oldpage{182-06}
+  i.e. the set of connected components of a fibre $f^{-1}(y)$ of $f$ is in bijective correspondence with the set of points of $Y'$ over $y$, i.e. the set of maximal ideals in $f_*(\sh{O}_X)_y$.
+\end{theorem}
+
+From this, we immediately deduce the usual variants of the connection theorem.
+We state here only the following:
+
+\begin{corollary}{1}
+\label{theorem5corollary1}
+  For a point $x$ of $X$ to be isolated in its fibre $f^{-1}(y)$, it is necessary and sufficient for the fibre $(f')^{-1}(y')$ (where $y'=f'(x)$) to consist of a single point $x$, or for $f'$ to induce an isomorphism from a neighbourhood of $x$ to a neighbourhood of $y'$.
+  The set of these points is an open subset $U$, and $f'$ induces an isomorphism from $U$ to an open subset of $Y'$.
+\end{corollary}
+
+To show that $f'$ is a local isomorphism at $x$, we note that $f'$ induces an \emph{isomorphism} $\sh{O}_{y'}\to\sh{O}_x$, as we see thanks to $f'(\sh{O}_X)=\sh{O}_{Y'}$;
+we also note that the $(f')^{-1}(V)$ give a fundamental system of neighbourhoods of $x$ when $V$ runs over a fundamental system of neighbourhoods of $y'$ (since $f'$ is a closed map whose fibre at $y'$ consists of the single point $x$).
+We thus immediately deduce the following result, due to Chevalley in the ``geometric'' case:
+
+\begin{corollary}{2}
+\label{theorem5corollary2}
+  For $f$ to be a finite morphism, it is necessary and sufficient for it to be proper with finite fibres.
+\end{corollary}
+
+If this is so, then $f'$ is effectively an isomorphism, by the above.
+
+Let $f\colon X\to Y$ be a morphism that is not necessarily proper, but suppose that $X$ is contained in some proper $Y$-scheme $\overline{f}\colon\overline{X}\to Y$ as an open subset (which is the case if, in particular, $\overline{f}$ is quasi-projective).
+Applying \hyperref[theorem5corollary1]{Corollary~1}, we see that $\overline{f'}$ (\todo \textbf{or $\overline{f}'$?}) induces an isomorphism from the set $U$ of points of $X$ that are isolated in their fibre to an open subset of $Y'$ (and that $U$ is indeed an open subset).
+We thus deduce the following global version of Zariski's ``main theorem'':
+
+\begin{theorem}{6}
+\label{theorem6}
+  Let $f\colon X\to Y$ be a morphism of finite type.
+  Then the set $U$ of points of $X$ that are isolated in their fibre is open, and, if $f$ is quasi-projective, then $U$ is $Y$-isomorphic to an open subset of some scheme $Y'$ that is finite over $Y$.
+\end{theorem}
+
+Since a morphism of finite type is locally affine, and \emph{a fortiori} locally quasi-projective, we immediately deduce from \cref{theorem6} the usual local variants of the main theorem.
+
+
+\section{Application to the cohomological study of proper and flat morphisms}
+\label{section5}
+
+Let $f\colon X\to Y$ be a proper morphism, and $\sh{F}$ a coherent sheaf on $X$,
+\oldpage{182-09}
+with $\sh{F}$ assumed to be $Y$-flat, i.e. the $\sh{F}_x$ are flat modules over the rings $\sh{O}_y$ (where $y=f(x)$).
+This also implies that, for every $y\in Y$, if we filter $\sh{F}$ along the fibre $f^{-1}(y)$ by the $\fk{m}_y^n\sh{F}$ (where $\fk{m}_y$ is the maximal ideal of $\sh{O}_y$), then the associated graded algebra is isomorphic to $(\sh{F}/\fk{m}_y\sh{F})\otimes_{\kres(y)}\gr(\sh{O}_y)$;
+in other words, we have that
+\[
+  \fk{m}_y^n\sh{F}/\fk{m}_y^{n+1}
+  = \sh{F}_y\otimes_{\kres(y)}(\fk{m}_y^n/\fk{m}_y^{n+1})
+\]
+for every integer $n$, where $\sh{F}_y$ denotes the sheaf $\sh{F}/\fk{m}_y\sh{F}$ induced by $\sh{F}$ on $X_y$ (with $X_y$ denoting the fibre $f^{-1}(y)$ considered as a proper scheme over the residue field $\kres(y)$ of $y$).
+Taking this isomorphism, as well as \cref{theorem2}, into account,
 
 
 %% Bibliography %%

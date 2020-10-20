@@ -170,7 +170,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
 
 - Brion, M. and Procesi, C. "Action d'un tore dans une variété projective".
   <br/>
-  In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in mathematics **92** (1990), 509--539. [MR1103602](https://mathscinet.ams.org/mathscinet-getitem?mr=1103602).
+  In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in Mathematics **92** (1990), 509--539. [MR1103602](https://mathscinet.ams.org/mathscinet-getitem?mr=1103602).
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/pm-92/projective-torus-action.tex)
   |
@@ -178,7 +178,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
 
 - Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>
-  Springer-Verlag, Lecture Notes in Mathematics **163** (1970).
+  Springer-Verlag, LNM **163** (1970).
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/lnm-163/de-regular-singular-points.tex)
   |
@@ -188,7 +188,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
 
 - Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points".
   <br/>
-  In _Galois Groups over ℚ_, Springer-Verlag, Mathematical Sciences Research Institute Publications **16** (1989), 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
+  In _Galois Groups over ℚ_, Springer-Verlag, MSRI Publications **16** (1989), 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/msrip-16/projective-line-minus-three-points.tex)
   |
@@ -208,7 +208,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
 
 - Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires".
   <br/>
-  _Annales de l'institut Fourier_ **4** (1952), 73--112.
+  _Annales de l'Institut Fourier_ **4** (1952), 73--112.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/aif-4/topological-tensor-nuclear-spaces.tex)
   |
