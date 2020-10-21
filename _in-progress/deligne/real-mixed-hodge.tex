@@ -1,0 +1,159 @@
+\documentclass{article}
+
+\title{Real mixed Hodge structures}
+\author{Pierre Deligne}
+\date{}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{Baskervaldx}
+\usepackage{mathpazo}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\rhead{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
+\crefname{section}{\S\!}{\S\S\!}
+\crefname{equation}{}{}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+
+\newtheorem*{lemma*}{Lemma}
+
+
+%% Shortcuts %%
+
+\newcommand{\sh}{\mathscr}
+\newcommand{\cat}{\mathcal}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\DeclareMathOperator{\Gr}{Gr}
+
+\newcommand{\todo}{\textbf{ !TODO! }}
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations/}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+  
+  \emph{What follows is a translation of the French paper:}
+
+  \medskip\noindent
+  \textsc{Deligne, P.}
+  ``Structures de Hodge mixtes r\'{e}elles''.
+  \emph{Proc. Symp. in Pure Math.} \textbf{55} (1994), 509--514.
+  {\footnotesize\url{https://publications.ias.edu/deligne/paper/393}}
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\tableofcontents
+\bigskip
+
+
+%% Content %%
+
+\oldpage{509}
+Real mixed Hodge structures (\cref{2}) form a strict abelian $\otimes$-category, and the ``underlying real vector space'' functor is a \todo functor.
+The functor $\Gr^W$ is another such functor.
+In this paper, we set out to calculate what the general theory of Tannakian categories gives in this particular case.
+
+
+\section{Three opposite filtrations}
+\label{1}
+
+\subsection{}
+\label{1.1}
+
+This section is a variation on section~1.2 of \textsc{P.~Deligne}, ``Th\'{e}orie de Hodge II'', \emph{Publ. Math. IHES} \textbf{40}, pp.~5--58.
+Let $\mathfrak{A}$ be an abelian category, and let $A$ be an object of $\mathfrak{A}$ endowed with three opposite filtrations $W$, $F$, and $\overline{F}$.
+Here, ``filtration'' means ``finite filtration'' (loc. cit. 1.1.4), the filtration $W$ is assumed to be increasing, and the filtrations $F$ and $\overline{F}$ decreasing.
+The opposite condition takes the form $\Gr_F^p\Gr_{\overline{F}}^q\Gr_n^WA=0$ for $n\neq p+q$ (loc. cit. 1.2.7, 1.2.13).
+
+For every bigraded object $B=\bigoplus B^{p,q}$, ew denote by $W$, $F_W$, and $\overline{F}_W$ the three opposite filtrations
+\[
+  \begin{aligned}
+    W_n &= \bigoplus_{p+q\leq n} B^{p,q},
+  \\F_W^i &= \bigoplus{p\geq i} B^{p,q},
+  \\\overline{F}_W^i &= \bigoplus_{q\geq i} B^{p,q}.
+  \end{aligned}
+\]
+With this notation, saying that the three filtrations $W$, $F$, and $\overline{F}$ of $A$ are opposite again implies (loc. cit. 1.2.6) that each $\Gr_n^W$ admits a (unique)
+\oldpage{510}
+decomposition
+\[
+  \Gr_n^W A = \bigoplus_{p+q=n} A_W^{p,q}
+\]
+such that the filtrations of $\Gr_n^W A$ induced by $F$ and $\overline{F}$ are given by
+\[
+  \begin{aligned}
+    F^i\Gr_n^W A &= \bigoplus_{\substack{p+q=n\\p\geq i}} A_W^{p,q},
+  \\\overline{F}^i\Gr_n^W A &= \bigoplus_{\substack{p+q=n\\q\geq i}} A_W^{p,q}.
+  \end{aligned}
+\]
+In other words, $F$ and $\overline{F}$ induce the filtrations $F_W$ and $\overline{F}_W$ on $\Gr^W A$.
+
+Set
+\[
+  A_F^{p,q} := (W_{p+q}\cap F^p) \cap \left((W_{p+q}\cap\overline{F}^q) + \sum_{i\geq0}(W_{p+q-i}\cap\overline{F}^{q-i+1})\right)
+\]
+and, swapping the roles of $F$ and $\overline{F}$, and of $p$ and $q$,
+\[
+  A_{\overline{F}}^{p,q} := (W_{p+q}\cap \overline{F}^q) \cap \left((W_{p+q}\cap F^p) + \sum_{i\geq0}(W_{p+q-i}\cap F^{p-i+1})\right).
+\]
+
+For $p+q=n$, the projection from $W_n$ to $\Gr_n^W A$ induces an isomorphism from $A_F^{pq}$ to $A_W^{pq}$: loc. cit. 1.2.8, restricted to the particular case 1.2.11 (where $A_F^{p,q}$ is denoted $A_0^{pq}$; note that, in the formula defining $A_F^{pq}$, we can replace the sum over $i\geq0$ with the same sum over $i\geq2$).
+We thus deduce (loc. cit.) that the $A_F^{pq}$ (resp. $A_{\overline{F}}^{pq}$) give a bigrading of $A$, and that the sum $a_F$ (resp. $a_{\overline{F}}$) of the isomorphisms $A_F^{pq}\xrightarrow{\sim}A_W^{pq}$ (resp. $A_{\overline{F}}^{pq}\xrightarrow{\sim}A_W^{pq}$) is a bifiltered isomorphism from $(A;W,F)$ to $(\Gr^W A;W,F_W)$ (resp. from $(A;W,\overline{F})$ to $(\Gr^W A;W,\overline{F}_W)$).
+
+\begin{lemma*}
+  The automorphism $d=a_{\overline{F}}a_F^{-1}$ of $\Gr^W A$ satisfies
+  \[
+  \label{1.1.1}
+    (d-1)(A_W^{pq}) \subset \bigoplus_{\substack{r<p\\s<q}} A_W^{rs}.
+  \tag{1.1.1}
+  \]
+\end{lemma*}
+
+
+\end{document}
