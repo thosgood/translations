@@ -51,11 +51,14 @@
 \newcommand{\pr}{\mathrm{pr}}
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\CC}{\mathbb{C}}
+\newcommand{\PP}{\mathbb{P}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
 \DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Ext}{Ext}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -93,8 +96,10 @@
 
 %% Content %%
 
+\section*{}
+
 \oldpage{143}
-The first of the ``standard conjectures'' (Grothendieck~\cite{19}, Kleiman~\cite{20}), the Lefschetz-style one, demands that certain cohomology classes be algebraic.
+The first of the ``standard conjectures'' (Grothendieck~\cite{19}, Kleiman~\cite{20}), the Lefschetz-style one, says that certain cohomology classes are algebraic.
 Anyway, if motives are the ``direct factors'' of algebraic varieties $X$ defined by projectors (algebraic cycles on $X\times X$), then their definition is only reasonable if we have enough algebraic cycles.
 On this problem --- the construction of interesting algebraic cycles --- progress has been sparse.
 
@@ -121,6 +126,32 @@ The second: from the point of view of Hodge theory, the class of a cycle $Z$ of 
   J^d(X) := H^{2d-1}(X,\CC)/F^d + H^{2d-1}(X,\ZZ),
 \]
 where $F^d$ denotes the $d$-th term of the Hodge filtration of $H^{2d-1}(X,\CC)$.
+In the category of mixed Hodge structures, this is, respectively, $\Hom(\ZZ(d),H^{2d}(X))$ and $\Ext^1(\ZZ(d),H^{2d-1}(X))$.
+The Hodge conjecture says that the group of cycle classes is sent to a subgroup of finite index of the quotient $H_\ZZ^{d,d}$.
+However, we have no idea what should be the image in $E_d$.
+Furthermore, the aesthetic awkwardness that causes this ignorance renders the methods of P.A.~Griffiths, to prove the Hodge conjecture by induction on the dimension of the variety $X$, generally inapplicable.
+This method is inspired by that which Lefschetz~\cite{24} uses for surfaces.
+The idea is that, if $(H_t)_{t\in\PP^1}$ is a \todo of hyperplane sections, then constructing the cycle $Z$ on $X$ reduces to constructing the cycles $Z_i=Z\cap H_t$.
+In good cases:
+\begin{enumerate}[(a)]
+  \item the cohomology class $c\in H_\ZZ^{d,d}(X)$ that we wish to be that of a cycle $Z$ restricts to zero on the $H_t$;
+  \item if $Z$ exists, then its cohomology class $c$ determines the class of the $Z_t$ in the intermediate Jacobians $J^d(H_t)$; and
+  \item the construction of $Z$ reduces to constructing the cycles $Z_t$ of classes defining a given section of the family of the $J^d(H_t)$.
+\end{enumerate}
+We can thus conclude that every element of $J^d(H_t)$ is the class of a cycle of codimension $d$ that is cohomologous to zero.
+Using this method, Zucker~\cite{32} proves the Hodge conjecture for cubic hypersurfaces in $\PP^5$.
+Note, however, that, if every element of $J^d(H_t)$ is the class of a cycle that is cohomologous to zero, then $H^{2d-1}(H_t)$ is of Hodge type $\{(d,d-1)(d-1,d)\}$ (see \cref{1.6}), and the converse is a consequence of the Hodge conjecture applied to the product of $H_t$ with a suitable abelian variety.
+Furthermore, this surjectivity implies the existence of a curve $C_t$ and an algebraic cycle $W_t$ on $H_t\times C_t$ that sends $H^1(C_t)$ to $H^{2d-1}(H_t)$.
+We can then expect that $H^{2d}(X)$ is controlled by the $H^2$ of the surface fibred over $\PP^1$ with fibres given by the $C_t$, and, for an $H^2$, we can use the Hodge conjecture anyway.
+
+\oldpage{145}
+The aim of these notes is to show that, despite this lack of progress on the problem of constructing cycles, the philosophy of motives is a powerful tool.
+
+I thank S.~Bloch for his comments on a first version of these notes.
+
+
+\section{Motives}
+\label{1}
 
 
 %% Bibliography %%
