@@ -160,6 +160,16 @@ Note that we have included any changes made in the Errata.
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
 
+- Deligne, P. "A quoi servent les motifs?".
+  <br/>
+  _Proc. Symp. in Pure Math._ **55** (1994), 143--161.
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/deligne/what-are-motives-for.tex)
+  |
+  <!-- [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]() -->
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/deligne/paper/413)
+
 - Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
   <br/>
   _Mathematische Annalen_ **32** (1888), 342–-350.
