@@ -50,8 +50,10 @@
 \newcommand{\cat}{\mathcal}
 \newcommand{\pr}{\mathrm{pr}}
 \newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\CC}{\mathbb{C}}
 \newcommand{\PP}{\mathbb{P}}
+\newcommand{\mot}{\mathrm{mot}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -59,6 +61,7 @@
 \DeclareMathOperator{\Pic}{Pic}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\real}{real}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -152,6 +155,36 @@ I thank S.~Bloch for his comments on a first version of these notes.
 
 \section{Motives}
 \label{1}
+
+According to what we can and want to do, we have various definitions of motives available to us --- or even none.
+We need to distinguish pure motives, typically given by the cohomology of non-singular projective varieties, and mixed motives, where open and singular varieties are allowed.
+The notion of a motive on $S$ (a family of motives parametrised by $S$) poses yet more problems.
+
+\subsection{}
+\label{1.1}
+
+For a field $k$, we always want the category of motives over $k$ to be a $\QQ$-linear abelian category $\sh{M}(k)$ with finite-dimensional $\Hom$ groups.
+In the pure case, we want it to be semi-simple and graded (by weights).
+In the mixed case, every motive $M$ should admit a finite increasing filtration $W$, with $\Gr_n^W(M)$ pure of weight~$n$.
+Some other essential structures are the following:
+\begin{enumerate}[(a)]
+  \item Every algebraic variety $X$ on $k$ should have motivic cohomology groups $H_\mot^i(X)$, which are objects of $\sh{M}(k)$.
+    In the pure case, we restrict to non-singular projective varieties $X$, and $H_\mot^i(X)$ should then be a pure motive of weight~$i$.
+  \item For each of the usual cohomology theories $H$, we should have a ``realisation'' functor $\real$, and isomorphisms
+    \[
+      H^i(X) = \real H_\mot^i(X).
+    \]
+  \item There should be a tensor product $\otimes$, with which the realisation functors are compatible.
+\end{enumerate}
+
+\subsection{}
+\label{1.2}
+
+The tensor product structure described above allows us to apply the theory of Tannakian categories, invented by Grothendieck to study the formalism of motives.
+References: Saavedra~\cite{28}, Deligne--Milne~\cite{12}, Deligne~\cite{15}.
+
+For $k$ of characteristic $0$, this theory says that the category of motives over $k$, with its tensor product, should be equivalent to the category of linear representations of a scheme $G$ of affine groups over $\QQ$.
+
 
 
 %% Bibliography %%
