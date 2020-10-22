@@ -44,6 +44,11 @@
 \usepackage{amsthm}
 
 
+\theoremstyle{definition}
+
+\newtheorem*{example}{Example}
+
+
 %% Shortcuts %%
 
 \newcommand{\sh}{\mathscr}
@@ -60,9 +65,13 @@
 
 \DeclareMathOperator{\Pic}{Pic}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\Ext}{Ext}
 \DeclareMathOperator{\real}{real}
 \DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Rep}{Rep}
+\DeclareMathOperator{\ind}{ind}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -121,7 +130,7 @@ Similarly, on an abelian variety, it is easier to write the functional equation 
 \oldpage{144}
 Unfortunately, in higher rank, we do not know how to construct vector bundles whose Chern classes are interesting any more than we know how to construct interesting cycles.
 
-On $\CC$, the Hodge conjecture would give the desired cycles.
+Over $\CC$, the Hodge conjecture would give the desired cycles.
 Two difficulties in proving this conjecture have been found.
 The first: Atiyah and Hirzebruch have shown that it could only be true rationally (cf. Atiyah-Hirzebruch~\cite{1}).
 
@@ -185,6 +194,35 @@ The tensor product structure described above allows us to apply the theory of Ta
 References: Saavedra~\cite{28}, Deligne--Milne~\cite{12}, Deligne~\cite{15}.
 
 For $k$ of characteristic $0$, this theory says that the category of motives over $k$, with its tensor product, should be equivalent to the category of linear representations of a scheme $G$ of affine groups over $\QQ$.
+Note that any two groups $G_1$ and $G_2$ \todo(?with one sitting inside the other?) have the same category of representations.
+The \emph{motivic Galois group} $G$ is thus not uniquely determined by $\sh{M}(k)$.
+The theory tells us that a choice of $G$ and of an equivalence $\sh{M}(k)\simeq\Rep(G)$ is equivalent to the choice of an exact functor to $\QQ$-vector spaces that is compatible with the tensor product of $\sh{M}(k)$: a \emph{fibre functor} $\omega$.
+To such an $\omega$ corresponds $G:=\underline{\Aut}^\otimes(\omega)$, the group scheme of $\otimes$-automorphisms of $\omega$.
+We can think of $\omega$, or, rather, $\omega\circ H_\mot$, as a cohomology theory with values in $\QQ$-vector spaces.
+
+\oldpage{146}
+If we have an embedding of $k$ into $\CC$, then a possible cohomology theory is: ``singular cohomology of the topological space of complex points''.
+For $k=\QQ$, another possible choice is ``de Rham cohomology''.
+
+In characteristic $p$, an example by Serre shows that there cannot be any reasonable cohomology theory with values in $\QQ$-vector spaces: if $E$ is a supersingular elliptic curve, then the algebra $\End(E)\otimes\QQ$ is a quaternion algebra, and thus has no linear representation of dimension~$2$ over $\QQ$.
+From the existence of a cohomology theory with values in vector spaces over an extension of $\QQ$ it follows, however, that $\sh{M}(k)$ should be the category of representations of a suitable gerbe.
+
+The Tannakian theory is a \emph{linear} analogue of a \emph{set-theoretic} theory, namely that of the profinite $\pi_1$, also due to Grothendieck (\cite{SGA1}).
+The analogy is as follows: if $\sh{R}$ is the category of finite \'{e}tale covers of a connected scheme $S$ (resp. a Tannakian category over $K$), and $\omega$ is a fibre functor, with values in finite sets (resp. in finite-dimensional $K$-vector spaces), then $\sh{R}$ is naturally equivalent to the category of finite $G$-sets (resp. of representations of $G$), where $G$ is the profinite group $\Aut(\omega)$ (resp. the affine group scheme $\underline{\Aut}^\otimes(\omega)$).
+From here we get the terminology ``motivic Galois group'', with the $\pi_1$ theory, in the case of spectra of fields, becoming the Galois version.
+
+\subsection{}
+\label{1.3}
+
+In general, the motivic Galois group $G$ is enormous.
+For example, except for when $k$ is algebraic over a finite field, we expect $G$ to admit $\mathrm{PGL}(2)^{\operatorname{card}(k)}$ as a quotient.
+It ``doesn't know'' that motives $M_t$ can form a family that depends algebraically on $t$.
+
+Even though $G$ is enormous, its existence facilitates the handling of ``motivic'' objects.
+
+\begin{example}
+  The category $\ind\sh{M}(k)$
+\end{example}
 
 
 
