@@ -80,7 +80,9 @@
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\RR}{R}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\shHom}{\underline{\Hom}}
+\DeclareMathOperator{\shAut}{\underline{\Aut}}
 \DeclareMathOperator{\gr}{gr}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
@@ -430,8 +432,66 @@ In particular:
 \oldpage{182-10}
 \begin{corollary}{2}
 \label{theorem7corollary2}
-  Let
+  Let $E_0$ be a locally free coherent sheaf on $X_y$ such that $H^1(X_y;\shHom_{\sh{O}_X}(E_0,E_0))=0$.
+  Then any two locally free sheaves whose restrictions to $X_y$ are isomorphic to $E_0$ are themselves isomorphic to one another in a neighbourhood of $X_y$.
 \end{corollary}
+
+Thus:
+
+\begin{corollary}{3}
+\label{theorem7corollary3}
+  Suppose that $H^1(X_y,\sh{O}_{X_y})=0$.
+  Then any two invertible sheaves on $X$ (i.e. locally isomorphic to $\sh{O}_X$) whose restrictions to $X_y$ are isomorphic are themselves isomorphic to one another.
+\end{corollary}
+
+It thus follows that:
+
+\begin{proposition}{2}
+\label{proposition2}
+  Let $Y$ be a connected scheme, and $E$ a locally free coherent sheaf on $Y$.
+  Consider the bundle of projective spaces $X=\PP(E)$ associated to $E$, endowed with its well-known invertible sheaf $\sh{O}_X(1)$.
+  Then every invertible sheaf $\sh{L}$ on $X$ is isomorphic to a sheaf of the form $f^*(\sh{L}')\otimes\sh{O}_X(n)$, where $\sh{L}'$ is an invertible sheaf on $Y$, and $n$ is an integer.
+  Further, $n$ is uniquely determined, and $\sh{L}'$ is determined up to isomorphism.
+\end{proposition}
+
+The above \hyperref[theorem7corollary3]{Corollary~3} proves that $\sh{L}$ is isomorphic to an $\sh{O}_X(n)$-module on a neighbourhood of each fibre.
+The rest is more or less formal.
+
+\Cref{proposition2} allows us to determine the $Y$-morphisms from $X=\PP(E)$ to another projective bundle.
+We see, in particular:
+
+\begin{corollary}{1}
+  Let $u$ be an automorphism of $X=\PP(E)$.
+  Then there exists an invertible sheaf $\sh{L}'$ on $Y$, and an isomorphism $v$ from $E$ to $E\otimes\sh{L}'$ such that $u$ is the isomorphism corresponding to $\PP(E)\xrightarrow{\sim}\PP(E\otimes\sh{L}')=\PP(E)$;
+  the pair $(v,\sh{L}')$ is determined up to isomorphism.
+\end{corollary}
+
+Let $\Gamma$ be the set of classes of invertible bundles $\sh{L}'$ on $Y$ such that $E\otimes\sh{L}'$ is isomorphic to $E$.
+Its elements are torsion, since, if $n$ is the rank of $E$, then (by taking $n$-th exterior powers) we must have that $(\sh{L}')^{\otimes n}\xrightarrow{\sim}\sh{O}_Y$.
+The above corollary can then be expressed by saying that we have an exact sequence of groups:
+\[
+  e \to \Aut(E)/\Gamma(Y,\sh{O}_Y^*) \to \Aut_Y(X) \to \Gamma \to e
+\]
+(which can also be deduced from the exact sequence in cohomology induced by the exact sequence of \emph{sheaves} of groups
+\oldpage{182-11}
+\[
+  e \to \sh{O}_X^* \to \shAut \to \shAut_Y(X) \to e,
+\]
+where $\sh{O}_X^*$ is the sheaf of ``units'' of $\sh{O}_X$, identified with the centre of $\shAut(E)$.)
+
+
+\section{Application to existence and uniqueness theorems for sheaves and schemes over a complete $\mathscr{J}$-adic ring}
+\label{section6}
+
+\Cref{theorem7} gave a uniqueness result for locally free coherent sheaves, by using \cref{theorem1} and \cref{theorem2}.
+Using \cref{theorem3}, we now obtain \emph{existence} theorems for sheaves, for morphisms of schemes, or for schemes.
+In the following, $A$ denotes a local Noetherian ring, assumed to be separated and \emph{complete}.
+The general method still consists of making \emph{formal} construction, which consists essentially of doing \emph{algebraic geometry over an Artinian ring}, and deducing conclusions from this that are ``algebraic'' in nature, by using the three fundamental theorems.
+
+\begin{proposition}{3}
+\label{proposition3}
+  Let $\fk{X}$ be a proper formal scheme that is flat over $A$
+\end{proposition}
 
 
 %% Bibliography %%

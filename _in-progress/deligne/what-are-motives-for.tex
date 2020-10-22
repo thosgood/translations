@@ -58,6 +58,8 @@
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\GG}{\mathbb{G}}
 \newcommand{\PP}{\mathbb{P}}
 \newcommand{\FF}{\mathbb{F}}
 \newcommand{\mot}{\mathrm{mot}}
@@ -158,7 +160,7 @@ In good cases:
 \end{enumerate}
 We can thus conclude that every element of $J^d(H_t)$ is the class of a cycle of codimension $d$ that is cohomologous to zero.
 Using this method, Zucker~\cite{32} proves the Hodge conjecture for cubic hypersurfaces in $\PP^5$.
-Note, however, that, if every element of $J^d(H_t)$ is the class of a cycle that is cohomologous to zero, then $H^{2d-1}(H_t)$ is of Hodge type $\{(d,d-1)(d-1,d)\}$ (see \cref{1.6}), and the converse is a consequence of the Hodge conjecture applied to the product of $H_t$ with a suitable abelian variety.
+Note, however, that, if every element of $J^d(H_t)$ is the class of a cycle that is cohomologous to zero, then $H^{2d-1}(H_t)$ is of Hodge type $\{(d,d-1),(d-1,d)\}$ (see \cref{1.6}), and the converse is a consequence of the Hodge conjecture applied to the product of $H_t$ with a suitable abelian variety.
 Furthermore, this surjectivity implies the existence of a curve $C_t$ and an algebraic cycle $W_t$ on $H_t\times C_t$ that sends $H^1(C_t)$ to $H^{2d-1}(H_t)$.
 We can then expect that $H^{2d}(X)$ is controlled by the $H^2$ of the surface fibred over $\PP^1$ with fibres given by the $C_t$, and, for an $H^2$, we can use the Hodge conjecture anyway.
 
@@ -320,7 +322,67 @@ In characteristic~$0$, we know how to do this (Brylinksi~\cite{7}).
 \subsection{}
 \label{1.6}
 
-Abelian varieties
+Abelian varieties have spaces of modules, and these allow us to view certain quotients of symmetric Hermitian spaces by arithmetic groups in an algebraic way.
+The case of motives is more complicated.
+If $S$ is a scheme over $\CC$, and $M$ is a family of pure motives parametrised by $S$, then $M$ gives a variation of Hodge structures $M_h$ over $S(\CC)$, which is polarised if $M$ is, via Hodge realisation.
+From this, we get a map $\varphi$ from $S(\CC)$ to the space $\mathscr{C}$ that classifies polarised Hodge structures with the same Hodge numbers as $M$.
+
+The variation $M_h$ gives, in particular, a local system of complex vector spaces $M_\CC$ endowed with a Hodge filtration $F$ that varies continuously.
+\oldpage{149}
+The holomorphicity of $F$ and the ``transversality'' condition discovered by Griffiths~\cite{17} (see also Griffiths~\cite{18}) can be expressed as follows.
+Let $T$ be the tangent bundle of $S$, where $S$ is thought of as a $C^\infty$ manifold.
+The complex structure of $S$ endows $T$ with a complex structure.
+Let $\varphi\colon T\otimes_\RR\CC\to T$ be the $\CC$-linear extension of the identity on $T$, and $T''\subset T\otimes_\RR\CC$ be the kernel of $\varphi$.
+We define a Hodge filtration on $T\otimes\CC$ by
+\[
+  F^{-1}=T\otimes\CC,
+  \quad
+  F^0=T'',
+  \quad
+  F^1=0.
+\]
+If $t$ and $m$ are $C^\infty$ sections of $T\otimes\CC$ and $M_\CC$ (respectively), then the flat structure of $M_\CC$ allows us to define $\nabla_t m$.
+Then the condition is that $(t,m)\mapsto\nabla_t m$ be compatible with the Hodge filtrations:
+\[
+  \begin{array}{llll}
+    \mbox{$t$ in $T''$,}
+    & \mbox{$m$ in $F^i$,}
+    & \mbox{$\nabla_t m$ in $F^i$:}
+    & \mbox{holomorphicity;}
+  \\\mbox{$t$ in $T$,}
+    & \mbox{$m$ in $F^i$,}
+    & \mbox{$\nabla_t m$ in $F^{i-1}$:}
+    & \mbox{transversality.}
+  \end{array}
+\]
+
+There exists a complex structure on the classifying space $\mathscr{C}$, and a distribution $\tau\subset T$ such that the holomorphicity and transversality conditions become holomorphicity of the classifying map $\varphi\colon S(\CC)\to\mathscr{C}$ and tangency of $\varphi(S)$ to $\tau$.
+
+The distribution $\tau$ is, in general, not integrable.
+The set of points of $\mathscr{C}$ that corresponds to a direct factor some $H^i(X)$, where $X$ is non-singular and projective, is the countable union of the subvarieties that are tangent to $\tau$.
+When $\tau$ is not equal to the entire tangent bundle, then we have no description of it, even conjecturally.
+
+An analogous argument, also due to Griffiths, explains why the points of the intermediate Jacobian $J^d(X)$ can not all be algebraic cycle classes, except for when $H^{2d-1}(X)$ is of type $\{(d-1,d)\},(d,d-1)$.
+Let $f\colon X\to S$ be a family of non-singular projective varieties.
+Set $X_s=f^{-1}(s)$.
+The intermediate Jacobians
+\[
+  J^d(X_s) = H^{2d-1}(X_s,\CC)/H^{2d-1}(X_s,\ZZ) + F^d
+\]
+form a holomorphic bundle $J^d$ of complex toruses, and the transversality axiom ensures that the Gauss--Manin connection (expressing that the $H^{2d-1}(X_s,\CC)$ form a local system) passes to the quotient to define a differential operator $D$, defined on the sheaf of sections of $J^d$ and with values in the sheaf of $1$-forms with values in the holomorphic bundle of the $H^{2d-1}(X_s,\CC)/F^{d-1}$.
+An algebraic family $(Z_s)_{s\in S}$ of algebraic cycles that are cohomologous to zero on the $X_s$ defines a holomorphic section $z$ of $J^d$.
+The result of Griffiths is that $Dz=0$.
+The section $z$ defines a holomorphic family of mixed Hodge structures that is an extension of $\ZZ$ (of type $(0,0)$) by $H^{2d-1}(X)(d)$, and $Dz=0$ is equivalent to saying that this family satisfies the transversality axiom.
+
+
+\subsection{}
+\label{1.7}
+
+When the distribution $\tau$ is the entire tangent bundle, $\mathscr{C}$ is an arithmetic quotient of a symmetric Hermitian domain.
+This description of complex points of Shimura varieties as modules of Hodge structures suggests that these varieties are spaces of modules of motives.
+
+\oldpage{150}
+Let $S$ be the algebraic $\RR$-group $\CC^*$, i.e. $S=R_{\CC/\RR}(\GG_m)$.
 
 
 %% Bibliography %%
