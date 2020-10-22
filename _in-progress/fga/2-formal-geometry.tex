@@ -117,10 +117,27 @@
 \setcounter{footnote}{0}
 
 \tableofcontents
-\bigskip
 
 
 %% Content %%
+
+\todo\textbf{do all the errata!!!!!!!!!!}
+
+\section*{}
+
+\emph{[Trans.] The following ``introduction'' comes from the May 1962 ``Commentaires'' (\emph{S\'{e}minaire Bourbaki} \textbf{14}, 1961--62, Compl\'{e}ment). We have also made changes throughout the text following the errata (loc. cit.).}
+
+\oldpage{C-03}
+The substance of \cref{section1} to \cref{section5} is contained in the published part of EGA~III; that of \cref{section6} and \cref{section7} is contained in SGA~III.
+For the study of the fundamental group, see SGA~V, IX, X, and XI, as well as SGA~1962 (expos\'{e}s X, XII, and XIII) for the Lefschetz-type theorems and numerous open questions.
+Only the theory of moderately ramified covers (cf. \cref{theorem14}) has not yet been the object of a dedicated expos\'{e}.
+The \hyperref[theorem14corollary1]{corollary} to \cref{theorem14}, which completely determines Galois covers of order prime to the characteristic of an algebraic curve over an algebraically closed field, has been used in an essential manner on three separate occasions:
+\begin{enumerate}[1.]
+  \item in the proof by Igusa of the Picard inequality for non-singular projective surfaces in arbitrary characteristic;
+  \item in the study (developed independently by Ogg and \check{S}afarevi\check{c}) of the group of homogeneous principal bundles over an abelian variety defined over a function field in one variable, in arbitrary characteristic;
+  \item in the recent proof, by Artin, of certain key theorems concerning the ``Weil cohomology'' of algebraic varieties.
+\end{enumerate}
+
 
 \section{Schemes}
 \label{section1}
@@ -375,7 +392,7 @@ We thus deduce the following global version of Zariski's ``main theorem'':
 \begin{theorem}{6}
 \label{theorem6}
   Let $f\colon X\to Y$ be a morphism of finite type.
-  Then the set $U$ of points of $X$ that are isolated in their fibre is open, and, if $f$ is quasi-projective, then $U$ is $Y$-isomorphic to an open subset of some scheme $Y'$ that is finite over $Y$.
+  Then the set $U$ of points of $X$ that are isolated in their fibre is open, and, if $f$ is quasi-projective\footnote{This hypothesis can be replaced by the weaker hypothesis ``if $f$ is separated'', by means of the following result (see SGA~VIII, 6.2): every morphism $f\colon X\to Y$ which is quasi-finite and separated is also projective.}, then $U$ is $Y$-isomorphic to an open subset of some scheme $Y'$ that is finite over $Y$.
 \end{theorem}
 
 Since a morphism of finite type is locally affine, and \emph{a fortiori} locally quasi-projective, we immediately deduce from \cref{theorem6} the usual local variants of the main theorem.
@@ -490,8 +507,61 @@ The general method still consists of making \emph{formal} construction, which co
 
 \begin{proposition}{3}
 \label{proposition3}
-  Let $\fk{X}$ be a proper formal scheme that is flat over $A$
+  Let $\fk{X}$ be a proper formal scheme that is flat over $A$, and let $\sh{F}_0$ be a locally free sheaf on $X_0$ such that $H^2(X_0,\shHom_{\sh{O}_{X_0}}(\sh{F}_0,\sh{F}_0))=0$.
+  Then there exists a locally free sheaf $\sh{F}$ on $\fk{X}$ that induces, on $X_0$, a sheaf isomorphic to $\sh{F}_0$.
+  (This $\sh{F}$ is also unique up to isomorphism if $H^1(X_0,\shHom_{\sh{O}_{X_0}}(\sh{F}_0,\sh{F}_0))=0$).
 \end{proposition}
+
+We construct, step by step, locally free sheaves $\sh{F}_n$ on the $X_n$, that induce one another.
+The construction of $\sh{F}_0$ is met with an obstruction in $H^2(X_0,\shHom_{\sh{O}_{X_0}}(\sh{F}_0,\sh{F}_0))\otimes_{A/\sh{J}}(\sh{J}^n/\sh{J}^{n+1})$, but this is zero, by hypothesis.
+Now using \cref{theorem3}, we obtain:
+
+\begin{corollary}{1}
+\label{proposition3corollary1}
+  Let $X$ be a proper scheme that is flat over $A$, and let $\sh{F}_0$ be as above.
+  Then there exists a locally free sheaf $\sh{F}$ on $X$ that induces, on $X_0$, a sheaf that is isomorphic to $\sh{F}_0$.
+  This $\sh{F}$ is also unique up to isomorphism if $H^1(X_0,\shHom_{\sh{O}_{X_0}}(\sh{F}_0,\sh{F}_0))=0$.
+\end{corollary}
+
+Let $X_0$ be a scheme of finite type over the field $k$, and suppose that $X_0$ is \emph{simple} (by which we mean \emph{absolutely} simple) over $k$, but not necessarily proper over $k$.
+Let $A$ be a local Artinian ring with residue field $k$.
+We are interested in finding schemes $X$ that are flat over $A$, and such that $X\otimes_A k=X_0$ (this is the starting point of the ``\emph{theory of modules}'', or of ``structure variations''
+\oldpage{182-12}
+of $X_0$).
+It is equivalent to give either such an $X$ or, on the topological space $X_0$, a sheaf $\sh{O}_X$ endowed with the following structures:
+\begin{enumerate}[i.]
+  \item $\sh{O}_X$ is a sheaf of $A$-algebras;
+  \item $\sh{O}_X$ is endowed with an augmentation homomorphism $\sh{O}_X\to\sh{O}_{X_0}$ (that is compatible with the $A$-algebra structures);
+\end{enumerate}
+and with the above data being subject to the following conditions: the augmentation induces an isomorphism $\sh{O}_X\otimes_A k\xrightarrow{\sim}\sh{O}_{X_0}$;
+$\sh{O}_X$ is flat over $A$, i.e. the graded algebra associated to $\sh{O}_X$ filtered by the powers of the maximal ideal $\fk{m}$ of $A$ is isomorphic to $\gr^0(\sh{O}_X)\otimes_k\gr(A)$, i.e. we have isomorphisms $\fk{m}^n\sh{O}_X/\fk{m}^{n+1}\sh{O}_X = \sh{O}_{X_0}\otimes_k(\fk{m}^n/\fk{m}^{n+1})$.
+The fundamental fact is the following:
+
+\begin{theorem}{8}
+\label{theorem8}
+  Let $X_0$ be a simple scheme of finite type over the field $k$, and assume $X_0$ to be affine.
+  Let $A$ be a local Artinian ring of residue field $k$.
+  Then there exists an $A$-scheme $X$ that is flat over $A$ and such that $X\otimes_A k=X_0$.
+  Further, any two such schemes are necessarily isomorphic.
+\end{theorem}
+
+Note that the isomorphic in question is not canonical, since $X$ will have, in general, non-trivial $A$-automorphisms that induce the identity on $X_0$.
+Furthermore, there is not, in general, a ``canonical'' choice of $X$ satisfying the given conditions, except in the case where $A$ is a $k$-algebra (the case of \emph{equal characteristics}), where we can take $X=X_0\otimes_k A$, i.e. $\sh{O}_X=\sh{O}_{X_0}\otimes_k A$ (whether or not $X_0$ is affine, in fact).
+In the case of unequal characteristics, I do not know in general, when $X_0$ is not affine, if we can ``lift'' $X_0$ to an $X$ defined over $A$.
+However, for any integer $n>0$, let $A_{n-1}=A/\fk{m}^n$, and suppose that we have lifted $X_0$ to a flat $A_{n-1}$-scheme $X_{n-1}$;
+we intend to lift $X_{n-1}$ to a flat $A_n$-scheme $X_n$.
+We already know, by \cref{theorem8}, that this is possible locally;
+we can also easily verify that, if $U_n$ lifts an open subset $U_{n-1}$ of $X_{n-1}$, then the sheaf of groups of automorphisms of $U_n$ (that induce the identity on $U_{n-1}$) is canonically isomorphic to $\fk{G}_{X_0/k}\otimes_k\fk{m}^n/\fk{m}^{n+1}$ restricted to $U_{n-1}$, and thus, in particular, commutative (where $\fk{G}_{X_0/k}$ denotes the sheaf of germs of $k$-derivations on $X_0$).
+It follows easily that we have an \emph{obstruction of constructing $X_n$ lifting $X_{n-1}$}, which lives in $H^2(X_0,\fk{G}_{X_0/k})\otimes\fk{m}^n/\fk{m}^{n+1}$.
+Then:
+
+\begin{corollary}{1}
+\label{theorem8corollary1}
+  Let $X_0$ be a simple scheme of finite type over $k$, and suppose that
+\oldpage{182-13}
+  $H^2(X_0,\fk{G}_{X_0/k})=0$.
+  Then, for every local Artinian ring $A$ with residue field $k$, there exists a flat $A$-scheme $X$ such that $X\otimes_A k=X_0$.
+\end{corollary}
 
 
 %% Bibliography %%
