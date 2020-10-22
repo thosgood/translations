@@ -172,7 +172,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
 
 - Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
   <br/>
-  _Mathematische Annalen_ **32** (1888), 342–-350.
+  _Mathematische Annalen_ **32** (1888), 342--350.
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/ma-32/sum-of-squares.tex)
   |

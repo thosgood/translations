@@ -72,6 +72,7 @@
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Rep}{Rep}
 \DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\Spec}{Spec}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -103,13 +104,12 @@
 
 \setcounter{footnote}{0}
 
+\setcounter{tocdepth}{1}
 \tableofcontents
 \bigskip
 
 
 %% Content %%
-
-\section*{}
 
 \oldpage{143}
 The first of the ``standard conjectures'' (Grothendieck~\cite{19}, Kleiman~\cite{20}), the Lefschetz-style one, says that certain cohomology classes are algebraic.
@@ -221,8 +221,43 @@ It ``doesn't know'' that motives $M_t$ can form a family that depends algebraica
 Even though $G$ is enormous, its existence facilitates the handling of ``motivic'' objects.
 
 \begin{example}
-  The category $\ind\sh{M}(k)$
+  The category $\ind\sh{M}(k)$ of ind-objects of the category $\sh{M}(k)$ of motives over $k$ inherits the tensor product from $\sh{M}(k)$.
+  This allows us to define a commutative Hopf algebra in $\ind\sh{M}(k)$ as being an object $H$ endowed with a product $H\otimes H\to H$ and coproduct $H\to H\otimes H$, as well as a unit $1\to H$, counit $H\to 1$, and antipode $H\to H$, satisfying suitable axioms.
+  We define the category of \emph{motivic affine group schemes} as being the opposite of the category of commutative Hopf algebras in $\ind\sh{M}(k)$.
+  If $\omega$ is a fibre functor, with values in $\QQ$-vector spaces, from the motivic Galois group $G:=\underline{\Aut}^\otimes(\omega)$, then the functor $\omega$ induces an equivalence between $\ind\sh{M}(k)$ and the category of linear representations --- not necessarily of finite dimension --- of $G$, and $H\mapsto\Spec\omega(H)$ is an equivalence between the category of motivic affine group schemes and the category of affine group schemes over $\QQ$ endowed with an action of $G$.
 \end{example}
+
+Here are three examples of such objects.
+
+\subsubsection{}
+\label{1.3.1}
+
+The motivic version of $\pi_1(X,x)$ made unipotent, cf. Deligne~\cite{14}, especially §§5, 7, and 10 to 13.
+
+\oldpage{147}
+\subsubsection{}
+\label{1.3.2}
+
+The motivic Galois group: there exists a motivic version $G_\mot$ such that, for every fibre functor $\omega$, the corresponding motivic Galois group is given by the application of $\omega$ to $G_\mot$.
+This gives a construction that works in any Tannakian category, cf. Deligne~\cite[\S8]{15}.
+In the analogy with the profinite-$\pi_1$ theory, its analogue is the following: for varying $x$, the $\pi_1(X,x)$ form a local system on $X$, or, more precisely, an group object in the category of pro-objects of the category of \'{e}tale covers of $X$.
+The $\pi_1$ at $x$ is obtained by taking its fibre at $x$.
+
+\subsubsection{}
+\label{1.3.3}
+
+Let $\sh{M}$ be a full subcategory of the category of mixed motives over $k$, stable under $\otimes$, taking duals, and sub-quotients, and let $\sh{M}_\mathrm{pur}$ be the full subcategory of direct sums of pure motives in $\sh{M}$.
+We have an exact functor that is compatible with the tensor product, given by $M\mapsto\Gr^W(M)$, from $\sh{M}$ to $\sh{M}_\mathrm{pur}$.
+In $\sh{M}_\mathrm{pur}$ there exists a motivic pro-unipotent group scheme $U$, acting functorially on $\Gr^W(M)$ for $M$ in $\sh{M}$, and such that $M\mapsto\Gr^W(M)$ is an equivalence between $\sh{M}$ and the category of representations (in $\sh{M}_\mathrm{pur}$) of $U$.
+This is a consequence of Deligne~\cite[8.17]{15}.
+
+We can similarly define and work with motivic schemes, motivic torsors, \ldots{}.
+
+
+\subsection{}
+\label{1.4}
+
+The motivic Galois group
 
 
 
