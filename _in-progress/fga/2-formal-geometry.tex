@@ -131,7 +131,7 @@
 
 \section*{}
 
-\emph{[Trans.] The following ``introduction'' comes from the May 1962 ``Commentaires'' (\emph{S\'{e}minaire Bourbaki} \textbf{14}, 1961--62, Compl\'{e}ment). We have also made changes throughout the text following the errata (loc. cit.).}
+\emph{[Trans.] The following ``introduction'' comes from the May 1962 ``Commentaires'' (\emph{S\'{e}minaire Bourbaki} \textbf{14}, 1961--62, Compl\'{e}ment). We have also made changes throughout the text following the errata (loc. cit.), and preface them with ``[Comp.]''.}
 
 \oldpage{C-03}
 The substance of \cref{section1} to \cref{section5} is contained in the published part of EGA~III; that of \cref{section6} and \cref{section7} is contained in SGA~III.
@@ -398,7 +398,7 @@ We thus deduce the following global version of Zariski's ``main theorem'':
 \begin{theorem}{6}
 \label{theorem6}
   Let $f\colon X\to Y$ be a morphism of finite type.
-  Then the set $U$ of points of $X$ that are isolated in their fibre is open, and, if $f$ is quasi-projective\footnote{This hypothesis can be replaced by the weaker hypothesis ``if $f$ is separated'', by means of the following result (see SGA~VIII, 6.2): every morphism $f\colon X\to Y$ which is quasi-finite and separated is also projective.}, then $U$ is $Y$-isomorphic to an open subset of some scheme $Y'$ that is finite over $Y$.
+  Then the set $U$ of points of $X$ that are isolated in their fibre is open, and, if $f$ is quasi-projective\footnote{\emph{[Comp.]} This hypothesis can be replaced by the weaker hypothesis ``if $f$ is separated'', by means of the following result (see SGA~VIII, 6.2): every morphism $f\colon X\to Y$ which is quasi-finite and separated is also projective.}, then $U$ is $Y$-isomorphic to an open subset of some scheme $Y'$ that is finite over $Y$.
 \end{theorem}
 
 Since a morphism of finite type is locally affine, and \emph{a fortiori} locally quasi-projective, we immediately deduce from \cref{theorem6} the usual local variants of the main theorem.
@@ -484,6 +484,7 @@ The rest is more or less formal.
 We see, in particular:
 
 \begin{corollary}{1}
+\label{proposition2corollary1}
   Let $u$ be an automorphism of $X=\PP(E)$.
   Then there exists an invertible sheaf $\sh{L}'$ on $Y$, and an isomorphism $v$ from $E$ to $E\otimes\sh{L}'$ such that $u$ is the isomorphism corresponding to $\PP(E)\xrightarrow{\sim}\PP(E\otimes\sh{L}')=\PP(E)$;
   the pair $(v,\sh{L}')$ is determined up to isomorphism.
@@ -653,13 +654,34 @@ In particular:
     \item We note that \cref{theorem3}, and the corresponding technique, only works for a \emph{complete} (local, for simplicity) base ring.
 
       In order to go from known results concerning the completion of a local ring to the corresponding results for the local ring itself, we would need a fourth ``fundamental theorem'', whose precise statement still needs to be found.
-    \item 
+    \item We will compare the results from this section (mainly the above \hyperref[theorem9corollary1]{Corollary~1} and \hyperref[theorem9corollary2]{Corollary~2}), as well as those from the following, with the results of Kodaira--Spencer on the variation of complex structures.
+      Using the conjectural theorem to which we have just alluded, we should be able to conclude, under the conditions of \hyperref[theorem9corollary1]{Corollary~1}, but where $A$ is no longer assumed to be complete, that there exists a ring $A'$ that contains $A$, and that is finite and unramified over $A$, such that $X\otimes_AA'$ and $X'\otimes_AA'$ are $A'$-isomorphic (where $X$ and $X'$ are given, and are proper flat $A$-schemes such that $X\otimes_Ak=X'\otimes_Ak=X_0$).
+      This is what we can prove, at least, when $X_0=\fk{P}_k^r$, by using \hyperref[proposition2corollary1]{Corollary~1} of \cref{proposition2}.
+      In any case, if $H^1(X_0,\fk{G}_{X_0/k})=0$, then we can prove that the fibres of $X$ and $X'$ over any point $y$ of $Y=\Spec(A)$ are isomorphic, or at least when we pass to the algebraic closure of the residue field $\kres(y)$.
+      (We have a local result, seemingly stronger, when we don't suppose that $A$ is necessarily local).
+      As for ``structure variations'' of the projective space, we again point out the following question, suggested by a corresponding problem of Kodaira--Spencer.
+      Let $X$ be a proper flat scheme, over a local integral ring $A$ with field of fractions $K$ and residue field $k$, and suppose that $X\otimes_AK$ is isomorphic to $\fk{P}_K^r$.
+      Is it then true that $X\otimes_Ak=X_0$ is isomorphic to $\fk{P}_k^R$ (or at least, over the algebraic closure of $k$)?
+      In this question, we can assume that $A$ is a complete discrete valuation ring.
+      There is an analogous question when $X_0$ is an abelian variety.
   \end{enumerate}
 \end{remarks}
 
 \begin{remark}
-  \todo\emph{\textbf{the comment from the errata}}
+  \emph{[Comp.] Concerning Remark~1) above.}
+  We note that J.-P. Serre has constructed a non-singular projective variety, of dimension~$3$, over an algebraically closed field $k$, of characteristic~$p>0$, which does not come from reduction of a proper scheme over a local integral ring with residue field $k$, and having a field of fractions of characteristic~$0$.\footnote{\textsc{Serre, J.-P.} ``Exemples des vari\'{e}t\'{e}s projectives en caract\'{e}ristique $p$ non relevables en caract\'{e}ristique z\'{e}ro''. \emph{Proc. Nat. Acad. Sc. U.S.A.} \textbf{47} (1961), 108--109.}
+  Mumford would have found an analogous result, with a non-singular projective \emph{surface}.
 \end{remark}
+
+\begin{remark}
+  \emph{[Comp.] Concerning Remarks~2) and 3) above.}
+  I am now less optimistic concerning the results conjectured here.
+  However, the question concerning structure variations for projective space, mentioned at the end of Remark~3) above, has been positively resolved by Hironaka, and the analogous question for abelian varieties has been resolved by Koizumi.
+\end{remark}
+
+
+\section{Application to the ``theory of modules''}
+\label{section7}
 
 
 %% Bibliography %%
