@@ -70,14 +70,6 @@ All of the following are by A. Grothendieck.
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215)
 
-2. "Géométrie formelle et géométrie algébrique".
-  <br/>
-  _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
-  <!-- <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/2-formal-geometry.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1596585546758) -->
-
 <!-- 3. "Technique de descente et théorèmes d'existence en géométrie algébrique."
     1. "Généralités. Descente par morphismes fidèlement plats".
         <br/>
@@ -160,7 +152,15 @@ Note that we have included any changes made in the Errata.
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
 
-- Deligne, P. "A quoi servent les motifs?".
+- **(57%)** Grothendieck, A. "Géométrie formelle et géométrie algébrique". (FGA 2)
+  <br/>
+  _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/fga/2-formal-geometry.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Ffga%2F2-formal-geometry.tex&command=pdflatex&trackId=1603489321895)
+
+- **(47%)** Deligne, P. "A quoi servent les motifs?".
   <br/>
   _Proc. Symp. in Pure Math._ **55** (1994), 143--161.
   <br/>
@@ -170,7 +170,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/deligne/paper/413)
 
-- Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
+- **(22%)** Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
   <br/>
   _Mathematische Annalen_ **32** (1888), 342--350.
   <br/>
@@ -180,7 +180,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/157385)
 
-- Brion, M. and Procesi, C. "Action d'un tore dans une variété projective".
+- **(12%)** Brion, M. and Procesi, C. "Action d'un tore dans une variété projective".
   <br/>
   In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in Mathematics **92** (1990), 509--539. [MR1103602](https://mathscinet.ams.org/mathscinet-getitem?mr=1103602).
   <br/>
@@ -188,7 +188,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fpm-92%2Fprojective-torus-action.tex&command=pdflatex&trackId=1602776678752)
 
-- Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
+- **(10%)** Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>
   Springer-Verlag, LNM **163** (1970).
   <br/>
@@ -198,7 +198,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355)
 
-- Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points".
+- **(4%)** Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points".
   <br/>
   In _Galois Groups over ℚ_, Springer-Verlag, MSRI Publications **16** (1989), 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
   <br/>
@@ -208,7 +208,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://publications.ias.edu/node/407)
 
-- Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen".
+- **(13%)** Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen".
   <br/>
   _Math. Ann._ **146** (1962), 331--368.
   <br/>
@@ -218,7 +218,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/160940)
 
-- Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires".
+- **(5%)** Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires".
   <br/>
   _Annales de l'Institut Fourier_ **4** (1952), 73--112.
   <br/>
