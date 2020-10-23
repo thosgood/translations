@@ -59,6 +59,7 @@
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\CC}{\mathbb{C}}
 \newcommand{\RR}{\mathbb{R}}
+\renewcommand{\AA}{\mathbb{A}}
 \newcommand{\GG}{\mathbb{G}}
 \newcommand{\PP}{\mathbb{P}}
 \newcommand{\FF}{\mathbb{F}}
@@ -383,6 +384,71 @@ This description of complex points of Shimura varieties as modules of Hodge stru
 
 \oldpage{150}
 Let $S$ be the algebraic $\RR$-group $\CC^*$, i.e. $S=R_{\CC/\RR}(\GG_m)$.
+Giving an action of $S$ on the real vector space $V$ is equivalent to giving a decomposition of $V\otimes\CC$ as a direct sum of $V^{p,q}$ with $\overline{V^{p,q}}=V^{q,p}$, with $z\in S(\RR)=\CC^*$ acting on $V^{p,q}$ via multiplication by $z^{-p}\overline{z}^{-q}$.
+We define $w\colon\GG_m\to S$ (resp. $\mu\colon\GG_m\to S$, defined over $\CC$) by the condition that, for all $V$, $w(\lambda)$ (resp. $\mu(\lambda)$) acts on $V^{p,q}$ via multiplication by $\lambda^{p+q}$ (resp. $\lambda^p$).
+
+The data defining a Shimura variety $\mathrm{Sh}_K(G,X)$ consists of a reductive group $G$ over $\QQ$, a $G(\RR)$-conjugation class of morphisms $h\colon S\to G_\RR$, with $w_X:= h\circ w$ central (and thus independent of $h$), and a compact open subgroup $K$ of $G(\AA^f)$.
+We consider the case where $w_X$ is defined over $\QQ$, and where $\operatorname{int}h(i)$ is a Cartan involution of the quotient $G/w_X(\GG_m)$.
+The \emph{dual field} $E(G,X)$ is the field of definition of the conjugacy class of $h\mu$ (for arbitrary $h$ in $X$).
+This is a subfield of $\CC$.
+The Shimura variety is defined over $E(G,X)$, with complex points $K\setminus X\times G(\AA^f)/G(\QQ)$.
+Its construction in the general case is due to Borovoi~\cite{6}.
+
+A point of the Shimura variety over a field $\FF$ containing $E(G,X)$ should correspond to
+\begin{enumerate}[(a)]
+  \item an exact $\otimes$-functor $x$ from the category $\Rep(G)$ of representations of $G$ to the category of pure motives over $\FF$; and
+  \item an integer structure.
+    In terms of finite adelic realisations (the restriction of the product of $\ell$-adic realisations), we can describe this as an isomorphism of $\otimes$-functors
+    \[
+      x(V)_{\AA^f} \xrightarrow{\sim} V\otimes\AA^f,
+    \]
+    given up to composition with an element of $K$.
+\end{enumerate}
+The following condition should be satisfied.
+For simplicity, we suppose that $\FF$ can be embedded in $\CC$.
+\begin{enumerate}[(a)]
+\setcounter{enumi}{2}
+  \item Let $\iota$ be an embedding of $\FF$ into $\CC$, extending the identity embedding of $E(G,X)$ into $\CC$.
+    There should exist $h\in X$ such that the following $\otimes$-functors from $\Rep(G)$ to Hodge structures are isomorphic:
+    \begin{enumerate}[(1)]
+      \item $(V,\rho)\mapsto V$, endowed with the Hodge structure defined by $\rho\circ h$;
+      \item $(V,\rho)\mapsto$ the Hodge realisation of $x(V)$, after extending the base field to $\CC$ by $\iota$.
+    \end{enumerate}
+\end{enumerate}
+The fact that condition~(c) is independent of the chosen complex embedding $\iota$ --- assumed to be an extension of the inclusion of $E(G,X)$ into $\CC$ --- is not obvious.
+Sometimes, however, it follows from (b) and more algebraic conditions (d) and (e), consequences of (c), that follow.
+\begin{enumerate}[(a)]
+\setcounter{enumi}{3}
+  \item The de Rham realisation defines a fibre functor $V\mapsto x(V)_{\mathrm{DR}}$ on $\Rep(G)$ that corresponds to a $G$-torsor $P$ over $F$.
+    The Hodge filtration of the $X(V)_{\mathrm{DR}}$ is exact and compatible with the tensor product,
+\oldpage{151}
+    and thus comes from a \todo $Q$ of $G^P$ and from $\mu_{\mathrm{DR}}\colon\GG_m\to Z(Q/\mathscr{R}_uQ)$, where $Z$ denotes the centre, that lifts to a conjugation class of morphisms from $\GG_m$ to $Q$, Saavedra~\cite[IV, 2.4, p.~229]{28}.
+    Since $\FF$ contains $E(G,X)$, it makes sense to ask for the conjugation class corresponding to maps from $\GG_m$ to $G$ to coincide with that of $h\circ\mu$ (for $h\in X$).
+    Condition~(c) implies this.
+    This explains the appearance of the dual field.
+  \item For a representation $(V,\rho)$ of weight $0$: $\rho\circ w$ trivial and $V\otimes V\to\QQ$ a symmetric invariant bilinear form such that, on $V_\RR$, $B(v,h(i)w)$ is positive-definite and symmetric, we ask for $x(V)\otimes x(V)\to 1$ to be positive, for the desired polarisation (loc. cit. V, 2.4, p.~276) of the category of motives.
+\end{enumerate}
+
+
+\subsection{}
+\label{1.8}
+
+This motivic interpretation of Shimura varieties has been a guide for how to elaborate the axioms that characterise them, as well as for the determination of their conjugates (Borovo\check{i}~\cite{6}).
+
+Let $p$ be a prime number such that $G_{\QQ_p}$ extends to a reductive group over $\ZZ_p$, and let $K$ be the product of $G(\ZZ_p)$ with a subgroup of the restriction of the product of the $G(\QQ_\ell)$, for $\ell\neq p$.
+The dual field $E(G,X)$ is then unramified at $p$.
+We hope that the Shimura variety has a natural reduction $\mod p$, and that we can try to paraphrase the conjectural motivic description above in order to conjecture the structure of the set of its points over a finite field of characteristic~$p$.
+There have been difficulties: how can we interpret (c) and the $p$-part of (b) to work together with (d)?
+For progress in this direction, see Langlands--Rapoport~\cite{23}.
+
+
+\section{Cohomology theories}
+\label{2}
+
+\subsection{}
+\label{2.1}
+
+A geometric construction, possible in one of the usual cohomology theories, should make sense ``motivically'', and thus have an analogue in the other usual theories.
 
 
 %% Bibliography %%
