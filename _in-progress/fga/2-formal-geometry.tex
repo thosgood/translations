@@ -65,6 +65,12 @@
   {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
   {\endinnercustomcorollary}
 
+
+\theoremstyle{definition}
+
+\newtheorem*{remark}{Remark}
+\newtheorem*{remarks}{Remarks}
+
 %% Shortcuts %%
 
 \newcommand{\sh}{\mathscr}
@@ -131,7 +137,7 @@
 The substance of \cref{section1} to \cref{section5} is contained in the published part of EGA~III; that of \cref{section6} and \cref{section7} is contained in SGA~III.
 For the study of the fundamental group, see SGA~V, IX, X, and XI, as well as SGA~1962 (expos\'{e}s X, XII, and XIII) for the Lefschetz-type theorems and numerous open questions.
 Only the theory of moderately ramified covers (cf. \cref{theorem14}) has not yet been the object of a dedicated expos\'{e}.
-The \hyperref[theorem14corollary1]{corollary} to \cref{theorem14}, which completely determines Galois covers of order prime to the characteristic of an algebraic curve over an algebraically closed field, has been used in an essential manner on three separate occasions:
+The \hyperref[theorem14corollary1]{corollary} of \cref{theorem14}, which completely determines Galois covers of order prime to the characteristic of an algebraic curve over an algebraically closed field, has been used in an essential manner on three separate occasions:
 \begin{enumerate}[1.]
   \item in the proof by Igusa of the Picard inequality for non-singular projective surfaces in arbitrary characteristic;
   \item in the study (developed independently by Ogg and \v{S}afarevi\v{c}) of the group of homogeneous principal bundles over an abelian variety defined over a function field in one variable, in arbitrary characteristic;
@@ -562,6 +568,98 @@ Then:
   \[H^2(X_0,\fk{G}_{X_0/k})=0.\]
   Then, for every local Artinian ring $A$ with residue field $k$, there exists a flat $A$-scheme $X$ such that $X\otimes_A k=X_0$.
 \end{corollary}
+
+Also, if we can find \emph{one} $X$ that is flat over $A$ and that lifts $X_0$, then, by \cref{theorem8}, the set of classes (up to isomorphism) of flat $A$-schemes that lift $X_0$ can be identified with $H^1(X_0,\shAut(X))$, where $\shAut(X)$ denotes the sheaf of germs of automorphisms of the sheaf $\sh{O_X}$ of $A$-algebras \emph{that are compatible with the augmentation}.
+The filtration of $\sh{O}_X$ defines a filtration of $\shAut(X)$, with the quotient of this sheaf by the $n$-th subgroup of the filtration being $\shAut(X_n)$;
+the graded algebra associated to this filtration is commutative, and can be identified with $\fk{G}_{X_0/k}\otimes_k\gr(A)$.
+In particular, if $\fk{m}^{n+1}$ is the first power of $\fk{m}$ that is not zero, then $F^n(\shAut(X))$ (the last stage of the filtration) is in the centre of $\shAut(X)$, and is isomorphic to $\fk{G}_{X_0/k}\otimes_k\fk{m}^n$;
+it is also the sheaf of germs of automorphisms of $X$ that induce the identity on $X_{n-1}=X\otimes_A A/\fk{m}^n$.
+Using these results, we immediately obtain the following statements:
+
+\begin{corollary}{2}
+\label{theorem8corollary2}
+  Let $X_0$ be a simple scheme of finite type over $k$, and let $A$ be a local Artinian ring with residue field $k$ and maximal ideal $\fk{m}$.
+  Suppose that $\fk{m}^{n+1}=0$.
+  Let $A_{n-1}=A/\fk{m}^n$, and let $X_{n-1}$ be a flat $A_{n-1}$-scheme such that $X_{n-1}\otimes_Ak=X_0$.
+  Then the set of classes (up to isomorphism, inducing the identity on $X_{n-1}$ \todo?) of flat $A$-schemes $X_n$ such that $X\otimes_AA_{n-1}=X_{n-1}$ is either empty, or a homogeneous principal space under $H^1(X_0,\fk{G}_{X_0/k})\otimes_k\fk{m}^n$.
+\end{corollary}
+
+(Note that, in general, there is no privileged choice of origin in the latter homogeneous principal space, since there is no privileged way of lifting $X_{n-1}$ to $X_n$).
+
+\begin{corollary}{3}
+\label{theorem8corollary3}
+  Let $X_0$ be a simple scheme of finite type over $k$, and suppose that $H^1(X_0,\fk{G}_{X_0/k})=0$.
+  Then, for every local Artinian ring $A$ with residue field $k$, \emph{there exists at most one flat $A$-scheme $X$} (up to isomorphism) such that $X\otimes_Ak=X_0$.
+\end{corollary}
+
+\Cref{theorem8corollary1} and \cref{theorem8corollary3} immediately imply the claims, which seem more general, obtained by supposing only that $A$ is a \emph{complete local Noetherian ring with residue field $k$}, provided that we introduce $X$ as a formal scheme over $A$:
+
+\begin{theorem}{9}
+\label{theorem9}
+  Let $k$ be a field, and $X_0$ a \emph{simple} scheme of finite type over $k$.
+  For every complete locally Noetherian ring $A$ with residue field $k$, let $F(A)$ be the set of classes (up to isomorphism, inducing the identity on $X_0$ \todo)
+\oldpage{182-14}
+  of formal schemes $\fk{X}$ over $A$, of finite type, and flat over $A$, such that $X\otimes_Ak=X_0$.
+  With this notation:
+  \begin{enumerate}[i.]
+    \item if $H^1(X_0,\fk{G}_{X_0/k})=0$, then, for all $A$, $F(A)$ has at most one element;
+    \item if $H^2(X_0,\fk{G}_{X_0/k})=0$, then, for all $A$, $F(A)$ has at least one element.
+  \end{enumerate}
+\end{theorem}
+
+\begin{corollary}{1}
+\label{theorem9corollary1}
+  Suppose that $X_0$ is proper over $k$.
+  Under condition~(i) of \cref{theorem9}, for all $A$, there exists at most (up to isomorphism, inducing the identity on $X_0$ \todo) one scheme $X$ that is proper, flat over $A$, and such that $X\otimes_Ak=X_0$.
+\end{corollary}
+
+We can use \hyperref[theorem3corollary2]{Corollary~2} of \cref{theorem3}.
+For example:
+\begin{corollary}{2}
+\label{theorem9corollary2}
+  If $X$ is a proper flat $A$-scheme such that $X\otimes_Ak$ is isomorphic to the projective-type scheme $\fk{P}_k^r$ of dimension~$r$ over $k$, then $X$ is isomorphic to $\fk{P}_k^r$.
+\end{corollary}
+
+(We can also deduce this result from \hyperref[proposition3corollary1]{Corollary~1} of \cref{proposition3}).
+
+\begin{corollary}{3}
+\label{theorem9corollary3}
+  Let $X_0$ be a simple projective scheme over $k$, and suppose that
+  \[
+    H^2(X_0,\sh{O}_{X_0}) = H^2(X_0,\fk{G}_{X_0/k}) = 0.
+  \]
+  Then, for all $A$, there exists a flat projective $A$-scheme such that $X\otimes_Ak=X_0$.
+\end{corollary}
+
+We can combine \cref{theorem9}~(ii) with \cref{theorem4}.
+In particular:
+
+\begin{corollary}{4}
+\label{theorem9corollary4}
+  Let $X_0$ be the scheme of a complete simple algebraic curve over $k$.
+  Then, for every complete local Noetherian ring $A$ with residue field $k$, there exists a ``simple curve scheme'' $X$ over $A$, such that $X\otimes_Ak=X_0$.
+\end{corollary}
+
+\begin{remarks}
+  \begin{enumerate}[1)]
+    \item \hyperref[theorem9corollary3]{Corollary~3} and \hyperref[theorem9corollary4]{Corollary~4} are above all interesting if $k$ is of characteristic $p\neq0$, taking $A$ to be a discrete valuation ring \emph{of characteristic~$0$}, with residue field $k$;
+      for example, the ``smallest possible $A$'', i.e. that for which $p$ generates the maximal ideal.
+      (In fact, by theorems of Cohen, it suffices to have \hyperref[theorem9corollary3]{Corollary~3} and \hyperref[theorem9corollary4]{Corollary~4} for such a ring $A$).
+      We note that, concerning this point, according to the specialists, we do not keow if there exist schemes over a field $k$ that are not reductions $\mod p$ of a flat scheme defined over such a ring $A$.
+      At the least, the results of this section give a way of systematically investigating this question.
+      We must start
+\oldpage{182-15}
+      by seeing if the first obstruction that we have, in $H^2(X_0,\fk{G}_{X_0/k})$, is necessarily zero.
+    \item We note that \cref{theorem3}, and the corresponding technique, only works for a \emph{complete} (local, for simplicity) base ring.
+
+      In order to go from known results concerning the completion of a local ring to the corresponding results for the local ring itself, we would need a fourth ``fundamental theorem'', whose precise statement still needs to be found.
+    \item 
+  \end{enumerate}
+\end{remarks}
+
+\begin{remark}
+  \todo\emph{\textbf{the comment from the errata}}
+\end{remark}
 
 
 %% Bibliography %%
