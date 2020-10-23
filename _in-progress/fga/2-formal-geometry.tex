@@ -77,6 +77,7 @@
 \newcommand{\cat}{\mathcal}
 \newcommand{\fk}{\mathfrak}
 \newcommand{\PP}{\mathbb{P}}
+\newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\kres}{\kappa}
 
 \renewcommand{\geq}{\geqslant}
@@ -682,6 +683,44 @@ In particular:
 
 \section{Application to the ``theory of modules''}
 \label{section7}
+
+Since the speaker has only recently encountered this theory himself, we will be obliged to limit ourselves to just cursory remarks.
+For simplicity, we work over a \emph{field} $k$, i.e. we work in \emph{equal characteristic}, even though \cref{theorem8} allows us to also discuss the more general case, without any fundamental changes, so it seems.
+We have not yet gotten past the ``formal'' stage, but the speaker still hopes to be able to construct true schemes of modules
+\oldpage{182-16}
+in certain cases from this, and, in particular, construct, for every integer $g$, a scheme over the integers that plays the role of universal scheme of modules for the simple curves of genus~$g$.
+
+\begin{remark}
+  \emph{[Comp.]}
+  We note that Mumford has recently constructed schemes of modules for the curves of genus~$g$ (cf. \emph{Mumford--Tate seminar}, Harvard University, 1961--62).
+  \Cref{theorem10} also proves that the ``Jacobi schemes of level~$n$\todo'' from the theory of modules are non-singular (and even simple over $\underline{\ZZ}$).
+\end{remark}
+
+We continue to use the setting and notation of \cref{theorem9}, and now suppose that $A$ is a local algebra of finite rank over $k$, which is assumed to be algebraically closed, for simplicity.
+Then $F(A)$ can be thought of as a covariant functor in $A$, with values in the category of sets, with a homomorphism $A\to B$ of $k$-algebras defining a map $F(A)\to F(B)$, since every flat $A$-scheme $X$ with $X\otimes_Ak=X_0$ gives rise to a $B$-scheme $X\otimes_AB$ with the same properties.
+\emph{Suppose} that we can find a complete local Noetherian $k$-algebra $\cat{O}$, as well as a functorial isomorphism
+\[
+  \label{isomorphism*}
+  \Hom(\cat{O},A) \xrightarrow{\sim} F(A)
+  \tag{$*$}
+\]
+(where the left-hand side denotes homomorphisms of $k$-algebras).
+We can easily see that such an $\cat{O}$ is determined up to canonical isomorphism, and so we call the formal spectrum $\fk{Y}$ of $\cat{O}$ (i.e. the topological space consisting of a single point, endowed with a sheaf of topological rings consisting of just $\cat{O}$) the \emph{formal scheme of modules for $X_0$}.
+(Note that it does not necessarily exist).
+Let $\fk{r}$ be the maximal ideal of $\cat{O}$, and, for all $n$, let $\sh{O}_n=\cat{O}/\fk{r}^{n+1}$ (so that $\sh{O}_0=k$).
+Then the canonical homomorphism $\cat{O}\to\sh{O}_n$ is an element of $\Hom(\cat{O},\sh{O}_n)$, and thus defines an element of $F(\sh{O}_n)$, i.e. a flat $\sh{O}_n$-scheme $X_n$ whose restriction $\mod\fk{r}$ is $X_0$.
+These $X_n$ are induced from one another by extension of scalars (i.e. here by reductions), whence it follows that they come from a formal scheme $\fk{X}$ that is well determined by the formal scheme of modules $\fk{Y}$;
+further, $\fk{X}$ is flat over $\fk{Y}$, and $\fk{X}_0=X_0$.
+The \hyperref[isomorphism*]{isomorphism~($*$)} is then given, as we can immediately see, by associating to each homomorphism $\cat{O}\to A$ of $k$-algebras the class of the $A$-scheme $\fk{X}\otimes_{\cat{O}} A$ (i.e. to every morphism $\fk{Y}'=\Spec(A)\to\fk{Y}$ of $k$-schemes, we associate the $\fk{Y}'$-scheme $\fk{X}\otimes_{\fk{Y}}\fk{Y}'$ given by base change).
+Furthermore, we see that the \hyperref[isomorphism*]{isomorphism~($*$)} and its above description still hold even if we only suppose that $A$ is a complete local Noetherian $k$-algebra (not necessarily Artinian).
+Of course, as always, $\cat{O}$ can indeed \emph{a priori} have nilpotent elements, and it seems likely that there should exist cases where $\cat{O}$ is itself Artinian, without being identical to $k$.
+This tells us at which point the point of view of Kodaira--Spencer (restricting to considering the $A$ that are \emph{regular} rings) is \emph{a priori} inadequate in the general case.
+
+\oldpage{182-17}
+It remains to give sufficient conditions for there to exist a formal scheme of modules for $X_0$, assumed to be proper over $k$.
+
+
+\todo\textbf{\emph{[Comp.] Page~23, line~12, 1st line of Corollary~5: add ``With $X$ and $Y$ proper over $k$.''}}
 
 
 %% Bibliography %%
