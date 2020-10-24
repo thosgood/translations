@@ -782,7 +782,46 @@ In order to be able to apply the fundamental theorems from \cref{section3}, we m
 
 \begin{lemma}{1}
 \label{lemma1}
-  \todo
+  Let $(X',a')$ be a pointed unramified covering associated to a pointed representation of $\pi_1(X,a)$ in a finite set $E$ (endowed with a marked point $e$),
+  Then the canonical morphism $\pi_1(X',a')\to\pi_1(X,a)$ identifies the domain with the stabiliser of $e$ in $\pi_1(X,a)$ (and is thus injective).
+\end{lemma}
+
+\begin{lemma}{2}
+\label{lemma2}
+  Let $X$ be an algebraic scheme over the field $k$, and let $k'$ be a radicial extension of $k$.
+  Then every unramified covering of $X\otimes_kk'$ is given by the inverse image (i.e. extension of scalars) of an unramified covering of $X$, determined up to isomorphism.
+\end{lemma}
+
+It follows, in particular, from these two lemmas that, for \emph{every} algebraic extension $K$ of $k$, and every geometric point $a'$ of $X'=X\otimes_kK$ that projects to the geometric point $a$ of $X$, that the functorial homomorphism $\pi_1(X',a')\to\pi_1(X,a)$ is injective.
+
+\begin{lemma}{3}
+\label{lemma3}
+  Let $X$ be a complete scheme over a local Artinian ring $A$, such that $H^0(X,\sh{O}_X)=A$.
+  Let $X'$ be an unramified covering of $X$, and let $A'=H^0(X',\sh{O}_{X'})$, which is thus a ring that is finite over $A$ (and which may a priori be ramified over $A$).
+  Let $X_0$ and $X'_0$ be the reduced subschemes associated to $X$ and $X'$, respectively (obtained by \todo by the sheaves of nilpotent elements in $\sh{O}_X$ and $\sh{O}_{X'}$, respectively).
+  Let $k$ be a subfield of $A/\fk{r}(A)$ over which $A/\fk{r}(A)$ is finite (so $X_0$ is a complete algebraic scheme over $k$, and $X'_0$ is an unramified covering).
+  Finally, let $\Omega$ be an algebraically closed extension of $k$, and consider the unramified covering $X'_0\otimes_k\Omega$ of $X_0\otimes_k\Omega$.
+  Then the following two conditions are equivalent:
+\oldpage{182-20}
+  \begin{enumerate}[i.]
+    \item $X'_0\otimes_k\Omega$ is complete \todo over $X_0\otimes_k\Omega$;
+    \item the natural morphism $X'\to X\otimes_AA'$ is an isomorphism.
+  \end{enumerate}
+
+  Under these conditions, $A'$ is an \emph{unramified} extension of $A$.
+  Finally, if $X'$ is connected, then condition~(i) is equivalent to the following, seemingly weaker, condition:
+  \begin{enumerate}[i bis.]
+    \item $X'_0\otimes_k\Omega$ admits a regular section over $X_0\otimes_k\Omega$.
+  \end{enumerate}
+\end{lemma}
+
+When condition~(ii) is satisfied, we say that the unramified covering $X'$ of $X$ is \emph{geometrically trivial}.
+
+\begin{lemma}{4}
+\label{lemma4}
+  Let $f\colon X\to Y$ be a proper morphism such that $f_*(\sh{O}_X)=\sh{O}_Y$.
+  Let $a$ be a geometric point of $X$, and $b$ its projection over $Y$.
+  Then $\pi_1(X,a)\to\pi_1(Y,b)$ is \emph{surjective}.
 \end{lemma}
 
 
