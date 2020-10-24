@@ -59,6 +59,12 @@
   {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
   {\endinnercustomproposition}
 
+\newtheorem{innercustomlemma}{Lemma}
+\crefname{innercustomlemma}{Lemma}{Lemmas}
+\newenvironment{lemma}[1]
+  {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
+  {\endinnercustomlemma}
+
 \newtheorem{innercustomcorollary}{Corollary}
 \crefname{innercustomcorollary}{Corollary}{Corollaries}
 \newenvironment{corollary}[1]
@@ -137,8 +143,8 @@
 \oldpage{C-03}
 The substance of \cref{section1} to \cref{section5} is contained in the published part of EGA~III; that of \cref{section6} and \cref{section7} is contained in SGA~III.
 For the study of the fundamental group, see SGA~V, IX, X, and XI, as well as SGA~1962 (expos\'{e}s X, XII, and XIII) for the Lefschetz-type theorems and numerous open questions.
-Only the theory of moderately ramified covers (cf. \cref{theorem14}) has not yet been the object of a dedicated expos\'{e}.
-The \hyperref[theorem14corollary1]{corollary} of \cref{theorem14}, which completely determines Galois covers of order prime to the characteristic of an algebraic curve over an algebraically closed field, has been used in an essential manner on three separate occasions:
+Only the theory of moderately ramified coverings (cf. \cref{theorem14}) has not yet been the object of a dedicated expos\'{e}.
+The \hyperref[theorem14corollary1]{corollary} of \cref{theorem14}, which completely determines Galois coverings of order prime to the characteristic of an algebraic curve over an algebraically closed field, has been used in an essential manner on three separate occasions:
 \begin{enumerate}[1.]
   \item in the proof by Igusa of the Picard inequality for non-singular projective surfaces in arbitrary characteristic;
   \item in the study (developed independently by Ogg and \v{S}afarevi\v{c}) of the group of homogeneous principal bundles over an abelian variety defined over a function field in one variable, in arbitrary characteristic;
@@ -718,6 +724,68 @@ This tells us at which point the point of view of Kodaira--Spencer (restricting 
 
 \oldpage{182-17}
 It remains to give sufficient conditions for there to exist a formal scheme of modules for $X_0$, assumed to be proper over $k$.
+Generally, it is easy to give simple necessary and sufficient conditions on a functor $A\to F(A)$ (from local $k$-algebras of finite rank to sets) in order for it to be of the form $\Hom(\cat{O},A)$ for some suitable $\cat{O}$.
+We do not give the details here.
+We point out only that, in the case which we are studying, these conditions impose non-trivial conditions of a cohomological nature on $X_0$, and it seems unlikely that they will always be satisfied, even though the speaker has not constructed any counterexamples.
+It seems plausible, however, that the condition $H^0(X,\fk{G}_{X_0/k})=0$ is \emph{sufficient} (even if not at all necessary) in order to guarantee the existence of a formal scheme of modules.
+We restrict ourselves to stating here a theorem that deals with a particularly simple case (whose analogue in the theory of analytic spaces is well known, cf. Kodaira--Spencer), which can easily be proven using the results from the previous section:
+
+\begin{theorem}{10}
+\label{theorem10}
+  Let $X_0$ be a simple proper scheme over the field $k$ such that
+  \[
+    H^0(X_0,\fk{G}_{X_0/k}) = H^2(X_0,\fk{G}_{X_0/k}) = 0.
+  \]
+  Then there exists a formal scheme of modules for $X_0$, corresponding to a local regular ring $\cat{O}$ (i.e. an algebra of formal series over $k$).
+\end{theorem}
+
+As we have already pointed out, it is not true in general that the formal scheme $\fk{X}$ over $\cat{O}$ is algebraisable;
+but we know that this is true, however, when $X_0$ is projective and $H^2(X_0,\sh{O}_{X_0})=0$ (\cref{theorem4}), such as when $X_0$ is of dimension~$1$.
+This is what gives some hope of constructing a scheme of modules over the integers for curves of a given genus\ldots{}.
+
+Note also that methods such as those described in this section can be applied in the construction and study of Picard varieties, as well as in many other constructions.
+We will return to this soon.
+
+
+\section{Application to the fundamental group}
+\label{section8}
+
+The techniques described allows us to tackle the system study of the fundamental group, using the example of topological theory.
+The first two theorems stated in this section are generalisations of results in a recent work by Lang--Serre.
+
+Let $X$ be a scheme.
+Then an $X$-scheme $X'$ is said to be an \emph{unramified covering of $X$}
+\oldpage{182-18}
+if
+\begin{enumerate}[i.]
+  \item $X'$ is finite over $X$, i.e. it is defined by a coherent sheaf of algebras $\sh{A}=\sh{A}(X')$ on $X$;
+  \item $\sh{A}$ is a locally free sheaf on $X$;
+  \item for all $x\in X$, the quotient $\sh{A}_x/\fk{m}_x\sh{A}_x = \sh{A}_x\otimes_{\sh{O}_X}\pi(x)$ is a separable algebra over $\kres(x)$.
+\end{enumerate}
+
+This notion of unramified covering (due to Serre and the speaker) posses all the elementary properties for which we can reasonably hope, and which we will not list.
+We restrict ourselves to saying that it gives rise to a \emph{Galois theory} modelled on classical Galois theory (and containing it; the proofs being overall simpler than the proofs generally seen for the latter) and the Galois theory of topological coverings.
+More precisely, we define a \emph{geometric point} of a scheme $X$ to be a morphism $a$ from the spectrum $\xi$ of an algebraically closed field $\Omega$ to $X$, i.e. the data of an algebraically closed extension of the residue field $\kres(x)$ of a point $x=|a|$ of $X$ (called the \emph{locality} of the geometric point $a$).
+If $X'$ is an unramified covering of $X$, then we can associate to it the set $E_a(X')$ of ``geometric points of $X'$ over $a$'', i.e. the set of pairs consisting of an $x'\in X'$ over $x$ and a $\kres(x)$-homomorphism to $\Omega$.
+We thus obtain (for fixed $(X,a)$) a functor $F(X,a)$ from the category $R(X)$ of unramified coverings $X'$ of $X$ to the category of finite sets.
+If $X$ is connected, then the pair given by $R(X)$ and $F(X,a)$ has all the formal properties necessary in order to be isomorphic to the analogous pair defined by a suitable totally disconnected compact topological group $\pi$ (i.e. a projective limit of finite groups): we take the category $\cat{C}(\pi)$ of finite sets on which $\pi$ acts \todo continuously, and the identity functor $F(\pi)(E)=E$ from this category to the category of finite sets.
+The group $\pi$ is also determined up to canonical isomorphic by the condition that $(\cat{C}(\pi),F(\pi))$ is isomorphic to a given pair.
+To be precise, $\pi$ is called the \emph{fundamental group of the connected scheme $X$ at the geometric point $a$}, and we denote it by $\pi_1(X,a)$.
+If $X$ is not connected, then we can replace it by the connected component containing $x=|a|$.
+If, however, $X$ is connected, then the groups $\pi_1(X,a')$ and $\pi_1(X,a')$ are isomorphic for any two geometric points $a'$ and $a''$ of $X$ (with the isomorphism being determined up to inner automorphism), and thus we can, as per usual, choose the most suitable $a$ for our purposes, such as the generic point of
+\oldpage{182-19}
+$X$ that is assumed to be irreducible.
+Of course, $\pi_1(X,a)$ is a \emph{covariant functor in the pointed scheme $(X,a)$}.
+Every statement concerning the classification of inseparable coverings can then be translated into the language of group theory, following the well-known dictionary (except that we must take into account the fact that here we have \emph{topological groups}).
+
+Our goal is to develop an analogue of the homotopy exact sequence of fibre bundles, relative to a proper morphism $f\colon X\to Y$.
+Clearly, since we don't know what the higher homotopy groups are, we will only have necessarily incomplete results.
+In order to be able to apply the fundamental theorems from \cref{section3}, we must first explain certain elementary lemmas concerning schemes over Artinian rings or fields (following the general procedure!).
+
+\begin{lemma}{1}
+\label{lemma1}
+  \todo
+\end{lemma}
 
 
 \todo\textbf{\emph{[Comp.] Page~23, line~12, 1st line of Corollary~5: add ``With $X$ and $Y$ proper over $k$.''}}
