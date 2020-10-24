@@ -1,0 +1,147 @@
+\documentclass{article}
+
+\title{On Kan theory}
+\author{H. Cartan}
+\date{10\textsuperscript{th} and 17\textsuperscript{th} of December, 1956}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{Baskervaldx}
+\usepackage{mathpazo}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\rhead{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
+\crefname{section}{\S\!}{\S\S\!}
+\crefname{equation}{}{}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+
+  \newtheorem{innercustomtheorem}{Theorem}
+  \crefname{innercustomtheorem}{Theorem}{Theorems}
+  \newenvironment{theorem}[1]
+    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
+    {\endinnercustomtheorem}
+
+  \newtheorem*{corollary}{Corollary}
+  \newtheorem*{lemma}{Lemma}
+
+\theoremstyle{definition}
+
+  \newtheorem*{remark}{Remark}
+
+
+%% Shortcuts %%
+
+\newcommand{\cat}{\mathcal}
+\newcommand{\id}{\mathrm{id}}
+\renewcommand{\SS}{\mathrm{S}}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+% \usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations/}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+
+  \medskip
+  
+  \emph{What follows is a translation of the French paper:}
+
+  \medskip\noindent
+  \textsc{Cartan, H.}
+  ``Sur la th\'{e}orie de Kan''.
+  \emph{S\'{e}minaire Henri Cartan}, Volume~\textbf{9} (1956-1957), Talk no.~1, 1–19.
+  {\footnotesize\url{http://www.numdam.org/item/SHC_1956-1957__9__A1_0/}}
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\tableofcontents
+\bigskip
+
+
+%% Content %%
+
+\oldpage{1-01}
+\subsection*{Bibliography}
+
+\begin{itemize}
+  \item \textsc{Daniel M. Kan}, Notes to \emph{Proc. Nat. Acad. Sci. U.S.A} \textbf{42} (1956), 419--421 and 542--546.
+  \item Various ``secret papers'' by Kan.
+  \item The notes from the lectures of J.C.~Moore, Princeton 1955-56.
+\end{itemize}
+
+
+\section{Categories with simplicial structure}
+\label{section1}
+
+Let $\cat{C}$ be a category.
+We associate to $\cat{C}$ a new category $\cat{C}^\SS$ as follows: an object of $\cat{C}^\SS$ is defined by the data of a sequence $(K_n)$ (for integer $n\geq0$) of objects of $\cat{C}$, along with, for each $n$, two sequences of maps
+\[
+  \begin{array}{ll}
+    d_i\colon K_n \to K_{n-1}
+    & \mbox{($0\leq i\leq n$, $n\geq1$)}
+  \\s_i\colon K_n \to K_{n+1}
+    & \mbox{($0\leq i\leq n$, $n\geq0$)}
+  \end{array}
+\]
+that are ``morphisms'' of the category $\cat{C}$.
+The $d_i$ (``face operators'') and the $s_i$ (``degeneracy operators'') are also subject to the following relations:
+\[
+\label{equation1}
+  \begin{cases}
+    d_i d_j = d_{j-1} d_i &\mbox{for $i<j$}
+  \\s_i s_j = s_{j+1} s_i &\mbox{for $i\leq j$}
+  \\d_i s_j = s_{j-1} d_i &\mbox{for $i<j$}
+  \\d_i s_j = \id &\mbox{for $i=j$ or $i=j+1$}
+  \\d_i s_j = s_j d_{i-1} &\mbox{for $i>j+1$.}
+  \end{cases}
+\tag{1}
+\]
+
+
+\end{document}
