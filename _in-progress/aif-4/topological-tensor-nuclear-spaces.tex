@@ -40,7 +40,7 @@
 
 \usepackage{amsthm}
 
-  \theoremstyle{plain}
+\theoremstyle{plain}
 
   \newtheorem{innercustomtheorem}{Theorem}
   \crefname{innercustomtheorem}{Theorem}{Theorems}
@@ -48,33 +48,7 @@
     {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
     {\endinnercustomtheorem}
 
-  \newtheorem{innercustomproposition}{Proposition}
-  \crefname{innercustomproposition}{Proposition}{Propositions}
-  \newenvironment{proposition}[1]
-    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-    {\endinnercustomproposition}
-
-  \newtheorem{innercustomlemma}{Lemma}
-  \crefname{innercustomlemma}{Lemma}{Lemmas}
-  \newenvironment{lemma}[1]
-    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
-    {\endinnercustomlemma}
-
-  \newtheorem{innercustomcor}{Corollary}
-  \crefname{innercustomcor}{Corollary}{Corollary}
-  \newenvironment{cor}[1]
-    {\renewcommand\theinnercustomcor{#1}\innercustomcor}
-    {\endinnercustomcor}
-
   \newtheorem*{corollary}{Corollary}
-
-
-  \theoremstyle{definition}
-
-  \newtheorem*{remark}{Remark}
-  \newtheorem*{remarks}{Remarks}
-  \newtheorem*{definition}{Definition}
-  \newtheorem*{examples}{Examples}
 
 
 %% Shortcuts %%
@@ -203,10 +177,20 @@ in any case, bornological implies quasi-tunnelled.
 
 \section{Topological tensor products}
 \label{section:topological-tensor-products}
+\oldpage{76}
 
-\subsection{Generalities on $E\hotimes F$}
+\subsection{Generalities on \texorpdfstring{$E\hotimes F$}{EF}}
 \label{subsection:generalities-on-E-hotimes-F}
 
+\textbf{(PTT, chap.~1, §1, n\textsuperscript{o}~1 and n\textsuperscript{o}~3).}
+
+The axiomatic definition of the algebraic tensor product $E\otimes F$ of two vector spaces $E$ and $F$, and of the canonical bilinear map $(x,y)\mapsto x\otimes y$ from $E\times F$ to $E\otimes F$ (\cite{1}) asks only that, for every vector space $G$, the bilinear maps from $E\times F$ to $G$ correspond bijectively with linear maps $f$ from $E\otimes F$ to $G$, where the map corresponding to $f$ is given by $(x,y)\mapsto f(x\otimes y)$.
+
+\begin{theorem}{1}
+\label{theorem1}
+  If $E$ and $F$ are locally convex spaces, then we can endow $E\otimes F$ with a locally convex topology such that, for every locally convex space $G$, the \emph{continuous} bilinear maps from $E\times F$ to $G$ correspond exactly to \emph{continuous} linear maps from $E\otimes F$ to $G$.
+  Further, such a topology is unique.
+\end{theorem}
 
 
 %% Bibliography %%
