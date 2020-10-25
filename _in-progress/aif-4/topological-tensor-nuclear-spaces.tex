@@ -31,7 +31,7 @@
 \let\runtitle\@title
 \makeatother
 \fancyhf{}
-\lhead{\footnotesize\runtitle\\}
+\lhead{\footnotesize{Summary of essential results in the theory of topological tensor products and nuclear spaces}\\}
 \rhead{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
@@ -85,6 +85,7 @@
 \newcommand{\sBB}{\mathscr{B}}
 \newcommand{\DF}{\mbox{\normalfont($\mathscr{DF}$)}}
 \newcommand{\FF}{\mbox{\normalfont($\mathscr{F}$)}}
+\newcommand{\hotimes}{\widehat{\otimes}}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -129,11 +130,14 @@
 
 %% Content %%
 
-\section{Introduction}
+\section*{Introduction}
 \label{section:introduction}
+\addcontentsline{toc}{section}{\protect\numberline{}Introduction}%
+
 
 \subsection*{Subject}
 \label{subsection:subject}
+\addcontentsline{toc}{subsection}{\protect\numberline{}Subject}%
 
 \oldpage{73}
 
@@ -165,6 +169,7 @@ The importance of topological tensor products shows itself in many different set
 
 \subsection*{Terminology and notation}
 \label{subsection:terminology-and-notation}
+\addcontentsline{toc}{subsection}{\protect\numberline{}Terminology and notation}%
 
 Generally we follow the terminology and notation of \cite{3}, apart from the fact that we call the semi-reflexive spaces of \cite{3} \emph{reflexive}.
 We only consider, unless otherwise stated, spaces that are \emph{locally convex} and \emph{separated};
@@ -190,7 +195,17 @@ If $A$ is closed, then the unit ball of $E_A$ is $A$.
 If $A$ is complete, then $E_A$ is complete.
 If $V$ is a disked neighbourhood of $0$ in $E$, then $E_V$ denotes the normed space given by passing to the quotient under the semi-norm $\|x\|_V=\inf_{x\in\lambda V}|\lambda|$.
 
-Recall that a locally convex space is said to be \emph{quasi-complete} if its closed bounded subsets are complete, 
+Recall that a locally convex space is said to be \emph{quasi-complete} if its closed bounded subsets are complete, \emph{barrelled} (resp. \emph{quasi-barrelled}) if the bounded subsets of its weak dual (resp. of its strong dual) are equicontinuous, and \emph{bornological} if every set of linear forms on $E$ that are uniformly bounded on every bounded subset is equicontinuous.
+If $E$ is quasi-complete, then tunnelled is equivalent to quasi-tunnelled;
+in any case, bornological implies quasi-tunnelled.
+
+
+
+\section{Topological tensor products}
+\label{section:topological-tensor-products}
+
+\subsection{Generalities on $E\hotimes F$}
+\label{subsection:generalities-on-E-hotimes-F}
 
 
 
