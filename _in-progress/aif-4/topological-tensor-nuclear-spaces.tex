@@ -192,12 +192,80 @@ The axiomatic definition of the algebraic tensor product $E\otimes F$ of two vec
   Further, such a topology is unique.
 \end{theorem}
 
+Then the \emph{equicontinuous} subsets of $\BB(E,F;G)$ correspond exactly to the \emph{equicontinuous} subsets of $\LL(E\otimes F;G)$ as well.
+Unless otherwise mentioned, $E\otimes F$ is assumed to be endowed with the above topology, called the \emph{projective tensor product of the topologies of $E$ and $F$};
+endowed with this topology, $E\otimes F$ is called the \emph{projective topological tensor product} of $E$ and $F$.
+
+If $E$ and $F$ are normed, then $E\otimes F$ is normable, and we can even find a norm such that, for every \emph{normed} space $G$, the above isomorphism between $\BB(E,F;G)$ and $\LL(E\otimes F;G)$ preserves the natural norms.
+Further, such a norm is unique.
+This norm on $E\otimes F$, denoted by $u\mapsto\|u\|$, where the norms of $E$ and $F$ are implicit, is the lower bound of the quantities $\sum_i\|x_i\|\|y_i\|$ over all representations of $u$ in the form $u=\sum_i x_i\otimes y_i$ (and this norm has already been considered, in \cite{8}).
+It is also the gauge of the set $\Gamma(U\otimes V)$, where $U$ (resp. $V$) is the unit ball in $E$ (resp. $F$), and where $U\otimes V$ denotes the set of $x\otimes y$ such that $x\in U$ and $y\in V$
+\oldpage{77}
+(with $\Gamma$ denoting, as per usual, the balanced hull).
+In the case where $E$ and $F$ are general locally convex spaces, a fundamental system of neighbourhoods of $0$ in $E\otimes F$ is obtained by taking the sets $\Gamma(U\otimes V)$, where $U$ (resp. $V$) runs over a fundamental system of neighbourhoods of $0$ in $E$ (resp. $F$).
+
+We can introduce the completion of $E\otimes F$, denoted by $E\hotimes F$, and called the \emph{completed projective tensor product} of $E$ and $F$.
+If $E$ and $F$ are normed spaces, then $E\hotimes F$ is a Banach space (with a well-defined norm!).
+If $E$ and $F$ are metrisable, then $E\hotimes F$ is of type~$\FF$.
+We have, by definition, the \emph{scholium}: if $E$ and $F$ are locally convex spaces, and $G$ is a \emph{complete} locally convex space, then the continuous bilinear maps from $E\times F$ to $G$ correspond bijectively to the continuous linear maps from $E\hotimes F$ to $G$.
+
+This claim still holds true for equicontinuous sets of maps.
+In particular, the dual of $E\hotimes F$ is $\BB(E,F)$, with a correspondence between the equicontinuous subsets (which already suffices to characterise the induced topology on $E\otimes F$).
+
+I do not know, if $E$ and $F$ are of type~$\FF$, whether or not this algebraic isomorphism from the dual of $E\hotimes F$ to $\BB(E,F)$ is a topological isomorphism, when we endow $\BB(E,F)$ with the topology given by bibounded convergence, i.e. uniform convergence on the products of two bounded sets \todo.
+
 
 %% Bibliography %%
 
 \nocite{*}
 
-\begin{thebibliography}{10}
+\begin{thebibliography}{9}
+
+  \bibitem{1}
+  {\sc Bourbaki, N.}
+  \newblock {\em Alg\`{e}bre multilin\'{e}aire}.
+  \newblock Hermann, {\em Act. Sc. Ind.} \textbf{1044}.
+
+  \bibitem{2}
+  {\sc Bourbaki, N.}
+  \newblock {\em Int\'{e}gration}.
+  \newblock Hermann, {\em Act. Sc. Ind.} \textbf{1175}.
+
+  \bibitem{3}
+  {\sc Dieudonn\'{e}, J. and Schwartz, L.}
+  \newblock La dualit\'{e} dans les espaces $\FF$ and $\DF$.
+  \newblock {\em Annales de Grenoble} \textbf{1} (1949), 61--101.
+
+  \bibitem{4}
+  {\sc Dixmier, J.}
+  \newblock Les fonctionnelles lin\'{e}aires sur l'ensemble des op\'{e}rateurs born\'{e}s d'un espace de Hilbert.
+  \newblock {\em Annals of Math.} \textbf{51} (1950), 387--408.
+
+  \bibitem{5}
+  {\sc Grothendieck, A.}
+  \newblock Produits tensoriels topologiques et espaces nucl\'{e}aires
+  \newblock {\em Memoirs of the Amer. Math. Soc.}, to appear.
+
+  \bibitem{6}
+  {\sc Grothendieck, A.}
+  \newblock Sur les espaces $\FF$ et $\DF$.
+  \newblock {\em Summa Brasiliensis Mathematicae}, to appear.
+
+  \bibitem{7}
+  {\sc K\"{o}the, G.}
+  \newblock Die Stufenr\"{a}ume, eine einfache klasse linearer vollkommener R\"{a}ume.
+  \newblock {\em Math. Zeitschrift} \textbf{51} (1948), 317--345.
+
+  \bibitem{8}
+  {\sc Schatten, R.}
+  \newblock {\em A theory of cross-spaces}.
+  \newblock Princeton University Press (1950).
+
+  \bibitem{9}
+  {\sc Schwartz, L.}
+  \newblock {\em Th\'{e}orie des distributions}, t.~1 and 2.
+  \newblock Hermann, {\em Act Sc. et Ind.} \textbf{1091} and \textbf{1122}.
+
 \end{thebibliography}
 
 
