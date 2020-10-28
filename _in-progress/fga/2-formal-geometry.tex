@@ -824,6 +824,49 @@ When condition~(ii) is satisfied, we say that the unramified covering $X'$ of $X
   Then $\pi_1(X,a)\to\pi_1(Y,b)$ is \emph{surjective}.
 \end{lemma}
 
+What we need to show is effectively the following: if an unramified covering $Y'$ of $Y$ (corresponding to a locally free sheaf of algebras $\sh{A}$) is such that $X\otimes_YY'$ is disconnected, then $Y'$ is also disconnected.
+In fact, $\sh{A}$ (\todo \emph{\textbf{right?}}) is then the direct sum of two non-zero sheaves of rings, and thus so too is its direct image, which is exactly $\sh{A}\otimes f_*(\sh{O}_X)=\sh{A}$.
+
+\begin{lemma}{5}
+\label{lemma5}
+  Let $X$ be a complete scheme over a field $k$, and suppose that $H^0(X,\sh{O}_X)$ is a local ring $A$, and that $A/\fk{r}(A)$ is radicial over $k$.
+  Let $\Omega$ be an algebraic closure of $k$, and let $\overline{X}=X\otimes_k\Omega$ (which is connected).
+  Pick a geometric point $\overline{a}$ of $\overline{X}$ that projects to the geometric point $a$ of $X$.
+  Then we have an exact sequence
+  \[
+    e
+    \to \pi_1(\overline{X},\overline{e})
+    \to \pi_1(X,a)
+    \to \pi_1(k,b)
+    \to e
+  \]
+  (where $\pi_1(k,b)$ is the Galois group of $\Omega$ over $k$).
+\end{lemma}
+
+The fact that the first homomorphism is injective has already been shown with \cref{lemma1} and \cref{lemma2};
+the exactness in the middle follows from \cref{lemma3};
+finally, the surjectivity of the last homomorphism (which is the only thing to rely on the fact that $A/\fk{r}(A)$ is radicial) follows from \cref{lemma4}.
+
+\begin{proposition}{4}
+\label{proposition4}
+  Let $f\colon X\to Y$ be a proper flat morphism such that, for all $y\in Y$, the algebra $H^0(f^{-1}(y),\sh{O}_{f^{-1}(y)})$ is separable over the residue field $\kres(y)$ (which is the case, for example, if $f^{-1}(y)$ is a \emph{separable scheme} over $\kres(y)$, i.e. reduced and such that the fields corresponding to its irreducible components are separable extensions of $\kres(y)$).
+  Then the covering
+\oldpage{182-21}
+  $Y'$ of $Y$ associated to $f_*(\sh{O}_X)$ is unramified.
+\end{proposition}
+
+The proof is easy, thanks to \cref{theorem2}.
+
+This proposition, combined with \cref{lemma1}, practically reduces the homotopical study of proper and flat morphisms (with separable fibres) to the case where $f_*(\sh{O}_X)=\sh{O}_Y$ (since, using Stein factorisation, we can replace $Y$ by $Y'$).
+
+\begin{remark}
+  A flat morphism of finite type whose fibres are separable (resp. simple) schemes is said to be \emph{separable} (resp. \emph{simple}).
+  We show that, if $f$ is flat and if $f^{-1}(y)$ is separable (resp. simple) then there exists a neighbourhood of $f^{-1}(y)$ on which $f$ is separable (resp. simple).
+  The same result holds true for ``absolutely normal'' (this is \emph{Bertini's theorem}).
+\end{remark}
+
+Let $f\colon X\to Y$ be a proper morphism such that
+
 
 \todo\textbf{\emph{[Comp.] Page~23, line~12, 1st line of Corollary~5: add ``With $X$ and $Y$ proper over $k$.''}}
 
