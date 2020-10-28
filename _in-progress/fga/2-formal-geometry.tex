@@ -866,6 +866,42 @@ This proposition, combined with \cref{lemma1}, practically reduces the homotopic
 \end{remark}
 
 Let $f\colon X\to Y$ be a proper morphism such that
+\[
+\label{equationi}
+  f_*(\sh{O}_X) = \sh{O}_Y
+\tag{i}
+\]
+and let $X'$ be a finite scheme over $X$.
+Let $Y'$ be the covering of $Y$ corresponding to the Stein factorisation of $X'\to Y$ (cf. \cref{theorem5}).
+Let $y\in Y$, so that the set of connected components of the fibre $F'$ of $X'$ over $y$ can be identified with the set of points $y'\in Y'$ over $y$ (\cref{theorem5}).
+Consider the evident morphism
+\[
+\label{equation*}
+  X'\to X\times_Y Y'
+\tag{$*$}
+\]
+induced by the natural morphisms $X'\to X$ and $X\to Y'$;
+this will be an isomorphism whenever $X'$ is of the form $X\times_Y Y''$, where $Y''$ is an unramified covering of $Y$, and then $Y'$ will be exactly $Y''$, and equation~\cref{equation*} will be the identity.
+We wish to precisely give the conditions for which $X'$ is of the form that we have just indicated, i.e. such that $Y'$ is unramified and equation~\cref{equation*} is an isomorphism.
+For this, we introduce the fibre $F$ of $X$ at $y$, which is a proper scheme over $\kres(y)$, for which $F'$ is a cover (an unramified one if $X$ is).
+Let $F'_1$ be a connected component of $F'$ corresponding to a point $y'_1$ of $Y'$ over $y$.
+Suppose further that
+\begin{enumerate}[(i)]
+\setcounter{enumi}{1}
+  \item $X'$ is unramified over $X$ at the points of $F'_1$ (and thus $F'_1$ is an unramified cover of $F$), and
+  \item $F'_1$ is a geometrically trivial covering of $F$ (cf. \cref{lemma3}).
+\end{enumerate}
+
+\begin{theorem}{11}
+\label{theorem11}
+  Under these conditions, there exists an open neighbourhood $U'$ of $y'_1$
+\oldpage{182-22}
+  in $Y'$ such that equation~\cref{equation*} is an isomorphism over $U'$.
+  Furthermore, $Y'$ is unramified at $y'_1$ over $Y$ (but can be ramified at other points $y'$ of $Y'$ over $y$).
+\end{theorem}
+
+Of course, conditions~(ii) and (iii) are also necessary for the conclusion of the theorem.
+The proof of the theorem is easy, thanks to \cref{lemma3} and \cref{theorem2}.
 
 
 \todo\textbf{\emph{[Comp.] Page~23, line~12, 1st line of Corollary~5: add ``With $X$ and $Y$ proper over $k$.''}}

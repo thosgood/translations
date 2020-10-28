@@ -152,7 +152,7 @@ Note that we have included any changes made in the Errata.
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
 
-- **(19/28)** Grothendieck, A. "Géométrie formelle et géométrie algébrique". (FGA 2)
+- **(21/28)** Grothendieck, A. "Géométrie formelle et géométrie algébrique". (FGA 2)
   <br/>
   _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
   <br/>
