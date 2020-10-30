@@ -942,10 +942,42 @@ In, \hyperref{theorem11corollary3}[Corollary~3] is equivalent to the following s
 
 \begin{corollary}{4}
 \label{theorem11corollary4}
+  Let $f\colon X\to Y$ be a proper and separable morphism such that $f_*(\sh{O}_X)=\sh{O}_Y$.
+  Let $\overline{F}$ be the geometric fibre of a point $y\in Y$, and pick a geometric point in $\overline{F}$, which, by the morphisms $\overline{F}\to X\to Y$, gives geometric points in $X$ and $Y$; we take these three points as base points for the fundamental groups of $\overline{F}$, $X$, and $Y$, respectively.
+  Under these conditions, we have the exact sequence
+  \[
+    \boxed{\pi_1(\overline{F}) \to \pi_1(X) \to \pi_1(Y) \to 0.}
+  \]
 \end{corollary}
 
+From this, we easily deduce the two following statements of Serre--Lang, with all normality hypotheses removed:
 
-\todo\textbf{\emph{[Comp.] Page~23, line~12, 1st line of Corollary~5: add ``With $X$ and $Y$ proper over $k$.''}}
+\begin{corollary}{5}
+\label{theorem11corollary5}
+  Let $X$ and $Y$ be connected schemes that are proper over a field $k$, and suppose that the reduced scheme $X_\red$ is separable over $k$ (which is automatically true if $k$ is perfect) and complete.
+  Pick a geometric point $a$ (resp. $b$) in $X$ (resp. $Y$); this gives a geometric point $c=(a,b)$ in $X\times_kY$, and a natural morphism
+  \[
+    \pi_1(X\times_kY,c) \to \pi_1(X,a)\times\pi_1(Y,b)
+  \]
+  (induced by the functorial morphisms from $\pi_1(X\times Y,c)$ to $\pi_1(X,a)$ and $\pi_1(Y,b)$).
+  This morphism is injective, and further bijective if $k$ is algebraically closed.
+\end{corollary}
+
+(The surjectivity in the above claim is almost trivial).
+We thus deduce, with Serre--Lang:
+
+\begin{corollary}{6}
+\label{theorem11corollary6}
+  Let $X$ be a connected algebraic scheme over an algebraically closed field $k$, and let $K$ be an algebraically closed extension of $k$.
+  Then the fundamental groups of $X$ and $X\times_kK$ are the same, i.e. every unramified covering of the latter scheme is given by extension of scalars of an unramified covering (which is unique up to isomorphism) of $X$.
+\end{corollary}
+
+\begin{remarks}
+  \begin{enumerate}[1)]
+    \item Using \cref{proposition4}, we see that the hypothesis that $f_*(\sh{O}_X)=\sh{O}_Y$ in \hyperref[theorem11corollary4]{Corollary~4} is not essential.
+      In the general case,
+  \end{enumerate}
+\end{remarks}
 
 
 %% Bibliography %%
