@@ -979,8 +979,54 @@ We thus deduce, with Serre--Lang:
       In the general case, instead of putting the trivial group $e$ after $\pi_1(Y)$, one must continue by $\pi_0(\overline{F})\to\pi_0(X)\to\pi_0(Y)\to e$,
 \oldpage{182-24}
       as in algebraic topology.
+    \item In general, we cannot say anything at the moment about the kernel of $\pi_1(\overline{F})\to\pi_1(X)$, although it should involve a $\pi_2(Y)$.
+      It seems, however, that we should be able to prove that $\pi_1(\overline{F})\to\pi_1(X)$ is \emph{injective} if $Y$ is the spectrum of a local ring $A$, by appealing to \cref{theorem12} below (which shows that this is the case if $A$ is \emph{complete}).
   \end{enumerate}
 \end{remarks}
+
+\Cref{theorem11} used only \cref{theorem1} and \cref{theorem2}.
+We will now use \cref{theorem3}, along with the following elementary lemma:
+
+\begin{lemma}{6}
+\label{lemma6}
+  Let $X$ be a scheme, and $X_0$ the corresponding reduced scheme (i.e. where we have killed all the nilpotent elements).
+  Then every unramified covering $X'_0$ of $X_0$ is induced by an unramified covering $X'$ of $X$, determined up to isomorphism.
+\end{lemma}
+
+This lemma, which is of a purely local nature, plays a role analogous to that of \cref{theorem8} here, in the theory of modules.
+Combining it with the existence theorem (\cref{theorem3}), we obtain:
+
+\begin{theorem}{12}
+\label{theorem12}
+  Let $A$ be a complete local Noetherian ring with residue field $k$.
+  Let $X$ be a proper scheme over $A$.
+  Then every unramified covering $X'_0$ of $X_0=X\otimes_Ak$ is induced by an unramified covering $X'$ of $X$, unique up to isomorphism.
+\end{theorem}
+
+In other words:
+
+\begin{corollary}{1}
+\label{theorem12corollary1}
+  Pick a geometric point in $X_0$ as the base point for the fundamental groups of $X_0$ and $X$.
+  Then the canonical homomorphism $\pi_1(X_0)\to\pi_1(X)$ is an \emph{isomorphism}.
+\end{corollary}
+
+Applying \cref{lemma5} to $X_0$ (supposing that $H^0(X_0,\sh{O}_{X_0})=k$, for simplicity), and noting that, since $A$ is complete, the unramified extensions of $A$ correspond to unramified extensions of its residue field, i.e. $\pi_1(Y)=\pi_1(k)$ (where $Y=\Spec(A)$).
+We obtain the exact sequence:
+\[
+  e \to \pi_1(\overline{X_0}) \to \pi_1(X) \to \pi_1(Y) \to e.
+\]
+
+\begin{corollary}{2}
+\label{theorem12corollary2}
+  Let $f\colon X\to Y$ be a proper flat morphism, and let $y_1$ be a point of $Y$, and $y_0$ a specialisation of $y_1$.
+  Consider the corresponding ``geometric'' fibres $\overline{X_1}$ and $\overline{X_0}$, and suppose that $\overline{X_0}$ is separable and connected (which implies that $\overline{X_1}$ satisfies the same conditions).
+  Then we can find a group homomorphism $\pi_1(X_1)\to\pi_1(X_0)$, defined up to inner automorphism.
+  Further, this homomorphism is \emph{surjective}.
+\end{corollary}
+
+\oldpage{182-25}
+
 
 
 %% Bibliography %%
