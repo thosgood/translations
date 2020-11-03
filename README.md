@@ -70,6 +70,14 @@ All of the following are by A. Grothendieck.
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215)
 
+2. Grothendieck, A. "Géométrie formelle et géométrie algébrique". (FGA 2)
+  <br/>
+  _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/fga/2-formal-geometry.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F2-formal-geometry.tex&command=pdflatex&trackId=1603489321895)
+
 <!-- 3. "Technique de descente et théorèmes d'existence en géométrie algébrique."
     1. "Généralités. Descente par morphismes fidèlement plats".
         <br/>
@@ -151,14 +159,6 @@ Note that we have included any changes made in the Errata.
 # In progress
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
-
-- **(24/28)** Grothendieck, A. "Géométrie formelle et géométrie algébrique". (FGA 2)
-  <br/>
-  _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
-  <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/fga/2-formal-geometry.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Ffga%2F2-formal-geometry.tex&command=pdflatex&trackId=1603489321895)
 
 - **(8/19)** Deligne, P. "A quoi servent les motifs?".
   <br/>

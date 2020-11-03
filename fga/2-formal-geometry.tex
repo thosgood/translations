@@ -208,7 +208,7 @@ The coherent sheaves of modules on $X$ are thus also the sheaves which are local
 \label{section2}
 
 Let $X$ be a scheme, and $X'$ a closed subset of $X$.
-Then there exists a coherent subsheaf $\sh{J}$ of $\sh{O}_X$ such that $X'=\supp\sh{O}_X/\sh{J}$ (and there even exists a larger one \todo?).
+Then there exists a coherent subsheaf $\sh{J}$ of $\sh{O}_X$ such that $X'=\supp\sh{O}_X/\sh{J}$ (and there even exists a largest such one).
 Endowing $X'$ with the sheaf $\sh{O}_X/\sh{J}$ makes $X'$ a scheme, denoted $X_0$;
 such a scheme is called a \emph{closed subscheme of $X$}.
 We can also, for any $n$, consider $X'$ endowed with $\sh{O}_X/\sh{J}^{n+1}$, denoted $X_n$, which is a closed subprescheme of $X$ whose underlying set is again $X'$, but with a different structure sheaf, namely $\sh{O}_{X_n}=\sh{O}_X/\sh{J}^{n+1}$.
@@ -335,7 +335,7 @@ We note, however, an interesting case where a formal scheme is algebraisable:
 
 \begin{theorem}{4}
 \label{theorem4}
-  Let $A$ be a complete local Noetherian ring, with residue field $k$, and let $\fk{X}$ be a proper formal scheme over $A$ (endowed with its \todo $\Gamma(A)$-adic topology).
+  Let $A$ be a complete local Noetherian ring, with residue field $k$, and let $\fk{X}$ be a proper formal scheme over $A$ (endowed with its $\mathfrak{r}(A)$-adic topology).
   We suppose that
   \begin{enumerate}[i.]
     \item the local rings of $\sh{O}_{\fk{X}}$ are \emph{flat} $A$-modules, or, equivalently, that, if we endow $\sh{O}_{\fk{X}}$ and $A$ with the filtration given by powers of the maximal ideal of $A$, then the associated graded algebras satisfy
@@ -398,7 +398,7 @@ We thus immediately deduce the following result, due to Chevalley in the ``geome
 If this is so, then $f'$ is effectively an isomorphism, by the above.
 
 Let $f\colon X\to Y$ be a morphism that is not necessarily proper, but suppose that $X$ is contained in some proper $Y$-scheme $\overline{f}\colon\overline{X}\to Y$ as an open subset (which is the case if, in particular, $\overline{f}$ is quasi-projective).
-Applying \hyperref[theorem5corollary1]{Corollary~1}, we see that $\overline{f'}$ (\todo \textbf{or $\overline{f}'$?}) induces an isomorphism from the set $U$ of points of $X$ that are isolated in their fibre to an open subset of $Y'$ (and that $U$ is indeed an open subset).
+Applying \hyperref[theorem5corollary1]{Corollary~1}, we see that $\overline{f'}$ induces an isomorphism from the set $U$ of points of $X$ that are isolated in their fibre to an open subset of $Y'$ (and that $U$ is indeed an open subset).
 We thus deduce the following global version of Zariski's ``main theorem'':
 
 \begin{theorem}{6}
@@ -588,7 +588,7 @@ Using these results, we immediately obtain the following statements:
   Let $X_0$ be a simple scheme of finite type over $k$, and let $A$ be a local Artinian ring with residue field $k$ and maximal ideal $\fk{m}$.
   Suppose that $\fk{m}^{n+1}=0$.
   Let $A_{n-1}=A/\fk{m}^n$, and let $X_{n-1}$ be a flat $A_{n-1}$-scheme such that $X_{n-1}\otimes_Ak=X_0$.
-  Then the set of classes (up to isomorphism, inducing the identity on $X_{n-1}$ \todo?) of flat $A$-schemes $X_n$ such that $X\otimes_AA_{n-1}=X_{n-1}$ is either empty, or a homogeneous principal space under $H^1(X_0,\fk{G}_{X_0/k})\otimes_k\fk{m}^n$.
+  Then the set of classes (up to an isomorphism that induces the identity on $X_{n-1}$) of flat $A$-schemes $X_n$ such that $X\otimes_AA_{n-1}=X_{n-1}$ is either empty, or a homogeneous principal space under $H^1(X_0,\fk{G}_{X_0/k})\otimes_k\fk{m}^n$.
 \end{corollary}
 
 (Note that, in general, there is no privileged choice of origin in the latter homogeneous principal space, since there is no privileged way of lifting $X_{n-1}$ to $X_n$).
@@ -604,7 +604,7 @@ Using these results, we immediately obtain the following statements:
 \begin{theorem}{9}
 \label{theorem9}
   Let $k$ be a field, and $X_0$ a \emph{simple} scheme of finite type over $k$.
-  For every complete locally Noetherian ring $A$ with residue field $k$, let $F(A)$ be the set of classes (up to isomorphism, inducing the identity on $X_0$ \todo)
+  For every complete locally Noetherian ring $A$ with residue field $k$, let $F(A)$ be the set of classes (up to an isomorphism that induces the identity on $X_0$)
 \oldpage{182-14}
   of formal schemes $\fk{X}$ over $A$, of finite type, and flat over $A$, such that $X\otimes_Ak=X_0$.
   With this notation:
@@ -617,7 +617,7 @@ Using these results, we immediately obtain the following statements:
 \begin{corollary}{1}
 \label{theorem9corollary1}
   Suppose that $X_0$ is proper over $k$.
-  Under condition~(i) of \cref{theorem9}, for all $A$, there exists at most (up to isomorphism, inducing the identity on $X_0$ \todo) one scheme $X$ that is proper, flat over $A$, and such that $X\otimes_Ak=X_0$.
+  Under condition~(i) of \cref{theorem9}, for all $A$, there exists at most (up to an isomorphism that induces the identity on $X_0$) one scheme $X$ that is proper, flat over $A$, and such that $X\otimes_Ak=X_0$.
 \end{corollary}
 
 We can use \hyperref[theorem3corollary2]{Corollary~2} of \cref{theorem3}.
@@ -698,7 +698,7 @@ in certain cases from this, and, in particular, construct, for every integer $g$
 \begin{remark}
   \emph{[Comp.]}
   We note that Mumford has recently constructed schemes of modules for the curves of genus~$g$ (cf. \emph{Mumford--Tate seminar}, Harvard University, 1961--62).
-  \Cref{theorem10} also proves that the ``Jacobi schemes of level~$n$\todo'' from the theory of modules are non-singular (and even simple over $\underline{\ZZ}$).
+  \Cref{theorem10} also proves that the ``level~$n$ Jacobi schemes'' from the theory of modules are non-singular (and even simple over $\underline{\ZZ}$).
 \end{remark}
 
 We continue to use the setting and notation of \cref{theorem9}, and now suppose that $A$ is a local algebra of finite rank over $k$, which is assumed to be algebraically closed, for simplicity.
@@ -767,7 +767,7 @@ We restrict ourselves to saying that it gives rise to a \emph{Galois theory} mod
 More precisely, we define a \emph{geometric point} of a scheme $X$ to be a morphism $a$ from the spectrum $\xi$ of an algebraically closed field $\Omega$ to $X$, i.e. the data of an algebraically closed extension of the residue field $\kres(x)$ of a point $x=|a|$ of $X$ (called the \emph{locality} of the geometric point $a$).
 If $X'$ is an unramified covering of $X$, then we can associate to it the set $E_a(X')$ of ``geometric points of $X'$ over $a$'', i.e. the set of pairs consisting of an $x'\in X'$ over $x$ and a $\kres(x)$-homomorphism to $\Omega$.
 We thus obtain (for fixed $(X,a)$) a functor $F(X,a)$ from the category $R(X)$ of unramified coverings $X'$ of $X$ to the category of finite sets.
-If $X$ is connected, then the pair given by $R(X)$ and $F(X,a)$ has all the formal properties necessary in order to be isomorphic to the analogous pair defined by a suitable totally disconnected compact topological group $\pi$ (i.e. a projective limit of finite groups): we take the category $\cat{C}(\pi)$ of finite sets on which $\pi$ acts \todo continuously, and the identity functor $F(\pi)(E)=E$ from this category to the category of finite sets.
+If $X$ is connected, then the pair given by $R(X)$ and $F(X,a)$ has all the formal properties necessary in order to be isomorphic to the analogous pair defined by a suitable totally disconnected compact topological group $\pi$ (i.e. a projective limit of finite groups): we take the category $\cat{C}(\pi)$ of finite sets on which $\pi$ acts continuously, and the identity functor $F(\pi)(E)=E$ from this category to the category of finite sets.
 The group $\pi$ is also determined up to canonical isomorphic by the condition that $(\cat{C}(\pi),F(\pi))$ is isomorphic to a given pair.
 To be precise, $\pi$ is called the \emph{fundamental group of the connected scheme $X$ at the geometric point $a$}, and we denote it by $\pi_1(X,a)$.
 If $X$ is not connected, then we can replace it by the connected component containing $x=|a|$.
@@ -799,13 +799,13 @@ It follows, in particular, from these two lemmas that, for \emph{every} algebrai
 \label{lemma3}
   Let $X$ be a complete scheme over a local Artinian ring $A$, such that $H^0(X,\sh{O}_X)=A$.
   Let $X'$ be an unramified covering of $X$, and let $A'=H^0(X',\sh{O}_{X'})$, which is thus a ring that is finite over $A$ (and which may a priori be ramified over $A$).
-  Let $X_0$ and $X'_0$ be the reduced subschemes associated to $X$ and $X'$, respectively (obtained by \todo by the sheaves of nilpotent elements in $\sh{O}_X$ and $\sh{O}_{X'}$, respectively).
+  Let $X_0$ and $X'_0$ be the reduced subschemes associated to $X$ and $X'$, respectively (obtained by splitting by the sheaves of nilpotent elements in $\sh{O}_X$ and $\sh{O}_{X'}$, respectively).
   Let $k$ be a subfield of $A/\fk{r}(A)$ over which $A/\fk{r}(A)$ is finite (so $X_0$ is a complete algebraic scheme over $k$, and $X'_0$ is an unramified covering).
   Finally, let $\Omega$ be an algebraically closed extension of $k$, and consider the unramified covering $X'_0\otimes_k\Omega$ of $X_0\otimes_k\Omega$.
   Then the following two conditions are equivalent:
 \oldpage{182-20}
   \begin{enumerate}[i.]
-    \item $X'_0\otimes_k\Omega$ is complete \todo over $X_0\otimes_k\Omega$;
+    \item $X'_0\otimes_k\Omega$ is completely decomposed over $X_0\otimes_k\Omega$;
     \item the natural morphism $X'\to X\otimes_AA'$ is an isomorphism.
   \end{enumerate}
 
@@ -826,7 +826,7 @@ When condition~(ii) is satisfied, we say that the unramified covering $X'$ of $X
 \end{lemma}
 
 What we need to show is effectively the following: if an unramified covering $Y'$ of $Y$ (corresponding to a locally free sheaf of algebras $\sh{A}$) is such that $X\otimes_YY'$ is disconnected, then $Y'$ is also disconnected.
-In fact, $\sh{A}$ (\todo \emph{\textbf{right?}}) is then the direct sum of two non-zero sheaves of rings, and thus so too is its direct image, which is exactly $\sh{A}\otimes f_*(\sh{O}_X)=\sh{A}$.
+In fact, $\sh{A}$ is then the direct sum of two non-zero sheaves of rings, and thus so too is its direct image, which is exactly $\sh{A}\otimes f_*(\sh{O}_X)=\sh{A}$.
 
 \begin{lemma}{5}
 \label{lemma5}
@@ -1029,7 +1029,7 @@ We obtain the exact sequence:
 We might hope that this homomorphism is always \emph{bijective}.
 Unfortunately, this is not the case in general if $\kres(y_0)$ is of characteristic~$>0$.
 We will, however, obtain below a \todo of the kernel of this homomorphism (at least in the case where $\overline{X_0}$ is simple), implying that, if $\kres(y_0)$ is of characteristic~$0$, then the above homomorphism is bijective (which is a result that we can also prove by transcendentality).
-At the very least, we already have, in any case, a \todo of $\pi_1$ by \todo.
+At the very least, we already have, in any case, a \todo of $\pi_1$ by a special fibre, using that given by a generic fibre.
 Using, for example, the fact that an algebraic curve in characteristic~$p$ lifts to a curve in characteristic~$0$ (\hyperref[theorem9corollary4]{Corollary~4} of \cref{theorem9}), we obtain, by transcendentality:
 
 \begin{corollary}{3}
@@ -1053,14 +1053,14 @@ given an unramified covering $\overline{X'_1}$ of $\overline{X_1}$ (which as can
 A priori, the given covering comes, by extension of scalars, from an unramified covering $X'_1$ of $X_1\otimes_KK'$, where $K'$ is a finite extension of the algebraic closure $\overline{K}$ of the field of fractions $K$ of $V$;
 if $X'_1$ were Galois, of group $G$, then we could choose $X'_1$ to also be Galois of group $G$.
 Thus: \emph{for $X'_1\otimes_{K'}\overline{K}=\overline{X'_1}$ to come from an unramified covering of $X_0$, it is necessary and sufficient for there to exists a finite extension $K''$ of $K'$ in $\overline{K}$ such that $X''_1=X'_1\otimes_{K'}K''$ is of the form $X''\otimes_{V''}K''$, where $V''$ is the normal closure of $V$ in $K''$, and where $X''$ is an unramified covering of $X\otimes_V V''$.}
-Suppose, for example, that $X_0$ is absolutely normal, whence $X\otimes_V V''$ is normal (since it is flat over $V''$ and has normal \todo), and its field of functions is identical to $K''(X_1)$, which is the field of functions of
+Suppose, for example, that $X_0$ is absolutely normal, whence $X\otimes_V V''$ is normal (since it is flat over $V''$ and has normal special fibre), and its field of functions is identical to $K''(X_1)$, which is the field of functions of
 \[
   X_1\otimes_K K'' = (X\otimes_VK)\otimes_KK'' = X\otimes_VK'' = (X\otimes_VV'')\otimes_{V''}K''.
 \]
 \oldpage{182-26}
-Let $L''=K''(X'_1)$ be the field of functions of $X'_1\otimes_{K'}K''$, which is a separable finite extension of $K''(X_1)$, and the above condition also implies that \emph{$L''$ is an unramified extension of the field of functions of $X\otimes_VV''$} (i.e. the \todo of $X\otimes_V V''$ in $L''$ is unramified over $X\otimes_VV''$).
-It suffices to show that $L''$ is unramified at the points of the \todo of $X\otimes_VV''$ (since it is unramified over the generic fibre $X_1\otimes_KK''$).
-If $X_0$ is now \emph{simple}, then it follows from the ``\emph{purity theorem}'' of Nagata--Zariski that it even suffices to show that $L''$ is unramified over the local ring $\sh{O}''$ of the generic point of the \todo of $X\otimes_VV''$, which is a discrete valuation ring, equal to the \todo in $K''(X_1)$ of the local ring $\sh{O}\subset K(X_1)$ of the generic point of the \todo of $X$.
+Let $L''=K''(X'_1)$ be the field of functions of $X'_1\otimes_{K'}K''$, which is a separable finite extension of $K''(X_1)$, and the above condition also implies that \emph{$L''$ is an unramified extension of the field of functions of $X\otimes_VV''$} (i.e. the normalisation of $X\otimes_V V''$ in $L''$ is unramified over $X\otimes_VV''$).
+It suffices to show that $L''$ is unramified at the points of the special fibre of $X\otimes_VV''$ (since it is unramified over the generic fibre $X_1\otimes_KK''$).
+If $X_0$ is now \emph{simple}, then it follows from the ``\emph{purity theorem}'' of Nagata--Zariski that it even suffices to show that $L''$ is unramified over the local ring $\sh{O}''$ of the generic point of the normalisation of $X\otimes_VV''$, which is a discrete valuation ring, equal to the normalisation in $K''(X_1)$ of the local ring $\sh{O}\subset K(X_1)$ of the generic point of the special fibre of $X$.
 We thus obtain:
 
 \begin{corollary}{5}
@@ -1068,7 +1068,68 @@ We thus obtain:
   Under the above conditions, and with the above notation, for the unramified covering $X'_1\otimes_{K'}\overline{K}$ of $\overline{X_1}=X_1\otimes_K\overline{K}$ to come from an unramified covering of $\overline{X_0}$, it is necessary and sufficient for there to exist a finite sub-extension $K''$ of $\overline{K}/K'$ such that $K''(X'_1)$ is unramified over the discrete valuation ring $\sh{O}''\subset K''(X_1)$.
 \end{corollary}
 
-Now note that
+Now note that $\sh{O}''$ is the normalisation in $K''(X_1)$ of the discrete valuation ring $\sh{O}'\subset K'(X_1)$ (which is the normalisation of $\sh{O}$ in $K'(X_1)$), and that $\sh{O}'$ contains the normalisation $V'$ of $V$ in $K'$, with a uniformiser $u$ of $V'$ being also a uniformiser of $\sh{O}'$.
+Suppose now that $X'_1$ is Galois, with Galois group $G$ \emph{of order $n$, coprime to the characteristic~$p$ of $\kres(y_0)$} (which is also the characteristic of the residue field of $\sh{O}'$).
+Then $K'(X_1')$ is ``tamely ramified'' over $\sh{O}'$, from which it easily follows (via ``\emph{Abhyankar's lemma}'') that, if we adjoin an $n$-th root $v$ of a uniformiser of $\sh{O}'$, then it becomes unramified over the normalisation of $\sh{O}'$ in $K'(X_1)(v)$.
+But we can take $v$ to be an $n$-th root of a uniformiser of $V'$, which shows that the condition of \hyperref[theorem12corollary5]{Corollary~5} is satisfied.
+(This idea of using Abhyankar's lemma and the purity theorem was given to me by Serre).
+To express the result we thus obtain, we introduce, for every totally disconnected compact group $\pi$, the quotient $\overline{\pi}$ of $\pi$ by the closed subgroup generated by its Sylow $p$-sub-groups, i.e. the projective limit of the discrete quotient groups of $\pi$ that are of order coprime to $p$.
+With this notation, we obtain:
+
+\begin{theorem}{13}
+\label{theorem13}
+  Let $f\colon X\to Y$ be a proper flat morphism, $y_1$ a point of $Y$, and $y_0$ a specialisation of $y_1$.
+  Suppose that $\overline{X_0}$ is connected and simple.
+  Then the homomorphism $\overline{\pi_1}(\overline{X_1})\to\overline{\pi_1}(\overline{X_0})$ induced by the
+\oldpage{182-27}
+  surjective homomorphism from \hyperref[theorem12corollary2]{Corollary~2} of \cref{theorem12} is an \emph{isomorphism}.
+\end{theorem}
+
+In other words:
+
+\begin{corollary}{1}
+\label{theorem13corollary1}
+  The classification of unramified Galois coverings, of Galois group of order coprime to the characteristic~$p$ of $\kres(y_0)$, is the same for $\overline{X_0}$ and for $\overline{X_1}$.
+\end{corollary}
+
+In particular, if $\kres(y_0)$ is of characteristic~$0$, then we see, algebraically, that $\pi_1(\overline{X_1})\to\pi_1(\overline{X_0})$ is bijective.
+
+We finally point out that the techniques utilised also give the following result, which is more general than \cref{theorem13}:
+
+\begin{theorem}{14}
+\label{theorem14}
+  Let $f\colon X\to Y$ be a proper simple morphism, and let $D$ be a closed subscheme of $X$ that is simple over $Y$, and of codimension~$1$ at all points.
+  Given a fibre $Z=f^{-1}(z)$ of $f$, let $Z'=Z\setminus Z\cap D$, and let $\pi_1^\mathrm{t}(\overline{Z'})$ be the quotient of the fundamental group $\pi_1(Z')$ that classifies the unramified coverings of $\overline{Z'}$ that are ``tamely ramified'' over $\overline{Z\cap D}$.
+  Let $y_0$ and $y_1$ be as in \cref{theorem13}.
+  Then there exists a \emph{surjective} homomorphism (defined up to inner automorphism) $\pi_1^\mathrm{t}(\overline{X'_1})\to\pi_1^\mathrm{t}(\overline{X'_0})$, and the corresponding homomorphism $\overline{\pi_1^\mathrm{t}}(\overline{X'_1})\to\overline{\pi_1^\mathrm{t}}(\overline{X'_0})$ is an isomorphism.
+\end{theorem}
+
+From this we obtain corresponding variants of the corollaries of \cref{theorem13}, and of \hyperref[theorem12corollary4]{Corollary~4} of \cref{theorem12}.
+Similarly, using \hyperref[theorem9corollary3]{Corollary~3} of \cref{theorem9}, we obtain, transcendentally:
+
+\begin{corollary}{1}
+\label{theorem14corollary1}
+  Let $X_0$ be the scheme of a complete simple curve over an algebraically closed field of arbitrary characteristic, and let $S=(s_i)_{1\leq i\leq n}$ be a finite subset of $X_0$ with $n$ elements.
+  Then $\pi_1^\mathrm{t}(X_0\setminus S)$ admits $2g+n$ topological generators, $x_i,y_i,\sigma_j$ (for $1\leq i\leq g$ and $1\leq j\leq n$), satisfying the relation
+  \[
+    \left(\prod_i x_iy_ix_i^{-1}y_i^{-1}\right)\sigma_1\ldots\sigma_n = 1,
+  \]
+  where the $\sigma_j$ are generators of the inertia groups corresponding to the $s_j$.
+  For every finite group $G$ \emph{of order coprime to the characteristic} that is generated by elements $\overline{x_i},\overline{y_i},\overline{\sigma_j}$ satisfying the above relation, there exists an unramified Galois covering of $X_0\setminus S$, of group $G$, with inertia groups at the points $s_j$ generated by the $\overline{\sigma_j}$.
+\end{corollary}
+
+If $X_0$ is of genus~$0$, and $n=3$, then we have a solution to the
+\oldpage{182-28}
+``\emph{three point problem}'', at least for Galois coverings of order coprime to the characteristic.
+(Here, \cref{theorem9} is actually useless, and it seems that we can deduce the above corollary from the particular case in question in the three point problem).
+
+\begin{remarks}
+  \begin{enumerate}[1)]
+    \item A more complete study, probably involving generalised Galois coverings of $X$, $X_0$, and $X_1$ (of eventually infinitesimal Galois group), should allow one to recover the kernel in \hyperref[theorem12corollary2]{Corollary~2} of \cref{theorem12}.
+      However, a study of coverings admitting ramifications that are not ``tame'' seems much more difficult.
+    \item \Cref{lemma6}, combined with a result of Grauert concerning the formal completion of a non-singular projective scheme along a hyperplane section (or with the theorem, as yet unproven, mentioned in Remark~2 after \cref{theorem11}), would also allow us to prove, in ``abstract'' algebraic geometry, the classical \emph{Lefschetz theorem} on the fundamental group.
+  \end{enumerate}
+\end{remarks}
 
 
 %% Bibliography %%
