@@ -1046,6 +1046,30 @@ We thus deduce, by a well-known technique using hyperplane sections:
   Then $\pi_1(X)$ admits a finite number of topological generators.
 \end{corollary}
 
+We wish to describe the kernel of the homomorphism $\pi_1(\overline{X_1})\to\pi_1(\overline{X_0})$.
+For this, we can suppose that $Y$ is the spectrum of a discrete complete valuation ring $V=\sh{O}_y$ (where $y=y_0$).
+The question is the equivalent to the following:
+given an unramified covering $\overline{X'_1}$ of $\overline{X_1}$ (which as can suppose to be Galois, if we wish), under which conditions must it come from an unramified covering of $X_0$?
+A priori, the given covering comes, by extension of scalars, from an unramified covering $X'_1$ of $X_1\otimes_KK'$, where $K'$ is a finite extension of the algebraic closure $\overline{K}$ of the field of fractions $K$ of $V$;
+if $X'_1$ were Galois, of group $G$, then we could choose $X'_1$ to also be Galois of group $G$.
+Thus: \emph{for $X'_1\otimes_{K'}\overline{K}=\overline{X'_1}$ to come from an unramified covering of $X_0$, it is necessary and sufficient for there to exists a finite extension $K''$ of $K'$ in $\overline{K}$ such that $X''_1=X'_1\otimes_{K'}K''$ is of the form $X''\otimes_{V''}K''$, where $V''$ is the normal closure of $V$ in $K''$, and where $X''$ is an unramified covering of $X\otimes_V V''$.}
+Suppose, for example, that $X_0$ is absolutely normal, whence $X\otimes_V V''$ is normal (since it is flat over $V''$ and has normal \todo), and its field of functions is identical to $K''(X_1)$, which is the field of functions of
+\[
+  X_1\otimes_K K'' = (X\otimes_VK)\otimes_KK'' = X\otimes_VK'' = (X\otimes_VV'')\otimes_{V''}K''.
+\]
+\oldpage{182-26}
+Let $L''=K''(X'_1)$ be the field of functions of $X'_1\otimes_{K'}K''$, which is a separable finite extension of $K''(X_1)$, and the above condition also implies that \emph{$L''$ is an unramified extension of the field of functions of $X\otimes_VV''$} (i.e. the \todo of $X\otimes_V V''$ in $L''$ is unramified over $X\otimes_VV''$).
+It suffices to show that $L''$ is unramified at the points of the \todo of $X\otimes_VV''$ (since it is unramified over the generic fibre $X_1\otimes_KK''$).
+If $X_0$ is now \emph{simple}, then it follows from the ``\emph{purity theorem}'' of Nagata--Zariski that it even suffices to show that $L''$ is unramified over the local ring $\sh{O}''$ of the generic point of the \todo of $X\otimes_VV''$, which is a discrete valuation ring, equal to the \todo in $K''(X_1)$ of the local ring $\sh{O}\subset K(X_1)$ of the generic point of the \todo of $X$.
+We thus obtain:
+
+\begin{corollary}{5}
+\label{theorem12corollary5}
+  Under the above conditions, and with the above notation, for the unramified covering $X'_1\otimes_{K'}\overline{K}$ of $\overline{X_1}=X_1\otimes_K\overline{K}$ to come from an unramified covering of $\overline{X_0}$, it is necessary and sufficient for there to exist a finite sub-extension $K''$ of $\overline{K}/K'$ such that $K''(X'_1)$ is unramified over the discrete valuation ring $\sh{O}''\subset K''(X_1)$.
+\end{corollary}
+
+Now note that
+
 
 %% Bibliography %%
 
