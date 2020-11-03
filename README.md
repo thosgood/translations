@@ -70,7 +70,7 @@ All of the following are by A. Grothendieck.
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=fga%2F1-coherent-duality.tex&command=pdflatex&trackId=1596585433215)
 
-2. Grothendieck, A. "Géométrie formelle et géométrie algébrique". (FGA 2)
+2. "Géométrie formelle et géométrie algébrique". (FGA 2)
   <br/>
   _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
   <br/>
