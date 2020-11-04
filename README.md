@@ -13,7 +13,7 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
 ## The Grothendieck trilogy
 
 - **EGA**: see [github.com/ryankeleti/ega](https://github.com/ryankeleti/ega)
-- **FGA**: see below, under "[Séminaire Bourbaki](#extracts-195792-fondements-de-la-géométrie-algébrique)";
+- **FGA**: see below, under "[Séminaire Bourbaki, Extracts](#extracts-195792-fondements-de-la-géométrie-algébrique)";
 - **SGA**: "coming soon&trade;"
 
 ---
@@ -55,7 +55,7 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
 
 ## Séminaire Bourbaki
 
-### Extracts (1957--92), "Fondements de la Géométrie Algébrique"
+### Extracts (1957--62), "Fondements de la Géométrie Algébrique"
 
 A PDF copy of the original notes can be found at [The Grothendieck Circle](https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf).
 We have included any comments and errata from the May 1962 "Commentaires" (_Séminaire Bourbaki_ **14**, 1961--62, Complément).
@@ -146,13 +146,13 @@ Note that we have included any changes made in the Errata.
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
 
-3. "Sur le foncteur Hom(X,Y) en théorie simpliciale" (H. Cartan).
+<!-- 3. "Sur le foncteur Hom(X,Y) en théorie simpliciale" (H. Cartan).
 
 4. "Théorie des fibrés principaux" (H. Cartan).
 
 5. "Les singularités des applications différentiables" (A. Haefliger).
 
-6. "Un théorème de Thom sur les singularités des applications différentiables" (A. Haefliger and A. Kosinski)
+6. "Un théorème de Thom sur les singularités des applications différentiables" (A. Haefliger and A. Kosinski) -->
 
 
 
