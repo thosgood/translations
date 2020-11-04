@@ -93,7 +93,9 @@
 \newcommand{\sbullet}{{\mathbin{\vcenter{\hbox{\scalebox{.5}{$\bullet$}}}}}}
 \newcommand{\id}{\mathrm{Id}}
 \newcommand{\CC}{\mathbb{C}}
+\newcommand{\NN}{\mathbb{N}}
 \newcommand{\dd}{\mathrm{d}}
+\newcommand{\pr}{\mathrm{pr}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -714,7 +716,7 @@ It is well known that:
 \begin{theorem}{2.17}
 \label{I.2.17}
   Let $X$ be a complex-analytic variety.
-  Then the following functors are equivalences of categories, quasi-inverse to one another, between the category of complex local systems on $X$ and the category of holomorphic vector bundles with on $X$ with integrable connections (with the morphisms being the horizontal morphisms of vector bundles):
+  Then the following functors are quasi-inverse to one another, and thus give an equivalence between the category of complex local systems on $X$ and the category of holomorphic vector bundles with on $X$ with integrable connections (with the morphisms being the horizontal morphisms of vector bundles):
   \begin{enumerate}[a)]
     \item the complex local system $V$ is sent to $\sh{V}=\sh{O}\otimes V$ endowed with its canonical connection;
     \item the holomorphic vector bundle $\sh{V}$ endowed with its integrable connection is sent to the subsheaf $V$ of $\sh{V}$ consisting of horizontal sections (i.e. those $v$ such that $\nabla v=0$).
@@ -773,9 +775,88 @@ From this, the holomorphic Poincar\'{e} lemma gives the following:
 \begin{definition}{2.21}
 \label{I.2.21}
   \begin{enumerate}[(i)]
-    \item Let
+    \item Let $f\colon X\to S$ be a smooth morphism of schemes, and $\sh{V}$ a quasi-coherent sheaf on $X$.
+      A \emph{relative connection} on $\sh{V}$ is an $f^*\sh{O}_S$-linear sheaf morphism
+      \[
+        \nabla\colon \sh{V} \to \Omega_{X/S}^1(\sh{V})
+      \]
+      (called the \emph{covariant derivative} defined by the connection) that identically satisfies, for any local section $f$ (resp. $v$) of $\sh{O}_X$ (resp. $\sh{V}$),
+      \[
+        \nabla(fv) = f\cdot\nabla v + \dd f\cdot v.
+      \]
+    \item Given $\sh{V}$ endowed with a relative connection, there exists exactly one system of $f^*\sh{O}_S$-homomorphisms of sheaves
+      \[
+        \nabla^{(p)}\colon \Omega_{X/S}^p(\sh{V}) \to \Omega_{X/S}^{p+1}(\sh{V})
+      \]
+      that satisfies \cref{I.2.10.4} and is such that $\nabla^{(0)}=\nabla$.
+\oldpage{14}
+    \item The \emph{curvature} of a connection is defined by
+      \[
+        R = \nabla^{(1)}\nabla^{(0)} \in \shHom(\sh{V},\Omega_{X/S}^2(\sh{V})) \cong \Omega_{X/S}^2(\shEnd(\sh{V})).
+      \]
+      The curvature satisfies the Ricci identity \cref{I.2.12.2} and the Bianchi identity \cref{I.2.12.3}.
+    \item An \emph{integrable connection} is a connection with zero curvature.
+    \item The \emph{de Rham complex} defined by an integrable connection is the complex $(\Omega_{X/S}^p(\sh{V}),\nabla)$.
   \end{enumerate}
 \end{definition}
+
+\begin{env}{2.22}
+\label{I.2.22}
+  Let $f\colon X\to S$ be a \emph{smooth} morphism of complex analytic spaces;
+  by hypothesis, $f$ is thus locally (in the domain) isomorphic to a projection $\pr_2\colon\CC^n\times S\to S$ (for some $n\in\NN$).
+  A \emph{local relative system} on $X$ is a sheaf of $f^*\sh{O}_S$-modules that is locally isomorphic to the sheaf-theoretic inverse image of a coherent analytic sheaf on $S$.
+  If $\sh{V}$ is a coherent analytic sheaf on $X$, then a \emph{relative connection} on $\sh{V}$ is an $f^*\sh{O}_S$-linear homomorphism
+  \[
+    \nabla\colon \sh{V} \to \Omega_{X/S}^1(\sh{V})
+  \]
+  that identically satisfies, for any local section $f$ (resp. $v$) of $\sh{O}$ (resp. $\sh{V}$),
+  \[
+    \nabla(fv) = f\cdot\nabla v + \dd f\cdot v.
+  \]
+  A \emph{morphism} between vector bundles endowed with relative connections is a morphism of vector bundles that commutes with $\nabla$.
+  We define, as in \cref{I.2.11,I.2.21}, the \emph{curvature} $R\in\Omega_{X/S}^2(\shEnd(\sh{V}))$ of a relative connection.
+  A relative connection is said to be \emph{integrable} if $R=0$, in which case we have the \emph{relative de Rham complex with values in $\sh{V}$}, denoted by $\Omega_{X/S}^\bullet(\sh{V})$, and defined as in \cref{I.2.15,I.2.21}.
+\end{env}
+
+The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. ``with parameters'') analogues:
+
+\begin{theorem}{2.23}
+\label{I.2.23}
+  Under the hypotheses of \cref{I.2.22}, we have the following.
+  \begin{enumerate}[(i)]
+    \item For every relative local system $V$ on $X$, there exists a coherent analytic sheaf $\sh{V}=\sh{O}_X\otimes_{f^*\sh{O}_S}V$ and exactly one relative connection, said to be canonical, such that a local section $v$ of $\sh{V}$ is horizontal (i.e. such that $\nabla v=0$) if and only if $v$ is a section of $V$;
+      this connection is integrable.
+    \item Given a relative local system $V$ on $X$, the de Rham complex defined
+\oldpage{15}
+      by $\sh{V}=\sh{O}_X\otimes_{f^*\sh{O}_S}V$, endowed with its canonical connection, is a resolution of the sheaf $V$.
+    \item The following functors are quasi-inverse to one another, and thus give an equivalence between the category of relative local systems on $X$ and the category of coherent analytic sheaves on $X$ endowed with a relative integrable connection:
+      \begin{enumerate}[a)]
+        \item the relative local system $V$ is sent to $\sh{V}=\sh{O}_X\otimes_{f^*\sh{O}_S}V$ endowed with its canonical connection;
+        \item the coherent analytic sheaf $\sh{V}$ on $X$ endowed with a relative integrable connection is sent to the subsheaf consisting of its horizontal sections (i.e. the sections $v$ such that $\nabla v=0$).
+      \end{enumerate}
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  We first prove (i)
+
+
+
+
+
+
+  \todo
+\end{proof}
+
+\begin{env}{2.23.2}
+\label{I.2.23.2}
+  \todo
+\end{env}
+
+\begin{proof}[\normalfont\textbf{2.23.3}]
+\label{I.2.23.3}
+  \todo
+\end{proof}
 
 
 %% Bibliography %%
