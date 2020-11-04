@@ -160,7 +160,7 @@ Note that we have included any changes made in the Errata.
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
 
-- **(8/19)** Deligne, P. "A quoi servent les motifs?".
+- **(11/19)** Deligne, P. "A quoi servent les motifs?".
   <br/>
   _Proc. Symp. in Pure Math._ **55** (1994), 143--161.
   <br/>

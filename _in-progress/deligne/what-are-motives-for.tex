@@ -65,6 +65,8 @@
 \newcommand{\FF}{\mathbb{F}}
 \newcommand{\mot}{\mathrm{mot}}
 \newcommand{\ab}{\mathrm{ab}}
+\newcommand{\un}{\mathrm{un}}
+\newcommand{\GL}{\mathrm{GL}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -176,7 +178,7 @@ I thank S.~Bloch for his comments on a first version of these notes.
 
 According to what we can and want to do, we have various definitions of motives available to us --- or even none.
 We need to distinguish pure motives, typically given by the cohomology of non-singular projective varieties, and mixed motives, where open and singular varieties are allowed.
-The notion of a motive on $S$ (a family of motives parametrised by $S$) poses yet more problems.
+The notion of a motive over $S$ (a family of motives parametrised by $S$) poses yet more problems.
 
 \subsection{}
 \label{1.1}
@@ -483,6 +485,93 @@ since it exists for $H^1$, i.e. for motives which are the abelian varieties, it 
 
 \subsection{}
 \label{2.2}
+
+Let $X_0$ be an algebraic variety over $k$, and let $X$ be given by extension of scalars of $X_0$ by an algebraic closure $\overline{k}$ of $k$.
+For $x\in X_0(k)$, the profinite fundamental group $\pi_1(X,x)$ is endowed with an action of $\Gal(\overline{k}/k)$.
+Suppose, for simplicity, that $X$ is normal.
+The functor ``the fibre at $x$'' then gives an equivalence of categories:
+\[
+  \begin{gathered}
+  \mbox{smooth $\QQ_\ell$-sheaves on $X_0$}
+\\\downarrow
+\\\mbox{$\ell$-adic representations of $\Gal(\overline{k}/k)$ endowed with an equivariant action of $\pi_1(X,x)$.}
+  \end{gathered}
+\]
+
+\oldpage{153}
+I do not know in which sense $\pi_1(X,x)$ is motivic.
+The situation changes for its pro-$\ell$-completion $\pi_1(X,x)_\ell^\wedge$.
+The abelianisation of this group is $H^1(X,\ZZ_\ell)$, and its $H_2$ is contained in that of $X$.
+There should exist a motivic group scheme $\pi_1(X,x)_\un$ over $k$ such that
+\begin{enumerate}[(a)]
+  \item For every usual cohomology theory $H$, the corresponding realisation of $\pi_1(X,x)_\un$ over $\overline{k}$ has ``local systems'' (in the sense of $H$) on $X$ as its linear representations, which are unipotent.
+  \item The functor ``the fibre at $x$'' gives an equivalence of categories:
+    \[
+      \begin{gathered}
+        \mbox{smooth motives over $X_0$ that are iterated extensions of \todo}
+      \\\mbox{of motives over $k$}
+      \\\downarrow
+      \\\mbox{motives over $k$ endowed with an action of $\pi_1(X,x)_\un$.}
+      \end{gathered}
+    \]
+\end{enumerate}
+
+In (a), the local systems in question are not assumed to be motivic.
+By (b), those that are motivic, however, form a faithful system of representations.
+
+This philosophy has been inspired by the Hodge theory of $\pi_1$: see Steenbrink--Zucker~\cite{30}.
+
+More generally, suppose that we have a set $A$ of pure motives over $X_0$.
+The above corresponds to $A=\varnothing$, or, equivalently, $A$ consisting of just the unit motive.
+There should exist a motivic group scheme $\pi_1(X,x)_A$ over $k$, where the $\pi_1$ is motivic relative to $A$, such that
+\begin{enumerate}[(a')]
+  \item Over $\overline{k}$, its realisation relative to the theory $H$ has ``local systems'' on $X$ that are iterated extensions of subquotients of tensor products of realisations of objects of $A$ and their duals as its representations.
+  \item The functor ``the fibre at $x$'' gives an equivalence of categories:
+    \[
+      \begin{gathered}
+        \mbox{smooth motives over $X_0$ that are tensor products of objects of $A$,}
+      \\\mbox{of their duals, and of inverse images of motives over $k$}
+      \\\downarrow
+      \\\mbox{motives over $k$ endowed with an action of $\pi_1(X,x)_A$.}
+      \end{gathered}
+    \]
+\end{enumerate}
+
+In (a'), the subquotients are taken over $X$ and are not assumed to be motivic.
+
+In Hodge theory, this suggests the following questions.
+Let $X$ be smooth and connected over $\CC$, and let $x\in X$.
+Let $A$ be a set of variations of polarisable Hodge structures on $X$.
+Let $\sh{A}$ be the Tannakian category of local $\QQ$-systems on $X$ generated (by $\otimes$, dual, subquotients, and extensions) by the underlying local systems of the objects of $A$.
+Let $\sh{A}_H$ be the Tannakian category of variations of mixed Hodge structures on $X$ that are admissible (in the sense of Steenbrink--Zucker~\cite{30}) and generated (by $\otimes$, dual, subquotients, and extensions) by $A$ and the constant variations given by polarisable weight gradings (\todo?).
+
+On $\sh{A}$, we have the fibre functor ``the fibre at $x$'', denoted by $\omega_x$.
+Let $G=\Aut^\otimes(\omega_x)$.
+This is the Zariski closure of $\pi_1(X,x)$ in the product of the $\GL(H_x)$, where $H$ is an object of $\sh{A}$.
+Let $\sh{H}(G)$ be the Hopf algebra of which $G$ is the spectrum.
+
+\oldpage{154}
+For $M$ in $\sh{A}_H$, the underlying local system $M_Q$ is in $\sh{A}$, so that $G$ acts on its fibre $(M_Q)_x$ at $x$: this fibre is an $\sh{H}(G)$-comodule:\footnote{\emph{[Trans.] In the original, this equation is labelled (2.2.21), but it seems like it should instead be (2.2.1).}}
+\[
+\label{2.2.1}
+  (M_Q)_x \to (M_Q)_x\otimes\sh{H}(G).
+\tag{2.2.1}
+\]
+
+The Hopf algebra $\sh{H}(G)$ should admit the structure of a mixed Hodge ind-structure, i.e. $G$ should be an affine group scheme in the Tannakian category of mixed Hodge structures, in such a way that
+\begin{enumerate}[(a)]
+  \item the arrows in \cref{2.2.1} are mixed Hodge morphisms; and
+  \item the functor $M\mapsto M_x$ gives an equivalence between $\sh{A}$ and the category of mixed Hodge structures $H$ with polarisable \todo that are endowed with a comodule structure $H\to H\otimes\sh{H}(G)$ that is a mixed Hodge morphism.
+\end{enumerate}
+
+
+\section{Absolute cohomology}
+\label{3}
+
+\subsection{}
+\label{3.1}
+
+In each of the usual cohomology theories, the functors $H^i(X)$ come from a functor $R\Gamma(X)$ with values in a triangulated category $\sh{D}$.
 
 
 %% Bibliography %%
