@@ -96,6 +96,7 @@
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\pr}{\mathrm{pr}}
+\newcommand{\II}{\mathrm{II}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -147,7 +148,7 @@
 
 %% Content %%
 
-(\todo \textbf{errata} \todo)
+(\todo \textbf{errata})
 
 
 \setcounter{chapter}{-1}
@@ -492,7 +493,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   \end{env}
 
   We leave it to the reader to verify that these formulas do indeed define connections.
-  For \cref{I.2.7.2}, for example, one must verify that, firstly, the given formula defines a $\mathbb{C}$-bilinear map from $(\sh{V}_1\otimes\sh{V}_2)$, which means that the right-hand side $\mathrm{II}(v_1,v_2)$ is $\mathbb{C}$-bilinear and such that $\mathrm{II}(fv_1,v_2)=\mathrm{II}(v_1,fv_2)$;
+  For \cref{I.2.7.2}, for example, one must verify that, firstly, the given formula defines a $\mathbb{C}$-bilinear map from $(\sh{V}_1\otimes\sh{V}_2)$, which means that the right-hand side $\II(v_1,v_2)$ is $\mathbb{C}$-bilinear and such that $\II(fv_1,v_2)=\II(v_1,fv_2)$;
   secondly, one must also verify identity~\cref{I.2.3.5}.
 \end{env}
 
@@ -536,18 +537,18 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   \tag{2.10.2}
   \]
   where $\alpha$ is any local section of $\Omega^p$, $v$ is any local section of $\sh{V}$, and $\dd$ is the exterior differential.
-  To prove that the right-hand side $\mathrm{II}(\alpha,v)$ of \cref{I.2.10.2} defines a homomorphism \cref{I.2.10.1}, it suffices to show that $\mathrm{II}(\alpha,v)$ is $\CC$-bilinear and satisfies
+  To prove that the right-hand side $\II(\alpha,v)$ of \cref{I.2.10.2} defines a homomorphism \cref{I.2.10.1}, it suffices to show that $\II(\alpha,v)$ is $\CC$-bilinear and satisfies
   \[
-    \mathrm{II}(f\alpha,v) = \mathrm{II}(\alpha,fv).
+    \II(f\alpha,v) = \II(\alpha,fv).
   \]
   But we have that
   \[
     \begin{aligned}
-      \mathrm{II}(f\alpha,v)
+      \II(f\alpha,v)
       &= \dd(f\alpha)v + (-1)^pf\alpha\wedge\nabla v
     \\&= \dd\alpha\cdot fv + \dd f\wedge\alpha v + (-1)^pf\alpha\wedge\nabla v
     \\&= \dd\alpha\cdot fv + (-1)^p\alpha\wedge(f\nabla v+\dd f\cdot v)
-    \\&= \mathrm{II}(\alpha,fv).
+    \\&= \II(\alpha,fv).
     \end{aligned}
   \]
 
@@ -707,7 +708,7 @@ The results \cref{I.2.16} to \cref{I.2.19} that follow will be proven in a more 
 
 \begin{proof}
   If $\nabla$ satisfies (i), then \cref{I.2.16.1} is a particular case of \cref{I.2.3.5}.
-  Conversely, the right-hand side $\mathrm{II}(f,v)$ of \cref{I.2.16.1} is $\CC$-bilinear, and thus extends uniquely to a $\CC$-linear map $\nabla\colon\sh{V}\to\Omega^1(\sh{V})$, which we can show defines a connection.
+  Conversely, the right-hand side $\II(f,v)$ of \cref{I.2.16.1} is $\CC$-bilinear, and thus extends uniquely to a $\CC$-linear map $\nabla\colon\sh{V}\to\Omega^1(\sh{V})$, which we can show defines a connection.
   Claim~(ii) is local on $X$, which allows us to reduce to the case where $V=\underline{\CC}$.
   Then $\sh{V}=\sh{O}$, $\nabla=\dd$, and $\nabla_{[X,Y]}=[\nabla_X,\nabla_Y]$ by the definition of $[X,Y]$.
 \end{proof}
@@ -838,24 +839,88 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
 \end{theorem}
 
 \begin{proof}
-  We first prove (i)
-
-
-
-
-
-
-  \todo
+  We first prove (i).
+  To show that $\sh{V}$ is coherent, it suffices to do so locally, for $V=f^*V_0$, in which case $\sh{V}$ is the inverse image, in the sense of coherent analytic sheaves, of $\sh{V}_0$.
+  The canonical relative connection necessarily satisfies, for any local section $f$ (resp $v_0$) of $\sh{O}_X$ (resp. $V$),
+  \[
+  \label{I.2.23.1}
+    \nabla(fv_0) = \dd f\cdot v_0.
+  \tag{2.23.1}
+  \]
+  The right-hand side $\II(f,v_0)$ of this equation is biadditive in $f$ and $v_0$, and satisfies, for any local section $g$ of $f^*\sh{O}_S$, the identity
+  \[
+    \II(fg,v_0) = \II(f,gv_0)
+  \]
+  (using the fact that $\dd g=0$ in $\Omega_{X/S}^1$).
+  We thus deduce the existence and uniqueness of a relative connection $\nabla$ that satisfies \cref{I.2.23.1}.
+  Finally, we have that
+  \[
+    \nabla\nabla(fv_0) = \nabla(\dd f\cdot v_0) = \dd\dd f\cdot v_0 = 0,
+  \]
+  and so the canonical connection $\nabla$ is integrable.
+  The fact that only the sections of $V$ are horizontal is a particular case of (ii), which is proven below.
 \end{proof}
 
 \begin{env}{2.23.2}
 \label{I.2.23.2}
-  \todo
+  We first of all consider the particular case of (ii) where $S=D^n$, $X=D^n\times D^m$, $f=\pr_2$, and the relative local system $V$ is the inverse image of $\sh{O}_S$.
+  The complex of global sections
+  \[
+    0 \to \Gamma(f^*\sh{O}_S) \to \Gamma(\sh{O}_X) \to \Gamma(\Omega_{X/S}^1) \to \ldots
+  \]
+  is acyclic, since it admits the homotopy operator $H$ defined below.
+\oldpage{16}
+  \begin{enumerate}[a)]
+    \item $H\colon \Gamma(\sh{O}_X) \to \Gamma(f^*\sh{O}_S) = \Gamma(S,\sh{O}_S)$ is the inverse image under the zero section of $f$;
+    \item an element $\omega\in\Gamma(\Omega_{X/S}^p)$ (where $p>0$) can be represented in a unique way as a sum of convergent series:
+      \[
+        \omega = \sum_{\substack{I\subset[1,m]\\|I|=p}} \; \sum_{\underline{n}\in \NN^{m+n}} a_{\underline{n}}^I
+        \left(
+          \prod_{i\in I} x_i^{n_i}\dd x_i
+        \right)
+        \left(
+          \prod_{i\in[1,m+n]\setminus I} x_i^{n_i}
+        \right)
+      \]
+      and we set
+      \[
+        H(\omega) = \sum_{I\subset[1,m]} \; \sum_{j\in I} \; \sum_{\underline{n}\in\NN^{m+n}} a_{\underline{n}}^I
+        \left(
+          \prod_{\substack{j\in I\\i\neq j}} x_j^{n_j}\dd x_j \frac{x_j^{n_j+1}}{n_j+1}
+        \right)
+        \left(
+          \prod_{i\in[1,m+n]\setminus I} x_i^{n_i}.
+        \right)
+      \]
+  \end{enumerate}
+
+  This remains true if we replace $D^{m+n}$ by a smaller polycylinder, and so $\Omega_{X/S}^\bullet$ is a resolution of $f^*\sh{O}_S$.
 \end{env}
 
 \begin{proof}[\normalfont\textbf{2.23.3}]
 \label{I.2.23.3}
-  \todo
+  We now prove (ii), which is of a local nature on $X$ and $S$.
+  Denoting by $D$ the open unit disc, we can thus restrict to the case where $S$ is a closed analytic subset of the polycylinder $D^n$, where $X=D^m\times S$, with $f=\pr_2$, and where $V$ is the inverse image of a coherent analytic sheaf $V_0$ on $S$.
+  Applying the syzygy theorem, and possibly shrinking $X$ and $S$, we can further suppose that the direct image of $V_0$ on $D^n$, which we again denote by $V_0$, admits a finite resolution $\sh{L}$ by free coherent $\sh{O}_{D^n}$-modules.
+  To prove (ii), we are allowed to replace $V_0$ by its direct image on $D^n$, and to suppose that $D^n=S$, which we now do.
+
+  If $\Sigma_0$ is a short exact sequence of coherent $\sh{O}_S$-modules
+  \[
+    \Sigma_0\colon 0 \to V'_0 \to V_0 \to V''_0 \to 0,
+  \]
+  then let $\Sigma=f^*\Sigma_0$ be the exact sequence of relative local systems given by the inverse image of $\Sigma_0$ (which is exact since $f^*$ is an exact functor), and let $\Omega_{X/S}^\bullet(\Sigma)$ be the corresponding exact sequence of relative de Rham complexes:
+  \[
+    \Omega_{X/S}^\bullet(\Sigma)\colon 0 \to \Omega_{X/S}^p\otimes_{f^*\sh{O}_S}f^*V'_0 \to \Omega_{X/S}^p\otimes_{f^*\sh{O}_S}f^*V_0 \to \Omega_{X/S}^p\otimes_{f^*\sh{O}_S}f^*V''_0 \to 0.
+  \]
+  This sequence is exact since $\Omega_{X/S}^p$ is flat over $f^*\sh{O}_S$, since it is locally free over $\sh{O}_X$ which is itself flat over $f^*\sh{O}_S$.
+
+  The snake lemma applied to $\Omega_{X/S}^\bullet(\Sigma)$ shows that, if claim~(ii)
+\oldpage{17}
+  is satisfied for any two of relative local systems $f^*V_0$, $f^*V'_0$, and $f^*V''_0$, then it is again satisfied for the third.
+  We thus deduce, by induction, that, if $V_0$ admits a finite resolution $M_\bullet$ by modules that satisfy (ii), then $V_0$ satisfies (ii).
+  This, applied to $V_0$ and $\sh{L}^\bullet$, finishes the proof of (i) and (ii).
+
+  It follows from (ii) that \todo
 \end{proof}
 
 
