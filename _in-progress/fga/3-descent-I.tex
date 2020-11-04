@@ -1,0 +1,172 @@
+\documentclass{article}
+
+\title{Techniques of descent and existence theorems in algebraic geometry; I. Generalities, and descent by faithfully flat morphisms\\(FGA~3.I)}
+\author{A. Grothendieck}
+\date{December 1959}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+\usepackage{graphicx}
+
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{Baskervaldx}
+\usepackage{mathpazo}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\rhead{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
+\crefname{section}{\S\!}{\S\S\!}
+\crefname{equation}{}{}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+
+\newtheorem{innercustomtheorem}{Theorem}
+\crefname{innercustomtheorem}{Theorem}{Theorems}
+\newenvironment{theorem}[1]
+  {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
+  {\endinnercustomtheorem}
+
+\newtheorem{innercustomproposition}{Proposition}
+\crefname{innercustomproposition}{Proposition}{Propositions}
+\newenvironment{proposition}[1]
+  {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+  {\endinnercustomproposition}
+
+\newtheorem{innercustomlemma}{Lemma}
+\crefname{innercustomlemma}{Lemma}{Lemmas}
+\newenvironment{lemma}[1]
+  {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
+  {\endinnercustomlemma}
+
+\newtheorem{innercustomcorollary}{Corollary}
+\crefname{innercustomcorollary}{Corollary}{Corollaries}
+\newenvironment{corollary}[1]
+  {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
+  {\endinnercustomcorollary}
+
+
+\theoremstyle{definition}
+
+\newtheorem*{remark}{Remark}
+\newtheorem*{remarks}{Remarks}
+
+%% Shortcuts %%
+
+\newcommand{\sh}{\mathscr}
+\newcommand{\cat}{\mathcal}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\todo}{\textbf{ !TODO! }}
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations/}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+
+  \medskip
+  
+  \emph{What follows is a translation of the French paper:}
+
+  \medskip\noindent
+  \textsc{Grothendieck, A.}
+  Technique de descente et th\'{e}or\`{e}mes d'existence en g\'{e}om\'{e}trie alg\'{e}brique. I. G\'{e}n\'{e}ralit\'{e}s. Descente par morphismes fid\`{e}lement plats.
+  \emph{S\'{e}minaire Bourbaki}, Volume~\textbf{12} (1959--60), Talk no.~190.
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\tableofcontents
+
+
+%% Content %%
+
+\section*{}
+
+\emph{[Trans.] We have made changes throughout the text following the errata (\emph{S\'{e}minaire Bourbaki} \textbf{14}, 1961--62, Compl\'{e}ment), and preface them with ``[Comp.]''.}
+
+From a technical point of view, the current talk, and those that will follow, can be considered as variations on the celebrated ``90 theorem'' of Hilbert.
+The introduction of the method of descent in algebraic geometry seems to be due to A.~Weil, under the name of ``descent of the base field''.
+Weil considered only the case of separable finite field extensions.
+The case of radicial extensions of height~$1$ was then studied by P.~Cartier.
+Lacking the language of schemes, and, more particularly, lacking nilpotent elements in the rings that were under consideration, the essential identity between these two cases could not have been formulated by Cartier.
+
+
+%% Bibliography %%
+
+\nocite{*}
+\begin{thebibliography}{6}
+
+  \bibitem{1}
+  {\sc Dieudonn\'{e}, J. and Grothendieck, A.}
+  \newblock El\'{e}ments de g\'{e}om\'{e}trie alg\'{e}brique.
+  \newblock {\em Publications math\'{e}matiques de l'Institut des Hautes Etudes Scientifiques} (to appear).
+
+  \bibitem{2}
+  {\sc Grauert, H. and Remmert, R.}
+  \newblock Komplexe R\"{a}ume.
+  \newblock {\em Math. Annalen} \textbf{136} (1958), 245--318.
+
+  \bibitem{3}
+  {\sc Grothendieck, A.}
+  \newblock G\'{e}om\'{e}trie formelle et g\'{e}om\'{e}trie alg\'{e}brique.
+  \newblock {\em S\'{e}minaire Bourbaki} \textbf{11} (1958--59), Talk no.~182.
+
+  \bibitem{4}
+  {\sc Murre, J.P.}
+  \newblock On a connectedness theorem for a birational transformation at a simple point.
+  \newblock {\em Amer. J. Math.} \textbf{80} (1958), 3--15
+
+  \bibitem{5}
+  {\sc Serre, J.-P.}
+  \newblock G\'{e}om\'{e}trie alg\'{e}brique et g\'{e}om\'{e}trie analytique.
+  \newblock {\em Ann. Institut Fourier Grenoble} \textbf{6} (1955--56), 1--42.
+
+  \bibitem{6}
+  {\sc Serre, J.-P.}
+  \newblock Espaces fibr\'{e}s alg\'{e}briques.
+  \newblock {\em S\'{e}minaire Chevalley} \textbf{3} (1958), Talk no.~1.
+
+\end{thebibliography}
+
+\end{document}
