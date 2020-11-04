@@ -65,6 +65,7 @@
 \newcommand{\FF}{\mathbb{F}}
 \newcommand{\mot}{\mathrm{mot}}
 \newcommand{\ab}{\mathrm{ab}}
+\newcommand{\abs}{\mathrm{abs}}
 \newcommand{\un}{\mathrm{un}}
 \newcommand{\GL}{\mathrm{GL}}
 
@@ -287,7 +288,7 @@ See Langlands--Rapoport~\cite{23} and the talk by Milne at this conference.
 One source of \cref{1.1}~(a) and (b) is the following example.
 A smooth projective curve $X$ defines its Jacobian via $J(X)=\Pic^0(X)$.
 Abelian varieties, up to isogeny, over $k$ form a semi-simple abelian category, with the $\Hom(A,B)$ being finite-dimensional over $\QQ$, and, for every usual cohomology theory $H$, the dual $H_1(X)$ of $H^1(X)$ is given by applying a ``realisation'' functor to $J(X)$.
-Note that $H_1(X)$ is also the twist \`{a} la Tate $H^1(X)(1)$ of $H^1(X)$.
+Note that $H_1(X)$ is also the Tate twist $H^1(X)(1)$ of $H^1(X)$.
 For $\ell$-adic cohomology, $\real_\ell(A)$ is the Tate module $V_\ell(A)=T_\ell(A)\otimes\QQ_\ell$.
 For $k$ of characteristic~$0$, and
 \oldpage{148}
@@ -300,7 +301,7 @@ If we do not restrict ourselves to pure motives, then another key example is tha
 More generally, we can consider a smooth projective curve $\overline{X}$, disjoint $S$ and $T$ in $\overline{X}$, and the cohomology $H^1(\overline{X}\setminus S,\operatorname{rel}T)$.
 A \emph{$1$-motive} $K^\bullet$ is a complex of group schemes concentrated in degrees $-1$ and $0$, such that, over the algebraic closure, $K^{-1}$ is a free $\ZZ$-module of finite type, and $K^0$ is an extension of an abelian variety by a torus.
 Suppose, for simplicity, that $k$ is algebraically closed.
-For every usual cohomology theory, the $H^1$ in question, or even its twist \`{a} la Tate $H^1(\overline{X}\setminus S,\operatorname{rel}T)(1)$, is then given by applying a realisation functor to the following $1$-motive.
+For every usual cohomology theory, the $H^1$ in question, or even its Tate twist $H^1(\overline{X}\setminus S,\operatorname{rel}T)(1)$, is then given by applying a realisation functor to the following $1$-motive.
 
 Let $J_T(\overline{X})$ be the generalised Jacobian classifying invertible sheaves of degree~$0$ over $\overline{X}$ that are trivialised over $T$.
 This is an extension of the abelian variety $\Pic^0(\overline{X})$ by the character group torus $\Ker(\ZZ^T\xrightarrow{\Sigma}\ZZ)$.
@@ -464,9 +465,9 @@ Is is for the $H^1$ of curves, i.e. for the $1$-motives, that I am convinced of 
 \oldpage{152}
 The same principle of transfer has allowed us to conjecture the asymptotic behaviour of a variation of Hodge structures on a punctured disc, or a product of punctured discs.
 
+\bigskip
 
-\subsection*{Warning}
-
+\textbf{Warning.}
 Let $(S,\eta,s)$ be a line, with $S$ the spectrum of a complete discrete valuation ring.
 By Raynaud, an abelian variety on the generic point $\eta$, with semi-stable reduction, admits a rigid-analytic description as the cokernel of an arrow defining a $1$-motive.
 At the same time, in Hodge theory, if $\sh{H}$ is a variation of polarised Hodge structures of type $\{(1,0),(0,1)\}$ on a punctured disk $D^*$, then the monodromy endows $\sh{H}_0$ with a weight filtration $W$ that, combined with the original Hodge filtration, makes $\sh{H}$ into a variation of mixed Hodge structures on a punctured neighbourhood of $0$.
@@ -572,6 +573,109 @@ The Hopf algebra $\sh{H}(G)$ should admit the structure of a mixed Hodge ind-str
 \label{3.1}
 
 In each of the usual cohomology theories, the functors $H^i(X)$ come from a functor $R\Gamma(X)$ with values in a triangulated category $\sh{D}$.
+This is endowed with a $t$-structure (the data of subcategories $\sh{D}^{\leq0}$ and $\sh{D}^{\geq0}$ satisfying suitable axioms: Beilinson--Bernstein--Deligne~\cite[1.3]{3}), with its heart (the abelian subcategory given by the intersection of $\sh{D}^{\leq0}$ and $\sh{D}^{\geq0}$) being the category in which $H^\bullet$ takes its values, and
+\[
+  H^i(X) = H^iR\Gamma(X)
+\]
+in the sense of this $t$-structure.
+
+We might hope that these functors $R\Gamma$ are the ``realisations'' of a motivic functor $R\Gamma$:
+we wish for the existence of a triangulated category $\sh{D}(k)$, with a $t$-structure whose heart is the category $\sh{M}(k)$ of mixed motives over $k$, as well as a functor $R\Gamma_\mot$ with values in $\sh{D}(k)$, which recover the $R\Gamma$ in the various theories by applying realisation functors.
+
+A triangulated category $\sh{D}$ with a $t$-structure is not always the derived category of its heart $\sh{C}$.
+For example: let $X$ be a finite connected CW-complex, and let $\sh{D}\subset D^b(X,\QQ)$ be the derived subcategory of the derived category consisting of complexes of sheaves with locally constant cohomology.
+Its heart is the abelian category of locally constant sheaves of $\QQ$-vector spaces over $X$.
+We have a natural functor $D^b(\sh{C})\to\sh{D}$, but this functor is only an equivalence if $X$ is a $K(\pi,1)$.
+
+In this section, we assume the existence of $\sh{D}(k)$ and of the aforementioned ``realisation'' functors.
+We also assume the existence of a ``Tate twist'' in $\sh{D}(k)$, which is an auto-equivalence of the category, and corresponds to the usual Tate twist via the realisation functors.
+Finally, we assume that the category $\sh{M}(k)$ is Tannakian, and that the $\ell$-adic cohomology if a fibre functor.
+This implies that, if $\varphi\colon M_1\to M_2$ is a morphism of motives whose $\ell$-adic realisation is an isomorphism, then $\varphi$ is an isomorphism.
+
+For $M_1$ and $M_2$ in $\sh{M}(k)$, set
+\[
+  \Ext^i(M_1,M_2) = \Hom_{\sh{D}(k)}(M_1,M_2[i]).
+\]
+\oldpage{155}
+These are the usual $\Hom$ and $\Ext$ for $i=0,1$, but, for $i>1$, they can differ from the Yoneda $\Ext$, which are the $\Hom(M_1,M_2[i])$ in $D^b(\sh{M}(k))$.
+
+For each of the usual cohomology theories, these motivic $\Ext^i$ should be sent to the $\Ext^i$ of the corresponding realisations of $M_1$ and $M_2$.
+
+
+\subsection{}
+\label{3.2}
+
+If $X$ is an algebraic variety over $k$< then we define the \emph{absolute cohomology groups} of $X$ to be the
+\[
+  H^i_\abs(X) := \Hom_{\sh{D}(k)}(1,R\Gamma_\mot(X)[i]),
+\]
+where $1$ is the unit motive.
+We will also consider the
+\[
+  H^i_\abs(X,\QQ(j)) := \Hom_{\sh{D}(k)}(1,R\Gamma_\mot(X)(j)[i]).
+\]
+
+These groups are often called the \emph{motivic cohomology groups}.
+They are vector spaces over $\QQ$.
+They are not to be confused with the $H^i_\mot(X)$, which are motives over $k$.
+The two are linked by a spectral sequence:
+\[
+\label{3.2.1}
+  E_2^{pq} = \Ext^p(1,H_\mot^q(X)) \Rightarrow H_\abs^{p+q}(X).
+\tag{3.2.1}
+\]
+If $M$ is a motive, then we write $H^p_\abs(M)$ to mean $\Ext^p(1,M)=\Hom_{\sh{D}(k)}(1,M[p])$.
+With this notation, the spectral sequence \cref{3.2.1} can be written as
+\[
+\label{3.2.2}
+  E_2^{pq} = H_\abs^p(H_\mot^q(X)) \Rightarrow H_\abs^{p+q}(X).
+\tag{3.2.2}
+\]
+
+The $\ell$-adic analogue is the following:
+a variety $X$ over $k$ (with algebraic closure $\overline{k}$) defines $\ell$-adic cohomology groups $H^i(X\otimes_k\overline{k},\QQ_\ell)$, which we wish to be realisations of motives $H_\mot^i(X)$.
+The variety $X$ also has an absolute \'{e}tale cohomology $H^i(X,\QQ_\ell)$, which is the abutment of a spectral sequence:
+\[
+  H^p(\Gal(\overline{k}/k), H^q(X\otimes_k\overline{k},\QQ_\ell)) \Rightarrow H^i(X,\QQ_\ell).
+\]
+
+If $X$ is projective and smooth over $k$, then we wish for $R\Gamma_\mot(X)$ to be (non-canonically) isomorphic to the direct sum in $\sh{D}(X)$ of the $H_\mot^i(X)[-i]$.
+This would follow from the following hypothesis:
+\begin{quote}
+  \textbf{($*$)}
+\itshape
+  If $\sh{L}$ is an invertible sheaf on $X$, then we have
+  \[c_1(\sh{L})\colon R\Gamma_\mot(X)\to R\Gamma_\mot(X)(1)[2]\]
+  which, after taking the $\ell$-adic realisation, gives the cup product with the Chern class $c_1(\sh{L})$ of
+  \[\sh{L}\colon H^i(X\otimes_k\overline{k},\QQ_\ell) \to H^{i+2}(X\otimes_k\overline{k},\QQ_\ell(1)).\]
+\end{quote}
+
+In fact, take $\sh{L}$ to be ample.
+Since the $\ell$-adic realisation functor is a fibre functor, it follows from ($*$) and the difficult Lefschetz theorem that, for $X$ of pure dimension $N$, the
+\[
+  c_1(\sh{L})^i\colon H_\mot^{N-i}(X) \to H_\mot^{N+i}(X)(i)
+\]
+are isomorphisms.
+We can then apply Deligne~\cite{8}.
+
+\oldpage{156}
+Analysing the proof, we can thus obtain, for every ample invertible sheaf $\sh{L}$, multiple canonical decompositions:
+\[
+  \varphi_\sh{L}\colon R\Gamma_\mot(X) \leftrightarrow \bigoplus H_\mot^i(X)[-i].
+\]
+See Deligne, ``D\'{e}ocmpositions dans la cat\'{e}gorie d\'{e}riv\'{e}e'', in this volume.
+
+\bigskip
+
+\textbf{Warning.}
+These arguments are essentially rational, since they depend on the difficult Lefschetz theorem.
+If we had an integer variety of $\sh{D}(X)$, then we should expect for $R\Gamma(X)$ in this setting to not always be a sum of the $H^i(X)[-i]$.
+
+
+\subsection{}
+\label{3.3}
+
+Let $X$ be smooth over $k$.
 
 
 %% Bibliography %%
