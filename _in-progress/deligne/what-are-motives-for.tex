@@ -43,6 +43,12 @@
 
 \usepackage{amsthm}
 
+\theoremstyle{plain}
+
+\newtheorem{innercustomnullities}{Vanishings}
+\newenvironment{nullities}[1]
+  {\renewcommand\theinnercustomnullities{#1}\innercustomnullities}
+  {\endinnercustomnullities}
 
 \theoremstyle{definition}
 
@@ -75,6 +81,7 @@
 \DeclareMathOperator{\Pic}{Pic}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Lie}{Lie}
 \DeclareMathOperator{\Ext}{Ext}
 \DeclareMathOperator{\real}{real}
 \DeclareMathOperator{\Gr}{Gr}
@@ -84,6 +91,9 @@
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\Ch}{Ch}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -155,11 +165,11 @@ The Hodge conjecture says that the group of cycle classes is sent to a subgroup 
 However, we have no idea what should be the image in $E_d$.
 Furthermore, the aesthetic awkwardness that causes this ignorance renders the methods of P.A.~Griffiths, to prove the Hodge conjecture by induction on the dimension of the variety $X$, generally inapplicable.
 This method is inspired by that which Lefschetz~\cite{24} uses for surfaces.
-The idea is that, if $(H_t)_{t\in\PP^1}$ is a \todo of hyperplane sections, then constructing the cycle $Z$ on $X$ reduces to constructing the cycles $Z_i=Z\cap H_t$.
+The idea is that, if $(H_t)_{t\in\PP^1}$ is a pencil of hyperplane sections, then constructing the cycle $Z$ on $X$ reduces to constructing the cycles $Z_i=Z\cap H_t$.
 In good cases:
 \begin{enumerate}[(a)]
-  \item the cohomology class $c\in H_\ZZ^{d,d}(X)$ that we wish to be that of a cycle $Z$ restricts to zero on the $H_t$;
-  \item if $Z$ exists, then its cohomology class $c$ determines the class of the $Z_t$ in the intermediate Jacobians $J^d(H_t)$; and
+  \item the cohomology class $c\in H_\ZZ^{d,d}(X)$ that we wish to be that of a cycle $Z$ restricts to zero on the $H_t$ ;
+  \item if $Z$ exists, then its cohomology class $c$ determines the class of the $Z_t$ in the intermediate Jacobians $J^d(H_t)$ ; and
   \item the construction of $Z$ reduces to constructing the cycles $Z_t$ of classes defining a given section of the family of the $J^d(H_t)$.
 \end{enumerate}
 We can thus conclude that every element of $J^d(H_t)$ is the class of a cycle of codimension $d$ that is cohomologous to zero.
@@ -399,7 +409,7 @@ Its construction in the general case is due to Borovoi~\cite{6}.
 
 A point of the Shimura variety over a field $\FF$ containing $E(G,X)$ should correspond to
 \begin{enumerate}[(a)]
-  \item an exact $\otimes$-functor $x$ from the category $\Rep(G)$ of representations of $G$ to the category of pure motives over $\FF$; and
+  \item an exact $\otimes$-functor $x$ from the category $\Rep(G)$ of representations of $G$ to the category of pure motives over $\FF$ ; and
   \item an integer structure.
     In terms of finite adelic realisations (the restriction of the product of $\ell$-adic realisations), we can describe this as an isomorphism of $\otimes$-functors
     \[
@@ -561,8 +571,8 @@ For $M$ in $\sh{A}_H$, the underlying local system $M_Q$ is in $\sh{A}$, so that
 
 The Hopf algebra $\sh{H}(G)$ should admit the structure of a mixed Hodge ind-structure, i.e. $G$ should be an affine group scheme in the Tannakian category of mixed Hodge structures, in such a way that
 \begin{enumerate}[(a)]
-  \item the arrows in \cref{2.2.1} are mixed Hodge morphisms; and
-  \item the functor $M\mapsto M_x$ gives an equivalence between $\sh{A}$ and the category of mixed Hodge structures $H$ with polarisable \todo that are endowed with a comodule structure $H\to H\otimes\sh{H}(G)$ that is a mixed Hodge morphism.
+  \item the arrows in \cref{2.2.1} are mixed Hodge morphisms ; and
+  \item the functor $M\mapsto M_x$ gives an equivalence between $\sh{A}$ and the category of mixed Hodge structures $H$ with polarisable associated graded algebras that are endowed with a comodule structure $H\to H\otimes\sh{H}(G)$ that is a mixed Hodge morphism.
 \end{enumerate}
 
 
@@ -676,10 +686,273 @@ If we had an integer variety of $\sh{D}(X)$, then we should expect for $R\Gamma(
 \label{3.3}
 
 Let $X$ be smooth over $k$.
+The various ``classes'' of an algebraic cycle $Z$ of codimension~$d$ should come from a motivic class
+\[
+\label{3.3.1}
+  \cl(Z) \in \Hom(1,R\Gamma_\mot(X)[2d](d)) =: H_\abs^{2d}(X,\QQ(d)).
+\tag{3.3.1}
+\]
+The class in \cref{3.3.1} should depend only on the linear equivalence class of $Z$.
+
+If $X$ is smooth and projective, and if we have chosen a decomposition
+\[
+  R\Gamma_\mot(X) \simeq \bigoplus H_\mot^i(X)[-i]
+\]
+(cf. \cref{3.2}), then the class in \cref{3.3.1} is equivalent to a series of classes
+\[
+\label{3.3.2}
+  \cl_n(Z) \in \Ext^n(1,H_\mot^{2d-n}(X)(d)) = H_\abs^n(H_\mot^{2d-n}(X)(d)).
+\tag{3.3.2}
+\]
+The first of these classes that is non-zero does not depend on the chosen decomposition.
+
+
+\subsection{}
+\label{3.4}
+
+\textbf{Example.}
+In Hodge theory, $Z$ defines first of all an integer cohomology class of type $(d,d)$, i.e. a morphism of Hodge structures
+\[
+  \ZZ \to H^{2d}(X)(d).
+\]
+If this class is zero, then $Z$ has a class in the intermediate Jacobian:
+\[
+  J_d(X) = H^{2d-1}(X,\CC)/F^d\oplus H^{2d-1}(X,\ZZ),
+\]
+which is exactly the group
+\[
+  \Ext^1(\ZZ,H^{2d-1}(X)(d))
+\]
+in the category of mixed Hodge structures.
+The story ends here, since the abelian category of mixed Hodge $\QQ$-structures is of cohomological dimension~$1$.
+
+
+\subsection{}
+\label{3.5}
+
+\textbf{Example.}
+Let $X$ be smooth and projective, and of pure dimension~$N$ over an algebraically closed field $k$.
+Let $\sh{O}(1)$ be an ample invertible sheaf.
+We will show how we can associate a class $\cl(D)$ in $\Pic^0(X)\otimes\QQ$ to a divisor $D$, where the theory of motives interprets this Picard group as $H_\abs^1(X)(1)$.
+
+\oldpage{157}
+By a theorem of A.~Weil~\cite[Theorem~7]{31}, the map
+\[
+  E\mapsto E\cdot c_1(\sh{O}(1))^{N-1}
+\]
+from linear equivalence classes of divisors to linear equivalence classes of $0$-cycles induces an isogeny
+\[
+  \varphi\colon \Pic^0(X) \to J(X),
+\]
+and thus a bijection from $\Pic^0(X)\otimes\QQ$ to $J(X)\otimes\QQ$.
+We set
+\[
+  \cl_1(D) = \varphi^{-1}\cl
+  \left(
+    D\cdot c_1(\sh{O}(1))^{N-1}
+    - \frac{\deg(D\cdot c_1(\sh{O}(1))^{N-1})}{\deg(c_1(\sh{O}(1))^N)}
+    \cdot c_1(\sh{O}(1))^N
+  \right).
+\]
+
+
+\subsection{}
+\label{3.6}
+
+\textbf{Example.}
+We now work, not over the spectrum of a field, but instead over a base $S$ which is smooth over an algebraically closed field $k$.
+Let $f\colon X\to S$ be smooth and projective over $S$, and let $Z$ be a cycle of codimension~$d$.
+We work in $\ell$-adic cohomology, with $\ell$ invertible over $S$.
+The cycle $Z$ has a class in
+\[
+  H^{2d}(X,\ZZ_\ell(d)) = \Hom_{D(S)}(\ZZ_\ell, Rf_*\ZZ_\ell[2d](d)).
+\]
+If we choose a decomposition
+\[
+\label{3.6.1}
+  Rf_*\QQ_\ell \simeq \sum R^if_*\QQ_\ell[-i],
+\tag{3.6.1}
+\]
+then this class gives rise to a series of classes:
+\[
+\label{3.6.2}
+  \cl_n(Z) \in \Ext^n(\ZZ,R^{2d-n}f_*\QQ_\ell(d)) = H^n(S,R^{2d-n}f_*\QQ_\ell(d)).
+\tag{3.6.2}
+\]
+
+If $X$ is of the form $X_0\times_{\Spec(k)}S$, and if the decomposition \cref{3.6.1} comes from the unique analogous decomposition of the cohomology of $X_0$, then these classes can be identified with the K\"{u}nneth components of the cohomology class of $Z$.
+
+
+\subsection{}
+\label{3.7}
+
+Suppose that $X$ is smooth over a field.
+Decompose the $K$-theory group $K_n(X)\otimes\QQ$ by the eigenvalues of the Adams operations:
+\[
+  K_n(X)\otimes\QQ = \bigoplus K_n(X)^{(j)}
+\]
+where, on $K_n(X)^{(j)}$, the Adams operation $\Psi_k$ acts by multiplication by $k^j$.
+Recall that $K_0(X)^{(j)}$ is the Chow group of cycles of codimension~$j$, modulo rational equivalence, tensored with $\QQ$.
+
+The example of the usual cohomology theories leads to us hope that the Chern classes
+\[
+  \ch^j\colon K_n(X)\otimes\QQ \to H_\abs^{2j-n}(X,\QQ(j))
+\]
+will factor through $K_n(X)^{(j)}$.
+
+An optimistic conjecture is that the ``Chern class'' morphisms are isomorphisms:
+\[
+\label{3.7.1}
+  \ch^j\colon K_n(x)^{(j)} \xrightarrow{\sim} H_\abs^{2j-n}(X,\QQ(j)) := \Hom(1,R\Gamma(X)(j)[2j-n]).
+\tag{3.7.1}
+\]
+
+\oldpage{158}
+This conjecture underlies the terminology ``absolute motivic cohomology group'' for the $K_n(X)^{(j)}$, as well as the notation
+\[
+  H_\sh{M}^{2j-n}(X,\QQ(j)) := K_n(X)^{(j)}.
+\]
+
+Block~\cite{4} proposed an interpretation of the $K_n(X)^{(j)}$ as ``higher Chow groups'' $\Ch^j(X;n)$.
+His argument has a hole (moving lemma insufficient) that he promises to fix.
+This interpretation makes the definition of $\ch^j$ more natural, but the interpretation in terms of $K$-theory remains necessary for explicit calculation in the case of number fields.
+The higher Chow groups have the advantage of having an natural integer structure.
+
+
+\subsection{}
+\label{3.8}
+
+Thanks to Beilinson, the conjecture \cref{3.7.1} can be deduced from certain hypotheses, of which the most important are
+\begin{enumerate}[(a)]
+  \item the functor $X\mapsto K_\bullet(X)$ factors through $R\Gamma_\mot$ ; and
+  \item the category $\sh{D}(k)$ is the derived category of the category of motives.
+\end{enumerate}
+The conjecture has striking consequences for the two sides of \cref{3.7.1}.
+They disappear, for trivial reasons, in different regions of the $(n,j)$-plane:
+\begin{enumerate}[(a)]
+  \item If $M$ is a motive, then $\Ext^i(1,M)=0$ for $i<0$, and $\Ext^0(1,M)=\Hom(1,M)$.
+    From this, it follows that $\Hom(1,R\Gamma(X)(j)[N])=0$ for $N<0$, or for $N=0$ and $j\neq0$.
+    In $K$-theory, this gives the conjecture by Beilinson and Soul\'{e} that $K_n(X)^{(j)}=0$ for $2j<n$, as well as for $2j\leq n$ if $j\neq0$.
+  \item The Chow group $\Ch^j(X)$ of algebraic cycles of codimension~$j$ is zero for $j>\dim X$, and, similarly, $\Ch^j(X;n)$ is zero for $j>\dim(X)+n$.
+    Furthermore, $\Ch^j(X;n)=0$ for $n<0$.
+\end{enumerate}
+Applying \cref{3.7.1}, we thus deduce:
+
+\begin{nullities}{3.8.1}
+\label{3.8.1}
+  \begin{enumerate}[(i)]
+    \item If $M$ is a pure motive of weight $w$, then $\Hom^i(1,M)=0$ for $i>-w$.
+    \item If $M$ is effective of weight $w$, and $b>0$, then $\Hom^i(1,M(w+b))=0$ for $i>w+b$.
+  \end{enumerate}
+\end{nullities}
+
+\begin{proof}
+  For (i), suppose that $M$ is a direct factor of $H_\mot^a(X)(c)$, with $c\geq0$, and $X$ a smooth projective variety.
+  The $\Ext^i(1,M)$ is then a direct factor of $\Ch^c(X;2c-i-a)$, and, if it is non-zero, then $2c-i-a\geq0$, i.e. $i\leq 2c-a=-w$.
+
+  For (ii), We again use the weak Lefschetz theorem (the $\ell$-adic, and thus motivic if the $\ell$-adic cohomology is a fibre functor, version) to suppose that $\dim(X)\leq a$.
+  We suppose that $c\geq a$, and we must prove the vanishing of $\Ext^i(1,H_\mot^a(X)(c))$ for $i>(c-a)+a=c$.
+  This inequality is equivalent to $c>a+(2c-i-a)\geq\dim(X)+(2c-i-a)$.
+\end{proof}
+
+If \cref{3.7.1} is an isomorphism then this would also imply the weak Lefschetz theorems for the Chow groups, as well as the conjectures on the Chow groups presented at this conference by J.P. Murre.
+
+
+\oldpage{159}
+\subsection{}
+\label{3.9}
+
+If $M$ is the unit motive, then (\ref{3.8.1})(ii) demands that
+\[
+\label{3.9.1}
+  H_\abs^n(\Spec(k),\QQ(j)) = 0 \quad\mbox{for $n>j$}.
+\tag{3.9.1}
+\]
+
+It is not clear to me if we should hope for an analogue of \cref{3.9.1} over $\ZZ$.
+If we define the $H_\abs^n(\Spec(k),\ZZ(j))$ as being the higher Chow groups, then \cref{3.9.1} is trivially true.
+
+A more concrete question is the following: suppose that we could define Galois cohomology classes in the $H^n(\Gal(\overline{k}/k),\ZZ_\ell(j))$ in a way that was ``independent of $\ell$''; if $n>j$, then \cref{3.9.1} demands that these classes be torsion; should we hope for them to actually be zero?
+
+
+\subsection{}
+\label{3.10}
+
+\textbf{Example.}
+Let $G$ be an simply connected and absolutely simple algebraic group over a field $k$.
+Over the algebraic closure $\overline{k}$ of $k$, the relations between the cohomology of $G$, $BG$, and $BT$ (where $T$ is a maximal torus) show that, in each of the usual cohomology theories, $H^i(G_{\overline{k}})=0$ for $i=1,2$, and that $H^3(G_{\overline{k}})(2)$ has a natural generator $a$.
+Now work in $\ell$-adic cohomology.
+Over $k$, the absolute $\ell$-adic cohomology of $G$ is the direct sum of that of a point and of a reduced cohomology $\widetilde{H}$, related to $G_{\overline{k}}$ by a Hochschild--Serre exact sequence.
+We thus have that $\widetilde{H}^i(G,\ZZ_\ell(2))=0$ for $i\leq2$, and that $\widetilde{H}^3(G,\ZZ_\ell(2))$ is isomorphic to $\ZZ_\ell$, with a natural generator $a$.
+This generator is primitive, and thus defines a homomorphism
+\[
+  G(k) \to H^3(\Spec(k),\ZZ_\ell(2)).
+\]
+We can show that, as predicted by \cref{3.9}, this arrow is zero:
+by Mercurev--Suslin~\cite{27}, the $H^3$ is torsion free, and a trace argument shows that the image is torsion:
+$G$ splits over a finite extension $k'$ of $k$, and $G(k')$ is equal to its derived group, at least if $|k'|\geq4$.
+
+The same circle of ideas allows us to construct a canonical central extension of $G(k)$ by $H^2(\Spec(k),\ZZ/n(2))$, equal to $K_2(k)/nK_2(k)$ by Mercurev--Suslin~\cite{27}.
+Recall that, for split $G$, a canonical central extension of $G(k)$ by $K_2(k)$ was constructed by Matsumoto~\cite[5.11]{25}.
+
+
+\subsection{}
+\label{3.11}
+
+If $M$ is a motive over $\QQ$, then $H_\abs^1(M)$ appears in the Beilinson conjecture concerning the behaviour at $s=0$ of the $L$-function of $M$ (Beilinson~\cite{2} and the talks by Soul\'{e}, Nekovar, and Scholl at this conference).
+I refer to these talks for a description of the conjecture and what is known about it.
+
+
+\subsection{}
+\label{3.12}
+
+If $F$ is a number field, then \cref{3.7.1} predicts that, in the category of motives over $F$, we have that
+\[
+\label{3.12.1}
+  \Ext^1(\QQ(0),\QQ(j)) = K_{2j-1}(F)\otimes\QQ,
+\tag{3.12.1}
+\]
+with vanishing of the $\Ext^n$ for $n\geq2$.
+The claim in \cref{3.12.1} imposes severe restrictions on the category of motives that are iterated extensions of Tate motives, and on the realisation systems attached to an object of this category.
+See Deligne~\cite{14}, where an example considered in detail is that of the Lie algebra of the unipotent $\pi_1$ of the projective line minus three points.
+
+\oldpage{160}
+Here is a programme to prove the consequences of \cref{3.12.1} for such realisation systems.
+\begin{enumerate}[(A)]
+  \item Define a Tannakian category $\sh{T}$, with simple objects being the tensor powers $\QQ(n)$, for $n\in\ZZ$, of an object $\QQ(1)$ of rank~$1$ for which \cref{3.12.1} is true ``by definition''.
+\end{enumerate}
+
+The idea is that Bloch's higher Chow groups $\Ch^n(\Spec(F),i)$ are given by a simplicial complex that is graded by the codimension~$n$ of cycles, and that the product is almost given by a graded simplicial commutative algebra structure.
+We say ``almost'', since the intersection of two cycles is not always defined, but only ``in general''.
+Rationally, it should be possible to replace this almost algebra by a true commutative bigraded differential algebra, with $d$ of degree $(1,0)$, and
+\begin{itemize}
+  \item $A^{\bullet,m}=0$ for $m<0$ ;
+  \item $A^{\bullet,0}$ consisting only of $\QQ$ in degree~$0$ ; and
+  \item $H^\bullet(A^{\bullet,n})$ consisting only of $K_{2n-1}(F)\otimes\QQ$ in degree~$1$.
+\end{itemize}
+We can then define $\sh{T}$ as a suitable category of bigraded differential modules, and with morphisms up to homotopy.
+
+This part of the programme has essentially been carried out by May~\cite{26}.
+For a cubic variety, see the talk of Bloch in this volume.
+
+\begin{enumerate}[(A)]
+\setcounter{enumi}{1}
+  \item Define, for each of the usual cohomology theories, a ``realisation'' fibre functor on the Tannakian category $\sh{T}$ of (A).
+  \item Show that the mixed Tate motives in which we are interested (for example, $\Lie\pi_1(\PP^1\setminus\{0,1,\infty\})$) --- or, rather, the systems of their realisations --- come from an object of $\sh{T}$.
+\end{enumerate}
 
 
 %% Bibliography %%
 
 \nocite{*}
+
+\begin{thebibliography}{10}
+
+  \bibitem{1}
+  {\sc Atiyah, M. and Hirzebruch, F.}
+  \newblock Analytic cycles on complex manifolds
+  \newblock {\em Topology} \textbf{1} (1962), 25--85.
+
+\end{thebibliography}
 
 \end{document}
