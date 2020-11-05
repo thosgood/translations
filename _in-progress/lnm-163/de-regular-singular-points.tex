@@ -148,13 +148,12 @@
 
 %% Content %%
 
-(\todo \textbf{errata})
-
-
 \setcounter{chapter}{-1}
 
 \chapter{Introduction}
 \label{0}
+
+(\todo \textbf{errata})
 
 \oldpage{1}
 If $X$ is a (non-singular) complex-analytic manifold, then there is an equivalence between the notions of
@@ -825,7 +824,7 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
 \label{I.2.23}
   Under the hypotheses of \cref{I.2.22}, we have the following.
   \begin{enumerate}[(i)]
-    \item For every relative local system $V$ on $X$, there exists a coherent analytic sheaf $\sh{V}=\sh{O}_X\otimes_{f^*\sh{O}_S}V$ and exactly one relative connection, said to be canonical, such that a local section $v$ of $\sh{V}$ is horizontal (i.e. such that $\nabla v=0$) if and only if $v$ is a section of $V$;
+    \item For every relative local system $V$ on $X$, there exists a coherent analytic sheaf \mbox{$\sh{V}=\sh{O}_X\otimes_{f^*\sh{O}_S}V$}, and exactly one relative connection, said to be canonical, such that a local section $v$ of $\sh{V}$ is horizontal (i.e. such that $\nabla v=0$) if and only if $v$ is a section of $V$;
       this connection is integrable.
     \item Given a relative local system $V$ on $X$, the de Rham complex defined
 \oldpage{15}
@@ -929,10 +928,20 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
     \item \emph{$S=D^n$, $X=D^{n+1}=D^n\times D$, $f=\pr_1$, and $\sh{V}$ is free.}
 
       Under these hypotheses, if $v$ is an arbitrary section of the inverse image of $\sh{V}$ under the zero section $s_0$ of $f$, then there exists exactly one horizontal section $\widetilde{v}$ of $\sh{V}$ that agrees with $v$ on $s_0(S)$ (as follows from the existence and uniqueness of solutions for Cauchy problems with parameters).
-      If $(e_i)$ is a basis of $s_0^*\sh{V}$, then the $\widetilde{e_i}$ form a horizontal basis of $\sh{V}$, and $(\sh{V},{\nabla})$ is defined by the relative local system $f^\sbullet s_0^*\sh{V}\simeq f^\sbullet\sh{O}_S^k$.
+      If $(e_i)_{1\leq i\leq k}$ is a basis of $s_0^*\sh{V}$, then the $\widetilde{e_i}$ form a horizontal basis of $\sh{V}$, and $(\sh{V},{\nabla})$ is defined by the relative local system $f^\sbullet s_0^*\sh{V}\simeq f^\sbullet\sh{O}_S^k$.
     \item \emph{$S=D^n$, $X=D^{n+1}=D^n\times D$, and $f=\pr_1$.}
 
-      \todo
+      By possibly shrinking $X$ and $S$, we can suppose that $\sh{V}$ admits a free presentation:
+      \[
+        \sh{V}_1 \xrightarrow{d} \sh{V}_0 \xrightarrow{\varepsilon} \sh{V} \to 0.
+      \]
+      By then possibly shrinking again, we can further suppose that $\sh{V}_0$ and $\sh{V}_1$ admit connections $\nabla_1$ and $\nabla_0$ (respectively) such that $\varepsilon$ and $d$ are compatible with the connections (if $(e_i)$ is a basis of $\sh{V}_0$, then $\nabla_0$ is determined by the $\nabla_0 e_i$, and it suffices to choose $\nabla_0 e_i$ such that $\varepsilon(\nabla_0 e_i)=\nabla(\varepsilon(e_i))$; we proceed similarly for $\nabla_1$).
+      The connections $\nabla_0$ and $\nabla_1$ are automatically integrable, since $f$ is of relative dimension~$1$.
+      There thus exist (by Case~1) relative local systems $V_0$ and $V_1$ such that $(\sh{V}_i,\nabla_i)\simeq\sh{O}_X\otimes_{f^\sbullet\sh{O}_S}V_i$.
+      We then have that
+      \[
+        (\sh{V},\nabla) \simeq \sh{O}_X\otimes_{f^\sbullet\sh{O}_S}(V_0/dV_1).
+      \]
 \oldpage{18}
     \item \emph{$f$ is of relative dimension~$1$.}
 
