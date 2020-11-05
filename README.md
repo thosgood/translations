@@ -30,6 +30,16 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/?id=BSMF_1958__86__97_0)
 
+- Deligne, P. "A quoi servent les motifs?".
+  <br/>
+  _Proc. Symp. in Pure Math._ **55** (1994), 143--161.
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/pspm-55/what-are-motives-for.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=pspm-55%2Fwhat-are-motives-for.tex&command=pdflatex&trackId=1603299038744)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/deligne/paper/413)
+
 - Grothendieck, A. "La théorie des classes de Chern".
   <br/>
   _Bull. Soc. Math. Fr_ **86** (1958) , 137--154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
@@ -159,16 +169,6 @@ Note that we have included any changes made in the Errata.
 # In progress
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
-
-- **(18/19)** Deligne, P. "A quoi servent les motifs?".
-  <br/>
-  _Proc. Symp. in Pure Math._ **55** (1994), 143--161.
-  <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/pspm-55/what-are-motives-for.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=pspm-55%2Fwhat-are-motives-for.tex&command=pdflatex&trackId=1603299038744)
-  |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/deligne/paper/413)
 
 - **(2/9)** Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
   <br/>
