@@ -840,7 +840,7 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
 
 \begin{proof}
   We first prove (i).
-  To show that $\sh{V}$ is coherent, it suffices to do so locally, for $V=f^*V_0$, in which case $\sh{V}$ is the inverse image, in the sense of coherent analytic sheaves, of $\sh{V}_0$.
+  To show that $\sh{V}$ is coherent, it suffices to do so locally, for $V=f^\sbullet V_0$, in which case $\sh{V}$ is the inverse image, in the sense of coherent analytic sheaves, of $\sh{V}_0$.
   The canonical relative connection necessarily satisfies, for any local section $f$ (resp $v_0$) of $\sh{O}_X$ (resp. $V$),
   \[
   \label{I.2.23.1}
@@ -866,12 +866,12 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
   We first of all consider the particular case of (ii) where $S=D^n$, $X=D^n\times D^m$, $f=\pr_2$, and the relative local system $V$ is the inverse image of $\sh{O}_S$.
   The complex of global sections
   \[
-    0 \to \Gamma(f^*\sh{O}_S) \to \Gamma(\sh{O}_X) \to \Gamma(\Omega_{X/S}^1) \to \ldots
+    0 \to \Gamma(f^\sbullet\sh{O}_S) \to \Gamma(\sh{O}_X) \to \Gamma(\Omega_{X/S}^1) \to \ldots
   \]
   is acyclic, since it admits the homotopy operator $H$ defined below.
 \oldpage{16}
   \begin{enumerate}[a)]
-    \item $H\colon \Gamma(\sh{O}_X) \to \Gamma(f^*\sh{O}_S) = \Gamma(S,\sh{O}_S)$ is the inverse image under the zero section of $f$;
+    \item $H\colon \Gamma(\sh{O}_X) \to \Gamma(f^\sbullet\sh{O}_S) = \Gamma(S,\sh{O}_S)$ is the inverse image under the zero section of $f$;
     \item an element $\omega\in\Gamma(\Omega_{X/S}^p)$ (where $p>0$) can be represented in a unique way as a sum of convergent series:
       \[
         \omega = \sum_{\substack{I\subset[1,m]\\|I|=p}} \; \sum_{\underline{n}\in \NN^{m+n}} a_{\underline{n}}^I
@@ -894,7 +894,7 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
       \]
   \end{enumerate}
 
-  This remains true if we replace $D^{m+n}$ by a smaller polycylinder, and so $\Omega_{X/S}^\bullet$ is a resolution of $f^*\sh{O}_S$.
+  This remains true if we replace $D^{m+n}$ by a smaller polycylinder, and so $\Omega_{X/S}^\bullet$ is a resolution of $f^\sbullet\sh{O}_S$.
 \end{env}
 
 \begin{proof}[\normalfont\textbf{2.23.3}]
@@ -908,19 +908,39 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
   \[
     \Sigma_0\colon 0 \to V'_0 \to V_0 \to V''_0 \to 0,
   \]
-  then let $\Sigma=f^*\Sigma_0$ be the exact sequence of relative local systems given by the inverse image of $\Sigma_0$ (which is exact since $f^*$ is an exact functor), and let $\Omega_{X/S}^\bullet(\Sigma)$ be the corresponding exact sequence of relative de Rham complexes:
+  then let $\Sigma=f^\sbullet\Sigma_0$ be the exact sequence of relative local systems given by the inverse image of $\Sigma_0$ (which is exact since $f^\sbullet$ is an exact functor), and let $\Omega_{X/S}^\bullet(\Sigma)$ be the corresponding exact sequence of relative de Rham complexes:
   \[
-    \Omega_{X/S}^\bullet(\Sigma)\colon 0 \to \Omega_{X/S}^p\otimes_{f^*\sh{O}_S}f^*V'_0 \to \Omega_{X/S}^p\otimes_{f^*\sh{O}_S}f^*V_0 \to \Omega_{X/S}^p\otimes_{f^*\sh{O}_S}f^*V''_0 \to 0.
+    \Omega_{X/S}^\bullet(\Sigma)\colon 0 \to \Omega_{X/S}^p\otimes_{f^\sbullet\sh{O}_S}f^\sbullet V'_0 \to \Omega_{X/S}^p\otimes_{f^\sbullet\sh{O}_S}f^\sbullet V_0 \to \Omega_{X/S}^p\otimes_{f^\sbullet\sh{O}_S}f^\sbullet V''_0 \to 0.
   \]
-  This sequence is exact since $\Omega_{X/S}^p$ is flat over $f^*\sh{O}_S$, since it is locally free over $\sh{O}_X$ which is itself flat over $f^*\sh{O}_S$.
+  This sequence is exact since $\Omega_{X/S}^p$ is flat over $f^\sbullet\sh{O}_S$, since it is locally free over $\sh{O}_X$ which is itself flat over $f^\sbullet\sh{O}_S$.
 
   The snake lemma applied to $\Omega_{X/S}^\bullet(\Sigma)$ shows that, if claim~(ii)
 \oldpage{17}
-  is satisfied for any two of relative local systems $f^*V_0$, $f^*V'_0$, and $f^*V''_0$, then it is again satisfied for the third.
+  is satisfied for any two of relative local systems $f^\sbullet V_0$, $f^\sbullet V'_0$, and $f^\sbullet V''_0$, then it is again satisfied for the third.
   We thus deduce, by induction, that, if $V_0$ admits a finite resolution $M_\bullet$ by modules that satisfy (ii), then $V_0$ satisfies (ii).
   This, applied to $V_0$ and $\sh{L}^\bullet$, finishes the proof of (i) and (ii).
 
-  It follows from (ii) that \todo
+  It follows from (ii) that the composite $\mbox{(iii)b}\circ\mbox{(iii)a}$ of the functors from (iii) is canonically isomorphic to the identity;
+  furthermore, if $V_1$ and $V_2$ are relative local systems, and if $u\colon\sh{V}_1\to\sh{V}_2$ is a homomorphism that induces $0$ on $V_1$, then $u=0$, since $V_1$ generates $\sh{V}_1$;
+  it thus follows that the functor $\mbox{(iii)a}$ is fully faithful.
+  It remains to show that every vector bundle $\sh{V}$ endowed with a relative connection $\nabla$ is given locally by a relative local system.
+
+  \begin{enumerate}[\bf {Case}~1:]
+    \item \emph{$S=D^n$, $X=D^{n+1}=D^n\times D$, $f=\pr_1$, and $\sh{V}$ is free.}
+
+      Under these hypotheses, if $v$ is an arbitrary section of the inverse image of $\sh{V}$ under the zero section $s_0$ of $f$, then there exists exactly one horizontal section $\widetilde{v}$ of $\sh{V}$ that agrees with $v$ on $s_0(S)$ (as follows from the existence and uniqueness of solutions for Cauchy problems with parameters).
+      If $(e_i)$ is a basis of $s_0^*\sh{V}$, then the $\widetilde{e_i}$ form a horizontal basis of $\sh{V}$, and $(\sh{V},{\nabla})$ is defined by the relative local system $f^\sbullet s_0^*\sh{V}\simeq f^\sbullet\sh{O}_S^k$.
+    \item \emph{$S=D^n$, $X=D^{n+1}=D^n\times D$, and $f=\pr_1$.}
+
+      \todo
+\oldpage{18}
+    \item \emph{$f$ is of relative dimension~$1$.}
+
+      \todo
+    \item[\bf General case.]
+      We proceed by induction on the relative dimension $n$ of $f$.
+      \todo
+  \end{enumerate}
 \end{proof}
 
 
