@@ -1015,7 +1015,7 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
 \begin{corollary}{2.25}
 \label{I.2.25}
   Let $f\colon X\to S$ be a proper separated morphism between topological spaces.
-  Suppose that $S$ is locally paracompact \cref{0.5}.
+  Suppose that $S$ is locally paracompact \hyperref[0.5]{(0.5)}.
   Then, for every $s\in S$, and for every sheaf $\sh{F}$ on $X$, we have that
   \[
     (\RR^i f_*\sh{F})_s \simeq \HH^i(f^{-1}(s), \sh{F}|f^{-1}(s)).
@@ -1135,13 +1135,102 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
   Under the hypotheses of \cref{I.2.28}, with $S$ smooth, we define the \emph{Gauss--Manin connection} on $\RR^i f_*\Omega_{X/S}^\bullet(V)$ as being the unique integrable connection that admits the local sections of $\RR^i f_*V$ as its horizontal sections \cref{I.2.17}.
 \end{env}
 
+
+
 \section{Translation in terms of first-order partial differential equations}
 \label{I.3}
+
+\begin{env}{3.1}
+\label{I.3.1}
+  Let $X$ be a complex-analytic variety.
+  If $\sh{V}$ is the holomorphic vector bundle defined by a $\CC$-vector space $V_0$, then we have seen that $\sh{V}$ admits a canonical connection with covariant derivative ${}_0\!\nabla$.
+  If $\nabla$ is the covariant derivative defined by another connection on $\sh{V}$, then we have seen \cref{I.2.6} that $\nabla$ can be written in the form
+  \[
+    \nabla = {}_0\!\nabla + \Gamma,
+    \quad\mbox{where $\Gamma\in\Omega(\shEnd(\sh{V}))$.}
+  \]
+
+  If we identify sections of $\sh{V}$ with holomorphic maps from $X$ to $V_0$, then we have that
+  \[
+  \label{I.3.1.1}
+    \nabla v = \dd v + \Gamma\cdot v
+  \tag{3.1.1}
+  \]
+\end{env}
 
 
 
 %% Bibliography %%
 
 \nocite{*}
+
+\begin{thebibliography}{26}
+
+  \bibitem{1}
+  {\sc Atiyah,~M. and Hodge,~W.L.}
+  \newblock Integrals of the second kind on an algebraic variety.
+  \newblock {\em Ann. of Math.} \textbf{62} (1955), 56--91.
+
+  \bibitem{2}
+  {\sc Baily,~W.L. and Borel,~A.}
+  \newblock Compactification of arithmetic quotients of bounded domains.
+  \newblock {\em Ann. of Math.} \textbf{84} (1966), 442--528.
+
+  \bibitem{3}
+  {\sc Baker,~A.}
+  \newblock Linear forms in the logarithms of algebraic numbers II.
+  \newblock {\em Mathematika} \textbf{14} (1967), 102--107.
+
+  \bibitem{4}
+  {\sc Berthelot,~P.}
+  \newblock Cohomologie $p$-cristalline des sch\'{e}mas.
+  \newblock {\em CR Acad. Sci. Paris} \textbf{269} (1969), 297--300, 357--360, and 397--400.
+
+  \bibitem{5}
+  {\sc Brieskorn,~E.}
+  \newblock Die monodromie der isolierten singularit\"{a}ten von hyperfl\"{a}chen.
+  \newblock {\em Manuscripta math.} \textbf{2} (1970), 103--161.
+
+  \bibitem{6}
+  {\sc Gelfond,~A.}
+  \newblock Sur le septi\`{e}me probl\`{e}me de D.~Hilbert.
+  \newblock {Doklady Akad. Nauk. URSS} \textbf{2} (1934), 4--6.
+
+  \bibitem{7}
+  {\sc Godement,~R.}
+  \newblock {\em Topologie alg\'{e}brique et th\'{e}orie des faisceaux}.
+  \newblock Hermann, 1958.
+
+  \bibitem{8}
+  {\sc Griffiths,~P.A.}
+  \newblock ``Some results on Moduli and Periods of Integrals on Algebraic Manifolds III''.
+  \newblock (Mimeographed notes from Princeton).
+
+  \bibitem{9}
+  {\sc Grothendieck,~A.}
+  \newblock On the De Rham cohomology of algebraic varieties.
+  \newblock {\em Publ. Math. IHES} \textbf{29} (1966), 95--103.
+
+  \bibitem{10}
+  {\sc Grothendieck,~A. (notes by Coates,~I. and Jussila,~O.)}
+  \newblock ``Crystals and the De Rham cohomology of schemes'', in: {\em dix expos\'{e}s sur la cohomologie des sch\'{e}mas}.
+  \newblock North Holl. Publ. Co., 1968.
+
+  \bibitem{11}
+  {\sc Gunning,~R.}
+  \newblock {\em Lectures on Riemann surfaces}.
+  \newblock Princeton Math. Notes, 1966.
+
+  \bibitem{12}
+  {\sc Hironaka,~H.}
+  \newblock Resolution of singularities of an algebraic variety over a field of characteristic zero, I and II.
+  \newblock {\em Ann. of Math.} \textbf{79} (1964).
+
+  \bibitem{13}
+  {\sc Ince,~E.L.}
+  \newblock {\em Ordinary differential equations}.
+  \newblock Dover, 1956.
+
+\end{thebibliography}
 
 \end{document}
