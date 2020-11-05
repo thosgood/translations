@@ -1,6 +1,6 @@
 \documentclass{report}
 
-\usepackage[margin=1.65in]{geometry}
+\usepackage[margin=1.6in]{geometry}
 
 \title{Regular singular differential equations}
 \author{Pierre Deligne}
@@ -79,6 +79,12 @@
     {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
     {\endinnercustomdefinition}
 
+  \newtheorem{innercustomreminder}{Reminder}
+  \crefname{innercustomreminder}{}{}
+  \newenvironment{reminder}[1]
+    {\renewcommand\theinnercustomreminder{#1}\innercustomreminder}
+    {\endinnercustomreminder}
+
   \newtheorem{innercustomenv}{}
   \crefname{innercustomenv}{}{}
   \newenvironment{env}[1]
@@ -97,6 +103,7 @@
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\pr}{\mathrm{pr}}
 \newcommand{\II}{\mathrm{II}}
+\newcommand{\RR}{\mathbf{R}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -108,6 +115,7 @@
 \DeclareMathOperator{\shHom}{\underline{Hom}}
 \DeclareMathOperator{\shEnd}{\underline{End}}
 \DeclareMathOperator{\DD}{D}
+\DeclareMathOperator{\HH}{H}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -802,7 +810,7 @@ From this, the holomorphic Poincar\'{e} lemma gives the following:
 
 \begin{env}{2.22}
 \label{I.2.22}
-  Let $f\colon X\to S$ be a \emph{smooth} morphism of complex analytic spaces;
+  Let $f\colon X\to S$ be a \emph{smooth} morphism of complex-analytic spaces;
   by hypothesis, $f$ is thus locally (in the domain) isomorphic to a projection $\pr_2\colon\CC^n\times S\to S$ (for some $n\in\NN$).
   A \emph{local relative system} on $X$ is a sheaf of $f^*\sh{O}_S$-modules that is locally isomorphic to the sheaf-theoretic inverse image of a coherent analytic sheaf on $S$.
   If $\sh{V}$ is a coherent analytic sheaf on $X$, then a \emph{relative connection} on $\sh{V}$ is an $f^*\sh{O}_S$-linear homomorphism
@@ -986,6 +994,148 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
       of \cref{I.2.23}.
   \end{enumerate}
 \end{proof}
+
+Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necessary to deduce \cref{I.2.28} from \cref{I.2.23}.
+
+\begin{reminder}{2.24}
+\label{I.2.24}
+  Let $Y$ be a closed subset of a topological space $X$, and suppose that $Y$ has a paracompact neighbourhood.
+  For every sheaf $\sh{F}$ on $X$, we have that
+  \[
+    \varinjlim_{U\supset Y} \HH^\bullet(U,\sh{F}) \xrightarrow{\sim} \HH^\bullet(Y,\sh{F}).
+  \]
+\end{reminder}
+
+\begin{proof}
+  See Godement~\cite[II, 4.11.1, p.~193]{7}.
+\end{proof}
+
+\begin{corollary}{2.25}
+\label{I.2.25}
+  Let $f\colon X\to S$ be a proper separated morphism between topological spaces.
+  Suppose that $S$ is locally paracompact \cref{0.5}.
+  Then, for every $s\in S$, and for every sheaf $\sh{F}$ on $X$, we have that
+  \[
+    (\RR^i f_*\sh{F})_s \simeq \HH^i(f^{-1}(s), \sh{F}|f^{-1}(s)).
+  \]
+\end{corollary}
+
+\begin{proof}
+  Since $f$ is closed, the $f^{-1}(U)$ form a fundamental system of neighbourhoods of $f^{-1}(s)$, where the $U$ are neighbourhoods of $s$.
+  Furthermore, if $U$ is paracompact, then $f^{-1}(U)$ is paracompact, since $f$ is proper and separated.
+  We conclude by \cref{I.2.24}.
+\end{proof}
+
+\begin{reminder}{2.26}
+\label{I.2.26}
+  Let $X$ be a contractible locally paracompact topological space, $i$ an integer, and $V$ a complex local system on $X$, such that $\dim_\CC\HH^i(X,V)<\infty$.
+  Then, for every vector space $A$ over $\CC$, possibly of infinite dimension, we have that
+  \[
+  \label{I.2.26.1}
+    A\otimes_\CC\HH^i(X,V) \xrightarrow{\sim} \HH^i(X,A\otimes_\CC V).
+  \tag{2.26.1}
+  \]
+\end{reminder}
+
+\begin{proof}
+  We denote by $\HH_\bullet(X,V^*)$ the singular homology of $X$ with coefficients in $V^*$.
+  The universal coefficient formula, which holds here, gives
+  \[
+  \label{I.2.26.2}
+    \HH^i(X,A\otimes V) \simeq \Hom_\CC(\HH_i(X,V^*),A).
+  \tag{2.26.2}
+  \]
+  For $A=\CC$, we thus conclude that $\dim\HH_i(X,V^*)<\infty$.
+  Equation~\cref{I.2.26.1} then follows from \cref{I.2.26.2}.
+\end{proof}
+
+\begin{env}{2.27}
+\label{I.2.27}
+  Let $f\colon X\to S$ be a smooth morphism of complex-analytic spaces, and let $V$ be a local system on $X$.
+  Then the sheaf
+\oldpage{20}
+  \[
+  \label{I.2.27.1}
+    V_\mathrm{rel} = f^\sbullet\sh{O}_S \otimes_\CC V
+  \tag{2.27.1}
+  \]
+  is a relative local system.
+  We denote by $\Omega_{X/S}^\bullet(V)$ the corresponding de Rham complex.
+  By \cref{I.2.23}, $\Omega_{X/S}^\bullet$ is a resolution of $V_\mathrm{rel}$.
+  We thus have that
+  \[
+  \label{I.2.27.2}
+    \RR^i f_* V_\mathrm{rel} \xrightarrow{\sim} \RR^i f_*(\Omega_{X/S}^\bullet(V))
+  \tag{2.27.2}
+  \]
+  where the right-hand side is the relative hypercohomology.
+  From \cref{I.2.27.1}, we thus obtain an arrow
+  \[
+  \label{I.2.27.3}
+    \sh{O}_S \otimes_\CC \RR^i f_*V \to \RR^i f_*(V_\mathrm{rel}),
+  \tag{2.27.3}
+  \]
+  whence, by composition, an arrow
+  \[
+  \label{I.2.27.4}
+    \sh{O}_S \otimes \RR^i f_*V \to \RR^i f_*(\Omega_{X/S}(V)).
+  \tag{2.27.4}
+  \]
+\end{env}
+
+\begin{proposition}{2.28}
+\label{I.2.28}
+  Let $f\colon X\to S$ be a smooth separated morphism of analytic spaces, $i$ and integer, and $V$ a complex local system on $X$.
+  We suppose that
+  \begin{enumerate}[a)]
+    \item $f$ is topologically trivial locally on $S$ ; and
+    \item the fibres of $f$ satisfy
+      \[
+        \dim\HH^i(f^{-1}(s),V) < \infty.
+      \]
+      Then the arrow \cref{I.2.27.4} is an isomorphism:
+      \[
+        \sh{O}_S \otimes_\CC \RR^i f_*V \xrightarrow{\sim} \RR^i f_*(\Omega_{X/S}^\bullet(V)).
+      \]
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  Let $s\in S$, $Y=f^{-1}(s)$, and $V_0=V|Y$.
+  To show that \cref{I.2.27.4} is an isomorphism, it suffices to construct a fundamental system $T$ of neighbourhoods of $s$ such that the arrows
+  \[
+  \label{I.2.28.1}
+    \HH^0(T,\sh{O}_S) \otimes \HH^i(T\times Y,\pr_2^\sbullet V_0) \xrightarrow{\sim} \HH^i(T\times Y,\pr_1^\sbullet\sh{O}_S \otimes \pr_2^\sbullet V_0)
+  \tag{2.28.1}
+  \]
+  are isomorphisms.
+  In fact, the fibre at $s$ of \cref{I.2.27.3}, which is the inductive limit of the arrows \cref{I.2.28.1}, will then be an isomorphism.
+
+  We will prove \cref{I.2.28.1} for a compact Stein neighbourhood $T$ of $s$, assumed to be contractible.
+  The arrow in \cref{I.2.28.1} can then be written as
+\oldpage{21}
+  \[
+  \label{I.2.28.2}
+    \HH^0(T,\sh{O}_S) \otimes \HH^i(Y,V_0) \xrightarrow{\sim} \HH^i(T\times Y,\pr_1^\sbullet\sh{O}_S \otimes \pr_2^\sbullet V_0).
+  \tag{2.28.2}
+  \]
+
+  We can calculate the right-hand side of \cref{I.2.28.2} by using the Leray spectral sequence for $\pr_2\colon T\times Y\to Y$.
+  By \cref{I.2.25}, since $\HH^i(T,\sh{O}_S)=0$, we have that
+  \[
+    \HH^i(T\times Y,\pr_1^\sbullet\sh{O}_S \otimes \pr_2^\sbullet V_0) \simeq \HH^i(Y,\HH^0(T,\sh{O}_S) \otimes V_0),
+  \]
+  and we conclude by \cref{I.2.26}.
+\end{proof}
+
+\begin{env}{2.29}
+\label{I.2.29}
+  Under the hypotheses of \cref{I.2.28}, with $S$ smooth, we define the \emph{Gauss--Manin connection} on $\RR^i f_*\Omega_{X/S}^\bullet(V)$ as being the unique integrable connection that admits the local sections of $\RR^i f_*V$ as its horizontal sections \cref{I.2.17}.
+\end{env}
+
+\section{Translation in terms of first-order partial differential equations}
+\label{I.3}
+
 
 
 %% Bibliography %%
