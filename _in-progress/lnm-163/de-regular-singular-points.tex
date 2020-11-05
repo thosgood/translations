@@ -945,10 +945,28 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
 \oldpage{18}
     \item \emph{$f$ is of relative dimension~$1$.}
 
-      \todo
+      We can suppose that $S$ is a closed analytic subset of $D^n$, and that $X=S\times D$ and $f=\pr_1$.
+      The relative local systems (resp. the modules with relative connections) on $X$ can then be identified with the local relative systems (resp. the modules with relative connections) on $D^n\times D$ that are annihilated by the inverse image of the ideal that defines $S$, and we conclude by using Case~2.
     \item[\bf General case.]
       We proceed by induction on the relative dimension $n$ of $f$.
-      \todo
+      The case $n=0$ is trivial.
+      If $n\neq0$, then we are led to the case where $X=S\times D^{n-1}\times D$ and $f=\pr_1$.
+      The bundle with connection $(\sh{V},\nabla)$ induces a bundle $\sh{V}_0$ with connection on $X_0=S\times D^{n-1}\times\{0\}$ which is, by induction, of the form $(\sh{V}_0,\nabla_0) = \sh{O}_{X_0}\otimes_{\pr_1^\sbullet\sh{O}_S}V$.
+      The projection $f$ from $X$ to $S\times D^{n-1}$ is of relative dimension~$1$, and the relative connection $\nabla$ induces a relative connection for $\sh{V}$ on $X/S\times D^{n-1}$.
+      By Case~3, there exists a vector bundle $V_1$ on $S\times D^{n-1}$, as well as an isomorphism
+      \[
+        \sh{V} \simeq \sh{O}_X\otimes_{p^\sbullet\sh{O}_{S\times D^{n-1}}}p^\sbullet V_1.
+      \]
+      of bundles with relative connections (for $p$).
+
+      The vector bundle $V_1$ can be identified with the restriction of $\sh{V}$ to $X_0$, whence we obtain an isomorphism
+      \[
+        \alpha\colon \sh{V}\simeq\sh{O}_X\otimes_{f^\sbullet\sh{O}_S}V
+      \]
+      of vector bundles, such that
+      \begin{enumerate}[(i)]
+        \item \todo
+      \end{enumerate}
   \end{enumerate}
 \end{proof}
 
