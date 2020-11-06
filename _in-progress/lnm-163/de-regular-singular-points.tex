@@ -106,6 +106,7 @@
 \newcommand{\pr}{\mathrm{pr}}
 \newcommand{\II}{\mathrm{II}}
 \newcommand{\RR}{\mathbf{R}}
+\newcommand{\GL}{\mathrm{GL}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -1092,7 +1093,7 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
 
 \begin{proposition}{2.28}
 \label{I.2.28}
-  Let $f\colon X\to S$ be a smooth separated morphism of analytic spaces, $i$ and integer, and $V$ a complex local system on $X$.
+  Let $f\colon X\to S$ be a smooth separated morphism of analytic spaces, $i$ an integer, and $V$ a complex local system on $X$.
   We suppose that
   \begin{enumerate}[a)]
     \item $f$ is topologically trivial locally on $S$ ; and
@@ -1161,6 +1162,58 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
     \nabla v = \dd v + \Gamma\cdot v
   \tag{3.1.1}
   \]
+
+  If we suppose that we have chosen a basis of $V$, i.e. an isomorphism $e\colon\CC^n\to V_0$ with coordinates (identified with basis vectors) $e_\alpha\colon\CC\to V_0$, then $\Gamma$ can be written as a matrix $\omega_\beta^\alpha$ of differential forms (the \emph{matrix of forms of the connection}), and \cref{I.3.1.1} can then be written as
+  \[
+  \label{I.3.1.2}
+    (\nabla v)^\alpha = \dd v^\alpha + \sum_\beta \omega_\beta^\alpha v^\beta.
+  \tag{3.1.2}
+  \]
+
+  Let $\sh{V}$ be an arbitrary holomorphic vector bundle on $X$.
+  The choice of a basis $e\colon\CC^n\xrightarrow{\sim}\sh{V}$ of $\sh{V}$ allows us to think of $\sh{V}$ as being defined by a
+\oldpage{22}
+  constant vector \todo ($\CC^n$), and the above remarks apply:
+  connections on $\sh{V}$ correspond, via \cref{I.3.1.2}, with $(n\times n)$-matrices of differential forms on $X$.
+  If $\omega_e$ is the matrix of the connection $\nabla$ in the basis $e$, and if $f\colon\CC^n\to\xrightarrow{\sim}\sh{V}$ is another basis of $\sh{V}$, with matrix $A\in\GL_n(\sh{O})$ (where $A=e^{-1}f$), then \cref{I.3.1.2}
+  \[
+    \begin{aligned}
+      \nabla v
+      &= e\dd(e^{-1}v) + e\omega_e e^{-1}v
+    \\&= fA^{-1}\dd(Af^{-1}v) + fA^{-1}\omega_e Af^{-1}v
+    \\&= f\dd f^{-1}v + f(A^{-1}\dd A + A^{-1}\omega_e A)f^{-1}v.
+    \end{aligned}
+  \]
+  Comparing this with \cref{I.3.1.2} in the basis $f$, we find that
+  \[
+  \label{I.3.1.3}
+    \omega_f = A^{-1}\dd A + A^{-1}\omega_e A.
+  \tag{3.1.3}
+  \]
+
+  If, further, $(x^i)$ is a system of local coordinates on $X$, which defines a basis $(\dd x^i)$ of $\Omega_X^1$, we set
+  \[
+    \omega_\beta^\alpha = \sum_i \Gamma_{\beta i}^\alpha \dd x^i
+  \]
+  and we call the holomorphic functions $\Gamma_{\beta i}^\alpha$ the \emph{coefficients of the connection}.
+  Equation~\cref{I.3.1.2} can the be written as
+  \[
+  \label{I.3.1.4}
+    (\nabla_i v)^\alpha = \partial_i v^\alpha + \sum_\beta \Gamma_{\beta i}^\alpha v^\beta.
+  \tag{3.1.4}
+  \]
+
+  The differential equation $\nabla v=0$ of horizontal sections of $\sh{V}$ can be written as the linear homogeneous system of first-order partial differential equations
+  \[
+  \label{I.3.1.5}
+    \partial_i v^\alpha = -\sum_\beta \Gamma_{\beta i}^\alpha v^\beta.
+  \tag{3.1.5}
+  \]
+\end{env}
+
+\begin{env}{3.2}
+\label{I.3.2}
+  With the notation of \cref{I.3.1.2},
 \end{env}
 
 
