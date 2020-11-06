@@ -101,6 +101,7 @@
 \newcommand{\sbullet}{{\mathbin{\vcenter{\hbox{\scalebox{.5}{$\bullet$}}}}}}
 \newcommand{\id}{\mathrm{Id}}
 \newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\pr}{\mathrm{pr}}
@@ -119,6 +120,7 @@
 \DeclareMathOperator{\shEnd}{\underline{End}}
 \DeclareMathOperator{\DD}{D}
 \DeclareMathOperator{\HH}{H}
+\DeclareMathOperator{\Gr}{Gr}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -1213,7 +1215,117 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
 
 \begin{env}{3.2}
 \label{I.3.2}
-  With the notation of \cref{I.3.1.2},
+  With the notation of \cref{I.3.1.2}, and using Einstein summation notation, we have that
+  \[
+    \begin{aligned}
+      \nabla\nabla v
+      &= \nabla((\dd v^\alpha + \omega_\beta^\alpha v^\beta)e_\alpha)
+    \\&= \dd(\dd v^\alpha + \omega_\beta^\alpha v^\beta)e_\alpha - (\dd v^\alpha + \omega_\beta^\alpha v^\beta)\wedge\omega_\alpha^\gamma\cdot e_\gamma
+    \\&= \dd\omega_\beta^\alpha\cdot v^\beta\cdot e_\alpha - \omega_\beta^\alpha\wedge\dd v^\beta\cdot e_\alpha - \dd v^\alpha\wedge\omega_\alpha^\gamma\cdot e_\gamma - \omega_\beta^\alpha\wedge\omega_\alpha^\gamma\cdot v^\beta e_\gamma
+    \\&= (\dd\omega_\beta^\gamma - \omega_\beta^\alpha\wedge\omega_\alpha^\gamma)v^\beta e_\gamma.
+    \end{aligned}
+  \]
+
+  The curvature tensor matrix is thus
+\oldpage{23}
+  \[
+  \label{I.3.2.1}
+    R_\beta^\alpha = \dd\omega_\beta^\alpha + \sum_\gamma \omega_\gamma^\alpha\wedge\omega_\beta^\gamma,
+  \tag{3.2.1}
+  \]
+  which we can also write as
+  \[
+  \label{I.3.2.2}
+    R = \dd\omega + \omega\wedge\omega.
+  \tag{3.2.2}
+  \]
+  Equation~\cref{I.3.2.1} gives, in a system $(x^i)$ of local coordinates,
+  \[
+  \label{I.3.2.3}
+    \begin{cases}
+      R_{\beta i j}^\alpha
+      &= (\partial_i\Gamma_{\beta j}^\alpha - \partial_j\Gamma_{\beta i}^\alpha) + (\Gamma_{\gamma i}^\alpha\Gamma_{\beta j}^\gamma - \Gamma_{\gamma j}^\gamma\Gamma_{\beta i}^\gamma)
+    \\R_\beta^\alpha
+      &= \sum_{i<j} R_{\beta i j}^\alpha \dd x^i\wedge\dd x^j.
+    \end{cases}
+  \tag{3.2.3}
+  \]
+
+  The condition $R_{\beta i j}^\alpha = 0$ is the integrability condition of the system \cref{I.3.1.5}, in the classical sense of the word;
+  it can be obtained by eliminating $v^\alpha$ from the equations given by substituting \cref{I.3.1.5} into the identity $\partial_i\partial_j v^\alpha = \partial_j\partial_i v^\alpha$.
+\end{env}
+
+
+
+\section{\texorpdfstring{$n^\mathrm{th}$}{nth}-order differential equations}
+\label{I.4}
+
+\begin{env}{4.1}
+\label{I.4.1}
+  The solution of a linear homogeneous $n^\mathrm{th}$-order differential equation
+  \[
+  \label{I.4.1.1}
+    \frac{\dd^n}{\dd x^n}y = \sum_{i=1}^n a_i(x) \frac{\dd^{n-i}}{\dd x^i}y
+  \tag{4.1.1}
+  \]
+  is equivalent to that of the system
+  \[
+  \label{I.4.1.2}
+    \begin{cases}
+      \frac{\dd}{\dd x}y_i
+      = y_{i+1} &\mbox{($1\leq i<n$);}
+    \\\frac{\dd}{\dd x}y_n
+      = \sum_{i=1}^n a_i(x) y_{n+1-i}
+    \end{cases}
+  \tag{4.1.2}
+  \]
+  of $n$ first-order equations.
+
+  By \cref{I.3}, this system can be described as the differential equation of horizontal sections of a rank-$n$ vector bundle endowed with a suitable connection, and this is what we aim to further explore.
+\end{env}
+
+\begin{env}{4.2}
+\label{I.4.2}
+  Let $X$ be a non-singular complex-analytic variety of pure dimension~$1$.
+  Let $X_n$ be the $n^\mathrm{th}$ infinitesimal neighbourhood of the diagonal of $X\times X$, and $p_1$ and $p_2$ the two projections from $X_n$ to $X$.
+  We denote by $\pi_{k,l}$ the injection from $X_l$ to
+\oldpage{24}
+  $X_k$, for $l\leq k$.
+
+  Let $\Omega^{\otimes n}$ be the $n^\mathrm{th}$ tensor power of the invertible sheaf $\Omega_X^1$ (for $n\in\ZZ$).
+  If $I$ is the ideal that defines the diagonal of $X\times X$, then $I/I^2\simeq\Omega_X^1$ canonically, and
+  \[
+  \label{I.4.2.1}
+    I^n/I^{n+1} \simeq \Omega^{\otimes n}.
+  \tag{4.2.1}
+  \]
+
+  If $\sh{L}$ is an invertible sheaf on $X$, then we denote by $P^n(\sh{L})$ the vector bundle
+  \[
+  \label{I.4.2.2}
+    P^n(\sh{L}) = (p_1)_*p_2^*\sh{L}
+  \tag{4.2.2}
+  \]
+  of $n^\mathrm{th}$-order jets of sections of $\sh{L}$.
+  The $I$-adic filtration of $p_2^*\sh{L}$ defines a filtration of $P^n(\sh{L})$ for which
+  \[
+  \label{I.4.2.3}
+    \begin{aligned}
+      \Gr P^n(\sh{L}) &\simeq \Gr P^n(\sh{O})\otimes\sh{L}
+    \\\Gr^i P^n(\sh{L}) \simeq \Omega^{\otimes i}\otimes\sh{L} \qquad\mbox{($0\leq i\leq n$).}
+    \end{aligned}
+  \tag{4.2.3}
+  \]
+
+  Recall that we define, by induction on $n$, a \emph{differential operator of order $\leq n$} as being a morphism $A\colon\sh{M}\to\sh{N}$ of abelian sheaves such that
+  \[
+    \begin{cases}
+      \mbox{$A$ is $\sh{O}$-linear} & \mbox{for $n=0$ ;}
+    \\\mbox{$[A,f]$ is of order $\leq m$ for every local section $f$ of $\sh{O}$} & \mbox{for $n=m+1$.}
+    \end{cases}
+  \]
+
+  For every local section $s$ of $\sh{L}$
 \end{env}
 
 
