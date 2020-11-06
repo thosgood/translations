@@ -188,7 +188,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fpm-92%2Fprojective-torus-action.tex&command=pdflatex&trackId=1602776678752)
 
-- **(20/126)** Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
+- **(25/126)** Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>
   Springer-Verlag, LNM **163** (1970).
   <br/>

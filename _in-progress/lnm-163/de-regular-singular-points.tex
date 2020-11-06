@@ -104,6 +104,7 @@
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\dd}{\mathrm{d}}
+\newcommand{\DD}{\mathrm{D}}
 \newcommand{\pr}{\mathrm{pr}}
 \newcommand{\II}{\mathrm{II}}
 \newcommand{\RR}{\mathbf{R}}
@@ -118,7 +119,6 @@
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\shHom}{\underline{Hom}}
 \DeclareMathOperator{\shEnd}{\underline{End}}
-\DeclareMathOperator{\DD}{D}
 \DeclareMathOperator{\HH}{H}
 \DeclareMathOperator{\Gr}{Gr}
 
@@ -349,7 +349,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   Let $X$ be a complex-analytic manifold \hyperref[0.7]{(0.7)} and $\sh{V}$ a vector bundle on $X$.
   The elders would have defined a (holomorphic) connection on $\sh{V}$ as the data, for every pair of points $(x,y)$ that are first order infinitesimal neighbours in $X$, of an isomorphism $\gamma_{y,x}\colon\sh{V}_x\to\sh{V}_y$ that depends holomorphically on $(x,y)$ and is such that $\gamma_{x,x}=\id$.
 
-  Suitably interpreted, this ``definition'' coincides with the currently fashionable definition (\cref{I.2.2.4}) given below (which we not be use in the rest of the section).
+  Suitably interpreted, this ``definition'' coincides with the currently fashionable definition \cref{I.2.2.4} given below (which we not be use in the rest of the section).
 
   It suffices to understand ``point'' to mean ``point with values in any analytic space'':
 
@@ -1325,8 +1325,139 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
     \end{cases}
   \]
 
-  For every local section $s$ of $\sh{L}$
+  For every local section $s$ of $\sh{L}$, $p_2^*s$ defines a local section $\DD^n(s)$ of $P^n(\sh{L})$ \cref{I.4.2.2}.
+  The $\CC$-linear sheaf morphism $\DD^n\colon\sh{L}\to P^n(\sh{L})$ is the universal differential operator of order $\leq n$ with domain $\sh{L}$.
 \end{env}
+
+\begin{definition}{4.3}
+\label{I.4.3}
+  \begin{enumerate}[(i)]
+    \item A \emph{linear homogeneous $n^\mathrm{th}$-order differential equation} on $\sh{L}$ is an $\sh{O}_X$-homomorphism $E\colon P^n(\sh{L})\to\Omega^{\otimes n}\otimes\sh{L}$ that induces the identity on the submodule $\Omega^{\otimes n}\otimes\sh{L}$ of $P^n(\sh{L})$.
+    \item A local section $s$ of $\sh{L}$ is a \emph{solution} of the differential equation $E$ if $E(\DD^n(s))=0$.
+  \end{enumerate}
+\end{definition}
+
+In fact, I have cheated with this definition, in that I have only considered equations that can be put in the ``resolved'' form \cref{I.4.1.1}.
+
+\oldpage{25}
+\begin{env}{4.4}
+\label{I.4.4}
+  Suppose that $\sh{L}=\sh{O}$, and let $x$ be a local coordinate on $X$.
+  The choice of $x$ allows us to identify $p^k(\sh{O})$ with $\sh{O}^{[0,k]}$, with the arrow $\DD^k$ becoming
+  \[
+    \begin{aligned}
+      \DD^k\colon \sh{O} &\to P^k(\sh{O}) \simeq \sh{O}^{[0,k]}
+    \\f &\mapsto (\partial_x^i f)_{0\leq i\leq k}.
+    \end{aligned}
+  \]
+  The choice of $x$ also allows us to identify $\Omega^1$ with $\sh{O}$, so that the $n^\mathrm{th}$-order differential equation can be identified with a morphism $E\in\Hom(\sh{O}^{[0,n]},\sh{O})$ \todo.
+  The solutions of $E$ are then exactly the (holomorphic) functions $f$ that satisfy
+  \[
+  \label{I.4.4.1}
+    \sum_{i=0}^n b_i(x) \partial_x^i f = 0
+    \qquad\mbox{($b_n=1$).}
+  \tag{4.4.1}
+  \]
+
+  The existence and uniqueness theorem for solutions of the Cauchy problem in \cref{I.4.4.1} implies the following.
+\end{env}
+
+\begin{theorem}{4.5}
+\label{I.4.5}
+  \emph{(Cauchy).}
+  Let $X$ and $\sh{L}$ be as in \cref{I.4.2}, and let $E$ be an $n^\mathrm{th}$-order differential equation on $\sh{L}$.
+  Then
+  \begin{enumerate}[(i)]
+    \item the subsheaf of $\sh{L}$ given by solutions of $E$ is a local system $\sh{L}^E$ of rank~$n$ on $X$ ; and
+    \item the canonical arrow $\DD^{n-1}\colon\sh{L}^E \to P^{n-1}(\sh{L})$ induces an isomorphism
+      \[
+        \sh{O}\otimes_\CC\sh{L}^E \xrightarrow{\sim} P^{n-1}(\sh{L}).
+      \]
+  \end{enumerate}
+\end{theorem}
+
+In particular, it follows from \cref{I.4.5}(ii) and from \cref{I.2.17} that $E$ defines a canonical connection on $P^{n-1}(\sh{L})$, whose horizontal sections are the images under $\DD$ of solutions of $E$.
+
+\begin{env}{4.6}
+\label{I.4.6}
+  To a differential equation $E$ on $\sh{L}$, we have thus associated
+  \begin{enumerate}[a)]
+    \item a holomorphic vector bundle $\sh{V}$ endowed with a connection (which is automatically integrable) \todo ; and
+    \item a surjective homomorphism $\lambda\colon\sh{V}\to\sh{L}$ (by $i=0$ in \cref{I.4.2.3}).
+  \end{enumerate}
+  Furthermore, the solutions of $E$ are exactly the images under $\lambda$ of the horizontal sections of $\sh{V}$.
+  This is just another way of expressing how to obtain \cref{I.4.1.2} from \cref{I.4.1.1}.
+\end{env}
+
+\oldpage{26}
+\begin{env}{4.7}
+\label{I.4.7}
+  Let $\sh{V}$ be a rank-$n$ vector bundle on $X$, endowed with a connection with covariant derivative $\nabla$.
+  Let $v$ be a local section of $\sh{V}$, and $w$ a vector field on $X$ that doesn't vanish at any point.
+  We say that $v$ is \emph{cyclic} if the local sections $(\nabla_w)^i(v)$ of $\sh{V}$ (for $0\leq i<n$) form a basis of $\sh{V}$.
+  This condition does not depend on the choice of $w$, and if $f$ is an invertible holomorphic function, then $v$ is cyclic if and only if $fv$ is cyclic.
+  In fact, we can show, by induction on $i$, that $(\nabla_{gw})^i(fv)$ lies in the submodule of $\sh{V}$ generated by the $(\nabla_w)^j(v)$ (for $0\leq j\leq i$).
+
+  If $\sh{L}$ is an invertible module, then we say that a section $v$ of $\sh{V}\otimes\sh{L}$ is cyclic if, for every every local isomorphism between $\sh{L}$ and $\sh{O}$, the corresponding section of $\sh{V}$ is cyclic.
+  This applies, in particular, to sections $v$ of $\shHom(\sh{V},\sh{L})=\sh{V}^\vee\otimes\sh{L}$.
+\end{env}
+
+\begin{lemma}{4.8}
+\label{I.4.8}
+  With the hypotheses and notation of \cref{I.4.6}, $\lambda$ is a cyclic section of $\shHom(\sh{V},\sh{L})$.
+\end{lemma}
+
+\begin{proof}
+  The problem is local on $X$;
+  we can reduce to the case where $\sh{L}=\sh{O}$ and where there exists a local coordinate $x$.
+
+  We use the notation of \cref{I.4.4}.
+  A section $(f^i)$ of $P^{n-1}(\sh{O})\simeq\sh{O}^{[0,n-1]}$ is horizontal if and only if it satisfies
+  \[
+    \begin{cases}
+      \partial_x f^i = f^{i+1}
+      & \mbox{($0\leq i\leq n-2$)}
+    \\\partial_x f^{n-1} = -\sum_{i=0}^{n-1} b_i f^i.
+    \end{cases}
+  \]
+  This gives us the coefficients of the connection: the matrix of the connection is
+  \[
+  \label{I.4.8.1}
+    \left(
+      \def\arraystretch{1.8}
+      \begin{array}{rrrrrr}
+        0 & -1 & 0 & 0 & \ldots & 0
+      \\0 & 0 & -1 & 0 & \ldots & 0
+      \\0 & 0 & 0 & -1 & & 0
+      \\\vdots & \vdots & & \ddots & \ddots & \vdots
+      \\\vdots & \vdots & & & 0 & -1
+      \\b^0 & b^1 & \ldots & \ldots & b^{n-2} & b^{n-1}
+      \end{array}
+    \right)
+  \tag{4.8.1}
+  \]
+
+\oldpage{27}
+  In the chosen system of coordinates, $\lambda=e^0$, and we calculate that
+  \[
+    \nabla_x^i\lambda = e^i
+    \qquad\mbox{($0\leq i\leq n-1$)}
+  \]
+  which proves \cref{I.4.8}.
+\end{proof}
+
+\begin{proposition}{4.9}
+\label{I.4.9}
+  The construction in \cref{I.4.6} establishes an equivalence between the following categories, where we take morphisms to be isomorphisms:
+  \begin{enumerate}[a)]
+    \item the category of invertible sheaves on $X$ endowed with an $n^\mathrm{th}$-order differential equation \cref{I.4.3} ; and
+    \item the category of triples consisting of a rank-$n$ vector bundle $\sh{V}$ endowed with a connection, an invertible sheaf $\sh{L}$, and a cyclic homomorphism $\lambda\colon\sh{V}\to\sh{L}$.
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  \todo
+\end{proof}
 
 
 
