@@ -14,6 +14,7 @@
 \usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{graphicx}
+\usepackage{tikz-cd}
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
@@ -1350,7 +1351,7 @@ In fact, I have cheated with this definition, in that I have only considered equ
     \\f &\mapsto (\partial_x^i f)_{0\leq i\leq k}.
     \end{aligned}
   \]
-  The choice of $x$ also allows us to identify $\Omega^1$ with $\sh{O}$, so that the $n^\mathrm{th}$-order differential equation can be identified with a morphism $E\in\Hom(\sh{O}^{[0,n]},\sh{O})$ \todo.
+  The choice of $x$ also allows us to identify $\Omega^1$ with $\sh{O}$, so that the $n^\mathrm{th}$-order differential equation can be identified with a morphism $E\in\Hom(\sh{O}^{[0,n]},\sh{O})$, and, as such, has coordinates $(b_i)_{0\leq i\leq n}$ with $b_n=1$.
   The solutions of $E$ are then exactly the (holomorphic) functions $f$ that satisfy
   \[
   \label{I.4.4.1}
@@ -1456,8 +1457,76 @@ In particular, it follows from \cref{I.4.5}(ii) and from \cref{I.2.17} that $E$ 
 \end{proposition}
 
 \begin{proof}
-  \todo
+  We will construct a functor that is quasi-inverse to that in \cref{I.4.6}.
+  Let $\sh{V}$ be a vector bundle with connection, and $\lambda$ a homomorphism from $\sh{V}$ to an invertible sheaf $\sh{L}$.
+  We denote by $V$ the local system of horizontal sections of $\sh{V}$.
+  For every $\sh{O}$-module $\sh{M}$, we have \cref{I.2.17}
+  \[
+    \Hom_\sh{O}(\sh{V},\sh{M}) \xrightarrow{\sim} \Hom_\CC(V,\sh{M}).
+  \]
+  In particular, we define a map $\gamma^k$ from $\sh{V}$ to $P^k(\sh{L})$ by setting, for any \emph{horizontal section} $v$ of $\sh{V}$,
+  \[
+  \label{I.4.9.1}
+    \gamma^k(v) = \DD^k(\lambda(v)).
+  \tag{4.9.1}
+  \]
+
+  \begin{lemma}{4.9.2}
+  \label{I.4.9.2}
+    The homomorphism $\lambda$ is cyclic if and only if
+    \[
+      \gamma^{n-1}\colon \sh{V} \to P^{n-1}(\sh{L})
+    \]
+    is an isomorphism.
+  \end{lemma}
+
+  The problem is local on $X$.
+  We can restrict to the case where $\sh{L}=\sh{O}$ and where we have a local coordinate $x$.
+  With the notation of \cref{I.4.4}, the morphism $\gamma^k$ then admits the morphisms $\partial_x^i\lambda = \nabla_x^i$ (for $0\leq i\leq k$) as coordinates.
+  For $k=n-1$, these form a basis of $\Hom(\sh{V},\sh{O})$ if and only if $\gamma^{n-1}$ is an isomorphism.
+
+  For $k\geq l$, the diagram
+\oldpage{28}
+  \[
+  \label{I.4.9.3}
+    \begin{tikzcd}[row sep=huge]
+      & \sh{V} \dlar[swap,"\gamma^k"] \drar["v^l"] &
+    \\P^k(\sh{L}) \ar[rr,"\pi_{l,k}"] && P^k(\sh{L})
+    \end{tikzcd}
+  \tag{4.9.3}
+  \]
+  commutes;
+  if $\lambda$ is cyclic, then this, along with \cref{I.4.9.2}, implies that $\gamma^n(v)$ is locally a direct factor, of codimension~$1$ in $P^n(\sh{L})$, and admits $\omega^{\otimes n}\otimes\sh{L} \simeq \Ker(\pi_{n-1,n})$ as a complement.
+  There thus exists exactly one $n^\mathrm{th}$-order differential equation
+  \[
+    E\colon P^n(\sh{L}) \to \Omega^{\otimes n}\otimes\sh{L}
+  \]
+  on $\sh{L}$ such that $E\circ\gamma^n=0$.
+
+  By \cref{I.4.9.1}, if $v$ is a horizontal section of $\sh{V}$, then $E\DD^n\lambda v = E\gamma^n v = 0$, and so $\lambda v$ is a solution of $E$.
+  We endow $P^{n-1}(\sh{L})$ with the connection \cref{I.4.6} defined by $E$.
+  If $v$ is a horizontal section of $\sh{V}$, then $\gamma^{n-1}(v)=\DD^{n-1}\lambda v$, where $\lambda v$ is a solution of $E$, and $\gamma^{n-1}(v)$ is thus horizontal.
+  We thus deduce that $\gamma^{n-1}$ is compatible with the connections.
+  A particular case of \cref{I.4.9.3} shows that the diagram
+  \[
+    \begin{tikzcd}[row sep=huge]
+      \sh{V} \ar[rr,"\gamma^{n-1}"] \drar[swap,"\lambda"]
+      && P^{n-1}(\sh{L}) \dlar["\todo"]
+    \\&\sh{L}&
+    \end{tikzcd}
+  \]
+  commutes, whence we have an isomorphism between $(\sh{V},\sh{L},\lambda)$ and the triple given by \cref{I.4.6} applied to $(\sh{L},E)$.
+  The functor
+  \[
+    (\sh{V},\sh{L},\lambda) \mapsto (\sh{L},E)
+  \]
+  is thus quasi-inverse to the functor in \cref{I.4.6}.
 \end{proof}
+
+\begin{env}{4.10}
+\label{I.4.10}
+  We summarise the relations between two systems $(\sh{V},\sh{L},\lambda)$ and $(\sh{L},E)$ that correspond under \cref{I.4.6} and \cref{I.4.9}.
+\end{env}
 
 
 
