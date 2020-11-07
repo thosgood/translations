@@ -112,6 +112,7 @@
 \newcommand{\II}{\mathrm{II}}
 \newcommand{\RR}{\mathbf{R}}
 \newcommand{\GL}{\mathrm{GL}}
+\newcommand{\tg}{\mathrm{tg}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -1599,7 +1600,7 @@ In this section, we specialise the results of \cref{I.4} to the case where $n=2$
 
 \begin{definition}{5.4}
 \label{I.5.4}
-  We define the \emph{osculating projective line bundle of $X$}, denoted by $P_\mathrm{tg}$, to be the osculating projective line bundle of $q_1\colon X_2\to X$.
+  We define the \emph{osculating projective line bundle of $X$}, denoted by $P_\tg$, to be the osculating projective line bundle of $q_1\colon X_2\to X$.
 \end{definition}
 
 By definition, we thus have a canonical commutative diagram
@@ -1607,21 +1608,21 @@ By definition, we thus have a canonical commutative diagram
 \label{I.5.4.1}
   \begin{tikzcd}
     X_2 \rar[hook] \drar[swap,"q_1"]
-    & P_\mathrm{tg} \dar
+    & P_\tg \dar
   \\& X
   \end{tikzcd}
 \tag{5.4.1}
 \]
-and, in particular, $P_\mathrm{tg}$ is endowed with a canonical section $e$, which is the image of the diagonal section of $X_2$, and we have that
+and, in particular, $P_\tg$ is endowed with a canonical section $e$, which is the image of the diagonal section of $X_2$, and we have that
 \[
 \label{I.5.4.2}
-  e^*\Omega_{P_\mathrm{tg}/X}^1 \simeq \Omega_X^1.
+  e^*\Omega_{P_\tg/X}^1 \simeq \Omega_X^1.
 \tag{5.4.2}
 \]
 
 \begin{env}{5.5}
 \label{I.5.5}
-  If $X$ is a projective line, then $\pr_1\colon X\times X\to X$ is a projective bundle on $X$ such that $P_\mathrm{tg}$ can be identified with the constant projective bundle of fibre $X$ on $X$ endowed with the inclusion homomorphism of $X_2$ into $X\times X$, i.e.
+  If $X$ is a projective line, then $\pr_1\colon X\times X\to X$ is a projective bundle on $X$ such that $P_\tg$ can be identified with the constant projective bundle of fibre $X$ on $X$ endowed with the inclusion homomorphism of $X_2$ into $X\times X$, i.e.
   \[
     \begin{tikzcd}
       X_2 \rar[hook] \drar[swap,"q_1"]
@@ -1635,7 +1636,7 @@ and, in particular, $P_\mathrm{tg}$ is endowed with a canonical section $e$, whi
     \begin{tikzcd}[column sep=huge]
       X_3 \drar[hook] \ar[ddr]
     \\X_2 \uar[hook] \rar[hook] \drar
-      & P_\mathrm{tg} \dar
+      & P_\tg \dar
     \\& X
     \end{tikzcd}
   \]
@@ -1645,8 +1646,212 @@ Now let $X$ be an arbitrary smooth curve.
 
 \begin{definition}{5.6}
 \label{I.5.6}
-  \emph{(Local form).}
+  \emph{(Local version).}
+  A \emph{projective connection} on $X$ is a sheaf on $X$ of germs of local isomorphisms from $X$ to $\PP^1$, which is a principal homogeneous sheaf (i.e. a torsor) for the constant sheaf of groups with value $\mathrm{PLG}_2(\CC)$.
 \end{definition}
+
+If $X$ is endowed with a projective connection, then every local construction on $\PP^1$ that is invariant under the projective group can be transported to $X$;
+in particular, the construction in \cref{I.5.5} gives us a morphism $\gamma$ that fits into a commutative diagram:
+\[
+\label{I.5.6.1}
+  \begin{tikzcd}[column sep=huge]
+    X_3 \drar[hook,"\gamma"] \ar[ddr]
+  \\X_2 \uar \rar[hook] \drar
+    & P_\tg \dar
+  \\& X
+  \end{tikzcd}
+\tag{5.6.1}
+\]
+
+It is not difficult to show that such a morphism $\gamma$ is defined by a unique projective connection (a proof of this will be given in \cref{I.5.10}), and so Definition~\cref{I.5.6} is equivalent to the following.
+
+\begin{definition}{5.6~bis}
+\label{I.5.6bis}
+  \emph{(Infinitesimal version).}
+  A \emph{projective connection} on $X$ is a morphism $\gamma\colon X_3\hookrightarrow P_\tg$ that makes the diagram in \cref{I.5.6.1} commute.
+\end{definition}
+
+Intuitively, giving a projective connection (the infinitesimal version) allows us to define \todo
+
+\begin{env}{5.7}
+\label{I.5.7}
+  Set $\Omega^{\otimes n}=(\Omega_X^1)^{\otimes n}$ \cref{I.4.2}.
+  The sheaf of ideals on $X_3$ that defines $X_2$ is
+\oldpage{32}
+  canonically isomorphic to $\Omega^{\otimes3}$, and is annihilated by the sheaf of ideals that defines the diagonal.
+  Also, if $\Delta$ is the diagonal map, then, by \cref{I.5.4.2}, we have that
+  \[
+    \Delta^*\gamma^*\Omega_{P_\tg/X}^1 \simeq \Omega^1.
+  \]
+  We thus deduce that the set of $X$-homomorphisms from $X_3$ to $P_\tg$ that induce the canonical homomorphism from $X_2$ to $P_\tg$ is either empty, or a principal homogeneous space for
+  \[
+    \Hom_X(\Delta^*\gamma^*\Omega_{P_\tg/X}^1, \Omega^{\otimes3})
+    = \Hom_X(\Omega^1,\Omega^{\otimes3})
+    = \HH^0(X,\Omega^{\otimes2}).
+  \]
+  If we replace $X$ by a small enough open subset, then this set is non-empty:
+\end{env}
+
+\begin{proposition}{5.8}
+\label{I.5.8}
+  Projective connections of open subsets of $X$ form a principal homogeneous sheaf (i.e. a torsor) for the sheaf $\Omega^{\otimes2}$.
+\end{proposition}
+
+\begin{proof}
+  If $\eta$ is a section of $\Omega^{\otimes2}$, and $\gamma_1\colon X_3\to P_\tg$ is a projective connection, then the connection $\gamma_2=\gamma_1+\eta$ is defined, for any function $f$ on $P_\tg$, by
+  \[
+  \label{I.5.8.1}
+    \gamma_2^*f = \gamma_1^*f + \eta\cdot e^*\dd f
+  \tag{5.8.1}
+  \]
+  (modulo the identification of $\Omega^{\otimes3}$ with an ideal of $\sh{O}_{X_3}$).
+\end{proof}
+
+\begin{env}{5.9}
+\label{I.5.9}
+  Let $f\colon X\to Y$ be a homomorphism between smooth curves endowed with projective connections $\gamma_X$ and $\gamma_Y$, and suppose that $f$ is a local isomorphism (i.e. $\dd f\neq0$ at all points).
+  Set
+  \[
+    \theta f = f^*\gamma_Y - \gamma_X \in \Gamma(X,\Omega^{\otimes2}).
+  \]
+  For a composite map $g\circ f\colon X\xrightarrow{f}Y\xrightarrow{g}Z$, we trivially have that
+  \[
+  \label{I.5.9.1}
+    \begin{aligned}
+      \theta(g\circ f) &= \theta(f) + f^*\theta(g),
+    \\\mbox{whence }\theta(f^{-1}) &= -f^*\theta(f).
+    \end{aligned}
+  \tag{5.9.1}
+  \]
+
+  Suppose that $X$ and $Y$ are open subsets of $\CC$, and endowed with the projective connection induced by that of $\PP^1(\CC)$.
+  Denoting by $x$ the injection from $X$ into $\CC$, we then have that
+\oldpage{33}
+  \[
+  \label{I.5.9.2}
+    \theta f = \frac{f'(f'''/6) - (f''/2)^2}{(f')^2} \dd x^{\otimes2}.
+  \tag{5.9.2}
+  \]
+
+  To prove this, we identify, using \cref{I.5.5}, the projective double tangent bundle to $X$ or $Y$ with the constant projective bundle.
+  The morphism $\delta f\colon P_{\tg,X}\to P_{\tg,Y}$ induced by $f$ can be written as
+  \[
+    \delta f\colon (x,p) \mapsto
+    \left(
+      f(x),
+      f(x) + \frac{f'(x)(p-x)}{1-\frac12(f''(x)/f'(x))(p-x)}
+    \right).
+  \]
+
+  Consider the diagram
+  \[
+    \begin{tikzcd}
+      X_3 \rar["f"] \dar[hook]
+      & Y_3 \dar[hook]
+    \\P_{\tg,X} \rar["\delta f"]
+      & P_{\tg,Y}
+    \end{tikzcd}
+  \]
+  Then $\theta(f)$ describes the lack of commutativity of the diagram, i.e. the difference between the jets
+  \[
+    (x,x+\varepsilon)
+    \mapsto
+    \left(
+      f(x),
+      f(x) + f'(x)\varepsilon + f''(x)\frac{\varepsilon^2}{2} + f'''(x)\frac{\varepsilon^3}{6}
+    \right)
+    \qquad\mbox{($\varepsilon^4=0$)}
+  \]
+  and
+  \[
+    \begin{aligned}
+      (x,x+\varepsilon)
+      &\mapsto
+      \left(
+        f(x),
+        f(x) + \frac{f'(x)\varepsilon}{1-\frac12(f''(x)/f'(x))\varepsilon}
+      \right)
+    \\&= \left(
+        f(x),
+        f(x) + f'(x)\varepsilon + f''(x)\frac{\varepsilon^2}{2} + \frac14(f''(x)^2/f'(x))\varepsilon^3
+      \right).
+    \end{aligned}
+  \]
+  We thus have that
+  \[
+    \theta(f) =
+    \left(
+      \frac16f'''(x) - \frac14f''(x)^2/f'(x)
+    \right) \dd x^{\otimes3} \dd f^{\otimes-1},
+  \]
+  and \cref{I.5.9.2} then follows.
+
+  Equation~\cref{I.5.9.2} shows that $6\theta f$ is the classical \emph{Schwarz derivative} of $f$.
+
+  \bigskip
+
+  If a map $f$ from $X\subset\CC$ to $\PP^1(\CC)$ is described by projective coordinates $f=(g,h)$, then
+  \[
+  \label{I.5.9.3}
+    \theta(f) =
+    \frac{
+      \left\vert
+        \begin{array}{cc}
+          g&g'\\h&h'
+        \end{array}
+      \right\vert
+      \left(
+        \left\vert
+          \begin{array}{cc}
+            g&g'''/6\\h&h'''/6
+          \end{array}
+        \right\vert
+        +
+        \left\vert
+          \begin{array}{cc}
+            g'&g'/2\\h'&h'/2
+          \end{array}
+        \right\vert
+      \right)
+      -
+      \left\vert
+        \begin{array}{cc}
+          g&g''/2\\h&h''/2
+        \end{array}
+      \right\vert^2
+    }{
+      \left\vert
+        \begin{array}{cc}
+          g&g'\\h&h'
+        \end{array}
+      \right\vert^2
+    }
+  \tag{5.9.3}
+  \]
+
+  To prove \cref{I.5.9.3}, the simplest method is to note the following.
+\oldpage{34}
+  \begin{enumerate}[(i)]
+    \item The right-hand side of \cref{I.5.9.3} is invariant under a linear substitution of constant coefficients $L$ acting on $g$ and $h$: the numerator and denominator $\det(L)^2$.
+    \item The right-hand side of \cref{I.5.9.3} is invariant under the substitution
+      \[
+        (g,h) \mapsto (\lambda g,\lambda h).
+      \]
+
+      Denoting the determinants by their first row, we have that
+      \[
+        \begin{aligned}
+          |\lambda g \quad (\lambda g)'|
+          &= |\lambda g \quad \lambda g'+\lambda' g|
+          = \lambda^2|g \quad g'|
+        \\[1em]
+          |\lambda g \quad (\lambda g)''/2|
+          &= \lambda^2|g \quad g''/2| + \lambda\lambda'|g \quad g'|
+        \end{aligned}
+      \]
+  \end{enumerate}
+\end{env}
+
 
 
 %% Bibliography %%
