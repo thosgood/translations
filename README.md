@@ -170,6 +170,16 @@ Note that we have included any changes made in the Errata.
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
 
+- **(0/6)** Deligne, P. "Variétés abéliennes ordinaires sur un corps fini".
+  <br/>
+  _Inv. Math._ **8** (1969), 238--243.
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/im-8/ord-ab-varieties-finite-field.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/352)
+
 - **(40/126)** Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>
   Springer-Verlag, LNM **163** (1970).
