@@ -49,10 +49,18 @@
 %% Shortcuts %%
 
 \newcommand{\sh}{\mathscr}
-\newcommand{\cat}{\mathcal}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\Pc}{\mathrm{Pc}}
+\newcommand{\Fr}{F_\mathrm{r}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Ker}{Ker}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -84,12 +92,169 @@
 
 \setcounter{footnote}{0}
 
-\tableofcontents
-\bigskip
-
 
 %% Content %%
 
+\oldpage{238}
+We give here a down-to-earth description of the category of ordinary abelian varieties over a finite field $\FF_q$.
+The result that we obtain was inspired by Ihara~\cite[ch.~V]{2} (see also \cite{3}).
+
+
+\subsubsection*{1}
+\label{1}
+Let $p$ be a prime number, $\FF_p$ the field $\ZZ/(p)$, and $\overline{\FF}_p$ an algebraic closure of $\FF_p$.
+For every power $q$ of $p$, let $\FF_q$ be the subfield of $q$ elements of $\overline{\FF}_p$.
+For every algebraic extension $k$ of $\FF_p$, we denote by $W_0(k)$ the discrete valuation Henselian ring essentially of finite type over $\ZZ$, absolutely unramified, with residue field $k$;
+let $W(k)$ be the ring of Witt vectors over $k$, i.e. the completion of $W_0(k)$.
+Let $W=W(\overline{F}_p)$, and let $\varphi$ be an embedding of $W$ into the field $\CC$ of complex numbers.
+We denote by $\ZZ(1)$ the subgroup $2\pi i\ZZ$ of $\CC$.
+The exponential map defines an isomorphism between $\ZZ(1)\otimes\ZZ_\ell$ and $\ZZ_\ell(1)(\CC)=\varprojlim\mu_{\ell^n}(\CC)$.
+
+We denote by $A^*$ the dual abelian variety of an abelian variety $A$.
+For every field $k$, we denote by $\overline{k}$ the algebraic closure of $k$.
+
+
+\subsubsection*{2}
+\label{2}
+Let $A$ be an abelian variety of dimension~$g$, defined over a field $k$ of characteristic~$p$.
+Recall that $A$ is said to be \emph{ordinary} if any of the following equivalent conditions are satisfied:
+\begin{enumerate}[(I)]
+  \item $A$ has $p^g$ points of order dividing $p$ with values in $\overline{k}$.
+  \item The ``Hasse-Witte matrix'' $F^*\colon H^1(A^{(p)},\sh{O}_{A^{(p)}}) \to H^1(A,\sh{O}_A)$ is invertible.
+  \item\label{2.III}
+    The neutral component of the group scheme $A_p$ that is the kernel of multiplication by $p$ is of multiplicative type (and thus geometrically isomorphic to a power of $\mu_p$).
+\end{enumerate}
+
+If $k=\FF_q$, and if $F$ is the Frobenius endomorphism of $A$, and $\Pc_A(F;x)$ is its characteristic polynomial, then these conditions are then equivalent to:
+\begin{enumerate}[(I)]
+\setcounter{enumi}{3}
+  \item At least half of the roots of $\Pc_A(F;X)$ in $\overline{\QQ}_p$ are $p$-adic units.
+    In other words, if $n=\dim A$, then the reduction $\mod p$ of the polynomial $\Pc_A(F;x)$ is not divisible by $x^{n+1}$.
+\end{enumerate}
+
+
+\subsubsection*{3}
+\label{3}
+Let $A$ be an ordinary abelian variety over $\overline{\FF}_p$.
+We denote by $\widetilde{A}$ the canonical Serre--Tate covering \cite{4} of $A$ over $W$.
+Recall that $\widetilde{A}$ depends functorially on $A$, and is characterised by the fact that the $p$-divisible group $T_p(\widetilde{A})$ over $W$ attached to $\widetilde{A}$ \cite{5} is the product of the
+\oldpage{239}
+$p$-divisible groups (uniquely determined, by \hyperref[2.III]{2.(III)}) that cover, respectively, the neutral component and the largest \'{e}tale quotient of $T_p(A)$.
+The canonical covering $\widetilde{A}$ is again the unique covering of $A$ such that every endomorphism of $A$ lifts to $\widetilde{A}$.
+We denote by $T(A)$ the integer homology of the complex abelian variety $A_\CC$ induced by $\widetilde{A}$ and $\varphi$ by the extension of scalars of $W$ to $\CC$:
+\[
+  T(A) = H_1(\widetilde{A}\otimes_\varphi\CC).
+\]
+We know that $\widetilde{A}$ descends uniquely to $W_0(\overline{F}_p)$, and so $A_\CC$ depends only on $A$ and on the restriction of $\varphi$ to $W_0(\overline{F}_p)$.
+The free $\ZZ$-module $T(A)$ is of rank~$2\dim(A)$;
+it is functorial in $A$.
+Furthermore, if $\ell\neq p$ is a prime number, then we have, functorially, that
+\[
+\label{3.1}
+  T(A)\otimes\ZZ_\ell = T_\ell(A).
+\tag{3.1}
+\]
+
+The canonical covering of the dual abelian variety $A^*$ of $A$ is the dual of $\widetilde{A}$, and so $(A_\CC)^*=A_\CC^*$, and $T(A)$ and $T(A^*)$ are in perfect duality with values in $\ZZ(1)$:
+\[
+\label{3.2}
+  T(A)\otimes T(A^*) \to \ZZ(1)
+\tag{3.2}
+\]
+(it is necessary to use $\ZZ(1)$ instead of $\ZZ$ in order to obtain a theory that is invariant under complex conjugation).
+The pairings \cref{3.2} are compatible, via \cref{3.1}, with the pairings
+\[
+  T_\ell(A)\otimes T_\ell(A^*) \to \ZZ_\ell(1);
+\]
+a morphism $\xi\colon A\to A^*$ defines a polarisation of $A$ if and only if $\xi_\CC\colon A_\CC\to A_\CC^*$ defines a polarisation of $A_\CC$.
+Set $T'_p(A) = \Hom(\QQ_p/\ZZ_p,A(\overline{F}_p))$, and $T''_p(A) = \Hom_{\ZZ_p}(T'_p(A^*),\ZZ(1)\otimes\ZZ_p)$.
+These $\ZZ_p$-modules are covariant functors in $A$.
+
+By definition of the canonical covering, the $p$-divisible group $T_p(\widetilde{A})$ is the sum of the constant pro\'{e}tale group $T'_p(A)$ and the Cartier dual of $T'_p(A^*)$.
+For every morphism $u\colon A\to B$, the induced morphism $u\colon T_p(\widetilde{A})\to T_p(\widetilde{B})$ can be identified with the sum of $u|T'_p(A)\colon T'_p(A)\to T'_p(B)$ and the Cartier transpose of $u^t|T'_p(B^*)\colon T'_p(B^*)\to T'_p(A^*)$.
+Over $\CC$, we canonically have that $\ZZ(1)/(p^n)\sim\mu_{p^n}$, whence an isomorphism of functors:
+\[
+\label{3.3}
+  T_{(p)}(A) = T(A)\otimes\ZZ_p = T'_p(A)\oplus T''_p(A).
+\tag{3.3}
+\]
+
+
+\subsubsection*{4}
+\label{4}
+Recall that, if $\varphi\colon X\to Y$ is an isogeny between complex abelian varieties, then the exact homotopy sequence reduces to a short exact sequence:
+\[
+  0 \to H_1(X) \to H_1(Y) \to \Ker(\varphi) \to 0.
+\]
+\oldpage{240}
+The abelian varieties that are quotients of $X$ by a finite subgroup, and these finite subgroups of $X$, correspond bijectively with the sub-lattice of $H_1(X)\otimes\QQ$ containing $H_1(X)$.
+
+Let $A$ be an ordinary abelian variety over $\overline{\FF}_p$.
+If $n$ is an integer coprime to $p$, then the subschemes of finite groups of order~$n$ of $A$, of $\widetilde{A}$, and of $A_\CC$, correspond bijectively, and also correspond to lattices $R$ containing $T(A)$ such that $[R:T(A)]=n$.
+
+Set $V'_p=T'_p(A)\otimes\QQ_p$ and $V''_p(A)=T''_p(A)\otimes\QQ_p$.
+The subschemes of finite groups of order~$p^k$ of $A$ are products of a \'{e}tale subgroup and an infinitesimal subgroup.
+The \'{e}tale subgroups of order~$p^k$ of $A$ correspond to those of subgroups of order~$p^k$ of $A_\CC$ such that the lattice $R$ corresponding to $T(A)$ is contained inside $T_{(p)}(A)+V'_p(A)$.
+By duality, the infinitesimal subgroups of $A$ correspond to the lattices $R$ containing $T(A)$ that are $p$-isogenous to $T(A)$,, i.e. such that $[R:T(A)]$ is a power of $p$ and is contained in $T_{(p)}(A)+V''_p(A)$.
+
+All told, the finite subgroups of $A^p$, or the abelian varieties that are quotients of $A$, correspond bijectively to the lattices $R$ containing $T(A)$ such that
+\[
+\label{4.1}
+  R\otimes\ZZ_p = (R\otimes\ZZ_p \cap V'_p) + (R\otimes\ZZ_p \cap V''_p).
+\tag{4.1}
+\]
+
+
+\subsubsection*{5}
+\label{5}
+In particular, $A^{(p)}$, the quotient of $A$ by the largest infinitesimal subgroup of $A$ that is annihilated by $p$ (for ordinary $A$), is defined by the lattice $T(A)^{(p)}$ containing $T(A)$ that is $p$-isogenous to $T(A)$, and such that
+\[
+  T(A)^{(p)}\otimes\ZZ_p = T'_p(A) + \frac1p T''_p(A).
+\]
+
+
+\subsubsection*{6}
+\label{6}
+Let $A$ be an abelian variety over $\FF_q$, and $F\colon x\mapsto x^q$ its Frobenius endomorphism.
+Recall that $A$ is uniquely determined by the pair $(\overline{A},F)$ induced by $(A,F)$ by extension of scalars from $\FF_q$ to $\overline{\FF}_q$;
+the endomorphism $F$ of $\overline{A}$ factors as the relative Frobenius morphism $\Fr^{(q)}\colon\overline{A}\to\overline{A}^{(q)}$ followed by an isomorphism $F'\colon\overline{A}^{(q)}\to\overline{A}$.
+If $A$ is ordinary, then we denote by $T(A)$ the $\ZZ$-module $T(\overline{A})$ endowed with the endomorphism $F$ induced by the Frobenius endomorphism of $A$.
+By \cref{5}, the above, and \cref{3.3}, the lattices $T(A)$ and $F(T(A))$ are $p$-isogenous, and we have that
+\[
+\label{6.1}
+  F(T'_p(A)) = T'_p(A),
+\tag{6.1}
+\]
+\[
+\label{6.2}
+  F(T''_p(A)) = qT''_p(A).
+\tag{6.2}
+\]
+
+
+\subsubsection*{7}
+\label{7}
+\textbf{Theorem.}
+{\itshape
+  The functor $A\mapsto(T(A),F)$ is an equivalence of categories between the category of ordinary abelian varieties over $\FF_q$ and the category of free $\ZZ$-modules $T$ of finite type endowed with an endomorphism $F$ that satisfy the following conditions:
+\oldpage{241}
+  \begin{enumerate}[(a)]
+    \item $F$ is semi-simple, and its eigenvectors have complex absolute value $q^{\frac12}$,
+    \item at least half of the roots in $\overline{\QQ}_p$ of the characteristic polynomial of $F$ are $p$-adic units;
+      in other words, if $T$ is of rank~$d$, then the reduction $\mod p$ of the polynomial $\Pc_T(F;x)$ is not divisible by $x^{[d/2]+1}$,
+    \item there exists an endomorphism $V$ of $T$ such that $FV=q$.
+  \end{enumerate}
+
+  If condition~(a) is satisfied, then conditions~(b) and (c) are equivalent to the following:
+  \begin{enumerate}[(a)]
+  \setcounter{enumi}{3}
+    \item the module $T\otimes\ZZ_p$ admits a decomposition, stable under $F$, into two sub-$\ZZ_p$-modules $T'_p$ and $T''_p$ of equal dimension, and such that $F|T'_p$ is invertible, and $F|T''_p$ is divisible by $q$.
+  \end{enumerate}
+}
+
+\begin{proof}
+  \todo
+\end{proof}
 
 
 %% Bibliography %%
