@@ -170,16 +170,6 @@ Note that we have included any changes made in the Errata.
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
 
-- **(2/9)** Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
-  <br/>
-  _Mathematische Annalen_ **32** (1888), 342--350.
-  <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/ma-32/sum-of-squares.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fma-32%2Fsum-of-squares.tex&command=pdflatex&trackId=1602812137443)
-  |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/157385)
-
 - **(4/31)** Brion, M. and Procesi, C. "Action d'un tore dans une variété projective".
   <br/>
   In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in Mathematics **92** (1990), 509--539. [MR1103602](https://mathscinet.ams.org/mathscinet-getitem?mr=1103602).
@@ -188,7 +178,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   |
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fpm-92%2Fprojective-torus-action.tex&command=pdflatex&trackId=1602776678752)
 
-- **(28/126)** Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
+- **(30/126)** Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>
   Springer-Verlag, LNM **163** (1970).
   <br/>
@@ -197,16 +187,6 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Flnm-163%2Fde-regular-singular-points.tex&command=pdflatex&trackId=1602812233423)
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355)
-
-- **(7/214)** Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points".
-  <br/>
-  In _Galois Groups over ℚ_, Springer-Verlag, MSRI Publications **16** (1989), 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
-  <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/msrip-16/projective-line-minus-three-points.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fmsrip-16%2Fprojective-line-minus-three-points.tex&command=pdflatex&trackId=1602812188930)
-  |
-  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://publications.ias.edu/node/407)
 
 - **(5/38)** Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen".
   <br/>
@@ -227,5 +207,25 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Faif-4%2Ftopological-tensor-nuclear-spaces.tex&command=pdflatex&trackId=1602812258122)
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/?id=AIF_1952__4__73_0)
+
+- **(7/214)** Deligne, P. "Le Groupe Fondamental de la Droite Projective Moins Trois Points".
+  <br/>
+  In _Galois Groups over ℚ_, Springer-Verlag, MSRI Publications **16** (1989), 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/msrip-16/projective-line-minus-three-points.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fmsrip-16%2Fprojective-line-minus-three-points.tex&command=pdflatex&trackId=1602812188930)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://publications.ias.edu/node/407)
+
+- **(2/9)** Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
+  <br/>
+  _Mathematische Annalen_ **32** (1888), 342--350.
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/ma-32/sum-of-squares.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fma-32%2Fsum-of-squares.tex&command=pdflatex&trackId=1602812137443)
+  |
+  [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/157385)
 
 <!-- icons from fontawesome.com under [their licence](https://fontawesome.com/license). -->

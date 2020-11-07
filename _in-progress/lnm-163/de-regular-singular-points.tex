@@ -101,6 +101,8 @@
 \newcommand{\cat}{\mathcal}
 \newcommand{\sbullet}{{\mathbin{\vcenter{\hbox{\scalebox{.5}{$\bullet$}}}}}}
 \newcommand{\id}{\mathrm{Id}}
+\newcommand{\PP}{\mathbb{P}}
+\renewcommand{\AA}{\mathbb{A}}
 \newcommand{\CC}{\mathbb{C}}
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\NN}{\mathbb{N}}
@@ -1552,8 +1554,99 @@ In this section, we specialise the results of \cref{I.4} to the case where $n=2$
 \begin{env}{5.1}
 \label{I.5.1}
   Let $S$ be an analytic space, and let $q\colon X_2\to S$ be an analytic space over $S$ that is locally isomorphic to the finite analytic space over $S$ defined by the $\sh{O}_S$-algebra $\sh{O}_S[T]/(T^3)$.
+
+  The fact that the group $\mathrm{PGL}_2$ acts \todo on $\PP^1$ has the following infinitesimal analogue.
 \end{env}
 
+\begin{lemma}{5.2}
+\label{I.5.2}
+  Under the hypotheses of \cref{I.5.1}, let $u$ and $v$ be $S$-immersions of $X_2$ into $\PP_S^1$, i.e.
+  \[
+    \begin{tikzcd}
+      X_2 \rar[shift left=1,"u"] \rar[shift right=1,swap,"v"]
+      & \PP_S^1.
+    \end{tikzcd}
+  \]
+  Then there exists exactly one \todo ($S$-automorphism) of $\PP_S^1$ that sends $u$ to $v$.
+\end{lemma}
+
+\begin{proof}
+  The problem is local on $S$, which allows us to suppose that $X_2$ is defined by the $\sh{O}_S$-algebra $\sh{O}_S[T]/(T^3)$, and that $u(X_2)$ and $v(X_2)$ are contained inside the same affine line, say, $\AA_S^1$.
+  By translation, we can assume that $u(0)=v(0)=0$.
+  We must then prove the existence and uniqueness of a \todo $p(x)=(ax+b)(cx+d)$ that satisfies $p(0)=0$, with first derivative $p'(0)\neq0$ and given second derivative $p''(0)$.
+  We have that $b=0$, and $p$ can be written uniquely in the form
+\oldpage{30}
+  \[
+    \begin{aligned}
+      p(x)
+      &= e\frac{x}{1-fx} \qquad\mbox{($e\neq0$)}
+    \\&= ex + efx^2 \mod x^3.
+    \end{aligned}
+  \]
+  The claim then follows immediately.
+\end{proof}
+
+\begin{env}{5.3}
+\label{I.5.3}
+  By \cref{I.5.2}, there exists exactly (up to isomorphism) one pair $(u,P)$ consisting of a projective line $P$ on $S$ (with structure group $\mathrm{PGL}_2(\sh{O}_S)$) and an $S$-immersion $u$ of $X_2$ into $P$.
+  We call $P$ the \emph{osculating projective line of $X_2$}.
+
+  Let $X$ be a smooth curve.
+  Let $X_2$ the second infinitesimal neighbourhood of the diagonal of $X\times X$, and let $q_1$ and $q_2$ be the two projections from $X_2$ to $X$.
+
+  The morphism $q_1\colon X_2\to X$ is of the type considered in \cref{I.5.1}.
+\end{env}
+
+\begin{definition}{5.4}
+\label{I.5.4}
+  We define the \emph{osculating projective line bundle of $X$}, denoted by $P_\mathrm{tg}$, to be the osculating projective line bundle of $q_1\colon X_2\to X$.
+\end{definition}
+
+By definition, we thus have a canonical commutative diagram
+\[
+\label{I.5.4.1}
+  \begin{tikzcd}
+    X_2 \rar[hook] \drar[swap,"q_1"]
+    & P_\mathrm{tg} \dar
+  \\& X
+  \end{tikzcd}
+\tag{5.4.1}
+\]
+and, in particular, $P_\mathrm{tg}$ is endowed with a canonical section $e$, which is the image of the diagonal section of $X_2$, and we have that
+\[
+\label{I.5.4.2}
+  e^*\Omega_{P_\mathrm{tg}/X}^1 \simeq \Omega_X^1.
+\tag{5.4.2}
+\]
+
+\begin{env}{5.5}
+\label{I.5.5}
+  If $X$ is a projective line, then $\pr_1\colon X\times X\to X$ is a projective bundle on $X$ such that $P_\mathrm{tg}$ can be identified with the constant projective bundle of fibre $X$ on $X$ endowed with the inclusion homomorphism of $X_2$ into $X\times X$, i.e.
+  \[
+    \begin{tikzcd}
+      X_2 \rar[hook] \drar[swap,"q_1"]
+      & X\times X \dar["\pr_1"]
+    \\& X
+    \end{tikzcd}
+  \]
+\oldpage{31}
+  In this particular case, we have a canonical commutative diagram
+  \[
+    \begin{tikzcd}[column sep=huge]
+      X_3 \drar[hook] \ar[ddr]
+    \\X_2 \uar[hook] \rar[hook] \drar
+      & P_\mathrm{tg} \dar
+    \\& X
+    \end{tikzcd}
+  \]
+\end{env}
+
+Now let $X$ be an arbitrary smooth curve.
+
+\begin{definition}{5.6}
+\label{I.5.6}
+  \emph{(Local form).}
+\end{definition}
 
 
 %% Bibliography %%
