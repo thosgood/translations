@@ -126,6 +126,7 @@
 \DeclareMathOperator{\shEnd}{\underline{End}}
 \DeclareMathOperator{\HH}{H}
 \DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\tr}{tr}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -1920,6 +1921,99 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
 \begin{env}{5.11}
 \label{I.5.11}
   Let $X$ be a smooth curve, $\sh{L}$ an invertible sheaf on $X$, and $E$ a second-order ordinary differential equation on $\sh{L}$.
+  We have seen, in \cref{I.4.5}, that $E$ defines a connection on the bundle $P^1(\sh{L})$ of first-order jets of sections of $\sh{L}$, and we obtain from it a connection on
+  \[
+    \bigwedge^2 P^1(\sh{L}) \simeq \sh{L}\otimes\Omega^1(\sh{L}) = \Omega^1\otimes\sh{L}^{\otimes2}.
+  \]
+
+  If $X$ is a compact connected curve of genus~$g$, then the bundle $\Omega^1\otimes\sh{L}^{\otimes2}$ is thus necessarily of degree~$0$, and we have that
+  \[
+    \deg(\sh{L}) = 1-g.
+  \]
+
+  Let $V$ be the rank-$2$ local system of solutions of $E$;
+  we have \cref{I.4.5} that $\sh{O}\otimes V\xrightarrow{\sim}P^1(\sh{L})$, and the linear form $\lambda\colon P^1(\sh{L})\to\sh{L}$ defines a section $\lambda_0$ of the projective bundle associated to the vector bundle $P^1(\sh{L})$.
+
+  Locally on $X$, $V$ is isomorphic to the constant local system $\underline{\CC^2}$;
+  the choice of an isomorphism $\sigma\colon V\to\underline{\CC^2}$ identifies $\lambda_0$ with a map $\lambda_{0,\sigma}$ from $X$ to $\PP^1(\CC)$;
+  by \cref{I.4.8}, the differential of this map is everywhere non-zero, and so $\lambda_{0,\sigma}$ allows us to transport the canonical projective connection of $\PP^1(\CC)$ to $X$.
+  This connection does not depend on the choice of $\sigma$, and so the differential equation $E$ defines a projective connection on $X$.
+\end{env}
+
+\begin{proposition}{5.12}
+\label{I.5.12}
+  Let $\sh{L}$ be an invertible sheaf on a smooth curve $X$.
+  The construction in \cref{I.5.10} gives a bijection between
+  \begin{enumerate}[a)]
+    \item the set of second-order ordinary differential equations on $\sh{L}$ ; and
+\oldpage{36}
+    \item the set of pairs consisting of a projective connection on $X$ and a connection on $\Omega^1(\sh{L}^{\otimes2})$.
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  The problem is local on $X$;
+  we can thus suppose that $X$ is an open subset of $\CC$, and that $\sh{L}=\sh{O}$.
+  An equation $E$ can then be written as
+  \[
+    E\colon y'' + a(x)y' + b(x)y = 0.
+  \]
+  If we identify $P^1(\sh{L})$ with $\sh{O}^2$, then the matrix of the connection \cref{I.5.10} defined by $E$ on $\wedge^2 P^1(\sh{L})\sim\sh{O}$ is then $-a(x)\tr M$, where $M$ is the matrix in \cref{I.4.8.1}.
+
+  Let $\varphi$ be the identity map from $X$, an open subset of $\PP^1(\CC)$, to itself endowed with the projective connection defined by $E$.
+  Identifying $\Omega$ with $\sh{O}$ by means of the given local coordinate, we then have that
+  \[
+  \label{I.5.12.1}
+    \theta(\varphi) = \frac13b - \frac{1}{12}(a^2+2a').
+  \tag{5.12.1}
+  \]
+  Indeed, if $f$ and $g$ are two linearly independent solutions of $E$, then the map with projective coordinates
+  \[
+    (f,g)\colon X\to\PP^1(\CC)
+  \]
+  \todo the projective connection.
+  We have that
+  \[
+    \begin{aligned}
+      f''
+      &= -(af'+bf)
+    \\f'''
+      &= -a(-af'-bf) - bf' - a'f' - b'f
+    \\&= (a^2-a'-b)f' + (ab-b')f.
+    \end{aligned}
+  \]
+
+  Equation~\cref{I.5.9.3} gives (using the same notation for determinants as before)
+  \[
+    \begin{aligned}
+      \theta(\varphi)
+      &= \frac{
+        \detrow{f}{f'}
+        \left(
+          \frac16(a^2-a'-b)\detrow{f}{f'}
+          +\frac12 b\detrow{f}{f'}
+        \right)
+        - (\frac12a)^2\detrow{f}{f'}^2
+      }{
+        \detrow{f}{f'}^2
+      }
+    \\&= \frac16(a^2-a'-b) + \frac12 b - \frac14 a^2
+    \\&= \frac13 b - \frac{1}{12}(a^2+2a').
+    \end{aligned}
+  \]
+
+  We conclude by noting that $(a,b)$ is uniquely determined by $(-a,\frac13b-\frac{1}{12}(a^2+2a'))$, and that, for any holomorphic function $g$ on an open subset $U$ of $\CC$, there exists a unique projective connection on $U$ satisfying $\theta(\varphi)=g$, for $\varphi$ \todo the connection (same proof as for \cref{I.5.10}, or \cref{I.5.8}).
+\end{proof}
+
+
+\oldpage{37}
+\section{Multiform functions of finite determination}
+\label{I.6}
+
+\begin{env}{6.1}
+\label{I.6.1}
+  Let $X$ be a non-empty connected topological space that is both locally path connected and locally simply path connected, and let $x_0$ be a point of $X$.
+  We denote by $\pi\colon \widetilde{X}_{x_0}\to X$ the universal covering of $(X,x_0)$, and by $\widetilde{x}_0$ the base point of $\widetilde{X}_{x_0}$
 \end{env}
 
 
