@@ -1841,12 +1841,27 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
       Denoting the determinants by their first row, we have that
       \[
         \begin{aligned}
-          |\lambda g \quad (\lambda g)'|
-          &= |\lambda g \quad \lambda g'+\lambda' g|
-          = \lambda^2|g \quad g'|
+          \left\vert\begin{array}{cc}g&(\lambda g)'\end{array}\right\vert
+          \quad&=\quad \left\vert\begin{array}{cc}\lambda g&\lambda g'+\lambda' g\end{array}\right\vert
+        \\[0.5em]
+          &=\quad \lambda^2\left\vert\begin{array}{cc}g&g'\end{array}\right\vert
         \\[1em]
-          |\lambda g \quad (\lambda g)''/2|
-          &= \lambda^2|g \quad g''/2| + \lambda\lambda'|g \quad g'|
+          \left\vert\begin{array}{cc}\lambda g&(\lambda g)''/2\end{array}\right\vert
+          \quad&=\quad \lambda^2\left\vert\begin{array}{cc}g&g''/2\end{array}\right\vert
+          + \lambda\lambda'\left\vert\begin{array}{cc}g&g'\end{array}\right\vert
+        \\[1em]
+          \left\vert\begin{array}{cc}\lambda g&(\lambda g)'''/6\end{array}\right\vert
+          \quad&=\quad \lambda^2\left\vert\begin{array}{cc}g&g'''/6\end{array}\right\vert
+          + \lambda\lambda'\left\vert\begin{array}{cc}g&g''/2\end{array}\right\vert
+        \\[0.5em]
+          &\qquad+ (\lambda\lambda''/2)\left\vert\begin{array}{cc}g&g'\end{array}\right\vert
+        \\[1em]
+          \left\vert\begin{array}{cc}(\lambda g)'&(\lambda g)''/2\end{array}\right\vert
+          \quad&=\quad \lambda^2\left\vert\begin{array}{cc}g'&g''/2\end{array}\right\vert
+          - (\lambda\lambda''/2)\left\vert\begin{array}{cc}g&g'\end{array}\right\vert
+        \\[0.5em]
+          &\qquad+ (\lambda')^2\left\vert\begin{array}{cc}g&g'\end{array}\right\vert
+          + \lambda\lambda'\left\vert\begin{array}{cc}g&g''/2\end{array}\right\vert.
         \end{aligned}
       \]
   \end{enumerate}
