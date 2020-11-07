@@ -170,14 +170,6 @@ Note that we have included any changes made in the Errata.
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
 
-- **(4/31)** Brion, M. and Procesi, C. "Action d'un tore dans une variété projective".
-  <br/>
-  In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in Mathematics **92** (1990), 509--539. [MR1103602](https://mathscinet.ams.org/mathscinet-getitem?mr=1103602).
-  <br/>
-  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/pm-92/projective-torus-action.tex)
-  |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fpm-92%2Fprojective-torus-action.tex&command=pdflatex&trackId=1602776678752)
-
 - **(30/126)** Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>
   Springer-Verlag, LNM **163** (1970).
@@ -187,6 +179,14 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Flnm-163%2Fde-regular-singular-points.tex&command=pdflatex&trackId=1602812233423)
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355)
+
+- **(6/31)** Brion, M. and Procesi, C. "Action d'un tore dans une variété projective".
+  <br/>
+  In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in Mathematics **92** (1990), 509--539. [MR1103602](https://mathscinet.ams.org/mathscinet-getitem?mr=1103602).
+  <br/>
+  [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/pm-92/projective-torus-action.tex)
+  |
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fpm-92%2Fprojective-torus-action.tex&command=pdflatex&trackId=1602776678752)
 
 - **(5/38)** Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen".
   <br/>
