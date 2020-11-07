@@ -255,7 +255,35 @@ By \cref{5}, the above, and \cref{3.3}, the lattices $T(A)$ and $F(T(A))$ are $p
 \begin{proof}
   \begin{enumerate}[(A)]
     \item We first prove that (a)+(b)+(c)$\implies$(d).
-      If $\alpha$ is a complex eigenvalue
+      If $\alpha$ is a complex eigenvalue of $F$, then $\overline{\alpha}$ is another, of the same multiplicity, and $\alpha\overline{\alpha}=q$.
+      If we exclude those that are equal to $\pm q^{\frac12}$, then the eigenvalues of $F$ in $\CC$, and thus in $\overline{\QQ}_p$, can be grouped into pairs of roots $\alpha$ and $q/\alpha$.
+      The roots $\alpha$ and $q/\alpha$ can not simultaneously be $p$-adic units, and so it follows from (b) that $\pm q^{\frac12}$ is not an eigenvalue of $F$, that half of the eigenvalues of $F$ in $\overline{\QQ}_p$ are $p$-adic units, say $\alpha_1,\ldots,\alpha_{d/2}$, and that the other half are of the form $\beta_1=q/\alpha_1,\ldots,\beta_{d/2}=q/\alpha_{d/2}$.
+      Let $T_{(p)}=T\otimes\ZZ_p$, $V_p=T\otimes\QQ_p$, $V'_p$ the subspace of $V_p$ given by the kernel of $\prod_i(F-\alpha_i)$, and $V''_p$ the kernel of the endomorphism $\varphi=\prod_i(F-\beta_i)$.
+      We have that $V_p=V'_p\oplus V''_p$.
+      Let $T'_p$ be the projection from $T_{(p)}$ to $V'_p$, and let $T''_p=T_{(p)}\cap V''_p$.
+      Since $\varphi$ annihilates $V''_p$, and respects $T$, it sends $T'_p$ to $T_{(p)}\cap V'_p\subset T'_p$.
+      Also, $\det(\varphi|V'_p)=\prod_{i,j}(\alpha_i-\beta_j)$ is a $p$-adic unit, and so $\varphi(T'_p)=T'_p$, and $T_{(p)}\cap V'_p=T'_p$, and so $T_{(p)}=T'_p\oplus T''_p$.
+    \item \emph{Full faithfulness.}
+      Let $A$ and $B$ be abelian varieties over $\FF_q$, and let $\psi$ be the arrow
+      \[
+        \psi\colon \Hom(A,B) \to \Hom_F(T(A),T(B)).
+      \]
+      By the theorem of Tate \cite{7} and by \cref{3.1}, the arrow
+      \[
+        \psi_\ell\colon \Hom(A,B)\otimes\ZZ_\ell \to \Hom_F(T(A),T(B))\otimes\ZZ_\ell
+      \]
+      is an isomorphism for $(\ell,p)=1$, and so $\psi\otimes\QQ$ is an isomorphism.
+      We know that $\Hom(A,B)$ is torsion free, and so $\psi$ is injective.
+      Let $u\colon A\to B$ be a morphism such that $T(u)$ is divisible by $n$.
+      The induced morphism $u_\CC\colon\overline{A}_\CC\to\overline{B}_\CC$ is thus divisible by~$n$, and thus so too is $\widetilde{u}\colon\widetilde{\overline{A}}\to\widetilde{\overline{B}}$ at the generic point of $W$.
+      The kernel of multiplication by~$n$ is flat over $W$;
+      $\widetilde{u}$ thus disappears on this kernel, $\widetilde{u}$ and $u$ are divisible by~$n$, and $\psi$ is bijective.
+    \item \emph{Necessity.}
+      The fact that $(T(A),F)$ satisfies (a) follows from Weil;
+        condition~(d), which implies (b) and (c), follows from \cref{6}.
+\oldpage{242}
+    \item \emph{Isogenies.}
+      Let $(T_0,F)$ satisfy
   \end{enumerate}
 \end{proof}
 
