@@ -113,6 +113,7 @@
 \newcommand{\RR}{\mathbf{R}}
 \newcommand{\GL}{\mathrm{GL}}
 \newcommand{\tg}{\mathrm{tg}}
+\newcommand{\detrow}[2]{\operatorname{det}(#1,#2)}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -1838,33 +1839,87 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
         (g,h) \mapsto (\lambda g,\lambda h).
       \]
 
-      Denoting the determinants by their first row, we have that
+      Denoting the determinant of $\left(\begin{array}{cc}a&b\\c&d\end{array}\right)$ by $\detrow{a}{b}$, we have that
       \[
         \begin{aligned}
-          \left\vert\begin{array}{cc}g&(\lambda g)'\end{array}\right\vert
-          \quad&=\quad \left\vert\begin{array}{cc}\lambda g&\lambda g'+\lambda' g\end{array}\right\vert
+          \detrow{g}{(\lambda g)'}
+          \quad&=\quad \detrow{\lambda g}{\lambda g'+\lambda' g}
         \\[0.5em]
-          &=\quad \lambda^2\left\vert\begin{array}{cc}g&g'\end{array}\right\vert
+          &=\quad \lambda^2\detrow{g}{g'}
         \\[1em]
-          \left\vert\begin{array}{cc}\lambda g&(\lambda g)''/2\end{array}\right\vert
-          \quad&=\quad \lambda^2\left\vert\begin{array}{cc}g&g''/2\end{array}\right\vert
-          + \lambda\lambda'\left\vert\begin{array}{cc}g&g'\end{array}\right\vert
+          \detrow{\lambda g}{(\lambda g)''/2}
+          \quad&=\quad \lambda^2\detrow{g}{g''/2}
+          + \lambda\lambda'\detrow{g}{g'}
         \\[1em]
-          \left\vert\begin{array}{cc}\lambda g&(\lambda g)'''/6\end{array}\right\vert
-          \quad&=\quad \lambda^2\left\vert\begin{array}{cc}g&g'''/6\end{array}\right\vert
-          + \lambda\lambda'\left\vert\begin{array}{cc}g&g''/2\end{array}\right\vert
+          \detrow{\lambda g}{(\lambda g)'''/6}
+          \quad&=\quad \lambda^2\detrow{g}{g'''/6}
+          + \lambda\lambda'\detrow{g}{g''/2}
         \\[0.5em]
-          &\qquad+ (\lambda\lambda''/2)\left\vert\begin{array}{cc}g&g'\end{array}\right\vert
+          &\qquad+ (\lambda\lambda''/2)\detrow{g}{g'}
         \\[1em]
-          \left\vert\begin{array}{cc}(\lambda g)'&(\lambda g)''/2\end{array}\right\vert
-          \quad&=\quad \lambda^2\left\vert\begin{array}{cc}g'&g''/2\end{array}\right\vert
-          - (\lambda\lambda''/2)\left\vert\begin{array}{cc}g&g'\end{array}\right\vert
+          \detrow{(\lambda g)'}{(\lambda g)''/2}
+          \quad&=\quad \lambda^2\detrow{g'}{g''/2}
+          - (\lambda\lambda''/2)\detrow{g}{g'}
         \\[0.5em]
-          &\qquad+ (\lambda')^2\left\vert\begin{array}{cc}g&g'\end{array}\right\vert
-          + \lambda\lambda'\left\vert\begin{array}{cc}g&g''/2\end{array}\right\vert.
+          &\qquad+ (\lambda')^2\detrow{g}{g'}
+          + \lambda\lambda'\detrow{g}{g''/2}.
         \end{aligned}
       \]
+
+      The new denominator $D_\lambda$ (resp. numerator $N_\lambda$) is thus given in terms of the old denominator $D$ (resp. numerator $N$) by
+      \[
+        \begin{aligned}
+          D_\lambda
+          &= \lambda^4 D
+        \\N_\lambda
+          &= \lambda^4 N + \lambda^4\detrow{g}{g'}\cdot
+          \left[
+            \begin{aligned}
+              &\Big(
+                \lambda'/\lambda\detrow{g}{g''/2}
+                + (\lambda''/2\lambda)\detrow{g}{g'}
+              \Big)
+            \\+&\Big(
+                -(\lambda''/2\lambda)\detrow{g}{g'}
+                +(\lambda'/\lambda)^2\detrow{g}{g'}
+                +(\lambda'/\lambda)\detrow{g}{g''}
+              \Big)
+            \\-&\Big(
+                2(\lambda'/\lambda)\detrow{g}{g''/2}
+                + (\lambda'/\lambda)^2\detrow{g}{g'}
+              \Big)
+            \end{aligned}
+          \right]
+        \end{aligned}
+      \]
+      and $N_\lambda/D_\lambda=N/D$.
+
+      With these variance properties agreeing with those of the left-hand side of \cref{I.5.9.3}, it suffices to prove \cref{I.5.9.3} in the particular case where $h=1$.
+      The equation then reduces to \cref{I.5.9.2}.
   \end{enumerate}
+
+  We will only need to use the fact that $\theta(f)$ can be expressed in terms of \todo:
+  we have, for $Z_i\sim Z$,
+  \[
+  \label{I.5.9.4}
+    \frac{(f(Z_1),f(Z_2),f(Z_3),f(Z_4))}{(Z_1,Z_2,Z_3,Z_4)} - 1
+    = \theta(f)(Z_1-Z_2)(Z_3-Z_4) + \mathcal{O}((Z_i-Z)^3).
+  \tag{5.9.4}
+  \]
+\end{env}
+
+\oldpage{35}
+\begin{env}{5.10}
+\label{I.5.10}
+  The differential equation $\theta(f)=0$ (for $f\colon X\to\PP^1(\CC)$ with non-zero first derivative) is a third-order differential equation.
+  It thus admits $\infty^3$ solutions, locally, and these solutions are permuted amongst themselves by the projective group (since the group transitively permutes the Cauchy data: \cref{I.5.2}).
+  The set of solutions is thus a projective connection (the local version, \cref{I.5.6}).
+  This construction is inverse to that which associates, to any projective connection in the sense of \cref{I.5.6}, a projective connection in the sense of \cref{I.5.6bis}.
+\end{env}
+
+\begin{env}{5.11}
+\label{I.5.11}
+  Let $X$ be a smooth curve, $\sh{L}$ an invertible sheaf on $X$, and $E$ a second-order ordinary differential equation on $\sh{L}$.
 \end{env}
 
 
