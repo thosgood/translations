@@ -176,7 +176,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   <br/>
   [<img alt="code-icon" src="images/file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/im-8/ord-ab-varieties-finite-field.tex)
   |
-  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF]()
+  [<img alt="pdf-icon" src="images/file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=im-8%2Ford-ab-varieties-finite-field.tex&command=pdflatex&trackId=1604785075223)
   |
   [<img alt="file-icon" src="images/file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/352)
 
