@@ -127,9 +127,9 @@ In the first series of the Séminaire Bourbaki (as it would eventually be known)
   <br/>
   _Séminaire Bourbaki_ **1** (1952), Talk no. 1.
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminars/SB-1-1.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminars/seminaire-bourbaki/SB-1-1.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminars/SB-1-1.tex)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminars/seminaire-bourbaki/SB-1-1.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/book-part/SB_1948-1951__1__7_0/)
 
