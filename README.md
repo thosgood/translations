@@ -79,8 +79,7 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
 
 ### Extracts (1957--62), "Fondements de la Géométrie Algébrique"
 
-A PDF copy of the original notes can be found at [The Grothendieck Circle](https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf).
-We have included any comments and errata from the May 1962 "Commentaires" (_Séminaire Bourbaki_ **14**, 1961--62, Complément).
+A PDF copy of the original notes can be found at [The Grothendieck Circle](https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf). We have included any comments and errata from the May 1962 "Commentaires" (_Séminaire Bourbaki_ **14**, 1961--62, Complément).
 
 All of the following are by A. Grothendieck.
 
@@ -122,7 +121,7 @@ All of the following are by A. Grothendieck.
 
 ### Extracts (1952), "Les travaux de Koszul"
 
-In the first series of the Séminaire Bourbaki (as it would eventually be known), H. Cartan gave three talks concerning the work of J.-L. Koszul on Lie algebras.
+In the first series of the Séminaire Bourbaki (as it would eventually be known), H. Cartan gave three talks concerning the work of J.-L. Koszul on Lie algebras. (These specific talks were given in 1948--49, but the first printed _Séminaire Bourbaki_ collection was published in 1952, containing the first 49 talks, dating from 1948 up until 1951).
 
 1. "Les travaux de Koszul, I".
   <br/>
@@ -132,7 +131,7 @@ In the first series of the Séminaire Bourbaki (as it would eventually be known)
   |
   [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminars/SB-1-1.tex)
   |
-  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SB_1948-1951__1__7_0/)
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/book-part/SB_1948-1951__1__7_0/)
 
 <!-- 2. "Les travaux de Koszul, II".
   <br/>
@@ -142,7 +141,7 @@ In the first series of the Séminaire Bourbaki (as it would eventually be known)
   |
   [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminars/SB-1-8.tex)
   |
-  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SB_1948-1951__1__7_0/)
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/book-part/SB_1948-1951__1__45_0/)
 
 3. "Les travaux de Koszul, III".
   <br/>
@@ -152,7 +151,7 @@ In the first series of the Séminaire Bourbaki (as it would eventually be known)
   |
   [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminars/SB-1-12.tex)
   |
-  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SB_1948-1951__1__7_0/) -->
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/book-part/SB_1948-1951__1__71_0/) -->
 
 
 ## Séminaire Claude Chevalley
