@@ -119,23 +119,9 @@ All of the following are by A. Grothendieck.
         <br/>
         _Séminaire Bourbaki_ **14** (1961--62), Talk no. 136. -->
 
-### Extracts (1948--49), "Les travaux de Koszul"
+<!-- ### Extracts (1948--49), "Les travaux de Koszul"
 
-In the first series of the Séminaire Bourbaki, H. Cartan gave three talks concerning the work of J.-L. Koszul on Lie algebras. (These specific talks were given in 1948--49, but the first published _Séminaire Bourbaki_ collection was printed in 1952, containing the first 49 talks, and dating from 1948 up until 1951). I have combined all three talks into one file.
-
-- "Les travaux de Koszul, I, II, and III".
-  <br/>
-  _Séminaire Bourbaki_ **1** (1952), Talks no. 1, 8, and 12.
-  <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminaire-bourbaki/SB-1-1%2B8%2B12.tex)
-  |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminaire-bourbaki/SB-1-1%2B8%2B12.tex)
-  |
-  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original I](http://www.numdam.org/book-part/SB_1948-1951__1__7_0/)
-  |
-  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original II](http://www.numdam.org/book-part/SB_1948-1951__1__45_0/)
-  |
-  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original III](http://www.numdam.org/book-part/SB_1948-1951__1__71_0/)
+In the first series of the Séminaire Bourbaki, H. Cartan gave three talks concerning the work of J.-L. Koszul on Lie algebras. (These specific talks were given in 1948--49, but the first published _Séminaire Bourbaki_ collection was printed in 1952, containing the first 49 talks, and dating from 1948 up until 1951). I have combined all three talks into one file. -->
 
 
 
@@ -199,6 +185,20 @@ Note that we have included any changes made in the Errata.
 # In progress
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
+
+- **(3/16)** "Les travaux de Koszul, I, II, and III".
+  <br/>
+  _Séminaire Bourbaki_ **1** (1952), Talks no. 1, 8, and 12.
+  <br/>
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminaire-bourbaki/SB-1-1%2B8%2B12.tex)
+  |
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminaire-bourbaki/SB-1-1%2B8%2B12.tex)
+  |
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original I](http://www.numdam.org/book-part/SB_1948-1951__1__7_0/)
+  |
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original II](http://www.numdam.org/book-part/SB_1948-1951__1__45_0/)
+  |
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original III](http://www.numdam.org/book-part/SB_1948-1951__1__71_0/)
 
 - **(40/126)** Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>
