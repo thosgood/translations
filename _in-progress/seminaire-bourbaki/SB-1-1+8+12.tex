@@ -56,6 +56,7 @@
 \newcommand{\lrp}{\mathbin{\lrcorner}}
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\RR}{\mathbb{R}}
+\newcommand{\fk}{\mathfrak}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -267,45 +268,45 @@ It can be calculated using the following rules (which don't need explicit knowle
 \section{Lie groups}
 \label{I.5}
 
-Let $V$ denote the manifold of a Lie group $G$, and denote by $\mathfrak{a}$ the subspace of $E$ given by vector fields that are \emph{invariant under left-translations} by $G$;
-we denote by $\mathfrak{a}'$ the subspace of $E'$ given by \emph{left-invariant} differential forms (of degree~$1$).
-Then $\mathfrak{a}$ and $\mathfrak{a}'$ are $n$-dimensional vector spaces over the field $\RR$ of reals, and are in duality.
-The exterior algebra $\Lambda(\mathfrak{a}')$ can be identified with the sub-algebra of $\Lambda(E')$ given by \emph{left-invariant} exterior differential forms, and it is \emph{stable} under the operator $\dd$ of exterior differentiation.
-(In particular, $\Lambda^0(\mathfrak{a}')$ is the field of constant functions, identified with $\RR$).
+Let $V$ denote the manifold of a Lie group $G$, and denote by $\fk{a}$ the subspace of $E$ given by vector fields that are \emph{invariant under left-translations} by $G$;
+we denote by $\fk{a}'$ the subspace of $E'$ given by \emph{left-invariant} differential forms (of degree~$1$).
+Then $\fk{a}$ and $\fk{a}'$ are $n$-dimensional vector spaces over the field $\RR$ of reals, and are in duality.
+The exterior algebra $\Lambda(\fk{a}')$ can be identified with the sub-algebra of $\Lambda(E')$ given by \emph{left-invariant} exterior differential forms, and it is \emph{stable} under the operator $\dd$ of exterior differentiation.
+(In particular, $\Lambda^0(\fk{a}')$ is the field of constant functions, identified with $\RR$).
 
-If $X\in\mathfrak{a}$, then the automorphism group of $V$ defined by $X$ (cf. \cref{I.4}) is the group of \emph{right}-translations by elements of the subgroup of $G$;
+If $X\in\fk{a}$, then the automorphism group of $V$ defined by $X$ (cf. \cref{I.4}) is the group of \emph{right}-translations by elements of the subgroup of $G$;
 the orbit of the identity element.
-Thus $\Lambda(\mathfrak{a})$ and $\Lambda(\mathfrak{a}')$ are \emph{stable} under $\theta(X)$ if $X\in\mathfrak{a}$.
-In particular, if $X$ and $Y$ are in $\mathfrak{a}$, then $[X,Y]$ is in $\mathfrak{a}$.
-The elements upon which $\theta(X)$ acts trivially (for \emph{all} $X\in\mathfrak{a}$) are those that are simultaneously invariant under left- and right-translations, and are simply called \emph{invariant elements}.
+Thus $\Lambda(\fk{a})$ and $\Lambda(\fk{a}')$ are \emph{stable} under $\theta(X)$ if $X\in\fk{a}$.
+In particular, if $X$ and $Y$ are in $\fk{a}$, then $[X,Y]$ is in $\fk{a}$.
+The elements upon which $\theta(X)$ acts trivially (for \emph{all} $X\in\fk{a}$) are those that are simultaneously invariant under left- and right-translations, and are simply called \emph{invariant elements}.
 
 Since $\theta(X)$ is zero on the scalars (constant functions), we have:
 \[
 \label{equation-I.3}
   \langle \theta(X)\cdot Y,\omega \rangle + \langle Y,\theta(X)\cdot\omega \rangle
   = 0
-  \qquad\mbox{for $Y\in\mathfrak{a}$ and $\omega\in\mathfrak{a}'$.}
+  \qquad\mbox{for $Y\in\fk{a}$ and $\omega\in\fk{a}'$.}
 \tag{3}
 \]
 In other words, $\theta(X)$ (acting on forms) is the \emph{transpose} of $-\theta(X)$ (acting on vector fields).
 
-The vector space $\mathfrak{a}$, endowed with the structure defined by the map $(X,Y)\mapsto[X,Y]$ from $\mathfrak{a}\times\mathfrak{a}$ to $\mathfrak{a}$, is the \emph{Lie algebra} of the group $G$.
+The vector space $\fk{a}$, endowed with the structure defined by the map $(X,Y)\mapsto[X,Y]$ from $\fk{a}\times\fk{a}$ to $\fk{a}$, is the \emph{Lie algebra} of the group $G$.
 
 
 \section{Lie algebras}
 \label{I.6}
 
-We start with an abstract Lie algebra $\mathfrak{a}$ (under the classical definition), taken over a field $K$ that is, for now, arbitrary.
-Let $n$ be the dimension of the vector space $\mathfrak{a}$ over $K$.
-We will construct everything from the structure of $\mathfrak{a}$, by taking the relations established above (in the case of the field $\RR$) as our definitions.
+We start with an abstract Lie algebra $\fk{a}$ (under the classical definition), taken over a field $K$ that is, for now, arbitrary.
+Let $n$ be the dimension of the vector space $\fk{a}$ over $K$.
+We will construct everything from the structure of $\fk{a}$, by taking the relations established above (in the case of the field $\RR$) as our definitions.
 
 \oldpage{11}
-Let $\mathfrak{a}'$ be the dual vector space of $\mathfrak{a}$.
-From now on, we denote elements of $\mathfrak{a}$ by $x,y,\ldots$;
-the elements of $\mathfrak{a}'$ by $x',y',\ldots$;
-the elements of $\Lambda(\mathfrak{a})$ by $\alpha,\beta,\ldots$;
-and the elements of $\Lambda(\mathfrak{a}')$ by $\alpha',\beta',\ldots$.
-We \emph{define} $\theta(x)$, for $x\in\mathfrak{a}$, by
+Let $\fk{a}'$ be the dual vector space of $\fk{a}$.
+From now on, we denote elements of $\fk{a}$ by $x,y,\ldots$;
+the elements of $\fk{a}'$ by $x',y',\ldots$;
+the elements of $\Lambda(\fk{a})$ by $\alpha,\beta,\ldots$;
+and the elements of $\Lambda(\fk{a}')$ by $\alpha',\beta',\ldots$.
+We \emph{define} $\theta(x)$, for $x\in\fk{a}$, by
 \[
   \begin{aligned}
     \theta(x)\cdot y
@@ -314,12 +315,12 @@ We \emph{define} $\theta(x)$, for $x\in\mathfrak{a}$, by
     &= -\langle[x,y],x'\rangle.
   \end{aligned}
 \]
-With $\theta(x)$ defined on $\mathfrak{a}$ and $\mathfrak{a}'$, we extend it to $\Lambda(\mathfrak{a})$ and $\Lambda(\mathfrak{a}')$ by imposing the condition that $\theta(x)$ be a \emph{derivation}.
-The $\theta(x)$ that acts on $\Lambda(\mathfrak{a})$ is the \emph{transpose} of the $-\theta(x)$ that acts on $\Lambda(\mathfrak{a}')$.
-The elements of $\Lambda(\mathfrak{a})$ (resp. of $\Lambda(\mathfrak{a}')$) for which $\theta(x)$ acts trivially (for \emph{all} $x\in\mathfrak{a}$) are called \emph{invariant} (or \emph{bi-invariant}) elements.
-The invariant elements of $\Lambda(\mathfrak{a})$ form a \emph{sub-algebra} $\mathfrak{J}$, and those of $\Lambda(\mathfrak{a}')$ form a sub-algebra $\mathfrak{J}'$.
+With $\theta(x)$ defined on $\fk{a}$ and $\fk{a}'$, we extend it to $\Lambda(\fk{a})$ and $\Lambda(\fk{a}')$ by imposing the condition that $\theta(x)$ be a \emph{derivation}.
+The $\theta(x)$ that acts on $\Lambda(\fk{a})$ is the \emph{transpose} of the $-\theta(x)$ that acts on $\Lambda(\fk{a}')$.
+The elements of $\Lambda(\fk{a})$ (resp. of $\Lambda(\fk{a}')$) for which $\theta(x)$ acts trivially (for \emph{all} $x\in\fk{a}$) are called \emph{invariant} (or \emph{bi-invariant}) elements.
+The invariant elements of $\Lambda(\fk{a})$ form a \emph{sub-algebra} $\fk{J}$, and those of $\Lambda(\fk{a}')$ form a sub-algebra $\fk{J}'$.
 
-Equation~\cref{equation-I.2} leads us to define an endomorphism $\delta$ of $\Lambda(\mathfrak{a}')$ that is zero on the scalars, and such that
+Equation~\cref{equation-I.2} leads us to define an endomorphism $\delta$ of $\Lambda(\fk{a}')$ that is zero on the scalars, and such that
 \[
 \label{equation-I.4}
   \theta(x) = i(x)\delta + \delta i(x).
@@ -331,14 +332,14 @@ it is an \emph{antiderivation}, characterised by
   \langle x\wedge y,\delta x'\rangle
   = -\langle[x,y],x'\rangle,
 \]
-and it maps $\Lambda^p(\mathfrak{a}')$ to $\Lambda^{p+1}(\mathfrak{a}')$.
+and it maps $\Lambda^p(\fk{a}')$ to $\Lambda^{p+1}(\fk{a}')$.
 
-We define, on $\Lambda(\mathfrak{a})$, the endomorphism $\partial$ that is the \emph{transpose} of $-\delta$ by
+We define, on $\Lambda(\fk{a})$, the endomorphism $\partial$ that is the \emph{transpose} of $-\delta$ by
 \[
   \langle\partial\alpha,\alpha'\rangle
   = -\langle\alpha,\delta\alpha'\rangle.
 \]
-Then $\partial$ commutes with the $\theta(x)$, satisfies $\partial\partial=0$, maps $\Lambda^p(\mathfrak{a})$ to $\Lambda^{p+1}(\mathfrak{a})$, and is \emph{zero on $\mathfrak{a}$};
+Then $\partial$ commutes with the $\theta(x)$, satisfies $\partial\partial=0$, maps $\Lambda^p(\fk{a})$ to $\Lambda^{p+1}(\fk{a})$, and is \emph{zero on $\fk{a}$};
 finally, we have that
 \[
   \begin{aligned}
@@ -354,30 +355,30 @@ whence, by induction, we have the explicit formula
   = \sum_{i<j} (-1)^{i+j+1} [x_i,x_j] x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p.
 \]
 
-The operator $\delta$ on $\Lambda(\mathfrak{a}')$ (the \emph{algebra of cochains}) defines a \emph{cohomology algebra}, denoted by $\HH(\mathfrak{a}')$.
-The operator $\partial$ on $\Lambda(\mathfrak{a})$ (the \emph{algebra of chains}) defines a \emph{homology group}, denoted by $\HH(\mathfrak{a})$;
-there is not, in general, a multiplication in $\HH(\mathfrak{a})$, since $\partial$ is \emph{not} an antiderivation.
+The operator $\delta$ on $\Lambda(\fk{a}')$ (the \emph{algebra of cochains}) defines a \emph{cohomology algebra}, denoted by $\HH(\fk{a}')$.
+The operator $\partial$ on $\Lambda(\fk{a})$ (the \emph{algebra of chains}) defines a \emph{homology group}, denoted by $\HH(\fk{a})$;
+there is not, in general, a multiplication in $\HH(\fk{a})$, since $\partial$ is \emph{not} an antiderivation.
 
-We have that $\HH(\mathfrak{a})$ and $\HH(\mathfrak{a}')$ are naturally in duality;
-for each degree~$p$, $\HH^p(\mathfrak{a})$ and $\HH^p(\mathfrak{a}')$ are in duality, and thus of the same dimension.
-If $\mathfrak{a}$ is the Lie algebra of a \emph{compact connected group}, then $\HH(\mathfrak{a}')$ can be identified with the cohomology algebra of the (topological) space of the group, by the de Rham theorem.
+We have that $\HH(\fk{a})$ and $\HH(\fk{a}')$ are naturally in duality;
+for each degree~$p$, $\HH^p(\fk{a})$ and $\HH^p(\fk{a}')$ are in duality, and thus of the same dimension.
+If $\fk{a}$ is the Lie algebra of a \emph{compact connected group}, then $\HH(\fk{a}')$ can be identified with the cohomology algebra of the (topological) space of the group, by the de Rham theorem.
 This proves that
 \oldpage{12}
 any two compact connected groups that are locally isomorphic have the same Betti number.
-In all cases, the common dimension of $\HH^p(\mathfrak{a})$ and $\HH^p(\mathfrak{a}')$ is called the \emph{$p$-th Betti number} of the Lie algebra $\mathfrak{a}$.
+In all cases, the common dimension of $\HH^p(\fk{a})$ and $\HH^p(\fk{a}')$ is called the \emph{$p$-th Betti number} of the Lie algebra $\fk{a}$.
 
 \medskip
 \textbf{Unimodularity.}
-We say that $\mathfrak{a}$ is \emph{unimodular} if $\theta(x)$ (for \emph{all} $x\in\mathfrak{a}$), considered as an endomorphism of $\mathfrak{a}$ (the \emph{adjoint} representation) has \emph{zero trace};
+We say that $\fk{a}$ is \emph{unimodular} if $\theta(x)$ (for \emph{all} $x\in\fk{a}$), considered as an endomorphism of $\fk{a}$ (the \emph{adjoint} representation) has \emph{zero trace};
 an equivalent condition is that the chain $\omega$ of degree~$n$ is a \emph{cycle};
 another equivalent condition is that $\omega$ is \emph{invariant}.
 
-If $\mathfrak{a}$ is unimodular, then $\alpha\mapsto\omega\llp\alpha'$ defines an isomorphism from $\HH^p(\mathfrak{a}')$ to $\HH^{n-p}(\mathfrak{a})$;
+If $\fk{a}$ is unimodular, then $\alpha\mapsto\omega\llp\alpha'$ defines an isomorphism from $\HH^p(\fk{a}')$ to $\HH^{n-p}(\fk{a})$;
 this corresponds to the ``Poincar\'{e} duality theorem'' for the Betti numbers of a manifold.
 
 \medskip
 \textbf{Expansions in a basis.}
-We can express $\delta$ and $\partial$ in terms of a basis $(x_k)$ of $\mathfrak{a}$ and the dual basis $(x'_k)$ of $\mathfrak{a}'$ (when $K$ is of characteristic $\neq2$):
+We can express $\delta$ and $\partial$ in terms of a basis $(x_k)$ of $\fk{a}$ and the dual basis $(x'_k)$ of $\fk{a}'$ (when $K$ is of characteristic $\neq2$):
 \[
   \begin{aligned}
     2\delta
@@ -385,19 +386,19 @@ We can express $\delta$ and $\partial$ in terms of a basis $(x_k)$ of $\mathfrak
     \qquad\mbox{always,}
   \\2\partial
     &= \sum_k i(x'_k)\theta(x_k)
-    \qquad\mbox{if $\mathfrak{a}$ is \emph{unimodular}.}
+    \qquad\mbox{if $\fk{a}$ is \emph{unimodular}.}
   \end{aligned}
 \]
 
 \medskip
 \textbf{Semi-simple Lie algebras.}
 We say that a Lie algebra is \emph{semi-simple} if it has no radical, or, equivalently (at least if $K$ is of characteristic~$0$), if all its representations are completely reducible.
-If $\mathfrak{a}/\mathfrak{c}$ is semi-simple (where $\mathfrak{c}$ is the centre of $\mathfrak{a}$), then we have a canonical isomorphism from $\HH(\mathfrak{a}')$ to $\mathfrak{J}'$, and from $\HH(\mathfrak{a})$ to $\mathfrak{J}$ (and thus a multiplicative structure on $\HH(\mathfrak{a})$ in this case).
+If $\fk{a}/\fk{c}$ is semi-simple (where $\fk{c}$ is the centre of $\fk{a}$), then we have a canonical isomorphism from $\HH(\fk{a}')$ to $\fk{J}'$, and from $\HH(\fk{a})$ to $\fk{J}$ (and thus a multiplicative structure on $\HH(\fk{a})$ in this case).
 
-If $\mathfrak{a}$ is semi-simple, then its centre is trivial, the Betti numbers in dimensions~$1$ and $2$ are zero, and the Betti number in dimension~$3$ is equal to the dimension of the vector space of \emph{invariant quadratic forms} (where an invariant quadratic form is a bilinear map $f(x,y)$ such that $f(y,x)=f(x,y)$ and $f(\theta(z)\cdot x,y)+f(x,\theta(z)\cdot y)=0$).
+If $\fk{a}$ is semi-simple, then its centre is trivial, the Betti numbers in dimensions~$1$ and $2$ are zero, and the Betti number in dimension~$3$ is equal to the dimension of the vector space of \emph{invariant quadratic forms} (where an invariant quadratic form is a bilinear map $f(x,y)$ such that $f(y,x)=f(x,y)$ and $f(\theta(z)\cdot x,y)+f(x,\theta(z)\cdot y)=0$).
 
 \textbf{Corollary.}
-If $K$ is maximal and quasi-real, and $\mathfrak{a}$ is \emph{simple}, then the third Betti number is equal to $1$.
+If $K$ is maximal and quasi-real, and $\fk{a}$ is \emph{simple}, then the third Betti number is equal to $1$.
 
 
 
@@ -410,21 +411,21 @@ If $K$ is maximal and quasi-real, and $\mathfrak{a}$ is \emph{simple}, then the 
 
 \[
   \begin{array}{rll}
-    \mbox{$\mathfrak{a}$:} & \mbox{Lie algebra over a field $K$;} & \mbox{elements $x,y,\ldots$}
-  \\\mbox{$\mathfrak{a}'$:} & \mbox{dual vector space of $\mathfrak{a}$;} & \mbox{elements $x',y',\ldots$}
-  \\\mbox{$\Lambda(\mathfrak{a})$:} & \mbox{exterior algebra of $\mathfrak{a}$;} & \mbox{elements $\alpha,\beta,\ldots$}
-  \\\mbox{$\Lambda(\mathfrak{a}')$:} & \mbox{exterior algebra of $\mathfrak{a}'$;} & \mbox{elements $\alpha',\beta',\ldots$}
+    \mbox{$\fk{a}$:} & \mbox{Lie algebra over a field $K$;} & \mbox{elements $x,y,\ldots$}
+  \\\mbox{$\fk{a}'$:} & \mbox{dual vector space of $\fk{a}$;} & \mbox{elements $x',y',\ldots$}
+  \\\mbox{$\Lambda(\fk{a})$:} & \mbox{exterior algebra of $\fk{a}$;} & \mbox{elements $\alpha,\beta,\ldots$}
+  \\\mbox{$\Lambda(\fk{a}')$:} & \mbox{exterior algebra of $\fk{a}'$;} & \mbox{elements $\alpha',\beta',\ldots$}
   \end{array}
 \]
 
 \begin{itemize}
-  \item The operator $\theta(x)$ is the \emph{infinitesimal transformation defined by $x\in\mathfrak{a}$} on $\Lambda(\mathfrak{a})$;
-    from now on, we denote by $\theta^*(x)$ (instead of $\theta(x)$) the operator that is the transpose of $-\theta(x)$ acting on $\Lambda(\mathfrak{a}')$.
-  \item  The operator $e(x)$ is the \emph{(left) exterior product with $x\in\mathfrak{a}$} on $\Lambda(\mathfrak{a})$;
-    the operator $i(x)$ is the \emph{interior product with $x\in\mathfrak{a}$} on $\Lambda(\mathfrak{a}')$;
+  \item The operator $\theta(x)$ is the \emph{infinitesimal transformation defined by $x\in\fk{a}$} on $\Lambda(\fk{a})$;
+    from now on, we denote by $\theta^*(x)$ (instead of $\theta(x)$) the operator that is the transpose of $-\theta(x)$ acting on $\Lambda(\fk{a}')$.
+  \item  The operator $e(x)$ is the \emph{(left) exterior product with $x\in\fk{a}$} on $\Lambda(\fk{a})$;
+    the operator $i(x)$ is the \emph{interior product with $x\in\fk{a}$} on $\Lambda(\fk{a}')$;
     $i(x)$ and $e(x)$ are the transpose of one another.
-  \item The operator $\partial$ is the \emph{boundary} operator on $\Lambda(\mathfrak{a})$;
-    the operator $\delta$ is the \emph{coboundary} operator on $\Lambda(\mathfrak{a}')$;
+  \item The operator $\partial$ is the \emph{boundary} operator on $\Lambda(\fk{a})$;
+    the operator $\delta$ is the \emph{coboundary} operator on $\Lambda(\fk{a}')$;
     $\delta$ is the transpose of $-\partial$.
 \end{itemize}
 
@@ -442,15 +443,56 @@ These operators satisfy the following relations:
 \tag{1}
 \]
 
-The \emph{homology vector space $\HH(\mathfrak{a})$} is defined by $\partial$ acting on $\Lambda(\mathfrak{a})$;
-the \emph{cohomology algebra $\HH(\mathfrak{a}')$} is defined by $\delta$ acting on $\Lambda(\mathfrak{a'})$.
-There is a multiplicative structure on $\HH(\mathfrak{a}')$ because $\delta$ is an \emph{antiderivation}.
-The vector spaces $\HH(\mathfrak{a})$ and $\HH(\mathfrak{a}')$ are canonically in duality.
+The \emph{homology vector space $\HH(\fk{a})$} is defined by $\partial$ acting on $\Lambda(\fk{a})$;
+the \emph{cohomology algebra $\HH(\fk{a}')$} is defined by $\delta$ acting on $\Lambda(\fk{a'})$.
+There is a multiplicative structure on $\HH(\fk{a}')$ because $\delta$ is an \emph{antiderivation}.
+The vector spaces $\HH(\fk{a})$ and $\HH(\fk{a}')$ are canonically in duality.
 
 
-\section{Direct composition of two Lie algebras}
+\section{Direct sum of two Lie algebras}
 \label{II.2}
 
+We say that $\fk{a}$ is the \emph{direct sum} of two sub-algebras $\fk{b},\fk{c}\subseteq\fk{a}$, and we write $\fk{a}=\fk{b}\oplus\fk{c}$, if
+\begin{enumerate}[1)]
+  \item the vector space $\fk{a}$ is the direct sum of the subspaces $\fk{b}$ and $\fk{c}$ ; and
+  \item $[x,y]=0$ for $x\in\fk{b}$ and $y\in\fk{c}$.
+\end{enumerate}
+If this is the case, then $\Gamma(\fk{a})$ is canonically isomorphic to the tensor product $\Gamma(\fk{b})\otimes\Gamma(\fk{c})$;
+\oldpage{46}
+if we transport the multiplicative structure of $\Gamma(\fk{a})$ to this tensor product, then we see that
+\[
+  (\beta_1\otimes\gamma_1)\cdot(\beta_2\otimes\gamma_2)
+  = (-1)^{pq}(\beta_1\wedge\beta_2)\otimes(\gamma_1\otimes\gamma_2)
+\]
+(where $p=\deg\beta_2$ and $q=\deg\gamma_1$), which describes the notion of the \emph{tensor product of graded algebras}.
+Finally, the boundary operator $\partial$ on $\Gamma(\fk{b})\otimes\Gamma(\fk{c})$ satisfies
+\[
+  \partial(\beta\otimes\gamma)
+  = (\partial\beta)\otimes\gamma + \overline{\beta}\otimes(\partial\gamma)
+\]
+(where $\overline{\beta}=(-1)^p\beta$ for $\beta$ of degree~$p$).
+It thus follows that the vector space $\HH(\fk{a})$ can be identified with the tensor product $\HH(\fk{b})\otimes\HH(\fk{c})$.
+
+Similarly, $\Gamma(\fk{a}')$ can be identified with the tensor product $\Gamma(\fk{b}')\otimes\Gamma(\fk{c}')$ of graded algebras.
+The duality between $\Gamma(\fk{b})\otimes\Gamma(\fk{c})$ and $\Gamma(\fk{b}')\otimes\Gamma(\fk{c}')$ is defined by
+\[
+  \langle\beta\otimes\gamma,\beta'\otimes\gamma'\rangle
+  = \langle\beta,\beta'\rangle \cdot \langle\gamma,\gamma'\rangle.
+\]
+The operator $\delta$ on $\Gamma(\fk{b}')\otimes\Gamma(\fk{c}')$ satisfies
+\[
+  \delta(\beta'\otimes\gamma')
+  = (\delta\beta')\otimes\gamma' + \overline{\beta'}\otimes(\delta\gamma'),
+\]
+and the cohomology algebra $\HH(\fk{a}')$ can be identified with the tensor product $\HH(\fk{b}')\otimes\HH(\fk{c}')$ of \emph{graded algebras}.
+
+If $\fk{b}$ and $\fk{c}$ are the Lie algebras of \emph{compact connected Lie groups} $G_1$ and $G_2$ (respectively), then $\fk{a}=\fk{b}\oplus\fk{c}$ is the Lie algebra of the product group $G_1\times G_2$;
+we recover the following theorem:
+\emph{the cohomology algebra (with real coefficients) of $G_1\times G_2$ is canonically identified with the tensor product of the cohomology algebras of $G_1$ and $G_2$}.
+
+
+\section{Semi-simple Lie algebras}
+\label{II.3}
 
 
 %% Bibliography %%
