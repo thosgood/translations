@@ -164,7 +164,7 @@ Note that we have included any changes made in the Errata.
   <br/>
   [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/2-coherent-algebraic-analytic-sheaves.tex)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
 
