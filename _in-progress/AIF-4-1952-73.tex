@@ -55,13 +55,15 @@
 
 %% Shortcuts %%
 
-\newcommand{\aster}[1]{$^\star\;$#1$\;{}_\star$}
+\newcommand{\aster}[1]{$\star${#1}$\star$}
 \newcommand{\BB}{\mathrm{B}}
 \newcommand{\LL}{\mathrm{L}}
 \newcommand{\sBB}{\mathscr{B}}
 \newcommand{\DF}{\mbox{\normalfont($\mathscr{DF}$)}}
 \newcommand{\FF}{\mbox{\normalfont($\mathscr{F}$)}}
 \newcommand{\hotimes}{\widehat{\otimes}}
+\newcommand{\scr}{\mathscr}
+\newcommand{\dd}{\mathrm{d}}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -118,11 +120,11 @@
 \oldpage{73}
 
 \footnote{The numbers in brackets refer to the bibliography found at the end of this article.}
-This article aims to give a summary, without proofs, of the principal results found in my work ``Produits tensoriels topologiques et espaces nucl\'{e}aires'', which will be published in the \emph{Memoirs of the Amer. Math. Society} (and which I will refer to as PTT).
-The main concern throughout PTT was that of being exhaustive, both in terms of studying all the questions raised by the topics covered, as well as trying to state the more difficult results as theorems that were the most general possible.
+This article aims to give a summary, without proofs, of the principal results found in my work ``Produits tensoriels topologiques et espaces nucl\'{e}aires'', which will be published in the \emph{Memoirs of the Amer. Math. Society} (and which I will refer to as \cite{PTT}).
+The main concern throughout \cite{PTT} was that of being exhaustive, both in terms of studying all the questions raised by the topics covered, as well as trying to state the more difficult results as theorems that were the most general possible.
 This work was also very dense, and the important simple ideas risked being sometimes hidden by technical details.
 This is why this bowlderised summary is possibly useful in giving a more assimilable outline of the theory.
-Some extra comments, interesting but not necessary for the general understanding of this summary, as well as some hints on certain proofs, have been placed between asterisks, like \aster{\ldots}.
+Some extra comments, interesting but not necessary for the general understanding of this summary, as well as some hints on certain proofs, have been placed between stars, like \aster{\ldots}.
 
 The importance of topological tensor products shows itself in many different settings:
 \begin{enumerate}[a)]
@@ -130,7 +132,7 @@ The importance of topological tensor products shows itself in many different set
     \footnote{Such a formulation of Fredholm theory seems to have appeared for the first time in \textsc{A.~Ruston}, ``Direct product of Banach spaces and linear functional equations'', \emph{Proc. of the London Math. Soc.} \textbf{3} (1951), 1. My work on this subject was conceived independently of his (in the autumn of 1951), and is rather different.}
   \item The many variants of the notion of topological tensor product give rise, by duality, to the definition of many remarkable classes of bilinear forms and linear operators, whose
 \oldpage{74}
-    study is only just barely covered in PTT, chap.~1, §4.
+    study is only just barely covered in \cite[chap.~I, \S4]{PTT}.
     In particular, the techniques introduced there, conveniently systematised and exploited, allow us to obtain entirely unexpected results in the \emph{theory of linear transformations between the space $L^1$, $L^2$, and $L^\infty$}, and their topological-vectorial analogues (these results being, as of yet, not definitive, and thus unpublished).
     I might return to this subject, and restrict myself to explaining, in a rather different way, the systematic work of von Neumann--Schatten on the remarkable classes of compact operators in a Hilbert space \cite[chap.~4]{8}.
   \item From the point of view of this current work, the most important application of topological tensor products is the theory of \emph{nuclear spaces}.
@@ -139,7 +141,7 @@ The importance of topological tensor products shows itself in many different set
     For now, there are not many applications to particular theories of the general theorems that we obtain.
     The most interesting seems to be a topological-vectorial variant of the ``K\"{u}nneth theorem'', giving the homology of a complex defined as the tensor product of two complexes, a variant which seems useful in topological algebra.
   \item Generally, it seems to me that the notions of topological tensor product are perfect for giving a suggestive and manageable \emph{language}, that would be good to use in many situations in functional analysis, especially since we have theorems (some of which are non-trivial) at our disposition that we can benefit from.
-  I hope that this summary, or, better, PTT, will succeed in giving the reader a similar impression, before the publication of the articles promised above.
+  I hope that this summary, or, better, \cite{PTT}, will succeed in giving the reader a similar impression, before the publication of the articles promised above.
 \end{enumerate}
 
 
@@ -165,7 +167,7 @@ This space is complete if and only if the spaces $E$ and $F$ are complete.
 
 We define a \emph{bounded} (resp. \emph{compact}, resp. \emph{weakly compact}) \emph{linear map} from $E$ to $F$ to be a linear map from $E$ to $F$ that sends a suitable neighbourhood of $0$ to a bounded (resp. relatively compact, resp. relatively weakly compact) subset of $F$.
 
-For short\footnote{This terminology was suggested to me by R.E.~Edwards.}, if $E$ is a vector space, we say \emph{disk} or \emph{disked set in $E$} to mean a convex and circled (a.k.a. balanced) subset of $E$.
+For short\footnote{This terminology was suggested to me by R.E.~Edwards.\\\emph{[Trans.] The seemingly more popular terminology these days is to say ``absolutely convex'' instead of ``disked'', and to speak of the ``absolutely convex hull'' instead of the ``disked hull''.}}, if $E$ is a vector space, we say \emph{disk} or \emph{disked set in $E$} to mean a convex and circled (a.k.a. balanced) subset of $E$.
 If $E$ is a locally convex space, and $A$ a bounded disk in $E$, then we denote by $E_A$ the vector space generated by $A$, and endowed with the norm $\|x\|_A=\inf_{x\in\lambda A}|\lambda|$.
 If $A$ is closed, then the unit ball of $E_A$ is $A$.
 If $A$ is complete, then $E_A$ is complete.
@@ -181,10 +183,12 @@ in any case, bornological implies quasi-tunnelled.
 \label{section:topological-tensor-products}
 \oldpage{76}
 
+
 \subsection{Generalities on \texorpdfstring{$E\hotimes F$}{EF}}
 \label{subsection:generalities-on-E-hotimes-F}
 
-\textbf{(PTT, chap.~1, §1, n\textsuperscript{o}~1 and n\textsuperscript{o}~3).}
+(\cite[chap.~1, §1, n\textsuperscript{o}~1 and n\textsuperscript{o}~3]{PTT}).
+\medskip
 
 The axiomatic definition of the algebraic tensor product $E\otimes F$ of two vector spaces $E$ and $F$, and of the canonical bilinear map $(x,y)\mapsto x\otimes y$ from $E\times F$ to $E\otimes F$ (\cite{1}) asks only that, for every vector space $G$, the bilinear maps from $E\times F$ to $G$ correspond bijectively with linear maps $f$ from $E\otimes F$ to $G$, where the map corresponding to $f$ is given by $(x,y)\mapsto f(x\otimes y)$.
 
@@ -214,8 +218,77 @@ We have, by definition, the \emph{scholium}: if $E$ and $F$ are locally convex s
 This claim still holds true for equicontinuous sets of maps.
 In particular, the dual of $E\hotimes F$ is $\BB(E,F)$, with a correspondence between the equicontinuous subsets (which already suffices to characterise the induced topology on $E\otimes F$).
 
-I do not know if, when $E$ and $F$ are of type~$\FF$, this algebraic isomorphism from the dual of $E\hotimes F$ to $\BB(E,F)$ is a \emph{topological} isomorphism, when we endow $\BB(E,F)$ with the topology given by bibounded convergence, i.e. uniform convergence on the products of two bounded sets \todo.
+I do not know if, when $E$ and $F$ are of type~$\FF$, this algebraic isomorphism from the dual of $E\hotimes F$ to $\BB(E,F)$ is a \emph{topological} isomorphism, when we endow $\BB(E,F)$ with the topology given by bibounded convergence, i.e. uniform convergence on the products of two bounded sets (``the problem of topologies'').
+An equivalent question is the following:
+is every bounded subset of $E\hotimes F$ contained in the closed disked hull of a set $A\hotimes B$, where $A$ (resp. $B$) is a bounded subset of $E$ (resp. $F$)?
 
+\aster{%
+  We now give some general tips for calculations involving $E\hotimes F$ (\cite[chap.~I, \S1, n\textsuperscript{o}~3]{PTT}).
+  If $E=\prod_i E_i$ and $F=\prod_j F_j$ (as topological-vectorial products), then $E\hotimes F$ can be identified with $\prod_{i,j}E_i\hotimes F_j$.
+  If $E=\sum_i E_i$ (as a topological direct sum), and if $F$ is a normable space, then $E\hotimes F$ can be identified with the topological direct sum $\sum_i(E_i\hotimes F)$.
+  This remains true if $F$ is an arbitrary $\DF$~space, provided that $I$ is countable, and these statements can also be generalised to the case where $E$ is the inductive limit (in the most general sense) of a family $E_i$ of spaces.
+  If $E$ and $F$ are both of type~$\FF$ (resp. type~$\DF$), then so too is $E\hotimes F$.
+  Similarly, if $E$ and $F$ are quasi-normable spaces, or Schwartz spaces (see definitions in \cite[\S3]{6}), then so too is $E\hotimes F$.
+}
+
+\oldpage{78}
+\subsection{The space \texorpdfstring{$E\hotimes F$}{EF} when \texorpdfstring{$E$}{E} and \texorpdfstring{$F$}{F} are of type \texorpdfstring{$\FF$}{(F)}}
+\label{subsection:E-hotimes-F-type-FF}
+
+(\cite[chap.~1, §2, n\textsuperscript{o}~1]{PTT}).
+\medskip
+
+\begin{theorem}{2}
+\label{theorem2}
+  Let $E$ and $F$ be two $\FF$~spaces.
+  Then every element of $E\hotimes F$ is the sum of an absolutely convergent series of the form
+  \[
+    u = \sum_i \lambda_i x_i \otimes y_i
+  \]
+  where $(x_i)$ (resp. $(y_i)$) is a bounded sequence in $E$ (resp. $F$), and where $(\lambda_i)$ is a summable sequence of scalars.
+\end{theorem}
+
+(It is also true that, if $(x_i)$, $(y_i)$, and $(\lambda_i)$ are given as above, then the series $\sum_i\lambda_i x_i\otimes y_i$ is always absolutely convergent in $E\hotimes F$, and so we have a \emph{characterisation} of the elements of $E\hotimes F$).
+If $E$ and $F$ are normed, then we can suppose in the above that $\|x_i\|\leq1$, $\|y_i\|\leq1$, $\sum_i|\lambda_i|\leq\|u\|_1+\varepsilon$, where $\varepsilon>0$ is arbitrary and given in advance.
+In these two statements, if $u$ runs over a compact subset of $E\hotimes F$, then we can suppose that the sequences $(x_i)$ and $(y_i)$ remain fixed (and we can even suppose that they are sequences that tend to $0$), and that $(\lambda_i)$ runs over a compact subset of $\ell^1$ (the space of summable sequences).
+We have an analogous statement for the concrete representation of convergent sequences in $E\hotimes F$.
+\Cref{theorem2} and its previous variants serve mainly as a way to:
+\begin{corollary}
+  Let $E$ and $F$ be spaces of type~$\FF$.
+  Then every compact subset $K$ of $E\hotimes F$ is contained inside the canonical image of the unit ball of a space $E_A\hotimes F_B$, where $A$ (resp. $B$) is a compact disked subset of $E$ (resp. $F$).
+  A fortiori, $K$ is contained in the closed convex hull of $A\otimes B$.
+\end{corollary}
+
+This fact also implies that, on $\BB(E,F)$, the ``bicompact convergence'' topology is identical to the compact convergence topology on the dual of $E\hotimes F$.
+
+\aster{%
+  For the proof of \cref{theorem2}, we suppose, for simplicity, that $E$ and $F$ are Banach spaces, and let $I$ be the product of their unit balls, and $i\mapsto x_i$ and $i\mapsto y_i$ the projections from $I$ to its factors.
+  It is easy t see that the linear map $(\lambda_i)\mapsto\sum_i\lambda_i x_i\otimes y_i$ from $\ell^1(I)$ to $E\hotimes F$ is a metric homomorphism from the former to a dense subspace of the latter, and thus \emph{onto} the latter, whence it indeed follows that $E\hotimes F$ can be identified with a quotient space of $\ell^1(I)$.
+
+  From \cref{theorem2}, we can extract results of the following type:
+  let $\scr{G}$ be a
+\oldpage{79}
+  locally compact group (resp. a Lie group), then every summable function $f$ (resp. every infinitely differentiable function of compact support) on $\scr{G}$ is of the form $\sum\lambda_i g_i*h_i$, where $(\lambda_i)\in\ell^1$, and where $(g_i)$ and $(h_i)$ are bounded sequences in $\LL^i(\scr{G})$ (resp. in $\scr{D}(\scr{G})$, the space of infinitely differentiable functions of compact support on $\scr{G}$);
+  we thus immediately conclude that $f$ is a linear combination of functions of positive type that are in $\LL(\scr{G})$ (resp. $\scr{D}(\scr{G})$).
+  In the former case, we can also restrict to functions that are all of compact support (with the supports of $g_i$ and $h_i$ being contained inside a compact subset that depends only on the compact support of $f$).
+  There is a simple direct proof in the case of $\LL^1(\scr{G})$, but I do not think that there is one for $\scr{D}(\scr{G})$, where the question presents difficulties even for $\scr{G}=\mathbb{R}$ (by using the Fourier transformation).
+}
+
+
+\subsection{Calculation of \texorpdfstring{$\LL^1\hotimes E$}{L1E}}
+\label{subsection:calculation-of-L1-hotimes-E}
+
+(\cite[chap.~I, \S2, n\textsuperscript{o}~2]{PTT}).
+\medskip
+
+Let $M$ be a locally compact space endowed with a measure $\mu\geq0$, $E$ a Banach space, and $\LL_E^1(\mu)$ the space of $\mu$-integrable maps from $M$ to $E$ (\cite{2}) endowed with its usual norm: $\|f\|_1=\int\|f(t)\|\dd\mu(t)$.
+We denote by $\LL^1(\mu)$ the space of $\mu$-summable scalar functions.
+Then there exists an obvious bilinear map $(\varphi,a)\mapsto\varphi\cdot a$ from $\LL^1(\mu)\times E$ to $\LL_E^1(\mu)$ that is of norm~$\leq1$, and thus defines a linear map of norm~$\leq1$ from $\LL^1(\mu)\hotimes E$ to $\LL_E^1(\mu)$.
+
+\begin{theorem}{3}
+\label{theorem3}
+  The above map from $\LL^1(\mu)\hotimes E$ to $\LL_E^1(\mu)$ is a metric isomorphic from the former space to the latter.
+\end{theorem}
 
 
 %% Bibliography %%
@@ -244,7 +317,7 @@ I do not know if, when $E$ and $F$ are of type~$\FF$, this algebraic isomorphism
   \newblock Les fonctionnelles lin\'{e}aires sur l'ensemble des op\'{e}rateurs born\'{e}s d'un espace de Hilbert.
   \newblock {\em Annals of Math.} \textbf{51} (1950), 387--408.
 
-  \bibitem{5}
+  \bibitem[PTT]{PTT}
   {\sc Grothendieck, A.}
   \newblock Produits tensoriels topologiques et espaces nucl\'{e}aires
   \newblock {\em Memoirs of the Amer. Math. Soc.}, to appear.
