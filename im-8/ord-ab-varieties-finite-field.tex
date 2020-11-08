@@ -2,7 +2,6 @@
 
 \title{Ordinary abelian varieties over a finite field}
 \author{Pierre Deligne}
-\date{}
 
 \usepackage{amssymb,amsmath}
 
@@ -52,6 +51,7 @@
 \newcommand{\FF}{\mathbb{F}}
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
 \newcommand{\CC}{\mathbb{C}}
 \newcommand{\Pc}{\mathrm{Pc}}
 \newcommand{\Fr}{F_\mathrm{r}}
@@ -86,7 +86,7 @@
   \medskip\noindent
   \textsc{Deligne, P.}
   ``Vari\'{e}t\'{e}s ab\'{e}liennes sur un corps fini''.
-  \emph{Inventiones math.}, Volume~\textbf{8} (1969), 238--243.
+  \emph{Inventiones Math.}, Volume~\textbf{8} (1969), 238--243.
   {\url{https://publications.ias.edu/node/352}}.
 \end{abstract}
 
@@ -100,7 +100,7 @@ We give here a down-to-earth description of the category of ordinary abelian var
 The result that we obtain was inspired by Ihara~\cite[ch.~V]{2} (see also \cite{3}).
 
 
-\subsubsection*{1}
+\section{}
 \label{1}
 Let $p$ be a prime number, $\FF_p$ the field $\ZZ/(p)$, and $\overline{\FF}_p$ an algebraic closure of $\FF_p$.
 For every power $q$ of $p$, let $\FF_q$ be the subfield of $q$ elements of $\overline{\FF}_p$.
@@ -114,7 +114,7 @@ We denote by $A^*$ the dual abelian variety of an abelian variety $A$.
 For every field $k$, we denote by $\overline{k}$ the algebraic closure of $k$.
 
 
-\subsubsection*{2}
+\section{}
 \label{2}
 Let $A$ be an abelian variety of dimension~$g$, defined over a field $k$ of characteristic~$p$.
 Recall that $A$ is said to be \emph{ordinary} if any of the following equivalent conditions are satisfied:
@@ -133,7 +133,7 @@ If $k=\FF_q$, and if $F$ is the Frobenius endomorphism of $A$, and $\Pc_A(F;x)$ 
 \end{enumerate}
 
 
-\subsubsection*{3}
+\section{}
 \label{3}
 Let $A$ be an ordinary abelian variety over $\overline{\FF}_p$.
 We denote by $\widetilde{A}$ the canonical Serre--Tate covering \cite{4} of $A$ over $W$.
@@ -180,7 +180,7 @@ Over $\CC$, we canonically have that $\ZZ(1)/(p^n)\sim\mu_{p^n}$, whence an isom
 \]
 
 
-\subsubsection*{4}
+\section{}
 \label{4}
 Recall that, if $\varphi\colon X\to Y$ is an isogeny between complex abelian varieties, then the exact homotopy sequence reduces to a short exact sequence:
 \[
@@ -205,7 +205,7 @@ All told, the finite subgroups of $A^p$, or the abelian varieties that are quoti
 \]
 
 
-\subsubsection*{5}
+\section{}
 \label{5}
 In particular, $A^{(p)}$, the quotient of $A$ by the largest infinitesimal subgroup of $A$ that is annihilated by $p$ (for ordinary $A$), is defined by the lattice $T(A)^{(p)}$ containing $T(A)$ that is $p$-isogenous to $T(A)$, and such that
 \[
@@ -213,7 +213,7 @@ In particular, $A^{(p)}$, the quotient of $A$ by the largest infinitesimal subgr
 \]
 
 
-\subsubsection*{6}
+\section{}
 \label{6}
 Let $A$ be an abelian variety over $\FF_q$, and $F\colon x\mapsto x^q$ its Frobenius endomorphism.
 Recall that $A$ is uniquely determined by the pair $(\overline{A},F)$ induced by $(A,F)$ by extension of scalars from $\FF_q$ to $\overline{\FF}_q$;
@@ -232,7 +232,7 @@ By \cref{5}, the above, and \cref{3.3}, the lattices $T(A)$ and $F(T(A))$ are $p
 \]
 
 
-\subsubsection*{7}
+\section{}
 \label{7}
 \textbf{Theorem.}
 {\itshape
@@ -283,13 +283,88 @@ By \cref{5}, the above, and \cref{3.3}, the lattices $T(A)$ and $F(T(A))$ are $p
         condition~(d), which implies (b) and (c), follows from \cref{6}.
 \oldpage{242}
     \item \emph{Isogenies.}
-      Let $(T_0,F)$ satisfy
+      Let $(T_0,F)$ satisfy (a) and (d), and let $T$ be a lattice in $T_0\otimes\QQ$, stable under $F$, that also satisfies (d).
+      Suppose that $(T_0,F)$ is the image of an abelian variety $A$ over $\FF_q$; we will prove that $(T,F)$ comes from an isogenous abelian variety.
+      By $T$ with $\frac1k T$, which is isomorphic to $T$, we can suppose that $T\supset T_0$.
+      Condition~(d) implies that $T$ satisfies \cref{4.1}, and that $T$ defines a subgroup $H$ of $\overline{A}$, defined over $\FF_q$, and such that $(T,F)=T(A/H)$.
+    \item \emph{Surjectivity.}
+      The functor $T$ induces a functor $T_\QQ$ from the category of isogeny classes of ordinary abelian varieties over $\FF_q$ to the category of finite-dimensional $\QQ$-vector spaces endowed with an automorphism $F$ that satisfies (a) and (b).
+      By (D), it suffices to prove that this functor $T_\QQ$ is essentially surjective.
+      It even suffices to show that every simple object $(V,F)$ in the codomain is in the image.
+      By Honda~\cite{1} (see also \cite{6}), there exists an abelian variety $A$ over $\FF_q$ such that the characteristic polynomial of the Frobenius $F_A$ of $A$ is a power of that of $F$.
+      The third characterisation in \cref{2} of ordinary abelian varieties shows that $A$ is ordinary.
+      Furthermore, $(T(A)\otimes\QQ,F)$ is the sum of copies of $(V,F)$, and thus, by (B), the isogeny class of the abelian variety $A\otimes\QQ$ is the sum of copies of an abelian variety $B$ that satisfies $T(B)\otimes\QQ=(V,F)$.
   \end{enumerate}
 \end{proof}
 
 
+\section{}
+\label{8}
+Let $(T,F)$ be a pair satisfying the hypotheses of the theorem, $2g$ the rank of $T$, $A$ the corresponding abelian variety over $\FF_q$, and $A_\CC$ the induced complex abelian variety (\cref{3}).
+We have that
+\[
+  T= H_1(A_\CC),
+\]
+and so $T\otimes\RR$ can be identified with the Lie algebra of $A_\CC$, and is thus endowed with a complex structure.
+Here, thanks to J.-P.~Serre, is how to reconstruct this complex structure in terms of $T$, $F$, and the restriction of $\varphi$ to $W_0(\FF_p)$:
+
+\textbf{Proposition.}
+{\itshape
+  The complex structure on $T\otimes\RR$ defined above is characterised by the following properties:
+  \begin{enumerate}[(I)]
+    \item The endomorphism $F$ is $\CC$-linear.
+    \item If $v$ is the valuation of the algebraic closure $\overline{\QQ}$ of $\QQ$ in $\CC$ that extends the valuation of $W_0(\FF_p)$, then the valuations of the $g$ eigenvalues of this endomorphism are strictly positive.
+  \end{enumerate}
+}
+
+\begin{proof}
+  Condition~(I) is evident, and condition~(II) follows from the fact that the action of $F$ on the Lie algebra of $A$ is congruent to zero $\mod p$.
+  The uniqueness of a structure satisfying (I) and (II) follows easily from condition~(b), satisfied by $(T,F)$.
+\end{proof}
+
+\oldpage{243}
+
 %% Bibliography %%
 
 \nocite{*}
+
+\begin{thebibliography}{7}
+
+  \bibitem{1}
+  {\sc Honda,~T.}
+  \newblock Isogeny classes of abelian varieties over finite fields.
+  \newblock {\em J. Math. Soc. Jap.} \textbf{20} (1968), 83--95.
+
+  \bibitem{2}
+  {\sc Ihara,~Y.}
+  \newblock {\em On congruence monodromy problems, vol.~I}.
+  \newblock University of Tokyo, 1968.
+
+  \bibitem{3}
+  {\sc Ihara,~Y.}
+  \newblock The congruence monodromy problems.
+  \newblock {\em J. Math. Soc. Jap.} \textbf{20} (1968), 107--121.
+
+  \bibitem{4}
+  {\sc Lubin,~J., Serre,~J.-P., and Tate,~J.}
+  \newblock ``Elliptic curves and formal groups''.
+  \newblock Woods Hole Summer Institute 1964 (mimeographed, printed in a limited number of copies).
+
+  \bibitem{5}
+  {\sc Serre,~J.P.}
+  \newblock ``Groups $p$-divisibles (d'apr\`{e}s J.~Tate)''.
+  \newblock {\em S\'{e}minaire Bourbaki} \textbf{10} (1966--67), Talk no.~318.
+
+  \bibitem{6}
+  {\sc Tate,~J.}
+  \newblock ``Classes d'isog\'{e}nies de vari\'{e}t\'{e}s ab\'{e}liennes sur un corps fini (d'apr\`{e}s T.~Honda)''.
+  \newblock {\em S\'{e}minaire Bourbaki} \textbf{11} (1968--69), Talk no.~352.
+
+  \bibitem{7}
+  {\sc Tate,~J.}
+  \newblock Endomorphisms of abelian varieties over finite fields.
+  \newblock {\em Inventiones Math.} \textbf{2} (1966), 134--144.
+
+\end{thebibliography}
 
 \end{document}

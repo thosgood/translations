@@ -42,6 +42,16 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/deligne/paper/413)
 
+- Deligne, P. "Variétés abéliennes ordinaires sur un corps fini".
+  <br/>
+  _Inv. Math._ **8** (1969), 238--243.
+  <br/>
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/im-8/ord-ab-varieties-finite-field.tex)
+  |
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=im-8%2Ford-ab-varieties-finite-field.tex&command=pdflatex&trackId=1604785075223)
+  |
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/352)
+
 - Grothendieck, A. "La théorie des classes de Chern".
   <br/>
   _Bull. Soc. Math. Fr_ **86** (1958) , 137--154. DOI: [10.24033/bsmf.1501](https://www.doi.org/10.24033/bsmf.1501).
@@ -171,16 +181,6 @@ Note that we have included any changes made in the Errata.
 # In progress
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
-
-- **(3/6)** Deligne, P. "Variétés abéliennes ordinaires sur un corps fini".
-  <br/>
-  _Inv. Math._ **8** (1969), 238--243.
-  <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/im-8/ord-ab-varieties-finite-field.tex)
-  |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=im-8%2Ford-ab-varieties-finite-field.tex&command=pdflatex&trackId=1604785075223)
-  |
-  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/352)
 
 - **(40/126)** Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>
