@@ -87,17 +87,17 @@ All of the following are by A. Grothendieck.
   <br/>
   _Séminaire Bourbaki_ **9** (1956--57), Talk no. 149.
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/fga/fga-1.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-bourbaki/fga/fga-1.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/fga/fga-1.tex)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/seminaire-bourbaki/fga/fga-1.tex)
 
 2. "Géométrie formelle et géométrie algébrique".
   <br/>
   _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/fga/fga-2.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-bourbaki/fga/fga-2.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/fga/fga-2.tex)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/seminaire-bourbaki/fga/fga-2.tex)
 
 <!-- 3. "Technique de descente et théorèmes d'existence en géométrie algébrique."
     1. "Généralités. Descente par morphismes fidèlement plats".
@@ -121,37 +121,22 @@ All of the following are by A. Grothendieck.
 
 ### Extracts (1948--49), "Les travaux de Koszul"
 
-In the first series of the Séminaire Bourbaki (as it would eventually be known), H. Cartan gave three talks concerning the work of J.-L. Koszul on Lie algebras. (These specific talks were given in 1948--49, but the first printed _Séminaire Bourbaki_ collection was published in 1952, containing the first 49 talks, dating from 1948 up until 1951).
+In the first series of the Séminaire Bourbaki, H. Cartan gave three talks concerning the work of J.-L. Koszul on Lie algebras. (These specific talks were given in 1948--49, but the first published _Séminaire Bourbaki_ collection was printed in 1952, containing the first 49 talks, and dating from 1948 up until 1951). I have combined all three talks into one file.
 
-1. "Les travaux de Koszul, I".
+- "Les travaux de Koszul, I, II, and III".
   <br/>
-  _Séminaire Bourbaki_ **1** (1952), Talk no. 1, 7--12.
+  _Séminaire Bourbaki_ **1** (1952), Talks no. 1, 8, and 12.
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminaire-bourbaki/SB-1-1.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminaire-bourbaki/SB-1-1+8+12.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminaire-bourbaki/SB-1-1.tex)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminaire-bourbaki/SB-1-1+8+12.tex)
   |
-  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/book-part/SB_1948-1951__1__7_0/)
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original I](http://www.numdam.org/book-part/SB_1948-1951__1__7_0/)
+  |
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original II](http://www.numdam.org/book-part/SB_1948-1951__1__45_0/)
+  |
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original III](http://www.numdam.org/book-part/SB_1948-1951__1__71_0/)
 
-<!-- 2. "Les travaux de Koszul, II".
-  <br/>
-  _Séminaire Bourbaki_ **1** (1952), Talk no. 8.
-  <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminars/SB-1-8.tex)
-  |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminars/SB-1-8.tex)
-  |
-  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/book-part/SB_1948-1951__1__45_0/)
-
-3. "Les travaux de Koszul, III".
-  <br/>
-  _Séminaire Bourbaki_ **1** (1952), Talk no. 12.
-  <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminars/SB-1-12.tex)
-  |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminars/SB-1-12.tex)
-  |
-  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/book-part/SB_1948-1951__1__71_0/) -->
 
 
 ## Séminaire Claude Chevalley
