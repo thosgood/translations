@@ -228,6 +228,37 @@ the operator $\dd$ (\emph{exterior differentiation}) is characterised by the fol
 
 Every vector field $X$ defines an \emph{infinitesimal} transformation, which we denote by $\theta(X)$, and which acts on $\Lambda(E)$ and $\Lambda(E')$.
 We first define $\theta(X)$ on $\Lambda^0(E)=\Lambda^0(E')$ by setting $\theta(X)\cdot f=\langle X,\dd f\rangle$.
+There then exists a kernel of the automorphism group of $V$, depending on a real parameter $t$, say $M\mapsto\varphi(M,t)$, such that, for every function $f$,
+\[
+  \frac{\partial}{\partial t} f(\varphi(M,t))
+  = \theta(X)\cdot f(\varphi(M,t)).
+\]
+This group acts on $\Lambda(E)$ and $\Lambda(E')$, and, by differentiating with respect to $t$ at $t=0$, we recover the operator $\theta(X)$.
+It can be calculated using the following rules (which don't need explicit knowledge of the automorphism group):
+\begin{itemize}
+  \item $\theta(X)$ \emph{commutes} with $\dd$ (on $\Lambda(E')$); to take $\theta(X)$ of a \emph{product} (either exterior, interior, or scalar), we apply the classical formula for taking the derivative of a product; and, in particular, on $\Lambda(E)$ and $\Lambda(E')$, $\theta(X)$ is a \emph{derivation}.
+  \item If we apply $\theta(X)$ to a vector field $Y$, then we obtain $\theta(X)\cdot Y$; we have the fundamental formula
+    \[
+    \label{equation-I.1}
+      \theta(\theta(X)\cdot Y) = \theta(X)\theta(Y) - \theta(Y)\theta(X),
+    \tag{1}
+    \]
+    which leads us to denote by $[X,Y]$ the vector field $\theta(X)\cdot Y$, and \cref{equation-I.1} then gives the \emph{Jacobi identity}
+\oldpage{10}
+  \item Finally, we have the ``fundamental formula of the calculation of variations'':
+    on the space $\Lambda(E')$ of exterior differential forms,
+    \[
+    \label{equation-I.2}
+      \theta(X) = i(X)\dd + \dd\cdot i(X),
+    \tag{2}
+    \]
+    where $i(X)$ denotes, as in \cref{I.2}, the \todo product.
+    (Proof: both sides of the equation are derivations that commute with $\dd$ and that are equal on functions).
+\end{itemize}
+
+
+\section{Lie groups}
+\label{I.5}
 
 
 

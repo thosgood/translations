@@ -127,9 +127,9 @@ In the first series of the Séminaire Bourbaki, H. Cartan gave three talks conce
   <br/>
   _Séminaire Bourbaki_ **1** (1952), Talks no. 1, 8, and 12.
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminaire-bourbaki/SB-1-1,8,12.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminaire-bourbaki/SB-1-1%2B8%2B12.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminaire-bourbaki/SB-1-1,8,12.tex)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminaire-bourbaki/SB-1-1%2B8%2B12.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original I](http://www.numdam.org/book-part/SB_1948-1951__1__7_0/)
   |
