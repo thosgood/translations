@@ -263,45 +263,45 @@ It can be calculated using the following rules (which don't need explicit knowle
 \section{Lie groups}
 \label{I.5}
 
-Let $V$ denote the manifold of a Lie group $G$, and denote by $\alpha$ the subspace of $E$ given by vector fields that are \emph{invariant under left-translations} by $G$;
-we denote by $\alpha'$ the subspace of $E'$ given by \emph{left-invariant} differential forms (of degree~$1$).
-Then $\alpha$ and $\alpha'$ are $n$-dimensional vector spaces over the field $\RR$ of reals, and are in duality.
-The exterior algebra $\Lambda(\alpha')$ can be identified with the sub-algebra of $\Lambda(E')$ given by \emph{left-invariant} exterior differential forms, and it is \emph{stable} under the operator $\dd$ of exterior differentiation.
-(In particular, $\Lambda^0(\alpha')$ is the field of constant functions, identified with $\RR$).
+Let $V$ denote the manifold of a Lie group $G$, and denote by $\mathfrak{a}$ the subspace of $E$ given by vector fields that are \emph{invariant under left-translations} by $G$;
+we denote by $\mathfrak{a}'$ the subspace of $E'$ given by \emph{left-invariant} differential forms (of degree~$1$).
+Then $\mathfrak{a}$ and $\mathfrak{a}'$ are $n$-dimensional vector spaces over the field $\RR$ of reals, and are in duality.
+The exterior algebra $\Lambda(\mathfrak{a}')$ can be identified with the sub-algebra of $\Lambda(E')$ given by \emph{left-invariant} exterior differential forms, and it is \emph{stable} under the operator $\dd$ of exterior differentiation.
+(In particular, $\Lambda^0(\mathfrak{a}')$ is the field of constant functions, identified with $\RR$).
 
-If $X\in\alpha$, then the automorphism group of $V$ defined by $X$ (cf. \cref{I.4}) is the group of \emph{right}-translations by elements of the subgroup of $G$;
+If $X\in\mathfrak{a}$, then the automorphism group of $V$ defined by $X$ (cf. \cref{I.4}) is the group of \emph{right}-translations by elements of the subgroup of $G$;
 the orbit of the identity element.
-Thus $\Lambda(\alpha)$ and $\Lambda(\alpha')$ are \emph{stable} under $\theta(X)$ if $X\in\alpha$.
-In particular, if $X$ and $Y$ are in $\alpha$, then $[X,Y]$ is in $\alpha$.
-The elements upon which $\theta(X)$ acts trivially (for \emph{all} $X\in\alpha$) are those that are simultaneously invariant under left- and right-translations, and are simply called \emph{invariant elements}.
+Thus $\Lambda(\mathfrak{a})$ and $\Lambda(\mathfrak{a}')$ are \emph{stable} under $\theta(X)$ if $X\in\mathfrak{a}$.
+In particular, if $X$ and $Y$ are in $\mathfrak{a}$, then $[X,Y]$ is in $\mathfrak{a}$.
+The elements upon which $\theta(X)$ acts trivially (for \emph{all} $X\in\mathfrak{a}$) are those that are simultaneously invariant under left- and right-translations, and are simply called \emph{invariant elements}.
 
 Since $\theta(X)$ is zero on the scalars (constant functions), we have:
 \[
 \label{equation-I.3}
   \langle \theta(X)\cdot Y,\omega \rangle + \langle Y,\theta(X)\cdot\omega \rangle
   = 0
-  \qquad\mbox{for $Y\in\alpha$ and $\omega\in\alpha'$.}
+  \qquad\mbox{for $Y\in\mathfrak{a}$ and $\omega\in\mathfrak{a}'$.}
 \tag{3}
 \]
 In other words, $\theta(X)$ (acting on forms) is the \emph{transpose} of $-\theta(X)$ (acting on vector fields).
 
-The vector space $\alpha$, endowed with the structure defined by the map $(X,Y)\mapsto[X,Y]$ from $\alpha\times\alpha$ to $\alpha$, is the \emph{Lie algebra} of the group $G$.
+The vector space $\mathfrak{a}$, endowed with the structure defined by the map $(X,Y)\mapsto[X,Y]$ from $\mathfrak{a}\times\mathfrak{a}$ to $\mathfrak{a}$, is the \emph{Lie algebra} of the group $G$.
 
 
 \section{Lie algebras}
 \label{I.6}
 
-We start with an abstract Lie algebra $\alpha$ (under the classical definition), taken over a field $K$ that is, for now, arbitrary.
-Let $n$ be the dimension of the vector space $\alpha$ over $K$.
-We will construct everything from the structure of $\alpha$, by taking the relations established above (in the case of the field $\RR$) as our definitions.
+We start with an abstract Lie algebra $\mathfrak{a}$ (under the classical definition), taken over a field $K$ that is, for now, arbitrary.
+Let $n$ be the dimension of the vector space $\mathfrak{a}$ over $K$.
+We will construct everything from the structure of $\mathfrak{a}$, by taking the relations established above (in the case of the field $\RR$) as our definitions.
 
 \oldpage{11}
-Let $\alpha'$ be the dual vector space of $\alpha$.
-From now on, we denote elements of $\alpha$ by $x,y,\ldots$;
-the elements of $\alpha'$ by $x',y',\ldots$;
-the elements of $\Lambda(\alpha)$ by $\alpha,\beta,\ldots$;
-and the elements of $\Lambda(\alpha')$ by $\alpha',\beta',\ldots$.
-We \emph{define} $\theta(x)$, for $x\in\alpha$, by
+Let $\mathfrak{a}'$ be the dual vector space of $\mathfrak{a}$.
+From now on, we denote elements of $\mathfrak{a}$ by $x,y,\ldots$;
+the elements of $\mathfrak{a}'$ by $x',y',\ldots$;
+the elements of $\Lambda(\mathfrak{a})$ by $\alpha,\beta,\ldots$;
+and the elements of $\Lambda(\mathfrak{a}')$ by $\alpha',\beta',\ldots$.
+We \emph{define} $\theta(x)$, for $x\in\mathfrak{a}$, by
 \[
   \begin{aligned}
     \theta(x)\cdot y
@@ -310,12 +310,12 @@ We \emph{define} $\theta(x)$, for $x\in\alpha$, by
     &= -\langle[x,y],x'\rangle.
   \end{aligned}
 \]
-With $\theta(x)$ defined on $\alpha$ and $\alpha'$, we extend it to $\Lambda(\alpha)$ and $\Lambda(\alpha')$ by imposing the condition that $\theta(x)$ be a \emph{derivation}.
-The $\theta(x)$ that acts on $\Lambda(\alpha)$ is the \emph{transpose} of the $-\theta(x)$ that acts on $\Lambda(\alpha')$.
-The elements of $\Lambda(\alpha)$ (resp. of $\Lambda(\alpha')$) for which $\theta(x)$ acts trivially (for \emph{all} $x\in\alpha$) are called \emph{invariant} (or \emph{bi-invariant}) elements.
-The invariant elements of $\Lambda(\alpha)$ form a \emph{sub-algebra} $\mathfrak{J}$, and those of $\Lambda(\alpha')$ form a sub-algebra $\mathfrak{J}'$.
+With $\theta(x)$ defined on $\mathfrak{a}$ and $\mathfrak{a}'$, we extend it to $\Lambda(\mathfrak{a})$ and $\Lambda(\mathfrak{a}')$ by imposing the condition that $\theta(x)$ be a \emph{derivation}.
+The $\theta(x)$ that acts on $\Lambda(\mathfrak{a})$ is the \emph{transpose} of the $-\theta(x)$ that acts on $\Lambda(\mathfrak{a}')$.
+The elements of $\Lambda(\mathfrak{a})$ (resp. of $\Lambda(\mathfrak{a}')$) for which $\theta(x)$ acts trivially (for \emph{all} $x\in\mathfrak{a}$) are called \emph{invariant} (or \emph{bi-invariant}) elements.
+The invariant elements of $\Lambda(\mathfrak{a})$ form a \emph{sub-algebra} $\mathfrak{J}$, and those of $\Lambda(\mathfrak{a}')$ form a sub-algebra $\mathfrak{J}'$.
 
-Equation~\cref{equation-I.2} leads us to define an endomorphism $\delta$ of $\Lambda(\alpha')$ that is zero on the scalars, and such that
+Equation~\cref{equation-I.2} leads us to define an endomorphism $\delta$ of $\Lambda(\mathfrak{a}')$ that is zero on the scalars, and such that
 \[
 \label{equation-I.4}
   \theta(x) = i(x)\delta + \delta i(x).
@@ -327,14 +327,14 @@ it is an \emph{antiderivation}, characterised by
   \langle x\wedge y,\delta x'\rangle
   = -\langle[x,y],x'\rangle,
 \]
-and it maps $\Lambda^p(\alpha')$ to $\Lambda^{p+1}(\alpha')$.
+and it maps $\Lambda^p(\mathfrak{a}')$ to $\Lambda^{p+1}(\mathfrak{a}')$.
 
-We define, on $\Lambda(\alpha)$, the endomorphism $\partial$ that is the \emph{transpose} of $-\delta$ by
+We define, on $\Lambda(\mathfrak{a})$, the endomorphism $\partial$ that is the \emph{transpose} of $-\delta$ by
 \[
   \langle\partial\alpha,\alpha'\rangle
   = -\langle\alpha,\delta\alpha'\rangle.
 \]
-Then $\partial$ commutes with the $\theta(x)$, satisfies $\partial\partial=0$, maps $\Lambda^p(\alpha)$ to $\Lambda^{p+1}(\alpha)$, and is \emph{zero on $\alpha$};
+Then $\partial$ commutes with the $\theta(x)$, satisfies $\partial\partial=0$, maps $\Lambda^p(\mathfrak{a})$ to $\Lambda^{p+1}(\mathfrak{a})$, and is \emph{zero on $\mathfrak{a}$};
 finally, we have that
 \[
   \begin{aligned}
@@ -350,30 +350,30 @@ whence, by induction, we have the explicit formula
   = \sum_{i<j} (-1)^{i+j+1} [x_i,x_j] x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p.
 \]
 
-The operator $\delta$ on $\Lambda(\alpha')$ (the \emph{algebra of cochains}) defines a \emph{cohomology algebra}, denoted by $\HH(\alpha')$.
-The operator $\partial$ on $\Lambda(\alpha)$ (the \emph{algebra of chains}) defines a \emph{homology group}, denoted by $\HH(\alpha)$;
-there is not, in general, a multiplication in $\HH(\alpha)$, since $\partial$ is \emph{not} an antiderivation.
+The operator $\delta$ on $\Lambda(\mathfrak{a}')$ (the \emph{algebra of cochains}) defines a \emph{cohomology algebra}, denoted by $\HH(\mathfrak{a}')$.
+The operator $\partial$ on $\Lambda(\mathfrak{a})$ (the \emph{algebra of chains}) defines a \emph{homology group}, denoted by $\HH(\mathfrak{a})$;
+there is not, in general, a multiplication in $\HH(\mathfrak{a})$, since $\partial$ is \emph{not} an antiderivation.
 
-We have that $\HH(\alpha)$ and $\HH(\alpha')$ are naturally in duality;
-for each degree~$p$, $\HH^p(\alpha)$ and $\HH^p(\alpha')$ are in duality, and thus of the same dimension.
-If $\alpha$ is the Lie algebra of a \emph{compact connected group}, then $\HH(\alpha')$ can be identified with the cohomology algebra of the (topological) space of the group, by the de Rham theorem.
+We have that $\HH(\mathfrak{a})$ and $\HH(\mathfrak{a}')$ are naturally in duality;
+for each degree~$p$, $\HH^p(\mathfrak{a})$ and $\HH^p(\mathfrak{a}')$ are in duality, and thus of the same dimension.
+If $\mathfrak{a}$ is the Lie algebra of a \emph{compact connected group}, then $\HH(\mathfrak{a}')$ can be identified with the cohomology algebra of the (topological) space of the group, by the de Rham theorem.
 This proves that
 \oldpage{12}
 any two compact connected groups that are locally isomorphic have the same Betti number.
-In all cases, the common dimension of $\HH^p(\alpha)$ and $\HH^p(\alpha')$ is called the \emph{$p$-th Betti number} of the Lie algebra $\alpha$.
+In all cases, the common dimension of $\HH^p(\mathfrak{a})$ and $\HH^p(\mathfrak{a}')$ is called the \emph{$p$-th Betti number} of the Lie algebra $\mathfrak{a}$.
 
 \medskip
 \textbf{Unimodularity.}
-We say that $\alpha$ is \emph{unimodular} if $\theta(x)$ (for \emph{all} $x\in\alpha$), considered as an endomorphism of $\alpha$ (the \emph{adjoint} representation) has \emph{zero trace};
+We say that $\mathfrak{a}$ is \emph{unimodular} if $\theta(x)$ (for \emph{all} $x\in\mathfrak{a}$), considered as an endomorphism of $\mathfrak{a}$ (the \emph{adjoint} representation) has \emph{zero trace};
 an equivalent condition is that the chain $\omega$ of degree~$n$ is a \emph{cycle};
 another equivalent condition is that $\omega$ is \emph{invariant}.
 
-If $\alpha$ is unimodular, then $\alpha\mapsto\omega\llp\alpha'$ defines an isomorphism from $\HH^p(\alpha')$ to $\HH^{n-p}(\alpha)$;
+If $\mathfrak{a}$ is unimodular, then $\alpha\mapsto\omega\llp\alpha'$ defines an isomorphism from $\HH^p(\mathfrak{a}')$ to $\HH^{n-p}(\mathfrak{a})$;
 this corresponds to the ``Poincar\'{e} duality theorem'' for the Betti numbers of a manifold.
 
 \medskip
 \textbf{Expansions in a basis.}
-We can express $\delta$ and $\partial$ in terms of a basis $(x_k)$ of $\alpha$ and the dual basis $(x'_k)$ of $\alpha'$ (when $K$ is of characteristic $\neq2$):
+We can express $\delta$ and $\partial$ in terms of a basis $(x_k)$ of $\mathfrak{a}$ and the dual basis $(x'_k)$ of $\mathfrak{a}'$ (when $K$ is of characteristic $\neq2$):
 \[
   \begin{aligned}
     2\delta
@@ -381,19 +381,19 @@ We can express $\delta$ and $\partial$ in terms of a basis $(x_k)$ of $\alpha$ a
     \qquad\mbox{always,}
   \\2\partial
     &= \sum_k i(x'_k)\theta(x_k)
-    \qquad\mbox{if $\alpha$ is \emph{unimodular}.}
+    \qquad\mbox{if $\mathfrak{a}$ is \emph{unimodular}.}
   \end{aligned}
 \]
 
 \medskip
 \textbf{Semi-simple Lie algebras.}
 We say that a Lie algebra is \emph{semi-simple} if it has no radical, or, equivalently (at least if $K$ is of characteristic~$0$), if all its representations are completely reducible.
-If $\alpha/\mathfrak{c}$ is semi-simple (where $\mathfrak{c}$ is the centre of $\alpha$), then we have a canonical isomorphism from $\HH(\alpha')$ to $\mathfrak{J}'$, and from $\HH(\alpha)$ to $\mathfrak{J}$ (and thus a multiplicative structure on $\HH(\alpha)$ in this case).
+If $\mathfrak{a}/\mathfrak{c}$ is semi-simple (where $\mathfrak{c}$ is the centre of $\mathfrak{a}$), then we have a canonical isomorphism from $\HH(\mathfrak{a}')$ to $\mathfrak{J}'$, and from $\HH(\mathfrak{a})$ to $\mathfrak{J}$ (and thus a multiplicative structure on $\HH(\mathfrak{a})$ in this case).
 
-If $\alpha$ is semi-simple, then its centre is trivial, the Betti numbers in dimensions~$1$ and $2$ are zero, and the Betti number in dimension~$3$ is equal to the dimension of the vector space of \emph{invariant quadratic forms} (where an invariant quadratic form is a bilinear map $f(x,y)$ such that $f(y,x)=f(x,y)$ and $f(\theta(z)\cdot x,y)+f(x,\theta(z)\cdot y)=0$).
+If $\mathfrak{a}$ is semi-simple, then its centre is trivial, the Betti numbers in dimensions~$1$ and $2$ are zero, and the Betti number in dimension~$3$ is equal to the dimension of the vector space of \emph{invariant quadratic forms} (where an invariant quadratic form is a bilinear map $f(x,y)$ such that $f(y,x)=f(x,y)$ and $f(\theta(z)\cdot x,y)+f(x,\theta(z)\cdot y)=0$).
 
 \textbf{Corollary.}
-If $K$ is maximal and quasi-real, and $\alpha$ is \emph{simple}, then the third Betti number is equal to $1$.
+If $K$ is maximal and quasi-real, and $\mathfrak{a}$ is \emph{simple}, then the third Betti number is equal to $1$.
 
 
 
@@ -403,6 +403,15 @@ If $K$ is maximal and quasi-real, and $\alpha$ is \emph{simple}, then the third 
 \oldpage{45}
 \section{Reminder of notation}
 \label{II.1}
+
+\[
+  \begin{array}{rll}
+    \mbox{$\mathfrak{a}$:} & \mbox{Lie algebra over a field $K$;} & \mbox{elements $x,y,\ldots$}
+  \\\mbox{$\mathfrak{a}'$:} & \mbox{dual vector space of $\mathfrak{a}$;} & \mbox{elements $x',y',\ldots$}
+  \\\mbox{$\Lambda(\mathfrak{a})$:} & \mbox{exterior algebra of $\mathfrak{a}$;} & \mbox{elements $\alpha,\beta,\ldots$}
+  \\\mbox{$\Lambda(\mathfrak{a}')$:} & \mbox{exterior algebra of $\mathfrak{a}'$;} & \mbox{elements $\alpha',\beta',\ldots$}
+  \end{array}
+\]
 
 
 
