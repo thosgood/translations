@@ -40,6 +40,10 @@
 \crefname{section}{\S\!}{\S\S\!}
 \crefname{equation}{}{}
 
+\makeatletter
+\@addtoreset{section}{part}
+\makeatother  
+
 
 %% Theorem environments %%
 
@@ -106,7 +110,7 @@
 
 %% Content %%
 
-\part{}
+\part{(December 1948)}
 \label{I}
 
 \oldpage{7}
@@ -397,7 +401,7 @@ If $K$ is maximal and quasi-real, and $\mathfrak{a}$ is \emph{simple}, then the 
 
 
 
-\part{}
+\part{(March 1949)}
 \label{II}
 
 \oldpage{45}
@@ -412,6 +416,40 @@ If $K$ is maximal and quasi-real, and $\mathfrak{a}$ is \emph{simple}, then the 
   \\\mbox{$\Lambda(\mathfrak{a}')$:} & \mbox{exterior algebra of $\mathfrak{a}'$;} & \mbox{elements $\alpha',\beta',\ldots$}
   \end{array}
 \]
+
+\begin{itemize}
+  \item The operator $\theta(x)$ is the \emph{infinitesimal transformation defined by $x\in\mathfrak{a}$} on $\Lambda(\mathfrak{a})$;
+    from now on, we denote by $\theta^*(x)$ (instead of $\theta(x)$) the operator that is the transpose of $-\theta(x)$ acting on $\Lambda(\mathfrak{a}')$.
+  \item  The operator $e(x)$ is the \emph{(left) exterior product with $x\in\mathfrak{a}$} on $\Lambda(\mathfrak{a})$;
+    the operator $i(x)$ is the \emph{interior product with $x\in\mathfrak{a}$} on $\Lambda(\mathfrak{a}')$;
+    $i(x)$ and $e(x)$ are the transpose of one another.
+  \item The operator $\partial$ is the \emph{boundary} operator on $\Lambda(\mathfrak{a})$;
+    the operator $\delta$ is the \emph{coboundary} operator on $\Lambda(\mathfrak{a}')$;
+    $\delta$ is the transpose of $-\partial$.
+\end{itemize}
+
+These operators satisfy the following relations:
+\[
+\label{1}
+  \begin{aligned}
+    \partial\partial &= 0,
+  \\\delta\delta &= 0,
+  \\\theta(x) &= e(x)\partial+\partial e(x),
+  \\\theta^*(x) &= i(x)\delta+\delta i(x),
+  \\\partial\theta(x) &= \theta(x)\partial,
+  \\\delta\theta^*(x) &= \theta^*(x)\delta.
+  \end{aligned}
+\tag{1}
+\]
+
+The \emph{homology vector space $\HH(\mathfrak{a})$} is defined by $\partial$ acting on $\Lambda(\mathfrak{a})$;
+the \emph{cohomology algebra $\HH(\mathfrak{a}')$} is defined by $\delta$ acting on $\Lambda(\mathfrak{a'})$.
+There is a multiplicative structure on $\HH(\mathfrak{a}')$ because $\delta$ is an \emph{antiderivation}.
+The vector spaces $\HH(\mathfrak{a})$ and $\HH(\mathfrak{a}')$ are canonically in duality.
+
+
+\section{Direct composition of two Lie algebras}
+\label{II.2}
 
 
 
