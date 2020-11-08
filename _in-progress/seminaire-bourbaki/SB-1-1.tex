@@ -48,8 +48,8 @@
 
 %% Shortcuts %%
 
-\newcommand{\sh}{\mathscr}
-\newcommand{\cat}{\mathcal}
+\newcommand{\llp}{\mathbin{\llcorner}}
+\newcommand{\lrp}{\mathbin{\lrcorner}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -78,7 +78,7 @@
   \medskip\noindent
   \textsc{Cartan, H.}
   ``Les travaux de Koszul, I''.
-  \emph{S\'{e}minaire Bourbaki}, Volume~\textbf{1} (1952), Talk no.~1.
+  \emph{S\'{e}minaire Bourbaki}, Volume~\textbf{1} (1952), Talk no.~1, 7--12.
   {\url{http://www.numdam.org/book-part/SB_1948-1951__1__7_0/}}
 \end{abstract}
 
@@ -90,15 +90,70 @@
 
 %% Content %%
 
+\oldpage{7}
 The homology and cohomology of a \emph{compact} Lie group can be directly studied via the Lie algebra of the group (cf. {\sc Chevalley and Eilenberg}, Cohomology theory of Lie groups and Lie algebras, \emph{Trans. Amer. Math. Soc}~\textbf{63} (1948), 85--124).
 Proceeding like so, we can study Lie algebras over an arbitrary field (most often of characteristic zero);
 the compactness hypotheses are then replaced with \emph{semi-simplicity} hypotheses.
 The current conference aims to explain certain algebraic tools that are useful for this study, and to prove the first results obtained (notably the theorem on the third Betti number).
-In a later conference, we will introduce the relative notions for a sub-algebra of a Lie algebra, and its corresponding ``homogeneous space''.
+In a later conference, we will introduce notions concerning a sub-algebra of a Lie algebra, and its corresponding ``homogeneous space''.
 
 
 \section{General notions}
 \label{1}
+
+Denoting an operator on a set $A$ (that is, a transformation from $A$ to $A$) by an arbitrary letter, such as $T$, we write $T\cdot x$ to mean the transformation of $x\in A$ under $T$, and $TU$ to mean the composition of operators $T$ and $U$, so that $TU\cdot x = T\cdot (U\cdot x)$.
+
+
+\section{Reminder of notions concerning the exterior algebra}
+\label{2}
+
+{(cf. {\sc Bourbaki}, \emph{Alg\`{e}bre}, Chap.~III).}
+
+Let $E$ be a vector space over a commutative field $K$ (or, equivalently, a unital module over a commutative ring).
+Let $\Lambda(E)$ be the exterior algebra of $E$, given by the direct sum of the $\Lambda^p(E)$ (with $\Lambda^0(E)=K$ and $\Lambda^1(E)=E$).
+We use lowercase \emph{Latin} letters to denote elements of $E$, and \emph{Greek} for those of $\Lambda(E)$.
+We write $a\wedge b$ for the product;
+in particular, for a product of elements of degree~$1$, we write $x_1\wedge x_2\wedge\ldots\wedge x_p$.
+
+The bilinear form that defines the duality between $E$ and its \emph{dual} $E'$ is denoted by $\langle x,x'\rangle$.
+The (\todo) product of some $\alpha\in\Lambda^p(E)$ with some $x'\in E$ is an element of $\Lambda^{p-1}(E)$, denoted by $a\llp x'$, and defined by
+\[
+  (x_1\wedge x_2\wedge\ldots\wedge x_p) \llp x'
+  = \sum_{i=1}^p (-1)^{i+1} \langle x_i,x' \rangle x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p
+\]
+(where the hat $\;\widehat{\,}\;$ over $x_i$ indicates that the $x_i$ term should be omitted).
+The operator on $\Lambda(E)$ given by $\alpha\mapsto\alpha\llp x'$ is denoted by $i(x')$;
+we have $i(x')i(x')=0$.
+We define $i(\alpha')$ for $\alpha'\in\Lambda(E)'$ by
+\[
+  i(x'_1\wedge\ldots\wedge x'_p)
+  = i(x'_p)\ldots i(x'_1).
+\]
+We write
+\oldpage{8}
+$\alpha\llp\alpha'$ to mean $i(\alpha')\cdot\alpha$.
+We similarly define $i(\alpha)$, which acts on $\Lambda(E')$;
+we denote $i(\alpha)\cdot\alpha'$ by $\alpha\lrp\alpha'$.
+We have $i(\alpha\wedge\beta)=i(\beta)i(\alpha)$.
+The scalar components of $\alpha\llp\alpha'$ and of $\alpha\lrp\alpha'$ are equal;
+we denote this scalar component by $\langle\alpha,\alpha'\rangle$: this ``scalar product'' extends $\langle x,x'\rangle$ and defines the duality between $\Lambda(E)$ and $\Lambda(E')$.
+We have $\langle\alpha,\alpha'\rangle=0$ if $\alpha$ and $\alpha'$ are homogeneous of different degrees, and
+\[
+  \langle x_1\wedge\ldots\wedge x_p,x'_1\wedge\ldots\wedge x'_p\rangle = \det(\langle x_i,x'_j\rangle).
+\]
+
+Let $e(\beta)$ be the exterior multiplication $\alpha\mapsto\beta\wedge\alpha$, and $e(\beta')$ the exterior multiplication $\alpha'\mapsto\beta'\wedge\alpha'$.
+The equation
+\[
+  \langle \beta\wedge\alpha, \alpha' \rangle
+  = \langle \alpha, \beta\lrp\alpha' \rangle
+\]
+tells us that $e(\beta)$ and $i(\beta)$ are \emph{transpose} to one another (the former acts on $\Lambda(E)$, and the latter on $\Lambda(E')$).
+Similarly, $e(\beta')$ and $i(\beta')$ are transpose.
+
+
+\section{Notions concerning endomorphisms of algebras in general}
+\label{3}
 
 
 

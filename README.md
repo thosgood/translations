@@ -1,6 +1,6 @@
-Here are some things that I've translated into English. Any comments or corrections are greatly appreciated. For contact details, see [[thosgood.com]](https://thosgood.com). I've tried to refrain from "rewriting" too much: generally the sentence structure etc. is pretty close to the original.
+Here are some things that I've translated into English. Any comments or corrections are greatly appreciated. For contact details, see [thosgood.com](https://thosgood.com). I've tried to refrain from "rewriting" too much: generally the sentence structure etc. is pretty close to the original.
 
-For each paper, there is a link to the `.tex` source file, to a PDF which is built from the latest version of the `.tex` file every time you load the page (many thanks to Andrey Lushnikov's [[LaTeX.Online]](https://github.com/aslushnikov/latex-online)), and to the original paper (if a copy is freely available online).
+For each paper, there is a link to the `.tex` source file, to a PDF which is built from the latest version of the `.tex` file every time you load the page (many thanks to Andrey Lushnikov's [LaTeX.Online](https://github.com/aslushnikov/latex-online)), and to the original paper (if a copy is freely available online).
 
 Each PDF has a version number (the first 8 characters of the MD5 hash of the source code). This makes it easy to tell at a glance whether or not there have been any changes.
 
@@ -14,7 +14,7 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
 
 ## The Grothendieck trilogy
 
-- **EGA**: [[github.com/ryankeleti/ega]](https://github.com/ryankeleti/ega)
+- **EGA**: [github.com/ryankeleti/ega](https://github.com/ryankeleti/ega)
 - **FGA**: see below, under "[Séminaire Bourbaki, Extracts](#extracts-195762-fondements-de-la-géométrie-algébrique)";
 - **SGA**: "coming soon&trade;"
 
@@ -125,7 +125,7 @@ In the first series of the Séminaire Bourbaki (as it would eventually be known)
 
 1. "Les travaux de Koszul, I".
   <br/>
-  _Séminaire Bourbaki_ **1** (1952), Talk no. 1.
+  _Séminaire Bourbaki_ **1** (1952), Talk no. 1, 7--12.
   <br/>
   [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminaire-bourbaki/SB-1-1.tex)
   |
