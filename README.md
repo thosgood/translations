@@ -28,7 +28,7 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
   <br/>
   [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/papers/BSMF-86-1958-97.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF]()
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=papers/BSMF-86-1958-97.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/?id=BSMF_1958__86__97_0)
 
@@ -38,7 +38,7 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
   <br/>
   [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/papers/PSPM-55-1994-143.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF]()
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=papers/PSPM-55-1994-143.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/deligne/paper/413)
 
@@ -48,7 +48,7 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
   <br/>
   [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/papers/IM-8-1969-238.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF]()
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=papers/IM-8-1969-238.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/352)
 
@@ -58,7 +58,7 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
   <br/>
   [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/papers/BSMF-86-1958-137.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF]()
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=papers/BSMF-86-1958-137.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](https://www.doi.org/10.24033/bsmf.1501)
 
@@ -68,7 +68,7 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
   <br/>
   [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/papers/AM-48-1926-305.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF]()
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=papers/AM-48-1926-305.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](https://doi.org/10.1007/BF02565336)
 
