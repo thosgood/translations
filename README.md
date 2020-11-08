@@ -88,17 +88,17 @@ All of the following are by A. Grothendieck.
   <br/>
   _Séminaire Bourbaki_ **9** (1956--57), Talk no. 149.
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/fga/1-coherent-duality.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/fga/fga-1.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/fga/1-coherent-duality.tex)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/fga/fga-1.tex)
 
 2. "Géométrie formelle et géométrie algébrique".
   <br/>
   _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/fga/2-formal-geometry.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/fga/fga-2.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/fga/2-formal-geometry.tex)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/fga/fga-2.tex)
 
 <!-- 3. "Technique de descente et théorèmes d'existence en géométrie algébrique."
     1. "Généralités. Descente par morphismes fidèlement plats".
@@ -120,6 +120,40 @@ All of the following are by A. Grothendieck.
         <br/>
         _Séminaire Bourbaki_ **14** (1961--62), Talk no. 136. -->
 
+### Extracts (1952), "Les travaux de Koszul"
+
+In the first series of the Séminaire Bourbaki (as it would eventually be known), H. Cartan gave three talks concerning the work of J.-L. Koszul on Lie algebras.
+
+1. "Les travaux de Koszul, I".
+  <br/>
+  _Séminaire Bourbaki_ **1** (1952), Talk no. 1.
+  <br/>
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminars/SB-1-1.tex)
+  |
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminars/SB-1-1.tex)
+  |
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SB_1948-1951__1__7_0/)
+
+<!-- 2. "Les travaux de Koszul, II".
+  <br/>
+  _Séminaire Bourbaki_ **1** (1952), Talk no. 8.
+  <br/>
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminars/SB-1-8.tex)
+  |
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminars/SB-1-8.tex)
+  |
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SB_1948-1951__1__7_0/)
+
+3. "Les travaux de Koszul, III".
+  <br/>
+  _Séminaire Bourbaki_ **1** (1952), Talk no. 12.
+  <br/>
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/seminars/SB-1-12.tex)
+  |
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/seminars/SB-1-12.tex)
+  |
+  [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SB_1948-1951__1__7_0/) -->
+
 
 ## Séminaire Claude Chevalley
 
@@ -127,17 +161,17 @@ All of the following are by A. Grothendieck.
 
 1. "Faisceaux quasi-cohérents" (P. Gabriel).
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-claude-chevalley/SCC-SCC-4-1.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/seminaire-claude-chevalley-4/1-quasi-coherent-sheaves.tex)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/seminaire-claude-chevalley/SCC-4-1.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A1_0/)
 
 2. "Le théorème de Serre" (P. Gabriel).
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-claude-chevalley-4/2-serre's-theorem.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-claude-chevalley/SCC-4-2.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/seminaire-claude-chevalley-4/2-serre's-theorem.tex)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/seminaire-claude-chevalley/SCC-4-2.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A2_0/)
 
@@ -145,9 +179,9 @@ All of the following are by A. Grothendieck.
 
 4. "Diviseurs en géométrie algébrique" (C.S. Seshadri).
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-claude-chevalley/SCC-4-4.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/seminaire-claude-chevalley-4/4-divisors-in-algebraic-geometry.tex)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/seminaire-claude-chevalley/SCC-4-4.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A4_0/)
 
@@ -162,9 +196,9 @@ Note that we have included any changes made in the Errata.
 
 2. "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-henri-cartan/SHC-9-2.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/seminaire-henri-cartan-9/2-coherent-algebraic-analytic-sheaves.tex)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=seminars/seminaire-henri-cartan/SHC-9-2.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
 
