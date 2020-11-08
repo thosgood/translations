@@ -290,6 +290,20 @@ Then there exists an obvious bilinear map $(\varphi,a)\mapsto\varphi\cdot a$ fro
   The above map from $\LL^1(\mu)\hotimes E$ to $\LL_E^1(\mu)$ is a metric isomorphic from the former space to the latter.
 \end{theorem}
 
+To see this, we can immediately reduce to the case where $E$ is of finite dimension, and then proceed by transposition.
+It then suffices to apply the classical theorem of Dunford--Pettis that characterises continuous linear maps from $\LL^1(\mu)$ to $E'$.
+
+If $E$ is an arbitrary locally convex space, then we denote by $\LL_E^1(\mu)$ the completion of the separated space associated to the space of continuous maps with compact support from $M$ to $E$, endowed with its family of semi-norms $f\mapsto\int p(f(t))\dd\mu(t)$ (where $p$ runs over a fundamental family of continuous semi-norms on $E$).
+Then \cref{theorem3} easily implies that $\LL_E^1(\mu)$ is again isomorphic to $\LL^1(\mu)\hotimes E$.
+
+\begin{corollary}
+  If $E$ is a closed vector subspace of the Banach space $F$, then the canonical linear map from $\LL^1(\mu)\hotimes E$ to $\LL^1(\mu)\hotimes F$ is a metric isomorphism.
+\end{corollary}
+
+\oldpage{80}
+This recovers, for example, the well-known fact that every continuous linear map from $E$ to the dual $\LL^\infty(\mu)$ of $\LL^1(\mu)$ can be extended to a linear map of the same norm from $F$ to $\LL^\infty(\mu)$;
+or, dually, that every continuous linear map from $\LL^1(\mu)$ to a quotient space $F'/E^0$ of a Banach dual by a weakly closed vector subspace comes from a linear map of the same norm from $\LL^1(\mu)$ to $F'$.
+
 
 %% Bibliography %%
 

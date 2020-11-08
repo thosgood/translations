@@ -228,7 +228,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/160940)
 
-- **(3/40)** Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires".
+- **(8/40)** Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires".
   <br/>
   _Annales de l'Institut Fourier_ **4** (1952), 73--112.
   <br/>
