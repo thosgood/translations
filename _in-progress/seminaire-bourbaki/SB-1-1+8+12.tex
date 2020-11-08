@@ -56,6 +56,8 @@
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
+\DeclareMathOperator{\HH}{H}
+
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
@@ -105,6 +107,7 @@
 %% Content %%
 
 \part{}
+\label{I}
 
 \oldpage{7}
 The homology and cohomology of a \emph{compact} Lie group can be directly studied via the Lie algebra of the group (cf. {\sc Chevalley and Eilenberg}, Cohomology theory of Lie groups and Lie algebras, \emph{Trans. Amer. Math. Soc}~\textbf{63} (1948), 85--124).
@@ -132,7 +135,7 @@ We write $a\wedge b$ for the product;
 in particular, for a product of elements of degree~$1$, we write $x_1\wedge x_2\wedge\ldots\wedge x_p$.
 
 The bilinear form that defines the duality between $E$ and its \emph{dual} $E'$ is denoted by $\langle x,x'\rangle$.
-The (\todo) product of some $\alpha\in\Lambda^p(E)$ with some $x'\in E$ is an element of $\Lambda^{p-1}(E)$, denoted by $a\llp x'$, and defined by
+The \emph{interior product} of some $\alpha\in\Lambda^p(E)$ with some $x'\in E$ is an element of $\Lambda^{p-1}(E)$, denoted by $a\llp x'$, and defined by
 \[
   (x_1\wedge x_2\wedge\ldots\wedge x_p) \llp x'
   = \sum_{i=1}^p (-1)^{i+1} \langle x_i,x' \rangle x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p
@@ -252,7 +255,7 @@ It can be calculated using the following rules (which don't need explicit knowle
       \theta(X) = i(X)\dd + \dd\cdot i(X),
     \tag{2}
     \]
-    where $i(X)$ denotes, as in \cref{I.2}, the \todo product.
+    where $i(X)$ denotes, as in \cref{I.2}, the interior product.
     (Proof: both sides of the equation are derivations that commute with $\dd$ and that are equal on functions).
 \end{itemize}
 
@@ -270,7 +273,7 @@ If $X\in\alpha$, then the automorphism group of $V$ defined by $X$ (cf. \cref{I.
 the orbit of the identity element.
 Thus $\Lambda(\alpha)$ and $\Lambda(\alpha')$ are \emph{stable} under $\theta(X)$ if $X\in\alpha$.
 In particular, if $X$ and $Y$ are in $\alpha$, then $[X,Y]$ is in $\alpha$.
-The elements upon which $\theta(X)$ acts as the identity (for \emph{all} $X\in\alpha$) are those which are simultaneously invariant under left- and right-translations, and are simply called \emph{invariant elements}.
+The elements upon which $\theta(X)$ acts trivially (for \emph{all} $X\in\alpha$) are those that are simultaneously invariant under left- and right-translations, and are simply called \emph{invariant elements}.
 
 Since $\theta(X)$ is zero on the scalars (constant functions), we have:
 \[
@@ -294,6 +297,112 @@ We will construct everything from the structure of $\alpha$, by taking the relat
 
 \oldpage{11}
 Let $\alpha'$ be the dual vector space of $\alpha$.
+From now on, we denote elements of $\alpha$ by $x,y,\ldots$;
+the elements of $\alpha'$ by $x',y',\ldots$;
+the elements of $\Lambda(\alpha)$ by $\alpha,\beta,\ldots$;
+and the elements of $\Lambda(\alpha')$ by $\alpha',\beta',\ldots$.
+We \emph{define} $\theta(x)$, for $x\in\alpha$, by
+\[
+  \begin{aligned}
+    \theta(x)\cdot y
+    &= [x,y];
+  \\\langle y,\theta(x)\cdot x'\rangle
+    &= -\langle[x,y],x'\rangle.
+  \end{aligned}
+\]
+With $\theta(x)$ defined on $\alpha$ and $\alpha'$, we extend it to $\Lambda(\alpha)$ and $\Lambda(\alpha')$ by imposing the condition that $\theta(x)$ be a \emph{derivation}.
+The $\theta(x)$ that acts on $\Lambda(\alpha)$ is the \emph{transpose} of the $-\theta(x)$ that acts on $\Lambda(\alpha')$.
+The elements of $\Lambda(\alpha)$ (resp. of $\Lambda(\alpha')$) for which $\theta(x)$ acts trivially (for \emph{all} $x\in\alpha$) are called \emph{invariant} (or \emph{bi-invariant}) elements.
+The invariant elements of $\Lambda(\alpha)$ form a \emph{sub-algebra} $\mathfrak{J}$, and those of $\Lambda(\alpha')$ form a sub-algebra $\mathfrak{J}'$.
+
+Equation~\cref{equation-I.2} leads us to define an endomorphism $\delta$ of $\Lambda(\alpha')$ that is zero on the scalars, and such that
+\[
+\label{equation-I.4}
+  \theta(x) = i(x)\delta + \delta i(x).
+\tag{4}
+\]
+Furthermore, such an operator is unique, commutes with the $\theta(x)$, and satisfies $\delta\delta=0$;
+it is an \emph{antiderivation}, characterised by
+\[
+  \langle x\wedge y,\delta x'\rangle
+  = -\langle[x,y],x'\rangle,
+\]
+and it maps $\Lambda^p(\alpha')$ to $\Lambda^{p+1}(\alpha')$.
+
+We define, on $\Lambda(\alpha)$, the endomorphism $\partial$ that is the \emph{transpose} of $-\delta$ by
+\[
+  \langle\partial\alpha,\alpha'\rangle
+  = -\langle\alpha,\delta\alpha'\rangle.
+\]
+Then $\partial$ commutes with the $\theta(x)$, satisfies $\partial\partial=0$, maps $\Lambda^p(\alpha)$ to $\Lambda^{p+1}(\alpha)$, and is \emph{zero on $\alpha$};
+finally, we have that
+\[
+  \begin{aligned}
+    \partial(x\wedge y)
+    &= [x,y]
+  \\\theta(x)
+    &= e(x)\partial + \partial e(x),
+  \end{aligned}
+\]
+whence, by induction, we have the explicit formula
+\[
+  \partial(x_1\wedge x_2\wedge\ldots\wedge x_p)
+  = \sum_{i<j} (-1)^{i+j+1} [x_i,x_j] x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p.
+\]
+
+The operator $\delta$ on $\Lambda(\alpha')$ (the \emph{algebra of cochains}) defines a \emph{cohomology algebra}, denoted by $\HH(\alpha')$.
+The operator $\partial$ on $\Lambda(\alpha)$ (the \emph{algebra of chains}) defines a \emph{homology group}, denoted by $\HH(\alpha)$;
+there is not, in general, a multiplication in $\HH(\alpha)$, since $\partial$ is \emph{not} an antiderivation.
+
+We have that $\HH(\alpha)$ and $\HH(\alpha')$ are naturally in duality;
+for each degree~$p$, $\HH^p(\alpha)$ and $\HH^p(\alpha')$ are in duality, and thus of the same dimension.
+If $\alpha$ is the Lie algebra of a \emph{compact connected group}, then $\HH(\alpha')$ can be identified with the cohomology algebra of the (topological) space of the group, by the de Rham theorem.
+This proves that
+\oldpage{12}
+any two compact connected groups that are locally isomorphic have the same Betti number.
+In all cases, the common dimension of $\HH^p(\alpha)$ and $\HH^p(\alpha')$ is called the \emph{$p$-th Betti number} of the Lie algebra $\alpha$.
+
+\medskip
+\textbf{Unimodularity.}
+We say that $\alpha$ is \emph{unimodular} if $\theta(x)$ (for \emph{all} $x\in\alpha$), considered as an endomorphism of $\alpha$ (the \emph{adjoint} representation) has \emph{zero trace};
+an equivalent condition is that the chain $\omega$ of degree~$n$ is a \emph{cycle};
+another equivalent condition is that $\omega$ is \emph{invariant}.
+
+If $\alpha$ is unimodular, then $\alpha\mapsto\omega\llp\alpha'$ defines an isomorphism from $\HH^p(\alpha')$ to $\HH^{n-p}(\alpha)$;
+this corresponds to the ``Poincar\'{e} duality theorem'' for the Betti numbers of a manifold.
+
+\medskip
+\textbf{Expansions in a basis.}
+We can express $\delta$ and $\partial$ in terms of a basis $(x_k)$ of $\alpha$ and the dual basis $(x'_k)$ of $\alpha'$ (when $K$ is of characteristic $\neq2$):
+\[
+  \begin{aligned}
+    2\delta
+    &= \sum_k e(x'_k)\theta(x_k)
+    \qquad\mbox{always,}
+  \\2\partial
+    &= \sum_k i(x'_k)\theta(x_k)
+    \qquad\mbox{if $\alpha$ is \emph{unimodular}.}
+  \end{aligned}
+\]
+
+\medskip
+\textbf{Semi-simple Lie algebras.}
+We say that a Lie algebra is \emph{semi-simple} if it has no radical, or, equivalently (at least if $K$ is of characteristic~$0$), if all its representations are completely reducible.
+If $\alpha/\mathfrak{c}$ is semi-simple (where $\mathfrak{c}$ is the centre of $\alpha$), then we have a canonical isomorphism from $\HH(\alpha')$ to $\mathfrak{J}'$, and from $\HH(\alpha)$ to $\mathfrak{J}$ (and thus a multiplicative structure on $\HH(\alpha)$ in this case).
+
+If $\alpha$ is semi-simple, then its centre is trivial, the Betti numbers in dimensions~$1$ and $2$ are zero, and the Betti number in dimension~$3$ is equal to the dimension of the vector space of \emph{invariant quadratic forms} (where an invariant quadratic form is a bilinear map $f(x,y)$ such that $f(y,x)=f(x,y)$ and $f(\theta(z)\cdot x,y)+f(x,\theta(z)\cdot y)=0$).
+
+\textbf{Corollary.}
+If $K$ is maximal and quasi-real, and $\alpha$ is \emph{simple}, then the third Betti number is equal to $1$.
+
+
+
+\part{}
+\label{II}
+
+\oldpage{45}
+\section{Reminder of notation}
+\label{II.1}
 
 
 
