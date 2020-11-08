@@ -186,9 +186,9 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   <br/>
   Springer-Verlag, LNM **163** (1970).
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/lnm-163/de-regular-singular-points.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/978-3-540-05190-9.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Flnm-163%2Fde-regular-singular-points.tex&command=pdflatex&trackId=1602812233423)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/978-3-540-05190-9.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355)
 
@@ -196,17 +196,17 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   <br/>
   In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in Mathematics **92** (1990), 509--539. [MR1103602](https://mathscinet.ams.org/mathscinet-getitem?mr=1103602).
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/pm-92/projective-torus-action.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/PM-92-1990-509.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fpm-92%2Fprojective-torus-action.tex&command=pdflatex&trackId=1602776678752)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/PM-92-1990-509.tex)
 
 - **(5/38)** Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen".
   <br/>
   _Math. Ann._ **146** (1962), 331--368.
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/ma-146/exceptional-analytic-sets.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/MA-146-1962-331.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fma-146%2Fexceptional-analytic-sets.tex&command=pdflatex&trackId=1602812494395)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/MA-146-1962-331.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/160940)
 
@@ -214,9 +214,9 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   <br/>
   _Annales de l'Institut Fourier_ **4** (1952), 73--112.
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/aif-4/topological-tensor-nuclear-spaces.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/AIF-4-1952-73.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Faif-4%2Ftopological-tensor-nuclear-spaces.tex&command=pdflatex&trackId=1602812258122)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/AIF-4-1952-73.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/?id=AIF_1952__4__73_0)
 
@@ -224,19 +224,19 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   <br/>
   In _Galois Groups over ℚ_, Springer-Verlag, MSRI Publications **16** (1989), 79--297. DOI: [10.1007/978-1-4613-9649-9_3](https://doi.org/10.1007/978-1-4613-9649-9_3)
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/msrip-16/projective-line-minus-three-points.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/MSRI-16-1989-79.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fmsrip-16%2Fprojective-line-minus-three-points.tex&command=pdflatex&trackId=1602812188930)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/MSRI-16-1989-79.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://publications.ias.edu/node/407)
 
 - **(2/9)** Hilbert, D. "Ueber die Darstellung definiter Formen als Summen von Formenquadraten".
   <br/>
-  _Mathematische Annalen_ **32** (1888), 342--350.
+  _Math. Ann._ **32** (1888), 342--350.
   <br/>
-  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/ma-32/sum-of-squares.tex)
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/MA-32-1888-342.tex)
   |
-  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fthosgood%2Ftranslations&target=_in-progress%2Fma-32%2Fsum-of-squares.tex&command=pdflatex&trackId=1602812137443)
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/MA-32-1888-342.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/157385)
 
