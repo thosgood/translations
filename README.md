@@ -186,7 +186,7 @@ Note that we have included any changes made in the Errata.
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
 
-- **(10/19)** Cartan, H. "Les travaux de Koszul, I, II, and III".
+- **(11/19)** Cartan, H. "Les travaux de Koszul, I, II, and III".
   <br/>
   _Séminaire Bourbaki_ **1** (1952), Talks no. 1, 8, and 12.
   <br/>
