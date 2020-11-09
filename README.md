@@ -210,6 +210,14 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355)
 
+- **(1/29)** Grothendieck, A. "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". (FGA 3.I)
+  <br/>
+  _Séminaire Bourbaki_ **12** (1959--60), Talk no. 190.
+  <br/>
+  [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/_in-progress/fga/fga-3-I.tex)
+  |
+  [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/fga/fga-3-I.tex)
+
 - **(6/31)** Brion, M. and Procesi, C. "Action d'un tore dans une variété projective".
   <br/>
   In _Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)_, Birkhäuser Boston, Progress in Mathematics **92** (1990), 509--539. [MR1103602](https://mathscinet.ams.org/mathscinet-getitem?mr=1103602).
