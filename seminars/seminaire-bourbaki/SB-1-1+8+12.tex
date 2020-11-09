@@ -535,6 +535,7 @@ similarly, the $\theta^*(x)$ of a cocycle is a coboundary.
   Let $F$ be the subspace of ``invariant'' elements of $E$ (i.e. elements $\alpha$ such that $\tau(x)\cdot\alpha=0$ for all $x\in\fk{a}$).
   Then $F$ is stable under $d$, and the canonical homology from the homology group $\HH(F)$ to the homology group $\HH(E)$ is an \emph{isomorphism} from the former to the latter.
 }
+\medskip
 
 We can apply this to the representation $x\mapsto\theta(x)$ (resp. $x\mapsto\theta^*(x)$) of a \emph{reductive} algebra $\fk{a}$;
 then $F$ becomes $\fk{J}$ (resp. $\fk{J}'$), the sub-algebra of \emph{invariant} chains (resp. \emph{invariant} cochains).
@@ -567,7 +568,7 @@ thus $\HH(\fk{a})$ and $\HH(\fk{a}')$ are (non-canonically) \emph{isomorphic alg
 \label{II.5}
 
 A preliminary remark:
-for $\alpha'$ to be an \emph{invariant} cochain, it is necessary and sufficient for it to be a cocycle \emph{and} for $i(x)\cdot\alpha'$ to be cocycles for \emph{all} $x\in\fk{a}$ (by \cref{equation-II.1}).
+for $\alpha'$ to be an \emph{invariant} cochain, it is necessary and sufficient that it be a cocycle, \emph{and} that the $i(x)\cdot\alpha'$ be cocycles for \emph{all} $x\in\fk{a}$ (by \cref{equation-II.1}).
 
 \medskip
 \textbf{The first Betti number is zero.}
@@ -631,6 +632,7 @@ The homomorphism $\widetilde{\varphi}^*$ is also a homomorphism for the multipli
 {\itshape
   If the algebras $\fk{a}$ and $\fk{b}$ are \emph{reductive}, then $\widetilde{\varphi}$ is a homomorphism for the multiplicative structures of $\HH(\fk{b})$ and $\HH(\fk{a})$.
 }
+\medskip
 
 This can be proved by using:
 
@@ -645,6 +647,7 @@ This can be proved by using:
   \]
   is orthogonal to the invariant cochains.
 }
+\medskip
 
 With this, we consider a reductive Lie algebra, and we will show that, if $\alpha$ and
 \oldpage{50}
@@ -700,27 +703,65 @@ The transpose homomorphism $\widetilde{\varphi}^*$ is an \emph{algebra homomorph
 (where the product $\cdot$ is in $\HH(\fk{a}')$).
 
 If $\fk{a}$ is now a \emph{reductive} algebra, then the homomorphism $\widetilde{\varphi}$ is also a homomorphism \emph{for the multiplicative structures} of $\HH(\fk{a})$ and $\HH(\fk{a})\otimes\HH(\fk{a})$.
-\oldpage{50}
+\oldpage{51}
 We thus find ourselves in the following algebraic situation:
 
+$K$ is a field of characteristic~$0$;
+$A$ is a graded algebra of finite rank over $K$ whose multiplication law satisfies the usual commutativity and anticommutativity conditions for an exterior algebra;
+$A'$ is a graded algebra that is (non-canonically) isomorphic to $A$, in canonical duality with $A$;
+the degree~$0$ elements of $A$ (resp. of $A'$) are given by multiples of the unit, and can be identified with the elements of $K$.
+The duality between $A\otimes A$ and $A'\otimes A'$ is defined by $\langle\alpha\otimes\beta,\alpha'\otimes\beta'\rangle = \langle\alpha,\alpha'\rangle\cdot\langle\beta,\beta'\rangle$, and the transpose of the canonical homomorphism $\widetilde{\varphi}^*$ from $A'\otimes A'$ to $A'$ (such that $\widetilde{\varphi}^*(\alpha'\otimes\beta')=\alpha'\cdot\beta'$) is $\widetilde{\varphi}$, which is a homomorphism from $A$ to $A\otimes A$ \emph{that respects the multiplicative structures}.
+In such a situation, we say that the homogeneous elements of degree~$\geq1$ of $A$ (resp. of $A'$) that are orthogonal to the products $\alpha'\cdot\beta'$ with $\alpha'$ and $\beta'$ of degree~$\geq1$ (resp. to the products $\alpha\cdot\beta$ etc.) are \emph{primitive}.
+We can then prove the following theorem of algebra:
+
+\medskip
+\textbf{The Hopf--Samelson theorem.}
+{\itshape
+  The \emph{primitive} elements of are \emph{odd degree};
+  they generate a vector subspace $P$ of $A$ (resp. $P'$ of $A'$);
+  the canonical map $P\to A$ (resp. $P'\to A'$) can be extended to give an \emph{isomorphism from the exterior algebra $\Gamma(P)$ onto $A$} (resp. an isomorphism from $\Gamma(P')$ onto $A'$);
+  when restricted to $P$ and $P'$, the duality between $A$ and $A'$ defines a duality between $P$ and $P'$;
+  this duality can be extended in the usual way to give a duality between $\Gamma(P)$ and $\Gamma(P')$ that, by identifying $\Gamma(P)$ with $A$, and $\Gamma(P')$ with $A'$, recovers the existing duality between $A$ and $A'$.
+}
+
+The above statement thus applies if we take $A$ to be the homology algebra $\HH(\fk{a})$ of a reductive Lie algebra, and $A'$ to then be the cohomology algebra $\HH(\fk{a}')$.
+
+\medskip
+\textbf{Remark.}
+In the case where $\fk{a}$ is the Lie algebra of a compact connected group, the dimension of the space $P$ of primitive elements is equal to the \emph{rank} of the group, that is, to the maximal dimension of the abelian sub-algebras of $\fk{a}$.
+We still do not have an algebraic proof of this fact, which would prove this statement for a reductive Lie algebra.
 
 
+\section{Homomorphisms from a reductive algebra to a reductive algebra}
+\label{II.8}
 
+Let $\fk{a}$ and $\fk{b}$ be reductive algebras, and $\varphi$ a homomorphism from $\fk{b}$ to $\fk{a}$;
+we keep the notation form \cref{II.6}.
+Then every \emph{primitive} element of $\HH(\fk{b})$ is sent, by $\widetilde{\varphi}$, to a \emph{primitive} element of $\HH(\fk{a})$;
+every \emph{primitive} element of $\HH(\fk{a}')$ is sent, by $\widetilde{\varphi}^*$, to a \emph{primitive} element of $\HH(\fk{b}')$.
+Taking
+\oldpage{52}
+\cref{theorem1} into account (from \cref{II.6}), we thus deduce:
 
+\medskip
+\textbf{Theorem 2.}
+\emph{(cf. Samelson).}
+{\itshape
+  The ideal of zeros of $\widetilde{\varphi}$ is the \emph{ideal} of $\HH(\fk{b})$ generated by the \emph{primitive} elements of $\HH(\fk{b})$ whose image under $\widetilde{\varphi}$ is zero;
+  the sub-algebra given by the image of $\widetilde{\varphi}$ is the \emph{sub-algebra} of $\HH(\fk{a})$ generated by the unit and by the \emph{primitive} elements of $\HH(\fk{a})$ that belong to the image of $\widetilde{\varphi}$.
+  The analogous properties hold for cohomology algebras.
+}
 
+\medskip
+\textbf{Corollary.}
+{\itshape
+  Let $n$ denote the dimension of $\fk{b}$.
+  For $\widetilde{\varphi}$ to be \emph{bijective}, it suffices that $\widetilde{\varphi}(\omega)\neq0$, where $\omega$ is the generating element of $\HH_n(\fk{b})$.
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+\medskip
+The next talk will be dedicated to the study of \emph{relative} homology and cohomology:
+given a sub-algebra $\fk{b}$ of $\fk{a}$, we define the homology (resp. cohomology) of the ``homogeneous space'' $\fk{a}/\fk{b}$, and we study the relations between the homology (resp. cohomology) of $\fk{a}$, of $\fk{b}$, and of $\fk{a}/\fk{b}$.
 
 
 
