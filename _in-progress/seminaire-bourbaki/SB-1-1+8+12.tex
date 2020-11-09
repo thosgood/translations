@@ -567,4 +567,56 @@ thus $\HH(\fk{a})$ and $\HH(\fk{a}')$ are (non-canonically) \emph{isomorphic alg
 \subsection{The first three Betti numbers of a semi-simple Lie algebra}
 \label{II.5}
 
+A preliminary remark:
+for $\alpha'$ to be an \emph{invariant} cochain, it is necessary and sufficient for it to be a cocycle \emph{and} for $i(x)\cdot\alpha'$ to be cocycles for \emph{all} $x\in\fk{a}$ (by \cref{equation-II.1}).
+
+\medskip
+\textbf{The first Betti number is zero.}
+The equation
+\[
+  \langle x\wedge y,\delta x'\rangle
+  = -\langle[x,y],x'\rangle
+\]
+shows that, if $x'$ is a cocycle, then $x'$ is orthogonal to the derived algebra $\fk{a}^2$, and is thus zero if $\fk{a}$ is semi-simple.
+
+\medskip
+\textbf{The second Betti number is zero.}
+Every invariant cochain $\alpha'$ of degree~$2$ is zero, since $i(x)\cdot\alpha'$ is a cocycle of degree~$1$ for all $x$, and is thus zero.
+
+\medskip
+\textbf{The third Betti number is equal to the dimension of the vector space of invariant quadratic forms}, and, in particular, is always $\geq1$.
+An invariant quadratic form is a \emph{symmetric} bilinear form $f(x,y)$ such that $f(\theta(z)\cdot x,y)+f(x,\theta(z)\cdot y)=0$ for all $z\in\fk{a}$.
+We define, as follows, an isomorphism from the vector space $(\fk{J}')^{(3)}$ of invariant cochains of degree~$3$ to the space of invariant quadratic forms:
+let $\alpha'$ be invariant and of degree~$3$;
+for every $x\in\fk{a}$, we know that $i(x)\cdot\alpha'$ is a cocycle of degree~$2$, and thus cohomologous to $0$;
+there thus exists a unique cochain $x'$ of degree~$1$ such that $\delta x'=i(x)\cdot\alpha'$;
+the map $x\mapsto x'$ from $\fk{a}$ to $\fk{a}'$ defines a
+\oldpage{49}
+bilinear form $f(x,y)=\langle y,x'\rangle$.
+We have
+\[
+\label{equation-II.2}
+  f(x,[y,z])
+  = -\langle x\wedge y\wedge z,\alpha'\rangle,
+\tag{2}
+\]
+and $f$ is symmetric and invariant.
+Conversely, if $f$ is a symmetric invariant bilinear form, then there exists a unique cochain $\alpha'$ such that \cref{equation-II.2} holds, and this cochain is invariant.
+QED.
+
+\medskip
+\textbf{Remark.}
+This converse holds even without the semi-simplicity assumption.
+In particular, the invariant symmetric bilinear form $\tr\theta(x)\theta(y)$ defines an invariant cochain of degree~$3$, called the \emph{Cartan cochain}.
+
+\medskip
+\textbf{Corollary.}
+{\itshape
+  If $\fk{a}$ is a Lie algebra such that the \emph{uniqueness} (up to a scalar multiple) of an invariant quadratic form is assured, then the third Betti number of $\fk{a}$ is equal to $1$.
+  This is notably the case for the algebra of a compact connected Lie group, or for a simple Lie algebra over an algebraically closed field.
+}
+
+\subsection{Homomorphisms from one Lie algebra to another}
+\label{II.6}
+
 \end{document}
