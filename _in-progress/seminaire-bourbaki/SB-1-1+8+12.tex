@@ -62,6 +62,7 @@
 \renewcommand{\leq}{\leqslant}
 
 \DeclareMathOperator{\HH}{H}
+\DeclareMathOperator{\tr}{tr}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -278,7 +279,7 @@ If $X\in\fk{a}$, then the automorphism group of $V$ defined by $X$ (cf. \cref{I.
 the orbit of the identity element.
 Thus $\Lambda(\fk{a})$ and $\Lambda(\fk{a}')$ are \emph{stable} under $\theta(X)$ if $X\in\fk{a}$.
 In particular, if $X$ and $Y$ are in $\fk{a}$, then $[X,Y]$ is in $\fk{a}$.
-The elements upon which $\theta(X)$ acts trivially (for \emph{all} $X\in\fk{a}$) are those that are simultaneously invariant under left- and right-translations, and are simply called \emph{invariant elements}.
+The elements upon which $\theta(X)$ acts as zero (for \emph{all} $X\in\fk{a}$) are those that are simultaneously invariant under left- and right-translations, and are simply called \emph{invariant elements}.
 
 Since $\theta(X)$ is zero on the scalars (constant functions), we have:
 \[
@@ -317,7 +318,7 @@ We \emph{define} $\theta(x)$, for $x\in\fk{a}$, by
 \]
 With $\theta(x)$ defined on $\fk{a}$ and $\fk{a}'$, we extend it to $\Lambda(\fk{a})$ and $\Lambda(\fk{a}')$ by imposing the condition that $\theta(x)$ be a \emph{derivation}.
 The $\theta(x)$ that acts on $\Lambda(\fk{a})$ is the \emph{transpose} of the $-\theta(x)$ that acts on $\Lambda(\fk{a}')$.
-The elements of $\Lambda(\fk{a})$ (resp. of $\Lambda(\fk{a}')$) for which $\theta(x)$ acts trivially (for \emph{all} $x\in\fk{a}$) are called \emph{invariant} (or \emph{bi-invariant}) elements.
+The elements of $\Lambda(\fk{a})$ (resp. of $\Lambda(\fk{a}')$) for which $\theta(x)$ acts as zero (for \emph{all} $x\in\fk{a}$) are called \emph{invariant} (or \emph{bi-invariant}) elements.
 The invariant elements of $\Lambda(\fk{a})$ form a \emph{sub-algebra} $\fk{J}$, and those of $\Lambda(\fk{a}')$ form a sub-algebra $\fk{J}'$.
 
 Equation~\cref{equation-I.2} leads us to define an endomorphism $\delta$ of $\Lambda(\fk{a}')$ that is zero on the scalars, and such that
@@ -397,6 +398,7 @@ If $\fk{a}/\fk{c}$ is semi-simple (where $\fk{c}$ is the centre of $\fk{a}$), th
 
 If $\fk{a}$ is semi-simple, then its centre is trivial, the Betti numbers in dimensions~$1$ and $2$ are zero, and the Betti number in dimension~$3$ is equal to the dimension of the vector space of \emph{invariant quadratic forms} (where an invariant quadratic form is a bilinear map $f(x,y)$ such that $f(y,x)=f(x,y)$ and $f(\theta(z)\cdot x,y)+f(x,\theta(z)\cdot y)=0$).
 
+\medskip
 \textbf{Corollary.}
 If $K$ is maximal and quasi-real, and $\fk{a}$ is \emph{simple}, then the third Betti number is equal to $1$.
 
@@ -431,7 +433,7 @@ If $K$ is maximal and quasi-real, and $\fk{a}$ is \emph{simple}, then the third 
 
 These operators satisfy the following relations:
 \[
-\label{1}
+\label{equation-II.1}
   \begin{aligned}
     \partial\partial &= 0,
   \\\delta\delta &= 0,
@@ -494,9 +496,75 @@ we recover the following theorem:
 \section{Semi-simple Lie algebras}
 \label{II.3}
 
+Every time that we speak of semi-simplicity, the field $K$ will be assumed to be of characteristic~$0$.
+We have the following equivalent characterisations of semi-simple Lie algebras
+\begin{enumerate}[(a)]
+  \item every square-zero ideal (i.e. giving rise to an invariant abelian subgroup) is the ideal $\{0\}$ ;
+  \item the quadratic form $\tr(\theta(x)\theta(y))$ is regular ;
+  \item $\fk{a}$ is the direct sum of \emph{simple} algebras (i.e. algebras of dimension~$>1$ with only trivial ideals, namely $\{0\}$ and the whole algebra itself);
+    such a decomposition is then unique.
+    (In principal, determining $\HH(\fk{a})$ and $\HH(\fk{a}')$ for semi-simple $\fk{a}$ thus reduces to determining the homology and cohomology of the simple algebras) ; and
+\oldpage{47}
+  \item every \emph{representation} of $\fk{a}$ in the endomorphism algebra of a vector space $E$ (of finite dimension over $K$) is \emph{completely reducible} (i.e. every invariant subspace admits an invariant complement).
+\end{enumerate}
 
-%% Bibliography %%
+Every quotient algebra of a semi-simple algebra is semi-simple.
+We thus deduce:
+if $\fk{a}$ is semi-simple, then $\fk{a}$ is identical to the ``derived'' algebra $\fk{a}^2$.
+In particular, a semi-simple algebra is \emph{unimodular} (cf. \cref{I}).
 
-\nocite{*}
+For every Lie algebra $\fk{a}$, the map $x\mapsto\theta(x)$ is a representation of $\fk{a}$ in the endomorphism algebra of the vector space $\Gamma(\fk{a})$;
+similarly, $x\mapsto\theta^*(\fk{a})$ is a representation in the endomorphism algebra of $\Gamma(\fk{a}')$.
+These representations vanish on the centre $\fk{c}$ of $\fk{a}$;
+we will be sure that they are completely reducible if the algebra $\fk{a}/\fk{c}$ is semi-simple, or, in other words, if $\fk{a}$ is the direct sum of a semi-simple algebra and an abelian algebra.
+Such a Lie algebra is said to be \emph{reductive};
+we are particularly interested in the homology and cohomology of reductive Lie algebras.
+The Lie algebra of a compact group is always reductive.
+
+
+\subsection{Homology of reductive Lie algebras}
+\label{II.4}
+
+In the representation $x\mapsto\theta(x)$ of $\fk{a}$ in the endomorphism algebra of $\Gamma(\fk{a})$, by \cref{equation-II.1}, the $\theta(x)$ is a of a cycle is a boundary;
+similarly, the $\theta^*(x)$ of a cocycle is a coboundary.
+
+\medskip
+\textbf{Lemma 1.}
+{\itshape
+  Let $x\mapsto\tau(x)$ be a completely reducible representation of a Lie algebra $\fk{a}$ in the endomorphism algebra of a finite-dimensional vector space $E$ endowed with an operator $d$ such that $dd=0$;
+  suppose that $\tau(x)d=d\tau(x)$, and that $\tau(x)$ sends cycles to boundaries.
+  Let $F$ be the subspace of ``invariant'' elements of $E$ (i.e. elements $\alpha$ such that $\tau(x)\cdot\alpha=0$ for all $x\in\fk{a}$).
+  Then $F$ is stable under $d$, and the canonical homology from the homology group $\HH(F)$ to the homology group $\HH(E)$ is an \emph{isomorphism} from the former to the latter.
+}
+
+We can apply this to the representation $x\mapsto\theta(x)$ (resp. $x\mapsto\theta^*(x)$) of a \emph{reductive} algebra $\fk{a}$;
+then $F$ becomes $\fk{J}$ (resp. $\fk{J}'$), the sub-algebra of \emph{invariant} chains (resp. \emph{invariant} cochains).
+But $\partial$ is zero for every element of $\fk{J}$, and $\delta$ is zero for every element of $\fk{J}'$, thanks to the formulas
+\[
+  \begin{aligned}
+    2\delta
+    &= \sum_k e(x'_k)\theta(x_k)
+  \\2\partial
+    &= \sum_k i(x'_k)^*\theta(x_k)
+  \end{aligned}
+\]
+(where $(x_k)$ and $(x'_k)$ are dual bases; see \cref{I}).
+So $\HH(\fk{J})$ can be identified with $\fk{J}$,
+and
+\oldpage{48}
+$\HH(\fk{J}')$ with $\fk{J}'$, and the lemma shows that $\fk{J}\to\HH(\fk{a})$ and $\fk{J}'\to\HH(\fk{a})$ are \emph{onto isomorphisms} (i.e there is one and only one invariant chain in each homology class; id. for cochains and cohomology).
+Furthermore, $\fk{J}'\to\HH(\fk{a}')$ is an isomorphism for the \emph{algebra} structure;
+we can not say the same of $\fk{J}\to\HH(\fk{a})$, since $\HH(\fk{a})$ has no multiplicative structure, but the identification of $\HH(\fk{a})$ with $\fk{J}$, which does have an algebra structure, precisely defines a multiplicative structure on $\HH(\fk{a})$, and allows us to speak about the \emph{homology algebra} of a reductive Lie algebra.
+We will prove that, if $\fk{a}$ is the Lie algebra of a compact connected group, then the multiplicative structure of $\HH(\fk{a})$ is precisely that which is defined by the ``Pontrjagin product''.
+
+\medskip
+\textbf{Remark.}
+On any reductive $\fk{a}$, there exists at least one \emph{regular} invariant quadratic form;
+it defines an isomorphism from the algebra $\Gamma(\fk{a})$ to the algebra $\Gamma(\fk{a})$, and from $\fk{J}$ to $\fk{J}'$;
+thus $\HH(\fk{a})$ and $\HH(\fk{a}')$ are (non-canonically) \emph{isomorphic algebras}.
+
+
+\subsection{The first three Betti numbers of a semi-simple Lie algebra}
+\label{II.5}
 
 \end{document}
