@@ -64,7 +64,6 @@
 \DeclareMathOperator{\HH}{H}
 \DeclareMathOperator{\tr}{tr}
 
-\newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
 
@@ -618,6 +617,42 @@ In particular, the invariant symmetric bilinear form $\tr\theta(x)\theta(y)$ def
 
 \section{Homomorphisms from one Lie algebra to another}
 \label{II.6}
+
+Let $\fk{b}$ and $\fk{a}$ be arbitrary Lie algebras (over the same field $K$), and let $\varphi$ be a homomorphism from $\fk{b}$ to $\fk{a}$;
+then $\varphi$ extends to a homomorphism, again denoted by $\varphi$, from the \emph{algebra} $\Gamma(\fk{b})$ to the \emph{algebra} $\Gamma(\fk{a})$.
+The transpose $\varphi^*$ (a homomorphism from $\fk{a}'$ to $\fk{b}'$) can be extended to a homomorphism, again denoted by $\varphi^*$, from the algebra $\Gamma(\fk{a}')$ to the algebra $\Gamma(\fk{b}')$;
+furthermore, the extensions of $\varphi$ and $\varphi^*$ are \emph{transpose to one another}.
+We have $\partial\varphi=\varphi\partial$ and $\delta\varphi^*=\varphi^*\delta$, whence a homomorphism $\widetilde{\varphi}$ from $\HH(\fk{b})$ to $\HH(\fk{a})$, and a homomorphism $\widetilde{\varphi}^*$ from $\HH^(\fk{a}')$ to $\HH(\fk{b}')$, with $\widetilde{\varphi}^*$ being the transpose of $\widetilde{\varphi}$.
+The homomorphism $\widetilde{\varphi}^*$ is also a homomorphism for the multiplicative structures.
+
+\medskip
+\textbf{Theorem 1.}
+{\itshape
+  If the algebras $\fk{a}$ and $\fk{b}$ are \emph{reductive}, then $\widetilde{\varphi}$ is a homomorphism for the multiplicative structures of $\HH(\fk{b})$ and $\HH(\fk{a})$.
+}
+
+This can be proved by using:
+
+\medskip
+\textbf{Lemma 2.}
+\label{lemma2}
+{\itshape
+  Let $\fk{a}$ be an arbitrary Lie algebra;
+  then, for any chains $\alpha$ and $\beta$ of $\Gamma(\fk{a})$, the chain
+  \[
+    \partial(\alpha\wedge\beta) + (\partial\alpha)\wedge\beta - \overline{\alpha}\wedge(\partial\beta)
+  \]
+  is orthogonal to the invariant cochains.
+}
+
+With this, we consider a reductive Lie algebra, and we will show that, if $\alpha$ and
+\oldpage{50}
+$\overline{\alpha}\wedge\partial\gamma$ are cycles, then $\overline{\alpha}\wedge\partial\gamma$ is a boundary:
+indeed, by \hyperref[lemma2]{Lemma~2}, 
+
+
+
+
 
 \todo
 
