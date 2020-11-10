@@ -12,7 +12,7 @@ This should go without saying, but I'll say it anyway: **_I am making no claim t
 
 ---
 
-## The Grothendieck trilogy
+## The Grothendieck "trilogy"
 
 - **EGA**: [github.com/ryankeleti/ega](https://github.com/ryankeleti/ega)
 - **FGA**: see below, under "[Séminaire Bourbaki, Extracts](#extracts-195762-fondements-de-la-géométrie-algébrique)";
