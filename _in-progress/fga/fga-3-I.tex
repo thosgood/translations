@@ -306,6 +306,7 @@ In the case where the diagram~\cref{equation-definition-A.1.3} is $\sh{F}$-exact
 
 
 \subsubsection{}
+\label{A.1.c}
 The most important case is that where
 \[
   S'' = S' \times_S S',
@@ -319,6 +320,65 @@ We then have two immediate necessary conditions for a gluing data $\varphi\colon
   where $p_{ij}$ denotes the canonical projection from $S'\times_S S'\times_S S'$ to the partial product of its $i$th and $j$th factors.
 \end{enumerate}
 
+\begin{definition}{1.6}
+\label{definition-A.1.6}
+  We define \emph{descent data} on $\xi'\in\sh{F}_{S'}$, with respect to the morphism $\alpha\colon S'\to S$, to be a gluing data on $\xi'$ with respect to the pair $(p_1,p_2)$ of canonical projections $S'\times_S S'\to S'$ that satisfies conditions~(i) and (ii) above.
+\end{definition}
+
+\begin{definition}{1.7}
+  A morphism $\alpha\colon S'\to S$ is said to be an \emph{$\sh{F}$-descent morphism} if the diagram
+  \[
+    \begin{tikzcd}
+      S
+      & S' \lar[swap,"\alpha"]
+      & S'\times_S S' \lar[shift left=1,"p_2"] \lar[shift right=1,swap,"p_1"]
+    \end{tikzcd}
+  \]
+  of morphisms is $\sh{F}$-exact (\cref{definition-A.1.3});
+  we say that $\alpha$ is a \emph{strict $\sh{F}$-descent morphism} if, further, every descent data (\cref{definition-A.1.6}) on any object of $\sh{F}_{S'}$ is effective.
+
+  This latter condition (of strictness) can also be stated in a more evocative way:
+  ``giving an object of $\sh{F}_S$ is equivalent to giving an object of $\sh{F}_{S'}$ endowed with a descent data''.
+\end{definition}
+
+Note that, if an $\sh{F}$-descent morphism $\alpha\colon S'\to S$ admits a \emph{section} $s\colon S\to S'$ (i.e. a morphism $s$ such that $\alpha s=\id_S$), then it is a strict $\sh{F}$-descent morphism:
+if $\xi'\in\sh{F}_{S'}$ is endowed with descent data with respect to $\alpha$, then ``it comes from'' $\xi=s^*(\xi')$.
+
+
+\subsubsection{}
+\label{A.1.d}
+We can present the above notions in a more intuitive manner, by introducing, for an object $T$ of $\cat{C}$ over $S$, the set
+\[
+  \Hom_S(T,S') = S'(T),
+\]
+whore elements will be denoted by $t$, $t'$, etc.
+Given an object $\xi'\in\sh{F}_{S'}$, there then corresponds, to every $t\in S'(T)$, an object $t^*(\xi')$ of $\sh{F}_T$, which will also be denoted by $\xi'_t$.
+A gluing data on $\xi'$ (with respect to $(p_1,p_2)$) is then defined by the data, for every $T$ over $S$, and every pair of points $t,t'\in S'(T)$, of an isomorphism
+\[
+  \varphi_{t',t}\colon \xi'_t \to \xi'_{t'}
+\]
+(satisfying the evident conditions of functoriality in $T$).
+Conditions~(i) and (ii) of \cref{A.1.c} can then be written as
+\begin{enumerate}[(i {bis})]
+  \item $\varphi_{t,t}=\id_{\xi'_t}$, for all $T$ and all $t\in S'(T)$.
+\oldpage{190-06}
+  \item $\varphi_{t,t''}=\varphi_{t,t'}\varphi_{t',t''}$, for all $T$ and all $t,t',t''\in S'(T)$.
+\end{enumerate}
+
+We can show that (ii~bis) implies that $\varphi_{t,t}^2=\varphi_{t,t}$, by taking $t=t'=t''$, and thus, since $\varphi_{t,t}$ is an isomorphism by hypothesis, implies (i~bis), which is thus a consequence of (ii~bis) (and so (i) is also a consequence of (ii)).
+But if we no longer suppose a priori that the $\varphi_{t,t}$ are isomorphisms (i.e. that $\varphi\colon p_1^*(\xi')\to p_2^*(\xi')$ is an isomorphism), then (ii~bis) no longer necessarily implies (i~bis);
+the combination of (ii~bis) and (i~bis), however, does imply that the $\varphi_{t,t'}$ are isomorphisms (since we then have $\varphi_{t,t'}\varphi_{t',t}=\varphi_{t,t}=\id_{\xi'_t}$).
+
+
+\subsection{Exact diagrams and strict epimorphisms, descent morphisms, and examples.}
+\label{A.2}
+
+\subsubsection{}
+\label{A.2.a}
+
+\begin{definition}{2.1}
+  Let $\cat{C}$ be a category.
+\end{definition}
 
 
 %% Bibliography %%
