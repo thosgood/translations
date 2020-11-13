@@ -86,8 +86,8 @@
 
 %% Shortcuts %%
 
-\newcommand{\sh}{\mathscr}
-\newcommand{\cat}{\mathcal}
+\newcommand{\sh}[1]{{\mathscr{#1}}}
+\newcommand{\cat}[1]{{\mathcal{#1}}}
 \newcommand{\from}{\leftarrow}
 \newcommand{\bb}{\mathbf}
 
@@ -247,7 +247,7 @@ that uniquely extend to a homomorphism of cohomological functors (in $\sh{B}$):
 \end{proposition}
 
 \begin{proof}
-  The proof is standard: we consider the bicomplex $\shHom_\sh{O}(\sh{L}_\bullet,C(\sh{B}))$, where $C(\sh{B})$ is an injective resolution of $\sh{B}$, as well as the natural homomorphisms into this bicomplex from $\shHom_\sh{O}(\sh{L}_\bullet,\sh{B}))$ and $\shHom_\sh{O}(\sh{A},C,\sh{B}))$.
+  The proof is standard: we consider the bicomplex $\shHom_\sh{O}(\sh{L}_\bullet,C(\sh{B}))$, where $C(\sh{B})$ is an injective resolution of $\sh{B}$, as well as the natural homomorphisms into this bicomplex from $\shHom_\sh{O}(\sh{L}_\bullet,\sh{B})$ and $\shHom_\sh{O}(\sh{A},C(\sh{B}))$.
 \end{proof}
 
 To finish, we note that the two $\Ext$ functors introduced in \cref{1.2} are not only cohomological functors in $\sh{B}$, but in fact \emph{cohomological bifunctors}, covariant in $\sh{B}$ and contravariant in $\sh{A}$.
