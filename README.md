@@ -200,7 +200,7 @@ Note that we have included any changes made in the Errata.
 
 Sometimes a paper takes "a while" to translate, but I put it here so that people can nudge me if there's one on this list that they _really_ want me to get around to finishing. (Some of these I have barely started, so don't get too excited.)
 
-- **(40/126)** Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
+- **(43/126)** Deligne, P. _Equations Différentielles à Points Singuliers Réguliers._
   <br/>
   Springer-Verlag, LNM **163** (1970).
   <br/>

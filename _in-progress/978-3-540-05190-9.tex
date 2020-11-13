@@ -2294,7 +2294,61 @@ They are either due to N.~Katz (see, most notably, \cite{14,15}), or classical (
     There exists a uniformiser $t$ such that $\dd t$ generates $\Omega$.
   \end{env}
   (For less hyper-generality, see \cref{II.1.7}).
+
+  If $t_1$ is another uniformiser, then $t_1=at$ for some $a\in\sh{O}^*$, and, by hypothesis, $\dd a$ is a multiple of $\dd t$, i.e. $\dd a=\lambda\dd t$.
+  We thus have that
+  \[
+    \dd t_1
+    = a\dd t + \dd a\cdot t
+    = (a+\lambda t)\dd t
+  \]
+  and so
+  \begin{env}{1.4.2}
+    \itshape
+    For every uniformiser $t$, $\dd t$ generates $\Omega$.
+  \end{env}
+
+  We denote by
+  \[
+    v\colon K^* \to \ZZ
+  \]
+  the valuation of $K$ defined by $\sh{O}$;
+  we also denote by $v$ the valuation of $\Omega\otimes K$ defined by the lattice $\Omega$.
+  If $t$ is a uniformiser, then
+  \[
+    v(\omega) = v(\omega/\dd t).
+  \]
+
+  If $f\in K^*$ with $f=at^n$ (for $a\in\sh{O}$), then
+  \[
+    \dd f = \dd a\cdot t^n + nat^{n-1}\dd t
+  \]
+  and thus
+\oldpage{44}
+  \begin{enumerate}
+    \item[(1.4.3)] \label{II.1.4.3}
+      $v(\dd f) \leq v(f) - 1$; and
+    \item[(1.4.4)] \label{II.1.4.4}
+      $v(f)\neq0 \implies v(\dd f) = v(f) - 1$.
+  \end{enumerate}
+
+  In particular, $\dd$ is continuous and extends to $\dd\colon\sh{O}^\wedge\to\Omega^\wedge$, and the triple $(\sh{O}^\wedge,\dd,\Omega^\wedge)$ again satisfies \cref{II.1.4.1}.
 \end{env}
+
+\begin{lemma}{1.5}
+\label{II.1.5}
+  If $\sh{O}$ is complete, then the triple $(\sh{O},\dd,\Omega)$ is isomorphic to the triple $(k[[t]],\partial_t,k[[t]])$.
+\end{lemma}
+
+\begin{proof}
+  The homomorphisms
+  \[
+    \Gr(\dd)\colon \fk{m}^i/\fk{m}^{i+1} \to \fk{m}^{i-1}\Omega/\fk{m}^i\Omega
+  \]
+  induced by $\dd$ are linear and bijective \hyperref[II.1.4.4]{(1.4.4)}.
+  Since $\sh{O}$ is complete, $\dd\colon\fk{m}\to\Omega$ is surjective, and $\Ker(\dd)\xrightarrow{\sim}k$.
+  This gives us a field of representatives that is annihilated by $\dd$, and the choice of a uniformiser $t$ gives the desired isomorphism $k[[t]]\xrightarrow{\sim}\sh{O}$.
+\end{proof}
 
 
 
