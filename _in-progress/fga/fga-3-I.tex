@@ -136,7 +136,7 @@
 
 \setcounter{footnote}{0}
 
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{3}
 \tableofcontents
 
 
@@ -146,6 +146,8 @@
 
 \emph{[Trans.] We have made changes throughout the text following the errata (\emph{S\'{e}minaire Bourbaki} \textbf{14}, 1961--62, Compl\'{e}ment), and preface them with ``[Comp.]''.}
 \medskip
+
+\textbf{\todo(errata)}
 
 \oldpage{190-01}
 From a technical point of view, the current talk, and those that will follow, can be considered as variations on the celebrated ``Theorem 90'' of Hilbert.
@@ -173,7 +175,7 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
 \label{A}
 
 
-\subsection{Fibred categories, descent data, morphisms of \texorpdfstring{$\sh{F}$}{F}-descent}
+\subsection{Fibred categories, descent data, \texorpdfstring{$\sh{F}$}{F}-descent morphisms}
 \label{A.1}
 
 \subsubsection{}
@@ -210,6 +212,7 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
 \end{definition}
 
 \begin{example}{1}
+\label{example:A.1.1}
   Let $\cat{C}$ be a category where all fibre products exist.
   We then define a fibred category $\sh{F}$ with base $\cat{C}$ by setting $\sh{F}_X$ to be the category of objects of $\cat{C}$ over $X$, and the functor $f^*\colon\sh{F}_Y\to\sh{F}_X$ corresponding to a morphism $f\colon X\to Y$ being defined by the \emph{fibre product} $Z\rightsquigarrow Z\times_Y X$.
 \end{example}
@@ -227,6 +230,7 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
 \label{A.1.b}
 
 \begin{definition}{1.2}
+\label{definition:A.1.2}
   A diagram
   \[
     \begin{tikzcd}
@@ -239,7 +243,7 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
 \end{definition}
 
 \begin{definition}{1.3}
-\label{definition-A.1.3}
+\label{definition:A.1.3}
   Let $\sh{F}$ be a fibred category with base $\cat{C}$, and consider a diagram
   \[
     \begin{tikzcd}
@@ -251,7 +255,7 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
   of morphisms in $\cat{C}$ such that $\alpha\beta_1=\alpha\beta_2$;
   this diagram is said to be \emph{$\sh{F}$-exact} if, for every pair $(\xi,\eta)$ of elements of $\sh{F}_S$, the diagram
   \[
-  \label{equation-definition-A.1.3}
+  \label{equation-definition:A.1.3}
     \begin{tikzcd}
       \Hom(\xi,\eta) \rar["\alpha^*"]
       & \Hom(\alpha^*(\xi),\alpha^*(\eta)) \rar[shift left=1,"\beta_1^*"] \rar[shift right=1,swap,"\beta_2^*"]
@@ -295,14 +299,14 @@ furthermore, if $u\colon\xi\to\eta$ is a morphism in $\sh{F}_s$, then
 \]
 is a morphism in $\sh{F}_{S'}$ that is compatible with the canonical gluing data.
 We thus obtain a \emph{canonical functor} from the category $\sh{F}_S$ to the category of objects of $\sh{F}_{S'}$ endowed with gluing data with respect to the pair $(\beta_1,\beta_2)$.
-With this, we can also rephrase \cref{definition-A.1.3} by saying that the diagram~\cref{equation-definition-A.1.3} is \emph{$\sh{F}$-exact} if the above functor is \emph{fully faithful}, i.e. if the above functor defines an equivalence between the category $\sh{F}_S$ and a subcategory of the category of objects of $\sh{F}_S$ endowed with gluing data with respect to $(\beta_1,\beta_2)$.
+With this, we can also rephrase \cref{definition:A.1.3} by saying that the diagram~\cref{equation-definition:A.1.3} is \emph{$\sh{F}$-exact} if the above functor is \emph{fully faithful}, i.e. if the above functor defines an equivalence between the category $\sh{F}_S$ and a subcategory of the category of objects of $\sh{F}_S$ endowed with gluing data with respect to $(\beta_1,\beta_2)$.
 
 \begin{definition}{1.5}
-\label{definition-A.1.5}
+\label{definition:A.1.5}
   We say that a gluing data on $\xi'\in\sh{F}_{S'}$ is \emph{effective} (with respect to $\alpha$) if $\xi'$, endowed with this data, is isomorphic to $\alpha^*(\xi)$ for some $\xi\in\sh{F}_S$.
 \end{definition}
 
-In the case where the diagram~\cref{equation-definition-A.1.3} is $\sh{F}$-exact, the object $\xi$ in \cref{definition-A.1.5} is then determined up to unique isomorphism, and \emph{the category $\sh{F}_S$ is equivalent to the category of objects of $\sh{F}_{S'}$ endowed with effective gluing data}.
+In the case where the diagram~\cref{equation-definition:A.1.3} is $\sh{F}$-exact, the object $\xi$ in \cref{definition:A.1.5} is then determined up to unique isomorphism, and \emph{the category $\sh{F}_S$ is equivalent to the category of objects of $\sh{F}_{S'}$ endowed with effective gluing data}.
 
 
 \subsubsection{}
@@ -321,11 +325,12 @@ We then have two immediate necessary conditions for a gluing data $\varphi\colon
 \end{enumerate}
 
 \begin{definition}{1.6}
-\label{definition-A.1.6}
+\label{definition:A.1.6}
   We define \emph{descent data} on $\xi'\in\sh{F}_{S'}$, with respect to the morphism $\alpha\colon S'\to S$, to be a gluing data on $\xi'$ with respect to the pair $(p_1,p_2)$ of canonical projections $S'\times_S S'\to S'$ that satisfies conditions~(i) and (ii) above.
 \end{definition}
 
 \begin{definition}{1.7}
+\label{definition:A.1.7}
   A morphism $\alpha\colon S'\to S$ is said to be an \emph{$\sh{F}$-descent morphism} if the diagram
   \[
     \begin{tikzcd}
@@ -334,8 +339,8 @@ We then have two immediate necessary conditions for a gluing data $\varphi\colon
       & S'\times_S S' \lar[shift left=1,"p_2"] \lar[shift right=1,swap,"p_1"]
     \end{tikzcd}
   \]
-  of morphisms is $\sh{F}$-exact (\cref{definition-A.1.3});
-  we say that $\alpha$ is a \emph{strict $\sh{F}$-descent morphism} if, further, every descent data (\cref{definition-A.1.6}) on any object of $\sh{F}_{S'}$ is effective.
+  of morphisms is $\sh{F}$-exact (\cref{definition:A.1.3});
+  we say that $\alpha$ is a \emph{strict $\sh{F}$-descent morphism} if, further, every descent data (\cref{definition:A.1.6}) on any object of $\sh{F}_{S'}$ is effective.
 
   This latter condition (of strictness) can also be stated in a more evocative way:
   ``giving an object of $\sh{F}_S$ is equivalent to giving an object of $\sh{F}_{S'}$ endowed with a descent data''.
@@ -378,7 +383,79 @@ the combination of (ii~bis) and (i~bis), however, does imply that the $\varphi_{
 
 \begin{definition}{2.1}
   Let $\cat{C}$ be a category.
+  A diagram
+  \[
+    \begin{tikzcd}
+      T \rar["\alpha"]
+      & T' \rar[shift left=1,"\beta_1"] \rar[shift right=1,swap,"\beta_2"]
+      & T''
+    \end{tikzcd}
+  \]
+  of morphisms is said to be \emph{exact} if, for all $Z\in\cat{C}$, the corresponding diagram
+  \[
+    \begin{tikzcd}
+      \Hom(Z,T) \rar
+      & \Hom(Z,T') \rar[shift left=1] \rar[shift right=1]
+      & \Hom(Z,T'')
+    \end{tikzcd}
+  \]
+  of sets is exact (\cref{definition:A.1.2}).
+  We then say that $(T,\alpha)$ (or, by an abuse of language, $T$) is a \emph{kernel} of the pair $(\beta_1,\beta_2)$ of morphisms.
 \end{definition}
+
+This kernel is evidently determined up to unique isomorphism.
+If $\cat{C}$ is the category of sets, then the above definition is compatible with \cref{definition:A.1.2}.
+Dually, we define the exactness of a diagram
+\[
+  \begin{tikzcd}
+    S
+    & S' \lar["\alpha"]
+    & S''\lar[shift left=1,swap,"\beta_1"] \lar[shift right=1,"\beta_2"]
+  \end{tikzcd}
+\]
+of morphisms in $\cat{C}$;
+we then say that $(S,\alpha)$ is a \emph{cokernel} of the pair $(\beta_1,\beta_2)$ morphisms.
+
+\begin{definition}{2.2}
+\label{definition:A.2.2}
+  A morphism $\alpha\colon S'\to S$ is said to be a \emph{strict epimorphism} if it is an epimorphism and, for every morphism $u\colon S'\to Z$, the following necessary condition is also sufficient for $u$ to factor as $S'\to S\to Z$:
+  for every $S''\in\cat{C}$ and every pair $\beta_1,\beta_2\colon S''\to S$ of morphisms such that $\alpha\beta_1=\alpha\beta_2$, we also have that $u\beta_1=u\beta_2$.
+\end{definition}
+
+If the fibre product $S'\times_S S'$ exists, then it is equivalent to say that the diagram
+\[
+  \begin{tikzcd}
+    S
+    & S' \lar["\alpha"]
+    & S'\times_S S'\lar[shift left=1,swap,"p_1"] \lar[shift right=1,"p_2"]
+  \end{tikzcd}
+\]
+\oldpage{190-07}
+is exact, i.e. that $S$ is a cokernel of the pair $(p_1,p_2)$.
+In any case, a cokernel morphism is a strict epimorphism.
+Note also that, if a strict epimorphism is also a monomorphism, then it is an isomorphism.
+We leave to the reader the task of developing the dual notion of a \emph{strict monomorphism}.
+
+To make the relation between the ideas of $\sh{F}$-descent morphisms and strict epimorphisms more precise, we introduce the following definitions:
+
+\begin{definition}{2.3}
+  A morphism $\alpha\colon S'\to S$ is said to be a \emph{universal epimorphism} (resp. a \emph{strict universal epimorphism}) if, for every $T$ over $S$, the fibre product $T'=S'\times_S T$ exists, and the projection $T'\to T$ is an epimorphism (resp. a strict epimorphism).
+\end{definition}
+
+In very nice categories (such as the category of sets, the category of sets over a topological space, abelian categories, etc.), the four notions of ``epijectivity'' introduced above all coincide;
+they are, however, all distinct in a category such as the category of preschemes, or the category of preschemes over a given non-empty prescheme $S$, even if we restrict to $S$-schemes that are finite over $S$.
+
+\begin{definition}{2.4}
+  A morphism $\alpha\colon S'\to S$ is said to be a \emph{descent morphism} (resp. a \emph{strict descent morphism}) if it is an $\sh{F}$-descent morphism (resp. a strict $\sh{F}$-descent morphism) (cf. \cref{definition:A.1.7}), where $\sh{F}$ denotes the fibred category over $\cat{C}$ of objects of $\cat{C}$ over objects of $\cat{C}$ (\cref{example:A.1.1}).
+\end{definition}
+
+\begin{proposition}{2.1}
+  If $\cat{C}$ has all finite products and (finite) fibre products, then there is an identity between descent morphisms in $\cat{C}$ and strict universal epimorphisms in $\cat{C}$.
+\end{proposition}
+
+
+\subsubsection{}
+\label{A.2.b}
 
 
 %% Bibliography %%
