@@ -99,6 +99,7 @@
 
 \newcommand{\sh}[1]{{\mathscr{#1}}}
 \newcommand{\cat}[1]{{\mathcal{#1}}}
+\newcommand{\fk}[1]{{\mathfrak{#1}}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -557,7 +558,30 @@ The canonical injection $M\to M'$ defines a homomorphism of $A'$-modules $M\otim
 \label{A.3}
 
 Let $A$ be a local ring, and $B$ a local algebra over $A$ whose maximal ideal induces that of $A$.
-We say that $B$ is 
+We say that $B$ is \emph{\'{e}tal\'{e}} over $A$ (instead of ``unramified'', as used elsewhere) if it satisfies the following conditions:
+\begin{enumerate}[(i)]
+  \item $B$ is flat over $A$; and
+  \item $B/\fk{m}B$ is a separable finite extension of $A/\fk{m}=k$ (where $\fk{m}$ denotes the maximal ideal of $A$).
+\end{enumerate}
+If $A$ and $B$ are Noetherian, and $k$ is algebraically closed, then this implies that the homomorphism $\overline{A}\to\overline{B}$ between the completions that extends $A\to B$ is an isomorphism.
+A morphism $f\colon T\to S$ of finite type is said to be \emph{\'{e}tale at $x\in T$}, or $T$ is said to be \emph{\'{e}tal\'{e} over $S$ at $x$}, if $\sh{O}_x$ is \'{e}tal\'{e} over $\sh{O}_{f(x)}$;
+$f$ is said to be \emph{\'{e}tale}, or an \emph{\'{e}talement}, or $T$ is said to be \emph{\'{e}tal\'{e} over $S$}, if $f$ is \'{e}tale at all $x\in T$.
+Note that, if $S$ is locally Noetherian, then the set of points of $T$ where $f$ is \'{e}tale is open, and Zariski's ``main theorem'' allows us to precisely state the structure of $T/S$ in a neighbourhood around such a point (by an equation of well-known type).
+
+If $S$ is a scheme of finite type over the field of complex numbers, then there exists a corresponding analytic space $\overline{S}$ (in the sense of Serre~\cite{5}), except for the fact that $\overline{S}$ can have nilpotent elements in its structure sheaf, which changes nothing essential in \cite{5}.
+We then easily see that $f$ is an \'{e}talement if and only if $\overline{f}\colon\overline{T}\to\overline{S}$ is an \'{e}talement, i.e. if every point of $\overline{T}$ admits a neighbourhood on which $\overline{f}$ induces an isomorphism onto an open subset of $\overline{S}$.
+In particular, to every \emph{\'{e}tale covering} $T$ of $S$ (i.e. every finite \'{e}tale morphism $f\colon T\to S$), there is a corresponding \'{e}tale covering $\overline{T}$ of $\overline{S}$, which is connected if and only if $T$ is connected \cite{5}.
+We can also easily see that, if $T$ and $T'$ are \'{e}tale schemes over $S$, then the natural map
+\[
+  \Hom_S(T,T') \to \Hom_{\overline{S}}(\overline{T},\overline{T}'')
+\]
+is bijective, i.e. the functor $T\mapsto\overline{T}$ from the category of \'{e}tale schemes over $S$ to the category of analytic spaces over $S$ is ``fully faithful'', and thus defines an equivalence between the first category and a subcategory of the second.
+A theorem of Grauert--Remmert~\cite{2} implies that, if $S$ is normal, then we thus obtain an equivalence between the category of \emph{\'{e}tale coverings} of $S$ and the category of (\emph{finite}) \'{e}tale coverings of $S$, i.e. every \'{e}tale covering $\sh{C}$ of $\overline{S}$ is $\overline{S}$-isomorphic to some $\overline{T}$, where $T$ is an \'{e}tale covering of $S$.
+We will show that \emph{the Grauert--Remmert theorem remains true without any normality hypotheses on $S$}.
+First let $S'\to S$ be a finite strict epimorphism, and suppose that
+\oldpage{190-11}
+the theorem has been proven for $S'$; we will show that it holds for $S$.
+
 
 
 %% Bibliography %%
