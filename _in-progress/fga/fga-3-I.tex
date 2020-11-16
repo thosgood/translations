@@ -415,7 +415,7 @@ Dually, we define the exactness of a diagram
   \begin{tikzcd}
     S
     & S' \lar[swap,"\alpha"]
-    & S''\lar[shift left=1,swap,"\beta_1"] \lar[shift right=1,"\beta_2"]
+    & S''\lar[shift left=1,"\beta_1"] \lar[shift right=1,swap,"\beta_2"]
   \end{tikzcd}
 \]
 of morphisms in $\cat{C}$;
@@ -432,7 +432,7 @@ If the fibre product $S'\times_S S'$ exists, then it is equivalent to say that t
   \begin{tikzcd}
     S
     & S' \lar[swap,"\alpha"]
-    & S'\times_S S'\lar[shift left=1,swap,"p_1"] \lar[shift right=1,"p_2"]
+    & S'\times_S S'\lar[shift left=1,"p_1"] \lar[shift right=1,swap,"p_2"]
   \end{tikzcd}
 \]
 \oldpage{190-07}
@@ -624,7 +624,7 @@ in particular, if $K_T$ and $K_{T'}$ are such that $T$ and $T'$ dominate one ano
 Now let $F$ be a (contravariant, to be clear) functor from $\cat{C}$ to an \emph{abelian} category $\cat{C}'$.
 Then
 \[
-  \cat{C}^\bullet(T,F) = F(K_T)
+  C^\bullet(T,F) = F(K_T)
 \]
 is a cosimplicial object of $\cat{C}'$, and thus defines, in a well-known way, a (cochain) complex in $\cat{C}'$, of which we can take the cohomology:
 \[
@@ -698,7 +698,7 @@ further, \emph{this inclusion is the identity if and only if every descent data 
 (This will be the case, in particular, if $\alpha\colon S'\to S$ is a strict $S$-descent morphism).
 
 \begin{remark}
-  The cochain complexes of the form $C^\bullet(T/S,F)$ contain, as a particular case, the majority of standard known complexes (that of \v{C}ech cohomology, of group cohomology, etc.), and play an important role in algebraic geometry (notably in the ``Weil cohomology'' of preschemes).
+  The cochain complexes of the form $C^\bullet(T/S,F)$ contain, as particular cases, the majority of standard known complexes (that of \v{C}ech cohomology, of group cohomology, etc.), and play an important role in algebraic geometry (notably in the ``Weil cohomology'' of preschemes).
 \end{remark}
 
 
