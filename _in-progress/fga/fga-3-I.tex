@@ -108,6 +108,9 @@
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\HH}{H}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Ga}{G_a}
+\DeclareMathOperator{\Gm}{G_m}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -722,6 +725,24 @@ further, \emph{this inclusion is the identity if and only if every descent data 
 
 \begin{example}{2}
   Let $\cat{C}$ be the category of preschemes.
+  We denote by $\Ga$ (for ``additive group'') the contravariant functor from $\cat{C}$ to the category of abelian groups, defined by
+  \[
+    \Ga(X) = \HH^0(X,\sh{O}_X).
+  \]
+  We similarly define the functor $\Gm$ (for ``multiplicative group'') by
+  \[
+    \Gm(X) = \HH^0(X,\sh{O}_X)^\times
+  \]
+  (i.e. the group of invertible elements of the ring $\HH^0(X,\sh{O}_X)$), and, more generally, the functor $\GL(n)$ (for ``linear group of order~$n$'') by
+\oldpage{190-15}
+  \[
+    \GL(n)(X) = \GL(n,\HH^0(X,\sh{O}_X)),
+  \]
+  which is a functor from $\cat{C}$ to the category of (not-necessary-commutative, if $n>1$) groups;
+  for $n=1$ we recover $\Gm$.
+  We can also think of $\GL(n)$ as an automorphism-functor (cf. \cref{A.4.c}) by considering the fibred category $\sh{F}$ with base $\cat{C}$ such that $\sh{F}_X$ is the category of locally free sheaves on $X$, for $X\in\cat{C}$, since then $\GL(n)(X)=\Aut_{\sh{F}_X}(\sh{O}_X^n)$.
+  By \cref{A.4.b}, it follows that, if $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism (cf. \cref{A.2.c}), then $\HH^1(S'/S,\GL(n))$ contains the set of isomorphism classes of locally free sheaves on $S$ whose inverse image on $S'$ is isomorphic to $\sh{O}_{S'}^n$, and this inclusion is an equality if and only if every descent data on $\sh{O}_{S'}^n$ (with respect to $\alpha\colon S'\to S$) is effective.
+  If $S$ is the spectrum of a local ring, then this implies that $\HH^1(S'/S,\GL(n))=(e)$, since every locally free sheaf on $S$ is then trivial.
 \end{example}
 
 
