@@ -106,6 +106,7 @@
 
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\HH}{H}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -138,7 +139,7 @@
 
 \setcounter{footnote}{0}
 
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{2}
 \tableofcontents
 
 
@@ -581,6 +582,58 @@ We will show that \emph{the Grauert--Remmert theorem remains true without any no
 First let $S'\to S$ be a finite strict epimorphism, and suppose that
 \oldpage{190-11}
 the theorem has been proven for $S'$; we will show that it holds for $S$.
+Let $\sh{C}$ be an \'{e}tale covering of $\overline{S}$, and consider its inverse image $\sh{C}'$ over $S'$, which corresponds to a coherent analytic sheaf $\fk{A}'$ of algebras on $S'$ that is the inverse image of a sheaf of algebras $\fk{A}$ on $\overline{S}$ defining $\sh{C}$.
+By hypothesis, on $S'$, $\sh{C}'$ comes from an \'{e}tale covering $T'$ of $S'$, i.e. $\fk{A}'$ comes from a coherent sheaf of algebras $\sh{A}'$ on $S'$.
+Also, $\fk{A}'$ is endowed with a canonical descent data with respect to $\overline{S}'\to\overline{S}$, i.e. with an isomorphism between its two inverse images on $\overline{S}'\times_{\overline{S}}\overline{S}'=\overline{S'\times_SS'}$ (satisfying conditions (i) and (ii)), and this isomorphism comes from, by what has already been said, an isomorphism between the corresponding algebraic sheaves, i.e. from a descent data on $\sh{A}'$ with respect to $S'\to S$.
+We can easily show that the latter is effective (since it is effective on $\fk{A}'$, and the effectiveness of a descent data, as described explicitly in the previous section, is something that can be checked locally on the \emph{completions} of the modules that are involved).
+From this, we obtain a coherent sheaf of algebras $\sh{A}$ on $S$ that defines a covering $T$ of $S$, and this is the desired covering.
+The above result then obviously holds true if $S'\to S$ is just a composition of a finite number of finite strict epimorphisms, i.e. is just an arbitrary finite epimorphism (by the factorisation result stated in \cref{A.2}).
+It thus follows that the Grauert--Remmert theorem holds true if $S$ is a \emph{reduced} scheme, i.e. such that $\sh{O}_S$ has no nilpotent elements, as we can see by introducing its normalisation $S'$.
+We can easily pass to the general case.
+
+A completely analogous argument, again using the factorisation result for finite strict epimorphisms, and the ``formal'' nature of the effectiveness of descent data, allows us to prove the following result:
+let $S$ be a locally Noetherian prescheme, and let $S'\to S$ be a finite, surjective, and radicial morphism (or, equivalently, a morphism of finite type such that, for every $T$ over $S$, the morphism $T'=S'\times_S T\to T$ is a homeomorphism, which we can also express by saying that $S'\to S$ is a \emph{universal homeomorphism}).
+For every $T$ \'{e}tal\'{e} over $S$, consider its inverse image $T'=T\times_S S'$, which is \'{e}tal\'{e} over $S'$.
+\emph{Then the functor $T\mapsto T'$ is an equivalence between the category of preschemes $T$ that are \'{e}tal\'{e} over $S$ and the category of preschemes $T'$ that are \'{e}tal\'{e} over $S'$.}
+(We use the bijectivity of
+\[
+  \Hom_S(T_1,T_2) \to \Hom_{S'}(T'_1,T'_2)
+\]
+for preschemes $T_1$ and $T_2$ that are \'{e}tal\'{e} over $S$, which can be proven directly without difficulty. We also use the fact that the stated theorem is true if $S'=(S,\sh{O}_S/\sh{J})$,
+\oldpage{190-12}
+where $\sh{J}$ is a nilpotent coherent sheaf of ideals of $\sh{O}_S$, cf. \cite[Lemma~6]{4}).
+Note also that we do not suppose here that the $T$ in question are finite over $S$.
+This result implies, in particular, that the morphism $S'\to S$ induces an isomorphism between the fundamental group of $S'$ and the fundamental group of $S$ (``\emph{topological invariance of the fundamental group of a prescheme}'').
+
+
+\subsection{Relations to \texorpdfstring{$1$}{1}-cohomology}
+\label{A.4}
+
+\subsubsection{}
+\label{A.4.a}
+
+Let $\cat{C}$ be a category such that the product of any two objects always exists, and let $T\in\cat{C}$.
+For every finite set $I\neq\varnothing$, we can consider $T^I$, and so we obtain a covariant functor from the category of non-empty finite sets to the category $\cat{C}$, i.e. what we can call a \emph{simplicial object} of $\cat{C}$, denoted by $K_T$.
+This object depends covariantly on $T$;
+also, \emph{if $u$ and $v$ are morphisms $T\to T'$, then the corresponding morphisms $K_T\to K_{T}$ are homotopic}.
+We say that $T$ \emph{dominates} $T'$ if $\Hom(T,T')\neq\varnothing$, and this gives an (upward) directed preorder on $\cat{C}$.
+It follows from the above that, if $T$ dominates $T'$, then there exists a canonical class (up to homotopy) of homomorphisms of simplicial objects $K_T\to K_{T'}$;
+in particular, if $K_T$ and $K_{T'}$ are such that $T$ and $T'$ dominate one another, then $K_T$ and $K_{T'}$ are homotopically equivalent.
+Now let $F$ be a (contravariant, to be clear) functor from $\cat{C}$ to an \emph{abelian} category $\cat{C}'$.
+Then
+\[
+  \cat{C}^\bullet(T,F) = F(K_T)
+\]
+is a cosimplicial object of $\cat{C}'$, and thus defines, in a well-known way, a (cochain) complex in $\cat{C}'$, of which we can take the cohomology:
+\[
+  \HH^\bullet(T,F)
+  = \HH^\bullet(C^\bullet(T,F))
+  = \HH^\bullet(F(K_T))
+\]
+(we may write a subscript ``$\cat{C}$'' on the $\HH^\bullet$ if there is any possibility for confusion).
+This is a cohomological functor in $F$, of which the variance for $T$ varying follows from what has already been said about the $K_T$;
+more precisely, for fixed $F$ and varying $T$ in $\cat{C}$ (preordered by the domination relation), the $\HH^\bullet(T,F)$ form an inductive system of graded objects of $\cat{C}'$;
+in particular, if $T$ and $T'$ are such that each one dominates the other, then $\HH^\bullet(T,F)$ and $\HH^\bullet(T',F)$ are canonically isomorphic.
 
 
 
