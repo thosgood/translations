@@ -106,6 +106,7 @@
 
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\HH}{H}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
@@ -674,6 +675,54 @@ Let $\xi,\eta\in\sh{F}_S$, and, for all $S'$ over $S$, let
   F_{\xi,\eta}(S') = \Hom(\xi\times_S S', \eta\times_S S').
 \]
 Then $F_{\xi,\eta}$ is a contravariant functor from $\cat{C}_S$ to the category of sets.
+With this setup, \emph{saying that the augmentation morphism}
+\[
+  F_{\xi,\eta}(S) \to \HH^0(S'/S,F_{\xi,\eta})
+\]
+\emph{is an isomorphism for every pair of elements $\xi,\eta\in\sh{F}_S$ implies that $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism} (\cref{definition:A.1.7}).
+
+
+\subsubsection{}
+\label{A.4.c}
+
+Similarly, for $\xi\in\sh{F}_S$ and any object $S'$ of $\cat{C}$ over
+\[
+  G_\xi(S') = \Aut(\xi\times_S S'),
+\]
+we thus define a contravariant functor $G_\xi$ from $\cat{C}_S$ to the category of
+\oldpage{190-14}
+groups.
+With this setup, we claim that \emph{$Z^1(S'/S,G)$ is canonically identified with the set of descent data on $\xi'=\xi\times_S S'$ with respect to $S'\to S$} (\cref{definition:A.1.6}), and that \emph{$\HH^1(S'/S,G)$ can be identified with the set of isomorphism classes of objects of $\sh{F}_{S'}$ endowed with a descent data relative to $\alpha\colon S'\to S$ that are isomorphic, as objects of $\sh{F}_{S'}$, to $\xi'=\xi\times_S S'$.}
+Then, \emph{if $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism} (cf. \cref{A.4.b}), \emph{then $\HH^1(S'/S,G)$ contains as a subset the set of isomorphism classes of objects $\eta$ of $\sh{F}_S$ such that $\eta\times_S S'$ is isomorphic (in $\sh{F}_{S'}$) to $\xi\times_S S'$};
+further, \emph{this inclusion is the identity if and only if every descent data on $\xi'=\xi\times_S S'$ with respect to $\alpha\colon S'\to S$ is effective}.
+(This will be the case, in particular, if $\alpha\colon S'\to S$ is a strict $S$-descent morphism).
+
+\begin{remark}
+  The cochain complexes of the form $C^\bullet(T/S,F)$ contain, as a particular case, the majority of standard known complexes (that of \v{C}ech cohomology, of group cohomology, etc.), and play an important role in algebraic geometry (notably in the ``Weil cohomology'' of preschemes).
+\end{remark}
+
+
+\subsubsection{}
+\label{A.4.d}
+
+\begin{example}{1}
+  Let $S'$ be an object over $S\in\cat{C}$, and let $\Gamma$ be a group of automorphisms of $S'$ such that $S'$ is ``formally $\Gamma$-principal over $S$'', i.e. such that the natural morphism
+  \[
+    \Gamma\times S' \to S'\times_S S'
+  \]
+  (where $\Gamma\times S'$ denotes the direct sum of $\Gamma$ copies of $S'$) is an isomorphism.
+  (We suppose that all the necessary direct sums exist in $\cat{C}$).
+  Let $F$ be a contravariant functor from $\cat{C}$ to the category of abelian groups.
+  Then \emph{$C^\bullet(S'/S,F)$ is canonically isomorphic to the simplicial group $C^\bullet(\Gamma,F(S'))$ of standard homogeneous cochains, and so $\HH^\bullet(S'/S,F)$ is canonically isomorphic to $\HH^\bullet(\Gamma,F(S')$}.
+\end{example}
+
+
+\subsubsection{}
+\label{A.4.e}
+
+\begin{example}{2}
+  Let $\cat{C}$ be the category of preschemes.
+\end{example}
 
 
 
