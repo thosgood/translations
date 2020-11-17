@@ -143,6 +143,8 @@ In the first series of the Séminaire Bourbaki, H. Cartan gave three talks conce
 
 ### Volume 4 (1958--59), "Variétés de Picard"
 
+Talks that are struck through are ones that I don't intend to translate.
+
 1. "Faisceaux quasi-cohérents" (P. Gabriel).
   <br/>
   [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-claude-chevalley/SCC-SCC-4-1.tex)
@@ -174,9 +176,9 @@ In the first series of the Séminaire Bourbaki, H. Cartan gave three talks conce
 
 ### Volume 9 (1956--57), "Quelques questions de topologie"
 
-Note that we have included any changes made in the Errata.
+Copies of talks 5 and 6 (by R. Godement) are non-existent. Talks that are struck through are ones that I don't intend to translate.
 
-1. "Sur la théorie de Kan" (H. Cartan).
+1. ~~"Sur la théorie de Kan" (H. Cartan).~~
 
 2. "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
   <br/>
@@ -186,13 +188,13 @@ Note that we have included any changes made in the Errata.
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
 
-<!-- 3. "Sur le foncteur Hom(X,Y) en théorie simpliciale" (H. Cartan).
+3. ~~"Sur le foncteur Hom(X,Y) en théorie simpliciale" (H. Cartan).~~
 
-4. "Théorie des fibrés principaux" (H. Cartan).
+4. ~~"Théorie des fibrés principaux" (H. Cartan).~~
 
-5. "Les singularités des applications différentiables" (A. Haefliger).
+7. "Les singularités des applications différentiables" (A. Haefliger).
 
-6. "Un théorème de Thom sur les singularités des applications différentiables" (A. Haefliger and A. Kosinski) -->
+8. "Un théorème de Thom sur les singularités des applications différentiables" (A. Haefliger and A. Kosinski)
 
 
 
@@ -210,7 +212,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355)
 
-- **(13/29)** Grothendieck, A. "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". (FGA 3.I)
+- **(16/29)** Grothendieck, A. "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". (FGA 3.I)
   <br/>
   _Séminaire Bourbaki_ **12** (1959--60), Talk no. 190.
   <br/>
