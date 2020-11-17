@@ -262,7 +262,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
 
 # Wish list
 
-Translations which I have yet to start, but one day intend to, are listed here, so that I don't forget about them.
+Translations which I have yet to start, but one day intend to, are listed here, so that I don't forget about them. Feel free to contact me with any suggestions!
 
 - _Séminaire Henri Cartan_ **13** (1960--61), "Familles d'espaces complexes et fondements de la géométrie analytique". <http://www.numdam.org/volume/SHC_1960-1961__13/>
 
