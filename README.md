@@ -143,9 +143,7 @@ In the first series of the Séminaire Bourbaki, H. Cartan gave three talks conce
 
 ### Volume 4 (1958--59), "Variétés de Picard"
 
-Talks that are struck through are ones that I don't intend to translate.
-
-1. "Faisceaux quasi-cohérents" (P. Gabriel).
+- "Faisceaux quasi-cohérents" (P. Gabriel), Talk no. 1.
   <br/>
   [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-claude-chevalley/SCC-SCC-4-1.tex)
   |
@@ -153,7 +151,7 @@ Talks that are struck through are ones that I don't intend to translate.
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A1_0/)
 
-2. "Le théorème de Serre" (P. Gabriel).
+- "Le théorème de Serre" (P. Gabriel), Talk no. 2.
   <br/>
   [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-claude-chevalley/SCC-4-2.tex)
   |
@@ -161,9 +159,7 @@ Talks that are struck through are ones that I don't intend to translate.
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A2_0/)
 
-3. ~~"Les foncteurs dérivés des foncteurs classiques" (P. Gabriel).~~
-
-4. "Diviseurs en géométrie algébrique" (C.S. Seshadri).
+- "Diviseurs en géométrie algébrique" (C.S. Seshadri), Talk no. 4.
   <br/>
   [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-claude-chevalley/SCC-4-4.tex)
   |
@@ -176,11 +172,9 @@ Talks that are struck through are ones that I don't intend to translate.
 
 ### Volume 9 (1956--57), "Quelques questions de topologie"
 
-Copies of talks 5 and 6 (by R. Godement) are non-existent. Talks that are struck through are ones that I don't intend to translate.
+Note that copies of talks 5 and 6 (by R. Godement) are non-existent.
 
-1. ~~"Sur la théorie de Kan" (H. Cartan).~~
-
-2. "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck).
+- "Sur les faisceaux algébriques et les faisceaux analytiques cohérents" (A. Grothendieck), Talk no. 2.
   <br/>
   [<img alt="code-icon" src="file-code-regular.svg" height="14px"/> TeX](https://github.com/thosgood/translations/tree/master/seminars/seminaire-henri-cartan/SHC-9-2.tex)
   |
@@ -188,17 +182,9 @@ Copies of talks 5 and 6 (by R. Godement) are non-existent. Talks that are struck
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SHC_1956-1957__9__A2_0/)
 
-3. ~~"Sur le foncteur Hom(X,Y) en théorie simpliciale" (H. Cartan).~~
+- "Les singularités des applications différentiables" (A. Haefliger), Talk no. 7. <!--http://www.numdam.org/item/?id=SHC_1956-1957__9__A5_0-->
 
-4. ~~"Théorie des fibrés principaux" (H. Cartan).~~
-
-5. \[non-existent\]
-
-6. \[non-existent\]
-
-7. "Les singularités des applications différentiables" (A. Haefliger). <!--http://www.numdam.org/item/?id=SHC_1956-1957__9__A5_0-->
-
-8. "Un théorème de Thom sur les singularités des applications différentiables" (A. Haefliger and A. Kosinski) <!--http://www.numdam.org/item/?id=SHC_1956-1957__9__A6_0-->
+- "Un théorème de Thom sur les singularités des applications différentiables" (A. Haefliger and A. Kosinski), Talk no. 8. <!--http://www.numdam.org/item/?id=SHC_1956-1957__9__A6_0-->
 
 
 ---
