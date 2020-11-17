@@ -159,7 +159,7 @@ In the first series of the Séminaire Bourbaki, H. Cartan gave three talks conce
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://www.numdam.org/item/SCC_1958-1959__4__A2_0/)
 
-3. "Les foncteurs dérivés des foncteurs classiques" (P. Gabriel).
+3. ~~"Les foncteurs dérivés des foncteurs classiques" (P. Gabriel).~~
 
 4. "Diviseurs en géométrie algébrique" (C.S. Seshadri).
   <br/>
@@ -265,5 +265,11 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   [<img alt="pdf-icon" src="file-pdf-regular.svg" height="14px"/> live PDF](https://latexonline.cc/compile?git=https://github.com/thosgood/translations&target=_in-progress/MA-32-1888-342.tex)
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](http://eudml.org/doc/157385)
+
+
+
+# Wish list
+
+- _Séminaire Henri Cartan_ **13** (1960--61), "Familles d'espaces complexes et fondements de la géométrie analytique". <http://www.numdam.org/volume/SHC_1960-1961__13/>
 
 <!-- icons from fontawesome.com under [their licence](https://fontawesome.com/license). -->
