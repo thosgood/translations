@@ -111,6 +111,7 @@
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\Ga}{G_a}
 \DeclareMathOperator{\Gm}{G_m}
+\DeclareMathOperator{\Spec}{Spec}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -151,7 +152,7 @@
 
 \subsubsection*{}
 
-\emph{[Trans.] We have made changes throughout the text following the errata (\emph{S\'{e}minaire Bourbaki} \textbf{14}, 1961--62, Compl\'{e}ment), and preface them with ``[Comp.]''.}
+\emph{[Trans.] We have made changes throughout the text following the errata (\emph{S\'{e}minaire Bourbaki} \textbf{14}, 1961--62, Compl\'{e}ment); we preface them with ``[Comp.]''.}
 \medskip
 
 \textbf{\todo(errata)}
@@ -189,7 +190,7 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
 \label{A.1.a}
 
 \begin{definition}{1.1}
-  A \emph{fibred category $\sh{F}$ with base $\cat{C}$} consists of
+  A \emph{fibred category $\sh{F}$ with base $\cat{C}$} (or \emph{over $\cat{C}$}) consists of
   \begin{itemize}
     \item a category $\cat{C}$
     \item for every $X\in\cat{C}$, a category $\sh{F}_X$
@@ -709,6 +710,7 @@ further, \emph{this inclusion is the identity if and only if every descent data 
 \label{A.4.d}
 
 \begin{example}{1}
+\label{example:A.4.d}
   Let $S'$ be an object over $S\in\cat{C}$, and let $\Gamma$ be a group of automorphisms of $S'$ such that $S'$ is ``formally $\Gamma$-principal over $S$'', i.e. such that the natural morphism
   \[
     \Gamma\times S' \to S'\times_S S'
@@ -743,7 +745,56 @@ further, \emph{this inclusion is the identity if and only if every descent data 
   We can also think of $\GL(n)$ as an automorphism-functor (cf. \cref{A.4.c}) by considering the fibred category $\sh{F}$ with base $\cat{C}$ such that $\sh{F}_X$ is the category of locally free sheaves on $X$, for $X\in\cat{C}$, since then $\GL(n)(X)=\Aut_{\sh{F}_X}(\sh{O}_X^n)$.
   By \cref{A.4.b}, it follows that, if $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism (cf. \cref{A.2.c}), then $\HH^1(S'/S,\GL(n))$ contains the set of isomorphism classes of locally free sheaves on $S$ whose inverse image on $S'$ is isomorphic to $\sh{O}_{S'}^n$, and this inclusion is an equality if and only if every descent data on $\sh{O}_{S'}^n$ (with respect to $\alpha\colon S'\to S$) is effective.
   If $S$ is the spectrum of a local ring, then this implies that $\HH^1(S'/S,\GL(n))=(e)$, since every locally free sheaf on $S$ is then trivial.
+
+  We note that the following conditions concerning a morphism $\alpha\colon S'\to S$ are equivalent:
+  \begin{enumerate}[(i)]
+    \item The augmentation homomorphism $\HH^0(S,\sh{O}_S) = \Ga(S)\to\HH^0(S'/S,\Ga)$ is an isomorphism.
+    \item $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism (where $\sh{F}$ is the fibred category over $\cat{C}$ described above).
+    \item $\alpha\colon S'\to S$ is a strict epimorphism (cf. \cref{A.2.c}).
+  \end{enumerate}
+
+  Now suppose that $S=\Spec(A)$ and $S'=\Spec(A')$;
+  then
+  \[
+    C^n(S'/S,\Ga)
+    = C^n(A'/A,\Ga)
+    = \underbrace{A'\otimes_A A'\otimes_A\ldots\otimes_A A'}_{\mbox{$n+1$ copies of $A'$}}
+  \]
+  with the coboundary operator $C^n(A'/A,\Ga)\to C^{n+1}(A'/A,\Ga)$ being the alternating sum of the face operators
+  \[
+    \partial_i(x_0\otimes x_1\otimes\ldots\otimes x_n)
+    = x_0\otimes\ldots\otimes x_{i-1}\otimes1_{A'}\otimes x_i\otimes\ldots\otimes x_n.
+  \]
+  Similarly, $C^n(S'/S,\Gm)=C^n(A'/A,\Gm)$ can be identified with $(\bigotimes_A^{n+1}A')^\times$, with the simplicial operations for $C^\bullet(A'/A,\Gm)$ being induced by those in $C^\bullet(S'/S,\Ga)$.
+  We can write down the simplicial operations for $C^\bullet(A'/A,\GL(n))$ in the same explicit manner.
+  \emph{In all the cases known to the speaker, $\HH^i(A'/A,\Ga)=0$ for $i>0$, and, if $A$ is local, then $\HH^1(A'/A,\Gm)=0$, and, more generally, $\HH^1(A'/A,\GL(n))=(e)$} (if $S'\to S$ is an $\sh{F}$-descent morphisms, i.e. if the diagram $A\to A'\rightrightarrows A'\otimes_A A'$ is exact, then compare this with \cref{A.2.c}).
+  We note that \emph{Hilbert's ``Theorem 90'' is exactly the fact that}
+\oldpage{190-16}
+  \emph{$\HH^1(S'/S,\Gm)=0$ if $A$ is a field and $A'$ is a finite Galois extension of $A$} (cf. \cref{example:A.4.d}), \emph{and we can also express it by saying that, in the case in question, $S'\to S$ is a strict descent morphisms for the fibred category of locally free sheaves of rank~$1$.}
+  This latter statement is the one that is most suitable to generalise Hilbert's theorem, by varying the hypotheses both on the morphism $S'\to S$ and on the quasi-coherent sheaves in question.
+
+  Finally, we note that, for a local \emph{Artinian} $A$ with maximal ideal $\fk{m}$, and an $A$-algebra $A'$ (where we denote, for any integer $k>0$, the ring $A/\fk{m}^{k+1}$ (resp. $A'/\fk{m}^{k+1}A'$) by $A_k$ (resp. $A'_k$)), the following properties are equivalent:
+  \begin{enumerate}[(i)]
+    \item $\HH^1(A'_k/A_k,\Ga)=0$ for all $k$.
+    \item $\HH^1(A'_k/A_k,\Gm)=0$ for all $k$.
+    \item $\HH^1(A'_k/A_k,\GL(n))=(e)$ for all $k$ and all $n$.
+  \end{enumerate}
+
+  If $S'\to S$ is a strict epimorphism, then the above conditions imply that it is a \emph{strict} descent morphism for free modules (not necessarily of finite type) over $A'$.
 \end{example}
+
+\begin{remark}
+  The definition of the groups $\HH^i(S'/S,\Gm)$ in the case where $S$ (resp. $S'$) is a scheme over the field $A$ (resp. $A'$) is due to Amitsur.
+  The group $\HH^2(S'/S,\Gm)$ is particularly interesting as a ``global'' variant of the Brauer group, for which we can refer to \cite[chap.~VII]{1}.
+\end{remark}
+
+
+
+\section{Descent by faithfully flat morphisms}
+\label{B}
+
+\subsection{Statement of the descent theorems}
+\label{B.1}
 
 
 
