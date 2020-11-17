@@ -192,9 +192,13 @@ Copies of talks 5 and 6 (by R. Godement) are non-existent. Talks that are struck
 
 4. ~~"Théorie des fibrés principaux" (H. Cartan).~~
 
-7. "Les singularités des applications différentiables" (A. Haefliger).
+5. \[non-existent\]
 
-8. "Un théorème de Thom sur les singularités des applications différentiables" (A. Haefliger and A. Kosinski)
+6. \[non-existent\]
+
+7. "Les singularités des applications différentiables" (A. Haefliger). <!--http://www.numdam.org/item/?id=SHC_1956-1957__9__A5_0-->
+
+8. "Un théorème de Thom sur les singularités des applications différentiables" (A. Haefliger and A. Kosinski) <!--http://www.numdam.org/item/?id=SHC_1956-1957__9__A6_0-->
 
 
 
