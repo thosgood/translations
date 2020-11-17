@@ -201,6 +201,8 @@ Copies of talks 5 and 6 (by R. Godement) are non-existent. Talks that are struck
 8. "Un théorème de Thom sur les singularités des applications différentiables" (A. Haefliger and A. Kosinski) <!--http://www.numdam.org/item/?id=SHC_1956-1957__9__A6_0-->
 
 
+---
+
 
 # In progress
 
