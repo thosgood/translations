@@ -202,7 +202,7 @@ Sometimes a paper takes "a while" to translate, but I put it here so that people
   |
   [<img alt="file-icon" src="file-alt-regular.svg" height="14px"/> original](https://publications.ias.edu/node/355)
 
-- **(18/29)** Grothendieck, A. "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". (FGA 3.I)
+- **(20/29)** Grothendieck, A. "Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats". (FGA 3.I)
   <br/>
   _Séminaire Bourbaki_ **12** (1959--60), Talk no. 190.
   <br/>

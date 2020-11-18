@@ -923,6 +923,7 @@ This follows easily from \cref{theorem:B.1(1)} and \cref{corollary:B.1(1)}, if w
 in the general case, we need to combine \cref{theorem:B.1(1)} with the following result:
 
 \begin{lemma}{1.2}
+\label{lemma:B.1.2}
   Let $\alpha\colon S'\to S$ be a faithfully flat and quasi-compact morphism.
   Then $S$ can be identified with a \emph{topological quotient space of $S'$}, i.e. every subset $U$ of $S$ such that $\alpha^{-1}(U)$ is open, is open.
 \end{lemma}
@@ -944,7 +945,7 @@ In summary:
   If $\alpha$ is finite, then it is a strict descent morphism with respect to the fibred category of quasi-projective (or projective) preschemes over preschemes.
 \end{theorem}
 
-\begin{remark*}
+\begin{remark}
   I do not know if, in the second claim above, the hypothesis that $\alpha$ be \emph{finite} is indeed necessary;
   we can prove that, in any case, we can ``formally'' replace it by the following, seemingly weaker, hypothesis:
   \emph{for every point of $S$ there exists an open neighbourhood $U$, a finite and faithfully flat $U'$ over $U$, and an $S$-morphism from $U'$ to $S'$}.
@@ -953,13 +954,27 @@ In summary:
   In these two cases, the speaker also does not know the answer to the following question:
   let $X$ be an $S$-scheme such that $X'=X\times_S S'$ is projective over $S'$;
   is it then true that $X$ is projective over $S$?
-\end{remark*}
+\end{remark}
 
 
 \subsection{Application to the descent of certain properties of morphisms}
 \label{B.2}
 
 Let $P$ be a class of morphisms of preschemes.
+Let $\alpha\colon S\to S'$ be a morphism of preschemes, and let $f\colon X\to Y$ be a morphism of $S$-preschemes, with $f'\colon X'\to Y'$ the inverse image of $f$ under $\alpha$.
+We can then ask if the relation ``$f'\in P$'' implies that ``$f\in P$''.
+It appears that the answer is affirmative in many important cases, if we suppose that $\alpha$ is \emph{faithfully flat} and \emph{quasi-compact} (this latter hypothesis being sometimes overly strong).
+We can see this directly without difficulty if $P$ is the class of surjective (resp. radicial) morphisms (with these two cases following from the surjectivity of $\alpha$), or flat (resp. faithfully flat, resp. simple) morphisms (with these three cases following from the faithful flatness of $\alpha$), or morphisms of finite type.
+Using \cref{theorem:B.1(1),theorem:B.1(2),lemma:B.1.2}, we see that it is also true if $P$ is one of the following classes:
+isomorphisms, open immersions, closed immersions, immersions (if $f$ is of finite type, and $Y$ is locally Noetherian), affine morphisms, finite morphisms, quasi-finite morphisms, open morphisms, closed morphisms, homeomorphisms, separated morphisms,
+\oldpage{190-21}
+or proper morphisms.
+The only important case not covered here is that of projective or quasi-projective morphisms, which has already been discussed in the remark in \hyperref[B.1]{(B.1)}.
+
+
+\subsection{Decent by finite faithfully flat morphisms}
+\label{B.3}
+
 
 
 
