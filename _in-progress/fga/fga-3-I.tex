@@ -77,6 +77,7 @@
   {\endinnercustomcorollary}
 
 \newtheorem*{corollary*}{Corollary}
+\newtheorem*{lemma*}{Lemma}
 
 
 \theoremstyle{definition}
@@ -160,6 +161,9 @@
 
 \textbf{\todo(errata)}
 
+[Comp.] For various details concerning the theory of descent, see also SGA~VI, VII, and VIII.
+\medskip
+
 \oldpage{190-01}
 From a technical point of view, the current talk, and those that will follow, can be considered as variations on the celebrated ``Theorem~90'' of Hilbert.
 The introduction of the method of descent in algebraic geometry seems to be due to A.~Weil, under the name of ``descent of the base field''.
@@ -167,7 +171,7 @@ Weil considered only the case of separable finite field extensions.
 The case of radicial extensions of height~$1$ was then studied by P.~Cartier.
 Lacking the language of schemes, and, more particularly, lacking nilpotent elements in the rings that were under consideration, the essential identity between these two cases could not have been formulated by Cartier.
 
-Currently, it seems that the general technique of descent that will be explained (combined with, when necessary, the fundamental theorems of ``formal geometry'', cf. \cite{3}) is at the base of the majority of existence theorems in algebraic geometry.
+Currently, it seems that the general technique of descent that will be explained (combined with, when necessary, the fundamental theorems of ``formal geometry'', cf. \cite{3}) is at the base of the majority of existence theorems in algebraic geometry.\footnote{[Comp.] It now seems excessive to say that the technique of descent is ``at the base of the majority of existence theorems in algebraic geometry''. This is true to a large extent for the non-projective techniques that are the object of study of the first two talks of this current series (i.e. ``Techniques of descent and existence theorems in algebraic geometry''), but not for the projective techniques (talks IV, V, and VI).}
 It is worth noting as well that this aforementioned technique of descent can certainly be transported to ``analytic geometry'', and we can hope that, in the not-too-distant future, the specialists will know how to prove the ``analytic'' analogues of the existence theorems in formal geometry that will be given in talk~II.
 In any case, the recent work of Kodaira--Spencer, whose methods seem unfit for defining and studying ``varieties of modules'' in the neighbourhood of their singular points, show reasonably clearly the necessity of methods that are closer to the theory of schemes (which should naturally complement transcendental techniques).
 
@@ -359,7 +363,7 @@ We then have two immediate necessary conditions for a gluing data $\varphi\colon
   ``giving an object of $\sh{F}_S$ is equivalent to giving an object of $\sh{F}_{S'}$ endowed with a descent data''.
 \end{definition}
 
-Note that, if an $\sh{F}$-descent morphism $\alpha\colon S'\to S$ admits a \emph{section} $s\colon S\to S'$ (i.e. a morphism $s$ such that $\alpha s=\id_S$), then it is a strict $\sh{F}$-descent morphism:
+Note that, if an $\sh{F}$-descent morphism\footnote{[Comp.] It is useless to assume here that $\alpha$ is an $\sh{F}$-descent morphism.} $\alpha\colon S'\to S$ admits a \emph{section} $s\colon S\to S'$ (i.e. a morphism $s$ such that $\alpha s=\id_S$), then it is a strict $\sh{F}$-descent morphism:
 if $\xi'\in\sh{F}_{S'}$ is endowed with descent data with respect to $\alpha$, then ``it comes from'' $\xi=s^*(\xi')$.
 
 
@@ -955,6 +959,11 @@ In summary:
   In these two cases, the speaker also does not know the answer to the following question:
   let $X$ be an $S$-scheme such that $X'=X\times_S S'$ is projective over $S'$;
   is it then true that $X$ is projective over $S$?
+
+  [Comp.]
+  A morphism $S'\to S$ that is quasi-finite, \'{e}tale, surjective, or a morphism of the form $\Spec(\overline{A})\to\Spec(A)$, is not always a strict descent morphism, even if $A$ is the local ring of an algebraic curve over an algebraically closed field $k$ and $S=\Spec(A)$.
+  We can thus find a proper simple morphism $f\colon X\to S$ that makes $X$ into a principal $E$-bundle over $S$, with $E$ an elliptic curve, such that $f'\colon X'\to S'$ is projective, but $f$ is not projective.
+  So this is also an example of a homogeneous principal bundle that is \emph{non-isotrivial} under an abelian scheme.
 \end{remark}
 
 
@@ -1018,6 +1027,105 @@ If we have a pairing of quasi-coherent sheaves on $S'$:
 (that we can think of as a pairing of sheaves of $\sh{A}'$-modules on $S$),
 \oldpage{190-22}
 and gluing data on the $\sh{F}'_i$ defined by homomorphisms $T_i\colon\sh{U}\to\shHom_{\sh{O}_S}(\sh{F}'_i,\sh{F}'_i)$ (for $i=1,2,3$), then these data are \emph{equivalent to the given pairing}, in the evident meaning of the phrase, if and only if the following condition is satisfied:
+
+For every section $\xi$ of $\sh{U}$ over an open subset, and denoting by $\Delta\xi=\sum\xi'_i\otimes_{\sh{A}'}\xi''_i$ the section of $\sh{U}\otimes_{\sh{A}'}\sh{U}$ (where $\sh{U}$ is considered as an $\sh{A}'$-module with its left structure) defined by the formula
+\[
+  \xi\cdot(fg) = \sum_i\xi'_i(f)\xi''_i(g)
+\]
+(where $f$ and $g$ are sections of $\sh{A}'$ over a smaller open subset), we have the formula
+\[
+\label{equation:B.3.4}
+  T_\xi^{(3)}(x\cdot y) = \sum_i T_{\xi'_i}^{(1)}x\cdot T_{\xi''_i}^{(2)}y
+\tag{3.4}
+\]
+for every pair $(x,y)$ of sections of $\sh{A}'$ over a smaller subset.
+(We can express this property by saying that the homomorphisms $T^{(i)}$ are \emph{compatible with the diagonal map of $\sh{U}$}, with respect to the given pair).
+In particular, equations~\cref{equation:B.3.1} to \cref{equation:B.3.4} allow us to understand, in terms of representations of algebras via diagonal maps, the descent data on a quasi-coherent sheaf of \emph{algebras} on $S'$, and thus also (by restricting to commutative algebras) the descent data on an affine $S'$-scheme.
+
+From here, we obtain an analogous interpretation of descent data on an arbitrary $S'$-prescheme $X'$:
+the data of such an $X'$ is equivalent to the data of a prescheme $X'$ \emph{over $S$} endowed with a homomorphism of $\sh{O}_S$-algebras
+\[
+  \sh{A}'\to\sh{O}_{X'},
+\]
+and a descent data on $X'$ is equivalent to the data of a sheaf homomorphism
+\[
+  \sh{U}
+  \to \shHom_{h^{-1}(\sh{O}_S)}(\sh{O}_{X'},\sh{O}_{X'})
+\]
+that is compatible with the morphism $h\colon X'\to S'$ and that satisfies the conditions analogous to equations~\cref{equation:B.3.1} to \cref{equation:B.3.4} above.
+
+\begin{example}{1}
+  (\emph{``Weil''}).
+  Suppose that $S'/S$ is a \emph{Galois \'{e}tale covering} with Galois group $\Gamma$ (cf. \hyperref[A.3]{(A.3)} and \hyperref[A.4.d]{(A.4.d)}).
+  Then a descent data on a quasi-coherent sheaf $\sh{F}'$ on $S'$ (resp. on an $S'$-prescheme $X'$) is equivalent to the data of a representation of $\Gamma$ by automorphisms of $(S',\sh{F}')$ (resp. of $(S',X')$) that is compatible with the action of $\Gamma$ on $S'$.
+  This result
+\oldpage{190-23}
+  is ``formal'', i.e. it can be proven in terms of categories, but, from the point of view of this section, we also obtain the explicit structure of $\sh{U}$ (endowed with its ring structure, the ring homomorphism $\sh{A}'\to\sh{U}$, and the diagonal map), which is completely known thanks to the following result:
+  \emph{$\sh{U}$ admits, as a left $A'$-module, a basis given by the sections of $\sh{U}$ that correspond to elements of $\Gamma$}.
+\end{example}
+
+\begin{example}{2}
+  (\emph{``Cartier''}).
+  Let $p$ be a prime number, and suppose that $p\sh{O}_S=0$ (i.e. that $\sh{O}_S$ is of \emph{characteristic~$p$}), that \todo (i.e. that $S'/S$ is \emph{radicial of height~$1$}), and that the sheaf of algebras $\sh{A}'$ over $\sh{A}$ \emph{locally admits a $p$-basis} (i.e. a family $(x_i)$ of sections such that $\sh{A}'$ is generated as an algebra by the $x_i$ under the sole condition that $x_i^p=0$).
+  We suppose that the set of the $i$ is finite, of cardinality~$n$.
+  Let $\fk{C}$ be the sheaf of $A$-derivations of $A'$, which is a locally free sheaf of rank~$n$ of $A'$-modules, and, furthermore, a sheaf of Lie $p$-algebras over $\sh{A}$ (but not over $\sh{A}'$) that satisfies the following condition:
+  \[
+  \label{equation:B.3.5}
+    [X,fY] = X(f)Y + f[X,Y].
+  \tag{3.5}
+  \]
+\end{example}
+
+\begin{lemma*}
+  $\sh{U}=\shHom_{\sh{O}_S}(\sh{A}',\sh{A}')$ is generated, as an $\sh{O}_S$-algebra endowed with an algebra homomorphism $\sh{A}'\to\sh{U}$, by the sub-left-$A'$-module $\fk{C}$, with the following additional relations:
+  \[
+  \label{equation:B.3.6}
+    \begin{cases}
+      Xf-fX &= X(f)
+    \\XY-YX &= [X,Y]
+    \\X^p &= X^{(p)}.
+    \end{cases}
+  \tag{3.6}
+  \]
+\end{lemma*}
+
+It follows from the above lemma that a descent data on the quasi-coherent sheaf $\sh{F}'$ on $S'$ is equivalent to the data, for all $X\in\fk{C}$, of an $\sh{O}_S$-endomorphism $\overline{X}$ of $\sh{F}'$ that satisfies the following conditions:
+\[
+\label{equation:B.3.7}
+  \overline{fX} = f\overline{X}
+\tag{3.7}
+\]
+\[
+\label{equation:B.3.8}
+  \overline{X}(fx) = X(f)x + f\overline{X}(x)
+\tag{3.8}
+\]
+\[
+\label{equation:B.3.9}
+  \overline{[X,Y]} = [\overline{X},\overline{Y}]
+\tag{3.9}
+\]
+\[
+\label{equation:B.3.10}
+  \overline{X^{(p)}} = \overline{X}^p.
+\tag{3.10}
+\]
+(This is what we may call a \emph{linear connection on $\sh{F}$}, \emph{flat}, and \emph{compatible with the $p$-th powers}).
+We can similarly write down the notion of a descent data on an $S'$-prescheme $X'$, with equation~\cref{equation:B.3.4} being replaced by the condition that the $\overline{X}$ are \emph{derivations} of $\sh{O}_{X'}$.
+Since the morphism $S'\to S$ is radicial, \cref{theorem:B.1(3)} ensures that every such descent data is
+\oldpage{190-24}
+effective, and thus defines an $S$-prescheme $X$.
+
+Note that we have not needed to impose any flatness, non-singular, or finiteness hypotheses on $\sh{F}'$ or $X'$.
+
+
+\subsection{Application to rationality criteria}
+\label{B.4}
+
+Let $X$ be an $S$-prescheme such that the direct image of $\sh{O}_X$ on $S$ is $\sh{O}_S$;
+this property remains true for any flat base extension $S'\to S$.
+If $\sh{F}$ is an \emph{invertible sheaf} (i.e. locally free of rank~$1$) on $X$, then there is a bijective correspondence between automorphisms of $\sh{F}$ (identified with the invertible sections of $\sh{O}_X$) and invertible sections of $\sh{O}_S$.
+So let $s$ be a section of $X$ over $S$;
 
 
 
