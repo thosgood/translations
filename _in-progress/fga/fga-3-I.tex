@@ -108,6 +108,7 @@
 
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\shHom}{\underline{\Hom}}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\HH}{H}
 \DeclareMathOperator{\GL}{GL}
@@ -975,6 +976,48 @@ The only important case not covered here is that of projective or quasi-projecti
 \subsection{Decent by finite faithfully flat morphisms}
 \label{B.3}
 
+Let $\alpha\colon S'\to S$ be a \emph{finite} morphism, corresponding to a sheaf of algebras $\sh{A}'$ on $S$ that is \emph{locally free} and of finite type as a sheaf of modules, and everywhere non-zero.
+Then $\alpha$ is a faithfully flat and quasi-compact morphism, to which we can thus apply the above results.
+The data of a quasi-coherent sheaf $\sh{F}'$ on $S'$ is equivalent to the data of the quasi-coherent sheaf $\alpha_*(\sh{F}')$ on $S$ endowed with its $\sh{A}'$-modules structure (noting that $\sh{A}'=\alpha_*(\sh{O}_{S'})$).
+For simplicity, we also denote this sheaf on $S$ by $\sh{F}'$.
+The two inverse images $p_i^*(\sh{F}')$ of $\sh{F}'$ on $S'\times_S S'$ similarly correspond to the quasi-coherent sheaves of $(\sh{A}'\otimes_{\sh{O}_S}\sh{A}')$-modules $\sh{F}'\otimes_{\sh{O}_S}\sh{A}'$ and $\sh{A}'\otimes_{\sh{O}_S}\sh{F}'$.
+The data of an $(S'\times_S S')$-homomorphism from the former to the latter is equivalent to the data of a homomorphism of $(\sh{A}'\otimes\sh{A}')$-modules, and, taking into account the fact that $\sh{A}'$ is locally free, this is equivalent to the data of a homomorphism of $(\sh{A}'\otimes\sh{A}')$-modules:
+\[
+  \sh{U}
+  = \shHom_{\sh{O}_S}(\sh{A}',\sh{A}')
+  = \sh{A}'\otimes\check{\sh{A}}'
+  \to \shHom_{\sh{O}_S}(\sh{F}',\sh{F}')
+\]
+i.e. to the data, for every section $\xi$ of $\sh{U}$ over an open subset $V$, of a homomorphism of $\sh{O}_S$-modules $T_\xi\colon\sh{F}'|V\to\sh{F}'|V$ that satisfies the conditions
+\[
+\label{equation:B.3.1}
+  \begin{aligned}
+    T_{f\xi}(x) &= fT_\xi(x),
+  \\T_{\xi f}(x) &= T_\xi(fx),
+  \end{aligned}
+\tag{3.1}
+\]
+where $f$ and $x$ are (respectively) sections of $\sh{A}'$ and $\sh{F}'$ over an open subset of $S$ that is contained inside $V$.
+Conditions~(i) and (ii) of a descent data (cf. \hyperref[A.1.c]{(A.1.c)}) can then be written (respectively) as
+\[
+\label{equation:B.3.2}
+  T_{1_U}(x) = x,
+  \qquad\mbox{i.e. $T_{1_U}=\id_{\sh{F}'}$}
+\tag{3.2}
+\]
+\[
+\label{equation:B.3.3}
+  T_{\xi\eta} = T_\xi T_\eta.
+\tag{3.3}
+\]
+In other words, \emph{a descent data on $\sh{F}'$ is equivalent to a representation of the sheaf $\sh{U}=\shHom_{\sh{O}_S}(\sh{A}',\sh{A}')$ of $\sh{O}_S$-algebras in the sheaf $\shHom_{\sh{O}_S}(\sh{F}',\sh{F}')$ of $\sh{O}_S$-algebras that satisfies the two linearity conditions \cref{equation:B.3.1}}.
+If we have a pairing of quasi-coherent sheaves on $S'$:
+\[
+  \sh{F}'_1\times\sh{F}'_2 \to \sh{F}'_3
+\]
+(that we can think of as a pairing of sheaves of $\sh{A}'$-modules on $S$),
+\oldpage{190-22}
+and gluing data on the $\sh{F}'_i$ defined by homomorphisms $T_i\colon\sh{U}\to\shHom_{\sh{O}_S}(\sh{F}'_i,\sh{F}'_i)$ (for $i=1,2,3$), then these data are \emph{equivalent to the given pairing}, in the evident meaning of the phrase, if and only if the following condition is satisfied:
 
 
 
