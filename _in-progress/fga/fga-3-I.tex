@@ -41,9 +41,9 @@
 
 \crefname{section}{}{}
 \crefname{equation}{}{}
-\renewcommand{\thesection}{\Alph{section}}
-\renewcommand{\thesubsection}{\arabic{subsection}}
-\renewcommand{\thesubsubsection}{(\alph{subsubsection})}
+\renewcommand{\thepart}{\Alph{part}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{(\alph{subsection})}
 
 
 %% Theorem environments %%
@@ -148,7 +148,7 @@
 
 \setcounter{footnote}{0}
 
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 \tableofcontents
 
 
@@ -186,14 +186,14 @@ morphisms are not necessarily of finite type.
 So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we will need to consider the non-Noetherian ring $\overline{\overline{A}}\otimes_A\overline{A}$, as well as the morphisms of affine schemes that correspond to the inclusions between the rings in question.
 
 
-\section{Preliminaries on categories}
+\part{Preliminaries on categories}
 \label{A}
 
 
-\subsection{Fibred categories, descent data, \texorpdfstring{$\sh{F}$}{F}-descent morphisms}
+\section{Fibred categories, descent data, \texorpdfstring{$\sh{F}$}{F}-descent morphisms}
 \label{A.1}
 
-\subsubsection{}
+\subsection{}
 \label{A.1.a}
 
 \begin{definition}{1.1}
@@ -243,7 +243,7 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
 \end{example}
 
 
-\subsubsection{}
+\subsection{}
 \label{A.1.b}
 
 \begin{definition}{1.2}
@@ -326,7 +326,7 @@ With this, we can also rephrase \cref{definition:A.1.3} by saying that the diagr
 In the case where the diagram~\cref{equation-definition:A.1.3} is $\sh{F}$-exact, the object $\xi$ in \cref{definition:A.1.5} is then determined up to unique isomorphism, and \emph{the category $\sh{F}_S$ is equivalent to the category of objects of $\sh{F}_{S'}$ endowed with effective gluing data}.
 
 
-\subsubsection{}
+\subsection{}
 \label{A.1.c}
 The most important case is that where
 \[
@@ -367,7 +367,7 @@ Note that, if an $\sh{F}$-descent morphism\footnote{[Comp.] It is useless to ass
 if $\xi'\in\sh{F}_{S'}$ is endowed with descent data with respect to $\alpha$, then ``it comes from'' $\xi=s^*(\xi')$.
 
 
-\subsubsection{}
+\subsection{}
 \label{A.1.d}
 We can present the above notions in a more intuitive manner, by introducing, for an object $T$ of $\cat{C}$ over $S$, the set
 \[
@@ -392,10 +392,10 @@ But if we no longer suppose a priori that the $\varphi_{t,t}$ are isomorphisms (
 the combination of (ii~bis) and (i~bis), however, does imply that the $\varphi_{t,t'}$ are isomorphisms (since we then have $\varphi_{t,t'}\varphi_{t',t}=\varphi_{t,t}=\id_{\xi'_t}$).
 
 
-\subsection{Exact diagrams and strict epimorphisms, descent morphisms, and examples.}
+\section{Exact diagrams and strict epimorphisms, descent morphisms, and examples.}
 \label{A.2}
 
-\subsubsection{}
+\subsection{}
 \label{A.2.a}
 
 \begin{definition}{2.1}
@@ -473,7 +473,7 @@ they are, however, all distinct in a category such as the category of preschemes
 \end{proposition}
 
 
-\subsubsection{}
+\subsection{}
 \label{A.2.b}
 
 \begin{example*}
@@ -520,7 +520,7 @@ they are, however, all distinct in a category such as the category of preschemes
 \end{example*}
 
 
-\subsubsection{}
+\subsection{}
 \label{A.2.c}
 
 If \cref{equation-example:A.2.b} is an exact diagram of finite morphisms, then, for every \emph{flat} morphism $T\to S$ of prescheme, the diagram induced from \cref{equation-example:A.2.b} by a change of base $T\to S$ is again exact.
@@ -571,7 +571,7 @@ The canonical injection $M\to M'$ defines a homomorphism of $A'$-modules $M\otim
 
 
 \oldpage{190-10}
-\subsection{Application to \'{e}talements}
+\section{Application to \'{e}talements}
 \label{A.3}
 
 Let $A$ be a local ring, and $B$ a local algebra over $A$ whose maximal ideal induces that of $A$.
@@ -622,10 +622,10 @@ Note also that we do not suppose here that the $T$ in question are finite over $
 This result implies, in particular, that the morphism $S'\to S$ induces an isomorphism between the fundamental group of $S'$ and the fundamental group of $S$ (``\emph{topological invariance of the fundamental group of a prescheme}'').
 
 
-\subsection{Relations to \texorpdfstring{$1$}{1}-cohomology}
+\section{Relations to \texorpdfstring{$1$}{1}-cohomology}
 \label{A.4}
 
-\subsubsection{}
+\subsection{}
 \label{A.4.a}
 
 Let $\cat{C}$ be a category such that the product of any two objects always exists, and let $T\in\cat{C}$.
@@ -680,7 +680,7 @@ by the group of operators $F(T)$ acting on $C^1(T/S,F)$, and thus, in particular
 \]
 
 
-\subsubsection{}
+\subsection{}
 \label{A.4.b}
 
 For example, let $\sh{F}$ be a fibred category with base $\cat{C}$.
@@ -696,7 +696,7 @@ With this setup, \emph{saying that the augmentation morphism}
 \emph{is an isomorphism for every pair of elements $\xi,\eta\in\sh{F}_S$ implies that $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism} (\cref{definition:A.1.7}).
 
 
-\subsubsection{}
+\subsection{}
 \label{A.4.c}
 
 Similarly, for $\xi\in\sh{F}_S$ and any object $S'$ of $\cat{C}$ over
@@ -716,7 +716,7 @@ further, \emph{this inclusion is the identity if and only if every descent data 
 \end{remark}
 
 
-\subsubsection{}
+\subsection{}
 \label{A.4.d}
 
 \begin{example}{1}
@@ -732,7 +732,7 @@ further, \emph{this inclusion is the identity if and only if every descent data 
 \end{example}
 
 
-\subsubsection{}
+\subsection{}
 \label{A.4.e}
 
 \begin{example}{2}
@@ -800,10 +800,10 @@ further, \emph{this inclusion is the identity if and only if every descent data 
 
 
 
-\section{Descent by faithfully flat morphisms}
+\part{Descent by faithfully flat morphisms}
 \label{B}
 
-\subsection{Statement of the descent theorems}
+\section{Statement of the descent theorems}
 \label{B.1}
 
 \begin{definition}{1.1}
@@ -967,7 +967,7 @@ In summary:
 \end{remark}
 
 
-\subsection{Application to the descent of certain properties of morphisms}
+\section{Application to the descent of certain properties of morphisms}
 \label{B.2}
 
 Let $P$ be a class of morphisms of preschemes.
@@ -982,7 +982,7 @@ or proper morphisms.
 The only important case not covered here is that of projective or quasi-projective morphisms, which has already been discussed in the remark in \hyperref[B.1]{(B.1)}.
 
 
-\subsection{Decent by finite faithfully flat morphisms}
+\section{Decent by finite faithfully flat morphisms}
 \label{B.3}
 
 Let $\alpha\colon S'\to S$ be a \emph{finite} morphism, corresponding to a sheaf of algebras $\sh{A}'$ on $S$ that is \emph{locally free} and of finite type as a sheaf of modules, and everywhere non-zero.
@@ -1119,7 +1119,7 @@ effective, and thus defines an $S$-prescheme $X$.
 Note that we have not needed to impose any flatness, non-singular, or finiteness hypotheses on $\sh{F}'$ or $X'$.
 
 
-\subsection{Application to rationality criteria}
+\section{Application to rationality criteria}
 \label{B.4}
 
 Let $X$ be an $S$-prescheme such that the direct image of $\sh{O}_X$ on $S$ is $\sh{O}_S$;
