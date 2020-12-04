@@ -1,22 +1,4 @@
-Here are some things that I've translated into English. Any comments or corrections are greatly appreciated. For contact details, see [thosgood.com](https://thosgood.com). I've tried to refrain from "rewriting" too much: generally the sentence structure etc. is pretty close to the original.
-
-For each paper, there is a link to the `.tex` source file, to a PDF which is built from the latest version of the `.tex` file every time you load the page (many thanks to Andrey Lushnikov's [LaTeX.Online](https://github.com/aslushnikov/latex-online)), and to the original paper (if a copy is freely available online).
-
-Each PDF has a version number (the first 8 characters of the MD5 hash of the source code). This makes it easy to tell at a glance whether or not there have been any changes.
-
-The GitHub repository from which this website is built can be found at [[thosgood/translations]](https://github.com/thosgood/translations).
-
----
-
 This should go without saying, but I'll say it anyway: **_I am making no claim to any of the mathematics or ideas contained in any of these translations; the only things that are mine are the errors introduced during the hazardous journey from one language to another._**
-
----
-
-## The Grothendieck "trilogy"
-
-- **EGA**: [github.com/ryankeleti/ega](https://github.com/ryankeleti/ega)
-- **FGA**: see below, under "[Séminaire Bourbaki, Extracts](#extracts-195762-fondements-de-la-géométrie-algébrique)";
-- **SGA**: "coming soon&trade;"
 
 ---
 
