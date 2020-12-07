@@ -11,6 +11,7 @@
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
 \usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
+\usepackage{booktabs}
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
@@ -44,27 +45,23 @@
 
 \usepackage{amsthm}
 
-
-%% Theorem environments %%
-
-\usepackage{amsthm}
-
 \theoremstyle{plain}
-
-  \newtheorem{innercustomproposition}{Proposition}
-  \crefname{innercustomproposition}{}{}
-  \newenvironment{proposition}[1]
-    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-    {\endinnercustomproposition}
-
 
 \theoremstyle{definition}
 
   \newtheorem{innercustomdefinition}{Definition}
-  \crefname{innercustomdefinition}{}{}
+  \crefname{innercustomdefinition}{Definition}{Definitions}
   \newenvironment{definition}[1]
     {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
     {\endinnercustomdefinition}
+
+  \newtheorem{innercustomprinciple}{Principle}
+  \crefname{innercustomprinciple}{Principle}{Principles}
+  \newenvironment{principle}[1]
+    {\renewcommand\theinnercustomprinciple{#1}\innercustomprinciple}
+    {\endinnercustomprinciple}
+
+  \newtheorem*{translation*}{Translation}
 
 
 %% Shortcuts %%
@@ -77,6 +74,7 @@
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Hom}{Hom}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -118,12 +116,13 @@
 %% Content %%
 
 \oldpage{425}
-We intend to give a heuristic dictionary between statements in $\ell$-adic cohomology and statements in Hodge theory.
+We intend to give a heuristic dictionary between statements in $l$-adic cohomology and statements in Hodge theory.
 This dictionary has, as its most notable sources sources, \cite{3} and the conjectural theory of Grothendieck motives \cite{2}.
 Up until now, it has mainly served to formulate conjectures in Hodge theory, and it has sometimes even suggested a proof.
 
 
-\subsection*{1}
+\section{}
+\label{1}
 
 \begin{definition}{1.1}
   A \emph{mixed Hodge structure $H$} consists of
@@ -162,7 +161,8 @@ We can show that mixed Hodge structures form an abelian category.
 If $f\colon H\to H'$ is a morphism, then $f_\QQ$ and $f_\CC$ are strictly compatible with the filtrations $W$ and $F$ (cf. \cite[2.3.5]{1}).
 
 
-\subsection*{2}
+\section{}
+\label{2}
 
 Let $A$ be a normal integral ring of finite type over $\ZZ$, with field of fractions $K$,
 \oldpage{426}
@@ -176,6 +176,70 @@ We know that, or we set,
 For every closed point $x$ of $\Spec(A)$, defined by some maximal ideal $m_x$ of $A$, the residue field $k_x=A/m_x$ is finite;
 the point $x$ defines a conjugation class of ``Frobenius substitutions'' $\varphi_x\in\pi_1(\Spec(A),\overline{K})$.
 We set $q_x=\#k_x$ and $F_x=\varphi_x^{-1}$.
+
+Let $K$ be a field of finite type over the prime field of characteristic~$p$, let $\overline{K}$ be an algebraic closure of $K$, let $l$ be a prime number $\neq p$, and let $H$ be a $\ZZ_l$- (or a $\QQ_l$-) module of finite type endowed with a continuous action $\rho$ of $\Gal(\overline{K}/K)$.
+We will still suppose in what follows that there exists an $A$ as above, with $l$ invertible in $A$, and such that $\rho$ factors through $\pi_1(\Spec(A),\overline{K}) = \Gal(K_{nr}/K)$.
+We say that $H$ is \emph{pure of weight~$n$} if, for every closed point $x$ of an non-empty open subset of $\Spec(A)$, the eigenvalues $\alpha$ of $F_x$ acting on $H$ are algebraic integers whose complex conjugates are all of absolute value $|\alpha|=q_x^{n/2}$.
+
+\begin{principle}{2.1}
+\label{principle-2.1}
+  If the Galois module $H$ ``comes from algebraic geometry'', then there exists a (unique) increasing filtration $W$ on $H_{\QQ_l}=H\otimes_{\ZZ_l}\QQ_l$ (the ``\emph{weight filtration}'') that is Galois invariant and such that $\Gr_n^W(H)$ is pure of weight~$n$.
+\end{principle}
+
+We can also further suppose that $\Gr_n^W(H)$ is semi-simple.
+
+When we have a resolution of singularities, we can often give a conjectural definition of $W$, whose validity follows from the Weil conjectures \cite{5} (cf. \cref{6}).
+
+Let $\mu$ be the subgroup of $\overline{K}^*$ given by the roots of unity.
+The \emph{Tate module $\ZZ_l(1)$}, defined by
+\[
+  \ZZ_l(1) = \Hom(\QQ_l/\ZZ_l,\mu)
+\]
+is pure of weight~$-2$.
+We set $\ZZ_l(n)=\ZZ_l(1)^\otimes n$.
+
+It is trivial that every morphism $f\colon H\to H'$ is strictly compatible with the weight filtration.
+
+\Cref{principle-2.1} agrees with the fact that every extension of $\mathbb{G}_m$ (``weight~$-2$'') by an abelian variety (``weight~$-1>-2$'') is trivial.
+
+
+\section{}
+\label{3}
+
+\begin{translation*}
+  The Galois modules that appear in $l$-adic cohomology have, as analogues, over $\CC$, mixed Hodge structures.
+  We further have the dictionary
+  
+  \bigskip
+  \begin{tabular}{p{0.5\linewidth}|p{0.5\linewidth}}
+    pure module of weight $n$
+    & Hodge structure of weight $n$
+  \\weight filtration
+    & weight filtration
+  \\Galois-compatible homomorphism
+    & morphism
+  \\Tate module $\ZZ_l(1)$
+    & Tate Hodge structure $\ZZ(1)$
+  \end{tabular}
+\end{translation*}
+
+
+\section{}
+\label{4}
+
+Let $X$ be a complex algebraic variety (i.e. a scheme of finite type over $\CC$ that we assume to be separated).
+Then there exists a subfield $K$ of $\CC$, of finite type over $\QQ$, such that $X$ can be defined over $K$ (i.e. it comes from an extension of scalars of $K$ to $\CC$ applied to a $K$-scheme $X'$).
+Let $\overline{K}$ be the algebraic closure of $K$ in $\CC$.
+The Galois group $\Gal(\overline{K}/K)$ then acts on the $l$-adic cohomology groups $H^\bullet(X,\ZZ_l)$;
+we have
+\[
+  H^\bullet(X(\CC),\ZZ)\otimes\ZZ_l
+  = H^\bullet(X,\ZZ_l)
+  = H^\bullet(X'_{\overline{K}},\ZZ_l).
+\]
+
+\oldpage{427}
+By \cref{3}, we
 
 
 
