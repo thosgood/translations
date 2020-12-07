@@ -1,0 +1,187 @@
+\documentclass{article}
+
+\title{Hodge Theory I}
+\author{Pierre Deligne}
+\date{}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{Baskervaldx}
+\usepackage{mathpazo}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\lfoot{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
+\crefname{section}{\S\!}{\S\S\!}
+\crefname{equation}{}{}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+
+  \newtheorem{innercustomproposition}{Proposition}
+  \crefname{innercustomproposition}{}{}
+  \newenvironment{proposition}[1]
+    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+    {\endinnercustomproposition}
+
+
+\theoremstyle{definition}
+
+  \newtheorem{innercustomdefinition}{Definition}
+  \crefname{innercustomdefinition}{}{}
+  \newenvironment{definition}[1]
+    {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
+    {\endinnercustomdefinition}
+
+
+%% Shortcuts %%
+
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\CC}{\mathbb{C}}
+
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Spec}{Spec}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\todo}{\textbf{ !TODO! }}
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations/}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+  
+  \emph{What follows is a translation of the French paper:}
+
+  \medskip\noindent
+  \textsc{Deligne, P.}
+  ``Th\'{e}orie de Hodge I''.
+  \emph{Actes du Congr\`{e}s intern. math.}, Volume~\textbf{1} (1970), 425--430.
+  \url{http://publications.ias.edu/deligne/paper/359}
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+% \tableofcontents
+\bigskip
+
+
+%% Content %%
+
+\oldpage{425}
+We intend to give a heuristic dictionary between statements in $\ell$-adic cohomology and statements in Hodge theory.
+This dictionary has, as its most notable sources sources, \cite{3} and the conjectural theory of Grothendieck motives \cite{2}.
+Up until now, it has mainly served to formulate conjectures in Hodge theory, and it has sometimes even suggested a proof.
+
+
+\subsection*{1}
+
+\begin{definition}{1.1}
+  A \emph{mixed Hodge structure $H$} consists of
+  \begin{enumerate}[(a)]
+    \item a $\ZZ$-module $H_\ZZ$ of finite type (the ``\emph{integer lattice}'');
+    \item a finite increasing filtration $W$ of $H_\QQ = H_\ZZ\otimes\QQ$ (the ``\emph{weight filtration}'');
+    \item a finite decreasing filtration $F$ of $H_\CC = H_\ZZ\otimes\CC$ (the ``\emph{Hodge filtration}'').
+  \end{enumerate}
+  This data is subject to the following condition:
+  there exists a (unique) bigradation of $\Gr_W(H_\CC)$ by subspaces $H^{p,q}$ such that
+  \begin{enumerate}[(i)]
+    \item $\Gr_W^n(H_\CC) = \bigoplus_{p+q=n}H^{p,q}$
+    \item the filtration $F$ induces on $\Gr_W(H_\CC)$ the filtration
+      \[
+        \Gr_W(F)^p = \bigoplus_{p'\geq p} H^{p',q'}
+      \]
+    \item $\overline{H^{pq}}=H^{qp}$.
+  \end{enumerate}
+\end{definition}
+
+A \emph{morphism} $f\colon H\to H'$ is a homomorphism $f_\ZZ\colon H_\ZZ\to H'_\ZZ$ such that $f_\QQ\colon H_\QQ\to H'_\QQ$ and $f_\CC\colon H_\CC\to H'_\CC$ are compatible with the filtrations $W$ and $F$, respectively.
+
+The \emph{Hodge numbers} of $H$ are the integers
+\[
+  h^{pq} = \dim H^{pq} = h^{qp}.
+\tag{1.2}
+\]
+
+We say that $H$ is pure \emph{of weight~$n$} if $h^{pq}=0$ for $p+q\neq n$ (i.e. if $\Gr_W^i(H)=0$ for $i\neq n$).
+We also say that $H$ is a \emph{Hodge structure of weight~$n$}.
+
+The \emph{Tate Hodge structure} $\ZZ(1)$ is the Hodge structure of weight~$-2$, purely of type~$(-1,-1)$, for which $\ZZ(1)_\CC=\CC$ and $\ZZ(1)_\ZZ = 2\pi i\ZZ = \Ker(\exp\colon\CC\to\CC^*)\subset\CC$.
+We set $\ZZ(n)=\ZZ(1)^{\otimes n}$.
+
+We can show that mixed Hodge structures form an abelian category.
+If $f\colon H\to H'$ is a morphism, then $f_\QQ$ and $f_\CC$ are strictly compatible with the filtrations $W$ and $F$ (cf. \cite[2.3.5]{1}).
+
+
+\subsection*{2}
+
+Let $A$ be a normal integral ring of finite type over $\ZZ$, with field of fractions $K$,
+\oldpage{426}
+and $\overline{K}$ an algebraic closure of $K$.
+Let $K_{nr}$ be the largest sub-extension of $\overline{K}$ that is unramified at each prime ideal of $A$.
+We know that, or we set,
+\[
+  \pi_1(\Spec(A),\overline{K}) = \Gal(K_{nr}/K).
+\]
+
+For every closed point $x$ of $\Spec(A)$, defined by some maximal ideal $m_x$ of $A$, the residue field $k_x=A/m_x$ is finite;
+the point $x$ defines a conjugation class of ``Frobenius substitutions'' $\varphi_x\in\pi_1(\Spec(A),\overline{K})$.
+We set $q_x=\#k_x$ and $F_x=\varphi_x^{-1}$.
+
+
+
+%% Bibliography %%
+
+\nocite{*}
+
+\end{document}

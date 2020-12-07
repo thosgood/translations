@@ -45,6 +45,23 @@
 
 \usepackage{amsthm}
 
+\theoremstyle{plain}
+
+  \newtheorem{innercustomproposition}{Proposition}
+  \crefname{innercustomproposition}{}{}
+  \newenvironment{proposition}[1]
+    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+    {\endinnercustomproposition}
+
+
+\theoremstyle{definition}
+
+  \newtheorem{innercustomdefinition}{Definition}
+  \crefname{innercustomdefinition}{}{}
+  \newenvironment{definition}[1]
+    {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
+    {\endinnercustomdefinition}
+
 
 %% Shortcuts %%
 
