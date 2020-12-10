@@ -164,7 +164,7 @@
 \medskip
 
 \oldpage{190-01}
-From a technical point of view, the current talk, and those that will follow, can be considered as variations on the celebrated ``Theorem~90'' of Hilbert.
+From a technical point of view, the current talk, and those that will follow, can be considered as variations on Hilbert's celebrated ``Theorem~90''.
 The introduction of the method of descent in algebraic geometry seems to be due to A.~Weil, under the name of ``descent of the base field''.
 Weil considered only the case of separable finite field extensions.
 The case of radicial extensions of height~$1$ was then studied by P.~Cartier.
@@ -476,7 +476,7 @@ they are, however, all distinct in a category such as the category of preschemes
 \label{A.2.b}
 
 \begin{example*}
-  Let $\cat{C}$ be the category of prescheme.
+  Let $\cat{C}$ be the category of preschemes.
   Let $S\in\cat{C}$, and let $S'$ and $S''$ be preschemes that are \emph{finite} over $S$, i.e. that correspond to sheaves of algebras $\sh{A}'$ and $\sh{A}''$ over $S$ that are quasi-coherent (as sheaves of modules) and of finite type (i.e. coherent if $S$ is locally Noetherian).
   Let $\alpha\colon S'\to S$ be the structure morphism of $S'$, and let $\beta_1$ and $\beta_2$ be $S$-morphisms from $S''$ to $S'$, defined by algebra homomorphisms $\sh{A}'\to\sh{A}''$, which we also denote by $\beta_1$ and $\beta_2$.
   Using the fact that a finite morphism is closed (the first Cohen--Seidenberg theorem), we can easily prove that the diagram
@@ -1054,6 +1054,7 @@ and a descent data on $X'$ is equivalent to the data of a sheaf homomorphism
 that is compatible with the morphism $h\colon X'\to S'$ and that satisfies the conditions analogous to equations~\cref{equation:B.3.1} to \cref{equation:B.3.4} above.
 
 \begin{example}{1}
+\label{example:B.3(1)}
   (\emph{``Weil''}).
   Suppose that $S'/S$ is a \emph{Galois \'{e}tale covering} with Galois group $\Gamma$ (cf. \hyperref[A.3]{(A.3)} and \hyperref[A.4.d]{(A.4.d)}).
   Then a descent data on a quasi-coherent sheaf $\sh{F}'$ on $S'$ (resp. on an $S'$-prescheme $X'$) is equivalent to the data of a representation of $\Gamma$ by automorphisms of $(S',\sh{F}')$ (resp. of $(S',X')$) that is compatible with the action of $\Gamma$ on $S'$.
@@ -1064,6 +1065,7 @@ that is compatible with the morphism $h\colon X'\to S'$ and that satisfies the c
 \end{example}
 
 \begin{example}{2}
+\label{example:B.3(2)}
   (\emph{``Cartier''}).
   Let $p$ be a prime number, and suppose that $p\sh{O}_S=0$ (i.e. that $\sh{O}_S$ is of \emph{characteristic~$p$}), that \todo (i.e. that $S'/S$ is \emph{radicial of height~$1$}), and that the sheaf of algebras $\sh{A}'$ over $\sh{A}$ \emph{locally admits a $p$-basis} (i.e. a family $(x_i)$ of sections such that $\sh{A}'$ is generated as an algebra by the $x_i$ under the sole condition that $x_i^p=0$).
   We suppose that the set of the $i$ is finite, of cardinality~$n$.
@@ -1125,6 +1127,30 @@ Let $X$ be an $S$-prescheme such that the direct image of $\sh{O}_X$ on $S$ is $
 this property remains true for any flat base extension $S'\to S$.
 If $\sh{F}$ is an \emph{invertible sheaf} (i.e. locally free of rank~$1$) on $X$, then there is a bijective correspondence between automorphisms of $\sh{F}$ (identified with the invertible sections of $\sh{O}_X$) and invertible sections of $\sh{O}_S$.
 So let $s$ be a section of $X$ over $S$;
+we define a \emph{section of $\sh{F}$ over $s$} to be a section of the invertible sheaf $s^*(\sh{F})$ on $S$.
+It follows from the above that, if $\sh{F}_i$ (for $i=1,2$) are invertible sheaves on $X$, each endowed with a section over $s$, and \emph{if $\sh{F}_1$ and $\sh{F}_2$ are isomorphic, then there exists exactly one isomorphism from $\sh{F}_1$ to $\sh{F}_2$ that is compatible with the sections in question} (i.e. sending the first to the second).
+We also, independently of the section $s$, regard two invertible sheaves $\sh{F}_1$ and $\sh{F}_2$ on $X$ as \emph{equivalent} if every point of $S$ has an open neighbourhood $U$ such that the restrictions of $\sh{F}_1$ and $\sh{F}_2$ to $X|U$ are isomorphic.
+Then \emph{every invertible sheaf $\sh{F}$ on $X$ is equivalent to an invertible sheaf $\sh{F}_1$ endowed with a marked section over $s$} (we take $\sh{F}_1=Fs^*(\sh{F})^{-1}$), \emph{and $\sh{F}_1$ is determined up to isomorphic}.
+In other words, the classification \emph{up to equivalence} of invertible sheaves on $X$ is the same as the classification \emph{up to isomorphism} of invertible sheaves endowed with a marked section.
+
+Since these properties remain true under flat extensions $\alpha\colon S'\to S$ of the base (by replacing the section $s$ with its inverse image $s'$ under $\alpha$), we thus conclude, taking \cref{theorem:B.1(1)} into account:
+
+\emph{With the prescheme $X/S$ being as above, and admitting a section $s$, let $\alpha\colon S'\to S$ be a faithfully flat and quasi-compact morphism; let $\sh{F}'$ be an invertible sheaf on $X'=X\times_S S'$.}
+\emph{For $\sh{F}'$ to be equivalent to the inverse image on $X'$ of an invertible sheaf $\sh{F}'$ on $X$, it is necessary and sufficient for its inverse images $p_1^*(\sh{F}')$ and $p_2^*(\sh{F}')$ on $X'\times_X X'=X\times_S(S'\times_S S')$ to be equivalent.}
+\emph{If this is the case, then $\sh{F}$ is determined up to equivalence.}
+(We then say that $\sh{F}'$ is \emph{rational} on $S$).
+
+Considering this principle in the case where $\alpha\colon S'\to S$ is as in \cref{example:B.3(1)} and \cref{example:B.3(2)} in the previous section, we recover the \emph{rationality criteria of Weil and of Cartier}.
+(We note that the authors restrict to the case where $S$ and $S'$
+\oldpage{190-25}
+are spectra of fields;
+a fortiori, $S$ is then the spectrum of a local ring, and the equivalence relation introduced above is exactly the relation of being isomorphic).
+The the first case, $\sh{F}'$ is rational on $S$ if and only if its images under $\Gamma$ are all equivalent to $\sh{F}'$.
+To express the rationality criterion in the second case, we consider, more generally, the diagonal morphism $X'\to X''=X'\times_X X'$ of $X'/X$, with the corresponding sheaf of ideals $\sh{I}$ on $X'\times_X X'$, and the sheaf $\sh{I}/\sh{I}^2$, which can be identified with its inverse image $\Omega_{X'/X}^1$ on $X$ (the \emph{sheaf of $1$-differentials of $X'$ with respect to $X$}).
+Since the restrictions of the $\sh{F}''_i=p_i(\sh{F}')$ (for $i=1,2$) to the diagonal are isomorphic (since they are both isomorphic to $\sh{F}'$), i.e. $\sh{F}''_1(\sh{F}''_2)^{-1}=\sh{F}''$ has a restriction to the diagonal which is trivial, it follows that the restriction of $\sh{F}''$ to $(X'',\sh{O}_{X''}/\sh{I}^2)$ is given, up to isomorphism, by a well-defined element $\xi$ of
+\[
+  \HH^1(X'',\sh{I}/\sh{I}^2) = \HH^1(X',\Omega_{X'/X}^1).
+\]
 
 
 

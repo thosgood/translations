@@ -62,6 +62,7 @@
     {\endinnercustomprinciple}
 
   \newtheorem*{translation*}{Translation}
+  \newtheorem*{scholium*}{Scholium}
 
 
 %% Shortcuts %%
@@ -239,7 +240,37 @@ we have
 \]
 
 \oldpage{427}
-By \cref{3}, we
+By \cref{3}, we should expect for the cohomology groups $H^n(X(\CC),\ZZ)$ to carry natural mixed Hodge structures.
+This is what we can prove (see \cite[3.2.5]{1} for the case where $X$ is smooth; the proof is algebraic, using classical Hodge theory \cite{6}).
+For $X$ projective and smooth, the Weil conjectures imply that $H^n(X,\ZZ_l)$ is pure of weight~$n$, while classical Hodge theory endows $H^n(X,\ZZ)$ with a Hodge structure of weight~$n$.
+For every morphism $f\colon X\to Y$, and for $K$ large enough, $f^\bullet\colon H^\bullet(Y,\ZZ_l)\to H^\bullet(X,\ZZ_l)$ Galois-commutes (by structure transport);
+similarly, $f^\bullet\colon H^\bullet(Y,\ZZ)\to H^\bullet(X,\ZZ)$ is a morphism of mixed Hodge structures.
+For $X$ smooth, the cohomology class $Z$ in $H^{2n}(X,\ZZ_l(n))$ of an algebraic cycle of codimension~$n$ defined over $K$ is Galois invariant, i.e. it defines
+\[
+  c(Z) \in \Hom_{\Gal}(\ZZ_l(-n),H^{2n}(X,\ZZ_l)).
+\]
+Similarly, the cohomology class $c(Z)\in H^{2n}(X(\CC),\ZZ)$ is purely of type~$(n,n)$, i.e. it corresponds to
+\[
+  c(Z) \in \Hom_{\mathrm{H.M.}}(\ZZ(-n),H^{2n}(X(\CC),\ZZ)).
+\]
+
+
+\section{}
+\label{5}
+
+If $f\colon H\to H'$ is a Galois-compatible morphism between $\QQ_l$-vector spaces of different weights, then $f=0$.
+Similarly, if $f\colon H\to H'$ is a morphism of pure mixed Hodge structures of different weights, then $f$ is torsion.
+A more useful remark is
+
+\begin{scholium*}
+  Let $H$ and $H'$ be Hodge structures of weight~$n$ and $n'$ (respectively), with $n>n'$.
+  Let $f\colon H_\QQ\to H'_\QQ$ be a homomorphism such that $f\colon H_\CC\to H'_\CC$ respects $F$.
+  Then $f=0$.
+\end{scholium*}
+
+
+\section{}
+\label{6}
 
 
 
