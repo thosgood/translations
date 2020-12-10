@@ -63,6 +63,7 @@
 
   \newtheorem*{translation*}{Translation}
   \newtheorem*{scholium*}{Scholium}
+  \newtheorem*{principle*}{Principle}
 
 
 %% Shortcuts %%
@@ -271,6 +272,48 @@ A more useful remark is
 
 \section{}
 \label{6}
+
+Let $X$ be a smooth projective variety over $\CC$, let $D=\sum_1^n D_i$ a normal crossing divisor in $X$, with $D_i$ all smooth divisors, and let $j$ be the inclusion of $U=X\setminus D$ into $X$.
+For $Q\subset[1,n]$, we set $D_q=\bigcap_{i\in Q}D_i$.
+
+In $l$-adic cohomology, we canonically have
+\[
+  R^q j_* \ZZ_l = \bigoplus_{\#Q=q} \ZZ_l(-q)_{D_Q}
+\tag{6.1}
+\]
+and the Leray spectral sequence for $j$ is of the form
+\[
+\label{6.2}
+  E_2^{pq}
+  = \bigoplus_{\#Q=q} H^p(D_Q,\QQ_l)\otimes\ZZ_l(-q)
+  \Rightarrow H^{p+q}(U,\QQ_l).
+\tag{6.2}
+\]
+
+\emph{By the Weil conjectures} \cite{5}, $H^p(D_Q,\QQ_l)$ is pure of weight~$p$, so that $E_2^{pq}$ is pure of weight $p+2q$.
+As a quotient of a sub-object of $E_2^{pq}$, $E_r^{pq}$ is also pure of weight $p+2q$.
+By \cref{5}, $d_r=0$ for $r\geq3$, since the weights $p+2q$ and $p+2q-r+2$ of $E_r^{pq}$ and $E_r^{p+q,q-r+1}$ (respectively) are different.
+Thus $E_3^{pq}=E_\infty^{pq}$.
+Up to renumbering, the weight filtration of $H^\bullet(U,\QQ_l)$ is the abutment of \cref{6.2}:
+\[
+  \Gr_n^W(H^k(U,\QQ_l)) = E_3^{2k-n,n-k}.
+\tag{6.3}
+\]
+
+
+\section{}
+\label{7}
+
+In integer cohomology, for the usual topology, the Leray spectral sequence for $j$ is of the form
+\[
+  'E_2^{pq}
+  = \bigoplus_{\#Q=q} H^p(D_Q,\ZZ)
+  \Rightarrow H^{p+q}(U,\ZZ).
+\tag{7.1}
+\]
+
+\oldpage{428}
+Since each $D_Q$ is a non-singular projective variety, $'E_2^{pq}$ is endowed with a Hodge structure of weight~$p$.
 
 
 
