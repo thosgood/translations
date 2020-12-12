@@ -102,6 +102,7 @@
 \newcommand{\sh}[1]{{\mathscr{#1}}}
 \newcommand{\cat}[1]{{\mathcal{#1}}}
 \newcommand{\fk}[1]{{\mathfrak{#1}}}
+\newcommand{\kres}{k}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -111,6 +112,7 @@
 \DeclareMathOperator{\shHom}{\underline{\Hom}}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\HH}{H}
+\DeclareMathOperator{\RR}{R}
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\Ga}{G_a}
 \DeclareMathOperator{\Gm}{G_m}
@@ -157,8 +159,6 @@
 
 \emph{[Trans.] We have made changes throughout the text following the errata (\emph{S\'{e}minaire Bourbaki} \textbf{14}, 1961--62, Compl\'{e}ment); we preface them with ``[Comp.]''.}
 \medskip
-
-\textbf{\todo(errata)}
 
 [Comp.] For various details concerning the theory of descent, see also SGA~VI, VII, and VIII.
 \medskip
@@ -1151,7 +1151,27 @@ Since the restrictions of the $\sh{F}''_i=p_i(\sh{F}')$ (for $i=1,2$) to the dia
 \[
   \HH^1(X'',\sh{I}/\sh{I}^2) = \HH^1(X',\Omega_{X'/X}^1).
 \]
+Also, being precise, we have $\Omega_{X'/X}^1=\Omega_{S'/S}^1\otimes_{\sh{O}_S}\sh{O}_X$, and thus, \emph{if $\Omega_{S'/S}^1$ is locally free on $S$} (as in the Cartier case), \emph{then $\xi$ defines a section of $\RR^1f'(\sh{O}_{X'})\otimes\Omega_{S'/S}^1$ on $S'$} (called the \emph{Atiyah--Cartier class of the invertible sheaf $\sh{F}$ on $X'/S$}) \emph{whose vanishing is necessary and sufficient for the inverse images of $\sh{F}'$ under the two projections of}
+\[
+  (X'',\sh{O}_{X''}/\sh{I}^2) = X\times_S(S'',\sh{O}_{S''}/\sh{J}^2)
+\]
+\emph{to $X'$ to be equivalent} (where $\sh{J}$ is the sheaf of ideals on $S''=S'\times_S S'$ defined by the diagonal morphism $S'\to S'\times_S S'$).
+This vanishing is thus trivially \emph{necessary} for the inverse images of $\sh{F}'$ on $X''=X\times_S S''$ itself to be equivalent, and thus also for $\sh{F}$ to be equivalent to the inverse image of an invertible sheaf $\sh{F}$ on $X$.
+The Atiyah--Cartier class can also be understood as the obstruction to the existence, locally over $S'$, of a \emph{connection} of $\sh{F}'$ relative to the derivations of $X'/X$, with such a connection further being determined when we know the derivations of $\sh{F}'$ corresponding to the natural extensions of derivations of $S'/S$ to $X'$.
+From this, and the results of the previous section, we easily conclude that, in the case of the aforementioned \cref{example:B.3(2)}, and when $X/S$ admits a section, the vanishing of the Atiyah--Cartier class is also sufficient for $\sh{F}'$ to be rational on $S$.
 
+
+\section{Application to the restriction of the base scheme to an abelian scheme}
+\label{B.5}
+
+Let $S$ be a prescheme.
+Well define an \emph{abelian scheme} over $S$ to be a simple proper scheme $X$
+\oldpage{190-26}
+over $S$ whose fibres at the points $x\in S$ are schemes of abelian varieties over the $\kres(x)$.
+Suppose that $S$ is Noetherian and \emph{regular} (i.e. that its local rings are regular), then we can show, using the \emph{connection theorem} of Murre \cite{4} (at least in the case ``of equal characteristics'', where the cited theorem is currently proven) that \emph{every rational section of $X$ over $S$ is everywhere defined} (i.e. is a section) (which generalises a classical theorem of Weil).
+It then follows, more generally, that, if $X'$ is a simple scheme over $S$, then every rational $S$-map from $X'$ to $X$ is everywhere defined.
+From this, we obtain the following, which generalises a result of Chow--Lang:
+\emph{with $S$ Noetherian and regular, and $K$ denoting its ring of rational functions} (a direct sum of fields), \emph{let $X$ be an abelian scheme over $K$; if $X$ is isomorphic to a $K$-scheme of the form $X_0\times_S\Spec(K)$, where $X_0$ is an abelian scheme over $S$, then $X_0$ is determined up to unique isomorphism.}
 
 
 
