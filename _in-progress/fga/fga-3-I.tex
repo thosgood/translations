@@ -1173,6 +1173,32 @@ It then follows, more generally, that, if $X'$ is a simple scheme over $S$, then
 From this, we obtain the following, which generalises a result of Chow--Lang:
 \emph{with $S$ Noetherian and regular, and $K$ denoting its ring of rational functions} (a direct sum of fields), \emph{let $X$ be an abelian scheme over $K$; if $X$ is isomorphic to a $K$-scheme of the form $X_0\times_S\Spec(K)$, where $X_0$ is an abelian scheme over $S$, then $X_0$ is determined up to unique isomorphism.}
 
+Using the above uniqueness result, we see that the question of restriction of the base to $X$ is local on $S$ (and thus that it suffices to know how to do the restriction to $\Spec(\sh{O}_x)$, where $x\in S$).
+In the same way, we see that, if $S'\to S$ is a \emph{simple} morphism of finite type, if $Y'$ is the ring of rational functions of $S'$, and if $X\otimes_K K'$ is of the form $X'_0\times_{S'}\Spec(K')$, \emph{then $X'_0$ is endowed with a canonical descent data with respect to $\alpha$}.
+Taking \cref{theorem:B.1(3)} into account, we thus conclude:
+
+\begin{proposition}{5.1}
+  Let $S$ be an irreducible regular Noetherian prescheme, with field of rational functions $Y$, let $K'$ be a finite extension of $K$ that is \emph{unramified over $S$}, let $S'$ be the normalisation of $S$ in $K'$ (which is thus an \'{e}tale cover of $S$), and let $X$ be an abelian scheme over $K$ such that $X\otimes_K K'$ is of the form $X'_0\times_{S'}\Spec(K')$, where $X'_0$ is a projective abelian scheme over $S'$.
+  Then $X$ is of the form $X_0\times_S\Spec(K)$, where $X_0$ is a projective abelian scheme over $S$.
+\end{proposition}
+
+\begin{remarks*}
+  The speaker does not know if we can replace the hypothesis that $S'\to S$ be a surjective \'{e}tale cover (which allows us to apply \cref{theorem:B.1(3)}) with the hypothesis that it is instead a \emph{simple} and \emph{surjective} morphism of finite type (not even if we suppose that it is an \'{e}talement), or if the proposition still holds true without supposing that $X'_0$ is projective over $S'$ (a condition which could be automatically satisfied).
+\end{remarks*}
+
+
+\section{Application to local triviality and isotriviality criteria}
+\label{B.6}
+
+Let $S$ be a prescheme, $G$ a ``\emph{prescheme of groups}'' over $S$, $P$ a prescheme over $S$ on which ``\emph{$G$ acts}'' (on the right).
+We say that $P$ is \emph{formally principal homogeneous} under $G$ if the well-known morphism
+\[
+  G\times_S P \to P\times_S P
+\]
+\oldpage{190-27}
+
+
+
 
 
 %% Bibliography %%
