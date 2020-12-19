@@ -93,8 +93,8 @@
   {\renewcommand\theinnercustomexample{#1}\innercustomexample}
   {\endinnercustomexample}
 
-\newtheorem*{remark}{Remark}
-\newtheorem*{remarks}{Remarks}
+\newtheorem*{remark*}{Remark}
+\newtheorem*{remarks*}{Remarks}
 \newtheorem*{example*}{Example}
 
 %% Shortcuts %%
@@ -116,9 +116,10 @@
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\Ga}{G_a}
 \DeclareMathOperator{\Gm}{G_m}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Sp}{Sp}
 \DeclareMathOperator{\Spec}{Spec}
 
-\newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
 
@@ -379,7 +380,7 @@ A gluing data on $\xi'$ (with respect to $(p_1,p_2)$) is then defined by the dat
   \varphi_{t',t}\colon \xi'_t \to \xi'_{t'}
 \]
 (satisfying the evident conditions of functoriality in $T$).
-Conditions~(i) and (ii) of \cref{A.1.c} can then be written as
+Conditions~(i) and (ii) of \hyperref[A.1.c]{A.1.c} can then be written as
 \begin{enumerate}[(i {bis})]
   \item $\varphi_{t,t}=\id_{\xi'_t}$, for all $T$ and all $t\in S'(T)$.
 \oldpage{190-06}
@@ -551,7 +552,7 @@ Let $M'$ be a flat $A'$-module endowed with a descent data to $A$, i.e. with an 
 \[
   \varphi\colon M'\otimes_A A' \xrightarrow{\sim} A'\otimes_A M'
 \]
-of $(A'\otimes_A A')$-modules that satisfies conditions (i) and (ii) of \cref{A.1.c} (which we leave to the reader to write out in terms of modules).
+of $(A'\otimes_A A')$-modules that satisfies conditions (i) and (ii) of \hyperref[A.1.c]{A.1.c} (which we leave to the reader to write out in terms of modules).
 Is this data effective (relative to the fibred category of flat quasi-coherent sheaves)?
 Let $M$ be the subset of $M'$ consisting of the $x'\in M'$ such that
 \[
@@ -561,12 +562,12 @@ which is a sub-$A$-module of $M'$.
 The canonical injection $M\to M'$ defines a homomorphism of $A'$-modules $M\otimes_A A'\to M'$.
 \emph{The effectiveness of $\varphi$ then implies the following: $M$ is a flat $A$-module, and the above homomorphism is an isomorphism.}
 
-\begin{remark}
+\begin{remark*}
   In the above, we have imposed no flatness hypotheses on the morphisms of the diagram~\cref{equation-example:A.2.b}, and this obliges us, in order to have a technique of descent, to impose flatness hypotheses on the objects over $S$ and $S'$ that we consider.
-  In \todo, we will impose a flatness hypothesis on $\alpha\colon S'\to S$, which will allow us to have a technique of descent for objects over $S$ and $S'$ that are no longer under any flatness hypotheses.
+  In \hyperref[B.2]{B.2}, we will impose a flatness hypothesis on $\alpha\colon S'\to S$, which will allow us to have a technique of descent for objects over $S$ and $S'$ that are no longer under any flatness hypotheses.
   In any case, there is a flatness hypothesis involved somewhere.
   This is one of the main reasons for the importance of the notion of flatness in algebraic geometry (whose role could not be visible when we restricted to base \emph{fields}, over which everything, in fact, is flat!).
-\end{remark}
+\end{remark*}
 
 
 \oldpage{190-10}
@@ -602,7 +603,7 @@ By hypothesis, on $S'$, $\sh{C}'$ comes from an \'{e}tale covering $T'$ of $S'$,
 Also, $\fk{A}'$ is endowed with a canonical descent data with respect to $\overline{S}'\to\overline{S}$, i.e. with an isomorphism between its two inverse images on $\overline{S}'\times_{\overline{S}}\overline{S}'=\overline{S'\times_SS'}$ (satisfying conditions (i) and (ii)), and this isomorphism comes from, by what has already been said, an isomorphism between the corresponding algebraic sheaves, i.e. from a descent data on $\sh{A}'$ with respect to $S'\to S$.
 We can easily show that the latter is effective (since it is effective on $\fk{A}'$, and the effectiveness of a descent data, as described explicitly in the previous section, is something that can be checked locally on the \emph{completions} of the modules that are involved).
 From this, we obtain a coherent sheaf of algebras $\sh{A}$ on $S$ that defines a covering $T$ of $S$, and this is the desired covering.
-The above result then obviously holds true if $S'\to S$ is just a composition of a finite number of finite strict epimorphisms, i.e. is just an arbitrary finite epimorphism (by the factorisation result stated in \cref{A.2}).
+The above result then obviously holds true if $S'\to S$ is just a composition of a finite number of finite strict epimorphisms, i.e. is just an arbitrary finite epimorphism (by the factorisation result stated in \hyperref[A.2]{A.2}).
 It thus follows that the Grauert--Remmert theorem holds true if $S$ is a \emph{reduced} scheme, i.e. such that $\sh{O}_S$ has no nilpotent elements, as we can see by introducing its normalisation $S'$.
 We can easily pass to the general case.
 
@@ -706,13 +707,13 @@ we thus define a contravariant functor $G_\xi$ from $\cat{C}_S$ to the category 
 \oldpage{190-14}
 groups.
 With this setup, we claim that \emph{$Z^1(S'/S,G)$ is canonically identified with the set of descent data on $\xi'=\xi\times_S S'$ with respect to $S'\to S$} (\cref{definition:A.1.6}), and that \emph{$\HH^1(S'/S,G)$ can be identified with the set of isomorphism classes of objects of $\sh{F}_{S'}$ endowed with a descent data relative to $\alpha\colon S'\to S$ that are isomorphic, as objects of $\sh{F}_{S'}$, to $\xi'=\xi\times_S S'$.}
-Then, \emph{if $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism} (cf. \cref{A.4.b}), \emph{then $\HH^1(S'/S,G)$ contains as a subset the set of isomorphism classes of objects $\eta$ of $\sh{F}_S$ such that $\eta\times_S S'$ is isomorphic (in $\sh{F}_{S'}$) to $\xi\times_S S'$};
+Then, \emph{if $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism} (cf. \hyperref[A.4.b]{A.4.b}), \emph{then $\HH^1(S'/S,G)$ contains as a subset the set of isomorphism classes of objects $\eta$ of $\sh{F}_S$ such that $\eta\times_S S'$ is isomorphic (in $\sh{F}_{S'}$) to $\xi\times_S S'$};
 further, \emph{this inclusion is the identity if and only if every descent data on $\xi'=\xi\times_S S'$ with respect to $\alpha\colon S'\to S$ is effective}.
 (This will be the case, in particular, if $\alpha\colon S'\to S$ is a strict $S$-descent morphism).
 
-\begin{remark}
+\begin{remark*}
   The cochain complexes of the form $C^\bullet(T/S,F)$ contain, as particular cases, the majority of standard known complexes (that of \v{C}ech cohomology, of group cohomology, etc.), and play an important role in algebraic geometry (notably in the ``Weil cohomology'' of preschemes).
-\end{remark}
+\end{remark*}
 
 
 \subsection{}
@@ -751,15 +752,15 @@ further, \emph{this inclusion is the identity if and only if every descent data 
   \]
   which is a functor from $\cat{C}$ to the category of (not-necessary-commutative, if $n>1$) groups;
   for $n=1$ we recover $\Gm$.
-  We can also think of $\GL(n)$ as an automorphism-functor (cf. \cref{A.4.c}) by considering the fibred category $\sh{F}$ with base $\cat{C}$ such that $\sh{F}_X$ is the category of locally free sheaves on $X$, for $X\in\cat{C}$, since then $\GL(n)(X)=\Aut_{\sh{F}_X}(\sh{O}_X^n)$.
-  By \cref{A.4.b}, it follows that, if $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism (cf. \cref{A.2.c}), then $\HH^1(S'/S,\GL(n))$ contains the set of isomorphism classes of locally free sheaves on $S$ whose inverse image on $S'$ is isomorphic to $\sh{O}_{S'}^n$, and this inclusion is an equality if and only if every descent data on $\sh{O}_{S'}^n$ (with respect to $\alpha\colon S'\to S$) is effective.
+  We can also think of $\GL(n)$ as an automorphism functor (cf. \hyperref[A.4.c]{A.4.c}) by considering the fibred category $\sh{F}$ with base $\cat{C}$ such that $\sh{F}_X$ is the category of locally free sheaves on $X$, for $X\in\cat{C}$, since then $\GL(n)(X)=\Aut_{\sh{F}_X}(\sh{O}_X^n)$.
+  By \hyperref[A.4.b]{A.4.b}, it follows that, if $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism (cf. \hyperref[A.2.c]{A.2.c}), then $\HH^1(S'/S,\GL(n))$ contains the set of isomorphism classes of locally free sheaves on $S$ whose inverse image on $S'$ is isomorphic to $\sh{O}_{S'}^n$, and this inclusion is an equality if and only if every descent data on $\sh{O}_{S'}^n$ (with respect to $\alpha\colon S'\to S$) is effective.
   If $S$ is the spectrum of a local ring, then this implies that $\HH^1(S'/S,\GL(n))=(e)$, since every locally free sheaf on $S$ is then trivial.
 
   We note that the following conditions concerning a morphism $\alpha\colon S'\to S$ are equivalent:
   \begin{enumerate}[(i)]
     \item The augmentation homomorphism $\HH^0(S,\sh{O}_S) = \Ga(S)\to\HH^0(S'/S,\Ga)$ is an isomorphism.
     \item $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism (where $\sh{F}$ is the fibred category over $\cat{C}$ described above).
-    \item $\alpha\colon S'\to S$ is a strict epimorphism (cf. \cref{A.2.c}).
+    \item $\alpha\colon S'\to S$ is a strict epimorphism (cf. \hyperref[A.2.c]{A.2.c}).
   \end{enumerate}
 
   Now suppose that $S=\Spec(A)$ and $S'=\Spec(A')$;
@@ -776,7 +777,7 @@ further, \emph{this inclusion is the identity if and only if every descent data 
   \]
   Similarly, $C^n(S'/S,\Gm)=C^n(A'/A,\Gm)$ can be identified with $(\bigotimes_A^{n+1}A')^\times$, with the simplicial operations for $C^\bullet(A'/A,\Gm)$ being induced by those in $C^\bullet(S'/S,\Ga)$.
   We can write down the simplicial operations for $C^\bullet(A'/A,\GL(n))$ in the same explicit manner.
-  \emph{In all the cases known to the speaker, $\HH^i(A'/A,\Ga)=0$ for $i>0$, and, if $A$ is local, then $\HH^1(A'/A,\Gm)=0$, and, more generally, $\HH^1(A'/A,\GL(n))=(e)$} (if $S'\to S$ is an $\sh{F}$-descent morphisms, i.e. if the diagram $A\to A'\rightrightarrows A'\otimes_A A'$ is exact, then compare this with \cref{A.2.c}).
+  \emph{In all the cases known to the speaker, $\HH^i(A'/A,\Ga)=0$ for $i>0$, and, if $A$ is local, then $\HH^1(A'/A,\Gm)=0$, and, more generally, $\HH^1(A'/A,\GL(n))=(e)$} (if $S'\to S$ is an $\sh{F}$-descent morphisms, i.e. if the diagram $A\to A'\rightrightarrows A'\otimes_A A'$ is exact, then compare this with \hyperref[A.2.c]{A.2.c}).
   We note that \emph{Hilbert's ``Theorem~90'' is exactly the fact that}
 \oldpage{190-16}
   \emph{$\HH^1(S'/S,\Gm)=0$ if $A$ is a field and $A'$ is a finite Galois extension of $A$} (cf. \cref{example:A.4.d}), \emph{and we can also express it by saying that, in the case in question, $S'\to S$ is a strict descent morphisms for the fibred category of locally free sheaves of rank~$1$.}
@@ -792,10 +793,10 @@ further, \emph{this inclusion is the identity if and only if every descent data 
   If $S'\to S$ is a strict epimorphism, then the above conditions imply that it is a \emph{strict} descent morphism for free modules (not necessarily of finite type) over $A'$.
 \end{example}
 
-\begin{remark}
+\begin{remark*}
   The definition of the groups $\HH^i(S'/S,\Gm)$ in the case where $S$ (resp. $S'$) is a scheme over the field $A$ (resp. $A'$) is due to Amitsur.
   The group $\HH^2(S'/S,\Gm)$ is particularly interesting as a ``global'' variant of the Brauer group, for which we can refer to \cite[chap.~VII]{1}.
-\end{remark}
+\end{remark*}
 
 
 
@@ -949,7 +950,7 @@ In summary:
   If $\alpha$ is finite, then it is a strict descent morphism with respect to the fibred category of quasi-projective (or projective) preschemes over preschemes.
 \end{theorem}
 
-\begin{remark}
+\begin{remark*}
   I do not know if, in the second claim above, the hypothesis that $\alpha$ be \emph{finite} is indeed necessary;
   we can prove that, in any case, we can ``formally'' replace it by the following, seemingly weaker, hypothesis:
   \emph{for every point of $S$ there exists an open neighbourhood $U$, a finite and faithfully flat $U'$ over $U$, and an $S$-morphism from $U'$ to $S'$}.
@@ -963,7 +964,7 @@ In summary:
   A morphism $S'\to S$ that is quasi-finite, \'{e}tale, surjective, or a morphism of the form $\Spec(\overline{A})\to\Spec(A)$, is not always a strict descent morphism, even if $A$ is the local ring of an algebraic curve over an algebraically closed field $k$ and $S=\Spec(A)$.
   We can thus find a proper simple morphism $f\colon X\to S$ that makes $X$ into a principal $E$-bundle over $S$, with $E$ an elliptic curve, such that $f'\colon X'\to S'$ is projective, but $f$ is not projective.
   So this is also an example of a homogeneous principal bundle that is \emph{non-isotrivial} under an abelian scheme.
-\end{remark}
+\end{remark*}
 
 
 \section{Application to the descent of certain properties of morphisms}
@@ -1067,7 +1068,7 @@ that is compatible with the morphism $h\colon X'\to S'$ and that satisfies the c
 \begin{example}{2}
 \label{example:B.3(2)}
   (\emph{``Cartier''}).
-  Let $p$ be a prime number, and suppose that $p\sh{O}_S=0$ (i.e. that $\sh{O}_S$ is of \emph{characteristic~$p$}), that \todo (i.e. that $S'/S$ is \emph{radicial of height~$1$}), and that the sheaf of algebras $\sh{A}'$ over $\sh{A}$ \emph{locally admits a $p$-basis} (i.e. a family $(x_i)$ of sections such that $\sh{A}'$ is generated as an algebra by the $x_i$ under the sole condition that $x_i^p=0$).
+  Let $p$ be a prime number, and suppose that $p\sh{O}_S=0$ (i.e. that $\sh{O}_S$ is of \emph{characteristic~$p$}), that $(\sh{A}')^p\subset\sh{O}_S=\sh{A}$ (i.e. that $S'/S$ is \emph{radicial of height~$1$}), and that the sheaf of algebras $\sh{A}'$ over $\sh{A}$ \emph{locally admits a $p$-basis} (i.e. a family $(x_i)$ of sections such that $\sh{A}'$ is generated as an algebra by the $x_i$ under the sole condition that $x_i^p=0$).
   We suppose that the set of the $i$ is finite, of cardinality~$n$.
   Let $\fk{C}$ be the sheaf of $A$-derivations of $A'$, which is a locally free sheaf of rank~$n$ of $A'$-modules, and, furthermore, a sheaf of Lie $p$-algebras over $\sh{A}$ (but not over $\sh{A}'$) that satisfies the following condition:
   \[
@@ -1196,7 +1197,50 @@ We say that $P$ is \emph{formally principal homogeneous} under $G$ if the well-k
   G\times_S P \to P\times_S P
 \]
 \oldpage{190-27}
+(induced from the actions of $G$ on $P$) is an \emph{isomorphism}.
+From now on, we assume $G$ to be \emph{flat} over $S$ (and thus faithfully flat over $S$), and we reserve the name of \emph{principal homogeneous bundle} under $G$ for a formally principal homogeneous bundle $P$ that is \emph{faithfully flat} and \emph{quasi-compact} over $S$.
+It is immediate that this is equivalent to being able to find a \emph{faithfully flat} and \emph{quasi-compact extension} $S'\to S$ of the base $S$ such that the formally principal homogeneous bundle $P'=P\times_S S'$ under $G'=G\times_S S'$ is \emph{trivial}, i.e. isomorphic to $G'$ (i.e. admitting a section);
+we can take, in particular, $S'=P$.
+Note also that, if $S$ is locally Noetherian, then the faithfully-flat hypothesis on $P$ is equivalent to the hypothesis that $\overline{P}_S=P\times_S\Spec(\overline{\sh{O}}_s)$ be faithfully flat over $\overline{\sh{O}}_s$ for all $s\in S$ (where $\overline{\sh{O}}_s$ denotes the completion of the local ring $\sh{O}_s$), as follows from the fact that $\overline{\sh{O}}_s$ is faithfully flat over $\sh{O}_s$.
+Also, if $P$ is of finite type over $S$, and $S$ is locally Noetherian, then the set of points $s$ satisfying the above condition is constructible, and so, if $S$ is a ``Jacobson prescheme'' (for example, a scheme of finite type over a field, or, more generally, over a Jacobson ring), then it suffices to verify the condition in question for the \emph{closed} points of $S$.
+This leads us to the case where the base is the spectrum of a complete local ring $A$.
+If $S=\Spec(A)$ (with $A$ a complete Noetherian local ring), and if $P$ is of finite type over $S$, then the faithful flatness of $P/S$ is also equivalent to the existence of an $S'$ that is \emph{finite and flat} over $S$ such that $P'$ is trivial, and, if, further, $G$ is \emph{simple} over $S$, then we can suppose $S'$ to be \emph{\'{e}tale} over $S$.
+Then, if, further, the residue field of $A$ is algebraically closed (the ``\emph{geometric case}''), then $P$ is faithfully flat over $A$ if and only if it is trivial.
+Thus, if $S$ is an algebraic prescheme over an algebraically closed field, and if $G$ is simple and of finite type over $S$, then we see that the faithfully-flat condition on $S$ is equivalent to the condition of being analytically trivial (SLF) of Serre \cite[p.~1--12]{6}.
 
+We can consider other, stronger, types of conditions on $P$, that have a ``local triviality'' nature.
+In particular, we say that $P$ is \emph{isotrivial} (resp. \emph{strictly isotrivial}) if, for all $s\in S$, there exists an open neighbourhood $U$ of $S$, and a \emph{finite and faithfully flat} morphism (resp. a \emph{surjective \'{e}tale covering}) $U'\to U$ such that $P'=P\times_S U'$ is trivial.
+(We stray from the terminology of Serre \cite{1}, which uses ``locally isotrivial'' for what we call ``strictly isotrivial'').
+Strict isotriviality is mainly useful if $G$ is simple over $S$, but is, however, an inadequate notion in other cases.
+
+If $G$ is \emph{affine} over $S$, then every principal homogeneous bundle $P$ under $G$ is affine, by \hyperref[B.2]{B.2}, whence the possibility, thanks to \cref{theorem:B.1(2)}, to ``descend''
+\oldpage{190-28}
+from such bundles by faithfully flat and quasi-compact morphisms.
+Taking, in particular, $G=\GL(n)_S$, defined by the condition that the functor $S'\mapsto\Hom(S',G)$ of $S$-preschemes (with values in the category of groups) can be identified with the functor $\GL(n)(S')=\GL(n,\HH^0(S',\sh{O}_{S'}))$ described in \hyperref[A.4.e]{A.4.e}.
+Using the facts
+\begin{enumerate}[(i)]
+  \item that every principal homogeneous bundle under $G$ (resp. every locally free sheaf of rank~$n$ on $S$) becomes isomorphic to the ``trivial'' object $G$ (resp. $\sh{O}_S^n$) under a suitable faithfully flat and quasi-compact extension of $S$;
+  \item that we can descend the type of objects in question (principal homogeneous bundles under $G$, resp. locally free sheaves of rank~$n$) by such morphisms; and, finally
+  \item that the automorphism group of the trivial bundle on any $S'/S$ is functorially isomorphic to the automorphism group of the trivial locally free sheaf of rank~$n$ on $S'$,
+\end{enumerate}
+we ``formally'' conclude that it is ``equivalent'' to give, on $S$ (or on some $S'/S$) a principal homogeneous bundle of group $G$, or to give a locally free sheaf of rank~$n$.
+(More precisely, we have an \emph{equivalence of fibred categories}).
+We thus conclude, in particular:
+
+\begin{proposition}{6.1}
+  Every principal homogeneous bundle under the group $\GL(n)_S$ is locally trivial.
+\end{proposition}
+
+By known arguments, we thus conclude the same result for others structure groups such as $\SL(n)_S$, $\Sp(n)_S$, and products of such groups.
+We thus also conclude that, if $F$ is a closed subgroup of $G=\GL(n)_S$ that is flat over $S$, and such that the quotient $G/F$ exists, and such that $G$ is an isotrivial (resp. strictly isotrivial) principal homogeneous bundle on $G/F$, of structure group $F\times_S(G/F)$, then \emph{every} principal homogeneous bundle of structure group $F$ is isotrivial (resp. strictly isotrivial).
+This applies to all the ``linear groups'' on $S$ that have been used up until now, and, in particular, to the case where $G=S\times_k\Gamma$, with $S$ a prescheme over the field $k$, and $\Gamma$ a linear group (in the classical sense) over $k$ (and thus in particular simple).
+This thus answers, for such groups, a question of Serre (loc. cit.).
+
+We also point out that, for most groups (linear or not) that are simple over $S$ that we know of, and certainly for all those of the form $S\times_k\Gamma$ as above, we can show that every isotrivial principal homogeneous bundle is strictly isotrivial, which answers, in particular, another question of Serre (loc. cit. 1--14), taking into account the fact that a homogeneous principal bundle obtained by a descent \emph{\`{a} la} Cartier (cf. \cref{example:B.3(2)}) is obviously isotrivial.
+
+\begin{remark*}
+  One of the essential difficulties in these questions (setting aside the question of the existence of quotient schemes) is the lack of effectiveness criteria for a descent data along a faithfully flat \emph{non-finite} morphism.
+\end{remark*}
 
 
 
