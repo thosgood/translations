@@ -1,0 +1,192 @@
+\documentclass{article}
+
+\title{Singularities of differentiable maps}
+\author{A. Haefliger}
+\date{13\textsuperscript{th} and 24\textsuperscript{th} of May, 1957}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{fouriernc}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\lfoot{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
+\crefname{section}{\S\!}{\S\S\!}
+\crefname{equation}{}{}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+
+  \newtheorem{innercustomtheorem}{Theorem}
+  \crefname{innercustomtheorem}{Theorem}{Theorems}
+  \newenvironment{theorem}[1]
+    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
+    {\endinnercustomtheorem}
+
+  \newtheorem{innercustomlemma}{Lemma}
+  \crefname{innercustomlemma}{Lemma}{Lemmas}
+  \newenvironment{lemma}[1]
+    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
+    {\endinnercustomlemma}
+
+  \newtheorem{innercustomcorollary}{Corollary}
+  \crefname{innercustomcorollary}{Corollary}{Corollaries}
+  \newenvironment{corollary}[1]
+    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
+    {\endinnercustomcorollary}
+
+
+\theoremstyle{definition}
+
+  \newtheorem*{remark}{Remark}
+
+  \newtheorem{innercustomdefinition}{Definition}
+  \crefname{innercustomdefinition}{Definition}{Definitions}
+  \newenvironment{definition}[1]
+    {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
+    {\endinnercustomdefinition}
+
+
+%% Shortcuts %%
+
+\newcommand{\sh}[1]{{\mathscr{#1}}}
+\newcommand{\cat}[1]{{\mathcal{#1}}}
+\usepackage{aurical}
+\newcommand{\shHom}{\sh{H}\textup{\kern-2.2pt{\Fontauri\slshape om}}}
+\newcommand{\shExt}{\sh{E}\textup{\kern-2.2pt{\Fontauri\slshape xt}}}
+% \DeclareMathOperator{\shHom}{\underline{Hom}}
+% \DeclareMathOperator{\shExt}{\underline{Ext}}
+\newcommand{\HH}{\mathrm{H}}
+\newcommand{\EE}{\mathrm{E}}
+\newcommand{\RR}{\mathrm{R}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Ext}{\operatorname{Ext}}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+% \usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations/}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+
+  \medskip
+  
+  \emph{What follows is a translation of the French seminar talk:}
+
+  \medskip\noindent
+  \textsc{Haefliger, A.}
+  ``Les singularit\'{e}s des applications diff\'{e}rentiables''.
+  \emph{S\'{e}minaire Henri Cartan}, Volume~\textbf{9} (1956--1957), Talk no.~7.
+  {\url{http://www.numdam.org/item/SHC_1956-1957__9__A7_0/}}
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\tableofcontents
+\bigskip
+
+
+%% Content %%
+
+The aim of this expos\'{e} is
+
+
+\section{Recalling some definitions}
+\label{section1}
+
+
+%% Bibliography %%
+
+\nocite{*}
+
+\begin{thebibliography}{1}
+
+  \bibitem{1}
+  {\sc Ehresmann, C.}
+  \newblock ``Introduction \`{a} la th\'{e}orie des structures infinit\'{e}simales et des pseudo-groups de Lie'', in
+  \newblock {\em Colloques Internationaux du Centre National de la Recherche Scientifique \textbf{52}: G\'{e}om\'{e}trie diff\'{e}rentielle, Strasbourg 1953}.
+  \newblock Paris, Centre National de la Recherche Scientifique (1953), 97--110.
+
+  \bibitem{2}
+  {\sc Thom, R.}
+  \newblock Les singularit\'{e}s des applications diff\'{e}rentiables.
+  \newblock {\em Ann. Inst. Fourier} \textbf{6} (1955--56), 43--87.
+
+  \bibitem{3}
+  {\sc Thom, R.}
+  \newblock Un lemma sur les applications diff\'{e}rentiables.
+  \newblock {\em Bol. Soc. Mat. Mexico} \textbf{2} (1956), 59--71.
+
+  \bibitem{4}
+  {\sc Whitney, H.}
+  \newblock Differentiable manifolds.
+  \newblock {\em Annals of Math.} \textbf{37} (1936), 645--680.
+
+  \bibitem{5}
+  {\sc Whitney, H.}
+  \newblock The general type of singularity of a set of $2n-1$ smooth functions of $n$ variables.
+  \newblock {\em Duke Math. J.} \textbf{10} (1943), 161--172.
+
+  \bibitem{6}
+  {\sc Whitney, H.}
+  \newblock On singularities of mappings of Euclidean spaces. I. Mappings of the plane into the plane.
+  \newblock {\em Annals of Math.} \textbf{62} (1955), 374--410.
+
+  \bibitem{7}
+  {\sc Whitney, H.}
+  \newblock Singularities of mappings of Euclidean spaces.
+  \newblock {\em To appear.}
+
+  \bibitem{8}
+  {\sc Whitney, H.}
+  \newblock Elementary structure of real algebraic varieties.
+  \newblock {\em To appear (in Annals of Math.)}.
+
+\end{thebibliography}
+
+
+\end{document}
