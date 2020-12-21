@@ -296,6 +296,7 @@ By \cref{5}, $d_r=0$ for $r\geq3$, since the weights $p+2q$ and $p+2q-r+2$ of $E
 Thus $E_3^{pq}=E_\infty^{pq}$.
 Up to renumbering, the weight filtration of $H^\bullet(U,\QQ_l)$ is the abutment of \cref{6.2}:
 \[
+\label{6.3}
   \Gr_n^W(H^k(U,\QQ_l)) = E_3^{2k-n,n-k}.
 \tag{6.3}
 \]
@@ -306,6 +307,7 @@ Up to renumbering, the weight filtration of $H^\bullet(U,\QQ_l)$ is the abutment
 
 In integer cohomology, for the usual topology, the Leray spectral sequence for $j$ is of the form
 \[
+\label{7.1}
   'E_2^{pq}
   = \bigoplus_{\#Q=q} H^p(D_Q,\ZZ)
   \Rightarrow H^{p+q}(U,\ZZ).
@@ -314,11 +316,62 @@ In integer cohomology, for the usual topology, the Leray spectral sequence for $
 
 \oldpage{428}
 Since each $D_Q$ is a non-singular projective variety, $'E_2^{pq}$ is endowed with a Hodge structure of weight~$p$.
+We set $E_2^{pq}='E_2^{pq}\otimes\ZZ(-q)$ (a Hodge structure of weight $p+2q$).
+As an abelian group, $E_2^{pq}='E_2^{pq}$;
+it is interesting to consider \cref{7.1} as a spectral sequence with initial page $E_2^{pq}$.
+By~\cref{3}, we should expect for $d_2\colon E_2^{pq}\to E_2^{p+2,q-1}$ to be a morphism of Hodge structures.
+We prove this by thinking of $d_2$ as a Gysin morphism.
+Then $E_3^{pq}$ is endowed with a Hodge structure of weight $p+2q$.
+By~\cref{3}, we expect that, \emph{modulo torsion}, the spectral sequence\footnote{\emph{[Trans.] The original refers to (6.4), but this seems to be a typo.}} \cref{6.2} degenerates at the $E_3$ page (i.e. $E_3=E_\infty$), and that the vanishing of the $d_r$ (for $r\geq3$) is an application of \cref{5}.
+This programme was successfully completed in \cite[§3.2]{1}.
+There, we \emph{define} the weight filtration of $H^\bullet(U,\QQ)$ as the abutment of \cref{7.1}, up to renumbering \cref{6.3}.
+
+In fact, to endow the cohomology groups $H^\bullet$ with a mixed Hodge structure, the key point has always been, up until now, to find a spectral sequence $E$ abutting to $H^\bullet$ such that the $l$-adic analogue of $E_2^{pq}$ be conjecturally pure (of weight $p+2q$);
+$E_2^{pq}$ should then carry a natural Hodge structure (of weight $p+2q$), and the filtration $W$ is the abutment of $E$.
+
+
+\section{}
+\label{8}
 
 
 
 %% Bibliography %%
 
 \nocite{*}
+
+\begin{thebibliography}{6}
+
+  \bibitem{1}
+  {\sc Deligne, P.}
+  \newblock Th\'{e}orie de Hodge.
+  \newblock (To appear in {\em Publ. Math. I.H.E.S.} \textbf{40}).
+
+  \bibitem{2}
+  {\sc Demazure, M.}
+  \newblock Motifs des vari\'{e}t\'{e}s alg\'{e}briques.
+  \newblock {\em S\'{e}m. Bourbaki} (1969--70), Talk no.~365.
+
+  \bibitem{3}
+  {\sc Serre, J.-P.}
+  \newblock Analogues k\"{a}hl\'{e}riens de certaines conjectures de Weil.
+  \newblock {\em Ann. of Math.} \textbf{71} (1960), 392--394.
+
+  \bibitem{4}
+  {\sc Serre, J.-P. and Tate, J.}
+  \newblock Good reduction of abelian varieties.
+  \newblock {\em Ann. of Math.} \textbf{88} (1968), 392--517.
+
+  \bibitem{5}
+  {\sc Weil, A.}
+  \newblock Number of solutions of equations in finite fields.
+  \newblock {\em Bull. Amer. Math. Soc.} \textbf{55} (1949), 497--508.
+
+  \bibitem{6}
+  {\sc Weil, A.}
+  \newblock {\em Introduction \`{a} l'\'{e}tude des vari\'{e}t\'{e}s k\"{a}hl\'{e}riennes.}
+  \newblock {Act. Sci. et Ind.} \textbf{1267}, Hermann (1958).
+
+\end{thebibliography}
+
 
 \end{document}
