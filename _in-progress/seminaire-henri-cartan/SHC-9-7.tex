@@ -121,6 +121,7 @@
 
 %% Content %%
 
+\oldpage{7-01}
 The aim of this expos\'{e} is to reformulate, in the terminology of ``jets'' of C.~Ehresmann, the basis of the theory of singularities of differentiable maps developed by H.~Whitney and R.~Thom.
 This language seems to us to be well adapted to make precise the definitions and the problems, as well as to bring out their invariant (under a change of coordinates) characteristics.
 This first talk contains almost only the definitions needed to be able to state the Thom lemma and the fundamental conjecture (Whitney--Thom) of the theory.
@@ -137,6 +138,44 @@ For more details, see \cite{1}.
 
 We write ``$r$-differentiable map'' to mean a differentiable map of class~$r$.
 We denote by $\RR^n$ the real space of dimension~$n$.
+
+In the set of pointed local $r$-differentiable maps from $\RR^n$ to $\RR^p$ (that is, the set of pairs $(f,x)$ consisting of an $r$-differentiable map $f$ from an open subset $U$ of $\RR^n$ to $\RR^p$, and of a point $x\in U$), we say that the pair $(f,x)$ is equivalent to the pair $(f',x')$ if and only if $x=x'$ and all the partial derivatives of order $\leq r$ of $f$ and $f'$ at the point $x$ are equal.
+The equivalence class of the pair $(f,x)$ is called the \emph{jet of order~$r$ of $f$ at the point $x$}, and is denoted by $f^r(x)$ (instead of $j_x^rf$).
+The point $x$ is said to be the \emph{source} of the jet $f^r(x)$, and $f(x)$ is its \emph{target}.
+If $V^n$ and $V^p$ are $r$-differentiable manifolds, then we similarly have the notion of a jet of order~$r$ at a point $x$ of $V^n$ of a local $r$-differentiable map from $V^n$ to $V^p$.
+
+The set $J^r(\RR^n,\RR^p$ of jets of order $r$ (of $r$-differentiable maps) from $\RR^n$ to $\RR^p$ is endowed with a topological structure which makes it a manifold homeomorphic to some real space:
+the coordinates of a jet $f^r(x)$ are the values of the coordinates of its source $x$ and of its target $f(x)$ and of the partial derivatives up to order~$r$ of $f$ at the point $x$.
+The space of jets of order~$r$ from
+\oldpage{7-02}
+$\RR^n$ to $\RR^p$ with source and target being the origin of $\RR^n$ and $\RR^p$ (respectively) is denoted by $L_{n,p}^r$.
+The space $J^r(\RR^n,\RR^p)$ is canonically isomorphic to the product $\RR^n\times\RR^p\times L_{n,p}^r$.
+
+The partial composition law defined between pointed local maps from $\RR^n$ to $\RR^p$ and pointed local maps from $\RR^p$ to $\RR^m$ defines, by passing to the quotient, a partially-defined \emph{composition law} between $J^r(\RR^n,\RR^p)$ and $J^r(\RR^p,\RR^m)$ that is continuous.
+The composition $YX$ of $X\in J^r(\RR^n,\RR^p)$ and $Y\in J^r(\RR^p,\RR^m)$ is defined if the source of $Y$ is the target of $X$.
+
+The set of \emph{invertible jets of order~$r$ from $\RR^n$ to $\RR^n$} with source and target equal to the origin forms an algebraic \emph{group} denoted by $L_n^r$.
+\emph{The product group $L_n^r\times L_p^r$ acts as a transformation group on $L_{n,p}^r$}: the transformation of an element $X\in L_{n,p}^r$ under the pair $(Z,Z')\in L_n^r\times L_p^r$ is the element $Z'XZ^{-1}$.
+
+All of the above notions immediately generalise if we replace $\RR^n$ and $\RR^p$ by $r$-differentiable manifolds $V^n$ and $V^p$ (of dimension~$n$ and $p$, respectively).
+The space $J^r(V^n,V^p)$ of jets of order~$r$ from $V^n$ to $V^p$ is endowed with the structure of a manifold;
+the map that sends any element of $J^r(V^n,V^p)$ to the pair consisting of its source and target is the projection of a fibration with base $V^n\times V^p$, with fibre $L_{n,p}^r$, and with structure group $L_n^r\times L_p^r$.
+
+Every $r$-differentiable map $f$ from $V^n$ to $V^p$ \emph{extends} to a map $f^r$ from $V^n$ to $J^r(V^n,V^p)$ that sends any point $x$ of $V^n$ to $f^r(x)$ (i.e. the jet of order~$r$ of $f$ at the point $x$).
+
+A jet $X\in J^r(V^n,V^p)$ is said to be \emph{equivalent} to a jet $X'\in J^r(V'^n,V'^p)$ (written $X\sim X'$) if there exist invertible jets $Z_1\in J^r(V^n,V'^n)$ and $Z_2\in J^r(V^p,V'^p)$ such that $X'=Z_2XZ_1^{-1}$.
+In particular, two jets $X$ and $X'$ belonging to $L_{n,p}^r$ are equivalent if and only if there exists an elements of the group $L_n^r\times L_p^r$ that sends $X$ to $X'$.
+
+Finally, note that the space $J^{r+k}(V^n,V^p)$ can be identified with a sub-manifold of the space of jets of order~$k$ from $V^n$ to $J^r(V^n,V^p)$.
+This is a direct consequence of the fact that the partial derivatives of order $\leq r+k$ of an $(r+k)$-differentiable map from $\RR^n$ to $\RR^p$ are the partial derivatives of order $\leq k$ of the partial derivatives of order $\leq r$ of $f$.
+
+
+\section{The Thom lemma}
+\label{section2}
+
+\subsection*{The notion of a map transversal to a sub-manifold}
+
+\oldpage{7-03}
 
 
 %% Bibliography %%
