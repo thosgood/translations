@@ -90,7 +90,6 @@
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
-\newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
 
@@ -382,6 +381,7 @@ and $M$ induces
 
 \oldpage{429}
 \begin{env}{8.5}
+\label{8.5}
   If $X$ is a non-singular projective variety over an algebraically closed field $k_0$, then we define
   \[
     L\colon \ZZ_l(-1)\otimes H^\bullet(X,\ZZ_l) \to H^\bullet(X,\ZZ_l)
@@ -445,6 +445,24 @@ By \cref{3} and \cref{8}, we expect for $H^i(\widetilde{X},\QQ)\simeq H^i(X_t,\Q
 \]
 We would further like for \cref{8.2}, and not just \cref{8.3} and \cref{8.4}, to have an analogue.
 
+We have in fact managed to define, for each vector $u$ of the tangent space to $D$ at $\{0\}$, a mixed Hodge structure $\mathscr{H}_u$ on $H^i(\widetilde{X},\ZZ)$.
+The filtration $W$ and the Hodge structures on the $\Gr_n^W(H^i)$ are independent of $u$, and the dependence on $u$ of $\mathscr{H}_u$ can be expressed
+\oldpage{430}
+simply in terms of $T$.
+Analogously to \cref{8.2}, we find that, for any $u$, $\log T$ induces a homomorphism of mixed Hodge structures
+\[
+  M\colon \ZZ(1)\otimes H^i(\widetilde{X},\ZZ) \to H^i(\widetilde{X},\ZZ).
+\]
+
+Finally, the analogy in \hyperref[8.5]{8.5} is not misleading (but here, the fact that $f|D^*$ is assumed to be proper and smooth is probably essential).
+We can prove that
+\[
+  (\log T)^k\colon \Gr_{n+k}^W(H^n(\widetilde{X},\QQ)) \to \Gr_{n-k}^W(H^n(\widetilde{X},\QQ))
+\]
+is an isomorphism for all $k$ (cf. \cite[IV~6, Corollary to Theorem~5]{6}).
+This characterises the filtration $W$.
+Up until the present, we have only had an analogue of the positivity theorem of Hodge (cf. \cite[IV~7, Corollary to Theorem~7]{6}) in very particular cases.
+We hope that the mixed structures $\mathscr{H}_u$ determine the asymptotic behaviour, for $t\to0$, of the family of pure structures $H^i(X,\ZZ)$ (for $t\in D^*$).
 
 
 %% Bibliography %%
