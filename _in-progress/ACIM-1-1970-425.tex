@@ -12,6 +12,7 @@
 \usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{booktabs}
+\usepackage{tikz-cd}
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
@@ -61,6 +62,12 @@
     {\renewcommand\theinnercustomprinciple{#1}\innercustomprinciple}
     {\endinnercustomprinciple}
 
+  \newtheorem{innercustomenv}{}
+  \crefname{innercustomenv}{}{}
+  \newenvironment{env}[1]
+    {\renewcommand\theinnercustomenv{#1}\innercustomenv}
+    {\endinnercustomenv}
+
   \newtheorem*{translation*}{Translation}
   \newtheorem*{scholium*}{Scholium}
   \newtheorem*{principle*}{Principle}
@@ -71,6 +78,8 @@
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\CC}{\mathbb{C}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\Id}{\mathrm{Id}}
 
 \DeclareMathOperator{\Gr}{Gr}
 \DeclareMathOperator{\Ker}{Ker}
@@ -145,7 +154,7 @@ Up until now, it has mainly served to formulate conjectures in Hodge theory, and
   \end{enumerate}
 \end{definition}
 
-A \emph{morphism} $f\colon H\to H'$ is a homomorphism $f_\ZZ\colon H_\ZZ\to H'_\ZZ$ such that $f_\QQ\colon H_\QQ\to H'_\QQ$ and $f_\CC\colon H_\CC\to H'_\CC$ are compatible with the filtrations $W$ and $F$, respectively.
+A \emph{morphism} $f\colon H\to H'$ is a homomorphism $f_\ZZ\colon H_\ZZ\to H'_\ZZ$ such that $f_\QQ\colon H_\QQ\to H'_\QQ$ and $f_\CC\colon H_\CC\to H'_\CC$ are compatible with the filtrations $W$ and $F$ (respectively).
 
 The \emph{Hodge numbers} of $H$ are the integers
 \[
@@ -212,8 +221,9 @@ It is trivial that every morphism $f\colon H\to H'$ is strictly compatible with 
   The Galois modules that appear in $l$-adic cohomology have, as analogues, over $\CC$, mixed Hodge structures.
   We further have the dictionary
   
-  \bigskip
-  \begin{tabular}{p{0.5\linewidth}|p{0.5\linewidth}}
+  \bigskip\noindent
+  \begin{tabular}{p{0.45\linewidth}|p{0.45\linewidth}}
+    \toprule
     pure module of weight $n$
     & Hodge structure of weight $n$
   \\weight filtration
@@ -222,6 +232,7 @@ It is trivial that every morphism $f\colon H\to H'$ is strictly compatible with 
     & morphism
   \\Tate module $\ZZ_l(1)$
     & Tate Hodge structure $\ZZ(1)$
+  \\\bottomrule
   \end{tabular}
 \end{translation*}
 
@@ -332,6 +343,107 @@ $E_2^{pq}$ should then carry a natural Hodge structure (of weight $p+2q$), and t
 
 \section{}
 \label{8}
+
+Let $\Spec(V)$ be the spectrum of a Henselian discrete valuation ring (a \emph{Henselian trait}) with field of fractions $K$, and residue field $k$ that is of finite type over the prime field of characteristic $p$.
+Let $\overline{K}$ be an algebraic closure of $K$, and let $H$ be a vector space of finite dimension over $\QQ_l$ (for $l\neq p$), on which $\Gal(\overline{K}/K)$ acts continuously.
+By Grothendieck, we know (\cite[Appendix]{4}) that a subgroup of finite index of the inertia group $I$ acts unipotently.
+By replacing $V$ with a finite extension, we arrive to the case where the action of all of $I$ is unipotent (the \emph{semi-stable} case);
+it then factors as the largest pro-$l$-group $I_l$ that is a quotient of $I$, and canonically isomorphic to $\ZZ_l(1)$.
+
+\begin{principle}{8.1}
+  In the semi-stable case, if the Galois module $H$ ``comes from algebraic geometry'', then there exists a (unique) increasing filtration $W$ of $H$ (the ``\emph{weight filtration}'') such that $I$ acts trivially on $\Gr_n^W(H)$, and such that $\Gr_n^W(H)$, as a Galois module under $\Gal(\overline{k}/k)\simeq\Gal(\overline{K}/K)/I$ is pure of weight~$n$.
+\end{principle}
+
+We can compare this with \cref{principle-2.1} and with the appendix of \cite{4}.
+
+If we have a resolution of the singularities, then we can sometimes give a conjectural definition of $W$, whose validity follows from the Weil conjectures.
+With the help of the resolution and of Weil, it is sometimes easy to show that, in any case, $H$ splits into pure Galois modules (under $\Gal(\overline{k}/k)$).
+
+Suppose that $H$ is semi-stable.
+For $T\in I_t$, we define $\log T$ by the \emph{finite} sum $-\sum_{n>0}(\Id-T)^n/n$.
+The map $(T,x)\mapsto\log T(x)$ can be identified with a homomorphism
+\[
+\label{8.2}
+  M\colon \ZZ_l(1)\otimes H \to H.
+\tag{8.2}
+\]
+Since $\ZZ_l(1)$ is of weight~$-2$, we necessarily have (cf. \cref{5})
+\[
+\label{8.3}
+  M(\ZZ_l(1)\otimes W_n(H)) \subset W_{n-2}(H),
+\tag{8.3}
+\]
+and $M$ induces
+\[
+\label{8.4}
+  \Gr(M)\colon \ZZ_l(1)\otimes\Gr_n^W(H) \to \Gr_{n-2}^W(H).
+\tag{8.4}
+\]
+
+\oldpage{429}
+\begin{env}{8.5}
+  If $X$ is a non-singular projective variety over an algebraically closed field $k_0$, then we define
+  \[
+    L\colon \ZZ_l(-1)\otimes H^\bullet(X,\ZZ_l) \to H^\bullet(X,\ZZ_l)
+  \]
+  as being the cup product with the cohomology class with a hyperplane section.
+  We note that there is a formal analogy between $L$ and $M$;
+  in the same way that $M$ is defined by an action of $\ZZ_l(1)$, we can think of $L$ as being defined by an action of $\ZZ_l(-1)$;
+  $L$ increases the degree by~$2$, and $\Gr M$ \cref{8.4} decreases it by~$2$.
+\end{env}
+
+
+\section{}
+\label{9}
+
+Let $D$ be the unit disc, $D^*=D\setminus\{0\}$, and $X$
+\[
+  \begin{tikzcd}[column sep=tiny]
+    X \ar[rr,hook] \ar[dr,swap,"f"]
+    && \PP^r(\CC)\times D \ar[dl,"\mathrm{pr}_2"]
+  \\&D&
+  \end{tikzcd}
+\]
+a family of projective varieties parametrised by $D$, with $f$ proper, and $f|D^*$ smooth.
+Keeping the notation of \cref{8}, and recalling that, in the analogy between Henselian traits and small neighbourhoods of $0$ in the complex line, we have the following dictionary (note that the spectrum of the ring of germs at $0$ of holomorphic functions is a Henselian trait):
+
+\begin{env}{9.1}
+  \phantom{}
+  \begin{tabular}{p{0.45\linewidth}|p{0.45\linewidth}}
+    \toprule
+    $D$
+    & $\Spec(V)$
+  \\$D^*$
+    & $\Spec(K)$
+  \\a universal covering $\widetilde{D^*}$ of $D^*$
+    & $\Spec(\overline{K})$
+  \\the fundamental group $\pi_1(D^*)$
+    & the inertia group $I$
+  \\(with $\pi_1(D^*)=\ZZ\simeq\ZZ(1)_\ZZ$)
+    & (with $I_l=\ZZ_l(1)$)
+  \\$X$
+    & a projective scheme $X$ over $\Spec(V)$
+  \\$X^*=f^{-1}(D^*)$
+    & $X_K$
+  \\$\widetilde{X}=X\times_D\widetilde{D^*}$
+    & $X_{\overline{K}}$
+  \\the local system $R^if_*\ZZ|D^*$
+    & the Galois module $H^i(X_{\overline{K}},\ZZ_l$
+  \\$H^i(\widetilde{X},\ZZ)$
+    & $H^i(X_{\overline{K}},\ZZ_l)$
+  \end{tabular}
+\end{env}
+
+Note that $\widetilde{X}$ is homotopically equivalent to each of the fibres $X_t=f^{-1}(t)$ (for $t\in D^*$): $H^i(X_{\overline{K}},\ZZ_l)$ is again analogous to $H^i(X_t,\ZZ)$, and the transformation of the monodromy $T$ corresponds to the action of $I$.
+
+Here, again, we know that a subgroup of finite index of $\pi_1(D^*)$ acts unipotently on $H^i(\widetilde{X},\QQ)=H^i(X_t,\QQ)$.
+We place ourselves in the semi-stable case, where all of $\pi_1(D^*)$ acts unipotently (this reduces to replacing $D$ by a finite covering), and let $T$ be the action of the canonical generator of $\pi_1(D^*)$.
+
+By \cref{3} and \cref{8}, we expect for $H^i(\widetilde{X},\QQ)\simeq H^i(X_t,\QQ)$ to be endowed with an increasing filtration $W$, for $\Gr_n^W(H^i(\widetilde{X},\QQ))$ to be endowed with a Hodge structure of weight~$n$, for $\log T(W_n)\subset W_{n-2}$, and for $\log T$ to induce a morphism of Hodge structures
+\[
+  M_n\colon \ZZ(-1)\otimes\Gr_n^W(H^i) \to \Gr_{n-2}^W(H^i).
+\]
+We would further like for \cref{8.2}, and not just \cref{8.3} and \cref{8.4}, to have an analogue.
 
 
 
