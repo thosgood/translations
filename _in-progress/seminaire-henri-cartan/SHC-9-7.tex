@@ -46,35 +46,13 @@
 \usepackage{amsthm}
 
 \theoremstyle{plain}
-
-  \newtheorem{innercustomtheorem}{Theorem}
-  \crefname{innercustomtheorem}{Theorem}{Theorems}
-  \newenvironment{theorem}[1]
-    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
-    {\endinnercustomtheorem}
-
-  \newtheorem{innercustomlemma}{Lemma}
-  \crefname{innercustomlemma}{Lemma}{Lemmas}
-  \newenvironment{lemma}[1]
-    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
-    {\endinnercustomlemma}
-
-  \newtheorem{innercustomcorollary}{Corollary}
-  \crefname{innercustomcorollary}{Corollary}{Corollaries}
-  \newenvironment{corollary}[1]
-    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
-    {\endinnercustomcorollary}
+  
+  \newtheorem*{lemma*}{Lemma}
 
 
 \theoremstyle{definition}
 
-  \newtheorem*{remark}{Remark}
-
-  \newtheorem{innercustomdefinition}{Definition}
-  \crefname{innercustomdefinition}{Definition}{Definitions}
-  \newenvironment{definition}[1]
-    {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
-    {\endinnercustomdefinition}
+  \newtheorem*{remarks*}{Remarks}
 
 
 %% Shortcuts %%
@@ -188,6 +166,48 @@ A differentiable map $f$ from a differentiable manifold $V^n$ to $V^p$ is said t
 
 If $f$ (assumed to be $r$-differentiable) is transversal to $S$ at every point of $V^n$, then \emph{$f^{-1}(S)$ is an $r$-differentiable sub-manifold of $V^n$ of codimension~$q$}.
 Indeed, $f^{-1}(S)$ is defined by $g_y\circ f=0$ in $f^{-1}(U_y)$.
+
+A \emph{Collection of $r$-differentiable sub-manifolds} in $V^p$ is a union $S=S_1\cup S_2\cup\ldots\cup S_m$ of a finite number (with $m\leq p$) of disjoint $r$-differentiable sub-manifolds of $V^p$ such that
+\begin{enumerate}
+  \item $\dim S_k>\dim S_{k+1}$ ; and
+  \item $S_k\cup S_{k+1}\cup\ldots\cup S_m$ is closed in $V^p$ (for $k=1,2\ldots,m$).
+\end{enumerate}
+The points of $S_1$ are said to be the \emph{regular} points of $S$.
+
+An $r$-differentiable map $f$ from $V^n$ to $V^p$ is said to be transversal at a point $x$ of $V^n$ to the collection $S$ of manifolds if $f$ is transversal at the point $x$ to the sub-manifold $S_k$ containing $f(x)$ of the decomposition $S$.
+If $f$ is transversal to $S$ at every point of $V^n$, then $f^{-1}(S)$ is a collection of $r$-differentiable manifolds in $V^n$, i.e. $f^{-1}(S)=f^{-1}(S_1)\cup\ldots\cup f^{-1}(S_m)$.
+
+Every algebraic variety can be expressed (in general, in multiple ways) as a collection of partial varieties (cf. \cite{8}).
+
+We will write $L(\RR^n,\RR^p,q)$ to denote the functional space of $q$-differentiable maps from $\RR^n$ to $\RR^p$ endowed with the topology defined by the chart of the partial derivatives of order~$\leq q$ on the compact subsets of $\RR^n$.
+
+\begin{lemma*}[The Thom lemma]
+  Let $S$ be an $s$-differentiable closed sub-manifold of $J^r(\RR^n,\RR^p)$ (with $s\geq n$).
+  Then the $q$-differentiable maps (for $q\geq r+n$) from $\RR^n$
+\oldpage{7-04}
+  to $\RR^p$ such that the extension $f^r$ of order~$r$ of $f$ is transversal to $S$ at every point of a compact subset of $\RR^n$ form an everywhere-dense open subset of $L(\RR^n,\RR^p,q)$.
+\end{lemma*}
+
+\begin{proof}
+  See \cite{3}.
+\end{proof}
+
+\begin{remarks*}
+  Since $L^(\RR^n,\RR^p,q)$ is a Baire space, the $q$-differentiable maps that are not transversal to $S$ at at least one point of $\RR^n$ form a subset whose complement is everywhere dense in $L(\RR^n,\RR^p,q)$;
+  in other words, every $r$-differentiable map from $\RR^n$ to $\RR^p$ can be approximated as close as desired, as can its partial derivatives of order~$\leq q$, by an $r$-differentiable map $g$ that is transversal to $S$ at every point of $\RR^n$.
+  This is still true even if $S$ is a non-closed sub-manifold, or if $S$ is a collection of sub-manifolds of $J^r(\RR^n,\RR^p)$.
+\end{remarks*}
+
+We can prove the following by passing from local to global:
+
+\begin{lemma*}[The global Thom lemma]
+  Let $V^n$ and $V^p$ be (paracompact) differentiable manifolds, and let $S$ be an $s$-differentiable sub-manifold of $J^r(V^n,V^p)$ (for $s\geq n$).
+  The $q$-differentiable maps (for $q\geq r+n$) from $V^n$ to $V^p$ such that the extension $f^r$ of $f$ is transversal to $S$ at every point of a compact subset of $V^n$ form an everywhere-dense open subset of $L(V^n,V^p,q)$.
+\end{lemma*}
+
+
+\section{Critical variety}
+\label{3}
 
 
 
