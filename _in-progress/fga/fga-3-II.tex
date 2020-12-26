@@ -273,6 +273,45 @@ Then, if $\cat{X}=(X_i)_{i\in I}$ is an arbitrary pro-object of $\cat{C}$, then 
 \]
 with the projective limit being \emph{taken in $\Pro(\cat{C})$} (since $h_{\cat{X}}=\varinjlim_i h_{X_i}$).
 
+We draw attention to the fact that, even if the projective limit of the $X_i$ \emph{exists in $\cat{C}$}, it will generally \emph{not} be isomorphic to the projective limit $\cat{X}$ in $\Pro(\cat{C})$, as is already evident in the case where $\cat{C}$ is the category of sets.
+We note that, by the definition itself, $\varprojlim{}_{\cat{C}}X_i=L$ is defined by the condition that the functor
+\[
+  \varprojlim_i\Hom_{\cat{C}}(Y,X_i)=\Hom_{\Pro(\cat{C})}(Y,\cat{X})
+\]
+in $Y\in\cat{C}$ and with values in $\Set$ be representable via $\cat{L}$, i.e. that it be isomorphic to $\Hom_{\cat{C}}(Y,\cat{L})$;
+then \emph{$\lim{}_{\cat{C}}X_i$ is already defined in terms of the \emph{pro-object} $\cat{X}$}, and, in a precise way, depends functorially on the pro-object $\cat{X}$ whenever it is defined;
+there is therefore no problem with denoting it by $\lim{}_{\cat{C}}(\cat{X})$.
+If projective limits in $\cat{C}$ always exist, then $\lim{}_{\cat{C}}(\cat{X})$ is a functor from $\Pro(\cat{C})$ to $\cat{C}$, and there is a canonical homomorphism of functors $\lim_\cat{C}(\cat{X})\to\cat{X}$.
+Since every (covariant, say, for simplicity) functor
+\[
+  F\colon \cat{C} \to \cat{C}'
+\]
+can be extended in an obvious way to a functor
+\[
+  \Pro(F)\colon \Pro(\cat{C}) \to \Pro(\cat{C}'),
+\]
+it follows that, if projective limits always exist in $\cat{C}'$, then $F$ also canonically defines a composite functor
+\[
+  \overline{F} = \varprojlim{}_{\cat{C}'}\colon \Pro(\cat{C}) \to \cat{C}'
+\]
+sending $\cat{X}=(X_i)_{i\in I}$ to $\varprojlim{}_{\cat{C}'}F(X_i)$.
+
+A pro-object $\cat{X}$ is said to be a \emph{strict pro-object} if it is isomorphic to a pro-object $(X_i)_{i\in I}$, where the transition morphisms $X_i\to X_j$ are \emph{epimorphisms};
+a functor defined by such an object is said to be \emph{strictly pro-representable}.
+We can thus further demand that $I$ be a filtered \emph{ordered} set, and that every epimorphism
+\oldpage{195-05}
+$X_i\to X'$ be equivalent to an epimorphism $X_i\to X_j$ for some suitable $j\in I$ (uniquely determined by this condition).
+Under these conditions, the projective system $(X_i)_{i\in I}$ is determined \emph{up to unique isomorphism} (in the usual sense of isomorphisms of projective systems).
+It thus follows that \emph{the projective limit of a projective system $\cat{X}^{(\alpha)}$ of strict pro-objects always exists in $\Pro(\cat{C})$}, and that, with the above notation of $F$ and $\overline{F}$, we have that
+\[
+  \overline{F}\varprojlim_\alpha\cat{X}^{(\alpha)} = \varprojlim_\alpha{}_{\cat{C}'}F(X^{(\alpha)}).
+\]
+In particular, if every pro-object of $\cat{C}$ is strict (cf. the \hyperref[A.1]{previous section}), then the extended functor $\overline{F}$ commutes with projective limits.
+
+
+\section{Characterisation of pro-representable functors}
+\label{A.3}
+
 
 %% Bibliography %%
 
