@@ -1,0 +1,229 @@
+\documentclass{article}
+
+\title{Techniques of descent and existence theorems in algebraic geometry\\II. \emph{The existence theorem and the formal theory of modules}}
+\author{A. Grothendieck}
+\date{February 1960}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+\usepackage{graphicx}
+
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{fouriernc}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\lfoot{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
+\crefname{section}{}{}
+\crefname{equation}{}{}
+\renewcommand{\thepart}{\Alph{part}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{(\alph{subsection})}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+
+\newtheorem{innercustomtheorem}{Theorem}
+\crefname{innercustomtheorem}{Theorem}{Theorems}
+\newenvironment{theorem}[1]
+  {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
+  {\endinnercustomtheorem}
+
+\newtheorem{innercustomproposition}{Proposition}
+\crefname{innercustomproposition}{Proposition}{Propositions}
+\newenvironment{proposition}[1]
+  {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+  {\endinnercustomproposition}
+
+\newtheorem{innercustomlemma}{Lemma}
+\crefname{innercustomlemma}{Lemma}{Lemmas}
+\newenvironment{lemma}[1]
+  {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
+  {\endinnercustomlemma}
+
+\newtheorem{innercustomcorollary}{Corollary}
+\crefname{innercustomcorollary}{Corollary}{Corollaries}
+\newenvironment{corollary}[1]
+  {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
+  {\endinnercustomcorollary}
+
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{lemma*}{Lemma}
+
+
+\theoremstyle{definition}
+
+\newtheorem{innercustomdefinition}{Definition}
+\crefname{innercustomdefinition}{Definition}{Definitions}
+\newenvironment{definition}[1]
+  {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
+  {\endinnercustomdefinition}
+
+\newtheorem{innercustomexample}{Example}
+\crefname{innercustomexample}{Example}{Examples}
+\newenvironment{example}[1]
+  {\renewcommand\theinnercustomexample{#1}\innercustomexample}
+  {\endinnercustomexample}
+
+\newtheorem*{remark*}{Remark}
+\newtheorem*{remarks*}{Remarks}
+\newtheorem*{example*}{Example}
+
+%% Shortcuts %%
+
+\newcommand{\sh}[1]{{\mathscr{#1}}}
+\newcommand{\cat}[1]{{\mathcal{#1}}}
+\newcommand{\fk}[1]{{\mathfrak{#1}}}
+\newcommand{\kres}{k}
+
+\newcommand{\Set}{\mathsf{Set}}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\shHom}{\underline{\Hom}}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\HH}{H}
+\DeclareMathOperator{\RR}{R}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Ga}{G_a}
+\DeclareMathOperator{\Gm}{G_m}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\Spec}{Spec}
+
+\newcommand{\todo}{\textbf{ !TODO! }}
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations/}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+
+  \medskip
+  
+  \emph{What follows is a translation of the French seminar talk:}
+
+  \medskip\noindent
+  \textsc{Grothendieck, A.}
+  Technique de descente et th\'{e}or\`{e}mes d'existence en g\'{e}om\'{e}trie alg\'{e}brique. I. Le th\'{e}or\`{e}me d'existence et th\'{e}orie formelle des modules.
+  \emph{S\'{e}minaire Bourbaki}, Volume~\textbf{12} (1959--60), Talk no.~195.
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+
+%% Content %%
+
+\subsubsection*{}
+
+\emph{[Trans.] We have made changes throughout the text following the errata (\emph{S\'{e}minaire Bourbaki} \textbf{14}, 1961--62, Compl\'{e}ment); we preface them with ``[Comp.]''.}
+\medskip
+
+\todo{errata}
+
+\oldpage{195-01}
+\part{Representable and pro-representable functors}
+\label{A}
+
+\section{Representable functors}
+\label{A.1}
+
+Let $\cat{C}$ be a category.
+For all $X\in\cat{C}$, let $h_X$ be the contravariant functor from $\cat{C}$ to the category $\Set$ of sets given by
+\[
+  \begin{aligned}
+    h_X\colon \cat{C} &\to \Set
+  \\Y&\mapsto \Hom(Y,X).
+  \end{aligned}
+\]
+If we have a morphism $X\to X'$ in $\cat{C}$, then this evidently induces a morphism $h_X\to h_{X'}$ of functors;
+$h_X$ is a covariant functor in $X$, i.e. we have defined a \emph{canonical covariant functor}
+\[
+  h\colon \cat{C} \to \Hom(\cat{C}^o,\Set)
+\]
+from $\cat{C}$ to the category of covariant functors from the dual $\cat{C}^o$ of $\cat{C}$ to the category of sets.
+We then recall:
+
+\begin{proposition}{1}
+  This functor $h$ is \emph{faithfully flat};
+  in other words, for every pair $X,X'$ of objects of $\cat{C}$, the natural map
+  \[
+    \Hom(X,X') \to \Hom(h_X,h_{X'})
+  \]
+  is \emph{bijective}.
+\end{proposition}
+
+
+%% Bibliography %%
+
+\nocite{*}
+\begin{thebibliography}{4}
+
+  \bibitem{1}
+  {\sc Grothendieck, A.}
+  \newblock Sur quelques points d'alg\'{e}bre homologique.
+  \newblock {\em Tohoku math. J.} {\bf 9} (1957), 119--221.
+
+  \bibitem{2}
+  {\sc Grothendieck, A.}
+  \newblock G\'{e}om\'{e}trie formelle et g\'{e}om\'{e}trie alg\'{e}brique.
+  \newblock {\em S\'{e}minaire Bourbaki} \textbf{11} (1958--59), Talk no.~182.
+
+  \bibitem{3}
+  {\sc Grothendieck, A.}
+  \newblock Technique de descente et th\'{e}or\`{e}mes d'existence en g\'{e}om\'{e}trie alg\'{e}brique, I: G\'{e}n\'{e}ralit\'{e}s, Descente pas morphismes fid\`{e}lement plats.
+  \newblock {\em S\'{e}minaire Bourbaki} \textbf{12} (1959--60), Talk no.~190.
+
+  \bibitem{4}
+  {\sc Serre, J.-P.}
+  \newblock Corps locaux et isog\'{e}nies.
+  \newblock {\em S\'{e}minaire Bourbaki} \textbf{11} (1958--59), Talk no.~185.
+
+\end{thebibliography}
+
+\end{document}
