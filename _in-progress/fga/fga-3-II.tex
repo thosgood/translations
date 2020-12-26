@@ -122,6 +122,7 @@
 \DeclareMathOperator{\SL}{SL}
 \DeclareMathOperator{\Sp}{Sp}
 \DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Pro}{Pro}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -191,6 +192,7 @@ from $\cat{C}$ to the category of covariant functors from the dual $\cat{C}^o$ o
 We then recall:
 
 \begin{proposition}{1}
+\label{A.1-proposition1}
   This functor $h$ is \emph{faithfully flat};
   in other words, for every pair $X,X'$ of objects of $\cat{C}$, the natural map
   \[
@@ -201,7 +203,7 @@ We then recall:
 
 In particular, if a functor $F\in\Hom(\cat{C}^o,\Set)$ is isomorphic to a functor of the form $h_X$, then \emph{$X$ is determined up to unique isomorphism}.
 We then say that the functor $F$ is \emph{representable}.
-The above proposition then implies that the canonical functor $h$ defines an \emph{equivalence} between the category $\cat{C}$ and the full sub-category of $\Hom(\cat{C}^o,\Set)$ consisting of representable functors.
+The above proposition then implies that the canonical functor $h$ defines an \emph{equivalence} between the category $\cat{C}$ and the full subcategory of $\Hom(\cat{C}^o,\Set)$ consisting of representable functors.
 This fact is the basis of \emph{the idea of a ``solution of a universal problem''}, with such a problem always consisting of examining if a given (contravariant, as here, or covariant, in the dual case) functor from $\cat{C}$ to $\Set$ is representable.
 \oldpage{195-02}
 Note further that, even by the definition of products in a category \cite{1}, the functor $h\colon X\mapsto h_X$ commutes with products whenever they exist (and, more generally, with finite or infinite projective limits, and, in particular, with fibred products, taking ``kernels'' \cite{2}, etc., whenever such things exist): we have an isomorphism of functors
@@ -237,6 +239,39 @@ The usual procedure of reversing the arrows that is necessary, for example, in t
 
 \section{Pro-representable functors, pro-objects}
 \label{A.2}
+
+Let $\cat{X}=(X_i)_{i\in I}$ be a projective system of objects of $\cat{C}$;
+there is a corresponding covariant functor
+\[
+  h'_{\cat{X}} = \varinjlim_i h'_{X_i}
+\]
+which can be written more explicitly as
+\[
+  h'_{\cat{X}}(Y) = \varinjlim_i h'_{X_i}(Y) = \varinjlim_i\Hom(X_i,Y)
+\]
+which is a functor from $\cat{C}$ to $\Set$.
+A functor from $\cat{C}$ to $\Set$ that is isomorphic to a functor of this type \emph{with $I$ filtered} is said to be \emph{pro-representable}.
+By \hyperref[A.1]{the previous section}, these are exactly the functors that are isomorphic to \emph{filtered inductive limits of representable functors}.
+Let $\cat{X}'=(X_j)_{j\in J}$ be another filtered projective system in $\cat{C}$ (indexed by another filtered pre-ordered set of indices $J$).
+Then we can easily show that we have a canonical bijection
+\[
+  \Hom(h_{\cat{X}'},h_{\cat{X}}) = \varprojlim_j\varinjlim_i\Hom(X_i,X'_j)
+\]
+(generalising \hyperref[A.1-proposition1]{Proposition~1, (A.1)}).
+This leads to introducing the \emph{category $\Pro(\cat{C})$ of pro-objects of $\cat{C}$}, whose objects are projective systems of objects of $\cat{C}$ (indexed by arbitrary filtered pre-ordered sets of indices), and whose morphisms between objects $\cat{X}=(X_i)_{i\in I}$ and $\cat{X}'=(X_j)_{j\in J}$ are given by
+\[
+  \Pro\Hom(\cat{X},\cat{X}') = \varprojlim_j\varinjlim_i\Hom(X_i,X'_j),
+\]
+with the composition of pro-homomorphisms being evident.
+By the very construction itself, $\cat{X}\mapsto h'_{\cat{X}}$ can be considered as a contravariant functor in $\cat{X}$, establishing an \emph{equivalence between the dual category of the category $\Pro(\cat{C})$ of pro-objects of $\cat{C}$ and the category of pro-representable covariant functors from $\cat{C}$ to $\Set$}.
+Of course, an object $X$ of $\cat{C}$ canonically defines a pro-object, denoted
+\oldpage{195-04}
+again by $X$, so that \emph{$\cat{C}$ is equivalent to a full subcategory of $\Pro(\cat{C})$}.
+Then, if $\cat{X}=(X_i)_{i\in I}$ is an arbitrary pro-object of $\cat{C}$, then (with the above identification) we have that
+\[
+  \cat{X} = \varprojlim_i X_i
+\]
+with the projective limit being \emph{taken in $\Pro(\cat{C})$} (since $h_{\cat{X}}=\varinjlim_i h_{X_i}$).
 
 
 %% Bibliography %%
