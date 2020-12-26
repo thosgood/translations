@@ -177,6 +177,20 @@ This is a direct consequence of the fact that the partial derivatives of order $
 
 \oldpage{7-03}
 
+An \emph{$r$-differentiable sub-manifold $S$ of codimension~$q$} of an $r$-differentiable manifold $V^p$ is a subset $S$ of $V^p$ such that, for every point $y$ of $S$, there exists a neighbourhood $U_y$ of $y$, and an $r$-differentiable map $g_y$ from $U_y$ to $\RR^q$ of rank~$q$ such that $U_y\cap S$ is the inverse image under $g_y$ of the origin $0$ in $\RR^q$.
+
+A differentiable map $f$ from a differentiable manifold $V^n$ to $V^p$ is said to be \emph{transversal to the sub-manifold $S$ at the point $x$ of $V^n$} if either
+\begin{enumerate}
+  \item $f(x)\not\in S$, or
+  \item $f(x)\in S$, and the image under $f$ of the tangent space of $V^n$ at the point $x$ and the tangent space of $S$ at the point $f(x)$ generate the tangent space of $V^p$ at the point $f(x)=y$.
+    (This is equivalent to saying that $g_y\circ f$ is a differentiable map of rank~$q$ at the point $x$, which is a property concerning the first-order jet of $f$ at the point $x$.)
+\end{enumerate}
+
+If $f$ (assumed to be $r$-differentiable) is transversal to $S$ at every point of $V^n$, then \emph{$f^{-1}(S)$ is an $r$-differentiable sub-manifold of $V^n$ of codimension~$q$}.
+Indeed, $f^{-1}(S)$ is defined by $g_y\circ f=0$ in $f^{-1}(U_y)$.
+
+
+
 
 %% Bibliography %%
 
