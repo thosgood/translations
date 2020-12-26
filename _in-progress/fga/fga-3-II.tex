@@ -312,6 +312,63 @@ In particular, if every pro-object of $\cat{C}$ is strict (cf. the \hyperref[A.1
 \section{Characterisation of pro-representable functors}
 \label{A.3}
 
+Let $\cat{C}$ and $\cat{C}'$ be categories in which all finite projective limits (i.e. limits over finite, not necessarily filtered, pre-ordered sets) exist, or, equivalently, in which finite products and finite fibred products exist (which implies, in particular, the exists of a ``right-unit object'' $e$ such that $\Hom(X,e)$ consists of only on element for all $X$).
+Let $F$ be a covariant functor from $\cat{C}$ to $\cat{C}'$.
+Then the following conditions are equivalent:
+\begin{enumerate}[i.]
+  \item $F$ commutes with finite projective limits;
+  \item $F$ commutes with finite products and with finite fibred products;
+  \item $F$ commutes with finite products, and, for every exact diagram
+    \[
+      X\to X'\rightrightarrows X''
+    \]
+    in $\cat{C}$ (cf. \cite[A, Definition 2.1]{3}), the image of the diagram under $F$
+    \[
+      F(X)\to F(X')\rightrightarrows F(X'')
+    \]
+    is exact.
+\end{enumerate}
+We then say that $F$ is \emph{left exact}.
+
+In what follows, we assume that finite projective limits always exist in $\cat{C}$.
+It is then immediate from the definitions that a representable functor is left exact, and, by taking the limit, that \emph{a pro-representable functor is left exact}.
+
+To obtain a converse, let
+\[
+  F\colon \cat{C} \to \Set
+\]
+be a covariant functor, and let $X\in\cat{C}$ and $\xi\in F(X)$.
+We say that $\xi$ (or the pair
+\oldpage{195-06}
+$(X,\xi)$) is \emph{minimal} if, for all $X'\in\cat{C}$ and all $\xi'\in F(X')$, and for every strict monomorphism (cf. \cite[A, \S2]{3}) $u\colon X'\to X$ such that $\xi=F(u)(\xi')$, $u$ is an isomorphism.
+We also say that a pair $(X,\xi)$ \emph{dominates} $(X'',\xi'')$ (where $xi\in F(X)$ and $\xi''\in F(X'')$) if there exists a morphism $v\colon X\to X''$ such that $\xi''=F(v)(\xi)$;
+\emph{if $\xi$ is minimal, and if $F$ is left exact, then this morphism $v$ is unique};
+\emph{if $\xi''$ is minimal, then $v$ is surjective}.
+From this we easily deduce the following proposition:
+
+\begin{proposition}{3.1}
+  For $F$ to be strictly pro-representable, it is necessary and sufficient for it to satisfy the following two conditions:
+  \begin{enumerate}[i.]
+    \item $F$ is left exact; and
+    \item every pair $(X,\xi)$, with $\xi\in F(X)$, is dominated by some \emph{minimal} pair.
+  \end{enumerate}
+\end{proposition}
+
+This second condition is trivial if every object of $\cat{C}$ is Artinian (by taking a sub-object $X'$ of $X$ that is minimal amongst those for which there exists some $\xi'\in F(X')$ such that $\xi$ is the image of $\xi'$).
+Whence:
+
+\begin{corollary*}
+  Let $\cat{C}$ be a category whose objects are all Artinian and in which all finite projective limits exist.
+  Then the pro-representable functors from $\cat{C}$ to $\Set$ are exactly the left exact functors, and they are in fact strictly pro-representable.
+\end{corollary*}
+
+This last fact also implies that \emph{every pro-object of $\cat{C}$ is then strict}.
+
+
+\section{Example: groups of Galois type, pro-algebraic groups}
+\label{A.4}
+
+
 
 %% Bibliography %%
 
