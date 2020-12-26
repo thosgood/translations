@@ -103,6 +103,7 @@
 \newcommand{\cat}[1]{{\mathcal{#1}}}
 \newcommand{\fk}[1]{{\mathfrak{#1}}}
 \newcommand{\kres}{k}
+\newcommand{\simto}{\xrightarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
 
 \newcommand{\Set}{\mathsf{Set}}
 
@@ -197,6 +198,45 @@ We then recall:
   \]
   is \emph{bijective}.
 \end{proposition}
+
+In particular, if a functor $F\in\Hom(\cat{C}^o,\Set)$ is isomorphic to a functor of the form $h_X$, then \emph{$X$ is determined up to unique isomorphism}.
+We then say that the functor $F$ is \emph{representable}.
+The above proposition then implies that the canonical functor $h$ defines an \emph{equivalence} between the category $\cat{C}$ and the full sub-category of $\Hom(\cat{C}^o,\Set)$ consisting of representable functors.
+This fact is the basis of \emph{the idea of a ``solution of a universal problem''}, with such a problem always consisting of examining if a given (contravariant, as here, or covariant, in the dual case) functor from $\cat{C}$ to $\Set$ is representable.
+\oldpage{195-02}
+Note further that, even by the definition of products in a category \cite{1}, the functor $h\colon X\mapsto h_X$ commutes with products whenever they exist (and, more generally, with finite or infinite projective limits, and, in particular, with fibred products, taking ``kernels'' \cite{2}, etc., whenever such things exist): we have an isomorphism of functors
+\[
+  h_{X\times X'} \simto h_X\times h_{X'}
+\]
+whenever $X\times X'$ exists, i.e. we have functorial (in $Y$) bijections
+\[
+  h_{X\times X'} \simto h_X(Y)\times h_{X'}(Y).
+\]
+In particular, the data of a morphism
+\[
+  X\times X' \to X''
+\]
+in $\cat{C}$ (i.e. of a ``\emph{composition law}'' in $\cat{C}$ between $X$, $X'$, and $X''$) is equivalent to the data of a morphism $h_{X\times X'}=h_X\times h_{X'}\to h_{X''}$, i.e. to the data, for all $Y\in\cat{C}$, of a composition law of \emph{sets}
+\[
+  h_X(Y)\times h_{X'}(Y) \to h_{X''}(Y)
+\]
+such that, for every morphism $Y\to Y'$ in $\cat{C}$, the system of set maps
+\[
+  h_{X^{(i)}}(Y) \to h_{X^{(i)}}(Y')
+  \qquad\mbox{(for $i=0,1,2$)}
+\]
+is a morphism for the two composition laws, with respect to $Y$ and $Y'$.
+In this way, we see that the idea of a ``$\cat{C}-group$'' structure, or a ``$\cat{C}$-ring'' structure, etc. on an object $X$ of $\cat{C}$ can be expressed in the most manageable way (in theory as much as in practice) by saying that, for every $Y\in\cat{C}$, we have a group law (resp. ring law, etc.) in the usual sense on the set $h_X(Y)$, with the maps $h_X(Y)\to h_X(Y')$ corresponding to morphisms $Y\to Y'$ that should be group homomorphisms (resp. ring homomorphisms, etc.).
+This is the most intuitive and manageable way of defining, for example, the various classical groups $\Ga$, $\Gm$, $\GL(n)$, etc. on a prescheme $S$ over an arbitrary base, and of writing the classical relations between these groups, or of placing a ``vector bundle'' structure on the affine scheme $V(\sh{F})$ over $S$ defined by a quasi-coherent sheaf $\sh{F}$, and of defining and studying the many associated flag varieties (Grassmannians, projective bundles), etc.;
+\emph{the general yoga is purely and simply identifying, using the canonical functor $h$, the objects of $\cat{C}$ with particular contravariant functors (namely, representable functors)}
+\oldpage{195-03}
+\emph{from $\cat{C}$ to the category of sets.}
+
+The usual procedure of reversing the arrows that is necessary, for example, in the case of affine schemes in order to pass from the geometric language to the language of commutative algebra, leads us to dualise the above considerations, and, in particular, to also introduce \emph{covariant representable functors $\cat{C}\to\Set$}, i.e. those of the form $Y\mapsto\Hom(X,Y)=h'_X(Y)$.
+
+
+\section{Pro-representable functors, pro-objects}
+\label{A.2}
 
 
 %% Bibliography %%
