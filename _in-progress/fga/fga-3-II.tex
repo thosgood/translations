@@ -347,6 +347,7 @@ We also say that a pair $(X,\xi)$ \emph{dominates} $(X'',\xi'')$ (where $xi\in F
 From this we easily deduce the following proposition:
 
 \begin{proposition}{3.1}
+\label{A.3-proposition1}
   For $F$ to be strictly pro-representable, it is necessary and sufficient for it to satisfy the following two conditions:
   \begin{enumerate}[i.]
     \item $F$ is left exact; and
@@ -367,6 +368,102 @@ This last fact also implies that \emph{every pro-object of $\cat{C}$ is then str
 
 \section{Example: groups of Galois type, pro-algebraic groups}
 \label{A.4}
+
+If $\cat{C}$ is the category of ordinary finite groups, then $\Pro(\cat{C})$ is equivalent to the category of totally disconnected compact topological\footnote{\emph{[Trans.] Here the word ``Hausdorff'' is implicit.}} groups.
+It is groups of this type, and their generalisations, obtained by replacing ordinary finite groups with schemes of finite groups over a given base prescheme (for example, finite algebraic groups over a field $k$), that serve as fundamental groups, homotopy groups, and absolute and relative homology groups for preschemes.
+In all these examples, the corollary to \cref{A.3-proposition1} applies, and it is indeed by the associated functor that the $\pi_1$ should be defined \cite{2}.
+It is the same if we start with the category of algebraic or quasi-algebraic groups over a field (or, more generally, over a Noetherian prescheme): we recover the ``\emph{pro-algebraic groups}'' of Serre \cite{4}.
+
+
+\section{Example: ``formal varieties''}
+\label{A.5}
+
+Let $\Lambda$ be a Noetherian ring, $\cat{C}$ the category of $\Lambda$-algebras that are Artinian modules of finite type over $\Lambda$ (or, more concisely,
+\oldpage{195-07}
+\emph{Artinian $\Lambda$-algebras}).
+The conditions of the corollary to \cref{A.3-proposition1} are then satisfied.
+Here, the category $\Pro(\cat{C})$ is equivalent to the category of \emph{topological algebras} $O$ over $\Lambda$ that are isomorphic to topological projective limits
+\[
+  O = \varprojlim O_i
+\]
+of algebras $O_i\in\cat{C}$, i.e. those whose topology is \emph{linear}, \emph{separated}, and \emph{complete}, and such that, for every open ideal $\fk{J}_i$ of $O$, the algebra $O/\fk{J}_i$ is an \emph{Artinian} algebra over $\Lambda$.
+The functor $\cat{C}\to\Set$ associated to such an algebra is exactly
+\[
+  \begin{aligned}
+    F(A)
+    &= h'_{O}(A)
+  \\&= \{\mbox{\emph{continuous} homomorphisms of topological $\Lambda$-algebras $O\to A$}\}
+  \\&= \varinjlim_i \Hom_{\mbox{$\Lambda$-algebras}}(O_i,A).
+  \end{aligned}
+\]
+Note also that the category $\cat{C}$ is essentially the product of analogous categories, corresponding to the local rings that are the completions of the $\Lambda_{\fk{m}}$ for the maximal ideals $\fk{m}$ of $\Lambda$;
+we can thus, if so desired, restrict to the case where $A$ is such a complete local ring.
+In any case, $O$ decomposes canonically as the topological product of its \emph{local components}, which correspond to the ``points'' of the \emph{formal scheme} \cite{2} defined by $O$.
+Such a point is defined by an object $\xi$ of some $F(K)$, where $K\in\cat{C}$ is a \emph{field} (for example, the residue field of the local component in question), and where two pairs $(\xi,K)$ and $(\xi',K')$ define the same point if and only if they are both dominated by the same $(\xi'',K'')$, or if they both dominate the same $(\xi''',K''')$.
+(If the $\Lambda/\fk{m}$ are algebraically closed, then it suffices to take the set given by the sum of the $F(\Lambda/\fk{m})$).
+
+It is important to give conditions that ensure that the local component $O_\xi$ of $O$ corresponding to some $\xi\in F(K)$ be a \emph{Noetherian} ring.
+If $\Lambda$ is a complete local ring (Noetherian, we recall), then it is equivalent to say that $O_\xi$ is isomorphic to a \emph{quotient ring of a formal series ring $\Lambda[[t_1,\ldots,t_n]]$}.
+To give such a criteria, we introduce (for every ring $A$) the $A$-algebra $I_A$ of ``dual numbers'' of $A$, defined by
+\[
+  I_A = A[t]/t^2A[t].
+\]
+Let $\varepsilon\colon I_A\to A$ be the augmentation homomorphism, which defines (if $A\in\cat{C}$) a map
+\[
+  F(\varepsilon)\colon F(I_A) \to F(A).
+\]
+\oldpage{195-08}
+Using the fact that $F$ is left exact, we intrinsically define the structure of an $A$-module on the subset
+\[
+  F(I_A,\xi) = F(\xi)^{-1}(\xi) \subset F(I_A)
+\]
+consisting of the $\xi'\in F(I_A)$ that ``reduce according to $\xi$'' (\todo???);
+using the explicit form of $F$ in terms of $O$, we find that this $K$-module can be identified with $\Hom_\Lambda(\fk{m}_\xi/\fk{m}_\xi^2,A$, where $m_\xi$ is the kernel of the homomorphism $\xi\colon O\to A$, i.e. if $A$ is a field, then the maximal ideal of the local component $O_\xi$ of $O$.
+From this, we immediately deduce the following proposition:
+
+\begin{proposition}{5.1}
+\label{A.5-proposition1}
+  Let $\xi\in F(K)$, where $K\in\cat{C}$ is a field.
+  For the corresponding local component $O_\xi$ of $O$ to be a \emph{Noetherian} ring, it is necessary and sufficient for the set $F(I_K,\xi)$ of elements of $F(I_K)$ \todo to be a vector space of \emph{finite dimension} over $K$.
+  Under these conditions, we have a canonical isomorphism
+  \[
+    F(I_K,\xi) = \Hom(\fk{m}_\xi/\fk{m}_\xi^2+\fk{n}_\xi\sh{O}_\xi, K)
+  \]
+  (where $\fk{n}_\xi$ is the maximal ideal of $\Lambda$ given by the kernel of the homomorphism $\Lambda\to K$), and so, in particular, the dimension of the $K$-vector space $F(I_K,\xi)$ is equal to the dimension of the vector space $\fk{m}_\xi/\fk{m}_\xi^2$ over the field $O_\xi/\fk{m}_\xi=K(\xi)$.
+\end{proposition}
+
+Suppose that $O_\xi$ is Noetherian, and suppose, for notational simplicity, that $\Lambda$ is complete and local, and that $O=O_\xi$.
+We say that \emph{$O$ is simple over $\Lambda$} if $O$ is a finite and \'{e}tale algebra over the completion algebra of the localisation of $\Lambda[t_1,\ldots,t_n]$ at one of its maximal ideals that induces the maximal ideal of $\Lambda$;
+if the residue extension of $O$ over $\Lambda$ is trivial (for example, if the residue field of $\Lambda$ is algebraically closed), then this is equivalent to saying that $O$ itself is isomorphic to such a formal series algebra.
+Finally, if we no longer necessarily suppose that $O$ is Noetherian, then we again say that \emph{$O$ is simple over $\Lambda$} if $O$ is isomorphic to a topological projective limit of quotient $\Lambda$-algebras that are Noetherian and $\Lambda$-simple in the above sense.
+We can immediately generalise to the case where $\Lambda$ and $O$ are no longer assumed to be local.
+With this, we have the following proposition:
+
+\begin{proposition}{5.2}
+\label{A.5-proposition2}
+  For $O$ to be simple over $\Lambda$, it is necessary and sufficient for the associated functor $F$ to send epimorphisms to epimorphisms.
+\end{proposition}
+
+If this is the case, then this implies that, for every \emph{surjective} homomorphism $A\to A'$ in $\cat{C}$, the morphism $F(A)\to F(A')$ is also \emph{surjective}.
+Of course, it suffices to verify this condition in the case where $A$ is \emph{local}, and (proceeding step-by-step) where the ideal of $A$ given by the kernel of $A\to A'$ is annihilated by the maximal ideal of $A$.
+This leads, in practice, to verifying that a certain obstruction, linked to \emph{infinitesimal} invariants
+\oldpage{195-09}
+of the situation that give us a functor $F$, is null;
+this is a problem of a \emph{cohomological} nature.
+
+To finish, we say some words, in the above context, about \emph{rings of definition}.
+Let $F$ still be a functor from $\cat{C}$ to $\Set$, assumed to be pro-representable via a topological $\Lambda$-algebra $O$.
+Then, for every $A\in\cat{C}$ and every $\xi\in F(A)$, there exists a \emph{smallest} subring $A'$ of $A$ such that $\xi$ is the image of an element $\xi'$ of $F(A')$ (which is then uniquely determined):
+indeed, it suffices to think of $\xi$ as a homomorphism from $O$ to $A$, and to take $A'$ to be the image of $O$ under this $\xi$.
+We then say that $A'$ is the \emph{ring of definition of the object $\xi\in F(A)$}.
+If $u\colon A\to B$ is an algebra homomorphism, and if $\eta=F(u)(\xi)$, then the ring of definition of $\eta$ is the image under $u$ of the ring of definition of $\xi$.
+If we start with a functor $F$ from $\cat{C}$ to $\Set$, then the existence of rings of definition, along with their properties that we have just discussed, is more or less \emph{equivalent} to the condition that $F$ be pro-representable;
+that is, they are usually far from being trivial.
+
+
+\part{The two existence theorems}
+\label{B}
+
 
 
 
