@@ -497,7 +497,41 @@ In the current state of the technique of descent (cf. the questions asked in \ci
 \end{theorem}
 
 The proof of this theorem is rather delicate, and cannot be sketched here.
+We content ourselves with pointing out that it relies essentially on a study of \emph{equivalence relations} (in the sense of categories) in \emph{the spectrum of an Artinian algebra} (the study of which poses even more problems, whose solutions seems essential for the further development of the theory).
 
+In applications, the verification of condition~i is always trivial.
+The verification of condition~ii split into two: case~a, where $A'$ is a free $A$-module coming from (\todo??) the \emph{technique of descent by flat morphisms} (cf. \cite[Theorems~1, 2, and 3]{3}), which offers no difficulty;
+to deal with case~b, we will use the following result:
+
+\begin{theorem}{2}
+  \label{B-theorem2}
+  Let $A$ be a local Artinian ring with maximal ideal $\fk{m}$, and let $A'$ be an $A$-algebra containing $A$, and such that $\fk{m}A'\subset A$, and $A\to A'\rightrightarrows A'\otimes_A A'$ is \emph{exact} (which is the case, in particular, if $A'/A$ is an $A$-module of length~$1$).
+  Let $\cat{F}$ be the fibred category (cf. \cite[A, Definition~1.1]{3}) of quasi-coherent sheaves that are flat over varying preschemes.
+  Then the morphism $\Spec(A')\to\Spec(A)$ is a \emph{strict $\cat{F}$-descent morphism} (cf. \cite[A, Definition~1.7]{3}).
+\end{theorem}
+
+In other words, the data of a flat $A$-module $M$ is completely equivalent to the data of a flat $A'$-module $M'$ endowed with an $(A'\otimes_A A')$-isomorphism from $M'\otimes_A A'$ to $A'\otimes_A M'$ satisfying the usual transitivity condition for a descent data (loc. cit.).
+
+We prove \cref{B-theorem2} by first proving that
+\[
+  \HH^i(A'/A,\Ga) = 0
+  \qquad\mbox{(for $i\geq1)}
+\]
+(cf. \cite[A, \S4.e]{3}), with the hypothesis that $\fk{m}A'\subset A$ allowing us to easily reduce to the case where $A$ is a field (namely $A/\fk{m}$).
+We can then apply the equivalences described in \cite[p.~16]{3}.
+
+
+\section{Applications to some particular cases}
+\label{C}
+
+
+\subsection{General remarks on functors represented by preschemes}
+\label{C.1}
+
+Let $S$ be a locally Noetherian prescheme.
+A prescheme $X$ over $S$ is said to be
+\oldpage{195-11}
+\emph{locally of finite type} over $S$ if, for all $x\in X$,
 
 
 

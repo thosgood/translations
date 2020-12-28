@@ -190,7 +190,7 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
 \label{A}
 
 
-\section{Fibred categories, descent data, \texorpdfstring{$\sh{F}$}{F}-descent morphisms}
+\section{Fibred categories, descent data, \texorpdfstring{$\cat{F}$}{F}-descent morphisms}
 \label{A.1}
 
 \subsection{}
@@ -198,15 +198,15 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
 
 \begin{definition}{1.1}
 \label{definition:A.1.1}
-  A \emph{fibred category $\sh{F}$ with base $\cat{C}$} (or \emph{over $\cat{C}$}) consists of
+  A \emph{fibred category $\cat{F}$ with base $\cat{C}$} (or \emph{over $\cat{C}$}) consists of
   \begin{itemize}
     \item a category $\cat{C}$
-    \item for every $X\in\cat{C}$, a category $\sh{F}_X$
-    \item for every $\cat{C}$-morphism $f\colon X\to Y$, a functor $f^*\colon\sh{F}_Y\to\sh{F}_X$, which we also write as
+    \item for every $X\in\cat{C}$, a category $\cat{F}_X$
+    \item for every $\cat{C}$-morphism $f\colon X\to Y$, a functor $f^*\colon\cat{F}_Y\to\cat{F}_X$, which we also write as
       \[
         f^*(\xi) = \xi \times_Y X
       \]
-      for $\xi\in\sh{F}_Y$ (with $X$ being thought of as an ``object of $\cat{C}$ over $Y$'', i.e. as being endowed with the morphism $f$)
+      for $\xi\in\cat{F}_Y$ (with $X$ being thought of as an ``object of $\cat{C}$ over $Y$'', i.e. as being endowed with the morphism $f$)
     \item for any two composible morphisms $X\xrightarrow{f}Y\xrightarrow{g}Z$, an isomorphism of functors
       \[
         c_{f,g}\colon (gf)^* \to f^*g^*
@@ -230,13 +230,13 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
 \begin{example}{1}
 \label{example:A.1.1(1)}
   Let $\cat{C}$ be a category where all fibre products exist.
-  We then define a fibred category $\sh{F}$ with base $\cat{C}$ by setting $\sh{F}_X$ to be the category of objects of $\cat{C}$ over $X$, and the functor $f^*\colon\sh{F}_Y\to\sh{F}_X$ corresponding to a morphism $f\colon X\to Y$ being defined by the \emph{fibre product} $Z\rightsquigarrow Z\times_Y X$.
+  We then define a fibred category $\cat{F}$ with base $\cat{C}$ by setting $\cat{F}_X$ to be the category of objects of $\cat{C}$ over $X$, and the functor $f^*\colon\cat{F}_Y\to\cat{F}_X$ corresponding to a morphism $f\colon X\to Y$ being defined by the \emph{fibre product} $Z\rightsquigarrow Z\times_Y X$.
 \end{example}
 
 \begin{example}{2}
 \label{example:A.1.1(2)}
-  Let $\cat{C}$ be the category of preschemes, and, for $X\in\cat{C}$, let $\sh{F}_X$ be the category of quasi-coherent sheaves of modules on $X$.
-  If $f\colon X\to Y$ is a morphism of preschemes, then $f^*\colon\sh{F}_Y\to\sh{F}_X$ is the
+  Let $\cat{C}$ be the category of preschemes, and, for $X\in\cat{C}$, let $\cat{F}_X$ be the category of quasi-coherent sheaves of modules on $X$.
+  If $f\colon X\to Y$ is a morphism of preschemes, then $f^*\colon\cat{F}_Y\to\cat{F}_X$ is the
 \oldpage{190-03}
   \emph{inverse image of sheaves of modules} functor.
   We thus obtain a category fibred over $\cat{C}$.
@@ -261,7 +261,7 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
 
 \begin{definition}{1.3}
 \label{definition:A.1.3}
-  Let $\sh{F}$ be a fibred category with base $\cat{C}$, and consider a diagram
+  Let $\cat{F}$ be a fibred category with base $\cat{C}$, and consider a diagram
   \[
     \begin{tikzcd}
       S
@@ -270,7 +270,7 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
     \end{tikzcd}
   \]
   of morphisms in $\cat{C}$ such that $\alpha\beta_1=\alpha\beta_2$;
-  this diagram is said to be \emph{$\sh{F}$-exact} if, for every pair $(\xi,\eta)$ of elements of $\sh{F}_S$, the diagram
+  this diagram is said to be \emph{$\cat{F}$-exact} if, for every pair $(\xi,\eta)$ of elements of $\cat{F}_S$, the diagram
   \[
   \label{equation-definition:A.1.3}
     \begin{tikzcd}
@@ -286,10 +286,10 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
 \end{definition}
 
 \begin{definition}{1.4}
-  Let $\sh{F}$ be a fibred category with base $\cat{C}$, and consider morphisms $\beta_1,\beta_2\colon S''\to S'$ in $\cat{C}$.
-  Let $\xi'\in\sh{F}_{S'}$.
+  Let $\cat{F}$ be a fibred category with base $\cat{C}$, and consider morphisms $\beta_1,\beta_2\colon S''\to S'$ in $\cat{C}$.
+  Let $\xi'\in\cat{F}_{S'}$.
   We define a \emph{gluing data} on $\xi'$ (with respect to the pair $(\beta_1,\beta_2)$) to be an isomorphism from $\beta_1^*(\xi')$ to $\beta_2^*(\xi')$.
-  If $\xi',\eta'\in\sh{F}_{S'}$ are both endowed with gluing data, then a morphism $u\colon\xi'\to\eta'$ in $\sh{F}_{S'}$ is said to be \emph{compatible with the gluing data} if the following diagram commutes:
+  If $\xi',\eta'\in\cat{F}_{S'}$ are both endowed with gluing data, then a morphism $u\colon\xi'\to\eta'$ in $\cat{F}_{S'}$ is said to be \emph{compatible with the gluing data} if the following diagram commutes:
   \[
     \begin{tikzcd}
       \beta_1^*(\xi') \rar \dar
@@ -300,30 +300,30 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
   \]
 \end{definition}
 
-With this definition, the objects of $\sh{F}_{S'}$ that are endowed with gluing data (with respect to $\beta_1$ and $\beta_2$) then form a \emph{category}.
-If $\alpha\colon S'\to S$ is a morphism such that $\alpha\beta_1=\alpha\beta_2$, then, for every $\xi\in\sh{F}_{S'}$, the object $\xi'=\alpha^*(\xi)$
+With this definition, the objects of $\cat{F}_{S'}$ that are endowed with gluing data (with respect to $\beta_1$ and $\beta_2$) then form a \emph{category}.
+If $\alpha\colon S'\to S$ is a morphism such that $\alpha\beta_1=\alpha\beta_2$, then, for every $\xi\in\cat{F}_{S'}$, the object $\xi'=\alpha^*(\xi)$
 \oldpage{190-04}
-of $\sh{F}_{S'}$ is endowed with a canonical gluing data, since
+of $\cat{F}_{S'}$ is endowed with a canonical gluing data, since
 \[
   \beta_i^*\alpha^*(\xi)
   \simeq (\alpha\beta_i)^*(\xi)
   = \gamma^*(\xi),
 \]
 where we again set $\gamma=\alpha\beta_1=\alpha\beta_2$;
-furthermore, if $u\colon\xi\to\eta$ is a morphism in $\sh{F}_s$, then
+furthermore, if $u\colon\xi\to\eta$ is a morphism in $\cat{F}_s$, then
 \[
   \alpha^*(u)\colon \alpha^*(\xi) \to \alpha^*(\eta)
 \]
-is a morphism in $\sh{F}_{S'}$ that is compatible with the canonical gluing data.
-We thus obtain a \emph{canonical functor} from the category $\sh{F}_S$ to the category of objects of $\sh{F}_{S'}$ endowed with gluing data with respect to the pair $(\beta_1,\beta_2)$.
-With this, we can also rephrase \cref{definition:A.1.3} by saying that the diagram~\cref{equation-definition:A.1.3} is \emph{$\sh{F}$-exact} if the above functor is \emph{fully faithful}, i.e. if the above functor defines an equivalence between the category $\sh{F}_S$ and a subcategory of the category of objects of $\sh{F}_S$ endowed with gluing data with respect to $(\beta_1,\beta_2)$.
+is a morphism in $\cat{F}_{S'}$ that is compatible with the canonical gluing data.
+We thus obtain a \emph{canonical functor} from the category $\cat{F}_S$ to the category of objects of $\cat{F}_{S'}$ endowed with gluing data with respect to the pair $(\beta_1,\beta_2)$.
+With this, we can also rephrase \cref{definition:A.1.3} by saying that the diagram~\cref{equation-definition:A.1.3} is \emph{$\cat{F}$-exact} if the above functor is \emph{fully faithful}, i.e. if the above functor defines an equivalence between the category $\cat{F}_S$ and a subcategory of the category of objects of $\cat{F}_S$ endowed with gluing data with respect to $(\beta_1,\beta_2)$.
 
 \begin{definition}{1.5}
 \label{definition:A.1.5}
-  We say that a gluing data on $\xi'\in\sh{F}_{S'}$ is \emph{effective} (with respect to $\alpha$) if $\xi'$, endowed with this data, is isomorphic to $\alpha^*(\xi)$ for some $\xi\in\sh{F}_S$.
+  We say that a gluing data on $\xi'\in\cat{F}_{S'}$ is \emph{effective} (with respect to $\alpha$) if $\xi'$, endowed with this data, is isomorphic to $\alpha^*(\xi)$ for some $\xi\in\cat{F}_S$.
 \end{definition}
 
-In the case where the diagram~\cref{equation-definition:A.1.3} is $\sh{F}$-exact, the object $\xi$ in \cref{definition:A.1.5} is then determined up to unique isomorphism, and \emph{the category $\sh{F}_S$ is equivalent to the category of objects of $\sh{F}_{S'}$ endowed with effective gluing data}.
+In the case where the diagram~\cref{equation-definition:A.1.3} is $\cat{F}$-exact, the object $\xi$ in \cref{definition:A.1.5} is then determined up to unique isomorphism, and \emph{the category $\cat{F}_S$ is equivalent to the category of objects of $\cat{F}_{S'}$ endowed with effective gluing data}.
 
 
 \subsection{}
@@ -333,7 +333,7 @@ The most important case is that where
   S'' = S' \times_S S',
 \]
 with the $\beta_i$ being the two projections $p_1$ and $p_2$ from $S'\times_S S'$ to its two factors (where we now suppose that $\cat{C}$ has all fibre products).
-We then have two immediate necessary conditions for a gluing data $\varphi\colon p_1^*(\xi')\to p_2^*(\xi')$ on some $\xi'\in\sh{F}_S$ to be effective:
+We then have two immediate necessary conditions for a gluing data $\varphi\colon p_1^*(\xi')\to p_2^*(\xi')$ on some $\xi'\in\cat{F}_S$ to be effective:
 \begin{enumerate}[(i)]
   \item $\Delta^*(\varphi) = \id_\xi$, where $\Delta\colon S'\to S'\times_S S'$ denotes the diagonal morphism, and where we identify $\Delta^* p_i^*(\xi')$ with $(p_i\Delta)^*(\xi')=\xi'$.
   \item $p_{31}^*(\varphi) = p_{32}^*(\varphi)p_{21}^*(\varphi)$,
@@ -343,12 +343,12 @@ We then have two immediate necessary conditions for a gluing data $\varphi\colon
 
 \begin{definition}{1.6}
 \label{definition:A.1.6}
-  We define \emph{descent data} on $\xi'\in\sh{F}_{S'}$, with respect to the morphism $\alpha\colon S'\to S$, to be a gluing data on $\xi'$ with respect to the pair $(p_1,p_2)$ of canonical projections $S'\times_S S'\to S'$ that satisfies conditions~(i) and (ii) above.
+  We define \emph{descent data} on $\xi'\in\cat{F}_{S'}$, with respect to the morphism $\alpha\colon S'\to S$, to be a gluing data on $\xi'$ with respect to the pair $(p_1,p_2)$ of canonical projections $S'\times_S S'\to S'$ that satisfies conditions~(i) and (ii) above.
 \end{definition}
 
 \begin{definition}{1.7}
 \label{definition:A.1.7}
-  A morphism $\alpha\colon S'\to S$ is said to be an \emph{$\sh{F}$-descent morphism} if the diagram
+  A morphism $\alpha\colon S'\to S$ is said to be an \emph{$\cat{F}$-descent morphism} if the diagram
   \[
     \begin{tikzcd}
       S
@@ -356,15 +356,15 @@ We then have two immediate necessary conditions for a gluing data $\varphi\colon
       & S'\times_S S' \lar[shift left=1,"p_2"] \lar[shift right=1,swap,"p_1"]
     \end{tikzcd}
   \]
-  of morphisms is $\sh{F}$-exact (\cref{definition:A.1.3});
-  we say that $\alpha$ is a \emph{strict $\sh{F}$-descent morphism} if, further, every descent data (\cref{definition:A.1.6}) on any object of $\sh{F}_{S'}$ is effective.
+  of morphisms is $\cat{F}$-exact (\cref{definition:A.1.3});
+  we say that $\alpha$ is a \emph{strict $\cat{F}$-descent morphism} if, further, every descent data (\cref{definition:A.1.6}) on any object of $\cat{F}_{S'}$ is effective.
 
   This latter condition (of strictness) can also be stated in a more evocative way:
-  ``giving an object of $\sh{F}_S$ is equivalent to giving an object of $\sh{F}_{S'}$ endowed with a descent data''.
+  ``giving an object of $\cat{F}_S$ is equivalent to giving an object of $\cat{F}_{S'}$ endowed with a descent data''.
 \end{definition}
 
-Note that, if an $\sh{F}$-descent morphism\footnote{[Comp.] It is useless to assume here that $\alpha$ is an $\sh{F}$-descent morphism.} $\alpha\colon S'\to S$ admits a \emph{section} $s\colon S\to S'$ (i.e. a morphism $s$ such that $\alpha s=\id_S$), then it is a strict $\sh{F}$-descent morphism:
-if $\xi'\in\sh{F}_{S'}$ is endowed with descent data with respect to $\alpha$, then ``it comes from'' $\xi=s^*(\xi')$.
+Note that, if an $\cat{F}$-descent morphism\footnote{[Comp.] It is useless to assume here that $\alpha$ is an $\cat{F}$-descent morphism.} $\alpha\colon S'\to S$ admits a \emph{section} $s\colon S\to S'$ (i.e. a morphism $s$ such that $\alpha s=\id_S$), then it is a strict $\cat{F}$-descent morphism:
+if $\xi'\in\cat{F}_{S'}$ is endowed with descent data with respect to $\alpha$, then ``it comes from'' $\xi=s^*(\xi')$.
 
 
 \subsection{}
@@ -374,7 +374,7 @@ We can present the above notions in a more intuitive manner, by introducing, for
   \Hom_S(T,S') = S'(T),
 \]
 whore elements will be denoted by $t$, $t'$, etc.
-Given an object $\xi'\in\sh{F}_{S'}$, there then corresponds, to every $t\in S'(T)$, an object $t^*(\xi')$ of $\sh{F}_T$, which will also be denoted by $\xi'_t$.
+Given an object $\xi'\in\cat{F}_{S'}$, there then corresponds, to every $t\in S'(T)$, an object $t^*(\xi')$ of $\cat{F}_T$, which will also be denoted by $\xi'_t$.
 A gluing data on $\xi'$ (with respect to $(p_1,p_2)$) is then defined by the data, for every $T$ over $S$, and every pair of points $t,t'\in S'(T)$, of an isomorphism
 \[
   \varphi_{t',t}\colon \xi'_t \to \xi'_{t'}
@@ -454,7 +454,7 @@ In any case, a cokernel morphism is a strict epimorphism.
 Note also that, if a strict epimorphism is also a monomorphism, then it is an isomorphism.
 We leave to the reader the task of developing the dual notion of a \emph{strict monomorphism}.
 
-To make the relation between the ideas of $\sh{F}$-descent morphisms and strict epimorphisms more precise, we introduce the following definitions:
+To make the relation between the ideas of $\cat{F}$-descent morphisms and strict epimorphisms more precise, we introduce the following definitions:
 
 \begin{definition}{2.3}
   A morphism $\alpha\colon S'\to S$ is said to be a \emph{universal epimorphism} (resp. a \emph{strict universal epimorphism}) if, for every $T$ over $S$, the fibre product $T'=S'\times_S T$ exists, and the projection $T'\to T$ is an epimorphism (resp. a strict epimorphism).
@@ -465,7 +465,7 @@ they are, however, all distinct in a category such as the category of preschemes
 
 \begin{definition}{2.4}
 \label{definition:A.2.4}
-  A morphism $\alpha\colon S'\to S$ is said to be a \emph{descent morphism} (resp. a \emph{strict descent morphism}) if it is an $\sh{F}$-descent morphism (resp. a strict $\sh{F}$-descent morphism) (cf. \cref{definition:A.1.7}), where $\sh{F}$ denotes the fibred category over $\cat{C}$ of objects of $\cat{C}$ over objects of $\cat{C}$ (\cref{example:A.1.1(1)}).
+  A morphism $\alpha\colon S'\to S$ is said to be a \emph{descent morphism} (resp. a \emph{strict descent morphism}) if it is an $\cat{F}$-descent morphism (resp. a strict $\cat{F}$-descent morphism) (cf. \cref{definition:A.1.7}), where $\cat{F}$ denotes the fibred category over $\cat{C}$ of objects of $\cat{C}$ over objects of $\cat{C}$ (\cref{example:A.1.1(1)}).
 \end{definition}
 
 \begin{proposition}{2.1}
@@ -532,9 +532,9 @@ It thus follows that, if $X$ and $Y$ are $S$-preschemes, with $X$ \emph{flat} ov
     & \Hom_{S''}(X'',Y'').
   \end{tikzcd}
 \]
-In particular, if $\sh{F}$ denotes the fibred category (over the category $\cat{C}$ of preschemes) such that, for $X\in\cat{C}$, $\sh{F}_X$ is the category of \emph{flat} $X$-preschemes, then the diagram~\cref{equation-example:A.2.b} is $\sh{F}$-exact.
+In particular, if $\cat{F}$ denotes the fibred category (over the category $\cat{C}$ of preschemes) such that, for $X\in\cat{C}$, $\cat{F}_X$ is the category of \emph{flat} $X$-preschemes, then the diagram~\cref{equation-example:A.2.b} is $\cat{F}$-exact.
 (This result becomes false if we do not impose the flatness hypothesis; in particular, a finite strict epimorphism is not necessarily a descent morphism).
-We similarly see that \cref{equation-example:A.2.b} is $\sh{F}$-exact if $\sh{F}$ denotes the fibred category for which $\sh{F}_X$ is the category of \emph{flat} quasi-coherent sheaves on the prescheme $X$ (here, again, the
+We similarly see that \cref{equation-example:A.2.b} is $\cat{F}$-exact if $\cat{F}$ denotes the fibred category for which $\cat{F}_X$ is the category of \emph{flat} quasi-coherent sheaves on the prescheme $X$ (here, again, the
 \oldpage{190-09}
 flatness hypothesis is essential).
 In either case, the question of \emph{effectiveness} of a gluing data (and, more specifically, of a descent data, when $S''=S'\times_S S'$) on a flat object over $S'$ is delicate (and its answer in many particular cases in one of the principal objects of these current talks).
@@ -547,7 +547,7 @@ More generally, let $A$ be a ring, and $A'$ an $A$-algebra (where everything is 
     & A'\otimes_A A'
   \end{tikzcd}
 \]
-is exact, which is equivalent to saying that the corresponding morphism $S'\to S$ between the spectra of $A'$ and $A$ is an $\sh{F}$-descent morphism, where $\sh{F}$ is the fibred category of flat quasi-coherent sheaves.
+is exact, which is equivalent to saying that the corresponding morphism $S'\to S$ between the spectra of $A'$ and $A$ is an $\cat{F}$-descent morphism, where $\cat{F}$ is the fibred category of flat quasi-coherent sheaves.
 Let $M'$ be a flat $A'$-module endowed with a descent data to $A$, i.e. with an isomorphism
 \[
   \varphi\colon M'\otimes_A A' \xrightarrow{\sim} A'\otimes_A M'
@@ -683,8 +683,8 @@ by the group of operators $F(T)$ acting on $C^1(T/S,F)$, and thus, in particular
 \subsection{}
 \label{A.4.b}
 
-For example, let $\sh{F}$ be a fibred category with base $\cat{C}$.
-Let $\xi,\eta\in\sh{F}_S$, and, for all $S'$ over $S$, let
+For example, let $\cat{F}$ be a fibred category with base $\cat{C}$.
+Let $\xi,\eta\in\cat{F}_S$, and, for all $S'$ over $S$, let
 \[
   F_{\xi,\eta}(S') = \Hom(\xi\times_S S', \eta\times_S S').
 \]
@@ -693,21 +693,21 @@ With this setup, \emph{saying that the augmentation morphism}
 \[
   F_{\xi,\eta}(S) \to \HH^0(S'/S,F_{\xi,\eta})
 \]
-\emph{is an isomorphism for every pair of elements $\xi,\eta\in\sh{F}_S$ implies that $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism} (\cref{definition:A.1.7}).
+\emph{is an isomorphism for every pair of elements $\xi,\eta\in\cat{F}_S$ implies that $\alpha\colon S'\to S$ is an $\cat{F}$-descent morphism} (\cref{definition:A.1.7}).
 
 
 \subsection{}
 \label{A.4.c}
 
-Similarly, for $\xi\in\sh{F}_S$ and any object $S'$ of $\cat{C}$ over
+Similarly, for $\xi\in\cat{F}_S$ and any object $S'$ of $\cat{C}$ over
 \[
   G_\xi(S') = \Aut(\xi\times_S S'),
 \]
 we thus define a contravariant functor $G_\xi$ from $\cat{C}_S$ to the category of
 \oldpage{190-14}
 groups.
-With this setup, we claim that \emph{$Z^1(S'/S,G)$ is canonically identified with the set of descent data on $\xi'=\xi\times_S S'$ with respect to $S'\to S$} (\cref{definition:A.1.6}), and that \emph{$\HH^1(S'/S,G)$ can be identified with the set of isomorphism classes of objects of $\sh{F}_{S'}$ endowed with a descent data relative to $\alpha\colon S'\to S$ that are isomorphic, as objects of $\sh{F}_{S'}$, to $\xi'=\xi\times_S S'$.}
-Then, \emph{if $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism} (cf. \hyperref[A.4.b]{A.4.b}), \emph{then $\HH^1(S'/S,G)$ contains as a subset the set of isomorphism classes of objects $\eta$ of $\sh{F}_S$ such that $\eta\times_S S'$ is isomorphic (in $\sh{F}_{S'}$) to $\xi\times_S S'$};
+With this setup, we claim that \emph{$Z^1(S'/S,G)$ is canonically identified with the set of descent data on $\xi'=\xi\times_S S'$ with respect to $S'\to S$} (\cref{definition:A.1.6}), and that \emph{$\HH^1(S'/S,G)$ can be identified with the set of isomorphism classes of objects of $\cat{F}_{S'}$ endowed with a descent data relative to $\alpha\colon S'\to S$ that are isomorphic, as objects of $\cat{F}_{S'}$, to $\xi'=\xi\times_S S'$.}
+Then, \emph{if $\alpha\colon S'\to S$ is an $\cat{F}$-descent morphism} (cf. \hyperref[A.4.b]{A.4.b}), \emph{then $\HH^1(S'/S,G)$ contains as a subset the set of isomorphism classes of objects $\eta$ of $\cat{F}_S$ such that $\eta\times_S S'$ is isomorphic (in $\cat{F}_{S'}$) to $\xi\times_S S'$};
 further, \emph{this inclusion is the identity if and only if every descent data on $\xi'=\xi\times_S S'$ with respect to $\alpha\colon S'\to S$ is effective}.
 (This will be the case, in particular, if $\alpha\colon S'\to S$ is a strict $S$-descent morphism).
 
@@ -752,14 +752,14 @@ further, \emph{this inclusion is the identity if and only if every descent data 
   \]
   which is a functor from $\cat{C}$ to the category of (not-necessary-commutative, if $n>1$) groups;
   for $n=1$ we recover $\Gm$.
-  We can also think of $\GL(n)$ as an automorphism functor (cf. \hyperref[A.4.c]{A.4.c}) by considering the fibred category $\sh{F}$ with base $\cat{C}$ such that $\sh{F}_X$ is the category of locally free sheaves on $X$, for $X\in\cat{C}$, since then $\GL(n)(X)=\Aut_{\sh{F}_X}(\sh{O}_X^n)$.
-  By \hyperref[A.4.b]{A.4.b}, it follows that, if $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism (cf. \hyperref[A.2.c]{A.2.c}), then $\HH^1(S'/S,\GL(n))$ contains the set of isomorphism classes of locally free sheaves on $S$ whose inverse image on $S'$ is isomorphic to $\sh{O}_{S'}^n$, and this inclusion is an equality if and only if every descent data on $\sh{O}_{S'}^n$ (with respect to $\alpha\colon S'\to S$) is effective.
+  We can also think of $\GL(n)$ as an automorphism functor (cf. \hyperref[A.4.c]{A.4.c}) by considering the fibred category $\cat{F}$ with base $\cat{C}$ such that $\cat{F}_X$ is the category of locally free sheaves on $X$, for $X\in\cat{C}$, since then $\GL(n)(X)=\Aut_{\cat{F}_X}(\sh{O}_X^n)$.
+  By \hyperref[A.4.b]{A.4.b}, it follows that, if $\alpha\colon S'\to S$ is an $\cat{F}$-descent morphism (cf. \hyperref[A.2.c]{A.2.c}), then $\HH^1(S'/S,\GL(n))$ contains the set of isomorphism classes of locally free sheaves on $S$ whose inverse image on $S'$ is isomorphic to $\sh{O}_{S'}^n$, and this inclusion is an equality if and only if every descent data on $\sh{O}_{S'}^n$ (with respect to $\alpha\colon S'\to S$) is effective.
   If $S$ is the spectrum of a local ring, then this implies that $\HH^1(S'/S,\GL(n))=(e)$, since every locally free sheaf on $S$ is then trivial.
 
   We note that the following conditions concerning a morphism $\alpha\colon S'\to S$ are equivalent:
   \begin{enumerate}[(i)]
     \item The augmentation homomorphism $\HH^0(S,\sh{O}_S) = \Ga(S)\to\HH^0(S'/S,\Ga)$ is an isomorphism.
-    \item $\alpha\colon S'\to S$ is an $\sh{F}$-descent morphism (where $\sh{F}$ is the fibred category over $\cat{C}$ described above).
+    \item $\alpha\colon S'\to S$ is an $\cat{F}$-descent morphism (where $\cat{F}$ is the fibred category over $\cat{C}$ described above).
     \item $\alpha\colon S'\to S$ is a strict epimorphism (cf. \hyperref[A.2.c]{A.2.c}).
   \end{enumerate}
 
@@ -777,7 +777,7 @@ further, \emph{this inclusion is the identity if and only if every descent data 
   \]
   Similarly, $C^n(S'/S,\Gm)=C^n(A'/A,\Gm)$ can be identified with $(\bigotimes_A^{n+1}A')^\times$, with the simplicial operations for $C^\bullet(A'/A,\Gm)$ being induced by those in $C^\bullet(S'/S,\Ga)$.
   We can write down the simplicial operations for $C^\bullet(A'/A,\GL(n))$ in the same explicit manner.
-  \emph{In all the cases known to the speaker, $\HH^i(A'/A,\Ga)=0$ for $i>0$, and, if $A$ is local, then $\HH^1(A'/A,\Gm)=0$, and, more generally, $\HH^1(A'/A,\GL(n))=(e)$} (if $S'\to S$ is an $\sh{F}$-descent morphisms, i.e. if the diagram $A\to A'\rightrightarrows A'\otimes_A A'$ is exact, then compare this with \hyperref[A.2.c]{A.2.c}).
+  \emph{In all the cases known to the speaker, $\HH^i(A'/A,\Ga)=0$ for $i>0$, and, if $A$ is local, then $\HH^1(A'/A,\Gm)=0$, and, more generally, $\HH^1(A'/A,\GL(n))=(e)$} (if $S'\to S$ is an $\cat{F}$-descent morphisms, i.e. if the diagram $A\to A'\rightrightarrows A'\otimes_A A'$ is exact, then compare this with \hyperref[A.2.c]{A.2.c}).
   We note that \emph{Hilbert's ``Theorem~90'' is exactly the fact that}
 \oldpage{190-16}
   \emph{$\HH^1(S'/S,\Gm)=0$ if $A$ is a field and $A'$ is a finite Galois extension of $A$} (cf. \cref{example:A.4.d}), \emph{and we can also express it by saying that, in the case in question, $S'\to S$ is a strict descent morphisms for the fibred category of locally free sheaves of rank~$1$.}
@@ -831,20 +831,20 @@ The class of flat (resp. faithfully flat, resp. quasi-compact) morphisms is stab
 \begin{theorem}{1}
 \label{theorem:B.1(1)}
   Let $\alpha\colon S'\to S$ be a morphism of preschemes that is \emph{faithfully flat} and \emph{quasi-compact}.
-  Then $\alpha$ is a \emph{strict descent morphism} (cf. \hyperref[definition:A.1.7]{A, Definition~1.7}) for the fibred category $\sh{F}$ of quasi-coherent sheaves (cf. \hyperref[example:A.1.1(2)]{A, Example~2}).
+  Then $\alpha$ is a \emph{strict descent morphism} (cf. \hyperref[definition:A.1.7]{A, Definition~1.7}) for the fibred category $\cat{F}$ of quasi-coherent sheaves (cf. \hyperref[example:A.1.1(2)]{A, Example~2}).
 \end{theorem}
 
 This statement implies two things:
 \begin{enumerate}[(i)]
-  \item If $\sh{F}$ and $\sh{G}$ are quasi-coherent sheaves on $S$, and $\sh{F}'$ and $\sh{G}'$ their inverse images on $S'$, then the natural homomorphism
+  \item If $\cat{F}$ and $\sh{G}$ are quasi-coherent sheaves on $S$, and $\cat{F}'$ and $\sh{G}'$ their inverse images on $S'$, then the natural homomorphism
     \[
-      \Hom(\sh{F},\sh{G}) \to \Hom(\sh{F}',\sh{G}')
+      \Hom(\cat{F},\sh{G}) \to \Hom(\cat{F}',\sh{G}')
     \]
-    is a bijection from the left-hand side to the subgroup of the right-hand side consisting of homomorphisms $\sh{F}'\to\sh{G}'$ that are compatible with the canonical descent data on these sheaves, i.e. whose inverse images under the two projections of $S''=S'\times_S S'$ to $S'$ give the same homomorphism $\sh{F}''\to\sh{G}''$.
-  \item Every quasi-coherent sheaf $\sh{F}'$ on $S'$ endowed with a descent data with respect to the morphism $\alpha\colon S'\to S$ (cf. \hyperref[definition:A.1.6]{A, Definition~1.6}) is isomorphic (endowed with this data) to the inverse image of a quasi-coherent sheaf $\sh{F}$ on $S$.
+    is a bijection from the left-hand side to the subgroup of the right-hand side consisting of homomorphisms $\cat{F}'\to\sh{G}'$ that are compatible with the canonical descent data on these sheaves, i.e. whose inverse images under the two projections of $S''=S'\times_S S'$ to $S'$ give the same homomorphism $\cat{F}''\to\sh{G}''$.
+  \item Every quasi-coherent sheaf $\cat{F}'$ on $S'$ endowed with a descent data with respect to the morphism $\alpha\colon S'\to S$ (cf. \hyperref[definition:A.1.6]{A, Definition~1.6}) is isomorphic (endowed with this data) to the inverse image of a quasi-coherent sheaf $\cat{F}$ on $S$.
 \end{enumerate}
 
-Setting $\sh{F}=\sh{O}_S$ in (i), we obtain:
+Setting $\cat{F}=\sh{O}_S$ in (i), we obtain:
 
 \begin{corollary}{1}
 \label{corollary:B.1(1)}
@@ -987,17 +987,17 @@ The only important case not covered here is that of projective or quasi-projecti
 
 Let $\alpha\colon S'\to S$ be a \emph{finite} morphism, corresponding to a sheaf of algebras $\sh{A}'$ on $S$ that is \emph{locally free} and of finite type as a sheaf of modules, and everywhere non-zero.
 Then $\alpha$ is a faithfully flat and quasi-compact morphism, to which we can thus apply the above results.
-The data of a quasi-coherent sheaf $\sh{F}'$ on $S'$ is equivalent to the data of the quasi-coherent sheaf $\alpha_*(\sh{F}')$ on $S$ endowed with its $\sh{A}'$-modules structure (noting that $\sh{A}'=\alpha_*(\sh{O}_{S'})$).
-For simplicity, we also denote this sheaf on $S$ by $\sh{F}'$.
-The two inverse images $p_i^*(\sh{F}')$ of $\sh{F}'$ on $S'\times_S S'$ similarly correspond to the quasi-coherent sheaves of $(\sh{A}'\otimes_{\sh{O}_S}\sh{A}')$-modules $\sh{F}'\otimes_{\sh{O}_S}\sh{A}'$ and $\sh{A}'\otimes_{\sh{O}_S}\sh{F}'$.
+The data of a quasi-coherent sheaf $\cat{F}'$ on $S'$ is equivalent to the data of the quasi-coherent sheaf $\alpha_*(\cat{F}')$ on $S$ endowed with its $\sh{A}'$-modules structure (noting that $\sh{A}'=\alpha_*(\sh{O}_{S'})$).
+For simplicity, we also denote this sheaf on $S$ by $\cat{F}'$.
+The two inverse images $p_i^*(\cat{F}')$ of $\cat{F}'$ on $S'\times_S S'$ similarly correspond to the quasi-coherent sheaves of $(\sh{A}'\otimes_{\sh{O}_S}\sh{A}')$-modules $\cat{F}'\otimes_{\sh{O}_S}\sh{A}'$ and $\sh{A}'\otimes_{\sh{O}_S}\cat{F}'$.
 The data of an $(S'\times_S S')$-homomorphism from the former to the latter is equivalent to the data of a homomorphism of $(\sh{A}'\otimes\sh{A}')$-modules, and, taking into account the fact that $\sh{A}'$ is locally free, this is equivalent to the data of a homomorphism of $(\sh{A}'\otimes\sh{A}')$-modules:
 \[
   \sh{U}
   = \shHom_{\sh{O}_S}(\sh{A}',\sh{A}')
   = \sh{A}'\otimes\check{\sh{A}}'
-  \to \shHom_{\sh{O}_S}(\sh{F}',\sh{F}')
+  \to \shHom_{\sh{O}_S}(\cat{F}',\cat{F}')
 \]
-i.e. to the data, for every section $\xi$ of $\sh{U}$ over an open subset $V$, of a homomorphism of $\sh{O}_S$-modules $T_\xi\colon\sh{F}'|V\to\sh{F}'|V$ that satisfies the conditions
+i.e. to the data, for every section $\xi$ of $\sh{U}$ over an open subset $V$, of a homomorphism of $\sh{O}_S$-modules $T_\xi\colon\cat{F}'|V\to\cat{F}'|V$ that satisfies the conditions
 \[
 \label{equation:B.3.1}
   \begin{aligned}
@@ -1006,12 +1006,12 @@ i.e. to the data, for every section $\xi$ of $\sh{U}$ over an open subset $V$, o
   \end{aligned}
 \tag{3.1}
 \]
-where $f$ and $x$ are (respectively) sections of $\sh{A}'$ and $\sh{F}'$ over an open subset of $S$ that is contained inside $V$.
+where $f$ and $x$ are (respectively) sections of $\sh{A}'$ and $\cat{F}'$ over an open subset of $S$ that is contained inside $V$.
 Conditions~(i) and (ii) of a descent data (cf. \hyperref[A.1.c]{(A.1.c)}) can then be written (respectively) as
 \[
 \label{equation:B.3.2}
   T_{1_U}(x) = x,
-  \qquad\mbox{i.e. $T_{1_U}=\id_{\sh{F}'}$}
+  \qquad\mbox{i.e. $T_{1_U}=\id_{\cat{F}'}$}
 \tag{3.2}
 \]
 \[
@@ -1019,14 +1019,14 @@ Conditions~(i) and (ii) of a descent data (cf. \hyperref[A.1.c]{(A.1.c)}) can th
   T_{\xi\eta} = T_\xi T_\eta.
 \tag{3.3}
 \]
-In other words, \emph{a descent data on $\sh{F}'$ is equivalent to a representation of the sheaf $\sh{U}=\shHom_{\sh{O}_S}(\sh{A}',\sh{A}')$ of $\sh{O}_S$-algebras in the sheaf $\shHom_{\sh{O}_S}(\sh{F}',\sh{F}')$ of $\sh{O}_S$-algebras that satisfies the two linearity conditions \cref{equation:B.3.1}}.
+In other words, \emph{a descent data on $\cat{F}'$ is equivalent to a representation of the sheaf $\sh{U}=\shHom_{\sh{O}_S}(\sh{A}',\sh{A}')$ of $\sh{O}_S$-algebras in the sheaf $\shHom_{\sh{O}_S}(\cat{F}',\cat{F}')$ of $\sh{O}_S$-algebras that satisfies the two linearity conditions \cref{equation:B.3.1}}.
 If we have a pairing of quasi-coherent sheaves on $S'$:
 \[
-  \sh{F}'_1\times\sh{F}'_2 \to \sh{F}'_3
+  \cat{F}'_1\times\cat{F}'_2 \to \cat{F}'_3
 \]
 (that we can think of as a pairing of sheaves of $\sh{A}'$-modules on $S$),
 \oldpage{190-22}
-and gluing data on the $\sh{F}'_i$ defined by homomorphisms $T_i\colon\sh{U}\to\shHom_{\sh{O}_S}(\sh{F}'_i,\sh{F}'_i)$ (for $i=1,2,3$), then these data are \emph{equivalent to the given pairing}, in the evident meaning of the phrase, if and only if the following condition is satisfied:
+and gluing data on the $\cat{F}'_i$ defined by homomorphisms $T_i\colon\sh{U}\to\shHom_{\sh{O}_S}(\cat{F}'_i,\cat{F}'_i)$ (for $i=1,2,3$), then these data are \emph{equivalent to the given pairing}, in the evident meaning of the phrase, if and only if the following condition is satisfied:
 
 For every section $\xi$ of $\sh{U}$ over an open subset, and denoting by $\Delta\xi=\sum\xi'_i\otimes_{\sh{A}'}\xi''_i$ the section of $\sh{U}\otimes_{\sh{A}'}\sh{U}$ (where $\sh{U}$ is considered as an $\sh{A}'$-module with its left structure) defined by the formula
 \[
@@ -1058,7 +1058,7 @@ that is compatible with the morphism $h\colon X'\to S'$ and that satisfies the c
 \label{example:B.3(1)}
   (\emph{``Weil''}).
   Suppose that $S'/S$ is a \emph{Galois \'{e}tale covering} with Galois group $\Gamma$ (cf. \hyperref[A.3]{(A.3)} and \hyperref[A.4.d]{(A.4.d)}).
-  Then a descent data on a quasi-coherent sheaf $\sh{F}'$ on $S'$ (resp. on an $S'$-prescheme $X'$) is equivalent to the data of a representation of $\Gamma$ by automorphisms of $(S',\sh{F}')$ (resp. of $(S',X')$) that is compatible with the action of $\Gamma$ on $S'$.
+  Then a descent data on a quasi-coherent sheaf $\cat{F}'$ on $S'$ (resp. on an $S'$-prescheme $X'$) is equivalent to the data of a representation of $\Gamma$ by automorphisms of $(S',\cat{F}')$ (resp. of $(S',X')$) that is compatible with the action of $\Gamma$ on $S'$.
   This result
 \oldpage{190-23}
   is ``formal'', i.e. it can be proven in terms of categories, but, from the point of view of this section, we also obtain the explicit structure of $\sh{U}$ (endowed with its ring structure, the ring homomorphism $\sh{A}'\to\sh{U}$, and the diagonal map), which is completely known thanks to the following result:
@@ -1091,7 +1091,7 @@ that is compatible with the morphism $h\colon X'\to S'$ and that satisfies the c
   \]
 \end{lemma*}
 
-It follows from the above lemma that a descent data on the quasi-coherent sheaf $\sh{F}'$ on $S'$ is equivalent to the data, for all $X\in\fk{C}$, of an $\sh{O}_S$-endomorphism $\overline{X}$ of $\sh{F}'$ that satisfies the following conditions:
+It follows from the above lemma that a descent data on the quasi-coherent sheaf $\cat{F}'$ on $S'$ is equivalent to the data, for all $X\in\fk{C}$, of an $\sh{O}_S$-endomorphism $\overline{X}$ of $\cat{F}'$ that satisfies the following conditions:
 \[
 \label{equation:B.3.7}
   \overline{fX} = f\overline{X}
@@ -1112,13 +1112,13 @@ It follows from the above lemma that a descent data on the quasi-coherent sheaf 
   \overline{X^{(p)}} = \overline{X}^p.
 \tag{3.10}
 \]
-(This is what we may call a \emph{linear connection on $\sh{F}$}, \emph{flat}, and \emph{compatible with the $p$-th powers}).
+(This is what we may call a \emph{linear connection on $\cat{F}$}, \emph{flat}, and \emph{compatible with the $p$-th powers}).
 We can similarly write down the notion of a descent data on an $S'$-prescheme $X'$, with equation~\cref{equation:B.3.4} being replaced by the condition that the $\overline{X}$ are \emph{derivations} of $\sh{O}_{X'}$.
 Since the morphism $S'\to S$ is radicial, \cref{theorem:B.1(3)} ensures that every such descent data is
 \oldpage{190-24}
 effective, and thus defines an $S$-prescheme $X$.
 
-Note that we have not needed to impose any flatness, non-singular, or finiteness hypotheses on $\sh{F}'$ or $X'$.
+Note that we have not needed to impose any flatness, non-singular, or finiteness hypotheses on $\cat{F}'$ or $X'$.
 
 
 \section{Application to rationality criteria}
@@ -1126,40 +1126,40 @@ Note that we have not needed to impose any flatness, non-singular, or finiteness
 
 Let $X$ be an $S$-prescheme such that the direct image of $\sh{O}_X$ on $S$ is $\sh{O}_S$;
 this property remains true for any flat base extension $S'\to S$.
-If $\sh{F}$ is an \emph{invertible sheaf} (i.e. locally free of rank~$1$) on $X$, then there is a bijective correspondence between automorphisms of $\sh{F}$ (identified with the invertible sections of $\sh{O}_X$) and invertible sections of $\sh{O}_S$.
+If $\cat{F}$ is an \emph{invertible sheaf} (i.e. locally free of rank~$1$) on $X$, then there is a bijective correspondence between automorphisms of $\cat{F}$ (identified with the invertible sections of $\sh{O}_X$) and invertible sections of $\sh{O}_S$.
 So let $s$ be a section of $X$ over $S$;
-we define a \emph{section of $\sh{F}$ over $s$} to be a section of the invertible sheaf $s^*(\sh{F})$ on $S$.
-It follows from the above that, if $\sh{F}_i$ (for $i=1,2$) are invertible sheaves on $X$, each endowed with a section over $s$, and \emph{if $\sh{F}_1$ and $\sh{F}_2$ are isomorphic, then there exists exactly one isomorphism from $\sh{F}_1$ to $\sh{F}_2$ that is compatible with the sections in question} (i.e. sending the first to the second).
-We also, independently of the section $s$, regard two invertible sheaves $\sh{F}_1$ and $\sh{F}_2$ on $X$ as \emph{equivalent} if every point of $S$ has an open neighbourhood $U$ such that the restrictions of $\sh{F}_1$ and $\sh{F}_2$ to $X|U$ are isomorphic.
-Then \emph{every invertible sheaf $\sh{F}$ on $X$ is equivalent to an invertible sheaf $\sh{F}_1$ endowed with a marked section over $s$} (we take $\sh{F}_1=Fs^*(\sh{F})^{-1}$), \emph{and $\sh{F}_1$ is determined up to isomorphic}.
+we define a \emph{section of $\cat{F}$ over $s$} to be a section of the invertible sheaf $s^*(\cat{F})$ on $S$.
+It follows from the above that, if $\cat{F}_i$ (for $i=1,2$) are invertible sheaves on $X$, each endowed with a section over $s$, and \emph{if $\cat{F}_1$ and $\cat{F}_2$ are isomorphic, then there exists exactly one isomorphism from $\cat{F}_1$ to $\cat{F}_2$ that is compatible with the sections in question} (i.e. sending the first to the second).
+We also, independently of the section $s$, regard two invertible sheaves $\cat{F}_1$ and $\cat{F}_2$ on $X$ as \emph{equivalent} if every point of $S$ has an open neighbourhood $U$ such that the restrictions of $\cat{F}_1$ and $\cat{F}_2$ to $X|U$ are isomorphic.
+Then \emph{every invertible sheaf $\cat{F}$ on $X$ is equivalent to an invertible sheaf $\cat{F}_1$ endowed with a marked section over $s$} (we take $\cat{F}_1=Fs^*(\cat{F})^{-1}$), \emph{and $\cat{F}_1$ is determined up to isomorphic}.
 In other words, the classification \emph{up to equivalence} of invertible sheaves on $X$ is the same as the classification \emph{up to isomorphism} of invertible sheaves endowed with a marked section.
 
 Since these properties remain true under flat extensions $\alpha\colon S'\to S$ of the base (by replacing the section $s$ with its inverse image $s'$ under $\alpha$), we thus conclude, taking \cref{theorem:B.1(1)} into account:
 
-\emph{With the prescheme $X/S$ being as above, and admitting a section $s$, let $\alpha\colon S'\to S$ be a faithfully flat and quasi-compact morphism; let $\sh{F}'$ be an invertible sheaf on $X'=X\times_S S'$.}
-\emph{For $\sh{F}'$ to be equivalent to the inverse image on $X'$ of an invertible sheaf $\sh{F}'$ on $X$, it is necessary and sufficient for its inverse images $p_1^*(\sh{F}')$ and $p_2^*(\sh{F}')$ on $X'\times_X X'=X\times_S(S'\times_S S')$ to be equivalent.}
-\emph{If this is the case, then $\sh{F}$ is determined up to equivalence.}
-(We then say that $\sh{F}'$ is \emph{rational} on $S$).
+\emph{With the prescheme $X/S$ being as above, and admitting a section $s$, let $\alpha\colon S'\to S$ be a faithfully flat and quasi-compact morphism; let $\cat{F}'$ be an invertible sheaf on $X'=X\times_S S'$.}
+\emph{For $\cat{F}'$ to be equivalent to the inverse image on $X'$ of an invertible sheaf $\cat{F}'$ on $X$, it is necessary and sufficient for its inverse images $p_1^*(\cat{F}')$ and $p_2^*(\cat{F}')$ on $X'\times_X X'=X\times_S(S'\times_S S')$ to be equivalent.}
+\emph{If this is the case, then $\cat{F}$ is determined up to equivalence.}
+(We then say that $\cat{F}'$ is \emph{rational} on $S$).
 
 Considering this principle in the case where $\alpha\colon S'\to S$ is as in \cref{example:B.3(1)} and \cref{example:B.3(2)} in the previous section, we recover the \emph{rationality criteria of Weil and of Cartier}.
 (We note that the authors restrict to the case where $S$ and $S'$
 \oldpage{190-25}
 are spectra of fields;
 a fortiori, $S$ is then the spectrum of a local ring, and the equivalence relation introduced above is exactly the relation of being isomorphic).
-The the first case, $\sh{F}'$ is rational on $S$ if and only if its images under $\Gamma$ are all equivalent to $\sh{F}'$.
+The the first case, $\cat{F}'$ is rational on $S$ if and only if its images under $\Gamma$ are all equivalent to $\cat{F}'$.
 To express the rationality criterion in the second case, we consider, more generally, the diagonal morphism $X'\to X''=X'\times_X X'$ of $X'/X$, with the corresponding sheaf of ideals $\sh{I}$ on $X'\times_X X'$, and the sheaf $\sh{I}/\sh{I}^2$, which can be identified with its inverse image $\Omega_{X'/X}^1$ on $X$ (the \emph{sheaf of $1$-differentials of $X'$ with respect to $X$}).
-Since the restrictions of the $\sh{F}''_i=p_i(\sh{F}')$ (for $i=1,2$) to the diagonal are isomorphic (since they are both isomorphic to $\sh{F}'$), i.e. $\sh{F}''_1(\sh{F}''_2)^{-1}=\sh{F}''$ has a restriction to the diagonal which is trivial, it follows that the restriction of $\sh{F}''$ to $(X'',\sh{O}_{X''}/\sh{I}^2)$ is given, up to isomorphism, by a well-defined element $\xi$ of
+Since the restrictions of the $\cat{F}''_i=p_i(\cat{F}')$ (for $i=1,2$) to the diagonal are isomorphic (since they are both isomorphic to $\cat{F}'$), i.e. $\cat{F}''_1(\cat{F}''_2)^{-1}=\cat{F}''$ has a restriction to the diagonal which is trivial, it follows that the restriction of $\cat{F}''$ to $(X'',\sh{O}_{X''}/\sh{I}^2)$ is given, up to isomorphism, by a well-defined element $\xi$ of
 \[
   \HH^1(X'',\sh{I}/\sh{I}^2) = \HH^1(X',\Omega_{X'/X}^1).
 \]
-Also, being precise, we have $\Omega_{X'/X}^1=\Omega_{S'/S}^1\otimes_{\sh{O}_S}\sh{O}_X$, and thus, \emph{if $\Omega_{S'/S}^1$ is locally free on $S$} (as in the Cartier case), \emph{then $\xi$ defines a section of $\RR^1f'(\sh{O}_{X'})\otimes\Omega_{S'/S}^1$ on $S'$} (called the \emph{Atiyah--Cartier class of the invertible sheaf $\sh{F}$ on $X'/S$}) \emph{whose vanishing is necessary and sufficient for the inverse images of $\sh{F}'$ under the two projections of}
+Also, being precise, we have $\Omega_{X'/X}^1=\Omega_{S'/S}^1\otimes_{\sh{O}_S}\sh{O}_X$, and thus, \emph{if $\Omega_{S'/S}^1$ is locally free on $S$} (as in the Cartier case), \emph{then $\xi$ defines a section of $\RR^1f'(\sh{O}_{X'})\otimes\Omega_{S'/S}^1$ on $S'$} (called the \emph{Atiyah--Cartier class of the invertible sheaf $\cat{F}$ on $X'/S$}) \emph{whose vanishing is necessary and sufficient for the inverse images of $\cat{F}'$ under the two projections of}
 \[
   (X'',\sh{O}_{X''}/\sh{I}^2) = X\times_S(S'',\sh{O}_{S''}/\sh{J}^2)
 \]
 \emph{to $X'$ to be equivalent} (where $\sh{J}$ is the sheaf of ideals on $S''=S'\times_S S'$ defined by the diagonal morphism $S'\to S'\times_S S'$).
-This vanishing is thus trivially \emph{necessary} for the inverse images of $\sh{F}'$ on $X''=X\times_S S''$ itself to be equivalent, and thus also for $\sh{F}$ to be equivalent to the inverse image of an invertible sheaf $\sh{F}$ on $X$.
-The Atiyah--Cartier class can also be understood as the obstruction to the existence, locally over $S'$, of a \emph{connection} of $\sh{F}'$ relative to the derivations of $X'/X$, with such a connection further being determined when we know the derivations of $\sh{F}'$ corresponding to the natural extensions of derivations of $S'/S$ to $X'$.
-From this, and the results of the previous section, we easily conclude that, in the case of the aforementioned \cref{example:B.3(2)}, and when $X/S$ admits a section, the vanishing of the Atiyah--Cartier class is also sufficient for $\sh{F}'$ to be rational on $S$.
+This vanishing is thus trivially \emph{necessary} for the inverse images of $\cat{F}'$ on $X''=X\times_S S''$ itself to be equivalent, and thus also for $\cat{F}$ to be equivalent to the inverse image of an invertible sheaf $\cat{F}$ on $X$.
+The Atiyah--Cartier class can also be understood as the obstruction to the existence, locally over $S'$, of a \emph{connection} of $\cat{F}'$ relative to the derivations of $X'/X$, with such a connection further being determined when we know the derivations of $\cat{F}'$ corresponding to the natural extensions of derivations of $S'/S$ to $X'$.
+From this, and the results of the previous section, we easily conclude that, in the case of the aforementioned \cref{example:B.3(2)}, and when $X/S$ admits a section, the vanishing of the Atiyah--Cartier class is also sufficient for $\cat{F}'$ to be rational on $S$.
 
 
 \section{Application to the restriction of the base scheme to an abelian scheme}
