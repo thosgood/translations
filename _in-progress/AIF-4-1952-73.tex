@@ -57,10 +57,12 @@
 \newcommand{\aster}[1]{$\star${#1}$\star$}
 \newcommand{\BB}{\mathrm{B}}
 \newcommand{\LL}{\mathrm{L}}
+\renewcommand{\ll}{\ell}
 \newcommand{\sBB}{\mathscr{B}}
 \newcommand{\DF}{\mbox{\normalfont($\mathscr{DF}$)}}
 \newcommand{\FF}{\mbox{\normalfont($\mathscr{F}$)}}
 \newcommand{\hotimes}{\widehat{\otimes}}
+\newcommand{\hhotimes}{\skew{0}{\widehat}{\skew{0}\widehat{\otimes}}}
 \newcommand{\scr}{\mathscr}
 \newcommand{\dd}{\mathrm{d}}
 
@@ -122,7 +124,7 @@
 This article aims to give a summary, without proofs, of the principal results found in my work ``Produits tensoriels topologiques et espaces nucl\'{e}aires'', which will be published in the \emph{Memoirs of the Amer. Math. Society} (and which I will refer to as \cite{PTT}).
 The main concern throughout \cite{PTT} was that of being exhaustive, both in terms of studying all the questions raised by the topics covered, as well as trying to state the more difficult results as theorems that were the most general possible.
 This work was also very dense, and the important simple ideas risked being sometimes hidden by technical details.
-This is why this bowlderised summary is possibly useful in giving a more assimilable outline of the theory.
+This is why this bowdlerised summary is possibly useful in giving a more assimilable outline of the theory.
 Some extra comments, interesting but not necessary for the general understanding of this summary, as well as some hints on certain proofs, have been placed between stars, like \aster{\ldots}.
 
 The importance of topological tensor products shows itself in many different settings:
@@ -186,7 +188,7 @@ in any case, bornological implies quasi-tunnelled.
 \subsection{Generalities on \texorpdfstring{$E\hotimes F$}{EF}}
 \label{subsection:generalities-on-E-hotimes-F}
 
-(\cite[chap.~1, §1, n\textsuperscript{o}~1 and n\textsuperscript{o}~3]{PTT}).
+(\cite[chap.~1, \S1, n\textsuperscript{o}~1 and n\textsuperscript{o}~3]{PTT}).
 \medskip
 
 The axiomatic definition of the algebraic tensor product $E\otimes F$ of two vector spaces $E$ and $F$, and of the canonical bilinear map $(x,y)\mapsto x\otimes y$ from $E\times F$ to $E\otimes F$ (\cite{1}) asks only that, for every vector space $G$, the bilinear maps from $E\times F$ to $G$ correspond bijectively with linear maps $f$ from $E\otimes F$ to $G$, where the map corresponding to $f$ is given by $(x,y)\mapsto f(x\otimes y)$.
@@ -234,7 +236,7 @@ is every bounded subset of $E\hotimes F$ contained in the closed disked hull of 
 \subsection{The space \texorpdfstring{$E\hotimes F$}{EF} when \texorpdfstring{$E$}{E} and \texorpdfstring{$F$}{F} are of type \texorpdfstring{$\FF$}{(F)}}
 \label{subsection:E-hotimes-F-type-FF}
 
-(\cite[chap.~1, §2, n\textsuperscript{o}~1]{PTT}).
+(\cite[chap.~1, \S2, n\textsuperscript{o}~1]{PTT}).
 \medskip
 
 \begin{theorem}{2}
@@ -249,7 +251,7 @@ is every bounded subset of $E\hotimes F$ contained in the closed disked hull of 
 
 (It is also true that, if $(x_i)$, $(y_i)$, and $(\lambda_i)$ are given as above, then the series $\sum_i\lambda_i x_i\otimes y_i$ is always absolutely convergent in $E\hotimes F$, and so we have a \emph{characterisation} of the elements of $E\hotimes F$).
 If $E$ and $F$ are normed, then we can suppose in the above that $\|x_i\|\leq1$, $\|y_i\|\leq1$, $\sum_i|\lambda_i|\leq\|u\|_1+\varepsilon$, where $\varepsilon>0$ is arbitrary and given in advance.
-In these two statements, if $u$ runs over a compact subset of $E\hotimes F$, then we can suppose that the sequences $(x_i)$ and $(y_i)$ remain fixed (and we can even suppose that they are sequences that tend to $0$), and that $(\lambda_i)$ runs over a compact subset of $\ell^1$ (the space of summable sequences).
+In these two statements, if $u$ runs over a compact subset of $E\hotimes F$, then we can suppose that the sequences $(x_i)$ and $(y_i)$ remain fixed (and we can even suppose that they are sequences that tend to $0$), and that $(\lambda_i)$ runs over a compact subset of $\ll^1$ (the space of summable sequences).
 We have an analogous statement for the concrete representation of convergent sequences in $E\hotimes F$.
 \Cref{theorem2} and its previous variants serve mainly as a way to:
 \begin{corollary}
@@ -262,12 +264,12 @@ This fact also implies that, on $\BB(E,F)$, the ``bicompact convergence'' topolo
 
 \aster{%
   For the proof of \cref{theorem2}, we suppose, for simplicity, that $E$ and $F$ are Banach spaces, and let $I$ be the product of their unit balls, and $i\mapsto x_i$ and $i\mapsto y_i$ the projections from $I$ to its factors.
-  It is easy t see that the linear map $(\lambda_i)\mapsto\sum_i\lambda_i x_i\otimes y_i$ from $\ell^1(I)$ to $E\hotimes F$ is a metric homomorphism from the former to a dense subspace of the latter, and thus \emph{onto} the latter, whence it indeed follows that $E\hotimes F$ can be identified with a quotient space of $\ell^1(I)$.
+  It is easy t see that the linear map $(\lambda_i)\mapsto\sum_i\lambda_i x_i\otimes y_i$ from $\ll^1(I)$ to $E\hotimes F$ is a metric homomorphism from the former to a dense subspace of the latter, and thus \emph{onto} the latter, whence it indeed follows that $E\hotimes F$ can be identified with a quotient space of $\ll^1(I)$.
 
   From \cref{theorem2}, we can extract results of the following type:
   let $\scr{G}$ be a
 \oldpage{79}
-  locally compact group (resp. a Lie group), then every summable function $f$ (resp. every infinitely differentiable function of compact support) on $\scr{G}$ is of the form $\sum\lambda_i g_i*h_i$, where $(\lambda_i)\in\ell^1$, and where $(g_i)$ and $(h_i)$ are bounded sequences in $\LL^i(\scr{G})$ (resp. in $\scr{D}(\scr{G})$, the space of infinitely differentiable functions of compact support on $\scr{G}$);
+  locally compact group (resp. a Lie group), then every summable function $f$ (resp. every infinitely differentiable function of compact support) on $\scr{G}$ is of the form $\sum\lambda_i g_i*h_i$, where $(\lambda_i)\in\ll^1$, and where $(g_i)$ and $(h_i)$ are bounded sequences in $\LL^i(\scr{G})$ (resp. in $\scr{D}(\scr{G})$, the space of infinitely differentiable functions of compact support on $\scr{G}$);
   we thus immediately conclude that $f$ is a linear combination of functions of positive type that are in $\LL(\scr{G})$ (resp. $\scr{D}(\scr{G})$).
   In the former case, we can also restrict to functions that are all of compact support (with the supports of $g_i$ and $h_i$ being contained inside a compact subset that depends only on the compact support of $f$).
   There is a simple direct proof in the case of $\LL^1(\scr{G})$, but I do not think that there is one for $\scr{D}(\scr{G})$, where the question presents difficulties even for $\scr{G}=\mathbb{R}$ (by using the Fourier transformation).
@@ -302,6 +304,65 @@ Then \cref{theorem3} easily implies that $\LL_E^1(\mu)$ is again isomorphic to $
 \oldpage{80}
 This recovers, for example, the well-known fact that every continuous linear map from $E$ to the dual $\LL^\infty(\mu)$ of $\LL^1(\mu)$ can be extended to a linear map of the same norm from $F$ to $\LL^\infty(\mu)$;
 or, dually, that every continuous linear map from $\LL^1(\mu)$ to a quotient space $F'/E^0$ of a Banach dual by a weakly closed vector subspace comes from a linear map of the same norm from $\LL^1(\mu)$ to $F'$.
+
+\aster{%
+  The analogue of \cref{theorem3} for $\LL^p$ spaces is false for all $p>1$.
+  However, \cref{theorem3} applies, in an essential way, in many important places in the theory outlined here.
+  We now give some less important applications (see \cite[chap.~1, \S2, n\textsuperscript{o}~2]{PTT} for details).
+  In \cref{theorem3}, if we take $E=c_0$ (the space of scalar sequences that converge to $0$), and note that $\LL_E^1(\mu)$ can then be identified with the space of \todo sequences in $\LL^1(\mu)$ that converge to $0$ almost everywhere, then we see that such sequences in $\LL^1(\mu)$ form a category of invariant sequences \todo topological-vectorial.
+  In particular, a continuous linear map from $\LL^1(\mu)$ to a space $\LL^1(\nu)$ sends \todo sequences that converge to $0$ almost everywhere to sequences of the same type.
+  We thus also see that the \todo bounded subsets of $\LL^1(\mu)$ form an invariant category \todo topological-vectorial.
+  If we take $F=\ll^p$, with $1\leq p<+\infty$, then we similarly obtain a topological-vectorial interpretation of the sequences $(f_i)$ in $\LL^1(\mu)$ such that
+  \[
+    \int \left(
+      \sum_i |f_i(t)|^p
+    \right)^{1/p}
+    \dd\mu(t) < +\infty.
+  \]
+  Such sequences are sent to sequences of the same type by any continuous linear map from $\LL^1(\mu)$ to a space $\LL^1(\nu)$.
+  Another interesting application of \cref{theorem3} is the following: every bounded subset $M$ of $\LL^1(\mu)\hotimes E$ is contained in the canonical image of the unit ball of a space $\LL^1(\mu)\hotimes E_A$, where $A$ is a closed bounded disk in the space $E$ of type $\FF$;
+  a fortiori, $M$ is contained in the closed disked hull of $B\otimes A$, where $B$ is the unit ball of $\LL^1(\mu)$, which solves the ``problem of topologies'' described in \cref{subsection:generalities-on-E-hotimes-F}.
+}
+
+
+\subsection{Other examples}
+\label{subsection:other-examples}
+
+If $H$ is a Hilbert space, then the elements of $H'\hotimes H$, identified with endomorphisms of $H$ (the \emph{Fredholm maps} or \emph{nuclear maps} from $H$ to $H$ --- see \todo) are exactly the endomorphisms $u$ such that the positive Hermitian operator
+\oldpage{81}
+$\sqrt{u^*u}$ is compact and has a summable sequence of eigenvalues, and $\|u\|_1$ is then equal to the sum of the eigenvalues of $\sqrt{u^*u}$ (repeated with multiplicities, of course).
+We obtain the operators that have already been studied in \cite{4} and \cite{8}.
+In fact, $u$ is also a Fredholm operator if and only if its Hermitian components $\frac12(u+u^*)$ and $\frac{1}{2i}(u-u^*)$ are, i.e. if they are compact Hermitian operators whose sequences of eigenvalues are summable.
+\emph{Relation to Hilbert--Schmidt operators: If $A$ and $B$ are Hilbert--Schmidt operators, then $AB$ is a Fredholm operator, and $\|AB\|_1\leq\|A\|_2\|B\|_2$};
+and, conversely, every Fredholm operator $u$ is the product of two Hilbert--Schmidt operators $A$ and $B$ of norm $\|A\|_2=\|B\|_2=\sqrt{\|u\|_1}$.
+All of these facts are elementary (one we know the spectral decomposition of compact Hermitian operators to a Hilbert space) and well known.
+
+Numerous other examples of products $E\hotimes F$, relating to \emph{nuclear spaces}, will be seen in \todo.
+
+\aster{%
+  In the setting of infinite-dimensional Banach spaces, I do now know, even in particular cases, other concrete characterisations of the elements of $E\hotimes F$ apart from those that we have given.
+  Also, the elements of $c_0\hotimes E$ (where $E$ can be any complete locally convex space) can be identified with \emph{certain} sequences in $E$ that converge to $0$, that we can call \emph{nuclearly convergent to $0$};
+  but if $E$ is an infinite-dimensional Banach space, then we always obtain a strictly smaller class than the class of all sequences converging to $0$ (see \todo).
+  We even show that (if $E$ is an infinite-dimensional Banach space), for any sequence $(\lambda_i)$ of positive scalars that is not square-summable, there exists a sequence $(x_i)$ in $E$ that does not converge nuclearly to $0$, and such that $\|x_i\|=\lambda_i$ for all $i$.
+  However, if, for example, $E$ is the space $C(K)$ of continuous functions on a compact space, then we show that every square-summable sequence in $C(K)$ converges nuclearly to $0$.
+  We also point out that, in any complete locally convex space, every summable sequence converges nuclearly to $0$.
+}
+
+
+\subsection{\texorpdfstring{$E\hhotimes F$}{EF} spaces}
+\label{subsection:E-hhotimes-F-spaces}
+
+(\cite[chap.~1, \S3, n\textsuperscript{o}~3]{PTT}).
+\medskip
+
+If $E$ and $F$ are Banach spaces, then $E\otimes F$ can be considered as a vector subspace of the Banach space $\BB(E',F')$ of continuous bilinear forms
+\oldpage{82}
+on $E'\times F'$.
+The completion of $E\otimes F$ under the norm induced by $\BB(E',F')$ is denoted by $E\hhotimes F$, which is thus a complete normed vector subspace of $\BB(E',F')$.
+Every reasonable normed topology on $E\otimes F$ is included between the topology induced by $E\hotimes F$ and the topology induced by $E\hhotimes F$.
+If $E$ and $F$ are now both arbitrary locally convex spaces, then we can again consider $E\otimes F$ is a space of bilinear forms on $E'\times F'$, and endow it with the biequicontinuous-convergence topology (i.e. the topology given by uniform convergence on the products of an equicontinuous subset of $E'$ with an equicontinuous subset of $F'$):
+the completion of $E\otimes F$ under this topology is again denoted by $E\hhotimes F$.
+If $E$ and $F$ are complete, then the space
 
 
 %% Bibliography %%
