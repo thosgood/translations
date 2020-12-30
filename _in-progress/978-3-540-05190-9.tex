@@ -120,7 +120,9 @@
 \newcommand{\RR}{\mathbf{R}}
 \newcommand{\GL}{\mathrm{GL}}
 \newcommand{\tg}{\mathrm{tg}}
+\newcommand{\an}{\mathrm{an}}
 \newcommand{\detrow}[2]{\operatorname{det}(#1,#2)}
+\newcommand{\simto}{\xrightarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -1025,7 +1027,7 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
   Let $Y$ be a closed subset of a topological space $X$, and suppose that $Y$ has a paracompact neighbourhood.
   For every sheaf $\sh{F}$ on $X$, we have that
   \[
-    \varinjlim_{U\supset Y} \HH^\bullet(U,\sh{F}) \xrightarrow{\sim} \HH^\bullet(Y,\sh{F}).
+    \varinjlim_{U\supset Y} \HH^\bullet(U,\sh{F}) \simto \HH^\bullet(Y,\sh{F}).
   \]
 \end{reminder}
 
@@ -1055,7 +1057,7 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
   Then, for every vector space $A$ over $\CC$, possibly of infinite dimension, we have that
   \[
   \label{I.2.26.1}
-    A\otimes_\CC\HH^i(X,V) \xrightarrow{\sim} \HH^i(X,A\otimes_\CC V).
+    A\otimes_\CC\HH^i(X,V) \simto \HH^i(X,A\otimes_\CC V).
   \tag{2.26.1}
   \]
 \end{reminder}
@@ -1088,7 +1090,7 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
   We thus have that
   \[
   \label{I.2.27.2}
-    \RR^i f_* V_\mathrm{rel} \xrightarrow{\sim} \RR^i f_*(\Omega_{X/S}^\bullet(V))
+    \RR^i f_* V_\mathrm{rel} \simto \RR^i f_*(\Omega_{X/S}^\bullet(V))
   \tag{2.27.2}
   \]
   where the right-hand side is the relative hypercohomology.
@@ -1118,7 +1120,7 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
       \]
       Then the arrow \cref{I.2.27.4} is an isomorphism:
       \[
-        \sh{O}_S \otimes_\CC \RR^i f_*V \xrightarrow{\sim} \RR^i f_*(\Omega_{X/S}^\bullet(V)).
+        \sh{O}_S \otimes_\CC \RR^i f_*V \simto \RR^i f_*(\Omega_{X/S}^\bullet(V)).
       \]
   \end{enumerate}
 \end{proposition}
@@ -1128,7 +1130,7 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
   To show that \cref{I.2.27.4} is an isomorphism, it suffices to construct a fundamental system $T$ of neighbourhoods of $s$ such that the arrows
   \[
   \label{I.2.28.1}
-    \HH^0(T,\sh{O}_S) \otimes \HH^i(T\times Y,\pr_2^\sbullet V_0) \xrightarrow{\sim} \HH^i(T\times Y,\pr_1^\sbullet\sh{O}_S \otimes \pr_2^\sbullet V_0)
+    \HH^0(T,\sh{O}_S) \otimes \HH^i(T\times Y,\pr_2^\sbullet V_0) \simto \HH^i(T\times Y,\pr_1^\sbullet\sh{O}_S \otimes \pr_2^\sbullet V_0)
   \tag{2.28.1}
   \]
   are isomorphisms.
@@ -1139,7 +1141,7 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
 \oldpage{21}
   \[
   \label{I.2.28.2}
-    \HH^0(T,\sh{O}_S) \otimes \HH^i(Y,V_0) \xrightarrow{\sim} \HH^i(T\times Y,\pr_1^\sbullet\sh{O}_S \otimes \pr_2^\sbullet V_0).
+    \HH^0(T,\sh{O}_S) \otimes \HH^i(Y,V_0) \simto \HH^i(T\times Y,\pr_1^\sbullet\sh{O}_S \otimes \pr_2^\sbullet V_0).
   \tag{2.28.2}
   \]
 
@@ -1186,11 +1188,11 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
   \]
 
   Let $\sh{V}$ be an arbitrary holomorphic vector bundle on $X$.
-  The choice of a basis $e\colon\CC^n\xrightarrow{\sim}\sh{V}$ of $\sh{V}$ allows us to think of $\sh{V}$ as being defined by a
+  The choice of a basis $e\colon\CC^n\simto\sh{V}$ of $\sh{V}$ allows us to think of $\sh{V}$ as being defined by a
 \oldpage{22}
   constant vector \todo ($\CC^n$), and the above remarks apply:
   connections on $\sh{V}$ correspond, via \cref{I.3.1.2}, with $(n\times n)$-matrices of differential forms on $X$.
-  If $\omega_e$ is the matrix of the connection $\nabla$ in the basis $e$, and if $f\colon\CC^n\to\xrightarrow{\sim}\sh{V}$ is another basis of $\sh{V}$, with matrix $A\in\GL_n(\sh{O})$ (where $A=e^{-1}f$), then \cref{I.3.1.2}
+  If $\omega_e$ is the matrix of the connection $\nabla$ in the basis $e$, and if $f\colon\CC^n\to\simto\sh{V}$ is another basis of $\sh{V}$, with matrix $A\in\GL_n(\sh{O})$ (where $A=e^{-1}f$), then \cref{I.3.1.2}
   \[
     \begin{aligned}
       \nabla v
@@ -1384,7 +1386,7 @@ In fact, I have cheated with this definition, in that I have only considered equ
     \item the subsheaf of $\sh{L}$ given by solutions of $E$ is a local system $\sh{L}^E$ of rank~$n$ on $X$ ; and
     \item the canonical arrow $\DD^{n-1}\colon\sh{L}^E \to P^{n-1}(\sh{L})$ induces an isomorphism
       \[
-        \sh{O}\otimes_\CC\sh{L}^E \xrightarrow{\sim} P^{n-1}(\sh{L}).
+        \sh{O}\otimes_\CC\sh{L}^E \simto P^{n-1}(\sh{L}).
       \]
   \end{enumerate}
 \end{theorem}
@@ -1474,7 +1476,7 @@ In particular, it follows from \cref{I.4.5}~(ii) and from \cref{I.2.17} that $E$
   We denote by $V$ the local system of horizontal sections of $\sh{V}$.
   For every $\sh{O}$-module $\sh{M}$, we have \cref{I.2.17}
   \[
-    \Hom_\sh{O}(\sh{V},\sh{M}) \xrightarrow{\sim} \Hom_\CC(V,\sh{M}).
+    \Hom_\sh{O}(\sh{V},\sh{M}) \simto \Hom_\CC(V,\sh{M}).
   \]
   In particular, we define a map $\gamma^k$ from $\sh{V}$ to $P^k(\sh{L})$ by setting, for any \emph{horizontal section} $v$ of $\sh{V}$,
   \[
@@ -1939,7 +1941,7 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
   \]
 
   Let $V$ be the rank-$2$ local system of solutions of $E$;
-  we have \cref{I.4.5} that $\sh{O}\otimes V\xrightarrow{\sim}P^1(\sh{L})$, and the linear form $\lambda\colon P^1(\sh{L})\to\sh{L}$ defines a section $\lambda_0$ of the projective bundle associated to the vector bundle $P^1(\sh{L})$.
+  we have \cref{I.4.5} that $\sh{O}\otimes V\simto P^1(\sh{L})$, and the linear form $\lambda\colon P^1(\sh{L})\to\sh{L}$ defines a section $\lambda_0$ of the projective bundle associated to the vector bundle $P^1(\sh{L})$.
 
   Locally on $X$, $V$ is isomorphic to the constant local system $\underline{\CC^2}$;
   the choice of an isomorphism $\sigma\colon V\to\underline{\CC^2}$ identifies $\lambda_0$ with a map $\lambda_{0,\sigma}$ from $X$ to $\PP^1(\CC)$;
@@ -2345,10 +2347,125 @@ They are either due to N.~Katz (see, most notably, \cite{14,15}), or classical (
     \Gr(\dd)\colon \fk{m}^i/\fk{m}^{i+1} \to \fk{m}^{i-1}\Omega/\fk{m}^i\Omega
   \]
   induced by $\dd$ are linear and bijective \hyperref[II.1.4.4]{(1.4.4)}.
-  Since $\sh{O}$ is complete, $\dd\colon\fk{m}\to\Omega$ is surjective, and $\Ker(\dd)\xrightarrow{\sim}k$.
-  This gives us a field of representatives that is annihilated by $\dd$, and the choice of a uniformiser $t$ gives the desired isomorphism $k[[t]]\xrightarrow{\sim}\sh{O}$.
+  Since $\sh{O}$ is complete, $\dd\colon\fk{m}\to\Omega$ is surjective, and $\Ker(\dd)\simto k$.
+  This gives us a field of representatives that is annihilated by $\dd$, and the choice of a uniformiser $t$ gives the desired isomorphism $k[[t]]\simto\sh{O}$.
 \end{proof}
 
+\begin{env}{1.6}
+\label{II.1.6}
+  If an $\sh{O}$-algebra $\sh{O}'$ is a discrete valuation ring with a field of fractions $K'$ that is algebraic over $K$, then the derivation $\dd$ extends uniquely to $\dd\colon K'\to\Omega\otimes_{\sh{O}}K'$.
+  Let $e$ be the ramification index of $\sh{O}'$ over $\sh{O}$, and let $t'$ be a uniformiser of $\sh{O}'$.
+  We set
+  \[
+    \Omega' = 1/(t')^{e-1}\Omega\otimes_{\sh{O}}\sh{O}'.
+  \]
+\end{env}
+
+We can easily show, using \cref{II.1.6}, that the triple $(\sh{O}',\dd,\Omega')$ again satisfies \cref{II.1.4.1}.
+
+\begin{env}{1.7}
+  We will mostly be interested in the following examples.
+  Let $X$ be a non-singular complex algebraic curve, and let $x\in X$.
+  We choose one of the following:
+  \begin{enumerate}
+    \item[(1.7.1)]\label{II.1.7.1}
+      $\sh{O}=\sh{O}_{x,X}$ (the local ring for the Zariski topology), $\Omega=(\Omega_{X/\CC}^1)_x$, and $\dd=\mbox{the differential}$ ;
+    \item[(1.7.2)]\label{II.1.7.2}
+      $\sh{O}=\sh{O}_{x,X^\an}$ (the local ring of germs at $x$ of holomorphic functions), $\Omega=(\Omega_{X^\an/\CC}^1)_{(x)}$, and $\dd=\mbox{the differential}$ ; or
+    \item[(1.7.3)]\label{II.1.7.3}
+      the common completion of \hyperref[II.1.7.1]{(1.7.1)} and \hyperref[II.1.7.2]{(1.7.2)}.
+  \end{enumerate}
+\end{env}
+
+\oldpage{45}
+\begin{env}{1.8}
+\label{II.1.8}
+  Under the hypotheses of \cref{II.1.4}, let $V$ be a finite-dimensional vector space over $K$, and $V_0$ a lattice in $V$, i.e. a free sub-$\sh{O}$-module of $V$ such that $KV_0=V$.
+  For every homomorphism $e\colon\sh{O}^n\to V$, we define the \emph{valuation $v(e)$ of $e$} to be the largest integer $m$ such that $e(\sh{O}^n)\subset\fk{m}^m V_0$.
+  If $V_0$ and $V_1$ are two lattices, then there exists an integer $s$ that is independent of $e$ and $n$ and is such that
+  \[
+  \label{II.1.8.1}
+    |v_0(e) - v_1(e)| \leq s.
+  \tag{1.8.1}
+  \]
+\end{env}
+
+\begin{theorem}{1.9}
+\label{II.1.9}
+  \emph{[N. Katz].}
+  Under the hypotheses of \cref{II.1.4}, and with the notation of \cref{II.1.8}, let $\nabla$ be a connection \cref{II.1.2} on a vector space $V$ of dimension~$n$ over $K$.
+  Then one of the following conditions is satisfied:
+  \begin{enumerate}[a)]
+    \item For any lattice $V_0$ in $V$, any basis $e\colon K^n\simto V$ of $V$, any differential form with a simple pole $\omega$ and $\tau=\omega^{-1}\in\Omega_K$, the numbers $-v(\nabla_\tau^i e)$ are bounded above ; or
+    \item There exists a rational number $r>0$, with denominator at most $n$, such that, for any $V_0$, $e$, and $\tau$ as above, the family of numbers
+      \[
+        |-v(\nabla_\tau^i e) - ri|
+      \]
+      is bounded.
+  \end{enumerate}
+\end{theorem}
+
+Conditions~a) and b) of \cref{II.1.9} are more manageable in a different form:
+
+\begin{lemma}{1.9.1}
+\label{II.1.9.1}
+  Let $V_0$, $\tau$, and $e$ be as in \cref{II.1.9}.
+  Then, for any given value of $r$, the {estimation}~b) (\todo??) is equivalent to
+  \[
+  \label{II.1.9.2}
+    |\sup_{j\leq i}(-v\nabla_\tau^i e)-ri| \leq C^{te}.
+  \tag{1.9.2}
+  \]
+  The {estimation}~a) (\todo??) is equivalent to the same bound \cref{II.1.9.2} for $r=0$.
+\end{lemma}
+
+\begin{proof}
+  Going from \cref{II.1.9} to \cref{II.1.9.2} is clear, as is the converse for $r=0$.
+  So suppose that \cref{II.1.9.2} holds true for $r>0$ and some value $C_0$ for the constant.
+  We have
+  \[
+  \label{II.1.9.a}
+    -v\nabla_\tau^i e - ri \leq C_0.
+  \tag{a}
+  \]
+  We immediately see that there exists a constant $k$ such that
+  \[
+    -v\nabla_\tau^n(\nabla_\tau^i e) \leq -v\nabla_\tau^i e + kn.
+  \]
+\oldpage{46}
+  Thus
+  \[
+    \begin{aligned}
+      -C_0 + r(i+n)
+      \leq& \sup_{j\leq i+n} -v\nabla_\tau^j e
+    \\=& \sup(\sup_{j\leq i} -v\nabla_\tau^j e, -v\nabla_\tau^i e+kn)
+    \\\leq& \sup(C_0+ri, -v\nabla_\tau^i e+kn)
+    \end{aligned}
+  \]
+  and, if $-C_0+r(i+n) > C_0+ri$, i.e. if $n>2C_0/r$, then we have
+  \[
+  \label{II.1.9.b}
+    -v\nabla_\tau^i e \geq (-C_0-kn-rn)+ri.
+  \tag{b}
+  \]
+
+  The inequalities \hyperref[II.1.9.a]{(a)} and \hyperref[II.1.9.b]{(b)} then imply the inequality of the form \cref{II.1.9}:
+  \[
+    |-v\nabla_\tau^i e - ri| \leq C_0+kn+rn.
+  \]
+\end{proof}
+
+\begin{lemma}{1.9.3}
+\label{II.1.9.3}
+  Let $(V_0,\tau_0,e_0)$ and $(V_1,\tau_1,e_1)$ be two systems as in \cref{II.1.9}.
+  Then
+  \[
+    |\sup_{j\leq i}(-v_1\nabla_{\tau_1}^j e_1) - \sup_{j\leq i}(-v_0\nabla_{\tau_0}^j e_0)| \leq C^{te}.
+  \]
+\end{lemma}
+
+\begin{proof}
+\end{proof}
 
 
 
