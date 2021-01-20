@@ -515,7 +515,7 @@ In other words, the data of a flat $A$-module $M$ is completely equivalent to th
 We prove \cref{B-theorem2} by first proving that
 \[
   \HH^i(A'/A,\Ga) = 0
-  \qquad\mbox{(for $i\geq1)}
+  \qquad\mbox{(for $i\geq1$)}
 \]
 (cf. \cite[A, \S4.e]{3}), with the hypothesis that $\fk{m}A'\subset A$ allowing us to easily reduce to the case where $A$ is a field (namely $A/\fk{m}$).
 We can then apply the equivalences described in \cite[p.~16]{3}.
@@ -531,7 +531,31 @@ We can then apply the equivalences described in \cite[p.~16]{3}.
 Let $S$ be a locally Noetherian prescheme.
 A prescheme $X$ over $S$ is said to be
 \oldpage{195-11}
-\emph{locally of finite type} over $S$ if, for all $x\in X$,
+\emph{locally of finite type} over $S$ if, for all $x\in X$ that \todo{??}, there exists an affine neighbourhood of $y$ of ring $A$, and an affine neighbourhood of $x$ (over the aforementioned affine neighbourhood of $y$) of ring $B$, such that $B$ is an $A$-algebra of finite type.
+There are many important examples of preschemes locally of finite type over $S$, that are not of finite type over $S$, given by solutions of classical universal problems;
+thus it is important to be able to consider the Picard scheme of a curve as a union of infinitely-many connected components (that we must avoid confusing with the connected component of the identity element, i.e. the ``Picard variety'').
+It is thus sometimes useful to place ourselves in the category $\cat{C}$ of preschemes locally of finite type over $S$, in order to study the question of representability of a contravariant functor $F$.
+\emph{The main goal of these talks is to develop a general technique that allows us to recognise when such a functor $F$ is representable, and to study the properties of the corresponding $S$-prescheme $X$ by means of the properties of $F$.}
+We note in passing that, in this study, we find non-pathological examples of preschemes over $S$ that are not separated over $S$, notably as ``Picard preschemes'' of excellent $S$-schemes;
+we must thus refrain from banishing preschemes that are not schemes from algebraic geometry.
+
+Let $X$ be a prescheme locally of finite type over $S$, and let
+\[
+  F\colon Y \mapsto \Hom_S(Y,X)
+\]
+be the associated contravariant functor.
+We can consider the restriction $F_0$ of $F$ to the subcategory $\cat{C}_0$ of $\cat{C}$ consisting of preschemes $Y$ over $S$ that are Artinian and finite over $S$:
+if $S=\Spec(\Lambda)$, then $\cat{C}_0$ is the category dual to the category of Artinian $\Gamma$-algebras considered in \todo{???}.
+If $Y=\Spec(A)$, where $A$ is a \emph{local} Artinian ring, then $Y$ consists of a single point $y$ living above a closed point $s$ of $S$, and an $S$-homomorphism from $Y$ to $X$ (i.e. an element of $F(Y)$) is defined by the data of a point $x\in X$ over $s$, along with an $\sh{O}_s$-homomorphism from $\sh{O}_x$ to $A$.
+If there exists such a homomorphism, then $x$ is necessarily a closed point of $X$ (since its residue field is algebraic over the residue field of $s$).
+This thus shows that \emph{the restriction $F_0$ of $F$ to ``Artinian $Y$-algebras'' is pro-representable, and is represented by the topological $Y$-algebra whose local components are the completions $\widehat{\sh{O}_x}$ of the local rings of $X$ at the points $x$ of $X$ that are closed and live above closed points of $Y$}.
+This shows that only knowing $F_0$ gives precise information about the structure of $X$ (that is, the structure of the completions of its local rings at the aforementioned points).
+We note that, even in the case where $S$
+\oldpage{195-12}
+is the spectrum of an algebraically closed field, it is only thanks to the systematic consideration of ``varieties'' $Y$ such that $\sh{O}_Y$ may admit nilpotent elements (and, in particular, working with the spectra of local Artinian rings) that we can arrive at the ``good formulation'' of classical universal problems, and understand the ``infinitesimal'' aspect.
+
+If we start with a given functor $F$, and we want to know whether or not it is representable, then studying the functor $F_0$ (using \cref{B-theorem1} and \cref{B-theorem2}) will give quasi-complete hints;
+
 
 
 
