@@ -2465,6 +2465,38 @@ Conditions~a) and b) of \cref{II.1.9} are more manageable in a different form:
 \end{lemma}
 
 \begin{proof}
+  It suffices to establish an inequality like \cref{II.1.9.3} when we change only one of the data $V_0$, $\tau_0$, or $e$.
+  The case where we change only the reference lattice $V_0$ follows from \cref{II.1.8.1}.
+
+  We will systematically use the fact that, for $f\in K$, we have, by \cref{II.1.4.3},
+  \[
+  \label{II.1.9.4}
+    v(\partial_{\tau_i}f) \geq v(f)
+  \tag{1.9.4}
+  \]
+  (using the notation of \cref{II.1.2.3}).
+
+  If $e$ and $f$ are two bases, then $e=fa$ for some $a\in\GL_n(K)$, whence
+  \[
+    \nabla_\tau^i(e) = \sum_j\binom{i}{j}\nabla_\tau^j(f)\cdot\nabla_\tau^{i-j}a,
+  \]
+  and, by \cref{II.1.9.4},
+  \[
+    v(\nabla_\tau^i(e)) \geq \inf_{j\leq i}v(\nabla_\tau^j f) + C^{te}
+  \]
+  whence
+  \[
+    \sup_{j\leq i}(-v\nabla_\tau^j e) - \sup_{j\leq i}(-v\nabla_\tau^j f) \leq C^{te}.
+  \]
+
+  Reversing the roles of $e$ and $f$, we similarly have that
+  \[
+    \sup_{j\leq i}(-v\nabla_\tau^j f) - \sup_{j\leq i}(-v\nabla_\tau^j e) \leq C^{te}
+  \]
+  whence the inequality \cref{II.1.9.3} for a change of basis.
+
+\oldpage{47}
+  If
 \end{proof}
 
 
