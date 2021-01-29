@@ -118,6 +118,7 @@
 \newcommand{\pr}{\mathrm{pr}}
 \newcommand{\II}{\mathrm{II}}
 \newcommand{\RR}{\mathbf{R}}
+\newcommand{\MM}{\mathrm{M}}
 \newcommand{\GL}{\mathrm{GL}}
 \newcommand{\tg}{\mathrm{tg}}
 \newcommand{\an}{\mathrm{an}}
@@ -2410,13 +2411,13 @@ Conditions~a) and b) of \cref{II.1.9} are more manageable in a different form:
 \begin{lemma}{1.9.1}
 \label{II.1.9.1}
   Let $V_0$, $\tau$, and $e$ be as in \cref{II.1.9}.
-  Then, for any given value of $r$, the {estimation}~b) (\todo??) is equivalent to
+  Then, for any given value of $r$, the bound~b) is equivalent to
   \[
   \label{II.1.9.2}
     |\sup_{j\leq i}(-v\nabla_\tau^i e)-ri| \leq C^{te}.
   \tag{1.9.2}
   \]
-  The {estimation}~a) (\todo??) is equivalent to the same bound \cref{II.1.9.2} for $r=0$.
+  The bound~a) is equivalent to the same bound \cref{II.1.9.2} for $r=0$.
 \end{lemma}
 
 \begin{proof}
@@ -2496,8 +2497,120 @@ Conditions~a) and b) of \cref{II.1.9} are more manageable in a different form:
   whence the inequality \cref{II.1.9.3} for a change of basis.
 
 \oldpage{47}
-  If
+  If $\tau$ and $\omega$ are vectors as in \cref{II.1.9}, then $\sigma=f\tau$, with $f$ invertible, whence
+  \[
+    \nabla_\sigma = f\nabla_\tau
+    \qquad\mbox{($f\in\sh{O}^*$)}
+  \]
+  and we can show by induction that
+  \[
+    \nabla_\sigma^i = \sum_{j\leq i}\varphi_j\nabla_\tau^j
+    \qquad\mbox{($\varphi_j\in\sh{O}$)}.
+  \]
+  From this we deduce that
+  \[
+    v\nabla_\sigma^i(e) \geq \inf_{j\leq i}v\nabla_\tau^j(e),
+  \]
+  whence
+  \[
+    \sup_{j\leq i}(-v\nabla_\sigma^j(e)) \leq \sup_{j\leq i}(-v\nabla_\tau^j(e)).
+  \]
+  Reversing the roles of $\sigma$ and $\tau$, we thus conclude that
+  \[
+  \label{II.1.9.5}
+    \sup_{j\leq i}(-v\nabla_\sigma(e)) = \sup_{j\leq i}(-v\nabla_\tau^j(e)).
+  \tag{1.9.5}
+  \]
 \end{proof}
+
+By \cref{II.1.9.1} and \cref{II.1.9.3} it suffices, to prove \cref{II.1.9}, to prove an upper bound of the form \cref{II.1.9.2} for \emph{one} choice of $(V_0,\tau,e)$.
+
+\begin{lemma}{1.9.6}
+\label{II.1.9.6}
+  Under the hypotheses of \cref{II.1.9}, let $e\colon K^n\to V$ be a basis of $V$, $t$ a uniformiser, $\omega$ a differential form presenting a simple pole (i.e. a basis of $t^{-1}\Omega$), set $\tau=\omega^{-1}\in\Omega$, and let $\Gamma=(\Gamma_j^i)$ be the connection matrix in the bases $e$ and $\omega$.
+  Let $s$ and $(r_i)_{1\leq i\leq n}$ be rational numbers, and set $r_{i,j}=s+r_i-r_j$, and suppose that
+  \[
+    -v(\Gamma_j^i) \leq r_{i,j}.
+  \]
+  Finally, let $\gamma\in \MM_n(k)$ be the matrix whose coefficients are ``$t^{r_{i,j}}\Gamma_j^i\mod m$'', i.e.
+  \[
+    \gamma_j^i =
+    \begin{cases}
+      0 & \mbox{if $-v(\Gamma_j^i)<r_{i,j}$ ;}
+    \\t^{r_{i,j}}\Gamma_j^i\mod m & \mbox{if $-v(\Gamma_j^i)=r_{i,j}$.}
+    \end{cases}
+  \]
+
+  Suppose that $s\leq0$, or that $\gamma$ is not nilpotent.
+  Then the upper bound \cref{II.1.9.2} is satisfied for $r=\sup\{s,0\}$.
+\end{lemma}
+
+\begin{proof}
+  Let $N$ be an integer such that the $r_iN$ are integers, and set $\sh{O}'=\sh{O}(\sqrt[N]{t})$.
+  Let $K'$ be the field of fractions of $K$, $v\colon {K'}^*\to\frac1N\ZZ$ the valuation of $K'$ that extends $v$,
+\oldpage{48}
+  and $\Lambda$ the diagonal matrix with coefficients being the $t^{-r_i}$.
+
+  On $\sh{O}'$, let $\omega'$ be the basis of $\Omega\otimes K'$ given by the inverse image of $\omega$, let $\tau'$ be the corresponding basis of ${\Omega'}^\vee\otimes K'$, and let $e'=e\Lambda$ be a new basis of $V'=V\otimes K'$.
+  In these bases, the connection matrix is
+  \[
+    \Gamma' = \Lambda^{-1}\Gamma\Lambda + \Lambda^{-1}\partial_{\tau'}\Lambda.
+  \]
+
+  The matrix $\Lambda^{-1}\partial_{\tau'}\Lambda$ has coefficients in $\sh{O}'$, and so either
+  \begin{enumerate}[(a)]
+    \item $s\leq0$, and $\Gamma'$ has coefficients in $\sh{O}'$ ; or
+    \item $s>0$, $-v(\Gamma')=s$, and the ``most polar part'' $\gamma$ of $\Gamma'$ is not nilpotent, so that $-v({\Gamma'}^\ell)=\ell s$.
+  \end{enumerate}
+
+  By the definition of $\Omega'$ \cref{II.1.6}, $\omega'$ presents a simple pole.
+  In case~(a), we thus conclude by induction on $\ell$ that
+  \[
+    v(\nabla_{\tau'}^\ell,e') \geq 0.
+  \]
+
+  We can prove by induction on $m$ that, in the basis $e'$,
+  \[
+    \nabla_{\tau'}^m = \sum_{0\leq k\leq n}({\Gamma'}^{m-i}+\Delta_i)\partial_\tau^i
+  \]
+  where $\Delta_i$ is the algebraic sum of the products of at most $m-i-1$ factors $\partial_{\tau'}^\ell\Gamma$.
+  In particular,
+  \[
+    \nabla_\tau^m e' = {\Gamma'}^m+\Delta_m
+  \]
+  and, in case~(b),
+  \[
+    -v(\nabla_{\tau'}^m,e') = ms.
+  \]
+
+  This satisfies \cref{II.1.9.2} on $\sh{O}'$ (for suitable bases), and \cref{II.1.9.6} then follows from \cref{II.1.9.3}.
+\end{proof}
+
+Theorem~\cref{II.1.9} follows from the following proposition and from \cref{I.1.3}.
+
+\begin{proposition}{1.10}
+\label{II.1.10}
+  Under the hypotheses of \cref{II.1.9}, let $X$ be a basis of $\Omega^\vee$, $t$ a uniformiser, set $\tau=tX$, and let $v$ be a cyclic vector \cref{II.1.2} of $V$.
+  Set
+\oldpage{49}
+  \[
+    \begin{aligned}
+      \nabla_X^n v &= \sum_{i<n}s_i\nabla_X^i v
+    \\\nabla_\tau^n v &= \sum_{i<n}b_i\nabla_\tau^i v.
+    \end{aligned}
+  \]
+  Then the bound \cref{II.1.9.2} holds true for
+  \[
+    \begin{aligned}
+      r
+      &= \sup\{0,\sup\{-v(b_i)/n-i\}\}
+    \\&= \sup\{0,\sup\{-v(a_i)/n-i\}-1\}.
+    \end{aligned}
+  \]
+  The same conclusion holds for a cyclic vector $v$ of $V^\vee$.
+\end{proposition}
+
+
 
 
 
