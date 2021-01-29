@@ -47,10 +47,12 @@
 
 \theoremstyle{plain}
 \newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
 \newtheorem*{proposition}{Proposition}
 \newtheorem*{corollary}{Corollary}
 
 \theoremstyle{definition}
+\newtheorem*{definition}{Definition}
 \newtheorem*{remark}{Remark}
 
 
@@ -66,6 +68,7 @@
 \renewcommand{\ss}{\mathrm{ss}}
 \newcommand{\II}{\mathbf{II}}
 \DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Proj}{Proj}
 
 \renewcommand{\geq}{\geqslant}
@@ -490,6 +493,119 @@ The objective of the second section is to make these results more precise.
 
 \subsection{The linear action of a torus of dimension \texorpdfstring{$1$}{1}}
 \label{2.1}
+
+Consider a linear action of $T=k^*$ on a finite-dimensional $k$-vector space $N$.
+Decompose $N$ into $N_+\oplus N_0\oplus N_-$, where $N_+$ (resp. $N_0$, $N_-$) is the sum of the proper subspaces associated to positive (resp. null, negative) characters of $T$.
+We suppose, for simplicity, that $N_0=\{0\}$, i.e. that $T$ acts on $N$ with only the origin as a fixed point.
+Let $Z=N//T$ be the quotient (in the sense of Mumford) of $N$ by $T$: if $k[N]$ is the algebra of polynomial functions on $N$, and $k[N]^T$ is the sub-algebra given by $T$-invariant functions, then $Z=\Spec k[N]^T$.
+This is an affine variety, generally singular at $0$ (the point associated to the maximal homogeneous ideal of $k[N]^T$).
+Away from $0$, all its singularities are quotients by finite cyclic groups.
+
+\oldpage{518}
+We write $\dot{N}_+=N_+\setminus\{0\}$, and $\PP(N_+)$ to mean the quotient of $\dot{N}_+$ by $T$;
+this is a weighted projective space.
+Let $Z_+$ be the quotient of $\dot{N}_+\times N_-$ by the action of $T$.
+The first projection induces a morphism $p_+\colon Z_+\to\PP(N_+)$ that makes $Z_+$ the quotient of a vector bundle on $\PP(N_+)$, by a finite cyclic group.
+
+The inclusion of $\dot{N}_+\times N_-$ into $N$ induces a morphism $f_+\colon Z_+\to Z$.
+We easily see that $f_+$ contracts the zero section $(\dot{N}_+\times\{0\})/T$ to $0$, and restricts to give an isomorphism on the complement of the zero section.
+We similarly define $\dot{N}_-$, $\PP(N_-)$, $Z_-$, $p_-$, and $f_-$.
+Let $\hat{Z}$ be the fibre product $Z_+\times_Z Z_-$.
+We have the diagram
+\[
+  \begin{tikzcd}
+    \hat{Z} \rar["\phi_-"] \dar[swap,"\phi_+"] \drar["\psi"]
+    & Z_- \dar["f_-"] \rar["p_-"]
+    & \PP(N_-)
+  \\Z_+ \rar[swap,"f_+"] \dar[swap,"p_+"]
+    & Z
+  \\\PP(N_+)
+  \end{tikzcd}
+\]
+
+The algebra $k[N_+]$ is graded (by weight with respect to $T$), and $\PP(N_+)$ is the $\Proj$ of $k[N_+]$.
+Consequently, $\PP(N_+)$ is canonically endowed with a sheaf that we denote by $\sh{O}_+(n)$.
+
+\begin{proposition}
+  We have
+  \[
+    \hat{Z} = \Spec \left( \bigoplus_{n=0}^\infty \sh{O}_+(n)\otimes\sh{O}_-(n) \right)
+  \]
+  (a sheaf of graded algebras on $\PP(N_+)\times\PP(N_0)$), and
+  \[
+    Z_+ = \Spec \left( \bigoplus_{n=0}^\infty \sh{O}_+(n)\otimes k[N_-]_n \right)
+  \]
+  where $k[N_-]_n$ denotes the polynomial functions on $N_-$ of weight $-n$ with respect to $T$.
+  The diagram
+  \[
+    \begin{tikzcd}
+      \hat{Z} \rar["\phi_-"] \dar[swap,"\phi_+"] \drar["\psi"]
+      & Z_- \dar["f_-"]
+    \\Z_+ \rar[swap,"f_+"]
+      & Z
+    \end{tikzcd}
+  \]
+\oldpage{519}
+  is dual to
+  \[
+    \begin{tikzcd}
+      \bigoplus_{n=0}^\infty\sh{O}_+(n)\otimes\sh{O}_-(n)
+      & \bigoplus_{n=0}^\infty k[N_+]_n\otimes\sh{O}_-(n) \lar
+    \\\bigoplus_{n=0}^\infty\sh{O}_+(n)\otimes k[N_-]_n \uar
+      & \bigoplus_{n=0}^\infty k[N_+]_n\otimes k[N_-]_n \uar \lar
+    \end{tikzcd}
+  \]
+\end{proposition}
+
+\begin{proof}
+  It suffices to prove that $Z_+=\Spec\bigoplus_{n=0}^\infty\sh{O}_+(n)\otimes k[N_-]_n$;
+  the claim on $\sh{O}_{\hat{Z}}$ then follows, since $\sh{O}_{\hat{Z}}=\sh{O}_{Z_+}\otimes_{\sh{O}_Z}\sh{O}_{Z_-}$.
+  Let $f$ be a polynomial function of weight $p$ on $N_+$.
+  Set $Z_{+f}=p_+^{-1}(\PP(N_+)_f)$, which is an affine open subset of $Z_+$.
+  We have
+  \[
+    k[Z_{+f}]
+    = k[N_{+f}\times N_-]^T
+    = \bigoplus_{n=0}^\infty\big(k[N_+][1/f]\big)_n\otimes k[N_-]_n.
+  \]
+  On the other hand,
+  \[
+    \begin{aligned}
+      \Gamma\left(\PP(N_+)_f, \bigoplus_{n=0}^\infty\sh{O}_+(n)\otimes k[N_-]_n\right)
+      &= \bigoplus_{n=0}^\infty\Gamma\left(\PP(N_+)_f,\sh{O}_+(n)\right)\otimes k[N_-]_n
+    \\&= \bigoplus_{n=0}^\infty\big(k[N_+][1/f]\big)_n\otimes k[N_-]_n.
+    \end{aligned}
+  \]
+\end{proof}
+
+\begin{definition}
+  Let $X$ be a variety with an action of $k^*$, such that the associated grading of $\sh{O}_X$ is concentrated in non-negative degrees: $\sh{O}_X=\bigoplus_{n=0}^\infty\sh{O}_{X,n}$.
+  Let $Y$ be the subvariety of $X$ such that $\sh{O}_Y=\sh{O}_{X,0}$.
+  The \emph{blow-up of $Y$ in $X$} is the $\Proj$ of the graded algebra $\bigoplus_{n=0}^\infty\mathcal{A}_n$, where $\mathcal{A}_n=\bigoplus_{m\geq n}\sh{O}_{X,m}$.
+  Its \emph{exceptional divisor} (considered here as a reduced variety) is the $\Proj$ of the sheaf of graded algebras $\sh{O}_X$.
+\end{definition}
+
+\begin{corollary}
+  \begin{enumerate}[(i)]
+    \item $f_+$ and $f_-$ are proper.
+    \item $\phi_+$, $\phi_-$, and $\psi$ are blow-ups (resp. zero sections of $p_+$, $p_-$, and $0$), with exceptional divisor $\PP(N_+)\times\PP(N_-)$.
+  \end{enumerate}
+\end{corollary}
+
+\begin{proof}
+  We will show that $\psi$ is the blow-up of $)$ in $X$, where the grading of $k[X]$ is defined by $k[X]_n=k[N_+]_n\otimes k[N_-]_n$ (the proofs of the claims concerning $\phi_+$ and $\phi_-$ are analogous).
+  This follows from the following lemma \cite[2.5]{Fle}:
+\end{proof}
+
+\begin{lemma}
+  Let $B=\bigoplus_{n=0}^\infty B_n$ be a graded algebra of finite type, with $B_0=k$.
+  The blow-up of $0$ in $B$ is the spectrum of the sheaf of algebras $\bigoplus_{n=0}^\infty\sh{O}_{\PP(B)}(n)$, where $\PP(B)$ is the $\Proj$ of $B$.
+\end{lemma}
+
+
+\oldpage{520}
+\subsection{Comparison of sheaves on the quotients}
+\label{2.2}
 
 
 
