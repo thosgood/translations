@@ -1,0 +1,175 @@
+\documentclass{article}
+
+\title{Mixed varieties and mixed spaces}
+\author{Adrien Douady}
+\date{7\textsuperscript{th} of November, 1960}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+
+\usepackage[mathscr]{eucal}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{fouriernc}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\lfoot{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
+\crefname{section}{\S\!}{\S\S\!}
+\crefname{equation}{}{}
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+  \newtheorem*{proposition}{Proposition}
+\theoremstyle{definition}
+  \newtheorem*{definition}{Definition}
+
+
+%% Shortcuts %%
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+% \usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations/}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+
+  \medskip
+  
+  \emph{What follows is a translation of the French seminar talk:}
+
+  \medskip\noindent
+  \textsc{Douady, A.}
+  ``Vari\'{e}t\'{e}s et espaces mixtes''.
+  \emph{S\'{e}minaire Henri Cartan}, Volume~\textbf{13 (1)} (1960--1961), Talk no.~2.
+  {\url{http://www.numdam.org/item/SHC_1960-1961__13_1_A1_0/}}
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\tableofcontents
+\bigskip
+
+
+%% Content %%
+
+\oldpage{2-01}
+\section{Category of models}
+\label{I}
+
+Let $B$ be a topological space.
+We define the category $\mathscr{S}_B^n$ in the following manner: the objects of $\mathscr{S}_B^n$ are the open subsets of $B\times\CC^n$, and a morphism $f\colon U\to U'$ from an open subset $U\subset B\times\CC^n$ to an open subset $U'\subset B\times\CC^n$ is a continuous map $f\colon U\to U'$ satisfying the following two conditions:
+\begin{enumerate}
+  \item the diagram
+    \[
+      \begin{tikzcd}
+        U \ar[rr,"f"] \ar[dr,swap,"\pi_1"]
+        && U' \ar[dl,"\pi_1"]
+      \\&B&
+      \end{tikzcd}
+    \]
+    commutes, where $\pi_1$ denotes the projection of $B\times\CC^n$ to $B$ ; and
+  \item for all $x\in B$, the map $f_x\colon U_x\to U'_x$ is holomorphic, where
+    \[
+      U_x = \{z\in\CC^n \mid (x,z)\in U\}
+    \]
+    (and similarly for $U'$).
+\end{enumerate}
+
+If $B$ is endowed with the structure of a $\mathscr{C}^\infty$ manifold (resp. an $\RR$-analytic manifold, resp. $\CC$-analytic manifold), then we obtain a category $\mathscr{C}^\infty\mathscr{S}_B$ (resp. $\RR\mathscr{S}_B$, resp. $\CC\mathscr{S}_B$) by requiring the morphisms to be $\mathscr{C}^\infty$ (resp. $\RR$-analytic, resp. $\CC$-analytic).
+
+More generally, if $f_1\colon B\to B'$ is a continuous map from one topological space to another, then a morphism of $\mathscr{S}_{f_1}$ is defined to be a continuous map $f$ from an object $U$ of $\mathscr{S}_B$ to an object $U'$ of $\mathscr{S}_{B'}$ such that
+\begin{enumerate}
+  \item the diagram
+    \[
+      \begin{tikzcd}
+        U \rar["f"] \dar[swap,"\pi_1"]
+        & U' \dar["\pi_1"]
+      \\B \rar[swap,"f_1"]
+        & B'
+      \end{tikzcd}
+    \]
+    commutes ; and
+  \item $f_x\colon U_x\to U'_{f_1(x)}$ is holomorphic for all $x\in B$.
+\end{enumerate}
+
+\oldpage{2-02}
+If $f_1$ is a $\mathscr{C}^\infty$ map from one $\mathscr{C}^\infty$ manifold to another, then $f$ will be a morphism of $\mathscr{C}^\infty\mathscr{S}_{f_1}$ if, further, it is a $\mathscr{C}^\infty$ map (resp. \ldots).
+We thus obtain, for every category of topological spaces, a fibred category $\mathscr{S}^n$ (resp. $\mathscr{C}^\infty\mathscr{S}^n$, resp. \ldots).
+
+
+\section{The definition of mixed spaces and mixed varieties}
+\label{II}
+
+\subsection{First definition}
+\label{II.1}
+
+Let $B$ and $V$ be separated spaces, and let $\pi\colon V\to B$ be a continuous map.
+
+
+
+%% Bibliography %%
+
+\nocite{*}
+
+\begin{thebibliography}{2}
+
+  \bibitem{1}
+  {\sc Cartan, H.}
+  \newblock Un th\'{e}or\`{e}me de finitude.
+  \newblock {\em S\'{e}minaire H. Cartan} \textbf{6} (1953--54), Talk no.~17.
+
+  \bibitem{2}
+  {\sc Kodaira, K. and Spencer, D.}
+  \newblock On deformation of complex analytic structures, I.
+  \newblock {\em Annals of Math.} \textbf{67} (1958), 328--401.
+
+\end{thebibliography}
+
+
+\end{document}
