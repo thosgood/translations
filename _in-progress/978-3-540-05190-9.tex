@@ -37,7 +37,7 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{section}{\S\!}{\S\S\!}
+\crefname{section}{}{}
 \crefname{equation}{}{}
 \crefdefaultlabelformat{#2(#1)#3}
 
@@ -137,6 +137,7 @@
 \DeclareMathOperator{\HH}{H}
 \DeclareMathOperator{\Gr}{Gr}
 \DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Res}{Res}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -2780,7 +2781,35 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
 \oldpage{53}
   $t\mapsto\lambda e^{2\pi it}$ ($0\leq t\leq1$).
   The fundamental groupoid is thus the constant group $\ZZ$.
+  It acts on any local system on $D^*$.
+  Using the dictionary \cref{I.2}, every vector bundle $V$ with connection is thus endowed with an action of the local fundamental group $\ZZ$.
+  The generator $T$ of this action is called the \emph{monodromy transformation}.
 \end{env}
+
+\begin{env}{1.16}
+\label{II.1.16}
+  Let $V$ be a vector bundle on $D$, and $\nabla$ a connection on $V|D^*$ that is meromorphic at $0$.
+  If $e_1$ (resp. $e_2$) is a basis of $V$ in which $\nabla$ is represented by $\Gamma_1\in\Omega^1(\End(V|D^*))$ (resp. $\Gamma_2$), then the difference $\Gamma_1-\Gamma_2$ is holomorphic at $0$.
+  Thus the polar part of $\Gamma$ does not depend on the choice of $e$.
+
+  Suppose that $\Gamma_i$ presents only a simple pole at $0$, and thus has ``polar part'' equal to some element $\gamma_i$ in
+  \[
+    \HH^0\left( \left(\frac1z\Omega^1/\Omega^1\right)\otimes\shEnd(V) \right).
+  \]
+  The ``residue'' map $\HH^0((1/z)\Omega^1/\Omega^1)\to\CC$ then associates to $\gamma_i$ an endomorphism of the fibre $V_0$ of $V$ at $0$.
+  We call this endomorphism the \emph{residue} of the connection at $0$, and denote it by
+  \[
+    \Res(\Gamma_i)\in\End(V_0).
+  \]
+\end{env}
+
+\begin{theorem}{1.17}
+\label{II.1.17}
+  Under the hypotheses of \cref{II.1.16}, the monodromy transformation $T$ extends to an automorphism of $V$ whose fibre at $0$ is given by
+  \[
+    T_0 = \exp(-2\pi i\Res(\Gamma)).
+  \]
+\end{theorem}
 
 
 
