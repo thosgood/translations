@@ -588,6 +588,72 @@ If it is representable, then we denote by $\shHom_S(X,Y)$ the prescheme over $S$
 \[
   \Hom_S(T,\shHom_S(X,Y)) \simto \Hom_S(T\times_S X,Y).
 \]
+There are variants of this universal problem, whose solution reduce to it \todo ; a prescheme of \emph{$S$-automorphisms of} an $S$-prescheme $X$ (which will be a prescheme in \emph{groups}), a prescheme of \emph{$S$-homomorphisms} from an $S$-prescheme in \emph{groups} to another (which will be a prescheme in commutative groups if the latter scheme in groups is commutative), etc.
+We can also generalise the definition of $\shHom_S(X,Y)$ by considering a prescheme $Z$ over the prescheme $X$ over $S$, and the functor
+\[
+  F(T) = \Hom_{X_T}(X_T,Z_T)
+\]
+(the set of ``sections'' of $Z_T$ over $X_T$);
+if this functor is representable, then the $S$-prescheme that represents it will be denoted by $\Pi_{X/S}Z$, and we will thus have, by definition, a functorial isomorphism
+\[
+  \Hom_S(T,\Pi_{X/S}Z) = \Hom_{X_T}(X_T,Z_T).
+\]
+Setting $Z=Y\times_S X$, we recover $\shHom_S(X,Y)$.
+From these definitions follows a formula for the new preschemes thus introduced that is as trivial as it is useful, that we will not give here (given that it holds in every category where products and fibred products exist).
+More serious is the question of \emph{existence} of schemes of the type $\shHom_S(X,Y)$.
+We note first of all that, for fixed $X$, $\shHom_S(X,Y)$ (resp. $\Pi_{X/S}Z$) can only exist for all $Y$ over $S$ (resp. for all $Z$ over $X$) if $X$ is \emph{flat} over $S$.
+Furthermore, we can convince ourselves that it is not reasonable to expect the existence of a solution, for general enough $Y$, except in the case where $X$ is further \emph{proper} over $S$.
+It seems, however, that these conditions are sufficient for the existence of $\shHom_S(X,Y)$ and $\Pi_{X/S}Z$, with the condition that, if necessary, we make some sort of ``quasi-projective'' hypothesis on $Y/S$ (resp. $Z/X$);
+this is what we can verify anyway in numerous cases (for example, when $Y$ is \emph{affine} over $S$, or, by direct elementary constructions, when $X$ is \emph{finite} over $S$).
+Here is what \cref{B-theorem1} and \cref{B-theorem2} give:
+
+\oldpage{195-14}
+\begin{proposition}{2.1}
+\label{B.2-proposition1}
+  Let $\Lambda$ be a Noetherian ring, and $X$ and $Y$ arbitrary preschemes over $\Lambda$.
+  Consider the functor
+  \[
+    F(A) = \Hom_A(X_A,Y_A)
+  \]
+  on the category $\cat{C}_0$ of Artinian $\Lambda$-algebras.
+  If $X$ is flat over $\Lambda$, then this functor is pro-representable.
+\end{proposition}
+
+Furthermore, we can show that, for all $A\in\cat{C}_0$ and all $\xi\in F(A)$, we have a canonical isomorphism
+\[
+  F(I_A,\xi) = \HH^1\Big(X_A,\shHom_{\sh{O}_{X_A}}\big(\xi^*(\Omega_{Y_A/A}^1),\sh{O}_{X_A}\big)\Big)
+\]
+where $\Omega_{Y_A/A}^1$ is the sheaf of K\"{a}hler $1$-differentials of $Y_A$ with respect to $A$.
+Taking $A$ to be a field, we find, using \cref{A.5-proposition1} and the finiteness theorem from \cite{2}, the following corollary:
+
+\begin{corollary*}
+  Suppose that $X$ is flat and proper over $S$, and that $Y$ is of finite type over $S$.
+  Then $F$ is pro-representable, and the local components of the corresponding topological $\Lambda$-algebra are \emph{Noetherian} rings.
+\end{corollary*}
+
+\begin{remarks*}
+  The problems considered in this section, and many others, having been generally studied, in the framework of classical algebraic geometry, via the ``Chow coordinates'' of cycles in projective space, allow us to consider these cycles as points of suitable projective varieties.
+  This procedure, and, more generally, the use of Chow coordinates, seems irredeemably insufficient from the point of view of schemes, since it destroys the nilpotent elements in the \todo varieties, and, in particular, do not lend themselves to a satisfying study of infinitesimal variations of cycles (without taking its non-intrinsic nature, linked to the projective space, into account).
+  The language of Chow coordinates has sadly been the only one used by many algebraic geometers for the study of families of varieties or families of cycles, which seems to have been a serious obstacle to the understanding of these notions, despite its certain technical interest (probably temporary).
+  If we wish to obtain the analogue of Chow varieties in the theory of schemes, we are led to the following universal problem:
+  let $X$ be a prescheme over $S$, and, for every prescheme $T$ over $S$, consider the set $F(T)$ of closed sub-preschemes of $X_T=X\times_S T$ that are \emph{flat} over $T$; we want to represent this functor in $T$ via some prescheme over $S$.
+  More generally, we can start with a quasi-coherent sheaf $\sh{G}$ on $X$, and take $F(T)$ to be the set of
+\oldpage{195-15}
+  quotient sheaves of $\sh{G}_T$ that are flat over $T$.
+  It seems that there exists a solution to this problem, with a scheme $C$ that is locally of finite type over $S$, if $X$ is proper over $S$, if $S$ is locally Noetherian, and if $F$ is furthermore coherent.
+  In any case, supposing only that $S$ is locally Noetherian, the restriction of $F$ to ``Artinian $S$-algebras'' is pro-representable, and, if, furthermore, $X$ is proper over $S$, and $F$ is coherent, then the local components of the corresponding topological ring $\sh{O}$ are Noetherian.
+  Of course, even after having proven the existence of the ``Chow scheme'' of $X$ over $S$, it remains to find a decomposition of it into disjoint open subsets $C_i$ (corresponding to the \todo?{fixation} of continuous invariants, such as degree and dimension of the cycles that we vary) over $S$, as well as to make precise the relations between this scheme with the classical Chow varieties, and to make precise when a $C_i$ is \emph{projective} (or at least quasi-projective) over $S$.
+\end{remarks*}
+
+
+\section{Picard schemes}
+\label{B.3}
+
+Let $f\colon X\to S$ be an $S$-prescheme, and consider the multiplicative sheaf $\sh{O}_X^*$ of units of the structure sheaf of $X$, along with the group
+\[
+  P(X/S) = \HH^0(S,\RR^1f_*(\sh{O}_X^*)),
+\]
+called the \emph{relative Picard group} of $X/S$.
 
 
 
