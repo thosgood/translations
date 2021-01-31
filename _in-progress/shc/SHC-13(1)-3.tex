@@ -48,7 +48,21 @@
 \usepackage{amsthm}
 
 \theoremstyle{plain}
+
+  \newtheorem{innercustomtheorem}{Theorem}
+  \crefname{innercustomtheorem}{Theorem}{Theorems}
+  \newenvironment{theorem}[1]
+    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
+    {\endinnercustomtheorem}
+
+  \newtheorem{innercustomproposition}{Proposition}
+  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \newenvironment{proposition}[1]
+    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+    {\endinnercustomproposition}
+
   \newtheorem*{proposition*}{Proposition}
+
 \theoremstyle{definition}
   \newtheorem*{definition*}{Definition}
 
@@ -146,6 +160,92 @@ Finally, we have a commutative diagram
   \end{tikzcd}
 \]
 where $\rho_0$ is the Spencer--Kodaira map \cite{2}.
+
+\begin{theorem}{1}
+\label{theorem1}
+  For the proper mixed manifold $\pi\colon V\to B$ to be locally trivial in a neighbourhood of the point $b_0\in B$, it is necessary and sufficient for the map $\widetilde{\rho}_0\colon\widetilde{T}_0\to\HH^1(V_0;\widetilde{\Theta})$ to be zero.
+\end{theorem}
+
+\begin{proof}
+  \begin{itemize}
+    \item[\emph{(Necessary).}]
+      If $\pi\colon V\to B$ is locally trivial at $b_0$, then, for every open subset $U$ of $B$ over which $V$ is trivial, we have $\widetilde{\Pi}=\widetilde{\Lambda}\oplus\widetilde{\Theta}$ on $V_U$, and so $\delta\colon\HH^0(V_U;\widetilde{\Lambda})\to\HH^0(V_U;\widetilde{\Theta})$ is zero.
+    \item[\emph{(Sufficient).}]
+      Let $(\eta_1,\ldots,\eta_p)$ be $\mathscr{C}^\infty$ vector fields (resp. \ldots) on a neighbourhood of $b_0$ in $B$, such that $(\eta_1(b_0),\ldots,\eta_p(b_0))$ forms a basis of the tangent space $T_0$ to $B$ at $b_0$.
+      It then follows from the hypothesis that the map
+      \[
+        \HH^0(V_0;\widetilde{\Pi}) \to \HH^0(V_0;\widetilde{\Lambda})
+      \]
+      is surjective.
+
+      So let $(\xi_1,\ldots,\xi_p)$ be projectable holomorphic vector fields on a neighbourhood of $V_0$ in $V$, that project to $(\eta_1,\ldots,\eta_p)$.
+      Let $f$ be the map defined on a neighbourhood of $\{0\}\times V_0$ in $\RR^p\times V_0$ (resp. $\CC^p\times V_0$) by
+      \[
+        f(t_1,\ldots,t_p,y) = e^{\xi_1}(t_1,e^{\xi_2}(\ldots,e^{\xi_p}(t_p,y)\ldots)).
+      \]
+      It follows from the proposition stated in \cite[\S III.2]{1} that $f$ induces an isomorphism of mixed manifolds from $U\times V_0$ to $\pi^{-1}(f_1(U))$ over $f_1$, where $U$ is a sufficiently small cubical neighbourhood of $0$ in $\RR^p$, and $f_1$ is the map from $U$ to $B$ defined by
+      \[
+        f_1(t_1,\ldots,t_p) = e^{\eta_1}(t_1,e^{\eta_2}(\ldots,e^{\eta_p}(t_p,b_0)\ldots)),
+      \]
+\oldpage{3-03}
+      which proves the theorem.
+  \end{itemize}
+\end{proof}
+
+
+\section{The regular case}
+\label{II}
+
+For all $b\in B$, set $V_b=\pi^{-1}(b)$.
+Consider the family $\{\HH^1(V_b;\Theta_b)\}_{b\in B}$ of finite-dimensional $\CC$-vector spaces, and, for all $b\in B$,  the map
+\[
+  \varepsilon_b\colon \HH^1(V_b;\widetilde{\Theta}) \to \HH^1(V_b;\Theta_b).
+\]
+
+For every open subset $U\subset B$, we have a map
+\[
+  \widetilde{\varepsilon}_U\colon \HH^1(V_U;\widetilde{\Theta}) \to \prod_{b\in U}\HH^1(V_b;\Theta_B)
+\]
+that defines, by varying $U$, a homomorphism from the sheaf $\mathrm{R}^1\pi_*\widetilde{\Theta}$ to the sheaf $\Phi$ on $B$ defined by $\Phi(U)=\prod_{b\in U}\HH^1(V_b;\Theta_b)$.
+
+\begin{definition*}
+  We say that the proper mixed manifold $\pi\colon V\to B$ is \emph{regular} if
+  \begin{enumerate}
+    \item the dimension of $\HH^1(V_b;\Theta_b)$ does not depend on the point $b\in B$ ; and
+    \item we can endow $E=\bigcup_{b\in B}\HH^1(V_b;\Theta_b)$ with the structure of a $\mathscr{C}^\infty$ vector bundle (resp. \ldots) such that $\widetilde{\varepsilon}$ is an isomorphism from the sheaf $\mathrm{R}^1\pi_*\widetilde{\Theta}$ to the sheaf of germs of $\mathscr{C}^\infty$ sections (resp. \ldots) of the bundle $E$.
+  \end{enumerate}
+\end{definition*}
+
+In fact, Kodaira and Spencer have shown \cite{2} that, by identifying the $\HH^1$ spaces with spaces of harmonic forms, condition~2 is a consequence of condition~1.
+
+Then \cref{theorem1} has the following corollary:
+
+\begin{proposition}{1}
+\label{proposition1}
+  For the proper mixed variety $\pi\colon V\to B$ to be locally trivial, it is necessary and sufficient for it to be regular and, for all $b\in B$, for the Spencer--Kodaira map
+  \[
+    \rho_b\colon T_b \to \HH^1(V_b;\Theta_b)
+  \]
+  to be zero.
+\end{proposition}
+
+Indeed, since $\widetilde{\varepsilon}$ is injective, this condition implies that the map
+\oldpage{3-04}
+\[
+  \widetilde{\rho}_b\colon \widetilde{T}_b \to \HH^1(V_b;\widetilde{\Theta})
+\]
+is zero for all $b$.
+
+At the end of this talk, we will construct a counter-example which shows that it is necessary to assume that the mixed variety is regular.
+
+
+\section{An example of non-regular deformation: Hopf varieties}
+\label{III}
+
+\subsection{Hopf varieties}
+\label{III.1}
+
+
 
 
 
