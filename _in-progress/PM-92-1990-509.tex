@@ -13,6 +13,8 @@
 \usepackage{enumerate}
 \usepackage{tikz-cd}
 
+\usepackage[only,sslash]{stmaryrd} % For the GIT quotient double slash command
+
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
 \usepackage{fouriernc}
@@ -118,11 +120,11 @@
 \section*{Introduction}
 \label{introduction}
 
-If a reductive algebraic group $G$ acts on a projective algebraic variety $X$, all over an algebraically closed field, the data of an $G$-linearised ample line bundle $L$ on $X$ allows us to define the open subset of stable points of $X$.
+If a reductive algebraic group $G$ acts on a projective algebraic variety $X$, all over an algebraically closed field, the data of a $G$-linearised ample line bundle $L$ on $X$ allows us to define the open subset of stable points of $X$.
 The quotient (in the usual sense of orbit spaces) of this open subset $X^\s=X^\s(L)$ by $G$ exists;
 it is a quasi-projective variety, denoted by $X^\s/G$.
 Furthermore, $X^\s$ is contained in the open subset $X^\ss=X^\ss(L)$ of semi-stable points, and we can again define a ``quotient'' $Y$ of $X^\ss$ by $G$ (it is the space of closed orbits of $G$ in $X^\ss$).
-The variety $Y$ is projective, and contains $X^\s/G$ as an open sub set.
+The variety $Y$ is projective, and contains $X^\s/G$ as an open subset.
 To define it, we introduce the algebra $A:=\oplus_{n=0}^\infty \Gamma(X,L^n)$ and its sub-algebra $A^G$ consisting of invariants of $G$;
 then $Y$ is the $\Proj$ of the graded algebra $A^G$.
 Thus $Y$ is endowed with a sheaf $\sh{O}(n)$ for every integer $n$, and one of them is invertible.
@@ -133,7 +135,7 @@ Our goal is to study these objects, introduced by Mumford in \cite{MF}, when $G$
 The idea is to simultaneously consider all the quotients associated to the $T$-linearised bundles $L^n\otimes\sh{O}(\chi)$, where $n$ is a positive integer, and $\sh{O}(\chi)$ is the trivial line bundle on $X$, with the torus acting on each fibre of $\sh{O}(\chi)$ by multiplication by the character $\chi$.
 The notion of a stable or semi-stable point for $L^n\otimes\sh{O}(\chi)$ depends only, in fact, on $\chi/n$.
 \oldpage{510}
-To every quotient $p$ of a character of $T$ by an integer, we can thus associated $X^\s(p)$, $X^\ss(p)$, $Y(p)$, and an ample class $L_p$ in $\Pic_\mathbb{Q}(Y(p))$;
+To every quotient $p$ of a character of $T$ by an integer, we can thus associate $X^\s(p)$, $X^\ss(p)$, $Y(p)$, and an ample class $L_p$ in $\Pic_\mathbb{Q}(Y(p))$;
 when $p=0$, we recover the above notions.
 
 For simplicity, we assume $L$ to be very ample, i.e. we consider the case where $X$ is a subvariety of a projective space $\PP(V)$, with the torus $T$ acting linearly on $V$, and where $L$ is the restriction of $\sh{O}(1)$ to $X$.
@@ -144,9 +146,9 @@ for every face $F$, we can define $X^\s(F)$, $X^\ss(F)$, and $Y(F)$.
 We further show \cref{1.3} that the map $p\in F\mapsto L_p\in\Pic_\QQ(Y(F))$ is affine.
 
 Let $F$ be an open face of $\mathcal{C}$.
-We show that every point that is semistable for $F$ is stable;
+We show that every point that is semi-stable for $F$ is stable;
 thus, if $X$ is smooth, then $Y(F)$ only has singularities from quotients by finite abelian groups.
-The quotients associated to the open faces are thus relatively simply.
+The quotients associated to the open faces are thus relatively simple.
 For an arbitrary face $F$, let $F'$ be an open face whose closure contains $F$.
 We define, in \cref{1.4}, a morphism $\pi_{F,F'}\colon Y(F')\to Y(F)$, that is almost always birational.
 In \cref{1.5}, we study the case where $F$ is of codimension one, and contained in the closure of the two open faces $F_-$ and $F_+$.
@@ -161,7 +163,7 @@ Then, when we consider the product $\bar{Y}$ of the quotients associated to all 
 In the third section of this paper, we apply these results to the asymptotic study of multigraded modules;
 we consider various extensions of the notions of multiplicity and of the Hilbert--Samuel function for a graded module to these modules.
 More precisely, we consider a polynomial algebra $A$, graded by $\NN\times\ZZ^l$ (with the $\NN$-grading being defined by the degree of the polynomials).
-We denote by $T$ the torus having $\ZZ^l$ as its group of character.
+We denote by $T$ the torus having $\ZZ^l$ as its group of characters.
 Every $(\NN\times\ZZ^l)$-graded $A$-module defines
 \oldpage{511}
 a $T$-linearised sheaf $\sh{M}$ on the projective space $\PP(V)$ associated to $A$.
@@ -169,7 +171,7 @@ Let $\II$ be the set of weights of $T$ in $V$, i.e. the duals of the $\ZZ^l$-deg
 For every face $F$ associated to $\II$, let $\sh{M}^{(F)}$ be the sheaf given by invariants of $T$ in $(\pi_F)_*(\sh{M})$, where $\pi_F\colon X^\ss(F)\to Y(F)$ is the ``quotient''.
 We show that, if $M$ is an $A$-module of finite type, then $\sh{M}^{(F)}$ is a coherent sheaf on $Y(F)$.
 For every $p\in F$, we denote by $\mu_M(p)$ the degree of $\sh{M}^{(F)}$ relative to the ample class $L_p$ (see \cite[I.3]{Kle}).
-We show that the function $\mu_M$ is polynomial on each face.
+We show that the function $\mu_M$ is a polynomial on each face.
 Furthermore, it appears as the density in various integral expressions of asymptotic invariants of $M$: the ``generalised Hilbert--Samuel polynomials'' \cref{3.5}, and the ``Joseph polynomials'' (\cite{Jos}; see \cref{3.6}).
 If $M$ is the homogeneous coordinate ring of a smooth projective subvariety $X$ of $\PP(V)$, then the function $\mu_M$ is continuous, and its Fourier transform depends only on fixed points of $T$ in $X$, and on their normal bundle \cref{3.4}.
 
@@ -182,7 +184,7 @@ the quotient $Y(p)$ is ``the reduced phase space'' $J^{-1}(p)/T_c$;
 the class of $L_p$ in $H^2(Y(p),\QQ)$ comes from the cohomology class of the symplectic form.
 Furthermore, if $M$ is the homogeneous coordinate ring of $X$, then the function $\mu_M$ is the density of the measure given by the image of the moment map.
 
-After having obtained the results of this paper, we became aware (in May 1989) of the article \cite{GS3} of V.~Guillemin and S.~Sternberg, which proves results that are related to ours found in \cref{2}, concerning Hamiltonian actions of compact toruses on symplectic varieties.
+After having obtained the results of this paper, we became aware (in May 1989) of the article \cite{GS3} of V.~Guillemin and S.~Sternberg, which proves results that are related to ours found in \cref{2}, concerning Hamiltonian actions of compact tori on symplectic varieties.
 
 
 \section{Quotients by a torus}
@@ -195,13 +197,13 @@ Let $T$ be a torus acting linearly on a vector space $V$ (with the base field $k
 Let $X$ be a closed irreducible subvariety of the projective space $\PP(V)$, stable under the action of $T$.
 For simplicity, we suppose
 \oldpage{512}
-that $T$ acts faithfully on $V$, and that it does not contain the homotheties, and further that $X$ is not contained in any linear subspace of $\PP(V)$.
+that $T$ acts faithfully on $V$, and that it does not contain homotheties, and further that $X$ is not contained in any linear subspace of $\PP(V)$.
 
 We denote by $\mathfrak{X}(T)$ the group of characters of $T$, and by $E$ (resp. $E_\QQ$) the vector space $\mathfrak{X}(T)\otimes_\ZZ\RR$ (resp. $\mathfrak{X}(T)\otimes_\ZZ\QQ$).
 Let $V=\oplus_{\chi\in\mathfrak{X}(T)}V_\chi$ be the decomposition of $V$ into proper subspaces of $T$.
 We denote by $\II$ the set of $\chi$ such that $V_\chi\neq\{0\}$, i.e. the set of weights of $T$ in $V$.
 For all $x\in\PP(V)$, we denote by $\bar{x}$ a representative of $x$ in $V$, and by $\bar{x}=\sum v_\chi$ its decomposition into eigenvectors of $T$.
-We denote by $\II(x)$ the set of $\chi\in\II$ such that $v_\chi\neq=0$;
+We denote by $\II(x)$ the set of $\chi\in\II$ such that $v_\chi\neq0$;
 we call it the set of weights of $x$.
 
 For all $p\in E$, let $\overline{F}(p)$ be the intersection of all the simplices that both contain $p$ and have all their vertices in $\II$.
@@ -233,8 +235,8 @@ The following claim is evident.
   \end{enumerate}
 \end{proposition}
 
-A point of $X^\s(F)$ (rep $X^\ss(F)$) is said to be \emph{stable} (resp. \emph{semistable}) for $F$.
-The below theorem, and its proof, justify this terminology.
+A point of $X^\s(F)$ (rep $X^\ss(F)$) is said to be \emph{stable} (resp. \emph{semi-stable}) for $F$.
+The theorem below, and its proof, justify this terminology.
 
 \begin{theorem}
 \label{1.2-theorem}
@@ -245,14 +247,14 @@ The below theorem, and its proof, justify this terminology.
 \end{theorem}
 
 \begin{proof}
-  Note first of all that, if $0\in\mathcal{C}$, then $X^\ss(0)$ (resp. $X^\s(0)$) is the set of semistable (resp. stable) points of $X\subset\PP(V)$;
+  Note first of all that, if $0\in\mathcal{C}$, then $X^\ss(0)$ (resp. $X^\s(0)$) is the set of semi-stable (resp. stable) points of $X\subset\PP(V)$;
   this follows from \cite[Theorem~2.1]{MF}.
 
   Let $p$ be a point in $F\cap E_\QQ$ (such a point exists since $F$ is a convex polyhedron with vertices in $E_\QQ$).
   Write $p=\chi/n$, where $n$ is the smallest positive integer such that $np\in\mathfrak{X}(T)$.
   Define a linear action of $T$ on the $n$th symmetric power $S^nV$ by $t\cdot m^n = \chi(t)^{-1}(t\cdot m)^n$.
   Embed $X$ into $\PP(S^nV)$ by the Veronese embedding.
-  We immediately see that $X^\ss(F)=X^\ss(p)$ is the set of semistable points of $X\subset\PP(S^nV)$, and that $X^\s(F)$ is the set of stable points.
+  We immediately see that $X^\ss(F)=X^\ss(p)$ is the set of semi-stable points of $X\subset\PP(S^nV)$, and that $X^\s(F)$ is the set of stable points.
   The claim then follows from \cite[1.4]{MF}.
 \end{proof}
 
@@ -283,7 +285,7 @@ By \cite[8.14.12]{EGAII}, this class does not depend on the choice of $n$ (see \
 By definition, $[\sh{O}(1)]$ is the class of $(\pi_0)_*^T\sh{O}(1)$ in $\Pic_\QQ(Y(0))$ (the invariant direct image of $\sh{O}(1)$).
 
 More generally, let $p=\chi/n$ be a rational point of $\mathcal{C}$.
-Note that $X^\ss(p)$ is the set of semistable points of $X$ associated to the
+Note that $X^\ss(p)$ is the set of semi-stable points of $X$ associated to the
 \oldpage{514}
 $T$-linearised bundle $\sh{O}(n)\otimes\sh{O}(\chi)$.
 Then $Y(p)$ is the $\Proj$ of the graded algebra
@@ -499,7 +501,7 @@ The objective of the second section is to make these results more precise.
 Consider a linear action of $T=k^*$ on a finite-dimensional $k$-vector space $N$.
 Decompose $N$ into $N_+\oplus N_0\oplus N_-$, where $N_+$ (resp. $N_0$, $N_-$) is the sum of the proper subspaces associated to positive (resp. null, negative) characters of $T$.
 We suppose, for simplicity, that $N_0=\{0\}$, i.e. that $T$ acts on $N$ with only the origin as a fixed point.
-Let $Z=N//T$ be the quotient (in the sense of Mumford) of $N$ by $T$: if $k[N]$ is the algebra of polynomial functions on $N$, and $k[N]^T$ is the sub-algebra given by $T$-invariant functions, then $Z=\Spec k[N]^T$.
+Let $Z=N \sslash T$ be the quotient (in the sense of Mumford) of $N$ by $T$: if $k[N]$ is the algebra of polynomial functions on $N$, and $k[N]^T$ is the sub-algebra given by $T$-invariant functions, then $Z=\Spec k[N]^T$.
 This is an affine variety, generally singular at $0$ (the point associated to the maximal homogeneous ideal of $k[N]^T$).
 Away from $0$, all its singularities are quotients by finite cyclic groups.
 
@@ -595,7 +597,7 @@ Consequently, $\PP(N_+)$ is canonically endowed with a sheaf that we denote by $
 \end{corollary}
 
 \begin{proof}
-  We will show that $\psi$ is the blow-up of $)$ in $X$, where the grading of $k[X]$ is defined by $k[X]_n=k[N_+]_n\otimes k[N_-]_n$ (the proofs of the claims concerning $\phi_+$ and $\phi_-$ are analogous).
+  We will show that $\psi$ is the blow-up of $0$ in $X$, where the grading of $k[X]$ is defined by $k[X]_n=k[N_+]_n\otimes k[N_-]_n$ (the proofs of the claims concerning $\phi_+$ and $\phi_-$ are analogous).
   This follows from the following lemma \cite[2.5]{Fle}:
 \end{proof}
 
