@@ -2603,8 +2603,8 @@ Theorem~\cref{II.1.9} follows from the following proposition and from \cref{I.1.
   \[
     \begin{aligned}
       r
-      &= \sup\{0,\sup\{-v(b_i)/n-i\}\}
-    \\&= \sup\{0,\sup\{-v(a_i)/n-i\}-1\}.
+      &= \sup\big\{0,\sup\{-v(b_i)/n-i\}\big\}
+    \\&= \sup\big\{0,\sup\{-v(a_i)/n-i\}-1\big\}.
     \end{aligned}
   \]
   The same conclusion holds for a cyclic vector $v$ of $V^\vee$.
@@ -2612,59 +2612,100 @@ Theorem~\cref{II.1.9} follows from the following proposition and from \cref{I.1.
 
 This proposition gives us a procedure for calculating $r$ for a given vector bundle $V$ with a connection defined by an $n$\textsuperscript{th} order differential equation (cf. \hyperref[I.4.8]{I.4.8}).
 
-We have the identities
-\[
-  \begin{aligned}
-    (t\nabla_X)^n-\sum b_i(t\nabla_X)^i &= t^n(\nabla_X^n-\sum a_i\nabla_X^i)
-  \\(t^{-1}\nabla_\tau)^n-\sum a_i(t^{-1}\nabla_\tau)^i &= t^{-n}(\nabla_\tau^n-\sum b_i\nabla_\tau^i).
-  \end{aligned}
-\]
-From these identities, we see that
-\[
-  \begin{aligned}
-    a_i &= g_{n,i}+\sum_{j\geq i}g_{j,i}b_j,
-    \quad v(g_{j,i})\geq i-n
-  \\b_i &= h_{n,i}+\sum_{j\geq i}h_{j,i}a_j,
-    \quad v(h_{i,j})\geq n-j
-  \end{aligned}
-\]
-and, for $i\geq0$,
-\[
-  \sup\{0,\sup_{j\geq i}\{-v(b_j)\}\} = \sup\{-,\sup_{j\geq i}\{-v(a_j)-(n-j)\}\}.
-\]
-The two expressions given for $r$ thus agree.
+\begin{proof}
+  We have the identities
+  \[
+    \begin{aligned}
+      (t\nabla_X)^n-\sum b_i(t\nabla_X)^i &= t^n\big(\nabla_X^n-\sum a_i\nabla_X^i\big)
+    \\(t^{-1}\nabla_\tau)^n-\sum a_i(t^{-1}\nabla_\tau)^i &= t^{-n}\big(\nabla_\tau^n-\sum b_i\nabla_\tau^i\big).
+    \end{aligned}
+  \]
+  From these identities, we see that
+  \[
+    \begin{aligned}
+      a_i &= g_{n,i}+\sum_{j\geq i}g_{j,i}b_j,
+      \quad v(g_{j,i})\geq i-n
+    \\b_i &= h_{n,i}+\sum_{j\geq i}h_{j,i}a_j,
+      \quad v(h_{i,j})\geq n-j
+    \end{aligned}
+  \]
+  and, for $i\geq0$,
+  \[
+    \sup\{0,\sup_{j\geq i}\{-v(b_j)\}\} = \sup\{0,\sup_{j\geq i}\{-v(a_j)-(n-j)\}\}.
+  \]
+  The two expressions given for $r$ thus agree.
 
-If $v\in V$ is a cyclic vector, then the matrix of the connection, in the bases $(\nabla_\tau^i v)_{0\leq i\leq n}$ of $V$ and $\tau$ of $\Omega^\vee$, is
-\oldpage{50}
-\[
-  \Gamma =
-  \left(
-    \def\arraystretch{1.8}
-    \begin{array}{rrrrrr}
-      0 & 0 & 0 & 0 & \cdots & b_0
-    \\1 & 0 & 0 & 0 & \cdots & b_1
-    \\0 & 1 & 0 & 0 & & \vdots
-    \\\vdots & & \ddots & \ddots & & \vdots
-    \\\vdots & & & 1 & 0 & b_{n-2}
-    \\0 & \cdots & \cdots & \cdots & 1 & b_{n-1}
-    \end{array}
-  \right).
-\]
-If $v\in V^\vee$ is a cyclic vector, then the matrix of the connection, in the basis of $V$ given by the dual of $(\nabla_\tau^iv)_{0\leq i\leq n}$ and the basis $\tau$ of $\Omega^\vee\otimes K$, is
-\[
-  \Gamma =
-  -\left(
-    \def\arraystretch{1.8}
-    \begin{array}{rrrrrr}
-      0 & 1 & 0 & 0 & \cdots & 0
-    \\0 & 0 & 1 & 0 & & \vdots
-    \\0 & 0 & 0 & 1 & & \vdots
-    \\\vdots & \vdots & & \ddots & \ddots & \vdots
-    \\\vdots & \vdots & & & 0 & 1
-    \\b^0 & b^1 & \cdots & \cdots & b^{n-2} & b^{n-1}
-    \end{array}
-  \right)
-\]
+  If $v\in V$ is a cyclic vector, then the matrix of the connection, in the bases $(\nabla_\tau^i v)_{0\leq i\leq n}$ of $V$ and $\tau$ of $\Omega^\vee$, is
+  \oldpage{50}
+  \[
+    \Gamma =
+    \left(
+      \def\arraystretch{1.8}
+      \begin{array}{rrrrrr}
+        0 & 0 & 0 & 0 & \cdots & b_0
+      \\1 & 0 & 0 & 0 & \cdots & b_1
+      \\0 & 1 & 0 & 0 & & \vdots
+      \\\vdots & & \ddots & \ddots & & \vdots
+      \\\vdots & & & 1 & 0 & b_{n-2}
+      \\0 & \cdots & \cdots & \cdots & 1 & b_{n-1}
+      \end{array}
+    \right).
+  \]
+  If $v\in V^\vee$ is a cyclic vector, then the matrix of the connection, in the basis of $V$ given by the dual of $(\nabla_\tau^iv)_{0\leq i\leq n}$ and the basis $\tau$ of $\Omega^\vee\otimes K$, is
+  \[
+    \Gamma =
+    -\left(
+      \def\arraystretch{1.8}
+      \begin{array}{rrrrrr}
+        0 & 1 & 0 & 0 & \cdots & 0
+      \\0 & 0 & 1 & 0 & & \vdots
+      \\0 & 0 & 0 & 1 & & \vdots
+      \\\vdots & \vdots & & \ddots & \ddots & \vdots
+      \\\vdots & \vdots & & & 0 & 1
+      \\b^0 & b^1 & \cdots & \cdots & b^{n-2} & b^{n-1}
+      \end{array}
+    \right)
+  \]
+
+  It remains only to apply \cref{II.1.9.6}.
+  For $v\in V$, we take $r_i=-ri$ and $s=r$.
+  For $v\in V^\vee$, we take $r_i=ri$ and $s=r$.
+  In the first (resp. second) case, if $s=r>0$, then the matrix $\gamma$ is of the type
+  \[
+    \gamma =
+    \left(
+      \def\arraystretch{1.8}
+      \begin{array}{rrrrrr}
+        0 & 0 & 0 & 0 & \cdots & *
+      \\1 & 0 & 0 & 0 & \cdots & *
+      \\0 & 1 & 0 & 0 & & \vdots
+      \\\vdots & & \ddots & \ddots & & \vdots
+      \\\vdots & & & 1 & 0 & *
+      \\0 & \cdots & \cdots & \cdots & 1 & *
+      \end{array}
+    \right)
+  \]
+  with one of the coefficients of the last column being non-zero (resp. of the type given by the transpose of this).
+  The coefficients are those of the characteristic polynomial of $\gamma$, which is thus not nilpotent for $s>0$.
+\end{proof}
+
+\begin{definition}{1.11}
+\label{II.1.11}
+  Under the hypotheses of \cref{II.1.9}, we say that the connection $\nabla$ is \emph{regular} if condition~a) of \cref{II.1.9} is satisfied.
+\end{definition}
+
+\begin{theorem}{1.12}
+\label{II.1.12}
+  (N. Katz).
+  Under the hypotheses of \cref{II.1.9}, we have the following:
+  \begin{enumerate}[(i)]
+    \item For the connection $\nabla$ to be regular, it is necessary and sufficient for $V$ to admit
+\oldpage{51}
+      a basis $e$ such that the matrix of the connection, in this basis, is a matrix of differential forms presenting, at worst, simple poles.
+    \item For the connection $\nabla$ to be irregular, and to satisfy a bound of the form \cref{II.1.9.2} for $r=a/b>0$, it is necessary and sufficient for $V$ to admit a basis $e$ (after a change of rings from $\sh{O}$ to $\sh{O}'=\sh{O}(\sqrt[b]{t})$, and for the natural valuation, with values in $\ZZ$, of $\sh{O}'$) such that the matrix of the connection, in this basis, presents a pole of order $a+1$, and for the polar part of order $a+1$ of this matrix (which is in $\MM_n(k)$ and determined up to a scalar multiple) to be non-nilpotent.
+  \end{enumerate}
+\end{theorem}
+
 
 
 
