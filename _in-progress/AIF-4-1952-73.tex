@@ -401,7 +401,26 @@ We note, however, that \emph{the space $\ll^1\hhotimes E$ can be understood as t
 (\cite[chap.~1, \S1, n\textsuperscript{o}~2]{PTT}).
 \medskip
 
-Let
+Let $E_i$ and $F_i$ ($i=1,2$) be locally convex spaces, and let $u_i$ be a continuous linear map from $E_i$ to $F_i$.
+In algebra, we define a linear map $u_1\otimes u_2$ from $E_1\otimes E_2$ to $F_1\otimes F_2$ by the formula $(u_1\otimes u_2)(x_1\otimes x_2)=u_1x_1\otimes u_2x_2$.
+This map is continuous if we endow $E_1\otimes E_2$ and $F_1\otimes F_2$ with the topologies induced by $E_1\hotimes E_2$ and $F_1\hotimes F_2$ (resp. by $E_1\hhotimes E_2$ and $F_1\hhotimes F_2$).
+It then follows that $u_1\otimes u_2$ extends, by continuity, to a continuous linear map $u_1\hotimes u_2$ from $E_1\hotimes E_2$ to $F_1\hotimes F_2$ (resp. $u_1\hhotimes u_2$ from $E_1\hhotimes E_2$ to $F_1\hhotimes F_2$).
+These maps will also simply be denoted by $u_1\otimes u_2$ whenever there is no fear of confusion.
+
+\begin{theorem}{5}
+\label{theorem5}
+  If each $u_i$ is a topological homomorphism from $E_i$ to a dense subspace of $F_i$, then $u_1\hotimes u_2$ is a topological homomorphism from $E_1\hotimes E_2$ to a dense subspace of $F_1\hotimes F_2$.
+  If each $u_i$ is a topological isomorphism from $E_i$ to $F_i$, then $u_1\hhotimes u_2$ is a topological isomorphism from $E_1\hhotimes E_2$ to $F_1\hhotimes F_2$.
+\end{theorem}
+
+These claims remain true if the $E_i$ and $F_i$ are normed and we consider \emph{metric} homomorphisms and \emph{metric} isomorphisms.
+Particularly interesting is the following corollary, which can also be obtained by an application of \cref{theorem2}.
+
+\begin{corollary}
+  If the $E_i$ and $F_i$ are $\FF$-spaces ($i=1,2$), and the $u_i$ are
+\oldpage{84}
+  homomorphisms from $E_i$ \emph{onto} $F_i$, then $u_1\hotimes u_2$ is a homomorphism from $E_1\hotimes E_2$ \emph{onto} $F_1\hotimes F_2$.
+\end{corollary}
 
 
 
