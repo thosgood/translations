@@ -377,7 +377,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 
   \begin{env}{2.2.2}
   \label{I.2.2.2}
-    If $Y$ is a subspace of $X$, then the \emph{$n$th infinitesimal neighbourhood} of $Y$ in $X$ is the subspace of $X$ defined locally by the $(n+1)$th power of the ideal of $\sh{O}_X$ that defines $Y$.
+    If $Y$ is a subspace of $X$, then the \emph{$n$\textsuperscript{th} infinitesimal neighbourhood} of $Y$ in $X$ is the subspace of $X$ defined locally by the $(n+1)$th power of the ideal of $\sh{O}_X$ that defines $Y$.
   \end{env}
 
   \begin{env}{2.2.3}
@@ -1442,12 +1442,12 @@ In particular, it follows from \cref{I.4.5}~(ii) and from \cref{I.2.17} that $E$
     \left(
       \def\arraystretch{1.8}
       \begin{array}{rrrrrr}
-        0 & -1 & 0 & 0 & \ldots & 0
-      \\0 & 0 & -1 & 0 & \ldots & 0
+        0 & -1 & 0 & 0 & \cdots & 0
+      \\0 & 0 & -1 & 0 & \cdots & 0
       \\0 & 0 & 0 & -1 & & 0
       \\\vdots & \vdots & & \ddots & \ddots & \vdots
       \\\vdots & \vdots & & & 0 & -1
-      \\b^0 & b^1 & \ldots & \ldots & b^{n-2} & b^{n-1}
+      \\b^0 & b^1 & \cdots & \cdots & b^{n-2} & b^{n-1}
       \end{array}
     \right)
   \tag{4.8.1}
@@ -2609,6 +2609,62 @@ Theorem~\cref{II.1.9} follows from the following proposition and from \cref{I.1.
   \]
   The same conclusion holds for a cyclic vector $v$ of $V^\vee$.
 \end{proposition}
+
+This proposition gives us a procedure for calculating $r$ for a given vector bundle $V$ with a connection defined by an $n$\textsuperscript{th} order differential equation (cf. \hyperref[I.4.8]{I.4.8}).
+
+We have the identities
+\[
+  \begin{aligned}
+    (t\nabla_X)^n-\sum b_i(t\nabla_X)^i &= t^n(\nabla_X^n-\sum a_i\nabla_X^i)
+  \\(t^{-1}\nabla_\tau)^n-\sum a_i(t^{-1}\nabla_\tau)^i &= t^{-n}(\nabla_\tau^n-\sum b_i\nabla_\tau^i).
+  \end{aligned}
+\]
+From these identities, we see that
+\[
+  \begin{aligned}
+    a_i &= g_{n,i}+\sum_{j\geq i}g_{j,i}b_j,
+    \quad v(g_{j,i})\geq i-n
+  \\b_i &= h_{n,i}+\sum_{j\geq i}h_{j,i}a_j,
+    \quad v(h_{i,j})\geq n-j
+  \end{aligned}
+\]
+and, for $i\geq0$,
+\[
+  \sup\{0,\sup_{j\geq i}\{-v(b_j)\}\} = \sup\{-,\sup_{j\geq i}\{-v(a_j)-(n-j)\}\}.
+\]
+The two expressions given for $r$ thus agree.
+
+If $v\in V$ is a cyclic vector, then the matrix of the connection, in the bases $(\nabla_\tau^i v)_{0\leq i\leq n}$ of $V$ and $\tau$ of $\Omega^\vee$, is
+\oldpage{50}
+\[
+  \Gamma =
+  \left(
+    \def\arraystretch{1.8}
+    \begin{array}{rrrrrr}
+      0 & 0 & 0 & 0 & \cdots & b_0
+    \\1 & 0 & 0 & 0 & \cdots & b_1
+    \\0 & 1 & 0 & 0 & & \vdots
+    \\\vdots & & \ddots & \ddots & & \vdots
+    \\\vdots & & & 1 & 0 & b_{n-2}
+    \\0 & \cdots & \cdots & \cdots & 1 & b_{n-1}
+    \end{array}
+  \right).
+\]
+If $v\in V^\vee$ is a cyclic vector, then the matrix of the connection, in the basis of $V$ given by the dual of $(\nabla_\tau^iv)_{0\leq i\leq n}$ and the basis $\tau$ of $\Omega^\vee\otimes K$, is
+\[
+  \Gamma =
+  -\left(
+    \def\arraystretch{1.8}
+    \begin{array}{rrrrrr}
+      0 & 1 & 0 & 0 & \cdots & 0
+    \\0 & 0 & 1 & 0 & & \vdots
+    \\0 & 0 & 0 & 1 & & \vdots
+    \\\vdots & \vdots & & \ddots & \ddots & \vdots
+    \\\vdots & \vdots & & & 0 & 1
+    \\b^0 & b^1 & \cdots & \cdots & b^{n-2} & b^{n-1}
+    \end{array}
+  \right)
+\]
 
 
 
