@@ -642,7 +642,7 @@ Taking $A$ to be a field, we find, using \cref{A.5-proposition1} and the finiten
   quotient sheaves of $\sh{G}_T$ that are flat over $T$.
   It seems that there exists a solution to this problem, with a scheme $C$ that is locally of finite type over $S$, if $X$ is proper over $S$, if $S$ is locally Noetherian, and if $F$ is furthermore coherent.
   In any case, supposing only that $S$ is locally Noetherian, the restriction of $F$ to ``Artinian $S$-algebras'' is pro-representable, and, if, furthermore, $X$ is proper over $S$, and $F$ is coherent, then the local components of the corresponding topological ring $\sh{O}$ are Noetherian.
-  Of course, even after having proven the existence of the ``Chow scheme'' of $X$ over $S$, it remains to find a decomposition of it into disjoint open subsets $C_i$ (corresponding to the \todo?{fixation} of continuous invariants, such as degree and dimension of the cycles that we vary) over $S$, as well as to make precise the relations between this scheme with the classical Chow varieties, and to make precise when a $C_i$ is \emph{projective} (or at least quasi-projective) over $S$.
+  Of course, even after having proven the existence of the ``Chow scheme'' of $X$ over $S$, it remains to find a decomposition of it into disjoint open subsets $C_i$ (corresponding to fixing continuous invariants, such as degree and dimension of the cycles that we vary) over $S$, as well as to make precise the relations between this scheme with the classical Chow varieties, and to make precise when a $C_i$ is \emph{projective} (or at least quasi-projective) over $S$.
 \end{remarks*}
 
 
@@ -654,7 +654,64 @@ Let $f\colon X\to S$ be an $S$-prescheme, and consider the multiplicative sheaf 
   P(X/S) = \HH^0(S,\RR^1f_*(\sh{O}_X^*)),
 \]
 called the \emph{relative Picard group} of $X/S$.
+An element of this group is thus defined by giving an open cover $(U_i)$ of $S$, along with an invertible sheaf $\sh{L}_i$ on each $f^{-1}(U_i)$, such that $\sh{L}_i|f^{-1}(U_i\cap U_j)$ is isomorphic to $\sh{L}_j|f^{-1}(U_i\cap U_j)$ for all $i,j$, or, at least locally over $U_i\cap U_j$ (i.e. these two sheaves are ``equivalent'' in the sense of \cite[B.4]{3}).
+If $X/S$ admits a section, then $P(X/S)$ is exactly the set of classes of invertible sheaves on $X/S$ up to ``equivalence'' (loc. cit.).
+We now set, for all $T$ over $S$,
+\[
+  F(T) = P(X_T/T)
+\]
+which gives a covariant functor in $T$, that we call the \emph{Picard functor} of $X/S$;
+if this functor is representable, then the prescheme over $S$ that represents it is called the \emph{Picard prescheme} of $X/S$, and denoted by $\sh{P}(X/S)$.
+In this case, we then have an isomorphism of functors:
+\[
+  \Hom_S(T,\sh{P}(X/S)) \simto P(X_T/T).
+\]
+Taking the Picard prescheme is compatible with extension of the base, and, in particular, the Picard preschemes of the fibres of $X$ over $S$ (which are preschemes over the residue fields $K(s)$ of the $s\in S$) are the fibres
+\oldpage{195-16}
+of $\sh{P}(X/S)$.
+Of course, since $P(X_T/T)=F(T)$ is a commutative group, the Picard preschemes are preschemes in groups.
+Note as well that the \emph{generalised Jacobians} of Rosenlicht are exactly the connected components of the identity in the Picard schemes of complete curves (possibly with singularities), which should make most of their properties clear (once their existence has been proven).
 
+\begin{remark*}
+  The definition adopted here is only reasonable when every point of $Y$ admits an open neighbourhood $U$ over which $X$ admits a section.
+  In the general case, it is necessary to slightly modify the definition of the Picard functor in order to still obtain an existence theorem.
+
+  Here, the plausible existence conditions for a Picard prescheme are the following: $X$ is \emph{proper} and \emph{flat} over $S$; $f_*(\sh{O}_X)=\sh{O}_S$; and $X$ locally admits a section over $S$.
+  This condition naturally arises in the application of the technique of descent, \emph{in eliminating the automorphisms of an invertible sheaf $\sh{L}$ on $X$ by endowing them with a marked section over the section $s$} (\cite[B.4]{3}).
+  Notably, we find the following:
+\end{remark*}
+
+\begin{proposition}{3.1}
+\label{B.3-proposition1}
+  Suppose that $X$ is flat over $S=\Spec(\Lambda)$, where $\Lambda$ is Noetherian, and suppose that, for all $T$ of finite type over $S$, we have ${f_T}_*(\sh{O}_{X_T})=\sh{O}_T$ (if $f$ is proper and has separable fibres, or if $S$ is the spectrum of a field, then it follows from K\"{u}nneth that the latter condition is equivalent to $f_*(\sh{O}_X)=\sh{O}_S$).
+  Then the Picard functor of $X/S$ on the category of Artinian $\Lambda$-algebras is pro-representable.
+
+  Furthermore, we then have
+  \[
+    F(I_A,\xi) = \HH^1(X_A,\sh{O}_{X_A}),
+  \]
+  and, in particular:
+\end{proposition}
+
+\begin{corollary*}
+  If $X$ is proper over $S$, then the local components of the topological $\Lambda$-algebra corresponding to the Picard functor are Noetherian.
+\end{corollary*}
+
+\begin{remarks*}
+  We can generalise the definitions and results from this section to the classification of principal bundles on $X$, with structure group $G$ being a scheme in groups over $S$ that is \emph{affine} and \emph{flat over $S$}, and also \emph{commutative}.
+  In the case where $G$ would not be commutative, and thus where the adjoint bundle in groups of a principal bundle (whose sections of the automorphisms of the principal bundle) would no longer be trivial, \cref{B.3-proposition1} no longer holds true as it is stated.
+  We can, however, modify the universal problem in such a way that we again obtain a solution (at least, for now, in formal geometry).
+  \emph{The golden rule to remember, in the context of the current}
+\oldpage{195-17}
+  \emph{section and in the following, and every time we are looking for ``schemes of modules'' for classes of objects that are only defined up to isomorphism, is always the following:}
+  \emph{eliminate the possible automorphisms of the objects that we want to classify, by introducing, if necessary, auxiliary structures} (points or elements of marked sections, fixing differential forms, etc.) that we take to be insignificant enough that we do not substantially modify the initial problem.
+\end{remarks*}
+
+
+\section{Formal modules of a variety}
+\label{B.4}
+
+Let $\Lambda$ be a \emph{local} Noetherian ring of residue field $k$ (more often than not, $\Lambda$ will be equal to $k$, or to a Cohen $p$-ring), and let $X_0$ be a prescheme over $k$.
 
 
 
