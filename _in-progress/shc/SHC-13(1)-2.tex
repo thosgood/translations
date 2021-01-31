@@ -150,6 +150,44 @@ We thus obtain, for every category of topological spaces, a fibred category $\ma
 \label{II.1}
 
 Let $B$ and $V$ be separated spaces, and let $\pi\colon V\to B$ be a continuous map.
+The structure of a \emph{mixed space} over $B$ is defined on $V$ by a system of charts $\varphi_i\colon U_i\to V$, where the $(U_i)$ are objects of $\mathscr{S}_B^n$;
+for each $i$, $\varphi_i$ is a homeomorphism from $U_i$ to an open subset of $V$ such that the diagram
+\[
+  \begin{tikzcd}
+    U_i \ar[rr,"\varphi_i"] \ar[dr,swap,"\pi_1"]
+    && V \ar[dl,"\pi"]
+  \\&B&
+  \end{tikzcd}
+\]
+commutes;
+finally, for all $i$ and all $j$, the ``change of chart'' $\varphi_j^{-1}\circ\varphi_i$ is an isomorphism of $\mathscr{S}_B$ from an open subset of $U_i$ to an open subset of $U_j$.
+
+The structure thus defined is that of a \emph{$(\mathscr{C}^0,\CC)$-mixed space}.
+If $B$ is a $\CC$-analytic space, and if the change of chart maps are all $\CC$-analytic, then we have a \emph{$\CC$-analytic mixed space}.
+In this case, $V$ itself is a $\CC$-analytic space, and the fibres $V_x=\pi^{-1}\{x\}$ are $\CC$-analytic sub-manifolds.
+
+If $B$ is a $\mathscr{C}^\infty$ manifold (resp. $\RR$-analytic, resp. $\CC$-analytic), and if the change of chart maps are all $\mathscr{C}^\infty$ (resp. \ldots), then we have a \emph{$(\mathscr{C}^\infty,\CC)$-mixed manifold} (resp. $(\RR,\CC)$, resp. $(\CC,\CC)$).
+In this case, $V$ itself is a manifold.
+Note that the notion of a $(\CC,\CC)$-mixed manifold, or a $\CC$-analytic mixed manifold, reduces to simply having a $\CC$-analytic manifold $V$ endowed with a projection $\pi\colon V\to B$ onto another $\CC$-analytic manifold such that $\pi$ is of maximal rank at every point.
+
+Let $\pi\colon V\to B$ and $\pi'\colon V'\to B'$ be mixed spaces, and let $f_1\colon B\to B'$ be a continuous (resp. \ldots) map.
+Then a morphism from $V$ to $V'$ over $f_1$ is defined to be a continuous map $f\colon V\to V'$ such that the diagram
+\[
+  \begin{tikzcd}
+    V \rar["f"] \dar[swap,"\pi"]
+    & V' \dar["\pi'"]
+  \\B \rar["f_1"]
+    & B'
+  \end{tikzcd}
+\]
+\oldpage{2-03}
+commutes, and such that, for any charts $\varphi_i\colon U_i\to V$ and $\varphi'_j\colon U'_j\to V'$, the map ${\varphi'_j}^{-1}\circ f\circ\varphi_i$ is a morphism of $\mathscr{S}_{f_1}$ (resp. \ldots) from an open subset of $U_i$ to $U_j$.
+
+
+\subsection{An equivalent definition}
+\label{II.2}
+
+We now give another way of defining mixed spaces, equivalent to the above.
 
 
 
