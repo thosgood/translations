@@ -1,0 +1,132 @@
+\documentclass{article}
+
+\title{Regular deformations}
+\author{Adrien Douady}
+\date{14\textsuperscript{th} of November, 1960}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+
+\usepackage[mathscr]{eucal}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{fouriernc}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\lfoot{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
+\crefname{section}{\S\!}{\S\S\!}
+\crefname{equation}{}{}
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+  \newtheorem*{proposition*}{Proposition}
+\theoremstyle{definition}
+  \newtheorem*{definition*}{Definition}
+
+
+%% Shortcuts %%
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\DD}{\mathrm{D}}
+\newcommand{\HH}{\mathrm{H}}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+% \usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations/}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+
+  \medskip
+  
+  \emph{What follows is a translation of the French seminar talk:}
+
+  \medskip\noindent
+  \textsc{Douady, A.}
+  ``D\'{e}formations r\'{e}guli\`{e}res''.
+  \emph{S\'{e}minaire Henri Cartan}, Volume~\textbf{13 (1)} (1960--1961), Talk no.~3.
+  {\url{http://www.numdam.org/item/SHC_1960-1961__13_1_A2_0/}}
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\tableofcontents
+\bigskip
+
+
+%% Content %%
+
+\oldpage{3-01}
+All throughout this talk, $B$ is a $\mathscr{C}^\infty$ manifold (resp. $\RR$-analytic, resp. $\CC$-analytic); $\pi\colon V\to B$ denotes a proper mixed manifold; $b_0$ is a point of $B$; and $V_0=\pi^{-1}(b_0)$ is thus a compact $\CC$-analytic manifold.
+
+
+\section{The map \texorpdfstring{$\widetilde{\rho}$}{p}}
+\label{I}
+
+
+
+
+%% Bibliography %%
+
+\nocite{*}
+
+\begin{thebibliography}{2}
+
+  \bibitem{1}
+  {\sc Douady, A.}
+  \newblock Vari\'{e}t\'{e}s et espaces mixtes
+  \newblock {\em S\'{e}minaire H. Cartan} \textbf{13} (1960--61), Talk no.~2.
+
+  \bibitem{2}
+  {\sc Kodaira, K. and Spencer, D.}
+  \newblock On deformation of complex analytic structures, I.
+  \newblock {\em Annals of Math.} \textbf{67} (1958), 328--401.
+
+\end{thebibliography}
+
+
+\end{document}
