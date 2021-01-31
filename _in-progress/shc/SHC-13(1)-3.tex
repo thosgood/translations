@@ -107,6 +107,45 @@ All throughout this talk, $B$ is a $\mathscr{C}^\infty$ manifold (resp. $\RR$-an
 \section{The map \texorpdfstring{$\widetilde{\rho}$}{p}}
 \label{I}
 
+Let $\widetilde{\Theta}$ (resp. $\widetilde{\Pi}$) be the sheaf of germs of vertical holomorphic (resp. locally projectable holomorphic) vector fields on $V$.
+The quotient sheaf $\widetilde{\Lambda}=\widetilde{\Pi}/\widetilde{\Theta}$ is exactly the inverse image under $\pi$ of the sheaf $\widetilde{T}$ of germs of $\mathscr{C}^\infty$ fields (resp. \ldots) of tangent vectors on $B$.
+
+For every open subset $U$ of $B$, set $V_U=\pi^{-1}(U)$.
+The exact sequence
+\[
+  0 \to \widetilde{\Theta} \to \widetilde{\Pi} \to \widetilde{\Lambda} \to 0
+\]
+of sheaves on $V_U$ gives rise to a homomorphism
+\[
+  \widetilde{\rho}_U\colon
+  \HH^0(U;\widetilde{T})
+  \xrightarrow{\pi_*} \HH^0(V_U;\widetilde{\Lambda})
+  \xrightarrow{\delta} \HH^1(V_U;\widetilde{\Theta}).
+\]
+Let $\mathrm{R}^1\pi_*\widetilde{\Theta}$ be the sheaf on $B$ defined by the presheaf $U\mapsto\HH^1(V_U;\widetilde{\Theta})$.
+Then $\widetilde{\rho}$ becomes a homomorphism of sheaves on $B$:
+\[
+  \widetilde{\rho}\colon \widetilde{T} \to \mathrm{R}^1\pi_*\widetilde{\Theta}.
+\]
+In particular, we have a homomorphism
+\[
+  \widetilde{\rho}_0\colon
+  \widetilde{T}_0
+  \to \mathrm{R}^1\pi_*\widetilde{\Theta}
+  = \HH^1(V_0;\widetilde{\Theta})
+\]
+where $\widetilde{T}_0$ is the vector space of germs at $b_0$ of fields of tangent vectors to $B$.
+Finally, we have a commutative diagram
+\oldpage{3-02}
+\[
+  \begin{tikzcd}
+    \widetilde{T}_0 \rar["\widetilde{\rho}_0"] \dar[swap,"\varepsilon"]
+    & \HH^1(V_0;\widetilde{\Theta}) \dar["\varepsilon"]
+  \\T_0 \rar[swap,"\rho_0"]
+    & \HH^1(V_0;\Theta_0)
+  \end{tikzcd}
+\]
+where $\rho_0$ is the Spencer--Kodaira map \cite{2}.
 
 
 
