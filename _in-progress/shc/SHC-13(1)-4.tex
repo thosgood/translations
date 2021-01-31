@@ -1,0 +1,148 @@
+\documentclass{article}
+
+\title{Primary obstruction to deformation}
+\author{Adrien Douady}
+\date{21\textsuperscript{st} of November, 1960}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+\usepackage[nameinlink]{cleveref}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+
+\usepackage[mathscr]{eucal}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{fouriernc}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\lfoot{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
+\crefname{equation}{}{}
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+
+  \newtheorem{innercustomtheorem}{Theorem}
+  \crefname{innercustomtheorem}{Theorem}{Theorems}
+  \newenvironment{theorem}[1]
+    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
+    {\endinnercustomtheorem}
+
+  \newtheorem{innercustomproposition}{Proposition}
+  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \newenvironment{proposition}[1]
+    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+    {\endinnercustomproposition}
+
+  \newtheorem{innercustomlemma}{Lemma}
+  \crefname{innercustomlemma}{Lemma}{Lemmas}
+  \newenvironment{lemma}[1]
+    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
+    {\endinnercustomlemma}
+
+  \newtheorem*{proposition*}{Proposition}
+
+\theoremstyle{definition}
+  \newtheorem*{definition*}{Definition}
+
+
+%% Shortcuts %%
+
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\DD}{\mathrm{D}}
+\newcommand{\HH}{\mathrm{H}}
+
+\DeclareMathOperator{\Hom}{Hom}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+% \usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations/}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+
+  \medskip
+  
+  \emph{What follows is a translation of the French seminar talk:}
+
+  \medskip\noindent
+  \textsc{Douady, A.}
+  ``Obstruction primaire \`{a} la d\'{e}formation''.
+  \emph{S\'{e}minaire Henri Cartan}, Volume~\textbf{13 (1)} (1960--1961), Talk no.~4.
+  {\url{http://www.numdam.org/item/SHC_1960-1961__13_1_A3_0/}}
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\tableofcontents
+\bigskip
+
+
+%% Content %%
+
+\section*{Introduction}
+\label{introduction}
+
+\oldpage{4-01}
+Let $V_0$ be a compact complex-analytic manifold, and let $\Theta$ be the sheaf of germs of holomorphic fields of tangent vectors.
+
+
+
+
+%% Bibliography %%
+
+\nocite{*}
+
+\begin{thebibliography}{5}
+
+  \bibitem{3}
+  {\sc Kodaira, K. and Spencer, D.}
+  \newblock On deformation of complex analytic structures, I.
+  \newblock {\em Annals of Math.} \textbf{67} (1958), 328--401.
+
+\end{thebibliography}
+
+
+\end{document}
