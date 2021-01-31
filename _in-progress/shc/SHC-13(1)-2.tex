@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\title{Mixed varieties and mixed spaces}
+\title{Mixed manifolds and mixed spaces}
 \author{Adrien Douady}
 \date{7\textsuperscript{th} of November, 1960}
 
@@ -48,9 +48,9 @@
 \usepackage{amsthm}
 
 \theoremstyle{plain}
-  \newtheorem*{proposition}{Proposition}
+  \newtheorem*{proposition*}{Proposition}
 \theoremstyle{definition}
-  \newtheorem*{definition}{Definition}
+  \newtheorem*{definition*}{Definition}
 
 
 %% Shortcuts %%
@@ -123,7 +123,7 @@ We define the category $\mathscr{S}_B^n$ in the following manner: the objects of
 
 If $B$ is endowed with the structure of a $\mathscr{C}^\infty$ manifold (resp. an $\RR$-analytic manifold, resp. $\CC$-analytic manifold), then we obtain a category $\mathscr{C}^\infty\mathscr{S}_B$ (resp. $\RR\mathscr{S}_B$, resp. $\CC\mathscr{S}_B$) by requiring the morphisms to be $\mathscr{C}^\infty$ (resp. $\RR$-analytic, resp. $\CC$-analytic).
 
-More generally, if $f_1\colon B\to B'$ is a continuous map from one topological space to another, then a morphism of $\mathscr{S}_{f_1}$ is defined to be a continuous map $f$ from an object $U$ of $\mathscr{S}_B$ to an object $U'$ of $\mathscr{S}_{B'}$ such that
+More generally, if $f_1\colon B\to B'$ is a continuous map from one topological space to another, then a \emph{morphism of $\mathscr{S}_{f_1}$} is a continuous map $f$ from an object $U$ of $\mathscr{S}_B$ to an object $U'$ of $\mathscr{S}_{B'}$ such that
 \begin{enumerate}
   \item the diagram
     \[
@@ -171,7 +171,7 @@ In this case, $V$ itself is a manifold.
 Note that the notion of a $(\CC,\CC)$-mixed manifold, or a $\CC$-analytic mixed manifold, reduces to simply having a $\CC$-analytic manifold $V$ endowed with a projection $\pi\colon V\to B$ onto another $\CC$-analytic manifold such that $\pi$ is of maximal rank at every point.
 
 Let $\pi\colon V\to B$ and $\pi'\colon V'\to B'$ be mixed spaces, and let $f_1\colon B\to B'$ be a continuous (resp. \ldots) map.
-Then a morphism from $V$ to $V'$ over $f_1$ is defined to be a continuous map $f\colon V\to V'$ such that the diagram
+Then a \emph{morphism from $V$ to $V'$ over $f_1$} is a continuous map $f\colon V\to V'$ such that the diagram
 \[
   \begin{tikzcd}
     V \rar["f"] \dar[swap,"\pi"]
@@ -188,6 +188,55 @@ commutes, and such that, for any charts $\varphi_i\colon U_i\to V$ and $\varphi'
 \label{II.2}
 
 We now give another way of defining mixed spaces, equivalent to the above.
+
+
+Given separated spaces $B$ and $V$, along with a continuous map $\pi\colon V\to B$, the structure of a \emph{pre-mixed space} consists of the structure of a $\CC$-analytic manifold on each fibre $V_x=\pi^{-1}\{x\}$.
+Given pre-mixed spaces $\pi\colon V\to B$ and $\pi'\colon V'\to B'$, along with a continuous map $f_1\colon B\to B'$, a \emph{morphism of pre-mixed spaces over $f_1$} is a continuous map $f\colon V\to V'$ such that the diagram
+\[
+  \begin{tikzcd}
+    V \rar["f"] \dar[swap,"\pi"]
+    & V' \dar["\pi'"]
+  \\B \rar[swap,"f_1"]
+    & B'
+  \end{tikzcd}
+\]
+commutes and induces a $\CC$-analytic map on each fibre.
+
+A \emph{mixed space} is a pre-mixed space $\pi\colon V\to B$ such that every point $y\in V$ admits a neighbourhood $W$ in $V$ that is isomorphic as a pre-mixed space to an open subset of $B\times\CC^n$, via an isomorphism over the identity.
+The morphisms of mixed spaces are the same: mixed spaces form a \emph{full subcategory}.
+
+
+\subsection{Deformations}
+\label{II.3}
+
+A mixed space $\pi\colon V\to B$ is said to be \emph{proper} if $B$ is locally compact and the map $\pi$ is proper (i.e. the inverse image of any compact subset is compact).
+If it is a mixed manifold, then we can show that it is a fibred manifold that is locally trivial with respect to the underlying $\mathscr{C}^\infty$ structure, but the previous talk shows that, in general, any two fibres are not isomorphic as $\CC$-analytic manifolds.
+
+\begin{definition*}
+  Let $V_0$ be a compact $\CC$-analytic manifold, $B$ a locally compact space, and $b_0\in B$.
+  Then a \emph{$\CC$-analytic deformation of $V_0$ over $(B,b_0)$} consists of a proper $\CC$-analytic mixed space $\pi\colon V\to B$
+\oldpage{2-04}
+  along with an isomorphism of $\CC$-analytic manifolds $i\colon V_0\to\pi^{-1}\{b_0\}$.
+\end{definition*}
+
+The goal of this seminar is the study, at least local, and an attempt at a classification of, $\CC$-analytic deformations of a given compact $\CC$-analytic manifold $V_0$.
+
+\begin{definition*}
+  Let $V_0$ be a compact $\CC$-analytic manifold.
+  A \emph{$\CC$-analytic deformation $(\pi\colon V\to B,i\colon V_0\to V)$ of $V_0$} is said to be \emph{locally complete} if, for any other deformation $(\pi'\colon V'\to B',i'\colon V_0\to V')$ of $V_0$, there exists a neighbourhood $B'_1$ of $b'_0$ in $B'$, an analytic map $f_1\colon B'_1\to B$ with $f_1(b'_0)\to b_0$, and a morphism of $\CC$-analytic mixed spaces $f\colon {\pi'}^{-1}(B'_1)\to V$ over $f_1$ such that $f\circ i'=i$.
+  The deformation is said to be \emph{locally universal} is furthermore the germ of $f_1$ at $b'_0$ is determined uniquely by this condition.
+\end{definition*}
+
+It seems that every compact $\CC$-analytic manifold $V_0$ admits a locally complete $\CC$-analytic deformation, and a locally universal one if the group of automorphisms of $V_0$ is discrete.
+
+
+\section{Vector fields}
+\label{III}
+
+\subsection{Study on models}
+\label{III.1}
+
+
 
 
 
