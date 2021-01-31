@@ -629,7 +629,16 @@ For all $\chi\in\ZZ$, we thus have the class $\chi\cdot\sh{O}(1)$ in $\Pic_\QQ(\
 \end{theorem}
 
 \begin{proof}
-  Let
+  Let $f$ be a polynomial function on $N_-$ that is an eigenvector of $T$ of weight~$p$.
+  With the notation of the proof in \cref{2.1}, we have
+  \[
+    \Gamma(Z_{+f},\sh{O}_\chi^+(1))
+    = k[N_{+f}\times N_-]_\chi
+    = \bigoplus_{n=0}^\infty\big(k[N_+]/[1/f]\big)_{n+\chi}\otimes k[N_-]_n.
+  \]
+  In other words, $\sh{O}_\chi^+(1)$ is the module $\bigoplus_{n=0}^\infty\sh{O}_+(n+\chi)\otimes k[N_-]_n$ on $\sh{O}_{Z_+}$.
+  Similarly, $\sh{O}_\chi^-(1)$ is the module $\bigoplus_{n=0}^\infty k[N_+]_n\otimes\sh{O}_-(n-\chi)$ on $\sh{O}_{Z_-}$.
+  Consequently, $\phi_+^*\sh{O}_\chi^+(1)-\phi_-^*\sh{O}_\chi^-(1)$ is the module $\bigoplus_{n=0}^\infty\sh{O}_+(n+\chi)\otimes\sh{O}_-(n+\chi)$ on $\bigoplus_{n=0}^\infty\sh{O}_+(n)\otimes\sh{O}_-(n)$.
 \end{proof}
 
 
