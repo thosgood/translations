@@ -58,6 +58,7 @@
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\CC}{\mathbb{C}}
 \newcommand{\DD}{\mathrm{D}}
+\newcommand{\HH}{\mathrm{H}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -252,7 +253,7 @@ Now suppose that $B$ is a $\mathscr{C}^\infty$ manifold, just for simplicity, an
 A field of tangent vectors to $U$ defined on $U_0$,
 \oldpage{2-05}
 i.e. a map $\omega\colon U_0\to T_0\times\CC^n$, is said to be a \emph{projectable holomorphic field} if $\omega(b_0,z)=(t_0,\theta(z))$ (where $t_0\in T_0$ is a vector that does not depend on $z$, called the \emph{projection} of the field $\omega$) and $\theta(z)$ is a holomorphic vector field.
-If $B$ is a $\CC$-analytic space, possibly with a singularity at $b_0$, then we give the same definition, but with $T_0$ then being the tangent space to $B$ at $b_0$ in the sense of Zariski, i.e. the dual of $\mathfrak{m}/\mathfrak{m}^2$, where $\mathfrak{m}$ is the ideal of germs at $b_0$ of holomorphic functions on $B$ that vanish at $b_0$.
+If $B$ is a $\CC$-analytic space, possibly with a singularity at $b_0$, then we give the same definition, but with $T_0$ then being the \emph{Zariski} tangent space to $B$ at $b_0$, i.e. the dual of $\mathfrak{m}/\mathfrak{m}^2$, where $\mathfrak{m}$ is the ideal of germs at $b_0$ of holomorphic functions on $B$ that vanish at $b_0$.
 
 If $f\colon U\to U'$ is an isomorphism of $\mathscr{C}^\infty\mathscr{S}_B$ (resp. \ldots), then then transport $f_*\omega$ is defined by
 \[
@@ -291,6 +292,72 @@ A \emph{projectable holomorphic field on $U$} is a $\mathscr{C}^\infty$ field of
 \label{III.2}
 
 Let $\pi\colon V\to B$ be a $(\mathscr{C}^\infty,\CC)$-mixed manifold (resp. \ldots, resp. a $\CC$-analytic mixed space).
+By transporting along the charts, we define the notions of
+\begin{itemize}
+  \item vertical holomorphic fields on an open subset of a fibre ;
+  \item vertical holomorphic fields on a open subset of $V$ ;
+  \item projectable holomorphic fields on an open subset of a fibre ; and
+  \item projectable holomorphic fields on an open subset of $V$.
+\end{itemize}
+
+\oldpage{2-06}
+Let $\xi$ be a $\mathscr{C}^\infty$ vector field (resp. \ldots) on $V$.
+By integrating $\xi$, we obtain a $\mathscr{C}^\infty$ map, denoted by $e^\xi$, from an open subset $W\subset\RR\times V$ containing $\{0\}\times V$ (resp. $\CC$-analytic map from an open subset $W\subset\CC\times V$) to $V$, characterised by
+\begin{enumerate}[(1)]
+  \item $e^\xi(t_1+t_2,y) = e^\xi(t_1,e^\xi(t_2,y))$, with the left-hand side being defined whenever the right-hand side is ; and
+  \item $\frac{\partial}{\partial t}e^\xi(t,y)|_{0,y} = \xi(y)$.
+\end{enumerate}
+Note that $W$ is a mixed manifold over $\RR\times B$ (resp. a mixed space over $\CC\times B$).
+
+\begin{proposition*}
+  For $e^\xi\colon W\to V$ to be a morphism of mixed spaces over the projection $\RR\times B\to B$, it is necessary and sufficient for $\xi$ to be a vertical holomorphic field.
+  For $e^\xi\colon W\to V$ to be a morphism of mixed spaces over a map from an open subset of $\RR\times B$ containing $\{0\}\times B$ to $B$, it is necessary and sufficient for $\xi$ to be a projectable holomorphic field.
+\end{proposition*}
+
+The proof is left to the reader.
+
+
+\section{The Spencer--Kodaira map}
+\label{IV}
+
+Let $\pi\colon V\to B$ be a mixed manifold (resp. a $\CC$-analytic mixed space), $b\in B$, and $V_0=\pi^{-1}\{b_0\}$.
+Let $T_0$ be the tangent space to $B$ at $b_0$ (resp. the Zariski tangent space).
+We introduce the following sheaves on $V_0$:
+\begin{itemize}
+  \item[$\Theta_0$:] the sheaf of germs of vertical holomorphic fields on $V_0$ ;
+  \item[$\Pi_0$:] the sheaf of germs of locally projectable holomorphic fields on $V_0$ ; and
+  \item[$\Lambda_0$:] the sheaf $\pi^*T_0$, i.e. the sheaf of germs of locally constant maps from $V_0$ to $T_0$.
+\end{itemize}
+
+We have an exact sequence of sheaves on $V_0$
+\[
+  0 \to \Theta_0 \to \Pi_0 \to \Lambda_0 \to 0
+\]
+that gives rise to the long exact sequence in cohomology
+\[
+  \ldots \to \HH^0(V_0;\Pi_0) \to \HH^0(V_0;\Lambda_0) \xrightarrow{\delta} \HH^1(V_0;\Theta_0) \to \ldots.
+\]
+We also have a canonical map
+\oldpage{2-07}
+\[
+  \iota\colon T_0 \to \HH^0(V_0;\Lambda_0)
+\]
+that is injective if $V_0$ is non-empty, and surjective if $V_0$ is connected.
+
+\begin{definition*}
+  The \emph{Spencer--Kodaira map} is the composition
+  \[
+    \rho_0 = \delta\circ\iota\colon T_0 \to \HH^1(V_0;\Theta_0).
+  \]
+\end{definition*}
+
+This map is an essential tool in the local study of deformations of $\CC$-analytic varieties.
+Note that $\Theta_0$ is exactly the sheaf of germs of holomorphic fields of tangent vectors to $V_0$, and thus depends only on $V_0$, while $T_0$ depends only on the base.
+Also, $\Theta_0$ is a coherent analytic sheaf on $V_0$, and, if $V_0$ is compact, then $\HH^1(V_0;\Theta_0)$ is a finite-dimensional vector space over $\CC$ \cite{1}.
+We thus see that, in this case (which is the only case where we can say anything non-trivial), $\rho_0$ might be possible to calculate.
+
+It is clear that, if the given mixed manifold is trivial (i.e. if $V=B\times V_0$, with $\pi$ being the projection to $B$), then the map $\rho_0$ is zero.
+The next talk aims to show that, in a certain sense, $\rho$ indicates the non-triviality of $V$ in a neighbourhood of $V_0$.
 
 
 
