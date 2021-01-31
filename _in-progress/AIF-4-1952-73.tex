@@ -59,6 +59,7 @@
 \newcommand{\LL}{\mathrm{L}}
 \renewcommand{\ll}{\ell}
 \newcommand{\sBB}{\mathscr{B}}
+\newcommand{\sLL}{\mathscr{L}}
 \newcommand{\DF}{\mbox{\normalfont($\mathscr{DF}$)}}
 \newcommand{\FF}{\mbox{\normalfont($\mathscr{F}$)}}
 \newcommand{\hotimes}{\widehat{\otimes}}
@@ -362,7 +363,48 @@ The completion of $E\otimes F$ under the norm induced by $\BB(E',F')$ is denoted
 Every reasonable normed topology on $E\otimes F$ is included between the topology induced by $E\hotimes F$ and the topology induced by $E\hhotimes F$.
 If $E$ and $F$ are now both arbitrary locally convex spaces, then we can again consider $E\otimes F$ is a space of bilinear forms on $E'\times F'$, and endow it with the biequicontinuous-convergence topology (i.e. the topology given by uniform convergence on the products of an equicontinuous subset of $E'$ with an equicontinuous subset of $F'$):
 the completion of $E\otimes F$ under this topology is again denoted by $E\hhotimes F$.
-If $E$ and $F$ are complete, then the space
+If $E$ and $F$ are complete, then the space $\sLL_e(E'_s,F'_s)$ of separately continuous bilinear forms on the product $E'_s\times F'_s$ of the weak duals $E'_s$ and $F'_s$ endowed with the biequicontinuous-convergence topology is complete, and so $E\hhotimes F$ can be identified with a topological vector subspace of $\sLL_e(E'_s,F'_s)$.
+Then the elements of $E\hhotimes F$ can be identified with certain separately weakly continuous bilinear maps on $E'\times F'$, or even with certain weakly continuous linear maps from $E'$ to $F$;
+these linear maps send equicontinuous subsets of $E'$ to relatively compact subsets of $F$, and the converse is true in all known cases (see \todo).
+
+The topology on $E\otimes F$ induced by $E\hotimes F$ is finer than that induced by $E\hhotimes F$, whence we have a canonical continuous linear map
+\[
+  E\hotimes F \to E\hhotimes F.
+\]
+
+An important, unsolved, problem is the question of whether or not this map is always bijective (see \todo).
+We note that it seems extremely plausible that, if $E$ and $F$ are Banach spaces such that the above map $E\hotimes F\to E\hhotimes F$ is a topological isomorphism (or even simply a topological homomorphism, i.e. here a map from the first space \emph{onto} the second), then $E$ or $F$ is of finite dimension.
+This is true if, for example, $E$ contains a vector subspace isomorphic to an $\ll^p$ space or to $c_0$.
+
+Let $E$ and $F$ be Banach spaces.
+The norm induced by the dual of $E\hotimes F$ on $E'\otimes F'$ is clearly the norm induced by $E'\hhotimes F'$.
+On the other hand, the norm induced on $E'\otimes F'$ by the dual of $E\hhotimes F$ is, in all known cases (see \todo), identical to the norm induced by $E'\hotimes F'$.
+This duality, which barely appears in the present summary, is a precious tool for various questions
+\oldpage{83}
+(e.g. \cite[chap.~I, \S4, n\textsuperscript{o}~6]{PTT}).
+The following theorem (which is, truth be told, trivial), can be seen as the dual response to \cref{theorem3}.
+
+\begin{theorem}{4}
+\label{theorem4}
+  Let $M$ be a locally compact space, let $C_0(M)$ the space of continuous scalar functions on $M$ that are ``zero at infinity'', endowed with the uniform convergence norm, and let $E$ be a locally convex complete space.
+  Then $C_0(M)\hhotimes E$ is canonically isomorphic to the space $C_0(M,E)$ of continuous maps from $M$ to $E$ that are zero at infinity, endowed with the uniform convergence topology (and with the uniform norm if $E$ is a Banach space).
+  In particular, $c_0\hhotimes E$ is isomorphic to the space of sequences in $E$ that tend to $0$.
+\end{theorem}
+
+As with the spaces $C(K)\hotimes E$ below, here the spaces $\LL'(\mu)\hhotimes E$ do not, in general, have a special interpretation as functional spaces.
+We note, however, that \emph{the space $\ll^1\hhotimes E$ can be understood as the space of summable sequences in $E$} (i.e. of ``commutatively convergent'' sequences in $E$).
+
+
+\subsection{Tensor product of linear maps}
+\label{subsection:tensor-product-of-linear-maps}
+
+(\cite[chap.~1, \S1, n\textsuperscript{o}~2]{PTT}).
+\medskip
+
+Let
+
+
+
 
 
 %% Bibliography %%
