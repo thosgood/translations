@@ -57,6 +57,7 @@
 
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\CC}{\mathbb{C}}
+\newcommand{\DD}{\mathrm{D}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -98,10 +99,10 @@
 
 %% Content %%
 
-\oldpage{2-01}
 \section{Category of models}
 \label{I}
 
+\oldpage{2-01}
 Let $B$ be a topological space.
 We define the category $\mathscr{S}_B^n$ in the following manner: the objects of $\mathscr{S}_B^n$ are the open subsets of $B\times\CC^n$, and a morphism $f\colon U\to U'$ from an open subset $U\subset B\times\CC^n$ to an open subset $U'\subset B\times\CC^n$ is a continuous map $f\colon U\to U'$ satisfying the following two conditions:
 \begin{enumerate}
@@ -176,7 +177,7 @@ Then a \emph{morphism from $V$ to $V'$ over $f_1$} is a continuous map $f\colon 
   \begin{tikzcd}
     V \rar["f"] \dar[swap,"\pi"]
     & V' \dar["\pi'"]
-  \\B \rar["f_1"]
+  \\B \rar[swap,"f_1"]
     & B'
   \end{tikzcd}
 \]
@@ -235,6 +236,61 @@ It seems that every compact $\CC$-analytic manifold $V_0$ admits a locally compl
 
 \subsection{Study on models}
 \label{III.1}
+
+Let $B$ be a space, $U$ an object of $\mathscr{S}_B$ (i.e. an open subset of $B\times\CC^n$), $b_0$ a point of $B$, and set $U_0=\pi^{-1}\{b_0\}$.
+
+A holomorphic field of tangent vectors on $U_0$ (i.e. a holomorphic map from $U_0$ to $\CC^n$) is said to be a \emph{vertical holomorphic field} on $U_0$.
+A \emph{vertical holomorphic field on $U$} is a continuous (resp. \ldots) map $\theta\colon U\to\CC^n$ that induces a vertical holomorphic field on each fibre $U_x$.
+If $f\colon U\to U'$ is an isomorphism in $\mathscr{S}_B$, then the \emph{transport $f_*\theta$ of $\theta$ by $f$} is defined by
+\[
+  f_*\theta(f(x,z)) = \DD_2 f_{x,z}\cdot\theta(x,z)
+\]
+where $\DD_2 f_{x,z}$ is the linear map from $\CC^n$ to itself that is tangent to $f_x$ at the point $z\in U_x$.
+This is again a vertical holomorphic field, since it follows from a Cauchy integral that the matrix $\DD f_{x,z}$ depends continuously on the pair $(x,z)$.
+
+Now suppose that $B$ is a $\mathscr{C}^\infty$ manifold, just for simplicity, and let $T_0$ be the tangent space to $B$ at $b_0$.
+A field of tangent vectors to $U$ defined on $U_0$,
+\oldpage{2-05}
+i.e. a map $\omega\colon U_0\to T_0\times\CC^n$, is said to be a \emph{projectable holomorphic field} if $\omega(b_0,z)=(t_0,\theta(z))$ (where $t_0\in T_0$ is a vector that does not depend on $z$, called the \emph{projection} of the field $\omega$) and $\theta(z)$ is a holomorphic vector field.
+If $B$ is a $\CC$-analytic space, possibly with a singularity at $b_0$, then we give the same definition, but with $T_0$ then being the tangent space to $B$ at $b_0$ in the sense of Zariski, i.e. the dual of $\mathfrak{m}/\mathfrak{m}^2$, where $\mathfrak{m}$ is the ideal of germs at $b_0$ of holomorphic functions on $B$ that vanish at $b_0$.
+
+If $f\colon U\to U'$ is an isomorphism of $\mathscr{C}^\infty\mathscr{S}_B$ (resp. \ldots), then then transport $f_*\omega$ is defined by
+\[
+  f_*\omega(f(b_0,z)) = \DD f_{b_0,z}\omega(b_0,z)
+\]
+where $\DD f_{b_0,z}\colon T_0\times\CC^n\to T_0\times\CC^n$ is now the linear map that is tangent to $f$ at the point $(b_0,z)$.
+This is a projectable holomorphic field.
+Indeed, the matrix $\DD f_{b_0,z}$ can be written as
+\[
+  \begin{pmatrix}
+    I & 0
+  \\\DD_1f & \DD_2f
+  \end{pmatrix}
+\]
+and
+\[
+  \begin{aligned}
+    \DD_1f\colon T &\to \CC^n
+  \\\DD_2f\colon \CC^n &\to \CC^n
+  \end{aligned}
+\]
+both depend holomorphically on $z$ (for $\DD_1f$, this follows from the fact that $f_x$ is holomorphic for every $x$).
+By setting $f_*\omega(b_0,z')=(t_0,\theta'(z'))$, we have
+\[
+  \begin{gathered}
+    \theta'(z') = \DD_1f_{b_0,z}(t_0) + \DD_2f_{b_0,z}(\omega(z))
+  \\\mbox{if $z'=f_{b_0}(z)$}
+  \end{gathered}
+\]
+which shows that $f_*\omega$ is indeed a projectable holomorphic field.
+
+A \emph{projectable holomorphic field on $U$} is a $\mathscr{C}^\infty$ field of vectors tangent to $U$ that induces a projectable holomorphic field on each fibre.
+
+
+\subsection{Vector fields on a mixed manifold}
+\label{III.2}
+
+Let $\pi\colon V\to B$ be a $(\mathscr{C}^\infty,\CC)$-mixed manifold (resp. \ldots, resp. a $\CC$-analytic mixed space).
 
 
 
