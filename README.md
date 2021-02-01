@@ -7,4 +7,3 @@ See <https://thosgood.com/translations> for details.
     + optional argument for name (e.g. Theorem)
     + optional argument for number (e.g. 1.7.3)
         * actually maybe have four environments, with starred versions for no number?
-- `\usepackage{geometry}`
