@@ -50,20 +50,13 @@
 
 \usepackage{amsthm}
 
-\theoremstyle{plain}
+\newenvironment{itenv}[1]
+  {\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
 
-  \newtheorem{innerproposition}{Proposition}
-  \newenvironment{proposition}[1]
-    {\renewcommand\theinnerproposition{#1}\innerproposition}
-    {\endinnerproposition}
-
-  \newtheorem*{theorem}{Theorem}
-  \newtheorem*{cor}{Corollary}
-
-
-\theoremstyle{definition}
-
-  \newtheorem*{remark}{Remark}
+\newenvironment{rmenv}[1]
+  {\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
 
 
 %% Shortcuts %%
@@ -148,35 +141,35 @@ If $X$ is affine, then $\supp\scr{F}$ is the set defined by the ideal $\ann\HH^0
 A sheaf $\scr{F}$ of $\scr{O}$-modules on a \emph{variety} $X$ is said to be a \emph{torsion sheaf} (resp. \emph{torsion-free sheaf}) if, for every $x\in X$, the module $\scr{F}_x$ over the ring $\scr{O}_x$ is a torsion module (resp. torsion-free module).
 
 \oldpage{4-02}
-\begin{proposition}{1}
+\begin{itenv}{Proposition 1}
 \label{proposition1}
   If $\scr{F}$ is a coherent sheaf on a variety $X$, then there exists a coherent subsheaf $T(\scr{F})$ of $\scr{F}$ (and only one) such that $(T(\scr{F}))_x = T(\scr{F}_x)$.
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   The uniqueness is trivial.
   The exists is a consequence of the fact that, if $X$ is affine, then $T(\scr{F}_x)$ is given by localisation of the module $T(\HH^0*(X,\scr{F}))$ with respect to the maximal ideal of $\HH^0(X,\scr{O})$ that defines $x$.
 \end{proof}
 
-\begin{cor}
+\begin{itenv}{Corollary}
   \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
   If $\scr{F}\neq0$ then $\scr{F}/T(\scr{F})$ is a torsion-free coherent sheaf.
-  \footnote{\emph{[Translator.] The condition that $\scr{F}\neq0$ is unnecessary, but we include it here since it is in the original. Note that the zero sheaf is indeed a torsion-free sheaf, otherwise any coherent torsion sheaf $\scr{F}$ provides a counterexample to this corollary.}}
-\end{cor}
+  \footnote{\emph{[Trans.] The condition that $\scr{F}\neq0$ is unnecessary, but we include it here since it is in the original. Note that the zero sheaf is indeed a torsion-free sheaf, otherwise any coherent torsion sheaf $\scr{F}$ provides a counterexample to this corollary.}}
+\end{itenv}
 
-\begin{proposition}{2}
+\begin{itenv}{Proposition 2}
 \label{proposition2}
   If $\scr{F}$ is a coherent sheaf on the variety $X$, then $\supp\scr{F}\neq X$ if and only if $\scr{F}$ is a torsion sheaf.
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   This is a trivial consequence of the fact that, if $U$ is an affine open subset, then $\supp\scr{F}\cap U$ is defined by the ideal $\ann\HH^0(U,\scr{F})$ of $\HH^0(U,\scr{O})$, where $\HH^0(U,\scr{F})$ is considered as a module over $\HH^0(U,\scr{O})$.
 \end{proof}
 
-\begin{proposition}{3}
+\begin{itenv}{Proposition 3}
 \label{proposition3}
   If $\scr{F}$ is a torsion-free coherent sheaf on a variety $X$, with $\scr{F}\subset\scr{R}^n$, then there exists a coherent sheaf $\scr{I}\neq0$ of ideals of $\scr{O}$ such that $\scr{I}\cdot\scr{F}\subset\scr{O}^n$.
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   Let $\scr{I}_x$ be the ideal $[\scr{O}_X^n:\scr{F}_x]$ of $\scr{O}_x$, i.e. the ideal of elements $i_x$ of $\scr{O}_x$ such that $i_x\scr{F}_x\subset\scr{O}_x^n$.
@@ -191,11 +184,11 @@ The sheaves $\scr{R}$ and $\scr{F}\otimes_{\scr{O}}\scr{R}$ are locally constant
 We can then identify $\scr{F}\otimes_{\scr{O}}\scr{R}$ with a vector space of finite dimension over $\scr{R}$ (we identify the field of rational functions with the sheaf $\scr{R}$ since $\scr{R}$ is constant).
 We call this dimension the \emph{rank of $\scr{F}$}, and we can then consider $\scr{F}$ as a subsheaf of $\scr{R}^n$, where $n=\rank\scr{F}$.
 
-\begin{proposition}{4}
+\begin{itenv}{Proposition 4}
 \label{proposition4}
   Under the same hypotheses as in \hyperref[proposition3]{Proposition~3}, there exists a coherent sheaf $\scr{I}\neq0$ of ideals of $\scr{O}$ such that $\scr{I}\cdot\scr{F}\subset\scr{O}^n$, where $n=\rank\scr{F}$;
   then $\scr{O}^n/(\scr{I}\cdot\scr{F})$ and $\scr{F}/(\scr{I}\cdot\scr{F})$ are torsion sheaves.
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   The proof is immediate.
@@ -204,11 +197,11 @@ We call this dimension the \emph{rank of $\scr{F}$}, and we can then consider $\
 \oldpage{4-03}
 If $Y$ is a closed subset of an algebraic space $X$, then we denote by $\scr{I}_Y$ the coherent sheaf of ideals of $\scr{O}$ defined by $Y$.
 
-\begin{proposition}{5}
+\begin{itenv}{Proposition 5}
 \label{proposition5}
   Let $Y$ be a closed subset of an algebraic space $X$, and $\scr{F}$ a coherent sheaf on $X$, with $\supp\scr{F}\subset Y$;
   then there exists an integer $k$ such that $\scr{I}_Y^k\scr{F}=0$.
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   We can reduce to the case where $X$ is affine, since there exists a finite cover of $X$ by affine opens.
@@ -216,11 +209,11 @@ If $Y$ is a closed subset of an algebraic space $X$, then we denote by $\scr{I}_
   This implies, as is well known, that $\ann\HH^0(X,\scr{F})\supset\scr{I}_Y^k$.
 \end{proof}
 
-\begin{proposition}{6}
+\begin{itenv}{Proposition 6}
 \label{proposition6}
   Let $\scr{F}$ be a coherent sheaf of fractional ideals on a variety $X$ (i.e. a coherent subsheaf of $\scr{R}$) such that, for every $x$ outside of a closed subset $Y$ of $X$, $\scr{F}_x$ is an ideal of $\scr{O}_x$.
   Then there exists an integer $k$ such that $\scr{I}_Y^k\cdot\scr{F}\subset\scr{O}$.
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   By \hyperref[proposition3]{Proposition~3} and the hypothesis, there exists a coherent sheaf $\scr{J}$ of ideals of $\scr{O}$ such that $\scr{J}_x=\scr{O}_x$ if $x\not\in Y$, and such that $\scr{J}\cdot\scr{F}\subset\scr{O}$.
@@ -246,12 +239,12 @@ If $Y$ is a closed subset of $X$, then a coherent sheaf on $Y$ has a canonical e
 With this notation, we have the following theorem:
 
 \oldpage{4-04}
-\begin{theorem}[D\'{e}vissage]
+\begin{itenv}{Theorem (D\'{e}vissage)}
 \label{theorem-devissage}
   Let $\cal{D}$ be a left-exact subcategory of $\cal{C}(X)$ that has the following property:
   for every closed irreducible subset $Y$ of $X$, there exists a coherent sheaf $\scr{M}_Y$ of $\cal{C}(Y)$ that belongs to $\cal{D}$, and that is torsion-free as a sheaf on $Y$.
   Then $\cal{D}=\cal{C}(X)$.
-\end{theorem}
+\end{itenv}
 
 \begin{proof}
   The proof works by induction on the dimension of $X$.
@@ -309,9 +302,9 @@ With this notation, we have the following theorem:
   Thus $\scr{F}\in\cal{D}$, and the theorem is proven.
 \end{proof}
 
-\begin{cor}[Serre's Theorem]
+\begin{itenv}{Corollary (Serre's Theorem)}
   If $\scr{F}$ is a coherent sheaf on a complete algebraic space $X$, then $\HH^0(X,\scr{F})$ is a vector space of finite dimension over $K$.
-\end{cor}
+\end{itenv}
 
 \begin{proof}
   We take $\cal{D}$ to be the category of all coherent sheaves $\scr{F}$ on $X$ such that $\HH^0(X,\scr{F})$ is of finite dimension over $K$.
@@ -365,10 +358,10 @@ We find, for example, that $\HH^1(X,\scr{O})$ is equal to the group of classes o
 Let $D$ be a (multiplicative) divisor on $X$.
 We define $\supp D$ to be the set of points $x\in X$ such that $D(x)$ is not the identity element in $\scr{R}^\times/\scr{O}_x^\times$, i.e. such that every definition function of $D$ at $x$ is either not defined at $x$ or takes the value $0$ at $x$.
 
-\begin{proposition}{7}
+\begin{itenv}{Proposition 7}
 \label{proposition7}
   The support of a divisor $D$ on a variety $X$ is a closed subset $\neq X$ of $X$, and $D=0$ if and only if the support is empty.
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   The latter claim is trivial.
@@ -378,23 +371,23 @@ We define $\supp D$ to be the set of points $x\in X$ such that $D(x)$ is not the
 \end{proof}
 
 \oldpage{4-08}
-\begin{proposition}{8}
+\begin{itenv}{Proposition 8}
 \label{proposition8}
   If $D$ is a divisor on a normal variety $X$, then $\supp D$ is a union of hypersurfaces (i.e. of closed subvarieties of codimension $1$).
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   If $f$ is a function on a normal variety $Y$, we know that, if $f$ is not defined at $x\in Y$, then $x$ belongs to a variety of poles or zeros of $f$ (i.e. to an irreducible component of the closure of the set of points $x\in Y$ such that $f(x)\in\{0,\infty\}$).
   So, if we take $f$ to be a definition function for $D$ in some open subset $U\subset X$, then $\supp D\cap U$ is the union of the pole and zero varieties of $f$ in $U$, and we know that these varieties are of codimension $1$ (\cite[chapitre~III]{2}).
 \end{proof}
 
-\begin{remark}
+\begin{rmenv}{Remark}
   If $X$ is not normal, then the support of a divisor $D$ on $X$ is not necessarily of codimension $1$.
   It is easy to define an affine variety $X$ of dimension $>1$ that is normal everywhere except at a single point $x_0$ (for example, the point $(a,ab,b^2,b^3)$ in the four-dimensional space $K^4$).
   There exists a function $u$ that is everywhere defined on $X$, and which is entire on the local ring of $x_0$, but which is not contained in this ring;
   by adding, if necessary, a constant, we can assume that $x_0$ is not a zero of $u$.
   There is then an open neighbourhood $X'$ of $x_0$ such that the divisor of the function induced by $u$ on $X'$ has support equal to the single point $x_0$.
-\end{remark}
+\end{rmenv}
 
 Suppose that $X$ is a normal variety, and $D$ is a divisor on $X$.
 Let $S$ be a hypersurface of $X$.
@@ -403,20 +396,20 @@ We denote this integer by $\ord_S D$.
 It is easy to see that $\ord_S D=0$ if and only if $S\not\subset\supp D$.
 If we now take the formal combination $C=\sum_S(\ord_S D)\cdot S$, where $S$ runs over the set of all hypersurfaces of $X$, then $C$ is a cycle of codimension $1$, and we call it the \emph{associated cycle} of the divisor $D$.
 
-\begin{proposition}{9}
+\begin{itenv}{Proposition 9}
 \label{proposition9}
   Let $X$ be a normal variety.
   The map that sends a divisor $D$ to its associated cycle of codimension~$1$ is an injective homomorphism from the group of divisors on $X$ to the group of cycles of codimension~$1$.
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   The proof is trivial.
 \end{proof}
 
-\begin{proposition}{10}
+\begin{itenv}{Proposition 10}
 \label{proposition10}
   If $X$ is further a non-singular variety, then the homomorphism that sends a divisor to its associated cycle is bijective.
-\end{proposition}
+\end{itenv}
 
 \oldpage{4-09}
 \begin{proof}
@@ -430,10 +423,10 @@ If we now take the formal combination $C=\sum_S(\ord_S D)\cdot S$, where $S$ run
   So the proposition is proven.
 \end{proof}
 
-\begin{remark}
+\begin{rmenv}{Remark}
   \hyperref[proposition10]{The proposition} is not necessarily true if $X$ is non-singular.
   For example, for the cone $xy-zw=0$ in $K^4$, the cycle defined by $x=z=0$ is not a cycle associated to any divisor.
-\end{remark}
+\end{rmenv}
 
 
 %% Bibliography %%

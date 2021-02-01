@@ -50,20 +50,13 @@
 
 \usepackage{amsthm}
 
-\theoremstyle{plain}
+\newenvironment{itenv}[1]
+  {\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
 
-  \newtheorem{innerproposition}{Proposition}
-  \newenvironment{proposition}[1]
-    {\renewcommand\theinnerproposition{#1}\innerproposition}
-    {\endinnerproposition}
-
-  \newtheorem{innerlemma}{Lemma}
-  \newenvironment{lemma}[1]
-    {\renewcommand\theinnerlemma{#1}\innerlemma}
-    {\endinnerlemma}
-
-  \newtheorem*{theorem}{Theorem}
-  \newtheorem*{corollary}{Corollary}
+\newenvironment{rmenv}[1]
+  {\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
 
 
 %% Shortcuts %%
@@ -175,14 +168,14 @@ If $\scr{I}(U,x)$ denotes the inverse image in $\scr{A}(U)$ of the maximal ideal
 of the $\scr{I}(U,x)$ where $x$ runs over $U\cap W$.
 If $U$ is an affine open subset, then the sheaf of ideals $\scr{I}(W)|U$ is exactly the sheaf associated to the ideal $\Gamma(U,\scr{I}(W))$ of $\scr{A}(U)$, which shows that $\scr{I}(W)$ is coherent.
 
-\begin{proposition}{1}
+\begin{itenv}{Proposition 1}
 \label{proposition1}
   \begin{enumerate}[(a)]
     \item The map $W\mapsto\scr{I}(W)$ gives a bijective correspondence between the closed subsets of $V$ and the sheaves of ideals $\scr{I}$ that satisfy the following condition:
       for every $x\in V$, $\scr{I}_x$ is either equal to $\scr{O}_x$ or equal to an intersection of prime ideals of $\scr{O}_x$.
     \item The map $W\mapsto\scr{I}(W)$ associates the closed subsets whose connected components are all irreducible to the sheaves of prime ideals (for every $x$, $\scr{I}_x$ is either equal to $\scr{O}_x$ or equal to a prime ideal).
   \end{enumerate}
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   \begin{enumerate}[(a)]
@@ -247,7 +240,7 @@ The $\varphi_{U_f}$ are compatible with the restriction maps, and, by ``passing 
 It is clear that $\varphi$ is an isomorphism if and only if $(V,\scr{A})$ is an affine algebraic set.
 The following theorem further examines this case:
 
-\begin{theorem}[Serre's Theorem]
+\begin{itenv}{Theorem (Serre's Theorem)}
   The following are equivalent:
   \begin{enumerate}[(a)]
     \item $(V,\scr{A})$ is an affine algebraic set.
@@ -259,17 +252,17 @@ The following theorem further examines this case:
         \item the open subsets $V_{f_i}$ of $V$, where the $f_i$ are non-zero, are affine open subsets, and they cover $V$.
       \end{itemize}
   \end{enumerate}
-\end{theorem}
+\end{itenv}
 
 \begin{proof}
   It remains only to show that (c) implies (d), and that (d) implies (a).
 
   \bigskip
   For (c)$\implies$(d), consider:
-  \begin{lemma}{1}
+  \begin{itenv}{Lemma 1}
   \label{lemma1}
     If $\scr{F}$ is a non-zero coherent sheaf, then $\Gamma(V,\scr{F})$ is non-zero.
-  \end{lemma}
+  \end{itenv}
 
   \begin{proof}
     Indeed, the support of $\scr{F}$ contains a closed point, say $x$.
@@ -286,11 +279,11 @@ The following theorem further examines this case:
   With this proven, let $f$ be a section of $\scr{A}$ over $V$ (a regular function on $V$).
   If $U$ is an arbitrary open subset of $V$, then we denote by $U_f$ the set of points of $U$ where $f$ is non-zero.
   The existence of the cover $(U_{f_i})$ will be a consequence of:
-  \begin{lemma}{2}
+  \begin{itenv}{Lemma 2}
   \label{lemma2}
 \oldpage{2-06}
     If $x$ is an arbitrary point of $V$, and $U$ is an affine open subset of $V$ containing $x$, then there exists a regular function $f$ on $V$ such that $V_f=U_f$, and such that $V_f$ contains $x$.
-  \end{lemma}
+  \end{itenv}
 
   \begin{proof}
     Let $W$ be the complement of $U$ in $V$, and let $\scr{I}(W)$ (resp. $\scr{I}(W,x)$) be the sheaf of germs of functions that are zero on $W$ (resp. on $W$ and $x$).
@@ -359,7 +352,7 @@ The following theorem further examines this case:
   which finishes the proof.
 \end{proof}
 
-\begin{corollary}
+\begin{itenv}{Corollary}
   If $V$ is an affine algebraic set, $U$ an open subset of $V$, $A$ the coordinate ring of $V$, and $\scr{U}(U)$ the coordinate ring of $U$, then the following are equivalent:
   \begin{enumerate}[(a)]
     \item $U$ is an affine open subset.
@@ -372,7 +365,7 @@ The following theorem further examines this case:
 
 \oldpage{2-08}
   Furthermore, if one of these equivalent properties is satisfied, then $\scr{U}(U)$ is $A$-flat.
-\end{corollary}
+\end{itenv}
 
 \begin{proof}
   (a)$\implies$(b):

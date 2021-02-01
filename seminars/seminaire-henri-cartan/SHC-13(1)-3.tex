@@ -55,27 +55,13 @@
 
 \usepackage{amsthm}
 
-\theoremstyle{plain}
+\newenvironment{itenv}[1]
+  {\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
 
-  \newtheorem{innertheorem}{Theorem}
-  \newenvironment{theorem}[1]
-    {\renewcommand\theinnertheorem{#1}\innertheorem}
-    {\endinnertheorem}
-
-  \newtheorem{innerproposition}{Proposition}
-  \newenvironment{proposition}[1]
-    {\renewcommand\theinnerproposition{#1}\innerproposition}
-    {\endinnerproposition}
-
-  \newtheorem{innerlemma}{Lemma}
-  \newenvironment{lemma}[1]
-    {\renewcommand\theinnerlemma{#1}\innerlemma}
-    {\endinnerlemma}
-
-  \newtheorem*{proposition*}{Proposition}
-
-\theoremstyle{definition}
-  \newtheorem*{definition*}{Definition}
+\newenvironment{rmenv}[1]
+  {\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
 
 
 %% Shortcuts %%
@@ -172,12 +158,13 @@ Finally, we have a commutative diagram
 \]
 where $\rho_0$ is the Spencer--Kodaira map \cite{2}.
 
-\begin{theorem}{1}
+\begin{itenv}{Theorem 1}
 \label{theorem1}
   For the proper mixed manifold $\pi\colon V\to B$ to be locally trivial in a neighbourhood of the point $b_0\in B$, it is necessary and sufficient for the map $\widetilde{\rho}_0\colon\widetilde{T}_0\to\HH^1(V_0;\widetilde{\Theta})$ to be zero.
-\end{theorem}
+\end{itenv}
 
 \begin{proof}
+  \phantom{.}
   \begin{itemize}
     \item[\emph{(Necessary).}]
       If $\pi\colon V\to B$ is locally trivial at $b_0$, then, for every open subset $U$ of $B$ over which $V$ is trivial, we have $\widetilde{\Pi}=\widetilde{\Lambda}\oplus\widetilde{\Theta}$ on $V_U$, and so $\delta\colon\HH^0(V_U;\widetilde{\Lambda})\to\HH^0(V_U;\widetilde{\Theta})$ is zero.
@@ -219,26 +206,26 @@ For every open subset $U\subset B$, we have a map
 \]
 that defines, by varying $U$, a homomorphism from the sheaf $\mathrm{R}^1\pi_*\widetilde{\Theta}$ to the sheaf $\Phi$ on $B$ defined by $\Phi(U)=\prod_{b\in U}\HH^1(V_b;\Theta_b)$.
 
-\begin{definition*}
+\begin{rmenv}{Definition}
   We say that the proper mixed manifold $\pi\colon V\to B$ is \emph{regular} if
   \begin{enumerate}
     \item the dimension of $\HH^1(V_b;\Theta_b)$ does not depend on the point $b\in B$ ; and
     \item we can endow $E=\bigcup_{b\in B}\HH^1(V_b;\Theta_b)$ with the structure of a $\mathscr{C}^\infty$ vector bundle (resp. \ldots) such that $\widetilde{\varepsilon}$ is an isomorphism from the sheaf $\mathrm{R}^1\pi_*\widetilde{\Theta}$ to the sheaf of germs of $\mathscr{C}^\infty$ sections (resp. \ldots) of the bundle $E$.
   \end{enumerate}
-\end{definition*}
+\end{rmenv}
 
 In fact, Kodaira and Spencer have shown \cite{2} that, by identifying the $\HH^1$ spaces with spaces of harmonic forms, condition~2 is a consequence of condition~1.
 
 Then \hyperref[theorem1]{Theorem~1} has the following corollary:
 
-\begin{proposition}{1}
+\begin{itenv}{Proposition 1}
 \label{proposition1}
   For the proper mixed manifold $\pi\colon V\to B$ to be locally trivial, it is necessary and sufficient for it to be regular and, for all $b\in B$, for the Spencer--Kodaira map
   \[
     \rho_b\colon T_b \to \HH^1(V_b;\Theta_b)
   \]
   to be zero.
-\end{proposition}
+\end{itenv}
 
 Indeed, since $\widetilde{\varepsilon}$ is injective, this condition implies that the map
 \oldpage{3-04}
@@ -263,10 +250,10 @@ Note that $V_b$ and $V_{b'}$ are isomorphic if and only if there exists some $a$
 
 Let $\Theta$ be the sheaf of germs of holomorphic fields of tangent vectors on $V_b$.
 
-\begin{proposition}{2}
+\begin{itenv}{Proposition 2}
 \label{proposition2}
   $\HH^0(V_b;\Theta)$ can be identified with the vector space of matrices that commute with $b$, and $\HH^1(V_b;\Theta)$ has the same dimension as this vector space.
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   If $X$ is a vector field on an open subset $U\subset\widetilde{V}$, then $b_*(X)$ is the vector field on the open subset $b(U)$ given by transporting via $b$, i.e. $b_*X(u)=bX(b^{-1}u)$.
@@ -275,7 +262,7 @@ Let $\Theta$ be the sheaf of germs of holomorphic fields of tangent vectors on $
   The cover $\widetilde{\mathscr{U}}=\{\widetilde{U}_i\}$ of $\widetilde{V}$ consists of Stein open subsets that are invariant under $b$ (not necessarily connected, but this doesn't matter).
   Then $b_*$ defines a map, again denoted by $b_*$, from the group of cochains $C^\bullet(\widetilde{V},\widetilde{U};\Theta)$ to itself.
 
-  \begin{lemma}{1}
+  \begin{itenv}{Lemma 1}
   \label{lemma1}
     We have the exact sequence
     \[
@@ -285,7 +272,7 @@ Let $\Theta$ be the sheaf of germs of holomorphic fields of tangent vectors on $
       \xrightarrow{1-b_*} C^\bullet(\widetilde{V},\widetilde{U};\Theta)
       \to 0.
     \]
-  \end{lemma}
+  \end{itenv}
 
   \begin{proof}
     The only thing that we need to verify is that the map $1-b_*$ is surjective.
@@ -353,14 +340,14 @@ This is a general result, that we hope to be able to prove in a later talk of th
 
 We have $T_b=\Hom(\CC^n,\CC^n)=L\subset\HH^0(\widetilde{V};\Theta)$, and we defined, to prove \hyperref[proposition2]{Proposition~2}, a surjective map $\delta_*\colon L\to\HH^1(V_b;\Theta)$.
 
-\begin{proposition}{3}
+\begin{itenv}{Proposition 3}
 \label{proposition3}
   The Spencer--Kodaira map $\rho$ is given, for the mixed manifold studied in this section, by
   \[
     \rho(a) = \delta_*(ab^{-1}).
   \]
   In particular, it is surjective, and its kernel is the space of matrices of the form $[\ell,b]$ for $\ell\in L$.
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   Let $a\in T_b=L$.

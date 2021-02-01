@@ -55,10 +55,13 @@
 
 \usepackage{amsthm}
 
-\theoremstyle{plain}
-  \newtheorem*{proposition*}{Proposition}
-\theoremstyle{definition}
-  \newtheorem*{definition*}{Definition}
+\newenvironment{itenv}[1]
+  {\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
+
+\newenvironment{rmenv}[1]
+  {\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
 
 
 %% Shortcuts %%
@@ -219,20 +222,20 @@ The morphisms of mixed spaces are the same: mixed spaces form a \emph{full subca
 A mixed space $\pi\colon V\to B$ is said to be \emph{proper} if $B$ is locally compact and the map $\pi$ is proper (i.e. the inverse image of any compact subset is compact).
 If it is a mixed manifold, then we can show that it is a fibred manifold that is locally trivial with respect to the underlying $\mathscr{C}^\infty$ structure, but the previous talk shows that, in general, any two fibres are not isomorphic as $\CC$-analytic manifolds.
 
-\begin{definition*}
+\begin{rmenv}{Definition}
   Let $V_0$ be a compact $\CC$-analytic manifold, $B$ a locally compact space, and $b_0\in B$.
   Then a \emph{$\CC$-analytic deformation of $V_0$ over $(B,b_0)$} consists of a proper $\CC$-analytic mixed space $\pi\colon V\to B$
 \oldpage{2-04}
   along with an isomorphism of $\CC$-analytic manifolds $i\colon V_0\to\pi^{-1}(b_0)$.
-\end{definition*}
+\end{rmenv}
 
 The goal of this seminar is the study, at least local, and an attempt at a classification of, $\CC$-analytic deformations of a given compact $\CC$-analytic manifold $V_0$.
 
-\begin{definition*}
+\begin{rmenv}{Definition}
   Let $V_0$ be a compact $\CC$-analytic manifold.
   A \emph{$\CC$-analytic deformation $(\pi\colon V\to B,i\colon V_0\to V)$ of $V_0$} is said to be \emph{locally complete} if, for any other deformation $(\pi'\colon V'\to B',i'\colon V_0\to V')$ of $V_0$, there exists a neighbourhood $B'_1$ of $b'_0$ in $B'$, an analytic map $f_1\colon B'_1\to B$ with $f_1(b'_0)\to b_0$, and a morphism of $\CC$-analytic mixed spaces $f\colon {\pi'}^{-1}(B'_1)\to V$ over $f_1$ such that $f\circ i'=i$.
   The deformation is said to be \emph{locally universal} is furthermore the germ of $f_1$ at $b'_0$ is determined uniquely by this condition.
-\end{definition*}
+\end{rmenv}
 
 It seems that every compact $\CC$-analytic manifold $V_0$ admits a locally complete $\CC$-analytic deformation, and a locally universal one if the group of automorphisms of $V_0$ is discrete.
 
@@ -314,10 +317,10 @@ By integrating $\xi$, we obtain a $\mathscr{C}^\infty$ map, denoted by $e^\xi$, 
 \end{enumerate}
 Note that $W$ is a mixed manifold over $\RR\times B$ (resp. a mixed space over $\CC\times B$).
 
-\begin{proposition*}
+\begin{itenv}{Proposition}
   For $e^\xi\colon W\to V$ to be a morphism of mixed spaces over the projection $\RR\times B\to B$, it is necessary and sufficient for $\xi$ to be a vertical holomorphic field.
   For $e^\xi\colon W\to V$ to be a morphism of mixed spaces over a map from an open subset of $\RR\times B$ containing $\{0\}\times B$ to $B$, it is necessary and sufficient for $\xi$ to be a projectable holomorphic field.
-\end{proposition*}
+\end{itenv}
 
 The proof is left to the reader.
 
@@ -349,12 +352,12 @@ We also have a canonical map
 \]
 that is injective if $V_0$ is non-empty, and surjective if $V_0$ is connected.
 
-\begin{definition*}
+\begin{rmenv}{Definition}
   The \emph{Spencer--Kodaira map} is the composition
   \[
     \rho_0 = \delta\circ\iota\colon T_0 \to \HH^1(V_0;\Theta_0).
   \]
-\end{definition*}
+\end{rmenv}
 
 This map is an essential tool in the local study of deformations of $\CC$-analytic varieties.
 Note that $\Theta_0$ is exactly the sheaf of germs of holomorphic fields of tangent vectors to $V_0$, and thus depends only on $V_0$, while $T_0$ depends only on the base.

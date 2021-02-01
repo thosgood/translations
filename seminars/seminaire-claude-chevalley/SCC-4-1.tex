@@ -51,24 +51,13 @@
 
 \usepackage{amsthm}
 
-\theoremstyle{plain}
+\newenvironment{itenv}[1]
+  {\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
 
-  \newtheorem{innertheorem}{Theorem}
-  \newenvironment{theorem}[1]
-    {\renewcommand\theinnertheorem{#1}\innertheorem}
-    {\endinnertheorem}
-
-  \newtheorem{innercorollary}{Corollary}
-  \newenvironment{corollary}[1]
-    {\renewcommand\theinnercorollary{#1}\innercorollary}
-    {\endinnercorollary}
-
-  \newtheorem*{proposition}{Proposition}
-
-
-\theoremstyle{definition}
-
-  \newtheorem*{remark}{Remark}
+\newenvironment{rmenv}[1]
+  {\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
 
 
 %% Shortcuts %%
@@ -251,14 +240,14 @@ We will see that the restriction of $\mathfrak{M}$ to the subspace $E_S$ can be 
 
 For every prime ideal $\mathfrak{p}$, we denote by $A_\mathfrak{p}$ and $M_\mathfrak{p}$ the ring and the module obtained by localisation of the multiplicative system $S=A\setminus\mathfrak{p}$.
 
-\begin{theorem}{1}
+\begin{itenv}{Theorem 1}
 \label{theroem1}
   \begin{enumerate}[(a)]
     \item If $\mathfrak{p}$ is a point of $V(A)$, then the localised ring $\mathfrak{A}_\mathfrak{p}$ (the fibre of the sheaf $\mathfrak{A}$ over $\mathfrak{p}$) is canonically isomorphic to $A_\mathfrak{p}$;
       Identifying $\mathfrak{A}_\mathfrak{p}$ with $A_\mathfrak{p}$, the localised module $\mathfrak{M}_\mathfrak{p}$ of the sheaf $\mathfrak{M}$ at $\mathfrak{p}$ is canonically isomorphic to $M_\mathfrak{p}$, and thus to $M\otimes_A A_\mathfrak{p}$.
     \item The canonical map from $M_f=\mathfrak{M}^*(U_f)$ to $\mathfrak{M}(U_f)$ is an isomorphism.
   \end{enumerate}
-\end{theorem}
+\end{itenv}
 
 \begin{proof}
   The first claim of (a) follows from the fact that
@@ -303,10 +292,10 @@ For every prime ideal $\mathfrak{p}$, we denote by $A_\mathfrak{p}$ and $M_\math
   and, in $M_{f_j}$, we have the equality $X_j=m_j/f_j=m/1$ for all $j$.
 \end{proof}
 
-\begin{corollary}{1}
+\begin{itenv}{Corollary 1}
 \label{corollary1}
   If $S$ is a multiplicatively-stable subset of $A$, then the restriction of the sheaf $\mathfrak{M}$ to $E_S$ can be identified with the sheaf $\mathfrak{M}_S$ on $V(A_S)$ associated to $M_S$.
-\end{corollary}
+\end{itenv}
 
 \begin{proof}
   Let $f$ be an element of $A$.
@@ -331,15 +320,15 @@ For every prime ideal $\mathfrak{p}$, we denote by $A_\mathfrak{p}$ and $M_\math
 \end{proof}
 
 \oldpage{1-07}
-\begin{corollary}{2}
+\begin{itenv}{Corollary 2}
 \label{corollary2}
   $M_S$ is the module of sections of $\mathfrak{M}$ over $E_S$.
-\end{corollary}
+\end{itenv}
 
-\begin{corollary}{3}
+\begin{itenv}{Corollary 3}
 \label{corollary3}
   If $M$ and $N$ are $A$-modules, then the map \[\varphi\colon\Hom(M,N)\to\Hom(\mathfrak{M},\mathfrak{N})\] defined by the functor $M\mapsto\mathfrak{M}$ is bijective.
-\end{corollary}
+\end{itenv}
 
 \begin{proof}
   We will exhibit an inverse map $\psi$.
@@ -350,7 +339,7 @@ For every prime ideal $\mathfrak{p}$, we denote by $A_\mathfrak{p}$ and $M_\math
 
 It follows from \hyperref[corollary3]{this corollary}, along with the exactness of the functor $M\mapsto\mathfrak{M}$, that, if $u\colon\scr{F}\to\scr{G}$ is a morphism of quasi-coherent sheaves, then $\Ker u$ and $\Coker u$ are quasi-coherent sheaves.
 
-\begin{theorem}{2}
+\begin{itenv}{Theorem 2}
 \label{theorem2}
   If $\scr{F}$ is an algebraic sheaf on $V(A)$, then the following are equivalent:
   \begin{enumerate}[(a)]
@@ -367,7 +356,7 @@ It follows from \hyperref[corollary3]{this corollary}, along with the exactness 
       is bijective.
     \item $\scr{F}$ is locally isomorphic to a quasi-coherent sheaf, i.e. every point $\mathfrak{p}$ of $V$ has a special neighbourhood $U_f$ such that $\scr{F}|U_f$ is a coherent sheaf.
   \end{enumerate}
-\end{theorem}
+\end{itenv}
 
 \begin{proof}
   We have already seen that (a)$\implies$(b), (a)$\implies$(c), and (a)$\implies$(d).
@@ -441,7 +430,7 @@ Such a surjection induces a map
 and defines $p$ surjections from $\scr{F}$ to $U$, i.e. the images of the basis vectors of $\Gamma(U,\mathfrak{A})^p$.
 Conversely, the data of $p$ sections of $\scr{F}$ over $U$ defines a map $A^p|U\to\scr{F}|U$).
 
-\begin{theorem}{3}
+\begin{itenv}{Theorem 3}
 \label{theorem3}
   The following are equivalent (if $A$ is Noetherian and if $\scr{F}$ is an algebraic sheaf on $V(A)$):
   \begin{enumerate}[(a)]
@@ -449,7 +438,7 @@ Conversely, the data of $p$ sections of $\scr{F}$ over $U$ defines a map $A^p|U\
     \item $\scr{F}$ is quasi-coherent and of finite type.
     \item $\scr{F}$ is of finite type, and, for every open subset $U$ and every morphism $\varphi\colon\scr{G}\to\scr{F}|U$, where $\scr{G}$ is a sheaf of finite type on $U$, the kernel $\Ker\varphi$ is of finite type on $U$.
   \end{enumerate}
-\end{theorem}
+\end{itenv}
 
 \begin{proof}
   We already know that (a)$\implies$(b).
@@ -505,13 +494,13 @@ Conversely, the data of $p$ sections of $\scr{F}$ over $U$ defines a map $A^p|U\
   \]
 \end{proof}
 
-\begin{remark}
+\begin{rmenv}{Remark}
 \label{remark-theorem3}
 \oldpage{1-11}
   Claim (c) gives a characterisation of coherent sheaves, which does not require the base of special open subsets of $V(A)$.
   In fact, if $V$ is an arbitrary topological space, and $\mathfrak{A}$ a sheaf of rings on $V$, then the sheaves of $\mathfrak{A}$-modules that satisfy (c) are the objects of an abelian subcategory of the category of sheaves of $\mathfrak{A}$-modules (see Serre \cite{4}).
   In the case considered here, the quasi-coherent sheaves are the inductive limits of coherent sheaves.
-\end{remark}
+\end{rmenv}
 
 
 \section{The maximal spectrum of a Jacobson ring}
@@ -522,14 +511,14 @@ For this, we denote by $\Omega(A)$ the \emph{maximal spectrum of $A$}, which is 
 We further suppose that $A$ is a \emph{Jacobson ring}, i.e. that every prime ideal is the intersection of maximal ideals (see \cite{1} and \cite{3}).
 The following proposition then holds true:
 
-\begin{proposition}
+\begin{itenv}{Proposition}
   The following are equivalent:
   \begin{enumerate}[(a)]
     \item $A$ is a Jacobson ring.
     \item The correspondence $U\mapsto U\cap\Omega(A)$ between open subsets of $V(A)$ and of $\Omega(A)$ is bijective.
     \item The correspondence $W\mapsto W\cap\Omega(A)$ between closed subsets of $V(A)$ and of $\Omega(A)$ is bijective.
   \end{enumerate}
-\end{proposition}
+\end{itenv}
 
 \begin{proof}
   The equivalence of (b) and (c) is trivial.

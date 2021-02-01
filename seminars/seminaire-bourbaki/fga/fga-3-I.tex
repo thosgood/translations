@@ -56,47 +56,13 @@
 
 \usepackage{amsthm}
 
-\theoremstyle{plain}
+\newenvironment{itenv}[1]
+  {\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
 
-\newtheorem{innertheorem}{Theorem}
-\newenvironment{theorem}[1]
-  {\renewcommand\theinnertheorem{#1}\innertheorem}
-  {\endinnertheorem}
-
-\newtheorem{innerproposition}{Proposition}
-\newenvironment{proposition}[1]
-  {\renewcommand\theinnerproposition{#1}\innerproposition}
-  {\endinnerproposition}
-
-\newtheorem{innerlemma}{Lemma}
-\newenvironment{lemma}[1]
-  {\renewcommand\theinnerlemma{#1}\innerlemma}
-  {\endinnerlemma}
-
-\newtheorem{innercorollary}{Corollary}
-\newenvironment{corollary}[1]
-  {\renewcommand\theinnercorollary{#1}\innercorollary}
-  {\endinnercorollary}
-
-\newtheorem*{corollary*}{Corollary}
-\newtheorem*{lemma*}{Lemma}
-
-
-\theoremstyle{definition}
-
-\newtheorem{innerdefinition}{Definition}
-\newenvironment{definition}[1]
-  {\renewcommand\theinnerdefinition{#1}\innerdefinition}
-  {\endinnerdefinition}
-
-\newtheorem{innerexample}{Example}
-\newenvironment{example}[1]
-  {\renewcommand\theinnerexample{#1}\innerexample}
-  {\endinnerexample}
-
-\newtheorem*{remark*}{Remark}
-\newtheorem*{remarks*}{Remarks}
-\newtheorem*{example*}{Example}
+\newenvironment{rmenv}[1]
+  {\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
 
 
 %% Shortcuts %%
@@ -196,7 +162,7 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
 \subsection{}
 \label{A.1.a}
 
-\begin{definition}{1.1}
+\begin{rmenv}{Definition 1.1}
 \label{definition:A.1.1}
   A \emph{fibred category $\cal{F}$ with base $\cal{C}$} (or \emph{over $\cal{C}$}) consists of
   \begin{itemize}
@@ -225,28 +191,28 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
         \end{tikzcd}
       \]
   \end{enumerate}
-\end{definition}
+\end{rmenv}
 
-\begin{example}{1}
+\begin{rmenv}{Example 1}
 \label{example:A.1.1(1)}
   Let $\cal{C}$ be a category where all fibre products exist.
   We then define a fibred category $\cal{F}$ with base $\cal{C}$ by setting $\cal{F}_X$ to be the category of objects of $\cal{C}$ over $X$, and the functor $f^*\colon\cal{F}_Y\to\cal{F}_X$ corresponding to a morphism $f\colon X\to Y$ being defined by the \emph{fibre product} $Z\rightsquigarrow Z\times_Y X$.
-\end{example}
+\end{rmenv}
 
-\begin{example}{2}
+\begin{rmenv}{Example 2}
 \label{example:A.1.1(2)}
   Let $\cal{C}$ be the category of preschemes, and, for $X\in\cal{C}$, let $\cal{F}_X$ be the category of quasi-coherent sheaves of modules on $X$.
   If $f\colon X\to Y$ is a morphism of preschemes, then $f^*\colon\cal{F}_Y\to\cal{F}_X$ is the
 \oldpage{190-03}
   \emph{inverse image of sheaves of modules} functor.
   We thus obtain a category fibred over $\cal{C}$.
-\end{example}
+\end{rmenv}
 
 
 \subsection{}
 \label{A.1.b}
 
-\begin{definition}{1.2}
+\begin{rmenv}{Definition 1.2}
 \label{definition:A.1.2}
   A diagram
   \[
@@ -257,9 +223,9 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
     \end{tikzcd}
   \]
   of maps of sets is said to be \emph{exact} if $u$ is a bijection from $E$ to the subset of $E'$ consisting of the $x'\in E'$ such that $v_1(x')=v_2(x')$.
-\end{definition}
+\end{rmenv}
 
-\begin{definition}{1.3}
+\begin{rmenv}{Definition 1.3}
 \label{definition:A.1.3}
   Let $\cal{F}$ be a fibred category with base $\cal{C}$, and consider a diagram
   \[
@@ -283,9 +249,9 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
   (where $\gamma=\alpha\beta_1=\alpha\beta_2$) of sets is exact.
 
   In this latter diagram, for simplicity, we have identified $\beta_i^*\alpha^*$ with $(\alpha\beta_i)^*=\gamma^*$, using $c_{\beta_i,\alpha}$.
-\end{definition}
+\end{rmenv}
 
-\begin{definition}{1.4}
+\begin{rmenv}{Definition 1.4}
   Let $\cal{F}$ be a fibred category with base $\cal{C}$, and consider morphisms $\beta_1,\beta_2\colon S''\to S'$ in $\cal{C}$.
   Let $\xi'\in\cal{F}_{S'}$.
   We define a \emph{gluing data} on $\xi'$ (with respect to the pair $(\beta_1,\beta_2)$) to be an isomorphism from $\beta_1^*(\xi')$ to $\beta_2^*(\xi')$.
@@ -298,7 +264,7 @@ So, if $A$ is a local Noetherian ring, with completion $\overline{A}$, then we w
       &\beta_2^*(\eta').
     \end{tikzcd}
   \]
-\end{definition}
+\end{rmenv}
 
 With this definition, the objects of $\cal{F}_{S'}$ that are endowed with gluing data (with respect to $\beta_1$ and $\beta_2$) then form a \emph{category}.
 If $\alpha\colon S'\to S$ is a morphism such that $\alpha\beta_1=\alpha\beta_2$, then, for every $\xi\in\cal{F}_{S'}$, the object $\xi'=\alpha^*(\xi)$
@@ -318,10 +284,10 @@ is a morphism in $\cal{F}_{S'}$ that is compatible with the canonical gluing dat
 We thus obtain a \emph{canonical functor} from the category $\cal{F}_S$ to the category of objects of $\cal{F}_{S'}$ endowed with gluing data with respect to the pair $(\beta_1,\beta_2)$.
 With this, we can also rephrase \hyperref[definition:A.1.3]{Definition~1.3} by saying that the diagram~\hyperref[equation-definition:A.1.3]{(+)} is \emph{$\cal{F}$-exact} if the above functor is \emph{fully faithful}, i.e. if the above functor defines an equivalence between the category $\cal{F}_S$ and a subcategory of the category of objects of $\cal{F}_S$ endowed with gluing data with respect to $(\beta_1,\beta_2)$.
 
-\begin{definition}{1.5}
+\begin{rmenv}{Definition 1.5}
 \label{definition:A.1.5}
   We say that a gluing data on $\xi'\in\cal{F}_{S'}$ is \emph{effective} (with respect to $\alpha$) if $\xi'$, endowed with this data, is isomorphic to $\alpha^*(\xi)$ for some $\xi\in\cal{F}_S$.
-\end{definition}
+\end{rmenv}
 
 In the case where the diagram~\hyperref[equation-definition:A.1.3]{(+)} is $\cal{F}$-exact, the object $\xi$ in \hyperref[definition:A.1.5]{Definition~1.5} is then determined up to unique isomorphism, and \emph{the category $\cal{F}_S$ is equivalent to the category of objects of $\cal{F}_{S'}$ endowed with effective gluing data}.
 
@@ -341,12 +307,12 @@ We then have two immediate necessary conditions for a gluing data $\varphi\colon
   where $p_{ij}$ denotes the canonical projection from $S'\times_S S'\times_S S'$ to the partial product of its $i$th and $j$th factors.
 \end{enumerate}
 
-\begin{definition}{1.6}
+\begin{rmenv}{Definition 1.6}
 \label{definition:A.1.6}
   We define \emph{descent data} on $\xi'\in\cal{F}_{S'}$, with respect to the morphism $\alpha\colon S'\to S$, to be a gluing data on $\xi'$ with respect to the pair $(p_1,p_2)$ of canonical projections $S'\times_S S'\to S'$ that satisfies conditions~(i) and (ii) above.
-\end{definition}
+\end{rmenv}
 
-\begin{definition}{1.7}
+\begin{rmenv}{Definition 1.7}
 \label{definition:A.1.7}
   A morphism $\alpha\colon S'\to S$ is said to be an \emph{$\cal{F}$-descent morphism} if the diagram
   \[
@@ -361,7 +327,7 @@ We then have two immediate necessary conditions for a gluing data $\varphi\colon
 
   This latter condition (of strictness) can also be stated in a more evocative way:
   ``giving an object of $\cal{F}_S$ is equivalent to giving an object of $\cal{F}_{S'}$ endowed with a descent data''.
-\end{definition}
+\end{rmenv}
 
 Note that, if an $\cal{F}$-descent morphism\footnote{\emph{[Comp.] It is useless to assume here that $\alpha$ is an $\cal{F}$-descent morphism.}} $\alpha\colon S'\to S$ admits a \emph{section} $s\colon S\to S'$ (i.e. a morphism $s$ such that $\alpha s=\id_S$), then it is a strict $\cal{F}$-descent morphism:
 if $\xi'\in\cal{F}_{S'}$ is endowed with descent data with respect to $\alpha$, then ``it comes from'' $\xi=s^*(\xi')$.
@@ -398,7 +364,7 @@ the combination of (ii~bis) and (i~bis), however, does imply that the $\varphi_{
 \subsection{}
 \label{A.2.a}
 
-\begin{definition}{2.1}
+\begin{rmenv}{Definition 2.1}
 \label{definition:A.2.1}
   Let $\cal{C}$ be a category.
   A diagram
@@ -419,7 +385,7 @@ the combination of (ii~bis) and (i~bis), however, does imply that the $\varphi_{
   \]
   of sets is exact (\hyperref[definition:A.1.2]{Definition~1.2}).
   We then say that $(T,\alpha)$ (or, by an abuse of language, $T$) is a \emph{kernel} of the pair $(\beta_1,\beta_2)$ of morphisms.
-\end{definition}
+\end{rmenv}
 
 This kernel is evidently determined up to unique isomorphism.
 If $\cal{C}$ is the category of sets, then the above definition is compatible with \hyperref[definition:A.1.2]{Definition~1.2}.
@@ -434,11 +400,11 @@ Dually, we define the exactness of a diagram
 of morphisms in $\cal{C}$;
 we then say that $(S,\alpha)$ is a \emph{cokernel} of the pair $(\beta_1,\beta_2)$ morphisms.
 
-\begin{definition}{2.2}
+\begin{rmenv}{Definition 2.2}
 \label{definition:A.2.2}
   A morphism $\alpha\colon S'\to S$ is said to be a \emph{strict epimorphism} if it is an epimorphism and, for every morphism $u\colon S'\to Z$, the following necessary condition is also sufficient for $u$ to factor as $S'\to S\to Z$:
   for every $S''\in\cal{C}$ and every pair $\beta_1,\beta_2\colon S''\to S$ of morphisms such that $\alpha\beta_1=\alpha\beta_2$, we also have that $u\beta_1=u\beta_2$.
-\end{definition}
+\end{rmenv}
 
 If the fibre product $S'\times_S S'$ exists, then it is equivalent to say that the diagram
 \[
@@ -456,27 +422,27 @@ We leave to the reader the task of developing the dual notion of a \emph{strict 
 
 To make the relation between the ideas of $\cal{F}$-descent morphisms and strict epimorphisms more precise, we introduce the following definitions:
 
-\begin{definition}{2.3}
+\begin{rmenv}{Definition 2.3}
   A morphism $\alpha\colon S'\to S$ is said to be a \emph{universal epimorphism} (resp. a \emph{strict universal epimorphism}) if, for every $T$ over $S$, the fibre product $T'=S'\times_S T$ exists, and the projection $T'\to T$ is an epimorphism (resp. a strict epimorphism).
-\end{definition}
+\end{rmenv}
 
 In very nice categories (such as the category of sets, the category of sets over a topological space, abelian categories, etc.), the four notions of ``epijectivity'' introduced above all coincide;
 they are, however, all distinct in a category such as the category of preschemes, or the category of preschemes over a given non-empty prescheme $S$, even if we restrict to $S$-schemes that are finite over $S$.
 
-\begin{definition}{2.4}
+\begin{rmenv}{Definition 2.4}
 \label{definition:A.2.4}
   A morphism $\alpha\colon S'\to S$ is said to be a \emph{descent morphism} (resp. a \emph{strict descent morphism}) if it is an $\cal{F}$-descent morphism (resp. a strict $\cal{F}$-descent morphism) (cf. \hyperref[definition:A.1.7]{Definition~1.7}), where $\cal{F}$ denotes the fibred category over $\cal{C}$ of objects of $\cal{C}$ over objects of $\cal{C}$ (\hyperref[example:A.1.1(1)]{Example~1}).
-\end{definition}
+\end{rmenv}
 
-\begin{proposition}{2.1}
+\begin{itenv}{Proposition 2.1}
   If $\cal{C}$ has all finite products and (finite) fibre products, then there is an identity between descent morphisms in $\cal{C}$ and strict universal epimorphisms in $\cal{C}$.
-\end{proposition}
+\end{itenv}
 
 
 \subsection{}
 \label{A.2.b}
 
-\begin{example*}
+\begin{rmenv}{Example}
   Let $\cal{C}$ be the category of preschemes.
   Let $S\in\cal{C}$, and let $S'$ and $S''$ be preschemes that are \emph{finite} over $S$, i.e. that correspond to sheaves of algebras $\scr{A}'$ and $\scr{A}''$ over $S$ that are quasi-coherent (as sheaves of modules) and of finite type (i.e. coherent if $S$ is locally Noetherian).
   Let $\alpha\colon S'\to S$ be the structure morphism of $S'$, and let $\beta_1$ and $\beta_2$ be $S$-morphisms from $S''$ to $S'$, defined by algebra homomorphisms $\scr{A}'\to\scr{A}''$, which we also denote by $\beta_1$ and $\beta_2$.
@@ -517,7 +483,7 @@ they are, however, all distinct in a category such as the category of preschemes
   As we have already mentioned, even if $S$ is the scheme of a local Artinian ring, then a finite morphism $S'\to S$ that is an epimorphism is not necessarily a strict epimorphism.
   However, we can prove that, \emph{if $S$ is a Noetherian prescheme, then every finite morphism $S'\to S$ that is an epimorphism is the composition of a finite sequence of strict epimorphisms} (also finite).
   This also shows that the composition of two strict epimorphisms is not necessarily a strict epimorphism.
-\end{example*}
+\end{rmenv}
 
 
 \subsection{}
@@ -562,12 +528,12 @@ which is a sub-$A$-module of $M'$.
 The canonical injection $M\to M'$ defines a homomorphism of $A'$-modules $M\otimes_A A'\to M'$.
 \emph{The effectiveness of $\varphi$ then implies the following: $M$ is a flat $A$-module, and the above homomorphism is an isomorphism.}
 
-\begin{remark*}
+\begin{rmenv}{Remark}
   In the above, we have imposed no flatness hypotheses on the morphisms of the diagram~\hyperref[equation-example:A.2.b]{(+)}, and this obliges us, in order to have a technique of descent, to impose flatness hypotheses on the objects over $S$ and $S'$ that we consider.
   In \hyperref[B.2]{B.2}, we will impose a flatness hypothesis on $\alpha\colon S'\to S$, which will allow us to have a technique of descent for objects over $S$ and $S'$ that are no longer under any flatness hypotheses.
   In any case, there is a flatness hypothesis involved somewhere.
   This is one of the main reasons for the importance of the notion of flatness in algebraic geometry (whose role could not be visible when we restricted to base \emph{fields}, over which everything, in fact, is flat!).
-\end{remark*}
+\end{rmenv}
 
 
 \oldpage{190-10}
@@ -711,15 +677,15 @@ Then, \emph{if $\alpha\colon S'\to S$ is an $\cal{F}$-descent morphism} (cf. \hy
 further, \emph{this inclusion is the identity if and only if every descent data on $\xi'=\xi\times_S S'$ with respect to $\alpha\colon S'\to S$ is effective}.
 (This will be the case, in particular, if $\alpha\colon S'\to S$ is a strict $S$-descent morphism).
 
-\begin{remark*}
+\begin{rmenv}{Remark}
   The cochain complexes of the form $C^\bullet(T/S,F)$ contain, as particular cases, the majority of standard known complexes (that of \v{C}ech cohomology, of group cohomology, etc.), and play an important role in algebraic geometry (notably in the ``Weil cohomology'' of preschemes).
-\end{remark*}
+\end{rmenv}
 
 
 \subsection{}
 \label{A.4.d}
 
-\begin{example}{1}
+\begin{rmenv}{Example 1}
 \label{example:A.4.d}
   Let $S'$ be an object over $S\in\cal{C}$, and let $\Gamma$ be a group of automorphisms of $S'$ such that $S'$ is ``formally $\Gamma$-principal over $S$'', i.e. such that the natural morphism
   \[
@@ -729,13 +695,13 @@ further, \emph{this inclusion is the identity if and only if every descent data 
   (We suppose that all the necessary direct sums exist in $\cal{C}$).
   Let $F$ be a contravariant functor from $\cal{C}$ to the category of abelian groups.
   Then \emph{$C^\bullet(S'/S,F)$ is canonically isomorphic to the simplicial group $C^\bullet(\Gamma,F(S'))$ of standard homogeneous cochains, and so $\HH^\bullet(S'/S,F)$ is canonically isomorphic to $\HH^\bullet(\Gamma,F(S')$}.
-\end{example}
+\end{rmenv}
 
 
 \subsection{}
 \label{A.4.e}
 
-\begin{example}{2}
+\begin{rmenv}{Example 2}
   Let $\cal{C}$ be the category of preschemes.
   We denote by $\Ga$ (for ``additive group'') the contravariant functor from $\cal{C}$ to the category of abelian groups, defined by
   \[
@@ -791,12 +757,12 @@ further, \emph{this inclusion is the identity if and only if every descent data 
   \end{enumerate}
 
   If $S'\to S$ is a strict epimorphism, then the above conditions imply that it is a \emph{strict} descent morphism for free modules (not necessarily of finite type) over $A'$.
-\end{example}
+\end{rmenv}
 
-\begin{remark*}
+\begin{rmenv}{Remark}
   The definition of the groups $\HH^i(S'/S,\Gm)$ in the case where $S$ (resp. $S'$) is a scheme over the field $A$ (resp. $A'$) is due to Amitsur.
   The group $\HH^2(S'/S,\Gm)$ is particularly interesting as a ``global'' variant of the Brauer group, for which we can refer to \cite[chap.~VII]{1}.
-\end{remark*}
+\end{rmenv}
 
 
 
@@ -806,10 +772,10 @@ further, \emph{this inclusion is the identity if and only if every descent data 
 \section{Statement of the descent theorems}
 \label{B.1}
 
-\begin{definition}{1.1}
+\begin{rmenv}{Definition 1.1}
   A morphism $\alpha\colon S'\to S$ of prescheme is said to be \emph{flat} if $\scr{O}_{x'}$ is a flat module over the ring $\scr{O}_{\alpha(x')}$ for all $x'\in S'$ (i.e. if $\scr{O}_{x'}\otimes_{\scr{O}_{\alpha(x')}}M$ is an exact functor in the $\scr{O}_{\alpha(x')}$-module $M$).
   A morphism is said to be \emph{faithfully flat} if it is flat and surjective.
-\end{definition}
+\end{rmenv}
 
 For example, if $S=\Spec(A)$ and $S'=\Spec(A')$, then $S'$ is flat over $S$ if and only if $A'$ is a flat $A$-module, and $S'$ is faithfully flat over $S$ if and only if $A'$ is a faithfully flat $A$-module (i.e. if and only if $A'\otimes_A M$ is an \emph{exact} and \emph{faithful} functor in the $A$-module $M$);
 this also implies, in the terminology of Serre~\cite{5}, that the pair $(A,A')$ is flat.
@@ -819,20 +785,20 @@ in other words, for a sequence of homomorphisms of
 quasi-coherent sheaves on $S$ to be exact, it is necessary and sufficient that its inverse image on $S'$ be exact (in particular, for a homomorphism of quasi-coherent sheaves on $S$ to be a monomorphism (resp. an epimorphism, resp. an isomorphism), it is necessary and sufficient that its inverse image on $S'$ be a monomorphism (resp. an epimorphism, resp. an isomorphism)).
 This property holds true if we restrict to an arbitrary open subset of $S'$, and then characterise faithfully flat morphisms in this form.
 
-\begin{definition}{1.2}
+\begin{rmenv}{Definition 1.2}
   A morphism $\alpha\colon S'\to S$ is said to be \emph{quasi-compact} if the inverse image of every quasi-compact open subset $U$ of $S$ is quasi-compact (i.e. a \emph{finite} union of affine open subsets).
-\end{definition}
+\end{rmenv}
 
 It evidently suffices to verify this property for the \emph{affine} open subsets of $S$.
 For example, an affine morphism (i.e. a morphism such that the inverse image of an affine open subset is affine) is quasi-compact.
 
 The class of flat (resp. faithfully flat, resp. quasi-compact) morphisms is stable under composition and by ``base extension'', and of course contains all isomorphisms.
 
-\begin{theorem}{1}
+\begin{itenv}{Theorem 1}
 \label{theorem:B.1(1)}
   Let $\alpha\colon S'\to S$ be a morphism of preschemes that is \emph{faithfully flat} and \emph{quasi-compact}.
   Then $\alpha$ is a \emph{strict descent morphism} (cf. \hyperref[definition:A.1.7]{A, Definition~1.7}) for the fibred category $\cal{F}$ of quasi-coherent sheaves (cf. \hyperref[example:A.1.1(2)]{A, Example~2}).
-\end{theorem}
+\end{itenv}
 
 This statement implies two things:
 \begin{enumerate}[(i)]
@@ -846,7 +812,7 @@ This statement implies two things:
 
 Setting $\cal{F}=\scr{O}_S$ in (i), we obtain:
 
-\begin{corollary}{1}
+\begin{itenv}{Corollary 1}
 \label{corollary:B.1(1)}
   Let $\scr{G}$ be a quasi-coherent sheaf on $S$, with $\scr{G}'$ and $\scr{G}''$ denoting its inverse images on $S'$ and $S''=S'\times_S S'$ (respectively), and let $p_1$ and $p_2$ be the two projections from $S''$ to $S$.
   Then the diagram
@@ -859,15 +825,15 @@ Setting $\cal{F}=\scr{O}_S$ in (i), we obtain:
     \end{tikzcd}
   \]
   of maps of sets is \emph{exact} (cf. \hyperref[definition:A.1.1]{A, Definition~1.1}).
-\end{corollary}
+\end{itenv}
 
 Also, the combination of (i) and (ii) with \hyperref[definition:A.1.1]{A, Definition~1.1} gives:
 
-\begin{corollary}{2}
+\begin{itenv}{Corollary 2}
 \label{corollary:B.1(2)}
   Let $\scr{G}$ be as in \hyperref[corollary:B.1(1)]{Corollary~1}.
   Then there is a bijective correspondence between quasi-coherent subsheaves of $\scr{G}$ and quasi-coherent subsheaves of $\scr{G}'$ whose inverse images on $S''$ under the two projections $p_1$ and $p_2$ give the same subsheaf of $\scr{G}$.
-\end{corollary}
+\end{itenv}
 
 Of course, we have an equivalent statement in terms of quotient sheaves.
 As we have already seen in \hyperref[A.4.e]{(A.4.e)}, \hyperref[theorem:B.1(1)]{Theorem~1} should be thought of as a generalisation of Hilbert's ``Theorem~90'', and implies, as particular cases, various formulations in terms of $1$-cohomology.
@@ -880,10 +846,10 @@ For the proof, we can easily reduce to the case where $S=\Spec(A)$ and $S'=\Spec
 \]
 for every $A$-module $M$, which follows from the more general lemma:
 
-\begin{lemma}{1.1}
+\begin{itenv}{Lemma 1.1}
   Let $A'$ be a faithfully flat $A$-algebra.
   Then, for every $A$-module $M$, the $M$-augmented complex $C^\bullet(A'/A,\Ga)\otimes_A M$ (cf. \hyperref[A.4.e]{(A.4.e)}) is a \emph{resolution} of $M$.
-\end{lemma}
+\end{itenv}
 
 \begin{proof}
   It suffices to prove that the augmented complex induced from the above by extension of the base $A$ to $A'$ satisfies the same conclusions.
@@ -893,9 +859,9 @@ for every $A$-module $M$, which follows from the more general lemma:
 
 We note, in passing, the following corollary, which generalises a well-known statement in Galois cohomology (compare with \hyperref[A.4.e]{(A.4.e)}):
 
-\begin{corollary*}
+\begin{itenv}{Corollary}
   If $A'$ is faithfully flat over $A$, then $\HH^0(A'/A,\Ga)=A$, and $\HH^i(A'/A,\Ga)=0$ for $i\geq1$.
-\end{corollary*}
+\end{itenv}
 
 \begin{proof}[Part (ii)]
 To prove part (ii) of \hyperref[theorem:B.1(1)]{Theorem~1}, we proceed, as for (i), by restricting to the case where $S'$ over $S$ admits a section, where the result then follows from (i) (cf. \hyperref[A.1.c]{(A.1.c)}).
@@ -907,11 +873,11 @@ For example, the data on $S$ of a
 quasi-coherent sheaf of commutative algebras ``is equivalent to'' the data on $S'$ of such a sheaf endowed with a descent data relative to $\alpha\colon S'\to S$.
 Taking into account the functorial correspondence between such quasi-coherent sheaves on $S$ and affine preschemes over $S$, we obtain the second claim of the following theorem:
 
-\begin{theorem}{2}
+\begin{itenv}{Theorem 2}
 \label{theorem:B.1(2)}
   Let $\alpha\colon S'\to S$ be as in \hyperref[theorem:B.1(1)]{Theorem~1}.
   Then $\alpha$ is a (non-strict, in general) \emph{descent morphism} (cf. \hyperref[definition:A.2.4]{A, Definition~2.4}), and it is a \emph{strict descent morphism} for the fibred category of affine schemes over preschemes (cf. \hyperref[definition:A.1.7]{A, Definition~1.7}).
-\end{theorem}
+\end{itenv}
 
 The first claim of the theorem implies this:
 let $X$ and $Y$ be preschemes over $S$, with $X'$ and $Y'$ their inverse images over $S$, and $X''$ and $Y''$ their inverse images over $S''=S'\times_S S'$;
@@ -927,11 +893,11 @@ of natural maps is \emph{exact}, i.e. $\alpha^*$ is a bijection from $\Hom_S(X,Y
 This follows easily from \hyperref[theorem:B.1(1)]{Theorem~1} and \hyperref[corollary:B.1(1)]{Corollary~1}, if we restrict to $Y$ being affine over $S$;
 in the general case, we need to combine \hyperref[theorem:B.1(1)]{Theorem~1} with the following result:
 
-\begin{lemma}{1.2}
+\begin{itenv}{Lemma 1.2}
 \label{lemma:B.1.2}
   Let $\alpha\colon S'\to S$ be a faithfully flat and quasi-compact morphism.
   Then $S$ can be identified with a \emph{topological quotient space of $S'$}, i.e. every subset $U$ of $S$ such that $\alpha^{-1}(U)$ is open, is open.
-\end{lemma}
+\end{itenv}
 
 To complete \hyperref[theorem:B.1(2)]{Theorem~2}, we must give effectiveness criteria for a descent data on an $S'$-prescheme $X'$ (in the case where $X'$ is not assumed to be affine over $S'$).
 Note first of all that \emph{such a descent data is not necessarily effective}, even if $S$ is the spectrum of a field $k$, $S'$ the spectrum of a quadratic extension $k'$ of $k$, and $S''$ a proper algebraic scheme of dimension~$2$ over $S'$ (as we can see, due to Serre, by using the non-projective surface of Nagata).
@@ -943,14 +909,14 @@ We can also show that this is the case if $\alpha\colon S'\to S$ is \emph{finite
 It is, in particular, the case if $X'/S'$ is quasi-projective, and, in this case, we can show that the ``descended'' prescheme $X/S$ is also quasi-projective (and projective if $X'/S'$ is projective).
 In summary:
 
-\begin{theorem}{3}
+\begin{itenv}{Theorem 3}
 \label{theorem:B.1(3)}
   Let $\alpha\colon S'\to S$ be faithfully flat and quasi-compact morphism of preschemes.
   If $\alpha$ is \emph{radicial}, then it is a \emph{strict descent morphism}.
   If $\alpha$ is finite, then it is a strict descent morphism with respect to the fibred category of quasi-projective (or projective) preschemes over preschemes.
-\end{theorem}
+\end{itenv}
 
-\begin{remark*}
+\begin{rmenv}{Remark}
   I do not know if, in the second claim above, the hypothesis that $\alpha$ be \emph{finite} is indeed necessary;
   we can prove that, in any case, we can ``formally'' replace it by the following, seemingly weaker, hypothesis:
   \emph{for every point of $S$ there exists an open neighbourhood $U$, a finite and faithfully flat $U'$ over $U$, and an $S$-morphism from $U'$ to $S'$}.
@@ -964,7 +930,7 @@ In summary:
   \emph{A morphism $S'\to S$ that is quasi-finite, \'{e}tale, surjective, or a morphism of the form $\Spec(\overline{A})\to\Spec(A)$, is not always a strict descent morphism, even if $A$ is the local ring of an algebraic curve over an algebraically closed field $k$ and $S=\Spec(A)$.}
   \emph{We can thus find a proper simple morphism $f\colon X\to S$ that makes $X$ into a principal $E$-bundle over $S$, with $E$ an elliptic curve, such that $f'\colon X'\to S'$ is projective, but $f$ is not projective.}
   \emph{So this is also an example of a homogeneous principal bundle that is \emph{non-isotrivial} under an abelian scheme.}
-\end{remark*}
+\end{rmenv}
 
 
 \section{Application to the descent of certain properties of morphisms}
@@ -1054,7 +1020,7 @@ and a descent data on $X'$ is equivalent to the data of a sheaf homomorphism
 \]
 that is compatible with the morphism $h\colon X'\to S'$ and that satisfies the conditions analogous to equations~\hyperref[equation:B.3.1]{(3.1)} to \hyperref[equation:B.3.4]{(3.4)} above.
 
-\begin{example}{1}
+\begin{rmenv}{Example 1}
 \label{example:B.3(1)}
   (\emph{``Weil''}).
   Suppose that $S'/S$ is a \emph{Galois \'{e}tale covering} with Galois group $\Gamma$ (cf. \hyperref[A.3]{(A.3)} and \hyperref[A.4.d]{(A.4.d)}).
@@ -1063,9 +1029,9 @@ that is compatible with the morphism $h\colon X'\to S'$ and that satisfies the c
 \oldpage{190-23}
   is ``formal'', i.e. it can be proven in terms of categories, but, from the point of view of this section, we also obtain the explicit structure of $\scr{U}$ (endowed with its ring structure, the ring homomorphism $\scr{A}'\to\scr{U}$, and the diagonal map), which is completely known thanks to the following result:
   \emph{$\scr{U}$ admits, as a left $A'$-module, a basis given by the sections of $\scr{U}$ that correspond to elements of $\Gamma$}.
-\end{example}
+\end{rmenv}
 
-\begin{example}{2}
+\begin{rmenv}{Example 2}
 \label{example:B.3(2)}
   (\emph{``Cartier''}).
   Let $p$ be a prime number, and suppose that $p\scr{O}_S=0$ (i.e. that $\scr{O}_S$ is of \emph{characteristic~$p$}), that $(\scr{A}')^p\subset\scr{O}_S=\scr{A}$ (i.e. that $S'/S$ is \emph{radicial of height~$1$}), and that the sheaf of algebras $\scr{A}'$ over $\scr{A}$ \emph{locally admits a $p$-basis} (i.e. a family $(x_i)$ of sections such that $\scr{A}'$ is generated as an algebra by the $x_i$ under the sole condition that $x_i^p=0$).
@@ -1076,9 +1042,9 @@ that is compatible with the morphism $h\colon X'\to S'$ and that satisfies the c
     [X,fY] = X(f)Y + f[X,Y].
   \tag{3.5}
   \]
-\end{example}
+\end{rmenv}
 
-\begin{lemma*}
+\begin{itenv}{Lemma}
   $\scr{U}=\shHom_{\scr{O}_S}(\scr{A}',\scr{A}')$ is generated, as an $\scr{O}_S$-algebra endowed with an algebra homomorphism $\scr{A}'\to\scr{U}$, by the sub-left-$A'$-module $\fk{C}$, with the following additional relations:
   \[
   \label{equation:B.3.6}
@@ -1089,7 +1055,7 @@ that is compatible with the morphism $h\colon X'\to S'$ and that satisfies the c
     \end{cases}
   \tag{3.6}
   \]
-\end{lemma*}
+\end{itenv}
 
 It follows from the above lemma that a descent data on the quasi-coherent sheaf $\cal{F}'$ on $S'$ is equivalent to the data, for all $X\in\fk{C}$, of an $\scr{O}_S$-endomorphism $\overline{X}$ of $\cal{F}'$ that satisfies the following conditions:
 \[
@@ -1178,14 +1144,14 @@ Using the above uniqueness result, we see that the question of restriction of th
 In the same way, we see that, if $S'\to S$ is a \emph{simple} morphism of finite type, if $Y'$ is the ring of rational functions of $S'$, and if $X\otimes_K K'$ is of the form $X'_0\times_{S'}\Spec(K')$, \emph{then $X'_0$ is endowed with a canonical descent data with respect to $\alpha$}.
 Taking \hyperref[theorem:B.1(3)]{Theorem~3} into account, we thus conclude:
 
-\begin{proposition}{5.1}
+\begin{itenv}{Proposition 5.1}
   Let $S$ be an irreducible regular Noetherian prescheme, with field of rational functions $Y$, let $K'$ be a finite extension of $K$ that is \emph{unramified over $S$}, let $S'$ be the normalisation of $S$ in $K'$ (which is thus an \'{e}tale cover of $S$), and let $X$ be an abelian scheme over $K$ such that $X\otimes_K K'$ is of the form $X'_0\times_{S'}\Spec(K')$, where $X'_0$ is a projective abelian scheme over $S'$.
   Then $X$ is of the form $X_0\times_S\Spec(K)$, where $X_0$ is a projective abelian scheme over $S$.
-\end{proposition}
+\end{itenv}
 
-\begin{remarks*}
+\begin{rmenv}{Remarks}
   The speaker does not know if we can replace the hypothesis that $S'\to S$ be a surjective \'{e}tale cover (which allows us to apply \hyperref[theorem:B.1(3)]{Theorem~3}) with the hypothesis that it is instead a \emph{simple} and \emph{surjective} morphism of finite type (not even if we suppose that it is an \'{e}talement), or if the proposition still holds true without supposing that $X'_0$ is projective over $S'$ (a condition which could be automatically satisfied).
-\end{remarks*}
+\end{rmenv}
 
 
 \section{Application to local triviality and isotriviality criteria}
@@ -1227,9 +1193,9 @@ we ``formally'' conclude that it is ``equivalent'' to give, on $S$ (or on some $
 (More precisely, we have an \emph{equivalence of fibred categories}).
 We thus conclude, in particular:
 
-\begin{proposition}{6.1}
+\begin{itenv}{Proposition 6.1}
   Every principal homogeneous bundle under the group $\GL(n)_S$ is locally trivial.
-\end{proposition}
+\end{itenv}
 
 By known arguments, we thus conclude the same result for others structure groups such as $\SL(n)_S$, $\Sp(n)_S$, and products of such groups.
 We thus also conclude that, if $F$ is a closed subgroup of $G=\GL(n)_S$ that is flat over $S$, and such that the quotient $G/F$ exists, and such that $G$ is an isotrivial (resp. strictly isotrivial) principal homogeneous bundle on $G/F$, of structure group $F\times_S(G/F)$, then \emph{every} principal homogeneous bundle of structure group $F$ is isotrivial (resp. strictly isotrivial).
@@ -1238,9 +1204,9 @@ This thus answers, for such groups, a question of Serre (loc. cit.).
 
 We also point out that, for most groups (linear or not) that are simple over $S$ that we know of, and certainly for all those of the form $S\times_k\Gamma$ as above, we can show that every isotrivial principal homogeneous bundle is strictly isotrivial, which answers, in particular, another question of Serre (loc. cit. 1--14), taking into account the fact that a homogeneous principal bundle obtained by a descent \emph{\`{a} la} Cartier (cf. \hyperref[example:B.3(2)]{Example~2}) is obviously isotrivial.
 
-\begin{remark*}
+\begin{rmenv}{Remark}
   One of the essential difficulties in these questions (setting aside the question of the existence of quotient schemes) is the lack of effectiveness criteria for a descent data along a faithfully flat \emph{non-finite} morphism.
-\end{remark*}
+\end{rmenv}
 
 
 
