@@ -1,8 +1,8 @@
 \documentclass{article}
 
-\title{Primary obstruction to deformation}
-\author{Adrien Douady}
-\date{21\textsuperscript{st} of November, 1960}
+\title{Abelian varieties}
+\author{A. Douady}
+\date{}
 
 \usepackage{amssymb,amsmath}
 
@@ -11,9 +11,8 @@
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
 \usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
-\usepackage{tikz-cd}
 
-\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
 \usepackage{fouriernc}
 
@@ -37,11 +36,6 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{equation}{}{}
-\renewcommand{\thesection}{\Roman{section}}
-\renewcommand{\thesubsection}{\arabic{subsection}}
-
-
 %% Theorem environments %%
 
 \usepackage{amsthm}
@@ -54,38 +48,50 @@
     {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
     {\endinnercustomtheorem}
 
-  \newtheorem{innercustomproposition}{Proposition}
-  \crefname{innercustomproposition}{Proposition}{Propositions}
-  \newenvironment{proposition}[1]
-    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-    {\endinnercustomproposition}
-
   \newtheorem{innercustomlemma}{Lemma}
   \crefname{innercustomlemma}{Lemma}{Lemmas}
   \newenvironment{lemma}[1]
     {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
     {\endinnercustomlemma}
 
-  \newtheorem*{proposition*}{Proposition}
+  \newtheorem{innercustomproposition}{Proposition}
+  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \newenvironment{proposition}[1]
+    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
+    {\endinnercustomproposition}
+
+  \newtheorem{innercustomcorollary}{Corollary}
+  \crefname{innercustomcorollary}{Corollary}{Corollaries}
+  \newenvironment{corollary}[1]
+    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
+    {\endinnercustomcorollary}
+
 
 \theoremstyle{definition}
+
+  \newtheorem{innercustomremark}{Remark}
+  \crefname{innercustomremark}{Remark}{Remarks}
+  \newenvironment{remark}[1]
+    {\renewcommand\theinnercustomremark{#1}\innercustomremark}
+    {\endinnercustomremark}
+
   \newtheorem*{definition*}{Definition}
+  \newtheorem*{remark*}{Remark}
+  \newtheorem*{properties*}{Properties}
 
 
 %% Shortcuts %%
 
-\newcommand{\ZZ}{\mathbb{Z}}
-\newcommand{\RR}{\mathbb{R}}
-\newcommand{\CC}{\mathbb{C}}
-\newcommand{\DD}{\mathrm{D}}
-\newcommand{\HH}{\mathrm{H}}
-
-\DeclareMathOperator{\Hom}{Hom}
+\newcommand{\sh}[1]{{\mathscr{#1}}}
+\newcommand{\cat}[1]{{\mathcal{#1}}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+\renewcommand{\thesubsection}{(\Alph{subsection})}
 
 
 %% Document %%
@@ -109,9 +115,9 @@
 
   \medskip\noindent
   \textsc{Douady, A.}
-  ``Obstruction primaire \`{a} la d\'{e}formation''.
-  \emph{S\'{e}minaire Henri Cartan}, Volume~\textbf{13 (1)} (1960--1961), Talk no.~4.
-  {\url{http://www.numdam.org/item/SHC_1960-1961__13_1_A3_0}}
+  ``Vari\'{e}t\'{e}s ab\'{e}liennes''.
+  \emph{S\'{e}minaire Claude Chevalley}, Volume~\textbf{4} (1958--1959), Talk no.~9.
+  {\url{http://www.numdam.org/item/SCC_1958-1959__4__A9_0}}
 \end{abstract}
 
 \setcounter{footnote}{0}
@@ -122,27 +128,31 @@
 
 %% Content %%
 
-\section*{Introduction}
-\label{introduction}
+\section{Algebraic groups}
+\label{1}
 
-\oldpage{4-01}
-Let $V_0$ be a compact complex-analytic manifold, and let $\Theta$ be the sheaf of germs of holomorphic fields of tangent vectors.
+\oldpage{9-01}
+\begin{definition*}
+  An \emph{algebraic group} is a pair $(G,\varphi)$, where $G$ is an algebraic variety and $\varphi$ is a morphism from $G\times G$ to $G$ that endows the set of points of $G$ with the structure of a group.
+\end{definition*}
 
-
+\begin{properties*}
+  For
+\end{properties*}
 
 
 %% Bibliography %%
 
 \nocite{*}
 
-\begin{thebibliography}{5}
+\begin{thebibliography}{1}
 
-  \bibitem{3}
-  {\sc Kodaira, K. and Spencer, D.}
-  \newblock On deformation of complex analytic structures, I.
-  \newblock {\em Annals of Math.} \textbf{67} (1958), 328--401.
+  \bibitem{1}
+  {\sc Chevalley, C.}
+  \newblock Fondements de la G\'{e}om\'{e}trie alg\'{e}brique
+  \newblock Paris, Secr\'{e}tariat math\'{e}matique, 1958, multigraphed.
+  \newblock (Class taught at the Sorbonne in 1957--58).
 
 \end{thebibliography}
-
 
 \end{document}
