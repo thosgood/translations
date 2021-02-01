@@ -4,6 +4,14 @@
 \author{A. Grothendieck}
 \date{February 1961}
 
+\newcommand{\doctype}{French seminar talk}
+\newcommand{\origcit}{%
+  \textsc{Grothendieck, A.}
+  Technique de descente et th\'{e}or\`{e}mes d'existence en g\'{e}om\'{e}trie alg\'{e}brique. III. Pr\'{e}schemas quotients.
+  \emph{S\'{e}minaire Bourbaki}, Volume~\textbf{13} (1960--61), Talk no.~212.%
+}
+
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
@@ -52,25 +60,21 @@
 \theoremstyle{plain}
 
 \newtheorem{innertheorem}{Theorem}
-\crefname{innertheorem}{Theorem}{Theorems}
 \newenvironment{theorem}[1]
   {\renewcommand\theinnertheorem{#1}\innertheorem}
   {\endinnertheorem}
 
 \newtheorem{innerproposition}{Proposition}
-\crefname{innerproposition}{Proposition}{Propositions}
 \newenvironment{proposition}[1]
   {\renewcommand\theinnerproposition{#1}\innerproposition}
   {\endinnerproposition}
 
 \newtheorem{innerlemma}{Lemma}
-\crefname{innerlemma}{Lemma}{Lemmas}
 \newenvironment{lemma}[1]
   {\renewcommand\theinnerlemma{#1}\innerlemma}
   {\endinnerlemma}
 
 \newtheorem{innercorollary}{Corollary}
-\crefname{innercorollary}{Corollary}{Corollaries}
 \newenvironment{corollary}[1]
   {\renewcommand\theinnercorollary{#1}\innercorollary}
   {\endinnercorollary}
@@ -82,13 +86,11 @@
 \theoremstyle{definition}
 
 \newtheorem{innerdefinition}{Definition}
-\crefname{innerdefinition}{Definition}{Definitions}
 \newenvironment{definition}[1]
   {\renewcommand\theinnerdefinition{#1}\innerdefinition}
   {\endinnerdefinition}
 
 \newtheorem{innerexample}{Example}
-\crefname{innerexample}{Example}{Examples}
 \newenvironment{example}[1]
   {\renewcommand\theinnerexample{#1}\innerexample}
   {\endinnerexample}
@@ -148,12 +150,10 @@
 
   \medskip
   
-  \emph{What follows is a translation of the French seminar talk:}
+  \emph{What follows is a translation of the \doctype:}
 
   \medskip\noindent
-  \textsc{Grothendieck, A.}
-  Technique de descente et th\'{e}or\`{e}mes d'existence en g\'{e}om\'{e}trie alg\'{e}brique. III. Pr\'{e}schemas quotients.
-  \emph{S\'{e}minaire Bourbaki}, Volume~\textbf{13} (1960--61), Talk no.~212.
+  \origcit
 \end{abstract}
 
 \setcounter{footnote}{0}

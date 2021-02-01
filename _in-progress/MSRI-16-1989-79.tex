@@ -4,6 +4,15 @@
 \author{P. Deligne}
 \date{1989}
 
+\newcommand{\doctype}{French paper}
+\newcommand{\origcit}{%
+  \textsc{Deligne, P.}
+  "Le Groupe Fondamental de la Droite Projective Moins Trois Points."
+  In \emph{Galois Groups over $\mathbb{Q}$}, Springer-Verlag, Mathematical Sciences Research Institute Publications, Volume~\textbf{16} (1989), 79--297.
+  \textsc{DOI:} \href{https://doi.org/10.1007/978-1-4613-9649-9_3}{10.1007/978-1-4613-9649-9\_3}%
+}
+
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
@@ -55,7 +64,6 @@
 \theoremstyle{definition}
 
   \newtheorem{innerenv}{}
-  \crefname{innerenv}{}{}
   \newenvironment{env}[1]
     {\renewcommand\theinnerenv{(#1)}\innerenv}
     {\endinnerenv}
@@ -110,13 +118,10 @@
 
   \medskip
   
-  \emph{What follows is a translation of the French paper:}
+  \emph{What follows is a translation of the \doctype:}
 
   \medskip\noindent
-  \textsc{Deligne, P.}
-  "Le Groupe Fondamental de la Droite Projective Moins Trois Points."
-  In \emph{Galois Groups over $\mathbb{Q}$}, Springer-Verlag, Mathematical Sciences Research Institute Publications, Volume~\textbf{16} (1989), 79--297.
-  \textsc{DOI:} \href{https://doi.org/10.1007/978-1-4613-9649-9_3}{10.1007/978-1-4613-9649-9\_3}.
+  \origcit
 \end{abstract}
 
 \setcounter{footnote}{0}
@@ -171,7 +176,7 @@ We would like to understand these actions.
 
 The nilpotent versions of $\pi_1$ is very close to cohomology.
 This is most visible in the theory of D.~Sullivan (\cite{Su}, \cite{Mo}).
-Notation: for $\Gamma$ a finitely generated group, let $Z^i\Gamma$ be the decreasing central series, let $\Gamma^{(N)}=\Gamma/Z^{N+1}\Gamma$, and let $\Gamma^{[N]}=\Gamma^{(N)}/\mathrm{torsion}$ \cref{9.3}.
+Notation: for $\Gamma$ a finitely generated group, let $Z^i\Gamma$ be the decreasing central series, let $\Gamma^{(N)}=\Gamma/Z^{N+1}\Gamma$, and let $\Gamma^{[N]}=\Gamma^{(N)}/\mathrm{torsion}$ \hyperref[9.3]{(9.3)}.
 The theory of Malcev (\cite{Mal}) attaches a nilpotent Lie algebra over $\QQ$, denoted $\Lie\Gamma^{[N]}$, to $\Gamma^{[N]}$, such that $\Gamma^{[N]}$ is a congruence subgroup of the unipotent algebraic group over $\QQ$ of the Lie algebra $\Lie\Gamma^{[N]}$.
 By D.~Sullivan, if $X$ is a differentiable manifold, then $\Lie\pi_1(X)^{[N]}\otimes\RR$ is determined, up to inner automorphism, by the differential-graded algebra $\Omega_X^\bullet$, taken
 \oldpage{82}
@@ -183,7 +188,7 @@ It allows us, however, to use his philosophy of motives.
 Let $k$ be a number field.
 If $X$ is an algebraic variety over $k$, then we have a whole series of parallel cohomology theories for $X$: the classical cohomology of $X(\CC)$ (for each complex embedding of $k$), crystalline cohomology (which is equal to de Rham cohomology if $X$ is smooth), $\ell$-adic cohomology, \ldots.
 The groups thus obtained are endowed with various additional structures (Hodge mixed, Galois action, \ldots) and are linked by comparison isomorphism.
-In \cref{1}, we axiomatise the situation by defining ``realisation systems over $k$''.
+In \hyperref[1]{\S1}, we axiomatise the situation by defining ``realisation systems over $k$''.
 The exact definition is not to be taken seriously: considering the applications --- and what we are capable of doing --- it could be wise to either add or remove data as much as axioms.
 The essential, for us, is that
 \begin{enumerate}[(i)]
@@ -201,7 +206,7 @@ For $X$ over $k$ and $x\in X(k)$, we want, for example, to regard $\Lie\pi_1(X(\
 This article owes much to an unpublished work of Z.~Wojtkoviak.
 For $X=\PP^1\setminus\{0,1,\infty\}$ and $x\in X(\CC)$, I proposed to him a definition of the mixed Hodge structure of $\Lie\pi_1(X(\CC),x)^{[N]}$.
 He calculated it in part, for small $N$, and, to my extreme surprise, show that, for $N=4$, its description involves $\zeta(3)$.
-A decanted form of the calculations appear in \cref{19}.
+A decanted form of the calculations appear in \hyperref[19]{\S19}.
 In fact, the whole article originates from my desire to
 \oldpage{83}
 understand the result of Z.~Wojtkoviak.
@@ -227,7 +232,7 @@ A large part of this article is dedicated to developing a language in which the 
 
 We now go through this article, pointing out several shortcuts.
 
-In \cref{1}, we describe the category of realisation systems over a base $S$.
+In \hyperref[1]{\S1}, we describe the category of realisation systems over a base $S$.
 The base $S$ can be: $\Spec(\QQ)$, $\Spec(\FF)$ for $\FF$ a number field, an open subset of the spectrum of the ring of integers of a number field, or smooth over $\Spec(\ZZ)$.
 In this category, the $\Hom$ are $\QQ$-vector spaces.
 We also define a notion of integer structure;
@@ -239,19 +244,19 @@ The theory coincides with that of U.~Jannsen
 \cite{J}.
 The crystalline aspect will be neglected in the rest of the introduction.
 
-In \cref{2} we give examples.
+In \hyperref[2]{\S2} we give examples.
 We also explain what an extension of the unit realisation system $\ZZ$ by a realisation system $M$ with integer coefficients is.
 \emph{Terminologie:} \unsure{$M$-torsor}, or torsor under $M$.
 \emph{Example:} the Kummer \unsure{$\ZZ(1)$-torsor}, where $\ZZ(1)$ is the Tate motive.
 
-In \cref{3} we describe certain remarkable torsors, which can be said to be cyclotomic, under the Tate motive $\ZZ(k)$.
-\cref{16} explains how these torsors naturally appear in the study of $\pi_1$ of $\PP^1\setminus\{0,1,\infty\}$.
+In \hyperref[3]{\S3} we describe certain remarkable torsors, which can be said to be cyclotomic, under the Tate motive $\ZZ(k)$.
+\hyperref[16]{\S16} explains how these torsors naturally appear in the study of $\pi_1$ of $\PP^1\setminus\{0,1,\infty\}$.
 The description here is direct, but unmotivated.
-The claim that some of these torsors are of finite order (\cref{3.5}, \cref{3.14}) lets us recover the known formulas expressing the Dirichlet $L$-functions in negative integers as integrals of distributions over $\hZZ$ with values in $\hZZ$: a version of Kummer congruences.
-In \cref{18}, we prove \cref{3.5} and \cref{3.14} using the geometric interpretation of \cref{16}.
-In \cref{3}, we give a direct proof, by using the known formulas for $L(\chi,1-k)$.
+The claim that some of these torsors are of finite order (\hyperref[3.5]{(3.5)}, \hyperref[3.14]{(3.14)}) lets us recover the known formulas expressing the Dirichlet $L$-functions in negative integers as integrals of distributions over $\hZZ$ with values in $\hZZ$: a version of Kummer congruences.
+In \hyperref[18]{\S18}, we prove \hyperref[3.5]{(3.5)} and \hyperref[3.14]{(3.14)} using the geometric interpretation of \hyperref[16]{\S16}.
+In \hyperref[3]{\S3}, we give a direct proof, by using the known formulas for $L(\chi,1-k)$.
 
-\cref{4} is a pot-pourri of reminders on Ind-objects and pro-objects.
+\hyperref[4]{\S4} is a pot-pourri of reminders on Ind-objects and pro-objects.
 The reader is invited to consult this only when needed.
 
 We want to give a motivic sense to an assertion like the following: the fundamental group of $\PP^1(\CC)\setminus\{0,1,\infty\}$ (at base point $b$) is freely generated by the following loops:
@@ -265,12 +270,12 @@ We want to give a motivic sense to an assertion like the following: the fundamen
   \end{tikzpicture}
 \tag{1}
 \]
-The purpose of \cref{5}, \cref{7}, and \cref{15} is to construct the language which allows us to do this.
+The purpose of \hyperref[5]{\S5}, \hyperref[7]{\S7}, and \hyperref[15]{\S15} is to construct the language which allows us to do this.
 This consists of
 \begin{enumerate}[(a)]
   \item giving a motivic sense to $\pi_1(X,x)^{(N)}$, not only to its Lie algebra;
-  \item giving a motivic sense to the torsor \cref{0.6} of homotopy classes of paths from $b_1$ to $b_2$;
-  \item in \cref{figure1}, the ``monodromy around $0$'' loop is only unambiguously determined
+  \item giving a motivic sense to the torsor \hyperref[0.6]{(0.6)} of homotopy classes of paths from $b_1$ to $b_2$;
+  \item in \hyperref[figure1]{(1)}, the ``monodromy around $0$'' loop is only unambiguously determined
 \oldpage{85}
     for $b$ ``close to $0$''.
     We must define what it means for a base point to be ``close to $0$''.
@@ -281,10 +286,10 @@ To avoid speculation: consider the group in realisation systems, and replace ``m
 There is an analogous definition for \unsure{torsors under a group}.
 We separately define a notion of ``\unsure{integer}'' structures.
 This definition has the advantage that the standard constructions in algebraic geometry (decreasing central series, quotients, pushing forward a $G$-torsor by $G\to H$, \unsure{torsor torsion},\ldots) all pass automatically to the motivic case.
-This, in an arbitrary Tannakian category, is explained in \cref{5}.
+This, in an arbitrary Tannakian category, is explained in \hyperref[5]{\S5}.
 
-In \cref{7}, we reinterpret these definitions in a language that is closer to that of our applications.
-The reader who is displeased by the general nonsense of \cref{5} and \cref{7} can take the interpretations given in \cref{7} as the definition of groups, torsors, \ldots in realisation systems.
+In \hyperref[7]{\S7}, we reinterpret these definitions in a language that is closer to that of our applications.
+The reader who is displeased by the general nonsense of \hyperref[5]{\S5} and \hyperref[7]{\S7} can take the interpretations given in \hyperref[7]{\S7} as the definition of groups, torsors, \ldots in realisation systems.
 Drawback: every standard construction must be redefined in this case.
 
 In the classical definition of $\pi_1$, the role of the base point $b$ can be played by a contractible subset $B$.
@@ -305,7 +310,7 @@ By this construction, a non-zero tangent vector at $s$ can act as a base point i
 
 The same phenomenon occurs in the profinite theory of $\pi_1$, and in the ``de Rham'' theory.
 Be aware that $\mathcal{B}(v)=\mathcal{B}(\lambda v)$ for real $\lambda>0$, but that this fact has no analogue in the other theories.
-There constructions are explained in \cref{15}.
+There constructions are explained in \hyperref[15]{\S15}.
 They allow us,
 \oldpage{86}
 in the definition of the motivic $\pi_1$ of $X$, to take a base point ``at infinity'', like the tangent vector $v$ at $s$.
@@ -320,21 +325,21 @@ Here and later on, $\pi_1$ is the pro-unipotent $\pi_1$, defined as the projecti
 
 We take the base point to be the tangent vector $1$ at $0$.
 We have a good reduction $\mod p$ for every $p$, and $\pi_1(X,b)_\mot^{(N)}$ is a linear group in the Tannakian category of motives over $\Spec(\ZZ)$ that are iterated extensions of Tate motives.
-\cref{8} states a conjecture on the $\Ext^1(\QQ,\QQ(k))$ in this category, as well as some consequences.
-At the end of \cref{16}, we make these explicit in the case of $\pi_1(X,b)_\mot^{(N)}$.
+\hyperref[8]{\S8} states a conjecture on the $\Ext^1(\QQ,\QQ(k))$ in this category, as well as some consequences.
+At the end of \hyperref[16]{\S16}, we make these explicit in the case of $\pi_1(X,b)_\mot^{(N)}$.
 I hope that this places the $\zeta(3)$ discovered by Z.~Wojtkoviak in its natural setting.
-\cref{6} is preliminary.
-For the essential idea, see \cref{6.2}.
+\hyperref[6]{\S6} is preliminary.
+For the essential idea, see \hyperref[6.2]{(6.2)}.
 
-To define the motivic $\pi_1$, we need to patch together the various theories of $\pi_1$ that we have at our disposal, guided by the goal of constructing a motivic group in the sense of \cref{5}, explained in \cref{7}.
-This is done in \cref{10} to \cref{13}, after a reminder (\cref{9}) on the Mal\v{c}ev theory of nilpotent groups and their Lie algebras.
+To define the motivic $\pi_1$, we need to patch together the various theories of $\pi_1$ that we have at our disposal, guided by the goal of constructing a motivic group in the sense of \hyperref[5]{\S5}, explained in \hyperref[7]{\S7}.
+This is done in \hyperref[10]{\S10} to \hyperref[13]{\S13}, after a reminder (\hyperref[9]{\S9}) on the Mal\v{c}ev theory of nilpotent groups and their Lie algebras.
 The result leaves much to be desired.
 It is only completely studied for smooth algebraic varieties whose smooth compactifications $\overline{X}$ satisfy $H^1(\overline{X},\scr{O})=0$.
 Another complaint: I sometimes only sketch the definition of structures that will be used in future calculations.
 
-In \cref{16}, we finally explain what the \unsure{torsors under $\ZZ(k)$} from \cref{3} have to do with the $\pi_1$ of the projective line minus three points.
-The justifying calculations are given in \cref{19}.
-We given, in \cref{17} and \cref{18}, a geometric explanation of some of their properties.
+In \hyperref[16]{\S16}, we finally explain what the \unsure{torsors under $\ZZ(k)$} from \hyperref[3]{\S3} have to do with the $\pi_1$ of the projective line minus three points.
+The justifying calculations are given in \hyperref[19]{\S19}.
+We given, in \hyperref[17]{\S17} and \hyperref[18]{\S18}, a geometric explanation of some of their properties.
 
 \oldpage{87}
 \section{Terminology and notation}

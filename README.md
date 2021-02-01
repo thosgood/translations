@@ -2,8 +2,6 @@ See <https://thosgood.com/translations> for details.
 
 ### TODO
 
-- remove `\cref`s from all papers
-- remove `\cref`s from all in-progress files
 - just two theorem environments
     + one plain, one definition
     + optional argument for name (e.g. Theorem)

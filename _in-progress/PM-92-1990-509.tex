@@ -4,6 +4,14 @@
 \author{Michel BRION and Claudio PROCESI}
 \date{}
 
+\newcommand{\doctype}{French book chapter}
+\newcommand{\origcit}{%
+  \textsc{Brion, M. and Procesi, C.}
+  ``Action d'un tore dans une vari\'{e}t\'{e} projective''
+  in \emph{Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)}, Birkh\"{a}user Boston, Progress in mathematics \textbf{92} (1990), 509--539.%
+}
+
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
@@ -96,12 +104,10 @@
 
   \medskip
   
-  \emph{What follows is a translation of the French book chapter:}
+  \emph{What follows is a translation of the \doctype:}
 
   \medskip\noindent
-  \textsc{Brion, M. and Procesi, C.}
-  ``Action d'un tore dans une vari\'{e}t\'{e} projective''
-  in \emph{Operator algebras, unitary representations, enveloping algebras, and invariant theory (Paris, 1989)}, Birkh\"{a}user Boston, Progress in mathematics \textbf{92} (1990), 509--539.
+  \origcit
 \end{abstract}
 
 \setcounter{footnote}{0}
@@ -137,24 +143,24 @@ when $p=0$, we recover the above notions.
 
 For simplicity, we assume $L$ to be very ample, i.e. we consider the case where $X$ is a subvariety of a projective space $\PP(V)$, with the torus $T$ acting linearly on $V$, and where $L$ is the restriction of $\scr{O}(1)$ to $X$.
 We show that $X^\s(p)$, $X^\ss(p)$, and $Y(p)$ depend only on the position of $p$ relative to a certain finite set $\II$ of characters of $T$ (the set of weights of $T$ in $V$).
-More precisely, we define \cref{1.1,1.2} a partition of the convex hull $\mathcal{C}$ of $\II$ into ``faces''.
+More precisely, we define (\hyperref[1.1]{\S1.1} and \hyperref[1.2]{\S1.2}) a partition of the convex hull $\mathcal{C}$ of $\II$ into ``faces''.
 Each face is the interior of a convex polyhedron, and $X^\s(p)$, $X^\ss(p)$, and $Y(p)$ depend only on the face of $p$;
 for every face $F$, we can define $X^\s(F)$, $X^\ss(F)$, and $Y(F)$.
-We further show \cref{1.3} that the map $p\in F\mapsto L_p\in\Pic_\QQ(Y(F))$ is affine.
+We further show \hyperref[1.3]{\S1.3} that the map $p\in F\mapsto L_p\in\Pic_\QQ(Y(F))$ is affine.
 
 Let $F$ be an open face of $\mathcal{C}$.
 We show that every point that is semi-stable for $F$ is stable;
 thus, if $X$ is smooth, then $Y(F)$ only has singularities from quotients by finite abelian groups.
 The quotients associated to the open faces are thus relatively simple.
 For an arbitrary face $F$, let $F'$ be an open face whose closure contains $F$.
-We define, in \cref{1.4}, a morphism $\pi_{F,F'}\colon Y(F')\to Y(F)$, that is almost always birational.
-In \cref{1.5}, we study the case where $F$ is of codimension one, and contained in the closure of the two open faces $F_-$ and $F_+$.
+We define, in \hyperref[1.4]{\S1.4}, a morphism $\pi_{F,F'}\colon Y(F')\to Y(F)$, that is almost always birational.
+In \hyperref[1.5]{\S1.5}, we study the case where $F$ is of codimension one, and contained in the closure of the two open faces $F_-$ and $F_+$.
 The morphisms $\pi_{F,F_-}$ and $\pi_{F,F_+}$ are, in general, quite complicated;
-however, if $\hat{Y}$ denotes the product of $Y(F_-)$ and $Y(F_+)$ over $Y(F)$, then the morphisms from $\hat{Y}$ to $Y(F_-)$, $Y(F)$, and $Y(F_+)$ are blow-ups of subvarieties, with the same exceptional divisor (see \cref{2.3} for a precise statement).
+however, if $\hat{Y}$ denotes the product of $Y(F_-)$ and $Y(F_+)$ over $Y(F)$, then the morphisms from $\hat{Y}$ to $Y(F_-)$, $Y(F)$, and $Y(F_+)$ are blow-ups of subvarieties, with the same exceptional divisor (see \hyperref[2.3]{\S2.3} for a precise statement).
 
 We can extend the affine map $p\mapsto L_p$ from $F_+$ to $\Pic_\QQ(Y_+)$ to $\mathcal{C}$, and then lift each $L_p$ to $\hat{Y}$, giving a class $L_p^+$;
 we define $L_p^-$ similarly.
-We show in \cref{2.3} that the difference $L_p^+ - L_p^-$ is a multiple of the exceptional divisor $\hat{Y}\to Y(F)$, and is zero for all $p\in F$.
+We show in \hyperref[2.3]{\S2.3} that the difference $L_p^+ - L_p^-$ is a multiple of the exceptional divisor $\hat{Y}\to Y(F)$, and is zero for all $p\in F$.
 Then, when we consider the product $\bar{Y}$ of the quotients associated to all the faces, over all the morphisms $\pi_{F,F'}$, the maps $p\mapsto L_p$ glue to give a continuous piecewise-affine map from $\mathcal{C}$ to $\Pic_\QQ(\overline{Y})$.
 
 In the third section of this paper, we apply these results to the asymptotic study of multigraded modules;
@@ -169,8 +175,8 @@ For every face $F$ associated to $\II$, let $\scr{M}^{(F)}$ be the sheaf given b
 We show that, if $M$ is an $A$-module of finite type, then $\scr{M}^{(F)}$ is a coherent sheaf on $Y(F)$.
 For every $p\in F$, we denote by $\mu_M(p)$ the degree of $\scr{M}^{(F)}$ relative to the ample class $L_p$ (see \cite[I.3]{Kle}).
 We show that the function $\mu_M$ is a polynomial on each face.
-Furthermore, it appears as the density in various integral expressions of asymptotic invariants of $M$: the ``generalised Hilbert--Samuel polynomials'' \cref{3.5}, and the ``Joseph polynomials'' (\cite{Jos}; see \cref{3.6}).
-If $M$ is the homogeneous coordinate ring of a smooth projective subvariety $X$ of $\PP(V)$, then the function $\mu_M$ is continuous, and its Fourier transform depends only on fixed points of $T$ in $X$, and on their normal bundle \cref{3.4}.
+Furthermore, it appears as the density in various integral expressions of asymptotic invariants of $M$: the ``generalised Hilbert--Samuel polynomials'' \hyperref[3.5]{\S3.5}, and the ``Joseph polynomials'' (\cite{Jos}; see \hyperref[3.6]{\S3.6}).
+If $M$ is the homogeneous coordinate ring of a smooth projective subvariety $X$ of $\PP(V)$, then the function $\mu_M$ is continuous, and its Fourier transform depends only on fixed points of $T$ in $X$, and on their normal bundle \hyperref[3.4]{\S3.4}.
 
 Finally, in an appendix, we briefly explain the links between our results and some theorems due to Atiyah, Duistermaat--Heckman, Guillemin--Sternberg in symplectic geometry (see \cite{Ati}, \cite{DH12}, and \cite{GS12}).
 Indeed, there are close links, studied in \cite{Kir}, between the algebraic action of a complex torus on a subvariety $X$ of a projective space and the Hamiltonian action of its compact maximal sub-torus $T_c$ on $X$ considered as a symplectic variety (the symplectic form being the imaginary part of a K\"{a}hler form on $\PP(V)$ that is invariant under $T_c$).
@@ -181,7 +187,7 @@ the quotient $Y(p)$ is ``the reduced phase space'' $J^{-1}(p)/T_c$;
 the class of $L_p$ in $H^2(Y(p),\QQ)$ comes from the cohomology class of the symplectic form.
 Furthermore, if $M$ is the homogeneous coordinate ring of $X$, then the function $\mu_M$ is the density of the measure given by the image of the moment map.
 
-After having obtained the results of this paper, we became aware (in May 1989) of the article \cite{GS3} of V.~Guillemin and S.~Sternberg, which proves results that are related to ours found in \cref{2}, concerning Hamiltonian actions of compact tori on symplectic varieties.
+After having obtained the results of this paper, we became aware (in May 1989) of the article \cite{GS3} of V.~Guillemin and S.~Sternberg, which proves results that are related to ours found in \hyperref[2]{\S2}, concerning Hamiltonian actions of compact tori on symplectic varieties.
 
 
 \section{Quotients by a torus}
@@ -346,7 +352,7 @@ Let $F$ and $F'$ be distinct faces such that $F\subset\overline{F'}$.
     \item This is by direct verification.
     \item By \cite[1.11]{MF} and the proof of \hyperref[1.2-theorem]{Theorem~1.2}, $\pi_F\colon X^\ss(F)\to Y(F)$ is the quotient by the equivalence relation ``$x\sim y$ $\iff$ the closures of the $T$-orbits of $x$ and $y$ meet''.
       Then the inclusion of $X^\ss(F')$ into $X^\ss(F)$ passes to the quotient to give $\pi_{F,F'}\colon Y(F')\to Y(F)$.
-    \item If $F$ is not contained in the boundary of $\mathcal{C}$, then $X^\s(F)$ is not empty, by \cref{1.2};
+    \item If $F$ is not contained in the boundary of $\mathcal{C}$, then $X^\s(F)$ is not empty, by \hyperref[1.2]{\S1.2};
       furthermore, the restrictions of $\pi_F$ and $\pi_{F'}$ to $X^\s(F)$ agree, since $X^\s(F)\subset X^\s(F')$.
       Thus $\pi_{F,F'}$ induces an isomorphism from $\pi_{F'}(X^\s(F))$ to its image.
   \end{enumerate}
@@ -390,7 +396,7 @@ We denote by $\lim_{t\to0}\lambda(t)x$ the image of $0$ under this morphism.
       $F$ is contained in the convex hull of $\II(x)$ if and only if $F$ is contained in the convex hull of $\II(y)$.
     \item $X^\lambda$ is a closed $T$-stable sub-variety of $X$, and $\II(X^\lambda)\subset\langle F\rangle$, and so $F$ is open in the convex hull of $\II(X^\lambda)$.
       Furthermore, $X^F=X^\lambda(F)$.
-      The first claim thus follows from \cref{1.2};
+      The first claim thus follows from \hyperref[1.2]{\S1.2};
       the second is evident.
     \item This follows from \cite[Theorem~4.4.]{BB}.
   \end{enumerate}
@@ -610,7 +616,7 @@ Consequently, $\PP(N_+)$ is canonically endowed with a sheaf that we denote by $
 
 We keep the above notation.
 Let $\pi_+\colon\dot{N}_+\times N_-\to Z_+$ be the quotient by $T$.
-As in \cref{1.2}, denote by $\scr{O}(\chi)$ the $T$-linearised line bundle on $N$ associated to the character $-\chi$ of $T$.
+As in \hyperref[1.2]{\S1.2}, denote by $\scr{O}(\chi)$ the $T$-linearised line bundle on $N$ associated to the character $-\chi$ of $T$.
 Set $\scr{O}_\chi^+(1)=(\pi_+)_*^T(\scr{O}(\chi))$;
 define $\scr{O}_\chi^-(1)$ similarly.
 We also have a sheaf $\scr{O}(1)$ on $\hat{Z}$, associated to the $\scr{O}_{\hat{Z}}$-module $\bigoplus_{n=0}^\infty\scr{O}_+(n)\otimes\scr{O}_-(n)$.
@@ -629,7 +635,7 @@ For all $\chi\in\ZZ$, we thus have the class $\chi\cdot\scr{O}(1)$ in $\Pic_\QQ(
 
 \begin{proof}
   Let $f$ be a polynomial function on $N_-$ that is an eigenvector of $T$ of weight~$p$.
-  With the notation of the proof in \cref{2.1}, we have
+  With the notation of the proof in \hyperref[2.1]{\S2.1}, we have
   \[
     \Gamma(Z_{+f},\scr{O}_\chi^+(1))
     = k[N_{+f}\times N_-]_\chi

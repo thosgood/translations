@@ -4,6 +4,15 @@
 \author{Hans Grauert}
 \date{}
 
+\newcommand{\doctype}{German paper}
+\newcommand{\origcit}{%
+  \textsc{Grauert, H.}
+  ``\"{U}ber Modifikationen und exzeptionelle analytische Mengen''.
+  \emph{Math. Ann.}, Volume~\textbf{146} (1962), 331--368.
+  {\url{http://eudml.org/doc/160940}}%
+}
+
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
@@ -56,7 +65,6 @@
 \theoremstyle{plain}
 
   \newtheorem{innerproposition}{Proposition}
-  \crefname{innerproposition}{Proposition}{Propositions}
   \newenvironment{proposition}[1]
     {\renewcommand\theinnerproposition{#1}\innerproposition}
     {\endinnerproposition}
@@ -76,6 +84,9 @@
 
 
 %% Shortcuts %%
+
+\newcommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
 
 \newcommand{\CC}{\mathbb{C}}
 \newcommand{\PP}{\mathbb{P}}
@@ -104,13 +115,10 @@
 
   \medskip
 
-  \emph{What follows is a translation of the German paper:}
+  \emph{What follows is a translation of the \doctype:}
 
   \medskip\noindent
-  \textsc{Grauert, H.}
-  ``\"{U}ber Modifikationen und exzeptionelle analytische Mengen''.
-  \emph{Math. Ann.}, Volume~\textbf{146} (1962), 331--368.
-  {\url{http://eudml.org/doc/160940}}
+  \origcit
 \end{abstract}
 
 \setcounter{footnote}{0}
@@ -154,18 +162,18 @@ If $A$ can now be collapsed to a point, then $\fk{S}$ can be extended to the ent
 
 \oldpage{332}
 We now give an overview of the present work.
-In \cref{1} we study the concepts of \emph{pseudoconvexity} and \emph{holomorphic convexity} on complex spaces.
-The reduction theory of Remmert then leads, in \cref{2}, to the first general theorem concerning exceptional analytic sets $A\subset X$.
-In order to simplify the somewhat strong assumption in this theorem, we consider, in \cref{3}, a coherent analytic sheaf $\fk{m}$ of germs of holomorphic functions that vanish on $A$, so that $A$ is exactly the zero set of $\fk{m}$.
+In \hyperref[1]{\S1} we study the concepts of \emph{pseudoconvexity} and \emph{holomorphic convexity} on complex spaces.
+The reduction theory of Remmert then leads, in \hyperref[2]{\S2}, to the first general theorem concerning exceptional analytic sets $A\subset X$.
+In order to simplify the somewhat strong assumption in this theorem, we consider, in \hyperref[3]{\S3}, a coherent analytic sheaf $\fk{m}$ of germs of holomorphic functions that vanish on $A$, so that $A$ is exactly the zero set of $\fk{m}$.
 Using $\fk{m}$, we then endow $A$ with a normal bundle $N_\fk{m}$.
 The structure of $N_\fk{m}$ is then critical: $A$ is exceptional if $N$ is weakly negative.
 We use the word ``negative'' here in the sense of Kodaira's definition; our result shows that it can be defined in a purely algebraic way in the world of algebraic geometry.
-Also in \cref{3}, we obtain simple criteria for positive (negative) line bundles and characterising projective algebraic spaces.
+Also in \hyperref[3]{\S3}, we obtain simple criteria for positive (negative) line bundles and characterising projective algebraic spaces.
 The well-known theorem of Kodaira (that every Hodge manifold $X$ is projective algebraic) is generalised to the case where $X$ is a normal complex space.
-Then \cref{4} deals with the complex structure of neighbourhoods of analytic sets $A\subset X$, which can be collapsed to a point.
+Then \hyperref[4]{\S4} deals with the complex structure of neighbourhoods of analytic sets $A\subset X$, which can be collapsed to a point.
 The main result of this section is that the neighbourhoods of (special) exceptional analytic sets $A\subset X$ and $A'\subset X'$ are analytically equivalent if (\unsure{and only if??}) they are equivalent in a formal sense.
 This means that the complex structure can be ``calculated'', which makes it possible to solve one of Hirzebruch's problems \cite{11}, and to transfer the propositions of Enriques and Kodaira from algebraic geometry to complex analysis.
---- It should also be mentioned that, using the main results of \cref{4}, we construct a complex space $X$ with the following properties:
+--- It should also be mentioned that, using the main results of \hyperref[4]{\S4}, we construct a complex space $X$ with the following properties:
 \begin{enumerate}[1)]
   \item $X$ is connected, compact, and of dimension~$2$;
   \item $X$ is normal, and has only one non-regular points;
@@ -176,7 +184,7 @@ This means that the complex structure can be ``calculated'', which makes it poss
     There are, however, some errors in \cite{7}.
     In Theorem~1, it should, of course, read ``\ldots{} such that $G$ is strongly pseudoconvex and $A$ is the maximal compact analytic subset of $G$''.
     Furthermore, the criterion in Theorem~2 is only sufficient.
-    See \cref{3.8}.
+    See \hyperref[3.8]{\S3.8}.
     Theorem~3 is only proven in the present work in the case where the normal bundle $N(A)$ is weakly negative.
     --- The author has already presented, several times, previously, the example of the complex space $X$, and, since then, Hironaka has found more interesting examples of complex spaces of this type.
   }

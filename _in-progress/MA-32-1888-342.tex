@@ -4,6 +4,15 @@
 \author{David Hilbert}
 \date{}
 
+\newcommand{\doctype}{German paper}
+\newcommand{\origcit}{%
+  \textsc{Hilbert, D.}
+  ``Ueber die Darstellung definiter Formen als Summe von Formenquadraten''.
+  \emph{Mathematische Annalen}, Volume~\textbf{32} (1888), 342--350.
+  {\url{http://eudml.org/doc/157385}}%
+}
+
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
@@ -67,13 +76,10 @@
 
   \medskip
   
-  \emph{What follows is a translation of the German paper:}
+  \emph{What follows is a translation of the \doctype:}
 
   \medskip\noindent
-  \textsc{Hilbert, D.}
-  ``Ueber die Darstellung definiter Formen als Summe von Formenquadraten''.
-  \emph{Mathematische Annalen}, Volume~\textbf{32} (1888), 342--350.
-  {\url{http://eudml.org/doc/157385}}
+  \origcit
 \end{abstract}
 
 \setcounter{footnote}{0}
@@ -110,7 +116,7 @@ The three equations
   \tag{2}
 \]
 cannot have a common solution.
-By \cref{equation1}, the four common solutions of the latter two equations must make
+By \hyperref[equation1]{(1)}, the four common solutions of the latter two equations must make
 \oldpage{343}
 the quadratic form $\varphi'$ vanish;
 thus
@@ -122,13 +128,13 @@ and, similarly,
   \psi' &= \beta\varphi+\zeta\chi,
 \\\chi' &= \delta\varphi+\vartheta\psi.
 \end{align*}
-By substituting these equations into \cref{equation1}, we obtain the following relations for the introduced constants:
+By substituting these equations into \hyperref[equation1]{(1)}, we obtain the following relations for the introduced constants:
 \[
   \alpha+\beta = 0,
   \quad\gamma+\delta = 0,
   \quad\zeta+\vartheta = 0.
 \]
-As soon as the resultant of the three equations \cref{equation2} is non-zero, the identity \cref{equation1} can only be satisfied by a linear combination of the three solutions:
+As soon as the resultant of the three equations \hyperref[equation2]{(2)} is non-zero, the identity \hyperref[equation1]{(1)} can only be satisfied by a linear combination of the three solutions:
 \[
   \left\{
     \begin{array}{rcr}
