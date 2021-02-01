@@ -421,14 +421,14 @@ Using the fact that $F$ is left exact, we intrinsically define the structure of 
 \[
   F(I_A,\xi) = F(\xi)^{-1}(\xi) \subset F(I_A)
 \]
-consisting of the $\xi'\in F(I_A)$ that ``reduce according to $\xi$'' (\todo???);
+consisting of the $\xi'\in F(I_A)$ that are ``reducible along $\xi$'';
 using the explicit form of $F$ in terms of $O$, we find that this $K$-module can be identified with $\Hom_\Lambda(\fk{m}_\xi/\fk{m}_\xi^2,A$, where $m_\xi$ is the kernel of the homomorphism $\xi\colon O\to A$, i.e. if $A$ is a field, then the maximal ideal of the local component $O_\xi$ of $O$.
 From this, we immediately deduce the following proposition:
 
 \begin{proposition}{5.1}
 \label{A.5-proposition1}
   Let $\xi\in F(K)$, where $K\in\cat{C}$ is a field.
-  For the corresponding local component $O_\xi$ of $O$ to be a \emph{Noetherian} ring, it is necessary and sufficient for the set $F(I_K,\xi)$ of elements of $F(I_K)$ \todo to be a vector space of \emph{finite dimension} over $K$.
+  For the corresponding local component $O_\xi$ of $O$ to be a \emph{Noetherian} ring, it is necessary and sufficient for the set $F(I_K,\xi)$ of elements of $F(I_K)$ that are reducible along $\xi$ to be a vector space of \emph{finite dimension} over $K$.
   Under these conditions, we have a canonical isomorphism
   \[
     F(I_K,\xi) = \Hom(\fk{m}_\xi/\fk{m}_\xi^2+\fk{n}_\xi\sh{O}_\xi, K)
@@ -568,7 +568,7 @@ or it could be the case that $F_0$ is indeed representable by a product of compl
 Finally, we come across interesting geometric problems (see sections \hyperref[C.4]{4} and \hyperref[C.5]{5} below) where we have only the functor $F_0$ (not coming from any ``global'' functor $F$), and where we will consider ourselves content if we can associate to it a ``formal scheme of modules''.
 
 To finish these generalities, we note how the theory of schemes explains some apparent anomalies, such as the Igusa surface $V$ whose ``Picard variety'' $P$ consists of a single point, and for which, however, $\HH^1(V,\sh{O}_V)\neq0$;
-in this case, $P$ is a ``purely infinitesimal'' group \todo, i.e. defined by a local algebra $\sh{O}$ of finite rank over the base field $k$ and endowed with a diagonal map corresponding to the multiplicative structure of $P$;
+in this case, $P$ is a ``purely infinitesimal'' non-reduced group \todo, i.e. defined by a local algebra $\sh{O}$ of finite rank over the base field $k$ and endowed with a diagonal map corresponding to the multiplicative structure of $P$;
 if $\fk{m}$ is the maximal ideal of $\sh{O}$, then the dual of $\fk{m}/\fk{m}^2$ is canonically isomorphic to $\HH^1(V,\sh{O}_V)$ (cf. section~\hyperref[C.3]{3} below).
 It is only when the Picard group is an algebraic group in the classical sense (i.e. simple over the base field $k$) that the dimension of $\HH^1(V,\sh{O}_V)$ (which is always equal to that of $\fk{m}/\fk{m}^2$) is equal to that of the Picard group.
 
@@ -636,7 +636,7 @@ Taking $A$ to be a field, we find, using \cref{A.5-proposition1} and the finiten
 
 \begin{remarks*}
   The problems considered in this section, and many others, having been generally studied, in the framework of classical algebraic geometry, via the ``Chow coordinates'' of cycles in projective space, allow us to consider these cycles as points of suitable projective varieties.
-  This procedure, and, more generally, the use of Chow coordinates, seems irredeemably insufficient from the point of view of schemes, since it destroys the nilpotent elements in the \todo varieties, and, in particular, do not lend themselves to a satisfying study of infinitesimal variations of cycles (without taking its non-intrinsic nature, linked to the projective space, into account).
+  This procedure, and, more generally, the use of Chow coordinates, seems irredeemably insufficient from the point of view of schemes, since it destroys the nilpotent elements in the parameterised varieties, and, in particular, do not lend themselves to a satisfying study of infinitesimal variations of cycles (without taking its non-intrinsic nature, linked to the projective space, into account).
   The language of Chow coordinates has sadly been the only one used by many algebraic geometers for the study of families of varieties or families of cycles, which seems to have been a serious obstacle to the understanding of these notions, despite its certain technical interest (probably temporary).
   If we wish to obtain the analogue of Chow varieties in the theory of schemes, we are led to the following universal problem:
   let $X$ be a prescheme over $S$, and, for every prescheme $T$ over $S$, consider the set $F(T)$ of closed sub-preschemes of $X_T=X\times_S T$ that are \emph{flat} over $T$; we want to represent this functor in $T$ via some prescheme over $S$.
@@ -790,7 +790,7 @@ Further, supposing that $S$ is the spectrum of a local Artinian ring $A$ of resi
 This proves that the functor $F(A)$ considered here is isomorphic to the analogous functor defined at the start of this section by abstracting the multiplicative structure on $X_0$.
 It then follows that, in particular, if $\fk{m}$ is the maximal ideal of $O$, then $\fk{m}/\fk{m}^2$ is canonically isomorphic to the dual of $\HH^1(X_0,\fk{G}_{X_0/k})$, and is thus of dimension $n^2$, where $n=\dim X_0$.
 It would be very interesting to determine if $O$ is indeed \emph{simple} over $\Lambda$, i.e. isomorphic to an algebra of formal series in $n^2$ variables over $\Lambda$.
-Now \hyperref[A.5-proposition2]{Proposition~5.2 in Part A} allows us to give an equivalent formulation of this problem as an \emph{existence problem of abelian schemes \todo a given abelian scheme}.
+Now \hyperref[A.5-proposition2]{Proposition~5.2 in Part A} allows us to give an equivalent formulation of this problem as an \emph{existence problem of abelian schemes that are reducible along a given abelian scheme}.
 In any case, we see, by a transcendental way, that the answer is affirmative if $k$ is of characteristic~$0$.
 In characteristic~$p\neq0$, it evidently suffices to restrict to the case where $\Lambda$ is the ring of Witt vectors constructed over an algebraically closed field $k$.
 This could be the moment for the ``\emph{Greenberg functor}'' to prove its worth \ldots
@@ -826,7 +826,7 @@ With this, the results of \cite{2} and \cite{3} imply, first of all, the followi
     (i.e. isomorphism classes of finite free algebras $B$ over $\widehat{\sh{O}}_{\fk{X},x}$ endowed with an isomorphism from $B\otimes_{\widehat{\sh{O}}_{\fk{X},x}}\sh{O}_{X_0,x}$ to $(\widehat{\sh{O}}'_0)_x$, where $\sh{O}'_0$ is the sheaf of algebras on $X_0$ that defines $X'_0$).
   \item We have a canonical isomorphism $\sh{G}_\fk{X}=\varprojlim\sh{G}_{\fk{X}_n}$; in other words, for every open subset $V$ of $\fk{X}$, we have $G(V)=\varprojlim G(V_n)$.
   \item Suppose that $\fk{X}$ comes from an ordinary \emph{proper} scheme $X$ over a complete local Noetherian ring $\Lambda$ that has ideal of definition $\fk{m}$ by taking the $\sh{J}$-adic completion of $\sh{O}_X$, where $\sh{J}=\fk{m}\cdot\sh{O}_X$.
-    Then $G(\fk{X})$ is canonically isomorphic to the set of classes of flat coverings of the \emph{ordinary} scheme $X$ that ``reduce following $X'_0$\todo''.
+    Then $G(\fk{X})$ is canonically isomorphic to the set of classes of flat coverings of the \emph{ordinary} scheme $X$ that are ``reducible along $X'_0$''.
 \end{enumerate}
 
 Figuratively speaking, we can say that (a) and (b) establish the fundamental relations between the local and global aspects of the problem; (c) gives the relations between the ``finite'' and ``infinitesimal'' aspects; and finally (d) remembers (under precise conditions) the identity between the ``formal'' and ``algebraic'' aspects.
