@@ -50,29 +50,13 @@
 
 \usepackage{amsthm}
 
-\theoremstyle{plain}
+\newenvironment{itenv}[1]
+  {\smallskip\noindent\textbf{#1.}\,\itshape}
+  {\smallskip}
 
-  \newtheorem{innertheorem}{Theorem}
-  \newenvironment{theorem}[1]{\renewcommand\theinnertheorem{#1}\innertheorem}{\endinnertheorem}
-
-  \newtheorem{innerlemma}{Lemma}
-  \newenvironment{lemma}[1]{\renewcommand\theinnerlemma{#1}\innerlemma}{\endinnerlemma}
-
-  \newtheorem{innerproposition}{Proposition}
-  \newenvironment{proposition}[1]{\renewcommand\theinnerproposition{#1}\innerproposition}{\endinnerproposition}
-
-  \newtheorem{innercorollary}{Corollary}
-  \newenvironment{corollary}[1]{\renewcommand\theinnercorollary{#1}\innercorollary}{\endinnercorollary}
-
-
-\theoremstyle{definition}
-
-  \newtheorem{innerremark}{Remark}
-  \newenvironment{remark}[1]{\renewcommand\theinnerremark{#1}\innerremark}{\endinnerremark}
-
-  \newtheorem*{definition*}{Definition}
-  \newtheorem*{remark*}{Remark}
-  \newtheorem*{properties*}{Properties}
+\newenvironment{rmenv}[1]
+  {\smallskip\noindent\textbf{#1.}\,\rmfamily}
+  {\smallskip}
 
 
 %% Shortcuts %%
@@ -121,11 +105,11 @@
 \label{1}
 
 \oldpage{9-01}
-\begin{definition*}
+\begin{rmenv}{Definition}
   An \emph{algebraic group} is a pair $(G,\varphi)$, where $G$ is an algebraic variety and $\varphi$ is a morphism from $G\times G$ to $G$ that endows the set of points of $G$ with the structure of a group.
-\end{definition*}
+\end{rmenv}
 
-\begin{properties*}
+\begin{rmenv}{Properties}
   For every point $a$ of $G$, the translations $l_a$ and $r_a$ defined by $l_a(x)=\varphi(a,x)$ and $r_a(x)=\varphi(x,a)$ are automorphisms of the algebraic variety structure of $G$.
 
   Every point $x$ of $G$ is simple (indeed, if $y$ is a simple point of $G$, then there exists an automorphism of $G$ that sends $y$ to $x$).
@@ -133,7 +117,7 @@
   If $G$ is connected, then $G$ is irreducible.
   The map $\pi\colon G\to G$ that, to any point, associates its inverse under the group law is a morphism (and thus an automorphism) of the algebraic variety structure.
   The proof of this property uses the fact that a bijective (and thus radicial) morphism from one variety to another is birational if it is unramified (\cite[p.~211, Corollary~2 to Proposition~3, Section~II, Chapter~VI]{1}).
-\end{properties*}
+\end{rmenv}
 
 
 %% Bibliography %%
