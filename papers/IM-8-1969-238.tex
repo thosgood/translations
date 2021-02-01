@@ -4,12 +4,20 @@
 \author{Pierre Deligne}
 \date{}
 
+\newcommand{\doctype}{French paper}
+\newcommand{\origcit}{%
+  \textsc{Deligne, P.}
+  ``Vari\'{e}t\'{e}s ab\'{e}liennes sur un corps fini''.
+  \emph{Inventiones Math.}, Volume~\textbf{8} (1969), 238--243.
+  {\url{https://publications.ias.edu/node/352}}%
+}
+
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 
 \usepackage{mathrsfs}
@@ -36,8 +44,6 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{section}{\S\!}{\S\S\!}
-\crefname{equation}{}{}
 
 
 %% Theorem environments %%
@@ -47,7 +53,7 @@
 
 %% Shortcuts %%
 
-\newcommand{\sh}[1]{{\mathscr{#1}}}
+\newcommand{\scr}[1]{{\mathscr{#1}}}
 \newcommand{\FF}{\mathbb{F}}
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
@@ -80,13 +86,10 @@
   \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations}} of translations of various papers into English.}
   \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
   
-  \emph{What follows is a translation of the French paper:}
+  \emph{What follows is a translation of the \doctype:}
 
   \medskip\noindent
-  \textsc{Deligne, P.}
-  ``Vari\'{e}t\'{e}s ab\'{e}liennes sur un corps fini''.
-  \emph{Inventiones Math.}, Volume~\textbf{8} (1969), 238--243.
-  {\url{https://publications.ias.edu/node/352}}.
+  \origcit
 \end{abstract}
 
 \setcounter{footnote}{0}
@@ -119,7 +122,7 @@ Let $A$ be an abelian variety of dimension~$g$, defined over a field $k$ of char
 Recall that $A$ is said to be \emph{ordinary} if any of the following equivalent conditions are satisfied:
 \begin{enumerate}[(I)]
   \item $A$ has $p^g$ points of order dividing $p$ with values in $\overline{k}$.
-  \item The ``Hasse-Witte matrix'' $F^*\colon H^1(A^{(p)},\sh{O}_{A^{(p)}}) \to H^1(A,\sh{O}_A)$ is invertible.
+  \item The ``Hasse-Witte matrix'' $F^*\colon H^1(A^{(p)},\scr{O}_{A^{(p)}}) \to H^1(A,\scr{O}_A)$ is invertible.
   \item\label{2.III}
     The neutral component of the group scheme $A_p$ that is the kernel of multiplication by $p$ is of multiplicative type (and thus geometrically isomorphic to a power of $\mu_p$).
 \end{enumerate}
@@ -161,7 +164,7 @@ The canonical covering of the dual abelian variety $A^*$ of $A$ is the dual of $
 \tag{3.2}
 \]
 (it is necessary to use $\ZZ(1)$ instead of $\ZZ$ in order to obtain a theory that is invariant under complex conjugation).
-The pairings \cref{3.2} are compatible, via \cref{3.1}, with the pairings
+The pairings \hyperref[3.2]{(3.2)} are compatible, via \hyperref[3.1]{(3.1)}, with the pairings
 \[
   T_\ell(A)\otimes T_\ell(A^*) \to \ZZ_\ell(1);
 \]
@@ -224,7 +227,7 @@ Let $A$ be an abelian variety over $\FF_q$, and $F\colon x\mapsto x^q$ its Frobe
 Recall that $A$ is uniquely determined by the pair $(\overline{A},F)$ induced by $(A,F)$ by extension of scalars from $\FF_q$ to $\overline{\FF}_q$;
 the endomorphism $F$ of $\overline{A}$ factors as the relative Frobenius morphism $\Fr^{(q)}\colon\overline{A}\to\overline{A}^{(q)}$ followed by an isomorphism $F'\colon\overline{A}^{(q)}\to\overline{A}$.
 If $A$ is ordinary, then we denote by $T(A)$ the $\ZZ$-module $T(\overline{A})$ endowed with the endomorphism $F$ induced by the Frobenius endomorphism of $A$.
-By \cref{5}, the above, and \cref{3.3}, the lattices $T(A)$ and $F(T(A))$ are $p$-isogenous, and we have that
+By \hyperref[5]{\S5}, the above, and \hyperref[3.3]{(3.3)}, the lattices $T(A)$ and $F(T(A))$ are $p$-isogenous, and we have that
 \[
 \label{6.1}
   F(T'_p(A)) = T'_p(A),
@@ -273,7 +276,7 @@ By \cref{5}, the above, and \cref{3.3}, the lattices $T(A)$ and $F(T(A))$ are $p
       \[
         \psi\colon \Hom(A,B) \to \Hom_F(T(A),T(B)).
       \]
-      By the theorem of Tate \cite{7} and by \cref{3.1}, the arrow
+      By the theorem of Tate \cite{7} and by \hyperref[3.1]{(3.1)}, the arrow
       \[
         \psi_\ell\colon \Hom(A,B)\otimes\ZZ_\ell \to \Hom_F(T(A),T(B))\otimes\ZZ_\ell
       \]
@@ -285,19 +288,19 @@ By \cref{5}, the above, and \cref{3.3}, the lattices $T(A)$ and $F(T(A))$ are $p
       $\widetilde{u}$ thus disappears on this kernel, $\widetilde{u}$ and $u$ are divisible by~$n$, and $\psi$ is bijective.
     \item \emph{Necessity.}
       The fact that $(T(A),F)$ satisfies (a) follows from Weil;
-        condition~(d), which implies (b) and (c), follows from \cref{6}.
+        condition~(d), which implies (b) and (c), follows from \hyperref[6]{\S6}.
 \oldpage{242}
     \item \emph{Isogenies.}
       Let $(T_0,F)$ satisfy (a) and (d), and let $T$ be a lattice in $T_0\otimes\QQ$, stable under $F$, that also satisfies (d).
       Suppose that $(T_0,F)$ is the image of an abelian variety $A$ over $\FF_q$; we will prove that $(T,F)$ comes from an isogenous abelian variety.
       By $T$ with $\frac1k T$, which is isomorphic to $T$, we can suppose that $T\supset T_0$.
-      Condition~(d) implies that $T$ satisfies \cref{4.1}, and that $T$ defines a subgroup $H$ of $\overline{A}$, defined over $\FF_q$, and such that $(T,F)=T(A/H)$.
+      Condition~(d) implies that $T$ satisfies \hyperref[4.1]{(4.1)}, and that $T$ defines a subgroup $H$ of $\overline{A}$, defined over $\FF_q$, and such that $(T,F)=T(A/H)$.
     \item \emph{Surjectivity.}
       The functor $T$ induces a functor $T_\QQ$ from the category of isogeny classes of ordinary abelian varieties over $\FF_q$ to the category of finite-dimensional $\QQ$-vector spaces endowed with an automorphism $F$ that satisfies (a) and (b).
       By (D), it suffices to prove that this functor $T_\QQ$ is essentially surjective.
       It even suffices to show that every simple object $(V,F)$ in the codomain is in the image.
       By Honda~\cite{1} (see also \cite{6}), there exists an abelian variety $A$ over $\FF_q$ such that the characteristic polynomial of the Frobenius $F_A$ of $A$ is a power of that of $F$.
-      The third characterisation in \cref{2} of ordinary abelian varieties shows that $A$ is ordinary.
+      The third characterisation in \hyperref[2]{\S2} of ordinary abelian varieties shows that $A$ is ordinary.
       Furthermore, $(T(A)\otimes\QQ,F)$ is the sum of copies of $(V,F)$, and thus, by (B), the isogeny class of the abelian variety $A\otimes\QQ$ is the sum of copies of an abelian variety $B$ that satisfies $T(B)\otimes\QQ=(V,F)$.
   \end{enumerate}
 \end{proof}
@@ -305,7 +308,7 @@ By \cref{5}, the above, and \cref{3.3}, the lattices $T(A)$ and $F(T(A))$ are $p
 
 \section{}
 \label{8}
-Let $(T,F)$ be a pair satisfying the hypotheses of the theorem, $2g$ the rank of $T$, $A$ the corresponding abelian variety over $\FF_q$, and $A_\CC$ the induced complex abelian variety (\cref{3}).
+Let $(T,F)$ be a pair satisfying the hypotheses of the theorem, $2g$ the rank of $T$, $A$ the corresponding abelian variety over $\FF_q$, and $A_\CC$ the induced complex abelian variety (\hyperref[3]{\S3}).
 We have that
 \[
   T= H_1(A_\CC),

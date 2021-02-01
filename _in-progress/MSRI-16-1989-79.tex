@@ -9,7 +9,6 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{tikz}
 \usepackage{tikz-cd}
@@ -39,8 +38,6 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{section}{\S\!}{\S\S\!}
-\crefname{equation}{}{}
 
 \setcounter{section}{-1}
 \usepackage{titlesec}
@@ -57,18 +54,18 @@
 
 \theoremstyle{definition}
 
-  \newtheorem{innercustomenv}{}
-  \crefname{innercustomenv}{}{}
+  \newtheorem{innerenv}{}
+  \crefname{innerenv}{}{}
   \newenvironment{env}[1]
-    {\renewcommand\theinnercustomenv{(#1)}\innercustomenv}
-    {\endinnercustomenv}
+    {\renewcommand\theinnerenv{(#1)}\innerenv}
+    {\endinnerenv}
 
 
 %% Shortcuts %%
 
 \newcommand{\mot}{\mathrm{mot}}
-\newcommand{\sh}[1]{{\mathscr{#1}}}
-\newcommand{\cat}[1]{{\mathcal{#1}}}
+\newcommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
 \newcommand{\bb}{\mathbb}
 \newcommand{\PP}{\bb{P}}
 \newcommand{\ZZ}{\bb{Z}}
@@ -332,7 +329,7 @@ For the essential idea, see \cref{6.2}.
 To define the motivic $\pi_1$, we need to patch together the various theories of $\pi_1$ that we have at our disposal, guided by the goal of constructing a motivic group in the sense of \cref{5}, explained in \cref{7}.
 This is done in \cref{10} to \cref{13}, after a reminder (\cref{9}) on the Mal\v{c}ev theory of nilpotent groups and their Lie algebras.
 The result leaves much to be desired.
-It is only completely studied for smooth algebraic varieties whose smooth compactifications $\overline{X}$ satisfy $H^1(\overline{X},\sh{O})=0$.
+It is only completely studied for smooth algebraic varieties whose smooth compactifications $\overline{X}$ satisfy $H^1(\overline{X},\scr{O})=0$.
 Another complaint: I sometimes only sketch the definition of structures that will be used in future calculations.
 
 In \cref{16}, we finally explain what the \unsure{torsors under $\ZZ(k)$} from \cref{3} have to do with the $\pi_1$ of the projective line minus three points.

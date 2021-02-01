@@ -4,12 +4,20 @@
 \author{A. Douady}
 \date{}
 
+\newcommand{\doctype}{French seminar talk}
+\newcommand{\origcit}{%
+  \textsc{Douady, A.}
+  ``Vari\'{e}t\'{e}s ab\'{e}liennes''.
+  \emph{S\'{e}minaire Claude Chevalley}, Volume~\textbf{4} (1958--1959), Talk no.~9.
+  {\url{http://www.numdam.org/item/SCC_1958-1959__4__A9_0}}%
+}
+
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 
 \usepackage{mathrsfs}
@@ -42,38 +50,23 @@
 
 \theoremstyle{plain}
 
-  \newtheorem{innercustomtheorem}{Theorem}
-  \crefname{innercustomtheorem}{Theorem}{Theorems}
-  \newenvironment{theorem}[1]
-    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
-    {\endinnercustomtheorem}
+  \newtheorem{innertheorem}{Theorem}
+  \newenvironment{theorem}[1]{\renewcommand\theinnertheorem{#1}\innertheorem}{\endinnertheorem}
 
-  \newtheorem{innercustomlemma}{Lemma}
-  \crefname{innercustomlemma}{Lemma}{Lemmas}
-  \newenvironment{lemma}[1]
-    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
-    {\endinnercustomlemma}
+  \newtheorem{innerlemma}{Lemma}
+  \newenvironment{lemma}[1]{\renewcommand\theinnerlemma{#1}\innerlemma}{\endinnerlemma}
 
-  \newtheorem{innercustomproposition}{Proposition}
-  \crefname{innercustomproposition}{Proposition}{Propositions}
-  \newenvironment{proposition}[1]
-    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-    {\endinnercustomproposition}
+  \newtheorem{innerproposition}{Proposition}
+  \newenvironment{proposition}[1]{\renewcommand\theinnerproposition{#1}\innerproposition}{\endinnerproposition}
 
-  \newtheorem{innercustomcorollary}{Corollary}
-  \crefname{innercustomcorollary}{Corollary}{Corollaries}
-  \newenvironment{corollary}[1]
-    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
-    {\endinnercustomcorollary}
+  \newtheorem{innercorollary}{Corollary}
+  \newenvironment{corollary}[1]{\renewcommand\theinnercorollary{#1}\innercorollary}{\endinnercorollary}
 
 
 \theoremstyle{definition}
 
-  \newtheorem{innercustomremark}{Remark}
-  \crefname{innercustomremark}{Remark}{Remarks}
-  \newenvironment{remark}[1]
-    {\renewcommand\theinnercustomremark{#1}\innercustomremark}
-    {\endinnercustomremark}
+  \newtheorem{innerremark}{Remark}
+  \newenvironment{remark}[1]{\renewcommand\theinnerremark{#1}\innerremark}{\endinnerremark}
 
   \newtheorem*{definition*}{Definition}
   \newtheorem*{remark*}{Remark}
@@ -81,9 +74,6 @@
 
 
 %% Shortcuts %%
-
-\newcommand{\sh}[1]{{\mathscr{#1}}}
-\newcommand{\cat}[1]{{\mathcal{#1}}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -111,13 +101,10 @@
 
   \medskip
   
-  \emph{What follows is a translation of the French seminar talk:}
+  \emph{What follows is a translation of the \doctype:}
 
   \medskip\noindent
-  \textsc{Douady, A.}
-  ``Vari\'{e}t\'{e}s ab\'{e}liennes''.
-  \emph{S\'{e}minaire Claude Chevalley}, Volume~\textbf{4} (1958--1959), Talk no.~9.
-  {\url{http://www.numdam.org/item/SCC_1958-1959__4__A9_0}}
+  \origcit
 \end{abstract}
 
 \setcounter{footnote}{0}
@@ -137,7 +124,13 @@
 \end{definition*}
 
 \begin{properties*}
-  For
+  For every point $a$ of $G$, the translations $l_a$ and $r_a$ defined by $l_a(x)=\varphi(a,x)$ and $r_a(x)=\varphi(x,a)$ are automorphisms of the algebraic variety structure of $G$.
+
+  Every point $x$ of $G$ is simple (indeed, if $y$ is a simple point of $G$, then there exists an automorphism of $G$ that sends $y$ to $x$).
+
+  If $G$ is connected, then $G$ is irreducible.
+  The map $\pi\colon G\to G$ that, to any point, associates its inverse under the group law is a morphism (and thus an automorphism) of the algebraic variety structure.
+  The proof of this property uses the fact that a bijective (and thus radicial) morphism from one variety to another is birational if it is unramified (\cite[p.~211, Corollary~2 to Proposition~3, Section~II, Chapter~VI]{1}).
 \end{properties*}
 
 

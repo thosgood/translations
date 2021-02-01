@@ -9,7 +9,6 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{tikz-cd}
 
@@ -43,11 +42,10 @@
 
 \theoremstyle{plain}
 
-  \newtheorem{innercustomtheorem}{Theorem}
-  \crefname{innercustomtheorem}{Theorem}{Theorems}
+  \newtheorem{innertheorem}{Theorem}
   \newenvironment{theorem}[1]
-    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
-    {\endinnercustomtheorem}
+    {\renewcommand\theinnertheorem{#1}\innertheorem}
+    {\endinnertheorem}
 
   \newtheorem*{corollary}{Corollary}
 
@@ -71,7 +69,6 @@
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
 
-\crefname{equation}{}{}
 \crefname{section}{\S\!\!}{\S\S\!\!}
 \crefname{subsection}{\S\!\!}{\S\S\!\!}
 

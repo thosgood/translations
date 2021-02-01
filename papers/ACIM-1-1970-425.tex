@@ -4,12 +4,20 @@
 \author{Pierre Deligne}
 \date{}
 
+\newcommand{\doctype}{French paper}
+\newcommand{\origcit}{%
+  \textsc{Deligne, P.}
+  ``Th\'{e}orie de Hodge I''.
+  \emph{Actes du Congr\`{e}s intern. math.}, Volume~\textbf{1} (1970), 425--430.
+  \url{https://publications.ias.edu/deligne/paper/359}%
+}
+
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{booktabs}
 \usepackage{tikz-cd}
@@ -38,8 +46,6 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{section}{\S\!}{\S\S\!}
-\crefname{equation}{}{}
 
 
 %% Theorem environments %%
@@ -50,23 +56,20 @@
 
 \theoremstyle{definition}
 
-  \newtheorem{innercustomdefinition}{Definition}
-  \crefname{innercustomdefinition}{Definition}{Definitions}
+  \newtheorem{innerdefinition}{Definition}
   \newenvironment{definition}[1]
-    {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
-    {\endinnercustomdefinition}
+    {\renewcommand\theinnerdefinition{#1}\innerdefinition}
+    {\endinnerdefinition}
 
-  \newtheorem{innercustomprinciple}{Principle}
-  \crefname{innercustomprinciple}{Principle}{Principles}
+  \newtheorem{innerprinciple}{Principle}
   \newenvironment{principle}[1]
-    {\renewcommand\theinnercustomprinciple{#1}\innercustomprinciple}
-    {\endinnercustomprinciple}
+    {\renewcommand\theinnerprinciple{#1}\innerprinciple}
+    {\endinnerprinciple}
 
-  \newtheorem{innercustomenv}{}
-  \crefname{innercustomenv}{}{}
+  \newtheorem{innerenv}{}
   \newenvironment{env}[1]
-    {\renewcommand\theinnercustomenv{#1}\innercustomenv}
-    {\endinnercustomenv}
+    {\renewcommand\theinnerenv{#1}\innerenv}
+    {\endinnerenv}
 
   \newtheorem*{translation*}{Translation}
   \newtheorem*{scholium*}{Scholium}
@@ -108,13 +111,10 @@
   \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations}} of translations of various papers into English.}
   \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
   
-  \emph{What follows is a translation of the French paper:}
+  \emph{What follows is a translation of the \doctype:}
 
   \medskip\noindent
-  \textsc{Deligne, P.}
-  ``Th\'{e}orie de Hodge I''.
-  \emph{Actes du Congr\`{e}s intern. math.}, Volume~\textbf{1} (1970), 425--430.
-  \url{https://publications.ias.edu/deligne/paper/359}
+  \origcit
 \end{abstract}
 
 \setcounter{footnote}{0}
@@ -198,7 +198,7 @@ We say that $H$ is \emph{pure of weight~$n$} if, for every closed point $x$ of a
 
 We can also further suppose that $\Gr_n^W(H)$ is semi-simple.
 
-When we have a resolution of singularities, we can often give a conjectural definition of $W$, whose validity follows from the Weil conjectures \cite{5} (cf. \cref{6}).
+When we have a resolution of singularities, we can often give a conjectural definition of $W$, whose validity follows from the Weil conjectures \cite{5} (cf. \hyperref[6]{\S6}).
 
 Let $\mu$ be the subgroup of $\overline{K}^*$ given by the roots of unity.
 The \emph{Tate module $\ZZ_l(1)$}, defined by
@@ -210,7 +210,7 @@ We set $\ZZ_l(n)=\ZZ_l(1)^\otimes n$.
 
 It is trivial that every morphism $f\colon H\to H'$ is strictly compatible with the weight filtration.
 
-\Cref{principle-2.1} agrees with the fact that every extension of $\mathbb{G}_m$ (``weight~$-2$'') by an abelian variety (``weight~$-1>-2$'') is trivial.
+\hyperref[principle-2.1]{Principle~2.1} agrees with the fact that every extension of $\mathbb{G}_m$ (``weight~$-2$'') by an abelian variety (``weight~$-1>-2$'') is trivial.
 
 
 \section{}
@@ -251,7 +251,7 @@ we have
 \]
 
 \oldpage{427}
-By \cref{3}, we should expect for the cohomology groups $H^n(X(\CC),\ZZ)$ to carry natural mixed Hodge structures.
+By \hyperref[3]{\S3}, we should expect for the cohomology groups $H^n(X(\CC),\ZZ)$ to carry natural mixed Hodge structures.
 This is what we can prove (see \cite[3.2.5]{1} for the case where $X$ is smooth; the proof is algebraic, using classical Hodge theory \cite{6}).
 For $X$ projective and smooth, the Weil conjectures imply that $H^n(X,\ZZ_l)$ is pure of weight~$n$, while classical Hodge theory endows $H^n(X,\ZZ)$ with a Hodge structure of weight~$n$.
 For every morphism $f\colon X\to Y$, and for $K$ large enough, $f^\bullet\colon H^\bullet(Y,\ZZ_l)\to H^\bullet(X,\ZZ_l)$ Galois-commutes (by structure transport);
@@ -302,9 +302,9 @@ and the Leray spectral sequence for $j$ is of the form
 
 \emph{By the Weil conjectures} \cite{5}, $H^p(D_Q,\QQ_l)$ is pure of weight~$p$, so that $E_2^{pq}$ is pure of weight $p+2q$.
 As a quotient of a sub-object of $E_2^{pq}$, $E_r^{pq}$ is also pure of weight $p+2q$.
-By \cref{5}, $d_r=0$ for $r\geq3$, since the weights $p+2q$ and $p+2q-r+2$ of $E_r^{pq}$ and $E_r^{p+q,q-r+1}$ (respectively) are different.
+By \hyperref[5]{\S5}, $d_r=0$ for $r\geq3$, since the weights $p+2q$ and $p+2q-r+2$ of $E_r^{pq}$ and $E_r^{p+q,q-r+1}$ (respectively) are different.
 Thus $E_3^{pq}=E_\infty^{pq}$.
-Up to renumbering, the weight filtration of $H^\bullet(U,\QQ_l)$ is the abutment of \cref{6.2}:
+Up to renumbering, the weight filtration of $H^\bullet(U,\QQ_l)$ is the abutment of \hyperref[6.2]{(6.2)}:
 \[
 \label{6.3}
   \Gr_n^W(H^k(U,\QQ_l)) = E_3^{2k-n,n-k}.
@@ -328,13 +328,13 @@ In integer cohomology, for the usual topology, the Leray spectral sequence for $
 Since each $D_Q$ is a non-singular projective variety, $'E_2^{pq}$ is endowed with a Hodge structure of weight~$p$.
 We set $E_2^{pq}='E_2^{pq}\otimes\ZZ(-q)$ (a Hodge structure of weight $p+2q$).
 As an abelian group, $E_2^{pq}='E_2^{pq}$;
-it is interesting to consider \cref{7.1} as a spectral sequence with initial page $E_2^{pq}$.
-By~\cref{3}, we should expect for $d_2\colon E_2^{pq}\to E_2^{p+2,q-1}$ to be a morphism of Hodge structures.
+it is interesting to consider \hyperref[7.1]{(7.1)} as a spectral sequence with initial page $E_2^{pq}$.
+By~\hyperref[3]{\S3}, we should expect for $d_2\colon E_2^{pq}\to E_2^{p+2,q-1}$ to be a morphism of Hodge structures.
 We prove this by thinking of $d_2$ as a Gysin morphism.
 Then $E_3^{pq}$ is endowed with a Hodge structure of weight $p+2q$.
-By~\cref{3}, we expect that, \emph{modulo torsion}, the spectral sequence\footnote{\emph{[Trans.] The original refers to (6.4), but this seems to be a typo.}} \cref{6.2} degenerates at the $E_3$ page (i.e. $E_3=E_\infty$), and that the vanishing of the $d_r$ (for $r\geq3$) is an application of \cref{5}.
+By~\hyperref[3]{\S3}, we expect that, \emph{modulo torsion}, the spectral sequence\footnote{\emph{[Trans.] The original refers to (6.4), but this seems to be a typo.}} \hyperref[6.2]{(6.2)} degenerates at the $E_3$ page (i.e. $E_3=E_\infty$), and that the vanishing of the $d_r$ (for $r\geq3$) is an application of \hyperref[5]{\S5}.
 This programme was successfully completed in \cite[§3.2]{1}.
-There, we \emph{define} the weight filtration of $H^\bullet(U,\QQ)$ as the abutment of \cref{7.1}, up to renumbering \cref{6.3}.
+There, we \emph{define} the weight filtration of $H^\bullet(U,\QQ)$ as the abutment of \hyperref[7.1]{(7.1)}, up to renumbering \hyperref[6.3]{(6.3)}.
 
 In fact, to endow the cohomology groups $H^\bullet$ with a mixed Hodge structure, the key point has always been, up until now, to find a spectral sequence $E$ abutting to $H^\bullet$ such that the $l$-adic analogue of $E_2^{pq}$ be conjecturally pure (of weight $p+2q$);
 $E_2^{pq}$ should then carry a natural Hodge structure (of weight $p+2q$), and the filtration $W$ is the abutment of $E$.
@@ -353,7 +353,7 @@ it then factors as the largest pro-$l$-group $I_l$ that is a quotient of $I$, an
   In the semi-stable case, if the Galois module $H$ ``comes from algebraic geometry'', then there exists a (unique) increasing filtration $W$ of $H$ (the ``\emph{weight filtration}'') such that $I$ acts trivially on $\Gr_n^W(H)$, and such that $\Gr_n^W(H)$, as a Galois module under $\Gal(\overline{k}/k)\simeq\Gal(\overline{K}/K)/I$ is pure of weight~$n$.
 \end{principle}
 
-We can compare this with \cref{principle-2.1} and with the appendix of \cite{4}.
+We can compare this with \hyperref[principle-2.1]{Principle~2.1} and with the appendix of \cite{4}.
 
 If we have a resolution of the singularities, then we can sometimes give a conjectural definition of $W$, whose validity follows from the Weil conjectures.
 With the help of the resolution and of Weil, it is sometimes easy to show that, in any case, $H$ splits into pure Galois modules (under $\Gal(\overline{k}/k)$).
@@ -366,7 +366,7 @@ The map $(T,x)\mapsto\log T(x)$ can be identified with a homomorphism
   M\colon \ZZ_l(1)\otimes H \to H.
 \tag{8.2}
 \]
-Since $\ZZ_l(1)$ is of weight~$-2$, we necessarily have (cf. \cref{5})
+Since $\ZZ_l(1)$ is of weight~$-2$, we necessarily have (cf. \hyperref[5]{\S5})
 \[
 \label{8.3}
   M(\ZZ_l(1)\otimes W_n(H)) \subset W_{n-2}(H),
@@ -389,7 +389,7 @@ and $M$ induces
   as being the cup product with the cohomology class with a hyperplane section.
   We note that there is a formal analogy between $L$ and $M$;
   in the same way that $M$ is defined by an action of $\ZZ_l(1)$, we can think of $L$ as being defined by an action of $\ZZ_l(-1)$;
-  $L$ increases the degree by~$2$, and $\Gr M$ \cref{8.4} decreases it by~$2$.
+  $L$ increases the degree by~$2$, and $\Gr M$ \hyperref[8.4]{(8.4)} decreases it by~$2$.
 \end{env}
 
 
@@ -405,7 +405,7 @@ Let $D$ be the unit disc, $D^*=D\setminus\{0\}$, and $X$
   \end{tikzcd}
 \]
 a family of projective varieties parameterised by $D$, with $f$ proper, and $f|D^*$ smooth.
-Keeping the notation of \cref{8}, and recalling that, in the analogy between Henselian traits and small neighbourhoods of $0$ in the complex line, we have the following dictionary (note that the spectrum of the ring of germs at $0$ of holomorphic functions is a Henselian trait):
+Keeping the notation of \hyperref[8]{\S8}, and recalling that, in the analogy between Henselian traits and small neighbourhoods of $0$ in the complex line, we have the following dictionary (note that the spectrum of the ring of germs at $0$ of holomorphic functions is a Henselian trait):
 
 \begin{env}{9.1}
   \phantom{}
@@ -439,17 +439,17 @@ Note that $\widetilde{X}$ is homotopically equivalent to each of the fibres $X_t
 Here, again, we know that a subgroup of finite index of $\pi_1(D^*)$ acts unipotently on $H^i(\widetilde{X},\QQ)=H^i(X_t,\QQ)$.
 We place ourselves in the semi-stable case, where all of $\pi_1(D^*)$ acts unipotently (this reduces to replacing $D$ by a finite covering), and let $T$ be the action of the canonical generator of $\pi_1(D^*)$.
 
-By \cref{3} and \cref{8}, we expect for $H^i(\widetilde{X},\QQ)\simeq H^i(X_t,\QQ)$ to be endowed with an increasing filtration $W$, for $\Gr_n^W(H^i(\widetilde{X},\QQ))$ to be endowed with a Hodge structure of weight~$n$, for $\log T(W_n)\subset W_{n-2}$, and for $\log T$ to induce a morphism of Hodge structures
+By \hyperref[3]{\S3} and \hyperref[8]{\S8}, we expect for $H^i(\widetilde{X},\QQ)\simeq H^i(X_t,\QQ)$ to be endowed with an increasing filtration $W$, for $\Gr_n^W(H^i(\widetilde{X},\QQ))$ to be endowed with a Hodge structure of weight~$n$, for $\log T(W_n)\subset W_{n-2}$, and for $\log T$ to induce a morphism of Hodge structures
 \[
   M_n\colon \ZZ(-1)\otimes\Gr_n^W(H^i) \to \Gr_{n-2}^W(H^i).
 \]
-We would further like for \cref{8.2}, and not just \cref{8.3} and \cref{8.4}, to have an analogue.
+We would further like for \hyperref[8.2]{(8.2)}, and not just \hyperref[8.3]{(8.3)} and \hyperref[8.4]{(8.4)}, to have an analogue.
 
 We have in fact managed to define, for each vector $u$ of the tangent space to $D$ at $\{0\}$, a mixed Hodge structure $\mathscr{H}_u$ on $H^i(\widetilde{X},\ZZ)$.
 The filtration $W$ and the Hodge structures on the $\Gr_n^W(H^i)$ are independent of $u$, and the dependence on $u$ of $\mathscr{H}_u$ can be expressed
 \oldpage{430}
 simply in terms of $T$.
-Analogously to \cref{8.2}, we find that, for any $u$, $\log T$ induces a homomorphism of mixed Hodge structures
+Analogously to \hyperref[8.2]{(8.2)}, we find that, for any $u$, $\log T$ induces a homomorphism of mixed Hodge structures
 \[
   M\colon \ZZ(1)\otimes H^i(\widetilde{X},\ZZ) \to H^i(\widetilde{X},\ZZ).
 \]

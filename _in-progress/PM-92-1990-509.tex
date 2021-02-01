@@ -9,7 +9,6 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{tikz-cd}
 
@@ -39,8 +38,6 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{section}{\S\!}{\S\S\!}
-\crefname{equation}{}{}
 
 
 %% Theorem environments %%
@@ -60,7 +57,7 @@
 
 %% Shortcuts %%
 
-\newcommand{\sh}[1]{{\mathscr{#1}}}
+\newcommand{\scr}[1]{{\mathscr{#1}}}
 \newcommand{\PP}{\mathbf{P}}
 \newcommand{\QQ}{\mathbf{Q}}
 \newcommand{\NN}{\mathbf{N}}
@@ -127,18 +124,18 @@ Furthermore, $X^\s$ is contained in the open subset $X^\ss=X^\ss(L)$ of semi-sta
 The variety $Y$ is projective, and contains $X^\s/G$ as an open subset.
 To define it, we introduce the algebra $A:=\oplus_{n=0}^\infty \Gamma(X,L^n)$ and its sub-algebra $A^G$ consisting of invariants of $G$;
 then $Y$ is the $\Proj$ of the graded algebra $A^G$.
-Thus $Y$ is endowed with a sheaf $\sh{O}(n)$ for every integer $n$, and one of them is invertible.
-So we can define the class $1/n[\sh{O}(n)]$ in the Picard group of $Y$, tensored with $\mathbb{Q}$.
+Thus $Y$ is endowed with a sheaf $\scr{O}(n)$ for every integer $n$, and one of them is invertible.
+So we can define the class $1/n[\scr{O}(n)]$ in the Picard group of $Y$, tensored with $\mathbb{Q}$.
 This class is ample, and depends only on $X$ and $L$.
 
 Our goal is to study these objects, introduced by Mumford in \cite{MF}, when $G$ is a torus (denoted by $T$).
-The idea is to simultaneously consider all the quotients associated to the $T$-linearised bundles $L^n\otimes\sh{O}(\chi)$, where $n$ is a positive integer, and $\sh{O}(\chi)$ is the trivial line bundle on $X$, with the torus acting on each fibre of $\sh{O}(\chi)$ by multiplication by the character $\chi$.
-The notion of a stable or semi-stable point for $L^n\otimes\sh{O}(\chi)$ depends only, in fact, on $\chi/n$.
+The idea is to simultaneously consider all the quotients associated to the $T$-linearised bundles $L^n\otimes\scr{O}(\chi)$, where $n$ is a positive integer, and $\scr{O}(\chi)$ is the trivial line bundle on $X$, with the torus acting on each fibre of $\scr{O}(\chi)$ by multiplication by the character $\chi$.
+The notion of a stable or semi-stable point for $L^n\otimes\scr{O}(\chi)$ depends only, in fact, on $\chi/n$.
 \oldpage{510}
 To every quotient $p$ of a character of $T$ by an integer, we can thus associate $X^\s(p)$, $X^\ss(p)$, $Y(p)$, and an ample class $L_p$ in $\Pic_\mathbb{Q}(Y(p))$;
 when $p=0$, we recover the above notions.
 
-For simplicity, we assume $L$ to be very ample, i.e. we consider the case where $X$ is a subvariety of a projective space $\PP(V)$, with the torus $T$ acting linearly on $V$, and where $L$ is the restriction of $\sh{O}(1)$ to $X$.
+For simplicity, we assume $L$ to be very ample, i.e. we consider the case where $X$ is a subvariety of a projective space $\PP(V)$, with the torus $T$ acting linearly on $V$, and where $L$ is the restriction of $\scr{O}(1)$ to $X$.
 We show that $X^\s(p)$, $X^\ss(p)$, and $Y(p)$ depend only on the position of $p$ relative to a certain finite set $\II$ of characters of $T$ (the set of weights of $T$ in $V$).
 More precisely, we define \cref{1.1,1.2} a partition of the convex hull $\mathcal{C}$ of $\II$ into ``faces''.
 Each face is the interior of a convex polyhedron, and $X^\s(p)$, $X^\ss(p)$, and $Y(p)$ depend only on the face of $p$;
@@ -166,11 +163,11 @@ More precisely, we consider a polynomial algebra $A$, graded by $\NN\times\ZZ^l$
 We denote by $T$ the torus having $\ZZ^l$ as its group of characters.
 Every $(\NN\times\ZZ^l)$-graded $A$-module defines
 \oldpage{511}
-a $T$-linearised sheaf $\sh{M}$ on the projective space $\PP(V)$ associated to $A$.
+a $T$-linearised sheaf $\scr{M}$ on the projective space $\PP(V)$ associated to $A$.
 Let $\II$ be the set of weights of $T$ in $V$, i.e. the duals of the $\ZZ^l$-degrees of the generators of $A$.\footnote{\emph{[Trans.] See e.g. Example~2.2.2 in M.~Brion's ``Linearization of algebraic group actions'' \emph{Handbook of Group Actions} Volume~\textbf{4} (2018), or 1.1.5 in Dolgachev and Hu's ``Variation of geometric invariant theory quotients'' \emph{Pub. Math. de l'IH\'{E}S} \textbf{87} (1998).}}
-For every face $F$ associated to $\II$, let $\sh{M}^{(F)}$ be the sheaf given by invariants of $T$ in $(\pi_F)_*(\sh{M})$, where $\pi_F\colon X^\ss(F)\to Y(F)$ is the ``quotient''.
-We show that, if $M$ is an $A$-module of finite type, then $\sh{M}^{(F)}$ is a coherent sheaf on $Y(F)$.
-For every $p\in F$, we denote by $\mu_M(p)$ the degree of $\sh{M}^{(F)}$ relative to the ample class $L_p$ (see \cite[I.3]{Kle}).
+For every face $F$ associated to $\II$, let $\scr{M}^{(F)}$ be the sheaf given by invariants of $T$ in $(\pi_F)_*(\scr{M})$, where $\pi_F\colon X^\ss(F)\to Y(F)$ is the ``quotient''.
+We show that, if $M$ is an $A$-module of finite type, then $\scr{M}^{(F)}$ is a coherent sheaf on $Y(F)$.
+For every $p\in F$, we denote by $\mu_M(p)$ the degree of $\scr{M}^{(F)}$ relative to the ample class $L_p$ (see \cite[I.3]{Kle}).
 We show that the function $\mu_M$ is a polynomial on each face.
 Furthermore, it appears as the density in various integral expressions of asymptotic invariants of $M$: the ``generalised Hilbert--Samuel polynomials'' \cref{3.5}, and the ``Joseph polynomials'' (\cite{Jos}; see \cref{3.6}).
 If $M$ is the homogeneous coordinate ring of a smooth projective subvariety $X$ of $\PP(V)$, then the function $\mu_M$ is continuous, and its Fourier transform depends only on fixed points of $T$ in $X$, and on their normal bundle \cref{3.4}.
@@ -242,7 +239,7 @@ The theorem below, and its proof, justify this terminology.
 \label{1.2-theorem}
   There exists a projective variety $Y(F)$, with the trivial action
 \oldpage{513}
-  of $T$, and a $T$-equivariant affine morphism $\pi_F\colon X^\ss(F)\to Y(F)$, such that $\sh{O}_{Y(F)}$ consists of the invariants of $T$ in $(\pi_F)_*(\sh{O}_{X^\ss(F)})$.
+  of $T$, and a $T$-equivariant affine morphism $\pi_F\colon X^\ss(F)\to Y(F)$, such that $\scr{O}_{Y(F)}$ consists of the invariants of $T$ in $(\pi_F)_*(\scr{O}_{X^\ss(F)})$.
   The restriction of $\pi_F$ to $X^\s(F)$ has the orbits of $T$ as its fibres.
 \end{theorem}
 
@@ -266,58 +263,58 @@ The theorem below, and its proof, justify this terminology.
 \subsection{A class of sheaves on the quotients}
 \label{1.3}
 
-The line bundle $\sh{O}(1)$ on $\PP(V)$ restricted to $X$ gives a $T$-linearised bundle, again denoted by $\sh{O}(1)$.
-For every character $\chi$ of $T$, we denote by $\sh{O}(\chi)$ the following $T$-linearised line bundle:
+The line bundle $\scr{O}(1)$ on $\PP(V)$ restricted to $X$ gives a $T$-linearised bundle, again denoted by $\scr{O}(1)$.
+For every character $\chi$ of $T$, we denote by $\scr{O}(\chi)$ the following $T$-linearised line bundle:
 it is the trivial line bundle on $X$, and $T$ acts on each fibre via the character $-\chi$.
-The map $\chi\mapsto\sh{O}(\chi)$ is a group homomorphism, from $\mathfrak{X}(T)$ to $\Pic^T(X)$ (the group of isomorphism classes of $T$-linearised line bundles on $X$).
-We extend this homomorphism to give a homomorphism from $E_\QQ$ to $\Pic^T(X)\otimes_\ZZ\QQ$, where $p\mapsto\sh{O}(p)$.
+The map $\chi\mapsto\scr{O}(\chi)$ is a group homomorphism, from $\mathfrak{X}(T)$ to $\Pic^T(X)$ (the group of isomorphism classes of $T$-linearised line bundles on $X$).
+We extend this homomorphism to give a homomorphism from $E_\QQ$ to $\Pic^T(X)\otimes_\ZZ\QQ$, where $p\mapsto\scr{O}(p)$.
 
 We now reformulate the proof of \hyperref[1.2-theorem]{Theorem~1.2} in the language of line bundles.
-Let $A=\oplus_{n=0}^\infty\Gamma(X,\sh{O}(n))$;
+Let $A=\oplus_{n=0}^\infty\Gamma(X,\scr{O}(n))$;
 this is a graded algebra on which $T$ acts.
 By \cite[1.11]{MF}, we have that $Y(0)=\Proj(A^T)$, where $A^T$ is the algebra of $T$-invariants in $A$.
-Thus $Y(0)$ is canonically endowed with sheaves $\sh{O}(n)$ for each whole number $n$.
-By \cite[8.14.4]{EGAII}, there exists an integer $n>0$ such that $\sh{O}(n)$ is invertible and very ample.
-Let $[\sh{O}(n)]$ be its class in $\Pic(Y(0))$.
-Set $[\sh{O}(1)] := 1/n[\sh{O}(n)]$;
+Thus $Y(0)$ is canonically endowed with sheaves $\scr{O}(n)$ for each whole number $n$.
+By \cite[8.14.4]{EGAII}, there exists an integer $n>0$ such that $\scr{O}(n)$ is invertible and very ample.
+Let $[\scr{O}(n)]$ be its class in $\Pic(Y(0))$.
+Set $[\scr{O}(1)] := 1/n[\scr{O}(n)]$;
 this is an element of $\Pic_\QQ(Y(0)) := \Pic(Y(0))\otimes_\ZZ\QQ$.
 By \cite[8.14.12]{EGAII}, this class does not depend on the choice of $n$ (see \cite{Dem} for more details on this construction).
-By definition, $[\sh{O}(1)]$ is the class of $(\pi_0)_*^T\sh{O}(1)$ in $\Pic_\QQ(Y(0))$ (the invariant direct image of $\sh{O}(1)$).
+By definition, $[\scr{O}(1)]$ is the class of $(\pi_0)_*^T\scr{O}(1)$ in $\Pic_\QQ(Y(0))$ (the invariant direct image of $\scr{O}(1)$).
 
 More generally, let $p=\chi/n$ be a rational point of $\mathcal{C}$.
 Note that $X^\ss(p)$ is the set of semi-stable points of $X$ associated to the
 \oldpage{514}
-$T$-linearised bundle $\sh{O}(n)\otimes\sh{O}(\chi)$.
+$T$-linearised bundle $\scr{O}(n)\otimes\scr{O}(\chi)$.
 Then $Y(p)$ is the $\Proj$ of the graded algebra
 \[
-  \bigoplus_{m=0}^\infty \Gamma(X,\sh{O}(mn)\otimes\sh{O}(m\chi))^T = \bigoplus_{m=0}^\infty \Gamma(X,\sh{O}(mn))_{m\chi}
+  \bigoplus_{m=0}^\infty \Gamma(X,\scr{O}(mn)\otimes\scr{O}(m\chi))^T = \bigoplus_{m=0}^\infty \Gamma(X,\scr{O}(mn))_{m\chi}
 \]
 (we recall that, for every rational $T$-module $W$, and for every character $\psi$ of $T$, we denote by $W_\psi$ the subspace of eigenvectors of $T$ in $W$, of weight $\psi$).
-We thus have a canonical sheaf $\sh{O}(1)$ on $Y(p)$, which depends on $\chi$ and $n$.
-Set $[\sh{O}_p(1)] = 1/n[\sh{O}(1)]$ in $\Pic_\QQ(Y(F))$;
+We thus have a canonical sheaf $\scr{O}(1)$ on $Y(p)$, which depends on $\chi$ and $n$.
+Set $[\scr{O}_p(1)] = 1/n[\scr{O}(1)]$ in $\Pic_\QQ(Y(F))$;
 this class depends only on $p$.
 
 \begin{proposition}
   Let $p$ be a rational point of a face $F$.
-  Then $[\sh{O}_p(1)]$ is the class of $(\pi_F)_*^T(\sh{O}(1)\otimes\sh{O}(p))$ in $\Pic_\QQ(Y(F))$.
+  Then $[\scr{O}_p(1)]$ is the class of $(\pi_F)_*^T(\scr{O}(1)\otimes\scr{O}(p))$ in $\Pic_\QQ(Y(F))$.
 \end{proposition}
 
 \begin{proof}
-  By definition, $\sh{O}_{\chi,n}(1)$ is the invariant direct image of the canonical sheaf on the $\Proj$ of $\oplus_{m=0}^\infty\Gamma(X,\sh{O}(mn)\otimes\sh{O}(m\chi))$, i.e. $\sh{O}_{\chi,n}(1) = (\pi_p)_*^T(\sh{O}(n)\otimes\sh{O}(n\chi))$.
+  By definition, $\scr{O}_{\chi,n}(1)$ is the invariant direct image of the canonical sheaf on the $\Proj$ of $\oplus_{m=0}^\infty\Gamma(X,\scr{O}(mn)\otimes\scr{O}(m\chi))$, i.e. $\scr{O}_{\chi,n}(1) = (\pi_p)_*^T(\scr{O}(n)\otimes\scr{O}(n\chi))$.
   The claim then follows immediately.
 \end{proof}
 
 \begin{corollary}
-  For every face $F$, the map $p\mapsto[\sh{O}_p(1)]$ is the restriction of an affine map.
+  For every face $F$, the map $p\mapsto[\scr{O}_p(1)]$ is the restriction of an affine map.
 \end{corollary}
 
 \begin{proof}
   Let $\chi/n$ be a rational point of the affine space generated by $F$.
-  We immediately see that the restriction of $\sh{O}(n)\otimes\sh{O}(\chi)$ to any orbit of $T$ in $X^\ss(F)$ is trivial line $T$-bundle.
-  By \cite[Proposition~3]{Kra2}, there exists a line bundle $\sh{L}_{n,\chi}$ on $Y(F)$ such that $\sh{O}(n)\otimes\sh{O}(\chi)=\pi_F^*\sh{L}_{n,\chi}$.
-  By the projection formula, we have that $\sh{L}_{n,\chi}=(\pi_F)_*^T(\sh{O}(n)\otimes\sh{O}(\chi))$, and thus $\sh{L}_{n,\chi}$ is unique.
-  Since the map $\chi/n\mapsto\sh{O}(1)\otimes\sh{O}(\chi/n)$ is affine, so too is $\chi/n\mapsto(1/n)\sh{L}_{n,\chi}$.
-  We conclude thanks to the fact that $(1/n)\sh{L}_{n,\chi}=\sh{O}_{\chi/n}(1)$ for every $\chi/n\in F$.
+  We immediately see that the restriction of $\scr{O}(n)\otimes\scr{O}(\chi)$ to any orbit of $T$ in $X^\ss(F)$ is trivial line $T$-bundle.
+  By \cite[Proposition~3]{Kra2}, there exists a line bundle $\scr{L}_{n,\chi}$ on $Y(F)$ such that $\scr{O}(n)\otimes\scr{O}(\chi)=\pi_F^*\scr{L}_{n,\chi}$.
+  By the projection formula, we have that $\scr{L}_{n,\chi}=(\pi_F)_*^T(\scr{O}(n)\otimes\scr{O}(\chi))$, and thus $\scr{L}_{n,\chi}$ is unique.
+  Since the map $\chi/n\mapsto\scr{O}(1)\otimes\scr{O}(\chi/n)$ is affine, so too is $\chi/n\mapsto(1/n)\scr{L}_{n,\chi}$.
+  We conclude thanks to the fact that $(1/n)\scr{L}_{n,\chi}=\scr{O}_{\chi/n}(1)$ for every $\chi/n\in F$.
 \end{proof}
 
 
@@ -528,16 +525,16 @@ We have the diagram
 \]
 
 The algebra $k[N_+]$ is graded (by weight with respect to $T$), and $\PP(N_+)$ is the $\Proj$ of $k[N_+]$.
-Consequently, $\PP(N_+)$ is canonically endowed with a sheaf that we denote by $\sh{O}_+(n)$.
+Consequently, $\PP(N_+)$ is canonically endowed with a sheaf that we denote by $\scr{O}_+(n)$.
 
 \begin{proposition}
   We have
   \[
-    \hat{Z} = \Spec \left( \bigoplus_{n=0}^\infty \sh{O}_+(n)\otimes\sh{O}_-(n) \right)
+    \hat{Z} = \Spec \left( \bigoplus_{n=0}^\infty \scr{O}_+(n)\otimes\scr{O}_-(n) \right)
   \]
   (a sheaf of graded algebras on $\PP(N_+)\times\PP(N_0)$), and
   \[
-    Z_+ = \Spec \left( \bigoplus_{n=0}^\infty \sh{O}_+(n)\otimes k[N_-]_n \right)
+    Z_+ = \Spec \left( \bigoplus_{n=0}^\infty \scr{O}_+(n)\otimes k[N_-]_n \right)
   \]
   where $k[N_-]_n$ denotes the polynomial functions on $N_-$ of weight $-n$ with respect to $T$.
   The diagram
@@ -553,17 +550,17 @@ Consequently, $\PP(N_+)$ is canonically endowed with a sheaf that we denote by $
   is dual to
   \[
     \begin{tikzcd}
-      \bigoplus_{n=0}^\infty\sh{O}_+(n)\otimes\sh{O}_-(n)
-      & \bigoplus_{n=0}^\infty k[N_+]_n\otimes\sh{O}_-(n) \lar
-    \\\bigoplus_{n=0}^\infty\sh{O}_+(n)\otimes k[N_-]_n \uar
+      \bigoplus_{n=0}^\infty\scr{O}_+(n)\otimes\scr{O}_-(n)
+      & \bigoplus_{n=0}^\infty k[N_+]_n\otimes\scr{O}_-(n) \lar
+    \\\bigoplus_{n=0}^\infty\scr{O}_+(n)\otimes k[N_-]_n \uar
       & \bigoplus_{n=0}^\infty k[N_+]_n\otimes k[N_-]_n \uar \lar
     \end{tikzcd}
   \]
 \end{proposition}
 
 \begin{proof}
-  It suffices to prove that $Z_+=\Spec\bigoplus_{n=0}^\infty\sh{O}_+(n)\otimes k[N_-]_n$;
-  the claim on $\sh{O}_{\hat{Z}}$ then follows, since $\sh{O}_{\hat{Z}}=\sh{O}_{Z_+}\otimes_{\sh{O}_Z}\sh{O}_{Z_-}$.
+  It suffices to prove that $Z_+=\Spec\bigoplus_{n=0}^\infty\scr{O}_+(n)\otimes k[N_-]_n$;
+  the claim on $\scr{O}_{\hat{Z}}$ then follows, since $\scr{O}_{\hat{Z}}=\scr{O}_{Z_+}\otimes_{\scr{O}_Z}\scr{O}_{Z_-}$.
   Let $f$ be a polynomial function of weight $p$ on $N_+$.
   Set $Z_{+f}=p_+^{-1}(\PP(N_+)_f)$, which is an affine open subset of $Z_+$.
   We have
@@ -575,18 +572,18 @@ Consequently, $\PP(N_+)$ is canonically endowed with a sheaf that we denote by $
   On the other hand,
   \[
     \begin{aligned}
-      \Gamma\left(\PP(N_+)_f, \bigoplus_{n=0}^\infty\sh{O}_+(n)\otimes k[N_-]_n\right)
-      &= \bigoplus_{n=0}^\infty\Gamma\left(\PP(N_+)_f,\sh{O}_+(n)\right)\otimes k[N_-]_n
+      \Gamma\left(\PP(N_+)_f, \bigoplus_{n=0}^\infty\scr{O}_+(n)\otimes k[N_-]_n\right)
+      &= \bigoplus_{n=0}^\infty\Gamma\left(\PP(N_+)_f,\scr{O}_+(n)\right)\otimes k[N_-]_n
     \\&= \bigoplus_{n=0}^\infty\big(k[N_+][1/f]\big)_n\otimes k[N_-]_n.
     \end{aligned}
   \]
 \end{proof}
 
 \begin{definition}
-  Let $X$ be a variety with an action of $k^*$, such that the associated grading of $\sh{O}_X$ is concentrated in non-negative degrees: $\sh{O}_X=\bigoplus_{n=0}^\infty\sh{O}_{X,n}$.
-  Let $Y$ be the subvariety of $X$ such that $\sh{O}_Y=\sh{O}_{X,0}$.
-  The \emph{blow-up of $Y$ in $X$} is the $\Proj$ of the graded algebra $\bigoplus_{n=0}^\infty\mathcal{A}_n$, where $\mathcal{A}_n=\bigoplus_{m\geq n}\sh{O}_{X,m}$.
-  Its \emph{exceptional divisor} (considered here as a reduced variety) is the $\Proj$ of the sheaf of graded algebras $\sh{O}_X$.
+  Let $X$ be a variety with an action of $k^*$, such that the associated grading of $\scr{O}_X$ is concentrated in non-negative degrees: $\scr{O}_X=\bigoplus_{n=0}^\infty\scr{O}_{X,n}$.
+  Let $Y$ be the subvariety of $X$ such that $\scr{O}_Y=\scr{O}_{X,0}$.
+  The \emph{blow-up of $Y$ in $X$} is the $\Proj$ of the graded algebra $\bigoplus_{n=0}^\infty\mathcal{A}_n$, where $\mathcal{A}_n=\bigoplus_{m\geq n}\scr{O}_{X,m}$.
+  Its \emph{exceptional divisor} (considered here as a reduced variety) is the $\Proj$ of the sheaf of graded algebras $\scr{O}_X$.
 \end{definition}
 
 \begin{corollary}
@@ -603,7 +600,7 @@ Consequently, $\PP(N_+)$ is canonically endowed with a sheaf that we denote by $
 
 \begin{lemma}
   Let $B=\bigoplus_{n=0}^\infty B_n$ be a graded algebra of finite type, with $B_0=k$.
-  The blow-up of $0$ in $B$ is the spectrum of the sheaf of algebras $\bigoplus_{n=0}^\infty\sh{O}_{\PP(B)}(n)$, where $\PP(B)$ is the $\Proj$ of $B$.
+  The blow-up of $0$ in $B$ is the spectrum of the sheaf of algebras $\bigoplus_{n=0}^\infty\scr{O}_{\PP(B)}(n)$, where $\PP(B)$ is the $\Proj$ of $B$.
 \end{lemma}
 
 
@@ -613,18 +610,18 @@ Consequently, $\PP(N_+)$ is canonically endowed with a sheaf that we denote by $
 
 We keep the above notation.
 Let $\pi_+\colon\dot{N}_+\times N_-\to Z_+$ be the quotient by $T$.
-As in \cref{1.2}, denote by $\sh{O}(\chi)$ the $T$-linearised line bundle on $N$ associated to the character $-\chi$ of $T$.
-Set $\sh{O}_\chi^+(1)=(\pi_+)_*^T(\sh{O}(\chi))$;
-define $\sh{O}_\chi^-(1)$ similarly.
-We also have a sheaf $\sh{O}(1)$ on $\hat{Z}$, associated to the $\sh{O}_{\hat{Z}}$-module $\bigoplus_{n=0}^\infty\sh{O}_+(n)\otimes\sh{O}_-(n)$.
-We can also see $\sh{O}(1)$ as the sheaf associated to the (Weil) divisor $\psi^{-1}(0)$ on $\hat{Z}$, where $\psi^{-1}(0)$ is the set-theoretic fibre of $\psi$ at $0$.
-For all $\chi\in\ZZ$, we thus have the class $\chi\cdot\sh{O}(1)$ in $\Pic_\QQ(\hat{Z})$.
+As in \cref{1.2}, denote by $\scr{O}(\chi)$ the $T$-linearised line bundle on $N$ associated to the character $-\chi$ of $T$.
+Set $\scr{O}_\chi^+(1)=(\pi_+)_*^T(\scr{O}(\chi))$;
+define $\scr{O}_\chi^-(1)$ similarly.
+We also have a sheaf $\scr{O}(1)$ on $\hat{Z}$, associated to the $\scr{O}_{\hat{Z}}$-module $\bigoplus_{n=0}^\infty\scr{O}_+(n)\otimes\scr{O}_-(n)$.
+We can also see $\scr{O}(1)$ as the sheaf associated to the (Weil) divisor $\psi^{-1}(0)$ on $\hat{Z}$, where $\psi^{-1}(0)$ is the set-theoretic fibre of $\psi$ at $0$.
+For all $\chi\in\ZZ$, we thus have the class $\chi\cdot\scr{O}(1)$ in $\Pic_\QQ(\hat{Z})$.
 
 \begin{theorem}
   For all $\chi\in\ZZ$, we have
   \[
-    \phi_+^*\sh{O}_\chi^+(1) - \phi_-^*\sh{O}_\chi^-(1)
-    = \chi\cdot\sh{O}(1)
+    \phi_+^*\scr{O}_\chi^+(1) - \phi_-^*\scr{O}_\chi^-(1)
+    = \chi\cdot\scr{O}(1)
     = \chi\cdot\psi^{-1}(0)
   \]
   in $\Pic_\QQ(\hat{Z})$.
@@ -634,13 +631,13 @@ For all $\chi\in\ZZ$, we thus have the class $\chi\cdot\sh{O}(1)$ in $\Pic_\QQ(\
   Let $f$ be a polynomial function on $N_-$ that is an eigenvector of $T$ of weight~$p$.
   With the notation of the proof in \cref{2.1}, we have
   \[
-    \Gamma(Z_{+f},\sh{O}_\chi^+(1))
+    \Gamma(Z_{+f},\scr{O}_\chi^+(1))
     = k[N_{+f}\times N_-]_\chi
     = \bigoplus_{n=0}^\infty\big(k[N_+]/[1/f]\big)_{n+\chi}\otimes k[N_-]_n.
   \]
-  In other words, $\sh{O}_\chi^+(1)$ is the module $\bigoplus_{n=0}^\infty\sh{O}_+(n+\chi)\otimes k[N_-]_n$ on $\sh{O}_{Z_+}$.
-  Similarly, $\sh{O}_\chi^-(1)$ is the module $\bigoplus_{n=0}^\infty k[N_+]_n\otimes\sh{O}_-(n-\chi)$ on $\sh{O}_{Z_-}$.
-  Consequently, $\phi_+^*\sh{O}_\chi^+(1)-\phi_-^*\sh{O}_\chi^-(1)$ is the module $\bigoplus_{n=0}^\infty\sh{O}_+(n+\chi)\otimes\sh{O}_-(n+\chi)$ on $\bigoplus_{n=0}^\infty\sh{O}_+(n)\otimes\sh{O}_-(n)$.
+  In other words, $\scr{O}_\chi^+(1)$ is the module $\bigoplus_{n=0}^\infty\scr{O}_+(n+\chi)\otimes k[N_-]_n$ on $\scr{O}_{Z_+}$.
+  Similarly, $\scr{O}_\chi^-(1)$ is the module $\bigoplus_{n=0}^\infty k[N_+]_n\otimes\scr{O}_-(n-\chi)$ on $\scr{O}_{Z_-}$.
+  Consequently, $\phi_+^*\scr{O}_\chi^+(1)-\phi_-^*\scr{O}_\chi^-(1)$ is the module $\bigoplus_{n=0}^\infty\scr{O}_+(n+\chi)\otimes\scr{O}_-(n+\chi)$ on $\bigoplus_{n=0}^\infty\scr{O}_+(n)\otimes\scr{O}_-(n)$.
 \end{proof}
 
 

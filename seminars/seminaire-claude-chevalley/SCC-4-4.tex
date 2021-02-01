@@ -4,12 +4,20 @@
 \author{C.S. Seshadri}
 \date{}
 
+\newcommand{\doctype}{French seminar talk}
+\newcommand{\origcit}{%
+  \textsc{Seshadri, C. S.}
+  ``Diviseurs en g\'{e}om\'{e}trie alg\'{e}brique''.
+  \emph{S\'{e}minaire Claude Chevalley}, Volume~\textbf{4} (1958--1959), Talk no.~4.
+  {\url{http://www.numdam.org/item/SCC_1958-1959__4__A4_0}}%
+}
+
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 
 \usepackage{mathrsfs}
@@ -42,11 +50,10 @@
 
 \theoremstyle{plain}
 
-  \newtheorem{innercustomproposition}{Proposition}
-  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \newtheorem{innerproposition}{Proposition}
   \newenvironment{proposition}[1]
-    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-    {\endinnercustomproposition}
+    {\renewcommand\theinnerproposition{#1}\innerproposition}
+    {\endinnerproposition}
 
   \newtheorem*{theorem}{Theorem}
   \newtheorem*{cor}{Corollary}
@@ -59,8 +66,8 @@
 
 %% Shortcuts %%
 
-\newcommand{\sh}[1]{{\mathscr{#1}}}
-\newcommand{\cat}[1]{{\mathcal{#1}}}
+\newcommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
 \newcommand{\HH}{\mathrm{H}}
 
 \renewcommand{\geq}{\geqslant}
@@ -94,13 +101,10 @@
 
   \medskip
   
-  \emph{What follows is a translation of the French seminar talk:}
+  \emph{What follows is a translation of the \doctype:}
 
   \medskip\noindent
-  \textsc{Seshadri, C. S.}
-  ``Diviseurs en g\'{e}om\'{e}trie alg\'{e}brique''.
-  \emph{S\'{e}minaire Claude Chevalley}, Volume~\textbf{4} (1958--1959), Talk no.~4.
-  {\url{http://www.numdam.org/item/SCC_1958-1959__4__A4_0}}
+  \origcit
 \end{abstract}
 
 \setcounter{footnote}{0}
@@ -118,8 +122,8 @@ In the literature, we often call the divisors studied here ``locally principal''
 
 The algebraic spaces considered here are defined over an algebraically closed field $K$.
 By ``variety'', we mean an irreducible algebraic space.
-If $X$ is an algebraic space, we denote by $\sh{O}(X)$, $\sh{R}(X)$, etc. (or simply $\sh{O}$, $\sh{R}$, etc.) the structure sheaf, of regular functions, etc. on $X$ (to define $\sh{R}(X)$ we assume that $X$ is a variety).
-By ``coherent sheaf'' on $X$, we mean a coherent sheaf of $\sh{O}$-modules on $X$.
+If $X$ is an algebraic space, we denote by $\scr{O}(X)$, $\scr{R}(X)$, etc. (or simply $\scr{O}$, $\scr{R}$, etc.) the structure sheaf, of regular functions, etc. on $X$ (to define $\scr{R}(X)$ we assume that $X$ is a variety).
+By ``coherent sheaf'' on $X$, we mean a coherent sheaf of $\scr{O}$-modules on $X$.
 
 
 \section{Preliminaries}
@@ -134,61 +138,61 @@ The torsion elements of $M$ form a torsion submodule of $M$ (denoted by $T(M)$);
 if $M\neq0$, then $M/T(M)$ is a torsion-free module.
 If $M$ is a torsion module of finite type over $A$, then the ideal $\ann M$ of $A$ (the ideal of $A$ given by the elements $a\in A$ such that $aM=0$) is non-zero.
 
-Let $X$ be an algebraic space and $\sh{F}$ a sheaf of $\sh{O}$-modules on $X$.
-We define $\supp\sh{F}$ to be the set of points $x\in X$ such that $\sh{F}_x\neq0$.
-If $\sh{F}$ is coherent, then $\supp\sh{F}$ is a closed subset of $X$.
-If $X$ is affine, then $\supp\sh{F}$ is the set defined by the ideal $\ann\HH^0(X,\sh{F})$ of the affine algebra $\HH^0(X,\sh{O})$, where $\HH^0(X,\sh{F})$ is considered as a module over $\HH^0(X,\sh{O})$.
+Let $X$ be an algebraic space and $\scr{F}$ a sheaf of $\scr{O}$-modules on $X$.
+We define $\supp\scr{F}$ to be the set of points $x\in X$ such that $\scr{F}_x\neq0$.
+If $\scr{F}$ is coherent, then $\supp\scr{F}$ is a closed subset of $X$.
+If $X$ is affine, then $\supp\scr{F}$ is the set defined by the ideal $\ann\HH^0(X,\scr{F})$ of the affine algebra $\HH^0(X,\scr{O})$, where $\HH^0(X,\scr{F})$ is considered as a module over $\HH^0(X,\scr{O})$.
 
-A sheaf $\sh{F}$ of $\sh{O}$-modules on a \emph{variety} $X$ is said to be a \emph{torsion sheaf} (resp. \emph{torsion-free sheaf}) if, for every $x\in X$, the module $\sh{F}_x$ over the ring $\sh{O}_x$ is a torsion module (resp. torsion-free module).
+A sheaf $\scr{F}$ of $\scr{O}$-modules on a \emph{variety} $X$ is said to be a \emph{torsion sheaf} (resp. \emph{torsion-free sheaf}) if, for every $x\in X$, the module $\scr{F}_x$ over the ring $\scr{O}_x$ is a torsion module (resp. torsion-free module).
 
 \oldpage{4-02}
 \begin{proposition}{1}
 \label{proposition1}
-  If $\sh{F}$ is a coherent sheaf on a variety $X$, then there exists a coherent subsheaf $T(\sh{F})$ of $\sh{F}$ (and only one) such that $(T(\sh{F}))_x = T(\sh{F}_x)$.
+  If $\scr{F}$ is a coherent sheaf on a variety $X$, then there exists a coherent subsheaf $T(\scr{F})$ of $\scr{F}$ (and only one) such that $(T(\scr{F}))_x = T(\scr{F}_x)$.
 \end{proposition}
 
 \begin{proof}
   The uniqueness is trivial.
-  The exists is a consequence of the fact that, if $X$ is affine, then $T(\sh{F}_x)$ is given by localisation of the module $T(\HH^0*(X,\sh{F}))$ with respect to the maximal ideal of $\HH^0(X,\sh{O})$ that defines $x$.
+  The exists is a consequence of the fact that, if $X$ is affine, then $T(\scr{F}_x)$ is given by localisation of the module $T(\HH^0*(X,\scr{F}))$ with respect to the maximal ideal of $\HH^0(X,\scr{O})$ that defines $x$.
 \end{proof}
 
 \begin{cor}
   \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
-  If $\sh{F}\neq0$ then $\sh{F}/T(\sh{F})$ is a torsion-free coherent sheaf.
-  \footnote{\emph{[Translator.] The condition that $\sh{F}\neq0$ is unnecessary, but we include it here since it is in the original. Note that the zero sheaf is indeed a torsion-free sheaf, otherwise any coherent torsion sheaf $\sh{F}$ provides a counterexample to this corollary.}}
+  If $\scr{F}\neq0$ then $\scr{F}/T(\scr{F})$ is a torsion-free coherent sheaf.
+  \footnote{\emph{[Translator.] The condition that $\scr{F}\neq0$ is unnecessary, but we include it here since it is in the original. Note that the zero sheaf is indeed a torsion-free sheaf, otherwise any coherent torsion sheaf $\scr{F}$ provides a counterexample to this corollary.}}
 \end{cor}
 
 \begin{proposition}{2}
 \label{proposition2}
-  If $\sh{F}$ is a coherent sheaf on the variety $X$, then $\supp\sh{F}\neq X$ if and only if $\sh{F}$ is a torsion sheaf.
+  If $\scr{F}$ is a coherent sheaf on the variety $X$, then $\supp\scr{F}\neq X$ if and only if $\scr{F}$ is a torsion sheaf.
 \end{proposition}
 
 \begin{proof}
-  This is a trivial consequence of the fact that, if $U$ is an affine open subset, then $\supp\sh{F}\cap U$ is defined by the ideal $\ann\HH^0(U,\sh{F})$ of $\HH^0(U,\sh{O})$, where $\HH^0(U,\sh{F})$ is considered as a module over $\HH^0(U,\sh{O})$.
+  This is a trivial consequence of the fact that, if $U$ is an affine open subset, then $\supp\scr{F}\cap U$ is defined by the ideal $\ann\HH^0(U,\scr{F})$ of $\HH^0(U,\scr{O})$, where $\HH^0(U,\scr{F})$ is considered as a module over $\HH^0(U,\scr{O})$.
 \end{proof}
 
 \begin{proposition}{3}
 \label{proposition3}
-  If $\sh{F}$ is a torsion-free coherent sheaf on a variety $X$, with $\sh{F}\subset\sh{R}^n$, then there exists a coherent sheaf $\sh{I}\neq0$ of ideals of $\sh{O}$ such that $\sh{I}\cdot\sh{F}\subset\sh{O}^n$.
+  If $\scr{F}$ is a torsion-free coherent sheaf on a variety $X$, with $\scr{F}\subset\scr{R}^n$, then there exists a coherent sheaf $\scr{I}\neq0$ of ideals of $\scr{O}$ such that $\scr{I}\cdot\scr{F}\subset\scr{O}^n$.
 \end{proposition}
 
 \begin{proof}
-  Let $\sh{I}_x$ be the ideal $[\sh{O}_X^n:\sh{F}_x]$ of $\sh{O}_x$, i.e. the ideal of elements $i_x$ of $\sh{O}_x$ such that $i_x\sh{F}_x\subset\sh{O}_x^n$.
-  Since $\sh{F}_x$ is of finite type over $\sh{O}_x$, we know that $\sh{I}_x\neq0$.
-  If we take an affine open subset $U$ of $X$, then we can prove that $\sh{I}_x$ is given by localisation of the ideal $[\HH^0(U,\sh{O}^n):\HH^0(U,\sh{F})]$ of $\HH^0(U,\sh{O})$ by the maximal ideal of $\HH^0(U,\sh{O})$ that defines $x$.
-  Thus $\{\sh{I}_x\}_{x\in X}$ defines a coherent sheaf $\sh{I}$ of ideals of $\sh{O}$ such that $\sh{I}\cdot\sh{F}\subset\sh{O}^n$.
+  Let $\scr{I}_x$ be the ideal $[\scr{O}_X^n:\scr{F}_x]$ of $\scr{O}_x$, i.e. the ideal of elements $i_x$ of $\scr{O}_x$ such that $i_x\scr{F}_x\subset\scr{O}_x^n$.
+  Since $\scr{F}_x$ is of finite type over $\scr{O}_x$, we know that $\scr{I}_x\neq0$.
+  If we take an affine open subset $U$ of $X$, then we can prove that $\scr{I}_x$ is given by localisation of the ideal $[\HH^0(U,\scr{O}^n):\HH^0(U,\scr{F})]$ of $\HH^0(U,\scr{O})$ by the maximal ideal of $\HH^0(U,\scr{O})$ that defines $x$.
+  Thus $\{\scr{I}_x\}_{x\in X}$ defines a coherent sheaf $\scr{I}$ of ideals of $\scr{O}$ such that $\scr{I}\cdot\scr{F}\subset\scr{O}^n$.
 \end{proof}
 
-Let $\sh{F}$ be a torsion-free coherent sheaf on a variety $X$.
-Then the canonical homomorphism $\sh{F}\to\sh{F}\otimes_{\sh{O}}\sh{R}$ is injective.
-The sheaves $\sh{R}$ and $\sh{F}\otimes_{\sh{O}}\sh{R}$ are locally constant sheaves, and thus constant (\cite[page~229]{5}).
-We can then identify $\sh{F}\otimes_{\sh{O}}\sh{R}$ with a vector space of finite dimension over $\sh{R}$ (we identify the field of rational functions with the sheaf $\sh{R}$ since $\sh{R}$ is constant).
-We call this dimension the \emph{rank of $\sh{F}$}, and we can then consider $\sh{F}$ as a subsheaf of $\sh{R}^n$, where $n=\rank\sh{F}$.
+Let $\scr{F}$ be a torsion-free coherent sheaf on a variety $X$.
+Then the canonical homomorphism $\scr{F}\to\scr{F}\otimes_{\scr{O}}\scr{R}$ is injective.
+The sheaves $\scr{R}$ and $\scr{F}\otimes_{\scr{O}}\scr{R}$ are locally constant sheaves, and thus constant (\cite[page~229]{5}).
+We can then identify $\scr{F}\otimes_{\scr{O}}\scr{R}$ with a vector space of finite dimension over $\scr{R}$ (we identify the field of rational functions with the sheaf $\scr{R}$ since $\scr{R}$ is constant).
+We call this dimension the \emph{rank of $\scr{F}$}, and we can then consider $\scr{F}$ as a subsheaf of $\scr{R}^n$, where $n=\rank\scr{F}$.
 
 \begin{proposition}{4}
 \label{proposition4}
-  Under the same hypotheses as in \cref{proposition3}, there exists a coherent sheaf $\sh{I}\neq0$ of ideals of $\sh{O}$ such that $\sh{I}\cdot\sh{F}\subset\sh{O}^n$, where $n=\rank\sh{F}$;
-  then $\sh{O}^n/(\sh{I}\cdot\sh{F})$ and $\sh{F}/(\sh{I}\cdot\sh{F})$ are torsion sheaves.
+  Under the same hypotheses as in \hyperref[proposition3]{Proposition~3}, there exists a coherent sheaf $\scr{I}\neq0$ of ideals of $\scr{O}$ such that $\scr{I}\cdot\scr{F}\subset\scr{O}^n$, where $n=\rank\scr{F}$;
+  then $\scr{O}^n/(\scr{I}\cdot\scr{F})$ and $\scr{F}/(\scr{I}\cdot\scr{F})$ are torsion sheaves.
 \end{proposition}
 
 \begin{proof}
@@ -196,122 +200,122 @@ We call this dimension the \emph{rank of $\sh{F}$}, and we can then consider $\s
 \end{proof}
 
 \oldpage{4-03}
-If $Y$ is a closed subset of an algebraic space $X$, then we denote by $\sh{I}_Y$ the coherent sheaf of ideals of $\sh{O}$ defined by $Y$.
+If $Y$ is a closed subset of an algebraic space $X$, then we denote by $\scr{I}_Y$ the coherent sheaf of ideals of $\scr{O}$ defined by $Y$.
 
 \begin{proposition}{5}
 \label{proposition5}
-  Let $Y$ be a closed subset of an algebraic space $X$, and $\sh{F}$ a coherent sheaf on $X$, with $\supp\sh{F}\subset Y$;
-  then there exists an integer $k$ such that $\sh{I}_Y^k\sh{F}=0$.
+  Let $Y$ be a closed subset of an algebraic space $X$, and $\scr{F}$ a coherent sheaf on $X$, with $\supp\scr{F}\subset Y$;
+  then there exists an integer $k$ such that $\scr{I}_Y^k\scr{F}=0$.
 \end{proposition}
 
 \begin{proof}
   We can reduce to the case where $X$ is affine, since there exists a finite cover of $X$ by affine opens.
-  In this case, the hypothesis implies that the set defined by the ideal $\ann\HH^0(X,\sh{F})$ is contained in $Y$.
-  This implies, as is well known, that $\ann\HH^0(X,\sh{F})\supset\sh{I}_Y^k$.
+  In this case, the hypothesis implies that the set defined by the ideal $\ann\HH^0(X,\scr{F})$ is contained in $Y$.
+  This implies, as is well known, that $\ann\HH^0(X,\scr{F})\supset\scr{I}_Y^k$.
 \end{proof}
 
 \begin{proposition}{6}
 \label{proposition6}
-  Let $\sh{F}$ be a coherent sheaf of fractional ideals on a variety $X$ (i.e. a coherent subsheaf of $\sh{R}$) such that, for every $x$ outside of a closed subset $Y$ of $X$, $\sh{F}_x$ is an ideal of $\sh{O}_x$.
-  Then there exists an integer $k$ such that $\sh{I}_Y^k\cdot\sh{F}\subset\sh{O}$.
+  Let $\scr{F}$ be a coherent sheaf of fractional ideals on a variety $X$ (i.e. a coherent subsheaf of $\scr{R}$) such that, for every $x$ outside of a closed subset $Y$ of $X$, $\scr{F}_x$ is an ideal of $\scr{O}_x$.
+  Then there exists an integer $k$ such that $\scr{I}_Y^k\cdot\scr{F}\subset\scr{O}$.
 \end{proposition}
 
 \begin{proof}
-  By \cref{proposition3} and the hypothesis, there exists a coherent sheaf $\sh{J}$ of ideals of $\sh{O}$ such that $\sh{J}_x=\sh{O}_x$ if $x\not\in Y$, and such that $\sh{J}\cdot\sh{F}\subset\sh{O}$.
-  Thus $\supp(\sh{O}/\sh{J})\subset Y$, and, by \cref{proposition5}, there exists an integer $k$ such that $\sh{I}_Y^k(\sh{O}/\sh{J})=0$.
-  This implies that $\sh{I}_Y^k\subset\sh{J}$.
+  By \hyperref[proposition3]{Proposition~3} and the hypothesis, there exists a coherent sheaf $\scr{J}$ of ideals of $\scr{O}$ such that $\scr{J}_x=\scr{O}_x$ if $x\not\in Y$, and such that $\scr{J}\cdot\scr{F}\subset\scr{O}$.
+  Thus $\supp(\scr{O}/\scr{J})\subset Y$, and, by \hyperref[proposition5]{Proposition~5}, there exists an integer $k$ such that $\scr{I}_Y^k(\scr{O}/\scr{J})=0$.
+  This implies that $\scr{I}_Y^k\subset\scr{J}$.
 \end{proof}
 
 
 \section{D\'{e}vissage theorem}
 \label{section2}
 
-Let $\cat{C}$ be an abelian category, and $\cat{C}'$ a subcategory of objects of $\cat{C}$.
-We say that $\cat{C}'$ is \emph{left exact in $\cat{C}$} if
+Let $\cal{C}$ be an abelian category, and $\cal{C}'$ a subcategory of objects of $\cal{C}$.
+We say that $\cal{C}'$ is \emph{left exact in $\cal{C}$} if
 \begin{enumerate}
-  \item every subobject of an object of $\cat{C}'$ is in $\cat{C}'$;
-  \item for every exact sequence $0\to\sh{A}'\to\sh{A}\to\sh{A}''\to0$ in $\cat{C}$, the object $\sh{A}$ is in $\cat{C}'$ if the other two objects are in $\cat{C}'$.
+  \item every subobject of an object of $\cal{C}'$ is in $\cal{C}'$;
+  \item for every exact sequence $0\to\scr{A}'\to\scr{A}\to\scr{A}''\to0$ in $\cal{C}$, the object $\scr{A}$ is in $\cal{C}'$ if the other two objects are in $\cal{C}'$.
   \footnote{The axioms here that define a left-exact subcategory are slightly stronger than those of Grothendieck \cite{4}.}
 \end{enumerate}
 
 Let $X$ be an algebraic space.
-We denote by $\cat{C}(X)$ the abelian category of coherent sheaves on $X$.
-If $Y$ is a closed subset of $X$, then a coherent sheaf on $Y$ has a canonical extension to a coherent sheaf on $X$ (extending by $0$ outside of $Y$), and so we can consider $\cat{C}(Y)$ as a subcategory of $\cat{C}(X)$.
+We denote by $\cal{C}(X)$ the abelian category of coherent sheaves on $X$.
+If $Y$ is a closed subset of $X$, then a coherent sheaf on $Y$ has a canonical extension to a coherent sheaf on $X$ (extending by $0$ outside of $Y$), and so we can consider $\cal{C}(Y)$ as a subcategory of $\cal{C}(X)$.
 With this notation, we have the following theorem:
 
 \oldpage{4-04}
 \begin{theorem}[D\'{e}vissage]
 \label{theorem-devissage}
-  Let $\cat{D}$ be a left-exact subcategory of $\cat{C}(X)$ that has the following property:
-  for every closed irreducible subset $Y$ of $X$, there exists a coherent sheaf $\sh{M}_Y$ of $\cat{C}(Y)$ that belongs to $\cat{D}$, and that is torsion-free as a sheaf on $Y$.
-  Then $\cat{D}=\cat{C}(X)$.
+  Let $\cal{D}$ be a left-exact subcategory of $\cal{C}(X)$ that has the following property:
+  for every closed irreducible subset $Y$ of $X$, there exists a coherent sheaf $\scr{M}_Y$ of $\cal{C}(Y)$ that belongs to $\cal{D}$, and that is torsion-free as a sheaf on $Y$.
+  Then $\cal{D}=\cal{C}(X)$.
 \end{theorem}
 
 \begin{proof}
   The proof works by induction on the dimension of $X$.
   If $\dim X=0$, then $X$ consists of a finite number of points $P_1,\ldots,P_r$, and a coherent sheaf on $X$ can be identified with a system $\{N_i\}_{i=1,\ldots,r}$, where $N_i$ is a vector space of finite dimension over $K$.
-  Thus the sheaf $\sh{M}_{P_i}$ on $P_i$ that we have, by hypothesis, is a vector space of finite dimension over $K$.
-  By the axioms of a left-exact subcategory, it is trivial to show that every system $\{N_i\}_{i=1,\ldots,r}$, where $N_i$ is a vector space of finite dimension over $K$, considered as a coherent sheaf on $X$, belongs to $\cat{D}$.
+  Thus the sheaf $\scr{M}_{P_i}$ on $P_i$ that we have, by hypothesis, is a vector space of finite dimension over $K$.
+  By the axioms of a left-exact subcategory, it is trivial to show that every system $\{N_i\}_{i=1,\ldots,r}$, where $N_i$ is a vector space of finite dimension over $K$, considered as a coherent sheaf on $X$, belongs to $\cal{D}$.
 
   Now assume that we have proven the theorem for all dimensions $\leq (n-1)$.
   Let $\dim X=n$.
   Let $Y$ be a closed subset of $X$ such that $\dim Y\leq(n-1)$.
-  We can easily show that $\cat{D}\cap\cat{C}(Y)$ is a left-exact subcategory of $\cat{C}(Y)$ that satisfies the hypotheses of the theorem.
-  So, by the induction hypothesis, $\cat{D}\supset\cat{C}(Y)$.
+  We can easily show that $\cal{D}\cap\cal{C}(Y)$ is a left-exact subcategory of $\cal{C}(Y)$ that satisfies the hypotheses of the theorem.
+  So, by the induction hypothesis, $\cal{D}\supset\cal{C}(Y)$.
 
-  We will now prove that, if $\sh{F}$ is a coherent sheaf on $X$ with $\supp\sh{F}=Y$, then $\sh{F}\in\cat{D}$.
-  If $\sh{I}_Y\cdot\sh{F}=0$, then $\sh{F}\in\cat{C}(Y)$, and, by the above, $\sh{F}\in\cat{D}$.
-  No matter what, by \cref{proposition5}, there exists an integer $k\geq1$ such that $\sh{I}_Y^k\sh{F}=0$.
+  We will now prove that, if $\scr{F}$ is a coherent sheaf on $X$ with $\supp\scr{F}=Y$, then $\scr{F}\in\cal{D}$.
+  If $\scr{I}_Y\cdot\scr{F}=0$, then $\scr{F}\in\cal{C}(Y)$, and, by the above, $\scr{F}\in\cal{D}$.
+  No matter what, by \hyperref[proposition5]{Proposition~5}, there exists an integer $k\geq1$ such that $\scr{I}_Y^k\scr{F}=0$.
   We will complete the proof by induction on $k$.
-  Suppose that that claim has been proven for every coherent sheaf $\sh{G}$ on $X$ such that $\sh{I}_Y^{k-1}\sh{G}=0$.
-  For $\sh{F}$, we have an exact sequence
+  Suppose that that claim has been proven for every coherent sheaf $\scr{G}$ on $X$ such that $\scr{I}_Y^{k-1}\scr{G}=0$.
+  For $\scr{F}$, we have an exact sequence
   \[
-    0 \to \sh{I}_Y\cdot\sh{F} \to \sh{F} \to \sh{F}/(\sh{I}_Y\cdot\sh{F}) \to 0.
+    0 \to \scr{I}_Y\cdot\scr{F} \to \scr{F} \to \scr{F}/(\scr{I}_Y\cdot\scr{F}) \to 0.
   \]
-  The sheaf $\sh{I}_Y\sh{F}$ is annihilated by $\sh{I}_Y^{k-1}$, and the sheaf $\sh{F}/(\sh{I}_Y\sh{F})$ is annihilated by $\sh{I}_Y$.
-  Thus $\sh{I}_Y\sh{F}$ and $\sh{F}/(\sh{I}_Y\sh{F})$ belong to $\cat{D}$.
-  This implies that $\sh{F}\in\cat{D}$.
+  The sheaf $\scr{I}_Y\scr{F}$ is annihilated by $\scr{I}_Y^{k-1}$, and the sheaf $\scr{F}/(\scr{I}_Y\scr{F})$ is annihilated by $\scr{I}_Y$.
+  Thus $\scr{I}_Y\scr{F}$ and $\scr{F}/(\scr{I}_Y\scr{F})$ belong to $\cal{D}$.
+  This implies that $\scr{F}\in\cal{D}$.
 
-  Suppose that $X$ is a variety, and that $\sh{F}$ is a torsion-free sheaf on $X$.
-  We can consider $\sh{F}$ as a coherent subsheaf of $\sh{R}^n$, where $n=\rank\sh{F}$, and, by \cref{proposition4}, there then exists a coherent sheaf of ideals $\sh{I}$ such that $\sh{I}\cdot\sh{F}\subset\sh{O}^n$, and such that the sheaves $\sh{F}/(\sh{I}\sh{F})$ and $\sh{O}^n/(\sh{I}\sh{F})$ are torsion sheaves.
-  Since $\sh{F}/(\sh{I}\sh{F})$ is a torsion sheaf, $\sh{F}/(\sh{I}\sh{F})\in\cat{D}$;
-  thus $\sh{F}\in\cat{D}$ if and only if $\sh{I}\sh{F}\in\cat{D}$.
-  Analogously, $\sh{I}\sh{F}\in\cat{D}$ if and only if $\sh{O}^n\in\cat{D}$, and, by the axioms of an exact subcategory, if and only if $\sh{O}\in\cat{D}$.
-  Thus $\sh{F}\in\cat{D}$ if and only if
+  Suppose that $X$ is a variety, and that $\scr{F}$ is a torsion-free sheaf on $X$.
+  We can consider $\scr{F}$ as a coherent subsheaf of $\scr{R}^n$, where $n=\rank\scr{F}$, and, by \hyperref[proposition4]{Proposition~4}, there then exists a coherent sheaf of ideals $\scr{I}$ such that $\scr{I}\cdot\scr{F}\subset\scr{O}^n$, and such that the sheaves $\scr{F}/(\scr{I}\scr{F})$ and $\scr{O}^n/(\scr{I}\scr{F})$ are torsion sheaves.
+  Since $\scr{F}/(\scr{I}\scr{F})$ is a torsion sheaf, $\scr{F}/(\scr{I}\scr{F})\in\cal{D}$;
+  thus $\scr{F}\in\cal{D}$ if and only if $\scr{I}\scr{F}\in\cal{D}$.
+  Analogously, $\scr{I}\scr{F}\in\cal{D}$ if and only if $\scr{O}^n\in\cal{D}$, and, by the axioms of an exact subcategory, if and only if $\scr{O}\in\cal{D}$.
+  Thus $\scr{F}\in\cal{D}$ if and only if
 \oldpage{4-05}
-  $\sh{O}\in\cat{D}$.
-  If we repeat the same argument for the torsion-free sheaf $\sh{M}_X$, which we have by hypothesis, then we see that $\sh{O}\in\cat{D}$, which implies that $\sh{F}\in\cat{D}$.
+  $\scr{O}\in\cal{D}$.
+  If we repeat the same argument for the torsion-free sheaf $\scr{M}_X$, which we have by hypothesis, then we see that $\scr{O}\in\cal{D}$, which implies that $\scr{F}\in\cal{D}$.
 
-  Suppose again that $X$ is a variety, but now that $\sh{F}$ is an arbitrary coherent sheaf.
-  We will show that $\sh{F}\in\cat{D}$.
-  We can assume that $\sh{F}\neq0$, and we then have
+  Suppose again that $X$ is a variety, but now that $\scr{F}$ is an arbitrary coherent sheaf.
+  We will show that $\scr{F}\in\cal{D}$.
+  We can assume that $\scr{F}\neq0$, and we then have
   \[
-    0 \to T(\sh{F}) \to \sh{F} \to \sh{F}/T(\sh{F}) \to 0
+    0 \to T(\scr{F}) \to \scr{F} \to \scr{F}/T(\scr{F}) \to 0
   \]
-  where $T(\sh{F})$ is a torsion sheaf, and $\sh{F}/T(\sh{F})$ is a torsion-free sheaf.
-  By \cref{proposition2}, $\supp T(\sh{F})\neq X$, and, since $X$ is a variety, $\dim\supp T(\sh{F})<\dim T(X)$.
-  We then have, by the induction hypothesis, that $T(\sh{F})\in\cat{D}$, and we have just proven that $\sh{F}/T(\sh{F})\in\cat{D}$.
-  Thus $\sh{F}\in\cat{D}$.
+  where $T(\scr{F})$ is a torsion sheaf, and $\scr{F}/T(\scr{F})$ is a torsion-free sheaf.
+  By \hyperref[proposition2]{Proposition~2}, $\supp T(\scr{F})\neq X$, and, since $X$ is a variety, $\dim\supp T(\scr{F})<\dim T(X)$.
+  We then have, by the induction hypothesis, that $T(\scr{F})\in\cal{D}$, and we have just proven that $\scr{F}/T(\scr{F})\in\cal{D}$.
+  Thus $\scr{F}\in\cal{D}$.
 
   Now let $X$ be an arbitrary algebraic space, and $X_1,\ldots,X_p$ its irreducible components.
-  If $\sh{F}$ is a coherent sheaf on $X$, then $\sh{F}/(\sh{I}_{X_i}\sh{F})$ can be identified with a sheaf on the variety $X_i$ (where $\sh{I}_{X_i}$ is the sheaf of ideals of $\sh{O}(X)$ determined by $X_i$), and, by the above, $\sh{F}/(\sh{I}_{X_i}\sh{F})\in\cat{D}$.
-  Thus the sheaf $\sh{G}=\sum_{i=1}^p\sh{F}/(\sh{I}_{X_i}\sh{F})$ belongs to $\cat{D}$.
-  We have a canonical homomorphism $\varphi\colon\sh{F}\to\sh{G}$.
-  The image of $\varphi$ is a coherent subsheaf of $\sh{G}$, and so the image of $\varphi$ belongs to $\cat{D}$.
+  If $\scr{F}$ is a coherent sheaf on $X$, then $\scr{F}/(\scr{I}_{X_i}\scr{F})$ can be identified with a sheaf on the variety $X_i$ (where $\scr{I}_{X_i}$ is the sheaf of ideals of $\scr{O}(X)$ determined by $X_i$), and, by the above, $\scr{F}/(\scr{I}_{X_i}\scr{F})\in\cal{D}$.
+  Thus the sheaf $\scr{G}=\sum_{i=1}^p\scr{F}/(\scr{I}_{X_i}\scr{F})$ belongs to $\cal{D}$.
+  We have a canonical homomorphism $\varphi\colon\scr{F}\to\scr{G}$.
+  The image of $\varphi$ is a coherent subsheaf of $\scr{G}$, and so the image of $\varphi$ belongs to $\cal{D}$.
 
-  We know that $\supp\Ker\varphi\subset\bigcup_{i\neq j}X_i\cap X_j$, and so $\dim\supp\Ker\varphi<\dim X$, and, by the induction hypothesis, $\Ker\varphi\in\cat{D}$.
-  Thus $\sh{F}\in\cat{D}$, and the theorem is proven.
+  We know that $\supp\Ker\varphi\subset\bigcup_{i\neq j}X_i\cap X_j$, and so $\dim\supp\Ker\varphi<\dim X$, and, by the induction hypothesis, $\Ker\varphi\in\cal{D}$.
+  Thus $\scr{F}\in\cal{D}$, and the theorem is proven.
 \end{proof}
 
 \begin{cor}[Serre's Theorem]
-  If $\sh{F}$ is a coherent sheaf on a complete algebraic space $X$, then $\HH^0(X,\sh{F})$ is a vector space of finite dimension over $K$.
+  If $\scr{F}$ is a coherent sheaf on a complete algebraic space $X$, then $\HH^0(X,\scr{F})$ is a vector space of finite dimension over $K$.
 \end{cor}
 
 \begin{proof}
-  We take $\cat{D}$ to be the category of all coherent sheaves $\sh{F}$ on $X$ such that $\HH^0(X,\sh{F})$ is of finite dimension over $K$.
-  We can prove that $\cat{D}$ is a left-exact subcategory of $\cat{C}(X)$.
+  We take $\cal{D}$ to be the category of all coherent sheaves $\scr{F}$ on $X$ such that $\HH^0(X,\scr{F})$ is of finite dimension over $K$.
+  We can prove that $\cal{D}$ is a left-exact subcategory of $\cal{C}(X)$.
   Also, we know that, if $Y$ is an irreducible closed subset of $X$, then $Y$ is a complete variety.
-  Thus the coherent sheaf $\sh{O}(Y)$ on $Y$ is a torsion-free sheaf with the property that $\HH^0(Y,\sh{O}(Y))\cong K$, and so $\HH^0(X,\sh{O}(Y))=\HH^0(Y,\sh{O}(Y))$ is of finite dimension over $K$ (we denote also by $\sh{O}(Y)$ the canonical extension of $\sh{O}(Y)$ to $X$).
+  Thus the coherent sheaf $\scr{O}(Y)$ on $Y$ is a torsion-free sheaf with the property that $\HH^0(Y,\scr{O}(Y))\cong K$, and so $\HH^0(X,\scr{O}(Y))=\HH^0(Y,\scr{O}(Y))$ is of finite dimension over $K$ (we denote also by $\scr{O}(Y)$ the canonical extension of $\scr{O}(Y)$ to $X$).
   By \hyperref[theorem-devissage]{the theorem}, the corollary is proven.
 \end{proof}
 
@@ -320,26 +324,26 @@ With this notation, we have the following theorem:
 \label{section3}
 
 \oldpage{4-06}
-Let $X$ be an algebraic variety, and $\sh{R}^\times(X)$ and $\sh{O}^\times(X)$ (or simply $\sh{R}^\times$ and $\sh{O}^\times$) the constant sheaf on $X$ of non-zero rational functions and the sheaf on $X$ of invertible regular functions (respectively).
-The sheaves $\sh{R}^\times$ and $\sh{O}^\times$, endowed with their multiplicative structure, are sheaves of abelian groups.
+Let $X$ be an algebraic variety, and $\scr{R}^\times(X)$ and $\scr{O}^\times(X)$ (or simply $\scr{R}^\times$ and $\scr{O}^\times$) the constant sheaf on $X$ of non-zero rational functions and the sheaf on $X$ of invertible regular functions (respectively).
+The sheaves $\scr{R}^\times$ and $\scr{O}^\times$, endowed with their multiplicative structure, are sheaves of abelian groups.
 
-A \emph{divisor} $D$ on $X$ is a section of the quotient sheaf $\sh{R}^\times/\sh{O}^\times$.
-An element of $\sh{R}^\times$ that is a representative of the value $D(x)$ of $D$ at $x$ is called a \emph{definition function of $D$ at $x$}.
-More generally, a function $f\in\sh{R}^\times$ is called a \emph{definition function of $D$ in an open subset $U$} if, for all $x\in U$, $f$ is a representative of $D(x)$; then $f$ is determined up to an invertible regular function on $U$.
-Since we can locally lift a section of $\sh{R}^\times/\sh{O}^\times$ to a section of $\sh{R}^\times$, a divisor $D$ is determined by the following data: a cover $\{U_i\}$ by open subsets, and non-zero rational functions $f_i$ on $U_i$ such that, on $U_i\cap U_j$, $f_{ij}=f_i/f_j$ is an invertible regular function.
+A \emph{divisor} $D$ on $X$ is a section of the quotient sheaf $\scr{R}^\times/\scr{O}^\times$.
+An element of $\scr{R}^\times$ that is a representative of the value $D(x)$ of $D$ at $x$ is called a \emph{definition function of $D$ at $x$}.
+More generally, a function $f\in\scr{R}^\times$ is called a \emph{definition function of $D$ in an open subset $U$} if, for all $x\in U$, $f$ is a representative of $D(x)$; then $f$ is determined up to an invertible regular function on $U$.
+Since we can locally lift a section of $\scr{R}^\times/\scr{O}^\times$ to a section of $\scr{R}^\times$, a divisor $D$ is determined by the following data: a cover $\{U_i\}$ by open subsets, and non-zero rational functions $f_i$ on $U_i$ such that, on $U_i\cap U_j$, $f_{ij}=f_i/f_j$ is an invertible regular function.
 We have that $f_{ij}f_{jk}f_{ki}=1$ on $U_i\cap U_j\cap U_k$, and, as is well known, this allows us to construct a locally trivial fibre bundle with $K^\times$ as the structure group;
 it is easy to see that this fibre bundle is determined up to equivalence \cite{7}.
-We also know that the coherent sheaves of fractional ideals (i.e. the coherent subsheaves of $\sh{R}$) that are generated by $f_i$ and $f_j$ (respectively) agree on $U_i\cap U_j$, and do not depend on the choice of definition functions of $D$ in $U_i$ and $U_j$.
+We also know that the coherent sheaves of fractional ideals (i.e. the coherent subsheaves of $\scr{R}$) that are generated by $f_i$ and $f_j$ (respectively) agree on $U_i\cap U_j$, and do not depend on the choice of definition functions of $D$ in $U_i$ and $U_j$.
 This implies that the divisor $D$ canonically determines a coherent sheaf of locally principal fractional ideals.
 We can easily see that the converse is true, and this gives us an equivalent definition of a divisor \cite{1}.
 
-A divisor $D$ is said to be \emph{positive} if, for each $x\in X$, $D(x)\in\sh{O}_x/\sh{O}_x^\times$ (i.e. if all the definition functions of $D$ at $x$ are regular functions in $x$).
+A divisor $D$ is said to be \emph{positive} if, for each $x\in X$, $D(x)\in\scr{O}_x/\scr{O}_x^\times$ (i.e. if all the definition functions of $D$ at $x$ are regular functions in $x$).
 
-Since $\sh{R}^\times/\sh{O}^\times$ is a sheaf of abelian groups on $X$, there is a canonical structure of an abelian group on the set of divisors on $X$;
+Since $\scr{R}^\times/\scr{O}^\times$ is a sheaf of abelian groups on $X$, there is a canonical structure of an abelian group on the set of divisors on $X$;
 this group is called the \emph{group of divisors on $X$}.
 The composition law in this group is written additively, and the identity element in this group is thus called the \emph{zero divisor}, and is denoted by $(0)$.
 
-If $f$ is a non-zero rational function on $X$, then it defines a divisor $\div f$ by the data $(\div f)(x)=\Im f\subseteq\sh{R}^\times/\sh{O}_x^\times$.
+If $f$ is a non-zero rational function on $X$, then it defines a divisor $\div f$ by the data $(\div f)(x)=\Im f\subseteq\scr{R}^\times/\scr{O}_x^\times$.
 The divisors
 \oldpage{4-07}
 obtained in this way are called \emph{principal divisors}, and form a subgroup of the group of divisors on $X$;
@@ -348,16 +352,16 @@ Two divisors $D_1$ and $D_2$ are said to be equivalent if they are equivalent mo
 we write $D_1\sim D_2$.
 We have seen that a divisor defines, up to equivalence, a locally trivial algebraic fibre bundle with structure group $K^\times$.
 On the other hand, it is easy to see that a locally trivial algebraic fibre bundle with $K^\times$ as its structure group defines, up to equivalence, a divisor \cite{7}.
-Thus the group of classes of divisors on $X$ is equal to $\HH^1(X,\sh{O}^\times)$, the group of classes of equivalent algebraic fibre bundles with $K^\times$ as their structure group.
+Thus the group of classes of divisors on $X$ is equal to $\HH^1(X,\scr{O}^\times)$, the group of classes of equivalent algebraic fibre bundles with $K^\times$ as their structure group.
 
-We can define, in an analogous way, an \emph{additive divisor} on a variety $X$ as a section of the sheaf $\sh{R}/\sh{O}$ (the divisors defined above are called \emph{multiplicative divisors}, or simply \emph{divisors}).
+We can define, in an analogous way, an \emph{additive divisor} on a variety $X$ as a section of the sheaf $\scr{R}/\scr{O}$ (the divisors defined above are called \emph{multiplicative divisors}, or simply \emph{divisors}).
 The additive divisors form an abelian group, and even a vector space over $K$.
 An additive divisor is determined by the following data: a cover $\{U_i\}$ of $X$ by open subsets, and rational functions $f_i$ on $U_i$ such that $f_{ij}=f_i-f_j$ is a regular function on $U_i\cap U_j$.
 We can define, as for (multiplicative) divisors, the notions of definition functions of an additive divisor, equivalence between two additive divisors, etc.
-We find, for example, that $\HH^1(X,\sh{O})$ is equal to the group of classes of additive divisors on $X$.
+We find, for example, that $\HH^1(X,\scr{O})$ is equal to the group of classes of additive divisors on $X$.
 
 Let $D$ be a (multiplicative) divisor on $X$.
-We define $\supp D$ to be the set of points $x\in X$ such that $D(x)$ is not the identity element in $\sh{R}^\times/\sh{O}_x^\times$, i.e. such that every definition function of $D$ at $x$ is either not defined at $x$ or takes the value $0$ at $x$.
+We define $\supp D$ to be the set of points $x\in X$ such that $D(x)$ is not the identity element in $\scr{R}^\times/\scr{O}_x^\times$, i.e. such that every definition function of $D$ at $x$ is either not defined at $x$ or takes the value $0$ at $x$.
 
 \begin{proposition}{7}
 \label{proposition7}
@@ -366,7 +370,7 @@ We define $\supp D$ to be the set of points $x\in X$ such that $D(x)$ is not the
 
 \begin{proof}
   The latter claim is trivial.
-  For the former, we prove that the set $E$ of points $x\in X$ such that every definition function of $D$ at $x$ belongs to $\sh{O}_x^\times$ is a non-empty open subset;
+  For the former, we prove that the set $E$ of points $x\in X$ such that every definition function of $D$ at $x$ belongs to $\scr{O}_x^\times$ is a non-empty open subset;
   indeed, if we take a definition function $g$ of $D$ at $x$, then it is also a definition function of $D$ in an open subset $U$ that contains $x$.
   By hypothesis, if $x\in E$, then $g$ is regular at $x$ and $g(x)\neq0$, and we can choose $U$ such that $g$ is regular and invertible on $U$, which proves that $E$ is open.
 \end{proof}
@@ -415,7 +419,7 @@ If we now take the formal combination $C=\sum_S(\ord_S D)\cdot S$, where $S$ run
 \oldpage{4-09}
 \begin{proof}
   It suffices to show that, for every hypersurface $S$, there exists a divisor $D$ such that the cycle $1\cdot S$ is the cycle associated to $D$.
-  Since $X$ is non-singular, for every $x\in X$, the local ring $\sh{O}_x$ is factorial \cite{3};
+  Since $X$ is non-singular, for every $x\in X$, the local ring $\scr{O}_x$ is factorial \cite{3};
   thus, for every $x\in S$, $S$ is defined by one single equation in a neighbourhood of $x$.
   So there exists a cover $\{U_i\}_{i=1,\ldots,p}$ of $S$ by open subsets $U_i$ of $X$, and, for each $i$, a regular function $f_i$ on $U_i$ that is non-zero outside of $U_i\cap S$ in $U_i$ with $\ord_S f_i=1$.
   It then follows that $f_i/f_j$ is an invertible regular function in $U_i\cap U_j$.

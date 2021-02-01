@@ -9,7 +9,6 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 
 \usepackage{mathrsfs}
@@ -36,8 +35,6 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{section}{\S\!}{\S\S\!}
-\crefname{equation}{}{}
 
 \usepackage{titlesec}
 \titleformat{\section}[block]
@@ -58,26 +55,24 @@
 
 \theoremstyle{plain}
 
-  \newtheorem{innercustomproposition}{Proposition}
-  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \newtheorem{innerproposition}{Proposition}
+  \crefname{innerproposition}{Proposition}{Propositions}
   \newenvironment{proposition}[1]
-    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-    {\endinnercustomproposition}
+    {\renewcommand\theinnerproposition{#1}\innerproposition}
+    {\endinnerproposition}
 
-  \newtheorem{innercustomlemma}{Lemma}
-  \crefname{innercustomlemma}{Lemma}{Lemmas}
+  \newtheorem{innerlemma}{Lemma}
   \newenvironment{lemma}[1]
-    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
-    {\endinnercustomlemma}
+    {\renewcommand\theinnerlemma{#1}\innerlemma}
+    {\endinnerlemma}
 
 
 \theoremstyle{definition}
 
-  \newtheorem{innercustomdefinition}{Definition}
-  \crefname{innercustomdefinition}{Definition}{Definitions}
+  \newtheorem{innerdefinition}{Definition}
   \newenvironment{definition}[1]
-    {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
-    {\endinnercustomdefinition}
+    {\renewcommand\theinnerdefinition{#1}\innerdefinition}
+    {\endinnerdefinition}
 
 
 %% Shortcuts %%
@@ -200,20 +195,20 @@ Complexes spaces are defined as in \cite{10}.
 We always assume that they are reduced: their local rings contain no nilpotent elements.
 If $X$ is a complex space, $U=U(x)$ a neighbourhood, $A\subset G\subset \CC^n$ an analytic set in a domain $G$ of the space $\CC^n$ of the $n$-dimensional complex numbers, and $\tau$ a biholomorphic map $U\to A$, then $(U,\tau,A)$ is called a chart in $X$, and $\tau$ a biholomorphic embedding of $U$ in $G$.
 
-We always denote by $\sh{O}=\sh{O}(X)$ the sheaf of germs of locally holomorphic functions on $X$.
-If $A\subset X$ is an analytic subset, then we denote by $\fk{m}=\fk{m}(A)\subset\sh{O}$ the sheaf of germs of locally holomorphic functions that vanish on $A$.
+We always denote by $\scr{O}=\scr{O}(X)$ the sheaf of germs of locally holomorphic functions on $X$.
+If $A\subset X$ is an analytic subset, then we denote by $\fk{m}=\fk{m}(A)\subset\scr{O}$ the sheaf of germs of locally holomorphic functions that vanish on $A$.
 By a theorem of Cartan, $\fk{m}$ is coherent.
-For every subsheaf $\sh{I}\subset\sh{O}$, let $\sh{I}^k$ be the sheaf consisting of germs $f_x=f_{1x}\cdot\ldots\cdot f_{kx}$, where $f_{1x},\ldots,f_{kx}\in\sh{I}_x$ for $x\in X$, $k=1,2,\ldots$.
+For every subsheaf $\scr{I}\subset\scr{O}$, let $\scr{I}^k$ be the sheaf consisting of germs $f_x=f_{1x}\cdot\ldots\cdot f_{kx}$, where $f_{1x},\ldots,f_{kx}\in\scr{I}_x$ for $x\in X$, $k=1,2,\ldots$.
 
 Now\footnote{
   A subscript $x$ always denotes the stalk of the sheaf at the point $x$.
   If $s$ is a section, then $s_x$ denotes its value at $x$.
-  Holomorphic functions and sections in $\sh{O}$ are always considered to be the same thing.
+  Holomorphic functions and sections in $\scr{O}$ are always considered to be the same thing.
   --- If $F$ is a complex-analytic vector bundle, then $\underline{F}$ always denotes the sheaf of germs of locally holomorphic sections in $F$.
 }
 let $x\in X$, $\fk{m}=\fk{m}(x)$, and $d(x)=\dim_\CC\fk{m}_x/\fk{m}_x^2$.
-If $\psi\colon X\to\CC^n$ is a holomorphic map, then $\psi$ defines, at each point $x\in X$, a homomorphism $\psi_x^*\colon\sh{O}_z(\CC^n)\to\sh{O}_x(X)$.
-This homomorphism maps the maximal ideal $\fk{m}_z\subset\sh{O}_z(\CC^n)$ to the maximal ideal $\fk{m}_x\subset\sh{O}_x(X)$.
+If $\psi\colon X\to\CC^n$ is a holomorphic map, then $\psi$ defines, at each point $x\in X$, a homomorphism $\psi_x^*\colon\scr{O}_z(\CC^n)\to\scr{O}_x(X)$.
+This homomorphism maps the maximal ideal $\fk{m}_z\subset\scr{O}_z(\CC^n)$ to the maximal ideal $\fk{m}_x\subset\scr{O}_x(X)$.
 If the induced map $\fk{m}_z/\fk{m}_z^2\to\fk{m}_x/\fk{m}_x^2$ is surjective, then we say that $\psi$ is a \emph{regular map} at $x$.
 In the case where $X$ is a complex manifold, we see that $\fk{m}_x/\fk{m}_x^2$ is exactly the covariant tangent space of $X$.
 Then $\psi$ is regular at $x\in X$ if and only if the Jacobian matrix of $\psi$ at $x$ has rank equal to $\dim_x X$.
@@ -232,10 +227,10 @@ Of course, $\psi|W$ is then also biholomorphic.
 
 \begin{proof}
 To prove \hyperref[(1)]{(1)}, we may assume that $X$ is an analytic set in a domain $D\subset\CC^m$.
-Let $\hat{\fk{m}}_x$ be the maximal ideal in $\sh{O}_x(\CC^m)$, and $\fk{i}_x\subset\sh{O}_x(\CC^m)$ the ideal of germs of holomorphic functions that vanish on $X\subset D$.
-Let $r$ be the dimension of the image $\sh{F}$ of $\fk{i}_x$ under the natural homomorphism $\lambda\colon\fk{i}_x\to\hat{\fk{m}}_x/\hat{\fk{m}}_x^2$.
+Let $\hat{\fk{m}}_x$ be the maximal ideal in $\scr{O}_x(\CC^m)$, and $\fk{i}_x\subset\scr{O}_x(\CC^m)$ the ideal of germs of holomorphic functions that vanish on $X\subset D$.
+Let $r$ be the dimension of the image $\scr{F}$ of $\fk{i}_x$ under the natural homomorphism $\lambda\colon\fk{i}_x\to\hat{\fk{m}}_x/\hat{\fk{m}}_x^2$.
 Clearly $m=r+d(x)$.
-Let $f_1,\ldots,f_r$ be functions that are holomorphic on a neighbourhood of $x$, with $f_{vx}\in\fk{i}_x$, so that the elements $\lambda(f_{vx})$ for $v=1,\ldots,r$ span the complex vector space $\sh{F}$.
+Let $f_1,\ldots,f_r$ be functions that are holomorphic on a neighbourhood of $x$, with $f_{vx}\in\fk{i}_x$, so that the elements $\lambda(f_{vx})$ for $v=1,\ldots,r$ span the complex vector space $\scr{F}$.
 Then the rank of the Jacobian matrix of $(f_1,\ldots,f_r)$ in $X$ is equal to $r$.
 Then, in a neighbourhood $W=W(x)$, the following properties apply:
 \oldpage{334}

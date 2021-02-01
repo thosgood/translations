@@ -11,7 +11,6 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{tikz-cd}
@@ -37,8 +36,6 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{section}{}{}
-\crefname{equation}{}{}
 \crefdefaultlabelformat{#2(#1)#3}
 
 
@@ -48,62 +45,62 @@
 
 \theoremstyle{plain}
 
-  \newtheorem{innercustomproposition}{Proposition}
-  \crefname{innercustomproposition}{}{}
+  \newtheorem{innerproposition}{Proposition}
+  \crefname{innerproposition}{}{}
   \newenvironment{proposition}[1]
-    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-    {\endinnercustomproposition}
+    {\renewcommand\theinnerproposition{#1}\innerproposition}
+    {\endinnerproposition}
 
-  \newtheorem{innercustomlemma}{Lemma}
-  \crefname{innercustomlemma}{}{}
+  \newtheorem{innerlemma}{Lemma}
+  \crefname{innerlemma}{}{}
   \newenvironment{lemma}[1]
-    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
-    {\endinnercustomlemma}
+    {\renewcommand\theinnerlemma{#1}\innerlemma}
+    {\endinnerlemma}
 
-  \newtheorem{innercustomtheorem}{Theorem}
-  \crefname{innercustomtheorem}{}{}
+  \newtheorem{innertheorem}{Theorem}
+  \crefname{innertheorem}{}{}
   \newenvironment{theorem}[1]
-    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
-    {\endinnercustomlemma}
+    {\renewcommand\theinnertheorem{#1}\innertheorem}
+    {\endinnerlemma}
 
-  \newtheorem{innercustomcorollary}{Corollary}
-  \crefname{innercustomcorollary}{}{}
+  \newtheorem{innercorollary}{Corollary}
+  \crefname{innercorollary}{}{}
   \newenvironment{corollary}[1]
-    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
-    {\endinnercustomcorollary}
+    {\renewcommand\theinnercorollary{#1}\innercorollary}
+    {\endinnercorollary}
 
 
 \theoremstyle{definition}
 
-  \newtheorem{innercustomdefinition}{Definition}
-  \crefname{innercustomdefinition}{}{}
+  \newtheorem{innerdefinition}{Definition}
+  \crefname{innerdefinition}{}{}
   \newenvironment{definition}[1]
-    {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
-    {\endinnercustomdefinition}
+    {\renewcommand\theinnerdefinition{#1}\innerdefinition}
+    {\endinnerdefinition}
 
-  \newtheorem{innercustomreminder}{Reminder}
-  \crefname{innercustomreminder}{}{}
+  \newtheorem{innerreminder}{Reminder}
+  \crefname{innerreminder}{}{}
   \newenvironment{reminder}[1]
-    {\renewcommand\theinnercustomreminder{#1}\innercustomreminder}
-    {\endinnercustomreminder}
+    {\renewcommand\theinnerreminder{#1}\innerreminder}
+    {\endinnerreminder}
 
-  \newtheorem{innercustomexample}{Example}
-  \crefname{innercustomexample}{}{}
+  \newtheorem{innerexample}{Example}
+  \crefname{innerexample}{}{}
   \newenvironment{example}[1]
-    {\renewcommand\theinnercustomexample{#1}\innercustomexample}
-    {\endinnercustomexample}
+    {\renewcommand\theinnerexample{#1}\innerexample}
+    {\endinnerexample}
 
-  \newtheorem{innercustomenv}{}
-  \crefname{innercustomenv}{}{}
+  \newtheorem{innerenv}{}
+  \crefname{innerenv}{}{}
   \newenvironment{env}[1]
-    {\renewcommand\theinnercustomenv{#1}\innercustomenv}
-    {\endinnercustomenv}
+    {\renewcommand\theinnerenv{#1}\innerenv}
+    {\endinnerenv}
 
 
 %% Shortcuts %%
 
-\newcommand{\sh}[1]{{\mathscr{#1}}}
-\newcommand{\cat}[1]{{\mathcal{#1}}}
+\newcommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
 \newcommand{\fk}[1]{{\mathfrak{#1}}}
 \newcommand{\sbullet}{{\mathbin{\vcenter{\hbox{\scalebox{.5}{$\bullet$}}}}}}
 \newcommand{\id}{\mathrm{Id}}
@@ -281,26 +278,26 @@ see \cite{4,10}.
     \item If $\alpha,\beta\in\pi_1(X,x_0)$ are represented by loops $a$ and $b$, then $\alpha\beta$ is represented by the loop $ab$ obtained by juxtaposing $b$ and $a$, in that order.
   \end{enumerate}
 
-  Let $\sh{F}$ be a locally constant sheaf on $X$.
-  For every path $a\colon[0,1]\to X$, the inverse image $a^*\sh{F}$ of $\sh{F}$ on $[0,1]$ is a locally constant, and thus constant, sheaf, and there exists exactly one isomorphism between $a^*\sh{F}$ and the constant sheaf defined by the set $(a^*\sh{F})_0 = \sh{F}_{a(0)}$.
-  This isomorphism defines an isomorphism $a(\sh{F})$ between $(a^*\sh{F})_0$ and $(a^*\sh{F})_1$, i.e. an isomorphism
+  Let $\scr{F}$ be a locally constant sheaf on $X$.
+  For every path $a\colon[0,1]\to X$, the inverse image $a^*\scr{F}$ of $\scr{F}$ on $[0,1]$ is a locally constant, and thus constant, sheaf, and there exists exactly one isomorphism between $a^*\scr{F}$ and the constant sheaf defined by the set $(a^*\scr{F})_0 = \scr{F}_{a(0)}$.
+  This isomorphism defines an isomorphism $a(\scr{F})$ between $(a^*\scr{F})_0$ and $(a^*\scr{F})_1$, i.e. an isomorphism
   \[
-    a(\sh{F})\colon \sh{F}_{a(0)} \to \sh{F}_{a(1)}.
+    a(\scr{F})\colon \scr{F}_{a(0)} \to \scr{F}_{a(1)}.
   \]
-  This isomorphism depends only on the homotopy class of $a$, and satisfies $ab(\sh{F}) = a(\sh{F})\cdot b(\sh{F})$.
-  In particular, $\pi_1(X,x_0)$ acts (on the left) on the fibre $\sh{F}_{x_0}$ of $\sh{F}$ at $x_0$.
+  This isomorphism depends only on the homotopy class of $a$, and satisfies $ab(\scr{F}) = a(\scr{F})\cdot b(\scr{F})$.
+  In particular, $\pi_1(X,x_0)$ acts (on the left) on the fibre $\scr{F}_{x_0}$ of $\scr{F}$ at $x_0$.
   It is well known that:
 \end{env}
 
 \begin{proposition}{1.3}
 \label{I.1.3}
-  Under the hypotheses of \cref{I.1.2}, with $X$ connected, the functor $\sh{F}\mapsto\sh{F}_{x_0}$ is an equivalence between the category of locally constant sheaves on $X$ and the category of sets endowed with an action by the group $\pi_1(X,x_0)$.
+  Under the hypotheses of \cref{I.1.2}, with $X$ connected, the functor $\scr{F}\mapsto\scr{F}_{x_0}$ is an equivalence between the category of locally constant sheaves on $X$ and the category of sets endowed with an action by the group $\pi_1(X,x_0)$.
 \end{proposition}
 
 \oldpage{4}
 \begin{corollary}{1.4}
 \label{I.1.4}
-  Under the hypotheses of \cref{I.1.2}, with $X$ connected, the functor $\sh{F}\mapsto\sh{F}_{x_0}$ is an equivalence between the category of complex local systems on $X$ and the category of complex finite-dimensional representations of $\pi_1(X,x_0)$.
+  Under the hypotheses of \cref{I.1.2}, with $X$ connected, the functor $\scr{F}\mapsto\scr{F}_{x_0}$ is an equivalence between the category of complex local systems on $X$ and the category of complex finite-dimensional representations of $\pi_1(X,x_0)$.
 \end{corollary}
 
 \begin{env}{1.5}
@@ -325,7 +322,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 
 \begin{proposition}{1.7}
 \label{I.1.7}
-  If $\sh{F}$ is a locally constant sheaf on $X$, then there exists exactly one action (said to be \emph{canonical}) of $\Pi_1(X)$ on $\sh{F}$ that, at each $x_0\in X$, induces the action from \cref{I.1.2} of $\pi_1(X,x_0)$ on $\sh{F}$.
+  If $\scr{F}$ is a locally constant sheaf on $X$, then there exists exactly one action (said to be \emph{canonical}) of $\Pi_1(X)$ on $\scr{F}$ that, at each $x_0\in X$, induces the action from \cref{I.1.2} of $\pi_1(X,x_0)$ on $\scr{F}$.
 \end{proposition}
 
 
@@ -336,35 +333,35 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 
 \begin{env}{2.1}
   Let $X$ be an analytic space \hyperref[0.1]{(0.1)}.
-  We define a (holomorphic) \emph{vector bundle} on $X$ to be a locally free sheaf of modules that is of finite type over the structure sheaf $\sh{O}$ of $X$.
-  If $\sh{V}$ is a vector bundle on $X$, and $x$ a point of $X$, then we denote by $\sh{V}_{(x)}$ the free $\sh{O}_{(x)}$-module of finite type of germs of sections of $\sh{V}$.
-  If $\mathfrak{m}_x$ is the maximal ideal of $\sh{O}_{(x)}$, then we define the \emph{fibre at $x$ of the vector bundle $\sh{V}$} to be the \todo of finite rank
+  We define a (holomorphic) \emph{vector bundle} on $X$ to be a locally free sheaf of modules that is of finite type over the structure sheaf $\scr{O}$ of $X$.
+  If $\scr{V}$ is a vector bundle on $X$, and $x$ a point of $X$, then we denote by $\scr{V}_{(x)}$ the free $\scr{O}_{(x)}$-module of finite type of germs of sections of $\scr{V}$.
+  If $\mathfrak{m}_x$ is the maximal ideal of $\scr{O}_{(x)}$, then we define the \emph{fibre at $x$ of the vector bundle $\scr{V}$} to be the \todo of finite rank
   \[
   \label{I.2.1.1}
-    \sh{V}_x = \sh{V}_{(x)} \otimes_{\sh{O}_{(x)}} \sh{O}_{(x)}/\mathfrak{m}_x.
+    \scr{V}_x = \scr{V}_{(x)} \otimes_{\scr{O}_{(x)}} \scr{O}_{(x)}/\mathfrak{m}_x.
   \tag{2.1.1}
   \]
 
-  If $f\colon X\to Y$ is a morphism of analytic spaces, then the \emph{inverse image} of a vector bundle $\sh{V}$ on $Y$ is the vector bundle $f^*\sh{V}$ on $X$ given by the inverse image of $\sh{V}$ as a coherent module:
-  if $f^\sbullet\sh{V}$ is the sheaf-theoretic inverse image of $\sh{V}$, then
+  If $f\colon X\to Y$ is a morphism of analytic spaces, then the \emph{inverse image} of a vector bundle $\scr{V}$ on $Y$ is the vector bundle $f^*\scr{V}$ on $X$ given by the inverse image of $\scr{V}$ as a coherent module:
+  if $f^\sbullet\scr{V}$ is the sheaf-theoretic inverse image of $\scr{V}$, then
   \[
   \label{I.2.1.2}
-    f^*\sh{V} \simeq \sh{O}_X \otimes_{f^*\sh{O}_Y} f^\sbullet\sh{V}
+    f^*\scr{V} \simeq \scr{O}_X \otimes_{f^*\scr{O}_Y} f^\sbullet\scr{V}
   \tag{2.1.2}
   \]
 
   In particular, if $x\colon P\to X$ is the morphism from the point space $P$ to $X$ defined by a point $x$ of $X$, then
   \[
     \label{I.2.1.3}
-      \sh{V}_x \simeq x^*\sh{V}.
+      \scr{V}_x \simeq x^*\scr{V}.
     \tag{2.1.3}
   \]
 \end{env}
 
 \begin{env}{2.2}
 \label{I.2.2}
-  Let $X$ be a complex-analytic manifold \hyperref[0.7]{(0.7)} and $\sh{V}$ a vector bundle on $X$.
-  The elders would have defined a (holomorphic) connection on $\sh{V}$ as the data, for every pair of points $(x,y)$ that are first order infinitesimal neighbours in $X$, of an isomorphism $\gamma_{y,x}\colon\sh{V}_x\to\sh{V}_y$ that depends holomorphically on $(x,y)$ and is such that $\gamma_{x,x}=\id$.
+  Let $X$ be a complex-analytic manifold \hyperref[0.7]{(0.7)} and $\scr{V}$ a vector bundle on $X$.
+  The elders would have defined a (holomorphic) connection on $\scr{V}$ as the data, for every pair of points $(x,y)$ that are first order infinitesimal neighbours in $X$, of an isomorphism $\gamma_{y,x}\colon\scr{V}_x\to\scr{V}_y$ that depends holomorphically on $(x,y)$ and is such that $\gamma_{x,x}=\id$.
 
   Suitably interpreted, this ``definition'' coincides with the currently fashionable definition \cref{I.2.2.4} given below (which we not be use in the rest of the section).
 
@@ -378,7 +375,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 
   \begin{env}{2.2.2}
   \label{I.2.2.2}
-    If $Y$ is a subspace of $X$, then the \emph{$n$\textsuperscript{th} infinitesimal neighbourhood} of $Y$ in $X$ is the subspace of $X$ defined locally by the $(n+1)$th power of the ideal of $\sh{O}_X$ that defines $Y$.
+    If $Y$ is a subspace of $X$, then the \emph{$n$\textsuperscript{th} infinitesimal neighbourhood} of $Y$ in $X$ is the subspace of $X$ defined locally by the $(n+1)$th power of the ideal of $\scr{O}_X$ that defines $Y$.
   \end{env}
 
   \begin{env}{2.2.3}
@@ -388,9 +385,9 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 
   \begin{env}{2.2.4}
   \label{I.2.2.4}
-    If $X$ is a complex-analytic manifold and $\sh{V}$ is a vector bundle on $X$, then a (\emph{holomorphic}) \emph{connection} $\gamma$ on $\sh{V}$ consists of the following data:
+    If $X$ is a complex-analytic manifold and $\scr{V}$ is a vector bundle on $X$, then a (\emph{holomorphic}) \emph{connection} $\gamma$ on $\scr{V}$ consists of the following data:
 
-    for every pair $(x,y)$ of points of $X$ with values in an arbitrary analytic space $S$, with $x$ and $y$ first order infinitesimal neighbours, an isomorphism $\gamma_{x,y}\colon x^*\sh{V}\to y^*\sh{V}$;
+    for every pair $(x,y)$ of points of $X$ with values in an arbitrary analytic space $S$, with $x$ and $y$ first order infinitesimal neighbours, an isomorphism $\gamma_{x,y}\colon x^*\scr{V}\to y^*\scr{V}$;
     this data is subject to the conditions:
     \begin{enumerate}[(i)]
       \item (functoriality) For any $f\colon T\to S$ and any first order infinitesimal neighbours $x,y\colon S\rightrightarrows X$, we have $f^*(\gamma_{y,x})=\gamma_{yf,xf}$.
@@ -402,39 +399,39 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 \begin{env}{2.3}
 \label{I.2.3}
   Let $X_1$ be the first-order infinitesimal neighbourhood of the diagonal $X_0$ of $X\times X$, and let $p_1$ and $p_2$ be the two projections of $X_1$ to $X$.
-  By definition, the vector bundle $P^1(\sh{V})$ of first-order jets of sections of $\sh{V}$ is the bundle $(p_1)_*p_2^*\sh{V}$.
-  We denote by $j^1$ the first-order differential operator that sends each section of $\sh{V}$ to its first-order jet:
+  By definition, the vector bundle $P^1(\scr{V})$ of first-order jets of sections of $\scr{V}$ is the bundle $(p_1)_*p_2^*\scr{V}$.
+  We denote by $j^1$ the first-order differential operator that sends each section of $\scr{V}$ to its first-order jet:
   \[
-    j^1\colon \sh{V} \to P^1(\sh{V}) \simeq \sh{O}_{X_1}\otimes_{\sh{O}_X}\sh{V}.
+    j^1\colon \scr{V} \to P^1(\scr{V}) \simeq \scr{O}_{X_1}\otimes_{\scr{O}_X}\scr{V}.
   \]
 
   A connection (\cref{I.2.2.4}) can be understood as a homomorphism (which is automatically an isomorphism)
   \[
   \label{I.2.3.1}
-    \gamma = p_1^*\sh{V} \to p_2^*\sh{V}
+    \gamma = p_1^*\scr{V} \to p_2^*\scr{V}
   \tag{2.3.1}
   \]
   which induces the identity over $X_0$.
   Since
   \[
-    \Hom_{X_1}(p_1^*\sh{V},p_2^*\sh{V}) \simeq \Hom(\sh{V},(p_1)_*p_2^*\sh{V}),
+    \Hom_{X_1}(p_1^*\scr{V},p_2^*\scr{V}) \simeq \Hom(\scr{V},(p_1)_*p_2^*\scr{V}),
   \]
 \oldpage{7}
-  a connection can also be understood as a ($\sh{O}$-linear) homomorphism
+  a connection can also be understood as a ($\scr{O}$-linear) homomorphism
   \[
   \label{I.2.3.2}
-    \DD\colon \sh{V} \to P^1(\sh{V})
+    \DD\colon \scr{V} \to P^1(\scr{V})
   \tag{2.3.2}
   \]
   such that the obvious composite arrow
   \[
-    \sh{V}\xrightarrow{\DD} P^1(\sh{V}) \to \sh{V}
+    \scr{V}\xrightarrow{\DD} P^1(\scr{V}) \to \scr{V}
   \]
   is the identity.
-  The sections $\DD s$ and $j^1(s)$ of $P^1(v)$ thus have the same image in $\sh{V}$, and $j^1(s)-\DD(s)$ can be identified with a section $\nabla s$ of $\Omega_X^1\otimes\sh{V} \simeq \Ker(P^1(\sh{V})\to\sh{V})$:
+  The sections $\DD s$ and $j^1(s)$ of $P^1(v)$ thus have the same image in $\scr{V}$, and $j^1(s)-\DD(s)$ can be identified with a section $\nabla s$ of $\Omega_X^1\otimes\scr{V} \simeq \Ker(P^1(\scr{V})\to\scr{V})$:
   \[
   \label{I.2.3.3}
-    \nabla\colon \sh{V} \to \Omega^1(X)
+    \nabla\colon \scr{V} \to \Omega^1(X)
   \tag{2.3.3}
   \]
   \[
@@ -443,7 +440,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   \tag{2.3.4}
   \]
 
-  In other words, a connection \cref{I.2.2.4}, allowing us to compare two neighbouring fibres of $\sh{V}$, also allows us to define the differential $\nabla s$ of a section of $\sh{V}$.
+  In other words, a connection \cref{I.2.2.4}, allowing us to compare two neighbouring fibres of $\scr{V}$, also allows us to define the differential $\nabla s$ of a section of $\scr{V}$.
 
   Conversely, equation~\cref{I.2.3.4} allows us to define $\DD$, and thus $\gamma$, from the covariant derivative $\nabla$.
   For $\DD$ to be linear, it is necessary and sufficient for $\nabla$ to satisfy the identity
@@ -458,41 +455,41 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 
 \begin{definition}{2.4}
 \label{I.2.4}
-  Let $\sh{V}$ be a (holomorphic) vector bundle on a complex-analytic manifold $X$.
-  A \emph{holomorphic connection} (or simply, \emph{connection}) on $\sh{V}$ is a $\mathbb{C}$-linear homomorphism
+  Let $\scr{V}$ be a (holomorphic) vector bundle on a complex-analytic manifold $X$.
+  A \emph{holomorphic connection} (or simply, \emph{connection}) on $\scr{V}$ is a $\mathbb{C}$-linear homomorphism
   \[
-    \nabla\colon \sh{V} \to \Omega_X^1(\sh{V}) = \Omega_X^1\otimes_{\sh{O}}\sh{V}
+    \nabla\colon \scr{V} \to \Omega_X^1(\scr{V}) = \Omega_X^1\otimes_{\scr{O}}\scr{V}
   \]
-  that satisfies the Leibniz identity (\cref{I.2.3.5}) for local sections $f$ of $\sh{O}$ and $s$ of $\sh{V}$.
+  that satisfies the Leibniz identity (\cref{I.2.3.5}) for local sections $f$ of $\scr{O}$ and $s$ of $\scr{V}$.
   We call $\nabla$ the \emph{covariant derivative} defined by the connection.
 \end{definition}
 
 \begin{env}{2.5}
 \label{I.2.5}
-  If the vector bundle $\sh{V}$ is endowed with a connection $\Gamma$ with covariant derivative $\nabla$, and if $w$ is a holomorphic vector field on $X$, then we set, for every local section $v$ of $\sh{V}$ over an open subset $U$ of $X$,
+  If the vector bundle $\scr{V}$ is endowed with a connection $\Gamma$ with covariant derivative $\nabla$, and if $w$ is a holomorphic vector field on $X$, then we set, for every local section $v$ of $\scr{V}$ over an open subset $U$ of $X$,
   \[
-    \nabla_w(v) = \langle \nabla v,w \rangle \in \sh{V}(U).
+    \nabla_w(v) = \langle \nabla v,w \rangle \in \scr{V}(U).
   \]
-  We call $\nabla_w\colon \sh{V} \to \sh{V}$ the \emph{covariant derivative along the vector field $w$}.
+  We call $\nabla_w\colon \scr{V} \to \scr{V}$ the \emph{covariant derivative along the vector field $w$}.
 \end{env}
 
 \oldpage{8}
 \begin{env}{2.6}
 \label{I.2.6}
-  If ${}_1\!\Gamma$ and ${}_2\!\Gamma$ are connections on $X$, with covariant derivatives ${}_1\!\nabla$ and ${}_2\!\nabla$ (respectively), then ${}_2\!\nabla-{}_1\!\nabla$ is a $\sh{O}$-linear homomorphism from $\sh{V}$ to $\Omega_X^1(\sh{V})$.
-  Conversely, the sum of ${}_1\!\nabla$ and such a homomorphism defines a connection on $\sh{V}$.
-  Thus connections on $\sh{V}$ form a principal homogeneous space (or torsor) on $\shHom(\sh{V},\Omega_X^1(\sh{V})) \simeq \Omega_X^1(\shEnd(\sh{V}))$.
+  If ${}_1\!\Gamma$ and ${}_2\!\Gamma$ are connections on $X$, with covariant derivatives ${}_1\!\nabla$ and ${}_2\!\nabla$ (respectively), then ${}_2\!\nabla-{}_1\!\nabla$ is a $\scr{O}$-linear homomorphism from $\scr{V}$ to $\Omega_X^1(\scr{V})$.
+  Conversely, the sum of ${}_1\!\nabla$ and such a homomorphism defines a connection on $\scr{V}$.
+  Thus connections on $\scr{V}$ form a principal homogeneous space (or torsor) on $\shHom(\scr{V},\Omega_X^1(\scr{V})) \simeq \Omega_X^1(\shEnd(\scr{V}))$.
 \end{env}
 
 \begin{env}{2.7}
 \label{I.2.7}
   If vector bundles are endowed with connections, then every vector bundle obtained by a ``tensor operation'' is again endowed with a connection.
   This is evident with \cref{I.2.2.4}.
-  More precisely, let $\sh{V}_1$ and $\sh{V}_2$ be vector bundles endowed with connections with covariant derivatives $\nabla_1$ and $\nabla_2$.
+  More precisely, let $\scr{V}_1$ and $\scr{V}_2$ be vector bundles endowed with connections with covariant derivatives $\nabla_1$ and $\nabla_2$.
 
   \begin{env}{2.7.1}
   \label{I.2.7.1}
-    We define a connection on $\sh{V}_1\oplus\sh{V}_2$ by the formula
+    We define a connection on $\scr{V}_1\oplus\scr{V}_2$ by the formula
     \[
       \nabla_w(v_1+v_2) = {}_1\!\nabla_w(v_1) + {}_2\!\nabla_w(v_2)
     \]
@@ -500,7 +497,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 
   \begin{env}{2.7.2}
   \label{I.2.7.2}
-    We define a connection on $\sh{V}_1\otimes\sh{V}_2$ by the Leibniz formula
+    We define a connection on $\scr{V}_1\otimes\scr{V}_2$ by the Leibniz formula
     \[
       \nabla_w(v_1\otimes v_2) = \nabla_w v_1\cdot v_2 + v_1\cdot\nabla_w v_2.
     \]
@@ -508,18 +505,18 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 
   \begin{env}{2.7.3}
   \label{I.2.7.3}
-    We define a connection on $\shHom(\sh{V}_1,\sh{V}_2)$ by the formula
+    We define a connection on $\shHom(\scr{V}_1,\scr{V}_2)$ by the formula
     \[
       (\nabla_w f)(v_1) = {}_2\!\nabla_2(f(v_1)) - f({}_1\!\nabla v_1).
     \]
   \end{env}
 
-  The canonical connection on $\sh{O}$ is the connection for which $\nabla f=\dd f$.
+  The canonical connection on $\scr{O}$ is the connection for which $\nabla f=\dd f$.
   
-  Let $\sh{V}$ be a vector bundle endowed with a connection.
+  Let $\scr{V}$ be a vector bundle endowed with a connection.
   \begin{env}{2.7.4}
   \label{I.2.7.4}
-    We define a connection on the dual $\sh{V}^\vee$ of $\sh{V}$ via \cref{I.2.7.3} and the defining isomorphism $\sh{V}^\vee = \shHom(\sh{V},\sh{O})$.
+    We define a connection on the dual $\scr{V}^\vee$ of $\scr{V}$ via \cref{I.2.7.3} and the defining isomorphism $\scr{V}^\vee = \shHom(\scr{V},\scr{O})$.
     We have
     \[
       \langle \nabla_w v',v \rangle = \partial_w\langle v',v \rangle - \langle v',\nabla_w v \rangle.
@@ -527,41 +524,41 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   \end{env}
 
   We leave it to the reader to verify that these formulas do indeed define connections.
-  For \cref{I.2.7.2}, for example, one must verify that, firstly, the given formula defines a $\mathbb{C}$-bilinear map from $(\sh{V}_1\otimes\sh{V}_2)$, which means that the right-hand side $\II(v_1,v_2)$ is $\mathbb{C}$-bilinear and such that $\II(fv_1,v_2)=\II(v_1,fv_2)$;
+  For \cref{I.2.7.2}, for example, one must verify that, firstly, the given formula defines a $\mathbb{C}$-bilinear map from $(\scr{V}_1\otimes\scr{V}_2)$, which means that the right-hand side $\II(v_1,v_2)$ is $\mathbb{C}$-bilinear and such that $\II(fv_1,v_2)=\II(v_1,fv_2)$;
   secondly, one must also verify identity~\cref{I.2.3.5}.
 \end{env}
 
 \begin{env}{2.8}
 \label{I.2.8}
-  An $\sh{O}$-homomorphism $f$ between vector bundles $\sh{V}_1$ and $\sh{V}_2$ endowed with connections
+  An $\scr{O}$-homomorphism $f$ between vector bundles $\scr{V}_1$ and $\scr{V}_2$ endowed with connections
 \oldpage{9}
   is said to be \emph{compatible with the connections} if
   \[
     {}_2\!\nabla\cdot f = f\cdot{}_1\!\nabla.
   \]
-  By \cref{I.2.7.3}, this reduces to saying that $\nabla f=0$, if $f$ is thought of as a section of $\shHom(\sh{V}_1,\sh{V}_2)$.
+  By \cref{I.2.7.3}, this reduces to saying that $\nabla f=0$, if $f$ is thought of as a section of $\shHom(\scr{V}_1,\scr{V}_2)$.
   For example, by \cref{I.2.7.3}, the canonical map
   \[
-    \Hom(\sh{V}_1,\sh{V}_2)\otimes\sh{V}_1 \to \sh{V}_2
+    \Hom(\scr{V}_1,\scr{V}_2)\otimes\scr{V}_1 \to \scr{V}_2
   \]
   is compatible with the connections.
 \end{env}
 
 \begin{env}{2.9}
 \label{I.2.9}
-  A local section $v$ of $\sh{V}$ is said to be \emph{horizontal} if $\nabla v=0$.
-  If $f$ is a homomorphism between bundles $\sh{V}_1$ and $\sh{V}_2$ endowed with connections, then it is equivalent to say either that $f$ is horizontal, or that $f$ is compatible with the connections \cref{I.2.8}.
+  A local section $v$ of $\scr{V}$ is said to be \emph{horizontal} if $\nabla v=0$.
+  If $f$ is a homomorphism between bundles $\scr{V}_1$ and $\scr{V}_2$ endowed with connections, then it is equivalent to say either that $f$ is horizontal, or that $f$ is compatible with the connections \cref{I.2.8}.
 \end{env}
 
 \begin{env}{2.10}
 \label{I.2.10}
-  Let $\sh{V}$ be a holomorphic vector bundle on $X$.
-  Define $\Omega_X^p=\wedge^p\Omega_X^1$ and $\Omega_X^p(\sh{V})=\Omega_X^p\otimes_\sh{O}\sh{V}$ (the sheaf of \emph{exterior differential $p$-forms with values in $\sh{V}$}).
-  Suppose that $\sh{V}$ is endowed with a holomorphic connection.
+  Let $\scr{V}$ be a holomorphic vector bundle on $X$.
+  Define $\Omega_X^p=\wedge^p\Omega_X^1$ and $\Omega_X^p(\scr{V})=\Omega_X^p\otimes_\scr{O}\scr{V}$ (the sheaf of \emph{exterior differential $p$-forms with values in $\scr{V}$}).
+  Suppose that $\scr{V}$ is endowed with a holomorphic connection.
   We then define $\CC$-linear morphisms
   \[
   \label{I.2.10.1}
-    \nabla\colon \Omega_X^p(\sh{V}) \to \Omega_X^{p+1}(\sh{V})
+    \nabla\colon \Omega_X^p(\scr{V}) \to \Omega_X^{p+1}(\scr{V})
   \tag{2.10.1}
   \]
   characterised by the following formula:
@@ -570,7 +567,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
     \nabla(\alpha,v) = \dd\alpha\cdot v + (-1)^p\alpha\wedge\nabla v,
   \tag{2.10.2}
   \]
-  where $\alpha$ is any local section of $\Omega^p$, $v$ is any local section of $\sh{V}$, and $\dd$ is the exterior differential.
+  where $\alpha$ is any local section of $\Omega^p$, $v$ is any local section of $\scr{V}$, and $\dd$ is the exterior differential.
   To prove that the right-hand side $\II(\alpha,v)$ of \cref{I.2.10.2} defines a homomorphism \cref{I.2.10.1}, it suffices to show that $\II(\alpha,v)$ is $\CC$-bilinear and satisfies
   \[
     \II(f\alpha,v) = \II(\alpha,fv).
@@ -586,14 +583,14 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
     \end{aligned}
   \]
 
-  Let $\sh{V}_1$ and $\sh{V}_2$ be vector bundles endowed with connections, and let $\sh{V}$ be their tensor product \cref{I.2.7.2}.
+  Let $\scr{V}_1$ and $\scr{V}_2$ be vector bundles endowed with connections, and let $\scr{V}$ be their tensor product \cref{I.2.7.2}.
   We denote by $\wedge$ the evident maps
   \[
-    \wedge\colon \Omega^p(\sh{V}_1)\otimes\Omega^1(\sh{V}_2) \to \Omega^{p+q}(\sh{V})
+    \wedge\colon \Omega^p(\scr{V}_1)\otimes\Omega^1(\scr{V}_2) \to \Omega^{p+q}(\scr{V})
   \]
 \oldpage{10}
-  such that, for any local section $\alpha$ (resp. $\beta$, resp. $v_1$, resp. $v_2$) of $\Omega^p$ (resp. $\Omega^q$, resp. $\sh{V}_1$, resp. $\sh{V}_2$), we have that $(\alpha\otimes v_1)\wedge(\beta\otimes v_2) = (\alpha\wedge\beta)\otimes(v_1\otimes v_2)$.
-  If $\nu_1$ (resp. $\nu_2$) is any local section of $\Omega^p(\sh{V}_1)$ (resp. $\Omega^q(\sh{V}_2)$), then
+  such that, for any local section $\alpha$ (resp. $\beta$, resp. $v_1$, resp. $v_2$) of $\Omega^p$ (resp. $\Omega^q$, resp. $\scr{V}_1$, resp. $\scr{V}_2$), we have that $(\alpha\otimes v_1)\wedge(\beta\otimes v_2) = (\alpha\wedge\beta)\otimes(v_1\otimes v_2)$.
+  If $\nu_1$ (resp. $\nu_2$) is any local section of $\Omega^p(\scr{V}_1)$ (resp. $\Omega^q(\scr{V}_2)$), then
   \[
   \label{I.2.10.3}
     \nabla(\nu_1\wedge\nu_2) = \nu_1\wedge\nu_2 + (-1)^p\nu_1\wedge\nu_2.
@@ -614,8 +611,8 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
     \end{aligned}
   \]
 
-  Let $\sh{V}$ be a vector bundle endowed with a connection.
-  If we apply the above formula to $\sh{O}$ and $\sh{V}$, then, for any local section $\alpha$ (resp. $\nu$) of $\Omega^p$ (resp. $\Omega^q(\sh{V})$), we have that
+  Let $\scr{V}$ be a vector bundle endowed with a connection.
+  If we apply the above formula to $\scr{O}$ and $\scr{V}$, then, for any local section $\alpha$ (resp. $\nu$) of $\Omega^p$ (resp. $\Omega^q(\scr{V})$), we have that
   \[
   \label{I.2.10.4}
     \nabla(\alpha\wedge\nu) = \dd\alpha\wedge\nu + (-1)^p\alpha\wedge\nabla\nu.
@@ -637,11 +634,11 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 
 \begin{definition}{2.11}
 \label{I.2.11}
-  Under the hypotheses of \cref{I.2.10}, the \emph{curvature} $R$ of the given connection on $\sh{V}$ is the composite homomorphism
+  Under the hypotheses of \cref{I.2.10}, the \emph{curvature} $R$ of the given connection on $\scr{V}$ is the composite homomorphism
   \[
-    R\colon \sh{V} \to \Omega_X^2(\sh{V})
+    R\colon \scr{V} \to \Omega_X^2(\scr{V})
   \]
-  considered as a section of $\Hom(\sh{V},\Omega_X^2(\sh{V})) \simeq \Omega_X^2(\End(\sh{V}))$.
+  considered as a section of $\Hom(\scr{V},\Omega_X^2(\scr{V})) \simeq \Omega_X^2(\End(\scr{V}))$.
 \end{definition}
 
 \begin{env}{2.12}
@@ -661,7 +658,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   \tag{2.12.2}
   \]
 
-  We endow $\shEnd(\sh{V})$ with the connection given in \cref{I.2.7.3}.
+  We endow $\shEnd(\scr{V})$ with the connection given in \cref{I.2.7.3}.
   The equation $\nabla(\nabla\nabla)=(\nabla\nabla)\nabla$ can be written as $\nabla(R\wedge\nu) = R\wedge\nabla\nu$.
   By \cref{I.2.7.3}, we have that $\nabla R\wedge\nu = \nabla(R\wedge\nu) - R\wedge\nabla\nu$, so that
   \[
@@ -682,7 +679,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
     \\&\quad+ \sum_{i<j})(-1)^{i+j} \langle \alpha, [X_i,X_j]\wedge X_0\wedge\ldots\wedge\widehat{X_i}\wedge\ldots\wedge\widehat{X_j}\wedge\ldots\wedge X_p \rangle.
     \end{aligned}
   \]
-  From this formula, and from \cref{I.2.10.2}, we see that, for any local section $\nu$ of $\Omega_X^p(\sh{V})$, and holomorphic vector fields $X_0,\ldots,X_p$,
+  From this formula, and from \cref{I.2.10.2}, we see that, for any local section $\nu$ of $\Omega_X^p(\scr{V})$, and holomorphic vector fields $X_0,\ldots,X_p$,
   \[
   \label{I.2.13.1}
     \begin{aligned}
@@ -693,7 +690,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   \tag{2.13.1}
   \]
 
-  In particular, for any local section $v$ of $\sh{V}$, we have that
+  In particular, for any local section $v$ of $\scr{V}$, we have that
   \[
     \langle \nabla\nabla v, X_1\wedge X_2 \rangle
     = \nabla_{X_1}\langle \nabla v, X_2 \rangle - \nabla_{X_2}\langle v, X_1 \rangle - \langle \nabla v, [X_1,X_2] \rangle.
@@ -715,11 +712,11 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
 \end{definition}
 If $\dim(X)\leq1$, then every connection is integrable.
 
-If $\Gamma$ is an integrable connection on $\sh{V}$, then the morphism $\nabla$ of \cref{I.2.10.1} satisfy $\nabla\nabla=0$, and so the $\Omega^p(\sh{V})$ give a differential complex $\Omega^\bullet(\sh{V})$.
+If $\Gamma$ is an integrable connection on $\scr{V}$, then the morphism $\nabla$ of \cref{I.2.10.1} satisfy $\nabla\nabla=0$, and so the $\Omega^p(\scr{V})$ give a differential complex $\Omega^\bullet(\scr{V})$.
 
 \begin{definition}{2.15}
 \label{I.2.15}
-  Under the above hypotheses, the complex $\Omega^\bullet(\sh{V})$ is called the \emph{holomorphic de Rham complex} with values in $\sh{V}$.
+  Under the above hypotheses, the complex $\Omega^\bullet(\scr{V})$ is called the \emph{holomorphic de Rham complex} with values in $\scr{V}$.
 \end{definition}
 
 \oldpage{12}
@@ -727,11 +724,11 @@ The results \cref{I.2.16} to \cref{I.2.19} that follow will be proven in a more 
 
 \begin{proposition}{2.16}
 \label{I.2.16}
-  Let $V$ be a local complex system on a complex-analytic variety $X$ \hyperref[0.6]{(0.6)}, and let $\sh{V}=\sh{O}\otimes_\CC V$.
+  Let $V$ be a local complex system on a complex-analytic variety $X$ \hyperref[0.6]{(0.6)}, and let $\scr{V}=\scr{O}\otimes_\CC V$.
   \begin{enumerate}[(i)]
-    \item There exists, on the vector bundle $\sh{V}$, exactly one connection (said to be \emph{canonical}) whose horizontal sections are the local sections of the subsheaf $V$ of $\sh{V}$.
-    \item The canonical connection on $\sh{V}$ is integrable.
-    \item For any local section $f$ (resp. $v$) of $\sh{O}$ (resp. $V$),
+    \item There exists, on the vector bundle $\scr{V}$, exactly one connection (said to be \emph{canonical}) whose horizontal sections are the local sections of the subsheaf $V$ of $\scr{V}$.
+    \item The canonical connection on $\scr{V}$ is integrable.
+    \item For any local section $f$ (resp. $v$) of $\scr{O}$ (resp. $V$),
       \[
       \label{I.2.16.1}
         \nabla(fv) = \dd f\cdot v.
@@ -742,9 +739,9 @@ The results \cref{I.2.16} to \cref{I.2.19} that follow will be proven in a more 
 
 \begin{proof}
   If $\nabla$ satisfies (i), then \cref{I.2.16.1} is a particular case of \cref{I.2.3.5}.
-  Conversely, the right-hand side $\II(f,v)$ of \cref{I.2.16.1} is $\CC$-bilinear, and thus extends uniquely to a $\CC$-linear map $\nabla\colon\sh{V}\to\Omega^1(\sh{V})$, which we can show defines a connection.
+  Conversely, the right-hand side $\II(f,v)$ of \cref{I.2.16.1} is $\CC$-bilinear, and thus extends uniquely to a $\CC$-linear map $\nabla\colon\scr{V}\to\Omega^1(\scr{V})$, which we can show defines a connection.
   Claim~(ii) is local on $X$, which allows us to reduce to the case where $V=\underline{\CC}$.
-  Then $\sh{V}=\sh{O}$, $\nabla=\dd$, and $\nabla_{[X,Y]}=[\nabla_X,\nabla_Y]$ by the definition of $[X,Y]$.
+  Then $\scr{V}=\scr{O}$, $\nabla=\dd$, and $\nabla_{[X,Y]}=[\nabla_X,\nabla_Y]$ by the definition of $[X,Y]$.
 \end{proof}
 
 It is well known that:
@@ -753,36 +750,36 @@ It is well known that:
   Let $X$ be a complex-analytic variety.
   Then the following functors are quasi-inverse to one another, and thus give an equivalence between the category of complex local systems on $X$ and the category of holomorphic vector bundles with on $X$ with integrable connections (with the morphisms being the horizontal morphisms of vector bundles):
   \begin{enumerate}[a)]
-    \item the complex local system $V$ is sent to $\sh{V}=\sh{O}\otimes V$ endowed with its canonical connection;
-    \item the holomorphic vector bundle $\sh{V}$ endowed with its integrable connection is sent to the subsheaf $V$ of $\sh{V}$ consisting of horizontal sections (i.e. those $v$ such that $\nabla v=0$).
+    \item the complex local system $V$ is sent to $\scr{V}=\scr{O}\otimes V$ endowed with its canonical connection;
+    \item the holomorphic vector bundle $\scr{V}$ endowed with its integrable connection is sent to the subsheaf $V$ of $\scr{V}$ consisting of horizontal sections (i.e. those $v$ such that $\nabla v=0$).
   \end{enumerate}
 \end{theorem}
 
 These equivalences are compatible with taking the tensor product, the internal $\Hom$, and the dual;
-to the unit complex local system $\underline{\CC}$ corresponds the bundle $\sh{O}$ endowed with the connection $\nabla$ such that $\nabla f=\dd f$.
+to the unit complex local system $\underline{\CC}$ corresponds the bundle $\scr{O}$ endowed with the connection $\nabla$ such that $\nabla f=\dd f$.
 
 Definition~\cref{I.2.10.2} implies the following:
 \begin{proposition}{2.18}
 \label{I.2.18}
-  If $V$ is a complex local system on $X$, and if $\sh{V}=\sh{O}\otimes_\CC V$,
+  If $V$ is a complex local system on $X$, and if $\scr{V}=\scr{O}\otimes_\CC V$,
 \oldpage{13}
   then the system of isomorphisms
   \[
     \Omega_X^p\otimes_\CC V
     \simeq
-    \Omega_X^p\otimes_\sh{O}\sh{O}\otimes_\CC V
+    \Omega_X^p\otimes_\scr{O}\scr{O}\otimes_\CC V
     \simeq
-    \Omega_X^p\otimes_\sh{O}\sh{V}
+    \Omega_X^p\otimes_\scr{O}\scr{V}
   \]
   is an isomorphism of complexes
   \[
-    \Omega_X^\bullet\otimes_\CC V \to \Omega_X^\bullet(\sh{V}).
+    \Omega_X^\bullet\otimes_\CC V \to \Omega_X^\bullet(\scr{V}).
   \]
 \end{proposition}
 From this, the holomorphic Poincar\'{e} lemma gives the following:
 \begin{proposition}{2.19}
 \label{I.2.19}
-  Under the hypotheses of \cref{I.2.16}, the complex $\Omega_X^\bullet(\sh{V})$ is a resolution of the sheaf $\sh{V}$.
+  Under the hypotheses of \cref{I.2.16}, the complex $\Omega_X^\bullet(\scr{V})$ is a resolution of the sheaf $\scr{V}$.
 \end{proposition}
 
 \begin{env}{2.20}
@@ -810,28 +807,28 @@ From this, the holomorphic Poincar\'{e} lemma gives the following:
 \begin{definition}{2.21}
 \label{I.2.21}
   \begin{enumerate}[(i)]
-    \item Let $f\colon X\to S$ be a smooth morphism of schemes, and $\sh{V}$ a quasi-coherent sheaf on $X$.
-      A \emph{relative connection} on $\sh{V}$ is an $f^*\sh{O}_S$-linear sheaf morphism
+    \item Let $f\colon X\to S$ be a smooth morphism of schemes, and $\scr{V}$ a quasi-coherent sheaf on $X$.
+      A \emph{relative connection} on $\scr{V}$ is an $f^*\scr{O}_S$-linear sheaf morphism
       \[
-        \nabla\colon \sh{V} \to \Omega_{X/S}^1(\sh{V})
+        \nabla\colon \scr{V} \to \Omega_{X/S}^1(\scr{V})
       \]
-      (called the \emph{covariant derivative} defined by the connection) that identically satisfies, for any local section $f$ (resp. $v$) of $\sh{O}_X$ (resp. $\sh{V}$),
+      (called the \emph{covariant derivative} defined by the connection) that identically satisfies, for any local section $f$ (resp. $v$) of $\scr{O}_X$ (resp. $\scr{V}$),
       \[
         \nabla(fv) = f\cdot\nabla v + \dd f\cdot v.
       \]
-    \item Given $\sh{V}$ endowed with a relative connection, there exists exactly one system of $f^*\sh{O}_S$-homomorphisms of sheaves
+    \item Given $\scr{V}$ endowed with a relative connection, there exists exactly one system of $f^*\scr{O}_S$-homomorphisms of sheaves
       \[
-        \nabla^{(p)}\colon \Omega_{X/S}^p(\sh{V}) \to \Omega_{X/S}^{p+1}(\sh{V})
+        \nabla^{(p)}\colon \Omega_{X/S}^p(\scr{V}) \to \Omega_{X/S}^{p+1}(\scr{V})
       \]
       that satisfies \cref{I.2.10.4} and is such that $\nabla^{(0)}=\nabla$.
 \oldpage{14}
     \item The \emph{curvature} of a connection is defined by
       \[
-        R = \nabla^{(1)}\nabla^{(0)} \in \shHom(\sh{V},\Omega_{X/S}^2(\sh{V})) \cong \Omega_{X/S}^2(\shEnd(\sh{V})).
+        R = \nabla^{(1)}\nabla^{(0)} \in \shHom(\scr{V},\Omega_{X/S}^2(\scr{V})) \cong \Omega_{X/S}^2(\shEnd(\scr{V})).
       \]
       The curvature satisfies the Ricci identity \cref{I.2.12.2} and the Bianchi identity \cref{I.2.12.3}.
     \item An \emph{integrable connection} is a connection with zero curvature.
-    \item The \emph{de Rham complex} defined by an integrable connection is the complex $(\Omega_{X/S}^p(\sh{V}),\nabla)$.
+    \item The \emph{de Rham complex} defined by an integrable connection is the complex $(\Omega_{X/S}^p(\scr{V}),\nabla)$.
   \end{enumerate}
 \end{definition}
 
@@ -839,18 +836,18 @@ From this, the holomorphic Poincar\'{e} lemma gives the following:
 \label{I.2.22}
   Let $f\colon X\to S$ be a \emph{smooth} morphism of complex-analytic spaces;
   by hypothesis, $f$ is thus locally (in the domain) isomorphic to a projection $\pr_2\colon\CC^n\times S\to S$ (for some $n\in\NN$).
-  A \emph{local relative system} on $X$ is a sheaf of $f^*\sh{O}_S$-modules that is locally isomorphic to the sheaf-theoretic inverse image of a coherent analytic sheaf on $S$.
-  If $\sh{V}$ is a coherent analytic sheaf on $X$, then a \emph{relative connection} on $\sh{V}$ is an $f^*\sh{O}_S$-linear homomorphism
+  A \emph{local relative system} on $X$ is a sheaf of $f^*\scr{O}_S$-modules that is locally isomorphic to the sheaf-theoretic inverse image of a coherent analytic sheaf on $S$.
+  If $\scr{V}$ is a coherent analytic sheaf on $X$, then a \emph{relative connection} on $\scr{V}$ is an $f^*\scr{O}_S$-linear homomorphism
   \[
-    \nabla\colon \sh{V} \to \Omega_{X/S}^1(\sh{V})
+    \nabla\colon \scr{V} \to \Omega_{X/S}^1(\scr{V})
   \]
-  that identically satisfies, for any local section $f$ (resp. $v$) of $\sh{O}$ (resp. $\sh{V}$),
+  that identically satisfies, for any local section $f$ (resp. $v$) of $\scr{O}$ (resp. $\scr{V}$),
   \[
     \nabla(fv) = f\cdot\nabla v + \dd f\cdot v.
   \]
   A \emph{morphism} between vector bundles endowed with relative connections is a morphism of vector bundles that commutes with $\nabla$.
-  We define, as in \cref{I.2.11,I.2.21}, the \emph{curvature} $R\in\Omega_{X/S}^2(\shEnd(\sh{V}))$ of a relative connection.
-  A relative connection is said to be \emph{integrable} if $R=0$, in which case we have the \emph{relative de Rham complex with values in $\sh{V}$}, denoted by $\Omega_{X/S}^\bullet(\sh{V})$, and defined as in \cref{I.2.15,I.2.21}.
+  We define, as in \cref{I.2.11,I.2.21}, the \emph{curvature} $R\in\Omega_{X/S}^2(\shEnd(\scr{V}))$ of a relative connection.
+  A relative connection is said to be \emph{integrable} if $R=0$, in which case we have the \emph{relative de Rham complex with values in $\scr{V}$}, denoted by $\Omega_{X/S}^\bullet(\scr{V})$, and defined as in \cref{I.2.15,I.2.21}.
 \end{env}
 
 The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. ``with parameters'') analogues:
@@ -859,29 +856,29 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
 \label{I.2.23}
   Under the hypotheses of \cref{I.2.22}, we have the following.
   \begin{enumerate}[(i)]
-    \item For every relative local system $V$ on $X$, there exists a coherent analytic sheaf \mbox{$\sh{V}=\sh{O}_X\otimes_{f^*\sh{O}_S}V$}, and exactly one relative connection, said to be canonical, such that a local section $v$ of $\sh{V}$ is horizontal (i.e. such that $\nabla v=0$) if and only if $v$ is a section of $V$;
+    \item For every relative local system $V$ on $X$, there exists a coherent analytic sheaf \mbox{$\scr{V}=\scr{O}_X\otimes_{f^*\scr{O}_S}V$}, and exactly one relative connection, said to be canonical, such that a local section $v$ of $\scr{V}$ is horizontal (i.e. such that $\nabla v=0$) if and only if $v$ is a section of $V$;
       this connection is integrable.
     \item Given a relative local system $V$ on $X$, the de Rham complex defined
 \oldpage{15}
-      by $\sh{V}=\sh{O}_X\otimes_{f^*\sh{O}_S}V$, endowed with its canonical connection, is a resolution of the sheaf $V$.
+      by $\scr{V}=\scr{O}_X\otimes_{f^*\scr{O}_S}V$, endowed with its canonical connection, is a resolution of the sheaf $V$.
     \item The following functors are quasi-inverse to one another, and thus give an equivalence between the category of relative local systems on $X$ and the category of coherent analytic sheaves on $X$ endowed with a relative integrable connection:
       \begin{enumerate}[a)]
-        \item the relative local system $V$ is sent to $\sh{V}=\sh{O}_X\otimes_{f^*\sh{O}_S}V$ endowed with its canonical connection;
-        \item the coherent analytic sheaf $\sh{V}$ on $X$ endowed with a relative integrable connection is sent to the subsheaf consisting of its horizontal sections (i.e. the sections $v$ such that $\nabla v=0$).
+        \item the relative local system $V$ is sent to $\scr{V}=\scr{O}_X\otimes_{f^*\scr{O}_S}V$ endowed with its canonical connection;
+        \item the coherent analytic sheaf $\scr{V}$ on $X$ endowed with a relative integrable connection is sent to the subsheaf consisting of its horizontal sections (i.e. the sections $v$ such that $\nabla v=0$).
       \end{enumerate}
   \end{enumerate}
 \end{theorem}
 
 \begin{proof}
   We first prove (i).
-  To show that $\sh{V}$ is coherent, it suffices to do so locally, for $V=f^\sbullet V_0$, in which case $\sh{V}$ is the inverse image, in the sense of coherent analytic sheaves, of $\sh{V}_0$.
-  The canonical relative connection necessarily satisfies, for any local section $f$ (resp $v_0$) of $\sh{O}_X$ (resp. $V$),
+  To show that $\scr{V}$ is coherent, it suffices to do so locally, for $V=f^\sbullet V_0$, in which case $\scr{V}$ is the inverse image, in the sense of coherent analytic sheaves, of $\scr{V}_0$.
+  The canonical relative connection necessarily satisfies, for any local section $f$ (resp $v_0$) of $\scr{O}_X$ (resp. $V$),
   \[
   \label{I.2.23.1}
     \nabla(fv_0) = \dd f\cdot v_0.
   \tag{2.23.1}
   \]
-  The right-hand side $\II(f,v_0)$ of this equation is biadditive in $f$ and $v_0$, and satisfies, for any local section $g$ of $f^*\sh{O}_S$, the identity
+  The right-hand side $\II(f,v_0)$ of this equation is biadditive in $f$ and $v_0$, and satisfies, for any local section $g$ of $f^*\scr{O}_S$, the identity
   \[
     \II(fg,v_0) = \II(f,gv_0)
   \]
@@ -897,15 +894,15 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
 
 \begin{env}{2.23.2}
 \label{I.2.23.2}
-  We first of all consider the particular case of (ii) where $S=D^n$, $X=D^n\times D^m$, $f=\pr_2$, and the relative local system $V$ is the inverse image of $\sh{O}_S$.
+  We first of all consider the particular case of (ii) where $S=D^n$, $X=D^n\times D^m$, $f=\pr_2$, and the relative local system $V$ is the inverse image of $\scr{O}_S$.
   The complex of global sections
   \[
-    0 \to \Gamma(f^\sbullet\sh{O}_S) \to \Gamma(\sh{O}_X) \to \Gamma(\Omega_{X/S}^1) \to \ldots
+    0 \to \Gamma(f^\sbullet\scr{O}_S) \to \Gamma(\scr{O}_X) \to \Gamma(\Omega_{X/S}^1) \to \ldots
   \]
   is acyclic, since it admits the homotopy operator $H$ defined below.
 \oldpage{16}
   \begin{enumerate}[a)]
-    \item $H\colon \Gamma(\sh{O}_X) \to \Gamma(f^\sbullet\sh{O}_S) = \Gamma(S,\sh{O}_S)$ is the inverse image under the zero section of $f$;
+    \item $H\colon \Gamma(\scr{O}_X) \to \Gamma(f^\sbullet\scr{O}_S) = \Gamma(S,\scr{O}_S)$ is the inverse image under the zero section of $f$;
     \item an element $\omega\in\Gamma(\Omega_{X/S}^p)$ (where $p>0$) can be represented in a unique way as a sum of convergent series:
       \[
         \omega = \sum_{\substack{I\subset[1,m]\\|I|=p}} \; \sum_{\underline{n}\in \NN^{m+n}} a_{\underline{n}}^I
@@ -928,54 +925,54 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
       \]
   \end{enumerate}
 
-  This remains true if we replace $D^{m+n}$ by a smaller polycylinder, and so $\Omega_{X/S}^\bullet$ is a resolution of $f^\sbullet\sh{O}_S$.
+  This remains true if we replace $D^{m+n}$ by a smaller polycylinder, and so $\Omega_{X/S}^\bullet$ is a resolution of $f^\sbullet\scr{O}_S$.
 \end{env}
 
 \begin{proof}[\normalfont\textbf{2.23.3}]
 \label{I.2.23.3}
   We now prove (ii), which is of a local nature on $X$ and $S$.
   Denoting by $D$ the open unit disc, we can thus restrict to the case where $S$ is a closed analytic subset of the polycylinder $D^n$, where $X=D^m\times S$, with $f=\pr_2$, and where $V$ is the inverse image of a coherent analytic sheaf $V_0$ on $S$.
-  Applying the syzygy theorem, and possibly shrinking $X$ and $S$, we can further suppose that the direct image of $V_0$ on $D^n$, which we again denote by $V_0$, admits a finite resolution $\sh{L}$ by free coherent $\sh{O}_{D^n}$-modules.
+  Applying the syzygy theorem, and possibly shrinking $X$ and $S$, we can further suppose that the direct image of $V_0$ on $D^n$, which we again denote by $V_0$, admits a finite resolution $\scr{L}$ by free coherent $\scr{O}_{D^n}$-modules.
   To prove (ii), we are allowed to replace $V_0$ by its direct image on $D^n$, and to suppose that $D^n=S$, which we now do.
 
-  If $\Sigma_0$ is a short exact sequence of coherent $\sh{O}_S$-modules
+  If $\Sigma_0$ is a short exact sequence of coherent $\scr{O}_S$-modules
   \[
     \Sigma_0\colon 0 \to V'_0 \to V_0 \to V''_0 \to 0,
   \]
   then let $\Sigma=f^\sbullet\Sigma_0$ be the exact sequence of relative local systems given by the inverse image of $\Sigma_0$ (which is exact since $f^\sbullet$ is an exact functor), and let $\Omega_{X/S}^\bullet(\Sigma)$ be the corresponding exact sequence of relative de Rham complexes:
   \[
-    \Omega_{X/S}^\bullet(\Sigma)\colon 0 \to \Omega_{X/S}^p\otimes_{f^\sbullet\sh{O}_S}f^\sbullet V'_0 \to \Omega_{X/S}^p\otimes_{f^\sbullet\sh{O}_S}f^\sbullet V_0 \to \Omega_{X/S}^p\otimes_{f^\sbullet\sh{O}_S}f^\sbullet V''_0 \to 0.
+    \Omega_{X/S}^\bullet(\Sigma)\colon 0 \to \Omega_{X/S}^p\otimes_{f^\sbullet\scr{O}_S}f^\sbullet V'_0 \to \Omega_{X/S}^p\otimes_{f^\sbullet\scr{O}_S}f^\sbullet V_0 \to \Omega_{X/S}^p\otimes_{f^\sbullet\scr{O}_S}f^\sbullet V''_0 \to 0.
   \]
-  This sequence is exact since $\Omega_{X/S}^p$ is flat over $f^\sbullet\sh{O}_S$, since it is locally free over $\sh{O}_X$ which is itself flat over $f^\sbullet\sh{O}_S$.
+  This sequence is exact since $\Omega_{X/S}^p$ is flat over $f^\sbullet\scr{O}_S$, since it is locally free over $\scr{O}_X$ which is itself flat over $f^\sbullet\scr{O}_S$.
 
   The snake lemma applied to $\Omega_{X/S}^\bullet(\Sigma)$ shows that, if claim~(ii)
 \oldpage{17}
   is satisfied for any two of relative local systems $f^\sbullet V_0$, $f^\sbullet V'_0$, and $f^\sbullet V''_0$, then it is again satisfied for the third.
   We thus deduce, by induction, that, if $V_0$ admits a finite resolution $M_\bullet$ by modules that satisfy (ii), then $V_0$ satisfies (ii).
-  This, applied to $V_0$ and $\sh{L}^\bullet$, finishes the proof of (i) and (ii).
+  This, applied to $V_0$ and $\scr{L}^\bullet$, finishes the proof of (i) and (ii).
 
   It follows from (ii) that the composite $\mbox{(iii)b}\circ\mbox{(iii)a}$ of the functors from (iii) is canonically isomorphic to the identity;
-  furthermore, if $V_1$ and $V_2$ are relative local systems, and if $u\colon\sh{V}_1\to\sh{V}_2$ is a homomorphism that induces $0$ on $V_1$, then $u=0$, since $V_1$ generates $\sh{V}_1$;
+  furthermore, if $V_1$ and $V_2$ are relative local systems, and if $u\colon\scr{V}_1\to\scr{V}_2$ is a homomorphism that induces $0$ on $V_1$, then $u=0$, since $V_1$ generates $\scr{V}_1$;
   it thus follows that the functor $\mbox{(iii)a}$ is fully faithful.
-  It remains to show that every vector bundle $\sh{V}$ endowed with a relative connection $\nabla$ is given locally by a relative local system.
+  It remains to show that every vector bundle $\scr{V}$ endowed with a relative connection $\nabla$ is given locally by a relative local system.
 
   \begin{enumerate}[\bf {Case}~1:]
-    \item \emph{$S=D^n$, $X=D^{n+1}=D^n\times D$, $f=\pr_1$, and $\sh{V}$ is free.}
+    \item \emph{$S=D^n$, $X=D^{n+1}=D^n\times D$, $f=\pr_1$, and $\scr{V}$ is free.}
 
-      Under these hypotheses, if $v$ is an arbitrary section of the inverse image of $\sh{V}$ under the zero section $s_0$ of $f$, then there exists exactly one horizontal section $\widetilde{v}$ of $\sh{V}$ that agrees with $v$ on $s_0(S)$ (as follows from the existence and uniqueness of solutions for Cauchy problems with parameters).
-      If $(e_i)_{1\leq i\leq k}$ is a basis of $s_0^*\sh{V}$, then the $\widetilde{e_i}$ form a horizontal basis of $\sh{V}$, and $(\sh{V},{\nabla})$ is defined by the relative local system $f^\sbullet s_0^*\sh{V}\simeq f^\sbullet\sh{O}_S^k$.
+      Under these hypotheses, if $v$ is an arbitrary section of the inverse image of $\scr{V}$ under the zero section $s_0$ of $f$, then there exists exactly one horizontal section $\widetilde{v}$ of $\scr{V}$ that agrees with $v$ on $s_0(S)$ (as follows from the existence and uniqueness of solutions for Cauchy problems with parameters).
+      If $(e_i)_{1\leq i\leq k}$ is a basis of $s_0^*\scr{V}$, then the $\widetilde{e_i}$ form a horizontal basis of $\scr{V}$, and $(\scr{V},{\nabla})$ is defined by the relative local system $f^\sbullet s_0^*\scr{V}\simeq f^\sbullet\scr{O}_S^k$.
     \item \emph{$S=D^n$, $X=D^{n+1}=D^n\times D$, and $f=\pr_1$.}
 
-      By possibly shrinking $X$ and $S$, we can suppose that $\sh{V}$ admits a free presentation:
+      By possibly shrinking $X$ and $S$, we can suppose that $\scr{V}$ admits a free presentation:
       \[
-        \sh{V}_1 \xrightarrow{d} \sh{V}_0 \xrightarrow{\varepsilon} \sh{V} \to 0.
+        \scr{V}_1 \xrightarrow{d} \scr{V}_0 \xrightarrow{\varepsilon} \scr{V} \to 0.
       \]
-      By then possibly shrinking again, we can further suppose that $\sh{V}_0$ and $\sh{V}_1$ admit connections $\nabla_1$ and $\nabla_0$ (respectively) such that $\varepsilon$ and $d$ are compatible with the connections (if $(e_i)$ is a basis of $\sh{V}_0$, then $\nabla_0$ is determined by the $\nabla_0 e_i$, and it suffices to choose $\nabla_0 e_i$ such that $\varepsilon(\nabla_0 e_i)=\nabla(\varepsilon(e_i))$; we proceed similarly for $\nabla_1$).
+      By then possibly shrinking again, we can further suppose that $\scr{V}_0$ and $\scr{V}_1$ admit connections $\nabla_1$ and $\nabla_0$ (respectively) such that $\varepsilon$ and $d$ are compatible with the connections (if $(e_i)$ is a basis of $\scr{V}_0$, then $\nabla_0$ is determined by the $\nabla_0 e_i$, and it suffices to choose $\nabla_0 e_i$ such that $\varepsilon(\nabla_0 e_i)=\nabla(\varepsilon(e_i))$; we proceed similarly for $\nabla_1$).
       The connections $\nabla_0$ and $\nabla_1$ are automatically integrable, since $f$ is of relative dimension~$1$.
-      There thus exist (by Case~1) relative local systems $V_0$ and $V_1$ such that $(\sh{V}_i,\nabla_i)\simeq\sh{O}_X\otimes_{f^\sbullet\sh{O}_S}V_i$.
+      There thus exist (by Case~1) relative local systems $V_0$ and $V_1$ such that $(\scr{V}_i,\nabla_i)\simeq\scr{O}_X\otimes_{f^\sbullet\scr{O}_S}V_i$.
       We then have that
       \[
-        (\sh{V},\nabla) \simeq \sh{O}_X\otimes_{f^\sbullet\sh{O}_S}(V_0/dV_1).
+        (\scr{V},\nabla) \simeq \scr{O}_X\otimes_{f^\sbullet\scr{O}_S}(V_0/dV_1).
       \]
 \oldpage{18}
     \item \emph{$f$ is of relative dimension~$1$.}
@@ -986,17 +983,17 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
       We proceed by induction on the relative dimension $n$ of $f$.
       The case $n=0$ is trivial.
       If $n\neq0$, then we are led to the case where $X=S\times D^{n-1}\times D$ and $f=\pr_1$.
-      The bundle with connection $(\sh{V},\nabla)$ induces a bundle $\sh{V}_0$ with connection on $X_0=S\times D^{n-1}\times\{0\}$ which is, by induction, of the form $(\sh{V}_0,\nabla_0) = \sh{O}_{X_0}\otimes_{\pr_1^\sbullet\sh{O}_S}V$.
-      The projection $f$ from $X$ to $S\times D^{n-1}$ is of relative dimension~$1$, and the relative connection $\nabla$ induces a relative connection for $\sh{V}$ on $X/S\times D^{n-1}$.
+      The bundle with connection $(\scr{V},\nabla)$ induces a bundle $\scr{V}_0$ with connection on $X_0=S\times D^{n-1}\times\{0\}$ which is, by induction, of the form $(\scr{V}_0,\nabla_0) = \scr{O}_{X_0}\otimes_{\pr_1^\sbullet\scr{O}_S}V$.
+      The projection $f$ from $X$ to $S\times D^{n-1}$ is of relative dimension~$1$, and the relative connection $\nabla$ induces a relative connection for $\scr{V}$ on $X/S\times D^{n-1}$.
       By Case~3, there exists a vector bundle $V_1$ on $S\times D^{n-1}$, as well as an isomorphism
       \[
-        \sh{V} \simeq \sh{O}_X\otimes_{p^\sbullet\sh{O}_{S\times D^{n-1}}}p^\sbullet V_1.
+        \scr{V} \simeq \scr{O}_X\otimes_{p^\sbullet\scr{O}_{S\times D^{n-1}}}p^\sbullet V_1.
       \]
       of bundles with relative connections (with respect to $p$).
 
-      The vector bundle $V_1$ can be identified with the restriction of $\sh{V}$ to $X_0$, whence we obtain an isomorphism
+      The vector bundle $V_1$ can be identified with the restriction of $\scr{V}$ to $X_0$, whence we obtain an isomorphism
       \[
-        \alpha\colon \sh{V}\simeq\sh{O}_X\otimes_{f^\sbullet\sh{O}_S}V
+        \alpha\colon \scr{V}\simeq\scr{O}_X\otimes_{f^\sbullet\scr{O}_S}V
       \]
       of vector bundles, such that
       \begin{enumerate}[(i)]
@@ -1014,7 +1011,7 @@ The ``absolute'' statements \cref{I.2.17,I.2.18,I.2.19} have ``relative'' (i.e. 
         \nabla_{x_n}\nabla_{x_i}v = \nabla_{x_i}\nabla_{x_n}v = 0.
       \]
 
-      In other words, $\nabla_{x_i}v$ is a relative horizontal section, with respect to $p$, of $\sh{V}$;
+      In other words, $\nabla_{x_i}v$ is a relative horizontal section, with respect to $p$, of $\scr{V}$;
       by (i), it is zero on $X_0$, and is thus zero, and we conclude that $\nabla v=0$.
       The isomorphism $\alpha$ is thus horizontal, and this finishes the proof
 \oldpage{19}
@@ -1027,9 +1024,9 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
 \begin{reminder}{2.24}
 \label{I.2.24}
   Let $Y$ be a closed subset of a topological space $X$, and suppose that $Y$ has a paracompact neighbourhood.
-  For every sheaf $\sh{F}$ on $X$, we have that
+  For every sheaf $\scr{F}$ on $X$, we have that
   \[
-    \varinjlim_{U\supset Y} \HH^\bullet(U,\sh{F}) \simto \HH^\bullet(Y,\sh{F}).
+    \varinjlim_{U\supset Y} \HH^\bullet(U,\scr{F}) \simto \HH^\bullet(Y,\scr{F}).
   \]
 \end{reminder}
 
@@ -1041,9 +1038,9 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
 \label{I.2.25}
   Let $f\colon X\to S$ be a proper separated morphism between topological spaces.
   Suppose that $S$ is locally paracompact \hyperref[0.5]{(0.5)}.
-  Then, for every $s\in S$, and for every sheaf $\sh{F}$ on $X$, we have that
+  Then, for every $s\in S$, and for every sheaf $\scr{F}$ on $X$, we have that
   \[
-    (\RR^i f_*\sh{F})_s \simeq \HH^i(f^{-1}(s), \sh{F}|f^{-1}(s)).
+    (\RR^i f_*\scr{F})_s \simeq \HH^i(f^{-1}(s), \scr{F}|f^{-1}(s)).
   \]
 \end{corollary}
 
@@ -1083,7 +1080,7 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
 \oldpage{20}
   \[
   \label{I.2.27.1}
-    V_\mathrm{rel} = f^\sbullet\sh{O}_S \otimes_\CC V
+    V_\mathrm{rel} = f^\sbullet\scr{O}_S \otimes_\CC V
   \tag{2.27.1}
   \]
   is a relative local system.
@@ -1099,13 +1096,13 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
   From \cref{I.2.27.1}, we thus obtain an arrow
   \[
   \label{I.2.27.3}
-    \sh{O}_S \otimes_\CC \RR^i f_*V \to \RR^i f_*(V_\mathrm{rel}),
+    \scr{O}_S \otimes_\CC \RR^i f_*V \to \RR^i f_*(V_\mathrm{rel}),
   \tag{2.27.3}
   \]
   whence, by composition, an arrow
   \[
   \label{I.2.27.4}
-    \sh{O}_S \otimes \RR^i f_*V \to \RR^i f_*(\Omega_{X/S}(V)).
+    \scr{O}_S \otimes \RR^i f_*V \to \RR^i f_*(\Omega_{X/S}(V)).
   \tag{2.27.4}
   \]
 \end{env}
@@ -1122,7 +1119,7 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
       \]
       Then the arrow \cref{I.2.27.4} is an isomorphism:
       \[
-        \sh{O}_S \otimes_\CC \RR^i f_*V \simto \RR^i f_*(\Omega_{X/S}^\bullet(V)).
+        \scr{O}_S \otimes_\CC \RR^i f_*V \simto \RR^i f_*(\Omega_{X/S}^\bullet(V)).
       \]
   \end{enumerate}
 \end{proposition}
@@ -1132,7 +1129,7 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
   To show that \cref{I.2.27.4} is an isomorphism, it suffices to construct a fundamental system $T$ of neighbourhoods of $s$ such that the arrows
   \[
   \label{I.2.28.1}
-    \HH^0(T,\sh{O}_S) \otimes \HH^i(T\times Y,\pr_2^\sbullet V_0) \simto \HH^i(T\times Y,\pr_1^\sbullet\sh{O}_S \otimes \pr_2^\sbullet V_0)
+    \HH^0(T,\scr{O}_S) \otimes \HH^i(T\times Y,\pr_2^\sbullet V_0) \simto \HH^i(T\times Y,\pr_1^\sbullet\scr{O}_S \otimes \pr_2^\sbullet V_0)
   \tag{2.28.1}
   \]
   are isomorphisms.
@@ -1143,14 +1140,14 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
 \oldpage{21}
   \[
   \label{I.2.28.2}
-    \HH^0(T,\sh{O}_S) \otimes \HH^i(Y,V_0) \simto \HH^i(T\times Y,\pr_1^\sbullet\sh{O}_S \otimes \pr_2^\sbullet V_0).
+    \HH^0(T,\scr{O}_S) \otimes \HH^i(Y,V_0) \simto \HH^i(T\times Y,\pr_1^\sbullet\scr{O}_S \otimes \pr_2^\sbullet V_0).
   \tag{2.28.2}
   \]
 
   We can calculate the right-hand side of \cref{I.2.28.2} by using the Leray spectral sequence for $\pr_2\colon T\times Y\to Y$.
-  By \cref{I.2.25}, since $\HH^i(T,\sh{O}_S)=0$, we have that
+  By \cref{I.2.25}, since $\HH^i(T,\scr{O}_S)=0$, we have that
   \[
-    \HH^i(T\times Y,\pr_1^\sbullet\sh{O}_S \otimes \pr_2^\sbullet V_0) \simeq \HH^i(Y,\HH^0(T,\sh{O}_S) \otimes V_0),
+    \HH^i(T\times Y,\pr_1^\sbullet\scr{O}_S \otimes \pr_2^\sbullet V_0) \simeq \HH^i(Y,\HH^0(T,\scr{O}_S) \otimes V_0),
   \]
   and we conclude by \cref{I.2.26}.
 \end{proof}
@@ -1168,14 +1165,14 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
 \begin{env}{3.1}
 \label{I.3.1}
   Let $X$ be a complex-analytic variety.
-  If $\sh{V}$ is the holomorphic vector bundle defined by a $\CC$-vector space $V_0$, then we have seen that $\sh{V}$ admits a canonical connection with covariant derivative ${}_0\!\nabla$.
-  If $\nabla$ is the covariant derivative defined by another connection on $\sh{V}$, then we have seen \cref{I.2.6} that $\nabla$ can be written in the form
+  If $\scr{V}$ is the holomorphic vector bundle defined by a $\CC$-vector space $V_0$, then we have seen that $\scr{V}$ admits a canonical connection with covariant derivative ${}_0\!\nabla$.
+  If $\nabla$ is the covariant derivative defined by another connection on $\scr{V}$, then we have seen \cref{I.2.6} that $\nabla$ can be written in the form
   \[
     \nabla = {}_0\!\nabla + \Gamma,
-    \quad\mbox{where $\Gamma\in\Omega(\shEnd(\sh{V}))$.}
+    \quad\mbox{where $\Gamma\in\Omega(\shEnd(\scr{V}))$.}
   \]
 
-  If we identify sections of $\sh{V}$ with holomorphic maps from $X$ to $V_0$, then we have that
+  If we identify sections of $\scr{V}$ with holomorphic maps from $X$ to $V_0$, then we have that
   \[
   \label{I.3.1.1}
     \nabla v = \dd v + \Gamma\cdot v
@@ -1189,12 +1186,12 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
   \tag{3.1.2}
   \]
 
-  Let $\sh{V}$ be an arbitrary holomorphic vector bundle on $X$.
-  The choice of a basis $e\colon\CC^n\simto\sh{V}$ of $\sh{V}$ allows us to think of $\sh{V}$ as being defined by a
+  Let $\scr{V}$ be an arbitrary holomorphic vector bundle on $X$.
+  The choice of a basis $e\colon\CC^n\simto\scr{V}$ of $\scr{V}$ allows us to think of $\scr{V}$ as being defined by a
 \oldpage{22}
   constant vector \todo ($\CC^n$), and the above remarks apply:
-  connections on $\sh{V}$ correspond, via \cref{I.3.1.2}, with $(n\times n)$-matrices of differential forms on $X$.
-  If $\omega_e$ is the matrix of the connection $\nabla$ in the basis $e$, and if $f\colon\CC^n\to\simto\sh{V}$ is another basis of $\sh{V}$, with matrix $A\in\GL_n(\sh{O})$ (where $A=e^{-1}f$), then \cref{I.3.1.2}
+  connections on $\scr{V}$ correspond, via \cref{I.3.1.2}, with $(n\times n)$-matrices of differential forms on $X$.
+  If $\omega_e$ is the matrix of the connection $\nabla$ in the basis $e$, and if $f\colon\CC^n\to\simto\scr{V}$ is another basis of $\scr{V}$, with matrix $A\in\GL_n(\scr{O})$ (where $A=e^{-1}f$), then \cref{I.3.1.2}
   \[
     \begin{aligned}
       \nabla v
@@ -1222,7 +1219,7 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
   \tag{3.1.4}
   \]
 
-  The differential equation $\nabla v=0$ of horizontal sections of $\sh{V}$ can be written as the linear homogeneous system of first-order partial differential equations
+  The differential equation $\nabla v=0$ of horizontal sections of $\scr{V}$ can be written as the linear homogeneous system of first-order partial differential equations
   \[
   \label{I.3.1.5}
     \partial_i v^\alpha = -\sum_\beta \Gamma_{\beta i}^\alpha v^\beta.
@@ -1317,40 +1314,40 @@ Some results in general topology (\cref{I.2.24} to \cref{I.2.27}) will be necess
   \tag{4.2.1}
   \]
 
-  If $\sh{L}$ is an invertible sheaf on $X$, then we denote by $P^n(\sh{L})$ the vector bundle
+  If $\scr{L}$ is an invertible sheaf on $X$, then we denote by $P^n(\scr{L})$ the vector bundle
   \[
   \label{I.4.2.2}
-    P^n(\sh{L}) = (p_1)_*p_2^*\sh{L}
+    P^n(\scr{L}) = (p_1)_*p_2^*\scr{L}
   \tag{4.2.2}
   \]
-  of $n^\mathrm{th}$-order jets of sections of $\sh{L}$.
-  The $I$-adic filtration of $p_2^*\sh{L}$ defines a filtration of $P^n(\sh{L})$ for which
+  of $n^\mathrm{th}$-order jets of sections of $\scr{L}$.
+  The $I$-adic filtration of $p_2^*\scr{L}$ defines a filtration of $P^n(\scr{L})$ for which
   \[
   \label{I.4.2.3}
     \begin{aligned}
-      \Gr P^n(\sh{L}) &\simeq \Gr P^n(\sh{O})\otimes\sh{L}
-    \\\Gr^i P^n(\sh{L}) &\simeq \Omega^{\otimes i}\otimes\sh{L} \qquad\mbox{($0\leq i\leq n$).}
+      \Gr P^n(\scr{L}) &\simeq \Gr P^n(\scr{O})\otimes\scr{L}
+    \\\Gr^i P^n(\scr{L}) &\simeq \Omega^{\otimes i}\otimes\scr{L} \qquad\mbox{($0\leq i\leq n$).}
     \end{aligned}
   \tag{4.2.3}
   \]
 
-  Recall that we define, by induction on $n$, a \emph{differential operator of order $\leq n$} as being a morphism $A\colon\sh{M}\to\sh{N}$ of abelian sheaves such that
+  Recall that we define, by induction on $n$, a \emph{differential operator of order $\leq n$} as being a morphism $A\colon\scr{M}\to\scr{N}$ of abelian sheaves such that
   \[
     \begin{cases}
-      \mbox{$A$ is $\sh{O}$-linear} & \mbox{for $n=0$ ;}
-    \\\mbox{$[A,f]$ is of order $\leq m$ for every local section $f$ of $\sh{O}$} & \mbox{for $n=m+1$.}
+      \mbox{$A$ is $\scr{O}$-linear} & \mbox{for $n=0$ ;}
+    \\\mbox{$[A,f]$ is of order $\leq m$ for every local section $f$ of $\scr{O}$} & \mbox{for $n=m+1$.}
     \end{cases}
   \]
 
-  For every local section $s$ of $\sh{L}$, $p_2^*s$ defines a local section $\DD^n(s)$ of $P^n(\sh{L})$ \cref{I.4.2.2}.
-  The $\CC$-linear sheaf morphism $\DD^n\colon\sh{L}\to P^n(\sh{L})$ is the universal differential operator of order $\leq n$ with domain $\sh{L}$.
+  For every local section $s$ of $\scr{L}$, $p_2^*s$ defines a local section $\DD^n(s)$ of $P^n(\scr{L})$ \cref{I.4.2.2}.
+  The $\CC$-linear sheaf morphism $\DD^n\colon\scr{L}\to P^n(\scr{L})$ is the universal differential operator of order $\leq n$ with domain $\scr{L}$.
 \end{env}
 
 \begin{definition}{4.3}
 \label{I.4.3}
   \begin{enumerate}[(i)]
-    \item A \emph{linear homogeneous $n^\mathrm{th}$-order differential equation} on $\sh{L}$ is an $\sh{O}_X$-homomorphism $E\colon P^n(\sh{L})\to\Omega^{\otimes n}\otimes\sh{L}$ that induces the identity on the submodule $\Omega^{\otimes n}\otimes\sh{L}$ of $P^n(\sh{L})$.
-    \item A local section $s$ of $\sh{L}$ is a \emph{solution} of the differential equation $E$ if $E(\DD^n(s))=0$.
+    \item A \emph{linear homogeneous $n^\mathrm{th}$-order differential equation} on $\scr{L}$ is an $\scr{O}_X$-homomorphism $E\colon P^n(\scr{L})\to\Omega^{\otimes n}\otimes\scr{L}$ that induces the identity on the submodule $\Omega^{\otimes n}\otimes\scr{L}$ of $P^n(\scr{L})$.
+    \item A local section $s$ of $\scr{L}$ is a \emph{solution} of the differential equation $E$ if $E(\DD^n(s))=0$.
   \end{enumerate}
 \end{definition}
 
@@ -1359,15 +1356,15 @@ In fact, I have cheated with this definition, in that I have only considered equ
 \oldpage{25}
 \begin{env}{4.4}
 \label{I.4.4}
-  Suppose that $\sh{L}=\sh{O}$, and let $x$ be a local coordinate on $X$.
-  The choice of $x$ allows us to identify $p^k(\sh{O})$ with $\sh{O}^{[0,k]}$, with the arrow $\DD^k$ becoming
+  Suppose that $\scr{L}=\scr{O}$, and let $x$ be a local coordinate on $X$.
+  The choice of $x$ allows us to identify $p^k(\scr{O})$ with $\scr{O}^{[0,k]}$, with the arrow $\DD^k$ becoming
   \[
     \begin{aligned}
-      \DD^k\colon \sh{O} &\to P^k(\sh{O}) \simeq \sh{O}^{[0,k]}
+      \DD^k\colon \scr{O} &\to P^k(\scr{O}) \simeq \scr{O}^{[0,k]}
     \\f &\mapsto (\partial_x^i f)_{0\leq i\leq k}.
     \end{aligned}
   \]
-  The choice of $x$ also allows us to identify $\Omega^1$ with $\sh{O}$, so that the $n^\mathrm{th}$-order differential equation can be identified with a morphism $E\in\Hom(\sh{O}^{[0,n]},\sh{O})$, and, as such, has coordinates $(b_i)_{0\leq i\leq n}$ with $b_n=1$.
+  The choice of $x$ also allows us to identify $\Omega^1$ with $\scr{O}$, so that the $n^\mathrm{th}$-order differential equation can be identified with a morphism $E\in\Hom(\scr{O}^{[0,n]},\scr{O})$, and, as such, has coordinates $(b_i)_{0\leq i\leq n}$ with $b_n=1$.
   The solutions of $E$ are then exactly the (holomorphic) functions $f$ that satisfy
   \[
   \label{I.4.4.1}
@@ -1382,54 +1379,54 @@ In fact, I have cheated with this definition, in that I have only considered equ
 \begin{theorem}{4.5}
 \label{I.4.5}
   \emph{(Cauchy).}
-  Let $X$ and $\sh{L}$ be as in \cref{I.4.2}, and let $E$ be an $n^\mathrm{th}$-order differential equation on $\sh{L}$.
+  Let $X$ and $\scr{L}$ be as in \cref{I.4.2}, and let $E$ be an $n^\mathrm{th}$-order differential equation on $\scr{L}$.
   Then
   \begin{enumerate}[(i)]
-    \item the subsheaf of $\sh{L}$ given by solutions of $E$ is a local system $\sh{L}^E$ of rank~$n$ on $X$ ; and
-    \item the canonical arrow $\DD^{n-1}\colon\sh{L}^E \to P^{n-1}(\sh{L})$ induces an isomorphism
+    \item the subsheaf of $\scr{L}$ given by solutions of $E$ is a local system $\scr{L}^E$ of rank~$n$ on $X$ ; and
+    \item the canonical arrow $\DD^{n-1}\colon\scr{L}^E \to P^{n-1}(\scr{L})$ induces an isomorphism
       \[
-        \sh{O}\otimes_\CC\sh{L}^E \simto P^{n-1}(\sh{L}).
+        \scr{O}\otimes_\CC\scr{L}^E \simto P^{n-1}(\scr{L}).
       \]
   \end{enumerate}
 \end{theorem}
 
-In particular, it follows from \cref{I.4.5}~(ii) and from \cref{I.2.17} that $E$ defines a canonical connection on $P^{n-1}(\sh{L})$, whose horizontal sections are the images under $\DD$ of solutions of $E$.
+In particular, it follows from \cref{I.4.5}~(ii) and from \cref{I.2.17} that $E$ defines a canonical connection on $P^{n-1}(\scr{L})$, whose horizontal sections are the images under $\DD$ of solutions of $E$.
 
 \begin{env}{4.6}
 \label{I.4.6}
-  To a differential equation $E$ on $\sh{L}$, we have thus associated
+  To a differential equation $E$ on $\scr{L}$, we have thus associated
   \begin{enumerate}[a)]
-    \item a holomorphic vector bundle $\sh{V}$ endowed with a connection (which is automatically integrable) \todo ; and
-    \item a surjective homomorphism $\lambda\colon\sh{V}\to\sh{L}$ (by $i=0$ in \cref{I.4.2.3}).
+    \item a holomorphic vector bundle $\scr{V}$ endowed with a connection (which is automatically integrable) \todo ; and
+    \item a surjective homomorphism $\lambda\colon\scr{V}\to\scr{L}$ (by $i=0$ in \cref{I.4.2.3}).
   \end{enumerate}
-  Furthermore, the solutions of $E$ are exactly the images under $\lambda$ of the horizontal sections of $\sh{V}$.
+  Furthermore, the solutions of $E$ are exactly the images under $\lambda$ of the horizontal sections of $\scr{V}$.
   This is just another way of expressing how to obtain \cref{I.4.1.2} from \cref{I.4.1.1}.
 \end{env}
 
 \oldpage{26}
 \begin{env}{4.7}
 \label{I.4.7}
-  Let $\sh{V}$ be a rank-$n$ vector bundle on $X$, endowed with a connection with covariant derivative $\nabla$.
-  Let $v$ be a local section of $\sh{V}$, and $w$ a vector field on $X$ that doesn't vanish at any point.
-  We say that $v$ is \emph{cyclic} if the local sections $(\nabla_w)^i(v)$ of $\sh{V}$ (for $0\leq i<n$) form a basis of $\sh{V}$.
+  Let $\scr{V}$ be a rank-$n$ vector bundle on $X$, endowed with a connection with covariant derivative $\nabla$.
+  Let $v$ be a local section of $\scr{V}$, and $w$ a vector field on $X$ that doesn't vanish at any point.
+  We say that $v$ is \emph{cyclic} if the local sections $(\nabla_w)^i(v)$ of $\scr{V}$ (for $0\leq i<n$) form a basis of $\scr{V}$.
   This condition does not depend on the choice of $w$, and if $f$ is an invertible holomorphic function, then $v$ is cyclic if and only if $fv$ is cyclic.
-  In fact, we can show, by induction on $i$, that $(\nabla_{gw})^i(fv)$ lies in the submodule of $\sh{V}$ generated by the $(\nabla_w)^j(v)$ (for $0\leq j\leq i$).
+  In fact, we can show, by induction on $i$, that $(\nabla_{gw})^i(fv)$ lies in the submodule of $\scr{V}$ generated by the $(\nabla_w)^j(v)$ (for $0\leq j\leq i$).
 
-  If $\sh{L}$ is an invertible module, then we say that a section $v$ of $\sh{V}\otimes\sh{L}$ is cyclic if, for every every local isomorphism between $\sh{L}$ and $\sh{O}$, the corresponding section of $\sh{V}$ is cyclic.
-  This applies, in particular, to sections $v$ of $\shHom(\sh{V},\sh{L})=\sh{V}^\vee\otimes\sh{L}$.
+  If $\scr{L}$ is an invertible module, then we say that a section $v$ of $\scr{V}\otimes\scr{L}$ is cyclic if, for every every local isomorphism between $\scr{L}$ and $\scr{O}$, the corresponding section of $\scr{V}$ is cyclic.
+  This applies, in particular, to sections $v$ of $\shHom(\scr{V},\scr{L})=\scr{V}^\vee\otimes\scr{L}$.
 \end{env}
 
 \begin{lemma}{4.8}
 \label{I.4.8}
-  With the hypotheses and notation of \cref{I.4.6}, $\lambda$ is a cyclic section of $\shHom(\sh{V},\sh{L})$.
+  With the hypotheses and notation of \cref{I.4.6}, $\lambda$ is a cyclic section of $\shHom(\scr{V},\scr{L})$.
 \end{lemma}
 
 \begin{proof}
   The problem is local on $X$;
-  we can reduce to the case where $\sh{L}=\sh{O}$ and where there exists a local coordinate $x$.
+  we can reduce to the case where $\scr{L}=\scr{O}$ and where there exists a local coordinate $x$.
 
   We use the notation of \cref{I.4.4}.
-  A section $(f^i)$ of $P^{n-1}(\sh{O})\simeq\sh{O}^{[0,n-1]}$ is horizontal if and only if it satisfies
+  A section $(f^i)$ of $P^{n-1}(\scr{O})\simeq\scr{O}^{[0,n-1]}$ is horizontal if and only if it satisfies
   \[
     \begin{cases}
       \partial_x f^i = f^{i+1}
@@ -1468,19 +1465,19 @@ In particular, it follows from \cref{I.4.5}~(ii) and from \cref{I.2.17} that $E$
   The construction in \cref{I.4.6} establishes an equivalence between the following categories, where we take morphisms to be isomorphisms:
   \begin{enumerate}[a)]
     \item the category of invertible sheaves on $X$ endowed with an $n^\mathrm{th}$-order differential equation \cref{I.4.3} ; and
-    \item the category of triples consisting of a rank-$n$ vector bundle $\sh{V}$ endowed with a connection, an invertible sheaf $\sh{L}$, and a cyclic homomorphism $\lambda\colon\sh{V}\to\sh{L}$.
+    \item the category of triples consisting of a rank-$n$ vector bundle $\scr{V}$ endowed with a connection, an invertible sheaf $\scr{L}$, and a cyclic homomorphism $\lambda\colon\scr{V}\to\scr{L}$.
   \end{enumerate}
 \end{proposition}
 
 \begin{proof}
   We will construct a functor that is quasi-inverse to that in \cref{I.4.6}.
-  Let $\sh{V}$ be a vector bundle with connection, and $\lambda$ a homomorphism from $\sh{V}$ to an invertible sheaf $\sh{L}$.
-  We denote by $V$ the local system of horizontal sections of $\sh{V}$.
-  For every $\sh{O}$-module $\sh{M}$, we have \cref{I.2.17}
+  Let $\scr{V}$ be a vector bundle with connection, and $\lambda$ a homomorphism from $\scr{V}$ to an invertible sheaf $\scr{L}$.
+  We denote by $V$ the local system of horizontal sections of $\scr{V}$.
+  For every $\scr{O}$-module $\scr{M}$, we have \cref{I.2.17}
   \[
-    \Hom_\sh{O}(\sh{V},\sh{M}) \simto \Hom_\CC(V,\sh{M}).
+    \Hom_\scr{O}(\scr{V},\scr{M}) \simto \Hom_\CC(V,\scr{M}).
   \]
-  In particular, we define a map $\gamma^k$ from $\sh{V}$ to $P^k(\sh{L})$ by setting, for any \emph{horizontal section} $v$ of $\sh{V}$,
+  In particular, we define a map $\gamma^k$ from $\scr{V}$ to $P^k(\scr{L})$ by setting, for any \emph{horizontal section} $v$ of $\scr{V}$,
   \[
   \label{I.4.9.1}
     \gamma^k(v) = \DD^k(\lambda(v)).
@@ -1491,59 +1488,59 @@ In particular, it follows from \cref{I.4.5}~(ii) and from \cref{I.2.17} that $E$
   \label{I.4.9.2}
     The homomorphism $\lambda$ is cyclic if and only if
     \[
-      \gamma^{n-1}\colon \sh{V} \to P^{n-1}(\sh{L})
+      \gamma^{n-1}\colon \scr{V} \to P^{n-1}(\scr{L})
     \]
     is an isomorphism.
   \end{lemma}
 
   The problem is local on $X$.
-  We can restrict to the case where $\sh{L}=\sh{O}$ and where we have a local coordinate $x$.
+  We can restrict to the case where $\scr{L}=\scr{O}$ and where we have a local coordinate $x$.
   With the notation of \cref{I.4.4}, the morphism $\gamma^k$ then admits the morphisms $\partial_x^i\lambda = \nabla_x^i$ (for $0\leq i\leq k$) as coordinates.
-  For $k=n-1$, these form a basis of $\Hom(\sh{V},\sh{O})$ if and only if $\gamma^{n-1}$ is an isomorphism.
+  For $k=n-1$, these form a basis of $\Hom(\scr{V},\scr{O})$ if and only if $\gamma^{n-1}$ is an isomorphism.
 
   For $k\geq l$, the diagram
 \oldpage{28}
   \[
   \label{I.4.9.3}
     \begin{tikzcd}[row sep=huge]
-      & \sh{V} \dlar[swap,"\gamma^k"] \drar["v^l"] &
-    \\P^k(\sh{L}) \ar[rr,"\pi_{l,k}"] && P^k(\sh{L})
+      & \scr{V} \dlar[swap,"\gamma^k"] \drar["v^l"] &
+    \\P^k(\scr{L}) \ar[rr,"\pi_{l,k}"] && P^k(\scr{L})
     \end{tikzcd}
   \tag{4.9.3}
   \]
   commutes;
-  if $\lambda$ is cyclic, then this, along with \cref{I.4.9.2}, implies that $\gamma^n(v)$ is locally a direct factor, of codimension~$1$ in $P^n(\sh{L})$, and admits $\omega^{\otimes n}\otimes\sh{L} \simeq \Ker(\pi_{n-1,n})$ as a complement.
+  if $\lambda$ is cyclic, then this, along with \cref{I.4.9.2}, implies that $\gamma^n(v)$ is locally a direct factor, of codimension~$1$ in $P^n(\scr{L})$, and admits $\omega^{\otimes n}\otimes\scr{L} \simeq \Ker(\pi_{n-1,n})$ as a complement.
   There thus exists exactly one $n^\mathrm{th}$-order differential equation
   \[
-    E\colon P^n(\sh{L}) \to \Omega^{\otimes n}\otimes\sh{L}
+    E\colon P^n(\scr{L}) \to \Omega^{\otimes n}\otimes\scr{L}
   \]
-  on $\sh{L}$ such that $E\circ\gamma^n=0$.
+  on $\scr{L}$ such that $E\circ\gamma^n=0$.
 
-  By \cref{I.4.9.1}, if $v$ is a horizontal section of $\sh{V}$, then $E\DD^n\lambda v = E\gamma^n v = 0$, and so $\lambda v$ is a solution of $E$.
-  We endow $P^{n-1}(\sh{L})$ with the connection \cref{I.4.6} defined by $E$.
-  If $v$ is a horizontal section of $\sh{V}$, then $\gamma^{n-1}(v)=\DD^{n-1}\lambda v$, where $\lambda v$ is a solution of $E$, and $\gamma^{n-1}(v)$ is thus horizontal.
+  By \cref{I.4.9.1}, if $v$ is a horizontal section of $\scr{V}$, then $E\DD^n\lambda v = E\gamma^n v = 0$, and so $\lambda v$ is a solution of $E$.
+  We endow $P^{n-1}(\scr{L})$ with the connection \cref{I.4.6} defined by $E$.
+  If $v$ is a horizontal section of $\scr{V}$, then $\gamma^{n-1}(v)=\DD^{n-1}\lambda v$, where $\lambda v$ is a solution of $E$, and $\gamma^{n-1}(v)$ is thus horizontal.
   We thus deduce that $\gamma^{n-1}$ is compatible with the connections.
   A particular case of \cref{I.4.9.3} shows that the diagram
   \[
     \begin{tikzcd}[row sep=huge]
-      \sh{V} \ar[rr,"\gamma^{n-1}"] \drar[swap,"\lambda"]
-      && P^{n-1}(\sh{L}) \dlar["\todo"]
-    \\&\sh{L}&
+      \scr{V} \ar[rr,"\gamma^{n-1}"] \drar[swap,"\lambda"]
+      && P^{n-1}(\scr{L}) \dlar["\todo"]
+    \\&\scr{L}&
     \end{tikzcd}
   \]
-  commutes, whence we have an isomorphism between $(\sh{V},\sh{L},\lambda)$ and the triple given by \cref{I.4.6} applied to $(\sh{L},E)$.
+  commutes, whence we have an isomorphism between $(\scr{V},\scr{L},\lambda)$ and the triple given by \cref{I.4.6} applied to $(\scr{L},E)$.
   The functor
   \[
-    (\sh{V},\sh{L},\lambda) \mapsto (\sh{L},E)
+    (\scr{V},\scr{L},\lambda) \mapsto (\scr{L},E)
   \]
   is thus quasi-inverse to the functor in \cref{I.4.6}.
 \end{proof}
 
 \begin{env}{4.10}
 \label{I.4.10}
-  We now summarise the relations between two systems $(\sh{V},\sh{L},\lambda)$ and $(\sh{L},E)$ that correspond under \cref{I.4.6} and \cref{I.4.9}.
+  We now summarise the relations between two systems $(\scr{V},\scr{L},\lambda)$ and $(\scr{L},E)$ that correspond under \cref{I.4.6} and \cref{I.4.9}.
 
-  We have homomorphisms $\gamma^k\colon\sh{V}\to P^k(\sh{L})$, such that
+  We have homomorphisms $\gamma^k\colon\scr{V}\to P^k(\scr{L})$, such that
   \begin{enumerate}
     \item[(4.10.1)]\label{I.4.10.1}
       $\gamma^k(v) = \DD^k\lambda v$ for $v$ horizontal ;
@@ -1555,7 +1552,7 @@ In particular, it follows from \cref{I.4.5}~(ii) and from \cref{I.2.17} that $E$
     \item[(4.10.4)]\label{I.4.10.4}
       $E\gamma^n=0$ ; and
     \item[(4.10.5)]\label{I.4.10.5}
-      $\lambda$ induces an isomorphic between the local system $V$ of sections of $\sh{V}$ and the local system $\sh{L}^E$ of solutions of $E$.
+      $\lambda$ induces an isomorphic between the local system $V$ of sections of $\scr{V}$ and the local system $\scr{L}^E$ of solutions of $E$.
   \end{enumerate}
 \end{env}
 
@@ -1567,7 +1564,7 @@ In this section, we specialise the results of \cref{I.4} to the case where $n=2$
 
 \begin{env}{5.1}
 \label{I.5.1}
-  Let $S$ be an analytic space, and let $q\colon X_2\to S$ be an analytic space over $S$ that is locally isomorphic to the finite analytic space over $S$ defined by the $\sh{O}_S$-algebra $\sh{O}_S[T]/(T^3)$.
+  Let $S$ be an analytic space, and let $q\colon X_2\to S$ be an analytic space over $S$ that is locally isomorphic to the finite analytic space over $S$ defined by the $\scr{O}_S$-algebra $\scr{O}_S[T]/(T^3)$.
 
   The fact that the group $\mathrm{PGL}_2$ acts \todo on $\PP^1$ has the following infinitesimal analogue.
 \end{env}
@@ -1585,7 +1582,7 @@ In this section, we specialise the results of \cref{I.4} to the case where $n=2$
 \end{lemma}
 
 \begin{proof}
-  The problem is local on $S$, which allows us to suppose that $X_2$ is defined by the $\sh{O}_S$-algebra $\sh{O}_S[T]/(T^3)$, and that $u(X_2)$ and $v(X_2)$ are contained inside the same affine line, say, $\AA_S^1$.
+  The problem is local on $S$, which allows us to suppose that $X_2$ is defined by the $\scr{O}_S$-algebra $\scr{O}_S[T]/(T^3)$, and that $u(X_2)$ and $v(X_2)$ are contained inside the same affine line, say, $\AA_S^1$.
   By translation, we can assume that $u(0)=v(0)=0$.
   We must then prove the existence and uniqueness of a \todo $p(x)=(ax+b)(cx+d)$ that satisfies $p(0)=0$, with first derivative $p'(0)\neq0$ and given second derivative $p''(0)$.
   We have that $b=0$, and $p$ can be written uniquely in the form
@@ -1602,7 +1599,7 @@ In this section, we specialise the results of \cref{I.4} to the case where $n=2$
 
 \begin{env}{5.3}
 \label{I.5.3}
-  By \cref{I.5.2}, there exists exactly (up to isomorphism) one pair $(u,P)$ consisting of a projective line $P$ on $S$ (with structure group $\mathrm{PGL}_2(\sh{O}_S)$) and an $S$-immersion $u$ of $X_2$ into $P$.
+  By \cref{I.5.2}, there exists exactly (up to isomorphism) one pair $(u,P)$ consisting of a projective line $P$ on $S$ (with structure group $\mathrm{PGL}_2(\scr{O}_S)$) and an $S$-immersion $u$ of $X_2$ into $P$.
   We call $P$ the \emph{osculating projective line of $X_2$}.
 
   Let $X$ be a smooth curve.
@@ -1717,7 +1714,7 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
     \gamma_2^*f = \gamma_1^*f + \eta\cdot e^*\dd f
   \tag{5.8.1}
   \]
-  (modulo the identification of $\Omega^{\otimes3}$ with an ideal of $\sh{O}_{X_3}$).
+  (modulo the identification of $\Omega^{\otimes3}$ with an ideal of $\scr{O}_{X_3}$).
 \end{proof}
 
 \begin{env}{5.9}
@@ -1931,19 +1928,19 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
 
 \begin{env}{5.11}
 \label{I.5.11}
-  Let $X$ be a smooth curve, $\sh{L}$ an invertible sheaf on $X$, and $E$ a second-order ordinary differential equation on $\sh{L}$.
-  We have seen, in \cref{I.4.5}, that $E$ defines a connection on the bundle $P^1(\sh{L})$ of first-order jets of sections of $\sh{L}$, and we obtain from it a connection on
+  Let $X$ be a smooth curve, $\scr{L}$ an invertible sheaf on $X$, and $E$ a second-order ordinary differential equation on $\scr{L}$.
+  We have seen, in \cref{I.4.5}, that $E$ defines a connection on the bundle $P^1(\scr{L})$ of first-order jets of sections of $\scr{L}$, and we obtain from it a connection on
   \[
-    \bigwedge^2 P^1(\sh{L}) \simeq \sh{L}\otimes\Omega^1(\sh{L}) = \Omega^1\otimes\sh{L}^{\otimes2}.
+    \bigwedge^2 P^1(\scr{L}) \simeq \scr{L}\otimes\Omega^1(\scr{L}) = \Omega^1\otimes\scr{L}^{\otimes2}.
   \]
 
-  If $X$ is a compact connected curve of genus~$g$, then the bundle $\Omega^1\otimes\sh{L}^{\otimes2}$ is thus necessarily of degree~$0$, and we have that
+  If $X$ is a compact connected curve of genus~$g$, then the bundle $\Omega^1\otimes\scr{L}^{\otimes2}$ is thus necessarily of degree~$0$, and we have that
   \[
-    \deg(\sh{L}) = 1-g.
+    \deg(\scr{L}) = 1-g.
   \]
 
   Let $V$ be the rank-$2$ local system of solutions of $E$;
-  we have \cref{I.4.5} that $\sh{O}\otimes V\simto P^1(\sh{L})$, and the linear form $\lambda\colon P^1(\sh{L})\to\sh{L}$ defines a section $\lambda_0$ of the projective bundle associated to the vector bundle $P^1(\sh{L})$.
+  we have \cref{I.4.5} that $\scr{O}\otimes V\simto P^1(\scr{L})$, and the linear form $\lambda\colon P^1(\scr{L})\to\scr{L}$ defines a section $\lambda_0$ of the projective bundle associated to the vector bundle $P^1(\scr{L})$.
 
   Locally on $X$, $V$ is isomorphic to the constant local system $\underline{\CC^2}$;
   the choice of an isomorphism $\sigma\colon V\to\underline{\CC^2}$ identifies $\lambda_0$ with a map $\lambda_{0,\sigma}$ from $X$ to $\PP^1(\CC)$;
@@ -1953,26 +1950,26 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
 
 \begin{proposition}{5.12}
 \label{I.5.12}
-  Let $\sh{L}$ be an invertible sheaf on a smooth curve $X$.
+  Let $\scr{L}$ be an invertible sheaf on a smooth curve $X$.
   The construction in \cref{I.5.10} gives a bijection between
   \begin{enumerate}[a)]
-    \item the set of second-order ordinary differential equations on $\sh{L}$ ; and
+    \item the set of second-order ordinary differential equations on $\scr{L}$ ; and
 \oldpage{36}
-    \item the set of pairs consisting of a projective connection on $X$ and a connection on $\Omega^1(\sh{L}^{\otimes2})$.
+    \item the set of pairs consisting of a projective connection on $X$ and a connection on $\Omega^1(\scr{L}^{\otimes2})$.
   \end{enumerate}
 \end{proposition}
 
 \begin{proof}
   The problem is local on $X$;
-  we can thus suppose that $X$ is an open subset of $\CC$, and that $\sh{L}=\sh{O}$.
+  we can thus suppose that $X$ is an open subset of $\CC$, and that $\scr{L}=\scr{O}$.
   An equation $E$ can then be written as
   \[
     E\colon y'' + a(x)y' + b(x)y = 0.
   \]
-  If we identify $P^1(\sh{L})$ with $\sh{O}^2$, then the matrix of the connection \cref{I.5.10} defined by $E$ on $\wedge^2 P^1(\sh{L})\sim\sh{O}$ is then $-a(x)\tr M$, where $M$ is the matrix in \cref{I.4.8.1}.
+  If we identify $P^1(\scr{L})$ with $\scr{O}^2$, then the matrix of the connection \cref{I.5.10} defined by $E$ on $\wedge^2 P^1(\scr{L})\sim\scr{O}$ is then $-a(x)\tr M$, where $M$ is the matrix in \cref{I.4.8.1}.
 
   Let $\varphi$ be the identity map from $X$, an open subset of $\PP^1(\CC)$, to itself endowed with the projective connection defined by $E$.
-  Identifying $\Omega$ with $\sh{O}$ by means of the given local coordinate, we then have that
+  Identifying $\Omega$ with $\scr{O}$ by means of the given local coordinate, we then have that
   \[
   \label{I.5.12.1}
     \theta(\varphi) = \frac13b - \frac{1}{12}(a^2+2a').
@@ -2027,35 +2024,35 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
   We denote by $\pi\colon \widetilde{X}_{x_0}\to X$ the universal covering of $(X,x_0)$, and by $\widetilde{x}_0$ the base point of $\widetilde{X}_{x_0}$.
 \end{env}
 
-If $\sh{F}$ is a sheaf on $X$, then we pose:
+If $\scr{F}$ is a sheaf on $X$, then we pose:
 \begin{definition}{6.2}
 \label{I.6.2}
-  A \emph{multiform section} of $\sh{F}$ on $X$ is a global section of the inverse image $\pi^*\sh{F}$ of $\sh{F}$ on $\widetilde{X}_{x_0}$.
+  A \emph{multiform section} of $\scr{F}$ on $X$ is a global section of the inverse image $\pi^*\scr{F}$ of $\scr{F}$ on $\widetilde{X}_{x_0}$.
 
-  If $s$ is a multiform section of $\sh{F}$ on $X$, then a \emph{determination of $s$ at a point $x$ of $X$} is an element of the fibre $\sh{F}_{(x)}$ of $\sh{F}$ at $x$ that is an inverse image of $s$ under a local section of $\pi$ at $x$.
+  If $s$ is a multiform section of $\scr{F}$ on $X$, then a \emph{determination of $s$ at a point $x$ of $X$} is an element of the fibre $\scr{F}_{(x)}$ of $\scr{F}$ at $x$ that is an inverse image of $s$ under a local section of $\pi$ at $x$.
   \textbf{\todo (check)}
   Each point in $\pi^{-1}(x)$ thus defines a determination of $s$ at $x$.
   We define the \emph{base determination} of $s$ at $x_0$ to be the determination defined by $\widetilde{x}_0$.
-  We define a \emph{determination of $s$ on an open subset $U$ of $X$} to be a section of $\sh{F}$ over $U$ whose \todo at every point of $U$ is a determination of $s$ at that point.
+  We define a \emph{determination of $s$ on an open subset $U$ of $X$} to be a section of $\scr{F}$ over $U$ whose \todo at every point of $U$ is a determination of $s$ at that point.
 \end{definition}
 
 \begin{definition}{6.3}
 \label{I.6.3}
-  We say that $\sh{F}$ satisfies the \emph{principle of analytic continuation} if the set where any two local sections of $\sh{F}$ agree is always (open and) closed.
+  We say that $\scr{F}$ satisfies the \emph{principle of analytic continuation} if the set where any two local sections of $\scr{F}$ agree is always (open and) closed.
 \end{definition}
 
 \begin{example}{6.4}
 \label{I.6.4}
-  If $\sh{F}$ is a coherent analytic sheaf on a complex-analytic space, then $\sh{F}$ satisfies the principle of analytic continuation if and only if $\sh{F}$ has no \todo components.
+  If $\scr{F}$ is a coherent analytic sheaf on a complex-analytic space, then $\scr{F}$ satisfies the principle of analytic continuation if and only if $\scr{F}$ has no \todo components.
 \end{example}
 
 \begin{proposition}{6.5}
 \label{I.6.5}
-  Let $X$ and $x_0$ be as in \cref{I.5.1}, and let $\sh{F}$ be a sheaf of $\CC$-vector spaces on $X$ that satisfies the principle of analytic continuation.
-  For every multiform section $s$ of $\sh{F}$, the following conditions are equivalent:
+  Let $X$ and $x_0$ be as in \cref{I.5.1}, and let $\scr{F}$ be a sheaf of $\CC$-vector spaces on $X$ that satisfies the principle of analytic continuation.
+  For every multiform section $s$ of $\scr{F}$, the following conditions are equivalent:
   \begin{enumerate}[(i)]
-    \item the determinations of $s$ at $x_0$ generate a finite-dimensional sub-vector space of $\sh{F}_{x_0}$ ; and
-    \item the subsheaf of $\sh{F}$ of $\CC$-vector spaces generated by the determinations of $s$ is a complex local system \cref{I.1.1}.
+    \item the determinations of $s$ at $x_0$ generate a finite-dimensional sub-vector space of $\scr{F}_{x_0}$ ; and
+    \item the subsheaf of $\scr{F}$ of $\CC$-vector spaces generated by the determinations of $s$ is a complex local system \cref{I.1.1}.
   \end{enumerate}
 \end{proposition}
 
@@ -2063,22 +2060,22 @@ If $\sh{F}$ is a sheaf on $X$, then we pose:
 \begin{proof}
   It is trivial that (ii) implies (i).
   We now prove that (i) implies (ii).
-  Let $x$ be a point of $X$ at which the determinations of $s$ generate a finite-dimensional sub-vector space of $\sh{F}_x$, and let $U$ be a connected open neighbourhood of $x$ over which $\widetilde{X}_{x_0}$ is trivial: $(\pi^{-1}(U),\pi) \simeq (U\times I,\pr_1)$ for some suitable set $I$.
+  Let $x$ be a point of $X$ at which the determinations of $s$ generate a finite-dimensional sub-vector space of $\scr{F}_x$, and let $U$ be a connected open neighbourhood of $x$ over which $\widetilde{X}_{x_0}$ is trivial: $(\pi^{-1}(U),\pi) \simeq (U\times I,\pr_1)$ for some suitable set $I$.
   We will prove that, over $U$, the determinations of $s$ generate a complex local system.
-  Each $i\in I$ defines a determination $s_i$ of $s$, and, over $U$, the vector subsheaf of $\sh{F}$ generated by the determinations of $s$ is generated by the $(s_i)_{i\in I}$;
+  Each $i\in I$ defines a determination $s_i$ of $s$, and, over $U$, the vector subsheaf of $\scr{F}$ generated by the determinations of $s$ is generated by the $(s_i)_{i\in I}$;
   if this sheaf is constant, then the hypotheses on $x$ implies that it is a local system.
   We have:
 
   \begin{lemma}{6.6}
   \label{I.6.6}
-    If a sheaf $\sh{F}$ of $\CC$-vector spaces on a connected space satisfies the principle of analytic continuation, then the vector subsheaf of $\sh{F}$ generated by a family of global sections $s_i$ is a constant sheaf.
+    If a sheaf $\scr{F}$ of $\CC$-vector spaces on a connected space satisfies the principle of analytic continuation, then the vector subsheaf of $\scr{F}$ generated by a family of global sections $s_i$ is a constant sheaf.
   \end{lemma}
 
   The sections $s_i$ define
   \[
-    a\colon\underline{\CC}^{(I)}\to\sh{F}
+    a\colon\underline{\CC}^{(I)}\to\scr{F}
   \]
-  with the image being the vector subsheaf $\sh{G}$ of $\sh{F}$ generated by the $s_i$.
+  with the image being the vector subsheaf $\scr{G}$ of $\scr{F}$ generated by the $s_i$.
   If an equation $\sum_i\lambda_i s_i=0$ between the $s_i$ holds at a point, then it holds everywhere, by the principle of analytic continuation.
 
   The sheaf $\Ker(a)$ is thus constant subsheaf of $\underline{\CC}^{(I)}$, and the claim then follows.
@@ -2088,18 +2085,18 @@ If $\sh{F}$ is a sheaf on $X$, then we pose:
 
 \begin{definition}{6.7}
 \label{I.6.7}
-  Under the hypotheses of \cref{I.6.5}, a multiform section $s$ of $\sh{F}$ is said to be a \emph{finite determination} if it satisfies either of the equivalent conditions of \cref{I.6.5}.
+  Under the hypotheses of \cref{I.6.5}, a multiform section $s$ of $\scr{F}$ is said to be a \emph{finite determination} if it satisfies either of the equivalent conditions of \cref{I.6.5}.
 \end{definition}
 
 \begin{env}{6.8}
 \label{I.6.8}
-  Under the hypotheses of \cref{I.6.5}, let $s$ be a multiform section of finite determination of $\sh{F}$.
+  Under the hypotheses of \cref{I.6.5}, let $s$ be a multiform section of finite determination of $\scr{F}$.
   This section defines
 \oldpage{39}
   \begin{enumerate}[a)]
     \item the local system $V$ generated by its determinations ;
     \item a \todo of $V$ at $x_0$, say, $v_0$, corresponding to the base determination of $s$ ; and
-    \item an inclusion morphism $\lambda\colon V\to\sh{F}$.
+    \item an inclusion morphism $\lambda\colon V\to\scr{F}$.
   \end{enumerate}
 
   The triple consisting of $V_{x_0}$, $v_0$, and the representation of $\pi_1(X,x_0)$ on $V_{x_0}$ defined by $V$ \cref{I.1.4} is called the \emph{monodromy} of $s$.
@@ -2110,35 +2107,35 @@ If $\sh{F}$ is a sheaf on $X$, then we pose:
 
       This simply means that $V$ is generated by the set of determinations of the unique multiform section of $V$ with base determination $v_0$.
     \item[(6.8.2)]\label{I.6.8.2}
-      $\lambda\colon V_{x_0}\to\sh{F}_{x_0}$ is injective.
+      $\lambda\colon V_{x_0}\to\scr{F}_{x_0}$ is injective.
   \end{enumerate}
 \end{env}
 
 \begin{env}{6.9}
 \label{I.6.9}
   Let $W_0$ be a finite-dimensional complex representation of $\pi_1(X,x_0)$, endowed with a cyclic vector $w_0$.
-  The multiform section $s$ of $\sh{F}$ is said to be of \emph{monodromy subordinate to $(w_0,v_0)$} if it is the finite determination, and if, with the notation of \cref{I.6.8}, there exists a homomorphism of $\pi_1(X,x_0)$-representations of $W_0$ in $V_{x_0}$ that sends $w_0$ to $v_0$.
+  The multiform section $s$ of $\scr{F}$ is said to be of \emph{monodromy subordinate to $(w_0,v_0)$} if it is the finite determination, and if, with the notation of \cref{I.6.8}, there exists a homomorphism of $\pi_1(X,x_0)$-representations of $W_0$ in $V_{x_0}$ that sends $w_0$ to $v_0$.
   Let $W$ be the local system defined by $W_0$, and let $w$ be the unique multiform section of $w$ of base determination $w_0$.
   It is clear that, under the hypotheses of \cref{I.6.5}, we have
 \end{env}
 
 \begin{proposition}{6.10}
 \label{I.6.10}
-  The function $\lambda\mapsto\lambda(w)$ is a bijection between the set $\Hom_\CC(W,\sh{F})$ and the set of multiform sections of $\sh{F}$ with monodromy subordinate to $(W_0,w_0)$.
+  The function $\lambda\mapsto\lambda(w)$ is a bijection between the set $\Hom_\CC(W,\scr{F})$ and the set of multiform sections of $\scr{F}$ with monodromy subordinate to $(W_0,w_0)$.
 \end{proposition}
 
 \begin{corollary}{6.11}
 \label{I.6.11}
   Let $X$ be a reduced connected complex analytic space endowed with a base point $x_0$.
-  Let $W_0$ be a finite-dimensional complex representation of $\pi_1(X,x_0)$ endowed with a cyclic vector $w_0$, and $W$ the corresponding local system on $X$, with $\sh{W}=\sh{O}\otimes_\CC W$ being
+  Let $W_0$ be a finite-dimensional complex representation of $\pi_1(X,x_0)$ endowed with a cyclic vector $w_0$, and $W$ the corresponding local system on $X$, with $\scr{W}=\scr{O}\otimes_\CC W$ being
 \oldpage{40}
-  the associated vector bundle, and $w$ the unique multiform section of $\sh{W}$ of base determination $w_0$.
-  Write $\sh{W}^\vee$ be the dual vector bundle of $\sh{W}$.
+  the associated vector bundle, and $w$ the unique multiform section of $\scr{W}$ of base determination $w_0$.
+  Write $\scr{W}^\vee$ be the dual vector bundle of $\scr{W}$.
   Then the function
   \[
     \lambda \mapsto \langle\lambda,w\rangle,
   \]
-  from $\Gamma(X,\sh{W}^\vee)$ to the set of multiform holomorphic functions on $X$ of monodromy subordinate to $(W_0,w_0)$, is a bijection.
+  from $\Gamma(X,\scr{W}^\vee)$ to the set of multiform holomorphic functions on $X$ of monodromy subordinate to $(W_0,w_0)$, is a bijection.
 \end{corollary}
 
 \begin{corollary}{6.12}
@@ -2289,8 +2286,8 @@ They are either due to N.~Katz (see, most notably, \cite{14,15}), or classical (
 
 \begin{env}{1.4}
 \label{II.1.4}
-  Let $\sh{O}$ be a discrete valuation ring of \emph{equal characteristic~$0$}, with maximal ideal $\fk{m}$, residue field $k=\sh{O}/\fk{m}$, and field of fractions $K$.
-  Suppose that $\sh{O}$ is endowed with a free rank-$1$ $\sh{O}$-module $\Omega$ along with a derivation $\dd\colon\sh{O}\to\Omega$ that satisfies
+  Let $\scr{O}$ be a discrete valuation ring of \emph{equal characteristic~$0$}, with maximal ideal $\fk{m}$, residue field $k=\scr{O}/\fk{m}$, and field of fractions $K$.
+  Suppose that $\scr{O}$ is endowed with a free rank-$1$ $\scr{O}$-module $\Omega$ along with a derivation $\dd\colon\scr{O}\to\Omega$ that satisfies
   \begin{env}{1.4.1}
   \label{II.1.4.1}
     \itshape
@@ -2298,7 +2295,7 @@ They are either due to N.~Katz (see, most notably, \cite{14,15}), or classical (
   \end{env}
   (For less hyper-generality, see \cref{II.1.7}).
 
-  If $t_1$ is another uniformiser, then $t_1=at$ for some $a\in\sh{O}^*$, and, by hypothesis, $\dd a$ is a multiple of $\dd t$, i.e. $\dd a=\lambda\dd t$.
+  If $t_1$ is another uniformiser, then $t_1=at$ for some $a\in\scr{O}^*$, and, by hypothesis, $\dd a$ is a multiple of $\dd t$, i.e. $\dd a=\lambda\dd t$.
   We thus have that
   \[
     \dd t_1
@@ -2315,14 +2312,14 @@ They are either due to N.~Katz (see, most notably, \cite{14,15}), or classical (
   \[
     v\colon K^* \to \ZZ
   \]
-  the valuation of $K$ defined by $\sh{O}$;
+  the valuation of $K$ defined by $\scr{O}$;
   we also denote by $v$ the valuation of $\Omega\otimes K$ defined by the lattice $\Omega$.
   If $t$ is a uniformiser, then
   \[
     v(\omega) = v(\omega/\dd t).
   \]
 
-  If $f\in K^*$ with $f=at^n$ (for $a\in\sh{O}$), then
+  If $f\in K^*$ with $f=at^n$ (for $a\in\scr{O}$), then
   \[
     \dd f = \dd a\cdot t^n + nat^{n-1}\dd t
   \]
@@ -2335,12 +2332,12 @@ They are either due to N.~Katz (see, most notably, \cite{14,15}), or classical (
       $v(f)\neq0 \implies v(\dd f) = v(f) - 1$.
   \end{enumerate}
 
-  In particular, $\dd$ is continuous and extends to $\dd\colon\sh{O}^\wedge\to\Omega^\wedge$, and the triple $(\sh{O}^\wedge,\dd,\Omega^\wedge)$ again satisfies \cref{II.1.4.1}.
+  In particular, $\dd$ is continuous and extends to $\dd\colon\scr{O}^\wedge\to\Omega^\wedge$, and the triple $(\scr{O}^\wedge,\dd,\Omega^\wedge)$ again satisfies \cref{II.1.4.1}.
 \end{env}
 
 \begin{lemma}{1.5}
 \label{II.1.5}
-  If $\sh{O}$ is complete, then the triple $(\sh{O},\dd,\Omega)$ is isomorphic to the triple $(k[[t]],\partial_t,k[[t]])$.
+  If $\scr{O}$ is complete, then the triple $(\scr{O},\dd,\Omega)$ is isomorphic to the triple $(k[[t]],\partial_t,k[[t]])$.
 \end{lemma}
 
 \begin{proof}
@@ -2349,21 +2346,21 @@ They are either due to N.~Katz (see, most notably, \cite{14,15}), or classical (
     \Gr(\dd)\colon \fk{m}^i/\fk{m}^{i+1} \to \fk{m}^{i-1}\Omega/\fk{m}^i\Omega
   \]
   induced by $\dd$ are linear and bijective \hyperref[II.1.4.4]{(1.4.4)}.
-  Since $\sh{O}$ is complete, $\dd\colon\fk{m}\to\Omega$ is surjective, and $\Ker(\dd)\simto k$.
-  This gives us a field of representatives that is annihilated by $\dd$, and the choice of a uniformiser $t$ gives the desired isomorphism $k[[t]]\simto\sh{O}$.
+  Since $\scr{O}$ is complete, $\dd\colon\fk{m}\to\Omega$ is surjective, and $\Ker(\dd)\simto k$.
+  This gives us a field of representatives that is annihilated by $\dd$, and the choice of a uniformiser $t$ gives the desired isomorphism $k[[t]]\simto\scr{O}$.
 \end{proof}
 
 \begin{env}{1.6}
 \label{II.1.6}
-  If an $\sh{O}$-algebra $\sh{O}'$ is a discrete valuation ring with a field of fractions $K'$ that is algebraic over $K$, then the derivation $\dd$ extends uniquely to $\dd\colon K'\to\Omega\otimes_{\sh{O}}K'$.
-  Let $e$ be the ramification index of $\sh{O}'$ over $\sh{O}$, and let $t'$ be a uniformiser of $\sh{O}'$.
+  If an $\scr{O}$-algebra $\scr{O}'$ is a discrete valuation ring with a field of fractions $K'$ that is algebraic over $K$, then the derivation $\dd$ extends uniquely to $\dd\colon K'\to\Omega\otimes_{\scr{O}}K'$.
+  Let $e$ be the ramification index of $\scr{O}'$ over $\scr{O}$, and let $t'$ be a uniformiser of $\scr{O}'$.
   We set
   \[
-    \Omega' = 1/(t')^{e-1}\Omega\otimes_{\sh{O}}\sh{O}'.
+    \Omega' = 1/(t')^{e-1}\Omega\otimes_{\scr{O}}\scr{O}'.
   \]
 \end{env}
 
-We can easily show, using \cref{II.1.6}, that the triple $(\sh{O}',\dd,\Omega')$ again satisfies \cref{II.1.4.1}.
+We can easily show, using \cref{II.1.6}, that the triple $(\scr{O}',\dd,\Omega')$ again satisfies \cref{II.1.4.1}.
 
 \begin{env}{1.7}
   We will mostly be interested in the following examples.
@@ -2371,9 +2368,9 @@ We can easily show, using \cref{II.1.6}, that the triple $(\sh{O}',\dd,\Omega')$
   We choose one of the following:
   \begin{enumerate}
     \item[(1.7.1)]\label{II.1.7.1}
-      $\sh{O}=\sh{O}_{x,X}$ (the local ring for the Zariski topology), $\Omega=(\Omega_{X/\CC}^1)_x$, and $\dd=\mbox{the differential}$ ;
+      $\scr{O}=\scr{O}_{x,X}$ (the local ring for the Zariski topology), $\Omega=(\Omega_{X/\CC}^1)_x$, and $\dd=\mbox{the differential}$ ;
     \item[(1.7.2)]\label{II.1.7.2}
-      $\sh{O}=\sh{O}_{x,X^\an}$ (the local ring of germs at $x$ of holomorphic functions), $\Omega=(\Omega_{X^\an/\CC}^1)_{(x)}$, and $\dd=\mbox{the differential}$ ; or
+      $\scr{O}=\scr{O}_{x,X^\an}$ (the local ring of germs at $x$ of holomorphic functions), $\Omega=(\Omega_{X^\an/\CC}^1)_{(x)}$, and $\dd=\mbox{the differential}$ ; or
     \item[(1.7.3)]\label{II.1.7.3}
       the common completion of \hyperref[II.1.7.1]{(1.7.1)} and \hyperref[II.1.7.2]{(1.7.2)}.
   \end{enumerate}
@@ -2382,8 +2379,8 @@ We can easily show, using \cref{II.1.6}, that the triple $(\sh{O}',\dd,\Omega')$
 \oldpage{45}
 \begin{env}{1.8}
 \label{II.1.8}
-  Under the hypotheses of \cref{II.1.4}, let $V$ be a finite-dimensional vector space over $K$, and $V_0$ a lattice in $V$, i.e. a free sub-$\sh{O}$-module of $V$ such that $KV_0=V$.
-  For every homomorphism $e\colon\sh{O}^n\to V$, we define the \emph{valuation $v(e)$ of $e$} to be the largest integer $m$ such that $e(\sh{O}^n)\subset\fk{m}^m V_0$.
+  Under the hypotheses of \cref{II.1.4}, let $V$ be a finite-dimensional vector space over $K$, and $V_0$ a lattice in $V$, i.e. a free sub-$\scr{O}$-module of $V$ such that $KV_0=V$.
+  For every homomorphism $e\colon\scr{O}^n\to V$, we define the \emph{valuation $v(e)$ of $e$} to be the largest integer $m$ such that $e(\scr{O}^n)\subset\fk{m}^m V_0$.
   If $V_0$ and $V_1$ are two lattices, then there exists an integer $s$ that is independent of $e$ and $n$ and is such that
   \[
   \label{II.1.8.1}
@@ -2501,12 +2498,12 @@ Conditions~a) and b) of \cref{II.1.9} are more manageable in a different form:
   If $\tau$ and $\omega$ are vectors as in \cref{II.1.9}, then $\sigma=f\tau$, with $f$ invertible, whence
   \[
     \nabla_\sigma = f\nabla_\tau
-    \qquad\mbox{($f\in\sh{O}^*$)}
+    \qquad\mbox{($f\in\scr{O}^*$)}
   \]
   and we can show by induction that
   \[
     \nabla_\sigma^i = \sum_{j\leq i}\varphi_j\nabla_\tau^j
-    \qquad\mbox{($\varphi_j\in\sh{O}$)}.
+    \qquad\mbox{($\varphi_j\in\scr{O}$)}.
   \]
   From this we deduce that
   \[
@@ -2547,20 +2544,20 @@ By \cref{II.1.9.1} and \cref{II.1.9.3} it suffices, to prove \cref{II.1.9}, to p
 \end{lemma}
 
 \begin{proof}
-  Let $N$ be an integer such that the $r_iN$ are integers, and set $\sh{O}'=\sh{O}(\sqrt[N]{t})$.
+  Let $N$ be an integer such that the $r_iN$ are integers, and set $\scr{O}'=\scr{O}(\sqrt[N]{t})$.
   Let $K'$ be the field of fractions of $K$, $v\colon {K'}^*\to\frac1N\ZZ$ the valuation of $K'$ that extends $v$,
 \oldpage{48}
   and $\Lambda$ the diagonal matrix with coefficients being the $t^{-r_i}$.
 
-  On $\sh{O}'$, let $\omega'$ be the basis of $\Omega\otimes K'$ given by the inverse image of $\omega$, let $\tau'$ be the corresponding basis of ${\Omega'}^\vee\otimes K'$, and let $e'=e\Lambda$ be a new basis of $V'=V\otimes K'$.
+  On $\scr{O}'$, let $\omega'$ be the basis of $\Omega\otimes K'$ given by the inverse image of $\omega$, let $\tau'$ be the corresponding basis of ${\Omega'}^\vee\otimes K'$, and let $e'=e\Lambda$ be a new basis of $V'=V\otimes K'$.
   In these bases, the connection matrix is
   \[
     \Gamma' = \Lambda^{-1}\Gamma\Lambda + \Lambda^{-1}\partial_{\tau'}\Lambda.
   \]
 
-  The matrix $\Lambda^{-1}\partial_{\tau'}\Lambda$ has coefficients in $\sh{O}'$, and so either
+  The matrix $\Lambda^{-1}\partial_{\tau'}\Lambda$ has coefficients in $\scr{O}'$, and so either
   \begin{enumerate}[(a)]
-    \item $s\leq0$, and $\Gamma'$ has coefficients in $\sh{O}'$ ; or
+    \item $s\leq0$, and $\Gamma'$ has coefficients in $\scr{O}'$ ; or
     \item $s>0$, $-v(\Gamma')=s$, and the ``most polar part'' $\gamma$ of $\Gamma'$ is not nilpotent, so that $-v({\Gamma'}^\ell)=\ell s$.
   \end{enumerate}
 
@@ -2584,7 +2581,7 @@ By \cref{II.1.9.1} and \cref{II.1.9.3} it suffices, to prove \cref{II.1.9}, to p
     -v(\nabla_{\tau'}^m,e') = ms.
   \]
 
-  This satisfies \cref{II.1.9.2} on $\sh{O}'$ (for suitable bases), and \cref{II.1.9.6} then follows from \cref{II.1.9.3}.
+  This satisfies \cref{II.1.9.2} on $\scr{O}'$ (for suitable bases), and \cref{II.1.9.6} then follows from \cref{II.1.9.3}.
 \end{proof}
 
 Theorem~\cref{II.1.9} follows from the following proposition and from \cref{I.1.3}.
@@ -2703,7 +2700,7 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
     \item For the connection $\nabla$ to be regular, it is necessary and sufficient for $V$ to admit
 \oldpage{51}
       a basis $e$ such that the matrix of the connection, in this basis, is a matrix of differential forms presenting, at worst, simple poles.
-    \item For the connection $\nabla$ to be irregular, and to satisfy a bound of the form \cref{II.1.9.2} for $r=a/b>0$, it is necessary and sufficient for $V$ to admit a basis $e$ (after a change of rings from $\sh{O}$ to $\sh{O}'=\sh{O}(\sqrt[b]{t})$, and for the natural valuation, with values in $\ZZ$, of $\sh{O}'$) such that the matrix of the connection, in this basis, presents a pole of order $a+1$, and for the polar part of order $a+1$ of this matrix (which is in $\MM_n(k)$ and determined up to a scalar multiple) to be non-nilpotent.
+    \item For the connection $\nabla$ to be irregular, and to satisfy a bound of the form \cref{II.1.9.2} for $r=a/b>0$, it is necessary and sufficient for $V$ to admit a basis $e$ (after a change of rings from $\scr{O}$ to $\scr{O}'=\scr{O}(\sqrt[b]{t})$, and for the natural valuation, with values in $\ZZ$, of $\scr{O}'$) such that the matrix of the connection, in this basis, presents a pole of order $a+1$, and for the polar part of order $a+1$ of this matrix (which is in $\MM_n(k)$ and determined up to a scalar multiple) to be non-nilpotent.
   \end{enumerate}
 \end{theorem}
 
@@ -2732,7 +2729,7 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
         \quad \ldots
       \]
       are regular.
-    \item If $\sh{O}'$ is a discrete valuation ring with field of fractions $k'$ that is algebraic over the field of fractions $K$ of $\sh{O}$, and if $V'=V\otimes_K K'$, then the connection on $V'$ is regular if and only if the connection on $V$ is regular.
+    \item If $\scr{O}'$ is a discrete valuation ring with field of fractions $k'$ that is algebraic over the field of fractions $K$ of $\scr{O}$, and if $V'=V\otimes_K K'$, then the connection on $V'$ is regular if and only if the connection on $V$ is regular.
   \end{enumerate}
 \end{proposition}
 
@@ -2762,7 +2759,7 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
     \item an equivalence class of extensions of $V$ to a vector bundle on $S$, with two extensions $V_1$ and $V_2$ being equivalent if there exists an integer $n$ such that $z^nV_1\subset V_2\subset z^{-n}V_1\subset j_*V$.
   \end{enumerate}
 
-  Such a bundle defines a vector space $V_K$ over the field of fractions $K$ of the local ring $\sh{O}_{p,S}$.
+  Such a bundle defines a vector space $V_K$ over the field of fractions $K$ of the local ring $\scr{O}_{p,S}$.
   We talk of a \emph{basis} of $V$ to mean a basis that extends to a basis of one of the permissible extensions of $V$.
   It is clear that $V$ admits bases of this type on a neighbourhood of $p$.
   A connection $\nabla$ on $V$ is said to be \emph{meromorphic} at $p$ if its coefficients (in any basis of $V$) are meromorphic at $p$.

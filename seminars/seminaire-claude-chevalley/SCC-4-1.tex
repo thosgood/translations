@@ -4,12 +4,20 @@
 \author{P. Gabriel}
 \date{}
 
+\newcommand{\doctype}{French seminar talk}
+\newcommand{\origcit}{%
+  \textsc{Gabriel, P.}
+  ``Faisceaux quasi-coh\'{e}rents''.
+  \emph{S\'{e}minaire Claude Chevalley}, Volume~\textbf{4} (1958--1959), Talk no.~1.
+  {\url{http://www.numdam.org/item/SCC_1958-1959__4__A1_0}}%
+}
+
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{tikz-cd}
 
@@ -43,17 +51,15 @@
 
 \theoremstyle{plain}
 
-  \newtheorem{innercustomtheorem}{Theorem}
-  \crefname{innercustomtheorem}{Theorem}{Theorems}
+  \newtheorem{innertheorem}{Theorem}
   \newenvironment{theorem}[1]
-    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
-    {\endinnercustomtheorem}
+    {\renewcommand\theinnertheorem{#1}\innertheorem}
+    {\endinnertheorem}
 
-  \newtheorem{innercustomcorollary}{Corollary}
-  \crefname{innercustomcorollary}{Corollary}{Corollaries}
+  \newtheorem{innercorollary}{Corollary}
   \newenvironment{corollary}[1]
-    {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
-    {\endinnercustomcorollary}
+    {\renewcommand\theinnercorollary{#1}\innercorollary}
+    {\endinnercorollary}
 
   \newtheorem*{proposition}{Proposition}
 
@@ -65,8 +71,8 @@
 
 %% Shortcuts %%
 
-\newcommand{\sh}[1]{{\mathscr{#1}}}
-\newcommand{\cat}[1]{{\mathcal{#1}}}
+\newcommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -96,13 +102,10 @@
 
   \medskip
   
-  \emph{What follows is a translation of the French seminar talk:}
+  \emph{What follows is a translation of the \doctype:}
 
   \medskip\noindent
-  \textsc{Gabriel, P.}
-  ``Faisceaux quasi-coh\'{e}rents''.
-  \emph{S\'{e}minaire Claude Chevalley}, Volume~\textbf{4} (1958--1959), Talk no.~1.
-  {\url{http://www.numdam.org/item/SCC_1958-1959__4__A1_0}}
+  \origcit
 \end{abstract}
 
 \setcounter{footnote}{0}
@@ -115,21 +118,21 @@
 
 \oldpage{1-01}
 We assume prior knowledge of the definitions and elementary properties of sheaves of modules on a topological space, i.e. \cite[chapitre~I, \S1; chapitre~II, \S\S1--2]{2}.
-We define a presheaf $\sh{P}$ on a base $\mathscr{B}$ of open subsets of a topological space $X$, with values in a category $\cat{C}$, to be the following data:
+We define a presheaf $\scr{P}$ on a base $\mathscr{B}$ of open subsets of a topological space $X$, with values in a category $\cal{C}$, to be the following data:
 \begin{enumerate}[(a)]
-  \item for every open subset $U$ in $\mathscr{B}$, an object $\sh{P}(U)$ of $\cat{C}$, that we may also denote by $\Gamma(U,\sh{P})$;
-  \item for every pair $(U,V)$ of open subsets $U$ in $\mathscr{B}$ such that $U\subset V$, a morphism $\rho_{UV}\colon\sh{P}(V)\to\sh{P}(U)$.
+  \item for every open subset $U$ in $\mathscr{B}$, an object $\scr{P}(U)$ of $\cal{C}$, that we may also denote by $\Gamma(U,\scr{P})$;
+  \item for every pair $(U,V)$ of open subsets $U$ in $\mathscr{B}$ such that $U\subset V$, a morphism $\rho_{UV}\colon\scr{P}(V)\to\scr{P}(U)$.
     The morphism $\rho_{UV}$ will be called the restriction of $V$ to $U$.
     We further suppose that, if $U\subset V\subset W$ are open subsets in $\mathscr{B}$, then $\rho_{UV}\circ\rho_{VW}=\rho_{UW}$.
 \end{enumerate}
 
-The construction of the sheaf $\widetilde{\sh{P}}$ associated to a presheaf $\sh{P}$ can be easily generalised to the case of presheaves on a base of open subsets.
-If $\mathfrak{U}=(U_i)_{i\in I}$ is a cover of the open subset $U\in\mathscr{B}$, where $U_i\in\mathscr{B}$, and $U_i\cap U_j\in\mathscr{B}$, and if $\sh{P}$ is a presheaf of rings (resp. of modules) on the base $\mathscr{B}$, then we write $\HH^0(\mathfrak{U},\sh{P})$ to mean the subring (resp. submodule) of $\prod_{i\in I}\sh{P}(U_i)$ given by the $(X_i)_{i\in I}$ such that $\rho_{U_i\cap U_j,U_i}(X_i) = \rho_{U_i\cap U_j,U_j}(X_j)$ for every pair $i,j\in I$.
+The construction of the sheaf $\widetilde{\scr{P}}$ associated to a presheaf $\scr{P}$ can be easily generalised to the case of presheaves on a base of open subsets.
+If $\mathfrak{U}=(U_i)_{i\in I}$ is a cover of the open subset $U\in\mathscr{B}$, where $U_i\in\mathscr{B}$, and $U_i\cap U_j\in\mathscr{B}$, and if $\scr{P}$ is a presheaf of rings (resp. of modules) on the base $\mathscr{B}$, then we write $\HH^0(\mathfrak{U},\scr{P})$ to mean the subring (resp. submodule) of $\prod_{i\in I}\scr{P}(U_i)$ given by the $(X_i)_{i\in I}$ such that $\rho_{U_i\cap U_j,U_i}(X_i) = \rho_{U_i\cap U_j,U_j}(X_j)$ for every pair $i,j\in I$.
 We then have canonical maps:
 \[
-  \sh{P}(U) \to \HH^0(\mathfrak{U},\sh{P}) \to \widetilde{\sh{P}}(U);
+  \scr{P}(U) \to \HH^0(\mathfrak{U},\scr{P}) \to \widetilde{\scr{P}}(U);
 \]
-if these maps are injective for every cover $\mathfrak{U}$ satisfying the conditions above, then $\widetilde{\sh{P}}(U)$ is the union of the $\HH^0(\mathfrak{U},\sh{P})$.
+if these maps are injective for every cover $\mathfrak{U}$ satisfying the conditions above, then $\widetilde{\scr{P}}(U)$ is the union of the $\HH^0(\mathfrak{U},\scr{P})$.
 
 
 \section{Preliminaries on localisation}
@@ -343,24 +346,24 @@ For every prime ideal $\mathfrak{p}$, we denote by $A_\mathfrak{p}$ and $M_\math
   Then $\varphi$ and $\psi$ are inverse to one another.
 \end{proof}
 
-It follows from \hyperref[corollary3]{this corollary}, along with the exactness of the functor $M\mapsto\mathfrak{M}$, that, if $u\colon\sh{F}\to\sh{G}$ is a morphism of quasi-coherent sheaves, then $\Ker u$ and $\Coker u$ are quasi-coherent sheaves.
+It follows from \hyperref[corollary3]{this corollary}, along with the exactness of the functor $M\mapsto\mathfrak{M}$, that, if $u\colon\scr{F}\to\scr{G}$ is a morphism of quasi-coherent sheaves, then $\Ker u$ and $\Coker u$ are quasi-coherent sheaves.
 
 \begin{theorem}{2}
 \label{theorem2}
-  If $\sh{F}$ is an algebraic sheaf on $V(A)$, then the following are equivalent:
+  If $\scr{F}$ is an algebraic sheaf on $V(A)$, then the following are equivalent:
   \begin{enumerate}[(a)]
-    \item $\sh{F}$ is quasi-coherent.
+    \item $\scr{F}$ is quasi-coherent.
     \item For every special open subset $U_f$, the natural map
       \[
-        \Gamma(V,\sh{F})\otimes_A A_f \to \Gamma(U_f,\sh{F})
+        \Gamma(V,\scr{F})\otimes_A A_f \to \Gamma(U_f,\scr{F})
       \]
       is bijective.
     \item For every point $\mathfrak{p}$ of $V$, the natural map
       \[
-        \Gamma(V,\sh{F})\otimes_A A_\mathfrak{p} \to \sh{F}_\mathfrak{p}
+        \Gamma(V,\scr{F})\otimes_A A_\mathfrak{p} \to \scr{F}_\mathfrak{p}
       \]
       is bijective.
-    \item $\sh{F}$ is locally isomorphic to a quasi-coherent sheaf, i.e. every point $\mathfrak{p}$ of $V$ has a special neighbourhood $U_f$ such that $\sh{F}|U_f$ is a coherent sheaf.
+    \item $\scr{F}$ is locally isomorphic to a quasi-coherent sheaf, i.e. every point $\mathfrak{p}$ of $V$ has a special neighbourhood $U_f$ such that $\scr{F}|U_f$ is a coherent sheaf.
   \end{enumerate}
 \end{theorem}
 
@@ -368,55 +371,55 @@ It follows from \hyperref[corollary3]{this corollary}, along with the exactness 
   We have already seen that (a)$\implies$(b), (a)$\implies$(c), and (a)$\implies$(d).
 
   We will first show that (b)$\implies$(a):
-  Let $M=\Gamma(V,\sh{F})$.
-  Then, for every affine open subset $U_f$ we have restrictions: $M\to\Gamma(U_f,\sh{F})$, and since $\Gamma(U_f,\sh{F})$ is an $A_f$-module, it follows that we have a map:
+  Let $M=\Gamma(V,\scr{F})$.
+  Then, for every affine open subset $U_f$ we have restrictions: $M\to\Gamma(U_f,\scr{F})$, and since $\Gamma(U_f,\scr{F})$ is an $A_f$-module, it follows that we have a map:
 \oldpage{1-08}
   \[
-    M_f = M\otimes_A A_f \to \Gamma(U_f,\sh{F}).
+    M_f = M\otimes_A A_f \to \Gamma(U_f,\scr{F}).
   \]
 
-  These maps induce a morphism of sheaves: $\mathfrak{M}\to\sh{F}$.
+  These maps induce a morphism of sheaves: $\mathfrak{M}\to\scr{F}$.
 
-  This morphism will be bijective if the induced maps $\mathfrak{M}(U_f)\to\sh{F}(U_f)$ are bijective (and so (b)$\implies$(a)) or if the induced maps $\mathfrak{M}_\mathfrak{p}\to\sh{F}_\mathfrak{p}$ are bijective (and so (c)$\implies$(a)).
+  This morphism will be bijective if the induced maps $\mathfrak{M}(U_f)\to\scr{F}(U_f)$ are bijective (and so (b)$\implies$(a)) or if the induced maps $\mathfrak{M}_\mathfrak{p}\to\scr{F}_\mathfrak{p}$ are bijective (and so (c)$\implies$(a)).
 
   It remains only to show that (d)$\implies$(a).
   The proof that follows is due to Grothendieck.
 
-  We note first of all that the map $A\to A_f$ endows every $A_f$-module with an $A$-module structure, and thus associates, to every quasi-coherent sheaf $\sh{F}$ on $U_f$, a quasi-coherent sheaf $\overline{\sh{F}}$ on $V$ (we will return later to this operation).
+  We note first of all that the map $A\to A_f$ endows every $A_f$-module with an $A$-module structure, and thus associates, to every quasi-coherent sheaf $\scr{F}$ on $U_f$, a quasi-coherent sheaf $\overline{\scr{F}}$ on $V$ (we will return later to this operation).
   Furthermore, if $U_g$ is an affine open subset of $V$, then:
   \[
-    \Gamma(U_g,\overline{\sh{F}})
-    = \Gamma(V,\overline{\sh{F}})_g
-    = \Gamma(U_f,\sh{F})_g
-    = \Gamma(U_f\cap U_g,\sh{F}).
+    \Gamma(U_g,\overline{\scr{F}})
+    = \Gamma(V,\overline{\scr{F}})_g
+    = \Gamma(U_f,\scr{F})_g
+    = \Gamma(U_f\cap U_g,\scr{F}).
   \]
 
-  So take some algebraic sheaf $\sh{G}$ on $V$ such that there exists a cover of $V$ by special open subsets $U_{f_i}$ with the condition that $\sh{G}|U_{f_i}$ is quasi-coherent.
-  We will now show that $\sh{G}$ is quasi-coherent.
+  So take some algebraic sheaf $\scr{G}$ on $V$ such that there exists a cover of $V$ by special open subsets $U_{f_i}$ with the condition that $\scr{G}|U_{f_i}$ is quasi-coherent.
+  We will now show that $\scr{G}$ is quasi-coherent.
 
-  Since $\sh{G}$ is a sheaf, we have, for all $U_g$, an exact sequence of the form:
+  Since $\scr{G}$ is a sheaf, we have, for all $U_g$, an exact sequence of the form:
   \[
     0
-    \to \Gamma(U_g,\sh{G})
-    \to \prod_i \Gamma(U_g\cap U_i,\sh{G})
-    \to \prod_{i<j} \Gamma(U_g\cap U_i\cap U_j,\sh{G})
+    \to \Gamma(U_g,\scr{G})
+    \to \prod_i \Gamma(U_g\cap U_i,\scr{G})
+    \to \prod_{i<j} \Gamma(U_g\cap U_i\cap U_j,\scr{G})
   \]
   or even
   \[
     0
-    \to \Gamma(U_g,\sh{G})
-    \to \prod_i \Gamma)U_g,\overline{\sh{G}|U_i})
-    \to \prod_{i\leq j} \Gamma(U_g,\overline{\sh{G}|U_i\cap U_j}).
+    \to \Gamma(U_g,\scr{G})
+    \to \prod_i \Gamma)U_g,\overline{\scr{G}|U_i})
+    \to \prod_{i\leq j} \Gamma(U_g,\overline{\scr{G}|U_i\cap U_j}).
   \]
 
   The two latter terms of the exact sequence are the sections over $U_g$ of the sheaves associated to the modules
   \[
-    M = \prod_i \Gamma(U_i,\sh{G}|U_i)
+    M = \prod_i \Gamma(U_i,\scr{G}|U_i)
     \mbox{ and }
-    N = \prod_{i<j} \Gamma(U_i\cap U_j,\sh{G}).
+    N = \prod_{i<j} \Gamma(U_i\cap U_j,\scr{G}).
   \]
-  Letting $g$ vary, we obtain, by taking the limit, an ``exact sequence of sheaves'': $0\to\sh{G}\to\mathfrak{M}\to\mathfrak{N}$.
-  The sheaf $\sh{G}$ is thus the kernel of a morphism of quasi-coherent sheaves: $\sh{G}$ is quasi-coherent.
+  Letting $g$ vary, we obtain, by taking the limit, an ``exact sequence of sheaves'': $0\to\scr{G}\to\mathfrak{M}\to\mathfrak{N}$.
+  The sheaf $\scr{G}$ is thus the kernel of a morphism of quasi-coherent sheaves: $\scr{G}$ is quasi-coherent.
 \end{proof}
 
 
@@ -426,75 +429,75 @@ It follows from \hyperref[corollary3]{this corollary}, along with the exactness 
 \oldpage{1-09}
 From now on we will suppose that \emph{$A$ is a Noetherian ring}.
 Then it is well known that the category of Noetherian $A$-modules agrees with that of $A$-modules of finite type.
-We define a \emph{coherent sheaf on $V(A)$} to be any sheaf $\sh{F}$ that is isomorphic to a sheaf of the type $\mathfrak{M}$, where $M$ is an $A$-module of finite type.
-The sheaf $\sh{F}$ is thus quasi-coherent, and it is a sheaf of finite type
-(a sheaf $\sh{F}$ of $\mathfrak{A}$-modules on a topological space $X$ is said to be \emph{of finite type} if every point of $X$ admits a neighbourhood $U$ along with a surjection $\mathfrak{A}^p|U\to\sh{F}|U\to0$, where $\mathfrak{A}^p$ is sheaf given by the direct sum of $p$ sheaves, each isomorphic to $\mathfrak{A}$.
+We define a \emph{coherent sheaf on $V(A)$} to be any sheaf $\scr{F}$ that is isomorphic to a sheaf of the type $\mathfrak{M}$, where $M$ is an $A$-module of finite type.
+The sheaf $\scr{F}$ is thus quasi-coherent, and it is a sheaf of finite type
+(a sheaf $\scr{F}$ of $\mathfrak{A}$-modules on a topological space $X$ is said to be \emph{of finite type} if every point of $X$ admits a neighbourhood $U$ along with a surjection $\mathfrak{A}^p|U\to\scr{F}|U\to0$, where $\mathfrak{A}^p$ is sheaf given by the direct sum of $p$ sheaves, each isomorphic to $\mathfrak{A}$.
 Such a surjection induces a map
 \[
-  \Gamma(U,\mathfrak{A}^p) = \Gamma(U,\mathfrak{A})^p \to \Gamma(U,\sh{F})
+  \Gamma(U,\mathfrak{A}^p) = \Gamma(U,\mathfrak{A})^p \to \Gamma(U,\scr{F})
 \]
-and defines $p$ surjections from $\sh{F}$ to $U$, i.e. the images of the basis vectors of $\Gamma(U,\mathfrak{A})^p$.
-Conversely, the data of $p$ sections of $\sh{F}$ over $U$ defines a map $A^p|U\to\sh{F}|U$).
+and defines $p$ surjections from $\scr{F}$ to $U$, i.e. the images of the basis vectors of $\Gamma(U,\mathfrak{A})^p$.
+Conversely, the data of $p$ sections of $\scr{F}$ over $U$ defines a map $A^p|U\to\scr{F}|U$).
 
 \begin{theorem}{3}
 \label{theorem3}
-  The following are equivalent (if $A$ is Noetherian and if $\sh{F}$ is an algebraic sheaf on $V(A)$):
+  The following are equivalent (if $A$ is Noetherian and if $\scr{F}$ is an algebraic sheaf on $V(A)$):
   \begin{enumerate}[(a)]
-    \item $\sh{F}$ is a coherent algebraic sheaf on $V(A)$.
-    \item $\sh{F}$ is quasi-coherent and of finite type.
-    \item $\sh{F}$ is of finite type, and, for every open subset $U$ and every morphism $\varphi\colon\sh{G}\to\sh{F}|U$, where $\sh{G}$ is a sheaf of finite type on $U$, the kernel $\Ker\varphi$ is of finite type on $U$.
+    \item $\scr{F}$ is a coherent algebraic sheaf on $V(A)$.
+    \item $\scr{F}$ is quasi-coherent and of finite type.
+    \item $\scr{F}$ is of finite type, and, for every open subset $U$ and every morphism $\varphi\colon\scr{G}\to\scr{F}|U$, where $\scr{G}$ is a sheaf of finite type on $U$, the kernel $\Ker\varphi$ is of finite type on $U$.
   \end{enumerate}
 \end{theorem}
 
 \begin{proof}
   We already know that (a)$\implies$(b).
-  Conversely, if $\sh{F}$ is quasi-coherent and of finite type, then there exists a cover $(U_i)_{i\in I}$ of $V(A)$ by special open subsets such that $\Gamma(U_{f_i},\sh{F})$ is an $A_{f_i}$-module of finite type.
-  Since $V(A)$ is quasi-compact, we can always assume that this cover is finite, and that $\sh{F}$ is of the form $\mathfrak{M}$:
+  Conversely, if $\scr{F}$ is quasi-coherent and of finite type, then there exists a cover $(U_i)_{i\in I}$ of $V(A)$ by special open subsets such that $\Gamma(U_{f_i},\scr{F})$ is an $A_{f_i}$-module of finite type.
+  Since $V(A)$ is quasi-compact, we can always assume that this cover is finite, and that $\scr{F}$ is of the form $\mathfrak{M}$:
   we then need to prove that $M$ is an $A$-module of finite type.
   But, for all $i$, there exists a finite number of $m_{i_k}\in M$ that generate $M_{f_i}$, and, if $N$ denotes the submodule generated by all the $m_{i_k}$, then $N$ is an $A$-module of finite type, and clearly $\mathfrak{N}=\mathfrak{M}$, whence $N=M$.
 
   \bigskip
   Now for (c)$\implies$(b):
-  If $\sh{F}$ is of finite type, then every point admits a special neighbourhood $U$ over which we have a surjection:
+  If $\scr{F}$ is of finite type, then every point admits a special neighbourhood $U$ over which we have a surjection:
 \oldpage{1-10}
   \[
-    \mathfrak{A}^p|U \to \sh{F}|U \to 0.
+    \mathfrak{A}^p|U \to \scr{F}|U \to 0.
   \]
 
   Since the kernel of this surjection is also of finite type, we in fact have an exact sequence (provided that the special open subset $U$ is small enough):
   \[
-    \mathfrak{A}^q|U \to \mathfrak{A}^p|U \to \sh{F}|U \to 0.
+    \mathfrak{A}^q|U \to \mathfrak{A}^p|U \to \scr{F}|U \to 0.
   \]
 
-  The sheaf $\sh{F}$ is thus, on every small enough special open subset, the cokernel of a morphism of quasi-coherent sheaves:
-  so $\sh{F}$ is locally quasi-coherent, and is thus quasi-coherent.
+  The sheaf $\scr{F}$ is thus, on every small enough special open subset, the cokernel of a morphism of quasi-coherent sheaves:
+  so $\scr{F}$ is locally quasi-coherent, and is thus quasi-coherent.
 
   \bigskip
   Finally, (a)$\implies$(c):
-  If $\sh{F}$ is coherent, then $\sh{F}$ is of finite type.
-  Furthermore, if $\varphi\colon\sh{G}\to\sh{F}|U$ is a morphism, then we can always assume that $U$ is a special open subset that is small enough such that we have a surjection $\psi\colon\mathfrak{A}^p|U\to\sh{G}\to0$.
+  If $\scr{F}$ is coherent, then $\scr{F}$ is of finite type.
+  Furthermore, if $\varphi\colon\scr{G}\to\scr{F}|U$ is a morphism, then we can always assume that $U$ is a special open subset that is small enough such that we have a surjection $\psi\colon\mathfrak{A}^p|U\to\scr{G}\to0$.
 
   We then have the following diagram:
   \[
     \begin{tikzcd}
       & \mathfrak{A}^p|U \dar[swap,"\psi"] \drar["\chi"] &
-    \\\Ker\varphi \rar & \sh{G} \rar[swap,"\varphi"] \dar & \sh{F}|U
+    \\\Ker\varphi \rar & \scr{G} \rar[swap,"\varphi"] \dar & \scr{F}|U
     \\ & 0 &
     \end{tikzcd}
   \]
   where $\chi=\varphi\circ\psi$.
 
-  The sheaves $\mathfrak{A}^p|U$ and $\sh{F}|U$ are coherent on $U$, and $\chi$ is thus induced by a morphism $\chi'\colon\mathfrak{A}^p(U)\to\sh{F}(U)$.
-  This ``resolution'' of $\Gamma(U,\sh{F})=\sh{F}(U)$ extends to a resolution
+  The sheaves $\mathfrak{A}^p|U$ and $\scr{F}|U$ are coherent on $U$, and $\chi$ is thus induced by a morphism $\chi'\colon\mathfrak{A}^p(U)\to\scr{F}(U)$.
+  This ``resolution'' of $\Gamma(U,\scr{F})=\scr{F}(U)$ extends to a resolution
   \[
-    \Gamma(U,A)^q \to \Gamma(U,A)^p \to \Gamma(U,\sh{F}).
+    \Gamma(U,A)^q \to \Gamma(U,A)^p \to \Gamma(U,\scr{F}).
   \]
 
   This latter exact sequence allows us to complete the diagram and show that, on $U$, $\Ker\varphi$ is the quotient of a sheaf of finite type:
   \[
     \begin{tikzcd}
-      \mathfrak{A}^q|U \rar \dar & \mathfrak{A}^p|U \rar["\chi"] \dar[swap,"\psi"] & \sh{F}|U \dar
-    \\\Ker\varphi \rar \dar & \sh{G} \rar[swap,"\varphi"] \dar & \sh{F}|U \uar
+      \mathfrak{A}^q|U \rar \dar & \mathfrak{A}^p|U \rar["\chi"] \dar[swap,"\psi"] & \scr{F}|U \dar
+    \\\Ker\varphi \rar \dar & \scr{G} \rar[swap,"\varphi"] \dar & \scr{F}|U \uar
     \\ 0 & 0 &
     \end{tikzcd}
   \]
@@ -550,8 +553,8 @@ Similarly, a sheaf of modules over this sheaf of rings is said to be \emph{algeb
 \section{Quasi-coherent sheaves on an algebraic variety}
 \label{section6}
 
-More generally, if $X$ is an arbitrary algebraic set over $k$, then we define a \emph{quasi-coherent} (resp. \emph{coherent}) \emph{algebraic sheaf on $X$} to be any sheaf $\sh{F}$ such that there exists a cover of $X$ by affine open subsets $U_i$ such that $\sh{F}|U_i$ is quasi-coherent (resp. coherent).
-By \hyperref[remark-theorem3]{the remark} that follows \cref{theorem3}, this is equivalent to saying that, for every affine open subset $U$, the sheaf $\sh{F}|U$ is quasi-coherent (resp. coherent).
+More generally, if $X$ is an arbitrary algebraic set over $k$, then we define a \emph{quasi-coherent} (resp. \emph{coherent}) \emph{algebraic sheaf on $X$} to be any sheaf $\scr{F}$ such that there exists a cover of $X$ by affine open subsets $U_i$ such that $\scr{F}|U_i$ is quasi-coherent (resp. coherent).
+By \hyperref[remark-theorem3]{the remark} that follows \hyperref[theorem3]{Theorem~3}, this is equivalent to saying that, for every affine open subset $U$, the sheaf $\scr{F}|U$ is quasi-coherent (resp. coherent).
 
 In particular, the sheaf of rings $\mathfrak{A}$ such that, for every affine open subset $U$, $\mathfrak{A}(U)$ is the ring of regular functions on $U$ (with the evident restrictions), is a coherent sheaf.
 We call it the \emph{sheaf of germs of regular functions}.

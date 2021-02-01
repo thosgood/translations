@@ -4,12 +4,20 @@
 \author{Adrien Douady}
 \date{14\textsuperscript{th} of November, 1960}
 
+\newcommand{\doctype}{French seminar talk}
+\newcommand{\origcit}{%
+  \textsc{Douady, A.}
+  ``D\'{e}formations r\'{e}guli\`{e}res''.
+  \emph{S\'{e}minaire Henri Cartan}, Volume~\textbf{13 (1)} (1960--1961), Talk no.~3.
+  {\url{http://www.numdam.org/item/SHC_1960-1961__13_1_A2_0}}%
+}
+
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{tikz-cd}
 
@@ -37,7 +45,6 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{equation}{}{}
 \renewcommand{\thesection}{\Roman{section}}
 \renewcommand{\thesubsection}{\arabic{subsection}}
 
@@ -48,23 +55,20 @@
 
 \theoremstyle{plain}
 
-  \newtheorem{innercustomtheorem}{Theorem}
-  \crefname{innercustomtheorem}{Theorem}{Theorems}
+  \newtheorem{innertheorem}{Theorem}
   \newenvironment{theorem}[1]
-    {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
-    {\endinnercustomtheorem}
+    {\renewcommand\theinnertheorem{#1}\innertheorem}
+    {\endinnertheorem}
 
-  \newtheorem{innercustomproposition}{Proposition}
-  \crefname{innercustomproposition}{Proposition}{Propositions}
+  \newtheorem{innerproposition}{Proposition}
   \newenvironment{proposition}[1]
-    {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-    {\endinnercustomproposition}
+    {\renewcommand\theinnerproposition{#1}\innerproposition}
+    {\endinnerproposition}
 
-  \newtheorem{innercustomlemma}{Lemma}
-  \crefname{innercustomlemma}{Lemma}{Lemmas}
+  \newtheorem{innerlemma}{Lemma}
   \newenvironment{lemma}[1]
-    {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
-    {\endinnercustomlemma}
+    {\renewcommand\theinnerlemma{#1}\innerlemma}
+    {\endinnerlemma}
 
   \newtheorem*{proposition*}{Proposition}
 
@@ -105,13 +109,10 @@
 
   \medskip
   
-  \emph{What follows is a translation of the French seminar talk:}
+  \emph{What follows is a translation of the \doctype:}
 
   \medskip\noindent
-  \textsc{Douady, A.}
-  ``D\'{e}formations r\'{e}guli\`{e}res''.
-  \emph{S\'{e}minaire Henri Cartan}, Volume~\textbf{13 (1)} (1960--1961), Talk no.~3.
-  {\url{http://www.numdam.org/item/SHC_1960-1961__13_1_A2_0}}
+  \origcit
 \end{abstract}
 
 \setcounter{footnote}{0}
@@ -226,7 +227,7 @@ that defines, by varying $U$, a homomorphism from the sheaf $\mathrm{R}^1\pi_*\w
 
 In fact, Kodaira and Spencer have shown \cite{2} that, by identifying the $\HH^1$ spaces with spaces of harmonic forms, condition~2 is a consequence of condition~1.
 
-Then \cref{theorem1} has the following corollary:
+Then \hyperref[theorem1]{Theorem~1} has the following corollary:
 
 \begin{proposition}{1}
 \label{proposition1}
@@ -298,11 +299,11 @@ Let $\Theta$ be the sheaf of germs of holomorphic fields of tangent vectors on $
       \beta = \sum_{p\geq0} b_*^p\gamma_1 + \sum_{p<0} b_*^p\gamma_2
     \]
     (which is a locally finite sum).
-    Then $\beta-b_*\beta=\gamma$, whence \cref{lemma1}.
+    Then $\beta-b_*\beta=\gamma$, whence \hyperref[lemma1]{Lemma~1}.
   \end{proof}
 
-  Now, to finish the proof of \cref{proposition2}.
-  From \cref{lemma1}, we have the following exact sequence:
+  Now, to finish the proof of \hyperref[proposition2]{Proposition~2}.
+  From \hyperref[lemma1]{Lemma~1}, we have the following exact sequence:
   \[
     0
     \to \HH^0(V_b;\Theta)
@@ -326,7 +327,7 @@ Let $\Theta$ be the sheaf of germs of holomorphic fields of tangent vectors on $
 
   Now $\HH^0(\widetilde{V};\Theta)$ is the space of holomorphic vector fields on $\widetilde{V}$, but such a field extends to a holomorphic vector field on $\CC^n$, and $\HH^0(\widetilde{V},\Theta)=L\oplus M$, where $L$ is the space of fields of linear vectors, and $M$ is the space of fields of second-order vectors at $0$.
   The subspaces $L$ and $M$ are invariant under $b_*$, and $1-b_*\colon M\to M$ is an isomorphism.
-  Then \cref{proposition2} follows from remarking that, if an element of $L$ is represented by a matrix $a$, then $b_*a=bab^{-1}$.
+  Then \hyperref[proposition2]{Proposition~2} follows from remarking that, if an element of $L$ is represented by a matrix $a$, then $b_*a=bab^{-1}$.
 \end{proof}
 
 
@@ -348,7 +349,7 @@ This is a general result, that we hope to be able to prove in a later talk of th
 \subsection{Calculation of \texorpdfstring{$\rho$}{p}}
 \label{III.3}
 
-We have $T_b=\Hom(\CC^n,\CC^n)=L\subset\HH^0(\widetilde{V};\Theta)$, and we defined, to prove \cref{proposition2}, a surjective map $\delta_*\colon L\to\HH^1(V_b;\Theta)$.
+We have $T_b=\Hom(\CC^n,\CC^n)=L\subset\HH^0(\widetilde{V};\Theta)$, and we defined, to prove \hyperref[proposition2]{Proposition~2}, a surjective map $\delta_*\colon L\to\HH^1(V_b;\Theta)$.
 
 \begin{proposition}{3}
 \label{proposition3}
@@ -380,7 +381,7 @@ We have $T_b=\Hom(\CC^n,\CC^n)=L\subset\HH^0(\widetilde{V};\Theta)$, and we defi
   \[
     ab^{-1}x + b\cdot\beta(b^{-1}x) = \beta(x).
   \]
-  We thus deduce that $\theta=\delta_*(ab^{-1})$, which proves \cref{proposition3}.
+  We thus deduce that $\theta=\delta_*(ab^{-1})$, which proves \hyperref[proposition3]{Proposition~3}.
 \end{proof}
 
 
@@ -397,7 +398,7 @@ Let $B'\subset B$ be the set of matrices of the form
 \]
 where $t\in\CC$, and let $V'=\pi^{-1}(B')$ be the mixed manifold induced by $V$ over $V'$;
 now $B'$ is a line, and its tangent space $T'_b$ at $b$ is generated, for all $b$, by $a=\begin{pmatrix}0&1\\0&0\end{pmatrix}$.
-It follows from \cref{proposition3} that the Spencer--Kodaira map
+It follows from \hyperref[proposition3]{Proposition~3} that the Spencer--Kodaira map
 \[
   \rho'\colon T_b(B') \to \HH^1(V_b;\Theta)
 \]
@@ -465,7 +466,7 @@ We necessarily have
 where $z\in\CC^n$, and $k$ is an integer;
 the same property, applied to the inverse map of $g$, shows that $k=\pm1$.
 Let $a$ be the linear map that is tangent to $g$ at the origin;
-the identity \cref{*} then gives
+the identity \hyperref[*]{($*$)} then gives
 \[
   \begin{aligned}
     ab &= (b')^ka

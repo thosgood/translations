@@ -4,12 +4,20 @@
 \author{George P\'{o}lya}
 \date{}
 
+\newcommand{\doctype}{German paper}
+\newcommand{\origcit}{%
+  \textsc{P\'{o}lya, G.}
+  ``Bemerkung \"{U}ber die Integraldarstellung der Riemannschen $\xi$-Funktion''.
+  \emph{Acta Math.}, Volume~\textbf{48} (1926), 305--317.
+  \textsc{DOI:} \href{https://doi.org/10.1007/BF02565336}{10.1007/BF02565336}%
+}
+
+
 \usepackage{amssymb,amsmath}
 
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{tikz}
 
@@ -37,21 +45,16 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{section}{\S\!}{\SS\!}
-\crefname{equation}{}{}
-
-
 %% Theorem environments %%
 
 \usepackage{amsthm}
 
 \theoremstyle{plain}
 
-\newtheorem{innercustomlemma}{Lemma}
-\crefname{innercustomlemma}{Lemma}{Lemmas}
+\newtheorem{innerlemma}{Lemma}
 \newenvironment{lemma}[1]
-  {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
-  {\endinnercustomlemma}
+  {\renewcommand\theinnerlemma{#1}\innerlemma}
+  {\endinnerlemma}
 
 
 %% Shortcuts %%
@@ -86,15 +89,10 @@
 
   \medskip
   
-  \emph{What follows is a translation of the German paper:}
+  \emph{What follows is a translation of the \doctype:}
 
   \medskip\noindent
-  \textsc{P\'{o}lya, G.}
-  ``Bemerkung \"{U}ber die Integraldarstellung der Riemannschen $\xi$-Funktion''.
-  \emph{Acta Math.}, Volume~\textbf{48} (1926), 305--317.
-  \textsc{DOI:} \href{https://doi.org/10.1007/BF02565336}{10.1007/BF02565336}.
-  % \emph{Journal}, Volume~\textbf{X} (Date), Y--Z.
-  % {\url{URL}}
+  \origcit
 \end{abstract}
 
 \setcounter{footnote}{0}
@@ -142,7 +140,7 @@ It is evident that
   \quad\mbox{as $u\to+\infty$.}
 \tag{4}
 \]
-Furthermore (see \cref{section4}), $\Phi(u)$ is an even function.
+Furthermore (see \hyperref[section4]{\S4}), $\Phi(u)$ is an even function.
 Therefore
 \[
 \label{5}
@@ -154,10 +152,10 @@ Therefore
 \]
 
 \oldpage{306}
-With regards to the Riemann hypothesis, one could ask the following question\footnote{This was casually mentioned by Prof.~Landau in a conversation in 1913.}: does the function given by replacing $\Phi(u)$ in the right-hand side of \cref{2} with the right-hand side of \cref{4} have only real zeros?
+With regards to the Riemann hypothesis, one could ask the following question\footnote{This was casually mentioned by Prof.~Landau in a conversation in 1913.}: does the function given by replacing $\Phi(u)$ in the right-hand side of \hyperref[2]{(2)} with the right-hand side of \hyperref[4]{(4)} have only real zeros?
 
-The answer is no (see \cref{section4}): the resulting function has infinitely many imaginary zeros.
-If, however, the right-hand side of \cref{5} is used, instead of the right-hand side of \cref{4}, then we obtain the function
+The answer is no (see \hyperref[section4]{\S4}): the resulting function has infinitely many imaginary zeros.
+If, however, the right-hand side of \hyperref[5]{(5)} is used, instead of the right-hand side of \hyperref[4]{(4)}, then we obtain the function
 \[
 \label{6}
   \xi^*(z) = 8\pi^2 \int_0^\infty \left(
@@ -205,7 +203,7 @@ Indeed,
 \]
 
 \oldpage{307}
-as one can easily derive from \cref{6} and \cref{7}.
+as one can easily derive from \hyperref[6]{(6)} and \hyperref[7]{(7)}.
 I will show that $\GG(iz)$ \emph{has only real zeros}.
 From this, the same property then easily follows for $\xi^*(z)$.
 
@@ -242,7 +240,7 @@ Furthermore, if $z$ is not an integer, then
 \tag{11}
 \]
 
-The proof of \cref{11} goes as follows: write
+The proof of \hyperref[11]{(11)} goes as follows: write
 \[
 \label{12}
   \Gamma(z)
@@ -269,7 +267,7 @@ Now,
   \\&= \int_0^\infty \sum_{n=0}^\infty e^{-ae^u} \frac{(-a)^n}{n!} (e^{(-n+z)u}+e^{(-n-z)u}) \dd u.
   \end{aligned}
 \]
-From this it follows, by \cref{14}, after exchanging the order of summation and integration (which can easily be justified by absolute convergence), that
+From this it follows, by \hyperref[14]{(14)}, after exchanging the order of summation and integration (which can easily be justified by absolute convergence), that
 \oldpage{308}
 \[
 \label{15}
@@ -289,7 +287,7 @@ On the other hand, evidently
   \\&+ a^z \sum_{l=0}^\infty \frac{(-1)^la^{2l}}{l!} \sum_{k=0}^\infty \frac{(-1)^ka^{-l-z+k}}{k!(-l-z+k)}
   \end{aligned}
 \]
-and so, by \cref{13},
+and so, by \hyperref[13]{(13)},
 \[
 \label{16}
   \GG(z)
@@ -297,13 +295,13 @@ and so, by \cref{13},
   + a^z \sum_{l=0}^\infty \frac{(-1)^la^{2l}}{l!} P(-l-z).
 \tag{16}
 \]
-It follows from \cref{12}, \cref{15}, and \cref{16} that
+It follows from \hyperref[12]{(12)}, \hyperref[15]{(15)}, and \hyperref[16]{(16)} that
 \[
   \GG(z)
   = a^{-z} \sum_{n=0}^\infty \frac{(-1)^na^{2n}}{n!} \Gamma(-n+z)
   + a^z \sum_{n=0}^\infty \frac{(-1)^na^{2n}}{n!} \Gamma(-n-z),
 \]
-which is equivalent to \cref{11}.
+which is equivalent to \hyperref[11]{(11)}.
 
 I will also state here, without proof, the two following representations, which will not be used in what follows:
 \[
@@ -318,13 +316,13 @@ I will also state here, without proof, the two following representations, which 
     &= \frac{\pi}{\sin(\pi z)} e^{\frac{i\pi z}{2}} J_{-z}(2ia) - \frac{\pi}{\sin(\pi z)} e^{-\frac{i\pi z}{2}} J_z(2ia).
   \end{aligned}
 \]
-In the first one, $2a>|\Re z|$; in the second, both terms on the right-hand side satisfy the same difference equation, which is also satisfied by $\GG(z)$, by \cref{9}.
+In the first one, $2a>|\Re z|$; in the second, both terms on the right-hand side satisfy the same difference equation, which is also satisfied by $\GG(z)$, by \hyperref[9]{(9)}.
 
 
 \section{}
 \label{section2}
 
-The asymptotic representation and the estimates of $\GG(z)$, with which we now concern ourselves, can be obtained by expanding \cref{11}.
+The asymptotic representation and the estimates of $\GG(z)$, with which we now concern ourselves, can be obtained by expanding \hyperref[11]{(11)}.
 
 \oldpage{309}
 Different areas of the $z$-plane have to be examined on a case-by-case basis.
@@ -345,7 +343,7 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
     \emph{where the absolute value of the function $\chi(z)=\chi(z;a)$ is bounded above by a value depending only on $A$.}
     \label{I}
 
-    We know, by \cref{11}, that
+    We know, by \hyperref[11]{(11)}, that
     \[
       \chi(z)
       = \frac{za^2}{1-z} \left(
@@ -381,20 +379,20 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
       \right)^{2\varepsilon}.
     \tag{20}
     \]
-    In the part of the half-plane where $x\geq\varepsilon$, where $y\geq1$, claim~II follows directly from \cref{17}, \cref{18}, and \cref{20};
+    In the part of the half-plane where $x\geq\varepsilon$, where $y\geq1$, claim~II follows directly from \hyperref[17]{(17)}, \hyperref[18]{(18)}, and \hyperref[20]{(20)};
     it also follows, by symmetry, in the part where $y\leq-1$.
     Then the only remaining part is the half-strip
     \[
       x\geq\varepsilon,
       \quad -1\leq y\leq 1.
     \]
-    By the already-proven part of claim~II, function~\cref{18} tends to zero as $z\to\infty$.
-    Since function~\cref{18} is entire and
+    By the already-proven part of claim~II, function~\hyperref[18]{(18)} tends to zero as $z\to\infty$.
+    Since function~\hyperref[18]{(18)} is entire and
 \oldpage{310}
     of finite order, by well-known general theorems\footnote{See \textsc{G.~P\'{o}lya and G.~Szeg\"{o}}, Aufgaben und Lehrs\"{a}tze aus der Analysis (Berlin 1925), Bd.~1, Aufgaben~III~333, III~339.}, it must tend uniformly to zero in the entire half-strip as $z\to\infty$;
     this completes the proof of claim~II.
-    Of course, instead of using general theorems, function~\cref{18} could also be used on suitable curves intersecting the half-strip, e.g. to estimate on the straight lines $x=k+\frac12$, for $k=0,1,2,3,\ldots$.
-    In the case where $k=0$, we investigate such an estimation for a different purpose, c.f. \cref{22}.
+    Of course, instead of using general theorems, function~\hyperref[18]{(18)} could also be used on suitable curves intersecting the half-strip, e.g. to estimate on the straight lines $x=k+\frac12$, for $k=0,1,2,3,\ldots$.
+    In the case where $k=0$, we investigate such an estimation for a different purpose, c.f. \hyperref[22]{(22)}.
   \item \emph{If $a\leq\frac14$, then there are no zeros of $\GG(z;a)$ outside of the strip $-\frac12<x<\frac12$.}
     \label{III}
 
@@ -421,7 +419,7 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
       \right).
     \tag{21}
     \]
-    Using \cref{21}, it follows from \cref{11} that, on the straight line $x=\frac12$,
+    Using \hyperref[21]{(21)}, it follows from \hyperref[11]{(11)} that, on the straight line $x=\frac12$,
     \[
     \label{22}
       \begin{aligned}
@@ -445,7 +443,7 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
     \]
 
   \oldpage{311}
-    It then follows from \cref{22} that
+    It then follows from \hyperref[22]{(22)} that
     \[
     \label{23}
       |\psi(z)| = |\psi(z;a)| < 1
@@ -459,9 +457,9 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
       \qquad\mbox{for $x\geq\frac12$, $r\geq R$, and $a\leq\frac14$.}
     \tag{24}
     \]
-    Furthermore, $|\psi(z)|<1$ is also satisfied in the circle segment $\{x\geq\frac12,r\leq R\}$, since the inequality in question, by \cref{23} and \cref{24}, is satisfied on the boundary of the circle segment.
+    Furthermore, $|\psi(z)|<1$ is also satisfied in the circle segment $\{x\geq\frac12,r\leq R\}$, since the inequality in question, by \hyperref[23]{(23)} and \hyperref[24]{(24)}, is satisfied on the boundary of the circle segment.
     Thus $|\psi(z)|<1$ is satisfied in the whole half-plane $x\geq\frac12$;
-    thus $\GG(z)$, cf.~\cref{18}, does not disappear in this half-plane.
+    thus $\GG(z)$, cf.~\hyperref[18]{(18)}, does not disappear in this half-plane.
 
     \[
       \begin{tikzpicture}[scale=1.1]
@@ -488,14 +486,14 @@ Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\
 
     For what follows, it is useful to have in mind a certain partition of the plane (cf. the above figure): the strip $-1\leq x\leq 1$ is denoted by $\SS$; the part of the plane where both $r\leq R$ and $|x|>1$ is denoted by $\TT$; the remaining part, which extends to infinity, is denoted by $\UU$.
     We pick the number $R=R(A)$ depending on a certain positive number $A$ such that, inside, and on the boundary of, $\UU$, the inequality $|\psi(z)|<1$ is satisfied for $a\leq A$.
-    From \cref{18} it follows that $\GG(z)$ does not vanish inside, or on the boundary of, $\UU$.
+    From \hyperref[18]{(18)} it follows that $\GG(z)$ does not vanish inside, or on the boundary of, $\UU$.
 \end{enumerate}
 
 
 \section{}
 \label{section3}
 
-We will now study consequences of the difference equation in \cref{9}, and link them to those that we have just obtained from the representation in \cref{11}.
+We will now study consequences of the difference equation in \hyperref[9]{(9)}, and link them to those that we have just obtained from the representation in \hyperref[11]{(11)}.
 
 \begin{enumerate}[I.]
 \setcounter{enumi}{3}
@@ -509,7 +507,7 @@ We will now study consequences of the difference equation in \cref{9}, and link 
     Firstly:
     the function $\GG(z)$ is even, and takes real values for all $z$.
     From this it follows that, if $y$ is real, then $\GG(iy)$ is real, and the two values $\GG(1+iy)$ and $\GG(-1+iy)$ are complex conjugate.
-    So \cref{9} implies, for $z=iy$, that
+    So \hyperref[9]{(9)} implies, for $z=iy$, that
     \[
     \label{25}
       y\GG(iy) = 2a\Im\GG(1+iy).
@@ -518,10 +516,10 @@ We will now study consequences of the difference equation in \cref{9}, and link 
 
     Secondly:
     it is not possible for $\GG(z)$ to vanish at two points simultaneously if the line connecting them is parallel to the real axis and is of length~$1$.
-    This is since, if $\GG(c)=0$ and $\GG(c-1)=0$, then \cref{9} would imply that $\GG(c+1)=0$ as well, and thus that $\GG(c+2)=0$, $\GG(c+3)=0$, ..., and so $\GG(z)$ would have zeros in the region $\UU$ (see the figure); but this would be a contradiction.
+    This is since, if $\GG(c)=0$ and $\GG(c-1)=0$, then \hyperref[9]{(9)} would imply that $\GG(c+1)=0$ as well, and thus that $\GG(c+2)=0$, $\GG(c+3)=0$, ..., and so $\GG(z)$ would have zeros in the region $\UU$ (see the figure); but this would be a contradiction.
 
-    For real $z$, $\GG(z)$ is positive (cf. \cref{7}).
-    On one hand, $\GG(1+iy)=0$ implies that $y\neq0$, and, on the other hand, $\GG(1+iy)=0$ implies that $\Im\GG(1+iy)=0$, and thus \cref{25} implies that $\GG(iy)=0$.
+    For real $z$, $\GG(z)$ is positive (cf. \hyperref[7]{(7)}).
+    On one hand, $\GG(1+iy)=0$ implies that $y\neq0$, and, on the other hand, $\GG(1+iy)=0$ implies that $\Im\GG(1+iy)=0$, and thus \hyperref[25]{(25)} implies that $\GG(iy)=0$.
     However, the simultaneous vanishing of $\GG(1+iy)$ and $\GG(iy)$ is impossible, and thus $\GG(1+iy)\neq0$.
   \item \emph{There are no zeros of $\GG(z)$ outside of the strip $\SS$.}
     \label{V}
@@ -535,7 +533,7 @@ We will now study consequences of the difference equation in \cref{9}, and link 
     \]
     As we have already established, there are no zeros of $\GG(z)$ in the region $\UU$ nor on its boundary.
     If we take \hyperref[IV]{IV} into account as well, we see that there are no zeros of $\GG(z)$ on the boundary of $\TT$ either.
-    If $z$ varies along the boundary of $\TT$, and $a$ in the closed interval \cref{26}, then $\GG(z;a)$ is a continuous non-zero function of $z$ and $a$.
+    If $z$ varies along the boundary of $\TT$, and $a$ in the closed interval \hyperref[26]{(26)}, then $\GG(z;a)$ is a continuous non-zero function of $z$ and $a$.
     Thus the integral
     \[
     \label{27}
@@ -543,14 +541,14 @@ We will now study consequences of the difference equation in \cref{9}, and link 
     \tag{27}
     \]
     (along the boundary of $\TT$ in the positive direction) is a continuous function of $a$.
-    The integral \cref{27} calculates an integer, namely the number of zeros of $\GG(z;a)$ that lie inside $\TT$.
+    The integral \hyperref[27]{(27)} calculates an integer, namely the number of zeros of $\GG(z;a)$ that lie inside $\TT$.
     A continuous function that takes only integer values is constant.
     Thus the integral is always equal to $0$, since it is equal to zero for $a=\frac14$, cf. \hyperref[III]{III}.
 \oldpage{313}
   \item \emph{All the zeros of $\GG(z)$ lying inside the strip $\SS$ are simple and purely imaginary.}
     \label{VI}
 
-    It follows from \cref{17} and from Stirling's formula that, in the strip $1\leq x\leq 1$, for $y\to+\infty$,
+    It follows from \hyperref[17]{(17)} and from Stirling's formula that, in the strip $1\leq x\leq 1$, for $y\to+\infty$,
     \[
     \label{28}
       \GG(x+iy)
@@ -570,7 +568,7 @@ We will now study consequences of the difference equation in \cref{9}, and link 
       \Phi = y\log\frac{y}{a} - y - \frac\pi4.
     \tag{29}
     \]
-    A weakened form of claim~\hyperref[VI]{VI}, in which we replace ``\emph{all} the zeros'' with ``\emph{all but finitely many} zeros'', can be proved using only \cref{28} and \cref{29}; a proof of the full result needs more.
+    A weakened form of claim~\hyperref[VI]{VI}, in which we replace ``\emph{all} the zeros'' with ``\emph{all but finitely many} zeros'', can be proved using only \hyperref[28]{(28)} and \hyperref[29]{(29)}; a proof of the full result needs more.
 
     Consider the branch of $\log\GG(z)$ that is real for $z=1$;
     by \hyperref[IV]{IV}, it can be extended indefinitely along the straight line $x=1$.
@@ -579,8 +577,8 @@ We will now study consequences of the difference equation in \cref{9}, and link 
       \Im\log\GG(1+iy) = (2n+1)\frac\pi2
     \]
     does \emph{not} hold by $y_n$ ($n=0,1,2,3,\ldots$).
-    In the curly brackets on the right-hand side of \cref{28}, the $a^{-x}y^xe^{i\Phi}$ term dominates when $x=1$;
-    by \cref{29}, we can exclude the possibility that
+    In the curly brackets on the right-hand side of \hyperref[28]{(28)}, the $a^{-x}y^xe^{i\Phi}$ term dominates when $x=1$;
+    by \hyperref[29]{(29)}, we can exclude the possibility that
     \[
       \Im\log\GG(1+iy) \to +\infty
       \qquad\mbox{as $y\to\infty$}.
@@ -622,7 +620,7 @@ We will now study consequences of the difference equation in \cref{9}, and link 
     \[
       \Im\GG(1+i\eta) = 0
     \]
-    and, by \cref{25}, that
+    and, by \hyperref[25]{(25)}, that
     \[
       \GG(i\eta) = 0.
     \]
@@ -634,14 +632,14 @@ We will now study consequences of the difference equation in \cref{9}, and link 
       N_n \geqslant 2n.
     \tag{31}
     \]
-    So \cref{30} and \cref{31} give
+    So \hyperref[30]{(30)} and \hyperref[31]{(31)} give
     \[
     \label{32}
       2\pi N_n^* \leqslant 2H_n + 2\pi.
     \tag{32}
     \]
-    Denote by $\Phi_n$ the value of \cref{29} at $y=y_n$.
-    Since, as mentioned above, the first term in the curly brackets of \cref{28} dominates when $x=1$, we have that
+    Denote by $\Phi_n$ the value of \hyperref[29]{(29)} at $y=y_n$.
+    Since, as mentioned above, the first term in the curly brackets of \hyperref[28]{(28)} dominates when $x=1$, we have that
     \[
       \Im\log\GG(1+iy_n)
       = (2n+1)\frac\pi2
@@ -652,10 +650,10 @@ We will now study consequences of the difference equation in \cref{9}, and link 
       \lim_{n\to\infty}\varepsilon_n = 0.
     \]
 \oldpage{315}
-    Since $\Phi_n=n\pi-\varepsilon_n$, for $y=y_n$ with $n$ large enough, the value of $e^{i\Phi_n}$ is almost $(-1)^n$, and the term in the curly brackets in \cref{28} is almost real.
+    Since $\Phi_n=n\pi-\varepsilon_n$, for $y=y_n$ with $n$ large enough, the value of $e^{i\Phi_n}$ is almost $(-1)^n$, and the term in the curly brackets in \hyperref[28]{(28)} is almost real.
     Two things follow from this:
     \begin{enumerate}[1)]
-      \item For $y=y_n$ in \cref{28}, the leading term in \cref{28} dominates over the error term $\error$ in all of the segment $-1\leqslant x\leqslant 1$, and so $\GG(z)$ has no zeros on the horizontal sides of $R_n$, as we had previously claimed.
+      \item For $y=y_n$ in \hyperref[28]{(28)}, the leading term in \hyperref[28]{(28)} dominates over the error term $\error$ in all of the segment $-1\leqslant x\leqslant 1$, and so $\GG(z)$ has no zeros on the horizontal sides of $R_n$, as we had previously claimed.
       \item Moving along an arc in this segment, the $e^{i\pi x/2}$ factor dominates in $\GG(z)$, or, more precisely, for arbitrary $\varepsilon$ we have
         \[
         \label{33}
@@ -663,7 +661,7 @@ We will now study consequences of the difference equation in \cref{9}, and link 
         \tag{33}
         \]
         for $n$ sufficiently large.
-        Then \cref{32} and \cref{33} give
+        Then \hyperref[32]{(32)} and \hyperref[33]{(33)} give
         \[
           2\pi N_n^* < 2\varepsilon.
         \]
@@ -684,7 +682,7 @@ The above observation also shows that the number of zeros with ordinate between 
 
 In order to be able to prove all of the claims in the introduction, we will need two simple, general lemmas.
 
-\begin{lemma}{1}
+\begin{lemma}{I}
 \label{lemma1}
   Let $F(u)$ be analytic, and taking real values for any non-negative real $u$.
   Further, let
@@ -709,20 +707,20 @@ In order to be able to prove all of the claims in the introduction, we will need
     \qquad F^{(2q-1)}(0) \neq 0.
   \]
 \oldpage{316}
-  Taking \cref{34} into account, we obtain, by repeated partial integration,
+  Taking \hyperref[34]{(34)} into account, we obtain, by repeated partial integration,
   \[
     G(x) = (-1)^q \frac{F^{(2q-1)}(0)}{x^{2q}} + \frac{{(-1)^{q+1}}}{x^{2q+1}} \int_0^\infty F^{(2q+1)}(u)\sin xu \dd u.
   \]
-  From this it follows, again using \cref{34}, that
+  From this it follows, again using \hyperref[34]{(34)}, that
   \[
     \lim_{x\to\infty} x^{2q}G(x) = (-1)^q F^{(2q-1)}(0) \neq 0,
   \]
   whence our claim.
 \end{proof}
 
-If we take $F(u)$ to be the right-hand side of \cref{4}, or, more generally, take $F(u)$ in \cref{35} to be the sum of finitely many terms of the series in \cref{3}, then we obtain an entire function $G(x)$ which, by the theory of Hadamard, can easily be proven to have infinitely many zeros.
-Of these zeros, by \cref{lemma1}, only finitely many are real, since the function $F(u)$ is clearly not even.
-The function $\Phi(u)$ in the integral representation \cref{2} of the $\xi$-function must, by \cref{lemma1}, be even (which could also be shown directly).
+If we take $F(u)$ to be the right-hand side of \hyperref[4]{(4)}, or, more generally, take $F(u)$ in \hyperref[35]{(35)} to be the sum of finitely many terms of the series in \hyperref[3]{(3)}, then we obtain an entire function $G(x)$ which, by the theory of Hadamard, can easily be proven to have infinitely many zeros.
+Of these zeros, by \hyperref[lemma1]{Lemma~I}, only finitely many are real, since the function $F(u)$ is clearly not even.
+The function $\Phi(u)$ in the integral representation \hyperref[2]{(2)} of the $\xi$-function must, by \hyperref[lemma1]{Lemma~I}, be even (which could also be shown directly).
 
 \begin{lemma}{II}
 \label{lemma2}
@@ -742,8 +740,8 @@ The function $\Phi(u)$ in the integral representation \cref{2} of the $\xi$-func
     G(z) = c z^q e^{\alpha z} \prod\left(1-\frac{z}{\alpha_n}\right)e^{z/\alpha_n},
   \]
   where $c,\alpha,\alpha_1,\alpha_2,\ldots$ are real constants, with $\alpha_n\neq0$ for $n=1,2,\ldots$ such that $\alpha_1^{-2}+\alpha_2^{-2}+\ldots$ converges, and where $q$ is a non-negative integer.
-  (If $G(z)$ has no zeros, i.e. when $G(z)$ reduces to $ce^{\alpha z}$, then \cref{36} can be identically zero.)
-  Let $z=x+iy$ be a zero of the function \cref{36}, so that
+  (If $G(z)$ has no zeros, i.e. when $G(z)$ reduces to $ce^{\alpha z}$, then \hyperref[36]{(36)} can be identically zero.)
+  Let $z=x+iy$ be a zero of the function \hyperref[36]{(36)}, so that
   \[
     |G(z-ia)| = |G(z+ia)|
   \]
@@ -766,14 +764,14 @@ The function $\Phi(u)$ in the integral representation \cref{2} of the $\xi$-func
 \end{proof}
 
 The fact that $\GG(\frac12 iz)$ has only real zeros has already been proven.
-That $\GG(\frac12 iz)$ also satisfies the genus hypothesis of \cref{lemma2} follows easily from the theory of Hadamard.
-If we apply \cref{lemma2} to $G(z)=\GG(\frac12 iz;\pi)$ and $a=9/2$, then, by \cref{8}, we obtain that all the zeros of $\xi^*(z)$ are real.
+That $\GG(\frac12 iz)$ also satisfies the genus hypothesis of \hyperref[lemma2]{Lemma~II} follows easily from the theory of Hadamard.
+If we apply \hyperref[lemma2]{Lemma~II} to $G(z)=\GG(\frac12 iz;\pi)$ and $a=9/2$, then, by \hyperref[8]{(8)}, we obtain that all the zeros of $\xi^*(z)$ are real.
 
-By \cref{8}, \cref{17}, and \cref{19}, we also see that, in the half-plane $y\geqslant\varepsilon$ (for fixed $\varepsilon>0$), as $z\to\infty$,
+By \hyperref[8]{(8)}, \hyperref[17]{(17)}, and \hyperref[19]{(19)}, we also see that, in the half-plane $y\geqslant\varepsilon$ (for fixed $\varepsilon>0$), as $z\to\infty$,
 \[
   \xi^*(iz) \sim \frac12 z^2 \pi^{-\frac{z}{2}-\frac14} \Gamma\left(\frac{z}{2}+\frac14\right).
 \]
-This formula should be compared with \cref{1}.\footnote{\emph{Note added during editing (5th February, 1926).} By suitably extending \cref{lemma2}, we can prove that the function%
+This formula should be compared with \hyperref[1]{(1)}.\footnote{\emph{Note added during editing (5th February, 1926).} By suitably extending \hyperref[lemma2]{Lemma~II}, we can prove that the function%
 \[%
   \xi^{**}(z) = 4\pi\int_0^\infty\left[%
     2\pi\left(%

@@ -9,7 +9,6 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
-\usepackage[nameinlink]{cleveref}
 \usepackage{enumerate}
 \usepackage{tikz-cd}
 \usepackage{graphicx}
@@ -38,8 +37,6 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-\crefname{section}{}{}
-\crefname{equation}{}{}
 \renewcommand{\thepart}{\Alph{part}}
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{(\alph{subsection})}
@@ -54,29 +51,29 @@
 
 \theoremstyle{plain}
 
-\newtheorem{innercustomtheorem}{Theorem}
-\crefname{innercustomtheorem}{Theorem}{Theorems}
+\newtheorem{innertheorem}{Theorem}
+\crefname{innertheorem}{Theorem}{Theorems}
 \newenvironment{theorem}[1]
-  {\renewcommand\theinnercustomtheorem{#1}\innercustomtheorem}
-  {\endinnercustomtheorem}
+  {\renewcommand\theinnertheorem{#1}\innertheorem}
+  {\endinnertheorem}
 
-\newtheorem{innercustomproposition}{Proposition}
-\crefname{innercustomproposition}{Proposition}{Propositions}
+\newtheorem{innerproposition}{Proposition}
+\crefname{innerproposition}{Proposition}{Propositions}
 \newenvironment{proposition}[1]
-  {\renewcommand\theinnercustomproposition{#1}\innercustomproposition}
-  {\endinnercustomproposition}
+  {\renewcommand\theinnerproposition{#1}\innerproposition}
+  {\endinnerproposition}
 
-\newtheorem{innercustomlemma}{Lemma}
-\crefname{innercustomlemma}{Lemma}{Lemmas}
+\newtheorem{innerlemma}{Lemma}
+\crefname{innerlemma}{Lemma}{Lemmas}
 \newenvironment{lemma}[1]
-  {\renewcommand\theinnercustomlemma{#1}\innercustomlemma}
-  {\endinnercustomlemma}
+  {\renewcommand\theinnerlemma{#1}\innerlemma}
+  {\endinnerlemma}
 
-\newtheorem{innercustomcorollary}{Corollary}
-\crefname{innercustomcorollary}{Corollary}{Corollaries}
+\newtheorem{innercorollary}{Corollary}
+\crefname{innercorollary}{Corollary}{Corollaries}
 \newenvironment{corollary}[1]
-  {\renewcommand\theinnercustomcorollary{#1}\innercustomcorollary}
-  {\endinnercustomcorollary}
+  {\renewcommand\theinnercorollary{#1}\innercorollary}
+  {\endinnercorollary}
 
 \newtheorem*{corollary*}{Corollary}
 \newtheorem*{lemma*}{Lemma}
@@ -84,17 +81,17 @@
 
 \theoremstyle{definition}
 
-\newtheorem{innercustomdefinition}{Definition}
-\crefname{innercustomdefinition}{Definition}{Definitions}
+\newtheorem{innerdefinition}{Definition}
+\crefname{innerdefinition}{Definition}{Definitions}
 \newenvironment{definition}[1]
-  {\renewcommand\theinnercustomdefinition{#1}\innercustomdefinition}
-  {\endinnercustomdefinition}
+  {\renewcommand\theinnerdefinition{#1}\innerdefinition}
+  {\endinnerdefinition}
 
-\newtheorem{innercustomexample}{Example}
-\crefname{innercustomexample}{Example}{Examples}
+\newtheorem{innerexample}{Example}
+\crefname{innerexample}{Example}{Examples}
 \newenvironment{example}[1]
-  {\renewcommand\theinnercustomexample{#1}\innercustomexample}
-  {\endinnercustomexample}
+  {\renewcommand\theinnerexample{#1}\innerexample}
+  {\endinnerexample}
 
 \newtheorem*{remark*}{Remark}
 \newtheorem*{remarks*}{Remarks}
@@ -102,8 +99,8 @@
 
 %% Shortcuts %%
 
-\newcommand{\sh}[1]{{\mathscr{#1}}}
-\newcommand{\cat}[1]{{\mathcal{#1}}}
+\newcommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
 \newcommand{\fk}[1]{{\mathfrak{#1}}}
 \newcommand{\kres}{\mathfrak{K}}
 \newcommand{\simto}{\xrightarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
