@@ -774,13 +774,73 @@ This proves that the functor $F(A)$ considered here is isomorphic to the analogo
 It then follows that, in particular, if $\fk{m}$ is the maximal ideal of $O$, then $\fk{m}/\fk{m}^2$ is canonically isomorphic to the dual of $\HH^1(X_0,\fk{G}_{X_0/k})$, and is thus of dimension $n^2$, where $n=\dim X_0$.
 It would be very interesting to determine if $O$ is indeed \emph{simple} over $\Lambda$, i.e. isomorphic to an algebra of formal series in $n^2$ variables over $\Lambda$.
 Now \hyperref[A.5-proposition2]{Proposition~5.2 in Part A} allows us to give an equivalent formulation of this problem as an \emph{existence problem of abelian schemes \todo a given abelian scheme}.
-In any case, we see, by transcendental \todo, that the answer is affirmative if $k$ is of characteristic~$0$.
+In any case, we see, by a transcendental way, that the answer is affirmative if $k$ is of characteristic~$0$.
 In characteristic~$p\neq0$, it evidently suffices to restrict to the case where $\Lambda$ is the ring of Witt vectors constructed over an algebraically closed field $k$.
 This could be the moment for the ``\emph{Greenberg functor}'' to prove its worth \ldots
 
 
 \section{Extension of coverings}
 \label{B.5}
+
+Let $\fk{X}$ be a \emph{formal} Noetherian prescheme \cite{2}, $U$ an open subset of $\fk{X}$ defined locally by the ``non-vanishing'' of a section of $\sh{O}_\fk{X}$ that is not a zero divisor (and thus large enough that every section of $\sh{O}_\fk{X}$ over an open subset $V$ that is zero on $U\cap V$ is zero).
+Let $\fk{J}$ be an ``ideal of definition'' for $\fk{X}$, and let $X_n=(\fk{X},\sh{O}_\fk{X}/\fk{J}^{n+1})$, which is thus a ordinary Noetherian prescheme.
+Then, if $\fk{X}'$ and $\fk{X}''$ are \emph{flat coverings} of $\fk{X}$ (i.e. preschemes over $\fk{X}$ defined by sheaves of algebras that are coherent and locally free as sheaves of modules) that are \emph{unramified over $U$}, the evident map
+\[
+  \Hom_\fk{X}(\fk{X}',\fk{X}'') \to \Hom_{X_0}(X'_0,X''_0)
+\]
+is \emph{injective};
+in particular, \emph{an automorphism of $\fk{X}'$ that induces the identity on $X'_0$ is the identity}.
+This allows us to apply the technique of descent to the situation.
+We start, in particular, with a flat covering $X'_0$ of $X_0$, unramified
+\oldpage{195-20}
+over $U_0$, and let $G(\fk{X})$ be the set of classes, up to isomorphism (inducing the identity on $X'_0$), of flat coverings $\fk{X}'$ of $\fk{X}$ that induce $X'_0$ on $X_0$ (and that are thus necessarily unramified over $U$).
+We similarly define $G(V)$ for every open subset $V$ of $\fk{X}$, and, more generally, $G(\fk{Y})$ for every formal prescheme $\fk{Y}$ over $\fk{X}$.
+With this, the results of \cite{2} and \cite{3} imply, first of all, the following results:
+\begin{enumerate}[(a)]
+  \item If $V$ varies amongst open subset of $\fk{X}$, then the $G(V)$ form a \emph{sheaf} on $\fk{X}$, say $\sh{G}_\fk{X}=\sh{G}$.
+    The restriction of this sheaf to $U$ is the \emph{constant} sheaf whose fibres consist of a single element.
+
+    More generally, describing the fibres of $\sh{G}_\fk{X}$ is a question of complete local rings, in a precise way:
+  \item For all $x\in\fk{X}$, we have $\sh{G}_x=G(\Spec(\widehat{\sh{O}}_{\fk{X},x}))$ (i.e. isomorphism classes of finite free algebras $B$ over $\widehat{\sh{O}}_{\fk{X},x}$ endowed with an isomorphism from $B\otimes_{\widehat{\sh{O}}_{\fk{X},x}}\sh{O}_{X_0,x}$ to $(\sh{O}'_0)_x$, where $\sh{O}'_0$ is the sheaf of algebras on $X_0$ that defines $X'_0$).
+  \item We have a canonical isomorphism $\sh{G}_\fk{X}=\varprojlim\sh{G}_{\fk{X}_n}$; in other words, for every open subset $V$ of $\fk{X}$, we have $G(V)=\varprojlim G(V_n)$.
+  \item Suppose that $\fk{X}$ comes from an ordinary \emph{proper} scheme $X$ over a complete local Noetherian ring $\Lambda$ that has ideal of definition $\fk{m}$ by taking the $\sh{J}$-adic completion of $\sh{O}_X$, where $\sh{J}=\fk{m}\cdot\sh{O}_X$.
+    Then $G(\fk{X})$ is canonically isomorphic to the set of classes of flat coverings of the \emph{ordinary} scheme $X$ that ``reduce following $X'_0$\todo''.
+\end{enumerate}
+
+Figuratively speaking, we can say that (a) and (b) establish the fundamental relations between the local and global aspects of the problem; (c) gives the relations between the ``finite'' and ``infinitesimal'' aspects; and finally (d) remembers (under precise conditions) the identity between the ``formal'' and ``algebraic'' aspects.
+
+Now suppose that $\fk{X}$ is defined by a local complete Noetherian ring $\Lambda$, with $\sh{J}=\fk{m}\cdot\sh{O}_X$ (and so $X_0$ is a prescheme over $\Lambda/\fk{m}$).
+For every algebra $A$ that is finite over $\Lambda$, we set
+\[
+  F(A) = G(\fk{X}\times_\Lambda A).
+\]
+This is a covariant functor in $A$, with values in the category of sets, and, by (c), this functor is completely determined by how it acts on Artinian algebras $A$;
+it is equivalent to say either that this functor is pro-representable, i.e. of the form
+\[
+  F(A) = \Hom_{\mbox{top. $\Lambda$-algebras}}(\sh{O},A)
+\]
+\oldpage{195-21}
+where $\sh{O}$ is a topological $\Lambda$ algebra of the type described in \hyperref[A.5]{A.5}, or that this is true when we restrict to only Artinian algebras $A$.
+The combination of \cref{B-theorem1} and \cref{B-theorem2} then effectively implies:
+
+\begin{proposition}{5.1}
+\label{B.5-proposition1}
+  The above functor is pro-representable.
+\end{proposition}
+
+Of course, by (a), if $U=\fk{X}$, then $G(\fk{Y})$ consists of a single element for all $\fk{Y}$ over $\fk{X}$, and the functor $F$ is then not very interesting (we will have $\sh{O}=\Lambda$).
+It seems that, in practically every other case, the topological local ring $\sh{O}$ \emph{is not Noetherian}.
+Its existence, however, shows, in a striking manner, the \emph{``continuous'' nature} of the set $G(\fk{X})$ of solutions (corresponding intuitively to the fact that there is a ``continuous'' choice in the way in which the ramification spreads when we take an extension of $X'_0$).
+We will compare this result with the point of view of J.-P. Serre \cite{4} via local class field theory, drawing attention as well to the \emph{continuous} character of the topological Galois group of the maximal abelian extension of a ``geometric'' local field, with the dual group (in the sense of Pontrjagin) appearing as an inductive limit of algebraic (or at least quasi-algebraic) groups;
+here as well, the classification of extensions is given by infinite-dimensional ``varieties''.
+We can also take, in the above, $\fk{X}$ to be the formal spectrum of a complete local ring (of which $\Lambda$ will be, for example, a Cohen subring), and we might hope that the results of this section can be used in the study of extensions of a local complete ring of dimension~$>1$.
+Just as much in the local case as in the global case, they might allow us to formulate precise relations between the phenomena of higher ramification and phenomena in characteristic~$0$ (approachable via a transcendental way).
+In any case, it is the preliminary analysis of \cref{B.5-proposition1} that allows us to extend the methods described in \cite{2} for the study of the fundamental group to the ``tamely ramified'' case, and to resolve, by a transcendental way, the ``problem of three points''.
+
+To finish, we note that the situation simplifies if $X_0$ is of dimension~$1$;
+then, by (a) and (b), $G(\fk{X})$ can be identified with $\prod_i G(\Spec(\sh{O}_{\fk{X},x_i}))$, where the $x_i$ are the points of $X_0\setminus U$:
+\emph{we can take arbitrary ``local'' extensions at the ramification points}.
+Further, if $X_0$ is normal, then we note that the formal scheme of modules guaranteed by \cref{B.5-proposition1} is \emph{simple} over $\Spec(\Lambda)$.
 
 
 
