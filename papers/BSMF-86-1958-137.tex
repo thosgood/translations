@@ -48,40 +48,17 @@
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
-
-
 %% Theorem environments %%
 
 \usepackage{amsthm}
 
-\theoremstyle{plain}
+\newenvironment{itenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
 
-  \newtheorem{innertheorem}{Theorem}
-  \newenvironment{theorem}[1]
-    {\renewcommand\theinnertheorem{#1}\innertheorem}
-    {\endinnertheorem}
-
-  \newtheorem{innerproposition}{Proposition}
-  \newenvironment{proposition}[1]
-    {\renewcommand\theinnerproposition{#1}\innerproposition}
-    {\endinnerproposition}
-
-  \newtheorem{innerlemma}{Lemma}
-  \newenvironment{lemma}[1]
-    {\renewcommand\theinnerlemma{#1}\innerlemma}
-    {\endinnerlemma}
-
-  \newtheorem*{corollary}{Corollary}
-
-
-\theoremstyle{definition}
-
-  \newtheorem*{remark}{Remark}
-
-  \newtheorem{innerdefinition}{Definition}
-  \newenvironment{definition}[1]
-    {\renewcommand\theinnerdefinition{#1}\innerdefinition}
-    {\endinnerdefinition}
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
 
 
 %% Shortcuts %%
@@ -289,19 +266,19 @@ With this, we suppose that the following conditions are satisfied:
 
 From these axioms we will prove two lemmas that will be useful in the \hyperref[section3]{next section}.
 
-\begin{lemma}{1}
+\begin{itenv}{Lemma 1}
 \label{lemma1}
   Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$.
   Consider, for all $i$ with $1\leq i\leq p$, the bundle $X^{(i)}$ of flags of length $i$ in $E$.
   Then $X^{(i)}\in\cal{V}$, and the homomorphism $A(X)\to A(X^{(i)})$ induced by the projection $X^{(i)}\to X$ is \emph{injective}.
-\end{lemma}
+\end{itenv}
 
 \begin{proof}
   By what was said in \hyperref[section1]{\S1}, we can restrict, by induction on $i$, to the case of the projective bundle $X^{(1)}=\mathbb{P}(E)$ associated to $E$.
   Then our claims are an immediate consequence of \hyperref[axiomV1]{(V1)} and \hyperref[axiomA1]{(A1)} [the element $1_{\mathbb{P}(E)}=(\xi_E)^0$ being free over the ring $A(X)$].
 \end{proof}
 
-\begin{lemma}{2}
+\begin{itenv}{Lemma 2}
 \label{lemma2}
   Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $s$ a regular section of $E$, and $(E_i)_{0\leq i\leq p}$ a decreasing sequence of vector subbundles of $E$, with $\rank E_i=p-i$.
   Define
@@ -316,7 +293,7 @@ From these axioms we will prove two lemmas that will be useful in the \hyperref[
   \[
     p_X(Y_p) = \prod_{1\leq i\leq p}\xi_i.
   \]
-\end{lemma}
+\end{itenv}
 
 \begin{proof}
   We will proceed by induction on $j$ (where $1\leq j\leq p$) that
@@ -349,17 +326,16 @@ From these axioms we will prove two lemmas that will be useful in the \hyperref[
 \end{proof}
 
 It is only in \hyperref[section3]{\S3} that we will need the following corollary.
-\begin{corollary}
-\phantomsection
+\begin{itenv}{Corollary}
 \label{lemma2corollary}
   Under the conditions of \hyperref[lemma2]{Lemma~2}, if $s$ is non-zero at every point (i.e. everywhere non-zero), then $\prod_{1\leq i\leq p}\xi_i=0$.
-\end{corollary}
+\end{itenv}
 
-\begin{remark}
+\begin{rmenv}{Remark}
   The introduction of the operation $i$ in \hyperref[datac]{c.}, and the axioms \hyperref[axiomA2]{(A2)}, \hyperref[axiomA3]{(A3)}, and \hyperref[axiomA4]{(A4)} concerning this operation, only serve to provide us with technical means of being able to prove \hyperref[lemma2corollary]{the corollary} to \hyperref[lemma2]{Lemma~2}.
   (In \hyperref[axiomA4]{(A4)}, it would have sufficed to suppose that $b=1_Y$.)
   We will only need to use the data of \hyperref[dataa]{a.} and \hyperref[datab]{b.}, axiom~\hyperref[axiomA2]{(A1)}, and \hyperref[lemma2corollary]{the corollary} to \hyperref[lemma2]{Lemma~2}.
-\end{remark}
+\end{rmenv}
 
 
 \subsection*{Particular cases}
@@ -429,7 +405,7 @@ We set
 and $c(E)$ is called the \emph{(total) Chern class} of $E$;
 its data is thus equivalent to the data of all the $c_i(E)$.
 
-\begin{theorem}{1}
+\begin{itenv}{Theorem 1}
 \label{theorem1}
   Suppose that we have the data of \hyperref[dataa]{\rm{a.}}, \hyperref[datab]{\rm{b.}}, and \hyperref[datac]{\rm{c.}} of the \hyperref[section2]{previous section}, satisfying axioms \hyperref[axiomA1]{\rm{(A1)}} to \hyperref[axiomA4]{\rm{(A4)}}.
   Then the Chern classes (defined by \hyperref[equation1]{(1)}) satisfy the following conditions:
@@ -464,7 +440,7 @@ its data is thus equivalent to the data of all the $c_i(E)$.
   \end{enumerate}
 
   Furthermore, properties \hyperref[theorem1i]{\rm{(i)}}, \hyperref[theorem1ii]{\rm{(ii)}}, and \hyperref[theorem1iii]{\rm{(iii)}} entirely \emph{characterise} Chern classes.
-\end{theorem}
+\end{itenv}
 
 \begin{proof}
 \oldpage{145}
@@ -582,8 +558,7 @@ its data is thus equivalent to the data of all the $c_i(E)$.
   This finishes the proof of \hyperref[theorem1]{Theorem~1}.
 \end{proof}
 
-\begin{corollary}
-\phantomsection
+\begin{itenv}{Corollary}
 \label{theorem1corollary}
   Let $X\in\cal{V}$, and let $E$ and $F$ be vector bundles on $X$.
   Then
@@ -593,7 +568,7 @@ its data is thus equivalent to the data of all the $c_i(E)$.
   \tag{7}
   \]
   and, similarly, the Chern classes of the exterior powers $\bigwedge E$ (resp. of the tensor product $E\otimes F$) can be expressed in terms of the Chern classes of $E$ and the rank of $E$ (resp. in terms of the Chern classes of $E$ and $F$ and the ranks of $E$ and $F$) by the well-known calculation of elementary functions (see the book by Hirzebruch).
-\end{corollary}
+\end{itenv}
 
 \begin{proof}
   Passing to a flag variety, as per usual, we can restrict to the case where $E$ and $F$ are completely split.
@@ -803,7 +778,8 @@ The injection $E\to\widetilde{E}$ defines an injection of bundles $\mathbb{P}(E)
 Let $s$ be a regular section of $E$.
 Then $s(X)$ is a non-singular closed subspace of $\widehat{E}$, and so $s(X)\in\cal{V}$, and we propose to determine $p_{\widehat{E}}(s(X))$.
 We will prove:
-\begin{lemma}{3}
+
+\begin{itenv}{Lemma 3}
 \label{lemma3}
   With the above notation, if $s_0$ is the zero section of $E$, then
   \[
@@ -811,7 +787,7 @@ We will prove:
     p_{\widehat{E}}(s_0(X)) = \sum_{i=0}^p c_i(E)(\xi_{\widetilde{E}})^{p-i}.
   \tag{17}
   \]
-\end{lemma}
+\end{itenv}
 
 \begin{proof}
   Let $X'$ be the flag variety of $E$, $f$ the projection from $X'$ to $X$, $E'$ the vector bundle $f^{-1}(E)$ on $X'$, and $s'_0$ the section of $E'$ given by the inverse image of $s_0$ under $f$.
@@ -856,7 +832,7 @@ We will prove:
 
 From this, we will deduce:
 
-\begin{theorem}{2}
+\begin{itenv}{Theorem 2}
 \label{theorem2}
   Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $s$ a regular section of $E$ that is transversal to the zero section, and $Y$ the set of zeros of $s$ (which is thus a non-singular closed subspace of codimension~$p$ of $X$).
   Under these conditions,
@@ -865,7 +841,7 @@ From this, we will deduce:
     p_X(Y) = c_p(E).
   \tag{18}
   \] 
-\end{theorem}
+\end{itenv}
 
 \begin{proof}
   Consider $s$ as a morphism from $X$ to $\widehat{E}$, so that $s$ is transversal to the non-singular closed subspace $s_0(X)$ of $\widehat{E}$ (where $s_0$ denotes the zero section), and so, by \hyperref[axiomA5]{(A5)}, since $Y=s^{-1}(s_0(X))$,
@@ -891,13 +867,13 @@ In fact, the above proof proves the following formula, which holds for \emph{eve
 (where $s_0$ denotes the zero section of $E$).
 From this we deduce, for example:
 
-\begin{corollary}
+\begin{itenv}{Corollary}
   Suppose that we are in the setting of the theory of Chow ($\cal{V}$ being the category of non-singular quasi-projective algebraic spaces; $A(X)$ being the ring of cycle classes under rational equivalence).
   Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $s$ a regular section of $E$ such that the cycle of zeros $Z$ of $s$ exists.
   Then the class of $Z$ is $c_p(E)$.
-\end{corollary}
+\end{itenv}
 
-\begin{remark}
+\begin{rmenv}{Remark}
   Equation~\hyperref[equation17]{(17)} holds true even if we replace the zero section $s_0$ by an arbitrary section of $E$.
   We can see this by slightly modifying the proof of \hyperref[lemma3]{Lemma~3}, but it is easy to deduce this formula from
 \oldpage{154}
@@ -907,7 +883,7 @@ From this we deduce, for example:
     c_p(L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)) = c_p(L_{\widetilde{E}}\otimes f^{-1}(E)),
   \]
   as follows from the formulas of \hyperref[section3]{\S3}.
-\end{remark}
+\end{rmenv}
 
 
 %% Bibliography %%

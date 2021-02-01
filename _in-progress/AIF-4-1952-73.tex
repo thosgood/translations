@@ -42,7 +42,7 @@
 \let\runtitle\@title
 \makeatother
 \fancyhf{}
-\lhead{\footnotesize{Summary of essential results in the theory of topological tensor products and nuclear spaces}\\}
+\lhead{\small\runtitle}
 \lfoot{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
@@ -53,12 +53,13 @@
 
 \theoremstyle{plain}
 
-  \newtheorem{innertheorem}{Theorem}
-  \newenvironment{theorem}[1]
-    {\renewcommand\theinnertheorem{#1}\innertheorem}
-    {\endinnertheorem}
+\newenvironment{itenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
 
-  \newtheorem*{corollary}{Corollary}
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
 
 
 %% Shortcuts %%
@@ -192,11 +193,11 @@ in any case, bornological implies quasi-tunnelled.
 
 The axiomatic definition of the algebraic tensor product $E\otimes F$ of two vector spaces $E$ and $F$, and of the canonical bilinear map $(x,y)\mapsto x\otimes y$ from $E\times F$ to $E\otimes F$ (\cite{1}) asks only that, for every vector space $G$, the bilinear maps from $E\times F$ to $G$ correspond bijectively with linear maps $f$ from $E\otimes F$ to $G$, where the map corresponding to $f$ is given by $(x,y)\mapsto f(x\otimes y)$.
 
-\begin{theorem}{1}
+\begin{itenv}{Theorem 1}
 \label{theorem1}
   If $E$ and $F$ are locally convex spaces, then we can endow $E\otimes F$ with a locally convex topology such that, for every locally convex space $G$, the \emph{continuous} bilinear maps from $E\times F$ to $G$ correspond exactly to \emph{continuous} linear maps from $E\otimes F$ to $G$.
   Further, such a topology is unique.
-\end{theorem}
+\end{itenv}
 
 Then the \emph{equicontinuous} subsets of $\BB(E,F;G)$ correspond exactly to the \emph{equicontinuous} subsets of $\LL(E\otimes F;G)$ as well.
 Unless otherwise mentioned, $E\otimes F$ is assumed to be endowed with the above topology, called the \emph{projective tensor product of the topologies of $E$ and $F$};
@@ -238,7 +239,7 @@ is every bounded subset of $E\hotimes F$ contained in the closed disked hull of 
 (\cite[chap.~1, \S2, n\textsuperscript{o}~1]{PTT}).
 \medskip
 
-\begin{theorem}{2}
+\begin{itenv}{Theorem 2}
 \label{theorem2}
   Let $E$ and $F$ be two $\FF$~spaces.
   Then every element of $E\hotimes F$ is the sum of an absolutely convergent series of the form
@@ -246,18 +247,18 @@ is every bounded subset of $E\hotimes F$ contained in the closed disked hull of 
     u = \sum_i \lambda_i x_i \otimes y_i
   \]
   where $(x_i)$ (resp. $(y_i)$) is a bounded sequence in $E$ (resp. $F$), and where $(\lambda_i)$ is a summable sequence of scalars.
-\end{theorem}
+\end{itenv}
 
 (It is also true that, if $(x_i)$, $(y_i)$, and $(\lambda_i)$ are given as above, then the series $\sum_i\lambda_i x_i\otimes y_i$ is always absolutely convergent in $E\hotimes F$, and so we have a \emph{characterisation} of the elements of $E\hotimes F$).
 If $E$ and $F$ are normed, then we can suppose in the above that $\|x_i\|\leq1$, $\|y_i\|\leq1$, $\sum_i|\lambda_i|\leq\|u\|_1+\varepsilon$, where $\varepsilon>0$ is arbitrary and given in advance.
 In these two statements, if $u$ runs over a compact subset of $E\hotimes F$, then we can suppose that the sequences $(x_i)$ and $(y_i)$ remain fixed (and we can even suppose that they are sequences that tend to $0$), and that $(\lambda_i)$ runs over a compact subset of $\ll^1$ (the space of summable sequences).
 We have an analogous statement for the concrete representation of convergent sequences in $E\hotimes F$.
 \hyperref[theorem2]{Theorem~2} and its previous variants serve mainly as a way to:
-\begin{corollary}
+\begin{itenv}{Corollary}
   Let $E$ and $F$ be spaces of type~$\FF$.
   Then every compact subset $K$ of $E\hotimes F$ is contained inside the canonical image of the unit ball of a space $E_A\hotimes F_B$, where $A$ (resp. $B$) is a compact disked subset of $E$ (resp. $F$).
   A fortiori, $K$ is contained in the closed convex hull of $A\otimes B$.
-\end{corollary}
+\end{itenv}
 
 This fact also implies that, on $\BB(E,F)$, the ``bicompact convergence'' topology is identical to the compact convergence topology on the dual of $E\hotimes F$.
 
@@ -285,10 +286,10 @@ Let $M$ be a locally compact space endowed with a measure $\mu\geq0$, $E$ a Bana
 We denote by $\LL^1(\mu)$ the space of $\mu$-summable scalar functions.
 Then there exists an obvious bilinear map $(\varphi,a)\mapsto\varphi\cdot a$ from $\LL^1(\mu)\times E$ to $\LL_E^1(\mu)$ that is of norm~$\leq1$, and thus defines a linear map of norm~$\leq1$ from $\LL^1(\mu)\hotimes E$ to $\LL_E^1(\mu)$.
 
-\begin{theorem}{3}
+\begin{itenv}{Theorem 3}
 \label{theorem3}
   The above map from $\LL^1(\mu)\hotimes E$ to $\LL_E^1(\mu)$ is a metric isomorphic from the former space to the latter.
-\end{theorem}
+\end{itenv}
 
 To see this, we can immediately reduce to the case where $E$ is of finite dimension, and then proceed by transposition.
 It then suffices to apply the classical theorem of Dunford--Pettis that characterises continuous linear maps from $\LL^1(\mu)$ to $E'$.
@@ -296,9 +297,9 @@ It then suffices to apply the classical theorem of Dunford--Pettis that characte
 If $E$ is an arbitrary locally convex space, then we denote by $\LL_E^1(\mu)$ the completion of the separated space associated to the space of continuous maps with compact support from $M$ to $E$, endowed with its family of semi-norms $f\mapsto\int p(f(t))\dd\mu(t)$ (where $p$ runs over a fundamental family of continuous semi-norms on $E$).
 Then \hyperref[theorem3]{Theorem~3} easily implies that $\LL_E^1(\mu)$ is again isomorphic to $\LL^1(\mu)\hotimes E$.
 
-\begin{corollary}
+\begin{itenv}{Corollary}
   If $E$ is a closed vector subspace of the Banach space $F$, then the canonical linear map from $\LL^1(\mu)\hotimes E$ to $\LL^1(\mu)\hotimes F$ is a metric isomorphism.
-\end{corollary}
+\end{itenv}
 
 \oldpage{80}
 This recovers, for example, the well-known fact that every continuous linear map from $E$ to the dual $\LL^\infty(\mu)$ of $\LL^1(\mu)$ can be extended to a linear map of the same norm from $F$ to $\LL^\infty(\mu)$;
@@ -382,12 +383,12 @@ This duality, which barely appears in the present summary, is a precious tool fo
 (e.g. \cite[chap.~I, \S4, n\textsuperscript{o}~6]{PTT}).
 The following theorem (which is, truth be told, trivial), can be seen as the dual response to \hyperref[theorem3]{Theorem~3}.
 
-\begin{theorem}{4}
+\begin{itenv}{Theorem 4}
 \label{theorem4}
   Let $M$ be a locally compact space, let $C_0(M)$ the space of continuous scalar functions on $M$ that are ``zero at infinity'', endowed with the uniform convergence norm, and let $E$ be a locally convex complete space.
   Then $C_0(M)\hhotimes E$ is canonically isomorphic to the space $C_0(M,E)$ of continuous maps from $M$ to $E$ that are zero at infinity, endowed with the uniform convergence topology (and with the uniform norm if $E$ is a Banach space).
   In particular, $c_0\hhotimes E$ is isomorphic to the space of sequences in $E$ that tend to $0$.
-\end{theorem}
+\end{itenv}
 
 As with the spaces $C(K)\hotimes E$ below, here the spaces $\LL'(\mu)\hhotimes E$ do not, in general, have a special interpretation as functional spaces.
 We note, however, that \emph{the space $\ll^1\hhotimes E$ can be understood as the space of summable sequences in $E$} (i.e. of ``commutatively convergent'' sequences in $E$).
@@ -405,20 +406,20 @@ This map is continuous if we endow $E_1\otimes E_2$ and $F_1\otimes F_2$ with th
 It then follows that $u_1\otimes u_2$ extends, by continuity, to a continuous linear map $u_1\hotimes u_2$ from $E_1\hotimes E_2$ to $F_1\hotimes F_2$ (resp. $u_1\hhotimes u_2$ from $E_1\hhotimes E_2$ to $F_1\hhotimes F_2$).
 These maps will also simply be denoted by $u_1\otimes u_2$ whenever there is no fear of confusion.
 
-\begin{theorem}{5}
+\begin{itenv}{Theorem 5}
 \label{theorem5}
   If each $u_i$ is a topological homomorphism from $E_i$ to a dense subspace of $F_i$, then $u_1\hotimes u_2$ is a topological homomorphism from $E_1\hotimes E_2$ to a dense subspace of $F_1\hotimes F_2$.
   If each $u_i$ is a topological isomorphism from $E_i$ to $F_i$, then $u_1\hhotimes u_2$ is a topological isomorphism from $E_1\hhotimes E_2$ to $F_1\hhotimes F_2$.
-\end{theorem}
+\end{itenv}
 
 These claims remain true if the $E_i$ and $F_i$ are normed and we consider \emph{metric} homomorphisms and \emph{metric} isomorphisms.
 Particularly interesting is the following corollary, which can also be obtained by an application of \hyperref[theorem2]{Theorem~2}.
 
-\begin{corollary}
+\begin{itenv}{Corollary}
   If the $E_i$ and $F_i$ are $\FF$-spaces ($i=1,2$), and the $u_i$ are
 \oldpage{84}
   homomorphisms from $E_i$ \emph{onto} $F_i$, then $u_1\hotimes u_2$ is a homomorphism from $E_1\hotimes E_2$ \emph{onto} $F_1\hotimes F_2$.
-\end{corollary}
+\end{itenv}
 
 
 

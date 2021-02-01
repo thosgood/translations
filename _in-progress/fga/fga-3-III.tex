@@ -59,47 +59,14 @@
 
 \usepackage{amsthm}
 
-\theoremstyle{plain}
+\newenvironment{itenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
 
-\newtheorem{innertheorem}{Theorem}
-\newenvironment{theorem}[1]
-  {\renewcommand\theinnertheorem{#1}\innertheorem}
-  {\endinnertheorem}
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
 
-\newtheorem{innerproposition}{Proposition}
-\newenvironment{proposition}[1]
-  {\renewcommand\theinnerproposition{#1}\innerproposition}
-  {\endinnerproposition}
-
-\newtheorem{innerlemma}{Lemma}
-\newenvironment{lemma}[1]
-  {\renewcommand\theinnerlemma{#1}\innerlemma}
-  {\endinnerlemma}
-
-\newtheorem{innercorollary}{Corollary}
-\newenvironment{corollary}[1]
-  {\renewcommand\theinnercorollary{#1}\innercorollary}
-  {\endinnercorollary}
-
-\newtheorem*{corollary*}{Corollary}
-\newtheorem*{lemma*}{Lemma}
-
-
-\theoremstyle{definition}
-
-\newtheorem{innerdefinition}{Definition}
-\newenvironment{definition}[1]
-  {\renewcommand\theinnerdefinition{#1}\innerdefinition}
-  {\endinnerdefinition}
-
-\newtheorem{innerexample}{Example}
-\newenvironment{example}[1]
-  {\renewcommand\theinnerexample{#1}\innerexample}
-  {\endinnerexample}
-
-\newtheorem*{remark*}{Remark}
-\newtheorem*{remarks*}{Remarks}
-\newtheorem*{example*}{Example}
 
 %% Shortcuts %%
 

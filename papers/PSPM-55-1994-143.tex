@@ -52,17 +52,13 @@
 
 \usepackage{amsthm}
 
-\theoremstyle{plain}
+\newenvironment{itenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
 
-\newtheorem{innernullities}{Vanishings}
-\newenvironment{nullities}[1]
-  {\renewcommand\theinnernullities{#1}\innernullities}
-  {\endinnernullities}
-
-\theoremstyle{definition}
-
-\newtheorem*{example}{Example}
-\newtheorem*{remark}{Remark}
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
 
 
 %% Shortcuts %%
@@ -246,12 +242,12 @@ It ``doesn't know'' that motives $M_t$ can form a family that depends algebraica
 
 Even though $G$ is enormous, its existence facilitates the handling of ``motivic'' objects.
 
-\begin{example}
+\begin{rmenv}{Example}
   The category $\ind\scr{M}(k)$ of ind-objects of the category $\scr{M}(k)$ of motives over $k$ inherits the tensor product from $\scr{M}(k)$.
   This allows us to define a commutative Hopf algebra in $\ind\scr{M}(k)$ as being an object $H$ endowed with a product $H\otimes H\to H$ and coproduct $H\to H\otimes H$, as well as a unit $1\to H$, counit $H\to 1$, and antipode $H\to H$, satisfying suitable axioms.
   We define the category of \emph{motivic affine group schemes} as being the opposite of the category of commutative Hopf algebras in $\ind\scr{M}(k)$.
   If $\omega$ is a fibre functor, with values in $\QQ$-vector spaces, from the motivic Galois group $G:=\underline{\Aut}^\otimes(\omega)$, then the functor $\omega$ induces an equivalence between $\ind\scr{M}(k)$ and the category of linear representations --- not necessarily of finite dimension --- of $G$, and $H\mapsto\Spec\omega(H)$ is an equivalence between the category of motivic affine group schemes and the category of affine group schemes over $\QQ$ endowed with an action of $G$.
-\end{example}
+\end{rmenv}
 
 Here are three examples of such objects.
 
@@ -329,9 +325,9 @@ Each $s\in S$ defines an invertible sheaf $\scr{O}(s)$, trivialised over $T$ and
 This is the aforementioned $1$-motive.
 See Deligne~\cite[\S10]{9}.
 
-\begin{remark}
+\begin{rmenv}{Remark}
   For $S,T\neq\varnothing$, the $1$-motive \hyperref[1.5.1]{(1.5.1)} also determines the category of invertible sheaves on $\overline{X}\setminus S$, trivialised over $T$: a point $x\in J_T(\overline{X})$ defines such an invertible sheaf $\scr{L}_x$, and an isomorphism from $\scr{L}_x$ to $\scr{L}_y$ which is the identity on $T$ is identified with $k\in\Ker(\ZZ^S\to\ZZ)$, with $y-x=\delta k$.
-\end{remark}
+\end{rmenv}
 
 Again, we wish to be able to identify $1$-motives with certain (mixed) motives.
 For some applications (the study at infinity of Shimura varieties), we would be content with even having a category of motives that contains the $1$-motives and is stable under $\otimes$.
@@ -843,13 +839,13 @@ They disappear, for trivial reasons, in different regions of the $(n,j)$-plane:
 \end{enumerate}
 Applying \hyperref[3.7.1]{(3.7.1)}, we thus deduce:
 
-\begin{nullities}{3.8.1}
+\begin{itenv}{Vanishings 3.8.1}
 \label{3.8.1}
   \begin{enumerate}[(i)]
     \item If $M$ is a pure motive of weight $w$, then $\Hom^i(1,M)=0$ for $i>-w$.
     \item If $M$ is effective of weight $w$, and $b>0$, then $\Hom^i(1,M(w+b))=0$ for $i>w+b$.
   \end{enumerate}
-\end{nullities}
+\end{itenv}
 
 \begin{proof}
   For (i), suppose that $M$ is a direct factor of $H_\mot^a(X)(c)$, with $c\geq0$, and $X$ a smooth projective variety.

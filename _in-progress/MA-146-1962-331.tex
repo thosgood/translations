@@ -66,23 +66,13 @@
 
 \theoremstyle{plain}
 
-  \newtheorem{innerproposition}{Proposition}
-  \newenvironment{proposition}[1]
-    {\renewcommand\theinnerproposition{#1}\innerproposition}
-    {\endinnerproposition}
+\newenvironment{itenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
 
-  \newtheorem{innerlemma}{Lemma}
-  \newenvironment{lemma}[1]
-    {\renewcommand\theinnerlemma{#1}\innerlemma}
-    {\endinnerlemma}
-
-
-\theoremstyle{definition}
-
-  \newtheorem{innerdefinition}{Definition}
-  \newenvironment{definition}[1]
-    {\renewcommand\theinnerdefinition{#1}\innerdefinition}
-    {\endinnerdefinition}
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
 
 
 %% Shortcuts %%
@@ -131,7 +121,7 @@
 
 %% Content %%
 
-\section*{}
+\subsubsection*{}
 
 \emph{The author was supported by US Air Force Grant No.~AF-EOAR-61-50.}
 
