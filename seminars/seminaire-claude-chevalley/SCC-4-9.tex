@@ -98,7 +98,6 @@
 \setcounter{footnote}{0}
 
 \tableofcontents
-\bigskip
 
 
 %% Content %%
@@ -137,7 +136,7 @@ Recall that a variety $V$ is said to be complete if, for every variety $T$ and e
 In the classical case, this property is equivalent to compactness.
 
 
-\subsection{}
+\subsection{Proposition 0}
 \label{2.A}
 
 \begin{itenv}{Proposition 0}
@@ -170,7 +169,7 @@ In the classical case, this property is equivalent to compactness.
   There is an analogous statement in analytic geometry:
   let $V$ be a compact connected complex-analytic space, $T$ a connected topological space, and $f$ a continuous map from $T\times V$ to another analytic space $U$, such that $f$ induces, for all $t\in T$, a holomorphic map $f_t$ from $\{t\}\times V$ to $U$.
   Then, if $f_t$ is constant for $t=t_0$, then it is constant for all $t\in T$.
-  In other words, a holomorphic map from $V$ to $U$ that is \todo to a constant map amongst holomorphic maps is constant.
+  In other words, a holomorphic map from $V$ to $U$ that is homotopic to a constant map amongst holomorphic maps is constant.
   The hypothesis that $f_t$ be holomorphic for all $t$ is essential: there are counter-examples with non-K\"{a}hler varieties $V$.
 \end{rmenv}
 
@@ -179,6 +178,7 @@ In the classical case, this property is equivalent to compactness.
 \label{1.B}
 
 \begin{itenv}{Proposition 1}
+\label{proposition1}
   If $V$ is a complete connected variety, $T$ a connected variety, and $G$ an algebraic group, then every morphism $f\colon T\times V\to G$ is of the form
   \[
     f(t,v) = \varphi_1(t)\times\varphi_2(v)
@@ -209,6 +209,7 @@ In the classical case, this property is equivalent to compactness.
 \end{rmenv}
 
 \begin{itenv}{Proposition 2}
+\label{proposition2}
   Let $G$ be a connected group, and $V$ a complete connected variety;
   suppose that $e\in V\subset G$.
   Then $V$ is contained in the centre of $G$.
@@ -224,6 +225,7 @@ In the classical case, this property is equivalent to compactness.
 In particular:
 
 \begin{itenv}{Theorem 0}
+\label{theorem0}
   The underlying group of an abelian variety is abelian.
 \end{itenv}
 
@@ -314,8 +316,74 @@ This theorem results from the combination of two lemmas.
 
 \oldpage{9-05}
 \begin{proof}
-  Let
+  Let $(x_0,y_0)$ be a simple point of $X\times Y$.
+  By considering the function $g$ on $X\times Y$, defined by
+  \[
+    g(x,y) = f(x,y) - f(x_0,y) - f(x,y_0) + f(x_0,y_0),
+  \]
+  we can reduce to showing that, if a function $g$ with values in $A$ is zero on
+  \[
+    X\vee Y = \{x_0\}\times Y \cup X\times\{y_0\},
+  \]
+  then it is zero on $X\times Y$.
+
+  We will successively reduce to the following particular cases:
+  \begin{enumerate}[(a)]
+    \item $X$ is a curve;
+    \item $X$ is a complete non-singular curve, and $Y$ is non-singular.
+  \end{enumerate}
+
+  \emph{Reduction to (a).}
+  The set of points $x_1$ of $X$ such that there exists an irreducible curve containing $x_0$ and $x_1$, where $x_0$ is a simple point, is dense in $X$.
+  But (a) implies that $g$ is zero at every point $(x_1,y)$ of the open set on which it is defined, and thus at every point of a dense set, and thus everywhere.
+
+  \emph{Reduction to (b).}
+  If $X$ is an irreducible curve, then there exists a curve $X_1$ that is both complete and normal (and thus non-singular), as well as a rational equivalence from $X$ to $X_1$, defined at $x_0$.
+  Also, if $Y_1$ is the open subset of simple points of $Y$, then $Y_1$ is birationally equivalent to $Y$.
+  The function $g$, defined on $X\times Y$, has a corresponding function $g_1$, defined on $X_1\times Y_1$, and it clearly suffices to prove the theorem for the function $g_1$.
+
+  \emph{Proof in case (b).}
+  The variety $X\times Y$ is a product of two non-singular varieties, and thus itself non-singular, and so $g$ is a morphism, by \hyperref[theorem1]{Theorem~1}.
+  Its value does not depend on $x$ for $y=y_0$, and thus also for all $y$, by \hyperref[proposition0]{Proposition~0}, since $X$ is complete.
+  It is zero for $x=x_0$, and thus for all $x$.
+
+  This concludes the proof of the theorem.
 \end{proof}
+
+\begin{itenv}{Corollary 1}
+\label{corollary1}
+  Every function $f$ defined on an algebraic group $G$ with values in an abelian variety $A$ is of the form $h+a$, where $h$ is a homomorphism from $G$ to $A$, and $a$ is a constant.
+\end{itenv}
+
+\begin{proof}
+  Set $h(x)=f(x)-f(e)$.
+  Then the function $g\colon G\times G\to A$ defined by $g(x,y)=h(x\cdot y)$ is of the form $g_1(x)+g_2(y)$.
+  We can impose that $g_1(e)=0$, and then $g_2(e)=0$.
+  By successively taking $x=e$ and then $y=e$, we find that $g_1=g_2=h$.
+  Whence $h(x,y)=h(x)+h(y)$.
+\end{proof}
+
+\begin{itenv}{Corollary 2}
+\label{corollary2}
+  Every function $f$ defined on a line $D$ with values in an abelian variety $A$ is constant.
+\end{itenv}
+
+\oldpage{9-06}
+\begin{proof}
+  By \hyperref[theorem1]{Theorem~1}, $f$ is everywhere defined, and by \hyperref[corollary1]{Corollary~1} applied to the multiplicative group, we have that $f(xy)=f(x)+f(y)+a$.
+  Setting $x=0$, we have $f(0)=f(0)+f(y)+a$, whence $f(y)=-a$.
+\end{proof}
+
+
+\section{Appendix: adjoint representations}
+\label{appendix}
+
+We can also obtain \hyperref[theorem0]{Theorem~0} from the following proposition:
+
+\begin{itenv}{Proposition 3}
+\label{proposition3}
+  Let
+\end{itenv}
 
 
 
