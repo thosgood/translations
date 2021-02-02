@@ -2,7 +2,7 @@
 
 \usepackage[margin=1.6in]{geometry}
 
-\title{Primary obstruction to deformation}
+\title{The primary obstruction to deformation}
 \author{Adrien Douady}
 \date{21\textsuperscript{st} of November, 1960}
 
@@ -66,11 +66,14 @@
 
 %% Shortcuts %%
 
+\newcommand{\scr}[1]{{\mathscr{#1}}}
+
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\CC}{\mathbb{C}}
 \newcommand{\DD}{\mathrm{D}}
 \newcommand{\HH}{\mathrm{H}}
+\newcommand{\dd}{\mathrm{d}}
 
 \DeclareMathOperator{\Hom}{Hom}
 
@@ -116,6 +119,94 @@
 
 \oldpage{4-01}
 Let $V_0$ be a compact complex-analytic manifold, and let $\Theta$ be the sheaf of germs of holomorphic fields of tangent vectors.
+We ask the following question: given an element $a\in\HH^1(V_0,\Theta)$, does there exists a deformation of $V_0$, with a non-singular base (i.e. a fibred mixed manifold $\pi\colon V\to B$, with $b_0\in B$, along with an isomorphism $V_0\xrightarrow{\cong}\pi^{-1}(b_0)$), such that $a$ is the image, under the map $\rho$ defined in [Talk no.~2], of a vector $v$ that is tangent to $B$ at $b_0$?
+An element $a\in\HH^1(V_0,\Theta)$ for which the answer is positive is called a \emph{deformation vector}.
+We will give a necessary condition for $a$ to be a deformation vector;
+this condition is written $[a\smile a]=0$.
+We will then give an example where this condition is not satisfied.
+
+
+\section{Exact sequences of sheaves of algebras}
+\label{I}
+
+Let $K$ be a commutative ring, and let $\Phi$, $\Phi_1$, and $\Phi_2$ be sheaves of $K$-modules on some space $X$, and suppose that we have some given homomorphism $\Phi_1\otimes\Phi_2\to\Phi$, written as a product.
+We define, for any cover $\scr{U}$ of $X$, the \emph{cup product}
+\[
+  \smile\colon C^p(X,\scr{U};\Phi_1) \otimes C^q(X,\scr{U};\Phi_2)
+  \to C^{p+q}(X,\scr{U};\Phi)
+\]
+by the formula
+\[
+  (\alpha\smile\beta)_{i_0,\ldots,i_{p+q}}
+  = \alpha_{i_0,\ldots,i_p}\cdot\beta_{i_p,\ldots,i_{p+q}}.
+\]
+We have the relation
+\[
+  \dd(\alpha\smile\beta) = \dd\alpha\smile\beta + (-1)^p\alpha\smile\dd\beta.
+\]
+This induces a cup product on the cohomology of the cover $\scr{U}$, and, by passing to the inductive limit over open covers, a cup product
+\[
+  \smile\colon \HH^p(X;\Phi_1) \otimes \HH^q(X;\Phi_2)
+  \to \HH^{p+q}(X;\Phi).
+\]
+
+\oldpage{4-02}
+\begin{rmenv}{Definition}
+  A \emph{sheaf of algebras} on $X$ is a sheaf of modules $\Phi$ on $X$ endowed with a product $\Phi\otimes\Phi\to\Phi$ (which we do not assume to be either commutative nor associative).
+\end{rmenv}
+
+If $f\colon\Phi\to\Psi$ is a homomorphism of sheaves of algebras, then the kernel $\Phi'$ of $f$ is a sheaf of two-sided ideals of $\Phi$, i.e. we have products $\Phi'\otimes\Phi\to\Phi'$ and $\Phi\otimes\Phi'\to\Phi'$ such that the two diagrams
+\[
+  \begin{tikzcd}
+    \Phi'\otimes\Phi \rar \dar
+    & \Phi' \dar
+  \\\Phi\otimes\Phi \rar
+    & \Phi
+  \end{tikzcd}
+  \qquad
+  \begin{tikzcd}
+    \Phi\otimes\Phi' \rar \dar
+    & \Phi' \dar
+  \\\Phi\otimes\Phi \rar
+    & \Phi
+  \end{tikzcd}
+\]
+both commute.
+
+\begin{itenv}{Proposition 1}
+\label{proposition1}
+  Let $0\to\Phi'\to\Phi\to\Phi''\to0$ be an exact sequence of sheaves of algebras on $X$;
+  let $a\in\HH^p(X;\Phi'')$.
+  Then $\delta a\in\HH^{p+1}(X;\Phi')$, and, for any class $b\in\HH^q(X;\Phi')$, we have
+  \[
+    \delta a\smile b=0.\qedhere
+  \]
+\end{itenv}
+
+\begin{proof}
+  Let $\scr{U}$ be a cover of $X$ such that $a$ and $b$ are represented by cocycles $\alpha$ and $\beta$ (respectively), and such that $\alpha$ lifts to a cochain $\eta\in C^p(X,\scr{U};\Phi)$.
+  Then $\delta\eta$ is a cocycle in $C^{p+1}(X,\scr{U};\Phi')$ whose class in $\HH^{p+1}(X;\Phi')$ is, by definition, $\delta a$, and $\delta a\smile b$ is the class of $\delta\eta\smile\beta$.
+  But $\delta(\eta\smile\beta)=\delta\eta\smile\beta$, and $\eta\smile\beta$ is a cochain in $C^{p+q}(X,\scr{U};\Phi')$, since $\Phi'$ is a sheaf of ideals.
+  So the cocycle $\delta\eta\smile\beta$ is cohomologous to $0$ in $\HH^{p+q+1}(X;\Phi')$, which proves the proposition.
+\end{proof}
+
+
+\section{The primary obstruction}
+\label{II}
+
+Let $V_0$ be a complex-analytic manifold, and $\Theta_0$ the sheaf of germs of holomorphic fields of tangent vectors.
+Then $\Theta_0$ is a sheaf of Lie algebras, and, if $a,b\in\HH^\bullet(V_0,\Theta_0)$, then we denote by $[a\smile b]$ the cup product defined by the bracket $[-,-]\colon\Theta_0\otimes\Theta_0\to\Theta_0$.
+It satisfies
+\[
+  [b\smile a] = (-1)^{pq+1}[a\smile b]
+\]
+for $a\in\HH^p(V_0,\Theta_0)$ and $b\in\HH^q(V_0,\Theta_0)$.
+
+\oldpage{4-03}
+\begin{itenv}{Theorem 1}
+\label{theorem1}
+  Let
+\end{itenv}
 
 
 
@@ -126,10 +217,30 @@ Let $V_0$ be a compact complex-analytic manifold, and let $\Theta$ be the sheaf 
 
 \begin{thebibliography}{5}
 
+  \bibitem{1}
+  {\sc Grothendieck, A.}
+  \newblock {\em A general theory of fibre spaces with structure sheaf}.
+  \newblock University of Kansas, Department of Mathematics (1955).
+
+  \bibitem{2}
+  {\sc Haefliger, A.}
+  \newblock Structures feuillet\'{e}es et cohomologie \`{a} valeur dans un faisceau de groupo\"{i}des.
+  \newblock {\em Commont. Math. Helvet.} \textbf{32} (1957/58), 248--239.
+
   \bibitem{3}
   {\sc Kodaira, K. and Spencer, D.}
   \newblock On deformation of complex analytic structures, I.
   \newblock {\em Annals of Math.} \textbf{67} (1958), 328--401.
+
+  \bibitem{4}
+  {\sc Kodaira, K. and Nirenberg, L. and Spencer, D.C.}
+  \newblock On the existence of deformations of complex analytic structures.
+  \newblock {\em Annals of Math.} \textbf{68} (1958), 450--459.
+
+  \bibitem{5}
+  {\sc Kuranishi, M.}
+  \newblock On the locally complete families of complex analytic structures.
+  \newblock (To appear in the Annals of Mathematics).
 
 \end{thebibliography}
 
