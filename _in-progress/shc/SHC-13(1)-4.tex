@@ -205,8 +205,102 @@ for $a\in\HH^p(V_0,\Theta_0)$ and $b\in\HH^q(V_0,\Theta_0)$.
 \oldpage{4-03}
 \begin{itenv}{Theorem 1}
 \label{theorem1}
-  Let
+  Let $\pi\colon V\to B$ be a mixed variety, $b_0$ a point of $B$, $V_0=\pi^{-1}(b_0)$, and let $\rho_0\colon T_0\to\HH^1(V_0,\Theta_0)$ be Spencer--Kodaira map.
+  Then, if $u$ and $v$ are tangent vectors of $B$ at $b_0$, we have
+  \[
+    [\rho_0(u)\smile\rho_0(v)] = 0.
+  \]
 \end{itenv}
+
+\begin{itenv}{Corollary}
+  Let $V_0$ be a complex-analytic manifold, and $\Theta$ the sheaf of germs of holomorphic fields of tangent vectors of $V_0$.
+  If $a\in\HH^1(V_0,\Theta)$ is a deformation vector, then
+  \[
+    [a\smile a]=0.
+  \]
+\end{itenv}
+
+\begin{proof}[Proof of the Corollary]
+  This is simply a particular case of \hyperref[theorem1]{Theorem~1};
+  note that $[a\smile b]$ is a symmetric bilinear map from $\HH^1\otimes\HH^1$ to $\HH^2$, and that we are in characteristic~$0\neq2$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem 1]
+  Consider the following sheaves on $V_0$:
+  \begin{itemize}
+    \item[$\Theta_0$:] the sheaf of germs of vertical holomorphic fields on $V_0$ ;
+    \item[$\widetilde{\Theta}_0$:] the sheaf of germs of vertical holomorphic fields on $V$ ;
+    \item[$\Pi_0$:] the sheaf of germs of locally projectable holomorphic fields on $V_0$ ;
+    \item[$\widetilde{\Pi}_0$:] the sheaf of germs of locally projectable holomorphic fields on $V$ ;
+    \item[$\Lambda_0$:] the sheaf $\pi^*T_0$, where $T_0$ is the tangent space of $B$ at $b_0$ ; and
+    \item[$\widetilde{\Lambda}_0$:] the sheaf $\pi^*\widetilde{T}_0$, where $\widetilde{T}_0$ is the space of germs at $b_0$ of fields on $B$ of tangent vectors of $B$.
+  \end{itemize}
+
+  We have the following diagram:
+  \[
+    \begin{tikzcd}
+      0 \rar
+      & \widetilde{\Theta}_0 \rar \dar["\epsilon"]
+      & \widetilde{\Pi}_0 \rar \dar["\epsilon"]
+      & \widetilde{\Lambda}_0 \rar \dar["\epsilon"]
+      & 0
+    \\0 \rar
+      & \Theta_0 \rar
+      & \Pi_0 \rar
+      & \Lambda_0 \rar
+      & 0
+    \end{tikzcd}
+  \]
+\oldpage{4-04}
+  whence we obtain the following commutative diagram:
+  \[
+    \begin{tikzcd}
+      \widetilde{T}_0 \rar["\widetilde{\rho}"] \dar[swap,"\epsilon"]
+      & \HH^1(V_0,\widetilde{\Theta}_0) \dar["\epsilon"]
+    \\T_0 \rar[swap,"\rho"]
+      & \HH^1(V_0,\Theta_0)
+    \end{tikzcd}
+  \]
+
+  Let $u,v\in T_0$ be fixed tangent vectors of $B$ at $b_0$.
+  We can always find vector fields $\widetilde{u}$ and $\widetilde{v}$ on $B$ that take the values $u$ and $v$ (respectively) at $b_0$;
+  $\epsilon(\widetilde{u})=u$ and $\epsilon(\widetilde{v})=v$.
+  The exact sequence
+  \[
+    0 \to
+    \widetilde{\Theta}_0 \to
+    \widetilde{\Pi}_0 \to
+    \widetilde{\Lambda}_0 \to
+    0
+  \]
+  is a sequence of homomorphisms of sheaves of Lie algebras, and so
+  \[
+    [\widetilde{\rho}(\widetilde{u})\smile\widetilde{\rho}(\widetilde{v})] = 0
+  \]
+  by \hyperref[proposition1]{Proposition~1}.
+  But $\epsilon\colon\widetilde{\Theta}_0\to\Theta_0$ is also a homomorphism of sheaves of Lie algebras, and the diagram
+  \[
+    \begin{tikzcd}
+      \HH^1(V_0,\widetilde{\Theta}_0)\otimes\HH^1(V_0,\widetilde{\Theta}_0) \rar["{[-\smile-]}"] \dar[swap,"\epsilon\otimes\epsilon"]
+      & \HH^2(V_0,\widetilde{\Theta}_0) \dar["\epsilon"]
+    \\\HH^1(V_0,\Theta_0)\otimes\HH^1(V_0,\widetilde{\Theta}_0) \rar[swap,"{[-\smile-]}"]
+      & \HH^2(V_0,\Theta_0)
+    \end{tikzcd}
+  \]
+  commutes.
+  We thus deduce that $[\rho(u)\smile\rho(v)]=0$.
+\end{proof}
+
+\oldpage{4-05}
+\begin{rmenv}{Remarks}
+  \begin{enumerate}
+    \item We make essential use of the fact that $\epsilon\colon\widetilde{T}_0\to T_0$ is surjective, and thus of the fact that $B$ has no singularities.
+    \item We actually have $[\rho(u)\smile b]=0$ for all $u\in T_0$, for any class $b\in\HH^1(V_0,\Theta_0)$ that is in the image of $\HH^1(V_0,\widetilde{\Theta}_0)$ under $\epsilon$.
+    In particular, for an element $a\in\HH^1(V_0,\Theta_0)$ to be a regular deformation vector (in the sense of [Talk no.~3]), it is necessary and sufficient for $[a\smile b]=0$ for all $b\in\HH^1(V_0,\Theta_0)$.
+  \end{enumerate}
+\end{rmenv}
+
+If
 
 
 
