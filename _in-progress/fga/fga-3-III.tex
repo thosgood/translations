@@ -78,25 +78,13 @@
 \newcommand{\simfrom}{\xleftarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
 
 \newcommand{\Set}{\mathsf{Set}}
+\newcommand{\pr}{\mathrm{pr}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\shHom}{\underline{\Hom}}
-\DeclareMathOperator{\Aut}{Aut}
-\DeclareMathOperator{\shAut}{\underline{\Aut}}
-\DeclareMathOperator{\HH}{H}
-\DeclareMathOperator{\RR}{R}
-\DeclareMathOperator{\GL}{GL}
-\DeclareMathOperator{\Ga}{G_a}
-\DeclareMathOperator{\Gm}{G_m}
-\DeclareMathOperator{\SL}{SL}
-\DeclareMathOperator{\Sp}{Sp}
-\DeclareMathOperator{\Spec}{Spec}
-\DeclareMathOperator{\Pro}{Pro}
-\DeclareMathOperator{\Ext}{Ext}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -157,6 +145,86 @@ That is to say, it's solution deserves the efforts of specialists of algebraic g
 
 \oldpage{212-02}
 \section{Equivalence relations, effective equivalence relations}
+
+Let $\cal{C}$ be a category, and $X$ an object of $\cal{C}$.
+A pair of morphisms
+\[
+  p_1,p_2\colon R\rightrightarrows X,
+\]
+is said to be an ``\emph{equivalence pair}'' in $\cal{C}$, with \emph{target} $X$ and \emph{source} $R$, if, for every object $T$ of $\cal{C}$, the corresponding maps
+\[
+  p_1(T),p_2(T)\colon R(T)\rightrightarrows X(T)
+\]
+(where we set $Y(T)=\Hom(T,Y)$ for any object $Y$ of $\cal{C}$) define a map
+\[
+  R(T)\to X(T)\times X(T)
+\]
+that induces a bijection from $R(T)$ to the graph of an equivalence relation on the set $X(T)$.
+We introduce an evident equivalence relation on equivalence pairs with target $X$, and call an equivalence class an \emph{equivalence $\cal{C}$-relation} on $X$, or simply an equivalence relation if no confusion may arise.
+
+If $X\times X$ exists, then the data of an equivalence relation on $X$ is equivalent to the data of a sub-object $R$ of $X\times X$ such that, for every object $T$ of $\cal{C}$, the subset of $(X\times X)(T)=X(T)\times X(T)$ that corresponds to $R(T)$ is the graph of an equivalence relation on $X(T)$.
+Denoting the morphisms from $R$ to $X$ induced by the projections $\pr_1$ and $\pr_2$ by $p_1$ and $p_2$ (respectively), the above condition says that $(p_1,p_2)$ is an equivalence pair.
+We can also express the axioms of a set-theoretical equivalence relation for the $R(T)$ in the $X(T)$ diagrammatically in $\cal{C}$ (under the assumption that both $X\times X$ and the fibre product $(R,p_2)\times_X(R,p_1)$ exist), following the general principle of \cite[A.1]{2}.
+We will not need this.
+
+Every time that we have a pair of morphisms $(p_1,p_2)$ with the same source $R$ and the same target $X$, we can define the \emph{cokernel} of the pair as an object $Y$ of $\cal{C}$ that represents the contravariant (in $Z$) functor
+\[
+  \Hom_{p_1,p_2}(X,Z)
+\]
+which denotes the set of morphisms $u$ from $X$ to $Z$ such that $up_1=up_2$.
+If $Y$ exists, then it is determined up to unique isomorphism.
+We will denote it by $Y/(p_1,p_2)$, or, by an abuse of notation, $Y/R$, with the latter mostly being used when
+\oldpage{212-03}
+$(p_1,p_2)$ is an equivalence pair: it is then common to identify, in notation, the equivalence relation defined by the pair with the one defined by $R$.
+Note that, if we consider $Y$ as a quotient of $X$, then it depends only on the equivalence relation defined by the pair $(p_1,p_2)$
+
+We now start with a morphism
+\[
+  f\colon X\to Y
+\]
+which allows us to consider $X$ as an ``object over $Y$'', and we suppose that the fibre product
+\[
+  \cal{R}(f) = X\times_Y X
+\]
+exists.
+Let $p_1$ and $p_2$ be its projections.
+Then $(p_1,p_2)$ is an equivalence pair, and is said to be \emph{associated} with the morphism $f$.
+It thus defines an equivalence relation, and is said to be \emph{associated} with the morphism $f$.
+
+We say that a pair of morphisms $(p_1,p_2)$ with target $X$, and source $R$, is an \emph{effective equivalence pair} if
+\begin{enumerate}[(i)]
+  \item the cokernel $Y=X/(p_1,p_2)$ exists ;
+  \item the fibre product $X\times_Y X$ exists ; and
+  \item the morphism $R\to X\times_Y X$ with components $p_1$ and $p_2$ is an isomorphism.
+\end{enumerate}
+Then the pair $(p_1,p_2)$ is indeed an equivalence pair.
+We also say that the equivalence relation that it defines is an \emph{effective equivalence relation}.
+
+We say that a morphism $f\colon X\to Y$ is an \emph{effective epimorphism} if
+\begin{enumerate}[(i)]
+  \item the fibre product $R=X\times_Y X$ exists ;
+  \item the quotient $X/(p_1,p_2)$ exists, where $p_1$ and $p_2$ are the projections from $R$ to $X$ ; and
+  \item the morphism $X/(p_1,p_2)\to Y$ induced by $f$ is an isomorphism.
+\end{enumerate}
+Then $f$ is indeed an epimorphism, and even a strict epimorphism (cf. \cite[A.2.3]{1}), with the converse being true if the fibre product $X\times_Y X$ exists.
+We also say that the quotient object of $X$ defined by the epimorphism $f$ is an \emph{effective quotient} of $X$.
+
+The above definitions imply the following ``\emph{Galois correspondence}'':
+
+\oldpage{212-04}
+\begin{itenv}{Proposition 1.1}
+\label{proposition1.1}
+  There is a bijective correspondence, respecting the natural orders, between the set of effective equivalence relations $R$ on $X$ and the set of effective quotients $Y$ of $X$, with such an $R$ corresponding to the effective quotient $X/R$, and such a $Y$ corresponding to the effective equivalence relation defined by the canonical projection $X\to Y$ (which is defined by the fibre product $X\times_Y X$ endowed with its two projections).
+\end{itenv}
+
+In very nice categories (sets, sheaves of sets, etc.), every quotient is effective, and every equivalence relation is effective.
+This is no longer true in categories such as the category of preschemes over a given prescheme $S$, not even if $S$ is the spectrum of field, nor even if we restrict to finite schemes over $S$.
+The question of effectiveness, and even (in the case of non-finite preschemes over $S$) the question of existence of quotients, more often than not turn out to be delicate.
+
+
+\section{Example: finite preschemes over \texorpdfstring{$S$}{S}}
+\label{2}
+
 
 
 

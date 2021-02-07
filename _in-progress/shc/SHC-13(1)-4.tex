@@ -391,10 +391,26 @@ More precisely:
 \end{itenv}
 
 Let $H$ be the analytic space of homomorphisms from $\Gamma$ to $\fk{a}$ whose images are contained in a vector subspace of $\fk{a}$ that is $1$-dimensional over $\CC$ (i.e. $(4\times2)$ matrices of rank~$1$ with coefficients in $\CC$).
-For every $h\in H$, $e\circ h$ is a homomorphism from $\Gamma$ to $A$, where $e\colon\fk{a}\to A$ denotes the exponential map, and we construct a manifold $V_h$ that is fibred over $X$ with fibre $D$ as follows: $V_h$ is the quotient of $E\times D$ by the equivalence relation define by $\Gamma$ acting as
+For every $h\in H$, $e\circ h$ is a homomorphism from $\Gamma$ to $A$, where $e\colon\fk{a}\to A$ denotes the exponential map, and we construct a manifold $V_h$ that is fibred over $X$ with fibre $D$ as follows: $V_h$ is the quotient of $E\times D$ by the equivalence relation defined by $\Gamma$ acting via
 \[
   \gamma\star(x,y) = (x+\gamma,((e\circ h)(\gamma))\cdot y).
 \]
+These manifolds are the fibres of a mixed space $W\to H$, where $W$ is the quotient of $H\times E\times D$ by the equivalence relation defined by $\Gamma$ acting via
+\[
+  \gamma\star(h,x,y) = (h,x+y,(e\circ h(y))\cdot y).
+\]
+We now place the following equivalence relation on $H$: we have $h'\sim h$ if and only if $(h'-h)$ extends to an $\CC$-linear map $f\colon E\to\fk{a}$.
+Note that, if $h'(\Gamma)$ and $h(\Gamma)$ are contained in the same subspace $L$ of $\fk{a}$ of dimension~$1$ over $\CC$ (or if $h'\sim h$), then we also have $f(E)\subset L$ (or $h\sim0$ and $h'\sim0$).
+In both cases, $V_h$ and $V_{h'}$ are isomorphic, and we have an isomorphism $i_{h',h}\colon V_h\to V_{h'}$ defined by
+\[
+  i_{h',h}(x,y) = (x,e\circ f(x)\cdot y)
+\]
+(in the first case), or
+\[
+  i_{h',h} = i_{h',0}\circ i_{0,h}
+\]
+(in the second case).
+\oldpage{4-08}
 
 
 

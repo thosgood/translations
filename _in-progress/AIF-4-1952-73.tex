@@ -70,6 +70,7 @@
 \renewcommand{\ll}{\ell}
 \newcommand{\sBB}{\mathscr{B}}
 \newcommand{\sLL}{\mathscr{L}}
+\newcommand{\sEE}{\mathscr{E}}
 \newcommand{\DF}{\mbox{\normalfont($\mathscr{DF}$)}}
 \newcommand{\FF}{\mbox{\normalfont($\mathscr{F}$)}}
 \newcommand{\hotimes}{\widehat{\otimes}}
@@ -123,10 +124,10 @@
 
 \footnote{The numbers in brackets refer to the bibliography found at the end of this article.}
 This article aims to give a summary, without proofs, of the principal results found in my work ``Produits tensoriels topologiques et espaces nucl\'{e}aires'', which will be published in the \emph{Memoirs of the Amer. Math. Society} (and which I will refer to as \cite{PTT}).
-The main concern throughout \cite{PTT} was that of being exhaustive, both in terms of studying all the questions raised by the topics covered, as well as trying to state the more difficult results as theorems that were the most general possible.
+The main concern throughout \cite{PTT} was that of being exhaustive, both in terms of studying all the questions raised by the topics covered, as well as trying to state the more difficult results as theorems that were as general as possible.
 This work was also very dense, and the important simple ideas risked being sometimes hidden by technical details.
 This is why this bowdlerised summary is possibly useful in giving a more assimilable outline of the theory.
-Some extra comments, interesting but not necessary for the general understanding of this summary, as well as some hints on certain proofs, have been placed between stars, like \aster{\ldots}.
+Some extra comments, interesting but not necessary for the general understanding of this summary, as well as some hints for certain proofs, have been placed between stars, \aster{like this}.
 
 The importance of topological tensor products shows itself in many different settings:
 \begin{enumerate}[a)]
@@ -194,7 +195,7 @@ in any case, bornological implies quasi-tunnelled.
 The axiomatic definition of the algebraic tensor product $E\otimes F$ of two vector spaces $E$ and $F$, and of the canonical bilinear map $(x,y)\mapsto x\otimes y$ from $E\times F$ to $E\otimes F$ (\cite{1}) asks only that, for every vector space $G$, the bilinear maps from $E\times F$ to $G$ correspond bijectively with linear maps $f$ from $E\otimes F$ to $G$, where the map corresponding to $f$ is given by $(x,y)\mapsto f(x\otimes y)$.
 
 \begin{itenv}{Theorem 1}
-\label{theorem1}
+\label{1.theorem1}
   If $E$ and $F$ are locally convex spaces, then we can endow $E\otimes F$ with a locally convex topology such that, for every locally convex space $G$, the \emph{continuous} bilinear maps from $E\times F$ to $G$ correspond exactly to \emph{continuous} linear maps from $E\otimes F$ to $G$.
   Further, such a topology is unique.
 \end{itenv}
@@ -240,7 +241,7 @@ is every bounded subset of $E\hotimes F$ contained in the closed disked hull of 
 \medskip
 
 \begin{itenv}{Theorem 2}
-\label{theorem2}
+\label{1.theorem2}
   Let $E$ and $F$ be two $\FF$~spaces.
   Then every element of $E\hotimes F$ is the sum of an absolutely convergent series of the form
   \[
@@ -253,7 +254,7 @@ is every bounded subset of $E\hotimes F$ contained in the closed disked hull of 
 If $E$ and $F$ are normed, then we can suppose in the above that $\|x_i\|\leq1$, $\|y_i\|\leq1$, $\sum_i|\lambda_i|\leq\|u\|_1+\varepsilon$, where $\varepsilon>0$ is arbitrary and given in advance.
 In these two statements, if $u$ runs over a compact subset of $E\hotimes F$, then we can suppose that the sequences $(x_i)$ and $(y_i)$ remain fixed (and we can even suppose that they are sequences that tend to $0$), and that $(\lambda_i)$ runs over a compact subset of $\ll^1$ (the space of summable sequences).
 We have an analogous statement for the concrete representation of convergent sequences in $E\hotimes F$.
-\hyperref[theorem2]{Theorem~2} and its previous variants serve mainly as a way to:
+\hyperref[1.theorem2]{Theorem~2} and its previous variants serve mainly as a way to:
 \begin{itenv}{Corollary}
   Let $E$ and $F$ be spaces of type~$\FF$.
   Then every compact subset $K$ of $E\hotimes F$ is contained inside the canonical image of the unit ball of a space $E_A\hotimes F_B$, where $A$ (resp. $B$) is a compact disked subset of $E$ (resp. $F$).
@@ -263,10 +264,10 @@ We have an analogous statement for the concrete representation of convergent seq
 This fact also implies that, on $\BB(E,F)$, the ``bicompact convergence'' topology is identical to the compact convergence topology on the dual of $E\hotimes F$.
 
 \aster{%
-  For the proof of \hyperref[theorem2]{Theorem~2}, we suppose, for simplicity, that $E$ and $F$ are Banach spaces, and let $I$ be the product of their unit balls, and $i\mapsto x_i$ and $i\mapsto y_i$ the projections from $I$ to its factors.
+  For the proof of \hyperref[1.theorem2]{Theorem~2}, we suppose, for simplicity, that $E$ and $F$ are Banach spaces, and let $I$ be the product of their unit balls, and $i\mapsto x_i$ and $i\mapsto y_i$ the projections from $I$ to its factors.
   It is easy t see that the linear map $(\lambda_i)\mapsto\sum_i\lambda_i x_i\otimes y_i$ from $\ll^1(I)$ to $E\hotimes F$ is a metric homomorphism from the former to a dense subspace of the latter, and thus \emph{onto} the latter, whence it indeed follows that $E\hotimes F$ can be identified with a quotient space of $\ll^1(I)$.
 
-  From \hyperref[theorem2]{Theorem~2}, we can extract results of the following type:
+  From \hyperref[1.theorem2]{Theorem~2}, we can extract results of the following type:
   let $\scr{G}$ be a
 \oldpage{79}
   locally compact group (resp. a Lie group), then every summable function $f$ (resp. every infinitely differentiable function of compact support) on $\scr{G}$ is of the form $\sum\lambda_i g_i*h_i$, where $(\lambda_i)\in\ll^1$, and where $(g_i)$ and $(h_i)$ are bounded sequences in $\LL^i(\scr{G})$ (resp. in $\scr{D}(\scr{G})$, the space of infinitely differentiable functions of compact support on $\scr{G}$);
@@ -287,7 +288,7 @@ We denote by $\LL^1(\mu)$ the space of $\mu$-summable scalar functions.
 Then there exists an obvious bilinear map $(\varphi,a)\mapsto\varphi\cdot a$ from $\LL^1(\mu)\times E$ to $\LL_E^1(\mu)$ that is of norm~$\leq1$, and thus defines a linear map of norm~$\leq1$ from $\LL^1(\mu)\hotimes E$ to $\LL_E^1(\mu)$.
 
 \begin{itenv}{Theorem 3}
-\label{theorem3}
+\label{1.theorem3}
   The above map from $\LL^1(\mu)\hotimes E$ to $\LL_E^1(\mu)$ is a metric isomorphic from the former space to the latter.
 \end{itenv}
 
@@ -295,7 +296,7 @@ To see this, we can immediately reduce to the case where $E$ is of finite dimens
 It then suffices to apply the classical theorem of Dunford--Pettis that characterises continuous linear maps from $\LL^1(\mu)$ to $E'$.
 
 If $E$ is an arbitrary locally convex space, then we denote by $\LL_E^1(\mu)$ the completion of the separated space associated to the space of continuous maps with compact support from $M$ to $E$, endowed with its family of semi-norms $f\mapsto\int p(f(t))\dd\mu(t)$ (where $p$ runs over a fundamental family of continuous semi-norms on $E$).
-Then \hyperref[theorem3]{Theorem~3} easily implies that $\LL_E^1(\mu)$ is again isomorphic to $\LL^1(\mu)\hotimes E$.
+Then \hyperref[1.theorem3]{Theorem~3} easily implies that $\LL_E^1(\mu)$ is again isomorphic to $\LL^1(\mu)\hotimes E$.
 
 \begin{itenv}{Corollary}
   If $E$ is a closed vector subspace of the Banach space $F$, then the canonical linear map from $\LL^1(\mu)\hotimes E$ to $\LL^1(\mu)\hotimes F$ is a metric isomorphism.
@@ -306,10 +307,10 @@ This recovers, for example, the well-known fact that every continuous linear map
 or, dually, that every continuous linear map from $\LL^1(\mu)$ to a quotient space $F'/E^0$ of a Banach dual by a weakly closed vector subspace comes from a linear map of the same norm from $\LL^1(\mu)$ to $F'$.
 
 \aster{%
-  The analogue of \hyperref[theorem3]{Theorem~3} for $\LL^p$ spaces is false for all $p>1$.
-  However, \hyperref[theorem3]{Theorem~3} applies, in an essential way, in many important places in the theory outlined here.
+  The analogue of \hyperref[1.theorem3]{Theorem~3} for $\LL^p$ spaces is false for all $p>1$.
+  However, \hyperref[1.theorem3]{Theorem~3} applies, in an essential way, in many important places in the theory outlined here.
   We now give some less important applications (see \cite[chap.~1, \S2, n\textsuperscript{o}~2]{PTT} for details).
-  In \hyperref[theorem3]{Theorem~3}, if we take $E=c_0$ (the space of scalar sequences that converge to $0$), and note that $\LL_E^1(\mu)$ can then be identified with the space of latticially bounded sequences in $\LL^1(\mu)$ that converge to $0$ almost everywhere, then we see that such sequences in $\LL^1(\mu)$ form a category of invariant sequences from the topological-vectorial point of view.
+  In \hyperref[1.theorem3]{Theorem~3}, if we take $E=c_0$ (the space of scalar sequences that converge to $0$), and note that $\LL_E^1(\mu)$ can then be identified with the space of latticially bounded sequences in $\LL^1(\mu)$ that converge to $0$ almost everywhere, then we see that such sequences in $\LL^1(\mu)$ form a category of invariant sequences from the topological-vectorial point of view.
   In particular, a continuous linear map from $\LL^1(\mu)$ to a space $\LL^1(\nu)$ sends latticially bounded sequences that converge to $0$ almost everywhere to sequences of the same type.
   We thus also see that the latticially bounded subsets of $\LL^1(\mu)$ form an invariant category from the topological-vectorial point of view.
   If we take $F=\ll^p$, with $1\leq p<+\infty$, then we similarly obtain a topological-vectorial interpretation of the sequences $(f_i)$ in $\LL^1(\mu)$ such that
@@ -320,7 +321,7 @@ or, dually, that every continuous linear map from $\LL^1(\mu)$ to a quotient spa
     \dd\mu(t) < +\infty.
   \]
   Such sequences are sent to sequences of the same type by any continuous linear map from $\LL^1(\mu)$ to a space $\LL^1(\nu)$.
-  Another interesting application of \hyperref[theorem3]{Theorem~3} is the following: every bounded subset $M$ of $\LL^1(\mu)\hotimes E$ is contained in the canonical image of the unit ball of a space $\LL^1(\mu)\hotimes E_A$, where $A$ is a closed bounded disk in the space $E$ of type $\FF$;
+  Another interesting application of \hyperref[1.theorem3]{Theorem~3} is the following: every bounded subset $M$ of $\LL^1(\mu)\hotimes E$ is contained in the canonical image of the unit ball of a space $\LL^1(\mu)\hotimes E_A$, where $A$ is a closed bounded disk in the space $E$ of type $\FF$;
   a fortiori, $M$ is contained in the closed disked hull of $B\otimes A$, where $B$ is the unit ball of $\LL^1(\mu)$, which solves the ``problem of topologies'' described in \hyperref[1.1]{\S1.1}.
 }
 
@@ -381,10 +382,10 @@ On the other hand, the norm induced on $E'\otimes F'$ by the dual of $E\hhotimes
 This duality, which barely appears in the present summary, is a precious tool for various questions
 \oldpage{83}
 (e.g. \cite[chap.~I, \S4, n\textsuperscript{o}~6]{PTT}).
-The following theorem (which is, truth be told, trivial), can be seen as the dual response to \hyperref[theorem3]{Theorem~3}.
+The following theorem (which is, truth be told, trivial), can be seen as the dual response to \hyperref[1.theorem3]{Theorem~3}.
 
 \begin{itenv}{Theorem 4}
-\label{theorem4}
+\label{1.theorem4}
   Let $M$ be a locally compact space, let $C_0(M)$ the space of continuous scalar functions on $M$ that are ``zero at infinity'', endowed with the uniform convergence norm, and let $E$ be a locally convex complete space.
   Then $C_0(M)\hhotimes E$ is canonically isomorphic to the space $C_0(M,E)$ of continuous maps from $M$ to $E$ that are zero at infinity, endowed with the uniform convergence topology (and with the uniform norm if $E$ is a Banach space).
   In particular, $c_0\hhotimes E$ is isomorphic to the space of sequences in $E$ that tend to $0$.
@@ -407,13 +408,13 @@ It then follows that $u_1\otimes u_2$ extends, by continuity, to a continuous li
 These maps will also simply be denoted by $u_1\otimes u_2$ whenever there is no fear of confusion.
 
 \begin{itenv}{Theorem 5}
-\label{theorem5}
+\label{1.theorem5}
   If each $u_i$ is a topological homomorphism from $E_i$ to a dense subspace of $F_i$, then $u_1\hotimes u_2$ is a topological homomorphism from $E_1\hotimes E_2$ to a dense subspace of $F_1\hotimes F_2$.
   If each $u_i$ is a topological isomorphism from $E_i$ to $F_i$, then $u_1\hhotimes u_2$ is a topological isomorphism from $E_1\hhotimes E_2$ to $F_1\hhotimes F_2$.
 \end{itenv}
 
 These claims remain true if the $E_i$ and $F_i$ are normed and we consider \emph{metric} homomorphisms and \emph{metric} isomorphisms.
-Particularly interesting is the following corollary, which can also be obtained by an application of \hyperref[theorem2]{Theorem~2}.
+Particularly interesting is the following corollary, which can also be obtained by an application of \hyperref[1.theorem2]{Theorem~2}.
 
 \begin{itenv}{Corollary}
   If the $E_i$ and $F_i$ are $\FF$-spaces ($i=1,2$), and the $u_i$ are
@@ -421,6 +422,70 @@ Particularly interesting is the following corollary, which can also be obtained 
   homomorphisms from $E_i$ \emph{onto} $F_i$, then $u_1\hotimes u_2$ is a homomorphism from $E_1\hotimes E_2$ \emph{onto} $F_1\hotimes F_2$.
 \end{itenv}
 
+As particular cases of this corollary, we obtain interesting lifting properties of vector functions with values in a quotient space of an $\FF$-space $E$.
+If e.g. $f$ is an infinitely differentiable map from an open subset of $\mathbb{R}^n$ to $E/F$, then it comes from an infinitely differentiable map from this same open subset to $E$.
+There is an analogous result for holomorphic functions, or infinitely differentiable functions on $\mathbb{R}^n$ that decay rapidly, or summable functions of a certain measure, etc.\footnote{%
+  With respect to this point, we done that we can prove, by a completely different method, the following claim, which can be thought of as dual to the corollary of \hyperref[1.theorem3]{Theorem~3}:
+  \emph{Let $M$ be a locally compact and paracompact space (e.g. a compact space), and $f$ a continuous map from $M$ to a quotient space $E/F$ of an $\FF$-space $E$. Then $f$ comes from a continuous map from $M$ to $E$.}
+  Since the space $\sEE^{(m)}(V)$ of $m$-times continuously differentiable functions on a infinitely differentiable paracompact manifold $V$ is isomorphic to a direct factor of a space of the form $C(M)$ (as I noted in ``Sur les applications lin\'{e}aires faiblement compacts d'espaces du type $C(K)$'', \emph{Can. J. Math.} \textbf{5} (1953), p.~144), it thus follows that the analogous lifting theorem holds also for $m$-times continuously differentiable maps from $V$ to $E/F$.
+}
+Another application is the following: let $D$ be a differential operator in the space $\sEE(U)$ of infinitely differentiable functions on an open subset $U$ of $\mathbb{R}^n$, let $E$ be an $\FF$-space, and let $\sEE(U,E)$ be the space of infinitely differentiable maps from $U$ to $E$.
+Then we have $\sEE(U,E)=\sEE(U)\hotimes E=\sEE(U)\hhotimes E$ (see \hyperref[2.5]{\S2.5}).
+Let $D_E$ be the operator in $\sEE(U,E)$ defined by $D$, and then $D_E=D\hotimes1$, where $1$ is the identity on $E$.
+Then, if $D$ is a topological homomorphism (resp. an \emph{onto} topological homomorphism), then so too is $D_E$.
+Indeed, in the case of an onto homomorphism, this is a particular case of the corollary of \hyperref[1.theorem5]{Theorem~5}, and, in the general case, we use \hyperref[1.theorem5]{Theorem~5} as well as the fact that, for every quotient space $F$ of $\sEE(U)$, we have $F\hotimes E=F\hhotimes E$ (since $\sEE(U)$, and thus $F$, are nuclear; see \hyperref[2.definition1] in \hyperref[2.2]{\S2.2} and \hyperref[2.theorem3]{Theorem~3} in \hyperref[2.3]{\S2.3}).
+
+We note that, if $u_1$ and $u_2$ are topological isomorphisms, then $u_1\hotimes u_2$ is not, in general, a topological isomorphism (nor is, in general $u_1\hhotimes u_2$ a topological homomorphism, if $u_1$ and $u_2$ are \emph{onto} topological homomorphisms).
+If each $E_i$ is identified with a topological-vectorial subspace of $F_i$ by $u_i$, then the canonical map $u_1\hotimes u_2$ from $E_1\hotimes E_2$ to $F_1\hotimes F_2$ is a topological isomorphism if and only if every equicontinuous set of bilinear forms on $E_1\times E_2$ is the set of restrictions of an equicontinuous set of bilinear forms on $F_1\times F_2$.
+If $F_1$
+\oldpage{85}
+and $F_2$ are of type~$\FF$, then it suffices to consider sets consisting of \emph{one single} bilinear form.
+In general, this criterion will not hold true, but it is linked to an existence problem of topological complements.
+
+\aster{%
+  More precisely, if $E_1$ and $E_2$ are direct factors, then $E_1\hotimes E_2$ can be identified with a topological-vectorial subspace of $F_1\hotimes F_2$.
+  Also, if $E$ is a topological-vectorial subspace of the Banach space $F$, and if the canonical map $E\hotimes G\to F\hotimes G$ is a topological isomorphism when $G=F'$, then $E''$ is a direct factor of $F''$;
+  thus, in the frequent case where $E$ is already a direct factor of $E''$, $E$ will also be a direct factor of $F$.
+
+  A useful case where the tensor product $u\hotimes v$ of two topological isomorphisms is a topological isomorphism is the following:
+  \emph{If $E''$ is the bidual of $E$, then $E\hotimes F$ can be identified with a topological-vectorial subspace (resp. a normed vector subspace, if $E$ and $F$ are normed) of $E''\hotimes F$}.
+}
+
+
+\subsection{Nuclear maps}
+\label{1.7}
+
+(\cite[chap.~1, \S3, n\textsuperscript{o}~2]{PTT}).
+\medskip
+
+Let $E$ and $F$ be Banach spaces.
+The continuous bilinear map $(x',y)\mapsto x'\otimes y$ from $E'\times F$ to $\LL(E,F)$ defines a natural continuous linear map from $E'\hotimes F$ to $\LL(E,F)$;
+the elements of the image of $E'\hotimes F$ in $\LL(E,F)$ are said to be \emph{nuclear maps} from $E$ to $F$.
+(We also define, between arbitrary locally convex spaces, the notions of \emph{trace maps} and \emph{Fredholm maps} --- see \hyperref[appendix1]{Appendix~1} --- which coincide with the notion of nuclear maps if $E$ and $F$ are Banach spaces; in this case, we can thus freely switch between saying ``nuclear maps'', ``trace maps'', or ``Fredholm maps''.)
+Nuclear maps from $E$ to $F$ form a vector space which can be identified with a quotient space of $E'\hotimes F$ (and with $E'\hotimes F$ itself in all known cases --- see ``problem of bijectivity'' in \hyperref[1]{\S1}).
+The quotient norm, again denoted by $u\mapsto\|u\|_1$, is called the \emph{trace norm} of the nuclear operator $u$.
+
+If $E$ and $F$ are arbitrary locally convex spaces, then a linear map $u$ from $E$ to $F$ is said to be \emph{nuclear} if it is the composition of a sequence of three operators
+\[
+  E \xrightarrow{\alpha} E_1 \xrightarrow{\beta} F_1 \xrightarrow{\gamma} F
+\]
+where $E_1$ and $F_1$ are Banach spaces, $\beta$ is a nuclear map from $E_1$ to $F_1$, and $\alpha$ and $\gamma$ are continuous linear maps.
+It is
+\oldpage{86}
+equivalent to say that there exists an weakly closed, equicontinuous, disked subset $A$ of $E'$, and a bounded disked subset $B$ of $F$ such that $F_B$ is complete, and finally some $u_0\in E'_A\hotimes F_B$ such that $u$ is the operator from $E$ to $F$ defined by $u_0$ (\emph{a priori}, $u_0$ defines a nuclear map from $\widehat{E}_{A^0}$ to $F_B$).
+\emph{A nuclear map is always compact} (i.e. sends a suitable neighbourhood of $0$ to a relatively compact set).
+Even better: by the corollary of \hyperref[1.theorem2]{Theorem~2}, we can suppose (in the above) that $B$ and $A$ are \emph{compact} subsets of $F$ and strong $E'$ (respectively).
+\hyperref[1.theorem2]{Theorem~2}, applied directly, also gives the following: \emph{nuclear maps from $E$ to $F$ are exactly the maps that are sums of series (always absolutely convergent in $\LL(E,F)$ endowed with the bounded-convergence topology) $u=\sum\lambda_i x'_i\otimes y_i$, where $(x'_i)$ is an equicontinuous sequence in $E'$, $(y_i)$ is a \todo a compact disk of $F$, and $(\lambda_i)$ is a summable sequence of scalars}.
+If we compose a nuclear map, on the left or on the right, with a continuous linear map, then we obtain another nuclear map.
+The dual of a nuclear map from $E$ to $F$ is a nuclear map from strong $F'$ to strong $E'$ (and even from $F'$ endowed with the uniform convergence on compact disks of $F$, to strong $E'$).
+
+Nuclear maps from $E$ to itself (more precisely, the slightly larger category of Fredholm maps from $E$ to itself) form a natural domain for \emph{Fredholm theory}.
+Here, our interest lies in other properties of these operators, that result directly from either \hyperref[1.theorem2]{Theorem~2} or the corollary of \hyperref[1.theorem5]{Theorem~5}.
+
+\begin{itenv}{Theorem 6}
+\label{1.theorem6}
+  Let
+\end{itenv}
 
 
 
