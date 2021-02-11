@@ -269,8 +269,64 @@ In particular, every equivalence relation is effective.
 This implies that, if $R$ is an equivalence relation on $X$, where $X$ is finite over $S$, then the canonical morphism $R\to X\times_Y X$ (where $Y=X/R$) is \emph{radicial and surjective} (and, in fact, a surjective closed immersion, since it is a monomorphism).
 
 
-\section{The case of a group of operators}
+\section{The case of a group with operators}
 \label{3}
+
+We now suppose that $\cal{C}$ is an arbitrary category.
+Let $G$ and $X$ be objects of $\cal{C}$, and suppose that $G$ is a $\cal{C}$-group with operators on the object $X$.
+This implies (cf. \cite[\S A.1]{2}) that, for every object $T$ of $\cal{C}$, we have a group structure on $G(T)$, and the structure of an operator domain on $X(T)$ acting on $G(T)$, such that, for variable $T$, the structures in question ``vary functorially'' in $T$.
+If the products $G\times G$ and $G\times X$ exist in $\cal{C}$, then such a structure can also be defined as a pair of morphisms
+\[
+  \begin{gathered}
+    G\times G\to G
+  \\\pi\colon G\times X\to X
+  \end{gathered}
+\]
+subject to the condition that, for every object $T$ of $\cal{C}$, the corresponding composition laws for the sets $G(T)$ and $X(T)$ make $G(T)$ into a group acting on $X(T)$.
+Translating this axiom into the commutativity of certain diagrams in $\cal{C}$ is easy, but tedious, and, in fact, perfectly useless in all cases known to me.
+
+Suppose that $G\times X$ exists, and consider the two morphisms
+\[
+  p_1,p_2\colon G\times X\rightrightarrows X
+\]
+with
+\oldpage{212-07}
+\[
+  \begin{aligned}
+    p_1 &= \pr_1
+  \\p_2 &= \pi.
+  \end{aligned}
+\]
+We immediately note that the pair $(p_1,p_2)$ is an equivalence pair if, and only if, for every object $T$ of $\cal{C}$, the map
+\[
+  G(T)\times X(T) \sim (G\times X)(T) \to X(T)\times X(T)
+\]
+defined by this pair is injective, i.e. if the group $G(T)$ acts \emph{freely} on the set $X(T)$, i.e. if $g\in G(T)$, $x\in X(T)$, and $g\cdot x=x$, then $g$ is the identity element of the group $G(T)$.
+We then say that $G$ \emph{acts freely} on $X$ (or that $X$ is a \emph{principal $\cal{C}$-space under $G$}).
+The equivalence relation associated to the pair $(p_1,p_2)$ is then called the \emph{equivalence relation defined by the group $G$} acting freely on $X$.
+If $X\times X$ also exists, and we consider the morphism
+\[
+  p\colon G\times X\to X\times X
+\]
+defined by the pair $(p_1,p_2)$, then the condition that $G$ acts freely implies that $p$ is a \emph{monomorphism}.
+
+Of course, even if $G$ dose not act freely on $X$, we still wish to have existence criteria for a quotient of $X$ by $G$, i.e. for the cokernel of the above pair $(p_1,p_2)$.
+
+The cokernel in question will often be denoted by $X/G$, or by $X\backslash G$ if $G$ acts on the left (with the previous notation being reserved for when $G$ acts on the right).
+We note that, even if the ``image'' of $G\times X$ under $p$ exists (this image being defined, for example, as the smallest sub-object of $X\times X$ through which we can factor $p$), say, $R$, then this is usually not an equivalence relation on $X$.
+If we then try to pass directly to the quotient under $R$ (or, more precisely, under the pair of morphisms from $R$ to $X$ induced by the two projections $\pr_i$), then we lose the particular characteristics of the original pair $(p_1,p_2)$.
+It is thus important to find a generalisation of the notion of equivalence relations, appealing directly to the pair defined by a $\cal{C}$-group with operators.
+
+
+\section{Equivalence pre-relations}
+\label{4}
+
+Recall that a \emph{groupoid} is defined to be a category where all the morphisms are isomorphisms.
+A category should be defined as consisting of two base sets, $X$ and $R$, with the former being the set of \emph{objects} and the latter the set of \emph{arrows}, endowed with the following structures:
+\oldpage{212-08}
+\begin{enumerate}[(i)]
+  \item 
+\end{enumerate}
 
 
 
