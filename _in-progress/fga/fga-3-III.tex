@@ -325,8 +325,64 @@ Recall that a \emph{groupoid} is defined to be a category where all the morphism
 A category should be defined as consisting of two base sets, $X$ and $R$, with the former being the set of \emph{objects} and the latter the set of \emph{arrows}, endowed with the following structures:
 \oldpage{212-08}
 \begin{enumerate}[(i)]
-  \item 
+  \item a pair of maps
+    \[
+      p_1,p_2\colon R\rightrightarrows X
+    \]
+    called the \emph{source map} and the \emph{target map} ;
+  \item a map
+    \[
+      \pi\colon(R,p_2)\times_X(R,p_1) \to R
+    \]
+    called the \emph{composition map}.
 \end{enumerate}
+These data should satisfy well-known axioms, which we will not repeat here, and which can be expressed in terms of the commutativity of certain diagrams along with the existence of a (necessarily unique) map $D\colon X\to R$ that makes two other diagrams commute, where $D$ corresponds to passing from an object to the corresponding identity map, and satisfies
+\[
+  p_1\circ D = p_2\circ D = \id_X.
+\]
+To say that a category is a groupoid then, implies the existence of a (necessarily unique) map
+\[
+  s\colon R\to R
+\]
+called the \emph{symmetry} of $R$, that sends every arrow to an inverse arrow, which can be expressed in terms of the commutativity of four other diagrams, built from $s$, $\Delta$, and the above data, and of which the first two can be written as
+\[
+  \begin{aligned}
+    p_1\circ s &= p_2
+  \\p_2\circ s &= p_1.
+  \end{aligned}
+\]
+
+Having recalled these notions, the general definitions in \cite[\S A.1]{2} show, in particular, what we should mean by ``the structure of a \emph{$\cal{C}$-category}'' (resp. \emph{$\cal{C}$-groupoid}) on a pair of objects $(X,R)$ of an arbitrary category $\cal{C}$:
+it is, by definition, the data, for every object $T$ in $\cal{C}$, of the structure of a category (resp. groupoid) in the set-theoretic sense, whose set of objects is $X(T)$, and set of arrows is $R(T)$, with these structures ``varying functorially'' in $T$.
+This thus implies the definition of two morphisms
+\[
+  p_1,p_2\colon R\rightrightarrows X
+\]
+called the \emph{source morphism} and the \emph{target morphism}, and, if the fibre product in question exists, a morphism
+\oldpage{212-09}
+\[
+  \pi\colon (R,p_2)\times_X(R,p_1) \to R
+\]
+called the \emph{composition morphism};
+these three morphisms then suffice to determine the structure of a category (resp. groupoid) on $(X,R)$, with the condition to place on them being the following: for every $T$, the three corresponding morphisms for $X(T)$ and $R(T)$ define the structure of a category (resp. groupoid) on the pair of sets $(X(T),R(T))$.
+If necessary, this can be expressed in terms of the commutativity of certain diagrams, implying a well-determined morphism
+\[
+  D\colon X\to R
+\]
+and, in the case of groupoids, a well-determined morphism
+\[
+  s\colon R\to R
+\]
+where the diagrams are as in the ``set-theoretic'' case.
+This tedious interpretation of the axioms is thankfully useless in practice, with the only theoretical interest in the possibility of being able to express the data and the axioms using morphisms and equalities of morphisms between certain fibre products being the following: if we have a left-exact functor $F\colon\cal{C}\to\cal{C}'$ (i.e. a functor that commutes with finite products and fibre products), then it sends $\cal{C}$-categories (resp. $\cal{C}$-groupoids) to a $\cal{C}'$-categories (resp. $\cal{C}'$-groupoids) (under the condition that finite products and fibre products exist in $\cal{C}$).
+
+It is important, in practice, to know how to understand the morphisms $p_1$, $p_2$, $\pi$, $D$, and $s$ as \emph{simplicial operations} in a suitable semi-simplicial or simplicial objects of $\cal{C}$ (or, at least when fibre products exist in $\cal{C}$).
+To fix terminology, we introduce the category $\cal{S}$ of \emph{simplex types} as the category whose objects are finite sets of the form
+\[
+  \Delta_n = [0,n]
+\]
+for $n\in\mathbb{Z}$, where $[0,n]$ denotes the interval of integers from $0$ to $n$ (inclusive), and whose morphisms are \emph{arbitrary maps} between these finite sets.
+
 
 
 
