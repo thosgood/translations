@@ -77,7 +77,7 @@
 \newcommand{\simto}{\xrightarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
 \newcommand{\simfrom}{\xleftarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
 
-\newcommand{\Set}{\mathsf{Set}}
+\newcommand{\Set}{\mathtt{Set}}
 \newcommand{\pr}{\mathrm{pr}}
 
 \renewcommand{\geq}{\geqslant}
@@ -382,6 +382,52 @@ To fix terminology, we introduce the category $\cal{S}$ of \emph{simplex types} 
   \Delta_n = [0,n]
 \]
 for $n\in\mathbb{Z}$, where $[0,n]$ denotes the interval of integers from $0$ to $n$ (inclusive), and whose morphisms are \emph{arbitrary maps} between these finite sets.
+We note that the category $\cal{S}$ is equivalent to the category of finite \emph{non-empty} sets, where we take the morphisms to be maps between finite sets.
+In $\cal{S}$, the sum of a finite \emph{non-empty} family of objects clearly exists, as does the amalgamated sum of two objects over a third (the dual operation to the fibre product).
+We denote by $\cal{S}'$ the subcategory of $\cal{S}$ that has the same objects, but where the morphisms are \emph{increasing maps} between the $\Delta_n$.
+This category is equivalent to the category of finite non-empty totally ordered sets.
+In this category, the
+\oldpage{212-10}
+sum of two objects never exists, and the amalgamated sum of two objects $A$ and $B$ over a third $C$ does not exist in general (take, for example, $C=\Delta_0$, and $A=B=\Delta_1$, with the two structure maps $u\colon C\to A$ and $v\colon C\to B$ being the equal).
+However, in certain cases, the amalgamated sum \emph{does} exist;
+consider
+\[
+  \begin{gathered}
+    A = \Delta_m
+    \qquad B = \Delta_n
+    \qquad C = \Delta_0
+  \\u(0) = m
+    \qquad v(0) = 0
+  \end{gathered}
+\]
+which is such that
+\[
+  A\coprod_C B = \Delta_{m+n}.
+\]
+
+A \emph{simplicial object} (resp. \emph{semi-simplicial object}) in a category $\cal{C}$ is defined to be a contravariant functor $K$ from $\cal{S}$ (resp. $\cal{S}'$) to $\cal{C}$.
+A simplicial object thus defines a semi-simplicial object by restriction, but the former differs from the latter essentially by the presence of \emph{symmetry operations} in the $K_n=K(\Delta_n)$, which correspond to the images under the functor $K$ of the elements of the symmetric group on $n+1$ elements (considered as the automorphism group of $\Delta_n$ in $\cal{S}$).
+
+With the above, for all $n$, let $\Delta'_n$ (resp. $\Delta''_n$) be the finite category whose set of objects is $\Delta_n$, and whose set of arrows is defined by the ``chaotic order'' relation (resp. the natural total order relation) on $\Delta_n$ (i.e. the set of arrows is the graph of the order relation).
+It is clear that $\Delta'_n$ (resp. $\Delta''_n$) depends functorially on the object $\Delta_n$ of $\cal{S}$ (resp. $\cal{S}'$).
+So if $Z$ is a category, then $\Hom(\Delta'_n,Z)$ (resp. $\Hom(\Delta''_n,Z)$) is, for varying $\Delta_n$, a functor from the category $\cal{S}$ (resp. $\cal{S}'$) to the category of sets, i.e. a \emph{simplicial set} (resp. \emph{semi-simplicial set}), which is said to be \emph{associated to the category $Z$}, and denoted by $Z'$ (resp. $Z''$).
+We also have an obvious natural homomorphism from the semi-simplicial set associated to $Z'$ to $Z''$, and this is an isomorphism if and only if $Z$ is a groupoid.
+Then:
+
+\begin{itenv}{Proposition 4.1}
+  The functor $Z\mapsto Z''$ from the category of categories to the category of semi-simplicial sets is fully faithful, and defines an equivalence between the category of \emph{categories} and the category of semi-simplicial sets, i.e. contravariant functors $K$ from $\cal{S}'$ to $\Set$ \emph{that send amalgamated sums $A\coprod_C B$ (of the type described above) to fibre products of sets}.
+
+  Similarly, the functor $Z\mapsto Z'$ from the category of groupoids to the category of simplicial sets is fully faithful, and defines an equivalence between the category of \emph{groupoids} and the category of
+\oldpage{212-11}
+  simplicial sets, i.e. contravariant functors $K$ from $\cal{S}$ to $\Set$ \emph{that send amalgamated sums to fibre products}.
+\end{itenv}
+
+We can thus consider categories as specific examples of semi-simplicial sets, and groupoids as specific examples of simplicial sets, with, of course, the condition that we argue ``up to isomorphism'', as is rigorous when we interpret certain structures in terms of others.
+The usual procedure of reduction to the set-theoretic case then implies:
+
+\begin{itenv}{Corollary 4.2}
+  The above claim remains true when we replace categories, groupoids, and simplicial sets with $\cal{C}$-categories, $\cal{C}$-groupoids, and $\cal{C}$-simplicial objects (respectively), \emph{provided that} fibre products exist in $\cal{C}$.
+\end{itenv}
 
 
 
