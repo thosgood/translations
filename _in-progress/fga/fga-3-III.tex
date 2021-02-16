@@ -429,6 +429,19 @@ The usual procedure of reduction to the set-theoretic case then implies:
   The above claim remains true when we replace categories, groupoids, and simplicial sets with $\cal{C}$-categories, $\cal{C}$-groupoids, and $\cal{C}$-simplicial objects (respectively), \emph{provided that} fibre products exist in $\cal{C}$.
 \end{itenv}
 
+The semi-simplicial object $K$ in $\cal{C}$ associated to a category $(X,R,\ldots)$ in $\cal{C}$ can be made explicit by considering the component $K_n=K(\Delta_n)$ of $K$ as being the $(n+1)$th fibre product of $(R,p_1)$ over $X$, or, even better, by the inductive formula
+\[
+  \begin{aligned}
+    K_0 &= R
+  \\K_n &= (K_{n-1},p_n^{(n-1)})\times_X(R,p_1)
+  \end{aligned}
+\]
+where the $p_i^{(n-1)}$ (for $0<i<n-1$) are the natural projections from $K_{n-1}$ to $X$ (which can also be defined inductively).
+In this way, $p_1$, $p_2$, $\pi$, $D$, and $s$ can be understood as simplicial operations that correspond to morphisms in $\cal{S}$, namely: the $0$ face of $\Delta_1$, the $1$ face of $\Delta_1$, the $(0,2)$ face of $\Delta_2$, the degeneracy $\Delta_1\to\Delta_0$, and the symmetry of $\Delta_1$ (respectively).
+Every other semi-simplicial (resp. simplicial) operation can be formally obtained from the four (resp. five) aforementioned operations by composition and fibre products.
+
+We now define
+
 
 
 
