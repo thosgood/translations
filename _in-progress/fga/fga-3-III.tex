@@ -85,6 +85,7 @@
 
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Spec}{Spec}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -415,6 +416,7 @@ We also have an obvious natural homomorphism from the semi-simplicial set associ
 Then:
 
 \begin{itenv}{Proposition 4.1}
+\label{proposition-4.1}
   The functor $Z\mapsto Z''$ from the category of categories to the category of semi-simplicial sets is fully faithful, and defines an equivalence between the category of \emph{categories} and the category of semi-simplicial sets, i.e. contravariant functors $K$ from $\cal{S}'$ to $\Set$ \emph{that send amalgamated sums $A\coprod_C B$ (of the type described above) to fibre products of sets}.
 
   Similarly, the functor $Z\mapsto Z'$ from the category of groupoids to the category of simplicial sets is fully faithful, and defines an equivalence between the category of \emph{groupoids} and the category of
@@ -440,7 +442,53 @@ where the $p_i^{(n-1)}$ (for $0<i<n-1$) are the natural projections from $K_{n-1
 In this way, $p_1$, $p_2$, $\pi$, $D$, and $s$ can be understood as simplicial operations that correspond to morphisms in $\cal{S}$, namely: the $0$ face of $\Delta_1$, the $1$ face of $\Delta_1$, the $(0,2)$ face of $\Delta_2$, the degeneracy $\Delta_1\to\Delta_0$, and the symmetry of $\Delta_1$ (respectively).
 Every other semi-simplicial (resp. simplicial) operation can be formally obtained from the four (resp. five) aforementioned operations by composition and fibre products.
 
-We now define
+We now define an \emph{equivalence pre-relation} on an object $X$ of a category to be the data of a groupoid whose object of objects is $X$.
+Such a data gives, amongst other things, an object $R$ along with two morphisms
+\[
+  p_1,p_2\colon R\rightrightarrows X.
+\]
+But we note that only these data alone do not determine the structure in question, contrary to what happens for equivalence pairs.
+In this talk, we are interested in this notion with the aim of obtaining criteria for the possibility of passing to the quotient, i.e. for being able to form the cokernel of the pair $(p_1,p_2)$.
+The statement of this problem thus makes no reference to the additional data inherent to a groupoid.
+In the proof of the results that will follow, we will,
+\oldpage{212-12}
+however, make use of this additional data, and, in particular, of the simplicial operations (including the symmetry operations) up to dimension~$3$ (the fourth fibre power of $R$ over $X$ will appear).
+
+An equivalence relation on an object $X$ of $\cal{C}$ defines an equivalence pre-relation: it suffices to show this in the set-theoretic case, and we then associate, to an equivalence relation on a set $X$, the groupoid whose set of objects is $X$, and whose set of arrows is the graph set of the equivalence relation.
+
+A $\cal{C}$-monoid $G$ acting on an object $X$ of $\cal{C}$ defines a $\cal{C}$-category whose basic objects are $R=G\times X$ and $X$ (under the condition that $G\times X$ exists), and that is a $\cal{C}$-groupoid if and only if $G$ is a group.
+It again suffices to prove this in the set-theoretic case.
+We then define the composition of arrows $(g,a)$ and $(g',g\cdot a)$ as being
+\[
+  (g',g\cdot a) \circ (g,a) = (g'g,a)
+\]
+i.e. if $a,b\in X$ then $\Hom(a,b)$ is, by definition, the transporter of $a$ to $b$, and morphisms compose thanks to the composition of elements of $G$.
+
+\begin{rmenv}{Remark}
+  We can avoid the logical difficulties that arise in a statement such as \hyperref[proposition4.1]{Proposition~4.1} by implicitly assuming that all the objects in question can be found in a fixed ``universe'' (that is itself a set).
+\end{rmenv}
+
+
+\section{Quotient by a finite and flat equivalence relation}
+\label{5}
+
+\begin{itenv}{Theorem 5.1}
+  Let $X=\Spec(B)$ be an affine scheme, $\cal{R}$ an equivalence pre-relation on $X$, whose component $R_1$ is affine: say, $R_1=\Spec(C)$.
+  We suppose that the first projection $p_1\colon R_1\to X$ is a finite and locally free morphism, i.e. that the corresponding homomorphism of rings $p'_1\colon B\to C$ makes $C$ a projective $B$-module of finite type.
+  Let $A$ be the subring of $B$ given by the kernel of the pair of homomorphisms $p'_1,p'_2\colon B\rightrightarrows C$ (i.e. the set of elements $b$ such that $p'_1(b)=p'_2(b)$).
+  Let $Y=\Spec(A)$, and $f\colon X\to Y$ the morphism defined by the embedding of $A$ into $B$.
+  Under these conditions:
+  \begin{enumerate}[(i)]
+    \item $B$ is integral over $A$, i.e. $f$ is an integral morphism.
+    \item The morphism $f$ is surjective, and its fibres are the set-theoretic equivalence classes
+\oldpage{212-13}
+      $p_2(p_1^{-1}(x))$ in $X$ modulo $\cal{R}$, and the topology of $Y$ is the quotient of that of $X$.
+    \item $Y$ is the quotient of $X$ by $\cal{R}$ in the category of preschemes.
+    \item If $\cal{R}$ comes from an equivalence \emph{relation}, then the morphism $f\colon X\to Y$ is finite and locally free (i.e. $B$ is a projective $A$-module of finite type), and the equivalence relation is effective, i.e. $R_1\to X\times_Y X$ is an isomorphism.
+  \end{enumerate}
+\end{itenv}
+
+This theorem generalises the well-known theorem
 
 
 
