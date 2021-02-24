@@ -473,6 +473,7 @@ i.e. if $a,b\in X$ then $\Hom(a,b)$ is, by definition, the transporter of $a$ to
 \label{5}
 
 \begin{itenv}{Theorem 5.1}
+\label{theorem5.1}
   Let $X=\Spec(B)$ be an affine scheme, $\cal{R}$ an equivalence pre-relation on $X$, whose component $R_1$ is affine: say, $R_1=\Spec(C)$.
   We suppose that the first projection $p_1\colon R_1\to X$ is a finite and locally free morphism, i.e. that the corresponding homomorphism of rings $p'_1\colon B\to C$ makes $C$ a projective $B$-module of finite type.
   Let $A$ be the subring of $B$ given by the kernel of the pair of homomorphisms $p'_1,p'_2\colon B\rightrightarrows C$ (i.e. the set of elements $b$ such that $p'_1(b)=p'_2(b)$).
@@ -482,13 +483,99 @@ i.e. if $a,b\in X$ then $\Hom(a,b)$ is, by definition, the transporter of $a$ to
     \item $B$ is integral over $A$, i.e. $f$ is an integral morphism.
     \item The morphism $f$ is surjective, and its fibres are the set-theoretic equivalence classes
 \oldpage{212-13}
-      $p_2(p_1^{-1}(x))$ in $X$ modulo $\cal{R}$, and the topology of $Y$ is the quotient of that of $X$.
+      $p_2(p_1^{-1}(x))$ in $X$ modulo~$\cal{R}$, and the topology of $Y$ is the quotient of that of $X$.
     \item $Y$ is the quotient of $X$ by $\cal{R}$ in the category of preschemes.
     \item If $\cal{R}$ comes from an equivalence \emph{relation}, then the morphism $f\colon X\to Y$ is finite and locally free (i.e. $B$ is a projective $A$-module of finite type), and the equivalence relation is effective, i.e. $R_1\to X\times_Y X$ is an isomorphism.
   \end{enumerate}
 \end{itenv}
 
-This theorem generalises the well-known theorem
+This theorem generalises the well-known theorem concerning the case of a finite group $G$ acting by automorphisms on the ring $B$, and with ring $A$ of invariants, and the proof is analogous to the known proof.
+We can make (iii) more precise as follows:
+
+\begin{itenv}{Corollary 5.2}
+  The canonical morphism $R_1\to X\times_Y X$ is \emph{surjective}.
+\end{itenv}
+
+Let $\cal{R}$ continue to be a ``finite and locally free'' equivalence pre-relation on $X$, but with $X$ now being an arbitrary prescheme.
+Suppose that we can find a prescheme $Y$ and a morphism $f\colon X\to Y$ such that $fp_1=fp_2$, and further such that the sequence
+\[
+  \cal{O}_Y \to f_*(\cal{O}_X) \rightrightarrows g_*(\cal{O}_R)
+\]
+of homomorphisms of sheaves of rings on $Y$ is exact (where $g=fp_i$).
+It then follows from the theorem that we have conclusions (i) to (iv) analogous to those of the theorem, and, in particular, by (iii), $Y$ is the quotient of $X$ by $\cal{R}$, and thus determined up to unique isomorphism.
+Under these conditions, we say that the equivalence pre-relation $\cal{R}$ on $X$ is \emph{admissible}.
+With this definition:
+
+\begin{itenv}{Theorem 5.3}
+\label{theorem5.3}
+  Let $X$ be a prescheme, and $\cal{R}$ an equivalence pre-relation on $X$ such that $p_1\colon R_1\to X$ is a finite and locally free morphism.
+  For $\cal{R}$ to be admissible, it is necessary and sufficient for every set-theoretic equivalence class $p_2(p_1^{-1}(x))$ in $X$ modulo~$\cal{R}$ to be contained in an affine open subset (a condition that is always satisfied if every finite subset of $X$ is contained in an affine open subset, for example if $X$ is quasi-projective over an affine scheme).
+\end{itenv}
+
+We can in fact easily show that every equivalence class modulo~$\cal{R}$ in $X$ is then contained in an affine open subset that is \emph{stable} under $\cal{R}$, and we construct the quotient $Y$ by gluing the pieces obtained by applying \hyperref[theorem5.1]{Theorem~5.1}.
+
+\oldpage{212-14}
+\begin{itenv}{Corollary 5.4}
+\label{corollary5.4}
+  Suppose that this condition is satisfied, and, further, that $\cal{R}$ comes from an equivalence relation.
+  Then the equivalence relation is question is effective, i.e. $R_1\to X\times_Y X$ is an isomorphism, and $f\colon X\to Y$ is a finite and locally free morphism.
+\end{itenv}
+
+We then immediately conclude, by descent, the following:
+
+\begin{itenv}{Corollary 5.5}
+  Under the conditions of \hyperref[corollary5.4]{Corollary~5.4}, for $X$ to be everywhere of rank~$n$ over $Y$, it is necessary and sufficient for $(R_1,p_1)$ to be everywhere of rank~$n$ over $X$.
+  If $X$ and $R_1$ are $Z$-preschemes, and $p_1$ and $p_2$ are $Z$-morphisms (and thus $Y$ a $Z$-prescheme), then $X$ is flat over $Z$ if and only if $Y$ is flat over $Z$.
+\end{itenv}
+
+In summary:
+
+\begin{itenv}{Scholium}
+  The data of a finite, locally free, and surjective morphism $f\colon X\to Y$ of preschemes is equivalent to the data of a prescheme $X$ endowed with an equivalence relation $R$ such that $p_1\colon R\to X$ is finite and locally free, and such that every class $p_2(p_1^{-1}(x))$ is contained in an affine open subset.
+\end{itenv}
+
+\begin{rmenv}{Remarks 5.6}
+  \begin{enumerate}
+    \item We have not needed to make any Noetherian hypothesis.
+    \item This idea of passing to the quotient contains, as a particular case, the ``inseparable descent'' of Cartier, which corresponds to the determination of finite and locally free morphisms $f\colon X\to Y$ such that $f_*(\cal{O}_X)$ admits a $p$-basis with respect to $\cal{O}_Y$ (where $X$ is a given prescheme whose sheaf $\cal{O}_X$ is annihilated by the prime number $p>0$).
+      We note that this result can also be easily expressed without any regularity hypothesis on the local rings, and without supposing that $X$ is an algebraic scheme over a field.
+      The theory of Jacobson--Bourbaki is obtained by taking $X$ to be the spectrum of a field of characteristic~$p$.
+      \item Gabriel had already obtained a particular case of \hyperref[theorem5.3]{Theorem~5.3} in the theory of passing to the quotient for finite commutative groups over a field $k$.
+        (Compare with \hyperref[corollary7.4]{Corollary~7.4}).
+  \end{enumerate}
+\end{rmenv}
+
+
+\section{Quotient by a proper and flat equivalence relation}
+\label{6}
+
+\begin{itenv}{Theorem 6.1}
+  Let $S$ be a \emph{locally Noetherian} prescheme, $X$ a \emph{quasi-projective} $S$-scheme, and $\cal{R}$ an equivalence pre-relation on $X$, such that:
+\oldpage{212-15}
+  \begin{enumerate}[(a)]
+    \item $p_1\colon R_1\to X$ is proper and flat; and
+    \item $R_1\to X\times_S X$ is a finite morphism (or, equivalently, by (a), a morphism with finite fibres, which is a condition that is automatically satisfied if $\cal{R}$ comes from an equivalence relation).
+  \end{enumerate}
+  Under these conditions:
+  \begin{enumerate}[(i)]
+    \item $X/\cal{R}=Y$ exists, and (if $S$ is Noetherian) is quasi-projective over $S$.
+    \item The canonical morphism $f\colon X\to Y$ is surjective, proper, and open, and its fibres are the equivalence classes $p_2(p_1^{-1}(x))$ in $X$ modulo~$\cal{R}$, and so $Y$ can be identified with the topological quotient space of $X$ by the set-theoretic equivalence relation defined by $\cal{R}$.
+      Finally, $R_1\to X\times_Y X$ is surjective.
+    \item If $\cal{R}$ comes from an equivalence relation, then the equivalence relation in question is effective, i.e. $R_1\to X\times_Y X$ is an isomorphism, and, further, $f\colon X\to Y$ is flat (and thus faithfully flat).
+  \end{enumerate}
+\end{itenv}
+
+For the proof, we can reduce to \hyperref[theorem5.1]{Theorem~5.1} by considering suitable quasi-sections of $X$ for $\cal{R}$, with the proof being analogous to the construction of algebraic quotient groups in the S\'{e}minaire Chevalley.
+
+In summary:
+
+\begin{itenv}{Scholium}
+  Let $X$ be quasi-projective over $S$, with $S$ locally Noetherian.
+  Then the data of a proper, faithfully flat, and surjective morphism $f\colon X\to Y$ from $X$ to an $S$-prescheme $Y$ is equivalent to the data of an equivalence relation $R$ on $X$ such that $p_1\colon R\to X$ is proper and flat.
+\end{itenv}
+
+The same method gives the following result:
+
 
 
 
