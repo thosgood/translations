@@ -550,6 +550,7 @@ In summary:
 \label{6}
 
 \begin{itenv}{Theorem 6.1}
+\label{theorem6.1}
   Let $S$ be a \emph{locally Noetherian} prescheme, $X$ a \emph{quasi-projective} $S$-scheme, and $\cal{R}$ an equivalence pre-relation on $X$, such that:
 \oldpage{212-15}
   \begin{enumerate}[(a)]
@@ -576,6 +577,39 @@ In summary:
 
 The same method gives the following result:
 
+\begin{itenv}{Theorem 6.2}
+\label{theorem6.2}
+  Let $S$ be a Noetherian prescheme, $X$ a prescheme of finite type over $S$, and $\cal{R}$ an equivalence pre-relation on the $S$-prescheme $X$.
+  Suppose that
+  \begin{enumerate}[(a)]
+    \item $p_1\colon R_1\to X$ is flat and of finite type; and
+    \item the morphism $R_1\to X\times_S X$ is quasi-finite (i.e. has finite fibres).
+  \end{enumerate}
+  Then there exists a \emph{dense} open subset $U$ of $X$ that is \emph{saturated} for $\cal{R}$, such that:
+  \begin{enumerate}[(i)]
+    \item If $\cal{R}_U$ is the equivalence pre-relation induced by $\cal{R}$ on $U$, then $U/\cal{R}_U$ exists, and is of finite type over $S$.
+    \item The canonical morphism $U\to U/\cal{R}_U$ is surjective and open, and its fibres are the set-theoretic equivalence classes for $\cal{R}_U$ (and thus $U/\cal{R}_U$ is a topological quotient space of $U$ by the set-theoretic equivalence relation defined by $\cal{R}_U$).
+      Finally, the morphism $(\cal{R}_U)_1\to U\times_{U/\cal{R}_U}U$ is surjective.
+\oldpage{212-16}
+    \item If $\cal{R}$ comes from an equivalence relation, then we can suppose that $U\to U/\cal{R}_U$ is faithfully flat and that $\cal{R}_U$ is effective.
+  \end{enumerate}
+\end{itenv}
+
+This is a result of an essentially ``birational'' nature.
+
+\begin{rmenv}{Remarks 6.3}
+  \begin{enumerate}
+    \item I do not know if, in \hyperref[theorem6.1]{Theorem~6.1} and \hyperref[theorem6.2]{Theorem~6.2}, hypothesis~(b) is useless.
+      In practice, it obliges us, in the passage to the quotient by groups, to restrict to he case where the stabilisers are all finite groups.
+    \item We can ask if there are results analogous to \hyperref[theorem6.1]{Theorem~6.1} and \hyperref[theorem6.2]{Theorem~6.2} without any flatness hypothesis.
+      I have no counter example in this direction.
+      However, even keeping the flatness hypothesis, and restricting to equivalence relations such that $p_1\colon R\to X$ is flat and quasi-finite (but not finite), and with $X$ affine, it can still be the case that $R$ is not effective: take the equivalence relations induced on the affine open subsets covering the Nagata variety (or a group with two elements acting in a ``non-admissible'' way).
+  \end{enumerate}
+\end{rmenv}
+
+
+\section{Applications}
+\label{7}
 
 
 
