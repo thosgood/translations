@@ -76,9 +76,9 @@
 \newcommand{\kres}{\mathfrak{K}}
 \newcommand{\simto}{\xrightarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
 \newcommand{\simfrom}{\xleftarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
-
 \newcommand{\Set}{\mathtt{Set}}
 \newcommand{\pr}{\mathrm{pr}}
+\newcommand{\Gm}{\mathrm{G}_\mathrm{m}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -87,8 +87,11 @@
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\sGL}{\mathscr{G}\!\!\mathscr{L}}
+\DeclareMathOperator{\GP}{GP}
+\DeclareMathOperator{\Aut}{Aut}
 
-\newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
 
@@ -125,14 +128,16 @@
 
 \subsubsection*{}
 
-\emph{[Trans.] We have made changes throughout the text following the errata (\emph{S\'{e}minaire Bourbaki} \textbf{14}, 1961--62, Compl\'{e}ment); we preface them with ``[Comp.]'' (except for small corrections, which we insert silently).}
+\emph{[Trans.] We have made changes throughout the text following the errata (\emph{S\'{e}minaire Bourbaki} \textbf{14}, 1961--62, Compl\'{e}ment); we preface them with ``[Comp.]''.}
 \medskip
 
 
-\todo --- errata!
-
 \section*{Introduction}
 \oldpage{212-01}
+
+\emph{[Comp.]}
+\emph{We note that the application (of the theory developed here) in expos\'{e}~3.V (``Picard schemes: existence theorems'') can equally be replaced by a suitable use of Hilbert schemes (cf. {\normalfont S\'{e}minaire Mumford--Tate, Harvard University (1961--62)}). As mentioned in \hyperref[8]{\S8}, the most important gap in the theory presented here is the lack of existence criteria for quotients by a non-proper equivalence relation, such as the equivalence relations coming from certain actions of the projective group. An important theorem in this direction has been obtained by Mumford ({\normalfont ``An elementary theorem in geometric invariant theory''. \emph{Bull. Amer. math. Soc.} \textbf{67} (1961), 483--486}). For a refinement of his result, and various applications the the theory, see {\normalfont S\'{e}minaire Mumford--Tate, Harvard University (1961--62)}.}
+\medskip
 
 The problems discussed in the current expos\'{e} differ from those discussed in the two previous ones, in that we try to represent certain covariant, no longer contravariant, functors of varying schemes.
 The procedure of passing to the quotient is, however, essential in many questions of construction in algebraic geometry, including those from expos\'{e}s~I and II (\cite{1}, \cite{2}).
@@ -417,7 +422,7 @@ We also have an obvious natural homomorphism from the semi-simplicial set associ
 Then:
 
 \begin{itenv}{Proposition 4.1}
-\label{proposition-4.1}
+\label{proposition4.1}
   The functor $Z\mapsto Z''$ from the category of categories to the category of semi-simplicial sets is fully faithful, and defines an equivalence between the category of \emph{categories} and the category of semi-simplicial sets, i.e. contravariant functors $K$ from $\cal{S}'$ to $\Set$ \emph{that send amalgamated sums $A\coprod_C B$ (of the type described above) to fibre products of sets}.
 
   Similarly, the functor $Z\mapsto Z'$ from the category of groupoids to the category of simplicial sets is fully faithful, and defines an equivalence between the category of \emph{groupoids} and the category of
@@ -560,7 +565,7 @@ In summary:
   \end{enumerate}
   Under these conditions:
   \begin{enumerate}[(i)]
-    \item $X/\cal{R}=Y$ exists, and (if $S$ is Noetherian) is quasi-projective over $S$.
+    \item $Y=X/\cal{R}$ exists, and (if $S$ is Noetherian) is quasi-projective\footnote{\emph{[Comp.]} \emph{The fact that $Y=X/\cal{R}$ is quasi-projective over $S$ has only been proven, for now, in the case where $\cal{R}$ comes from an equivalence relation.}} over $S$.
     \item The canonical morphism $f\colon X\to Y$ is surjective, proper, and open, and its fibres are the equivalence classes $p_2(p_1^{-1}(x))$ in $X$ modulo~$\cal{R}$, and so $Y$ can be identified with the topological quotient space of $X$ by the set-theoretic equivalence relation defined by $\cal{R}$.
       Finally, $R_1\to X\times_Y X$ is surjective.
     \item If $\cal{R}$ comes from an equivalence relation, then the equivalence relation in question is effective, i.e. $R_1\to X\times_Y X$ is an isomorphism, and, further, $f\colon X\to Y$ is flat (and thus faithfully flat).
@@ -656,6 +661,7 @@ The situation is particularly simple if $S$ is the spectrum of a field, since th
 We find:
 
 \begin{itenv}{Corollary 7.4}
+\label{corollary7.4}
   Let $F$ and $G$ be group schemes of finite type over a field $k$, and let $u\colon F\to G$ be a homomorphism of $k$-groups.
   Then $u$ factors as $F\to F'\to G$, where $F\to F'$ is a homomorphism given by passing to the quotient by the closed subgroup $\Ker u$ of $F$, and where $F'\to G$ is a group homomorphism that is a closed immersion.
   The quotient $G/F=G/F'$ exists.
@@ -671,7 +677,54 @@ It is advantageous to consider the ``hyperalgebras'' introduced by Cartier, foll
 \section{A conjecture}
 \label{8}
 
+The conjecture in question concerns the need of knowing how to pass to the quotient by the projective group acting on certain subschemes of ``Hilbert schemes'' (with these ``Hilbert schemes'' replacing, in the theory of schemes, Chow varieties).
 
+Let $S$ be a prescheme, and $n$ an integer.
+To every prescheme $S'$ over $S$, we associate the group $\GL(n,\Gamma(S',\cal{O}_{S'}))$ of invertible $(n\times n)$ matrices with values in the ring of sections of $\cal{O}_{S'}$.
+We thus obtain a contravariant functor in $S'$, which can can easily show to be representable, and so the functor corresponds to a group scheme over $S$ (which is further affine over $S$) which we denote by $\GL(n)_s$.
+Its construction is compatible with change of base, so that, in reality, everything comes from a group scheme over $\mathbb{Z}$, denoted by $\GL(n)$.
+The group $\GL(1)$, called the \emph{multiplicative group}, and often denoted by $\Gm$, corresponds to the functor $S\mapsto\Gamma(S,\cal{O}_S)^*$, with the latter being the group of ``units'' over $S$.
+We have an evident homomorphism $\GL(1)\to\GL(n)$, and we can easily construct the quotient group, denoted by $\GP(n-1)$, and called the \emph{projective group of degree~$(n-1)$ over $\mathbb{Z}$}.
+It represents the functor that sends $S$ to the group of sections of the sheaf $\sGL(n)_S/\sGL(1)_S$, where $\sGL(n)_S$ denotes the sheaf of germs of sections of $\GL(n)_S$ over $S$.
+(Note that sections of $\GP(n-1)_S$ over $S$ do not, in general, come from sections of $\GL(n)_S$ over $S$!)
+Note that we can prove that $\GL(n-1)$ equally represents the functor $S\mapsto\Aut_S(\mathbb{P}_S^{n-1})$ (where $\mathbb{P}_S^{n-1}$ is the projective-type scheme of relative dimension~$(n-1)$ over $S$), at least when $S$ is Noetherian.
+It is in this way that it appears in the theory of modules.
+
+Let $S$ be a Noetherian scheme, which we can, if we want, suppose to be affine, and let $X$ be a quasi-projective $S$-prescheme endowed with an invertible sheaf $\scr{L}$ that is very ample with respect to $S$.
+Suppose that the group $G=\GP(n)_S$ acts on $X$ and $\scr{L}$ simultaneously (in a way that is compatible with its action on $X$), and that it acts \emph{freely} on $S$.
+
+\oldpage{212-19}
+\begin{itenv}{Conjecture 8.1}
+  Under the above conditions:
+  \begin{enumerate}
+    \item The equivalence relation defined by $G$ is effective, the quotient $Y=X/G$ is of finite type over $S$, and the canonical morphism $f\colon X\to Y$ is flat and surjective (and thus $X$ becomes a homogeneous principal bundle on $Y$, with group $G\times_S Y=\GP(n)_Y$).
+    \item Let $\scr{L}'$ be the invertible sheaf on $Y$ induced from $\scr{L}$ by ``faithfully flat descent'' under $f$ (cf. \cite[\S B, Theorem~1]{1}).
+      Then $\scr{L}'$ is ``pre-ample'' on $Y$ with respect to $S$, i.e. there exists an integer $m$ and a quasi-finite morphism from $Y$ to some suitable projective-type scheme $\mathbb{P}_S^N$ such that $(\scr{L}')^{\otimes m}$ is isomorphic to the inverse image of $\cal{O}_{\mathbb{P}_S^N}(1)$.
+  \end{enumerate}
+\end{itenv}
+
+We note that, even if $X$ is separated over $S$, then it can be the case that $Y$ is not separated over $S$ (a situation that arises in not-at-all-pathological ``module problems'').
+If 1. is satisfied, then $Y$ is separated if and only if the equivalence relation defined by $G$ has a closed graph, i.e. if $G\times X\to X\times X$ has a closed image (and is thus a closed immersion).
+If $Y$ is separated, then $\scr{L}'$ is pre-ample on $Y$ with respect to $S$ if and only if it is ample, i.e. if a suitable tensor power defines a projective immersion.
+In the module problems mentioned in the introduction, we can show that the equivalence relation to which we arrive does indeed have a closed graph.
+
+\begin{rmenv}{Remarks 8.2}
+  We have assumed that $G=\GP(n)_S$ to give a concrete example, and because it is currently the most important case in practice.
+  The reasonable hypothesis to make on $G$ seems rather to be that $G$ be one of the ``forms'' on $S$ of a Tohok\^{u} group (whose construction over the integers has also been made by Chevalley).
+  The only positive fact that is known to me concerning the above conjecture is the following:
+  \emph{Let $X$ be an affine scheme over a field $k$ of characteristic~$0$, on which the group $\GL(n)_k$ or $\GP(n-1)_k$ acts freely. Then the equivalence relation defined by $G$ is effective, the quotient $X/G$ is affine, and the morphism $X\to X/G$ is flat and surjective.}
+  The proof uses the following fact (that, for now, has only been proven in characteristic~$0$):
+  if we let $G$ act on the affine ring $A$ of $G$, considered as a vector space over $k$, then the trivial representation of $G$ only appears once (in a composition series of a vector subspace of finite dimension over $k$ that is stable under $G$).
+  It seems possible that a systematic use of the
+\oldpage{212-20}
+  theory of linear representations of $G$ would give a proof of the conjecture, or at least when we work over a base field.
+  When we are no longer working over a base field, the author knows nothing.
+\end{rmenv}
+
+\begin{rmenv}{Remark}
+  \emph{[Comp.]}
+  \emph{As we note at the end of the next expos\'{e}, the above conjecture is decidedly false. The ``positive fact'' mentioned in the above remark seems to have been proven simultaneously by various authors (Nagata, Rosenlicht, Grothendieck, \ldots).}
+\end{rmenv}
 
 
 
