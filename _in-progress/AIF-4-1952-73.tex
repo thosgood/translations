@@ -494,7 +494,40 @@ Here, our interest lies in other properties of these operators, that result dire
   \end{enumerate}
 \end{itenv}
 
-We have analogous statements for ``equinuclear'' sets of maps, if we 
+We have analogous statements for ``equinuclear'' sets of maps, if by that we mean a set of maps from a locally convex space $M$ to another locally convex space $N$, contained in
+\oldpage{87}
+the set of maps defined by the unit ball of a space $M'_A\hotimes N_B$, where $A$ is a weakly closed equicontinuous disk of $M'$, and $B$ a bounded disk in $N$ such that $N_B$ is complete.
+
+We note that, if $u$ is a nuclear map from $E$ to $F$, $M$ a closed vector subspace of $E$ contained in the kernel of $u$, and $N$ a closed vector subspace of $F$ containing $u(E)$, then, in general, the linear map from $E/M$ to $F$ or from $E$ to $N$ defined by $u$ \emph{is not nuclear}, even if $E$ and $F$ are reflexive Banach spaces.
+However, if $M$ (resp. $N$) admits a topological complement, then the map from $E/M$ to $F$ (resp. from $E$ to $N$) defined by $u$ will itself be nuclear.
+This is the case, in particular, if $E$ (resp. $F$) is a Hilbert space.
+
+
+\subsection{Integral linear maps, integral bilinear forms}
+\label{1.8}
+
+(\cite[\S4, n\textsuperscript{o}~3 and n\textsuperscript{o}~4]{PTT}).
+\medskip
+
+\begin{itenv}{Theorem 7}
+\label{1.theorem7}
+  Let $E$ and $F$ be two locally convex (resp. normed) spaces, and $v$ a separately continuous bilinear form on $E\times F$.
+  Then the following conditions are equivalent:
+  \begin{enumerate}[a)]
+    \item $u\mapsto\langle u,v\rangle$ is a linear form on $E\otimes F$ that is continuous for the topology induced by $E\hhotimes F$ (resp. $u\mapsto\langle u,v\rangle$ is a linear form on $E\otimes F$ of norm~$\leq1$ when $E\otimes F$ is endowed with the norm induced by $E\hhotimes F$).
+    \item $v$ is contained in the closed disked hull in $\sBB_\mathrm{s}(E,F)$ (the space $\sBB(E,F)$ endowed with the simple-convergence topology) of a set $M\otimes N$, where $M$ is an equicontinuous subset of $E'$, and $N$ an equicontinuous subset of $F'$ (resp. $M$ the unit ball of $E'$, and $N$ the unit ball of $F'$).
+    \item There exists a measure $\mu$ on the product space of a weakly compact equicontinuous subspace $M$ of $E'$ with a weakly compact equicontinuous subspace $N$ of $F'$ (resp. a measure $\mu$ of norm~$\leq1$ on the product of the unit ball of $E'$ with the unit ball of $F'$, endowed with the product of the weak topologies) such that we have the formula
+      \[
+        v = \int_{M\times N} x'\otimes y' \dd\mu(x',y')
+      \]
+      (the weak integral in $\sBB(E,F)$, in duality with $E\otimes F$).
+    \item There exists a compact space endowed with a positive measure $\mu$ of norm~$\leq1$, a continuous linear map $\alpha$ from $E$ to $\LL^\infty(\mu)$, and a continuous linear map $\beta$ from $F$ to $\LL^\infty(\mu)$ (resp. the same, but with $\alpha$ and $\beta$
+\oldpage{88}
+      also of norm~$\leq1$) such that we have $u(x,y)=\langle\alpha x,\beta y\rangle$ for $x\in E$, $y\in F$.
+  \end{enumerate}
+\end{itenv}
+
+A bilinear form on $E\times F$ is said to be \emph{integral} if it satisfies any of the equivalent conditions of \hyperref[1.theorem7]{Theorem~7}.
 
 
 
