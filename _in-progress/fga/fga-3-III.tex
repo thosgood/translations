@@ -611,6 +611,41 @@ This is a result of an essentially ``birational'' nature.
 \section{Applications}
 \label{7}
 
+As we said in the introduction, the most important application of \hyperref[theorem6.1]{Theorem~6.1} is the construction of Picard schemes, as well as solutions to various other problems of ``modules'', to which we will later return.
+
+We obtain a simple proof of the following result of Shimura:
+
+\begin{itenv}{Proposition 7.1}
+  Let $A$ be an abelian scheme defined over a discrete valuation ring $V$ with field of fractions $K$.
+  Then every abelian scheme $B'$ over $K$ that is isogenous to a quotient of $A\otimes_V K$ ``simplifies well for $V$'', i.e. is isomorphic to some $B\otimes_V A$, where $B$ is an abelian scheme over $V$ (essentially unique, we recall).
+\end{itenv}
+
+\begin{proof}
+  We can suppose that $B'$ is the quotient of $A_K$ by a subscheme in groups $C'$.
+  (N.B. $C'$ will not, in general, be ``reduced'', i.e. its local rings will have nilpotent elements).
+  Consider the closed subscheme $C$ of $A$ given by ``the closure'' of $C'$, i.e. the smallest closed subscheme of $A$ such that $C_K$ contains $C'$.
+  Then $C_K=C'$, and, since $V$ is a discrete valuation ring, we easily deduce that $C$ is a subscheme in groups of $A$ over $V$.
+  Since $A$ is proper over $\Spec(V)=S$, so too is $C$.
+  Further, $A$ is projective over $S$.
+  We can thus apply \hyperref[theorem6.1]{Theorem~6.1} in order to construct $A/C=B$,
+\oldpage{212-17}
+  which is the desired $B$.
+\end{proof}
+
+Finally, essentially known arguments allow us to extract from \hyperref[theorem6.2]{Theorem~6.2} the following result:
+
+\begin{itenv}{Theorem 7.2}
+  Let $S$ be the spectrum of an Artinian ring, $F$ and $G$ group schemes of finite type over $S$, and $u\colon F\to G$ a homomorphism of group schemes over $S$.
+  Suppose that
+  \begin{enumerate}[(i)]
+    \item $F$ is flat over $S$; and
+    \item the kernel of $u$ is finite.
+  \end{enumerate}
+
+  Under these conditions, the quotient scheme $G/F$ exists, and the canonical morphism $G\to G/F$ is surjective and open, and its fibres are the set-theoretic equivalence classes defined by the right action of $F$ on $G$.
+  Finally, if $u$ is a monomorphism, then the morphism $G\to G/F$ is flat, and the morphism $G\times F\to G\times_{(G/F)}G$ is an isomorphism, or, in other words, $G$ is a principal homogeneous space over $G/F$, with structure group $F$ (acting on the right), or rather $F\times_S(G/F)$ considered as a group scheme over $G/F$ (cf. \cite[\S B.6]{1}).
+\end{itenv}
+
 
 
 
