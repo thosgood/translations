@@ -86,6 +86,7 @@
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ker}{Ker}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -645,6 +646,32 @@ Finally, essentially known arguments allow us to extract from \hyperref[theorem6
   Under these conditions, the quotient scheme $G/F$ exists, and the canonical morphism $G\to G/F$ is surjective and open, and its fibres are the set-theoretic equivalence classes defined by the right action of $F$ on $G$.
   Finally, if $u$ is a monomorphism, then the morphism $G\to G/F$ is flat, and the morphism $G\times F\to G\times_{(G/F)}G$ is an isomorphism, or, in other words, $G$ is a principal homogeneous space over $G/F$, with structure group $F$ (acting on the right), or rather $F\times_S(G/F)$ considered as a group scheme over $G/F$ (cf. \cite[\S B.6]{1}).
 \end{itenv}
+
+\begin{itenv}{Corollary 7.3}
+  Under these conditions, for $G$ to be flat over $S$, it is necessary and sufficient for $G/F$ to be flat over $S$.
+  If this condition is satisfied, then the passage to the quotient by $F$ commutes with every extension of the base $S$, and if $F$ is an invariant subgroup of $G$, then $G/F$ can be endowed with the structure of a \emph{quotient group} of $G$ by $F$.
+\end{itenv}
+
+The situation is particularly simple if $S$ is the spectrum of a field, since then every $S$-prescheme is automatically flat over $S$.
+We find:
+
+\begin{itenv}{Corollary 7.4}
+  Let $F$ and $G$ be group schemes of finite type over a field $k$, and let $u\colon F\to G$ be a homomorphism of $k$-groups.
+  Then $u$ factors as $F\to F'\to G$, where $F\to F'$ is a homomorphism given by passing to the quotient by the closed subgroup $\Ker u$ of $F$, and where $F'\to G$ is a group homomorphism that is a closed immersion.
+  The quotient $G/F=G/F'$ exists.
+  The usual formalism (as in the Noether theorems) holds amongst algebraic groups over $k$.
+\end{itenv}
+
+This result allows us to treat the passage to the quotient in a uniform way for algebraic (in the classical sense, i.e. irreducible over $k$ and simple over $k$) groups, and the passage to the quotient by ``infinitesimal'' subgroups
+\oldpage{212-18}
+considered by Cartier.
+It is advantageous to consider the ``hyperalgebras'' introduced by Cartier, following from the work of Dieudonn\'{e} on formal groups, as groups in the category of formal schemes over $k$, and, if necessary (if they correspond to hyperalgebras of finite rank over $k$), as algebraic groups that are finite over $k$.
+
+
+\section{A conjecture}
+\label{8}
+
+
 
 
 
