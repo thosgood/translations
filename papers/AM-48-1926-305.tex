@@ -53,10 +53,13 @@
 
 \theoremstyle{plain}
 
-\newtheorem{innerlemma}{Lemma}
-\newenvironment{lemma}[1]
-  {\renewcommand\theinnerlemma{#1}\innerlemma}
-  {\endinnerlemma}
+\newenvironment{itenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
+
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
 
 
 %% Shortcuts %%
@@ -684,7 +687,7 @@ The above observation also shows that the number of zeros with ordinate between 
 
 In order to be able to prove all of the claims in the introduction, we will need two simple, general lemmas.
 
-\begin{lemma}{I}
+\begin{itenv}{Lemma I}
 \label{lemma1}
   Let $F(u)$ be analytic, and taking real values for any non-negative real $u$.
   Further, let
@@ -701,7 +704,7 @@ In order to be able to prove all of the claims in the introduction, we will need
   \tag{35}
   \]
   is non-zero for sufficiently large real $x$.
-\end{lemma}
+\end{itenv}
 \begin{proof}
   Since $F(u)$ is not even, there exists some integer $q$ such that
   \[
@@ -724,7 +727,7 @@ If we take $F(u)$ to be the right-hand side of \hyperref[4]{(4)}, or, more gener
 Of these zeros, by \hyperref[lemma1]{Lemma~I}, only finitely many are real, since the function $F(u)$ is clearly not even.
 The function $\Phi(u)$ in the integral representation \hyperref[2]{(2)} of the $\xi$-function must, by \hyperref[lemma1]{Lemma~I}, be even (which could also be shown directly).
 
-\begin{lemma}{II}
+\begin{itenv}{Lemma II}
 \label{lemma2}
   Let $a$ be a positive constant, and $G(z)$ an entire function of genus $0$ or $1$, that takes real values for real $z$, with no complex zeros and at least one real zero.
   Then the function
@@ -735,7 +738,7 @@ The function $\Phi(u)$ in the integral representation \hyperref[2]{(2)} of the $
   \]
   has only real zeros.
   \footnote{The corresponding result for polynomials is a special case of a theorem of \textsc{Ch.~Biehler}. See e.g. \textsc{G. P\'{o}lya and G.~Szeg\"{o}}, op. cit., Aufgabe~III~25.}
-\end{lemma}
+\end{itenv}
 \begin{proof}
   The hypotheses on $G(z)$ imply that
   \[
