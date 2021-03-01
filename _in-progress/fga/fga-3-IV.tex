@@ -1,0 +1,186 @@
+\documentclass{article}
+
+\usepackage[margin=1.6in]{geometry}
+
+\title{Techniques of descent and existence theorems in algebraic geometry\\IV. \emph{Hilbert schemes}}
+\author{A. Grothendieck}
+\date{May 1961}
+
+\newcommand{\doctype}{French seminar talk}
+\newcommand{\origcit}{%
+  \textsc{Grothendieck, A.}
+  Technique de descente et th\'{e}or\`{e}mes d'existence en g\'{e}om\'{e}trie alg\'{e}brique. IV. Les sch\'{e}mas de Hilbert.
+  \emph{S\'{e}minaire Bourbaki}, Volume~\textbf{13} (1960--61), Talk no.~221.%
+}
+
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+\usepackage{graphicx}
+
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{fouriernc}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\makeatletter
+\ifx\pdfmdfivesum\undefined
+  \let\pdfmdfivesum\mdfivesum
+\fi
+\edef\filesum{\pdfmdfivesum file {\jobname}}
+\pagestyle{fancy}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhf{}
+\lhead{\footnotesize\runtitle}
+\lfoot{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+
+
+\renewcommand{\thepart}{\Alph{part}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{(\alph{subsection})}
+
+\usepackage{chngcntr}
+\counterwithin*{section}{part}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\newenvironment{itenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
+  {\medskip}
+
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\medskip}
+
+
+%% Shortcuts %%
+
+\newcommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\newcommand{\fk}[1]{{\mathfrak{#1}}}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\shHom}{\underline{\Hom}}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\shTor}{\underline{\Tor}}
+
+\newcommand{\todo}{\textbf{ !TODO! }}
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+
+  \medskip
+  
+  \emph{What follows is a translation of the \doctype:}
+
+  \medskip\noindent
+  \origcit
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+
+%% Content %%
+
+\subsubsection*{}
+
+\emph{[Trans.] We have made changes throughout the text following the errata (\emph{S\'{e}minaire Bourbaki} \textbf{14}, 1961--62, Compl\'{e}ment); we preface them with ``[Comp.]''.}
+\medskip
+
+\todo additif
+
+\todo errata
+
+
+\section*{Introduction}
+\oldpage{221-01}
+
+
+
+
+
+
+%% Bibliography %%
+
+\nocite{*}
+\begin{thebibliography}{8}
+
+  \bibitem{1}
+  {\sc Borel, A. and Serre, J.-P.}
+  \newblock Le th\'{e}or\`{e}me de Riemann--Roch.
+  \newblock {\em Bull. Soc. math. France} \textbf{86} (1958), 97--136.
+
+  \bibitem{2}
+  {\sc Grothendieck, A.}
+  \newblock Technique de descente et th\'{e}or\`{e}mes d'existence en g\'{e}om\'{e}trie alg\'{e}brique, I, II, III
+  \newblock {\em S\'{e}minaire Bourbaki} \textbf{12} (1959--60), Talk no.~190; \textbf{12} (1959--60), Talk no.~195; \textbf{13} (1960--61), Talk no.~212.
+
+  \bibitem{3}
+  {\sc Grothendieck, A.}
+  \newblock {\em S\'{e}minaire de G\'{e}om\'{e}trie alg\'{e}brique, I, II, III, IV.}
+  \newblock Paris, Institut des Hautes \'{E}tudes Scientifiques (1960--61).
+
+  \bibitem{4}
+  {\sc Grothendieck, A.}
+  \newblock Technique de construction en g\'{e}om\'{e}trie analytique, IV, V.
+  \newblock {\em S\'{e}minaire Cartan} \textbf{13} (1960--61), Talks no.~11 and 12.
+
+  \bibitem{5}
+  {\sc Grothendieck, A. and Dieudonn\'{e}, J.}
+  \newblock El\'{e}ments de g\'{e}om\'{e}trie alg\'{e}brique, I: Le langage de sch\'{e}mas.
+  \newblock {\em Publications math\'{e}matiques de l'Institut des Hautes \'{E}tudes Scientifiques} \textbf{4} (1960); II, III, IV (to appear).
+
+  \bibitem{6}
+  {\sc Kodaira, K.}
+  \newblock Characteristic linear systems of complete continuous systems.
+  \newblock {\em Amer. J. of Math.} \textbf{78} (1956), 716--744.
+
+  \bibitem{7}
+  {\sc Serre, J.-P.}
+  \newblock Exemples de vari\'{e}t\'{e}s projectives en caract\'{e}ristique $p$ non relevables en caract\'{e}ristique $0$.
+  \newblock {\em Proc. Nat. Acad. Sc. U.S.A.} \textbf{47} (1961), 108--109.
+
+  \bibitem{8}
+  {\sc Zappa, G.}
+  \newblock Sull'esistenza, sopra la superficie algebriche, di sistemi continui completi infiniti, la cui curva e a serie caratteristica incompleta.
+  \newblock {\em Pont. Acad. Sc. Acta} \textbf{9} (1945), 91--93.
+
+\end{thebibliography}
+
+\end{document}
