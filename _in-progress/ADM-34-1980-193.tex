@@ -118,10 +118,10 @@
 
 %% Content %%
 
-\oldpage{193}
 \section{Introduction}
 \label{0}
 
+\oldpage{193}
 We revise the notions of algebraic theories, algebras, categories, and algebraic functors introduced by F.W.~Lawvere, in such a way that the essential theorems can be generalised to apply to non-algebraic situations, such as that of fields, local rings, totally ordered sets, metric spaces, normed vector spaces, pre-Hilbert spaces, etc.
 
 A multialgebraic category is a category of functors that are multicontinuous for finite multiproducts, defined over a small category with finite multiproducts with values in $\Set$.
@@ -429,6 +429,21 @@ We use the notation and results of \cite{2} and \cite{3}.
   The inclusion functor $\MulAlg(\bb{M})\to\Set^\bb{M}$ preserves kernel pairs and fibre products.
   It preserves and reflects regular epimorphisms since these are cokernels of their kernel pairs.
   Since the category $\Set^\bb{M}$ has universal regular factorisations, so too does the category $\MulAlg(\bb{M})$.
+\end{proof}
+
+
+\begin{rmenv}{2. Multialgebraic forgetful functors}
+  The \emph{structure-forgetful functor} $U_\bb{M}\colon\MulAlg(\bb{M})\to\Set$ is defined by $U_\bb{M}F=\coprod_{g\in G}FX_g$ and, for $f\colon F\to H$ in $\MulAlg(\bb{M})$, by $U_\bb{M}f=\coprod_{g\in G}fX_g$.
+\end{rmenv}
+
+\begin{itenv}{2.0 Proposition}
+  The functor $U_\bb{M}\colon\MulAlg(\bb{M})\to\Set$ has a left multiadjoint;
+  it is faithful and reflects isomorphisms;
+  it preserves connected limits, filtered colimits, and regular epimorphisms.
+\end{itenv}
+
+\begin{proof}
+  
 \end{proof}
 
 
