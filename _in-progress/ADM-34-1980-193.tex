@@ -222,7 +222,7 @@ We use the notation and results of \cite{2} and \cite{3}.
     (where the first coproduct is over all primes $p$, and the second coproduct is over all $K$ such that $K\cap\bb{Z}[X_1,\ldots,X_n] = I$ and $K\cap\bb{Z}[X_{n+1},\ldots,X_{n+m}] = J$).
     But we can prove that every $\bb{M}$-multialgebra is, up to isomorphism, of this form, and thus defines an integral domain.
     This correspondence is functorial, i.e. if $\Dom$ denotes the category of integral domains and injective homomorphisms, then we can define a functor $V\colon\Dom\to\MulAlg(\bb{M})$ by $VA=A^{(\,\,)}$ and $Vf(x_1,\ldots,x_n)=(f(x_1),\ldots,f(x_n))$.
-    We can, with difficulty, directly prove that $V$ is an equivalence of categories, but this result is also an immediate consequence of \hyperref[theorem-3.2]{Theorem~3.2}.
+    We can, with difficulty, directly prove that $V$ is an equivalence of categories, but this result is also an immediate consequence of \hyperref[3.2]{Theorem~3.2}.
   \end{rmenv}
 
   \begin{rmenv}{1.2.2 The multialgebraic theory of commutative local rings}
@@ -273,7 +273,7 @@ We use the notation and results of \cite{2} and \cite{3}.
     (where the first coproduct is over all primes $p$, and the second coproduct is over all $K$ such that $K\cap\bb{Z}[X_1,\ldots,X_n] = I$ and $K\cap\bb{Z}[X_{n+1},\ldots,X_{n+m}] = J$).
     But we can prove that every $\bb{M}$-multialgebra is, up to isomorphism, of this form, and thus defines a commutative local ring.
     This correspondence is functorial, i.e. if $\Loc$ denotes the category of commutative local rings and local homomorphisms, then we can define a functor $V\colon\Loc\to\MulAlg(\bb{M})$ by $VA=A^{[\,\,]}$ and $Vf(x_1,\ldots,x_n)=(f(x_1),\ldots,f(x_n))$.
-    We can, with difficulty, directly prove that $V$ is an equivalence of categories, but this result is also an immediate consequence of \hyperref[theorem-3.2]{Theorem~3.2}.
+    We can, with difficulty, directly prove that $V$ is an equivalence of categories, but this result is also an immediate consequence of \hyperref[3.2]{Theorem~3.2}.
   \end{rmenv}
 
   \begin{rmenv}{1.2.3 The multialgebraic theory of real pre-Hilbert spaces}
@@ -302,7 +302,7 @@ We use the notation and results of \cite{2} and \cite{3}.
     \]
     We can show that this functor is an $\bb{M}$-multialgebra, and, conversely, that every $\bb{M}$-multialgebra is, up to isomorphism, of the above form, and thus defines a real pre-Hilbert space.
     We can thus establish an equivalence between the category $\PHilb$ of real pre-Hilbert spaces and orthogonal linear maps and the category $\MulAlg(\bb{M})$.
-    This result is an immediate consequence of \hyperref[theorem-3.2]{Theorem~3.2}.
+    This result is an immediate consequence of \hyperref[3.2]{Theorem~3.2}.
   \end{rmenv}
 
   \begin{rmenv}{1.2.4 The multialgebraic theory of totally ordered sets}
@@ -595,7 +595,109 @@ We denote by $\bb{L}_0$ the full subcategory of $\bb{A}$ whose objects are the t
       Then $h$ is an isomorphism, and $f\cong g$ is a regular epimorphism.
 \oldpage{202}
     \item We will show that the functor $J_0\colon\bb{L}_0\to\bb{A}$ is dense.
+      We will in fact show that $J_0$ is dense by filtered colimits and $J_0$-absolute cokernels \cite{4}.
+      The objects of $\bb{L}_0$ are of finite presentation in $\bb{A}$, since, if $E$ is a finite cardinal, if $(g_i\colon E\to UA_i)_{i\in I}$ is a universal family of morphisms from $E$ to $U$, and if $A=\varinjlim_{k\in\bb{K}}A_k$ is a filtered colimit in $\bb{A}$, then we have
+      \[
+        \begin{aligned}
+          \coprod_{i\in I} \Hom_\bb{A}(A_i,A)
+          &\cong \Hom_\Set(E,UA)
+          \cong \varinjlim_{k\in\bb{K}} \Hom_\Set(E,UA_k)
+        \\&\cong \varinjlim_{k\in\bb{K}} \coprod_{i\in I} \Hom_\bb{A}(A_i,A_k)
+          \cong \coprod_{i\in I} \varinjlim_{k\in\bb{K}} \Hom_\bb{A}(A_i,A_k)
+        \end{aligned}
+      \]
+      and so, for all $i\in I$, we have $\Hom_\bb{A}(A_i,A)\cong\varinjlim_{k\in\bb{K}}\Hom_\bb{A}(A_i,A_k)$.
+      We thus deduce that the filtered colimits of $\bb{A}$ are $J_0$-absolute \cite{4}.
+      Let $A$ be an object of $\bb{A}$.
+      Set $K=\{(A_0,x_0):\mbox{$A_0\in\bb{L}_0$ and $x_0\colon A_0\to A$}\}$, and denote by $P$ the set of finite subsets of $K$.
+      Then $P$ is a filtered ordered set.
+      For $K_0\in P$, consider a multisum of $(A_0)_{(A_0,x_0)\in K_0}$ in $\MulAlg(\bb{M})$, and denote by $(\iota_{A_0,x_0}\colon A_0\to S_{K_0})_{(A_0,x_0)\in K_0}$ the family of morphisms of this multisum, which factors as the family of morphisms $(x_0\colon A_0\to A)_{(A_0,x_0)\in K_0}$ and a morphism $x_{K_0}\colon S_{K_0}\to A$.
+      \[
+        \begin{tikzcd}[column sep=7em]
+          A_0 \ar[ddr,swap,"\iota_{A_0,x_0}"] \ar[ddrrr,bend left=20,"x_0"]
+        \\
+        \\&S_{K_0} \ar[dr,swap,"\iota_{K_0}"] \ar[rr,"x_{K_0}"]
+          && A
+        \\&& S \ar[ru,"x"]
+        \\A_1 \ar[uur,"\iota_{A_1,x_1}"] \ar[uurrr,bend right=20,swap,"x_1"]
+        \end{tikzcd}
+      \]
+
+      The objects $S_{K_0}$ are in $\bb{L}_0$.
+      For $K_0\subset K_1\in P$, we denote by $\iota_{K_1K_0}\colon S_{K_0}\to S_{K_1}$ the canonical morphism.
+      Let $(\iota_{K_0}\colon S_{K_0}\to S)_{K_0\in P}$ be the filtered colimit of $(S_{K_0})_{K_0\in P}$, and $x\colon S\to A$ the morphism defined by $x\iota_{K_0}=x_{K_0}$ for all $K_0\in P$.
+      For every object $A_0\in\bb{L}_0$, the map $\Hom_\bb{A}(A_0,x)$ is surjective.
+      Since the map $Ux$ is equivalent to the sum $\coprod_{A_0}\Hom_\bb{A}(A_0,x)$, where $A_0$ runs over the targets of the diagonally universal morphisms whose source is $1$, it is also surjective.
+      Since the functor $U$ reflects regular epimorphisms, we thus deduce that $x$ is a regular epimorphism.
+      It is thus a $J_0$-absolute regular epimorphism.
+      We denote by $\bb{L}$ the full subcategory of $\bb{A}$ whose objects are the filtered colimit of objects of $\bb{L}_0$.
+      Every object of $\bb{A}$ is then the $J_0$-absolute regular quotient of an object of $\bb{L}$.
+      We thus deduce that every object of $\bb{A}$ is the $J_0$-absolute cokernel of morphisms of $\bb{L}$ \cite[Lemma~5.6.1]{4}, and consequently $J_0$ is dense by filtered colimit and $J_0$-absolute cokernels \cite[Def.~2.0]{4}.
+    \item The comparison functor $V\colon\bb{A}\to\MulAlg(\bb{M})$ is fully faithful since $J_0$ is dense;
+      it preserves filtered colimits since the objects of $\bb{L}_0$ are of finite presentation in $\bb{A}$;
+      and it preserves regular epimorphisms since $U$ preserves them, $U_\bb{M}$ reflects them, and since we have an isomorphism $U_\bb{M}V\cong U$.
+      We will show that $V$ is an equivalence of categories.
+      Denote by $\bb{L}_\bb{M}$ the full subcategory of $\MulAlg(\bb{M})$ whose objects are the filtered colimits of representable $\bb{M}$-multialgebras.
+      Every object of $\bb{L}_\bb{M}$ is isomorphic to an object of the form $VA$, where $A$ is an object of $\bb{L}$.
+      Let $F$ be an $\bb{M}$-multialgebra.
+      By b) applied to $\bb{A}=\MulAlg(\bb{M})$, $F$ is the
+\oldpage{203}
+      regular quotient of an object of $\bb{L}_\bb{M}$.
+      There thus exists an object $A_0\in\bb{L}$ and a regular epimorphism $q_0
+      \colon VA_0\to F$.
+      \[
+        \begin{tikzcd}[sep=huge]
+          B_0 \rar[shift left,"r"] \rar[shift right,swap,"s"]
+          & A_0 \rar["p_0"]
+          & A
+        \\A_1 \uar["p_1"] \ar[ur,shift left,"f"] \ar[ur,shift right,swap,"g"]
+        \\R_1 \uar[shift left,"h"] \uar[shift right,swap,"l"]
+        \end{tikzcd}
+      \]
+      \[
+        \begin{tikzcd}[sep=huge]
+          F_0 \rar[shift left,"m"] \rar[shift right,swap,"n"]
+          & VA_0 \rar[two heads,"q_0"]
+          & F
+        \\VA_1 \uar["q_1"] \ar[ur,shift left,"Vf"] \ar[ur,shift right,swap,"Vg"]
+        \\VR_1 \uar[shift left,"Vh"] \uar[shift right,swap,"Vl"]
+        \end{tikzcd}
+      \]
+
+      Let $(m,n)\colon F_0\rightrightarrows VA_0$ be the kernel pair of $q_0$.
+      There exists, once again, an object $A_1$ of $\bb{L}$ and a regular epimorphism $q_1\colon VA_1\to F_0$.
+      Let $f,g\colon A_1\rightrightarrows A_0$ be morphisms in $\bb{A}$ defined by $Vf=mq_1$ and $Vg=nq_1$, let $(h,l)\colon R_1\rightrightarrows A_1$ be the kernel pair of $(f,g)$, let $p_1\colon A_1\to B_0$ be the cokernel of $(h,l)$, and let $r,s\colon B_0\rightrightarrows A_0$ be the morphisms defined by $rp_1=f$ and $sp_1=g$.
+      Then $(Vh,Vf)$ is the kernel pair of $(Vf,Vg)$.
+      Since $(m,n)$ is a monomorphic pair, $(Vh,Vl)$ is the kernel pair of $q_1$.
+      Since $V$ preserves kernel pairs and regular epimorphisms, the morphism $Vp_1$ is isomorphic to the morphism $q_1$, and so the pair $(Vr,Vs)$ is isomorphic to the pair $(m,n)$.
+      Since the pair $(m,n)$ is an equivalence, so too is the pair $(r,s)$.
+      It admits a cokernel $p_0\colon A_0\twoheadrightarrow A$.
+      The two morphisms $Up_0$ and $q_0$ are thus isomorphic, and so the object $F$ is isomorphic to $VA$.
   \end{enumerate}
+\end{proof}
+
+
+
+\section{Multialgebraic categories}
+\label{4}
+
+A category is \emph{multialgebraic} if it is equivalent to a category $\MulAlg(\bb{M})$ of multialgebras for some multialgebraic theory $\bb{M}$.
+By \hyperref[3]{\S3}, it is equivalent to ask that there exist a multialgebraic forgetful functor defined on the category.
+
+\begin{itenv}{4.0 Theorem}
+\label{4.0}
+  A category is multialgebraic if and only if
+  \begin{enumerate}[1)]
+    \item it has filtered colimits and kernel pairs, and its equivalence relations are effective;
+    \item it has finite multisums; and
+    \item it has a proper generating set consisting of projective objects of finite presentation.
+  \end{enumerate}
+\end{itenv}
+
+\begin{proof}
+  Recall that an object $X$ is projective if the functor $\Hom(X,-)$ preserves regular epimorphisms, and is of finite presentation if the functor $\Hom(X,-)$ preserves filtered colimits \cite{5}.
+  A category $\MulAlg(\bb{M})$ satisfies conditions 1), 2), and 3) by taking the generating set to be the set of representable $\bb{M}$-multialgebras $\Hom_\bb{M}(X,-)$, where $X\in\bb{M}$.
+  Now let $\bb{A}$ be a category satisfying conditions 1), 2), and 3).
 \end{proof}
 
 
