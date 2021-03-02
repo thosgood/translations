@@ -698,7 +698,51 @@ By \hyperref[3]{\S3}, it is equivalent to ask that there exist a multialgebraic 
   Recall that an object $X$ is projective if the functor $\Hom(X,-)$ preserves regular epimorphisms, and is of finite presentation if the functor $\Hom(X,-)$ preserves filtered colimits \cite{5}.
   A category $\MulAlg(\bb{M})$ satisfies conditions 1), 2), and 3) by taking the generating set to be the set of representable $\bb{M}$-multialgebras $\Hom_\bb{M}(X,-)$, where $X\in\bb{M}$.
   Now let $\bb{A}$ be a category satisfying conditions 1), 2), and 3).
+  Let $G$ be a proper generating set of $\bb{A}$ consisting of projective objects of finite presentation.
+  Define the functor $U\colon\bb{A}\to\Set$ by
+  \[
+    U(-) = \coprod_{A_0\in G} \Hom_\bb{A}(A_0,-).
+  \]
+\oldpage{204}
+  We will show that $U$ is a multialgebraic forgetful functor.
+  The functor $U$ preserves filtered colimits since, for a filtered diagram $(A_i)_{i\in\bb{I}}$ of $\bb{A}$, we have
+  \[
+    \begin{aligned}
+      U(\varinjlim_{i\in\bb{I}} A_i)
+      &\cong \coprod_{A_0\in G} \Hom_\bb{A}(A_0,\varinjlim_{i\in\bb{I}} A_i)
+      \cong \coprod_{A_0\in G} \varinjlim_{i\in\bb{I}} \Hom_\bb{A}(A_0,A_i)
+    \\&\cong \varinjlim_{i\in\bb{I}} \coprod_{A_0\in G} \Hom_\bb{A}(A_0,A_i)
+      = \varinjlim_{i\in\bb{I}} UA_i.
+    \end{aligned}
+  \]
+  The functor $U$ preserves regular epimorphisms since, for a regular epimorphism $f$ in $\bb{A}$, the map $\Hom_\bb{A}(A_0,f)$ is surjective for all $A_0\in G$, and so the map $Uf=\coprod_{A_0\in G}\Hom_\bb{A}(A_0,f)$ is surjective too.
+  The functor $U$ reflects isomorphism since, for a morphism $f$ in $\bb{A}$ such that $Uf$ is a bijection, for every $A_0\in G$, we have that $\Hom_\bb{A}(A_0,f)$ is a bijection, and so $f$ is an isomorphism.
+  It remains to show that $U$ admits a left multiadjoint.
+  Let $I$ be a set.
+  For every family $(X_i)_{i\in I}$ of objects of $G$ indexed by $I$, choose a multisum $(\gamma_{ij}\colon X_i\to Y_j)_{(i,j)\in I\times J((X_i))}$ of $(X_i)_{i\in I}$ in $\bb{A}$, and for $j\in J((X_i))$ we define the map $g_j\colon I\to\coprod_{A_0\in G}\Hom_\bb{A}(A_0,Y_j)$ by $g_j(i)=\gamma_{ji}$.
+  We will show that
+  \[
+    (g_j\colon I\to UY_j)_{j\in\coprod_{(X_i)\in GI}J((X_i))}
+  \]
+  is a universal family of morphisms from $I$ to $U$.
+  Let $A$ be an object of $\bb{A}$, and let
+  \[
+    g\colon I\to UA = \coprod_{A_0\in G} \Hom_\bb{A}(A_0,A)
+  \]
+  be a map.
+  For $i\in I$, let $X_i\in G$ be such that $g(i)\in\Hom_\bb{A}(X_i,A)$.
+  We thus obtain an inductive cone $(g(i)\colon X_i\to A)_{i\in I}$ in $\bb{A}$ with base $(X_i)_{i\in I}$.
+  There thus exists a unique pair $(j,f)$, where $j\in J((X_i))$ and $f\colon Y_j\to A$ satisfy $f\gamma_{ij}=g(i)$ for all $i\in I$.
+  For $i\in I$, we have $(Uf)g_j(i)=Uf(\gamma_{ji})=f\gamma_{ji}=g(i)$, and so $(Uf)g_j=g$.
+  Suppose further the existence of another factorisation $g=(Uf')g_{j'}$, where $(X'_i)_{i\in I}$ is a family of objects of $G$ indexed by $I$, $j'\in J((X_i))$, and $f\colon Y_{j'}\to A$.
+  Then $g(i)\in\Hom_\bb{A}(X'_i,A)$, so $X'_i=X_i$ for all $i\in I$.
+  Then $f'\gamma_{j'i}=(Uf')g_{j'}(i)=g(i)$, and so $j'=j$ and $f'=f$.
 \end{proof}
+
+\begin{rmenv}{4.1 Examples}
+\label{4.1}
+  
+\end{rmenv}
 
 
 
