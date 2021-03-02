@@ -71,6 +71,8 @@
 \newcommand{\Set}{\mathbb{S}\mathrm{et}}
 \newcommand{\MulAlg}{\mathbb{M}\mathrm{ulAlg}}
 \newcommand{\Dom}{\mathbb{D}\mathrm{om}}
+\newcommand{\Loc}{\mathbb{L}\mathrm{oc}}
+\newcommand{\PHilb}{\mathbb{P}\mathrm{Hilb}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -125,7 +127,7 @@ They are equipped with a structure-forgetful functor with values in $\Set$, whic
 We give two characterisations of multialgebraic categories, and we show that they are equivalent to multimonadic categories of finite rank over $\Set$.
 Proper morphisms of multialgebraic theories determine proper multialgebraic functors.
 These functors possess a left adjoint.
-For example, the inclusion functors of the category of commutative fields into the category of integral domains and into the category of local commutative rings are both proper multialgebraic.
+For example, the inclusion functors of the category of commutative fields into the category of integral domains and into the category of commutative local rings are both proper multialgebraic.
 
 We use the notation and results of \cite{2} and \cite{3}.
 
@@ -173,7 +175,7 @@ We use the notation and results of \cite{2} and \cite{3}.
       K\cap\bb{Z}[X_{n+1},\ldots,X_{n+m}] = J.
     \]
     We can see that every object of $\bb{D}_0$ belongs to a finite multisum of objects of the form $(1,I)$.
-    The dual category $\bb{D}_0^\op$ in which we distinguish the objects of the form $(1,I)$ is thus a multialgebraic theory, denoted by $\bb{M}$.
+    The opposite category $\bb{D}_0^\op$ in which we distinguish the objects of the form $(1,I)$ is thus a multialgebraic theory, which we denote by $\bb{M}$.
 
 \oldpage{195}
     Let $A$ be an integral domain.
@@ -187,7 +189,11 @@ We use the notation and results of \cite{2} and \cite{3}.
       \big\}
     \]
     the prime ideal of polynomial relations with coefficients in $\bb{Z}$ between the $x_1,\ldots,x_n$.
-    We define a functor $A^{(\,\,)}\colon\bb{M}\to\Set$ by $A^{(n,I)}=\{(x_1,\ldots,x_n)\in A^n:I_{x_1,\ldots,x_n}=I\}$ and, for a morphism $\langle g_1,\ldots,g_n\rangle\colon(n,I)\to(m,J)$ of $\bb{D}_0$, by
+    We define a functor $A^{(\,\,)}\colon\bb{M}\to\Set$ by
+    \[
+      A^{(n,I)}=\{(x_1,\ldots,x_n)\in A^n:I_{x_1,\ldots,x_n}=I\}
+    \]
+    and, for a morphism $\langle g_1,\ldots,g_n\rangle\colon(n,I)\to(m,J)$ of $\bb{D}_0$, by
     \[
       A^{\langle g_1,\ldots,g_n\rangle}(x_1,\ldots,x_m) =
       \big(
@@ -208,7 +214,57 @@ We use the notation and results of \cite{2} and \cite{3}.
     We can, with difficulty, directly prove that $V$ is an equivalence of categories, but this result is also an immediate consequence of \hyperref[theorem-3.2]{Theorem~3.2}.
   \end{rmenv}
 
-  \begin{rmenv}{1.2.2 The multialgebraic theory of local commutative rings}
+  \begin{rmenv}{1.2.2 The multialgebraic theory of commutative local rings}
+    Let $\bb{L}_0$ be the category whose objects are pairs $(n,I)$ consisting of an integer $n\in\bb{N}$ and a prime ideal $I$ of $\bb{Z}[X_1,\ldots,X_n]$, and whose morphisms $(n,I)\to(m,J)$ are the homomorphisms of local rings $\bb{Z}[X_1,\ldots,X_n]_I\to\bb{Z}[X_1,\ldots,X_m]_J$ that are localisations of polynomial rings at prime ideals.
+    These are of the form $[g_1,\ldots,g_n]$, where $g_1,\ldots,g_n$ are polynomials in $\bb{Z}[X_1,\ldots,X_n]$ such that $f\in I$ if and only if $f(g_1,\ldots,g_n)\in J$ for all $f\in\bb{Z}[X_1,\ldots,X_n]$, and where $[g_1,\ldots,g_n]$ denotes the extension to fractions of the homomorphism $g_1,\ldots,g_n\colon\bb{Z}[X_1,\ldots,X_n]\to\bb{Z}[X_1,\ldots,X_m]$.
+    The composition of morphisms is given by composing the ring homomorphisms.
+    The category $\bb{L}_0$ has finite multisums since the objects of the form $(0,(p))$ form an initial family of objects, and the multisum of $(n,I)$ and $(m,J)$ exists, consisting of objects $(n+m,K)$, where $K$ runs over the prime ideals of $\bb{Z}[X_1,\ldots,x_n,X_{n+1},\ldots,X_{n+m}]$ such that
+    \[
+      K\cap\bb{Z}[X_1,\ldots,X_n] = I
+      \quad\text{and}\quad
+      K\cap\bb{Z}[X_{n+1},\ldots,X_{n+m}] = J.
+    \]
+    We can see that every object of $\bb{L}_0$ belongs to a finite multisum of objects of the form $(1,I)$.
+    The opposite category in which we distinguish the objects of the form $(1,I)$ is thus a multialgebraic theory, which we denote by $\bb{M}$.
+
+    Let $A$ be a commutative local ring.
+    For every $(x_1,\ldots,x_n)\in A^n$, denote by
+    \[
+      J_{x_1,\ldots,x_n} =
+      \big\{
+        P(X_1,\ldots,X_n)\in\bb{Z}[X_1,\ldots,X_n]
+        :
+        \mbox{$P(X_1,\ldots,x_n)$ is not invertible}
+      \big\}
+    \]
+\oldpage{196}
+    the prime ideal.
+    We define a functor  $A^{[\,\,]}\colon\bb{M}\to\Set$ by
+    \[
+      A^{[n,I]}=\{(x_1,\ldots,x_n)\in A^n:J_{x_1,\ldots,x_n}=I\}
+    \]
+    and, for a morphism $[g_1,\ldots,g_n]\colon(n,I)\to(m,J)$ of $\bb{L}_0$, by
+    \[
+      A^{[g_1,\ldots,g_n]}(x_1,\ldots,x_m) =
+      \big(
+        g_1(x_1,\ldots,x_m),
+        \ldots,
+        g_n(x_1,\ldots,x_m)
+      \big).
+    \]
+    This functor is an $\bb{M}$-multialgebra since we have
+    \[
+      \coprod_p A^{[0,(p)]} \cong 1
+      \quad\text{and}\quad
+      \coprod_K A^{[n+m,K]} \cong A^{[n,I]}\times A^{[m,J]}
+    \]
+    (where the first coproduct is over all primes $p$, and the second coproduct is over all $K$ such that $K\cap\bb{Z}[X_1,\ldots,X_n] = I$ and $K\cap\bb{Z}[X_{n+1},\ldots,X_{n+m}] = J$).
+    But we can prove that every $\bb{M}$-multialgebra is, up to isomorphism, of this form, and thus defines a commutative local ring.
+    This correspondence is functorial, i.e. if $\Loc$ denotes the category of commutative local rings and local homomorphisms, then we can define a functor $V\colon\Loc\to\MulAlg(\bb{M})$ by $VA=A^{[\,\,]}$ and $Vf(x_1,\ldots,x_n)=(f(x_1),\ldots,f(x_n))$.
+    We can, with difficulty, directly prove that $V$ is an equivalence of categories, but this result is also an immediate consequence of \hyperref[theorem-3.2]{Theorem~3.2}.
+  \end{rmenv}
+
+  \begin{rmenv}{1.2.3 The multialgebraic theory of real pre-Hilbert spaces}
   \end{rmenv}
 
 \end{rmenv}
