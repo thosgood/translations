@@ -78,6 +78,7 @@
 \newcommand{\TotOrd}{\mathbb{T}\mathrm{otOrd}}
 
 \DeclareMathOperator{\Part}{Part}
+\DeclareMathOperator{\Hom}{Hom}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -140,6 +141,7 @@ We use the notation and results of \cite{2} and \cite{3}.
 \section{Multialgebraic theories and multialgebras}
 
 \begin{rmenv}{1.0 Definition \cite{2}}
+\label{1.0}
   A \emph{multiproduct} of a small family $(X_i)_{i\in I}$ of objects of a category $\bb{A}$ is a small family $(\gamma_{ij}\colon Y_j\to X_i)_{(i,j)\in I\times J}$ of morphisms in $\bb{A}$ such that, for every family $(f_i\colon Y\to X_i)_{i\in I}$ of morphisms in $\bb{A}$, there exists a unique pair $(j,f)$ consisting of $j\in J$ and a morphism $f\colon Y\to Y_j$ such that $\gamma_{ij}f=f_i$ for all $i\in I$.
 
   We say that the $Y_j$ \emph{belong} to the multiproduct of objects $(X_i)_{i\in I}$.
@@ -148,6 +150,7 @@ We use the notation and results of \cite{2} and \cite{3}.
 \end{rmenv}
 
 \begin{rmenv}{1.1 Definitions}
+\label{1.1}
   A \emph{multialgebraic theory} is a small category $\bb{M}$ with finite multiproducts, endowed with a distinguished small family of objects $(X_g)_{g\in G}$ such that every object of $\bb{M}$ belongs to a finite multiproduct of objects of this family.
 
   An \emph{$\bb{M}$-multialgebra} is a functor $F\colon\bb{M}\to\Set$ that is multicontinuous for finite multiproducts \cite{2}, i.e. for every finite sequence $X_1,\ldots,X_n$ of objects of $\bb{M}$ that has a multiproduct $(\gamma_{ij}\colon Y_j\to X_i)_{(i,j)\in[1,n]\times J}$, the map
@@ -167,10 +170,12 @@ We use the notation and results of \cite{2} and \cite{3}.
 \label{1.2}
 
   \begin{rmenv}{1.2.0}
+  \label{1.2.0}
     Algebraic theories and algebras in the sense of F.W.~Lawvere \cite{6}, and those of $I$-terms in the sense of J.~Benabou \cite{1}.
   \end{rmenv}
 
   \begin{rmenv}{1.2.1 The multialgebraic theory of integral domains}
+  \label{1.2.1}
     Let $\bb{D}_0$ be the category whose objects are pairs $(n,I)$ consisting of an integer $n\in\bb{N}$ and a prime ideal $I$ of $\bb{Z}[X_1,\ldots,X_n]$, and whose morphisms $(n,I)\to(m,J)$ are the injective homomorphisms of unital rings $\bb{Z}[X_1,\ldots,X_n]/I\to\bb{Z}[X_1,\ldots,X_m]/J$.
     These are of the form $\langle g_1,\ldots,g_n\rangle$, where $g_1,\ldots,g_n$ are polynomials in $\bb{Z}[X_1,\ldots,X_m]$ such that $f\in I$ if and only if $f(g_1,\ldots,g_n)\in J$ for all $f\in\bb{Z}[X_1,\ldots,X_n]$, and where $\langle g_1,\ldots,g_n\rangle$ denotes the quotient homomorphism of the homomorphism $g_1,\ldots,g_n\colon\bb{Z}[X_1,\ldots,X_n]\to\bb{Z}[X_1,\ldots,X_m]$.
     The composition of morphisms is given by composing the ring homomorphisms.
@@ -221,6 +226,7 @@ We use the notation and results of \cite{2} and \cite{3}.
   \end{rmenv}
 
   \begin{rmenv}{1.2.2 The multialgebraic theory of commutative local rings}
+  \label{1.2.2}
     Let $\bb{L}_0$ be the category whose objects are pairs $(n,I)$ consisting of an integer $n\in\bb{N}$ and a prime ideal $I$ of $\bb{Z}[X_1,\ldots,X_n]$, and whose morphisms $(n,I)\to(m,J)$ are the homomorphisms of local rings $\bb{Z}[X_1,\ldots,X_n]_I\to\bb{Z}[X_1,\ldots,X_m]_J$ that are localisations of polynomial rings at prime ideals.
     These are of the form $[g_1,\ldots,g_n]$, where $g_1,\ldots,g_n$ are polynomials in $\bb{Z}[X_1,\ldots,X_n]$ such that $f\in I$ if and only if $f(g_1,\ldots,g_n)\in J$ for all $f\in\bb{Z}[X_1,\ldots,X_n]$, and where $[g_1,\ldots,g_n]$ denotes the extension to fractions of the homomorphism $g_1,\ldots,g_n\colon\bb{Z}[X_1,\ldots,X_n]\to\bb{Z}[X_1,\ldots,X_m]$.
     The composition of morphisms is given by composing the ring homomorphisms.
@@ -271,6 +277,7 @@ We use the notation and results of \cite{2} and \cite{3}.
   \end{rmenv}
 
   \begin{rmenv}{1.2.3 The multialgebraic theory of real pre-Hilbert spaces}
+  \label{1.2.3}
     A finite sequence of vectors in a real pre-Hilbert space is said to be orthonormal if the vectors are all of norm~$1$ and pairwise orthogonal.
     A real matrix with $p$ rows and $n$ columns is said to be orthonormal if its columns form an orthonormal sequence in $\bb{R}^p$.
     Let $\Orth$ be the category of orthonormal matrices, whose objects are the natural numbers, and whose morphisms $n\to p$ are the orthonormal matrices with $p$ rows and $n$ columns, with composition being given by matrix multiplication.
@@ -299,6 +306,7 @@ We use the notation and results of \cite{2} and \cite{3}.
   \end{rmenv}
 
   \begin{rmenv}{1.2.4 The multialgebraic theory of totally ordered sets}
+  \label{1.2.4}
     Let $\Delta_\st$ be the category whose objects are the finite ordinals, and whose morphisms are the
 \oldpage{197}
     strictly increasing maps.
@@ -328,7 +336,7 @@ We use the notation and results of \cite{2} and \cite{3}.
 \end{rmenv}
 
 \begin{itenv}{1.3 Proposition}
-\label{proposition-1.3}
+\label{1.3}
   $\MulAlg(\bb{M})$ is a multireflexive full subcategory of $\Set^\bb{M}$ that is closed under connected limits, filtered colimits, and cokernels of equivalence relations.
 \end{itenv}
 
@@ -417,6 +425,7 @@ We use the notation and results of \cite{2} and \cite{3}.
 
 \oldpage{199}
 \begin{itenv}{1.4 Proposition}
+\label{1.4}
   $\MulAlg(\bb{M})$ is a multicocomplete category, whose equivalence relations are effective, and whose pairs of coequalisable morphisms have cokernels, and it has a universal factorisation of morphisms into monomorphisms and regular epimorphisms.
 \end{itenv}
 
@@ -436,11 +445,14 @@ We use the notation and results of \cite{2} and \cite{3}.
 \end{proof}
 
 
-\begin{rmenv}{2. Multialgebraic forgetful functors}
-  The \emph{structure-forgetful functor} $U_\bb{M}\colon\MulAlg(\bb{M})\to\Set$ is defined by $U_\bb{M}F=\coprod_{g\in G}FX_g$ and, for $f\colon F\to H$ in $\MulAlg(\bb{M})$, by $U_\bb{M}f=\coprod_{g\in G}fX_g$.
-\end{rmenv}
+
+\section{Multialgebraic forgetful functors}
+\label{2}
+
+The \emph{structure-forgetful functor} $U_\bb{M}\colon\MulAlg(\bb{M})\to\Set$ is defined by $U_\bb{M}F=\coprod_{g\in G}FX_g$ and, for $f\colon F\to H$ in $\MulAlg(\bb{M})$, by $U_\bb{M}f=\coprod_{g\in G}fX_g$.
 
 \begin{itenv}{2.0 Proposition}
+\label{2.0}
   The functor $U_\bb{M}\colon\MulAlg(\bb{M})\to\Set$ has a left multiadjoint;
   it is faithful and reflects isomorphisms;
   it preserves connected limits, filtered colimits, and regular epimorphisms.
@@ -448,7 +460,7 @@ We use the notation and results of \cite{2} and \cite{3}.
 
 \begin{proof}
   If we denote by $k_\bb{M}\colon\MulAlg(\bb{M})\to\Set$ the inclusion functor, by $\varphi\colon G\to M$ the functor defined by $\varphi g=X_g$, by $\Set^\varphi\colon\Set^\bb{M}\to\Set^G$ the functor associated to $\varphi$, and by $\Sigma\colon\Set^G\to\Set$ the disjoint sum of sets functor, then we have $U_\bb{M}=\Sigma\Set^\varphi k_\bb{M}$.
-  The functor $k_\bb{M}$ has a left multiadjoint (\hyperref[proposition-1.3]{Proposition~1.3}), and the functor $\Set^\varphi$ has a left adjoint.
+  The functor $k_\bb{M}$ has a left multiadjoint (\hyperref[1.3]{Proposition~1.3}), and the functor $\Set^\varphi$ has a left adjoint.
   The functor $\Sigma$ also has a left multiadjoint since, for any set $E$, and writing $\Part(E)$ to mean the set of partitions of $E$ indexed by $G$, the family of maps
   \[
     \left(1_E\colon E\to\bigcup_{g\in G}E_g\right)_{(E_g)_{g\in G}\in\Part(E)}
@@ -480,11 +492,81 @@ We use the notation and results of \cite{2} and \cite{3}.
 \end{proof}
 
 \begin{rmenv}{2.1 Examples}
+\label{2.1}
   It is immediate that the structure-forgetful functors $U_\bb{M}\colon\MulAlg(\bb{M})\to\Set$ for the multialgebraic theories $\bb{M}$ given in \hyperref[1.2]{1.2} are equivalent to the usual structure-forgetful functors.
 \end{rmenv}
 
-\begin{rmenv}{3 The multialgebraic theory generated by a functor $U\colon\bb{A}\to\Set$ having a left multiadjoint}
+
+
+\section{The multialgebraic theory generated by a functor \texorpdfstring{$U\colon\bb{A}\to\Set$}{U:A->Set} that has a left multiadjoint}
+\label{3}
+
+Let $U\colon\bb{A}\to\Set$ be a functor that has a left multiadjoint.
+For each set $E$, we choose a universal family of morphisms from $E$ to $U$, and consider only the morphisms that are diagonally universal to $U$ belonging to these families.
+We denote by $\bb{L}_0$ the full subcategory of $\bb{A}$ whose objects are the targets of the diagonally universal morphisms to $U$ whose sources are the finite cardinals.
+
+\begin{itenv}{3.0 Lemma}
+\label{3.0}
+  The category $\bb{L}_0$ is small, has finite multisums, and each of its objects belongs to a finite multisum of objects that are targets of diagonally universal morphisms whose source is the cardinal $1$.
+\end{itenv}
+
+\begin{proof}
+  Let $(X_i)_{i\in[1,n]}$ be a finite sequence of objects of $\bb{L}_0$.
+  For every $i\in[1,n]$, let $E_i$ be a finite cardinal, and $g_i\colon E_i\to UX_i$ a diagonally universal morphism from $E_i$ to $U$.
+  Set $(E,\iota)=\coprod_{i=1}^nE_i$, and denote by $(h_j\colon E\to UY_j)_{j\in J}$ a universal family of morphisms form $E$ to $U$.
+  Since the cardinal $E$ is finite, the objects $Y_j$ belong to $\bb{L}_0$.
+  Set
+  \[
+    J' =
+    \big\{
+      j\in J
+      :
+      \mbox{$h_j\iota_i$ factors through $g_i$ in the form $h_j\iota_i=(U\gamma_{ji})g_i$ for all $i\in[1,n]$}
+    \big\}.
+  \]
+  We will show that $(\gamma_{ji}\colon X_i\to Y_j)_{(i,j)\in[1,n]\times J'}$ is a multisum of $(X_i)_{i\in[1,n]}$.
+  Let $(f_i\colon X_i\to Z)_{i\in[1,n]}$ be an inductive cone in $\bb{A}$ with base $(X_i)_{i\in[1,n]}$.
+  Then there exists a unique morphism $g\colon E\to UZ$ satisfying $g\iota_i=(Uf_i)g_i$ for all $i\in I$.
+  Denote by $h_j\colon E\to UY_j$ the diagonally universal morphism from $E$ to $U$, and by $f\colon Y_j\to Z$ the morphism in $\bb{A}$ satisfying $(Uf)h_j=g$.
+  The relation $(Uf)h_j\iota_i=g\iota_i=(Uf_i)g_i$ implies the existence of a morphism $\gamma_{ji}\colon X_i\to Y_j$ satisfying $(U\gamma_{ji})g_i=h_j\iota_i$ and $f\gamma_{ji}=f_i$ for all $i\in[1,n]$.
+  Then $j\in J'$ and the inductive cone $(f_i\colon X_i\to Z)_{i\in[1,n]}$ factor uniquely through the inductive cone $(\gamma_{ij}\colon X_i\to Y_j)_{i\in[1,n]}$.
+  This shows that $\bb{L}_0$ has finite multisums.
+
+  Let $Y$ be an object of $\bb{L}_0$.
+  Then there exists a finite cardinal $E$ and a diagonally universal morphism $h\colon E\to UY$.
+  The cardinal $E$ is the finite sum of models of the cardinal $1$,
+\oldpage{201}
+  say $(E,\iota)=\coprod_{i=1}^nE_i$, with $E_i=1$.
+  For all $i\in[1,n]$, the map $h\iota_i\colon E_i\to UY$ factors through a diagonally universal morphism $g_i\colon E_i\to UX_i$.
+  We then find ourselves in the situation described above.
+  We thus deduce that $Y$ belongs to a multisum of $(X_i)_{i\in[1,n]}$, with each of the $X_i$ being the target of a diagonally universal morphism whose source is the cardinal $1$.
+\end{proof}
+
+\begin{rmenv}{3.1 Notation}
+\label{3.1}
+  The multialgebraic theory $\bb{M}$ \emph{generated} by the functor $U\colon\bb{A}\to\Set$ is the opposite category of the full subcategory $\bb{L}_0$ of $\bb{A}$ whose objects are the targets of the diagonally universal morphisms to $U$ whose sources are the finite cardinals, endowed with the distinguished family of the objects that are targets of diagonally universal morphisms whose source is the cardinal $1$.
+  Writing $J_0\colon\bb{L}_0\to\bb{A}$ for the inclusion functor, the \emph{comparison functor} $V\colon\bb{A}\to\MulAlg(\bb{M})$ is defined by
+  \[
+    V(\,\cdot\,) = \Hom_\bb{A}(J_0(-),\,\cdot\,).
+  \]
+  It satisfies $U_\bb{M}V\cong U$.
+  If $V$ is an equivalence, then the functor $U$ is said to be a \emph{multialgebraic forgetful functor}.
 \end{rmenv}
+
+\begin{itenv}{3.2 Theorem}
+\label{3.2}
+  A functor $U\colon\bb{A}\to\Set$ is a multialgebraic forgetful functor if and only if
+  \begin{enumerate}[1)]
+    \item it has a left multiadjoint;
+    \item it reflects isomorphisms;
+    \item $\bb{A}$ has filtered colimits and kernel pairs, and its equivalence relations are effective; and
+    \item it preserves filtered colimits and regular epimorphisms.
+  \end{enumerate}
+\end{itenv}
+
+\begin{proof}
+  
+\end{proof}
 
 
 
