@@ -22,8 +22,6 @@
 \usepackage{enumerate}
 \usepackage{tikz-cd}
 
-\usepackage[only,sslash]{stmaryrd} % For the GIT quotient double slash command
-
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
 \usepackage{fouriernc}
@@ -68,11 +66,15 @@
 \newcommand{\bb}[1]{{\mathbb{#1}}}
 
 \newcommand{\op}{{\mathrm{op}}}
+\newcommand{\st}{{\mathrm{st}}}
 \newcommand{\Set}{\mathbb{S}\mathrm{et}}
 \newcommand{\MulAlg}{\mathbb{M}\mathrm{ulAlg}}
 \newcommand{\Dom}{\mathbb{D}\mathrm{om}}
 \newcommand{\Loc}{\mathbb{L}\mathrm{oc}}
+\newcommand{\Orth}{\mathbb{O}\mathrm{rth}}
+\newcommand{\Euc}{\mathbb{E}\mathrm{uc}}
 \newcommand{\PHilb}{\mathbb{P}\mathrm{Hilb}}
+\newcommand{\TotOrd}{\mathbb{T}\mathrm{otOrd}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -265,9 +267,68 @@ We use the notation and results of \cite{2} and \cite{3}.
   \end{rmenv}
 
   \begin{rmenv}{1.2.3 The multialgebraic theory of real pre-Hilbert spaces}
+    A finite sequence of vectors in a real pre-Hilbert space is said to be orthonormal if the vectors are all of norm~$1$ and pairwise orthogonal.
+    A real matrix with $p$ rows and $n$ columns is said to be orthonormal if its columns form an orthonormal sequence in $\bb{R}^p$.
+    Let $\Orth$ be the category of orthonormal matrices, whose objects are the natural numbers, and whose morphisms $n\to p$ are the orthonormal matrices with $p$ rows and $n$ columns, with composition being given by matrix multiplication.
+    In particular, there is a unique morphism $0\to n$, namely the empty matrix.
+    The category $\Orth$ is in fact equivalent to the category $\Euc$ of Euclidean spaces, which is a full subcategory of the category $\PHilb$ of real pre-Hilbert spaces.
+    It thus has finite multisums, by \cite[{}1.1.3]{2}.
+    The opposite category $\Orth^\op$ in which we distinguish the family of objects $(X_\rho)_{\rho\in\bb{R}_+}$ defined by $X_0=0$ and $X_\rho=1$ for $\rho>0$ is a multialgebraic theory, which we denote by $\bb{M}$.
+
+    If $E$ is a real pre-Hilbert space, then we define a functor $E^{(\,\,)}\colon\bb{M}\to\Set$ by
+    \[
+      E^{(n)} =
+      \big\{
+        (x_1,\ldots,x_n)\in E^n
+        :
+        \mbox{$x_1,\ldots,x_n$ is orthonormal in $E$}
+      \big\}
+    \]
+    and, for a morphism $A=(a_{ji})\colon n\to p$, by
+    \[
+      E^{(A)}(x_1,\ldots,x_p) =
+      (a_{11}x_1+\ldots+a_{p1}x_p,\ldots,a_{1n}x_1+\ldots+a_{pn}x_p).
+    \]
+    We can show that this functor is an $\bb{M}$-multialgebra, and, conversely, that every $\bb{M}$-multialgebra is, up to isomorphism, of the above form, and thus defines a real pre-Hilbert space.
+    We can thus establish an equivalence between the category $\PHilb$ of real pre-Hilbert spaces and orthogonal linear maps and the category $\MulAlg(\bb{M})$.
+    This result is an immediate consequence of \hyperref[theorem-3.2]{Theorem~3.2}.
+  \end{rmenv}
+
+  \begin{rmenv}{1.2.4 The multialgebraic theory of totally ordered sets}
+    Let $\Delta_\st$ be the category whose objects are the finite ordinals, and whose morphisms are the
+\oldpage{197}
+    strictly increasing maps.
+    The object $0$ is initial, and the category has finite multisums, with the multisum of $n$ and $p$ being given by the set of pairs of morphisms $(f\colon n\to q,g\colon p\to q)$ that are globally surjective.
+    The opposite category $\Delta_\st^\op$ in which we distinguish the object $1$ is a multialgebraic theory, which we denote by $\bb{M}$.
+
+    A totally ordered set $E$ determines an $\bb{M}$-multialgebra $E^{(\,\,)}\colon\bb{M}\to\Set$, defined by
+    \[
+      E^{(n)} =
+      \big\{
+        (x_1,\ldots,x_n)\in E^n
+        :
+        x_1<x_2<\ldots<x_n
+      \big\}
+    \]
+    and, for $f\colon n\to p$, by
+    \[
+      E^{(f)}(x_1,\ldots,x_n) =
+      \big(
+        x_{f(1)},\ldots,x_{f(n)}
+      \big).
+    \]
+    Conversely, every $\bb{M}$-multialgebra is, up to isomorphism, of the above form, and thus determines a totally ordered set.
+    We thus establish a correspondence between the category $\TotOrd$ of totally ordered sets and strictly increasing maps and the category $\MulAlg(\bb{M})$.
   \end{rmenv}
 
 \end{rmenv}
+
+\begin{itenv}{1.3 Proposition}
+  $\MulAlg(\bb{M})$ is a multireflexive full subcategory of $\Set^\bb{M}$ that is closed under connected limits, filtered colimits, and cokernels of equivalence relations.
+\end{itenv}
+
+\begin{proof}
+\end{proof}
 
 
 
