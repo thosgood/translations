@@ -69,7 +69,7 @@
 
 \newcommand{\op}{{\mathrm{op}}}
 \newcommand{\st}{{\mathrm{st}}}
-\newcommand{\Set}{\mathbb{S}\mathrm{et}}
+\newcommand{\Set}{\mathbb{E}\mathrm{ns}}
 \newcommand{\MulAlg}{\mathbb{M}\mathrm{ulAlg}}
 \newcommand{\Dom}{\mathbb{D}\mathrm{om}}
 \newcommand{\Locc}{\mathbb{L}\mathrm{occ}}
@@ -83,8 +83,6 @@
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
-
-\newcommand{\todo}{\textbf{ !TODO! }}
 
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
@@ -795,6 +793,70 @@ By \hyperref[3]{\S3}, it is equivalent to ask that there exist a multialgebraic 
   \\$\bb{T}\mathrm{rdloc}$ & distributive local lattices and local homomorphisms
   \\etc.
   \end{longtable}
+\end{rmenv}
+
+
+
+\section{Proper multialgebraic functors}
+\label{5}
+
+\begin{rmenv}{5.0 Definitions}
+\label{5.0}
+  If $\bb{M}$ and $\bb{N}$ are multialgebraic theories, then a \emph{proper morphism} of multialgebraic theories from $\bb{N}$ to $\bb{M}$ is a functor $m\colon\bb{N}\to\bb{M}$ that is bijective on objects and that preserves both the distinguished family of objects and all finite multiproducts.
+  The functor $\MulAlg(m)\colon\MulAlg(\bb{M})\to\MulAlg(\bb{N})$ induced by the
+\oldpage{206}
+  functor $\Set^m\colon\Set^\bb{M}\to\Set^\bb{N}$ is said to be \emph{proper multialgebraic}.
+  It satisfies
+  \[
+    U_\bb{N}\circ\MulAlg(m) = U_\bb{M}.
+  \]
+\end{rmenv}
+
+\begin{itenv}{5.1 Theorem}
+\label{5.1}
+  Every proper multialgebraic functor $\MulAlg(m)\colon\MulAlg(\bb{M})\to\MulAlg(\bb{N})$ is faithful, reflects isomorphism, preserves filtered colimits and regular epimorphisms, and has a left adjoint.
+\end{itenv}
+
+\begin{proof}
+  The first properties follow from \hyperref[1.3]{Proposition~1.3} and from the fact that $\MulAlg(m)$ is induced by $\Set^m$.
+  Define the functors
+  \[
+    \begin{aligned}
+      J_\bb{N}\colon \bb{N}^\op &\to \MulAlg(\bb{N})
+    \\J_\bb{M}\colon \bb{M}^\op &\to \MulAlg(\bb{M})
+    \end{aligned}
+  \]
+  by $J_\bb{N}(\,\cdot\,)=\Hom_\bb{N}(\,\cdot\,,-)$ and $J_\bb{M}(\,\cdot\,)=\Hom_\bb{M}(\,\cdot\,,-)$.
+  Since the functor $J_\bb{N}$ is dense for filtered colimits and $J_\bb{N}$-absolute cokernels (part~(b) of the proof of \hyperref[3.2]{Theorem~3.2}), and since the category $\MulAlg(\bb{M})$ has filtered colimits and cokernels of pairs of coequalisable morphisms, the left Kan extension of $J_\bb{M}m^\op$ along $J_\bb{N}$ exists and determines a left adjoint functor of the functor $\MulAlg(m)$ \cite[Prop.~3.1]{4}.
+\end{proof}
+
+\begin{rmenv}{5.2 Examples}
+\label{5.2}
+
+  \begin{rmenv}{5.2.0}
+  \label{5.2.0}
+    Let $\bb{K}_0$ be the category whose objects are pairs $(n,I)$ consisting of a whole number $n$ and a prime ideal $I$ of $\bb{Z}[X_1,\ldots,X_n]$, and whose morphisms $(n,I)\to(m,J)$ are field homomorphisms $k(I)\to k(J)$, where $k(I)$ (resp. $k(J)$) denotes the field of fractions of the integral domain $\bb{Z}[X_1,\ldots,X_n]/I$ (resp. of $\bb{Z}[X_1,\ldots,X_m]/J$).
+    This is a category with finite multisums, calculated as for $\bb{D}_0$ (\hyperref[1.2.1]{1.2.1}).
+    The opposite category $\bb{K}_0^\op$ in which we distinguish the objects of the form $(1,I)$ is a multialgebraic theory.
+    The category of multialgebras $\MulAlg(\bb{K}_0^\op)$ is equivalent to the category $\bb{K}\mathrm{c}$ of commutative fields.
+    A proper morphism of multialgebraic theories $r\colon\bb{D}_0^\op\to\bb{K}_0^\op$ is defined by $r(n,I)=(n,I)$ and $r\langle g_1,\ldots,g_n\rangle=\mbox{the extension of $\langle g_1,\ldots,g_n\rangle$ to fractions}$.
+    The proper multialgebraic functor
+    \[
+      \MulAlg(r)\colon \MulAlg(\bb{K}_0^\op) \to \MulAlg(\bb{D}_0^\op)
+    \]
+    is equivalent to the inclusion functor $\bb{K}\mathrm{c}\to\Dom$, whose left adjoint sends an integral domain to its field of fractions.
+  \end{rmenv}
+
+  \begin{rmenv}{5.2.1}
+  \label{5.2.1}
+    The proper morphism of multialgebraic theories $s\colon\bb{L}_0^\op\to\bb{K}_0^\op$ is the identity on objects, and sends $[g_1,\ldots,g_n]\colon\bb{Z}[X_1,\ldots,X_n]_I\to\bb{Z}[X_1,\ldots,X_m]_J$ to the quotient homomorphism $s[g_1,\ldots,g_n]\colon k(I)\to k(J)$.
+    The proper multialgebraic functor $\MulAlg(s)\colon\MulAlg(\bb{K}_0^\op)\to\MulAlg(\bb{L}_0^\op)$ is equivalent to the inclusion functor $\bb{K}\mathrm{c}\to\Locc$, whose left adjoint sends a commutative local ring to its quotient by its maximal ideal.
+  \end{rmenv}
+
+  \begin{rmenv}{5.2.2}
+    Let
+  \end{rmenv}
+
 \end{rmenv}
 
 
