@@ -417,7 +417,18 @@ We use the notation and results of \cite{2} and \cite{3}.
 \end{itenv}
 
 \begin{proof}
-  
+  Let $(F_k)$ be a diagram in $\MulAlg(\bb{M})$.
+  If $(\iota_k\colon F_k\to F)_{k\in\bb{K}}$ is its colimit in $\Set^\bb{M}$, and if $(f_j\colon F\to G_j)_{j\in J}$ is a universal family of morphisms from $F$ to $\MulAlg(\bb{M})$, then it is immediate that $(f_j\iota_k\colon F_k\to G_j)_{(j,k)\in J\times\bb{K}}$ is a multicolimit of $(F_k)_{k\in\bb{K}}$ in $\MulAlg(\bb{M})$.
+  Let $(f,g)\colon F\rightrightarrows G$ be a pair of morphisms in $\MulAlg(\bb{M})$ that is coequalisable by a morphism $h\colon G\to H$ in $\MulAlg(\bb{M})$.
+  Denote by $(k_i\colon G\to K_i)_{i\in I}$ a multicokernel of $(f,g)$ in $\MulAlg(\bb{M})$.
+  The set $I$ is non-empty, and so the kernel pair $(m,n)\colon R\rightrightarrows G$ of the family $(k_i\colon G\to K_i)_{i\in I}$ exists.
+  This is an equivalence relation.
+  Let $k\colon G\to K$ be its cokernel.
+  Every morphism $k_i$ is of the form $k_i=h_ki$.
+  Consequently, $|I|=1$, and $k\cong k_i$ is a cokernel of $(f,g)$.
+  The inclusion functor $\MulAlg(\bb{M})\to\Set^\bb{M}$ preserves kernel pairs and fibre products.
+  It preserves and reflects regular epimorphisms since these are cokernels of their kernel pairs.
+  Since the category $\Set^\bb{M}$ has universal regular factorisations, so too does the category $\MulAlg(\bb{M})$.
 \end{proof}
 
 
