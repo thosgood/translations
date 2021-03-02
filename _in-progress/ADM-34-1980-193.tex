@@ -329,6 +329,95 @@ We use the notation and results of \cite{2} and \cite{3}.
 \end{itenv}
 
 \begin{proof}
+  \begin{enumerate}[a)]
+    \item Let $(F_k)_{k\in\bb{K}}$ be a connected diagram in $\MulAlg(\bb{M})$ whose limit in $\Set^\bb{M}$ is $F$.
+      For every finite multiproduct $(\gamma_{ij}\colon Y_j\to X_i)_{(i,j)\in[1,n]\times J}$ in $\bb{M}$, we have \cite[{}3.5.4.a]{2}
+      \[
+        \begin{aligned}
+          \coprod_{j\in J} FY_j
+          &= \coprod_{j\in J} \varprojlim_{k\in\bb{K}} F_kY_j
+          \cong \varprojlim_{k\in\bb{K}} \coprod_{j\in J} F_kY_j
+          \cong \varprojlim_{k\in\bb{K}} \prod_{i=1}^n F_kX_i
+        \\&\cong \prod_{i=1}^n \varprojlim_{k\in\bb{K}} F_kX_i
+          = \prod_{i=1}^n FX_i.
+        \end{aligned}
+      \]
+      The functor $F$ is thus an $\bb{M}$-multialgebra, and so $\MulAlg(\bb{M})$ is a full subcategory of $\Set^\bb{M}$ that is closed under connected limits.
+      To show that $\MulAlg(\bb{M})$ is a multireflexive subcategory of $\Set^\bb{M}$ it suffices, by \cite[Theorem~3.6.1]{2}, to show that the solution-set condition is satisfied.
+    \item Let $G$ be an $\bb{M}$-multialgebra, and $f\colon F\to G$ a morphism in $\Set^\bb{M}$.
+      Since the category $\Set^\bb{M}$ is regular, $f$ factors as $f=gh$, where $h\colon F\to H$ is a quotient functor, and $g\colon H\to G$ is a sub-functor.
+      For every object $X$ of $\bb{M}$, denote by $\bar{H}X$ the set of elements of $G(X)$ of the form $G\omega(y)$, where $\omega\colon Y\to X$ runs over the set of morphisms in $\bb{M}$ whose source is an object $Y$ belonging to a finite multiproduct $(\gamma_{ij}\colon Y_j\to X_i)_{(i,j)\in[1,n]\times J}$ of objects of the family $(X_g)_{g\in G}$, i.e. $Y=Y_{j_0}$, and where $y$ is an element of $GY$ such that $G\gamma_{ij_0}\in HX_i$ for all $i\in[1,n]$.
+      It is immediate that this defines a sub-functor $\bar{H}$ of $G$ which contains the sub-functor $H$.
+      We will show that $\bar{H}$ is an $\bb{M}$-multialgebra.
+      Let $(\delta_{ik}\colon Z_k\to X_i)_{(i,k)\in[1,n]\times K}$ be a finite multiproduct in $\bb{M}$.
+      The map $\langle(\bar{H}\delta_{ik})\rangle\colon\coprod_{k\in K}\bar{H}Z_k\to\prod_{i=1}^n\bar{H}X_i$ induced by the bijection $\langle(G\delta_{ik})\rangle\colon\coprod_{k\in K}GZ_k\to\prod_{i=1}^nGX_i$ is injective.
+      To show that it is surjective, consider an element $(x_i)\in\prod_{i=1}^n\bar{H}X_i$, which we will show that the unique element $z\in GZ_{k_0}$ satisfying $G\delta_{ik_0}(z)=x_i$ for all $i\in[1,n]$ belongs to $\bar{H}Z_{k_0}$.
+\oldpage{198}
+      \[
+        \begin{tikzcd}[column sep=huge]
+          T_{l_0} \ar[rr,"\beta_{il_0}"] \ar[dr,swap,"\omega_0"]
+          && Y_1 \ar[dr,"\omega_1"]
+        \\&Z_{k_0} \ar[rr,"\delta_{ik_0}"] \ar[ddrr,bend right=20]
+          && X_1
+        \\T_l \ar[rr,swap,"\beta_{2l}"]
+          && Y_2 \ar[dr,"\omega_2"]
+        \\&Z_k \ar[rr,swap,"\delta_{2k}"] \ar[uurr,bend left=20]
+          && X_2
+        \end{tikzcd}
+      \]
+      For all $i\in[1,n]$, the element $x_i$ belongs to $\bar{H}X_i$, and so there exists a morphism $\omega_i\colon Y_i\to X_i$ and an element $y_i\in GY_i$ satisfying the conditions stated above in the definition of $\bar{H}$.
+      Let $(\beta_{il}\colon T_l\to Y_i)_{(i,l)\in[1,n]\times L}$ and $t\in GT_{l_0}$ be such that they satisfy $G\beta_{il_0}(t)=y_i$ for all $i\in[1,n]$.
+      The family of morphisms $\omega_i\beta_{il_0}\colon T_{l_0}\to X_i$ factors uniquely through a family of morphisms $(\delta_{ik_1}\colon Z_{k_1}\to X_i)_{i\in I}$ and a morphism $\omega_0\colon T_{l_0}\to Z_{k_1}$.
+      The relations
+      \[
+        (G\delta_{ik_1})(G\omega_0(t))
+        = (G\omega_i)(G\beta_{il_0}(t))
+        = G\omega_i(y_i)
+        = x_i
+      \]
+      imply that $k_1=k_0$ and that $G\omega_0(t)=z$.
+      We can then easily show that $z\in\bar{H}Z_{k_0}$.
+      This proves that $\bar{H}$ is an $\bb{M}$-multialgebra.
+      We finally obtain a solution-set of morphisms from $F$ to $\MulAlg(\bb{M})$ by noting that, up to isomorphism, there exists a set of quotient functors $H$ of $F$, and thus a set of functors of the form $\bar{H}$.
+    \item If $(F_k)_{k\in\bb{K}}$ is a filtered diagram of $\MulAlg(\bb{M})$ that has $F$ as its colimit in $\Set^\bb{M}$, then, for every finite multiproduct $(\gamma_{ij}\colon Y_j\to X_i)_{(i,j)\in[1,n]\times J}$ in $\bb{M}$, we have
+      \[
+        \begin{aligned}
+          \coprod_{j\in J} FY_j
+          &= \coprod_{j\in J} \varinjlim_{k\in\bb{K}} F_kY_j
+          \cong \varinjlim_{k\in\bb{K}} \coprod_{j\in J} F_kY_j
+          \cong \varinjlim_{k\in\bb{K}} \prod_{i=1}^n F_kX_i
+        \\&\cong \prod_{i=1}^n \varinjlim_{k\in\bb{K}} F_kX_i
+          = \prod_{i=1}^n FX_i
+        \end{aligned}
+      \]
+      and so $F$ is an $\bb{M}$-multialgebra.
+      Thus $\MulAlg(\bb{M})$ is closed under filtered colimits.
+    \item Let $(m,n)\colon R\rightrightarrows F$ be an equivalence relation in $\MulAlg(\bb{M})$.
+      Let $g\colon F\to G$ be its cokernel in $\Set^\bb{M}$.
+      Then, for every object $X$ of $\bb{M}$, $RX$ is an equivalence relation on $FX$ whose quotient is $GX$.
+      For every finite multiproduct $(\gamma_{ij}\colon Y_j\to X_i)_{(i,j)\in[1,n]\times J}$ in $\bb{M}$, we have
+      \[
+        \begin{aligned}
+          \coprod_{j\in J} GY_j
+          &\cong \coprod_{j\in J} (FY_j/RY_j)
+          \cong \coprod_{j\in J} FY_j \Big/ \coprod_{j\in J} RY_j
+          \cong \prod_{i=1}^n FX_i \Big/ \prod_{i=1}^n RX_i
+        \\&\cong \prod_{i=1}^n (FX_i/RX_i)
+          \cong \prod_{i=1}^n GX_i.
+        \end{aligned}
+      \]
+      This proves that $G$ is an $\bb{M}$-multialgebra.
+      Thus $\MulAlg(\bb{M})$ is closed in $\Set^\bb{M}$ under quotients of equivalence relations.
+  \end{enumerate}
+\end{proof}
+
+\oldpage{199}
+\begin{itenv}{1.4 Proposition}
+  $\MulAlg(\bb{M})$ is a multicocomplete category, whose equivalence relations are effective, and whose pairs of coequalisable morphisms have cokernels, and it has a universal factorisation of morphisms into monomorphisms and regular epimorphisms.
+\end{itenv}
+
+\begin{proof}
+  
 \end{proof}
 
 
