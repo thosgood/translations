@@ -22,6 +22,7 @@
 \hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
 \usepackage{enumerate}
 \usepackage{tikz-cd}
+\usepackage{longtable}
 
 \usepackage{mathrsfs}
 %% Fancy fonts --- feel free to remove! %%
@@ -71,7 +72,7 @@
 \newcommand{\Set}{\mathbb{S}\mathrm{et}}
 \newcommand{\MulAlg}{\mathbb{M}\mathrm{ulAlg}}
 \newcommand{\Dom}{\mathbb{D}\mathrm{om}}
-\newcommand{\Loc}{\mathbb{L}\mathrm{oc}}
+\newcommand{\Locc}{\mathbb{L}\mathrm{occ}}
 \newcommand{\Orth}{\mathbb{O}\mathrm{rth}}
 \newcommand{\Euc}{\mathbb{E}\mathrm{uc}}
 \newcommand{\PHilb}{\mathbb{P}\mathrm{Hilb}}
@@ -272,7 +273,7 @@ We use the notation and results of \cite{2} and \cite{3}.
     \]
     (where the first coproduct is over all primes $p$, and the second coproduct is over all $K$ such that $K\cap\bb{Z}[X_1,\ldots,X_n] = I$ and $K\cap\bb{Z}[X_{n+1},\ldots,X_{n+m}] = J$).
     But we can prove that every $\bb{M}$-multialgebra is, up to isomorphism, of this form, and thus defines a commutative local ring.
-    This correspondence is functorial, i.e. if $\Loc$ denotes the category of commutative local rings and local homomorphisms, then we can define a functor $V\colon\Loc\to\MulAlg(\bb{M})$ by $VA=A^{[\,\,]}$ and $Vf(x_1,\ldots,x_n)=(f(x_1),\ldots,f(x_n))$.
+    This correspondence is functorial, i.e. if $\Locc$ denotes the category of commutative local rings and local homomorphisms, then we can define a functor $V\colon\Locc\to\MulAlg(\bb{M})$ by $VA=A^{[\,\,]}$ and $Vf(x_1,\ldots,x_n)=(f(x_1),\ldots,f(x_n))$.
     We can, with difficulty, directly prove that $V$ is an equivalence of categories, but this result is also an immediate consequence of \hyperref[3.2]{Theorem~3.2}.
   \end{rmenv}
 
@@ -741,7 +742,59 @@ By \hyperref[3]{\S3}, it is equivalent to ask that there exist a multialgebraic 
 
 \begin{rmenv}{4.1 Examples}
 \label{4.1}
-  
+  Either \hyperref[4.0]{Theorem~4.0} or \hyperref[3.2]{Theorem~3.2} easily show that the following categories are multialgebraic, and that their structure-forgetful functor with values in $\Set$ is a multialgebraic forgetful functor.
+  \begin{longtable}{p{0.5in}p{4.4in}}
+    $\bb{K}$ & fields and homomorphisms
+  \\$\bb{K}\mathrm{c}$ & commutative fields and homomorphisms
+  \\$\bb{K}(p)$ & fields of characteristic~$p$ and homomorphisms
+  \\$\bb{K}\mathrm{c}(0)$ & commutative fields of characteristic~$0$ and homomorphisms
+  \\$\bb{L}\mathrm{oc}$ & local rings and local homomorphisms
+  \\$\bb{L}\mathrm{occ}$ & commutative local rings and local homomorphisms
+  \\$\bb{I}\mathrm{nt}$ & integral rings and injective homomorphisms
+  \\$\bb{D}\mathrm{om}$ & integral domains and injective homomorphisms
+  \\$\bb{R}\mathrm{ed}$ & reduced commutative rings and injective homomorphisms
+  \\$\bb{P}\mathrm{rim}$ & primary commutative rings (every zero divisor is nilpotent) and injective homomorphisms
+  \end{longtable}
+\oldpage{205}
+  \begin{longtable}{p{0.5in}p{4.4in}}
+    $\bb{Q}\mathrm{Prim}$ & quasi-primary commutative rings ($xy=0$ implies that either $x$ or $y$ is nilpotent) and injective homomorphisms
+  \\$\bb{K}\mathrm{dif}$ & differential fields and differential homomorphisms
+  \\$\bb{L}\mathrm{ocdif}$ & differential local rings and differential local homomorphisms
+  \\$\bb{D}\mathrm{omdif}$ & differential integral domains and injective differential homomorphisms
+  \\etc.
+  \end{longtable}
+  \begin{longtable}{p{0.5in}p{4.4in}}
+    $\bb{K}\mathrm{cO}$ & orderable commutative fields and homomorphisms
+  \\$\bb{L}\mathrm{occO}$ & commutative local rings such that $1+x_1^2+\ldots+x_n^2$ is invertible for all $x_1,\ldots,x_n$ and local homomorphisms
+  \\$\bb{O}\mathrm{rdtot}$ & totally ordered sets and strictly increasing maps
+  \\$\bb{K}\mathrm{cord}$ & ordered fields and increasing homomorphisms
+  \\$\bb{L}\mathrm{occOrdt}$ & totally ordered commutative local rings and strictly increasing local homomorphisms
+  \\$\bb{D}\mathrm{omOrdt}$ & totally ordered integral domains and strictly increasing homomorphisms
+  \\etc.
+  \end{longtable}
+  \begin{longtable}{p{0.5in}p{4.4in}}
+    $\bb{G}\mathrm{rOrd}$ & ordered groups and proper increasing homomorphisms ($f(x)\geq0\implies x\geq0$)
+  \\$\bb{A}\mathrm{bOrd}$ & ordered abelian groups and proper increasing homomorphisms
+  \\$\bb{A}\mathrm{ncOrd}$ & ordered commutative rings and proper increasing homomorphisms
+  \\etc.
+  \end{longtable}
+  \begin{longtable}{p{0.5in}p{4.4in}}
+    $\bb{K}\mathrm{cv}$ & commutative fields with absolute values and homomorphisms that preserve the absolute value
+  \\etc.
+  \end{longtable}
+  \begin{longtable}{p{0.5in}p{4.4in}}
+    $\bb{N}\mathrm{orm}(\bb{R})$ & normed $\bb{R}$-vector spaces and linear maps that preserve the norm
+  \\$\bb{Alg}\mathrm{Norm}(\bb{R})$ & normed $\bb{R}$-algebras and homomorphisms that preserve the norm
+  \\$\bb{S}\mathrm{tell}(\bb{C})$ & $\bb{C}^*$-algebras and homomorphisms that preserve the norm
+  \\etc.
+  \end{longtable}
+  \begin{longtable}{p{0.5in}p{4.4in}}
+    $\bb{P}\mathrm{Hild}$ & pre-Hilbert spaces and orthogonal linear maps (linear maps that preserve the scalar product)
+  \\$\bb{M}\mathrm{et}$ & metric spaces and isometries
+  \\$\bb{T}\mathrm{rloc}$ & local lattices ($0\neq1$ and $[x\vee y=1\implies(\mbox{$x=1$ or $y=1$})]$) and local homomorphisms ($f(x)=1\implies x=1$)
+  \\$\bb{T}\mathrm{rdloc}$ & distributive local lattices and local homomorphisms
+  \\etc.
+  \end{longtable}
 \end{rmenv}
 
 
