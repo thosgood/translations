@@ -854,10 +854,38 @@ By \hyperref[3]{\S3}, it is equivalent to ask that there exist a multialgebraic 
   \end{rmenv}
 
   \begin{rmenv}{5.2.2}
-    Let
+    Let $\bb{P}_0$ be the category whose objects are pairs $(n,I)$ consisting of a whole number $n$ and a prime ideal $I$ of $\bb{Z}[X_1,\ldots,X_n]$, and whose morphisms $(n,I)\to(m,J)$ are the homomorphisms of unital rings $f\colon\bb{Z}[X_1,\ldots,X_n]\to\bb{Z}[X_1,\ldots,X_m]$ such that $f^{-1}(J)=I$.
+    This is a category with finite multisums, calculated as for $\bb{D}_0$.
+\oldpage{207}
+    The opposite category $\bb{P}_0^\op$ in which we distinguish the objects of the form $(1,I)$ is a multialgebraic theory.
+    The category of multialgebras $\MulAlg(\bb{P}_0^\op)$ is equivalent to the category $\bb{A}\mathrm{nc/Spec}$ whose objects are pairs $(A,P)$ consisting of a commutative unital ring $A$ and a prime ideal $P$ of $A$, and whose morphisms $(A,P)\to(B,Q)$ are the homomorphisms of unital rings $g\colon A\to B$ such that $g^{-1}(Q)=P$.
+    We define a proper morphism of multialgebraic theories $t\colon\bb{P}_0^\op\to\bb{D}_0^\op$ by $t(n,I)=(n,I)$, and by $t(f)=\mbox{quotient of $f$}$.
+    The proper multialgebraic functor $\MulAlg(t)\colon\MulAlg(\bb{D}_0^\op)\to\MulAlg(\bb{P}_0^\op)$ is equivalent to the functor $\Dom\to\bb{A}\mathrm{nc/Spec}$ that sends an integral domain $A$ to the pair $(A,\{0\})$, and whose left adjoint sends a pair $(A,P)$ to the integral domain $A/P$.
+  \end{rmenv}
+
+  \begin{rmenv}{5.2.3}
+  \label{5.2.3}
+    The proper morphism of multialgebraic theories $u\colon\bb{P}_0^\op\to\bb{L}_0^\op$ is defined by $u(n,I)=(n,I)$, and by $u(f)=\mbox{localisation of $f$}$.
+    The functor
+    \[
+      \MulAlg(u)\colon \MulAlg(\bb{L}_0^\op) \to \MulAlg(\bb{P}_0^\op)
+    \]
+    is equivalent to the functor $\Locc\to\bb{A}\mathrm{nc/Spec}$ that sends a local ring $A$ to the pair $(A,M_A)$, where $M_A$ is the maximal ideal of $A$, and whose left adjoint sends a pair $(A,P)$ to the localised ring $A_P$.
+  \end{rmenv}
+
+  \begin{rmenv}{5.2.4}
+  \label{5.2.4}
+    The proper morphism of multialgebraic theories $rt=su\colon\bb{P}_0^\op\to\bb{K}_0^\op$ defines the functor $\MulAlg(rt)\colon\bb{K}\mathrm{c}\to\bb{A}\mathrm{nc/Spec}$ that sends a commutative field $K$ to the pair $(K,\{0\})$, and whose left adjoint sends a pair $(A,P)$ to the field $k(P)$.
   \end{rmenv}
 
 \end{rmenv}
+
+
+
+\section{Multimonadic categories of finite rank}
+\label{6}
+
+Multimonads and multimonadic categories are defined in \cite{3}.
 
 
 
