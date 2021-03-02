@@ -467,7 +467,7 @@ The \emph{structure-forgetful functor} $U_\bb{M}\colon\MulAlg(\bb{M})\to\Set$ is
   is a universal family of morphisms from $E$ to $\Sigma$.
   We thus deduce that the composite functor $U_\bb{M}$ has a left multiadjoint.
 
-  Let $f,h\colon F\rightrightarrows G$ be morphisms in $\MulAlg(\bb{M})$ satisfying $Uf=Uh$.
+  Let $f,h\colon F\rightrightarrows G$ be morphisms in $\MulAlg(\bb{M})$ such that $Uf=Uh$.
   Then we have $\coprod_{g\in G}f_{X_g}=\coprod_{g\in G}h_{X_g}$, and so $f_{X_g}=h_{X_g}$ for all $g\in G$.
   If $(X_i)_{i\in[1,n]}$ is a finite sequence of objects of $(X_g)_{g\in G}$ that has a multiproduct $(\gamma_{ij}\colon Y_j\to X_i)_{(i,j)\in[1,n]\times J}$, then we have
   \[
@@ -525,9 +525,9 @@ We denote by $\bb{L}_0$ the full subcategory of $\bb{A}$ whose objects are the t
   \]
   We will show that $(\gamma_{ji}\colon X_i\to Y_j)_{(i,j)\in[1,n]\times J'}$ is a multisum of $(X_i)_{i\in[1,n]}$.
   Let $(f_i\colon X_i\to Z)_{i\in[1,n]}$ be an inductive cone in $\bb{A}$ with base $(X_i)_{i\in[1,n]}$.
-  Then there exists a unique morphism $g\colon E\to UZ$ satisfying $g\iota_i=(Uf_i)g_i$ for all $i\in I$.
-  Denote by $h_j\colon E\to UY_j$ the diagonally universal morphism from $E$ to $U$, and by $f\colon Y_j\to Z$ the morphism in $\bb{A}$ satisfying $(Uf)h_j=g$.
-  The relation $(Uf)h_j\iota_i=g\iota_i=(Uf_i)g_i$ implies the existence of a morphism $\gamma_{ji}\colon X_i\to Y_j$ satisfying $(U\gamma_{ji})g_i=h_j\iota_i$ and $f\gamma_{ji}=f_i$ for all $i\in[1,n]$.
+  Then there exists a unique morphism $g\colon E\to UZ$ such that $g\iota_i=(Uf_i)g_i$ for all $i\in I$.
+  Denote by $h_j\colon E\to UY_j$ the diagonally universal morphism from $E$ to $U$, and by $f\colon Y_j\to Z$ the morphism in $\bb{A}$ that satisfies $(Uf)h_j=g$.
+  The relation $(Uf)h_j\iota_i=g\iota_i=(Uf_i)g_i$ implies the existence of a morphism $\gamma_{ji}\colon X_i\to Y_j$ such that $(U\gamma_{ji})g_i=h_j\iota_i$ and $f\gamma_{ji}=f_i$ for all $i\in[1,n]$.
   Then $j\in J'$ and the inductive cone $(f_i\colon X_i\to Z)_{i\in[1,n]}$ factor uniquely through the inductive cone $(\gamma_{ij}\colon X_i\to Y_j)_{i\in[1,n]}$.
   This shows that $\bb{L}_0$ has finite multisums.
 
@@ -571,7 +571,7 @@ We denote by $\bb{L}_0$ the full subcategory of $\bb{A}$ whose objects are the t
   \begin{enumerate}[a)]
     \item We will show that $U$ reflects regular epimorphisms.
       Let $f\colon X\to Y$ be a morphism in $\bb{A}$ whose image $Uf$ is a surjective map.
-      Denote by $(m,n)\colon R\rightrightarrows X$ the kernel pair of $f$, by $g\colon X\to Z$ the cokernel of $(m,n)$, and by $h\colon Z\to Y$ the unique morphism satisfying $hg=f$.
+      Denote by $(m,n)\colon R\rightrightarrows X$ the kernel pair of $f$, by $g\colon X\to Z$ the cokernel of $(m,n)$, and by $h\colon Z\to Y$ the unique morphism such that $hg=f$.
       \[
         \begin{tikzcd}
           R \rar[shift left,"m"] \rar[shift right,swap,"n"]
@@ -886,6 +886,108 @@ By \hyperref[3]{\S3}, it is equivalent to ask that there exist a multialgebraic 
 \label{6}
 
 Multimonads and multimonadic categories are defined in \cite{3}.
+
+\begin{rmenv}{6.0 Definitions}
+\label{6.0}
+  A multimonad $(S,\bb{T})=(S;(T,\eta,\mu))$ on $\Set$ is of \emph{finite rank} if the functor $S$ preserves cofiltered limits and the functor $T$ preserves filtered colimits.
+  A category equivalent to $\Set_{/S}^\bb{T}$ and a functor equivalent to $U_S^\bb{T}\colon\Set_{/S}^\bb{T}\to\Set$ are said to be \emph{multimonadic of finite rank} over $\Set$.
+\end{rmenv}
+
+\begin{itenv}{6.1 Theorem}
+\label{6.1}
+  For a functor $U\colon\bb{A}\to\Set$, the following claims are equivalent:
+  \begin{enumerate}[(i)]
+    \item $U$ is multimonadic of finite rank;
+    \item $U$ is multimonadic and $\bb{A}$ has filtered colimits preserved by $U$; and
+    \item $U$ is a multialgebraic forgetful functor.
+  \end{enumerate}
+\end{itenv}
+
+\begin{proof}
+  The equivalence (ii)$\iff$(iii) follows immediately from \hyperref[3.2]{Theorem~3.2} and from \cite[Theorem~4.2]{3}.
+  We will show the equivalence (i)$\iff$(ii) for $U_S^\bb{T}\colon\Set_{/S}^\bb{T}\to\Set$.
+  First of all, it is immediate that the category $\Set_{/S}$ has filtered colimits preserved by $U_S$ if and only if the functor $S$ preserves cofiltered limits.
+  If we assume (i), then $\Set_{/S}$ has filtered colimits preserved by $U_S$, and so $\Set_{/S}^\bb{T}$ has
+\oldpage{208}
+  filtered colimits preserved by $U$, and so $\Set_{/S}^\bb{T}$ has filtered colimits preserved by $U_S^\bb{T}$.
+  Now assume (ii).
+  Let $(X_i)_{i\in\bb{I}}$ be a filtered diagram in $\Set_{/S}$.
+  Denote by $(\iota_i\colon U_SX_i\to E)_{i\in\bb{I}}$ the colimit of $(U_SX_i)_{i\in\bb{I}}$ in $\Set$, and by $(l_i\colon F^\bb{T}X_i\to(Y,y))_{i\in\bb{I}}$ the colimit of $(F^\bb{T}X_i)_{i\in\bb{I}}$ in $\Set_{/S}^\bb{T}$.
+  Since the functor $U_S^\bb{T}$ preserves filtered colimits,
+  \[
+    (U_S^\bb{T}l_i\colon U_S^\bb{T}F^\bb{T}X_i \to U_SY)_{i\in\bb{I}}
+  \]
+  is a colimit of $(U_S^\bb{T}F^\bb{T}X_i)_{i\in\bb{I}}$.
+  The maps
+  \[
+    (U_s\eta_{X_i}\colon U_SX_i \to U_S^\bb{T}F^\bb{T}X_i)_{i\in\bb{I}}
+  \]
+  determine, by colimits, a map $p\colon E\to U_SY$ such that $p\iota_i=(U_S^\bb{T}l_i)(U_S\eta_i)$ for all $i\in\bb{I}$.
+  There thus exists a unique object $X$ of $\Set_{/S}$ and a unique morphism $\eta\colon X\to Y$ such that $U_S\eta=p$, and a unique diagram $(\gamma_i\colon X_i\to X)_{i\in I}$ such that $(X_i)_{i\in\bb{I}}$.
+  Let $(f_i\colon X_i\to Z)_{i\in\bb{I}}$ be an inductive cone with base $(X_i)_{i\in\bb{I}}$.
+  Then there exists a unique morphism $g\colon E\to U_SZ$ such that $g\iota_i=U_sf_i$ for all $i\in I$.
+  Let $f\colon X'\to Z$ be the unique morphism such that $U_Sf=g$.
+  Then
+  \[
+    \begin{aligned}
+      U_S(\eta_Zf)\iota_i
+      &= (U_S\eta_Z)(U_Sf)\iota_i
+      = (U_S\eta_Z)(U_Sf_i)
+      = U_S(\eta_Zf_i)
+      = U_S((U^\bb{T}F^\bb{T}f_i)\eta_{x_i})
+    \\&= (U_SU^\bb{T}(ll_i))(U_S\eta_{x_i})
+      = (U_S^\bb{T}l)(U_S^\bb{T}l_i)(U_S\eta_{x_i})
+      = (U_S^\bb{T})p\iota_i
+    \\&= U_S((U^\bb{T}l)\eta)\iota_i.
+    \end{aligned}
+  \]
+  We thus deduce the equality $(U^\bb{T}l)\eta=\eta_Zf$, and so $f$ is a morphism $X\to Z$ such that $f\gamma_i=f_i$ for all $i\in I$.
+  Thus $\Set_{/S}$ has filtered colimits preserved by $U_S$.
+  Since the functor $U_S$ reflects isomorphisms, it also reflects filtered colimits, and since $U$ preserves filtered colimits, $U^\bb{T}$ also preserves filtered colimits.
+  We thus deduce that $S$ preserves cofiltered limits, and that $T$ preserves filtered colimits, i.e. that $(S,\bb{T})$ is of finite rank.
+\end{proof}
+
+
+
+\section{\texorpdfstring{$\alpha$}{alpha}-multialgebraic theories and categories}
+\label{7}
+
+We consider a regular infinite cardinal $\alpha$ (say $\alpha=\aleph_0$, $\alpha=\aleph_1$, \ldots).
+A family is $\alpha$-small if its index set has cardinality less than $\alpha$.
+A multiproduct of an $\alpha$-small family of objects is said to be $\alpha$-small.
+A category has \emph{$\alpha$-small multiproducts} if every $\alpha$-small family of objects has a multiproduct.
+
+\begin{rmenv}{7.0 Definitions}
+\label{7.0}
+  An \emph{$\alpha$-multialgebraic theory} is a small category $\bb{M}$ with $\alpha$-small multiproducts endowed with a small distinguished family $(X_g)_{g\in G}$ of objects such that every object of $\bb{M}$ belongs to an $\alpha$-small multiproduct of objects of this family.
+
+  An \emph{$\bb{M}$-multialgebra} is then a functor $F\colon\bb{M}\to\Set$ that is multicontinuous for $\alpha$-small multiproducts \cite{2}.
+
+  The category $\MulAlg(\bb{M})$ is defined as before.
+
+  A \emph{proper morphism of $\alpha$-multialgebraic theories} is a functor that is bijective on objects and that preserves both the distinguished family of objects and all $\alpha$-small multiproducts.
+\end{rmenv}
+
+\oldpage{209}
+\begin{rmenv}{7.1}
+  All the above results remain true if we substitute:
+  \begin{itemize}
+    \item ``$\alpha$-small'' for ``finite'';
+    \item ``$\alpha$-filtered'' for ``filtered'';
+    \item ``$\alpha$-presentable'' for ``of finite presentation''; and
+    \item ``rank-$\alpha$'' for ``finite rank''.
+  \end{itemize}
+\end{rmenv}
+
+\begin{rmenv}{7.2 Examples of $\aleph_1$-multialgebraic categories}
+  \begin{longtable}{p{0.6in}p{4.4in}}
+    $\bb{M}\mathrm{etcompl}$ & complete metric spaces and isometries
+  \\$\bb{M}\mathrm{etcomp}$ & compact metric spaces and isometries
+  \\$\bb{B}\mathrm{an}(\bb{R})$ & real Banach spaces and linear maps that preserve the norm
+  \\$\bb{A}\mathrm{lgBan}(\bb{R})$ & real Banach algebras and homomorphisms that preserve the norm
+  \\$\bb{H}\mathrm{ilb}$ & Hilbert spaces and orthogonal linear maps
+  \end{longtable}
+\end{rmenv}
 
 
 
