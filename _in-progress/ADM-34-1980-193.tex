@@ -565,7 +565,37 @@ We denote by $\bb{L}_0$ the full subcategory of $\bb{A}$ whose objects are the t
 \end{itenv}
 
 \begin{proof}
-  
+  Since the category $\bb{A}$ does not necessarily have products, we consider here the kernel pairs of a set of morphisms with the same source.
+  The conditions are necessary by Propositions~\hyperref[1.3]{1.3}, \hyperref[1.4]{1.4}, and \hyperref[2.0]{2.0}.
+
+  Now consider a functor $U$ satisfying the conditions.
+  \begin{enumerate}[a)]
+    \item We will show that $U$ reflects regular epimorphisms.
+      Let $f\colon X\to Y$ be a morphism in $\bb{A}$ whose image $Uf$ is a surjective map.
+      Denote by $(m,n)\colon R\rightrightarrows X$ the kernel pair of $f$, by $g\colon X\to Z$ the cokernel of $(m,n)$, and by $h\colon Z\to Y$ the unique morphism satisfying $hg=f$.
+      \[
+        \begin{tikzcd}
+          R \rar[shift left,"m"] \rar[shift right,swap,"n"]
+          & X \ar[rr,"f"] \ar[dr,swap,"g"]
+          && Y
+        \\&& Z \ar[ur,swap,"h"]
+        \end{tikzcd}
+      \]
+      \[
+        \begin{tikzcd}
+          UR \rar[shift left,"Um"] \rar[shift right,swap,"Un"]
+          & UX \ar[rr,"Uf"] \ar[dr,swap,"Ug"]
+          && UY
+        \\&& UZ \ar[ur,swap,"Uh"] \ar[ur,sloped,"\sim"]
+        \end{tikzcd}
+      \]
+      Then $(m,n)$ is the kernel pair of $g$.
+      Consequently, $(Um,Un)$ is the kernel pair of $Uf$, and also of $Ug$.
+      Since $Uf$ and $Ug$ are surjective maps, they are both cokernels of $(Um,Un)$, and so $Uh$ is bijective.
+      Then $h$ is an isomorphism, and $f\cong g$ is a regular epimorphism.
+\oldpage{202}
+    \item We will show that the functor $J_0\colon\bb{L}_0\to\bb{A}$ is dense.
+  \end{enumerate}
 \end{proof}
 
 
