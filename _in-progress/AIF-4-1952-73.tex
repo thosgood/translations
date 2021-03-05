@@ -67,6 +67,8 @@
 \newcommand{\aster}[1]{$\star${#1}$\star$}
 \newcommand{\BB}{\mathrm{B}}
 \newcommand{\LL}{\mathrm{L}}
+\newcommand{\JJ}{\mathrm{J}}
+\newcommand{\CC}{\mathrm{C}}
 \renewcommand{\ll}{\ell}
 \newcommand{\sBB}{\mathscr{B}}
 \newcommand{\sLL}{\mathscr{L}}
@@ -528,6 +530,28 @@ This is the case, in particular, if $E$ (resp. $F$) is a Hilbert space.
 \end{itenv}
 
 A bilinear form on $E\times F$ is said to be \emph{integral} if it satisfies any of the equivalent conditions of \hyperref[1.theorem7]{Theorem~7}.
+In particular, the dual of $E\hhotimes F$ can be identified with the space $\JJ(E,F)$ of integral bilinear forms on $E\times F$.
+If $E$ and $F$ are Banach spaces, then $\JJ(E,F)$ will be endowed with the dual norm of the Banach space $E\hhotimes F$, which we call the \emph{integral norm}, and denote by $\|v\|'_1$.
+Similarly, a linear map $v$ from one locally convex space $E$ to another $G$ is said to be \emph{integral} if the corresponding bilinear form on $E\times G'$ is integral.
+
+If $E$ and $G$ are Banach spaces, then we also call the integral norm of the corresponding bilinear form of $v$ the integral norm of $v$.
+
+Recall that, in all known cases, when $E$ and $F$ are Banach, the natural linear map from $E'\hotimes F'$ to $\JJ(E,F)$ is a metric isomorphism from the first space to the second (see \hyperref[1.5]{\S5}), which is why we use the notation $\|v\|'_1$ for the integral norm, closely related to the notation $\|v\|_1$ for the trace norm.
+Criterion~d) of \hyperref[1.theorem7]{Theorem~7} takes the following form (which we state for Banach spaces, for simplicity) for integral linear maps:
+\emph{Let $v$ be a linear map from one Banach space $E$ to another $F$. Then $v$ is integral and of integral norm $\leq1$ if and only if the map from $E$ to $F''$ that it defines can be obtained by composing a linear map of norm $\leq$ from $E$ to some space $\LL^\infty(\mu)$, constructed with a suitable positive measure of norm $\leq1$ on a compact space, with the identity map from $\LL^\infty(\mu)$ to $\LL^1(\mu)$, and finally with a linear map of norm $\leq$ from $\LL^1(\mu)$ to $F''$.}
+Similarly, criterion~b) of \hyperref[1.theorem7]{Theorem~7} easily gives:
+\emph{The linear map $v$ from $E$ to $F$ is integral and of integral norm $\leq1$ if and only if it is an adherent point in $\LL_s(E,F_s)$ (where $F_s$ denotes $F$ endowed with the weak topology, and $\LL_s(E,F_s)$ denotes $\LL(E,F_s)$ endowed with the simple-convergence topology) of the disked hull of the set of the $x'\otimes y$, where $x'$ (resp. $y$) runs over the unit ball of $E'$ (resp. of $F$); or if it is adherent to the set of nuclear operators of trace-norm $\leq1$.}
+
+\begin{rmenv}{Examples}
+  Let $E$ and $F$ be arbitrary locally convex spaces.
+  Then every bilinear form on $E\times F$ defined by an element of a space $E'_A\hotimes F'_B$, where $A$ (resp. $B$) is a weakly closed disked equicontinuous subset of $E'$ (resp. of $F'$), is integral.
+  Thus every nuclear map from $E$ to $F$ is integral.
+  The
+\oldpage{89}
+  converse is false, even for Banach spaces, since the identity map from $\LL^\infty(\mu)$ to $\LL^1(\mu)$ is integral, but it is not, in general, even compact.
+  If $E=\CC(M)$ (resp. $F=\CC(N)$) is the space of continuous scalar functions on the compact space $M$ (resp. $N$), then we have seen (\hyperref[1.theorem4]{Theorem~4}) that $\CC(M)\hotimes\CC(N)$ can be identified with its norm to the space $\CC(M\times N)$, and so the space of integral bilinear forms on $\CC(M)\times\CC(N)$ can be identified with its norm to the space of Radon measures on the compact space $M\times N$.
+  Other examples will be seen in \hyperref[I.9]{\S9}
+\end{rmenv}
 
 
 
