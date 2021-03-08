@@ -3005,7 +3005,7 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
 
   The hypotheses of \hyperref[II.1.23]{(1.23)} are again satisfied for $X'\hookrightarrow\overline{X}'$, and $V|X'_\eta$ is regular at $\overline{X}'\setminus X'$.
   To show that $V|X'_s=V|X_s$ is regular at $x$, we can thus restrict to the case where $V$ is free;
-  we can thus suppose that $V$ extends \unsure{or is the extension of?} to a vector bundle on $\overline{X}$, with basis $(e)$.
+  we can thus suppose that $V$ extends \todo{(or is the extension of?)} to a vector bundle on $\overline{X}$, with basis $(e)$.
 
   Let $f$ be a section of $\cal{O}_{\overline{X}}$ that is non-constant on $X_s$ and zero on $\overline{X}\setminus X$.
   Let $\tau$ be the relative vector field such that $\langle\tau,\dd f/f\rangle=1$.
@@ -3052,6 +3052,54 @@ We can similarly prove the following analytic variant of \hyperref[II.1.23]{(1.2
 
 \section{Growth conditions}
 \label{II.2}
+
+\begin{rmenv}{2.1}
+\label{II.2.1}
+  Let $X^*$ be a separated scheme of finite type over $\CC$.
+  By Nagata \cite{20} (see also EGA~II, 2nd edition), $X^*$ can be represented by a dense Zariski open subset of a scheme $X$ that is proper over $\CC$ (here, proper = complete = compact).
+  Furthermore, if $X_1$ and $X_2$ are two ``compactifications'' of $X^*$, then there exists a third compactification $X_3$ along with two commutative diagrams
+  \[
+    \begin{tikzcd}
+      X^* \rar[hook] \dar[equal]
+      & X_3 \dar
+    \\ X^* \rar[hook]
+      & X_i
+    \end{tikzcd}
+  \]
+  We can take $X_3$ to be the scheme-theoretic closure of the diagonal image of $X$ in $X_1\times X_2$.
+
+  This makes schemes over $\CC$ much more well behaved at infinity than analytic varieties are.
+  Often, an algebraic object or construction with respect to some scheme $X^*$ can be seen as an analogous analytic object or construction, plus a ``growth condition at infinity''.
+\end{rmenv}
+
+\oldpage{61}
+\begin{rmenv}{2.2}
+\label{II.2.2}
+  Let $X$ be a separated complex analytic space, and $Y$ a closed analytic subset of $X$.
+  Let $X^*=X\setminus Y$, and let $j\colon X^*\hookrightarrow X$ be the inclusion morphism of $X^*$ into $X$.
+  In what follows, $X$ is seen as a ``partial compactification'' of $X^*$, with $Y$ being the ``at infinity''.
+  We will not lose much generality in supposing that $X^*$ is dense in $X$.
+\end{rmenv}
+
+\begin{rmenv}{2.3}
+\label{II.2.3}
+  Suppose that $X^*$ is smooth, and that $X$ admits an embedding into some $\CC^n$ (or, more generally, into some smooth analytic space).
+  If $j_1$ and $j_2$ are embeddings of $X$ into $\CC^{n_i}$, then the two Riemannian structures on $X^*$ induced by $\CC^{n_i}$, say $j_1^*g$ and $j_2^*$, satisfy the following:
+  \[
+  \label{II.2.3.*}
+    \begin{gathered}
+      \mbox{For every compact subset $K$ of $X$, there exist constants $A,B>0$ such that}
+    \\j_1^*g \leq Aj_2^*g \leq Bj_2^*g \leq Bj_1^*g
+      \qquad\mbox{on $K\cap X^*$.}
+    \end{gathered}
+  \tag{*}
+  \]
+
+  To see this, we compare $j_i^*g$ with $j_3^*g$, where $j_3$ is the diagonal embedding of $X$ into $\CC^{n_1+n_2}$.
+  Locally on $X$, we have $j_3=\alpha\cdot j_i$, where $\alpha\colon\CC^{n+i}\to\CC^{n_1+n_2}$ is a holomorphic section of $\pr_i$, and the claim then follows.
+
+  The compactification $X$ of $X^*$ thus defines an equivalence class under \hyperref[II.2.3.*]{(*)} of Riemannian structures on $X^*$.
+\end{rmenv}
 
 
 
