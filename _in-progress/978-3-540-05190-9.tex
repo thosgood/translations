@@ -3099,6 +3099,37 @@ We can similarly prove the following analytic variant of \hyperref[II.1.23]{(1.2
   Locally on $X$, we have $j_3=\alpha\cdot j_i$, where $\alpha\colon\CC^{n+i}\to\CC^{n_1+n_2}$ is a holomorphic section of $\pr_i$, and the claim then follows.
 
   The compactification $X$ of $X^*$ thus defines an equivalence class under \hyperref[II.2.3.*]{(*)} of Riemannian structures on $X^*$.
+
+  Now suppose only that $X^*$ is smooth.
+  A \emph{Riemannian structure $g$} on $X^*$ is said to be \emph{adapted to $X$} if, for every open subset $U$ of $X$ that admits an embedding into $\CC^n$, the restriction $g|U\cap X^*$ is in the class described above, with respect to $U\cap X^*\hookrightarrow U$.
+  This condition is local on $X$.
+  Using a partition of unity, we can show that there exist Riemannian structures on $X^*$ that are adapted to $X$;
+  these form an equivalence class under \hyperref[II.2.3.*]{(*)}.
+\end{rmenv}
+
+\begin{rmenv}{2.4}
+\label{II.2.4}
+  We situate ourselves under the hypotheses of \hyperref[II.2.2]{(2.2)}.
+  We have multiple ways of defining the distance from a point of $X^*$ to the infinity $Y$.
+
+  \begin{rmenv}{2.4.1}
+  \label{II.2.4.1}
+    Suppose that $Y$ is defined in $X$ by a finite family of equations $f_i=0$.
+    We set
+\oldpage{62}
+    \[
+      d_1(x) = \sum f_i(x)\overline{f_i(x)}.
+    \]
+
+    If the functions $d'_1(n)$ and $d''_1(n)$ are obtained by this procedure, then we have \todo\textbf{???}.
+    For every compact subset $K$ of $X$, there exist constants $A_1,A_2>0$ and $\rho_1,\rho_2>0$ such that, for all $x\in X^*$,
+    \[
+      \begin{aligned}
+        d'_1(x) &\leq A_1d''_1(x)^{\rho_1}
+      \\d''_1(x) &\leq A_2d'_1(x)^{\rho_2}.
+      \end{aligned}
+    \]
+  \end{rmenv}
 \end{rmenv}
 
 
