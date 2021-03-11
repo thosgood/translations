@@ -226,7 +226,7 @@ I do not know if, when $E$ and $F$ are of type~$\FF$, this algebraic isomorphism
 An equivalent question is the following:
 is every bounded subset of $E\hotimes F$ contained in the closed disked hull of a set $A\hotimes B$, where $A$ (resp. $B$) is a bounded subset of $E$ (resp. $F$)?
 
-\aster{%
+\aster{
   We now give some general tips for calculations involving $E\hotimes F$ (\cite[chap.~I, \S1, n\textsuperscript{o}~3]{PTT}).
   If $E=\prod_i E_i$ and $F=\prod_j F_j$ (as topological-vectorial products), then $E\hotimes F$ can be identified with $\prod_{i,j}E_i\hotimes F_j$.
   If $E=\sum_i E_i$ (as a topological direct sum), and if $F$ is a normable space, then $E\hotimes F$ can be identified with the topological direct sum $\sum_i(E_i\hotimes F)$.
@@ -265,7 +265,7 @@ We have an analogous statement for the concrete representation of convergent seq
 
 This fact also implies that, on $\BB(E,F)$, the ``bicompact convergence'' topology is identical to the compact convergence topology on the dual of $E\hotimes F$.
 
-\aster{%
+\aster{
   For the proof of \hyperref[1.theorem2]{Theorem~2}, we suppose, for simplicity, that $E$ and $F$ are Banach spaces, and let $I$ be the product of their unit balls, and $i\mapsto x_i$ and $i\mapsto y_i$ the projections from $I$ to its factors.
   It is easy t see that the linear map $(\lambda_i)\mapsto\sum_i\lambda_i x_i\otimes y_i$ from $\ll^1(I)$ to $E\hotimes F$ is a metric homomorphism from the former to a dense subspace of the latter, and thus \emph{onto} the latter, whence it indeed follows that $E\hotimes F$ can be identified with a quotient space of $\ll^1(I)$.
 
@@ -308,7 +308,7 @@ Then \hyperref[1.theorem3]{Theorem~3} easily implies that $\LL_E^1(\mu)$ is agai
 This recovers, for example, the well-known fact that every continuous linear map from $E$ to the dual $\LL^\infty(\mu)$ of $\LL^1(\mu)$ can be extended to a linear map of the same norm from $F$ to $\LL^\infty(\mu)$;
 or, dually, that every continuous linear map from $\LL^1(\mu)$ to a quotient space $F'/E^0$ of a Banach dual by a weakly closed vector subspace comes from a linear map of the same norm from $\LL^1(\mu)$ to $F'$.
 
-\aster{%
+\aster{
   The analogue of \hyperref[1.theorem3]{Theorem~3} for $\LL^p$ spaces is false for all $p>1$.
   However, \hyperref[1.theorem3]{Theorem~3} applies, in an essential way, in many important places in the theory outlined here.
   We now give some less important applications (see \cite[chap.~1, \S2, n\textsuperscript{o}~2]{PTT} for details).
@@ -342,7 +342,7 @@ All of these facts are elementary (one we know the spectral decomposition of com
 
 Numerous other examples of products $E\hotimes F$, relating to \emph{nuclear spaces}, will be seen in \todo.
 
-\aster{%
+\aster{
   In the setting of infinite-dimensional Banach spaces, I do now know, even in particular cases, other concrete characterisations of the elements of $E\hotimes F$ apart from those that we have given.
   Also, the elements of $c_0\hotimes E$ (where $E$ can be any complete locally convex space) can be identified with \emph{certain} sequences in $E$ that converge to $0$, that we can call \emph{nuclearly convergent to $0$};
   but if $E$ is an infinite-dimensional Banach space, then we always obtain a strictly smaller class than the class of all sequences converging to $0$ (see \todo).
@@ -444,7 +444,7 @@ If $F_1$
 and $F_2$ are of type~$\FF$, then it suffices to consider sets consisting of \emph{one single} bilinear form.
 In general, this criterion will not hold true, but it is linked to an existence problem of topological complements.
 
-\aster{%
+\aster{
   More precisely, if $E_1$ and $E_2$ are direct factors, then $E_1\hotimes E_2$ can be identified with a topological-vectorial subspace of $F_1\hotimes F_2$.
   Also, if $E$ is a topological-vectorial subspace of the Banach space $F$, and if the canonical map $E\hotimes G\to F\hotimes G$ is a topological isomorphism when $G=F'$, then $E''$ is a direct factor of $F''$;
   thus, in the frequent case where $E$ is already a direct factor of $E''$, $E$ will also be a direct factor of $F$.
@@ -550,8 +550,48 @@ Similarly, criterion~b) of \hyperref[1.theorem7]{Theorem~7} easily gives:
 \oldpage{89}
   converse is false, even for Banach spaces, since the identity map from $\LL^\infty(\mu)$ to $\LL^1(\mu)$ is integral, but it is not, in general, even compact.
   If $E=\CC(M)$ (resp. $F=\CC(N)$) is the space of continuous scalar functions on the compact space $M$ (resp. $N$), then we have seen (\hyperref[1.theorem4]{Theorem~4}) that $\CC(M)\hotimes\CC(N)$ can be identified with its norm to the space $\CC(M\times N)$, and so the space of integral bilinear forms on $\CC(M)\times\CC(N)$ can be identified with its norm to the space of Radon measures on the compact space $M\times N$.
-  Other examples will be seen in \hyperref[I.9]{\S9}
+  Other examples will be seen in \hyperref[1.9]{\S9}
+
+  By composing an integral linear map on the left or on the right with a continuous linear map, we obtain another integral linear map.
+  The transpose of an integral map from $E$ to $F$ is an integral map from strong $F'$ to strong $E'$.
+
+  Using, for example, criterion~a) of \hyperref[1.theorem7]{Theorem~7}, we see that, if $E_1$ and $E_2$ are locally convex spaces, and $F_1$ (resp. $F_2$) is a topological vector subspace of $E_1$ (resp. of $E_2$), then every integral bilinear form on $F_1\times F_2$ can be extended to a integral bilinear form on $E_1\times E_2$, with equal integral norm if $E_1$ and $E_2$ are normed (compare with \hyperref[1.theorem6]{Theorem~6}).
+  The most important properties of integral maps are summarised in the following:
 \end{rmenv}
+
+\begin{itenv}{Theorem 8}
+\label{1.theorem8}
+  Let $u$ be an integral linear map from a locally convex space $E$ to a locally convex space $F$.
+  \begin{enumerate}
+    \item If $F$ is quasi-complete, then $u$ is weakly compact, and sends weakly compact subsets of $E$ to compact subsets of $F$.
+      If $v$ is a linear map from $F$ to a locally convex space $G$ that sends bounded subsets to weakly relatively compact subsets, then $v\circ u$ is a compact map.
+    \item Let $v$ be a linear map from $F$ to an $\FF$-space $G$ that sends bounded subsets to weakly relatively compact subsets (resp. a linear map from a $\DF$-space $G$ to $E$ that sends bounded subsets to weakly relatively compact subsets of $E$).
+      Then $v\circ u$ (resp. $u\circ v$) is a \emph{nuclear} map from $E$ to $G$ (resp. from $G$ to $F''$).
+      If $E$, $F$, and $G$ are Banach spaces, then $\|v\circ u\|'_1\leq\|v\|\|u\|'$.
+  \end{enumerate}
+\end{itenv}
+
+\begin{itenv}{Corollary 1}
+  The composition of two integral maps is a nuclear map.
+\end{itenv}
+
+\begin{rmenv}{Other corollaries}
+  An integral map from $E$ to $F$ is nuclear if $F$ is a reflexive $\FF$-space, and it is
+\oldpage{90}
+  a nuclear map from $E$ to $F''$ if $E$ is a reflexive $\DF$-space.
+  An integral map from $E$ to $F$ sends summable sequences to absolutely summable sequences, and weakly convergent sequences to nuclearly convergent sequences (see the end of \hyperref[1.4]{\S4}).
+\end{rmenv}
+
+\aster{
+  So, considering the unit circumference $T$ of the complex plane, endowed with its Haar measure $\mu$, suppose that the sequence $(a_n)$ in the set $\mathbb{Z}$ of integers is such that $(\varepsilon_n a_n)$ is the sequence of coefficients of a function in $\LL^\infty(\mu)$, for some sequence $(\varepsilon)$ of numbers equal to $+1$ or $-1$;
+  then we can easily see that the sequence $a_nz^n\in\LL^\infty(\mu)$ is summable, and is thus an absolutely summable sequence in $\LL^1(\mu)$, whence, immediately, $(a_n)\in\ll^1$.
+  We have thus obtained an analogue of the well-known theorem of Littlewood (in which $\LL^\infty$ is replaced by $\LL^1$, and $\ell^1$ by $\ell^2$).
+  We note that Littlewood's theorem can be obtained in the same way, as a consequence of the following theorem, which has much more general consequences (and which will later be published, along with some of its various consequences):
+  \emph{every summable sequence in an $\LL^1(\mu)$-space (for an arbitrary measure) has a sequence of norms that is square summable} (and even belonging to $\ell^2\hotimes\LL^1(\mu)$;
+  this is dual to the theorem, noted at the end of \hyperref[1.4]{\S4}, that says that every square summable sequence in a $\CC(K)$-space --- and even every sequence belonging to $\ell^2\hhotimes\CC(K)$ --- is nuclearly convergent to $0$).
+
+  We will give some hints on the proof of \hyperref[1.theorem8]{Theorem~8}, that rely essentially on criterion~d) of \hyperref[1.theorem7]{Theorem~7}.
+}
 
 
 
