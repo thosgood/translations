@@ -53,6 +53,10 @@
   {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
   {\medskip}
 
+\newenvironment{itenv*}
+  {\phantomsection\par\medskip\noindent\itshape}
+  {\medskip}
+
 \newenvironment{rmenv}[1]
   {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
   {\medskip}
@@ -3085,26 +3089,27 @@ We can similarly prove the following analytic variant of \hyperref[II.1.23]{(1.2
 \label{II.2.3}
   Suppose that $X^*$ is smooth, and that $X$ admits an embedding into some $\CC^n$ (or, more generally, into some smooth analytic space).
   If $j_1$ and $j_2$ are embeddings of $X$ into $\CC^{n_i}$, then the two Riemannian structures on $X^*$ induced by $\CC^{n_i}$, say $j_1^*g$ and $j_2^*$, satisfy the following:
-  \[
+
+  \begin{itenv*}
   \label{II.2.3.*}
-    \begin{gathered}
-      \mbox{For every compact subset $K$ of $X$, there exist constants $A,B>0$ such that}
-    \\j_1^*g \leq Aj_2^*g \leq Bj_2^*g \leq Bj_1^*g
-      \qquad\mbox{on $K\cap X^*$.}
-    \end{gathered}
-  \tag{*}
-  \]
+    For every compact subset $K$ of $X$, there exist constants $A,B>0$ such that
+    \[
+      j_1^*g \leq Aj_2^*g \leq Bj_2^*g \leq Bj_1^*g.
+    \tag{$*$}
+    \]
+    on $K\cap X^*$.
+  \end{itenv*}
 
   To see this, we compare $j_i^*g$ with $j_3^*g$, where $j_3$ is the diagonal embedding of $X$ into $\CC^{n_1+n_2}$.
   Locally on $X$, we have $j_3=\alpha\cdot j_i$, where $\alpha\colon\CC^{n+i}\to\CC^{n_1+n_2}$ is a holomorphic section of $\pr_i$, and the claim then follows.
 
-  The compactification $X$ of $X^*$ thus defines an equivalence class under \hyperref[II.2.3.*]{(*)} of Riemannian structures on $X^*$.
+  The compactification $X$ of $X^*$ thus defines an equivalence class under \hyperref[II.2.3.*]{($*$)} of Riemannian structures on $X^*$.
 
   Now suppose only that $X^*$ is smooth.
   A \emph{Riemannian structure $g$} on $X^*$ is said to be \emph{adapted to $X$} if, for every open subset $U$ of $X$ that admits an embedding into $\CC^n$, the restriction $g|U\cap X^*$ is in the class described above, with respect to $U\cap X^*\hookrightarrow U$.
   This condition is local on $X$.
   Using a partition of unity, we can show that there exist Riemannian structures on $X^*$ that are adapted to $X$;
-  these form an equivalence class under \hyperref[II.2.3.*]{(*)}.
+  these form an equivalence class under \hyperref[II.2.3.*]{($*$)}.
 \end{rmenv}
 
 \begin{rmenv}{2.4}
@@ -3121,15 +3126,90 @@ We can similarly prove the following analytic variant of \hyperref[II.1.23]{(1.2
       d_1(x) = \sum f_i(x)\overline{f_i(x)}.
     \]
 
-    If the functions $d'_1(n)$ and $d''_1(n)$ are obtained by this procedure, then we have \todo\textbf{???}.
-    For every compact subset $K$ of $X$, there exist constants $A_1,A_2>0$ and $\rho_1,\rho_2>0$ such that, for all $x\in X^*$,
-    \[
-      \begin{aligned}
-        d'_1(x) &\leq A_1d''_1(x)^{\rho_1}
-      \\d''_1(x) &\leq A_2d'_1(x)^{\rho_2}.
-      \end{aligned}
-    \]
+    If the functions $d'_1(n)$ and $d''_1(n)$ are obtained by this procedure, then we have:
+
+    \begin{itenv*}
+    \label{II.2.4.1.*M}
+      For every compact subset $K$ of $X$, there exist constants $A_1,A_2>0$ and $\rho_1,\rho_2>0$ such that, for all $x\in X^*$,
+      \[
+        \begin{aligned}
+          d'_1(x) &\leq A_1d''_1(x)^{\rho_1}
+        \\d''_1(x) &\leq A_2d'_1(x)^{\rho_2}.
+        \end{aligned}
+      \tag{$*$M}
+      \]
+    \end{itenv*}
+
+    Indeed, let $(f'_i=0)$ and $(f''_i=0)$ be two systems of equations for $Y$.
+    It suffices to verify \hyperref[II.2.4.1.*M]{($*$M)} locally on $X$.
+    Locally, by the analytic Nullstellensatz, we know that, for large enough $N$, the ${f'_i}^N$ (resp. ${f''_i}^N$) are linear combinations of the $f''_i$ (resp. $f'_i$), and \hyperref[II.2.4.1.*M]{($*$M)} then follows formally.
   \end{rmenv}
+
+  \begin{rmenv}{2.4.2}
+  \label{II.2.4.2}
+    Suppose that $X$ admits an embedding $j\colon X\hookrightarrow\CC^n$.
+    Let $U$ be a relatively compact open subset of $X$.
+    In $U$, we set
+    \[
+      d_2(x) = d(j(x),j(Y\cap U))
+    \]
+    where $d$ is the Euclidean distance in $\CC^n$.
+
+    We can show, as in \hyperref[II.2.3]{(2.3)}, that, if $d'_2$ and $d''_2$ are obtained by this method, with respect to two different embeddings, then we have:
+
+    \begin{itenv*}
+    \label{II.2.4.2.*R}
+      For every compact subset $K$ of $U$, there exist constants $A,B>0$ such that, for all $x\in K\cap X^*$,
+      \[
+        d'_2(x) \leq Ad''_2(x) \leq Bd'_2(x).
+      \tag{$*$R}
+      \]
+    \end{itenv*}
+
+    Furthermore, it follows immediately from the Lojasiewicz inequalities \cite[Th.~1, p.~85]{18} that the ``distances at infinity'' \hyperref[II.2.4.1]{(2.4.1)} and \hyperref[II.2.4.2]{(2.4.2)} are equivalent in the sense of \hyperref[II.2.4.1.*M]{($*$M)}.
+  \end{rmenv}
+\end{rmenv}
+
+\begin{rmenv}{Definition 2.5}
+\label{II.2.5}
+  Under the hypotheses of \hyperref[II.2.2]{(2.2)}, a norm $\|x\|$ on $X^\bullet$ is said to be \emph{adapted to $X$} if it is a function from $X^*$ to $\RR^+$ such that, for every open subset $U$ of $X$ on which $Y$ is defined by a finite family of equations $(f_i=0)$, and for every compact subset $K$ of $U$, there exist constants $A_1,A_2>0$ and $\rho_1,\rho_2>0$ such that, for all $x\in K\cap X^*$, we have
+  \[
+    \begin{aligned}
+      (1+\|x\|)^{-1}
+      &\leq A_1\left(\sum f_i(x)\overline{f_i(x)}\right)^{\rho_1}
+    \\\sum f_i(x)\overline{f_i(x)}
+      &\leq A_2(1+\|x\|)^{-\rho2}.
+    \end{aligned}
+  \]
+
+  \oldpage{63}
+  These conditions are local on $X$.
+  We can show, using a partition of unity, that there always exist norms on $X^*$ that are adapted to $X$.
+  These form an equivalence class under the equivalence relation
+
+  \begin{itenv*}
+  \label{II.2.5.*'M}
+    For every compact subset $K$ of $X$, there exist constants $A_1,A_2>0$ and $\rho_1,\rho_2>0$ such that, for all $x\in K\cap X^*$,
+    \[
+      (1+\|x\|_i) \leq A_i(1+\|x\|_j)^{\rho_i}
+    \tag{$*'$M}
+    \]
+    for $i=1,2$.
+  \end{itenv*}
+\end{rmenv}
+
+\begin{rmenv}{Definition 2.6}
+\label{II.2.6}
+  A function $f$ on $X^*$ is said to be of \emph{moderate growth along $Y$} if there exists a norm $\|x\|$ on $X^*$ that is adapted to $X$ and such that, for all $x\in X^*$,
+  \[
+    |f(x)| \leq \|x^*\|.
+  \]
+
+  This condition is local on $X$.
+\end{rmenv}
+
+\begin{rmenv}{2.7}
+\label{II.2.7}
 \end{rmenv}
 
 
