@@ -188,7 +188,7 @@ in any case, bornological implies quasi-tunnelled.
 \oldpage{76}
 
 
-\subsection{Generalities on \texorpdfstring{$E\hotimes F$}{EF}}
+\subsection{Generalities on \texorpdfstring{$E\hotimes F$}{E(x)F}}
 \label{1.1}
 
 (\cite[chap.~1, \S1, n\textsuperscript{o}~1 and n\textsuperscript{o}~3]{PTT}).
@@ -236,7 +236,7 @@ is every bounded subset of $E\hotimes F$ contained in the closed disked hull of 
 }
 
 \oldpage{78}
-\subsection{The space \texorpdfstring{$E\hotimes F$}{EF} when \texorpdfstring{$E$}{E} and \texorpdfstring{$F$}{F} are of type \texorpdfstring{$\FF$}{(F)}}
+\subsection{The space \texorpdfstring{$E\hotimes F$}{E(x)F} when \texorpdfstring{$E$}{E} and \texorpdfstring{$F$}{F} are of type \texorpdfstring{$\FF$}{(F)}}
 \label{1.2}
 
 (\cite[chap.~1, \S2, n\textsuperscript{o}~1]{PTT}).
@@ -279,7 +279,7 @@ This fact also implies that, on $\BB(E,F)$, the ``bicompact convergence'' topolo
 }
 
 
-\subsection{Calculation of \texorpdfstring{$\LL^1\hotimes E$}{L1E}}
+\subsection{Calculation of \texorpdfstring{$\LL^1\hotimes E$}{L^1(x)E}}
 \label{1.3}
 
 (\cite[chap.~I, \S2, n\textsuperscript{o}~2]{PTT}).
@@ -352,7 +352,7 @@ Numerous other examples of products $E\hotimes F$, relating to \emph{nuclear spa
 }
 
 
-\subsection{\texorpdfstring{$E\hhotimes F$}{EF} spaces}
+\subsection{\texorpdfstring{$E\hhotimes F$}{E(x)F} spaces}
 \label{1.5}
 
 (\cite[chap.~1, \S3, n\textsuperscript{o}~3]{PTT}).
@@ -508,7 +508,7 @@ This is the case, in particular, if $E$ (resp. $F$) is a Hilbert space.
 \subsection{Integral linear maps, integral bilinear forms}
 \label{1.8}
 
-(\cite[\S4, n\textsuperscript{o}~3 and n\textsuperscript{o}~4]{PTT}).
+(\cite[chap.~1, \S4, n\textsuperscript{o}~3 and n\textsuperscript{o}~4]{PTT}).
 \medskip
 
 \begin{itenv}{Theorem 7}
@@ -572,6 +572,7 @@ Similarly, criterion~b) of \hyperref[1.theorem7]{Theorem~7} easily gives:
 \end{itenv}
 
 \begin{itenv}{Corollary 1}
+\label{1.corollary1}
   The composition of two integral maps is a nuclear map.
 \end{itenv}
 
@@ -590,9 +591,42 @@ Similarly, criterion~b) of \hyperref[1.theorem7]{Theorem~7} easily gives:
   \emph{every summable sequence in an $\LL^1(\mu)$-space (for an arbitrary measure) has a sequence of norms that is square summable} (and even belonging to $\ell^2\hotimes\LL^1(\mu)$;
   this is dual to the theorem, noted at the end of \hyperref[1.4]{\S4}, that says that every square summable sequence in a $\CC(K)$-space --- and even every sequence belonging to $\ell^2\hhotimes\CC(K)$ --- is nuclearly convergent to $0$).
 
-  We will give some hints on the proof of \hyperref[1.theorem8]{Theorem~8}, that rely essentially on criterion~d) of \hyperref[1.theorem7]{Theorem~7}.
+  We will give some hints concerning the proof of \hyperref[1.theorem8]{Theorem~8}, that rely in an essential manner on criterion~d) of \hyperref[1.theorem7]{Theorem~7}.
+  The fact that $u$ is a weakly compact map follows immediately from the fact that the identified map from $\LL^\infty(\mu)$ to $\LL^1(\mu)$ is a weakly compact map.
+  The other claims of the theorem follow easily from the second part, which is more difficult.
+  We can reduce to showing that every weakly compact linear map from $\LL^1(\mu)$ to an $\FF$-space $G$ induces a nuclear map from $\LL^\infty(\mu)$ to $G$, and thus (\hyperref[1.theorem3]{Theorem~3}) comes from some $f\in\LL^1_G(\mu)$.
+  But a theorem of Dunford--Pettis--Phillips tells us that such a map is in fact given by a \emph{strongly measurable and bounded} map $f$ from $M$ to $G$.
+  Note that \hyperref[1.corollary1]{Corollary~1}, which is important due to its application in the theory of nuclear spaces, admits a simpler direct proof:
+  we can reduce to showing that, if $\mu$ and $\nu$ are measures on compact $M$ and $N$, then a continuous linear map $u$ from $\LL^1(\mu)$ to $\LL^\infty(\nu)$ defines a \emph{nuclear} map from $\LL^\infty(\mu)$ to $\LL^1(\nu)$.
+  But $u$ can be identified with a continuous linear form on $\LL^1(\mu)\hotimes\LL^1(\nu)$, which is isomorphic to the space $\LL^1(\mu\otimes\nu)$ (\hyperref[1.theorem3]{Theorem~3}), and so $u$ is defined
+\oldpage{91}
+  by a measurable and bounded function $f$ on $M\times N$, which can be identified a fortiori with an element of $\LL^1(\mu\otimes\nu)=\LL^1(\mu)\hotimes\LL^1(\nu)$.
+  This latter element indeed defines a nuclear map from $\LL^\infty(\mu)$ to $\LL^1(\nu)$, which happens to be exactly the map induced by $u$.
+  QED.
+
+  In \cite{PTT}, we deduce \hyperref[1.theorem8]{Theorem~8} from more general results (see \cite[chap.~1, \S4, n\textsuperscript{o}~2]{PTT}).
+  The majority of \cite[chap.~1, \S4]{PTT} (the densest part of the whole work) is dedicated to the exposition of these results and their many consequences, which we cannot give in this summary.
 }
 
+
+\subsection{Integral linear maps to an \texorpdfstring{$\LL^1$}{L^1} space or a \texorpdfstring{$C_0(M)$}{C_0(M)} space}
+\label{1.9}
+
+(\cite[chap.~1, \S4, n\textsuperscript{o}~4]{PTT}).
+\medskip
+
+\aster{
+  We can characterise the integral linear from a locally convex space $E$ to an $\LL^1(\mu)$ space (where $\mu$ is an arbitrary measure on a locally compact space $M$): they are the linear maps that send a suitable neighbourhood $V$ of $0$ in $E$ to a \emph{latticially bounded} subset of $\LL^1(\mu)$.
+  If $E$ is normed, with $V$ its unit ball, and $h=\sup_{x\in V}|ux|$ (so that $h$ is a positive element of $\LL^1(\mu)$), then $\|u\|'_1=\|h\|_1$.
+  If $E$ or $\LL^1(\mu)$ is separable, then the theorem of Dunford--Pettis gives an equivalent criterion (which we state, as an example, in the case where $E$ is assumed to be normed):
+  \emph{there exists a weakly measurable map $f$ from $M$ to $E'$ such that $\|f(t)\|$ is a summable function of $t$, and such that, for all $x\in E$, $ux$ is the class in $\LL^1(\mu)$ of the function $t\mapsto\langle x,f(t)\rangle$; then $\|u\|'_1\leq\int\|f(t)\|\dd\mu(t)$ (and we have equality for a suitable choice of $f$).}
+  We can also characterise the \emph{nuclear} maps from a locally convex space $E$ to $\LL^1(\mu)$: they are those which send a suitable neighbourhood $V$ of $0$ in $E$ to a subset $A$ of $\LL^1(\mu)$ which is latticially bounded and further \emph{equimeasurable} (by which we mean that, for every compact $K\subset M$, and every $\varepsilon>0$, there exists a compact $K_0$ such that $\mu(K\cap K_0^c)\leq\varepsilon$, and such that the $\varphi\in A$ agree almost everywhere on $K_0$ with the functions from an equicontinuous and uniformly bounded set of functions on $K_0$).
+  If we suppose, for simplicity, that $E$ is a Banach space, then this is equivalent to saying that the map in question is given by an \emph{integrable} \cite{2} map $f$ from $M$ to $E'$ (and, indeed, it follows immediately from \hyperref[1.theorem3]{Theorem~3} that this indeed implies that $u$ is nuclear).
+
+  Dually, let $M$ be a locally compact space, and $E$ a Banach space (for simplicity), and suppose that either $M$ is metrisable and
+\oldpage{92}
+  countable at infinity, or that $E$ is separable. 
+}
 
 
 
