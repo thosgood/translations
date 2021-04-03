@@ -279,7 +279,7 @@ This fact also implies that, on $\BB(E,F)$, the ``bicompact convergence'' topolo
 }
 
 
-\subsection{Calculation of \texorpdfstring{$\LL^1\hotimes E$}{L^1(x)E}}
+\subsection{Calculation of \texorpdfstring{$\LL^1\hotimes E$}{L1(x)E}}
 \label{1.3}
 
 (\cite[chap.~I, \S2, n\textsuperscript{o}~2]{PTT}).
@@ -388,8 +388,8 @@ The following theorem (which is, truth be told, trivial), can be seen as the dua
 
 \begin{itenv}{Theorem 4}
 \label{1.theorem4}
-  Let $M$ be a locally compact space, let $C_0(M)$ the space of continuous scalar functions on $M$ that are ``zero at infinity'', endowed with the uniform convergence norm, and let $E$ be a locally convex complete space.
-  Then $C_0(M)\hhotimes E$ is canonically isomorphic to the space $C_0(M,E)$ of continuous maps from $M$ to $E$ that are zero at infinity, endowed with the uniform convergence topology (and with the uniform norm if $E$ is a Banach space).
+  Let $M$ be a locally compact space, let $\CC_0(M)$ the space of continuous scalar functions on $M$ that are ``zero at infinity'', endowed with the uniform convergence norm, and let $E$ be a locally convex complete space.
+  Then $\CC_0(M)\hhotimes E$ is canonically isomorphic to the space $\CC_0(M,E)$ of continuous maps from $M$ to $E$ that are zero at infinity, endowed with the uniform convergence topology (and with the uniform norm if $E$ is a Banach space).
   In particular, $c_0\hhotimes E$ is isomorphic to the space of sequences in $E$ that tend to $0$.
 \end{itenv}
 
@@ -609,7 +609,7 @@ Similarly, criterion~b) of \hyperref[1.theorem7]{Theorem~7} easily gives:
 }
 
 
-\subsection{Integral linear maps to an \texorpdfstring{$\LL^1$}{L^1} space or a \texorpdfstring{$C_0(M)$}{C_0(M)} space}
+\subsection{Integral linear maps to an \texorpdfstring{$\LL^1$}{L1} space or a \texorpdfstring{$\CC_0(M)$}{C0(M)} space}
 \label{1.9}
 
 (\cite[chap.~1, \S4, n\textsuperscript{o}~4]{PTT}).
@@ -625,8 +625,22 @@ Similarly, criterion~b) of \hyperref[1.theorem7]{Theorem~7} easily gives:
 
   Dually, let $M$ be a locally compact space, and $E$ a Banach space (for simplicity), and suppose that either $M$ is metrisable and
 \oldpage{92}
-  countable at infinity, or that $E$ is separable. 
+  countable at infinity, or that $E$ is separable.
+  Then the integral maps $u$ from $\CC_0(M)$ (the space of continuous functions on $M$ that are ``zero at infinity'') to $E'$, i.e. the continuous linear forms on $\CC_0(M,E)=\CC_0(M)\hhotimes E$, are exactly those given by a measure $\mu$ on $M$ and a weakly $\mu$-measurable and bounded map $f$ from $M$ to $E'$ by the formula $u\varphi=\int\varphi(t)f(t)\dd\mu(t)$.
+  We can further suppose that $\|f(t)\|=1$ for all $t$, and that $\|\mu\|_1=\|u\|'_1$.
+  Using \hyperref[1.theorem3]{Theorem~3}, we also find that the \emph{nuclear} maps from $\CC_0(M)$ to $E'$, or even from $\CC_0(M)$ to an arbitrary Banach space $F$, are exactly those given by a pair $(u,f)$ as above, but with $f$ being an \emph{integrable} map from $M$ to $F$;
+  it is no longer necessary here to make any separability hypotheses.
+  In particular, if $K$ and $L$ are compact spaces, $\mu$ a measure on $K$, and $N(x,y)$ a continuous scalar function on $K\times L$, then the map $f\mapsto\int f(x)N(x,y)\dd\mu(x)$ from $C(K)$ to $C(L)$, defined by the continuous kernel $N$, is nuclear.
+  Note that we have just described two remarkable categories of ``vectorial measures'' on $M$, which we call \emph{integral vectorial measures} and \emph{nuclear vectorial measures} (respectively) on $M$.
+
+  The fact that we can characterise the integral and nuclear maps from a Banach space (for example) $E$ to $\LL^1(\mu)$ by properties concerning their images of the unit ball is completely special to $\LL^1(\mu)$ (see the end of \hyperref[1.7]{\S7}) and is also linked to the corollary of \hyperref[1.theorem3]{Theorem~3}.
+  Similarly, we can show that the integral linear maps from $\LL^1(\mu)$ to a locally convex space $E$ can be characterised by properties concerning their images of the unit ball of $\LL^1(\mu)$, a feature that we will not further study here (see \cite[chap.~1, \S4, n\textsuperscript{o}~6]{PTT}).
 }
+
+
+\subsection*{Appendix 1}
+\label{appendix1}
+\addcontentsline{toc}{subsection}{Appendix 1}
 
 
 
