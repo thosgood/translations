@@ -2975,83 +2975,85 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
   If $V$ is endowed with a connection, then we can immediately see \hyperref[II.1.12]{(I.12)} that $(V,\nabla)$ is regular at $x_\infty\in\overline{X}\setminus X$, in the sense of \hyperref[II.1.21]{(1.21)}, if and only if $(V^\an,\nabla)$ is regular at $x_\infty$, in the sense of \hyperref[II.1.14]{(1.14)}.
 \end{rmenv}
 
-\begin{itenv}{Theorem 1.23}
-\label{II.1.23}
-  Consider a commutative diagram
-  \[
-    \begin{tikzcd}
-      X \ar[rr,"j"] \ar[dr,swap,"f"]
-      && \overline{X} \ar[dl,"\overline{f}"]
-    \\&S&
-    \end{tikzcd}
-  \]
-  in which
-  \begin{enumerate}[a)]
-    \item $S$ is a Noetherian scheme of characteristic~$0$, and $j$ is an open immersion of finite type of $S$-schemes;
-    \item $f$ is smooth of pure relative dimension~$1$; and
-    \item $T=\overline{X}\setminus X$ is quasi-finite over $S$.
-  \end{enumerate}
+% The following are removed by the errata
 
-  Let $V$ be a vector bundle on $X$ endowed with a relative connection $\nabla\colon V\to\Omega_{X/S}^1(V)$.
-  Then the set of points $s\in S$ such that the restriction of $(V,\nabla)$ to the fibre $X_s$ of $X$ at $s$ is regular at $T_s$ is closed in $S$.
-\end{itenv}
+% \begin{itenv}{Theorem 1.23}
+% \label{II.1.23}
+%   Consider a commutative diagram
+%   \[
+%     \begin{tikzcd}
+%       X \ar[rr,"j"] \ar[dr,swap,"f"]
+%       && \overline{X} \ar[dl,"\overline{f}"]
+%     \\&S&
+%     \end{tikzcd}
+%   \]
+%   in which
+%   \begin{enumerate}[a)]
+%     \item $S$ is a Noetherian scheme of characteristic~$0$, and $j$ is an open immersion of finite type of $S$-schemes;
+%     \item $f$ is smooth of pure relative dimension~$1$; and
+%     \item $T=\overline{X}\setminus X$ is quasi-finite over $S$.
+%   \end{enumerate}
 
-\begin{proof}
-  It is clear, by \hyperref[II.1.12]{(1.12)}, that the set in question in constructable (as is its complement, which satisfies the property that it contains, for any point $\eta$, a neighbourhood of $\eta$ in the closure $\overline{\eta}$).
-  It remains to show that it is stable under specialisation, which can be shown by proving that, if $S$ is the spectrum of a discrete valuation ring, with generic point $\eta$ and closed point $s$, and if $(V_\eta,\nabla)$ on $X_\eta$ is regular at $T_\eta$, then $(V_s,\nabla)$ on $X_s$ is regular at $T_s$.
-  By replacing $\overline{X}$ with its normalisation, if necessary, we can suppose that $\overline{X}$ is flat over $S$ and normal.
+%   Let $V$ be a vector bundle on $X$ endowed with a relative connection $\nabla\colon V\to\Omega_{X/S}^1(V)$.
+%   Then the set of points $s\in S$ such that the restriction of $(V,\nabla)$ to the fibre $X_s$ of $X$ at $s$ is regular at $T_s$ is closed in $S$.
+% \end{itenv}
 
-  Let $x\in T_s$.
-  Let $\overline{X}'$ be an affine neighbourhood of $x$ in $\overline{X}$ such that the
-\oldpage{59}
-  restriction of $V$ to $\overline{X}'\cap X_s$ is free, with basis $e_i$, and such that there exists an open affine subset $X''$ of $X$ such that $X''_s=\overline{X}'\cap X_s$ (for there to exist such an $X''$, it suffices to take $\overline{X}$ to be small enough such that $\overline{X}_s\setminus X_s$ is defined by one single equation, for example).
-  We lift $e_i$ to a section $\widetilde{e}_i$ of $V$ over $X''$, and we let $X'$ be the open subset of $X''$ on which $(\widetilde{e}_i)$ is a basis.
+% \begin{proof}
+%   It is clear, by \hyperref[II.1.12]{(1.12)}, that the set in question in constructable (as is its complement, which satisfies the property that it contains, for any point $\eta$, a neighbourhood of $\eta$ in the closure $\overline{\eta}$).
+%   It remains to show that it is stable under specialisation, which can be shown by proving that, if $S$ is the spectrum of a discrete valuation ring, with generic point $\eta$ and closed point $s$, and if $(V_\eta,\nabla)$ on $X_\eta$ is regular at $T_\eta$, then $(V_s,\nabla)$ on $X_s$ is regular at $T_s$.
+%   By replacing $\overline{X}$ with its normalisation, if necessary, we can suppose that $\overline{X}$ is flat over $S$ and normal.
 
-  The hypotheses of \hyperref[II.1.23]{(1.23)} are again satisfied for $X'\hookrightarrow\overline{X}'$, and $V|X'_\eta$ is regular at $\overline{X}'\setminus X'$.
-  To show that $V|X'_s=V|X_s$ is regular at $x$, we can thus restrict to the case where $V$ is free;
-  we can thus suppose that $V$ extends \todo{(or is the extension of?)} to a vector bundle on $\overline{X}$, with basis $(e)$.
+%   Let $x\in T_s$.
+%   Let $\overline{X}'$ be an affine neighbourhood of $x$ in $\overline{X}$ such that the
+% \oldpage{59}
+%   restriction of $V$ to $\overline{X}'\cap X_s$ is free, with basis $e_i$, and such that there exists an open affine subset $X''$ of $X$ such that $X''_s=\overline{X}'\cap X_s$ (for there to exist such an $X''$, it suffices to take $\overline{X}$ to be small enough such that $\overline{X}_s\setminus X_s$ is defined by one single equation, for example).
+%   We lift $e_i$ to a section $\widetilde{e}_i$ of $V$ over $X''$, and we let $X'$ be the open subset of $X''$ on which $(\widetilde{e}_i)$ is a basis.
 
-  Let $f$ be a section of $\cal{O}_{\overline{X}}$ that is non-constant on $X_s$ and zero on $\overline{X}\setminus X$.
-  Let $\tau$ be the relative vector field such that $\langle\tau,\dd f/f\rangle=1$.
+%   The hypotheses of \hyperref[II.1.23]{(1.23)} are again satisfied for $X'\hookrightarrow\overline{X}'$, and $V|X'_\eta$ is regular at $\overline{X}'\setminus X'$.
+%   To show that $V|X'_s=V|X_s$ is regular at $x$, we can thus restrict to the case where $V$ is free;
+%   we can thus suppose that $V$ extends \todo{(or is the extension of?)} to a vector bundle on $\overline{X}$, with basis $(e)$.
 
-  By construction, the vector field $\tau$ induces, on the normalisation $\overline{X}_s^\mathrm{n}$ of $\overline{X}_s$, a vector field that vanishes simply on $\overline{X}_s\setminus X_s$.
-  To show that $V|X_s$ is regular at $x$, it thus suffices to show that there exists some $n$ such that the
-  \[
-    f^n\nabla_\tau^i e_k|\overline{X}_s
-  \]
-  (for $i\geq0$) are all regular.
-  By hypothesis, there exists some $n$ such that the
-  \[
-    f^n\nabla_\tau^i e_k|\overline{X}_\eta
-  \]
-  are regular.
-  The $f^n\nabla_\tau^i e_k$ are thus regular over $\overline{X}_\eta\cup X_s$, and so the complement is of dimension~$2$;
-  since $\overline{X}$ is normal, the $f^n\nabla_\tau^i e_k$ are automatically everywhere regular, and thus in particular over $\overline{X}_s$.
-\end{proof}
+%   Let $f$ be a section of $\cal{O}_{\overline{X}}$ that is non-constant on $X_s$ and zero on $\overline{X}\setminus X$.
+%   Let $\tau$ be the relative vector field such that $\langle\tau,\dd f/f\rangle=1$.
 
-We can similarly prove the following analytic variant of \hyperref[II.1.23]{(1.23)}.
+%   By construction, the vector field $\tau$ induces, on the normalisation $\overline{X}_s^\mathrm{n}$ of $\overline{X}_s$, a vector field that vanishes simply on $\overline{X}_s\setminus X_s$.
+%   To show that $V|X_s$ is regular at $x$, it thus suffices to show that there exists some $n$ such that the
+%   \[
+%     f^n\nabla_\tau^i e_k|\overline{X}_s
+%   \]
+%   (for $i\geq0$) are all regular.
+%   By hypothesis, there exists some $n$ such that the
+%   \[
+%     f^n\nabla_\tau^i e_k|\overline{X}_\eta
+%   \]
+%   are regular.
+%   The $f^n\nabla_\tau^i e_k$ are thus regular over $\overline{X}_\eta\cup X_s$, and so the complement is of dimension~$2$;
+%   since $\overline{X}$ is normal, the $f^n\nabla_\tau^i e_k$ are automatically everywhere regular, and thus in particular over $\overline{X}_s$.
+% \end{proof}
 
-\begin{itenv}{Proposition 1.24}
-  Consider a commutative diagram
-  \[
-    \begin{tikzcd}
-      X \ar[rr,"j"] \ar[dr,swap,"f"]
-      && \overline{X} \ar[dl,"\overline{f}"]
-    \\&D&
-    \end{tikzcd}
-  \]
-  in which
-\oldpage{60}
-  \begin{enumerate}[a)]
-    \item $D$ is the unit disc;
-    \item $f$ is smooth of pure relative dimension~$1$; and
-    \item $j$ is an open immersion, and $T=\overline{X}\setminus X$ is an analytic subspace that is quasi-finite over $D$.
-  \end{enumerate}
+% We can similarly prove the following analytic variant of \hyperref[II.1.23]{(1.23)}.
 
-  Let $V$ be a vector bundle on $X$, extending to a coherent analytic sheaf on $\overline{X}$, and endowed with a relative connection on $X$.
-  For all $\lambda$, the restriction of $V$ to $f^{-1}(\lambda)$ is endowed with a structure that is meromorphic \hyperref{II.1.14}{(1.14)} at all points in the inverse image of $T$ in the Riemann surface given by the normalisation of $\overline{f}^{-1}(\lambda)$.
-  If, for $\lambda\neq0$, $V|f^{-1}(\lambda)$ is regular at these points, then $V|f^{-1}(0)$ has the analogous property.
-\end{itenv}
+% \begin{itenv}{Proposition 1.24}
+%   Consider a commutative diagram
+%   \[
+%     \begin{tikzcd}
+%       X \ar[rr,"j"] \ar[dr,swap,"f"]
+%       && \overline{X} \ar[dl,"\overline{f}"]
+%     \\&D&
+%     \end{tikzcd}
+%   \]
+%   in which
+% \oldpage{60}
+%   \begin{enumerate}[a)]
+%     \item $D$ is the unit disc;
+%     \item $f$ is smooth of pure relative dimension~$1$; and
+%     \item $j$ is an open immersion, and $T=\overline{X}\setminus X$ is an analytic subspace that is quasi-finite over $D$.
+%   \end{enumerate}
+
+%   Let $V$ be a vector bundle on $X$, extending to a coherent analytic sheaf on $\overline{X}$, and endowed with a relative connection on $X$.
+%   For all $\lambda$, the restriction of $V$ to $f^{-1}(\lambda)$ is endowed with a structure that is meromorphic \hyperref{II.1.14}{(1.14)} at all points in the inverse image of $T$ in the Riemann surface given by the normalisation of $\overline{f}^{-1}(\lambda)$.
+%   If, for $\lambda\neq0$, $V|f^{-1}(\lambda)$ is regular at these points, then $V|f^{-1}(0)$ has the analogous property.
+% \end{itenv}
 
 
 \section{Growth conditions}
@@ -3425,15 +3427,20 @@ We can similarly prove the following analytic variant of \hyperref[II.1.23]{(1.2
   \newblock Géométrie algébrique et géométrie analytique.
   \newblock {\em Ann. Inst. Fourier. Grenoble} \textbf{6} (1956).
 
-  \bibitem{25}
+  \bibitem[25]{25}
   {Turrittin,~H.L.}
   \newblock Convergent solutions of ordinary homogeneous differential equations in the neighbourhood of a singular point.
   \newblock {\em Acta Math.} \textbf{93} (1955), 27--66.
 
-  \bibitem{26}
+  \bibitem[26]{26}
   {Turrittin,~H.L.}
   \newblock ``Asymptotic expansions of solutions of systems of ordinary linear differential equations containing a parameter'', in: {\em Contributions to the theory of nonlinear oscillations.}
   \newblock Princeton, 1952.
+
+  \bibitem[27]{27}
+  {G\'{e}rard,~R.}
+  \newblock {\em Th\'{e}orie de Fuchs sur une vari\'{e}t\'{e} analytic complexe}.
+  \newblock Thesis, Strasbourg (1968).
 
 \end{thebibliography}
 
