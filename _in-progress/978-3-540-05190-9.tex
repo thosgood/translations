@@ -1983,7 +1983,7 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
 \begin{rmenv}{6.1}
 \label{I.6.1}
   Let $X$ be a non-empty connected topological space that is both locally path connected and locally simply path connected, and let $x_0$ be a point of $X$.
-  We denote by $\pi\colon \widetilde{X}_{x_0}\to X$ the universal covering of $(X,x_0)$, and by $\widetilde{x}_0$ the base point of $\widetilde{X}_{x_0}$.
+  We denote by $\pi\colon \widetilde{X}_{x_0}\to X$ the universal cover of $(X,x_0)$, and by $\widetilde{x}_0$ the base point of $\widetilde{X}_{x_0}$.
 \end{rmenv}
 
 If $\scr{F}$ is a sheaf on $X$, then we pose:
@@ -3210,7 +3210,92 @@ We can similarly prove the following analytic variant of \hyperref[II.1.23]{(1.2
 
 \begin{rmenv}{2.7}
 \label{II.2.7}
+  More precise information about the structure at infinity of $X^*$ is necessary in order to reasonably define what a multiform function with moderate growth at infinity on $X^*$ is.
+
+  The fundamental example is that of the logarithm function.
+  Denote by $\widetilde{D}^*$ the universal cover of the punctured disc.
+  At an arbitrary point of $D^*$, the set of determinations of $\log\colon\widetilde{D}^*\to\CC$ is not bounded.
+  We only have a bound
+  \[
+    |\log(z)| \leq A(1/|z|)^\varepsilon
+  \]
+  in a subset of $\widetilde{D}^*$ where the argument $\arg(z)$ of $z$ is bounded.
+
+  The delicate results of Lojasiewicz used below will only be essential in what follows for trivial cases (cf. \hyperref[II.2.20]{(2.20)}).
 \end{rmenv}
+
+\begin{rmenv}{2.8}
+\label{II.2.8}
+  In \cite{17}, Lojasiewicz proves results which are more precise than \hyperref[II.2.8.2]{(2.8.2)} given below
+
+  \begin{rmenv}{2.8.1}
+  \label{II.2.8.1}
+    Let $X$ be a separated analytic space.
+    In the following, we understand ``semi-analytic triangulation of $X$'' in the following weak sense: a semi-analytic triangulation of $X$ is a set $\scr{T}$ of closed semi-analytic subsets of $X$ (the simplices of the triangulation) such that
+    \begin{enumerate}[(a)]
+      \item $\scr{T}$ is locally finite and stable under intersection; and
+      \item for every $\sigma\in\scr{T}$, there exists a homeomorphism $\gamma$ between $\sigma$ and a simplex
+\oldpage{64}
+        of the form $\Delta_n$ such that
+        \begin{enumerate}[(b1)]
+          \item the graph $\Gamma\subset\RR\times X$ of $\gamma$ is semi-analytic, and even semi-algebraic in the first variable; and
+          \item $\gamma$ sends the set of faces of $\Delta_n$ to the set of $\tau\in\scr{T}$ contained in $\sigma$.
+        \end{enumerate}
+    \end{enumerate}
+  \end{rmenv}
+
+  \begin{rmenv}{2.8.2}
+  \label{II.2.8.2}
+    Let $X$ be separated analytic space, and $\scr{F}$ a locally finite set of semi-analytic subsets of $X$.
+    Then, locally on $X$, there exists a semi-analytic triangulation $\scr{T}$ of $X$ such that every $F\in\scr{F}$ is the union of the simplices of the triangulation that it contains.
+  \end{rmenv}
+\end{rmenv}
+
+\begin{rmenv}{Definition 2.9}
+\label{II.2.9}
+  Under the hypotheses of \hyperref[II.2.2]{(2.2)}, a subset $P$ of a covering $\pi\colon\widetilde{X}^*\to X^*$ of $X^*$ is said to be \emph{vertical} along $Y$ if there exists a finite family of compact semi-analytic subsets $P_i$ of $X$ such that the $P_i\setminus Y$ are simply connected, and lifts $\widetilde{P_i}$ of the $P_i\setminus Y$ on $\widetilde{X}^*$ such that
+  \[
+    P \subset \bigcup_i\widetilde{P_i}.
+  \]
+
+  \begin{rmenv}{2.9.1}
+  \label{II.2.9.1}
+    If $\scr{T}$ is a semi-analytic triangulation of $X$ that induces a semi-analytic triangulation of $Y$, then a subset $P$ of $\widetilde{X}^*$ is vertical if and only if it is contained in the union of a finite nubmer of lifts of open simplices of $\scr{T}$.
+  \end{rmenv}
+
+  \begin{rmenv}{2.9.2}
+  \label{II.2.9.2}
+    If $X$ is a finite union of open subsets $U_i$, then, for a subset $P$ of $\widetilde{X}^*$ to be vertical, it is necessary and sufficient for $P$ to be a union of subsets $P_i\subset\pi^{-1}(U_i)$ that are vertical along $Y\cap U_i$.
+  \end{rmenv}
+
+  \begin{rmenv}{2.9.3}
+  \label{II.2.9.3}
+    If $U$ is an open subset of $X$, and $P$ is a vertical subset of $\widetilde{X}^*$, then, for every compact subset $K$ of $U$, $P\cap\pi^{-1}(K)$ is vertical in $\pi^{-1}(U)$ along $U\cap Y$.
+  \end{rmenv}
+\end{rmenv}
+
+\begin{rmenv}{Definition 2.10}
+\label{II.2.10}
+  Under the hypotheses of \hyperref[II.2.2]{(2.2)}, let $\pi\colon\widetilde{X}^*\to X^*$, and let $f$ be a function on $\widetilde{X}^*$.
+  We say that $f$ is \emph{of moderate growth along $Y$} if, for every norm
+\oldpage{65}
+  $\|x\|$ on $X^*$ that is adapted to $X$, and for every vertical subset $P$ of $\widetilde{X}^*$, there exist $A,N>0$ such that, for all $x\in P$,
+  \[
+    |f(x)| \leq A(1+\|x\|)^N.
+  \]
+
+  This condition is of a local nature on $X$.
+\end{rmenv}
+
+\begin{rmenv}{Example 2.11}
+\label{II.2.11}
+  Let $X$ be the disc, $X^*$ the punctured disc, and $\widetilde{X}^*$ the universal cover of $X^*$.
+  The multiform functions on $X^*$ (or functions on $\widetilde{X}^*$) defined by $z\mapsto z^\rho$ (for $\rho\in\CC$), and also $z\mapsto\log z$, are of moderate growth at the origin.
+\end{rmenv}
+
+\begin{itenv}{Lemma 2.12}
+\label{II.2.12}
+\end{itenv}
 
 
 
