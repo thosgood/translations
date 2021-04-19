@@ -3228,7 +3228,7 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
 
 \begin{rmenv}{2.8}
 \label{II.2.8}
-  In \cite{17}, Lojasiewicz proves results which are more precise than \hyperref[II.2.8.2]{(2.8.2)} given below
+  In \cite{17}, Lojasiewicz proves results which are more precise than \hyperref[II.2.8.2]{(2.8.2)} given below.
 
   \begin{rmenv}{2.8.1}
   \label{II.2.8.1}
@@ -3297,7 +3297,44 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
 
 \begin{itenv}{Lemma 2.12}
 \label{II.2.12}
+  Under the hypotheses of \hyperref[II.2.2]{(2.2)}, let $\scr{V}$ be a coherent analytic sheaf on $X^*$, and $\scr{V}_1$ and $\scr{V}_2$ extensions of $\scr{V}$ to a coherent analytic sheaf on $X$.
+  Then the following conditions are equivalent.
+  \begin{enumerate}[(i)]
+    \item There exists an extension $\scr{V}'$ of $\scr{V}$ on $X$, as well as homomorphisms from $\scr{V}'$ to $\scr{V}_1$ and to $\scr{V}_2$.
+    \item There exists an extension $\scr{V}''$ of $\scr{V}$ on $X$, as well as homomorphisms from $\scr{V}_1$ and from $\scr{V}_2$ to $\scr{V}''$.
+    \item The two previous conditions are locally satisfied on $Y$.
+  \end{enumerate}
 \end{itenv}
+
+\begin{proof}
+  To prove that (i)$\iff$(ii), we take
+  \[
+    \scr{V}'' = (\scr{V}_1\oplus \scr{V}_2)/\scr{V}'
+  \]
+  where
+  \[
+    \scr{V}' = \scr{V}_1\cap \scr{V}_2.
+  \]
+  If (i) is locally true, then a global solution is given by the sum of the images of $\scr{V}_1$ and $\scr{V}_2$ in $j_*\scr{V}$, where $j$ is the inclusion of $X^*$ into $X$.
+\end{proof}
+
+\begin{rmenv}{2.13}
+\label{II.2.13}
+  We say that two extensions $\scr{V}_1$ and $\scr{V}_2$ of $\scr{V}$ are \emph{meromorphically equivalent} if the conditions of \hyperref[II.2.2]{(2.2)} are satisfied;
+  we say that a coherent analytic sheaf on $X^*$ is \emph{meromorphic along $Y$} if it is locally endowed with an equivalence class of extensions of $\scr{V}$ to a coherent analytic sheaf on $X$.
+  If there exists an extension of $\scr{V}$ on $X$ that is, locally on $Y$, meromorphically equivalent to the given extensions, then this extension is unique up to meromorphic equivalence;
+  we then say that $\scr{V}$ is \emph{effectively meromorphic along $Y$}.
+\oldpage{66}
+  I do not know if there exist coherent analytic sheaves on $X^*$ that are meromorphic along $Y$ but not effectively meromorphic along $Y$.
+
+  Let $\scr{V}$ be a coherent analytic sheaf on $X^*$ that is meromorphic along $Y$;
+  a \emph{section} $v\in\HH^0(X^*,\scr{V})$ is said to be \emph{meromorphic along $Y$} if, locally on $X$, it is defined by a section of one of the given extensions of $\scr{V}$.
+  The information of the sheaf $j_*^\mathrm{mero}\scr{V}$ on $X$ of sections of $\scr{V}$ which are meromorphic along $Y$ is equivalent to the information of the meromorphic structure along $Y$ of $\scr{V}$.
+\end{rmenv}
+
+\begin{rmenv}{2.14}
+\label{II.2.14}
+\end{rmenv}
 
 
 
