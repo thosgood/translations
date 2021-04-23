@@ -3393,6 +3393,52 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
   \[
     \eta\alpha\omega = f^N.
   \]
+  Let $K$ be a compact subset of $U_1$.
+  It is clear that there exists $M>0$ such that
+  \[
+    \begin{aligned}
+      |\omega\eta(v)| &\leq C^{te}(1+\|x\|)^M |v|
+    \\|\alpha(v)| &\leq C^{te}(1+\|x\|)^M |v|
+    \end{aligned}
+  \]
+  on $K$, and thus
+  \[
+  \label{II.2.15.4.1}
+    |v|_\omega \leq C^{te}(1+\|x\|)^M |v|_\eta
+  \tag{1}
+  \]
+  \[
+  \label{II.2.15.4.2}
+    |v|_\eta \leq C^{te}(1+\|x\|)^M |f^N| |v|_\omega
+  \tag{2}
+  \]
+  on $K$.
+
+  We can apply \hyperref[II.2.15.4.2]{(2)} to a finite family of functions $f_i$ that generates an ideal of definition of $Y$.
+
+  By \hyperref[II.2.4]{(2.4)} and \hyperref[II.2.5]{(2.5)}, there exists $M'$ such that
+  \[
+  \label{II.2.15.4.3}
+    \sum_i |f_i^N| \leq C^{te}(1+\|x\|)^{M'}
+  \tag{3}
+  \]
+  on $K$, and it thus follows that, in a small enough neighbourhood of $x$, $|v|_\omega$ and $|v|_\eta$ are equivalent, in the sense of \hyperref[II.2.14.1]{(2.14.1)}.
+  The equivalence \hyperref[II.2.14.1]{(2.14.1)} is of a local nature on $X$.
+  We can thus prove, by using a partition of unity, the following proposition:
+\end{rmenv}
+
+\begin{itenv}{Proposition 2.16}
+\label{II.2.16}
+  Under the hypotheses of \hyperref[II.2.14]{(2.14)}, there exists exactly one equivalence class \hyperref[II.2.14.1]{(2.14.1)} of norms on $\scr{V}$ which are locally equivalent (in the sense of \hyperref[II.2.14.1]{(2.14.1)}) to the norms \hyperref[II.2.15.2]{(2.15.2)} and \hyperref[II.2.15.3]{(2.15.3)}.
+\end{itenv}
+
+We say that the norms whose existence is guaranteed by \hyperref[II.2.16]{(2.16)} are \emph{moderate}.
+
+\oldpage{68}
+\begin{rmenv}{Definition 2.17}
+\label{II.2.17}
+  Under the hypotheses of \hyperref[II.2.14]{(2.14)}, let $|v|$ be a moderate norm on $\scr{V}$, $\pi\colon\widetilde{X}^*\to X^*$ a covering of $X^*$, and $v$ a continuous section of $\pi^*\scr{V}$.
+  We say that $v$ is \emph{of moderate growth along $Y$} if $|v|$ is of moderate growth along $Y$ \hyperref[II.2.10]{(2.10)}.
 \end{rmenv}
 
 
