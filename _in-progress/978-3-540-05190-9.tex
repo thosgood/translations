@@ -3322,18 +3322,77 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
 \label{II.2.13}
   We say that two extensions $\scr{V}_1$ and $\scr{V}_2$ of $\scr{V}$ are \emph{meromorphically equivalent} if the conditions of \hyperref[II.2.2]{(2.2)} are satisfied;
   we say that a coherent analytic sheaf on $X^*$ is \emph{meromorphic along $Y$} if it is locally endowed with an equivalence class of extensions of $\scr{V}$ to a coherent analytic sheaf on $X$.
-  If there exists an extension of $\scr{V}$ on $X$ that is, locally on $Y$, meromorphically equivalent to the given extensions, then this extension is unique up to meromorphic equivalence;
+  If there exists an extension of $\scr{V}$ on $X$ that is, locally on $Y$, meromorphically equivalent to the pre-given extensions, then this extension is unique up to meromorphic equivalence;
   we then say that $\scr{V}$ is \emph{effectively meromorphic along $Y$}.
 \oldpage{66}
   I do not know if there exist coherent analytic sheaves on $X^*$ that are meromorphic along $Y$ but not effectively meromorphic along $Y$.
 
   Let $\scr{V}$ be a coherent analytic sheaf on $X^*$ that is meromorphic along $Y$;
-  a \emph{section} $v\in\HH^0(X^*,\scr{V})$ is said to be \emph{meromorphic along $Y$} if, locally on $X$, it is defined by a section of one of the given extensions of $\scr{V}$.
+  a \emph{section} $v\in\HH^0(X^*,\scr{V})$ is said to be \emph{meromorphic along $Y$} if, locally on $X$, it is defined by a section of one of the pre-given extensions of $\scr{V}$.
   The information of the sheaf $j_*^\mathrm{mero}\scr{V}$ on $X$ of sections of $\scr{V}$ which are meromorphic along $Y$ is equivalent to the information of the meromorphic structure along $Y$ of $\scr{V}$.
 \end{rmenv}
 
 \begin{rmenv}{2.14}
 \label{II.2.14}
+  Suppose that $X^*$ is reduced, and let $\scr{V}$ be a vector bundle on $X^*$ which is meromorphic along $Y$.
+  We will define an equivalence class of ``norms'' on $\scr{V}$.
+  The ``norms'' in question will be continuous families of norms on the $\scr{V}_x$ ($x\in X^*$).
+  If $v$ is a continuous section of $\scr{V}$, then $|v|$ is a positive function on $X^*$, which is zero at exactly the points where $v=0$.
+  Two norms $|v|_1$ and $|v|_2$ will be said to be equivalent if we have the following:
+  \begin{rmenv}{2.14.1}
+  \label{II.2.14.1}
+    For any norm $\|x\|$ on $X^*$, and any compact subset $K$ of $X$, there exist $A_1,A_2,N_1,N_2>0$ such that
+    \[
+      \begin{aligned}
+        |v|_1 &\leq A_1(1+\|x\|)^{N_1}|v|_2
+      \\|v|_2 &\leq A_2(1+\|x\|)^{N_2}|v|_1
+      \end{aligned}
+    \]
+    on $K\cap X^*$.
+  \end{rmenv}
+\end{rmenv}
+
+\begin{rmenv}{2.15.1}
+\label{II.2.15.1}
+  If $\scr{V}=\cal{O}^n$, then we set $|v|=\sum|v_i|$.
+\end{rmenv}
+
+\begin{rmenv}{2.15.2}
+\label{II.2.15.2}
+  Let $x\in Y$, and let $\scr{V}_1$ be a pre-given extension of $\scr{V}$ on a neighbourhood of $x$.
+  Then there exists an open neighbourhood $U$ of $x$, along with $\omega\colon\scr{V}_1\to\cal{O}^n$, such that $\omega$ is a monomorphism on $U\cap X^*$.
+  We set
+  \[
+    |v|_\omega = |\omega(v)|
+  \]
+  in $U\cap X^*$.
+\end{rmenv}
+
+\begin{rmenv}{2.15.3}
+\label{II.2.15.3}
+  For $x$ and $\scr{V}_1$ as in \hyperref[II.2.15.1]{(2.15.1)}, there exists a neighbourhood $U$ of $x$, and an epimorphism $\eta\colon\cal{O}^n\to\scr{V}_1$ on $U$.
+  We set
+  \[
+    |v|_\eta = \inf_{\eta(w)=v}|w|
+  \]
+  in $U\cap X^*$.
+\end{rmenv}
+
+\oldpage{67}
+\begin{rmenv}{2.15.4}
+\label{II.2.15.4}
+  We now compare \hyperref[II.2.15.2]{(2.15.2)} and \hyperref[II.2.15.3]{(2.15.3)}.
+  Consider $U$ along with the meromorphic homomorphisms
+  \[
+    \cal{O}^n \xrightarrow{\eta} \scr{V} \xrightarrow{\omega} \cal{O}^m
+  \]
+  defined on $U\setminus Y$, with $\eta$ an epimorphism and $\omega$ a monomorphism.
+  The meromorphic homomorphism $\omega\eta$ is such that its kernel and image are locally direct factors.
+  This still holds true in the scheme $\Spec(\cal{O}_{x,X})\setminus Y_x$.
+  We thus easily deduce that, for every holomorphic function $f$ on $U$ that vanishes on $Y$, there exists $N>0$, and open neighbourhood $U_1\subset U$ of $x$, and some $\alpha\colon\cal{O}^m\to\cal{O}^n$ such that
+  \[
+    \eta\alpha\omega = f^N.
+  \]
 \end{rmenv}
 
 
