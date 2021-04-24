@@ -100,6 +100,7 @@
 \DeclareMathOperator{\Gr}{Gr}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\codim}{codim}
 
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -1352,7 +1353,7 @@ In fact, I have cheated with this definition, in that I have only considered equ
   \end{enumerate}
 \end{itenv}
 
-In particular, it follows from \hyperref[I.4.5]{(4.5)}~(ii) and from \hyperref[I.2.17]{(2.17)} that $E$ defines a canonical connection on $P^{n-1}(\scr{L})$, whose horizontal sections are the images under $\DD$ of solutions of $E$.
+In particular, it follows from \hyperref[I.4.5]{(4.5.ii)} and from \hyperref[I.2.17]{(2.17)} that $E$ defines a canonical connection on $P^{n-1}(\scr{L})$, whose horizontal sections are the images under $\DD$ of solutions of $E$.
 
 \begin{rmenv}{4.6}
 \label{I.4.6}
@@ -3477,9 +3478,9 @@ This is the case in the following well-known proposition, which shows that the k
   where $Y_i$ is closed in $X_i$, and $X_i^*=X_i\setminus Y_i$, and thus $Y_1=f^{-1}(Y_2)$.
 
   Consider the hypotheses:
-  \begin{enumerate}
-    \item[{\rm(a)}] There exists a subset $K$ of $X_1$ that is proper over $X_2$ and such that $f(K_1)\supset\overline{X_2^*}$.
-    \item[{\rm(b)}] $f$ is proper and induces an isomorphism $X_1^*\simto X_2^*$.
+  \begin{enumerate}[(a)]
+    \item There exists a subset $K$ of $X_1$ that is proper over $X_2$ and such that $f(K_1)\supset\overline{X_2^*}$.
+    \item $f$ is proper and induces an isomorphism $X_1^*\simto X_2^*$.
   \end{enumerate}
 
   It is clear that {\rm(b)}$\implies${\rm(a)}.
@@ -3527,12 +3528,12 @@ This is the case in the following well-known proposition, which shows that the k
 \end{proof}
 
 \begin{rmenv}{Remarks 2.20}
-  \begin{enumerate}
-    \item[{\rm(i)}] Let $X=D^{n+m}$ and $X^*=(D^*)^n\times D^m$;
+  \begin{enumerate}[(i)]
+    \item Let $X=D^{n+m}$ and $X^*=(D^*)^n\times D^m$;
       then $Y$ is a normal crossing divisor in $X$.
       On the universal cover $\widetilde{X}^*$ of $X^*$, the functions $\arg(z_i)$ (for $1\leq i\leq n$) are defined.
       It is clear that a subset $P$ of $\widetilde{X}^*$ is vertical along $Y$ if and only if its image in $X$ is relatively compact and if the functions $\arg(z_i)$ (for $1\leq i\leq n$) are bounded on $P$.
-    \item[{\rm(ii)}] Hironaka's resolution of singularities, along with (ii\textsubscript{c}) of \hyperref[II.2.19]{(2.19)}, allows us, in the general case, to make explicit the idea of vertical subsets, starting from the particular case of~(i).
+    \item Hironaka's resolution of singularities, along with (ii\textsubscript{c}) of \hyperref[II.2.19]{(2.19)}, allows us, in the general case, to make explicit the idea of vertical subsets, starting from the particular case of~(i).
   \end{enumerate}
 \end{rmenv}
 
@@ -3557,11 +3558,11 @@ We further immediately deduce, from \cite{GAGA}, the following:
   Let $\pi\colon\widetilde{X}^*\to(X^*)^\an$ be a covering of $(X^*)^\an$, and $\scr{V}$ an
 \oldpage{71}
   algebraic vector bundle on $X^*$.
-  \begin{enumerate}
-    \item[{\rm(i)}] A \emph{norm on $X^*$} is defined to be a norm on $(X^*)^\an$ that is adapted to $X^\an$ \hyperref[II.2.5]{(2.5)}.
-    \item[{\rm(ii)}] A \emph{vertical subset of $\widetilde{X}^*$} is defined to be a subset of $\widetilde{X}^*$ that is vertical along $Y=X\setminus X^*$ \hyperref[II.2.9]{(2.9)}.
-    \item[{\rm(iii)}] A \emph{moderate norm on $\scr{V}$} is defined to be a moderate norm on $\scr{V}^\an$ with respect to the meromorphic structure at infinity of $\scr{V}^\an$ \hyperref[II.2.16]{(2.16)}.
-    \item[{\rm(iv)}] A continuous section $v$ of $\pi^*\scr{V}$ is said to be of \emph{moderate growth} if it is of moderate growth along $Y$ \hyperref[II.2.17]{(2.17)}.
+  \begin{enumerate}[(i)]
+    \item A \emph{norm on $X^*$} is defined to be a norm on $(X^*)^\an$ that is adapted to $X^\an$ \hyperref[II.2.5]{(2.5)}.
+    \item A \emph{vertical subset of $\widetilde{X}^*$} is defined to be a subset of $\widetilde{X}^*$ that is vertical along $Y=X\setminus X^*$ \hyperref[II.2.9]{(2.9)}.
+    \item A \emph{moderate norm on $\scr{V}$} is defined to be a moderate norm on $\scr{V}^\an$ with respect to the meromorphic structure at infinity of $\scr{V}^\an$ \hyperref[II.2.16]{(2.16)}.
+    \item A continuous section $v$ of $\pi^*\scr{V}$ is said to be of \emph{moderate growth} if it is of moderate growth along $Y$ \hyperref[II.2.17]{(2.17)}.
   \end{enumerate}
 \end{rmenv}
 
@@ -3724,12 +3725,12 @@ This section brings together some constructions that are ``local at infinity\tod
   Suppose that we have a given complex representation $W_0$ of finite dimension~$d$ of $\pi_1(X,x_0)$ endowed with a cyclic vector $w_0$.
   We denote by $W$ the corresponding local system \hyperref[I.1.4]{(I.1.4)}, and by $\scr{W}$ the algebraic vector bundle with regular integrable connection endowed with an isomorphism of $\pi_1(X,x_0)$-representations \hyperref[II.5.7]{(II.5.7)}
   \[
-    \scr{W}_{x_0} \cong W.
+    \scr{W}_{x_0} \simeq W.
   \]
   Finally, we denote by $w$ the multiform horizontal section of $\scr{W}^\an$ with base determination $w_0$.
 \end{rmenv}
 
-\begin{rmenv}{1.2}
+\begin{rmenv}{Definition 1.2}
 \label{III.1.2}
   A section of an \emph{algebraic} vector bundle $\scr{V}$ on $X$ is said to be \emph{in the Nilsson class} if it is a multiform holomorphic section of finite determination that is of moderate growth at infinity \hyperref[II.2.23]{(II.2.23.iv)}.
 
@@ -3743,9 +3744,9 @@ The first says that, for a function \emph{of finite determination}, various vari
 \label{III.1.3}
   Let $s$ be a multiform holomorphic section of finite determination of an algebraic vector bundle on $X$.
   Then the following conditions are equivalent:
-  \begin{enumerate}
-    \item[{\rm(i)}] $s$ is in the Nilsson class; and
-    \item[{\rm(ii)}] the restriction of $s$ to every (locally closed) smooth algebraic curve along $X$ is in the Nilsson class.
+  \begin{enumerate}[(i)]
+    \item $s$ is in the Nilsson class; and
+    \item the restriction of $s$ to every (locally closed) smooth algebraic curve along $X$ is in the Nilsson class.
   \end{enumerate}
 \oldpage{123}
   If $X$ is a Zariski open subset of a compact normal variety $\overline{X}$, then the two conditions above are also equivalent to the following:
@@ -3753,6 +3754,58 @@ The first says that, for a function \emph{of finite determination}, various vari
     \item[{\rm(iii)}] every irreducible component of $\overline{X}\setminus X$ of codimension~$1$ in $\overline{X}$ contains a non-empty open subset $U$ along which $s$ is of moderate growth.
   \end{enumerate}
 \end{itenv}
+
+In the above, we do not lose any generality in supposing, in (iii), that $X\cup U\subset\overline{X}$ is smooth, and that $U$ is a smooth divisor there.
+Unlike (i), conditions (ii) and (iii) do not make any reference to the theory of Lojasiewicz.
+It follows from (iii) that, if $\codim(\overline{X}\setminus X)\geq2$, then a function of finite determination is automatically in the Nilsson class.
+
+For $X$ of dimension~$1$, the following theorem is due to Plemelj \cite{23}.
+
+\begin{itenv}{Theorem 1.4}
+\label{III.1.4}
+  Let $\scr{V}$ be an algebraic vector bundle on $X$.
+  The ``evaluation at $w$'' function, that sends each (algebraic) $f\in\Hom(\scr{W},\scr{V})$ to the section $f(w)$ of $\scr{V}^\an$ gives a bijection between $\Hom(\scr{W},\scr{V})$ and the set of sections of $\scr{V}$ in the Nilsson class that are of monodromy subordinate to $(W_0,w_0)$.
+\end{itenv}
+
+\begin{rmenv}{1.5}
+\label{III.1.5}
+  Here we prove \hyperref[III.1.3]{(1.3)} and \hyperref[III.1.4]{(1.4)}.
+  We have already seen (in \hyperref[I.6.11]{(I.6.11)}) that the function $E_w\colon f\mapsto f(w)$ identifies $\Hom(\scr{W}^\an,\scr{V}^\an)$ with the set of multiform holomorphic sections of $\scr{V}^\an$ of finite determination with monodromy subordinate to $(W_0,w_0)$.
+  It thus remains to prove that $f$ is algebraic if and only if $f(w)$ satisfies \hyperref[III.1.3]{(1.3.i)} (resp. \hyperref[III.1.3]{(1.3.ii)}, resp. \hyperref[III.1.3]{(1.3.iii)}).
+
+  By \hyperref[II.4.1]{(II.4.1.iii)}, the ``section'' $w$ of $\scr{W}$ is in the Nilsson class, so that, if $f$ is algebraic, then $f(w)$ satisfies \hyperref[III.1.3]{(1.3.i)}.
+  Trivially, \hyperref[III.1.3]{(1.3.i)}$\implies$\hyperref[III.1.3]{(1.3.ii)} and \hyperref[III.1.3]{(1.3.i)}$\implies$\hyperref[III.1.3]{(1.3.iii)}.
+
+  Let $e\colon\cal{O}^d\to\scr{W}$ be a multiform basis of $\scr{W}$ consisting of determinations of $w$.
+  Since $\scr{W}$ is regular, $e^{-1}$ is of moderate growth at infinity.
+  For $f\colon\scr{W}^\an\to\scr{V}^\an$, the $f(e_i)$ are determinations of $f(w)$.
+  From this, and from the equation $f=fee^{-1}$, we deduce that
+\oldpage{124}
+  \begin{enumerate}[a)]
+    \item if $f(w)$ satisfies \hyperref[III.1.3]{(1.3.ii)}, then the restriction of $f\in\HH^0(\shHom(\scr{W},\scr{V})^\an)$ to any curve is of moderate growth; and
+    \item if $f(w)$ satisfies \hyperref[III.1.3]{(1.3.iii)}, then $f$ is of moderate growth near a non-empty open subset of each irreducible component of $\overline{X}\setminus X$ of codimension~$1$.
+  \end{enumerate}
+\end{rmenv}
+
+By \hyperref[II.4.1.1]{(II.4.1.1)}, under each of these hypotheses, $f$ is algebraic.
+
+\begin{itenv}{Corollary 1.5}
+\label{III.1.5}
+  Under the hypotheses of \hyperref[III.1.4]{(1.4)}, if $X$ is affine, with coordinate ring $A$, and if $\scr{V}$ is of rank~$m$, then the set of sections of $\scr{V}$ in the Nilsson class that are of monodromy subordinate to $(W_0,w_0)$ is a \emph{projective} $A$-module of rank~$dm$.
+\end{itenv}
+
+\begin{rmenv}{Remark 1.6}
+\label{III.1.6}
+  A \emph{meromorphic function in the Nilsson class} is, by definition, a section of some sheaf $\cal{O}(D)$, for $D$ a sufficiently positive divisor, in the Nilsson class (where $\cal{O}(D)$ is the sheaf of meromorphic functions $f$ such that $\operatorname{div}(f)\geq-D$).
+  It follows from \hyperref[III.1.5]{(1.5)} that the set of meromorphic functions in the Nilsson class that are of monodromy subordinate to $(W_0,w_0)$ is a vector space of dimension~$d$ over the field of rational functions on $X$.
+\end{rmenv}
+
+\begin{rmenv}{1.7}
+\label{III.1.7}
+\end{rmenv}
+
+
+
 
 
 %% Bibliography %%
