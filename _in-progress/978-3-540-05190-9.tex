@@ -3174,7 +3174,7 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
 
 \begin{rmenv}{Definition 2.5}
 \label{II.2.5}
-  Under the hypotheses of \hyperref[II.2.2]{(2.2)}, a norm $\|x\|$ on $X^\bullet$ is said to be \emph{adapted to $X$} if it is a function from $X^*$ to $\RR^+$ such that, for every open subset $U$ of $X$ on which $Y$ is defined by a finite family of equations $(f_i=0)$, and for every compact subset $K$ of $U$, there exist constants $A_1,A_2>0$ and $\rho_1,\rho_2>0$ such that, for all $x\in K\cap X^*$, we have
+  Under the hypotheses of \hyperref[II.2.2]{(2.2)}, a norm $\|x\|$ on $X^*$ is said to be \emph{adapted to $X$} if it is a function from $X^*$ to $\RR^+$ such that, for every open subset $U$ of $X$ on which $Y$ is defined by a finite family of equations $(f_i=0)$, and for every compact subset $K$ of $U$, there exist constants $A_1,A_2>0$ and $\rho_1,\rho_2>0$ such that, for all $x\in K\cap X^*$, we have
   \[
     \begin{aligned}
       (1+\|x\|)^{-1}
@@ -3477,10 +3477,10 @@ This is the case in the following well-known proposition, which shows that the k
   It is clear that {\rm(b)}$\implies${\rm(a)}.
   We have
   \begin{enumerate}
-    \item[{\rm(i\textsubscript{a})}] If $\|x\|$ is a norm on $X_2^*$ with respect to $X_2$, then $\|f(x)\|$ is a norm on $X_1^*$ with respect to $X_1$.
+    \item[{\rm(i\textsubscript{a})}] If $\|x\|$ is a norm on $X_2^*$ adapted to $X_2$, then $\|f(x)\|$ is a norm on $X_1^*$ adapted to $X_1$.
 \oldpage{69}
     \item[{\rm(i\textsubscript{b})}] Conversely, if {\rm(a)} is satisfied, and if $\|x\|$ is a function on $X_2^*$ such that $\|f(x)\|$ is a norm on $X_1^*$, then $\|x\|$ is a norm on $X_2^*$.
-    \item[{\rm(i\textsubscript{c})}] In particular, if {\rm(b)} is satisfied, then the norms on $X_1^*=X_2^*$ with respect to $X_1$ or $X_2$ agree.
+    \item[{\rm(i\textsubscript{c})}] In particular, if {\rm(b)} is satisfied, then the norms on $X_1^*=X_2^*$ adapted to $X_1$ or $X_2$ agree.
   \end{enumerate}
 
   Let $\pi_2\colon\widetilde{X_2}^*\to X_2^*$ be a covering, and $\pi_1\colon\widetilde{X_1}^*\to X_1^*$ its inverse image over $X_1^*$.
@@ -3495,7 +3495,7 @@ This is the case in the following well-known proposition, which shows that the k
   \begin{enumerate}
     \item[{\rm(iii\textsubscript{a})}] The inverse image of a moderate norm on $\scr{V}_2$ is a moderate norm on $\scr{V}_1$.
     \item[{\rm(iii\textsubscript{b})}] Conversely, if {\rm(a)} is satisfied, then a norm on $\scr{V}_2$ is moderate if its inverse image is.
-    \item[{\rm(iii\textsubscript{c})}] In particular, if {\rm(b)} is satisfied, then the moderate norms on $\scr{V}_1=\scr{V}_2$ with respect to $X_1$ or $X_2$ agree.
+    \item[{\rm(iii\textsubscript{c})}] In particular, if {\rm(b)} is satisfied, then the moderate norms on $\scr{V}_1=\scr{V}_2$ adapted to $X_1$ or $X_2$ agree.
   \end{enumerate}
 \end{itenv}
 
@@ -3524,10 +3524,62 @@ This is the case in the following well-known proposition, which shows that the k
       then $Y$ is a normal crossing divisor in $X$.
       On the universal cover $\widetilde{X}^*$ of $X^*$, the functions $\arg(z_i)$ (for $1\leq i\leq n$) are defined.
       It is clear that a subset $P$ of $\widetilde{X}^*$ is vertical along $Y$ if and only if its image in $X$ is relatively compact and if the functions $\arg(z_i)$ (for $1\leq i\leq n$) are bounded on $P$.
+    \item[{\rm(ii)}] Hironaka's resolution of singularities, along with (ii\textsubscript{c}) of \hyperref[II.2.19]{(2.19)}, allows us, in the general case, to make explicit the idea of vertical subsets, starting from the particular case of~(i).
   \end{enumerate}
 \end{rmenv}
 
+\begin{rmenv}{2.21}
+\label{II.2.21}
+  \hyperref[II.2.19]{Proposition~2.19} allows us to pursue the programme of \hyperref[II.2.1]{(2.1)}.
+  So let $X^*$ be a separated scheme of finite type over $\CC$, and $X$ a proper scheme over $\CC$ that contains $X^*$ as a Zariski open subset.
+  If $\scr{F}$ is a coherent algebraic sheaf on $X^*$, then we know (EGA~I, 9.4.7) that $\scr{F}$ can be extended to a coherent algebraic sheaf $\scr{F}_1$ on $X$.
+  The various sheaves $\scr{F}_1^\an$ define on $\scr{F}^\an$ (effectively) the same meromorphic structure along $Y=X\setminus X^*$.
+\end{rmenv}
 
+We further immediately deduce, from \cite{GAGA}, the following:
+
+\begin{itenv}{Proposition 2.22}
+\label{II.2.22}
+  Under the hypotheses of \hyperref[II.2.21]{(2.21)}, the functor $\scr{F}\mapsto\scr{F}^\an$ induces an equivalence between the category of coherent algebraic sheaves on $X^*$ and the category of coherent analytic sheaves on $(X^*)^\an$ that are effectively meromorphic along $Y$.
+\end{itenv}
+
+\begin{rmenv}{Definition 2.23}
+\label{II.2.23}
+  Let $X^*$ be a separated scheme of finite type over $\CC$, and let $X$ be as in \hyperref[II.2.21]{(2.21)}.
+  Let $\pi\colon\widetilde{X}^*\to(X^*)^\an$ be a covering of $(X^*)^\an$, and $\scr{V}$ an
+\oldpage{71}
+  algebraic vector bundle on $X^*$.
+  \begin{enumerate}
+    \item[{\rm(i)}] A \emph{norm on $X^*$} is defined to be a norm on $(X^*)^\an$ that is adapted to $X^\an$ \hyperref[II.2.5]{(2.5)}.
+    \item[{\rm(ii)}] A \emph{vertical subset of $\widetilde{X}^*$} is defined to be a subset of $\widetilde{X}^*$ that is vertical along $Y=X\setminus X^*$ \hyperref[II.2.9]{(2.9)}.
+    \item[{\rm(iii)}] A \emph{moderate norm on $\scr{V}$} is defined to be a moderate norm on $\scr{V}^\an$ with respect to the meromorphic structure at infinity of $\scr{V}^\an$ \hyperref[II.2.16]{(2.16)}.
+    \item[{\rm(iv)}] A continuous section $v$ of $\pi^*\scr{V}$ is said to be of \emph{moderate growth} if it is of moderate growth along $Y$ \hyperref[II.2.17]{(2.17)}.
+  \end{enumerate}
+\end{rmenv}
+
+By \hyperref[II.2.19]{(2.19)}, these definitions do not depend on the choice of compactification $X$ of $X^*$.
+
+We can also immediately deduce, from \hyperref[II.2.18]{(2.18)} and \cite{GAGA} (as in \hyperref[II.2.22]{(2.22)}), the following:
+
+\begin{itenv}{Proposition 2.24}
+\label{II.2.24}
+  Let $X$ be a separated scheme that is reduced and of finite type over $\CC$, and let $\scr{V}$ be an algebraic vector bundle on $X$.
+  Then a holomorphic section $v$ of $\scr{V}^\an$ is algebraic if and only if it is of moderate growth.
+\end{itenv}
+
+\begin{rmenv}{Problem 2.25}
+\label{II.2.25}
+  Let $X=G/K$ be a Hermitian symmetric domain (with $G$ a real Lie group, and $K$ a compact maximal subgroup), and $\Gamma$ an arithmetic subgroup of $G$.
+  The quotient $\Gamma\backslash G/K$ is then naturally a quasi-projective algebraic variety \cite{2}.
+  Is it true that a subset $P$ of $G/K$ is vertical \hyperref[II.2.23]{(2.23)} if and only if it is contained in the union of a finite number of Siegel domains?
+\end{rmenv}
+
+
+
+\oldpage{72}
+
+\section{Logarithmic poles}
+\label{II.3}
 
 
 %% Bibliography %%
