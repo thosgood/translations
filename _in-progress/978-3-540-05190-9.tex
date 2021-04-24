@@ -1249,7 +1249,7 @@ Some results in general topology (\hyperref[I.2.24]{(2.24)} to \hyperref[I.2.27]
   \label{I.4.1.2}
     \begin{cases}
       \frac{\dd}{\dd x}y_i
-      = y_{i+1} &\mbox{($1\leq i<n$);}
+      = y_{i+1} &\mbox{(for $1\leq i<n$);}
     \\\frac{\dd}{\dd x}y_n
       = \sum_{i=1}^n a_i(x) y_{n+1-i}
     \end{cases}
@@ -1288,7 +1288,7 @@ Some results in general topology (\hyperref[I.2.24]{(2.24)} to \hyperref[I.2.27]
   \label{I.4.2.3}
     \begin{aligned}
       \Gr P^n(\scr{L}) &\simeq \Gr P^n(\cal{O})\otimes\scr{L}
-    \\\Gr^i P^n(\scr{L}) &\simeq \Omega^{\otimes i}\otimes\scr{L} \qquad\mbox{($0\leq i\leq n$).}
+    \\\Gr^i P^n(\scr{L}) &\simeq \Omega^{\otimes i}\otimes\scr{L} \qquad\mbox{(for $0\leq i\leq n$).}
     \end{aligned}
   \tag{4.2.3}
   \]
@@ -1331,7 +1331,7 @@ In fact, I have cheated with this definition, in that I have only considered equ
   \[
   \label{I.4.4.1}
     \sum_{i=0}^n b_i(x) \partial_x^i f = 0
-    \qquad\mbox{($b_n=1$).}
+    \qquad\mbox{(with $b_n=1$).}
   \tag{4.4.1}
   \]
 
@@ -1392,7 +1392,7 @@ In particular, it follows from \hyperref[I.4.5]{(4.5)}~(ii) and from \hyperref[I
   \[
     \begin{cases}
       \partial_x f^i = f^{i+1}
-      & \mbox{($0\leq i\leq n-2$)}
+      & \mbox{(for $0\leq i\leq n-2$)}
     \\\partial_x f^{n-1} = -\sum_{i=0}^{n-1} b_i f^i.
     \end{cases}
   \]
@@ -1417,7 +1417,7 @@ In particular, it follows from \hyperref[I.4.5]{(4.5)}~(ii) and from \hyperref[I
   In the chosen system of coordinates, $\lambda=e^0$, and we calculate that
   \[
     \nabla_x^i\lambda = e^i
-    \qquad\mbox{($0\leq i\leq n-1$)}
+    \qquad\mbox{(for $0\leq i\leq n-1$)}
   \]
   which proves \hyperref[I.4.8]{(4.8)}.
 \end{proof}
@@ -1552,7 +1552,7 @@ In this section, we specialise the results of \hyperref[I.4]{(4)} to the case wh
   \[
     \begin{aligned}
       p(x)
-      &= e\frac{x}{1-fx} \qquad\mbox{($e\neq0$)}
+      &= e\frac{x}{1-fx} \qquad\mbox{(for $e\neq0$)}
     \\&= ex + efx^2 \mod x^3.
     \end{aligned}
   \]
@@ -1732,7 +1732,7 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
       f(x),
       f(x) + f'(x)\varepsilon + f''(x)\frac{\varepsilon^2}{2} + f'''(x)\frac{\varepsilon^3}{6}
     \right)
-    \qquad\mbox{($\varepsilon^4=0$)}
+    \qquad\mbox{(mod. $\varepsilon^4=0$)}
   \]
   and
   \[
@@ -2191,7 +2191,7 @@ They are either due to N.~Katz (see, most notably, \cite{14,15}), or classical (
   We say that $v$ is a \emph{cyclic vector} if, for $\tau\in\Omega$, the vectors
   \[
     \nabla_\tau^i v
-    \qquad\mbox{($0\leq i\leq n$)}
+    \qquad\mbox{(for $0\leq i\leq n$)}
   \]
   form a basis of $V$.
 \end{rmenv}
@@ -2210,7 +2210,7 @@ They are either due to N.~Katz (see, most notably, \cite{14,15}), or classical (
   For any rational number $\lambda$ and integer $k$, the vectors
   \[
     \partial_\tau^i(e+\lambda t^k f)
-    \qquad\mbox{($0\leq i\leq m$)}
+    \qquad\mbox{(for $0\leq i\leq m$)}
   \]
   are linearly dependent, and their exterior product $\omega(\lambda,k)$ is thus zero.
   We have that
@@ -2242,7 +2242,7 @@ They are either due to N.~Katz (see, most notably, \cite{14,15}), or classical (
     = e\wedge\partial_\tau^1 e\wedge\ldots\wedge\partial_\tau^{m-1} e\wedge f
     = 0,
   \]
-  and $f$ is then linearly dependent of the $\partial_\tau^i e$ ($0\leq i\leq m$), which contradicts the hypothesis.
+  and $f$ is then linearly dependent of the $\partial_\tau^i e$ (for $0\leq i\leq m$), which contradicts the hypothesis.
   Thus $m=n$, and so $e$ is a cyclic vector
 \end{proof}
 
@@ -2460,12 +2460,12 @@ Conditions~a) and b) of \hyperref[II.1.9]{(1.9)} are more manageable in a differ
   If $\tau$ and $\omega$ are vectors as in \hyperref[II.1.9]{(1.9)}, then $\sigma=f\tau$, with $f$ invertible, whence
   \[
     \nabla_\sigma = f\nabla_\tau
-    \qquad\mbox{($f\in\cal{O}^*$)}
+    \qquad\mbox{(with $f\in\cal{O}^*$)}
   \]
   and we can show by induction that
   \[
     \nabla_\sigma^i = \sum_{j\leq i}\varphi_j\nabla_\tau^j
-    \qquad\mbox{($\varphi_j\in\cal{O}$)}.
+    \qquad\mbox{(with $\varphi_j\in\cal{O}$)}.
   \]
   From this we deduce that
   \[
@@ -2671,7 +2671,7 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
   This leads us to the case where $b=1$.
   Conditions~(i) and (ii) are then sufficient, by \hyperref[II.1.9.6]{(1.9.6)}.
   Conversely, let $v$ be a cyclic vector \hyperref[II.1.3]{(1.3)}, $t$ a uniformiser, and $\tau\in\Omega^\vee$ of valuation~$1$.
-  Then it follows from the proofs of \hyperref[II.1.9.6]{(1.9.6)} and of \hyperref[II.1.10]{(1.10)} that the basis $e_i=t^{ri}\nabla_\tau^i v$ ($0\leq i\leq\dim V$) satisfies (i) or (ii).
+  Then it follows from the proofs of \hyperref[II.1.9.6]{(1.9.6)} and of \hyperref[II.1.10]{(1.10)} that the basis $e_i=t^{ri}\nabla_\tau^i v$ (for $0\leq i\leq\dim V$) satisfies (i) or (ii).
 \end{proof}
 
 \begin{itenv}{Proposition 1.13}
@@ -2738,7 +2738,7 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
   and let $D^*=D\setminus\{0\}$.
   The group $\pi_1(D^*)$ is cyclic, generated by the loop
 \oldpage{53}
-  $t\mapsto\lambda e^{2\pi it}$ ($0\leq t\leq1$).
+  $t\mapsto\lambda e^{2\pi it}$ (for $0\leq t\leq1$).
   The fundamental groupoid is thus the constant group $\ZZ$.
   It acts on any local system on $D^*$.
   Using the dictionary \hyperref[I.2]{(I.2)}, every vector bundle $V$ with connection is thus endowed with an action of the local fundamental group $\ZZ$.
@@ -3336,7 +3336,7 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
 \label{II.2.14}
   Suppose that $X^*$ is reduced, and let $\scr{V}$ be a vector bundle on $X^*$ which is meromorphic along $Y$.
   We will define an equivalence class of ``norms'' on $\scr{V}$.
-  The ``norms'' in question will be continuous families of norms on the $\scr{V}_x$ ($x\in X^*$).
+  The ``norms'' in question will be continuous families of norms on the $\scr{V}_x$ (for $x\in X^*$).
   If $v$ is a continuous section of $\scr{V}$, then $|v|$ is a positive function on $X^*$, which is zero at exactly the points where $v=0$.
   Two norms $|v|_1$ and $|v|_2$ will be said to be equivalent if we have the following:
   \begin{rmenv}{2.14.1}
@@ -3507,7 +3507,7 @@ This is the case in the following well-known proposition, which shows that the k
   By \hyperref[II.2.15.2]{(2.15.2)} and \hyperref[II.2.16]{(2.16)}, we can reduce to proving {\rm(iii\textsubscript{a})} in the trivial case where $\scr{V}=\cal{O}$.
 
 \oldpage{70}
-  Finally, if $\scr{T}_2$ is a semi-analytic triangulation of the pair $(X_2,Y_2)$, then the $f^{-1}(\sigma)$ ($\sigma\in\scr{T}_2$) form a locally finite set of semi-analytic subsets of $X_1$, and, by \hyperref[II.2.8.2]{2.8.2}, there exists, locally on $X_1$, a semi-analytic triangulation $\scr{T}_1$ of the pair $(X_1,Y_1)$ such that
+  Finally, if $\scr{T}_2$ is a semi-analytic triangulation of the pair $(X_2,Y_2)$, then the $f^{-1}(\sigma)$ (for $\sigma\in\scr{T}_2$) form a locally finite set of semi-analytic subsets of $X_1$, and, by \hyperref[II.2.8.2]{2.8.2}, there exists, locally on $X_1$, a semi-analytic triangulation $\scr{T}_1$ of the pair $(X_1,Y_1)$ such that
   \[
     \forall\,\sigma\in\scr{T}_1
     \quad
@@ -3518,6 +3518,14 @@ This is the case in the following well-known proposition, which shows that the k
   Claims {\rm(ii\textsubscript{a})} and {\rm(ii\textsubscript{b})} thus follow immediately.
 \end{proof}
 
+\begin{rmenv}{Remarks 2.20}
+  \begin{enumerate}
+    \item[{\rm(i)}] Let $X=D^{n+m}$ and $X^*=(D^*)^n\times D^m$;
+      then $Y$ is a normal crossing divisor in $X$.
+      On the universal cover $\widetilde{X}^*$ of $X^*$, the functions $\arg(z_i)$ (for $1\leq i\leq n$) are defined.
+      It is clear that a subset $P$ of $\widetilde{X}^*$ is vertical along $Y$ if and only if its image in $X$ is relatively compact and if the functions $\arg(z_i)$ (for $1\leq i\leq n$) are bounded on $P$.
+  \end{enumerate}
+\end{rmenv}
 
 
 
