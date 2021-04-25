@@ -3892,9 +3892,30 @@ An immediate corollary of \hyperref[III.2.3.*]{($*$)} is:
 Indeed, let $\alpha$ be an eigenvalue of $N$ in an extension $K'$ of $K$.
 For every embedding $\sigma$ of $K'$ into $\CC$, $\exp(2\pi i\sigma(\alpha))$ is algebraic.
 We thus deduce first of all that $\alpha$ is algebraic, since otherwise $\sigma(\alpha)$ could take any non-algebraic value.
-Then \hyperref[III.2.3.*]{Theorem~($*$)} implies that $\alpha$ is rational, so that the eigenvalues $\exp(2\pi i\alpha)$ of $\exp(2\pi iN)$ are roots of unity.
+Then \hyperref[III.2.3.*]{($*$)} implies that $\alpha$ is rational, so that the eigenvalues $\exp(2\pi i\alpha)$ of $\exp(2\pi iN)$ are roots of unity.
 
 \begin{proof}[Proof of {\hyperref[III.2.3]{Theorem 2.3}}]
+  By shrinking $S$ if necessary, we can assume that $\scr{H}=\RR^if_*\Omega_{X/S}^\bullet$ is locally free.
+
+  Let $K$ be a subfield of $\CC$ such that $f$, $X$, $S$, $\overline{S}$, and the points of $T$ are all definable over $K$, i.e. all come from extension of scalars $\sigma_0\colon K\to\CC$ of
+\oldpage{127}
+  \[
+    f_0\colon X_0\to S_0
+    \quad\mbox{and}\quad
+    T_0\subset\overline{S}_0(K).
+  \]
+
+  The Gauss--Manin connection on $\scr{H}_0=\RR^if_*\Omega_{X_0/S_0}^\bullet$ is regular \hyperref[II.7.4]{(II.7.4)}.
+  There thus exists an extension of $\scr{H}'_0$ to a vector bundle on $\overline{S}_0$ such that the connection has at worst a simple pole at each $t\in T_0$.
+  Let $N_t$ be the matrix of the residue of the connection at $t\in T_0$ in a basis of $(\scr{H}'_0)_t$.
+
+  For every embedding $\sigma\colon K\to\CC$, $f_0$ defines, by extension of scalars,
+  \[
+    f_{(\sigma)}\colon X_{(\sigma)}\to S_{(\sigma)}
+  \]
+  and $\scr{H}_{(\sigma)}=\RR^i(f_{(\sigma)})_*\Omega_{X_{(\sigma)}/S_{(\sigma)}}^\bullet$ is induced by extension of scalars from $\scr{H}_0$.
+  By \hyperref[II.1.17.1]{(II.1.17.1)}, $\exp(2\pi i\sigma/N_t)$ has the same characteristic polynomial as the local monodromy transformation at $t$ acting on $\RR^i(f_{(\sigma)})_*\CC$.
+  Thus $\exp(2\pi i\sigma/N_t)$ has a characteristic polynomial with integer coefficients, and, by \hyperref[III.2.3.**]{($**$)}, $\exp(2\pi iN_t)$ is quasi-unipotent, whence \hyperref[III.2.3]{Theorem~2.3}.
 \end{proof}
 
 
