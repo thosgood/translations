@@ -82,6 +82,8 @@
 \newcommand{\RR}{\mathbf{R}}
 \newcommand{\MM}{\mathrm{M}}
 \newcommand{\GL}{\mathrm{GL}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\SO}{\mathrm{SO}}
 \newcommand{\tg}{\mathrm{tg}}
 \newcommand{\an}{\mathrm{an}}
 \newcommand{\detrow}[2]{\operatorname{det}(#1,#2)}
@@ -3815,7 +3817,7 @@ By \hyperref[II.4.1.1]{(II.4.1.1)}, under each of these hypotheses, $f$ is algeb
   Let $U'$ be a dense Zariski open subset of $S$ such that, over $U'$, $f$ is locally $C^\infty$-trivial.
   The \emph{homology} groups $\HH_p(X_S^\an,W)$ then form a local system $\scr{H}$ on $U'$.
 
-  We denote by $\langle,\rangle$ the pairing of sheaves on a small enough dense Zariski open subset $U\subset U'$ \hyperref[II.6.13]{(II.6.13)}
+  We denote by $\langle-,-\rangle$ the pairing of sheaves on a small enough dense Zariski open subset $U\subset U'$ \hyperref[II.6.13]{(II.6.13)}
   \[
     \begin{aligned}
       \scr{H} \otimes \Ker\big(\dd\colon f_*\Omega_{X/S}^p(\scr{W}^\vee)\to f_*\Omega_{X/S}^{p+1}(\scr{W}^\vee)\big)
@@ -3840,6 +3842,52 @@ By \hyperref[II.4.1.1]{(II.4.1.1)}, under each of these hypotheses, $f$ is algeb
 \section{The monodromy theorem (by Brieskorn)}
 \label{III.2}
 
+The proof of the monodromy theorem given in this section is due to Brieskorn \cite{5}.
+
+\begin{rmenv}{2.1}
+\label{III.2.1}
+  Let $S$ be a smooth algebraic curve over $\CC$, induced by a smooth projective curve $\overline{S}$ by removing a finite set $T$ of points.
+  For $t\in T$, the \emph{local monodromy group at $t$}, or the \emph{local fundamental group of $S$ at $t$}, is the fundamental group of $D\setminus\{t\}$, where $D$ is a small disc centred at $t$.
+  This group is canonically isomorphic to $\ZZ$, and we call its canonical generator the \emph{monodromy transformation}.
+
+  If $\scr{V}$ is a local system of $\CC$-vector spaces on $S$, then the local monodromy group at $t$ acts on $V|(D\setminus\{t\})$.
+  If $\scr{V}$ is the complexification of a local system of $\ZZ$-modules of finite type, then the characteristic polynomial of the monodromy transformation has integer coefficients.
+
+  Recall that a linear substitution is said to be quasi-unipotent if one of its powers is unipotent.
+  A local system of $\CC$-vector spaces on $S$ is said to be \emph{quasi-unipotent} (resp. \emph{unipotent}) \emph{at infinity} if, for all $t\in T$, the corresponding monodromy transformation is quasi-unipotent (resp. unipotent).
+\end{rmenv}
+
+\oldpage{126}
+\begin{rmenv}{Example 2.2}
+\label{III.2.2}
+  Let $X=\SL_2(\mathbb{R})/\SO_2(\mathbb{R})$ be the Poincar\'{e} half plane, and $\Gamma$ a torsion-free discrete subgroup of $\SL_2(\mathbb{R})$ such that $\Gamma\backslash\SL_2(\mathbb{R})$ is of finite volume.
+  We then know that $\Gamma\backslash X$ is an algebraic curve, with fundamental group $\Gamma$.
+  Each finite-dimensional complex representation $\rho$ of $\Gamma$ thus defines a local system $V_\rho$ on $\Gamma\backslash X$ (and conversely).
+  For $V_\rho$ to be unipotent at infinity, it is necessary and sufficiently for $\rho(\gamma)$ to be unipotent for every element $\gamma$ of $\Gamma$ that is unipotent in $\SL_2(\mathbb{R})$.
+\end{rmenv}
+
+\begin{itenv}{Theorem 2.3}
+\label{III.2.3}
+  Let $S$ be as in \hyperref[III.2.1]{(2.1)}, let $i$ be an integer, and let $f\colon X\to S$ be a smooth morphism.
+  Suppose that $\RR^if_*\CC$ is a local system (i.e. that it is locally constant) \hyperref[II.6.13]{(II.6.13)}.
+  Then $\RR^if_*\CC$ is quasi-unipotent at infinity.
+\end{itenv}
+
+The proof relies on \hyperref[II.7.4]{(II.7.4)} and on the following theorem of Gelfond (\cite{6} or \cite{2}):
+
+\begin{itenv*}
+\label{III.2.3.*}
+  {\rm\textbf{($*$)}}
+  If $\alpha$ and $\exp(2\pi i\alpha)$ are algebraic numbers, then $\alpha$ is rational.
+\end{itenv*}
+
+An immediate corollary of \hyperref[III.2.3.*]{($*$)} is:
+
+\begin{itenv*}
+\label{III.2.3.**}
+  {\rm\textbf{($**$)}}
+  If $N$ is a matrix with entries in a subfield $K$ of $\CC$, and if, for every embedding $\sigma K\to\CC$, the characteristic polynomial of $\exp(2\pi i\sigma(N))$ has integer coefficients, then $\exp(2\pi iN)$ is quasi-unipotent.
+\end{itenv*}
 
 
 
