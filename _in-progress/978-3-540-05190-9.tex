@@ -3737,7 +3737,7 @@ This section brings together some constructions that are ``local at infinity\tod
   If $\scr{V}=\cal{O}$, then we speak of \emph{functions in the Nilsson class}.
 \end{rmenv}
 
-The two following theorems will be proven simultaneously in \hyperref[III.1.5]{(1.5)}.
+The two following theorems will be proven simultaneously in \hyperref[III.1.5proof]{(1.5)}.
 The first says that, for a function \emph{of finite determination}, various variants of the ``moderate growth at infinity'' condition are equivalent.
 
 \begin{itenv}{Theorem 1.3}
@@ -3768,7 +3768,7 @@ For $X$ of dimension~$1$, the following theorem is due to Plemelj \cite{23}.
 \end{itenv}
 
 \begin{rmenv}{1.5}
-\label{III.1.5}
+\label{III.1.5proof}
   Here we prove \hyperref[III.1.3]{(1.3)} and \hyperref[III.1.4]{(1.4)}.
   We have already seen (in \hyperref[I.6.11]{(I.6.11)}) that the function $E_w\colon f\mapsto f(w)$ identifies $\Hom(\scr{W}^\an,\scr{V}^\an)$ with the set of multiform holomorphic sections of $\scr{V}^\an$ of finite determination with monodromy subordinate to $(W_0,w_0)$.
   It thus remains to prove that $f$ is algebraic if and only if $f(w)$ satisfies \hyperref[III.1.3]{(1.3.i)} (resp. \hyperref[III.1.3]{(1.3.ii)}, resp. \hyperref[III.1.3]{(1.3.iii)}).
@@ -3802,7 +3802,43 @@ By \hyperref[II.4.1.1]{(II.4.1.1)}, under each of these hypotheses, $f$ is algeb
 
 \begin{rmenv}{1.7}
 \label{III.1.7}
+  Let $f\colon X\to S$ be a smooth morphism, with $S$ smooth.
+  By \hyperref[III.1.4]{(1.4)}, the set of relative differential $p$-forms on $X$ that are in the Nilsson class and of monodromy subordinate to $(W_0,w_0)$ can be identified with the space
+  \[
+    \HH^0\Big(
+      S,\Ker\big(
+      \dd\colon f_*\Omega_{X/S}^p(\scr{W}^\vee)\to f_*\Omega_{X/S}^{p+1}(\scr{W}^\vee)
+      \big)
+    \Big).
+  \]
+
+  Let $U'$ be a dense Zariski open subset of $S$ such that, over $U'$, $f$ is locally $C^\infty$-trivial.
+  The \emph{homology} groups $\HH_p(X_S^\an,W)$ then form a local system $\scr{H}$ on $U'$.
+
+  We denote by $\langle,\rangle$ the pairing of sheaves on a small enough dense Zariski open subset $U\subset U'$ \hyperref[II.6.13]{(II.6.13)}
+  \[
+    \begin{aligned}
+      \scr{H} \otimes \Ker\big(\dd\colon f_*\Omega_{X/S}^p(\scr{W}^\vee)\to f_*\Omega_{X/S}^{p+1}(\scr{W}^\vee)\big)
+      &\to \scr{H} \otimes \RR^p f_* \Omega_{X/S}^\bullet(\scr{W}^\vee)
+    \\&\to \scr{H} \otimes \RR^p f_*^\an \scr{W}^\vee \otimes \cal{O}_S^\an
+    \\&\to \cal{O}_S^\an.
+    \end{aligned}
+  \]
+
+\oldpage{125}
+  We define a \emph{period} of a closed relative $p$-form $\alpha$ in the Nilsson class of the type considered above to be any multiform function on $U$ of the form $\langle h,\alpha\rangle$, with $h$ a multiform (horizontal) section of $\scr{H}$.
+  A period is thus a multiform function of finite determination that is of monodromy subordinate to $\scr{H}$.
+  \hyperref[III.1.4]{Theorem~1.4} and \hyperref[II.6.13]{Theorem~II.6.13} thus give us the theorem essentially equivalent to that of \hyperref[II.7.4]{(II.7.4)}.
 \end{rmenv}
+
+\begin{itenv}{Theorem 1.8}
+\label{III.1.8}
+  Under the hypotheses of \hyperref[III.1.7]{(1.7)}, the periods of a closed relative differential $p$-form on $X$ in the Nilsson class are functions in the Nilsson class on a suitable dense Zariski open subset of $S$.
+\end{itenv}
+
+
+\section{The monodromy theorem (by Brieskorn)}
+\label{III.2}
 
 
 
