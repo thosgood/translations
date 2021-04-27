@@ -3639,7 +3639,7 @@ This section brings together some constructions that are ``local at infinity\tod
 
   \begin{itenv}{Lemma 3.2.1}
   \label{II.3.2.1}
-    The sheaf $\Omega_X^1\langle Y\rangle$ is free, with basis $\{\dd z_i/z_i\}_{1\leq i\leq k}\cup\{\dd z_j\}_{k<j\leq n}$.
+    The sheaf $\Omega_X^1\langle Y\rangle$ is free, with basis $(\dd z_i/z_i)_{1\leq i\leq k}\cup(\dd z_j)_{k<j\leq n}$.
   \end{itenv}
 
   \begin{proof}
@@ -3693,6 +3693,48 @@ This section brings together some constructions that are ``local at infinity\tod
     \end{enumerate}
 
     We can then define the complex $\Omega_{X/S}^\bullet\langle Y\rangle$ as the image of $j_*\Omega_{X^*}^\bullet$ in $\Omega_X^\bullet\langle Y\rangle$.
+
+    Locally, close to $0$ and $f^{-1}(0)$, we can find coordinate systems $(z_i)_{0\leq i\leq n}$ on $X$, and $z$ on $S$, such that $z(0)=0$, such that $z\circ f = \prod_{i=0}^k z_i^{e_i}$ (for $k\leq n$ and $e_i>0$), and such that $Y$ can be described by the equation $\prod_{i=0}^l z_i=0$ (for $k\leq l\leq n$).
+    In such a coordinate system, the sheaf $\Omega_{X/S}^1\langle Y\rangle$ is free, with basis given by $(\dd z_i/z_i)_{1\leq i\leq l}\cup(\dd z_j)_{l<j\leq n}$.
+    In $\Omega_{X/S}^1\langle Y\rangle$, we have the equation
+    \[
+      \dd f/f = \sum_{i=0}^k e_i\dd z_i/z_i = 0.
+    \]
+    We thus deduce that $\Omega_{X/S}^1\langle Y\rangle$ is \emph{locally free}, that
+    \[
+    \label{II.3.3.2.1}
+      \wedge^p \Omega_{X/S}^1\langle Y\rangle
+      \simto \Omega_{X/S}^p\langle Y\rangle,
+    \tag{3.3.2.1}
+    \]
+    and that the sequence
+  \oldpage{75}
+    \[
+    \label{II.3.3.2.2}
+      0
+      \to f^*\Omega_S^1\langle0\rangle
+      \xrightarrow{f^*} \Omega_X^1\langle Y\rangle
+      \to \Omega_{X/S}^1\langle Y\rangle
+      \to 0
+    \tag{3.3.2.2}
+    \]
+    is exact and \emph{locally split}.
+    This will play a key role in \hyperref[II.7]{(II.7)}, in the following form:
+
+    \begin{itenv}{Lemma 3.3.2.3}
+    \label{II.3.3.2.3}
+      Every vector field $v_0$ on $S$ that vanishes at $0$ can be locally lifted to a vector field $v$ on $X$ satisfying
+      \[
+        \langle v,\Omega_X^1\langle Y\rangle\rangle \subset \cal{O}_X.
+      \]
+    \end{itenv}
+
+    Indeed, the transpose of the direct monomorphism $f^*$ in \hyperref[II.3.3.2.2]{(3.3.2.2)} is an epimorphism.
+  \end{rmenv}
+
+  \begin{rmenv}{3.3.3}
+  \label{II.3.3.3}
+    The reader can translate \hyperref[II.3.3.2]{(3.3.2)} into the setting of a morphism $f\colon X\to S$ of schemes of finite type over $\CC$ that satisfies the conditions analogous to \hyperref[II.3.3.2]{(3.3.2.a,b,c)}.
   \end{rmenv}
 \end{rmenv}
 
