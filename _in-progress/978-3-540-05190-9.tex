@@ -3596,6 +3596,104 @@ This section brings together some constructions that are ``local at infinity\tod
 
 \begin{rmenv}{Definition 3.1}
 \label{II.3.1}
+  Let $Y$ be a normal crossing divisor in a complex-analytic variety $X$, and let $j$ be the inclusion of $X^*=X\setminus Y$ into $X$.
+  We define the \emph{logarithmic de Rham complex} of $X$ along $Y$ to be the smallest sub-complex $\Omega_X^\bullet\langle Y\rangle$ of $j_*\Omega_{X^*}^\bullet$ that containing $\Omega_X^\bullet$ that is stable under the exterior product, and such that $\dd f/f$ is a local section of $\Omega_X^1\langle Y\rangle$ for all local sections $f$ of $j_*\Omega_X^\bullet$ that are meromorphic along $Y$.
+
+  A section of $j_*\Omega_{X^*}^p$ is said to present a \emph{logarithmic pole} along $Y$ if it is a section of $\Omega_X^p\langle Y\rangle$.
+\end{rmenv}
+
+\begin{itenv}{Proposition 3.2}
+\label{II.3.2}
+  Under the hypotheses of \hyperref[II.3.1]{(3.1)},
+  \begin{enumerate}[(i)]
+    \item For a section $\alpha$ of $j_*\Omega_{X^*}^p$ to present a logarithmic pole along $Y$, it is necessary and sufficient for $\alpha$ and $\dd\alpha$ to present at worst simple poles along $Y$.
+    \item The sheaf $\Omega_X^1\langle Y\rangle$ is locally free, and
+      \[
+        \Omega_X^p\langle Y\rangle = \wedge^p \Omega_X^1\langle Y\rangle.
+      \]
+    \item If the pair $(X,Y)$ is a product $(X,Y)=(X_1,Y_1)\times(X_2,Y_2)$, i.e. if
+      \[
+        X = X_1\times X_2
+        \quad\mbox{and}\quad
+        Y = X_1\times Y_2 \cup X_2\times Y_1,
+      \]
+      then the isomorphism between $\Omega_{X^*}^\bullet$ and the external tensor product $\Omega_{X_1^*}^\bullet\boxtimes\Omega_{X_2^*}^\bullet$ (defined by $\pr_1^*\Omega_{X_1^*}^\bullet\otimes\pr_2^*\Omega_{X_2^*}^\bullet$) induces an isomorphism
+      \[
+        \Omega_{X_1}^\bullet\langle Y_1\rangle \boxtimes \Omega_{X_2}^\bullet\langle Y_2\rangle
+        \simto \Omega_X^\bullet\langle Y\rangle.
+      \]
+    \item Let $Y_i$ be a normal crossing divisor in $X_i$ (for $i=1,2$), and $f\colon X_1\to X_2$ a morphism such that $f^{-1}(Y_2)=Y_1$.
+      Then the morphism $f^*\colon f^*((j_2)_*\Omega_{X_2^*}^\bullet)\to (j_1)_*\Omega_{X_1^*}^\bullet$ induces an ``inverse image'' morphism
+      \[
+        f^*\colon f^*\Omega_{X_2}^\bullet\langle Y_2\rangle \to \Omega_{X_1}^1\langle Y_1\rangle.
+      \]
+  \end{enumerate}
+\end{itenv}
+
+\oldpage{73}
+\begin{proof}
+  Claim~(iv) is trivial, given the definition.
+  Let $D$ be the open unit disc, and $D^*=D\setminus\{0\}$.
+  To prove (i), (ii), and (iii), we can assume that $X$ is the polydisc $D^n$, and that $X^*=(D^*)^k\times D^{n-k}$, and $Y=\bigcup_{1\leq i\leq k}Y_i$, where $Y_i=\pr_i^{-1}(0)$.
+  Under these hypotheses, we have
+
+  \begin{itenv}{Lemma 3.2.1}
+  \label{II.3.2.1}
+    The sheaf $\Omega_X^1\langle Y\rangle$ is free, with basis $\{\dd z_i/z_i\}_{1\leq i\leq k}\cup\{\dd z_j\}_{k<j\leq n}$.
+  \end{itenv}
+
+  \begin{proof}
+    Indeed, every section of $j_*\Omega_{X^*}^\bullet$ that is meromorphic along $Y$ can be written locally as $f=g\cdot\prod_{i=1}^k z_i^{k_i}$ with $g$ invertible, and
+    \[
+      \dd f/f = \dd g/g + \sum_{i=1}^k k_i\dd z_i/z_i
+    \]
+    is a linear combination of the proposed basis vectors, which are clearly independent.
+  \end{proof}
+
+  From this lemma, we immediately deduce (ii), (iii), and the necessity of the condition in~(i).
+
+  Let $\alpha$ be a section of $j_*\Omega_{X^*}^p$ satisfying the condition of~(i).
+  To prove that $\alpha$ is a section of $\Omega_{X^*}^p\langle Y\rangle$, it suffices (since this sheaf is locally free) to prove this outside of a set of complex codimension~$\geq2$.
+  This allows us to suppose that the hypotheses of \hyperref[II.3.2.1]{(3.2.1)} are satisfied, with $k=1$.
+  The form $\alpha$ can thus be written in the form $\alpha=\alpha_1+\alpha_2\wedge\dd z_1/z_1$ in exactly one way, with the forms $\alpha_1$ and $\alpha_2$ being such that they do not contain any $\dd z_1$ term.
+
+  The hypotheses imply that
+  \begin{itemize}
+    \item $\alpha_2$ is holomorphic;
+    \item $z_1\alpha_1$ is holomorphic; and
+    \item $z_1\dd\alpha = z_1\dd\alpha_1+\dd\alpha_2\wedge\dd z_1$ is holomorphic.
+  \end{itemize}
+
+  From this,
+  \[
+    \dd z_1\wedge\alpha_1 = \dd(z_1\wedge\alpha_1) + z_1\dd\alpha - \dd\alpha_2\wedge\dd z_1
+  \]
+  is holomorphic, and thus so too is $\alpha_1$, which proves~(i).
+\end{proof}
+
+\begin{rmenv}{Variants 3.3}
+\label{II.3.3}
+  \begin{rmenv}{3.3.1}
+  \label{II.3.3.1}
+    Let $f\colon X\to S$ be a smooth morphism of schemes of characteristic~$0$, or a smooth morphism of analytic spaces, and let $Y$ be a relative normal crossing divisor in $X$.
+    \hyperref[II.3.1]{Definition~3.1} still makes sense, and defines a sub-complex $\Omega_{X/S}^\bullet\langle Y\rangle$ of $j_*\Omega_{X^*/S}^\bullet$ (where $j$ is the inclusion $j\colon X^*=X\setminus Y\to X$).
+    \hyperref[II.3.2]{Proposition~3.2} still holds true, mutatis mutandis.
+    Forming the complex $\Omega_{X/S}^\bullet\langle Y\rangle$ is compatible with any base change, and with \'{e}tale localisation on $X$.
+  \end{rmenv}
+
+  \begin{rmenv}{3.3.2}
+  \label{II.3.3.2}
+    Let $f\colon X\to S$ be a morphism of smooth analytic spaces, $0$ a point of $S$, and $Y$ a normal crossing divisor in $X$.
+    Let $S^*=S\setminus\{0\}$, and $X^*=X\setminus Y$, and let $j$ be the inclusion of $X^*$ into $X$.
+    Suppose that
+    \begin{enumerate}[(a)]
+      \item $\dim(S)=1$;
+      \item $f|f^{-1}(S^*)$ is smooth, and $Y\cap f^{-1}(S^*)$ is a relative normal crossing divisor in $f^{-1}(S^*)$; and
+      \item $Y\supset f^{-1}(0)$.
+    \end{enumerate}
+
+    We can then define the complex $\Omega_{X/S}^\bullet\langle Y\rangle$ as the image of $j_*\Omega_{X^*}^\bullet$ in $\Omega_X^\bullet\langle Y\rangle$.
+  \end{rmenv}
 \end{rmenv}
 
 
