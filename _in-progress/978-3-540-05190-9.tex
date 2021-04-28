@@ -3816,7 +3816,94 @@ This section brings together some constructions that are ``local at infinity\tod
     Y = X_1\times Y_2 \cup X_2\times Y_1,
   \]
 \oldpage{77}
+  then the weight filtration on $\Omega_X^\bullet\langle Y\rangle$ is the external tensor product, via \hyperref[II.3.2]{(3.2.iii)}, of the weight filtrations on the $\Omega_{X_i}^\bullet\langle Y_i\rangle$.
+  We thus have
+  \[
+  \label{II.3.6.1}
+    \Gr^W(\Omega_{X_1}^\bullet\langle Y\rangle) \boxtimes \Gr^W(\Omega_{X_2}^\bullet\langle Y_2\rangle)
+    \simto \Gr^W(\Omega_X^\bullet\langle Y\rangle).
+  \tag{3.6.1}
+  \]
+
+  The isomorphisms
+  \[
+    \begin{aligned}
+      \widetilde{Y}^n
+      &= \coprod_{p+q=n} \widetilde{Y}^p\boxtimes\widetilde{Y}^q
+    \\\epsilon^n
+      &= \coprod_{p+q=n} \epsilon^p\boxtimes\epsilon^q
+    \end{aligned}
+  \]
+  induce an isomorphism
+  \[
+  \label{II.3.6.2}
+    \sum_p a_*\Omega_{\widetilde{Y}^p}^\bullet(\epsilon^p)[-p]
+    \boxtimes
+    \sum_q a_*\Omega_{\widetilde{Y}^q}^\bullet(\epsilon^q)[-q]
+    \simto
+    \sum_n a_*\Omega_{\widetilde{Y}^n}^\bullet(\epsilon^n)[-n].
+  \tag{3.6.2}
+  \]
+  Further, via \hyperref[II.3.6.1]{(3.6.1)} and \hyperref[II.3.6.2]{(3.6.2)}, we have
+  \[
+  \label{II.3.6.3}
+    \rho_1\boxtimes\rho_2 = \rho.
+  \tag{3.6.3}
+  \]
+
+  For $\rho$ to be an isomorphism, it is thus sufficient that the $\rho_i$ be isomorphisms.
+  Since the problem is local on $X$, this allows us to restrict to the trivial case where $\dim(X)=1$.
 \end{proof}
+
+\begin{rmenv}{3.7}
+\label{II.3.7}
+  The isomorphism inverse to $\rho$ is called the \emph{Poincar\'{e} residue}
+  \[
+  \label{II.3.7.1}
+    \Res\colon \Gr_n^W(\Omega_X^p\langle Y\rangle) \to \Omega_{\widetilde{Y}^n}^p(\epsilon^n)[-n].
+  \tag{3.7.1}
+  \]
+  We will only need the case where $p=1$, which gives
+  \[
+  \label{II.3.7.2}
+    \Res\colon \Omega_X^1\langle Y\rangle \to \cal{O}_{\widetilde{Y}}.
+  \tag{3.7.2}
+  \]
+
+  If $\scr{V}$ is a vector bundle on $X$, then the morphism \hyperref[II.3.7.2]{(3.7.2)} extends by linearity to
+  \[
+  \label{II.3.7.3}
+    \Res\colon \Omega_X^1\langle Y\rangle(\scr{V}) \to \cal{O}_{\widetilde{Y}}\otimes\scr{V}.
+  \tag{3.7.3}
+  \]
+  For each smooth component $Y_i$ of $Y$, this gives
+\oldpage{78}
+  \[
+  \label{II.3.7.4}
+    \Res_{Y_i}\colon \Omega_X^1\langle Y\rangle(\scr{V}) \to \scr{V}|Y_i.
+  \tag{3.7.4}
+  \]
+\end{rmenv}
+
+\begin{rmenv}{3.8}
+\label{II.3.8}
+  Under the hypotheses of \hyperref[II.3.1]{(3.1)}, let $\scr{V}_0$ be a vector bundle on $X*$, endowed with an integrable connection $\nabla$.
+  Suppose that $\scr{V}_0$ is given as the restriction to $X^*$ of a vector bundle $\scr{V}$ on $X$.
+  Locally on $X$, the choice of a basis $e$ of $\scr{V}$ allows us to define the ``connection matrix''
+  \[
+  \label{II.3.8.1}
+    \Gamma \in j_*\Omega_{X^*}^1(\shEnd(\scr{V})).
+  \tag{3.8.1}
+  \]
+  A change of basis $e\mapsto e'$ modifies $\Gamma$ by addition of a section of $\Omega_X^1(\shEnd(\scr{V}))$ \hyperref[I.3.1.3]{(I.3.1.3)}.
+  Thus the ``polar part of $\Gamma$''
+  \[
+  \label{II.3.8.2}
+    \dot{\Gamma} \in j_*\Omega_{X^*}^1(\shEnd(\scr{V}_0))/\Omega_X^1(\shEnd(\scr{V}))
+  \tag{3.8.2}
+  \]
+  depends only on $\scr{V}$ and on $\nabla$.
+\end{rmenv}
 
 
 
