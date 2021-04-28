@@ -3988,7 +3988,38 @@ We can also deduce \hyperref[II.3.10]{(3.10)} from the following proposition, wh
   \]
 
   This construction can be made global, and endows $j_*^\mathrm{m}\cal{O}_{X^*}$ with an exhaustive filtration such that $P^k=0$ for $k>0$.
+
+  Let $\scr{V}$ be a vector bundle on $X$, and $\Gamma$ an integrable connection on $\scr{V}|X^*$ presenting a logarithmic pole along $Y$.
+  We define a filtration $P$, again called the \emph{pole-order filtration}, of the complex $j_*^\mathrm{m}j^*\Omega_X^\bullet(\scr{V})=j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V})$ by
+  \[
+  \label{II.3.12.2}
+    P^k(j_*^\mathrm{m}\Omega_{X^*}^p(\scr{V}))
+    = P^{k-p}(j_*^\mathrm{m}\cal{O}_{X^*})\otimes\Omega_X^p\otimes\scr{V}.
+  \tag{3.12.2}
+  \]
+
+  From the fact that $\Gamma$ presents at worst logarithmic poles along $Y$, we deduce that
+  \begin{enumerate}[a)]
+    \item the filtration $P$ in \hyperref[II.3.12.2]{(3.12.2)} is compatible with the differentials; and
+    \item $\Omega_X^\bullet\langle Y\rangle(\scr{V})$ is a sub-complex of $j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V})$.
+  \end{enumerate}
+
+  Furthermore,
+  \begin{enumerate}
+    \item[{\rm c)}] the operators $\dd$ are $\cal{O}_X$-linear on the complexes $\Gr_p^n(j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V}))$; and
+    \item[{\rm d)}] the filtration $P$ induces the \emph{Hodge filtration} $F$ on $\Omega_X^\bullet\langle Y\rangle(\scr{V})$ by the stupid truncations $\sigma_{\geq p}$, whence we have a morphism of filtered complexes
+    \[
+    \label{II.3.12.3}
+      \big(\Omega_X^\bullet\langle Y\rangle(\scr{V}), F\big)
+      \to
+      \big(j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V}), P\big).
+    \tag{3.12.3}
+    \]
+  \end{enumerate}
 \end{rmenv}
+
+\begin{itenv}{Proposition 3.13}
+\end{itenv}
 
 
 
