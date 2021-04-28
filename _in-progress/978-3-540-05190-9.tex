@@ -3643,7 +3643,7 @@ This section brings together some constructions that are ``local at infinity\tod
   \end{itenv}
 
   \begin{proof}
-    Indeed, every section of $j_*\Omega_{X^*}^\bullet$ that is meromorphic along $Y$ can be written locally as $f=g\cdot\prod_{i=1}^k z_i^{k_i}$ with $g$ invertible, and
+    Indeed, every section of $j_*\cal{O}_{X^*}^*$ that is meromorphic along $Y$ can be written locally as $f=g\cdot\prod_{i=1}^k z_i^{k_i}$ with $g$ invertible, and
     \[
       \dd f/f = \dd g/g + \sum_{i=1}^k k_i\dd z_i/z_i
     \]
@@ -3725,7 +3725,7 @@ This section brings together some constructions that are ``local at infinity\tod
     \label{II.3.3.2.3}
       Every vector field $v_0$ on $S$ that vanishes at $0$ can be locally lifted to a vector field $v$ on $X$ satisfying
       \[
-        \langle v,\Omega_X^1\langle Y\rangle\rangle \subset \cal{O}_X.
+        \big\langle v,\Omega_X^1\langle Y\rangle\big\rangle \subset \cal{O}_X.
       \]
     \end{itenv}
 
@@ -3737,6 +3737,86 @@ This section brings together some constructions that are ``local at infinity\tod
     The reader can translate \hyperref[II.3.3.2]{(3.3.2)} into the setting of a morphism $f\colon X\to S$ of schemes of finite type over $\CC$ that satisfies the conditions analogous to \hyperref[II.3.3.2]{(3.3.2.a,b,c)}.
   \end{rmenv}
 \end{rmenv}
+
+\begin{rmenv}{3.4}
+\label{II.3.4}
+  Let $Y$ be a normal crossing divisor in $S$.
+  Locally on $X$, we can write $Y$ as a sum of smooth divisors $Y_i$.
+  We denote by $Y^p$ (resp. $\widetilde{Y}^p$) the union (resp. disjoint sum) of the $p$-fold intersections (??\todo??) of the $Y_i$;
+  the $Y^p$, thus locally defined, glue to give a subspace $Y^p$ of $X$, and the $\widetilde{Y}^p$ glue to give the normalised variety of $Y^p$.
+  We have $\widetilde{Y}^0=Y^0=X$, and we set $\widetilde{Y}=Y^1$.
+  Let $a\colon Y^p\to X$ be the projection.
+
+  If, to each point $y\in\widetilde{Y}^p$, we associate the set of \todo, then we define a local system $E_p$ on $\widetilde{Y}^p$ of sets with $p$~elements.
+
+  Denote by $\epsilon^p$ the rank-$1$ local system
+  \[
+    \epsilon^p = \wedge^p \underline{\CC}^{E_p}
+  \]
+  on $\widetilde{Y}^p$.
+  We have that $(\epsilon^p)^{\otimes2}\simeq\underline{\CC}$.
+  If $Y$ is the sum of smooth divisors $(Y_i)_{i\in I}$, then the choice of a total order on $I$ trivialises the $\epsilon^p$.
+\end{rmenv}
+
+\begin{rmenv}{3.5}
+\label{II.3.5}
+  Denote by $W_n(\Omega_X^\bullet\langle Y\rangle)$ the smallest sub-$\cal{O}$-module of $\Omega_X^\bullet\langle Y\rangle$ that is stable under the exterior product with the local sections of $\Omega_X^\bullet$ and that contains the products
+  \[
+    \dd f_1/f_1\wedge\ldots\wedge\dd f_k/f_k
+  \]
+\oldpage{76}
+  for $k\leq n$, and local sections $f_i$ of $j_*\cal{O}_{X^*}^*$ that are meromorphic along $Y$.
+  Then the $W_n$ form an \emph{increasing} filtration of $\Omega_X^\bullet\langle Y\rangle$ by sub-complexes, called the \emph{weight filtration}.
+  We have that
+  \[
+  \label{II.3.5.1}
+    W_n(\Omega_X^\bullet\langle Y\rangle) \wedge W_m(\Omega_X^\bullet\langle Y\rangle)
+    \subset W_{n+m}(\Omega_X^\bullet\langle Y\rangle).
+  \tag{3.5.1}
+  \]
+
+  Locally on $X$, we can write $Y$ as a finite sum of smooth divisors $(Y_i)_{i\in I}$ defined by equations $t_i=0$.
+  Let $q$ be an injection of $[1,n]$ into $I$, let $e(q)$ be the corresponding section $e_{q(1)}\wedge\ldots\wedge e_{q(n)}$ of $\epsilon^n$ on the component $Y_q=\bigcap_{1\leq i\leq n}Y_{q(i)}$ of $\widetilde{Y}^n$, and let $a_q\colon Y_q\to X$ be the projection.
+
+  The map $\rho_0$ from $\Omega_X^p$ to $W^n/W^{n-1}(\Omega_X^{p+n}\langle Y\rangle)$ given by
+  \[
+  \label{II.3.5.2}
+    \alpha
+    \longmapsto \dd t_{(q_1)}/t_{q(1)}\wedge\ldots\wedge\dd t_{q(n)}/t_{q(n)}\wedge\alpha
+  \tag{3.5.2}
+  \]
+  does not depend on the choice of the $t_i$, since, if $t'_i$ are a different choice, then the $\dd t_i/t_i-\dd t'_i/t'_i=\dd(t_i/t'_i)/(t_i/t'_i)$ are holomorphic, and $\rho_0(\alpha)-\rho'_0(\alpha)\in W^{n-1}(\Omega_X^{p+n}\langle Y\rangle)$.
+  Similarly, $\rho_0(t_{q(i)}\cdot\beta)=0$, and $\rho_0(\dd t_{q(i)}\wedge\beta)=0$, and so $\rho_0$ factors through
+  \[
+    \rho_1\colon (a_q)_*\Omega_{Y_q}^p \to W^n/W^{n-1}(\Omega_X^{p+n}\langle Y\rangle).
+  \]
+  The trivialisation $e(q)$ of $\epsilon^n|Y_q$ identifies $\rho_1$ with
+  \[
+    \rho_2\colon (a_q)_*\Omega_{Y_q}^\bullet(\epsilon^n)[-n] \to \Gr_n^W(\Omega_X^\bullet\langle Y\rangle).
+  \]
+  Finally, the sum of the morphisms $\rho_2$ for the different $q$ defines a morphism of complexes
+  \[
+  \label{II.3.5.3}
+    \rho\colon a_*\Omega_{\widetilde{Y}^n}^\bullet(\epsilon)[-n] \to \Gr_n^W(\Omega_X^\bullet\langle Y\rangle).
+  \tag{3.5.3}
+  \]
+  This morphism, defined locally by \hyperref[II.3.5.2]{(3.5.2)}, glues to give a morphism of complexes on $X$.
+\end{rmenv}
+
+\begin{itenv}{Proposition 3.6}
+\label{II.3.6}
+  The morphisms \hyperref[II.3.5.3]{(3.5.3)} are isomorphisms.
+\end{itenv}
+
+\begin{proof}
+  If the pair $(X,Y)$ is a product $(X,Y)=(X_1,Y_1)\times(X_2,Y_2)$, i.e. if
+  \[
+    X = X_1\times X_2
+    \quad\mbox{and}\quad
+    Y = X_1\times Y_2 \cup X_2\times Y_1,
+  \]
+\oldpage{77}
+\end{proof}
 
 
 
