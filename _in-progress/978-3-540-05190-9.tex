@@ -3903,6 +3903,91 @@ This section brings together some constructions that are ``local at infinity\tod
   \tag{3.8.2}
   \]
   depends only on $\scr{V}$ and on $\nabla$.
+  We say that \emph{the connection $\nabla$ has at worst a logarithmic pole along $Y$} if, in every local basis of $\scr{V}$, the connection forms present at worst a logarithmic pole along $Y$.
+  In this case, \emph{the residue of the connection $\Gamma$} along a local component $Y_i$ of $Y$ is defined \hyperref[II.3.7.4]{(3.7.4)}
+  \[
+  \label{II.3.8.3}
+    \Res_{Y_i}(\Gamma) \in \shEnd(\scr{V}|Y_i)
+  \tag{3.8.3}
+  \]
+  and it depends only on $\scr{V}$ and on $\nabla$.
+  More globally, if $i\colon\widetilde{Y}\to X$ is the projection of the normalisation of $Y$ onto $X$, then the residue of the connection along $Y$ is an endomorphism of $i^*\scr{V}$
+  \[
+  \label{II.3.8.4}
+    \Res_Y(\Gamma) \in \shEnd(i^*\scr{V}).
+  \tag{3.8.4}
+  \]
+\end{rmenv}
+
+\begin{rmenv}{3.9}
+\label{II.3.9}
+  We place ourselves under the hypotheses of \hyperref[II.3.8]{(3.8)}, and make the following additional hypotheses:
+  \begin{enumerate}[a)]
+    \item $Y$ is the sum of smooth divisors $(Y_i)_{1\leq i\leq n}$ (which is always the case locally).
+      For $P\subset[1,n]$, we set $Y_P=\bigcap_{i\in P}Y_i$ and $Y'_P=Y_P\setminus\bigcup_{i\not\in P}Y_i$.
+    \item The connection on $\scr{V}$ has at worst a logarithmic pole along $Y$.
+  \end{enumerate}
+
+  The dual of the vector bundle $\Omega_X^1\langle Y\rangle$ is the bundle $T_X^1\langle-Y\rangle$ of vector fields $v$ on $X$ that satisfy
+\oldpage{79}
+  \begin{rmenv}{3.9.1}
+    For $P\subset[1,n]$, $v|Y_P$ is tangent to $Y_P$.
+  \end{rmenv}
+
+  If a vector field $v$ satisfies \hyperref[II.3.9.1]{(3.9.1)}, and if $g$ is a section of $\scr{V}$, then $\nabla_v(g)$ is again a regular section of $\scr{V}$.
+  Its restriction to $Y_P$ depends only on $g|Y_P$ and on the image of $v$ in $T_X^1\langle-Y\rangle\otimes\cal{O}_{Y_P}$.
+  If $s$ is a local section of the evident epimorphism from $T_X^1\langle-Y\rangle\otimes\cal{O}_{Y_P}$ to its image in the tangent bundle to $Y_P$, then $\nabla_{s(v)}(g)$ defines a connection ${}_s\nabla$ on $\scr{V}|Y'_P$.
+  There is a Lie bracket defined, by passing to the quotient, on $T_X^1\langle-Y\rangle\otimes\cal{O}_{Y_P}$.
+  The connection ${}_s\nabla$ is integrable if $s$ commutes with the bracket;
+  it presents at worst a logarithmic pole along $Y_P\cap\bigcup_{i\not\in P}Y_i$.
+\end{rmenv}
+
+An easy calculation shows the following:
+
+\begin{itenv}{Proposition 3.10}
+\label{II.3.10}
+  Under the previous hypotheses, and with the above notation,
+  \begin{enumerate}[(i)]
+    \item $[\Res_{Y_i}(\Gamma),\Res_{Y_j}(\Gamma)]=0$ on $Y_i\cap Y_j$; and
+    \item if $i\in P$, then ${}_s\nabla\Res_{Y_i}(\Gamma)=0$ on $Y'_P$.
+  \end{enumerate}
+\end{itenv}
+
+We deduce from \hyperref[II.3.10]{(3.10.ii)}, for $P=\{i\}$, that the characteristic polynomial of $\Res_{Y_i}(\Gamma)$ is constant on $Y_i$.
+
+We can also deduce \hyperref[II.3.10]{(3.10)} from the following proposition, which can be proven similarly to \hyperref[II.1.17]{(1.17)}:
+
+\begin{itenv}{Proposition 3.11}
+\label{II.3.11}
+  Let $\scr{V}$ be a vector bundle on $X=D^n$, let $Y=\{0\}\times D^{n-1}$, and $X^*=X\setminus Y$, and let $\Gamma$ be an integrable connection on $\scr{V}|X^*$ presenting a logarithmic pole along $Y$.
+  Let $T$ be the monodromy transformation of $\scr{V}|X^*$ defined by the positive generator of $\pi_1(X^*)\cong\pi_1(D^*)\cong\ZZ$ (cf. \hyperref[II.1.15]{(1.15)}).
+  Then the horizontal automorphism $T$ of $\scr{V}|X^*$ can be extended to an automorphism of $\scr{V}$, again denoted by $T$, and
+  \[
+    T|Y = \exp(-2\pi i\Res_Y(\Gamma)).
+  \]
+\end{itenv}
+
+\begin{rmenv}{3.12}
+\label{II.3.12}
+  Let $X$ be a complex-analytic variety, $Y$ a normal crossing divisor in $X$, and $j\colon X^*=X\setminus Y\to X$ the inclusion.
+  For a vector bundle $\scr{V}$ on $X$, we denote by $j_*^\mathrm{m}j^*\scr{V}$ the sheaf of sections of $\scr{V}$ over $X^*$ that are meromorphic along $Y$.
+
+\oldpage{80}
+  Locally on $X$, $Y$ is the union of smooth divisors $Y_i$, and we define the \emph{pole-order filtration $P$} of $j_*^\mathrm{m}j^*\cal{O}=j_*^\mathrm{m}\cal{O}_{X^*}$ by the equation
+  \[
+  \label{II.3.12.1}
+    P^k(j_*^\mathrm{m}j^*\cal{O})
+    = \sum_{\underline{n}\in A_k}\cal{O}(\sum(n_i+1)Y_i)
+  \tag{3.12.1}
+  \]
+  where
+  \[
+    A_k = \big\{
+      (n_i) \mid \mbox{$\sum_i n_i\leq-k$ and $n_i\geq0$ for all $i$}
+    \big\}.
+  \]
+
+  This construction can be made global, and endows $j_*^\mathrm{m}\cal{O}_{X^*}$ with an exhaustive filtration such that $P^k=0$ for $k>0$.
 \end{rmenv}
 
 
