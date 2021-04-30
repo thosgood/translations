@@ -3900,7 +3900,7 @@ This section brings together some constructions that are ``local at infinity\tod
   Thus the ``polar part of $\Gamma$''
   \[
   \label{II.3.8.2}
-    \dot{\Gamma} \in j_*\Omega_{X^*}^1(\shEnd(\scr{V}_0))/\Omega_X^1(\shEnd(\scr{V}))
+    \dot{\Gamma} \in j_*\Omega_{X^*}^1\big(\shEnd(\scr{V}_0))\big/\Omega_X^1(\shEnd(\scr{V})\big)
   \tag{3.8.2}
   \]
   depends only on $\scr{V}$ and on $\nabla$.
@@ -3994,7 +3994,7 @@ We can also deduce \hyperref[II.3.10]{(3.10)} from the following proposition, wh
   We define a filtration $P$, again called the \emph{pole-order filtration}, of the complex $j_*^\mathrm{m}j^*\Omega_X^\bullet(\scr{V})=j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V})$ by
   \[
   \label{II.3.12.2}
-    P^k(j_*^\mathrm{m}\Omega_{X^*}^p(\scr{V}))
+    P^k\big(j_*^\mathrm{m}\Omega_{X^*}^p(\scr{V})\big)
     = P^{k-p}(j_*^\mathrm{m}\cal{O}_{X^*})\otimes\Omega_X^p\otimes\scr{V}.
   \tag{3.12.2}
   \]
@@ -4028,8 +4028,8 @@ We can also deduce \hyperref[II.3.10]{(3.10)} from the following proposition, wh
 \oldpage{81}
       \[
       \label{II.3.13.1}
-        \Gr_F(\Omega_X^\bullet\langle Y\rangle(\scr{V}))
-        \to \Gr_P(j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V})).
+        \Gr_F\big(\Omega_X^\bullet\langle Y\rangle(\scr{V})\big)
+        \to \Gr_P\big(j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V})\big).
       \tag{3.13.1}
       \]
   \end{enumerate}
@@ -4067,9 +4067,9 @@ We can also deduce \hyperref[II.3.10]{(3.10)} from the following proposition, wh
       The isomorphism \hyperref[II.3.2]{(3.2.iii)} identifies the Hodge filtration of $\Omega_X^\bullet\langle Y\rangle$ with the external tensor product of the Hodge filtrations of the $\Omega_{X_i}^\bullet\langle Y_i\rangle$, whence the evident isomorphism
       \[
       \label{II.3.13.2}
-        \Gr_F(\Omega_{X_1}^\bullet\langle Y_1\rangle(\scr{V}_1))
-        \boxtimes \Gr_F(\Omega_{X_2}^\bullet\langle Y_2\rangle(\scr{V}_2))
-        \simto \Gr_F(\Omega_X^\bullet\langle Y\rangle(\scr{V})).
+        \Gr_F\big(\Omega_{X_1}^\bullet\langle Y_1\rangle(\scr{V}_1)\big)
+        \boxtimes \Gr_F\big(\Omega_{X_2}^\bullet\langle Y_2\rangle(\scr{V}_2)\big)
+        \simto \Gr_F\big(\Omega_X^\bullet\langle Y\rangle(\scr{V})\big).
       \tag{3.13.2}
       \]
 
@@ -4084,9 +4084,9 @@ We can also deduce \hyperref[II.3.10]{(3.10)} from the following proposition, wh
       We thus have
       \[
       \label{II.3.13.3}
-        \Gr_P(j_*^\mathrm{m}\Omega_{X_1^*}^\bullet(\scr{V}_1))
-        \boxtimes \Gr_P(j_*^\mathrm{m}\Omega_{X_2^*}^\bullet(\scr{V}_2))
-        \simto \Gr_P(j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V})).
+        \Gr_P\big(j_*^\mathrm{m}\Omega_{X_1^*}^\bullet(\scr{V}_1)\big)
+        \boxtimes \Gr_P\big(j_*^\mathrm{m}\Omega_{X_2^*}^\bullet(\scr{V}_2)\big)
+        \simto \Gr_P\big(j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V})\big).
       \tag{3.13.3}
       \]
       The morphism \hyperref[II.3.13.1]{(3.13.1)} can be identified, via \hyperref[II.3.13.2]{(3.13.2)} and \hyperref[II.3.13.3]{(3.13.3)}, with the external tensor product of the analogous morphisms for $\scr{V}_1$ and $\scr{V}_2$.
@@ -4184,26 +4184,64 @@ We can also deduce \hyperref[II.3.10]{(3.10)} from the following proposition, wh
 
 \begin{itenv}{Corollary 3.14}
 \label{II.3.14}
+  Let $X$ be a smooth scheme over $\CC$, $Y$ a normal crossing divisor in $X$, $j$ the inclusion of $X^*=X\setminus Y$ into $X$, $\scr{V}$ a vector bundle on $X$, and $\Gamma$ an integrable connection on $\scr{V}|X^*$ that presents a logarithmic pole along $Y$.
+  Suppose that the residues of the connection along $Y$ do not admit any strictly positive integer as an eigenvalue.
+  Then
+  \begin{enumerate}[(i)]
+    \item the homomorphism of complexes
+      \[
+        i\colon \Omega_X^\bullet\langle Y\rangle(\scr{V}) \to j_*\Omega_{X^*}^\bullet(\scr{V})
+      \]
+      induces an isomorphism on the cohomology sheaves (for the Zariski topology); and
+    \item more precisely, $i$ is injective, and there exists an exhaustive increasing filtration of the complex $\Coker(i)$ whose successive quotients are acyclic complexes whose differentials are linear.
+  \end{enumerate}
 \end{itenv}
 
+\begin{proof}
+  The filtration $P$ of \hyperref[II.3.12]{(3.12)} has an evident algebraic analogue, which also satisfies conditions~a) to d) of \hyperref[II.3.12]{(3.12)}.
+  The corollary follows from the statement, which is more precise than (ii), saying that the complexes
+  \[
+    G^i = \Gr^i_P\big(j_*\Omega_{X^*}^\bullet(\scr{V})\big/\Omega_X^\bullet\langle Y\rangle(\scr{V})\big)
+  \]
+  are acyclic.
+  These complexes have $\cal{O}_X$-linear differentials, and, by \hyperref[II.3.13]{(3.13)},
+\oldpage{85}
+  the $(G^i)^\an$ are acyclic.
+  By the flatness of $\cal{O}_{X^\an}$ over $\cal{O}_X$, the $G^i$ are thus acyclic, which finishes the proof.
+\end{proof}
 
+\begin{itenv}{Corollary 3.15}
+\label{II.3.15}
+  Under the hypotheses of \hyperref[II.3.14]{(3.14)}, we have
+  \[
+    \mathbb{H}^k\big(X,\Omega_X^\bullet\langle Y\rangle(\scr{V})\big)
+    \simto \mathbb{H}^k\big(X^*,\Omega_{X^*}^\bullet(\scr{V})\big).
+  \]
+\end{itenv}
 
+\begin{proof}
+  Since the morphism $j$ is affine, we have
+  \[
+    \RR^kj_*\Omega_{X^*}^p(\scr{V})=0
+    \quad\mbox{for $k>0$}
+  \]
+  and so
+  \[
+    \mathbb{H}^\bullet\big(X,j_*\Omega_{X^*}^\bullet(\scr{V})\big)
+    \simto \mathbb{H}^\bullet\big(X^*,\Omega_{X^*}^\bullet(\scr{V})\big).
+  \]
+  Also, by \hyperref[II.3.14]{(3.14.i)}, we have
+  \[
+    \mathbb{H}^\bullet\big(X,\Omega_X^\bullet\langle Y\rangle(\scr{V})\big)
+    \simto \mathbb{H}^\bullet\big(X,j_*\Omega_{X^*}^\bullet(\scr{V})\big)
+  \]
+  whence the corollary.
+\end{proof}
 
-
-
-
-
-
-
-\todo
-
-
-
-
-
-
-
-
+\begin{rmenv}{Remark 3.16}
+\label{II.3.16}
+  It is easy to generalise \hyperref[II.3.13]{(3.13)} and \hyperref[II.3.14]{(3.14)} to the relative situation, where $f\colon X\to S$ is a smooth morphism (with $S$ an analytic space, or scheme of characteristic~$0$), and $Y$ is a relative normal crossing divisor.
+\end{rmenv}
 
 
 \section{Regularity in dimension \texorpdfstring{$n$}{n}}
