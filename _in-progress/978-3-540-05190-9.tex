@@ -4136,8 +4136,55 @@ We can also deduce \hyperref[II.3.10]{(3.10)} from the following proposition, wh
       As $t\to0$, the $\scr{V}_t$ ``tend'' to the constant vector bundle $\scr{V}_0$ defined by the fibre $V_0$ of $\scr{V}$ at $0$, endowed with a connection satisfying \hyperref[II.3.13.4]{(3.13.4)}, \hyperref[II.3.13.5]{(3.13.5)}, and \hyperref[II.3.13.6]{(3.13.6)}.
 
       More precisely, let $H$ and $i_t$ be the morphisms
+      \[
+        \begin{aligned}
+          H\colon &D^n\times D \to D^n
+          \colon &(x,t) \mapsto t\cdot x
+        \\i_t\colon &D^n \to D^n\times D
+          \colon &x\mapsto (x,t).
+        \end{aligned}
+      \]
+      Then $H_t=H\circ i_t$.
+      The inverse image of the connection $\nabla$ on $\scr{V}$ is $\nabla_1$ on $H^*\scr{V}|H^{-1}(X^*)$.
+      The corresponding relative connection (relative to $\pr_2$) extends to $H^*(\scr{V})|X^*\times D$.
+      If we set $\scr{V}_t=i_t^*H^*\scr{V}$, then, for $t\neq0$, we have an isomorphism of bundles with connections
+      \[
+      \label{II.3.13.7}
+        \scr{V}_t \cong H_t^*(\scr{V}).
+      \tag{3.13.7}
+      \]
+      For $t=0$, we have an isomorphism of vector bundles
+\oldpage{84}
+      \[
+      \label{II.3.13.8}
+        \scr{V}_0 = H_0^*(\scr{V}) = \cal{O}_X\otimes_{\CC}V_0
+      \tag{3.13.8}
+      \]
+      and the connection on $\scr{V}_0|X^*$ satisfies \hyperref[II.3.13.4]{(3.13.4)}, \hyperref[II.3.13.5]{(3.13.5)}, and \hyperref[II.3.13.6]{(3.13.6)}.
+
+      The relative version of \hyperref[II.3.12]{(3.12)} gives a morphism of filtered complexes
+      \[
+      \label{II.3.13.9}
+        \varphi\colon
+        \big(
+          \Omega_{X\times D/D}^\bullet\langle Y\times D\rangle(H^*\scr{V}),F
+        \big)
+        \to
+        \big(
+          j_*^\mathrm{m}\Omega_{X^*\times D}^\bullet(H^*\scr{V}),P
+        \big).
+      \tag{3.13.9}
+      \]
+      The associated graded complexes are flat over $D$ (via $\pr_2$), and their homogeneous graded components are coherent, and the differentials are $\cal{O}_{X\times D}$-linear.
+      We already know that $i_0^*\Gr(\varphi)$ is a quasi-isomorphism.
+      It thus follows that $i_t^*\Gr^p(\varphi)$ (the arrow \hyperref[II.3.13.1]{(3.13.1)} for $\scr{V}_t$) is a quasi-isomorphism near to $0$, for $t$ small enough.
+      Since the $\scr{V}_t$ are isomorphic to one another, close to $0$, for $t\neq0$ \hyperref[II.3.13.7]{(3.13.7)}, $i_1^*\Gr^p(\varphi)$ is a quasi-isomorphism near to $0$, which proves \hyperref[II.3.13].
   \end{itemize}
 \end{proof}
+
+\begin{itenv}{Corollary 3.14}
+\label{II.3.14}
+\end{itenv}
 
 
 
