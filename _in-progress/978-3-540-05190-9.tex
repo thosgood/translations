@@ -94,6 +94,7 @@
 
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Coker}{Coker}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\shHom}{\underline{Hom}}
@@ -921,12 +922,12 @@ The ``absolute'' statements \hyperref[I.2.17]{(2.17)}, \hyperref[I.2.18]{(2.18)}
   it thus follows that the functor $\mbox{(iii)a}$ is fully faithful.
   It remains to show that every vector bundle $\scr{V}$ endowed with a relative connection $\nabla$ is given locally by a relative local system.
 
-  \begin{enumerate}[\bf {Case}~1:]
-    \item \emph{$S=D^n$, $X=D^{n+1}=D^n\times D$, $f=\pr_1$, and $\scr{V}$ is free.}
+  \begin{itemize}
+    \item[] \textbf{Case 1:} \emph{$S=D^n$, $X=D^{n+1}=D^n\times D$, $f=\pr_1$, and $\scr{V}$ is free.}
 
       Under these hypotheses, if $v$ is an arbitrary section of the inverse image of $\scr{V}$ under the zero section $s_0$ of $f$, then there exists exactly one horizontal section $\widetilde{v}$ of $\scr{V}$ that agrees with $v$ on $s_0(S)$ (as follows from the existence and uniqueness of solutions for Cauchy problems with parameters).
       If $(e_i)_{1\leq i\leq k}$ is a basis of $s_0^*\scr{V}$, then the $\widetilde{e_i}$ form a horizontal basis of $\scr{V}$, and $(\scr{V},{\nabla})$ is defined by the relative local system $f^\sbullet s_0^*\scr{V}\simeq f^\sbullet\cal{O}_S^k$.
-    \item \emph{$S=D^n$, $X=D^{n+1}=D^n\times D$, and $f=\pr_1$.}
+    \item[] \textbf{Case 2:} \emph{$S=D^n$, $X=D^{n+1}=D^n\times D$, and $f=\pr_1$.}
 
       By possibly shrinking $X$ and $S$, we can suppose that $\scr{V}$ admits a free presentation:
       \[
@@ -940,11 +941,11 @@ The ``absolute'' statements \hyperref[I.2.17]{(2.17)}, \hyperref[I.2.18]{(2.18)}
         (\scr{V},\nabla) \simeq \cal{O}_X\otimes_{f^\sbullet\cal{O}_S}(V_0/dV_1).
       \]
 \oldpage{18}
-    \item \emph{$f$ is of relative dimension~$1$.}
+    \item[] \textbf{Case 3:} \emph{$f$ is of relative dimension~$1$.}
 
       We can suppose that $S$ is a closed analytic subset of $D^n$, and that $X=S\times D$ and $f=\pr_1$.
       The relative local systems (resp. the modules with relative connections) on $X$ can then be identified with the local relative systems (resp. the modules with relative connections) on $D^n\times D$ that are annihilated by the inverse image of the ideal that defines $S$, and we conclude by using Case~2.
-    \item[\bf General case.]
+    \item[] \textbf{General case.}
       We proceed by induction on the relative dimension $n$ of $f$.
       The case $n=0$ is trivial.
       If $n\neq0$, then we are led to the case where $X=S\times D^{n-1}\times D$ and $f=\pr_1$.
@@ -981,7 +982,7 @@ The ``absolute'' statements \hyperref[I.2.17]{(2.17)}, \hyperref[I.2.18]{(2.18)}
       The isomorphism $\alpha$ is thus horizontal, and this finishes the proof
 \oldpage{19}
       of \hyperref[I.2.23]{(2.23)}.
-  \end{enumerate}
+  \end{itemize}
 \end{proof}
 
 Some results in general topology (\hyperref[I.2.24]{(2.24)} to \hyperref[I.2.27]{(2.27)}) will be necessary to deduce \hyperref[I.2.28]{(2.28)} from \hyperref[I.2.23]{(2.23)}.
@@ -4019,7 +4020,124 @@ We can also deduce \hyperref[II.3.10]{(3.10)} from the following proposition, wh
 \end{rmenv}
 
 \begin{itenv}{Proposition 3.13}
+\label{II.3.13}
+  With the hypotheses and notation of \hyperref[II.3.12]{(3.12)}, if the residues of the connection $\Gamma$ along all the local components of $Y$ do not admit any strictly positive integer as an eigenvalue, then
+  \begin{enumerate}[(i)]
+    \item the morphism of complexes \hyperref[II.3.12.3]{(3.12.3)} is a quasi-isomorphism; and
+    \item more precisely, it induces a quasi-isomorphism
+\oldpage{81}
+      \[
+      \label{II.3.13.1}
+        \Gr_F(\Omega_X^\bullet\langle Y\rangle(\scr{V}))
+        \to \Gr_P(j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V})).
+      \tag{3.13.1}
+      \]
+  \end{enumerate}
 \end{itenv}
+
+\begin{proof}
+  It suffices to prove (ii), which also implies that, for each $p$, $\Gr_P^p(j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V}))[p]$ is a resolution of $\Omega_X^p\langle Y\rangle(\scr{V})$.
+
+  \begin{itemize}
+    \item[] \textbf{First reduction (Extensions).}
+      If $\scr{V}$ is an extension of bundles with connections satisfying \hyperref[II.3.13]{(3.13)}, as in
+      \[
+        0 \to \scr{V}' \to \scr{V} \to \scr{V}'' \to 0
+      \]
+      then the lines of the diagram
+      \[
+        \begin{tikzcd}
+          0 \rar
+          & \Gr_F\Omega_X^\bullet\langle Y\rangle(\scr{V}') \rar \dar
+          & \Gr_F\Omega_X^\bullet\langle Y\rangle(\scr{V}) \rar \dar
+          & \Gr_F\Omega_X^\bullet\langle Y\rangle(\scr{V}'') \rar \dar
+          & 0
+        \\0 \rar
+          & \Gr_Pj_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V}') \rar
+          & \Gr_Pj_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V}) \rar
+          & \Gr_Pj_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V}'') \rar
+          & 0
+        \end{tikzcd}
+      \]
+      are exact.
+      For \hyperref[II.3.13.1]{(3.13.1)} to be a quasi-isomorphism, it thus suffices to prove the analogous claim for $\scr{V}'$ and $\scr{V}''$.
+    \item[] \textbf{Second reduction (Products).}
+      Suppose that $(X,Y)$ is the product of $(X_1,Y_1)$ and $(X_2,Y_2)$, and that $\scr{V}$ is the external tensor product $\scr{V}=\scr{V}_1\boxtimes\scr{V}_2$ of bundles $\scr{V}_i$ with connections satisfying the hypotheses of \hyperref[II.3.13]{(3.13)} on $(X_i,Y_i)$.
+
+      The isomorphism \hyperref[II.3.2]{(3.2.iii)} identifies the Hodge filtration of $\Omega_X^\bullet\langle Y\rangle$ with the external tensor product of the Hodge filtrations of the $\Omega_{X_i}^\bullet\langle Y_i\rangle$, whence the evident isomorphism
+      \[
+      \label{II.3.13.2}
+        \Gr_F(\Omega_{X_1}^\bullet\langle Y_1\rangle(\scr{V}_1))
+        \boxtimes \Gr_F(\Omega_{X_2}^\bullet\langle Y_2\rangle(\scr{V}_2))
+        \simto \Gr_F(\Omega_X^\bullet\langle Y\rangle(\scr{V})).
+      \tag{3.13.2}
+      \]
+
+      The evident isomorphism
+      \[
+        j_*^\mathrm{m}\Omega_{X_1^*}^\bullet
+        \boxtimes j_*^\mathrm{m}\Omega_{X_2^*}^\bullet
+        \simto j_*^\mathrm{m}\Omega_{X^*}^\bullet
+      \]
+\oldpage{82}
+      identifies the filtration $P$ of $j_*^\mathrm{m}\Omega_{X^*}^\bullet$ with the external tensor product of the filtrations $P$ of the $j_*^\mathrm{m}\Omega_{X_i^*}^\bullet$.
+      We thus have
+      \[
+      \label{II.3.13.3}
+        \Gr_P(j_*^\mathrm{m}\Omega_{X_1^*}^\bullet(\scr{V}_1))
+        \boxtimes \Gr_P(j_*^\mathrm{m}\Omega_{X_2^*}^\bullet(\scr{V}_2))
+        \simto \Gr_P(j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V})).
+      \tag{3.13.3}
+      \]
+      The morphism \hyperref[II.3.13.1]{(3.13.1)} can be identified, via \hyperref[II.3.13.2]{(3.13.2)} and \hyperref[II.3.13.3]{(3.13.3)}, with the external tensor product of the analogous morphisms for $\scr{V}_1$ and $\scr{V}_2$.
+      Since the complexes in question have $\cal{O}_X$-linear differentials \hyperref[II.3.12]{(3.12.d)}, to prove that \hyperref[II.3.13.3] is a quasi-isomorphism, it suffices to prove the analogous claim for $\scr{V}_1$ and $\scr{V}_2$.
+    \item[] \textbf{Case of constant coefficients.}
+      We first prove \hyperref[II.3.13]{(3.13.ii)} in the case where the following conditions are satisfied:
+      \begin{itemize}
+        \item[(3.13.4)]\label{II.3.13.4}
+          $X$ is the open polydisc $D^n$;
+        \item[(3.13.5)]\label{II.3.13.5}
+          $Y=\bigcup_{1\leq i\leq k}Y_i$, with $Y_i=\pr_i^{-1}(0)$; and
+        \item[(3.13.6)]\label{II.3.13.6}
+          $\scr{V}$ is the constant vector bundle defined by a vector space $V$, and the connection is of the form
+          \[
+            \Gamma = \sum_i\Gamma_i\frac{\dd z_i}{z_i}
+          \]
+          with $\Gamma_i\in\End(V)$ and $\Gamma_i=0$ for $i>k$.
+      \end{itemize}
+
+      Since the connection is integrable, the $\Gamma_i$ pairwise commute, and there exists a finite filtration $G$ of $V$ that is stable under the $\Gamma_i$, and such that $\dim\Gr_G^l(V)\leq1$.
+      By the first reduction, we can assume that $V=\CC$, in which case the $\Gamma_i$ can be identified with a scalar $\gamma_i$.
+      The bundle $\scr{V}$ with connection is then the external tensor product of the bundles $(\cal{O},\gamma_i\dd z/z)$ on $D$.
+      The second reduction allows us to assume that $n=1$.
+      If $k=0$, i.e. if $Y=\varnothing$, then $\Omega_X^\bullet\langle Y\rangle=j_*^\mathrm{m}\Omega_{X^*}^\bullet$ and $F=P$.
+      If $k=1$, i.e. if $Y=\{0\}$, then
+      \begin{enumerate}[a)]
+        \item $P^i(j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V}))=0$ for $i>-1$;
+\oldpage{83}
+        \item $P^{-1}(j_*^\mathrm{m}\Omega_{X^*}^p(\scr{V}))$ is equal to $0$ if $p=0$, and to $\Omega_X^1\langle Y\rangle(\scr{V})$ if $p=1$;
+        \item $\Gr_P^0(j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V}))$ is the complex
+          \[
+            \frac{1}{z}\cal{O}
+            \xrightarrow{\partial_z+\gamma} \frac{1}{z^2}\cal{O}\bigg/\frac{1}{z}\cal{O}
+          \]
+          and if $\gamma-1\neq0$ then $\Coker(\dd)=0$ and $\Ker(\dd)=\scr{V}=\Omega_X^0\langle Y\rangle(\scr{V})$; and
+        \item $\Gr_P^{-n}(j_*^\mathrm{m}\Omega_{X^*}^\bullet(\scr{V}))$, for $n>0$, is the complex
+          \[
+            \frac{1}{z^{n+1}}\cal{O}\bigg/\frac{1}{z^{n}}\cal{O}
+            \xrightarrow{\partial_z+\gamma} \frac{1}{z^{n+2}}\cal{O}\bigg/\frac{1}{z^{n+1}}\cal{O}.
+          \]
+      \end{enumerate}
+      This satisfies \hyperref[II.3.13]{(3.13.ii)} case by case.
+    \item[] \textbf{General case.}
+      Since the problem is local, we can suppose that conditions \hyperref[II.3.13.4]{(3.13.4)} and \hyperref[II.3.13.5]{(3.13.5)} are satisfied, and it suffices to prove that the germ at $0$ of \hyperref[II.3.13.1]{(3.13.1)} is a quasi-isomorphism.
+
+      For $0<|t|\leq1$, let $\scr{V}_t$ be the bundle with connection given by the inverse image of $\scr{V}$ under the homothety $H_t$ with ratio $t$.
+      As $t\to0$, the $\scr{V}_t$ ``tend'' to the constant vector bundle $\scr{V}_0$ defined by the fibre $V_0$ of $\scr{V}$ at $0$, endowed with a connection satisfying \hyperref[II.3.13.4]{(3.13.4)}, \hyperref[II.3.13.5]{(3.13.5)}, and \hyperref[II.3.13.6]{(3.13.6)}.
+
+      More precisely, let $H$ and $i_t$ be the morphisms
+  \end{itemize}
+\end{proof}
 
 
 
