@@ -2660,7 +2660,7 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
 
 \begin{itenv}{Theorem 1.12}
 \label{II.1.12}
-  (N. Katz).
+  \emph{[N. Katz].}
   Under the hypotheses of \hyperref[II.1.9]{(1.9)}, we have the following:
   \begin{enumerate}[(i)]
     \item For the connection $\nabla$ to be regular, it is necessary and sufficient for $V$ to admit
@@ -4247,7 +4247,41 @@ We can also deduce \hyperref[II.3.10]{(3.10)} from the following proposition, wh
 \section{Regularity in dimension \texorpdfstring{$n$}{n}}
 \label{II.4}
 
+\emph{[Translator] The proof of \hyperref[II.4.1]{Theorem~4.1} has been replaced with the proof given in the errata, written by P.~Deligne at Warwick University in April 1971. The errata also cites the following:}
+\begin{quote}
+  N.~Katz.
+  The regularity theorem in algebraic geometry.
+  \emph{Actes du Congr\`{e}s intern. math.} \textbf{1} (1970), 437--443.
+\end{quote}
 
+\begin{itenv}{Theorem~4.1}
+\label{II.4.1}
+  Let $X$ be a complex-analytic space, $Y$ a closed analytic subset of $X$ such that $X^*=X\setminus Y$ is smooth, $X'$ the normalisation of $X$, and $Y'$ the inverse image of $Y$ in $X'$.
+  Let $\scr{V}$ be a vector bundle on $X^*$ that is meromorphic along $Y$, and let $\nabla$ be a connection on $\scr{V}$.
+  Then the following conditions are equivalent:
+  \begin{enumerate}[(i)]
+    \item there exists an open subset $U$ of $Y'$ that contains a point of each codimension~$1$ component of $Y'$, and an isomorphism $\varphi$ from a neighbourhood of $U$ in $X'$ to $U\times D$ (where $D$ is the unit disc) that induces the identity map from $U$ to $U\times\{0\}$, such that, for all $u\in U$, the restriction of $\varphi^*\scr{V}$ to $\{u\}\times D$ is regular at~$0$;
+\oldpage{86}
+    \item for every map $\varphi\colon D\to X$ with $\varphi^{-1}(Y)=\{0\}$, the inverse image of $V$ under $\varphi$ is regular; and
+    \item the (multiform) horizontal sections of $\scr{V}$ are of moderate growth along $Y$.
+  \end{enumerate}
+
+  By (i), these conditions hold ``in codimension~$1$ at infinity'' on the normalisation of $X$.
+  If $Y$ is a smooth normal crossing divisor in $X$, then the above three conditions are also equivalent to the following:
+  \begin{enumerate}
+    \item[(iv)] for all $y\in Y$, there exists an open neighbourhood $U$ of $y$, and a basis $e\colon\cal{O}^d\to\scr{V}$ of $\scr{V}$ on $U\setminus Y$ that is meromorphic along $Y$, such that the connection matrix (which is a matrix of differential forms) presents at worst a logarithmic pole along $Y$.
+  \end{enumerate}
+\end{itenv}
+
+\begin{proof}
+  We will use constructions \hyperref[II.5.1]{(5.1)} to \hyperref[II.5.5]{(5.5)}; the reader can verify the lack of circularity.
+
+  The theorem is local along $Y$, which allows us to suppose that
+  \begin{enumerate}[a)]
+    \item the meromorphic structure of $\scr{V}$ along $Y$ is defined by a coherent extension $\widetilde{\scr{V}}$ of the vector bundle $\scr{V}$ on $X$; and
+    \item 
+  \end{enumerate}
+\end{proof}
 
 
 
