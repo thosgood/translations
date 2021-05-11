@@ -98,6 +98,8 @@
 \DeclareMathOperator{\limind}{lim\,ind}
 \DeclareMathOperator{\limproj}{lim\,proj}
 
+\DeclareMathOperator{\shIsom}{\underline{Isom}}
+
 \newcommand{\unsure}[1]{TODO: \underline{\textbf{#1}}}
 \newcommand{\todo}{\textbf{ !TODO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
@@ -163,7 +165,7 @@ Applying an element of $\Gal(\cQQ/\QQ)$ to these coefficients, we obtain the equ
 Understanding how $\Gal(\cQQ/\QQ)$ permutes the isomorphism classes of finite covers essentially reduces to understanding the Galois action on $\hat{\pi}_1$.
 ``Essentially'', since I have omitted mentioning the base points, and since the Galois covers have not been thought of as $G$-covers, for $G$ their automorphism group.
 
-Up until now, we have not had the language to study the Galois action on $\hat{\pi}_1$.
+Up until now, we have not had the language necessary to study the Galois action on $\hat{\pi}_1$.
 A.~Grothendieck and his students have developed a combinatorial description (``charts'') of finite covers of $X$, based on a decomposition of $\PP^1(\CC)$ into the two ``spherical triangles'' $\Im(z)\geq0$ and $\Im(z)\leq0$, with sides $[\infty,0]$, $[0,1]$, and $[1,\infty]$.
 This has not helped in understanding the Galois action.
 We have only a few unresolved examples of covers whose Galois conjugates have been calculated.
@@ -248,8 +250,8 @@ The crystalline aspect will be neglected in the rest of the introduction.
 
 In \hyperref[2]{\S2} we give examples.
 We also explain what an extension of the unit realisation system $\ZZ$ by a realisation system $M$ with integer coefficients is.
-\emph{Terminologie:} \unsure{$M$-torsor}, or torsor under $M$.
-\emph{Example:} the Kummer \unsure{$\ZZ(1)$-torsor}, where $\ZZ(1)$ is the Tate motive.
+\emph{Terminologie:} $M$-torsor, or torsor under $M$.
+\emph{Example:} the Kummer $\ZZ(1)$-torsor, where $\ZZ(1)$ is the Tate motive.
 
 In \hyperref[3]{\S3} we describe certain remarkable torsors, which can be said to be cyclotomic, under the Tate motive $\ZZ(k)$.
 \hyperref[16]{\S16} explains how these torsors naturally appear in the study of $\pi_1$ of $\PP^1\setminus\{0,1,\infty\}$.
@@ -285,9 +287,9 @@ This consists of
 
 Our solution will be to define a motivic linear group as being an Ind-object in the category of motives, endowed with the structure of a commutative Hopf algebra.
 To avoid speculation: consider the group in realisation systems, and replace ``motive'' by ``realisation system''.
-There is an analogous definition for \unsure{torsors under a group}.
-We separately define a notion of ``\unsure{integer}'' structures.
-This definition has the advantage that the standard constructions in algebraic geometry (decreasing central series, quotients, pushing forward a $G$-torsor by $G\to H$, \unsure{torsor torsion},\ldots) all pass automatically to the motivic case.
+There is an analogous definition for torsors under a group.
+We separately define a notion of ``integer'' structures.
+This definition has the advantage that the standard constructions in algebraic geometry (decreasing central series, quotients, pushing forward a $G$-torsor by $G\to H$, twisting by a torsor, \ldots) all translate automatically to the motivic case.
 This, in an arbitrary Tannakian category, is explained in \hyperref[5]{\S5}.
 
 In \hyperref[7]{\S7}, we reinterpret these definitions in a language that is closer to that of our applications.
@@ -307,7 +309,7 @@ For example, if $X$ is a Riemann surface $\overline{X}$ minus a point $s$, and $
     \end{tikzpicture}
   \end{gathered}
 \]
-The \emph{filter} $\mathcal{B}(v)$ that they generate is independent of the chosen coordinate.
+The \unsure{filter} $\mathcal{B}(v)$ that they generate is independent of the chosen coordinate.
 By this construction, a non-zero tangent vector at $s$ can act as a base point in the definition of $\pi_1$ of $X$.
 
 The same phenomenon occurs in the profinite theory of $\pi_1$, and in the ``de Rham'' theory.
@@ -339,13 +341,15 @@ The result leaves much to be desired.
 It is only completely studied for smooth algebraic varieties whose smooth compactifications $\overline{X}$ satisfy $H^1(\overline{X},\scr{O})=0$.
 Another complaint: I sometimes only sketch the definition of structures that will be used in future calculations.
 
-In \hyperref[16]{\S16}, we finally explain what the \unsure{torsors under $\ZZ(k)$} from \hyperref[3]{\S3} have to do with the $\pi_1$ of the projective line minus three points.
+In \hyperref[16]{\S16}, we finally explain what the $\ZZ(k)$-torsors from \hyperref[3]{\S3} have to do with the $\pi_1$ of the projective line minus three points.
 The justifying calculations are given in \hyperref[19]{\S19}.
 We given, in \hyperref[17]{\S17} and \hyperref[18]{\S18}, a geometric explanation of some of their properties.
 
-\oldpage{87}
+
+
 \section{Terminology and notation}
 \label{0}
+\oldpage{87}
 
 \begin{env}{0.1}
 \label{0.1}
@@ -370,6 +374,61 @@ We given, in \hyperref[17]{\S17} and \hyperref[18]{\S18}, a geometric explanatio
   \]
   We denote by $\cQQ$ the algebraic closure of $\QQ$ in $\CC$.
 \end{env}
+
+\begin{env}{0.3}
+\label{0.3}
+  For an abstract group, algebraic group, profinite group, or Lie algebra $A$, we denote by $Z^i(A)$ the descending central series.
+  We use the numbering for which $A=Z^1(A)$.
+  We denote by $A^{(N)}$ the quotient of $A$ by $Z^{N+1}(A)$.
+  In the case of abstract or profinite groups, we denote by $A^{[N]}$ the largest torsion-free quotient of $A^{(N)}$.
+\end{env}
+
+\begin{env}{0.4}
+\label{0.4}
+  We denote by $\otimes$ an extension of scalars.
+  For example, if $X$ is a scheme over $k$, and $k'$ is an extension of $k$, then we set
+  \[
+    X\otimes k'
+    \coloneqq X\times_{\Spec(k)}\Spec(k').
+  \]
+\end{env}
+
+\begin{env}{0.5}
+\label{0.5}
+  Let $G$ be a sheaf of groups on a site $\cal{S}$, or, equivalently, in a topos $T$.
+  Useful particular case: if $\cal{S}$ is a point, then a sheaf is a set and $G$ is a group.
+  A \emph{$G$-torsor}, or \emph{torsor under $G$}, is a sheaf $P$ endowed with a right $G$-action such that $P$ is locally isomorphic to $G$ acting on itself by translations on the right.
+  We also call such an object a \emph{right $G$-principal homogeneous space}, or a \emph{right principal homogeneous space under $G$}.
+\oldpage{88}
+  If $P$ is a $G$-torsor, then a sheaf $X$ on which $G$ acts can be \emph{twisted} by $P$.
+  The twisting $X^P$ is the contracted product $P\times^G X=(P\times X)/G$, and is endowed with $\alpha\colon P\to\shIsom(X,X^P)$ satisfying $\alpha(pg)=\alpha(p)g$.
+
+  An \emph{$(H,G)$-bitorsor} (cf. SGA~7, VII.1, or Girard, \emph{Cohomologie non abelienne}, III~1.5) is a space which is simultaneously a left principal homogeneous space under $H$ and a right principal homogeneous space under $G$, with the $G$- and $H$-actions commuting with one another.
+  If $P$ is a $G$-torsor, then the sheaf of automorphisms of $P$ is the twisting $G^P$ of $G$ by $P$ (under the action of $G$ on itself by inner automorphisms), and $P$ is a $(G^P,P)$-bitorsor.
+  By this construction, the data of an $(H,G)$-bitorsor $P$ is equivalent to the data of a $G$-torsor $P$ along with an isomorphism between $H$ and $G^P$.
+  Notation: we will write ${}_HP_G$ to mean that $P$ is an $(H,G)$-bitorsor.
+
+  We will use the following operations on torsors and bitorsors.
+  \begin{itemize}
+    \item \textbf{Pushing forward:} (or \textbf{transporting}) a $G$-torsor $P$ by $\varphi\colon G\to H$ to obtain an $H$-torsor $\varphi(P)$.
+      A \emph{$\varphi$-morphism} from the $G$-torsor $P$ to the $H$-torsor $Q$ is some $u\colon P\to Q$ such that $u(pg)=u(p)\varphi(g)$.
+      A $\varphi$-morphism factors uniquely through an isomorphism of $H$-torsors between $\varphi(P)$ and $Q$.
+    \item \textbf{Composition:} of a $(G_1,G_2)$-bitorsor $P$ and a $(G_2,G_3)$-bitorsor $Q$:
+      the $(G_1,G_3)$-bitorsor $P\circ Q$ given by the contracted product $P\times^{G_2}Q=(P\times Q)/G_2$.
+    \item \textbf{Inverse:} of ${}_{G_1}P_{G_2}$:
+      the $(G_2,G_1)$-bitorsor $P^{-1}$, unique up to isomorphism, endowed with $(p\mapsto p^{-1})\colon P\to P^{-1}$ such that $(g_1pg_2)^{-1}=g_2^{-1}p^{-1}g_1^{-1}$.
+
+      For $G$-torsors $P$ and $Q$, the sheaf $\shIsom(P,Q)$ of isomorphisms of $G$-torsors from $P$ to $Q$ is the $(G^Q,G^P)$-bitorsor $G\circ P^{-1}$.
+  \end{itemize}
+
+  If the site $\cal{S}$ is such that the representable functors $h_S$ are sheaves, then we can transport these operations to $\cal{S}$ via the fully faithful functor $S\mapsto h_S$, with each construction only being defined if it does not leave the collection of representable sheaves.
+\end{env}
+
+
+
+\section{Mixed motives}
+\label{1}
+\oldpage{89}
 
 
 %% Bibliography %%
