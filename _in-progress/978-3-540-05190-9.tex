@@ -32,11 +32,6 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{xstring}
-\makeatletter
-\ifx\pdfmdfivesum\undefined
-  \let\pdfmdfivesum\mdfivesum
-\fi
-\edef\filesum{\pdfmdfivesum file {\jobname}}
 \pagestyle{fancy}
 \fancypagestyle{plain}{}
 \fancyhf{}
