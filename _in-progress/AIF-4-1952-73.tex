@@ -31,20 +31,15 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{xstring}
-\makeatletter
-\ifx\pdfmdfivesum\undefined
-  \let\pdfmdfivesum\mdfivesum
-\fi
-\edef\filesum{\pdfmdfivesum file {\jobname}}
 \pagestyle{fancy}
-\makeatletter
-\let\runauthor\@author
-\let\runtitle\@title
-\makeatother
+\fancypagestyle{plain}{}
 \fancyhf{}
-\lhead{\small\runtitle}
-\lfoot{\footnotesize Version: \texttt{\StrMid{\filesum}{1}{8}}}
+\lhead{\footnotesize\nouppercase\leftmark}
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
+% Git commit hash for server builds
+\newif\ifserver
+\serverfalse
+\lfoot{\footnotesize\ifserver{Git commit: \href{https://github.com/thosgood/translations/commit/GitCommitHashVariable}{GitCommitHashVariable}}\fi}
 
 
 %% Theorem environments %%
