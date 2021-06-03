@@ -1,5 +1,3 @@
-See <https://thosgood.com/translations> for details.
-
 ### To-do
 
 - add end marker to `itenv` and `rmenv`
