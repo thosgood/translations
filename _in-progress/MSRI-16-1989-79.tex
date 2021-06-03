@@ -86,6 +86,7 @@
 \newcommand{\FF}{\bb{F}}
 \newcommand{\QQ}{\bb{Q}}
 \newcommand{\cQQ}{\overline{\QQ}}
+\newcommand{\DR}{{\mathrm{DR}}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -97,6 +98,7 @@
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\limind}{lim\,ind}
 \DeclareMathOperator{\limproj}{lim\,proj}
+\DeclareMathOperator{\HH}{H}
 
 \DeclareMathOperator{\shIsom}{\underline{Isom}}
 
@@ -441,6 +443,43 @@ We given, in \hyperref[17]{\S17} and \hyperref[18]{\S18}, a geometric explanatio
 \section{Mixed motives}
 \label{1}
 \oldpage{11~(89)}
+
+\begin{env}{1.1}
+  For algebraic varieties, we have various parallel cohomology theories.
+  The most important for us will be de Rham and $\ell$-adic cohomology.
+
+  \begin{itemize}
+    \item \textbf{De Rham cohomology.}
+      Let $k$ be a field of characteristic~$0$, and $X$ an algebraic variety over $k$.
+      Suppose that $X$ is smooth.
+      The de Rham cohomology groups $\HH_\DR^i(X)$ are the hypercohomology groups of the de Rham complex:
+      \[
+        \HH_\DR^i(X)
+        \coloneqq \mathbb{H}^i(X,\Omega_{X/k}^\bullet)
+      \]
+      cf. \cite{G}.
+      These are vector spaces over $k$.
+      If $k'$ is an extension of $k$, and $X'$ over $k'$ is given by extension of scalars of $X$, then
+      \[
+        \HH_\DR^i(X') = \HH_\DR^i(X)\otimes_k k'.
+      \]
+      If $X$ is not smooth, then the de Rham complex no longer gives a reasonable theory.
+      We can define the $\HH_\DR^i(X)$ by reduction to the smooth case, by the methods of \cite{D3}, or, if $X$ admits an embedding into a smooth variety $Z$, as the hypercohomology of the de Rham complex of the formal completion of $Z$ along $X$ (R.~Hartshorne, \emph{On the de Rham cohomology of algebraic varieties}, Publ.~Math.~IHES \textbf{45} (1975), p.~5--99);
+      more intrinsically, it is the crystalline cohomology of $X$ (A.~Grothendieck, \emph{Crystals and the de Rham cohomology of schemes}, Notes by J.~Coates and O.~Jussila, in: ``dix expos\'{e}s sur la cohomologie des sch\'{e}mas'', North Holland (1968)).
+    \item \textbf{$\ell$-adic cohomology.}
+      Let $\ell$ be a prime number;
+      if $k$ is an algebraically closed field of characteristic~$\neq\ell$, then we have the $\ell$-adic theory $X\mapsto\HH^i(X,\QQ_\ell)$ that associates, to $X$ over $k$, cohomology groups which are vector spaces over $\QQ_\ell$ \cite[\S VI]{SGA5}.
+      They are defined from the cohomology groups with coefficients in $\ZZ/(\ell^n)$, and we allow ourselves to give, as reference for a theorem in $\ell$-adic cohomology, the place where its $\ZZ/(\ell^n)$ analogue is proved.
+      The $\HH^i(X,\QQ_\ell)$ depend only on $X$.
+      In particular, if $k$ is the algebraic closure of $k_0$, and if $X$ is given by extension of scalars of some $X_0$ over $k_0$, then $\Gal(k/k_0)$ acts (semi-$k$-linearly) on $X$, and thus acts on the $\HH^i(X,\QQ_\ell)$.
+      This action is continuous.
+      If $k'$ is an algebraically closed extension of $k$, and if $X'$ is given by extension of scalars of $X$, then $\HH^i(X,\QQ_\ell)\xrightarrow{\sim}\HH^i(X',\QQ_\ell)$.
+      \oldpage{12~(90)}
+      This follows by passing to the limit in the base change theorem for a smooth morphism \cite[\S XVI, 1.2]{SGA4}: $k'$ is the filtrant inductive limit of the $k$-algebras $A$ with $\Spec(A)$ smooth over $k$.
+  \end{itemize}
+
+  If $k=\CC$, then we have the topological space $X(\CC)$ of points of $X$, as well as its rational cohomology $\HH^\bullet(X(\CC),\QQ)$.
+\end{env}
 
 
 %% Bibliography %%
