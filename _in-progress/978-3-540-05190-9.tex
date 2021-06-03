@@ -25,6 +25,7 @@
 \usepackage{tikz-cd}
 
 \usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
 \usepackage{fouriernc}
 
 
@@ -40,7 +41,9 @@
 \fancypagestyle{plain}{}
 \fancyhf{}
 \lhead{\footnotesize\nouppercase\leftmark}
-\lfoot{\footnotesize Git commit: \href{https://github.com/thosgood/translations/commit/COMMITNUMBERVARIABLE}{COMMITNUMBERVARIABLE}}
+\newif\ifserver
+\serverfalse
+\lfoot{\footnotesize\ifserver{Git commit: \href{https://github.com/thosgood/translations/commit/GitCommitHashVariable}{GitCommitHashVariable}}\fi}
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
 
 
