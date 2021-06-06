@@ -2,7 +2,8 @@
 
 - add end marker to `itenv` and `rmenv`
 - spacing after `itenv` and `rmenv`...
-- change version code to git commit number
+- **convert everything to `.(R)md` and make the server build PDF _and_ HTML versions**
+  + Pandoc or Bookdown?
 
 ### Server code
 
