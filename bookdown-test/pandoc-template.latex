@@ -62,9 +62,11 @@ $if(csl-refs)$
   % turn on hanging indent if param 1 is 1
   \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
   % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
-  \fi
+  %% WE MANUALLY SET THIS INSTEAD
+  %\ifnum #2 > 0
+  % \setlength{\parskip}{#2\baselineskip}
+  %\fi
+  \setlength{\parskip}{0.75\baselineskip}
  }%
  {}
 \usepackage{calc} % for \widthof, \maxof
