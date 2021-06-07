@@ -63,6 +63,10 @@ html {
 
 /* Book */
 
+p.author:before {
+  content: "by ";
+}
+
 .page-inner h1 {
   font-size: 1.75em !important;
   border-bottom: 1px solid black;
@@ -74,6 +78,15 @@ html {
 
 
 /* Custom environments */
+
+.translator-note {
+  font-size: 90%;
+  padding: 1em;
+  border: 1px solid gray;
+}
+.translator-note > :last-child {
+  margin-bottom: 0 !important;
+}
 
 .itenv {
   font-style: italic;
