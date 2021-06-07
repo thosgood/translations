@@ -44,12 +44,13 @@ else
   fi
   if ! [ -z "$NEWRMD" ]; then
     cd $TRANSLATIONS_DIR/bookdown-builder/
+    rm _main.Rmd
     for file in $NEWRMD; do
       BASE=${file##*/}
       PREF=${BASE%.*}
       cp $TRANSLATIONS_DIR/$file ./index.Rmd
-      if [ -f "${file%.*}.bib"]; then
-        cp $TRANSLATIONS_DIR/${file%.*}.bib .
+      if [ -f "${file%.*}.bib" ]; then
+        cp $TRANSLATIONS_DIR/"${file%.*}.bib" .
       fi
       echo "$BASE" &&
       ./build.R &&
