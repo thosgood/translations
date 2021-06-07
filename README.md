@@ -1,6 +1,19 @@
 ### Rmd conversion
 
-need to supply `index.Rmd` (and `bib.bib`)
+directory structure:
+
+- `??/items/ITEM.Rmd`, `items/ANOTHER_ITEM.Rmd`, ... (where `items/` is where files with updates are pulled to from GitHub)
+- `~/builder/` (containing the `.Rproj` file etc.)
+- `??/public_html/` (containing the current `builds/` directory)
+
+method:
+
+- for each `items/ITEM.Rmd`
+  1. get `$ITEM_NAME` from `items/ITEM.Rmd`
+  2. copy `items/${ITEM_NAME}.Rmd` (and `items/${ITEM_NAME}.bib`) to `~/builder/index.Rmd` (and `~/builder/bib.bib`)
+  3. run `~/builder/build.R`
+  4. rename `_main.html` (resp. `_main.pdf`, `_main.tex`) to `${ITEM_NAME}.html` (resp. `${ITEM_NAME}.pdf`, `${ITEM_NAME}.tex`)
+- copy `~/builder/output` to `??/public_html/bookdown` (i.e. also rename `output/` to `bookdown/`)
 
 #### To-do list
 
