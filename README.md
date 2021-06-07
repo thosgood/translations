@@ -1,4 +1,8 @@
-### Rmd conversion: to-do list
+### Rmd conversion
+
+need to supply `index.Rmd` (and `bib.bib`)
+
+#### To-do list
 
 - (PDF) no header on title page
 - (HTML) latex in section title appears twice in TOC
