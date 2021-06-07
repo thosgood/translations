@@ -1,0 +1,92 @@
+\documentclass{article}
+
+\usepackage[margin=1.6in]{geometry}
+
+\title{$title$}
+\author{$author$}
+\date{$date$}
+
+\usepackage{amssymb,amsmath}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+\usepackage{enumerate}
+
+\usepackage{mathrsfs}
+\usepackage{fouriernc}
+
+%% Header and footer %%
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\pagestyle{fancy}
+\fancypagestyle{plain}{}
+\fancyhf{}
+\lhead{\footnotesize\nouppercase\leftmark}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+% Git commit hash for server builds
+\newif\ifserver
+\serverfalse
+\lfoot{\footnotesize\ifserver{Git commit: \href{https://github.com/thosgood/translations/commit/GitCommitHashVariable}{GitCommitHashVariable}}\fi}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\newenvironment{itenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
+  {\par\medskip}
+
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\par\medskip}
+
+
+%% Shortcuts %%
+
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$$\Big\vert$$ \textit{p.~#1}}}
+
+
+%% Bibliography %%
+
+$if(csl-refs)$
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{CSLReferences}[2]%
+  {\section*{Bibliography}$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
+  {\par}
+$endif$
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is a translation into English of the following:}
+
+  !!!!!!!!
+
+  \emph{The translator\footnote{\url{https://thosgood.com}} takes full responsibility for any errors introduced, and claims no rights to any of the mathematical content herein.}
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\tableofcontents
+
+
+%% Content %%
+
+$body$
+
+\end{document}

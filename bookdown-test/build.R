@@ -2,6 +2,9 @@
 
 bookdown::render_book("index.Rmd",
                       "bookdown::gitbook",
-                      output_dir = "html",
+                      output_dir = "output",
                       config_file = "_bookdown.yml")
-print('Done!')
+bookdown::render_book("index.Rmd",
+                      "bookdown::pdf_book",
+                      output_dir = "output",
+                      config_file = "_bookdown.yml")
