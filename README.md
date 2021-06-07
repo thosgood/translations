@@ -1,13 +1,9 @@
-### To-do
+### Rmd conversion: to-do list
 
-- **convert everything to `.(R)md` and make the server build PDF _and_ HTML versions**
-  + (PDF) no header on title page
-  + (BOTH) bibliography formatting
-  + (PDF) bibliography in TOC
-  + (PDF) original in translator's note
-  + (PDF) footnote in translator's note (currently not on the first page)
-  + (BOTH) git commit version
-  + (HTML) link to github copy of Rmd source ("source" metadata)
+- (PDF) no header on title page
+- (HTML) latex in section title appears twice in TOC
+- (HTML) link to github copy of Rmd source ("source" metadata)
+- (BOTH) git commit version
 
 ### Server code
 

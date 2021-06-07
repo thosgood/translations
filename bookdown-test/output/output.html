@@ -97,6 +97,7 @@ div.csl-indent {
 <li class="chapter" data-level="1" data-path=""><a href="#section-1"><i class="fa fa-check"></i><b>1</b> Notation</a></li>
 <li class="chapter" data-level="2" data-path=""><a href="#section-2"><i class="fa fa-check"></i><b>2</b> The functor <eq env="math">A(X)</eq></a></li>
 <li class="chapter" data-level="" data-path=""><a href="#bibliography"><i class="fa fa-check"></i>Bibliography</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#bibliography"><i class="fa fa-check"></i>Test</a></li>
 </ul>
 
       </nav>
@@ -120,24 +121,24 @@ div.csl-indent {
 </div>
 <div class="translator-note">
 <p>This text is a translation into English of the following:</p>
-<p>Grothendieck, A. “La théorie des classes de Chern.” <em>Bulletin de la Société Mathématique de France</em>, <strong>86</strong> (1958), 137–154. DOI: <a href="https://www.doi.org/10.24033/bsmf.1501">10.24033/bsmf.1501</a></p>
+<p>Grothendieck, A. “La théorie des classes de Chern.” <em>Bulletin de la Société Mathématique de France</em> <strong>86</strong> (1958), 137–154. DOI: <a href="https://www.doi.org/10.24033/bsmf.1501">10.24033/bsmf.1501</a></p>
 <p><a href="https://thosgood.com">The translator</a> takes full responsibility for any errors introduced, and claims no rights to any of the mathematical content herein.</p>
 </div>
 <div id="introduction" class="section level1 unnumbered">
 <h1>Introduction</h1>
 <p>In this appendix, we will develop an axiomatic theory of Chern classes that will allow us, in particular, to define the Chern classes of an algebraic vector bundle <eq env="math">E</eq> on a non-singular quasi-projective algebraic variety <eq env="math">X</eq> as elements of the Chow ring <eq env="math">A(X)</eq> of <eq env="math">X</eq>, i.e. as classes of cycles under rational equivalence.
-This exposé is inspired one one hand by the book of Hirzebruch (where the essential <em>formal properties</em> characterising a theory of Chern classes were brought to light), and on the other hand by an idea of Chern <span class="citation">(<a href="#ref-2" role="doc-biblioref">Chern 1953</a>)</span> that consists of using the multiplicative structure of the ring of cycle classes on the bundle of projective spaces <eq env="math">\mathbb{P}(E)</eq> associated to <eq env="math">E</eq>, to give an effective <em>construction</em> of Chern classes.
+This exposé is inspired one one hand by the book of Hirzebruch (where the essential <em>formal properties</em> characterising a theory of Chern classes were brought to light), and on the other hand by an idea of Chern <span class="citation">[<a href="#ref-2" role="doc-biblioref">2</a>]</span> that consists of using the multiplicative structure of the ring of cycle classes on the bundle of projective spaces <eq env="math">\mathbb{P}(E)</eq> associated to <eq env="math">E</eq>, to give an effective <em>construction</em> of Chern classes.
 We note that the exposition given here also applies to other settings than algebraic geometry, and recovers, for example, an entirely elementary theory of Chern classes for complex vector bundles on topological manifolds (and, from this, on any space for which the classification theorem of principal bundles with a structure group via a “classifying space” holds true).
 Similarly, we will obtain, for a complex-analytic vector bundle <eq env="math">E</eq> on a (non-singular) complex-analytic manifold <eq env="math">X</eq>, Chern classes
 <eq env="displaymath">
   c_p(E) \in \operatorname{H}^p(X,\Omega_X^p),
 </eq>
 where <eq env="math">\Omega_X^p</eq> is the sheaf of germs of holomorphic differential forms of degree <eq env="math">p</eq> on <eq env="math">X</eq>.
-[And it is certainly easy to prove that this definition agrees with the one given recently by Atiyah <span class="citation">(<a href="#ref-1" role="doc-biblioref">Atiyah 1957</a>)</span>, and that it is related to the topological definition of Chern classes via the spectral sequence relating <eq env="math">\operatorname{H}^p(X,\Omega_X^q)</eq> and <eq env="math">\operatorname{H}^\bullet(X,\mathbb{C})</eq>.]
+[And it is certainly easy to prove that this definition agrees with the one given recently by Atiyah <span class="citation">[<a href="#ref-1" role="doc-biblioref">1</a>]</span>, and that it is related to the topological definition of Chern classes via the spectral sequence relating <eq env="math">\operatorname{H}^p(X,\Omega_X^q)</eq> and <eq env="math">\operatorname{H}^\bullet(X,\mathbb{C})</eq>.]
 Similarly, the theory of Stiefel–Whitney classes in <eq env="math">\mathbb{Z}/2\mathbb{Z}</eq> cohomology fits into the framework that we will describe here.</p>
 <p>It appears that a satisfying theory of Chern classes in algebraic geometry was given, for the first time, by W.L. Chow (unpublished), using the Grassmannian.
 The main aim of the current paper has been to eliminate the Grassmannian from the theory.
-I have already shown <span class="citation">(<a href="#ref-4" role="doc-biblioref">Séminaire Claude Chevalley 1956–1958</a>)</span> how the theory of Chern classes allows us to <em>recover</em> the structure of <eq env="math">A(X)</eq> when <eq env="math">X</eq> is a Grassmannian.</p>
+I have already shown <span class="citation">[<a href="#ref-4" role="doc-biblioref">4</a>]</span> how the theory of Chern classes allows us to <em>recover</em> the structure of <eq env="math">A(X)</eq> when <eq env="math">X</eq> is a Grassmannian.</p>
 </div>
 <div id="section-1" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Notation</h1>
@@ -155,11 +156,11 @@ The dual bundle of this subbundle of <eq env="math">f^{-1}(E)</eq> is denoted by
   \check{L}_E \subset f^{-1}(E).
 </eq></p>
 <p>Let <eq env="math">p</eq> be the rank of <eq env="math">E</eq> (assumed to be constant, which is always the case if <eq env="math">X</eq> is connected).
-Then <eq env="math">E^{(1)}=f^{-1}(E)/L_E</eq> is a vector bundle of rank <eq env="math">p-1</eq> on <eq env="math">X^{(1)}=\mathbb{P}(E)</eq>, and we can thus construct <eq env="math">X^{(2)}=\mathbb{P}(E^{(1)})</eq> and the analogous bundle <eq env="math">E^{(2)}=(E^{(1)})^{(1)}</eq> of rank <eq env="math">p-2</eq> on <eq env="math">X^{(2)}</eq>.
-We thus inductively construct manifolds <eq env="math">X^{(i)}</eq> and vector bundles <eq env="math">E^{(i)}</eq> of rank <eq env="math">p-i</eq> on <eq env="math">X^{(i)}</eq> (for <eq env="math">1\leqslant i\leqslant p</eq>), where <eq env="math">X^{(i)}</eq> is the bundle <eq env="math">\mathbb{P}(E^{(i-1)})</eq> on <eq env="math">X^{(i-1)}</eq>.
+Then <eq env="math">E^{(1)}=f^{-1}(E)/\check{L}_E</eq> is a vector bundle of rank <eq env="math">p-1</eq> on <eq env="math">X^{(1)}=\mathbb{P}(E)</eq>, and we can thus construct <eq env="math">X^{(2)}=\mathbb{P}(E^{(1)})</eq> and the analogous bundle <eq env="math">E^{(2)}=(E^{(1)})^{(1)}</eq> of rank <eq env="math">p-2</eq> on <eq env="math">X^{(2)}</eq>.
+In this manner, we inductively construct manifolds <eq env="math">X^{(i)}</eq> and vector bundles <eq env="math">E^{(i)}</eq> of rank <eq env="math">p-i</eq> on <eq env="math">X^{(i)}</eq> (for <eq env="math">1\leqslant i\leqslant p</eq>), where <eq env="math">X^{(i)}</eq> is the bundle <eq env="math">\mathbb{P}(E^{(i-1)})</eq> on <eq env="math">X^{(i-1)}</eq>.
 We define a <em>flag of length <eq env="math">i</eq></em> in a vector space <eq env="math">V</eq> to be an increasing sequence <eq env="math">(V_j)_{0\leqslant j\leqslant i}</eq> of vector subspaces <eq env="math">V_j</eq>, with <eq env="math">\dim V_j=j</eq>.
-Then <eq env="math">X^{(i)}</eq> can also be understood as the <em>bundle on <eq env="math">X</eq> of flags of length <eq env="math">i</eq></em> in <eq env="math">E</eq>, and if <eq env="math">f^{(i)}</eq> is the projection from <eq env="math">X^{(i)}</eq> to <eq env="math">X</eq>, then we directly define, as in the definition of <eq env="math">L_E</eq>, an increasing sequence of subbundles <eq env="math">(V_j)_{0\leqslant j\leqslant i}</eq> of <eq env="math">E_i=(f^{(i)})^{(-1)}(E)</eq>, with <eq env="math">\operatorname{rank}(V_j)=j</eq>, and the quotient of <eq env="math">E_i</eq> by <eq env="math">V_i</eq> being exactly the vector bundle <eq env="math">E^{(i)}</eq>.
-In particular, <eq env="math">X^{(p)}</eq> is the <em>flag manifold</em> (of maximum length <eq env="math">p</eq>) <eq env="math">D(E)</eq> of <eq env="math">E</eq>, which thus looks like a “multiple extension” of <eq env="math">X</eq> by fibrations in projective spaces associated to vector bundles;
+Then <eq env="math">X^{(i)}</eq> can also be understood as the <em>bundle on <eq env="math">X</eq> of flags of length <eq env="math">i</eq></em> in <eq env="math">E</eq>, and, if <eq env="math">f^{(i)}</eq> is the projection from <eq env="math">X^{(i)}</eq> to <eq env="math">X</eq>, then we directly define, as in the definition of <eq env="math">L_E</eq>, an increasing sequence of subbundles <eq env="math">(V_j)_{0\leqslant j\leqslant i}</eq> of <eq env="math">E_i=(f^{(i)})^{(-1)}(E)</eq>, with <eq env="math">\operatorname{rank}(V_j)=j</eq>, with the quotient of <eq env="math">E_i</eq> by <eq env="math">V_i</eq> being exactly the vector bundle <eq env="math">E^{(i)}</eq>.
+In particular, <eq env="math">X^{(p)}</eq> is the <em>flag manifold</em> <eq env="math">D(E)</eq> (of maximum length <eq env="math">p</eq>) of <eq env="math">E</eq>, which resembles a “multiple extension” of <eq env="math">X</eq> by fibrations in projective spaces associated to vector bundles;
 the inverse image <eq env="math">E_p</eq> of <eq env="math">E</eq> in <eq env="math">X^{(p)}=D(E)</eq> is further <em>completely split</em>.
 By this, we mean that this rank-<eq env="math">p</eq> vector bundle is endowed with a sequence <eq env="math">(V_i)_{0\leqslant i\leqslant p}</eq> of vector subbundles,
 with <eq env="math">\operatorname{rank}(V_i)=i</eq>.
@@ -182,25 +183,25 @@ In this way, <eq env="math">\mathbf{P}(X)</eq> can be considered as a <em>contra
 <p>With <eq env="math">f\colon X\to Y</eq> still a morphism, let <eq env="math">F</eq> be a rank-<eq env="math">p</eq> vector bundle on <eq env="math">Y</eq>, and set <eq env="math">E=f^{-1}(F)</eq>.
 This is a rank-<eq env="math">p</eq> vector bundle on <eq env="math">X</eq>, and we have a canonical isomorphism <eq env="math">\mathbb{P}(E)=f^{-1}(\mathbb{P}(F))</eq>, whence a natural morphism
 <eq env="displaymath">
-  \bar{f}\colon \mathbb{P}(E) \to \mathbb{P}(F)
-</eq>
-[where <eq env="math">E=f^{-1}(F)</eq>].</p>
-<p>With this, we can immediately verify that <em><eq env="math">L_e</eq> is canonically isomorphic to the inverse image <eq env="math">\bar{f}^{-1}(L_F)</eq></em>.
+  \bar{f}\colon \mathbb{P}(E) \to \mathbb{P}(F).
+</eq></p>
+<p>With this, we can immediately verify that <eq env="math">L_E</eq> is canonically isomorphic to the inverse image <eq env="math">\bar{f}^{-1}(L_F)</eq>_.
 We thus have the formula
 <eq env="displaymath">
   \operatorname{cl}(L_E) = \bar{f}^*(\operatorname{cl}(L_F)).
 </eq></p>
 <p>Let <eq env="math">E</eq> be a rank-<eq env="math">p</eq> vector bundle on <eq env="math">X</eq>, and <eq env="math">s</eq> a regular section of <eq env="math">E</eq>.
-This is then a morphism from <eq env="math">X</eq> to <eq env="math">E</eq>, and even an isomorphism from <eq env="math">X</eq> to a closed subspace of <eq env="math">E</eq> of codimension <eq env="math">p</eq>.
-In particular, the image of <eq env="math">X</eq> under the zero section is a closed non-singular subspace <eq env="math">X'</eq> of <eq env="math">E</eq> of codimension <eq env="math">p</eq>.
+Then <eq env="math">s</eq> is a morphism from <eq env="math">X</eq> to <eq env="math">E</eq>, and even an isomorphism from <eq env="math">X</eq> to a closed subspace of codimension <eq env="math">p</eq> of <eq env="math">E</eq>.
+In particular, the image of <eq env="math">X</eq> under the zero section is a closed non-singular subspace <eq env="math">X'</eq> of codimension <eq env="math">p</eq> of <eq env="math">E</eq>.
 Evidently, the inverse image <eq env="math">s^{-1}(X')</eq> is exactly the set of zeros of <eq env="math">s</eq>.
-For the <em>cycle</em> <eq env="math">s^{-1}(X')</eq> to be defined, it is necessary and sufficient for the set of zeros of <eq env="math">s</eq> to be everywhere empty, or of codimension <eq env="math">p</eq> in <eq env="math">X</eq>.
+For the <em>cycle</em> <eq env="math">s^{-1}(X')</eq> to be well defined, it is necessary and sufficient for the set of zeros of <eq env="math">s</eq> to be everywhere empty, or of codimension <eq env="math">p</eq> in <eq env="math">X</eq>.
 In this case, we can then speak of the <em>cycle of zeros</em> of the section <eq env="math">s</eq>.
-Recall also that the morphism <eq env="math">s</eq> is said to be <em>transversal</em> to the subvariety <eq env="math">X'</eq> of <eq env="math">X</eq> if, at every point of the inverse image of <eq env="math">X'</eq> under <eq env="math">s</eq>, the tangent map to <eq env="math">s</eq> is surjective mod the tangent space to <eq env="math">X'</eq>.
-In this case, <eq env="math">s^{-1}(X')</eq> is a non-singular algebraic subspace of <eq env="math">X</eq> that is everywhere of codimension <eq env="math">p</eq>, and all its components are of multiplicity <eq env="math">1</eq> in the cycle of zeros of <eq env="math">s</eq>.
-We will say, for brevity, that the section <eq env="math">s</eq> is <em>transversal to the zero section</em>.
-To express this property by a calculation, since it is local on <eq env="math">X</eq>, we can assume that <eq env="math">E</eq> is the trivial bundle <eq env="math">X\times k^p</eq>, so that <eq env="math">s</eq> is defined by the data of <eq env="math">p</eq> regular functions <eq env="math">(f_1,\ldots,f_p)</eq> on <eq env="math">X</eq>.
-For <eq env="math">s</eq> to be transversal to the zero section, it is necessary and sufficient for the functions <eq env="math">f_1,\ldots,f_p</eq> to give a regular system of parameters of <eq env="math">{\mathscr{O}}_x</eq> at every point <eq env="math">x</eq>.</p>
+Recall also that the morphism <eq env="math">s</eq> is said to be <em>transversal</em> to the subvariety <eq env="math">X'</eq> of <eq env="math">X</eq> if, at every point of the inverse image of <eq env="math">X'</eq> under <eq env="math">s</eq>, the tangent map to <eq env="math">s</eq> is surjective modulo the tangent space to <eq env="math">X'</eq>.
+In this case, <eq env="math">s^{-1}(X')</eq> is a non-singular algebraic subspace of <eq env="math">X</eq> that is everywhere of codimension <eq env="math">p</eq>, and all of its components are of multiplicity <eq env="math">1</eq> in the cycle of zeros of <eq env="math">s</eq>.
+We will then say, for brevity, that the section <eq env="math">s</eq> is <em>transversal to the zero section</em>.
+We can express this property by a calculation:
+since it is local on <eq env="math">X</eq>, we can assume that <eq env="math">E</eq> is the trivial bundle <eq env="math">X\times k^p</eq>, so that <eq env="math">s</eq> is defined by the data of <eq env="math">p</eq> regular functions <eq env="math">(f_1,\ldots,f_p)</eq> on <eq env="math">X</eq>;
+for <eq env="math">s</eq> to be transversal to the zero section, it is necessary and sufficient for the functions <eq env="math">f_1,\ldots,f_p</eq> to give a regular system of parameters of <eq env="math">{\mathscr{O}}_x</eq> at every point <eq env="math">x</eq>.</p>
 </div>
 <div id="section-2" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> The functor <eq env="math">A(X)</eq></h1>
@@ -210,18 +211,21 @@ The only condition that we impose on <eq env="math">{\mathcal{V}}</eq> is that</
 <div id="bibliography" class="section level1 unnumbered">
 <h1>Bibliography</h1>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
+</div>
+<div id="bibliography" class="section level1 unnumbered">
+<h1>Test</h1>
+<div id="refs" class="references csl-bib-body">
 <div id="ref-1" class="csl-entry">
-Atiyah, M. 1957. <span>“Complex Analytic Connections in Fibre Bundles.”</span> <em>Trans. Amer. Math. Soc</em> 85: 181–207.
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">M. Atiyah. <span>“Complex analytic connections in fibre bundles.”</span> <em>Trans. Amer. Math. Soc</em>. <strong>85</strong> (1957) 181–207.</div>
 </div>
 <div id="ref-2" class="csl-entry">
-Chern, Shung-Shen. 1953. <span>“On the Characteristic Classes of Complex Sphere Bundles and Algebraic Varieties.”</span> <em>Amer. J. Math.</em> 75: 565–97.
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S.-S. Chern. <span>“On the characteristic classes of complex sphere bundles and algebraic varieties.”</span> <em>Amer. J. Math.</em> <strong>75</strong> (1953) 565–597.</div>
 </div>
 <div id="ref-3" class="csl-entry">
-Grothendieck, Alexander. 1956–1957. <span>“Théorème de Dualité Four Les Faisceaux Algébriques Cohérents.”</span> <em>Séminaire Bourbaki</em> 9 (1956–1957).
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">A. Grothendieck. <span>“Théorème de dualité four les faisceaux algébriques cohérents.”</span> <em>Séminaire Bourbaki</em>. <strong>9</strong> (1956–1957).</div>
 </div>
 <div id="ref-4" class="csl-entry">
-Séminaire Claude Chevalley. 1956–1958. <span>“Classification Des Groupes de <span>Lie</span>”</span> 1 (1956–1958).
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Séminaire Claude Chevalley. <span>“Classification des groupes de <span>Lie</span>.”</span> <strong>1</strong> (1956–1958).</div>
 </div>
 </div>
 </div>
