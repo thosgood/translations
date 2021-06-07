@@ -1,0 +1,911 @@
+\documentclass{article}
+
+\usepackage[margin=1.6in]{geometry}
+
+\title{The theory of Chern classes}
+\author{A. Grothendieck}
+\date{}
+
+\newcommand{\doctype}{French paper}
+\newcommand{\origcit}{%
+  \textsc{Grothendieck, A.}
+  ``La th\'{e}orie des classes de Chern''.
+  \emph{Bulletin de la Soci\'{e}t\'{e} Math\'{e}matique de France}, Volume~\textbf{86} (1958) , 137-154.
+  \textsc{doi}: \href{https://www.doi.org/10.24033/bsmf.1501}{10.24033/bsmf.1501}%
+}
+
+
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+
+\usepackage{mathrsfs}
+%% Fancy fonts --- feel free to remove! %%
+\usepackage{fouriernc}
+
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\pagestyle{fancy}
+\fancypagestyle{plain}{}
+\fancyhf{}
+\lhead{\footnotesize\nouppercase\leftmark}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+% Git commit hash for server builds
+\newif\ifserver
+\serverfalse
+\lfoot{\footnotesize\ifserver{Git commit: \href{https://github.com/thosgood/translations/commit/GitCommitHashVariable}{GitCommitHashVariable}}\fi}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\newenvironment{itenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
+  {\par\medskip}
+
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\par\medskip}
+
+
+%% Shortcuts %%
+
+\newcommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\newcommand{\PP}{\mathbf{P}}
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\DeclareMathOperator{\HH}{H}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\cl}{cl}
+
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note.}
+
+\begin{abstract}
+  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+  \emph{This text is one of a series\footnote{\url{https://thosgood.com/translations}} of translations of various papers into English.}
+  \emph{The translator takes full responsibility for any errors introduced in the passage from one language to another, and claims no rights to any of the mathematical content herein.}
+
+  \medskip
+  
+  \emph{What follows is a translation of the \doctype:}
+
+  \medskip\noindent
+  \origcit
+\end{abstract}
+
+\setcounter{footnote}{0}
+
+\tableofcontents
+
+
+%% Content %%
+
+% \bigskip\bigskip
+
+
+\section*{Introduction}
+
+\oldpage{137}
+In this appendix, we will develop an axiomatic theory of Chern classes that will allow us, in particular, to define the Chern classes of an algebraic vector bundle $E$ on a non-singular quasi-projective algebraic variety $X$ as elements of the Chow ring $A(X)$ of $X$, i.e. as classes of cycles under rational equivalence.
+This expos\'{e} is inspired by the book of Hirzebruch on one hand (where the essential \emph{formal properties} characterising a theory of Chern classes was brought to light), and by an idea of Chern \cite{2} that consists of using the multiplicative structure of the ring of cycle classes on the bundle of projective spaces $P(E)$ associated to $E$, to reach an effective \emph{construction} of Chern classes.
+We note that the exposition given here also applies to other settings than algebraic geometry, and recovers, for example, an entirely elementary theory of Chern classes for complex vector bundles on topological manifold (and, from this, on any space for which the classification theorem of principal bundles with a structure group via a ``classifying space'' holds true).
+Similarly, we will obtain, for a complex-analytic vector bundle $E$ on a (non-singular) complex-analytic manifold $X$, Chern classes
+\[
+  c_p(E) \in \HH^p(X,\Omega_X^p),
+\]
+where $\Omega_X^p$ is the sheaf of germs of holomorphic differential forms of degree $p$ on $X$.
+[And it is certainly easy to prove that this definition agrees with that given recently by Atiyah \cite{1}, and that it is linked to the topological definition of Chern classes via the spectral sequence linking $\HH^p(X,\Omega_X^q)$ and $\HH^\bullet(X,\mathbb{C})$.]
+Similarly, the theory of
+\oldpage{138}
+Stiefel-Whitney classes in cohomology mod~$2$ fits into the framework that we will describe here.
+
+It appears that a satisfying theory of Chern classes in algebraic geometry has been given, for the first time, by W.L.~Chow (unpublished), using the Grassmannian.
+The main aim of the current paper has been to eliminate the Grassmannian from the theory.
+I have already shown \cite{4} how the theory of Chern classes allows us to \emph{recover} the structure of $A(X)$ when $X$ is a Grassmannian.
+
+
+\section{Notation}
+\label{section1}
+
+In order to not expose ourselves to the complications arising from the theory of intersections, we will limit ourselves in what follows to considering only \emph{non-singular} topological spaces.
+The base field $k$ will be fixed once and for all, and to better understand the ideas, the reader can assume it to be algebraically closed.
+All the bundles, subvarieties, morphisms, etc. that we consider in what follows will be defined over $k$.
+
+If $X$ is an algebraic space, and $E$ a vector bundle on $X$, then we denote by $\mathbb{P}(E)$ the associated projective bundle.
+The fibre $\mathbb{P}(E)_x$ of $\mathbb{P}(E)$ at a point $x\in X$ is thus the projective space associated to the vector space $E_x$, and so a point of $\mathbb{P}(E)_x$ over a point $x\in X$ is exactly a homogeneous line in $E_x$.
+Let $f\colon\mathbb{P}(E)\to X$ be the projection of the bundle;
+we will consider the inverse image of $E$ under $f$, which is the vector bundle $f^{-1}(E)$ on $\mathbb{P}(E)$.
+There is a canonical rank-$1$ subbundle of $f^{-1}(E)$, whose fibre at a point $d$ of $\mathbb{P}(E)$ (over a point $x\in X$) is the line $d$ in $E_x=f^{-1}(E)_d$.
+The dual bundle of this subbundle of $f^{-1}(E)$ is denoted $L_E$, and we thus have the inclusion
+\[
+  \check{L}_E \subset f^{-1}(E).
+\]
+
+Let $p$ be the rank of $E$ (assumed to be constant, which is always the case if $X$ is connected).
+Then $E^{(1)}=f^{-1}(E)/L_E$ is a vector bundle of rank $p-1$ on $X^{(1)}=\mathbb{P}(E)$, and we can thus construct $X^{(2)}=\mathbb{P}(E^{(1)})$ and the analogous bundle $E^{(2)}=(E^{(1)})^{(1)}$ of rank $p-2$ on $X^{(2)}$.
+We thus inductively construct manifolds $X^{(i)}$ and vector bundles $E^{(i)}$ of rank $p-i$ on $X^{(i)}$ ($1\leq i\leq p$), where $X^{(i)}$ is the bundle $\mathbb{P}(E^{(i-1)})$ on $X^{(i-1)}$.
+We define a \emph{flag of length $i$} in a vector space $V$ to be an increasing sequence $(V_j)_{0\leq j\leq i}$ of vector subspaces $V_j$, with $\dim V_j=j$.
+Then $X^{(i)}$ can also be understood as the \emph{bundle on $X$ of flags of length $i$} in $E$, and if $f^{(i)}$ is the projection from $X^{(i)}$ to $X$, then we directly define, as in the definition of $L_E$, an increasing sequence of subbundles $(V_j)_{0\leq j\leq i}$ of $E_i=(f^{(i)})^{(-1)}(E)$, with $\rank(V_j)=j$, and the quotient of $E_i$ by $V_i$ being exactly the vector bundle $E^{(i)}$.
+In particular, $X^{(p)}$ is the \emph{flag manifold} (of maximum length $p$) $D(E)$ of $E$, which thus looks like a ``multiple extension'' of $X$ by fibrations in projective spaces associated to vector bundles;
+the inverse image $E_p$ of $E$ in $X^{(p)}=D(E)$ is further \emph{completely split}.
+By this, we mean that this rank-$p$ vector bundle is endowed with a sequence $(V_i)_{0\leq i\leq p}$ of vector subbundles,
+\oldpage{139}
+with $\rank(V_i)=i$.
+Then the $V_i/V_{i-1}$ ($1\leq i\leq p$) are vector bundles of rank~$1$, and are called the \emph{factors} of the given splitting.
+
+If $X$ is an algebraic space, then we denote by $\PP(X)$ the group of isomorphism classes of rank-$1$ vector bundles on $X$ (the composition law of the group being given by the tensor product of bundles).
+If $L$ is such a rank-$1$ vector bundle, then we denote by $\cl_X(L)$ the element of $\PP(X)$ that it defines.
+We thus have
+\begin{gather*}
+  \cl_X(L\otimes L') = \cl_X(L) + \cl_X(L')
+\\\cl_X(\check{L}) = -\cl_X(L).
+\end{gather*}
+
+If $f\colon X\to Y$ is a morphism, then the formula
+\[
+  f^*(\cl_X(L)) = \cl_X(f^{-1}(L))
+\]
+defines a homomorphism $f^*$ from $\PP(Y)$ to $\PP(X)$.
+In this way, $\PP(X)$ can be considered as a \emph{contravariant functor} in $X$.
+
+With $f\colon X\to Y$ still a morphism, let $F$ be a rank-$p$ vector bundle on $Y$, and set $E=f^{-1}(F)$.
+This is a rank-$p$ vector bundle on $X$, and we have a canonical isomorphism $\mathbb{P}(E)=f^{-1}(\mathbb{P}(F))$, whence a natural morphism
+\[
+  \overline{f}\colon \mathbb{P}(E) \to \mathbb{P}(F)
+  \quad\mbox{[$E=f^{-1}(F)$].}
+\]
+
+With this, we can immediately verify that \emph{$L_e$ is canonically isomorphic to the inverse image $\overline{f}^{-1}(L_F)$}.
+We thus have the formula
+\[
+  \cl(L_E) = \overline{f}^*(\cl(L_F)).
+\]
+
+Let $E$ be a rank-$p$ vector bundle on $X$, and $s$ a regular section of $E$.
+This is then a morphism from $X$ to $E$, and even an isomorphism from $X$ to a closed subspace of $E$ of codimension~$p$.
+In particular, the image of $X$ under the zero section is a closed non-singular subspace $X'$ of $E$ of codimension~$p$.
+Evidently, the inverse image $s^{-1}(X')$ is exactly the set of zeros of $s$.
+For the \emph{cycle} $s^{-1}(X')$ to be defined, it is necessary and sufficient for the set of zeros of $s$ to be everywhere empty, or of codimension~$p$ in $X$.
+In this case, we can then speak of the \emph{cycle of zeros} of the section $s$.
+Recall also that the morphism $s$ is said to be \emph{transversal} to the subvariety $X'$ of $X$ if, at every point of the inverse image of $X'$ under $s$, the tangent map to $s$ is surjective mod the tangent space to $X'$.
+In this case, $s^{-1}(X')$ is a non-singular algebraic subspace of $X$ that is everywhere of codimension~$p$, and all its components are of multiplicity~$1$ in the cycle of zeros of $s$.
+We will say, for brevity, that the section $s$ is \emph{transversal to the zero section}.
+To express this property by a calculation, since it is local on $X$, we can assume that $E$ is the trivial bundle $X\times k^p$, so that $s$ is defined by the data of $p$ regular functions $(f_1,\ldots,f_p)$ on $X$.
+For $s$ to be transversal to the zero section, it is necessary and sufficient for the functions $f_1,\ldots,f_p$ to give a regular system of parameters of $\scr{O}_x$ at every point $x$.
+
+
+\section{The functor \texorpdfstring{$A(X)$}{A(X)}}
+\label{section2}
+
+\oldpage{140}
+
+In what follows, suppose that we have a category $\cal{V}$ of non-singular algebraic spaces (the morphisms in this category being the morphisms of algebraic spaces).
+The only condition that we impose on $\cal{V}$ is that
+\begin{enumerate}[({V}1)]
+  \item\label{axiomV1}
+    If $X\in\cal{V}$, and if $E$ is a vector bundle on $X$, then $\mathbb{P}(E)\in\cal{V}$.
+\end{enumerate}
+
+Suppose further that we have the following data:
+\begin{enumerate}[a.]
+  \item\label{dataa}
+    a contravariant functor $X\mapsto A(X)$ from $\cal{V}$ to the category of unital anticommutative graded rings;
+  \item\label{datab}
+    a functorial homomorphism $p_X\colon\PP(X)\to A^2(X)$ (for $X\in\cal{V}$);
+  \item\label{datac}
+    for all $X\in\cal{V}$, and for every closed algebraic subspace $Y$ of $X$, of constant codimension~$p$ in $X$, with $Y\in\cal{V}$, a group homomorphism
+    \[
+      i_*\colon A(Y)\to A(X)
+    \]
+    (where $i$ denotes the injection $Y\to X$) that raises the degree by $2p$.
+\end{enumerate}
+
+If $f\colon X\to Y$ is a morphism in $\cal{V}$, then the corresponding homomorphism from $A(Y)$ to $A(X)$ is denoted by $f^*$.
+The unit element of $A(X)$ will be denoted by $1_X$, and if $X,Y\in\cal{V}$, and if $Y$ is a closed subspace of $X$ of constant codimension~$p$, then we define $p_X(Y)=i_*(1_Y)$, where $i$ is (again) the injection morphism from $Y$ into $X$.
+
+With this, we suppose that the following conditions are satisfied:
+\begin{enumerate}[({A}1)]
+  \item\label{axiomA1}
+    Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $\mathbb{P}(E)$ the associated projective bundle, and $\xi_E$ the element of $A(\mathbb{P}(E))$ defined by
+    \[
+      \xi_E = p(\cl(L_E)).
+    \]
+    We can think of $A(\mathbb{P}(E))$ as a left module over $A(X)$ via the homomorphism $f^*\colon A(X)\to A(\mathbb{P}(E))$ associated to the projection $f\colon\mathbb{P}(E)\to X$.
+    Then the elements
+    \[
+      (\xi_E)^i
+      \quad\mbox{(for $0\leq i\leq p-1$)}
+    \]
+    form a basis of $A(\mathbb{P}(E))$ over $A(X)$.
+  \item\label{axiomA2}
+    Let $X\in\cal{V}$, and let $L$ be a rank-$1$ vector bundle on $X$, and $s$ a regular section of $L$ that is transversal to the zero section, and such that the space $Y$ of zeros of $s$ belongs to $\cal{V}$.
+    Then
+    \[
+      p_X(Y) = p_X(\cl_X(L)).
+    \]
+  \item\label{axiomA3}
+    Let $X,Y,Z\in\cal{V}$, with $Z\subset Y\subset X$, and let $i$ and $j$ be the injection morphisms $Z\to Y$ and $Y\to X$ (respectively).
+    Then $(ji)_* = j_*i_*$.
+  \item\label{axiomA4}
+    Let $X,Y\in\cal{V}$, with $Y\subset X$, and let $i$ be the injection morphism of $Y$
+\oldpage{141}
+  into $X$.
+    Then
+    \[
+      i_*(bi^*(a)) = i_*(b)a
+      \quad\mbox{[$a\in A(X),b\in A(Y)$].}
+    \]
+\end{enumerate}
+
+From these axioms we will prove two lemmas that will be useful in the \hyperref[section3]{next section}.
+
+\begin{itenv}{Lemma 1}
+\label{lemma1}
+  Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$.
+  Consider, for all $i$ with $1\leq i\leq p$, the bundle $X^{(i)}$ of flags of length $i$ in $E$.
+  Then $X^{(i)}\in\cal{V}$, and the homomorphism $A(X)\to A(X^{(i)})$ induced by the projection $X^{(i)}\to X$ is \emph{injective}.
+\end{itenv}
+
+\begin{proof}
+  By what was said in \hyperref[section1]{\S1}, we can restrict, by induction on $i$, to the case of the projective bundle $X^{(1)}=\mathbb{P}(E)$ associated to $E$.
+  Then our claims are an immediate consequence of \hyperref[axiomV1]{(V1)} and \hyperref[axiomA1]{(A1)} [the element $1_{\mathbb{P}(E)}=(\xi_E)^0$ being free over the ring $A(X)$].
+\end{proof}
+
+\begin{itenv}{Lemma 2}
+\label{lemma2}
+  Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $s$ a regular section of $E$, and $(E_i)_{0\leq i\leq p}$ a decreasing sequence of vector subbundles of $E$, with $\rank E_i=p-i$.
+  Define
+  \[
+    \xi_i = p_X\cl_X(E_{i-1}/E_i)
+    \quad\mbox{($1\leq i\leq p$).}
+  \]
+  For every $1\leq i\leq p$, let $Y_i$ be the subset of $X$ consisting of those $x\in X$ such that $s(x)\in E_i$.
+  Suppose that, for all $i$, $Y_i$ is a non-singular subvariety of $X$, and that $Y_i\in\cal{V}$.
+  Let $s_i$ be the section of $(E_i/E_{i+1})|Y_i$ defined by $s$, and suppose that, for $1\leq i\leq p-1$, $s_i$ is transversal to the zero section.
+  Then, under these conditions,
+  \[
+    p_X(Y_p) = \prod_{1\leq i\leq p}\xi_i.
+  \]
+\end{itenv}
+
+\begin{proof}
+  We will proceed by induction on $j$ (where $1\leq j\leq p$) that
+  \[
+    \label{lemma2equationstar}
+    p_X(Y_j) = \prod_{1\leq i\leq j}\xi_i.
+    \tag{$\star$}
+  \]
+
+  For $j=1$, this equation is exactly axiom~\hyperref[axiomA2]{(A2)}.
+  Suppose that the equation has been proven for some $j<p$, and we will prove it for $j+1$.
+  Applying \hyperref[axiomA2]{(A2)} to the section $s_j$ of $(E_j/E_{j+1})|Y_j$, we see that
+  \[
+    p_{Y_j}(Y_{j+1}) = p_{Y_j}\cl_{Y_j}((E_j/E_{j+1})|Y_j).
+  \]
+  Let $u_j$ be the injection morphism $Y_j\to X$.
+  From the functoriality of $\cl$ and $p$ we see that the right-hand side of the above equation is $u_j^*(p_X\cl_X(E_j/E_{j+1}))$, whence
+  \[
+    p_{Y_j}(Y_{j+1}) = u_j^*(\xi_{j+1}).
+  \]
+
+  \oldpage{142}
+  Using \hyperref[axiomA3]{(A3)}, we thus conclude that
+  \[
+    p_X(Y_{j+1}) = (u_j)_*(u_j^*(\xi_{j+1})).
+  \]
+
+  The right-hand side can also be written as $(u_j)_*(1_{y_j}u_j^*(\xi_{j+1}))$, which is equal, by \hyperref[axiomA4]{(A4)}, to $(u_j)_*(1_{Y_j})\xi_{j+1} = p_X(Y_j)\xi_{j+1}$.
+  Using the induction hypothesis \hyperref[lemma2equationstar]{($\star$)}, we indeed recover the analogous formula with $j+1$ instead of $j$.
+\end{proof}
+
+It is only in \hyperref[section3]{\S3} that we will need the following corollary.
+\begin{itenv}{Corollary}
+\label{lemma2corollary}
+  Under the conditions of \hyperref[lemma2]{Lemma~2}, if $s$ is non-zero at every point (i.e. everywhere non-zero), then $\prod_{1\leq i\leq p}\xi_i=0$.
+\end{itenv}
+
+\begin{rmenv}{Remark}
+  The introduction of the operation $i$ in \hyperref[datac]{c.}, and the axioms \hyperref[axiomA2]{(A2)}, \hyperref[axiomA3]{(A3)}, and \hyperref[axiomA4]{(A4)} concerning this operation, only serve to provide us with technical means of being able to prove \hyperref[lemma2corollary]{the corollary} to \hyperref[lemma2]{Lemma~2}.
+  (In \hyperref[axiomA4]{(A4)}, it would have sufficed to suppose that $b=1_Y$.)
+  We will only need to use the data of \hyperref[dataa]{a.} and \hyperref[datab]{b.}, axiom~\hyperref[axiomA2]{(A1)}, and \hyperref[lemma2corollary]{the corollary} to \hyperref[lemma2]{Lemma~2}.
+\end{rmenv}
+
+
+\subsection*{Particular cases}
+
+Note first of all that the condition \hyperref[axiomV1]{(V1)} is satisfied for all reasonable categories of algebraic spaces, and, anyway, for the category of all non-singular algebraic spaces, for the category of non-singular quasi-projective algebraic spaces, and for the category of non-singular projective algebraic spaces.
+The verification in these two latter cases presents no difficulty, and is left to the reader (this result being a particular case of a more general result on blow-up varieties).
+
+We now given some particular cases where the conditions in this section are satisfied.
+
+\begin{enumerate}
+  \item
+    $\cal{V}$ is the category of non-singular quasi-projective algebraic spaces, and $A(X)$ is the ring of cycle classes on $X$ under \emph{rational equivalence}, with the usual definition of $f^*$ and $f_*$.
+    Of course, we grade $A(X)$ by taking the class of a cycle on $X$ that is everywhere of codimension~$p$ to be of degree~$2p$ [so that $A(X)$ has only even degrees, as we would expect, in a cohomological theory, for a graded \emph{commutative} ring].
+    The homomorphism $\PP(X)\to A^2(X)$ is an isomorphism, given by sending any rank-$1$ vector bundle $L$ on $X$ to the set of divisors of rational sections of $L$ that are not zero on any component of $X$.
+    For the theory of linear equivalence, including the verification of properties \hyperref[axiomA1]{(A1)} to \hyperref[axiomA4]{(A4)} (with only \hyperref[axiomA1]{(A1)} not being immediate), see the expos\'{e}s by Chevalley and Grothendieck in \cite{4}.
+
+    The conditions that we demand are also satisfied by taking $A(X)$ to be the ring of cycle classes under \emph{algebraic} equivalence.
+    But for a theory
+\oldpage{143}
+    of Chern classes, we rather prefer to work with rational equivalence, which gives a finer theory.
+
+    We cannot yet define a ring structure on the group $A(X)$ of cycle classes on an \emph{arbitrary} (not necessarily quasi-projective) non-singular variety, nor, for a morphism $f\colon X\to Y$, a morphism $f^*\colon A(Y)\to A(X)$ in such a way that the necessary conditions are satisfied.
+    Further, it is not even certain that this might be possible.
+    We can think of replacing the ring of cycle classes (under rational equivalence) by the graded ring associated to the ring $K(X)$ of classes of coherent algebraic sheaves on $X$, filtered in the natural way (by considering the dimension of the supports of the sheaves).
+    Unfortunately, we would have to prove that this filtration is compatible with the ring ring structure (and with the ``inverse image'' homomorphisms), which I only know how to do in the quasi-projective case, by using the rational equivalence.
+    However, it seems that these difficulties disappear when we tensor with the field of rationals $\mathbb{Q}$, i.e. if we ignore the phenomenons of torsion.
+
+  \item
+    $\cal{V}$ is the category of all non-singular algebraic spaces.
+    If $X$ is such a variety, then we denote by $\Omega_X^\bullet$ the sheaf of germs of regular differential forms on $X$, and by $A(X)$ the cohomology group $\HH^\bullet(X,\Omega_X^\bullet)$.
+    We grade this group by taking $\HH^p(X,\Omega_X^q)$ to be of degree $p+q$, and we make this an algebra by means of the cup product.
+    We thus obtain an anticommutative graded algebra, which is clearly a contravariant functor with respect to $X$.
+    By following the formalism developed by Grothendieck in \cite{3}, we define in a natural way the homomorphisms $i_*\colon A(Y)\to A(X)$ associated to an injection $i\colon Y\to X$ (and it is probably possible to define $i_*$ for every \emph{proper} morphism $i\colon Y\to X$).\renewcommand*{\thefootnote}{*}\footnote{(Note added during editing). This homomorphism $i_*$ is now defined in full generality.}
+    Finally, we define a morphism $\PP(X)\to\HH^1(X,\Omega_X^1)\subset A^2(X)$ in a classical way, by writing, for example, $\PP(X)=\HH^1(X,\scr{O}_X^\times)$ (where $\scr{O}_X^\times$ denotes the sheaf of germs of invertible regular functions on $X$), and by considering the homomorphism $f\mapsto\mathrm{d}f/f$ from $\scr{O}_X^\times$ to $\Omega_X^1$.
+    We can again easily verify that conditions \hyperref[axiomA1]{(A1)} to \hyperref[axiomA4]{(A4)} are satisfied, with \hyperref[axiomA1]{(A1)} being a consequence of the Leray spectral sequence of the continuous map $\mathbb{P}(E)\to X$ [the spectral sequence being trivial, as follows from considering from the class $\xi_E$ on $\mathbb{P}(E)$.]
+
+  \item
+    The base field $k$ is the field of complex numbers, $\cal{V}$ is the category of non-singular algebraic spaces, and $A(X)=\HH^\bullet(X,\mathbb{Z})$ (with $X$ being endowed with its ``usual'' topology).
+    The definition of \hyperref[datab]{b.} (either by Poincar\'{e} duality on divisor classes, or as an obstruction class in the classical exact sequence $0\to\mathbb{Z}\to\scr{O}_X\to\scr{O}_X^\times\to0$ of sheaves on $X$, endowed with its usual topology) is well known.
+    The definition of \hyperref[datac]{c.} classical comes
+\oldpage{144}
+    from Poincar\'{e} duality, and properties \hyperref[axiomA1]{(A1)} to \hyperref[axiomA4]{(A4)} are well known (with \hyperref[axiomA2]{(A2)} again following from the Leray spectral sequence).
+\end{enumerate}
+
+
+\section{Definition and fundamental properties of Chern classes}
+\label{section3}
+
+Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $\xi_E=p_X(\cl(L_E))$ the fundamental class in $A^2(\mathbb{P}(E))$.
+By axiom~\hyperref[axiomA1]{(A1)} of the \hyperref[section2]{previous section}, $(\xi_E)^p$ can be written as a unique linear combination of the $(\xi_E)^i$ (for $0\leq i\leq p-1$) with coefficients in $A(X)$.
+This means that we can find, in a unique way, elements $c_i(E)\in A^{2i}(X)$ (defined for every integer $i\geq0$) satisfying the conditions
+\[
+\label{equation1}
+  \begin{gathered}
+    \sum_{i=0}^p c_i(E)(\xi_E)^{p-i} = 0,
+  \\c_0(E)=1,\quad\text{and}\quad c_i(E)=0\mbox{ for $i>p$.}
+  \end{gathered}
+\tag{1}
+\]
+The $c_i(E)$ are called the \emph{Chern classes} of $E$, with $c_i(E)$ being the $i$th Chern class.
+We set
+\[
+\label{equation2}
+  c(E) = \sum_i c_i(E)
+\tag{2}
+\]
+and $c(E)$ is called the \emph{(total) Chern class} of $E$;
+its data is thus equivalent to the data of all the $c_i(E)$.
+
+\begin{itenv}{Theorem 1}
+\label{theorem1}
+  Suppose that we have the data of \hyperref[dataa]{\rm{a.}}, \hyperref[datab]{\rm{b.}}, and \hyperref[datac]{\rm{c.}} of the \hyperref[section2]{previous section}, satisfying axioms \hyperref[axiomA1]{\rm{(A1)}} to \hyperref[axiomA4]{\rm{(A4)}}.
+  Then the Chern classes (defined by \hyperref[equation1]{(1)}) satisfy the following conditions:
+  \begin{enumerate}[\rm(i)]
+    \item\label{theorem1i}
+      \emph{Functoriality. ---}
+      Let $f\colon X\to Y$ be a morphism in $\cal{V}$, and let $E$ be a vector bundle on $Y$.
+      Then
+      \[
+      \label{equation3}
+        c(f^{-1}(E)) = f^*(c(E))
+      \tag{3}
+      \]
+      [where $f^{-1}(E)$ denotes the vector bundle on $X$ given by the inverse image of $E$ under $f$].
+    \item\label{theorem1ii}
+      \emph{Normalisation. ---}
+      If $E$ is a rank-$1$ vector bundle on $X\in\cal{V}$, then
+      \[
+      \label{equation4}
+        c(E) = 1+p_X(\cl_X(E)).
+      \tag{4}
+      \]
+    \item\label{theorem1iii}
+      \emph{Additivity. ---}
+      Let $X\in\cal{V}$, and let $0\to E'\to E\to E''\to 0$ be an exact sequence of vector bundles on $X$.
+      Then
+      \[
+      \label{equation5}
+        c(E) = c(E')c(E'').
+      \tag{5}
+      \]
+  \end{enumerate}
+
+  Furthermore, properties \hyperref[theorem1i]{\rm{(i)}}, \hyperref[theorem1ii]{\rm{(ii)}}, and \hyperref[theorem1iii]{\rm{(iii)}} entirely \emph{characterise} Chern classes.
+\end{itenv}
+
+\begin{proof}
+\oldpage{145}
+  We first prove the \emph{uniqueness} of a theory of Chern classes satisfying \hyperref[theorem1i]{\rm{(i)}}, \hyperref[theorem1ii]{\rm{(ii)}}, and \hyperref[theorem1iii]{\rm{(iii)}}.
+  Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $X'$ the flag variety associated to $E$, with $f'\colon X\to X$ the canonical projection.
+  By \hyperref[lemma1]{Lemma~1}, we know that $X'\in\cal{V}$ and that $f^*\colon A(X)\to A(X')$ is injective.
+  Thus $c(E)$ is known if we known $f(c(E))$, which, by \hyperref[theorem1i]{\rm{(i)}}, is equal to $c(f^{-1}(E))$.
+  But $f^{-1}(E)$ splits completely.
+  We are thus reduced to determining $c(E)$ when $E$ is a rank-$p$ vector bundle, which splits completely, and is thus endowed with a composition series $(E_i)_{0\leq i\leq p}$, with $\rank E_i=p-i$,
+  But then the additivity formula \hyperref[theorem1iii]{\rm{(iii)}} proves (by induction on $p$) that $c(E)=\prod_{i=1}^p c(E_{i-1}/E_i)$, and finally the normalisation formula \hyperref[theorem1ii]{\rm{(ii)}} implies that
+  \[
+  \label{equation6}
+    c(E) = \prod_{i=1}^p (1+p_X\cl_X(E_{i-1}/E_i)).
+  \tag{6}
+  \]
+
+  We now show that the Chern classes defined by \hyperref[equation1]{(1)} do indeed satisfy \hyperref[theorem1i]{\rm{(i)}}, \hyperref[theorem1ii]{\rm{(ii)}}, and \hyperref[theorem1iii]{\rm{(iii)}}.
+
+  \begin{proof}[Proof of \rm{(i)}]
+    Let $X,Y\in\cal{V}$, and let $E$ be a vector bundle on $Y$, and $F$ its inverse image under $f$.
+    Then $\mathbb{P}(F)$ is the inverse image of $\mathbb{P}(E)$ under $f$, and so we have a commutative diagram of morphisms
+    \[
+      \begin{tikzcd}
+        \mathbb{P}(F) \rar["\overline{f}"] \dar[swap,"p"]
+        & \mathbb{P}(E) \dar["q"]
+      \\X \rar[swap,"f"]
+        & Y
+      \end{tikzcd}
+    \]
+    We also know that $L_F$ is the inverse image of $L_E$ under $\overline{f}$.
+    It thus follows that
+    \[
+      \xi_F = \overline{f}^*(\xi_E).
+    \]
+    Equation~\hyperref[equation3]{(3)} is trivially satisfied in dimensions $i=0$ and $i>p$, and so it suffices to verify it in dimensions $1\leq i\leq p$.
+    By definition,
+    \[
+      \sum_{i=0}^p q^*(c_i(E))(\xi_E)^{p-i} = 0
+    \]
+    which implies, by applying the homomorphism $\overline{f}^*$, and noting that
+    \[
+      \begin{gathered}
+        \overline{f}^*q^* = (q\overline{f})^* = (fp)^* = p^*f^*
+      \\\text{and}\quad\overline{f}^*(\xi_E) = \xi_F
+      \end{gathered}
+    \]
+    the relation
+    \[
+      \sum_{i=0}^p p^*(f^*(c_i(E)))(\xi_F)^{p-i} = 0
+    \]
+\oldpage{146}
+    which proves, by definition, that
+    \[
+      c_i(F) = f^*(c_i(E))
+      \quad\mbox{for $1\leq i\leq p$.}\qedhere
+    \]
+  \end{proof}
+
+  \begin{proof}[Proof of \rm{(ii)}]
+    Suppose that $E$ is of rank~$1$, so that $\mathbb{P}(E)=X$, $L_E=\check{E}$, and $\xi_E = p_X\cl_X(\check{E}) = -p_X\cl_X(E)$.
+    The first equation \hyperref[equation1]{(1)} can then be written as
+    \[
+      \xi_E + c_1(E) = 0
+    \]
+    whence
+    \[
+      c_1(E) = -\xi_E = p_X\cl_X(E).\qedhere
+    \]
+  \end{proof}
+
+  \begin{proof}[Proof of \rm{(iii)}]
+    Under the conditions of the statement of \hyperref[theorem1i]{(i)}, let $P$ be the product bundle on $X$ of the flag variety of $E'$ and the flag variety of $E''$.
+    Then $P$ can also be identified with the flag variety of $f^{-1}(E'')$, where $f\colon D(E')\to X$ is the canonical projection to $X$ from the flag variety $D(E')$ of $E'$.
+    Using \hyperref[lemma1]{Lemma~1} of the \hyperref[section2]{previous section} twice, we find that $P\in\cal{V}$, and that the homomorphism $g^*\colon A(X)\to A(P)$ associated to the projection $g\colon P\to X$ is injective.
+    Then, to prove \hyperref[equation5]{(5)}, it suffices to prove the formula that follows from it by applying $g^*$ to both sides, which, by functoriality \hyperref[theorem1i]{(i)}, reduces to proving the multiplicativity formula for the inverse image of the exact sequence $0\to E'\to E\to E''\to 0$ under $g$.
+    But it is immediate that $g^{-1}(E')$ and $g^{-1}(E'')$ split completely.
+    We can thus restrict to proving the additivity formula in the case where the factors $E'$ and $E''$ split completely.
+    But then the splittings of $E'$ and $E''$ define a splitting of $E$, and it clearly suffices to prove \hyperref[equation6]{(6)} for each of the composition series of $E'$, $E''$, and $E$ thus obtained.
+    This leads us to prove \hyperref[equation6]{(6)} for a completely split vector bundle.
+
+    So let $X'=\mathbb{P}(E)$, with $f'$ the projection from $X'$ to $X$, and define
+    \[
+      \begin{aligned}
+        E' &= f^{-1}(E),
+      \\E'_i &= f^{-1}(E_i),
+      \\L &= L_E,
+      \\\xi_i &= p_X\cl_X(E_{i-1}/E_i)\quad(1\leq i\leq p),
+      \\\xi'_i &= f^*(\xi_i) = p_X\cl_{X'}(E'_i/E'_{i+1}).
+      \end{aligned}
+    \]
+    The (rank-$1$) bundle $\check{L}$ can be identified with a vector subbundle of $E'$, and the injection homomorphism $\check{L}\to E'$ can be understood as a regular section $s$ of the bundle $F'=L\otimes E'$.
+    Since $s$ corresponds to an injection morphism, we immediately see that $s$ does not vanish.
+    Letting $F'_i=L\otimes E'_i$, we obtain a splitting of $F'$, whose factors are $F'_i/F'_{i+1} = L\otimes(E'_i/E'_{i+1})$, whence
+    \[
+      p_X\cl_{X'}(F'_{i-1}/F'_{i}) = \xi_E+\xi'_i.
+    \]
+
+    Let $Y_i$ be the set of points $x'$ of $X'$ such that $s(x')\in F'_i$, which is also the set of points $x'$ such that the fibre of $\check{L}$ at $x'$ is contained in $E'_i$, and can thus be identified with $\mathbb{P}(E_i)$.
+    Thus $Y_i$ is a non-singular closed subspace of $X'$, and $Y'\in\cal{V}$.
+    Now let $s_i$ be the section of $(F'_{i-1}|F'_i)|Y_{i-1}$ induced by $s|Y_{i-1}$, which I claim is transversal to the zero section.
+    Since the question is local, we
+\oldpage{147}
+    can assume that $E=X\times k^n$ and $E_i=X\times k^{n-i}$, so then $Y_i=X\times\mathbb{P}(k^{n-i})$, $E_j|Y_i$ is the constant bundle with fibre $k^{n-j}$ on $Y_i$, and $L|Y_i$ is the subbundle (of the constant bundle with fibre $k^{n-i}$) given by the inverse image, under the projection map from $Y_i$ to its factor $\mathbb{P}(k^{n-i})$, of the well-known rank-$1$ subbundle $l$ of the constant bundle with fibre $k^{n-i}$.
+    Then the bundle $(F'_i|F'_{i+1})|Y_i$ on $Y_i$, and its section $s_{i+1}$, are the inverse images, under the projection map from $Y_i$ to its factor $\mathbb{P}(k^{n-i})$, of a specific section $\sigma$ of $l$.
+    But it is well known (and immediate to verify) that every non-zero section of $l$ is transversal to the zero section (its cycle of zeros then being a linear hyperplane of the projective space).
+    This proves our claim.
+  \end{proof}
+
+  So we are under the conditions of \hyperref[lemma2corollary]{the corollary} to \hyperref[lemma2]{Lemma~2} of the \hyperref[section2]{previous section}, which implies that
+  \[
+    \prod_{i=1}^p (\xi_E+\xi'_i) = 0.
+  \]
+  This proves, by the definition of the $c_i(E)$, that the $c_i(E)$ are the elementary symmetric functions in the $\xi_i$, which is exactly \hyperref[equation6]{(6)}.
+
+  This finishes the proof of \hyperref[theorem1]{Theorem~1}.
+\end{proof}
+
+\begin{itenv}{Corollary}
+\label{theorem1corollary}
+  Let $X\in\cal{V}$, and let $E$ and $F$ be vector bundles on $X$.
+  Then
+  \[
+  \label{equation7}
+    c_i(\check{E}) = (-1)^i c_i(E)
+  \tag{7}
+  \]
+  and, similarly, the Chern classes of the exterior powers $\bigwedge E$ (resp. of the tensor product $E\otimes F$) can be expressed in terms of the Chern classes of $E$ and the rank of $E$ (resp. in terms of the Chern classes of $E$ and $F$ and the ranks of $E$ and $F$) by the well-known calculation of elementary functions (see the book by Hirzebruch).
+\end{itenv}
+
+\begin{proof}
+  Passing to a flag variety, as per usual, we can restrict to the case where $E$ and $F$ are completely split.
+  In this case, the formulas follow immediately from \hyperref[equation6]{(6)}.
+\end{proof}
+
+
+\section{Remarks and various supplements}
+\label{section4}
+
+\begin{enumerate}
+  \item\label{remark1}
+    In all the above, we have only needed to work with elements of even degree in $A(X)$, which implies, in particular, that all the calculations were essentially commutative.
+    We note also that the axioms \hyperref[axiomA1]{(A1)} to \hyperref[axiomA4]{(A4)} remain satisfied if we replace each $A(X)$ with the direct sum of the $A^{2i}(X)$.
+    But then it seems sensible to divide all the degrees by $2$, and thus to assume from the start that the $A(X)$ were commutative, and that the homomorphism $p_X$ from $\PP(X)$ took its values, not in $A^2(X)$, but in $A^1(X)$.
+    This is what we assume in the following remark.
+  \item\label{remark2}
+    Let $A$ be a commutative positively-graded ring with unit.
+    Let $\widehat{A}$ be
+\oldpage{148}
+    the ring given by the product of the $A^i$ (for $i\geq0$).
+    Then the set of elements of $\widehat{A}$ of augmentation~$1$ (i.e. whose degree-$0$ component is $1$) is a group under multiplication, which we denote by $1+\widehat{A}^+$.
+    Consider the group given by the product
+    \[
+      \widetilde{A} = \mathbb{Z}\times(1+\widehat{A}^+)
+    \]
+    whose composition is written additivity;
+    then $(0,1+\widehat{A}^+)$ is a subgroup of this group, isomorphic to the multiplicative group $1+\widehat{A}^+$.
+    With this in mind, we can define a (commutative unital) ring structure on $\widetilde{A}$, compatible with the additive structure, whose unit is $(1,1)$, and that is given, on the $(0,1+\widehat{A}^+)$ factor by universal polynomial formulas (with integer coefficients).
+    We will then have that
+    \[
+    \label{equation8}
+      (1,1+x_1)(1,1+y_1) = (1,1+(x_1+y_1))
+    \tag{8}
+    \]
+    for $x_1,y_1\in A^1$, and these formulas suffice to characterise the polynomials that define the composition law (taking into account the associativity of the composition law).
+
+    We can also define (non-additive!) maps
+    \[
+      \lambda^i\colon \widetilde{A}\to\widetilde{A}
+      \quad(i\geq0)
+    \]
+    which make $\widetilde{A}$ a $\lambda$-ring, by which we mean that the following conditions are satisfied:
+    \[
+    \label{equation9}
+      \begin{aligned}
+        \lambda^0(x) &= 1,
+      \\\lambda^1(x) &= x,
+      \\\lambda^n(x+y) &= \sum_{i+j=n}\lambda^i(x)\lambda^j(y)\quad\mbox{if $n\geq0$}
+      \end{aligned}
+    \tag{9}
+    \]
+    which also implies that the map
+    \[
+      \lambda\colon \widetilde{A} \to 1+\widetilde{A}[[t]]^+
+    \]
+    defined by the formula
+    \[
+    \label{equation10}
+      \lambda(x) = \sum_{i\geq0} \lambda^i(x)t^i
+    \tag{10}
+    \]
+    is an additive homomorphism from $\widetilde{A}$ to the multiplicative group of formal series of augmentation~$1$, and is a right inverse to the natural homomorphism $(1+a_1t+\ldots)\mapsto a_1$ from this latter group to $\widetilde{A}$.
+    The restriction of the maps $\lambda^i$ to the factor $(0,1+\widetilde{A}^+)$ is defined by universal polynomial formulas (with integer coefficients), and
+    \[
+    \label{equation11}
+      \lambda^i(1,1+x_1) = 0
+      \quad\mbox{for $i>1$}
+    \tag{11}
+    \]
+    if $x_1\in A^1$, and this formula suffices to characterise the polynomials defining the $\lambda^i$ [taking into account the formulas in \hyperref[equation9]{(9)}].
+
+\oldpage{149}
+    In fact, the $\lambda$-ring $A$ is a \emph{special} $\lambda$-ring, by which we mean that the $\lambda^i(xy)$ can be expressed in terms of universal polynomials (with integer coefficients) in the $\lambda^j(x)$ and $\lambda^k(y)$, and that the $\lambda^j(\lambda^i(x))$ can be expressed in terms of universal polynomials (with integer coefficients) in the $\lambda^k(x)$.
+    We will not go into more details of the polynomials here, and we content ourselves with information below.
+    The fact that a $\lambda$-ring $K$ is special also implies that the homomorphism $\lambda\colon K\to 1+K[[t]]^+$ is furthermore a homomorphism of $\lambda$-rings, by which we mean that, for every commutative unital ring $K$, we can define a canonical $\lambda$-ring law on $1+K[[t]]^+$ (whose additive structure is the usual multiplication of formal series), whose composition laws are given by universal polynomial formulas (with integer coefficients).
+    If the multiplication of this ring is denoted by $f\circ g$, then
+    \[
+    \label{equation12}
+      (1+at)\circ(1+bt) = 1+abt
+    \tag{12}
+    \]
+    \[
+    \label{equation13}
+      \lambda^i(1+at) = 1
+      \quad\mbox{(the zero element of $1+K[[t]]^+$)}
+      \quad\mbox{if $i>1$}
+    \tag{13}
+    \]
+    [these formulas being the ``multiplicative'' analogues to \hyperref[equation8]{(8)} and \hyperref[equation11]{(11)}].
+    These formulas suffice to characterise [taking into account \hyperref[equation9]{(9)} and the associativity of the multiplication] the polynomials that define $f\circ g$ and the $\lambda^i(f)$.
+
+    \renewcommand*{\thefootnote}{*}
+    It is the detailed study of $\lambda$-rings in general, and of certain specific $\lambda$-rings (the ring of classes of vector bundles on an algebraic variety, and the ring of classes of representations of an algebraic group) that held the key to the first algebraic proof of the Riemann-Roch theorem, in the form given in the paper preceding this one.\footnote{\emph{[Translator.] This is referring to} {\sc Borel, A; Serre, J.-P.} ``Le th\'{e}or\`{e}me de Riemann-Roch''. \emph{Bull. Soc. Math. France} {\bf 86} (1958),   97--136. \emph{(which has also been translated in this series).}}
+    This proof is, for now, only valid in characteristic~$0$, but it gives, however, finer results than the second method, which uses blow-up varieties.
+    In any case, $\lambda$-rings exist in large numbers in nature, the formalism to which they give rise is more amenable, and the author of these sentences cannot recommend enough that the reader makes use of them.
+
+    That said, we now return to the commutative graded rings $A(X)$.
+    If $E$ is a rank-$p$ vector bundle on $X$, then we denote by $\widetilde{c}(E)$ the \emph{completed Chern class} of $E$, which is the element of $\widetilde{A(X)}$ defined by
+    \[
+    \label{equation14}
+      \widetilde{c}(E) = (p,c(E))
+      \quad\mbox{[$p=\rank(E)$].}
+    \tag{14}
+    \]
+    With this notation, the two formulas that were not explicitly given in \hyperref[theorem1corollary]{the corollary} to \hyperref[theorem1]{Theorem~1} can be written simply as
+    \[
+    \label{equation7bis}
+      \begin{aligned}
+        \widetilde{c}\left(\wedge^i E\right) &= \lambda^i(\widetilde{c}(E)),
+      \\\widetilde{c}(E\otimes F) &= \widetilde{c}(E)\widetilde{c}(F),
+      \end{aligned}
+    \tag{7 \emph{bis}}
+    \]
+    and the additivity formula can be written as
+    \[
+    \label{equation5bis}
+      \widetilde{c}(E) = \widetilde{c}(E') + \widetilde{c}(E'').
+    \tag{5 \emph{bis}}
+    \]
+
+\oldpage{150}
+    We can thus also say that \emph{the completed Chern class $\widetilde{c}(E)$ defines a homomorphism of $\lambda$-rings from $K(X)$ to $\widetilde{A(X)}$.}
+
+  \item\label{remark3}
+    \emph{Application to the Chow ring. ---}
+    Let $X$ be a non-singular algebraic space.
+    Recall that, if $Y$ is an irreducible cycle on $X$, then we denote by $\gamma(Y)$ the element defined by $\scr{O}_Y$ in the group $K(X)$ of glasses of sheaves on $X$, and we extend this definition by linearity to the case where $Y$ is an arbitrary cycle.
+    Consider the decreasing \emph{filtration} on $K(X)$ given by the $K^i(X)$, where $K^i(X)$ denotes the subgroup of $K(X)$ generated by the classes of coherent sheaves on $X$ whose support is of codimension~$\geq i$ [i.e. if $X$ is equidimensional of dimension~$n$, then this is the subgroup $K_{n-i}(X)$ of $K(X)$ generated by the classes of sheaves whose support is of dimension~$\leq n-i$].
+    We will show that $K^i(X)$ is the set of the $\gamma(Z)$ where $Z$ runs over the cycles of codimension~$\geq i$ in $X$.
+    Now, let $Z$ and $Z'$ be cycles of dimension $p$ and $p'$ (respectively), such that the intersection cycle $Z\cdot Z'$ is defined.
+    It then follows from the definition of the ring structure of $K(X)$ (alternating sums of $\mathrm{Tor}$) and from the cohomological definition of the intersection of cycles by Serre that
+    \[
+      \gamma(Z)\gamma(Z') \equiv \gamma(Z\cdot Z') \mod K^{p+p'+1}(X).
+    \]
+
+    \renewcommand*{\thefootnote}{*}
+    Using this, and Proposition~8 of the current article by Borel--Serre\footnote{\emph{[Translator.] This is once again referring to paper by A.~Borel and J.P.~Serre mentioned in the previous translator footnote.}}, we find that \emph{if $X$ is quasi-projective, then the filtration of $K(X)$ is compatible with its ring structure};
+    the homomorphism $Z\mapsto\gamma(Z)$ from the group $A(X)$ of cycle classes to $K(X)$ is compatible with the filtrations, and defines, by passing to the associated graded rings, \emph{a homomorphism $\varphi$ of graded rings from the Chow ring $A(X)$ to the graded ring $GK(X)$ associated to $K(X)$}.
+    We will show that \emph{the kernel of this homomorphism is a torsion group}.
+    For this, consider the homomorphism $\widetilde{c}$ from the $\lambda$-ring $K(X)$ to $\widetilde{A(X)}$ described in \hyperref[remark2]{Remark~2}.
+    Since $A^i(X)$ does not change if we remove a closed subset of codimension~$>i$ from $X$, we immediately see that $\widetilde{c}$ is compatible with the filtrations, and thus defines, by passing to the associated graded rings, \emph{a homomorphism $\psi$ from $GK(X)$ to the graded ring $A'(X)$ associated to the filtered ring $\widetilde{A(X)}$, which can itself be identified (as a graded group) with $A(X)$}.
+    [As for its multiplicative structure, we can formally verify that it is given by the product $x_p\star y_q = -\frac{(p+q-1)!}{(p-1)!(q-1)!}x_p y_q$ for $x_p\in A^p(X)$ and $y_q\in A^q(X)$.]
+    With this, we have the relations
+    \[
+    \label{equation15}
+      \begin{aligned}
+        \psi\varphi &= (-1)^{i-1}(i-1)!\mathrm{id}_{A(X)}
+      \\\varphi\psi &= (-1)^{i-1}(i-1)!\mathrm{id}_{GK(X)}
+      \end{aligned}
+    \tag{15}
+    \]
+    in degree $i$.
+    Since $\varphi$ is surjective, the second equation follows from the first, which, by what we have already said, is equivalent to the following statement:
+    If $Y$
+\oldpage{151}
+    is a non-singular closed subvariety of $X$, of codimension~$i$, then
+    \[
+    \label{equation16}
+      \begin{cases}
+        c_j(\gamma(Y)) = 0 &\mbox{for $j<i$},
+      \\c_i(\gamma(Y)) = (-1)^{i-1}(i-1)!\cl_X^i(Y) &\mbox{otherwise}
+      \end{cases}
+    \tag{16}
+    \]
+    [where $\cl_X^i(Y)$ denotes the class of $Y$ in $A^i(X)$].
+    [The first case in \hyperref[equation16]{(16)} simply says that $\widetilde{c}$ is compatible with the filtrations, and has been written simply to remind of this fact.]
+    Equation~\hyperref[equation16]{(16)} is plausible \emph{a priori}, if we note that, since the restriction of $c_i(\gamma(Y))$ to $X\setminus Y$ is zero (by the functoriality of Chern classes), $c_i(\gamma(Y))$ must necessarily be proportional to $\cl_X^i(Y)$;
+    and also that $\psi\varphi$ must be a ring homomorphism from $A'(X)=G(\widetilde{A(X)})$ (whose multiplicative structure has been explained above) to $A(X)$.
+    We will not give here the full proof of \hyperref[equation16]{(16)}, instead only noting that, if set aside the problem of torsion, this equation is a particular case of the Riemann-Roch theorem [applied to the injection of $Y$ into $X$, and the unit element of $K(Y)$.]
+
+    The equations in \hyperref[equation15]{(15)} indeed show that \emph{$\varphi$ and $\psi$ are isomorphisms, up to a torsion group}.
+    (I do not know if $\varphi$ is in fact an isomorphism;
+    it is at least the case in degrees $i=1$ and $i=2$.)
+    It also follows that \emph{$\widetilde{c}$ is an isomorphism, up to torsion, from $K(X)$ to $A(X)$}.
+
+    The above shows that, to prove intersection formulas in $A(X)$, we can, if we ignore torsion, perform the calculations in $GK(X)$, and so, ultimately, in $K(X)$, i.e. we can reduce to calculating alternating sums of $\mathrm{Tor}$ of sheaves:
+    this is the ``without moving cycles'' method.
+    It allows us, for example, to determine (up to torsion) the ring of cycle classes of a blow-up variety, by using part~(c) of Lemma~19 of the paper of Borel--Serre, which gives (by passing to the associated graded objects) that $f^*i_*(y) = j_*(g^*(y)c_{p-1}(F))$.
+    We will return to this questions in a later article.
+\end{enumerate}
+
+
+\section{The cycle of zeros of a regular section of a vector bundle}
+\label{section5}
+
+In this section, we assume that the category $\cal{V}$ satisfies the following condition:
+\begin{enumerate}[({V}2)]
+  \item\label{axiomV2}
+    For all $X\in\cal{V}$ and every non-singular closed subspace $Y$ of $X$, we have that $Y\in\cal{V}$.
+\end{enumerate}
+
+Furthermore, we assume that the following axiom is verified:
+\begin{enumerate}[({A}5)]
+  \item\label{axiomA5}
+    Let $X,Y\in\cal{V}$, and let $Y'$ be a non-singular closed subspace of $Y$, $f$ a morphism from $X$ to $Y$ that is transversal to $Y'$, and $X'=f^{-1}(Y')$ [so $X'$ is a non-singular closed subspace of $X$, and so $X'\in\cal{V}$ and $p_X(X')$ is defined].
+    Under these conditions,
+    \[
+      p_X(X') = f^*(p_Y(Y')).
+    \]
+\end{enumerate}
+
+\oldpage{152}
+Let $X\in V$, and let $E$ be a rank-$p$ vector bundle on $X$.
+Denote by $\mathbf{e}$ the constant vector bundle $X\times k$ on $X$, let $\widetilde{E}=E+\mathbf{e}$ be the vector bundle given by the direct sum of $E$ and $\mathbf{e}$, and define $\widehat{E}=\mathbb{P}(\widetilde{E})$.
+The injection $E\to\widetilde{E}$ defines an injection of bundles $\mathbb{P}(E)\subset\mathbb{P}(\widetilde{E})=\widehat{E}$, and the complement $\widehat{E}\setminus\mathbb{P}(E)$ is canonically isomorphic to $E$, since $\widehat{E}$ can be understood as the bundle induced by projectively completing all the fibres of $E$.
+Let $s$ be a regular section of $E$.
+Then $s(X)$ is a non-singular closed subspace of $\widehat{E}$, and so $s(X)\in\cal{V}$, and we propose to determine $p_{\widehat{E}}(s(X))$.
+We will prove:
+
+\begin{itenv}{Lemma 3}
+\label{lemma3}
+  With the above notation, if $s_0$ is the zero section of $E$, then
+  \[
+  \label{equation17}
+    p_{\widehat{E}}(s_0(X)) = \sum_{i=0}^p c_i(E)(\xi_{\widetilde{E}})^{p-i}.
+  \tag{17}
+  \]
+\end{itenv}
+
+\begin{proof}
+  Let $X'$ be the flag variety of $E$, $f$ the projection from $X'$ to $X$, $E'$ the vector bundle $f^{-1}(E)$ on $X'$, and $s'_0$ the section of $E'$ given by the inverse image of $s_0$ under $f$.
+  Then $\widehat{E}'$ is the inverse image of $\widehat{E}$ under $f$, so let $\widehat{f}$ be the natural morphism from $\widehat{E}'$ to $\widehat{E}$;
+  we then have a commutative diagram of morphisms:
+  \[
+    \begin{tikzcd}
+      X \dar[swap,"s_0"]
+      & X' \lar[swap,"f"] \dar["s'_0"]
+    \\\widehat{E}'
+      & \widehat{E}' \lar["\widehat{f}"]
+    \end{tikzcd}
+  \]
+
+  Since $\widehat{f}$ is a fibrant morphism, it follows that it is transversal to every non-singular closed subspace of $\widehat{E}$, and, in particular, to $s_0(X)$.
+  We also know that $\widehat{f}^{-1}(s_0(X)) = s'_0(X')$.
+  Since $\widehat{f}^*$ is injective (\hyperref[lemma1]{Lemma~1}), it suffices, in order to prove \hyperref[equation17]{(17)}, to prove the formula given by applying $\widehat{f}^*$ to both sides.
+  Applying axiom \hyperref[axiomA5]{(A5)}, the left-hand side is then $p_{\widehat{E}}(s'_0(X'))$, and the second is $c_i(E')(\xi_{\widetilde{E}'})^{p-1}$ [taking into account the functoriality of the $c_i$, and the immediate formula $\xi_{\widetilde{E}'}=\widehat{f}^*(\xi_{\widetilde{E}})$].
+  This leads us to prove \hyperref[equation17]{(17)} in the case where the bundle $E$ admits a splitting $(E_i)_{0\leq i\leq p}$ (where $\rank E_i=p-i$).
+
+  So let $f$ be the projection from $\widehat{E}=\mathbb{P}(\widetilde{E})$ to $X$, and consider the splitting
+  \[
+    \widetilde{E} = E_0+\mathbf{e} \supset E_1+\mathbf{e} \supset \ldots \supset E_p+\mathbf{e} = \mathbf{e} \supset 0
+  \]
+  of $\widetilde{E}$, and let $E'=f^{-1}(\widetilde{E})$.
+  Then we also have a splitting on the bundle $L_{\widetilde{E}}\otimes E'$, and its factors are the $L_{\widetilde{E}}\otimes f^{-1}(E_{i-1}/E_i)$ (for $1\leq i\leq p$), and $L_E\otimes f^{-1}(\mathbf{e}) = L_E$;
+  we also have a canonical section $s$, and we have seen, in the proof of \hyperref[theorem1]{Theorem~1}, that the conditions of \hyperref[lemma2]{Lemma~2} are satisfied.
+  Equation~\hyperref[lemma2equationstar]{($\star$)}
+\oldpage{153}
+  after \hyperref[lemma2]{Lemma~2} then gives
+  \[
+    p_{\widehat{E}}(Y_p) = \prod_{i=1}^p c_1(L_{\widetilde{E}}\otimes f^{-1}(E_{i-1}/E_i)),
+  \]
+  where $Y_p$ denotes the set of points of $\widehat{E}=\mathbb{P}(\widetilde{E})$ consisting of lines of $\widetilde{E}$ that are contained in the subbundle $\mathbf{e}$, i.e. the set $s_0(X)$, where $s_0$ is the zero section of $E$ (with $E$ being identified with an open subset of $\widehat{E}$).
+  Since we have
+  \[
+    c_1(L_{\widetilde{E}}\otimes f^{-1}(E_{i-1}/E_i)) = \xi_{\widetilde{E}}+f^*(\xi_i),
+    \quad\text{where }\xi_i = c_1(E_{i-1}/E_i),
+  \]
+  equation~\hyperref[equation17]{(17)} then follows.
+\end{proof}
+
+From this, we will deduce:
+
+\begin{itenv}{Theorem 2}
+\label{theorem2}
+  Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $s$ a regular section of $E$ that is transversal to the zero section, and $Y$ the set of zeros of $s$ (which is thus a non-singular closed subspace of codimension~$p$ of $X$).
+  Under these conditions,
+  \[
+  \label{equation18}
+    p_X(Y) = c_p(E).
+  \tag{18}
+  \] 
+\end{itenv}
+
+\begin{proof}
+  Consider $s$ as a morphism from $X$ to $\widehat{E}$, so that $s$ is transversal to the non-singular closed subspace $s_0(X)$ of $\widehat{E}$ (where $s_0$ denotes the zero section), and so, by \hyperref[axiomA5]{(A5)}, since $Y=s^{-1}(s_0(X))$,
+  \[
+    p_X(Y) = s^*(p_{\widehat{E}}(s_0(X))).
+  \]
+
+  Equation~\hyperref[equation18]{(18)} then follows from \hyperref[equation17]{(17)}, since
+  \[
+    s^*(c_i(E)) = c_i(E)
+    \quad\text{and}\quad
+    s^*(\xi_{\widetilde{E}}) = 0.
+  \]
+  (This latter equation follows immediately from the fact that $L_{\widetilde{E}}$ induces a trivial bundle on $E$, and so the inverse image of $L_{\widetilde{E}}$ under $s$ is the trivial bundle on $X$.)
+\end{proof}
+
+In fact, the above proof proves the following formula, which holds for \emph{every} regular section $s$ of $E$:
+\[
+\label{equation18bis}
+  s^*(p_{\widetilde{E}}(s_0(X))) = c_p(E)
+\tag{18 \emph{bis}}
+\]
+(where $s_0$ denotes the zero section of $E$).
+From this we deduce, for example:
+
+\begin{itenv}{Corollary}
+  Suppose that we are in the setting of the theory of Chow ($\cal{V}$ being the category of non-singular quasi-projective algebraic spaces; $A(X)$ being the ring of cycle classes under rational equivalence).
+  Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $s$ a regular section of $E$ such that the cycle of zeros $Z$ of $s$ exists.
+  Then the class of $Z$ is $c_p(E)$.
+\end{itenv}
+
+\begin{rmenv}{Remark}
+  Equation~\hyperref[equation17]{(17)} holds true even if we replace the zero section $s_0$ by an arbitrary section of $E$.
+  We can see this by slightly modifying the proof of \hyperref[lemma3]{Lemma~3}, but it is easy to deduce this formula from
+\oldpage{154}
+  \hyperref[theorem2]{Theorem~2}, noting that $s(X)$ is the set of zeros of a section (which is transversal to the zero section) of a suitable vector bundle on $\mathbb{P}(\widetilde{E})$, i.e. the bundle $L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)$, where $S$ is the (trivial) rank-$1$ subbundle of $\widetilde{E}$ defined by the section $s$.
+  The right-hand side of \hyperref[equation17]{(17)} is exactly
+  \[
+    c_p(L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)) = c_p(L_{\widetilde{E}}\otimes f^{-1}(E)),
+  \]
+  as follows from the formulas of \hyperref[section3]{\S3}.
+\end{rmenv}
+
+
+%% Bibliography %%
+
+\nocite{*}
+
+\begin{thebibliography}{4}
+
+  \bibitem{1}
+  {Atiyah, M.}
+  \newblock Complex analytic connections in fibre bundles.
+  \newblock {\em Trans. Amer. math. Soc.} {\bf 85} (1957), 181--207.
+
+  \bibitem{2}
+  {Chern, Shung-Shen.}
+  \newblock On the characteristic classes of complex sphere bundles and algebraic varieties.
+  \newblock {\em Amer. J. Math.} {\bf 75} (1953), 565--597.
+
+  \bibitem{3}
+  {Grothendieck, Alexander.}
+  \newblock Th\'{e}or\`{e}me de dualit\'{e} four les faisceaux alg\'{e}briques coh\'{e}rents.
+  \newblock {\em S\'{e}minaire Bourbaki} {\bf 9}, no.~149 (1956--57).
+
+  \bibitem{4}
+  ``Classification des groupes de Lie''.
+  \newblock {\em S\'{e}minaire Chevalley}, {Volume~1} (1956--58).
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>The theory of Chern classes</title>
+  <meta name="description" content="The theory of Chern classes" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="The theory of Chern classes" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="The theory of Chern classes" />
+  
+  
+  
+
+<meta name="author" content="A. Grothendieck" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="katex.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><h4>Table of contents</h4></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path=""><a href="#introduction"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#section-1"><i class="fa fa-check"></i>1. Notation</a></li>
+<li><a href="#section-2">2. The functor <eq env="math">A(X)</eq></a></li>
+<li class="chapter" data-level="" data-path=""><a href="#bibliography"><i class="fa fa-check"></i>Bibliography</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The theory of Chern classes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">The theory of Chern classes</h1>
+<p class="author"><em>A. Grothendieck</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>(web version last updated: 07 June 2021)</em></p>
+</div>
+<div id="introduction" class="section level1 unnumbered">
+<h1>Introduction</h1>
+<p>In this appendix, we will develop an axiomatic theory of Chern classes that will allow us, in particular, to define the Chern classes of an algebraic vector bundle <eq env="math">E</eq> on a non-singular quasi-projective algebraic variety <eq env="math">X</eq> as elements of the Chow ring <eq env="math">A(X)</eq> of <eq env="math">X</eq>, i.e. as classes of cycles under rational equivalence.
+This exposé is inspired by the book of Hirzebruch on one hand (where the essential <em>formal properties</em> characterising a theory of Chern classes was brought to light), and by an idea of Chern <span class="citation">(<a href="#ref-2" role="doc-biblioref">Chern 1953</a>)</span> that consists of using the multiplicative structure of the ring of cycle classes on the bundle of projective spaces <eq env="math">P(E)</eq> associated to <eq env="math">E</eq>, to reach an effective <em>construction</em> of Chern classes.
+We note that the exposition given here also applies to other settings than algebraic geometry, and recovers, for example, an entirely elementary theory of Chern classes for complex vector bundles on topological manifold (and, from this, on any space for which the classification theorem of principal bundles with a structure group via a “classifying space” holds true).
+Similarly, we will obtain, for a complex-analytic vector bundle <eq env="math">E</eq> on a (non-singular) complex-analytic manifold <eq env="math">X</eq>, Chern classes
+<eq env="displaymath">
+  c_p(E) \in \operatorname{H}^p(X,\Omega_X^p),
+</eq>
+where <eq env="math">\Omega_X^p</eq> is the sheaf of germs of holomorphic differential forms of degree <eq env="math">p</eq> on <eq env="math">X</eq>.
+[And it is certainly easy to prove that this definition agrees with that given recently by Atiyah , and that it is linked to the topological definition of Chern classes via the spectral sequence linking <eq env="math">\operatorname{H}^p(X,\Omega_X^q)</eq> and <eq env="math">\operatorname{H}^\bullet(X,\mathbb{C})</eq>.]
+Similarly, the theory of Stiefel-Whitney classes in cohomology mod <eq env="math">2</eq> fits into the framework that we will describe here.</p>
+<p>It appears that a satisfying theory of Chern classes in algebraic geometry has been given, for the first time, by W.L. Chow (unpublished), using the Grassmannian.
+The main aim of the current paper has been to eliminate the Grassmannian from the theory.
+I have already shown <span class="citation">(<a href="#ref-4" role="doc-biblioref"><strong>4?</strong></a>)</span> how the theory of Chern classes allows us to <em>recover</em> the structure of <eq env="math">A(X)</eq> when <eq env="math">X</eq> is a Grassmannian.</p>
+</div>
+<div id="section-1" class="section level1">
+<h1>1. Notation</h1>
+<p>In order to not expose ourselves to the complications arising from the theory of intersections, we will limit ourselves in what follows to considering only <em>non-singular</em> topological spaces.
+We fix a base field <eq env="math">k</eq> once and for all, and, to better understand the ideas, the reader can assume it to be algebraically closed.
+All the bundles, subvarieties, morphisms, etc. that we consider in what follows will be defined over <eq env="math">k</eq>.</p>
+<p>If <eq env="math">X</eq> is an algebraic space, and <eq env="math">E</eq> a vector bundle on <eq env="math">X</eq>, then we denote by <eq env="math">\mathbb{P}(E)</eq> the associated projective bundle.
+The fibre <eq env="math">\mathbb{P}(E)_x</eq> of <eq env="math">\mathbb{P}(E)</eq> at a point <eq env="math">x\in X</eq> is thus the projective space associated to the vector space <eq env="math">E_x</eq>, and so a point of <eq env="math">\mathbb{P}(E)_x</eq> over a point <eq env="math">x\in X</eq> is exactly a homogeneous line in <eq env="math">E_x</eq>.
+Let <eq env="math">f\colon\mathbb{P}(E)\to X</eq> be the projection of the bundle;
+we will consider the inverse image of <eq env="math">E</eq> under <eq env="math">f</eq>, which is the vector bundle <eq env="math">f^{-1}(E)</eq> on <eq env="math">\mathbb{P}(E)</eq>.
+There is a canonical rank-<eq env="math">1</eq> subbundle of <eq env="math">f^{-1}(E)</eq>, whose fibre at a point <eq env="math">d</eq> of <eq env="math">\mathbb{P}(E)</eq> (over a point <eq env="math">x\in X</eq>) is the line <eq env="math">d</eq> in <eq env="math">E_x=f^{-1}(E)_d</eq>.
+The dual bundle of this subbundle of <eq env="math">f^{-1}(E)</eq> is denoted <eq env="math">L_E</eq>, and we thus have the inclusion
+<eq env="displaymath">
+  \check{L}_E \subset f^{-1}(E).
+</eq></p>
+<p>Let <eq env="math">p</eq> be the rank of <eq env="math">E</eq> (assumed to be constant, which is always the case if <eq env="math">X</eq> is connected).
+Then <eq env="math">E^{(1)}=f^{-1}(E)/L_E</eq> is a vector bundle of rank <eq env="math">p-1</eq> on <eq env="math">X^{(1)}=\mathbb{P}(E)</eq>, and we can thus construct <eq env="math">X^{(2)}=\mathbb{P}(E^{(1)})</eq> and the analogous bundle <eq env="math">E^{(2)}=(E^{(1)})^{(1)}</eq> of rank <eq env="math">p-2</eq> on <eq env="math">X^{(2)}</eq>.
+We thus inductively construct manifolds <eq env="math">X^{(i)}</eq> and vector bundles <eq env="math">E^{(i)}</eq> of rank <eq env="math">p-i</eq> on <eq env="math">X^{(i)}</eq> (for <eq env="math">1\leqslant i\leqslant p</eq>), where <eq env="math">X^{(i)}</eq> is the bundle <eq env="math">\mathbb{P}(E^{(i-1)})</eq> on <eq env="math">X^{(i-1)}</eq>.
+We define a <em>flag of length <eq env="math">i</eq></em> in a vector space <eq env="math">V</eq> to be an increasing sequence <eq env="math">(V_j)_{0\leqslant j\leqslant i}</eq> of vector subspaces <eq env="math">V_j</eq>, with <eq env="math">\dim V_j=j</eq>.
+Then <eq env="math">X^{(i)}</eq> can also be understood as the <em>bundle on <eq env="math">X</eq> of flags of length <eq env="math">i</eq></em> in <eq env="math">E</eq>, and if <eq env="math">f^{(i)}</eq> is the projection from <eq env="math">X^{(i)}</eq> to <eq env="math">X</eq>, then we directly define, as in the definition of <eq env="math">L_E</eq>, an increasing sequence of subbundles <eq env="math">(V_j)_{0\leqslant j\leqslant i}</eq> of <eq env="math">E_i=(f^{(i)})^{(-1)}(E)</eq>, with <eq env="math">\operatorname{rank}(V_j)=j</eq>, and the quotient of <eq env="math">E_i</eq> by <eq env="math">V_i</eq> being exactly the vector bundle <eq env="math">E^{(i)}</eq>.
+In particular, <eq env="math">X^{(p)}</eq> is the <em>flag manifold</em> (of maximum length <eq env="math">p</eq>) <eq env="math">D(E)</eq> of <eq env="math">E</eq>, which thus looks like a “multiple extension” of <eq env="math">X</eq> by fibrations in projective spaces associated to vector bundles;
+the inverse image <eq env="math">E_p</eq> of <eq env="math">E</eq> in <eq env="math">X^{(p)}=D(E)</eq> is further <em>completely split</em>.
+By this, we mean that this rank-<eq env="math">p</eq> vector bundle is endowed with a sequence <eq env="math">(V_i)_{0\leqslant i\leqslant p}</eq> of vector subbundles,
+with <eq env="math">\operatorname{rank}(V_i)=i</eq>.
+Then the <eq env="math">V_i/V_{i-1}</eq> (<eq env="math">1\leqslant i\leqslant p</eq>) are vector bundles of rank <eq env="math">1</eq>, and are called the <em>factors</em> of the given splitting.</p>
+<p>If <eq env="math">X</eq> is an algebraic space, then we denote by <eq env="math">\mathbf{P}(X)</eq> the group of isomorphism classes of rank-<eq env="math">1</eq> vector bundles on <eq env="math">X</eq> (the composition law of the group being given by the tensor product of bundles).
+If <eq env="math">L</eq> is such a rank-<eq env="math">1</eq> vector bundle, then we denote by <eq env="math">\operatorname{cl}_X(L)</eq> the element of <eq env="math">\mathbf{P}(X)</eq> that it defines.
+We thus have
+<eq env="displaymath">
+  \begin{aligned}
+    \operatorname{cl}_X(L\otimes L') &amp;= \operatorname{cl}_X(L) + \operatorname{cl}_X(L')
+  \\\operatorname{cl}_X(\check{L}) &amp;= -\operatorname{cl}_X(L).
+  \end{aligned}
+</eq></p>
+<p>If <eq env="math">f\colon X\to Y</eq> is a morphism, then the formula
+<eq env="displaymath">
+  f^*(\operatorname{cl}_X(L)) = \operatorname{cl}_X(f^{-1}(L))
+</eq>
+defines a homomorphism <eq env="math">f^*</eq> from <eq env="math">\mathbf{P}(Y)</eq> to <eq env="math">\mathbf{P}(X)</eq>.
+In this way, <eq env="math">\mathbf{P}(X)</eq> can be considered as a <em>contravariant functor</em> in <eq env="math">X</eq>.</p>
+<p>With <eq env="math">f\colon X\to Y</eq> still a morphism, let <eq env="math">F</eq> be a rank-<eq env="math">p</eq> vector bundle on <eq env="math">Y</eq>, and set <eq env="math">E=f^{-1}(F)</eq>.
+This is a rank-<eq env="math">p</eq> vector bundle on <eq env="math">X</eq>, and we have a canonical isomorphism <eq env="math">\mathbb{P}(E)=f^{-1}(\mathbb{P}(F))</eq>, whence a natural morphism
+<eq env="displaymath">
+  \bar{f}\colon \mathbb{P}(E) \to \mathbb{P}(F)
+</eq>
+[where <eq env="math">E=f^{-1}(F)</eq>].</p>
+<p>With this, we can immediately verify that <em><eq env="math">L_e</eq> is canonically isomorphic to the inverse image <eq env="math">\bar{f}^{-1}(L_F)</eq></em>.
+We thus have the formula
+<eq env="displaymath">
+  \operatorname{cl}(L_E) = \bar{f}^*(\operatorname{cl}(L_F)).
+</eq></p>
+<p>Let <eq env="math">E</eq> be a rank-<eq env="math">p</eq> vector bundle on <eq env="math">X</eq>, and <eq env="math">s</eq> a regular section of <eq env="math">E</eq>.
+This is then a morphism from <eq env="math">X</eq> to <eq env="math">E</eq>, and even an isomorphism from <eq env="math">X</eq> to a closed subspace of <eq env="math">E</eq> of codimension <eq env="math">p</eq>.
+In particular, the image of <eq env="math">X</eq> under the zero section is a closed non-singular subspace <eq env="math">X'</eq> of <eq env="math">E</eq> of codimension <eq env="math">p</eq>.
+Evidently, the inverse image <eq env="math">s^{-1}(X')</eq> is exactly the set of zeros of <eq env="math">s</eq>.
+For the <em>cycle</em> <eq env="math">s^{-1}(X')</eq> to be defined, it is necessary and sufficient for the set of zeros of <eq env="math">s</eq> to be everywhere empty, or of codimension <eq env="math">p</eq> in <eq env="math">X</eq>.
+In this case, we can then speak of the <em>cycle of zeros</em> of the section <eq env="math">s</eq>.
+Recall also that the morphism <eq env="math">s</eq> is said to be <em>transversal</em> to the subvariety <eq env="math">X'</eq> of <eq env="math">X</eq> if, at every point of the inverse image of <eq env="math">X'</eq> under <eq env="math">s</eq>, the tangent map to <eq env="math">s</eq> is surjective mod the tangent space to <eq env="math">X'</eq>.
+In this case, <eq env="math">s^{-1}(X')</eq> is a non-singular algebraic subspace of <eq env="math">X</eq> that is everywhere of codimension <eq env="math">p</eq>, and all its components are of multiplicity <eq env="math">1</eq> in the cycle of zeros of <eq env="math">s</eq>.
+We will say, for brevity, that the section <eq env="math">s</eq> is <em>transversal to the zero section</em>.
+To express this property by a calculation, since it is local on <eq env="math">X</eq>, we can assume that <eq env="math">E</eq> is the trivial bundle <eq env="math">X\times k^p</eq>, so that <eq env="math">s</eq> is defined by the data of <eq env="math">p</eq> regular functions <eq env="math">(f_1,\ldots,f_p)</eq> on <eq env="math">X</eq>.
+For <eq env="math">s</eq> to be transversal to the zero section, it is necessary and sufficient for the functions <eq env="math">f_1,\ldots,f_p</eq> to give a regular system of parameters of <eq env="math">{\mathscr{O}}_x</eq> at every point <eq env="math">x</eq>.</p>
+</div>
+<div id="section-2" class="section level1">
+<h1>2. The functor <eq env="math">A(X)</eq></h1>
+
+</div>
+<div id="bibliography" class="section level1">
+<h1>Bibliography</h1>
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-2" class="csl-entry">
+Chern, Shung-Shen. 1953. <span>“On the Characteristic Classes of Complex Sphere Bundles and Algebraic Varieties.”</span> <em>Amer. J. Math.</em> 75: 565–97.
+</div>
+</div>
+</div>
+<script type="text/javascript" src="../katex.min.js"></script>
+
+<script type="text/javascript">
+  var $document = $(document);
+  $document.ready(function() {
+    $('eq').map(function() {
+      var display = (this.getAttribute('env') == "displaymath");
+      katex.render(this.textContent, this, {displayMode: display, fleqn: true, throwOnError: false});
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  var $document = $(document);
+  $document.ready(function() {
+    $('div.font-settings button.size-3').map(function() {
+      this.setAttribute("class", "button size-2")
+      if (this.innerText == "Sepia") {
+        this.setAttribute("style", "display: none;");
+      }
+      if (this.innerText == "White") {
+        this.innerText = "Light";
+      }
+      if (this.innerText == "Night") {
+        this.innerText = "Dark";
+      }
+    });
+  });
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": {}
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 1
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": {},
+"toc": {
+"collapse": "subsection"
+},
+"info": false
+});
+});
+</script>
+
+</body>
+
+</html>
