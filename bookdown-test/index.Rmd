@@ -2,7 +2,8 @@
 title: "The theory of Chern classes"
 author: "A. Grothendieck"
 date: "(web version last updated: `r format(Sys.Date(), format='%d %B %Y')`)"
-bibliography: ["BSMF-86-1958-137.bib"]
+bibliography: BSMF-86-1958-137.bib
+csl: bib-style.csl
 link-citations: true
 output:
   bookdown::gitbook:
@@ -137,8 +138,12 @@ To express this property by a calculation, since it is local on $X$, we can assu
 For $s$ to be transversal to the zero section, it is necessary and sufficient for the functions $f_1,\ldots,f_p$ to give a regular system of parameters of $\scr{O}_x$ at every point $x$.
 
 
-# 2. The functor $A(X)$ {#section-2}
+# 2. The functor A(X) {#section-2}
 
 \oldpage{140}
+
+In what follows, suppose that we have a category $\cal{V}$ of non-singular algebraic spaces (the morphisms in this category being the morphisms of algebraic spaces).
+The only condition that we impose on $\cal{V}$ is that
+
 
 `r if (knitr::is_html_output()) '# Bibliography'`
