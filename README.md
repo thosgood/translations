@@ -1,11 +1,12 @@
 ### To-do list
 
 - (PDF) no header on title page
+- (PDF) bibliography formatting (no initial indent + spacing)
 - (HTML) latex in section title appears twice in TOC
   + also in title in header (if title contains latex)
 - (HTML) link to github copy of Rmd source ("source" metadata)
-- (BOTH) git commit version
 - (HTML) make `download: ["pdf"]` in `_output.yml` work somehow...
+- (BOTH) git commit version
 
 ### Server code
 
@@ -45,21 +46,28 @@ else
   fi
   if ! [ -z "$NEWRMD" ]; then
     cd $TRANSLATIONS_DIR/bookdown-builder/
-    rm _main.Rmd
+    rmdir output
+    if [ -f "_main.Rmd" ]; then
+      rm _main.Rmd
+    fi
     for file in $NEWRMD; do
       BASE=${file##*/}
       PREF=${BASE%.*}
       cp $TRANSLATIONS_DIR/$file ./index.Rmd
-      if [ -f "${file%.*}.bib" ]; then
-        cp $TRANSLATIONS_DIR/"${file%.*}.bib" .
+      if [ -f "$TRANSLATIONS_DIR/${file%.*}.bib" ]; then
+        cp "$TRANSLATIONS_DIR/${file%.*}.bib" .
       fi
       echo "$BASE" &&
       ./build.R &&
-      mv ./output/_main.html ./bookdown-builder/output/$PREF.html &&
-      mv ./output/_main.pdf ./bookdown-builder/output/$PREF.pdf &&
-      mv ./output/_main.tex ./bookdown-builder/output/$PREF.tex
+      mv output/_main.html output/$PREF.html &&
+      mv output/_main.pdf output/$PREF.pdf &&
+      mv output/_main.tex output/$PREF.tex &&
+      rm index.Rmd
+      if [ -f "./*.bib" ]; then
+        rm *.bib
+      fi
     done
-    #mv $TRANSLATIONS_DIR/bookdown-builder/output $WEBSITE/bookdown
+    cp -r output/* $WEBSITE/bookdown
   fi
 fi
 ```
