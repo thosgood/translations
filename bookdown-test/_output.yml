@@ -1,6 +1,6 @@
 bookdown::gitbook:
-  number_sections: true
-  anchor_sections: false
+  number_sections: yes
+  anchor_sections: no
   mathjax: null
   pandoc_args: ["--gladtex"]
   css: ["style.css", "katex.css"]
@@ -9,6 +9,7 @@ bookdown::gitbook:
   split_by: none
   config:
     toc:
+      scroll_highlight: yes
       before: |
         <li><h4>Table of contents</h4></li>
     fontsettings:
@@ -16,10 +17,7 @@ bookdown::gitbook:
       family: serif
       size: 1
     download: ["pdf"]
-    sharing:
-      facebook: no
-      twitter: no
-      all: []
+    sharing: no
     info: no
 bookdown::pdf_book:
   template: pandoc-template.latex
