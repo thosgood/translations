@@ -66,7 +66,7 @@
 \maketitle
 \thispagestyle{fancy}
 
-\renewcommand{\abstractname}{Translator's note.}
+\renewcommand{\abstractname}{Translator's note}
 
 \begin{abstract}
   \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
@@ -102,27 +102,28 @@
 \oldpage{137}
 
 In this appendix, we will develop an axiomatic theory of Chern classes that will allow us, in particular, to define the Chern classes of an algebraic vector bundle \(E\) on a non-singular quasi-projective algebraic variety \(X\) as elements of the Chow ring \(A(X)\) of \(X\), i.e.~as classes of cycles under rational equivalence.
-This exposé is inspired by the book of Hirzebruch on one hand (where the essential \emph{formal properties} characterising a theory of Chern classes was brought to light), and by an idea of Chern (\protect\hyperlink{ref-2}{Chern 1953}) that consists of using the multiplicative structure of the ring of cycle classes on the bundle of projective spaces \(P(E)\) associated to \(E\), to reach an effective \emph{construction} of Chern classes.
-We note that the exposition given here also applies to other settings than algebraic geometry, and recovers, for example, an entirely elementary theory of Chern classes for complex vector bundles on topological manifold (and, from this, on any space for which the classification theorem of principal bundles with a structure group via a ``classifying space'' holds true).
+This exposé is inspired one one hand by the book of Hirzebruch (where the essential \emph{formal properties} characterising a theory of Chern classes were brought to light), and on the other hand by an idea of Chern (\protect\hyperlink{ref-2}{Chern 1953}) that consists of using the multiplicative structure of the ring of cycle classes on the bundle of projective spaces \(\mathbb{P}(E)\) associated to \(E\), to give an effective \emph{construction} of Chern classes.
+We note that the exposition given here also applies to other settings than algebraic geometry, and recovers, for example, an entirely elementary theory of Chern classes for complex vector bundles on topological manifolds (and, from this, on any space for which the classification theorem of principal bundles with a structure group via a ``classifying space'' holds true).
 Similarly, we will obtain, for a complex-analytic vector bundle \(E\) on a (non-singular) complex-analytic manifold \(X\), Chern classes
 \[
   c_p(E) \in \operatorname{H}^p(X,\Omega_X^p),
 \]
 where \(\Omega_X^p\) is the sheaf of germs of holomorphic differential forms of degree \(p\) on \(X\).
-{[}And it is certainly easy to prove that this definition agrees with that given recently by Atiyah \cite{1}, and that it is linked to the topological definition of Chern classes via the spectral sequence linking \(\operatorname{H}^p(X,\Omega_X^q)\) and \(\operatorname{H}^\bullet(X,\mathbb{C})\).{]}
-Similarly, the theory of Stiefel-Whitney classes in cohomology mod \(2\) fits into the framework that we will describe here.
+{[}And it is certainly easy to prove that this definition agrees with the one given recently by Atiyah (\protect\hyperlink{ref-1}{Atiyah 1957}), and that it is related to the topological definition of Chern classes via the spectral sequence relating \(\operatorname{H}^p(X,\Omega_X^q)\) and \(\operatorname{H}^\bullet(X,\mathbb{C})\).{]}
+Similarly, the theory of Stiefel--Whitney classes in \(\mathbb{Z}/2\mathbb{Z}\) cohomology fits into the framework that we will describe here.
 
 \oldpage{138}
 
-It appears that a satisfying theory of Chern classes in algebraic geometry has been given, for the first time, by W.L. Chow (unpublished), using the Grassmannian.
+It appears that a satisfying theory of Chern classes in algebraic geometry was given, for the first time, by W.L. Chow (unpublished), using the Grassmannian.
 The main aim of the current paper has been to eliminate the Grassmannian from the theory.
 I have already shown (\protect\hyperlink{ref-4}{Séminaire Claude Chevalley 1956--1958}) how the theory of Chern classes allows us to \emph{recover} the structure of \(A(X)\) when \(X\) is a Grassmannian.
 
 \hypertarget{section-1}{%
 \section{Notation}\label{section-1}}
 
-In order to not expose ourselves to the complications arising from the theory of intersections, we will limit ourselves in what follows to considering only \emph{non-singular} topological spaces.
-We fix a base field \(k\) once and for all, and, to better understand the ideas, the reader can assume it to be algebraically closed.
+In order to not expose ourselves to the complications arising from intersection theory, we will limit ourselves in what follows to considering only \emph{non-singular} topological spaces.
+We fix, once and for all, a base field \(k\).
+To better understand the ideas, the reader can assume that \(k\) is algebraically closed.
 All the bundles, subvarieties, morphisms, etc. that we consider in what follows will be defined over \(k\).
 
 If \(X\) is an algebraic space, and \(E\) a vector bundle on \(X\), then we denote by \(\mathbb{P}(E)\) the associated projective bundle.
@@ -130,7 +131,7 @@ The fibre \(\mathbb{P}(E)_x\) of \(\mathbb{P}(E)\) at a point \(x\in X\) is thus
 Let \(f\colon\mathbb{P}(E)\to X\) be the projection of the bundle;
 we will consider the inverse image of \(E\) under \(f\), which is the vector bundle \(f^{-1}(E)\) on \(\mathbb{P}(E)\).
 There is a canonical rank-\(1\) subbundle of \(f^{-1}(E)\), whose fibre at a point \(d\) of \(\mathbb{P}(E)\) (over a point \(x\in X\)) is the line \(d\) in \(E_x=f^{-1}(E)_d\).
-The dual bundle of this subbundle of \(f^{-1}(E)\) is denoted \(L_E\), and we thus have the inclusion
+The dual bundle of this subbundle of \(f^{-1}(E)\) is denoted by \(L_E\), and we thus have the inclusion
 \[
   \check{L}_E \subset f^{-1}(E).
 \]

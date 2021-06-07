@@ -1,9 +1,13 @@
 ### To-do
 
-- add end marker to `itenv` and `rmenv`
-- spacing after `itenv` and `rmenv`...
 - **convert everything to `.(R)md` and make the server build PDF _and_ HTML versions**
-  + Pandoc or Bookdown?
+  + (PDF) no header on title page
+  + (BOTH) bibliography formatting
+  + (PDF) bibliography in TOC
+  + (PDF) original in translator's note
+  + (PDF) footnote in translator's note (currently not on the first page)
+  + (BOTH) git commit version
+  + (HTML) link to github copy of Rmd source ("source" metadata)
 
 ### Server code
 
