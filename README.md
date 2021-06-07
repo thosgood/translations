@@ -5,6 +5,7 @@
   + also in title in header (if title contains latex)
 - (HTML) link to github copy of Rmd source ("source" metadata)
 - (BOTH) git commit version
+- (HTML) make `download: ["pdf"]` in `_output.yml` work somehow...
 
 ### Server code
 
