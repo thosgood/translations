@@ -1,0 +1,113 @@
+html {
+  font-size: 85%;
+}
+
+.page-inner {
+  max-width: 720px !important;
+}
+
+.katex-html {
+  white-space: nowrap;
+}
+
+@font-face {
+  font-family: EBGaramond;
+  src: url(../fonts/EBGaramond-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: EBGaramond;
+  src: url(../fonts/EBGaramond-Bold.ttf) format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: EBGaramond;
+  src: url(../fonts/EBGaramond-Italic.ttf) format('truetype');
+  font-style: italic;
+}
+@font-face {
+  font-family: EBGaramond;
+  src: url(../fonts/EBGaramond-BoldItalic.ttf) format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+.book.font-family-0 {
+  font-family: EBGaramond, Georgia, serif;
+}
+
+.book.font-family-1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.page-wrapper p {
+  text-align: justify;
+}
+
+
+/* TOC */
+
+.book .book-summary nav ul.summary h4 {
+  font-size: 1.5rem;
+  padding-left: 1em;
+}
+
+
+/* Book */
+
+.page-inner h1 {
+  font-size: 1.75em !important;
+  border-bottom: 1px solid black;
+}
+
+.page-inner h2 {
+  font-size: 1.5em !important;
+}
+
+
+/* Custom environments */
+
+.itenv {
+  font-style: italic;
+  margin: 1em 0;
+}
+
+.itenv:before {
+  content: attr(title)".";
+  font-style: normal;
+  font-weight: bold;
+  padding-right: 0.5em;
+  float: left;
+}
+
+.itenv em {
+  font-style: normal !important;
+}
+
+.itenv > :first-child {
+  margin-top: 0 !important;
+}
+
+.itenv > :last-child {
+  margin-bottom: 0 !important;
+}
+
+.rmenv {
+  font-style: normal;
+  margin: 1em 0;
+}
+
+.rmenv:before {
+  content: attr(title)".";
+  font-style: normal;
+  font-weight: bold;
+  padding-right: 0.5em;
+  float: left;
+}
+
+.rmenv > :first-child {
+  margin-top: 0 !important;
+}
+
+.rmenv > :last-child {
+  margin-bottom: 0 !important;
+}
