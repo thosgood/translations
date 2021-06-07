@@ -19,6 +19,7 @@ method:
 
 - (PDF) no header on title page
 - (HTML) latex in section title appears twice in TOC
+  + also in title in header (if title contains latex)
 - (HTML) link to github copy of Rmd source ("source" metadata)
 - (BOTH) git commit version
 
