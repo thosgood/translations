@@ -1,5 +1,7 @@
 ### To-do list
 
+- move `clever_git_pull` into this repo
+
 - (PDF) header on title page
 - (HTML) latex in section title appears twice in TOC
   + also in title in header (if title contains latex)
@@ -28,7 +30,7 @@ if [ -z "$NEWTEX" ] && [ -z "$NEWRMD" ]; then
   printf "No changes to any .tex or .Rmd files!\n"
 else
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-  printf "\nHere are the .tex files that have changed:\n"
+  printf "Here are the .tex files that have changed:\n"
   printf "$NEWTEX\n"
   printf "Here are the .Rmd files that have changed:\n"
   printf "$NEWRMD\n"
@@ -45,7 +47,7 @@ else
       sed -i 's/serverfalse/servertrue/g' ./$BASE &&
       sed -i "s/GitCommitHashVariable/$COMMIT/g" ./$BASE &&
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-      printf "\nWorking on $BASE\n" &&
+      printf "Working on $BASE\n" &&
       shpdflatex.sh $BASE &&
       cp $PREF.pdf $WEBSITE/builds
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
@@ -64,7 +66,7 @@ else
         cp "$TRANSLATIONS_DIR/${file%.*}.bib" .
       fi
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-      printf "\nWorking on $BASE\n" &&
+      printf "Working on $BASE\n" &&
       sed -i "s/PDF_FILE_NAME/$PREF/g" ./_output.yml &&
       ./build.R &&
       mv output/_main.html output/$PREF.html &&
