@@ -7,6 +7,7 @@
   + also in title in header (if title contains latex)
 - (HTML) link to github copy of Rmd source ("source" metadata)
 - (HTML) make `download: ["pdf"]` in `_output.yml` work somehow...
+  + need to rename the pdf halfway through the `build.R` process, before starting the gitbook build!
 - (BOTH) git commit version
 
 ### Server code
