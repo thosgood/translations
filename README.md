@@ -1,7 +1,6 @@
 ### To-do list
 
-- (PDF) no header on title page
-- (PDF) bibliography formatting (no initial indent + spacing)
+- (PDF) header on title page
 - (HTML) latex in section title appears twice in TOC
   + also in title in header (if title contains latex)
 - (HTML) link to github copy of Rmd source ("source" metadata)
