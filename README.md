@@ -27,12 +27,12 @@ NEWRMD=$(git diff --name-only master origin/master | grep -E '.Rmd$')
 if [ -z "$NEWTEX" ] && [ -z "$NEWRMD" ]; then
   printf "No changes to any .tex or .Rmd files!\n"
 else
-  printf "------------------------"
+  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   printf "\nHere are the .tex files that have changed:\n"
   printf "$NEWTEX\n"
   printf "Here are the .Rmd files that have changed:\n"
   printf "$NEWRMD\n"
-  printf "------------------------"
+  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   git pull
   COMMIT=$(git rev-parse --short HEAD)
   printf "\nUpdating to git commit $COMMIT\n"
@@ -44,11 +44,11 @@ else
       cp $TRANSLATIONS_DIR/$file ./$BASE &&
       sed -i 's/serverfalse/servertrue/g' ./$BASE &&
       sed -i "s/GitCommitHashVariable/$COMMIT/g" ./$BASE &&
-      printf "------------------------"
+      printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "\nWorking on $BASE\n" &&
       shpdflatex.sh $BASE &&
       cp $PREF.pdf $WEBSITE/builds
-      printf "------------------------"
+      printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     done
   fi
   if ! [ -z "$NEWRMD" ]; then
@@ -63,7 +63,7 @@ else
       if [ -f "$TRANSLATIONS_DIR/${file%.*}.bib" ]; then
         cp "$TRANSLATIONS_DIR/${file%.*}.bib" .
       fi
-      printf "------------------------"
+      printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "\nWorking on $BASE\n" &&
       sed -i "s/PDF_FILE_NAME/$PREF/g" ./_output.yml &&
       ./build.R &&
@@ -72,7 +72,7 @@ else
       mv output/_main.tex output/$PREF.tex &&
       rm index.Rmd &&
       rm *.bib
-      printf "------------------------"
+      printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     done
     cp -r output/* $WEBSITE/bookdown
   fi
