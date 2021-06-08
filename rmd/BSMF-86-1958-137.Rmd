@@ -57,8 +57,8 @@ If $X$ is an algebraic space, and $E$ a vector bundle on $X$, then we denote by 
 The fibre $\mathbb{P}(E)_x$ of $\mathbb{P}(E)$ at a point $x\in X$ is thus the projective space associated to the vector space $E_x$, and so a point of $\mathbb{P}(E)_x$ over a point $x\in X$ is exactly a homogeneous line in $E_x$.
 Let $f\colon\mathbb{P}(E)\to X$ be the projection of the bundle;
 we will consider the inverse image of $E$ under $f$, which is the vector bundle $f^{-1}(E)$ on $\mathbb{P}(E)$.
-There is a canonical rank-$1$ subbundle of $f^{-1}(E)$, whose fibre at a point $d$ of $\mathbb{P}(E)$ (over a point $x\in X$) is the line $d$ in $E_x=f^{-1}(E)_d$.
-The dual bundle of this subbundle of $f^{-1}(E)$ is denoted by $L_E$, and we thus have the inclusion
+There is a canonical rank-$1$ sub-bundle of $f^{-1}(E)$, whose fibre at a point $d$ of $\mathbb{P}(E)$ (over a point $x\in X$) is the line $d$ in $E_x=f^{-1}(E)_d$.
+The dual bundle of this sub-bundle of $f^{-1}(E)$ is denoted by $L_E$, and we thus have the inclusion
 $$
   \check{L}_E \subset f^{-1}(E).
 $$
@@ -67,10 +67,10 @@ Let $p$ be the rank of $E$ (assumed to be constant, which is always the case if 
 Then $E^{(1)}=f^{-1}(E)/\check{L}_E$ is a vector bundle of rank $p-1$ on $X^{(1)}=\mathbb{P}(E)$, and we can thus construct $X^{(2)}=\mathbb{P}(E^{(1)})$ and the analogous bundle $E^{(2)}=(E^{(1)})^{(1)}$ of rank $p-2$ on $X^{(2)}$.
 In this manner, we inductively construct manifolds $X^{(i)}$ and vector bundles $E^{(i)}$ of rank $p-i$ on $X^{(i)}$ (for $1\leq i\leq p$), where $X^{(i)}$ is the bundle $\mathbb{P}(E^{(i-1)})$ on $X^{(i-1)}$.
 We define a _flag of length $i$_ in a vector space $V$ to be an increasing sequence $(V_j)_{0\leq j\leq i}$ of vector subspaces $V_j$, with $\dim V_j=j$.
-Then $X^{(i)}$ can also be understood as the _bundle on $X$ of flags of length $i$_ in $E$, and, if $f^{(i)}$ is the projection from $X^{(i)}$ to $X$, then we directly define, as in the definition of $L_E$, an increasing sequence of subbundles $(V_j)_{0\leq j\leq i}$ of $E_i=(f^{(i)})^{(-1)}(E)$, with $\rank(V_j)=j$, with the quotient of $E_i$ by $V_i$ being exactly the vector bundle $E^{(i)}$.
+Then $X^{(i)}$ can also be understood as the _bundle on $X$ of flags of length $i$_ in $E$, and, if $f^{(i)}$ is the projection from $X^{(i)}$ to $X$, then we directly define, as in the definition of $L_E$, an increasing sequence of sub-bundles $(V_j)_{0\leq j\leq i}$ of $E_i=(f^{(i)})^{(-1)}(E)$, with $\rank(V_j)=j$, with the quotient of $E_i$ by $V_i$ being exactly the vector bundle $E^{(i)}$.
 In particular, $X^{(p)}$ is the _flag manifold_ $D(E)$ (of maximum length $p$) of $E$, which resembles a "multiple extension" of $X$ by fibrations in projective spaces associated to vector bundles;
 the inverse image $E_p$ of $E$ in $X^{(p)}=D(E)$ is further _completely split_.
-By this, we mean that this rank-$p$ vector bundle is endowed with a sequence $(V_i)_{0\leq i\leq p}$ of vector subbundles,
+By this, we mean that this rank-$p$ vector bundle is endowed with a sequence $(V_i)_{0\leq i\leq p}$ of vector sub-bundles,
 with $\rank(V_i)=i$.
 Then the $V_i/V_{i-1}$ ($1\leq i\leq p$) are vector bundles of rank $1$, and are called the _factors_ of the given splitting.
 
@@ -126,3 +126,94 @@ for $s$ to be transversal to the zero section, it is necessary and sufficient fo
 In what follows, suppose that we have a category $\cal{V}$ of non-singular algebraic spaces (the morphisms in this category being the morphisms of algebraic spaces).
 The only condition that we impose on $\cal{V}$ is that
 
+::: {.rmenv #V1 title="V1"}
+If $X\in\cal{V}$, and if $E$ is a vector bundle on $X$, then $\mathbb{P}(E)\in\cal{V}$.
+:::
+
+Suppose further that we have the following data:
+
+::: {.rmenv #data title="Data"}
+a. a contravariant functor $X\mapsto A(X)$ from $\cal{V}$ to the category of unital anticommutative graded rings;
+
+b. a functorial homomorphism $p_X\colon\PP(X)\to A^2(X)$ (for $X\in\cal{V}$); and
+
+c. for all $X\in\cal{V}$, and for every closed algebraic subspace $Y$ of $X$, of constant codimension $p$ in $X$, with $Y\in\cal{V}$, a group homomorphism
+    $$
+      i_*\colon A(Y)\to A(X)
+    $$
+    (where $i$ denotes the injection $Y\to X$) that raises the degree by $2p$.
+:::
+
+If $f\colon X\to Y$ is a morphism in $\cal{V}$, then we denote the corresponding homomorphism from $A(Y)$ to $A(X)$ by $f^*$.
+The unit element of $A(X)$ will be denoted by $1_X$, and, if $X\in\cal{V}$, and if $Y$ is a closed algebraic subspace of constant codimension $p$ of $X$, with $Y\in\cal{V}$, then we define $p_X(Y)=i_*(1_Y)$, where $i$ is (again) the injection morphism from $Y$ into $X$.
+
+With this, we suppose that the following conditions are satisfied:
+
+::: {.rmenv #axiomA1 title="A1"}
+Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $\mathbb{P}(E)$ the associated projective bundle, and $\xi_E$ the element of $A(\mathbb{P}(E))$ defined by
+$$
+  \xi_E = p(\cl(L_E)).
+$$
+We can think of $A(\mathbb{P}(E))$ as a left $A(X)$-module via the homomorphism $f^*\colon A(X)\to A(\mathbb{P}(E))$ associated to the projection $f\colon\mathbb{P}(E)\to X$.
+Then the elements
+$$
+  (\xi_E)^0, \ldots, (\xi_E)^{p-1}
+$$
+form a basis of $A(\mathbb{P}(E))$ over $A(X)$.
+:::
+
+::: {.rmenv #axiomA2 title="A2"}
+Let $X\in\cal{V}$, and let $L$ be a rank-$1$ vector bundle on $X$, and $s$ a regular section of $L$ that is transversal to the zero section, and such that the space $Y$ of zeros of $s$ belongs to $\cal{V}$.
+Then
+$$
+  p_X(Y) = p_X(\cl_X(L)).
+$$
+:::
+
+::: {.rmenv #axiomA3 title="A3"}
+Let $X,Y,Z\in\cal{V}$, with $Z\subset Y\subset X$, and let $i\colon Z\to Y$ and $j\colon Y\to X$ be the injection morphisms.
+Then $(ji)_* = j_*i_*$.
+:::
+
+::: {.rmenv #axiomA4 title="A4"}
+Let $X,Y\in\cal{V}$, with $Y\subset X$, and let $i\colon Y\to X$ be the injection morphism.
+Then
+$$
+  i_*(bi^*(a)) = i_*(b)a
+$$
+for all $a\in A(X)$ and all $b\in A(Y)$,
+:::
+
+\oldpage{141}
+
+From these axioms we will prove two lemmas that will be useful in the [next section](#section-3).
+
+::: {.itenv #lemma1 title="Lemma 1"}
+Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$.
+Consider, for all $1\leq i\leq p$, the bundle $X^{(i)}$ of flags of length $i$ in $E$.
+Then $X^{(i)}\in\cal{V}$, and the homomorphism $A(X)\to A(X^{(i)})$ induced by the projection $X^{(i)}\to X$ is \emph{injective}.
+:::
+
+::: {.proof}
+By [§1](#section-1), we can restrict, by induction on $i$, to the case of the projective bundle $X^{(1)}=\mathbb{P}(E)$ associated to $E$.
+Then our claims are an immediate consequence of [V1](#V1) and [A1](#A1) [since the element $1_{\mathbb{P}(E)}=(\xi_E)^0$ is free over the ring $A(X)$].
+:::
+
+::: {.itenv #lemma2 title="Lemma 2"}
+Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, with $s$ a regular section of $E$, and $(E_i)_{0\leq i\leq p}$ a decreasing sequence of vector sub-bundles of $E$, with $\rank E_i=p-i$.
+Define, for $1\leq i\leq p$,
+$$
+  \xi_i = p_X\cl_X(E_{i-1}/E_i)
+$$
+For every $1\leq i\leq p$, let $Y_i$ be the subset of $X$ consisting of those $x\in X$ such that $s(x)\in E_i$.
+Suppose that, for all $i$, $Y_i$ is a non-singular subvariety of $X$, and that $Y_i\in\cal{V}$.
+Let $s_i$ be the section of $(E_i/E_{i+1})|Y_i$ defined by $s$, and suppose that, for $1\leq i\leq p-1$, $s_i$ is transversal to the zero section.
+Then, under these conditions,
+$$
+  p_X(Y_p) = \prod_{1\leq i\leq p}\xi_i.
+$$
+:::
+
+::: {.proof}
+We
+:::
