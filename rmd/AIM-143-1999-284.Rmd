@@ -24,12 +24,12 @@ The goal of this note is to prove the following result:
 
 ::: {.itenv title="Theorem"}
 We have
-$$
+\begin{equation}
 (\#eq:1)
 \frac{1}{2\pi}\int_{\Re(s)=1/2} \frac{\log|\zeta(s)|}{|s|^2}|\dd s|
 = \sum_{\Re\rho>1/2} \log\left|\frac{\rho}{1-\rho}\right|.
 \tag{1}
-$$
+\end{equation}
 In particular, the Riemann hypothesis is true if and only if
 $$
 \int_{\Re(s)=1/2} \frac{\log|\zeta(s)|}{|s|^2}|\dd s| = 0.
