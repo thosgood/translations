@@ -46,13 +46,11 @@ else
       shpdflatex.sh $BASE &&
       cp $PREF.pdf $WEBSITE/builds
     done
-    rm $TRANSLATIONS_DIR/builds/*
   fi
   if ! [ -z "$NEWRMD" ]; then
     cd $TRANSLATIONS_DIR/bookdown-builder/
-    rmdir output
-    if [ -f "_main.Rmd" ]; then
-      rm _main.Rmd
+    if [ -f "./_main.Rmd" ]; then
+      rm ./_main.Rmd
     fi
     for file in $NEWRMD; do
       BASE=${file##*/}
@@ -67,13 +65,10 @@ else
       mv output/_main.html output/$PREF.html &&
       mv output/_main.pdf output/$PREF.pdf &&
       mv output/_main.tex output/$PREF.tex &&
-      rm index.Rmd
-      if [ -f "./*.bib" ]; then
-        rm *.bib
-      fi
+      rm index.Rmd &&
+      rm *.bib
     done
     cp -r output/* $WEBSITE/bookdown
-    rm output/*
   fi
 fi
 ```
