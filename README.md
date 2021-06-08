@@ -9,6 +9,11 @@
 
 ### Server code
 
+**Using the following versions:**
+- `bookdown 0.22.3`
+- `pandoc 2.11.1.1`
+- `pdfTeX 3.141592653-2.6-1.40.22`
+
 ```bash
 #!/bin/bash
 
@@ -67,6 +72,7 @@ else
       fi
     done
     cp -r output/* $WEBSITE/bookdown
+    rm output/*
   fi
 fi
 ```
