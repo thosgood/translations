@@ -25,15 +25,15 @@ git fetch
 NEWTEX=$(git diff --name-only master origin/master | grep -E '.tex$')
 NEWRMD=$(git diff --name-only master origin/master | grep -E '.Rmd$')
 if [ -z "$NEWTEX" ] && [ -z "$NEWRMD" ]; then
-  echo "no changes"
+  printf "No changes to any .tex or .Rmd files!\n"
 else
-  echo "Here are the .tex files that have changed:"
-  echo "$NEWTEX"
-  echo "Here are the .Rmd files that have changed:"
-  echo "$NEWRMD"
+  printf "Here are the .tex files that have changed:\n"
+  printf "$NEWTEX\n"
+  printf "Here are the .Rmd files that have changed:\n"
+  printf "$NEWRMD\n"
   git pull
   COMMIT=$(git rev-parse --short HEAD)
-  echo "Updating to git commit hash $COMMIT"
+  printf "\nUpdating to git commit $COMMIT\n"
   if ! [ -z "$NEWTEX" ]; then
     cd $TRANSLATIONS_DIR/builds
     for file in $NEWTEX; do
@@ -42,7 +42,7 @@ else
       cp $TRANSLATIONS_DIR/$file ./$BASE &&
       sed -i 's/serverfalse/servertrue/g' ./$BASE &&
       sed -i "s/GitCommitHashVariable/$COMMIT/g" ./$BASE &&
-      echo "$BASE" &&
+      printf "\nWorking on $BASE\n" &&
       shpdflatex.sh $BASE &&
       cp $PREF.pdf $WEBSITE/builds
     done
@@ -59,7 +59,7 @@ else
       if [ -f "$TRANSLATIONS_DIR/${file%.*}.bib" ]; then
         cp "$TRANSLATIONS_DIR/${file%.*}.bib" .
       fi
-      echo "$BASE" &&
+      printf "\nWorking on $BASE\n" &&
       sed -i "s/PDF_FILE_NAME/$PREF/g" ./_output.yml &&
       ./build.R &&
       mv output/_main.html output/$PREF.html &&
@@ -70,5 +70,6 @@ else
     done
     cp -r output/* $WEBSITE/bookdown
   fi
+  printf "\nDone!\n"
 fi
 ```
