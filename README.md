@@ -62,6 +62,7 @@ else
         cp "$TRANSLATIONS_DIR/${file%.*}.bib" .
       fi
       echo "$BASE" &&
+      sed -i "s/PDF_FILE_NAME/$PREF/g" ./_output.yml &&
       ./build.R &&
       mv output/_main.html output/$PREF.html &&
       mv output/_main.pdf output/$PREF.pdf &&
