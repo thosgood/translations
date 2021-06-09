@@ -126,13 +126,13 @@ for $s$ to be transversal to the zero section, it is necessary and sufficient fo
 In what follows, suppose that we have a category $\cal{V}$ of non-singular algebraic spaces (the morphisms in this category being the morphisms of algebraic spaces).
 The only condition that we impose on $\cal{V}$ is the following:
 
-::: {.rmenv #V1 title="V1" data-latex="V1"}
+::: {.rmenv #V1 title="V1" data-latex="{V1}"}
 If $X\in\cal{V}$, and if $E$ is a vector bundle on $X$, then $\mathbb{P}(E)\in\cal{V}$.
 :::
 
 Suppose further that we have the following data:
 
-::: {.rmenv #data title="Data" data-latex="Data"}
+::: {.rmenv #data title="Data" data-latex="{Data}"}
 —
 
 a. a contravariant functor $X\mapsto A(X)$ from $\cal{V}$ to the category of unital anticommutative graded rings;
@@ -151,7 +151,7 @@ The unit element of $A(X)$ will be denoted by $1_X$, and, if $X\in\cal{V}$, and 
 
 With this, we suppose that the following conditions are satisfied:
 
-::: {.rmenv #axiomA1 title="A1" data-latex="A1"}
+::: {.rmenv #axiomA1 title="A1" data-latex="{A1}"}
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $\mathbb{P}(E)$ the associated projective bundle, and $\xi_E$ the element of $A(\mathbb{P}(E))$ defined by
 $$
   \xi_E = p(\cl(L_E)).
@@ -164,7 +164,7 @@ $$
 form a basis of $A(\mathbb{P}(E))$ over $A(X)$.
 :::
 
-::: {.rmenv #axiomA2 title="A2" data-latex="A2"}
+::: {.rmenv #axiomA2 title="A2" data-latex="{A2}"}
 Let $X\in\cal{V}$, and let $L$ be a rank-$1$ vector bundle on $X$, and $s$ a regular section of $L$ that is transversal to the zero section, and such that the space $Y$ of zeros of $s$ belongs to $\cal{V}$.
 Then
 $$
@@ -172,12 +172,12 @@ $$
 $$
 :::
 
-::: {.rmenv #axiomA3 title="A3" data-latex="A3"}
+::: {.rmenv #axiomA3 title="A3" data-latex="{A3}"}
 Let $X,Y,Z\in\cal{V}$, with $Z\subset Y\subset X$, and let $i\colon Z\to Y$ and $j\colon Y\to X$ be the injection morphisms.
 Then $(ji)_* = j_*i_*$.
 :::
 
-::: {.rmenv #axiomA4 title="A4" data-latex="A4"}
+::: {.rmenv #axiomA4 title="A4" data-latex="{A4}"}
 Let $X,Y\in\cal{V}$, with $Y\subset X$, and let $i\colon Y\to X$ be the injection morphism.
 Then
 $$
@@ -190,7 +190,7 @@ for all $a\in A(X)$ and all $b\in A(Y)$,
 
 From these axioms we will prove two lemmas that will be useful in the [next section](#section-3).
 
-::: {.itenv #lemma1 title="Lemma 1" data-latex="Lemma 1"}
+::: {.itenv #lemma1 title="Lemma 1" data-latex="{Lemma 1}"}
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$.
 Consider, for all $1\leq i\leq p$, the bundle $X^{(i)}$ of flags of length $i$ in $E$.
 Then $X^{(i)}\in\cal{V}$, and the homomorphism $A(X)\to A(X^{(i)})$ induced by the projection $X^{(i)}\to X$ is \emph{injective}.
@@ -201,7 +201,7 @@ By [§1](#section-1), we can restrict, by induction on $i$, to the case of the p
 Then our claims are an immediate consequence of [V1](#V1) and [A1](#A1) [since the element $1_{\mathbb{P}(E)}=(\xi_E)^0$ is free over the ring $A(X)$].
 :::
 
-::: {.itenv #lemma2 title="Lemma 2" data-latex="Lemma 2"}
+::: {.itenv #lemma2 title="Lemma 2" data-latex="{Lemma 2}"}
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, with $s$ a regular section of $E$, and $(E_i)_{0\leq i\leq p}$ a decreasing sequence of vector sub-bundles of $E$, with $\rank E_i=p-i$.
 Define, for $1\leq i\leq p$,
 $$
