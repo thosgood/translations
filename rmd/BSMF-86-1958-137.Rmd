@@ -151,7 +151,7 @@ The unit element of $A(X)$ will be denoted by $1_X$, and, if $X\in\cal{V}$, and 
 
 With this, we suppose that the following conditions are satisfied:
 
-::: {.rmenv #axiomA1 title="A1" data-latex="{A1}"}
+::: {.rmenv #axiom-A1 title="A1" data-latex="{A1}"}
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $\mathbb{P}(E)$ the associated projective bundle, and $\xi_E$ the element of $A(\mathbb{P}(E))$ defined by
 $$
   \xi_E = p(\cl(L_E)).
@@ -164,7 +164,7 @@ $$
 form a basis of $A(\mathbb{P}(E))$ over $A(X)$.
 :::
 
-::: {.rmenv #axiomA2 title="A2" data-latex="{A2}"}
+::: {.rmenv #axiom-A2 title="A2" data-latex="{A2}"}
 Let $X\in\cal{V}$, and let $L$ be a rank-$1$ vector bundle on $X$, and $s$ a regular section of $L$ that is transversal to the zero section, and such that the space $Y$ of zeros of $s$ belongs to $\cal{V}$.
 Then
 $$
@@ -172,12 +172,12 @@ $$
 $$
 :::
 
-::: {.rmenv #axiomA3 title="A3" data-latex="{A3}"}
+::: {.rmenv #axiom-A3 title="A3" data-latex="{A3}"}
 Let $X,Y,Z\in\cal{V}$, with $Z\subset Y\subset X$, and let $i\colon Z\to Y$ and $j\colon Y\to X$ be the injection morphisms.
 Then $(ji)_* = j_*i_*$.
 :::
 
-::: {.rmenv #axiomA4 title="A4" data-latex="{A4}"}
+::: {.rmenv #axiom-A4 title="A4" data-latex="{A4}"}
 Let $X,Y\in\cal{V}$, with $Y\subset X$, and let $i\colon Y\to X$ be the injection morphism.
 Then
 $$
@@ -190,7 +190,7 @@ for all $a\in A(X)$ and all $b\in A(Y)$,
 
 From these axioms we will prove two lemmas that will be useful in the [next section](#section-3).
 
-::: {.itenv #lemma1 title="Lemma 1" data-latex="{Lemma 1}"}
+::: {.itenv #lemma-1 title="Lemma 1" data-latex="{Lemma 1}"}
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$.
 Consider, for all $1\leq i\leq p$, the bundle $X^{(i)}$ of flags of length $i$ in $E$.
 Then $X^{(i)}\in\cal{V}$, and the homomorphism $A(X)\to A(X^{(i)})$ induced by the projection $X^{(i)}\to X$ is \emph{injective}.
@@ -201,7 +201,7 @@ By [§1](#section-1), we can restrict, by induction on $i$, to the case of the p
 Then our claims are an immediate consequence of [V1](#V1) and [A1](#A1) [since the element $1_{\mathbb{P}(E)}=(\xi_E)^0$ is free over the ring $A(X)$].
 :::
 
-::: {.itenv #lemma2 title="Lemma 2" data-latex="{Lemma 2}"}
+::: {.itenv #lemma-2 title="Lemma 2" data-latex="{Lemma 2}"}
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, with $s$ a regular section of $E$, and $(E_i)_{0\leq i\leq p}$ a decreasing sequence of vector sub-bundles of $E$, with $\rank E_i=p-i$.
 Define, for $1\leq i\leq p$,
 $$
@@ -217,5 +217,46 @@ $$
 :::
 
 ::: {.proof}
-We
+We will prove, by induction on $j$ (where $1\leq j\leq p$), that
+$$
+  p_X(Y_j) = \prod_{1\leq i\leq j}\xi_i.
+\tag{$\star$}
+$$
+
+For $j=1$, this equation is exactly axiom [A2](#axiom-A2).
+Now suppose that the equation has been proven for some $j<p$;
+we will prove it for $j+1$.
+Applying [A2](#axiom-A2) to the section $s_j$ of $(E_j/E_{j+1})|Y_j$, we see that
+$$
+  p_{Y_j}(Y_{j+1}) = p_{Y_j}\cl_{Y_j}((E_j/E_{j+1})|Y_j).
+$$
+Let $u_j$ be the injection morphism $Y_j\to X$.
+From the functoriality of $\cl$ and $p$ we see that the right-hand side of the above equation is $u_j^*(p_X\cl_X(E_j/E_{j+1}))$, whence
+$$
+  p_{Y_j}(Y_{j+1}) = u_j^*(\xi_{j+1}).
+$$
+Using axiom [A3](#axiom-A3), we thus conclude that
+$$
+  p_X(Y_{j+1}) = (u_j)_*(u_j^*(\xi_{j+1})).
+$$
+The right-hand side of this equation can also be written as $(u_j)_*(1_{y_j}u_j^*(\xi_{j+1}))$, which is equal, by axiom [A4](#axiom-A4), to $(u_j)_*(1_{Y_j})\xi_{j+1} = p_X(Y_j)\xi_{j+1}$.
+Using the induction hypothesis, we then indeed recover the analogous formula, with $j+1$ instead of $j$.
+:::
+
+\oldpage{142}
+
+The following corollary will only be used in [§3](#section-3).
+
+::: {.itenv #lemma-2-corollary title="Corollary" data-latex={Corollary}}
+  Under the conditions of [Lemma 2](#lemma-2), if $s$ is non-zero at every point, then $\prod_{1\leq i\leq p}\xi_i=0$.
+:::
+
+::: {.rmenv title="Remark" data-latex="{Remark}"}
+The introduction of the operation $i$ in [c.](#data), and the axioms [A2](#axiom-A2), [A3](#axiom-A3), and [A4](#axiom-A4) concerning this operation, only serve to provide us with technical means of being able to prove [the corollary to Lemma 2](#lemma-2-corollary).
+(Axiom [A4](#axiom-A4) would still have sufficed even if we had assumed that $b=1_Y$.)
+For the theory of Chern classes in [the following section](#section-3), we will only need the data of [a.](#data) and [b.](#data), axiom [A2](#axiom-A1), and [the corollary to Lemma 2](#lemma-2-corollary).
+:::
+
+::: {.rmenv title="Particular cases" data-latex="{Particular cases}"}
+We note, first of all, that
 :::
