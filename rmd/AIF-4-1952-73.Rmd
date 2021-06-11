@@ -43,8 +43,34 @@ reference-section-title: "Bibliography"
 
 ## Subject {-}
 
+\oldpage{73}
+
 This article aims to give a summary, without proofs, of the principal results found in my work "Produits tensoriels topologiques et espaces nucléaires", which will be published in the _Memoirs of the Amer. Math. Society_ (and which I will refer to as [[PTT](#ref-PTT)]).
 The main concern throughout [[PTT](#ref-PTT)] was that of being exhaustive, both in terms of studying all the questions raised by the topics covered, as well as trying to state the more difficult results as theorems that were as general as possible.
 This work was also very dense, and the important simple ideas risked being sometimes hidden behind technical details.
 This is why this bowdlerised summary is possibly useful in giving a more assimilable outline of the theory.
 Some extra comments, interesting but not necessary for the general understanding of this summary, as well as some hints for certain proofs, have been placed between stars, $\star$ like this $\star$.
+
+The importance of topological tensor products shows itself in many different settings:
+
+\oldpage{74}
+
+a. The notion of the topological tensor product forms the foundations of a simple and general formulation of _Fredholm theory_, including, alongside the classical case of an integral operator defined by a continuous kernel, many other operators that are defined in the most important functional spaces.^[Such a formulation of Fredholm theory seems to have appeared for the first time in A. Ruston, "Direct product of Banach spaces and linear functional equations", _Proc. of the London Math. Soc._ **3** (1951), 1. My work on this subject was conceived independently of his (in the autumn of 1951), and is rather different.]
+
+b. The many variants of the notion of topological tensor product give rise, by duality, to the definition of many remarkable classes of bilinear forms and linear operators, whose study is only just barely covered in [[PTT](#ref-PTT), chap. I, §4].
+    In particular, the techniques introduced there, conveniently systematised and exploited, allow us to obtain entirely unexpected results in the _theory of linear transformations between the spaces $L^1$, $L^2$, and $L^\infty$_, and their topological-vectorial analogues (these results being, as of yet, not definitive, and thus unpublished).
+    I might return to this subject, and restrict myself to explaining, in a rather different way, the systematic work of von Neumann--Schatten on the remarkable classes of compact operators in a Hilbert space [@8, chap. 4].
+
+c. From the point of view of this current work, the most important application of topological tensor products is the theory of _nuclear spaces_.
+    We explain this theory, generalise it, and make precise the famous "theory of kernels" of L. Schwartz, and further discover new properties, even for the most classical of spaces.
+    Here, the topological tensor calculus is the most simple, since the majority of variants of the notion of topological tensor product coincide, and their properties thus sum.
+    For now, there are not many applications of the general theorems that we obtain to specific theories.
+    The most interesting seems to be a topological-vectorial variant of the "Künneth theorem", giving the homology of a complex defined as the tensor product of two complexes, a variant which seems useful in topological algebra.
+
+d. Generally, it seems to me that the notions of topological tensor product are perfect for giving a suggestive and manageable _language_ that would be good to use in many situations in functional analysis, especially since we have theorems (some of which are non-trivial) at our disposition from which we can benefit.
+  I hope that this summary, or, better, [[PTT](#ref-PTT)], will succeed in giving the reader a similar impression, before the publication of the articles promised above.
+
+
+## Terminology and notation {-}
+
+Generally we follow the terminology and notation of [@3], apart from the fact that we call the semi-reflexive spaces of [@3] _reflexive_.
