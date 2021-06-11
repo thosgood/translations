@@ -100,6 +100,7 @@
             <text variable="title" font-style="italic"/>
             <text macro="edition"/>
             <text macro="publisher"/>
+            <text macro="year-date" prefix="(" suffix=")"/>
           </group>
         </if>
         <else-if type="chapter paper-conference" match="any">
@@ -114,19 +115,12 @@
             <text variable="page"/>
           </group>
         </else-if>
-        <else-if type="patent">
-          <group delimiter=", ">
-            <text variable="title"/>
-            <text variable="number"/>
-            <text macro="year-date"/>
-          </group>
-        </else-if>
         <else-if type="thesis">
           <group delimiter=". ">
             <text variable="title" font-style="italic"/>
             <text variable="genre"/>
             <text variable="publisher"/>
-            <text macro="year-date"/>
+            <text macro="year-date" prefix="(" suffix=")"/>
           </group>
         </else-if>
         <else>

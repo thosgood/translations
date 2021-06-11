@@ -1,0 +1,47 @@
+--- 
+title: "Summary of essential results in the theory of topological tensor products and nuclear spaces"
+author: "A. Grothendieck"
+date: ""
+original: 'Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". _Annales de l’institut Fourier_ **4** (1952), 73-122. DOI: [10.5802/aif.46](https://doi.org/10.5802/aif.46)'
+bibliography: AIF-4-1952-73.bib
+nocite: '@*'
+link-citations: true
+csl: maths-translations.csl
+reference-section-title: "Bibliography"
+---
+
+```{r, child = if (knitr::is_html_output()) '_translator-note.Rmd'}
+```
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\providecommand{\aster}[1]{$\star${#1}$\star$}
+\providecommand{\BB}{\mathrm{B}}
+\providecommand{\LL}{\mathrm{L}}
+\providecommand{\JJ}{\mathrm{J}}
+\providecommand{\CC}{\mathrm{C}}
+\renewcommand{\ll}{\ell}
+\providecommand{\sBB}{\mathscr{B}}
+\providecommand{\sLL}{\mathscr{L}}
+\providecommand{\sEE}{\mathscr{E}}
+\providecommand{\DF}{\mbox{\normalfont($\mathscr{DF}$)}}
+\providecommand{\FF}{\mbox{\normalfont($\mathscr{F}$)}}
+\providecommand{\hotimes}{\widehat{\otimes}}
+\providecommand{\hhotimes}{\skew{0}{\widehat}{\skew{0}\widehat{\otimes}}}
+\providecommand{\scr}{\mathscr}
+\providecommand{\dd}{\mathrm{d}}
+\providecommand{\lotimes}{\overline{\otimes}}
+
+<!-- Content -->
+
+# Introduction {-}
+
+## Subject {-}
+
+This article aims to give a summary, without proofs, of the principal results found in my work "Produits tensoriels topologiques et espaces nucléaires", which will be published in the _Memoirs of the Amer. Math. Society_ (and which I will refer to as [@PTT]).
