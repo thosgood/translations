@@ -54,7 +54,6 @@ else
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $BASE\n" &&
       sed -i "s/FILE_NAME/$PREF/g" ./_output.yml &&
-      sed -i "s/FILE_NAME/$BASE/g" ./_bookdown.yml &&
       ./build_pdf.R &&
       mv output/_main.pdf "output/$PREF.pdf" &&
       ./build_html.R &&
