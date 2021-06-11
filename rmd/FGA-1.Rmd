@@ -8,6 +8,39 @@ nocite: '@*'
 link-citations: true
 csl: maths-translations.csl
 reference-section-title: "Bibliography"
+references:
+- id: 1
+  title: 'Des groups $\operatorname{Ext}^s(A,B)$'
+  author: 'Cartier, P.'
+  container-title: 'Séminaire A. Grothendieck: Algèbre homologique'
+  volume: 1
+  issued:
+    year: 1957
+  page: Talk no. 3
+- id: 2
+  title: 'Sur quelques points d'algèbre homologique'
+  author: 'Grothendieck, A.'
+  container-title: 'Tohoku math. J.'
+  volume: 9
+  issued:
+    year: 1957
+  page: 119--221
+- id: 3
+  title: 'Faisceaux algébriques cohérents'
+  author: 'Serre, J.-P.'
+  container-title: 'Annals of Math.'
+  volume: 61
+  issued:
+    year: 1955
+  page: 197--278
+- id: 4
+  title: 'Sur la dimension homologique des anneaux et des modules noethériens'
+  author: 'Serre, J.-P.'
+  container-title: 'Proc. Intern. Symp. on alg. number Theory [1955, Tokyo et Nikko]'
+  publisher: 'Science Council of Japan, Tokyo'
+  issued:
+    year: 1956
+  page: 175--189
 ---
 
 ```{r, child = if (knitr::is_html_output()) '_translator-note.Rmd'}
@@ -47,6 +80,6 @@ They can be established very simply, thanks to reasonably elementary results on 
 
 # Ext of sheaves of modules {#section-1}
 
-[@2, chap. 3 and 4]
+[cf. @2, chap. 3 and 4]
 
 Let $X$ be a topological space endowed with a sheaf $\scr{O}$ of unital (but not necessarily commutative) rings.
