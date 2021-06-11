@@ -3,6 +3,7 @@
 - move `clever_git_pull` into this repo
 
 - (PDF) header on title page
+- (HTML) `favicon` (in YAML metadata)
 - (HTML) latex in section title appears twice in TOC
   + also in title in header (if title contains latex)
 - (HTML) link to github copy of Rmd source ("source" metadata)
@@ -72,10 +73,12 @@ else
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $BASE\n" &&
       sed -i "s/PDF_FILE_NAME/$PREF/g" ./_output.yml &&
-      ./build.R &&
-      mv output/_main.html output/$PREF.html &&
-      mv output/_main.pdf output/$PREF.pdf &&
-      mv output/_main.tex output/$PREF.tex &&
+      ./build_pdf.R &&
+      mv _main.pdf "$PREF.pdf" &&
+      ./build_html.R &&
+      mv output/_main.html "output/$PREF.html" &&
+      mv output/_main.pdf "output/$PREF.pdf" &&
+      mv output/_main.tex "output/$PREF.tex" &&
       rm index.Rmd &&
       rm *.bib
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
