@@ -74,10 +74,9 @@ else
       printf "Working on $BASE\n" &&
       sed -i "s/PDF_FILE_NAME/$PREF/g" ./_output.yml &&
       ./build_pdf.R &&
-      mv _main.pdf "$PREF.pdf" &&
+      mv output/_main.pdf "output/$PREF.pdf" &&
       ./build_html.R &&
       mv output/_main.html "output/$PREF.html" &&
-      mv output/_main.pdf "output/$PREF.pdf" &&
       mv output/_main.tex "output/$PREF.tex" &&
       rm index.Rmd &&
       rm *.bib
