@@ -1,7 +1,5 @@
 ### To-do list
 
-- move `clever_git_pull` into this repo
-
 - (PDF) header on title page
 - (HTML) `favicon` (in YAML metadata)
 - (HTML) latex in section title appears twice in TOC
