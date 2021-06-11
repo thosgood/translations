@@ -5,6 +5,21 @@
 # - pandoc 2.11.1.1
 # - pdfTeX 3.141592653-2.6-1.40.22
 
+usage() { echo "Usage: $0 [-a <rmd|tex>]" 1>&2; exit 1; }
+
+while getopts ":s:p:" o; do
+    case "${o}" in
+        a)
+            s=${OPTARG}
+            ((s == "rmd" || s == "tex")) || usage
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
 TRANSLATIONS_DIR=~/translations
 WEBSITE=/var/www/labs.thosgood.com
 
