@@ -9,9 +9,12 @@ TRANSLATIONS_DIR=~/translations
 WEBSITE=/var/www/labs.thosgood.com
 
 cd $TRANSLATIONS_DIR
+git reset --hard
 git fetch
+
 NEWTEX=$(git diff --name-only master origin/master | grep -E '.tex$')
 NEWRMD=$(git diff --name-only master origin/master | grep -E '.Rmd$')
+
 if [ -z "$NEWTEX" ] && [ -z "$NEWRMD" ]; then
   printf "No changes to any .tex or .Rmd files!\n"
 else
@@ -41,9 +44,6 @@ else
   fi
   if ! [ -z "$NEWRMD" ]; then
     cd $TRANSLATIONS_DIR/bookdown-builder/
-    if [ -f "./_main.Rmd" ]; then
-      rm ./_main.Rmd
-    fi
     for file in $NEWRMD; do
       BASE=${file##*/}
       PREF=${BASE%.*}
