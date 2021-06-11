@@ -13,16 +13,20 @@ reference-section-title: "Bibliography"
 ```{r, child = if (knitr::is_html_output()) '_translator-note.Rmd'}
 ```
 
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
 \providecommand{\HH}{\operatorname{H}}
 \providecommand{\rank}{\operatorname{rank}}
 \providecommand{\cl}{\operatorname{cl}}
 \providecommand{\PP}{\mathbf{P}}
 
-\providecommand{\scr}[1]{{\mathscr{#1}}}
-\renewcommand{\cal}[1]{{\mathcal{#1}}}
-
-\renewcommand{\geq}{\geqslant}
-\renewcommand{\leq}{\leqslant}
+<!-- Content -->
 
 # Introduction {-}
 
