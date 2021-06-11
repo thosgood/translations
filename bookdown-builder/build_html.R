@@ -2,5 +2,4 @@
 
 bookdown::render_book("index.Rmd",
                       "bookdown::gitbook",
-                      output_dir = "output",
-                      config_file = "_bookdown.yml")
+                      output_dir = "output")
