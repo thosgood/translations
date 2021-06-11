@@ -135,7 +135,7 @@
             <text variable="container-title" form="short" text-case="title" font-style="italic" suffix="."/>
             <text variable="volume" font-weight="bold"/>
             <text macro="year-date" prefix="(" suffix=")"/>
-            <text variable="page" form="short"/>
+            <text variable="page" form="short" prefix=", "/>
           </group>
         </else>
       </choose>
