@@ -27,6 +27,7 @@ WEBSITE=/var/www/labs.thosgood.com
 
 cd $TRANSLATIONS_DIR
 git reset --hard
+git clean -df
 git fetch
 
 if [ "$ALL_TYPE" == "tex" ]; then
