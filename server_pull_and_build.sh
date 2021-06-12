@@ -36,16 +36,13 @@ git fetch
 if [ "$ALL_TYPE" == "tex" ]; then
   # To rebuild all tex files
   NEW_TEX=$(find latex _in-progress -name '*.tex')
-  FORCED=1
 elif [ "$ALL_TYPE" == "rmd" ]; then
   # To rebuild all Rmd files
   NEW_RMD=$(find rmd _in-progress -name '*.Rmd')
-  FORCED=1
 else
   # Only get changed files
   NEW_TEX=$(git diff --name-only master origin/master | grep -E '.tex$')
   NEW_RMD=$(git diff --name-only master origin/master | grep -E '.Rmd$')
-  FORCED=0
 fi
 
 if [ -z "$NEW_TEX" ] && [ -z "$NEW_RMD" ]; then
@@ -65,12 +62,10 @@ else
     for FILE in $NEW_TEX; do
       BASE=${FILE##*/}
       PREF=${BASE%.*}
-      cp $TRANSLATIONS_DIR/$FILE ./$BASE
+      cp $TRANSLATIONS_DIR/$FILE ./$BASE &&
       # Automatic linking to the git commit
-      if [[ $FORCED != 1 ]]; then
-        sed -i 's/serverfalse/servertrue/g' ./$BASE &&
-        sed -i "s/GitCommitHashVariable/$COMMIT/g" ./$BASE
-      fi
+      sed -i 's/serverfalse/servertrue/g' ./$BASE &&
+      sed -i "s/GitCommitHashVariable/$COMMIT/g" ./$BASE &&
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $BASE\n" &&
       # Build
@@ -100,14 +95,12 @@ else
       # Tell Bookdown how to find the PDF file when we build the html version
       sed -ir "s/\".*pdf\"/\"$PREF.pdf\"/g" _output.yml &&
       # File name in automatic link
-      sed -ir "s/rmd\/.*Rmd/rmd\/$PREF.Rmd/g" _translator-note.Rmd
+      sed -ir "s/rmd\/.*Rmd/rmd\/$PREF.Rmd/g" _translator-note.Rmd &&
       # Git commit version number in automatic link
       # (note that this is the same for ALL files currently being built, so
       #  we don't need to worry about the fact that this is only changed on the
       #  first time through this loop (i.e. only for the first value of $FILE))
-      if [[ $FORCED != 1 ]]; then
-        sed -ir "s/GIT_COMMIT_HASH_VARIABLE/$COMMIT/g" _translator-note.Rmd
-      fi
+      sed -ir "s/GIT_COMMIT_HASH_VARIABLE/$COMMIT/g" _translator-note.Rmd &&
       ./build_pdf.R &&
       mv output/_main.pdf "output/$PREF.pdf" &&
       ./build_html.R &&
