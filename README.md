@@ -13,7 +13,6 @@
 ## Technical
 
 - (PDF) header on title page
-- (HTML) `favicon` (in YAML metadata)
 - (HTML) katex in section title appears twice in TOC
   + also in title in header (if title contains katex)
 - (HTML) reading progress bar

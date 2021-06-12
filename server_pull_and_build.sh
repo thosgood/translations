@@ -22,19 +22,25 @@ while getopts ":a:" o; do
 done
 shift $((OPTIND-1))
 
+# Where the local copy of the repo is
 TRANSLATIONS_DIR=~/translations
+# Where to "publish" files
 WEBSITE=/var/www/labs.thosgood.com
 
+# Clean-up
 cd $TRANSLATIONS_DIR
 git reset --hard
 git clean -df
 git fetch
 
 if [ "$ALL_TYPE" == "tex" ]; then
+  # To rebuild all tex files
   NEW_TEX=$(find latex _in-progress -name '*.tex')
 elif [ "$ALL_TYPE" == "rmd" ]; then
+  # To rebuild all Rmd files
   NEW_RMD=$(find rmd _in-progress -name '*.Rmd')
 else
+  # Only get changed files
   NEW_TEX=$(git diff --name-only master origin/master | grep -E '.tex$')
   NEW_RMD=$(git diff --name-only master origin/master | grep -E '.Rmd$')
 fi
@@ -49,19 +55,22 @@ else
   printf "$NEW_RMD\n"
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   git pull
+  # Get the git commit hash
   COMMIT=$(git rev-parse --short HEAD)
-  printf "\nUpdating to git commit $COMMIT\n"
   if ! [ -z "$NEW_TEX" ]; then
     cd $TRANSLATIONS_DIR/builds
     for FILE in $NEW_TEX; do
       BASE=${FILE##*/}
       PREF=${BASE%.*}
       cp $TRANSLATIONS_DIR/$FILE ./$BASE &&
+      # Automatic linking to the git commit
       sed -i 's/serverfalse/servertrue/g' ./$BASE &&
       sed -i "s/GitCommitHashVariable/$COMMIT/g" ./$BASE &&
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $BASE\n" &&
+      # Build
       shpdflatex.sh $BASE &&
+      # Deploy
       cp $PREF.pdf $WEBSITE/builds
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     done
@@ -69,27 +78,35 @@ else
   if ! [ -z "$NEW_RMD" ]; then
     cd $TRANSLATIONS_DIR/bookdown-builder/
     for FILE in $NEW_RMD; do
+      # Clean-up
       if [ -z "_main.Rmd" ]; then
         rm _main.Rmd
       fi
       BASE=${FILE##*/}
       PREF=${BASE%.*}
       cp $TRANSLATIONS_DIR/$FILE ./index.Rmd
+      # Git commit version number in automatic link
+      sed -i "s/GIT_COMMIT_HASH_VARIABLE/$COMMIT/g" ./$BASE &&
+      # If there's a bib file, then bring that along too
       if [ -f "$TRANSLATIONS_DIR/${FILE%.*}.bib" ]; then
         cp "$TRANSLATIONS_DIR/${FILE%.*}.bib" .
       fi
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $BASE\n" &&
+      # Build
+      # Tell Bookdown how to find the PDF file when we build the html version
       sed -ir "s/\".*pdf\"/\"$PREF.pdf\"/g" _output.yml &&
       ./build_pdf.R &&
       mv output/_main.pdf "output/$PREF.pdf" &&
       ./build_html.R &&
       mv output/_main.html "output/$PREF.html" &&
       mv output/_main.tex "output/$PREF.tex" &&
+      # Clean-up
       rm index.Rmd &&
       rm *.bib
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     done
+    # Deploy
     cp -r output/* $WEBSITE/bookdown
   fi
   printf "\nDone!\n"
