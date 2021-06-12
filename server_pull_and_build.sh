@@ -95,9 +95,12 @@ else
       # Tell Bookdown how to find the PDF file when we build the html version
       sed -ir "s/\".*pdf\"/\"$PREF.pdf\"/g" _output.yml &&
       # File name in automatic link
-      sed -i "s/FILE_NAME/$PREF/g" _translator-note.Rmd &&
+      sed -ir "s/.*Rmd/$PREF.Rmd/g" _translator-note.Rmd &&
       # Git commit version number in automatic link
-      sed -i "s/GIT_COMMIT_HASH_VARIABLE/$COMMIT/g" _translator-note.Rmd &&
+      # (note that this is the same for ALL files currently being built, so
+      #  we don't need to worry about the fact that this is only changed on the
+      #  first time through this loop (i.e. only for the first value of $FILE))
+      sed -ir "s/GIT_COMMIT_HASH_VARIABLE/$COMMIT/g" _translator-note.Rmd &&
       ./build_pdf.R &&
       mv output/_main.pdf "output/$PREF.pdf" &&
       ./build_html.R &&
