@@ -11,7 +11,9 @@ while getopts ":a:" o; do
     case "${o}" in
         a)
             ALL_TYPE=${OPTARG}
-            [[ "$ALL_TYPE" == "rmd" ]] || usage
+            if [[ "$ALL_TYPE" == "rmd" ]] || [[ "$ALL_TYPE" == "tex" ]]; then
+              usage
+            fi
             ;;
         *)
             usage
@@ -27,27 +29,33 @@ cd $TRANSLATIONS_DIR
 git reset --hard
 git fetch
 
-NEWTEX=$(git diff --name-only master origin/master | grep -E '.tex$')
-NEWRMD=$(git diff --name-only master origin/master | grep -E '.Rmd$')
+if [ "$ALL_TYPE" == "tex" ]; then
+  NEW_TEX=$(find latex -name '*.tex')
+elif [ "$ALL_TYPE" == "rmd" ]; then
+  NEW_RMD=$(find rmd -name '*.Rmd')
+else
+  NEW_TEX=$(git diff --name-only master origin/master | grep -E '.tex$')
+  NEW_RMD=$(git diff --name-only master origin/master | grep -E '.Rmd$')
+fi
 
-if [ -z "$NEWTEX" ] && [ -z "$NEWRMD" ]; then
+if [ -z "$NEW_TEX" ] && [ -z "$NEW_RMD" ]; then
   printf "No changes to any .tex or .Rmd files!\n"
 else
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   printf "Here are the .tex files that have changed:\n"
-  printf "$NEWTEX\n"
+  printf "$NEW_TEX\n"
   printf "Here are the .Rmd files that have changed:\n"
-  printf "$NEWRMD\n"
+  printf "$NEW_RMD\n"
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   git pull
   COMMIT=$(git rev-parse --short HEAD)
   printf "\nUpdating to git commit $COMMIT\n"
-  if ! [ -z "$NEWTEX" ]; then
+  if ! [ -z "$NEW_TEX" ]; then
     cd $TRANSLATIONS_DIR/builds
-    for file in $NEWTEX; do
-      BASE=${file##*/}
+    for FILE in $NEW_TEX; do
+      BASE=${FILE##*/}
       PREF=${BASE%.*}
-      cp $TRANSLATIONS_DIR/$file ./$BASE &&
+      cp $TRANSLATIONS_DIR/$FILE ./$BASE &&
       sed -i 's/serverfalse/servertrue/g' ./$BASE &&
       sed -i "s/GitCommitHashVariable/$COMMIT/g" ./$BASE &&
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
@@ -57,14 +65,14 @@ else
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     done
   fi
-  if ! [ -z "$NEWRMD" ]; then
+  if ! [ -z "$NEW_RMD" ]; then
     cd $TRANSLATIONS_DIR/bookdown-builder/
-    for file in $NEWRMD; do
-      BASE=${file##*/}
+    for FILE in $NEW_RMD; do
+      BASE=${FILE##*/}
       PREF=${BASE%.*}
-      cp $TRANSLATIONS_DIR/$file ./index.Rmd
-      if [ -f "$TRANSLATIONS_DIR/${file%.*}.bib" ]; then
-        cp "$TRANSLATIONS_DIR/${file%.*}.bib" .
+      cp $TRANSLATIONS_DIR/$FILE ./index.Rmd
+      if [ -f "$TRANSLATIONS_DIR/${FILE%.*}.bib" ]; then
+        cp "$TRANSLATIONS_DIR/${FILE%.*}.bib" .
       fi
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $BASE\n" &&
