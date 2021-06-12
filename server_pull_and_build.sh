@@ -7,11 +7,11 @@
 
 usage() { echo "Usage: $0 [-a <rmd|tex>]" 1>&2; exit 1; }
 
-while getopts ":s:p:" o; do
+while getopts ":a:" o; do
     case "${o}" in
         a)
             ALL_TYPE=${OPTARG}
-            if [ "$ALL_TYPE" != "rmd" || "$ALL_TYPE" != "tex" ]; then
+            if [ "$ALL_TYPE" != "rmd" || "$ALL_TYPE" = "tex" ]; then
               usage
             fi
             ;;
