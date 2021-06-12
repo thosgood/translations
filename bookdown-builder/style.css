@@ -72,11 +72,12 @@ html {
 /* Book */
 
 h1.title {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 p.author {
   font-size: 1.5em;
+  float: left;
 }
 p.author:before {
   content: "by ";
@@ -84,6 +85,8 @@ p.author:before {
 
 p.date {
   margin-top: 0 !important;
+  font-size: 1.5em;
+  float: right;
 }
 
 .page-inner h1 {
@@ -117,6 +120,7 @@ p.date {
 /* Custom environments */
 
 .translator-note {
+  clear: both;
   padding: 0;
 }
 .translator-note > :last-child {
