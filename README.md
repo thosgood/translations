@@ -1,6 +1,7 @@
 ### To-do list
 
 - (PDF) header on title page
+- (PDF) subtitle (e.g. FGA-3-I)
 - (HTML) `favicon` (in YAML metadata)
 - (HTML) katex in section title appears twice in TOC
   + also in title in header (if title contains katex)
