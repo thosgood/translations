@@ -2,11 +2,7 @@
 
 \usepackage[margin=1.6in]{geometry}
 
-$if(subtitle)$
-\title{$title$\\[1em]\textit{$subtitle$}}
-$else$
-\title{$title$}
-$end-if$
+\title{$title$$if(subtitle)$\\\emph{$subtitle$}$endif$}
 \author{$author$}
 \date{$date$}
 
