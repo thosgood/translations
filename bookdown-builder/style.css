@@ -102,12 +102,16 @@ p.date {
 }
 .page-inner code:before,
 .page-inner code:after {
-  letter-spacing: 0;
-  content: '';
+  letter-spacing: 0 !important;
+  content: '' !important;
 }
 
 
 /* Custom environments */
+
+.git-info {
+
+}
 
 .translator-note {
   font-size: 90%;
