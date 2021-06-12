@@ -1,4 +1,16 @@
-### To-do list
+# To-do list
+
+## Translation-al
+
+- Rmarkdown versions of existing translations
+  + `978-3-540-05190-9`
+  + `AIF-4-1952-73`
+  + `BSMF-86-1958-137`
+  + `FGA-*`
+  + `MSRI-16-1989-79`
+
+
+## Technical
 
 - (PDF) header on title page
 - (HTML) `favicon` (in YAML metadata)
