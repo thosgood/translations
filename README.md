@@ -2,7 +2,7 @@
 
 ## Translation-al
 
-- Rmarkdown versions of existing translations
+- `.Rmd` versions of existing translations
   + `978-3-540-05190-9`
   + `AIF-4-1952-73`
   + `BSMF-86-1958-137`
