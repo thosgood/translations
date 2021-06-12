@@ -94,6 +94,8 @@ else
       # Build
       # Tell Bookdown how to find the PDF file when we build the html version
       sed -ir "s/\".*pdf\"/\"$PREF.pdf\"/g" _output.yml &&
+      # File name in automatic link
+      sed -i "s/FILE_NAME/$PREF/g" _translator-note.Rmd &&
       # Git commit version number in automatic link
       sed -i "s/GIT_COMMIT_HASH_VARIABLE/$COMMIT/g" _translator-note.Rmd &&
       ./build_pdf.R &&
