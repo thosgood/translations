@@ -11,9 +11,7 @@ while getopts ":a:" o; do
     case "${o}" in
         a)
             ALL_TYPE=${OPTARG}
-            if [ "$ALL_TYPE" != rmd || "$ALL_TYPE" = tex ]; then
-              usage
-            fi
+            [[ "$ALL_TYPE" == "rmd" ]] || usage
             ;;
         *)
             usage
