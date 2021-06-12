@@ -10,8 +10,10 @@ usage() { echo "Usage: $0 [-a <rmd|tex>]" 1>&2; exit 1; }
 while getopts ":s:p:" o; do
     case "${o}" in
         a)
-            s=${OPTARG}
-            (("$s" == "rmd" || "$s" == "tex")) || usage
+            ALL_TYPE=${OPTARG}
+            if [ "$ALL_TYPE" != "rmd" || "$ALL_TYPE" != "tex") ]; then
+              usage
+            fi
             ;;
         *)
             usage
@@ -19,6 +21,8 @@ while getopts ":s:p:" o; do
     esac
 done
 shift $((OPTIND-1))
+
+printf "$ALL_TYPE"
 
 TRANSLATIONS_DIR=~/translations
 WEBSITE=/var/www/labs.thosgood.com
