@@ -11,7 +11,7 @@ while getopts ":a:" o; do
     case "${o}" in
         a)
             ALL_TYPE=${OPTARG}
-            if [ "$ALL_TYPE" != "rmd" || "$ALL_TYPE" = "tex" ]; then
+            if [ "$ALL_TYPE" != rmd || "$ALL_TYPE" = tex ]; then
               usage
             fi
             ;;
@@ -21,8 +21,6 @@ while getopts ":a:" o; do
     esac
 done
 shift $((OPTIND-1))
-
-printf "$ALL_TYPE"
 
 TRANSLATIONS_DIR=~/translations
 WEBSITE=/var/www/labs.thosgood.com
