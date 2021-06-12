@@ -30,9 +30,9 @@ git reset --hard
 git fetch
 
 if [ "$ALL_TYPE" == "tex" ]; then
-  NEW_TEX=$(find latex -name '*.tex')
+  NEW_TEX=$(find latex _in-progress -name '*.tex')
 elif [ "$ALL_TYPE" == "rmd" ]; then
-  NEW_RMD=$(find rmd -name '*.Rmd')
+  NEW_RMD=$(find rmd _in-progress -name '*.Rmd')
 else
   NEW_TEX=$(git diff --name-only master origin/master | grep -E '.tex$')
   NEW_RMD=$(git diff --name-only master origin/master | grep -E '.Rmd$')
