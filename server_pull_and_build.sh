@@ -36,13 +36,16 @@ git fetch
 if [ "$ALL_TYPE" == "tex" ]; then
   # To rebuild all tex files
   NEW_TEX=$(find latex _in-progress -name '*.tex')
+  FORCED=1
 elif [ "$ALL_TYPE" == "rmd" ]; then
   # To rebuild all Rmd files
   NEW_RMD=$(find rmd _in-progress -name '*.Rmd')
+  FORCED=1
 else
   # Only get changed files
   NEW_TEX=$(git diff --name-only master origin/master | grep -E '.tex$')
   NEW_RMD=$(git diff --name-only master origin/master | grep -E '.Rmd$')
+  FORCED=0
 fi
 
 if [ -z "$NEW_TEX" ] && [ -z "$NEW_RMD" ]; then
@@ -64,8 +67,10 @@ else
       PREF=${BASE%.*}
       cp $TRANSLATIONS_DIR/$FILE ./$BASE &&
       # Automatic linking to the git commit
-      sed -i 's/serverfalse/servertrue/g' ./$BASE &&
-      sed -i "s/GitCommitHashVariable/$COMMIT/g" ./$BASE &&
+      if [[ $FORCED != 1 ]]; then
+        sed -i 's/serverfalse/servertrue/g' ./$BASE &&
+        sed -i "s/GitCommitHashVariable/$COMMIT/g" ./$BASE &&
+      fi
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $BASE\n" &&
       # Build
@@ -100,7 +105,9 @@ else
       # (note that this is the same for ALL files currently being built, so
       #  we don't need to worry about the fact that this is only changed on the
       #  first time through this loop (i.e. only for the first value of $FILE))
-      sed -ir "s/GIT_COMMIT_HASH_VARIABLE/$COMMIT/g" _translator-note.Rmd &&
+      if [[ $FORCED != 1 ]]; then
+        sed -ir "s/GIT_COMMIT_HASH_VARIABLE/$COMMIT/g" _translator-note.Rmd &&
+      fi
       ./build_pdf.R &&
       mv output/_main.pdf "output/$PREF.pdf" &&
       ./build_html.R &&
