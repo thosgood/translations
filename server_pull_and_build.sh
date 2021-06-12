@@ -86,7 +86,7 @@ else
       PREF=${BASE%.*}
       cp $TRANSLATIONS_DIR/$FILE ./index.Rmd
       # Git commit version number in automatic link
-      sed -i "s/GIT_COMMIT_HASH_VARIABLE/$COMMIT/g" ./$BASE &&
+      sed -i "s/GIT_COMMIT_HASH_VARIABLE/$COMMIT/g" index.Rmd &&
       # If there's a bib file, then bring that along too
       if [ -f "$TRANSLATIONS_DIR/${FILE%.*}.bib" ]; then
         cp "$TRANSLATIONS_DIR/${FILE%.*}.bib" .
