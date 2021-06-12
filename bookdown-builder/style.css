@@ -96,6 +96,16 @@ p.date {
   font-kerning: none;
 }
 
+.page-inner code {
+  background-color: #fff !important;
+  padding: 0;
+}
+.page-inner code:before,
+.page-inner code:after {
+  letter-spacing: 0;
+  content: '';
+}
+
 
 /* Custom environments */
 
