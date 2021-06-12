@@ -68,6 +68,9 @@ else
   fi
   if ! [ -z "$NEW_RMD" ]; then
     cd $TRANSLATIONS_DIR/bookdown-builder/
+    if [ -z "_main.Rmd" ]; then
+      rm _main.Rmd
+    fi
     for FILE in $NEW_RMD; do
       BASE=${FILE##*/}
       PREF=${BASE%.*}
