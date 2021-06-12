@@ -11,7 +11,7 @@ while getopts ":s:p:" o; do
     case "${o}" in
         a)
             s=${OPTARG}
-            (("${s}" == "rmd" || "${s}" == "tex")) || usage
+            (("$s" == "rmd" || "$s" == "tex")) || usage
             ;;
         *)
             usage
