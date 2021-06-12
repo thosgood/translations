@@ -76,8 +76,7 @@ else
       fi
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $BASE\n" &&
-      sed -ir "s/\".*pdf\"/$PREF.pdf/g" _output.yml &&
-      cat _output.yml &&
+      sed -ir "s/\".*pdf\"/\"$PREF.pdf\"/g" _output.yml &&
       ./build_pdf.R &&
       mv output/_main.pdf "output/$PREF.pdf" &&
       ./build_html.R &&
