@@ -110,7 +110,15 @@ p.date {
 /* Custom environments */
 
 .git-info {
+  font-size: 90%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
+.git-info ul {
+  list-style: none;
+  padding: 0;
 }
 
 .translator-note {
