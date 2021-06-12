@@ -112,12 +112,17 @@ p.date {
 .translator-note {
   padding: 0;
 }
-.translator-note .original-citation {
-  padding: 0 1em;
-  border: 1px solid gray;
-}
 .translator-note > :last-child {
   margin-bottom: 0 !important;
+}
+
+.original-citation {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid gray;
+}
+.original-citation > :last-child {
+  margin-bottom: 0;
 }
 
 .itenv {
