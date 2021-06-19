@@ -308,17 +308,13 @@ Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $\xi_E=p_
 By axiom [A1](#axiom-A1) of the previous section, $(\xi_E)^p$ can be written as a unique linear combination of the $(\xi_E)^i$ (for $0\leq i\leq p-1$) with coefficients in $A(X)$.
 This means that we can find, in a unique way, elements $c_i(E)\in A^{2i}(X)$ (defined for every integer $i\geq0$) satisfying the conditions
 
-$$
 \begin{equation}
   \begin{gathered}
     \sum_{i=0}^p c_i(E)(\xi_E)^{p-i} = 0,
   \\c_0(E)=1,
   \\c_i(E)=0\text{ for }i>p.
   \end{gathered}
-\tag{1}
-(\#eq:equation-1)
 \end{equation}
-$$
 
 The $c_i(E)$ are called the _Chern classes_ of $E$, with $c_i(E)$ being called the $i$th Chern class.
 We set
