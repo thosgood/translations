@@ -310,16 +310,19 @@ This means that we can find, in a unique way, elements $c_i(E)\in A^{2i}(X)$ (de
 $$
   \begin{gathered}
     \sum_{i=0}^p c_i(E)(\xi_E)^{p-i} = 0,
-  \\c_0(E)=1,
-  \\c_i(E)=0\text{ for }i>p.
+  \\c_0(E)=1, \quad\text{and}\quad c_i(E)=0\text{ for }i>p.
   \end{gathered}
 \tag{1}
 $$
 The $c_i(E)$ are called the _Chern classes_ of $E$, with $c_i(E)$ being called the $i$th Chern class.
-We set
+We define
 $$
   c(E) = \sum_i c_i(E)
 \tag{2}
 $$
 and call $c(E)$ the _(total) Chern class_ of $E$;
-its data is thus equivalent to the data of all the $c_i(E)$.
+its data is equivalent to the data of all the $c_i(E)$.
+
+::: {.itenv #theorem-1 title="Theorem 1" data-latex="{Theorem 1}"}
+Suppose that
+:::
