@@ -12,8 +12,6 @@
 
 ## Technical
 
-- (SERVER) rename html files to `index.html` and put them (along with the pdf file) into a directory named after the file (so that we can go to `/bookdown/THING` instead of `/bookdown/THING.html`)
-
 - (PDF) header on title page
 - (PDF) git commit version
 - (HTML) katex in section title appears twice in TOC
