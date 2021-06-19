@@ -305,7 +305,7 @@ We now given some particular cases where the conditions in this section are sati
 # Definition and fundamental properties of Chern classes {#section-3}
 
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $\xi_E=p_X(\cl(L_E))$ the fundamental class in $A^2(\mathbb{P}(E))$.
-By axiom [A1](#axiom-A1) of the previous section, $(\xi_E)^p$ can be written as a unique linear combination of the $(\xi_E)^i$ (for $0\leq i\leq p-1$) with coefficients in $A(X)$.
+By axiom [A1](#axiom-A1) from the previous section, $(\xi_E)^p$ can be written as a unique linear combination of the $(\xi_E)^i$ (for $0\leq i\leq p-1$) with coefficients in $A(X)$.
 This means that we can find, in a unique way, elements $c_i(E)\in A^{2i}(X)$ (defined for every integer $i\geq0$) satisfying the conditions
 $$
   \begin{gathered}
@@ -324,5 +324,39 @@ and call $c(E)$ the _(total) Chern class_ of $E$;
 its data is equivalent to the data of all the $c_i(E)$.
 
 ::: {.itenv #theorem-1 title="Theorem 1" data-latex="{Theorem 1}"}
-Suppose that
+Suppose that we have the data of [a.](#data), [b.](#data), and [c.](#data) from the previous section, satisfying axioms [A1](#axiom-A1) to [A4](#axiom-A4).
+Then the Chern classes (defined by (1)) satisfy the following conditions:
+
+i. _Functoriality._ ---
+    Let $f\colon X\to Y$ be a morphism in $\cal{V}$, and let $E$ be a vector bundle on $Y$.
+    Then
+    $$
+      c(f^{-1}(E)) = f^*(c(E))
+    \tag{3}
+    $$
+    [where $f^{-1}(E)$ denotes the vector bundle on $X$ given by the inverse image of $E$ under $f$].
+
+ii. _Normalisation._ ---
+    If $E$ is a rank-$1$ vector bundle on $X\in\cal{V}$, then
+    $$
+      c(E) = 1+p_X(\cl_X(E)).
+    \tag{4}
+    $$
+
+iii. _Additivity._ ---
+    Let $X\in\cal{V}$, and let $0\to E'\to E\to E''\to 0$ be an exact sequence of vector bundles on $X$.
+    Then
+    $$
+      c(E) = c(E')c(E'').
+    \tag{5}
+    $$
+
+Furthermore, properties i., ii., and iii. entirely _characterise_ Chern classes.
+:::
+
+\oldpage{145}
+
+::: {.proof}
+We first prove the _uniqueness_ of a theory of Chern classes satisfying properties i., ii., and iii.
+Let
 :::
