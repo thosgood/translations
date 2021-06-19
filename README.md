@@ -14,6 +14,7 @@
 
 - (PDF) header on title page
 - (PDF) git commit version
+- (PDF) link to html version in translator's note
 - (HTML) katex in section title appears twice in TOC
   + also in title in header (if title contains katex)
 - (HTML) reading progress bar
