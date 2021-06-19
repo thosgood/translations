@@ -356,7 +356,7 @@ Furthermore, properties i., ii., and iii. entirely _characterise_ Chern classes.
 
 \oldpage{145}
 
-:::: {.proof}
+::: {.proof}
 We first prove the _uniqueness_ of a theory of Chern classes satisfying properties i., ii., and iii.
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $X'$ the flag variety associated to $E$, with $f'\colon X\to X$ the canonical projection.
 By [Lemma 1](#lemma-1), we know that $X'\in\cal{V}$, and that $f^*\colon A(X)\to A(X')$ is injective.
@@ -372,13 +372,12 @@ $$
 
 We now show that the Chern classes defined by (1) do indeed satisfy i., ii., and iii.
 
-::: {.proof name="of i." data-latex="{of i.}"}
-Let $X,Y\in\cal{V}$, and let $E$ be a vector bundle on $Y$, and $F$ its inverse image under $f$.
-Then $\mathbb{P}(F)$ is the inverse image of $\mathbb{P}(E)$ under $f$, and so we have a commutative diagram of morphisms
-$$
-  !!!
-$$
+
+i. Let $X,Y\in\cal{V}$, and let $E$ be a vector bundle on $Y$, and $F$ its inverse image under $f$.
+    Then $\mathbb{P}(F)$ is the inverse image of $\mathbb{P}(E)$ under $f$, and so we have a commutative diagram of morphisms
+    $$
+      !!!
+    $$
 :::
-::::
 
 **TO-DO: REPLACE Data AND Theorem 1 ENUMS WITH ENVS (LIKE FOR A1, ..., A4)**
