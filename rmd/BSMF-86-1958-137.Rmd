@@ -264,5 +264,44 @@ For the theory of Chern classes in [the following section](#section-3), we will 
 :::
 
 ::: {.rmenv title="Particular cases" data-latex="{Particular cases}"}
-We note, first of all,
+We note, first of all, that condition [V1](#V1) is satisfied for all reasonable categories of algebraic spaces;
+it is satisfied, in particular, for the categories of arbitrary non-singular algebraic spaces, of non-singular quasi-projective algebraic spaces, and of non-singular projective algebraic spaces.
+The verification for the two latter cases presents no difficulty, and is left to the reader (the result being a particular case of a more general result concerning blown-up varieties).
+
+We now given some particular cases where the conditions in this section are satisfied.
+
+1. $\cal{V}$ is the category of non-singular quasi-projective algebraic spaces, and $A(X)$ is the ring of cycle classes on $X$ under _rational equivalence_, with the usual definition of $f^*$ and $f_*$.
+    Of course, we grade $A(X)$ by taking the class of a cycle on $X$ that is everywhere of codimension $p$ to be of degree $2p$ [so that $A(X)$ has only even degrees, as we would expect in a cohomological theory for a _commutative_ graded ring].
+    The homomorphism $\PP(X)\to A^2(X)$ is an isomorphism, given by sending any rank-$1$ vector bundle $L$ on $X$ to the set of divisors of rational sections of $L$ that are not zero on any component of $X$.
+    For the theory of linear equivalence, including the verification of [A1](#axiom-A1) to [A4](#axiom-A4) (with only [A1](#axiom-A1) not being immediate), see the exposés by Chevalley and Grothendieck in [@4].
+
+    The conditions that we demand are also satisfied if we take $A(X)$ to be the ring of cycle classes under _algebraic_ equivalence, but, for a theory of Chern classes, we rather prefer to work with rational equivalence, which gives a finer theory.
+
+    We cannot yet define a ring structure on the group $A(X)$ of cycle classes on an _arbitrary_ (not necessarily quasi-projective) non-singular variety, nor, for a morphism $f\colon X\to Y$, a morphism $f^*\colon A(Y)\to A(X)$ in such a way that the necessary conditions are satisfied.
+    Further, it is not even certain that this might be possible.
+    We can imagine replacing the ring of cycle classes (under rational equivalence) by the graded ring associated to the ring $K(X)$ of classes of coherent algebraic sheaves on $X$, filtered in the natural way (by considering the dimension of the supports of the sheaves).
+    Unfortunately, we would then have to prove that this filtration is compatible with the ring structure (and with the "inverse image" homomorphisms), which I only know how to do in the quasi-projective case, by using rational equivalence.
+    However, it seems that these difficulties disappear when we tensor with the field of rationals $\mathbb{Q}$, i.e. if we ignore the phenomenons of torsion.
+
+\oldpage{143}
+
+2. $\cal{V}$ is the category of all non-singular algebraic spaces.
+    If $X$ is such a variety, then we denote by $\Omega_X^\bullet$ the sheaf of germs of regular differential forms on $X$, and by $A(X)$ the cohomology group $\HH^\bullet(X,\Omega_X^\bullet)$.
+    We grade this group by taking $\HH^p(X,\Omega_X^q)$ to be of degree $p+q$, and we make this an algebra by means of the cup product.
+    We thus obtain an anticommutative graded algebra, which is clearly a contravariant functor with respect to $X$.
+    By following the formalism developed by Grothendieck in [@3], we define in a natural way the homomorphism $i_*\colon A(Y)\to A(X)$ associated to an injection $i\colon Y\to X$ (and it is probably possible to define $i_*$ for every _proper_ morphism $i\colon Y\to X$).^[(Note added during editing). This homomorphism $i_*$ is now defined in full generality.]
+    Finally, we define a morphism $\PP(X)\to\HH^1(X,\Omega_X^1)\subset A^2(X)$ in a classical way, by writing, for example, $\PP(X)=\HH^1(X,\scr{O}_X^\times)$ (where $\scr{O}_X^\times$ denotes the sheaf of germs of invertible regular functions on $X$), and by considering the homomorphism $f\mapsto\mathrm{d}f/f$ from $\scr{O}_X^\times$ to $\Omega_X^1$.
+    We can again easily verify that conditions [A1](#axiom-A1) to [A4](#axiom-A4) are satisfied, with [A1](#axiom-A1) being a consequence of the Leray spectral sequence of the continuous map $\mathbb{P}(E)\to X$ [the spectral sequence being trivial, as follows from considering from the class $\xi_E$ on $\mathbb{P}(E)$.]
+
+3. The base field $k$ is the field of complex numbers, $\cal{V}$ is the category of non-singular algebraic spaces, and $A(X)=\HH^\bullet(X,\mathbb{Z})$ (with $X$ being endowed with its "usual" topology).
+    The definition of \hyperref[datab]{b.} (either by Poincaré duality on divisor classes, or as an obstruction class in the classical exact sequence $0\to\mathbb{Z}\to\scr{O}_X\to\scr{O}_X^\times\to0$ of sheaves on $X$, endowed with its usual topology) is well known.
+    The definition of \hyperref[datac]{c.} classically comes
+    from Poincaré duality, and properties [A1](#axiom-A1) to [A4](#axiom-A4) are well known (with [A1](#axiom-A1) again following from the Leray spectral sequence).
 :::
+
+\oldpage{144}
+
+
+# Definition and fundamental properties of Chern classes {#section-3}
+
+Let $X\in\cal{V}$, and
