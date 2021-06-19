@@ -294,8 +294,8 @@ We now given some particular cases where the conditions in this section are sati
     We can again easily verify that conditions [A1](#axiom-A1) to [A4](#axiom-A4) are satisfied, with [A1](#axiom-A1) being a consequence of the Leray spectral sequence of the continuous map $\mathbb{P}(E)\to X$ [the spectral sequence being trivial, as follows from considering from the class $\xi_E$ on $\mathbb{P}(E)$.]
 
 3. The base field $k$ is the field of complex numbers, $\cal{V}$ is the category of non-singular algebraic spaces, and $A(X)=\HH^\bullet(X,\mathbb{Z})$ (with $X$ being endowed with its "usual" topology).
-    The definition of \hyperref[datab]{b.} (either by Poincaré duality on divisor classes, or as an obstruction class in the classical exact sequence $0\to\mathbb{Z}\to\scr{O}_X\to\scr{O}_X^\times\to0$ of sheaves on $X$, endowed with its usual topology) is well known.
-    The definition of \hyperref[datac]{c.} classically comes
+    The definition of [b.](#data) (either by Poincaré duality on divisor classes, or as an obstruction class in the classical exact sequence $0\to\mathbb{Z}\to\scr{O}_X\to\scr{O}_X^\times\to0$ of sheaves on $X$, endowed with its usual topology) is well known.
+    The definition of [c.](#data) classically comes
     from Poincaré duality, and properties [A1](#axiom-A1) to [A4](#axiom-A4) are well known (with [A1](#axiom-A1) again following from the Leray spectral sequence).
 :::
 
@@ -304,4 +304,23 @@ We now given some particular cases where the conditions in this section are sati
 
 # Definition and fundamental properties of Chern classes {#section-3}
 
-Let $X\in\cal{V}$, and
+Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $\xi_E=p_X(\cl(L_E))$ the fundamental class in $A^2(\mathbb{P}(E))$.
+By axiom [A1](#axiom-A1) of the previous section, $(\xi_E)^p$ can be written as a unique linear combination of the $(\xi_E)^i$ (for $0\leq i\leq p-1$) with coefficients in $A(X)$.
+This means that we can find, in a unique way, elements $c_i(E)\in A^{2i}(X)$ (defined for every integer $i\geq0$) satisfying the conditions
+\begin{equation}
+  \begin{gathered}
+    \sum_{i=0}^p c_i(E)(\xi_E)^{p-i} = 0,
+  \\c_0(E)=1,\quad\text{and}\quad c_i(E)=0\text{ for }i>p.
+  \end{gathered}
+\tag{1}
+(\#eq:equation-1)
+\end{equation}
+The $c_i(E)$ are called the _Chern classes_ of $E$, with $c_i(E)$ being called the $i$th Chern class.
+We set
+\begin{equation}
+  c(E) = \sum_i c_i(E)
+\tag{2}
+(\#eq:equation-2)
+\end{equation}
+and call $c(E)$ the _(total) Chern class_ of $E$;
+its data is thus equivalent to the data of all the $c_i(E)$.
