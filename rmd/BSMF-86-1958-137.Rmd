@@ -138,18 +138,20 @@ If $X\in\cal{V}$, and if $E$ is a vector bundle on $X$, then $\mathbb{P}(E)\in\c
 
 Suppose further that we have the following data:
 
-::: {.rmenv #data title="Data" data-latex="{Data}"}
-—
+::: {.rmenv #data-a title="a" data-latex="{a}"}
+a contravariant functor $X\mapsto A(X)$ from $\cal{V}$ to the category of unital anticommutative graded rings;
+:::
 
-a. a contravariant functor $X\mapsto A(X)$ from $\cal{V}$ to the category of unital anticommutative graded rings;
+::: {.rmenv #data-b title="b" data-latex="{b}"}
+a homomorphism $p_X\colon\PP(X)\to A^2(X)$ that is functorial in $X\in\cal{V}$; and
+:::
 
-b. a homomorphism $p_X\colon\PP(X)\to A^2(X)$ that is functorial in $X\in\cal{V}$; and
-
-c. for all $X\in\cal{V}$, and for every closed algebraic subspace $Y$ of $X$, of constant codimension $p$ in $X$, with $Y\in\cal{V}$, a group homomorphism
-    $$
-      i_*\colon A(Y)\to A(X)
-    $$
-    (where $i$ denotes the injection $Y\to X$) that raises the degree by $2p$.
+::: {.rmenv #data-c title="c" data-latex="{c}"}
+for all $X\in\cal{V}$, and for every closed algebraic subspace $Y$ of $X$, of constant codimension $p$ in $X$, with $Y\in\cal{V}$, a group homomorphism
+$$
+  i_*\colon A(Y)\to A(X)
+$$
+(where $i$ denotes the injection $Y\to X$) that raises the degree by $2p$.
 :::
 
 If $f\colon X\to Y$ is a morphism in $\cal{V}$, then we denote the corresponding homomorphism from $A(Y)$ to $A(X)$ by $f^*$.
@@ -258,9 +260,9 @@ Under the conditions of [Lemma 2](#lemma-2), if $s$ is non-zero at every point, 
 :::
 
 ::: {.rmenv title="Remark" data-latex="{Remark}"}
-The introduction of the operation $i$ in [c.](#data), and the axioms [A2](#axiom-A2), [A3](#axiom-A3), and [A4](#axiom-A4) concerning this operation, only serve to provide us with technical means of being able to prove [the corollary to Lemma 2](#lemma-2-corollary).
+The introduction of the operation $i$ in [c.](#data-c), and the axioms [A2](#axiom-A2), [A3](#axiom-A3), and [A4](#axiom-A4) concerning this operation, only serve to provide us with technical means of being able to prove [the corollary to Lemma 2](#lemma-2-corollary).
 (Axiom [A4](#axiom-A4) would still have sufficed even if we had assumed that $b=1_Y$.)
-For the theory of Chern classes in [the following section](#section-3), we will only need the data of [a.](#data) and [b.](#data), axiom [A2](#axiom-A1), and [the corollary to Lemma 2](#lemma-2-corollary).
+For the theory of Chern classes in [the following section](#section-3), we will only need the data of [a.](#data-a) and [b.](#data-b), axiom [A2](#axiom-A1), and [the corollary to Lemma 2](#lemma-2-corollary).
 :::
 
 ::: {.rmenv title="Particular cases" data-latex="{Particular cases}"}
@@ -294,8 +296,8 @@ We now given some particular cases where the conditions in this section are sati
     We can again easily verify that conditions [A1](#axiom-A1) to [A4](#axiom-A4) are satisfied, with [A1](#axiom-A1) being a consequence of the Leray spectral sequence of the continuous map $\mathbb{P}(E)\to X$ [the spectral sequence being trivial, as follows from considering from the class $\xi_E$ on $\mathbb{P}(E)$.]
 
 3. The base field $k$ is the field of complex numbers, $\cal{V}$ is the category of non-singular algebraic spaces, and $A(X)=\HH^\bullet(X,\mathbb{Z})$ (with $X$ being endowed with its "usual" topology).
-    The definition of [b.](#data) (either by Poincaré duality on divisor classes, or as an obstruction class in the classical exact sequence $0\to\mathbb{Z}\to\scr{O}_X\to\scr{O}_X^\times\to0$ of sheaves on $X$, endowed with its usual topology) is well known.
-    The definition of [c.](#data) classically comes
+    The definition of [b.](#data-b) (either by Poincaré duality on divisor classes, or as an obstruction class in the classical exact sequence $0\to\mathbb{Z}\to\scr{O}_X\to\scr{O}_X^\times\to0$ of sheaves on $X$, endowed with its usual topology) is well known.
+    The definition of [c.](#data-c) classically comes
     from Poincaré duality, and properties [A1](#axiom-A1) to [A4](#axiom-A4) are well known (with [A1](#axiom-A1) again following from the Leray spectral sequence).
 :::
 
@@ -324,7 +326,7 @@ and call $c(E)$ the _(total) Chern class_ of $E$;
 its data is equivalent to the data of all the $c_i(E)$.
 
 ::: {.itenv #theorem-1 title="Theorem 1" data-latex="{Theorem 1}"}
-Suppose that we have the data of [a.](#data), [b.](#data), and [c.](#data) from the previous section, satisfying axioms [A1](#axiom-A1) to [A4](#axiom-A4).
+Suppose that we have the data of [a.](#data-a), [b.](#data-b), and [c.](#data-c) from the previous section, satisfying axioms [A1](#axiom-A1) to [A4](#axiom-A4).
 Then the Chern classes (defined by (1)) satisfy the following conditions:
 
 i. _Functoriality._ ---
@@ -372,16 +374,13 @@ $$
 
 We now show that the Chern classes defined by (1) do indeed satisfy i., ii., and iii.
 
-
 i. Let $X,Y\in\cal{V}$, and let $E$ be a vector bundle on $Y$, and $F$ its inverse image under $f$.
     Then $\mathbb{P}(F)$ is the inverse image of $\mathbb{P}(E)$ under $f$, and so we have a commutative diagram of morphisms
     $$
       \begin{CD}
-        \mathbb{P}(F) @>\overline{f}>> \mathbb{P}(E)
+        \mathbb{P}(F) @>\bar{f}>> \mathbb{P}(E)
       \\@VpVV @VVqV
       \\X @>>f> Y
       \end{CD}
     $$
 :::
-
-**TO-DO: REPLACE Data AND Theorem 1 ENUMS WITH ENVS (LIKE FOR A1, ..., A4)**
