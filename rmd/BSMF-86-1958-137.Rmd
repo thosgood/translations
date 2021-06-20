@@ -256,7 +256,7 @@ Using the induction hypothesis, we then indeed recover the analogous formula, wi
 The following corollary will only be used in [§3](#section-3).
 
 ::: {.itenv #lemma-2-corollary title="Corollary" data-latex="{Corollary}"}
-Under the conditions of [Lemma 2](#lemma-2), if $s$ is non-zero at every point, then $\prod_{1\leq i\leq p}\xi_i=0$.
+Under the conditions of [Lemma 2](#lemma-2), if, further, $s$ is non-zero at every point, then $\prod_{1\leq i\leq p}\xi_i=0$.
 :::
 
 ::: {.rmenv title="Remark" data-latex="{Remark}"}
@@ -358,15 +358,9 @@ Furthermore, properties i., ii., and iii. entirely _characterise_ Chern classes.
 
 \oldpage{145}
 
-DOES THIS SHOW UP?
-
-::: {.proof}
-HOW ABOUT THIS?
-:::
-
 ::: {.proof}
 We first prove the _uniqueness_ of a theory of Chern classes satisfying properties i., ii., and iii.
-Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $X'$ the flag variety associated to $E$, with $f'\colon X\to X$ the canonical projection.
+<!-- Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $X'$ the flag variety associated to $E$, with $f'\colon X\to X$ the canonical projection.
 By [Lemma 1](#lemma-1), we know that $X'\in\cal{V}$, and that $f^*\colon A(X)\to A(X')$ is injective.
 So we know $c(E)$ if we know $f(c(E))$, which, by i., is equal to $c(f^{-1}(E))$.
 But $f^{-1}(E)$ splits completely.
@@ -388,6 +382,5 @@ i. Let $X,Y\in\cal{V}$, and let $E$ be a vector bundle on $Y$, and $F$ its inver
       \\@VpVV @VVqV
       \\X @>>f> Y
       \end{CD}
-    $$
-
+    $$ -->
 :::
