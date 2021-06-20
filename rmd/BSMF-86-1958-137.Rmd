@@ -139,15 +139,15 @@ If $X\in\cal{V}$, and if $E$ is a vector bundle on $X$, then $\mathbb{P}(E)\in\c
 Suppose further that we have the following data:
 
 ::: {.rmenv #data-a title="a" data-latex="{a}"}
-a contravariant functor $X\mapsto A(X)$ from $\cal{V}$ to the category of unital anticommutative graded rings;
+A contravariant functor $X\mapsto A(X)$ from $\cal{V}$ to the category of unital anticommutative graded rings.
 :::
 
 ::: {.rmenv #data-b title="b" data-latex="{b}"}
-a homomorphism $p_X\colon\PP(X)\to A^2(X)$ that is functorial in $X\in\cal{V}$; and
+A homomorphism $p_X\colon\PP(X)\to A^2(X)$ that is functorial in $X\in\cal{V}$.
 :::
 
 ::: {.rmenv #data-c title="c" data-latex="{c}"}
-for all $X\in\cal{V}$, and for every closed algebraic subspace $Y$ of $X$, of constant codimension $p$ in $X$, with $Y\in\cal{V}$, a group homomorphism
+For all $X\in\cal{V}$, and for every closed algebraic subspace $Y$ of $X$, of constant codimension $p$ in $X$, with $Y\in\cal{V}$, a group homomorphism
 $$
   i_*\colon A(Y)\to A(X)
 $$
@@ -358,6 +358,12 @@ Furthermore, properties i., ii., and iii. entirely _characterise_ Chern classes.
 
 \oldpage{145}
 
+DOES THIS SHOW UP?
+
+::: {.proof}
+HOW ABOUT THIS?
+:::
+
 ::: {.proof}
 We first prove the _uniqueness_ of a theory of Chern classes satisfying properties i., ii., and iii.
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $X'$ the flag variety associated to $E$, with $f'\colon X\to X$ the canonical projection.
@@ -383,4 +389,5 @@ i. Let $X,Y\in\cal{V}$, and let $E$ be a vector bundle on $Y$, and $F$ its inver
       \\X @>>f> Y
       \end{CD}
     $$
+
 :::
