@@ -227,7 +227,7 @@ $$
 :::: {.proof}
 We will prove, by induction on $j$ (where $1\leq j\leq p$), that
 
-::: {.ref-eq #equation-star title="" data-latex=""}
+::: {.refeq #equation-star title="" data-latex=""}
 $$
   p_X(Y_j) = \prod_{1\leq i\leq j}\xi_i.
 \tag{$\star$}
@@ -313,7 +313,7 @@ Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $\xi_E=p_
 By axiom [A1](#axiom-A1) from the previous section, $(\xi_E)^p$ can be written as a unique linear combination of the $(\xi_E)^i$ (for $0\leq i\leq p-1$) with coefficients in $A(X)$.
 This means that we can find, in a unique way, elements $c_i(E)\in A^{2i}(X)$ (defined for every integer $i\geq0$) satisfying the conditions
 
-::: {.ref-eq #equation-1 title="" data-latex=""}
+::: {.refeq #equation-1 title="" data-latex=""}
 $$
   \begin{gathered}
     \sum_{i=0}^p c_i(E)(\xi_E)^{p-i} = 0,
