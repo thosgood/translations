@@ -385,5 +385,45 @@ $$
   \\X @>>f> Y
   \end{CD}
 $$
-We also
+We also know that $L_F$ is the inverse image of $L_E$ under $\bar{f}$.
+It thus follows that
+$$
+  \xi_F = \bar{f}^*(\xi_E).
+$$
+Equation (3) is trivially satisfied in dimensions $i=0$ and $i>p$, so it suffices to verify it in dimensions $1\leq i\leq p$.
+By definition,
+$$
+  \sum_{i=0}^p q^*(c_i(E))(\xi_E)^{p-i} = 0
+$$
+which implies --- by applying the homomorphism $\bar{f}^*$ and noting that
+$$
+  \begin{gathered}
+    \bar{f}^*q^* = (q\bar{f})^* = (fp)^* = p^*f^*
+  \\\text{and}\quad\bar{f}^*(\xi_E) = \xi_F
+  \end{gathered}
+$$
+--- the relation
+$$
+  \sum_{i=0}^p p^*(f^*(c_i(E)))(\xi_F)^{p-i} = 0
+$$
+which proves, by definition, that
+$$
+  c_i(F) = f^*(c_i(E))
+$$
+for $1\leq i\leq p$.
+
+\oldpage{146}
+
+_(Proof of ii.)_
+Suppose that $E$ is of rank $1$, so that $\mathbb{P}(E)=X$, $L_E=\check{E}$, and $\xi_E = p_X\cl_X(\check{E}) = -p_X\cl_X(E)$.
+Equation (1) can then be written as
+$$
+  \xi_E + c_1(E) = 0
+$$
+whence
+$$
+  c_1(E) = -\xi_E = p_X\cl_X(E).
+$$
+
+_(Proof of iii.)_
 :::
