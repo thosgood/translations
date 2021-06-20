@@ -116,9 +116,9 @@ Then $s$ is a morphism from $X$ to $E$, and even an isomorphism from $X$ to a cl
 In particular, the image of $X$ under the zero section is a closed non-singular subspace $X'$ of codimension $p$ of $E$.
 Evidently, the inverse image $s^{-1}(X')$ is exactly the set of zeros of $s$.
 For the _cycle_ $s^{-1}(X')$ to be well defined, it is necessary and sufficient for the set of zeros of $s$ to be everywhere empty, or of codimension $p$ in $X$.
-In this case, we can then speak of the _cycle of zeros_ of the section $s$.
+In this case, we can then speak of the _zero cycle_ of the section $s$.
 Recall also that the morphism $s$ is said to be _transversal_ to the subvariety $X'$ of $X$ if, at every point of the inverse image of $X'$ under $s$, the tangent map to $s$ is surjective modulo the tangent space to $X'$.
-In this case, $s^{-1}(X')$ is a non-singular algebraic subspace of $X$ that is everywhere of codimension $p$, and all of its components are of multiplicity $1$ in the cycle of zeros of $s$.
+In this case, $s^{-1}(X')$ is a non-singular algebraic subspace of $X$ that is everywhere of codimension $p$, and all of its components are of multiplicity $1$ in the zero cycle of $s$.
 We will then say, for brevity, that the section $s$ is _transversal to the zero section_.
 We can express this property by a calculation:
 since it is local on $X$, we can assume that $E$ is the trivial bundle $X\times k^p$, so that $s$ is defined by the data of $p$ regular functions $(f_1,\ldots,f_p)$ on $X$;
@@ -132,7 +132,7 @@ for $s$ to be transversal to the zero section, it is necessary and sufficient fo
 In what follows, suppose that we have a category $\cal{V}$ of non-singular algebraic spaces (the morphisms in this category being the morphisms of algebraic spaces).
 The only condition that we impose on $\cal{V}$ is the following:
 
-::: {.rmenv #V1 title="V1" data-latex="{V1}"}
+::: {.rmenv #condition-V1 title="V1" data-latex="{V1}"}
 If $X\in\cal{V}$, and if $E$ is a vector bundle on $X$, then $\mathbb{P}(E)\in\cal{V}$.
 :::
 
@@ -206,7 +206,7 @@ Then $X^{(i)}\in\cal{V}$, and the homomorphism $A(X)\to A(X^{(i)})$ induced by t
 
 ::: {.proof}
 By [§1](#section-1), we can restrict, by induction on $i$, to the case of the projective bundle $X^{(1)}=\mathbb{P}(E)$ associated to $E$.
-Then our claims are an immediate consequence of [V1](#V1) and [A1](#A1) [since the element $1_{\mathbb{P}(E)}=(\xi_E)^0$ is free over the ring $A(X)$].
+Then our claims are an immediate consequence of [V1](#condition-V1) and [A1](#A1) [since the element $1_{\mathbb{P}(E)}=(\xi_E)^0$ is free over the ring $A(X)$].
 :::
 
 ::: {.itenv #lemma-2 title="Lemma 2" data-latex="{Lemma 2}"}
@@ -266,7 +266,7 @@ For the theory of Chern classes in [the following section](#section-3), we will 
 :::
 
 ::: {.rmenv title="Particular cases" data-latex="{Particular cases}"}
-We note, first of all, that condition [V1](#V1) is satisfied for all reasonable categories of algebraic spaces;
+We note, first of all, that condition [V1](#condition-V1) is satisfied for all reasonable categories of algebraic spaces;
 it is satisfied, in particular, for the categories of arbitrary non-singular algebraic spaces, of non-singular quasi-projective algebraic spaces, and of non-singular projective algebraic spaces.
 The verification for the two latter cases presents no difficulty, and is left to the reader (the result being a particular case of a more general result concerning blown-up varieties).
 
@@ -465,7 +465,7 @@ Then $Y_i$ is a non-singular closed subspace of $X'$, and $Y'\in\cal{V}$.
 Now let $s_i$ be the section of $(F'_{i-1}|F'_i)|Y_{i-1}$ induced by $s|Y_{i-1}$, which I claim is transversal to the zero section.
 Since the question is local, we can assume that $E=X\times k^n$ and $E_i=X\times k^{n-i}$, so then $Y_i=X\times\mathbb{P}(k^{n-i})$, $E_j|Y_i$ is the constant bundle with fibre $k^{n-j}$ on $Y_i$, and $L|Y_i$ is the subbundle (of the constant bundle with fibre $k^{n-i}$) given by the inverse image, under the projection map from $Y_i$ to its factor $\mathbb{P}(k^{n-i})$, of the well-known rank-$1$ subbundle $l$ of the constant bundle with fibre $k^{n-i}$.
 Then the bundle $(F'_i|F'_{i+1})|Y_i$ on $Y_i$, and its section $s_{i+1}$, are the inverse images, under the projection map from $Y_i$ to its factor $\mathbb{P}(k^{n-i})$, of a specific section $\sigma$ of $l$.
-But it is well known (and immediately true) that every non-zero section of $l$ is transversal to the zero section (its cycle of zeros then being a linear hyperplane of the projective space).
+But it is well known (and immediately true) that every non-zero section of $l$ is transversal to the zero section (its zero cycle then being a linear hyperplane of the projective space).
 This proves our claim.
 
 \medskip
@@ -669,7 +669,7 @@ We will return to this questions in a later article.
 
 In this section, we assume that the category $\cal{V}$ further satisfies the following condition:
 
-::: {.rmenv #V2 title="V2" data-latex="{V2}"}
+::: {.rmenv #condition-V2 title="V2" data-latex="{V2}"}
 For all $X\in\cal{V}$ and every non-singular closed subspace $Y$ of $X$, we have that $Y\in\cal{V}$.
 :::
 
@@ -685,4 +685,109 @@ $$
 
 \oldpage{152}
 
-Let
+Let $X\in V$, and let $E$ be a rank-$p$ vector bundle on $X$.
+Denote by $\mathbf{e}$ the constant vector bundle $X\times k$ on $X$, let $\widetilde{E}=E+\mathbf{e}$ be the vector bundle given by the direct sum of $E$ and $\mathbf{e}$, and define $\widehat{E}=\mathbb{P}(\widetilde{E})$.
+The injection $E\to\widetilde{E}$ defines an injection of bundles $\mathbb{P}(E)\subset\mathbb{P}(\widetilde{E})=\widehat{E}$, and the complement $\widehat{E}\setminus\mathbb{P}(E)$ is canonically isomorphic to $E$, since $\widehat{E}$ can be understood as the bundle induced by projectively completing all the fibres of $E$.
+Let $s$ be a regular section of $E$.
+Then $s(X)$ is a non-singular closed subspace of $\widehat{E}$, and so $s(X)\in\cal{V}$, and we propose to calculate $p_{\widehat{E}}(s(X))$.
+We will prove:
+
+::: {.itenv #lemma-3 title="Lemma 3" data-latex="{Lemma 3}"}
+With the above notation, if $s_0$ is the zero section of $E$, then
+$$
+  p_{\widehat{E}}(s_0(X)) = \sum_{i=0}^p c_i(E)(\xi_{\widetilde{E}})^{p-i}.
+\tag{17}
+$$
+:::
+
+::: {.proof}
+Let $X'$ be the flag variety of $E$, $f$ the projection from $X'$ to $X$, $E'$ the vector bundle $f^{-1}(E)$ on $X'$, and $s'_0$ the section of $E'$ given by the inverse image of $s_0$ under $f$.
+Then $\widehat{E}'$ is the inverse image of $\widehat{E}$ under $f$, so let $\widehat{f}$ be the natural morphism from $\widehat{E}'$ to $\widehat{E}$;
+we then have a commutative diagram of morphisms:
+$$
+  \begin{CD}
+    X @<f<< X'
+  \\@Vs_0VV @VVs'_0V
+  \\\widehat{E} @<<\widehat{f}< \widehat{E}'
+  \end{CD}
+$$
+
+Since $\widehat{f}$ is a fibrant morphism, it follows that it is transversal to every non-singular closed subspace of $\widehat{E}$, and, in particular, to $s_0(X)$.
+We also know that $\widehat{f}^{-1}(s_0(X)) = s'_0(X')$.
+Since $\widehat{f}^*$ is injective ([Lemma 1](#lemma-1)), it suffices, in order to prove [(17)](#lemma-3), to prove the formula given by applying $\widehat{f}^*$ to both sides.
+Applying axiom [A5](#axiom-A5), the left-hand side is then $p_{\widehat{E}}(s'_0(X'))$, and the right-hand side is $c_i(E')(\xi_{\widetilde{E}'})^{p-1}$ [taking into account the functoriality of the $c_i$, and the immediate formula $\xi_{\widetilde{E}'}=\widehat{f}^*(\xi_{\widetilde{E}})$].
+This leads us to prove [(17)](#lemma-3) in the case where the bundle $E$ admits a splitting $(E_i)_{0\leq i\leq p}$ (where $\rank E_i=p-i$).
+
+So let $f$ be the projection from $\widehat{E}=\mathbb{P}(\widetilde{E})$ to $X$, and consider the splitting
+$$
+  \widetilde{E} = E_0+\mathbf{e} \supset E_1+\mathbf{e} \supset \ldots \supset E_p+\mathbf{e} = \mathbf{e} \supset 0
+$$
+of $\widetilde{E}$, and let $E'=f^{-1}(\widetilde{E})$.
+Then we also have a splitting on the bundle $L_{\widetilde{E}}\otimes E'$, and its factors are the $L_{\widetilde{E}}\otimes f^{-1}(E_{i-1}/E_i)$ (for $1\leq i\leq p$), and $L_E\otimes f^{-1}(\mathbf{e}) = L_E$;
+we also have a canonical section $s$, and we have seen, in the proof of [Theorem 1](#theorem-1), that the conditions of [Lemma 2](#lemma-2) are satisfied.
+Equation ($\star$) in the proof of [Lemma 2](#lemma-2) then gives
+$$
+  p_{\widehat{E}}(Y_p) = \prod_{i=1}^p c_1(L_{\widetilde{E}}\otimes f^{-1}(E_{i-1}/E_i)),
+$$
+where $Y_p$ denotes the set of points of $\widehat{E}=\mathbb{P}(\widetilde{E})$ consisting of lines of $\widetilde{E}$ that are contained in the subbundle $\mathbf{e}$, i.e. the set $s_0(X)$, where $s_0$ is the zero section of $E$ (with $E$ being identified with an open subset of $\widehat{E}$).
+Since we have
+$$
+  c_1(L_{\widetilde{E}}\otimes f^{-1}(E_{i-1}/E_i)) = \xi_{\widetilde{E}}+f^*(\xi_i),
+  \quad\text{where }\xi_i = c_1(E_{i-1}/E_i),
+$$
+and [(17)](#lemma-3) then follows.
+:::
+
+\oldpage{153}
+
+From this, we will deduce
+
+::: {.itenv #theorem-2 title="Theorem 2" data-latex="{Theorem 2}"}
+Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $s$ a regular section of $E$ that is transversal to the zero section, and $Y$ the set of zeros of $s$ (which is thus a non-singular closed subspace of codimension $p$ of $X$).
+Under these conditions,
+$$
+  p_X(Y) = c_p(E).
+\tag{18}
+$$ 
+:::
+
+::: {.proof}
+Consider $s$ as a morphism from $X$ to $\widehat{E}$, so that $s$ is transversal to the non-singular closed subspace $s_0(X)$ of $\widehat{E}$ (where $s_0$ denotes the zero section), and so, by [A5](#axiom-A5), since $Y=s^{-1}(s_0(X))$,
+$$
+  p_X(Y) = s^*(p_{\widehat{E}}(s_0(X))).
+$$
+
+Equation [(18)](#theorem-2) then follows from [(17)](#lemma-3), since
+$$
+  s^*(c_i(E)) = c_i(E)
+  \quad\text{and}\quad
+  s^*(\xi_{\widetilde{E}}) = 0.
+$$
+(This latter equation follows immediately from the fact that $L_{\widetilde{E}}$ induces a trivial bundle on $E$, and so the inverse image of $L_{\widetilde{E}}$ under $s$ is the trivial bundle on $X$.)
+:::
+
+In fact, the above proof proves the following formula, which holds for _every_ regular section $s$ of $E$:
+$$
+  s^*(p_{\widetilde{E}}(s_0(X))) = c_p(E)
+\tag{18 bis}
+$$
+(where $s_0$ denotes the zero section of $E$).
+From this we deduce, for example:
+
+::: {.itenv #lemma-3-corollary title="Corollary" data-latex="{Corollary}"}
+Suppose that we are in the setting of Chow theory ($\cal{V}$ being the category of non-singular quasi-projective algebraic spaces; $A(X)$ being the ring of cycle classes under rational equivalence).
+Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $s$ a regular section of $E$ such that the zero cycle $Z$ of $s$ exists.
+Then the class of $Z$ is $c_p(E)$.
+:::
+
+\oldpage{154}
+
+::: {.rmenv title="Remark" data-latex="{Remark}"}
+Equation [(17)](#lemma-3) holds true even if we replace the zero section $s_0$ by an arbitrary section of $E$.
+We can see this by slightly modifying the proof of [Lemma 3](#lemma-3), but it is easy to deduce this formula from [Theorem 2](#theorem-2), noting that $s(X)$ is the set of zeros of a section (which is transversal to the zero section) of a suitable vector bundle on $\mathbb{P}(\widetilde{E})$, i.e. the bundle $L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)$, where $S$ is the (trivial) rank-$1$ subbundle of $\widetilde{E}$ defined by the section $s$.
+The right-hand side of [(17)](#lemma-3) is then exactly
+$$
+  c_p(L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)) = c_p(L_{\widetilde{E}}\otimes f^{-1}(E)),
+$$
+as follows from the formulas of [§3](#section-3).
+:::
