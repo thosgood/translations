@@ -94,8 +94,6 @@ else
       # Build
       # Tell Bookdown how to find the PDF file when we build the html version
       sed -ir "s/\".*pdf\"/\"$PREF.pdf\"/g" _output.yml &&
-      # Tell Bookdown how to find the TeX file when we build the html version
-      sed -ir "s/\".*tex\"/\"$PREF.tex\"/g" _output.yml &&
       # Git commit version number in automatic link
       # (note that this is the same for ALL files currently being built, so
       #  we don't need to worry about the fact that this is only changed on the
