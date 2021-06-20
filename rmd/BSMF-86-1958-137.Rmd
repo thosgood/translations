@@ -377,7 +377,7 @@ We now show that the Chern classes defined by (1) do indeed satisfy i., ii., and
 
 \medskip
 
-_Proof of i._
+_Proof of i._ ---
 Let $X,Y\in\cal{V}$, and let $E$ be a vector bundle on $Y$, and $F$ its inverse image under $f$.
 Then $\mathbb{P}(F)$ is the inverse image of $\mathbb{P}(E)$ under $f$, and so we have a commutative diagram of morphisms
 $$
@@ -418,7 +418,7 @@ for $1\leq i\leq p$.
 
 \medskip
 
-_Proof of ii._
+_Proof of ii._ ---
 Suppose that $E$ is of rank $1$, so that $\mathbb{P}(E)=X$, $L_E=\check{E}$, and $\xi_E = p_X\cl_X(\check{E}) = -p_X\cl_X(E)$.
 Equation (1) can then be written as
 $$
@@ -431,8 +431,7 @@ $$
 
 \medskip
 
-_Proof of iii._
-
+_Proof of iii._ ---
 With the set-up of i., let $P$ be the product bundle on $X$ of the flag variety of $E'$ with the flag variety of $E''$.
 Then $P$ can also be identified with the flag variety of $f^{-1}(E'')$, where $f\colon D(E')\to X$ is the canonical projection to $X$ from the flag variety $D(E')$ of $E'$.
 Using [Lemma 1](#lemma-1) twice, we find that $P\in\cal{V}$, and that the homomorphism $g^*\colon A(X)\to A(P)$ associated to the projection $g\colon P\to X$ is injective.
@@ -471,8 +470,7 @@ This proves our claim.
 
 \medskip
 
-_Proof of [Theorem 1](#theorem-1)._
-
+_Proof of [Theorem 1](#theorem-1)._ ---
 So we are under the conditions of [the corollary to Lemma 2](#lemma-2-corollary), which implies that
 $$
   \prod_{i=1}^p (\xi_E+\xi'_i) = 0.
@@ -496,3 +494,6 @@ and, similarly, the Chern classes of the exterior powers $\bigwedge E$ (resp. of
 Passing to a flag variety, as per usual, we can reduce to the case where $E$ and $F$ are completely split.
 In this case, the formulas follow immediately from (6).
 :::
+
+
+# Remarks and various addenda {#section-4}
