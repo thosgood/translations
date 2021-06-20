@@ -341,15 +341,17 @@ Suppose that we have the data of [a.](#data-a), [b.](#data-b), and [c.](#data-c)
 Then the Chern classes (defined by (1)) satisfy the following conditions:
 
 i. _Functoriality._ ---
-    Let $f\colon X\to Y$ be a morphism in $\cal{V}$, and let $E$ be a vector bundle on $Y$.
-    Then
-    ::: {.refeq #equation-3 title="" data-latex=""}
-    $$
-      c(f^{-1}(E)) = f^*(c(E))
-    \tag{3}
-    $$
-    :::
-    [where $f^{-1}(E)$ denotes the vector bundle on $X$ given by the inverse image of $E$ under $f$].
+  Let $f\colon X\to Y$ be a morphism in $\cal{V}$, and let $E$ be a vector bundle on $Y$.
+  Then
+
+  ::: {.refeq #equation-3 title="" data-latex=""}
+  $$
+    c(f^{-1}(E)) = f^*(c(E))
+  \tag{3}
+  $$
+  :::
+  
+  [where $f^{-1}(E)$ denotes the vector bundle on $X$ given by the inverse image of $E$ under $f$].
 
 ii. _Normalisation._ ---
     If $E$ is a rank-$1$ vector bundle on $X\in\cal{V}$, then
