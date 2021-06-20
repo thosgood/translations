@@ -663,3 +663,26 @@ this is the "without moving cycles" method.
 It allows us, for example, to determine (up to torsion) the ring of cycle classes of a blow-up variety, by using part (c) of Lemma 19 of the paper of Borel--Serre^[[Trans.] This is once again referring to paper by Borel and Serre mentioned in the previous translator footnotes.], which gives (by passing to the associated graded objects) that $f^*i_*(y) = j_*(g^*(y)c_{p-1}(F))$.
 We will return to this questions in a later article.
 ::::
+
+
+# The zero cycles of a regular section of a vector bundle {#section-5}
+
+In this section, we assume that the category $\cal{V}$ further satisfies the following condition:
+
+::: {.rmenv #V2 title="V2" data-latex="{V2}"}
+For all $X\in\cal{V}$ and every non-singular closed subspace $Y$ of $X$, we have that $Y\in\cal{V}$.
+:::
+
+Furthermore, we assume that the following axiom is verified:
+
+::: {.rmenv #axiom-A5 title="A5" data-latex="{A5}"}
+Let $X,Y\in\cal{V}$, and let $Y'$ be a non-singular closed subspace of $Y$, $f$ a morphism from $X$ to $Y$ that is transversal to $Y'$, and $X'=f^{-1}(Y')$ [so $X'$ is a non-singular closed subspace of $X$, thus $X'\in\cal{V}$ and $p_X(X')$ is defined].
+Under these conditions,
+$$
+  p_X(X') = f^*(p_Y(Y')).
+$$
+:::
+
+\oldpage{152}
+
+Let
