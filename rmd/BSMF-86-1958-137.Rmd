@@ -362,9 +362,10 @@ Furthermore, properties i., ii., and iii. entirely _characterise_ Chern classes.
 We first prove the _uniqueness_ of a theory of Chern classes satisfying properties i., ii., and iii.
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $X'$ the flag variety associated to $E$, with $f'\colon X\to X$ the canonical projection.
 By [Lemma 1](#lemma-1), we know that $X'\in\cal{V}$, and that $f^*\colon A(X)\to A(X')$ is injective.
-<!-- So we know $c(E)$ if we know $f(c(E))$, which, by i., is equal to $c(f^{-1}(E))$.
+So, if we know $c(E)$, then we know $f(c(E))$;
+the latter, by i., is equal to $c(f^{-1}(E))$.
 But $f^{-1}(E)$ splits completely.
-We can thus reduce to determining $c(E)$ when $E$ is a rank-$p$ vector bundle that splits completely, and which is thus endowed with a composition series $(E_i)_{0\leq i\leq p}$, with $\rank E_i=p-i$,
+<!-- We can thus reduce to determining $c(E)$ when $E$ is a rank-$p$ vector bundle that splits completely, and which is thus endowed with a composition series $(E_i)_{0\leq i\leq p}$, with $\rank E_i=p-i$,
 But then the additivity formula iii. proves (by induction on $p$) that $c(E)=\prod_{i=1}^p c(E_{i-1}/E_i)$.
 Finally, the normalisation formula ii. implies that
 $$
