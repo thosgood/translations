@@ -375,7 +375,9 @@ $$
 
 We now show that the Chern classes defined by (1) do indeed satisfy i., ii., and iii.
 
-_(Proof of i.)_
+\medskip
+
+_Proof of i._
 Let $X,Y\in\cal{V}$, and let $E$ be a vector bundle on $Y$, and $F$ its inverse image under $f$.
 Then $\mathbb{P}(F)$ is the inverse image of $\mathbb{P}(E)$ under $f$, and so we have a commutative diagram of morphisms
 $$
@@ -414,7 +416,9 @@ for $1\leq i\leq p$.
 
 \oldpage{146}
 
-_(Proof of ii.)_
+\medskip
+
+_Proof of ii._
 Suppose that $E$ is of rank $1$, so that $\mathbb{P}(E)=X$, $L_E=\check{E}$, and $\xi_E = p_X\cl_X(\check{E}) = -p_X\cl_X(E)$.
 Equation (1) can then be written as
 $$
@@ -425,5 +429,70 @@ $$
   c_1(E) = -\xi_E = p_X\cl_X(E).
 $$
 
-_(Proof of iii.)_
+\medskip
+
+_Proof of iii._
+
+With the set-up of i., let $P$ be the product bundle on $X$ of the flag variety of $E'$ with the flag variety of $E''$.
+Then $P$ can also be identified with the flag variety of $f^{-1}(E'')$, where $f\colon D(E')\to X$ is the canonical projection to $X$ from the flag variety $D(E')$ of $E'$.
+Using [Lemma 1](#lemma-1) twice, we find that $P\in\cal{V}$, and that the homomorphism $g^*\colon A(X)\to A(P)$ associated to the projection $g\colon P\to X$ is injective.
+Then, to prove (5), it suffices to prove the formula that follows from it by applying $g^*$ to both sides, which, by functoriality (i.), reduces to proving the multiplicativity formula for the inverse image of the exact sequence $0\to E'\to E\to E''\to 0$ under $g$.
+But it is immediate that $g^{-1}(E')$ and $g^{-1}(E'')$ split completely.
+We can thus reduce to proving the additivity formula in the case where the factors $E'$ and $E''$ split completely.
+But then the splittings of $E'$ and $E''$ define a splitting of $E$, and it clearly suffices to prove (6) for each of the composition series of $E'$, $E''$, and $E$ thus obtained.
+This leads us to prove (6) for a completely split vector bundle.
+
+So let $X'=\mathbb{P}(E)$, with $f'$ the projection from $X'$ to $X$, and define
+$$
+  \begin{aligned}
+    E' &= f^{-1}(E),
+  \\E'_i &= f^{-1}(E_i),
+  \\L &= L_E,
+  \\\xi_i &= p_X\cl_X(E_{i-1}/E_i)\quad(1\leq i\leq p),
+  \\\xi'_i &= f^*(\xi_i) = p_X\cl_{X'}(E'_i/E'_{i+1}).
+  \end{aligned}
+$$
+The (rank-$1$) bundle $\check{L}$ can be identified with a vector subbundle of $E'$, and the injection homomorphism $\check{L}\to E'$ can be understood as a regular section $s$ of the bundle $F'=L\otimes E'$.
+Since $s$ corresponds to an injection morphism, we immediately see that $s$ does not vanish.
+Letting $F'_i=L\otimes E'_i$, we obtain a splitting of $F'$, whose factors are $F'_i/F'_{i+1} = L\otimes(E'_i/E'_{i+1})$, whence
+$$
+  p_X\cl_{X'}(F'_{i-1}/F'_{i}) = \xi_E+\xi'_i.
+$$
+
+\oldpage{147}
+
+Let $Y_i$ be the set of points $x'$ of $X'$ such that $s(x')\in F'_i$, which is also the set of points $x'$ such that the fibre of $\check{L}$ at $x'$ is contained in $E'_i$, and can thus be identified with $\mathbb{P}(E_i)$.
+Then $Y_i$ is a non-singular closed subspace of $X'$, and $Y'\in\cal{V}$.
+Now let $s_i$ be the section of $(F'_{i-1}|F'_i)|Y_{i-1}$ induced by $s|Y_{i-1}$, which I claim is transversal to the zero section.
+Since the question is local, we can assume that $E=X\times k^n$ and $E_i=X\times k^{n-i}$, so then $Y_i=X\times\mathbb{P}(k^{n-i})$, $E_j|Y_i$ is the constant bundle with fibre $k^{n-j}$ on $Y_i$, and $L|Y_i$ is the subbundle (of the constant bundle with fibre $k^{n-i}$) given by the inverse image, under the projection map from $Y_i$ to its factor $\mathbb{P}(k^{n-i})$, of the well-known rank-$1$ subbundle $l$ of the constant bundle with fibre $k^{n-i}$.
+Then the bundle $(F'_i|F'_{i+1})|Y_i$ on $Y_i$, and its section $s_{i+1}$, are the inverse images, under the projection map from $Y_i$ to its factor $\mathbb{P}(k^{n-i})$, of a specific section $\sigma$ of $l$.
+But it is well known (and immediately true) that every non-zero section of $l$ is transversal to the zero section (its cycle of zeros then being a linear hyperplane of the projective space).
+This proves our claim.
+
+\medskip
+
+_Proof of [Theorem 1](#theorem-1)._
+
+So we are under the conditions of [the corollary to Lemma 2](#lemma-2-corollary), which implies that
+$$
+  \prod_{i=1}^p (\xi_E+\xi'_i) = 0.
+$$
+This proves, by the definition of the $c_i(E)$, that the $c_i(E)$ are the elementary symmetric functions in the $\xi_i$, which is exactly (6).
+
+This finishes the proof of [Theorem 1](#theorem-1).
+:::
+
+::: {.itenv #theorem-1-corollary title="Corollary" data-latex="{Corollary}"}
+Let $X\in\cal{V}$, and let $E$ and $F$ be vector bundles on $X$.
+Then
+$$
+  c_i(\check{E}) = (-1)^i c_i(E)
+\tag{7}
+$$
+and, similarly, the Chern classes of the exterior powers $\bigwedge E$ (resp. of the tensor product $E\otimes F$) can be expressed in terms of the Chern classes of $E$ and the rank of $E$ (resp. in terms of the Chern classes of $E$ and $F$ and the ranks of $E$ and $F$) by the well-known calculation of elementary functions (see the book by Hirzebruch).
+:::
+
+::: {.proof}
+Passing to a flag variety, as per usual, we can reduce to the case where $E$ and $F$ are completely split.
+In this case, the formulas follow immediately from (6).
 :::
