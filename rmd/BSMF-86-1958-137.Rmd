@@ -376,7 +376,11 @@ We now show that the Chern classes defined by (1) do indeed satisfy i., ii., and
 i. Let $X,Y\in\cal{V}$, and let $E$ be a vector bundle on $Y$, and $F$ its inverse image under $f$.
     Then $\mathbb{P}(F)$ is the inverse image of $\mathbb{P}(E)$ under $f$, and so we have a commutative diagram of morphisms
     $$
-      !!!
+      \begin{CD}
+        \mathbb{P}(F) @>\overline{f}>> \mathbb{P}(E)
+      \\@VpVV @VVqV
+      \\X @>>f> Y
+      \end{CD}
     $$
 :::
 
