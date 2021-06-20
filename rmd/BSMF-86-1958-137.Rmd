@@ -224,12 +224,15 @@ $$
 $$
 :::
 
-::: {.proof}
+:::: {.proof}
 We will prove, by induction on $j$ (where $1\leq j\leq p$), that
+
+::: {.equation #equation-star title="" data-latex=""}
 $$
   p_X(Y_j) = \prod_{1\leq i\leq j}\xi_i.
 \tag{$\star$}
 $$
+:::
 
 For $j=1$, this equation is exactly axiom [A2](#axiom-A2).
 Now suppose that the equation has been proven for some $j<p$;
@@ -249,7 +252,7 @@ $$
 $$
 The right-hand side of this equation can also be written as $(u_j)_*(1_{y_j}u_j^*(\xi_{j+1}))$, which is equal, by axiom [A4](#axiom-A4), to $(u_j)_*(1_{Y_j})\xi_{j+1} = p_X(Y_j)\xi_{j+1}$.
 Using the induction hypothesis, we then indeed recover the analogous formula, with $j+1$ instead of $j$.
-:::
+::::
 
 \oldpage{142}
 
@@ -309,6 +312,8 @@ We now given some particular cases where the conditions in this section are sati
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $\xi_E=p_X(\cl(L_E))$ the fundamental class in $A^2(\mathbb{P}(E))$.
 By axiom [A1](#axiom-A1) from the previous section, $(\xi_E)^p$ can be written as a unique linear combination of the $(\xi_E)^i$ (for $0\leq i\leq p-1$) with coefficients in $A(X)$.
 This means that we can find, in a unique way, elements $c_i(E)\in A^{2i}(X)$ (defined for every integer $i\geq0$) satisfying the conditions
+
+::: {.equation #equation-1 title="" data-latex=""}
 $$
   \begin{gathered}
     \sum_{i=0}^p c_i(E)(\xi_E)^{p-i} = 0,
@@ -316,6 +321,8 @@ $$
   \end{gathered}
 \tag{1}
 $$
+:::
+
 The $c_i(E)$ are called the _Chern classes_ of $E$, with $c_i(E)$ being called the $i$th Chern class.
 We define
 $$
