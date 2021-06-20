@@ -338,19 +338,15 @@ its data is equivalent to the data of all the $c_i(E)$.
 
 :::: {.itenv #theorem-1 title="Theorem 1" data-latex="{Theorem 1}"}
 Suppose that we have the data of [a.](#data-a), [b.](#data-b), and [c.](#data-c) from the previous section, satisfying axioms [A1](#axiom-A1) to [A4](#axiom-A4).
-Then the Chern classes (defined by (1)) satisfy the following conditions:
+Then the Chern classes (defined by [(1)](#equation-1)) satisfy the following conditions:
 
 i. _Functoriality._ ---
     Let $f\colon X\to Y$ be a morphism in $\cal{V}$, and let $E$ be a vector bundle on $Y$.
     Then
-
-    ::: {.refeq #equation-3 title="" data-latex=""}
     $$
       c(f^{-1}(E)) = f^*(c(E))
     \tag{3}
     $$
-    :::
-    
     [where $f^{-1}(E)$ denotes the vector bundle on $X$ given by the inverse image of $E$ under $f$].
 
 ii. _Normalisation._ ---
@@ -383,12 +379,14 @@ But $f^{-1}(E)$ splits completely.
 We can thus reduce to determining $c(E)$ when $E$ is a rank-$p$ vector bundle that splits completely, and which is thus endowed with a composition series $(E_i)_{0\leq i\leq p}$, with $\rank E_i=p-i$,
 But then the additivity formula iii. proves (by induction on $p$) that $c(E)=\prod_{i=1}^p c(E_{i-1}/E_i)$.
 Finally, the normalisation formula ii. implies that
+
+::: {.refeq #equation-6 title="" data-latex=""}
 $$
   c(E) = \prod_{i=1}^p (1+p_X\cl_X(E_{i-1}/E_i)).
 \tag{6}
 $$
 
-We now show that the Chern classes defined by (1) do indeed satisfy i., ii., and iii.
+We now show that the Chern classes defined by [(1)](#equation-1) do indeed satisfy i., ii., and iii.
 
 \medskip
 
@@ -435,7 +433,7 @@ for $1\leq i\leq p$.
 
 _Proof of ii._ ---
 Suppose that $E$ is of rank $1$, so that $\mathbb{P}(E)=X$, $L_E=\check{E}$, and $\xi_E = p_X\cl_X(\check{E}) = -p_X\cl_X(E)$.
-Equation (1) can then be written as
+Equation [(1)](#equation-1) can then be written as
 $$
   \xi_E + c_1(E) = 0
 $$
