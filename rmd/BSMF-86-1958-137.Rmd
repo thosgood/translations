@@ -497,3 +497,115 @@ In this case, the formulas follow immediately from (6).
 
 
 # Remarks and various addenda {#section-4}
+
+::: {.rmenv #remark-1 title="Remark 1" data-latex="{Remark 1}"}
+In all the above, we have only needed to work with elements of even degree in $A(X)$, which implies, in particular, that all the calculations were essentially commutative.
+We note also that the axioms [A1](#axiom-A1) to [A4](#axiom-A4) remain satisfied if we replace each $A(X)$ with the direct sum of the $A^{2i}(X)$.
+But then it seems sensible to divide all the degrees by $2$, and thus to assume from the start that the $A(X)$ were commutative, and that the homomorphism $p_X$ from $\PP(X)$ took its values, not in $A^2(X)$, but in $A^1(X)$.
+This is what we assume in the following remark.
+:::
+
+\oldpage{148}
+
+::: {.rmenv #remark-2 title="Remark 2" data-latex="{Remark 2}"}
+Let $A$ be a commutative positively-graded ring with unit.
+Let $\widehat{A}$ be the ring given by the product of the $A^i$ (for $i\geq0$).
+Then the set of elements of $\widehat{A}$ of augmentation $1$ (i.e. whose degree-$0$ component is $1$) is a group under multiplication, which we denote by $1+\widehat{A}^+$.
+Consider the group given by the product
+$$
+  \widetilde{A} = \mathbb{Z}\times(1+\widehat{A}^+)
+$$
+whose composition is written additively;
+then $(0,1+\widehat{A}^+)$ is a subgroup of this group, isomorphic to the multiplicative group $1+\widehat{A}^+$.
+With this in mind, we can define a (commutative unital) ring structure on $\widetilde{A}$, compatible with the additive structure, whose unit is $(1,1)$, and which is given, on the $(0,1+\widehat{A}^+)$ factor, by universal polynomial formulas (with integer coefficients).
+We will then have that
+$$
+  (1,1+x_1)(1,1+y_1) = (1,1+(x_1+y_1))
+\tag{8}
+$$
+for $x_1,y_1\in A^1$, and these formulas indeed suffice to characterise the polynomials that define the composition law (taking into account the associativity of the composition law).
+
+We can also define (non-additive!) maps
+$$
+  \lambda^i\colon \widetilde{A}\to\widetilde{A}
+  \quad(i\geq0)
+$$
+for $i\geq0$ that make $\widetilde{A}$ a $\lambda$-ring, by which we mean that the following conditions are satisfied:
+$$
+  \begin{aligned}
+    \lambda^0(x) &= 1,
+  \\\lambda^1(x) &= x,
+  \\\lambda^n(x+y) &= \sum_{i+j=n}\lambda^i(x)\lambda^j(y)\quad\text{for }n\geq0
+  \end{aligned}
+\tag{9}
+$$
+which also implies that the map
+$$
+  \lambda\colon \widetilde{A} \to 1+\widetilde{A}[[t]]^+
+$$
+defined by the formula
+$$
+  \lambda(x) = \sum_{i\geq0} \lambda^i(x)t^i
+\tag{10}
+$$
+is an additive homomorphism from $\widetilde{A}$ to the multiplicative group of formal series of augmentation $1$, and is a right inverse to the natural homomorphism $(1+a_1t+\ldots)\mapsto a_1$ from this latter group to $\widetilde{A}$.
+The restrictions of the maps $\lambda^i$ to the factor $(0,1+\widetilde{A}^+)$ are defined by universal polynomial formulas (with integer coefficients), and
+$$
+  \lambda^i(1,1+x_1) = 0
+  \quad\mbox{for $i>1$}
+\tag{11}
+$$
+if $x_1\in A^1$, and this formula indeed suffices to characterise the polynomials defining the $\lambda^i$ [taking into account the formulas in (9)].
+
+\oldpage{149}
+
+In fact, the $\lambda$-ring $A$ is a _special_ $\lambda$-ring, by which we mean that the $\lambda^i(xy)$ can be expressed in terms of universal polynomials (with integer coefficients) in the $\lambda^j(x)$ and $\lambda^k(y)$, and that the $\lambda^j(\lambda^i(x))$ can be expressed in terms of universal polynomials (with integer coefficients) in the $\lambda^k(x)$.
+We will not go into more details of the polynomials here, and we content ourselves with the following information.
+The fact that a $\lambda$-ring $K$ is special also implies that the homomorphism $\lambda\colon K\to 1+K[[t]]^+$ is furthermore a homomorphism of $\lambda$-rings, by which we mean that, for every commutative unital ring $K$, we can define a canonical $\lambda$-ring law on $1+K[[t]]^+$ (whose additive structure is the usual multiplication of formal series), whose composition laws are given by universal polynomial formulas (with integer coefficients).
+If the multiplication of this ring is denoted by $f\circ g$, then
+$$
+  (1+at)\circ(1+bt) = 1+abt
+\tag{12}
+$$
+$$
+  \lambda^i(1+at) = 1
+  \quad\text{if }i>1
+\tag{13}
+$$
+(where here $1$ is the zero element of $1+K[[t]]^+$) [these formulas being the ``multiplicative'' analogues to (8) and (11)].
+These formulas suffice to characterise [taking into account (9) and the associativity of the multiplication] the polynomials that define $f\circ g$ and the $\lambda^i(f)$.
+
+It is the detailed study of $\lambda$-rings in general, and of certain specific $\lambda$-rings (the ring of classes of vector bundles on an algebraic variety, and the ring of classes of representations of an algebraic group) that held the key to the first algebraic proof of the Riemann-Roch theorem, in the form given in the paper preceding this one.^[[Trans.] This is referring to Borel, A; Serre, J.-P. "Le théorème de Riemann--Roch." _Bull. Soc. Math. France_ **86** (1958), 97--136.]
+This proof is, for now, only valid in characteristic $0$, but it gives, however, finer results than the second proof, which uses blow-up varieties.
+In any case, many $\lambda$-rings exist in nature, the formalism to which they give rise is more amenable, and the author of these sentences cannot recommend enough that the reader makes use of them.
+
+That said, we now return to the commutative graded rings $A(X)$.
+If $E$ is a rank-$p$ vector bundle on $X$, then we denote by $\widetilde{c}(E)$ the _completed Chern class_ of $E$, which is the element of $\widetilde{A(X)}$ defined by
+$$
+  \widetilde{c}(E) = (p,c(E))
+\tag{14}
+$$
+where $p=\rank(E)$.
+With this notation, the two formulas that were not explicitly given in [the corollary to Theorem 1](#theorem-1-corollary) can be written simply as
+$$
+  \begin{aligned}
+    \widetilde{c}\left(\wedge^i E\right) &= \lambda^i(\widetilde{c}(E)),
+  \\\widetilde{c}(E\otimes F) &= \widetilde{c}(E)\widetilde{c}(F),
+  \end{aligned}
+\tag{7 \emph{bis}}
+$$
+and the additivity formula can be written as
+$$
+  \widetilde{c}(E) = \widetilde{c}(E') + \widetilde{c}(E'').
+\tag{5 \emph{bis}}
+$$
+
+We can thus also say that _the completed Chern class $\widetilde{c}(E)$ defines a homomorphism of $\lambda$-rings from $K(X)$ to $\widetilde{A(X)}$_.
+:::
+
+\oldpage{150}
+
+::: {.rmenv #remark-3 title="Remark 3" data-latex="{Remark 3}"}
+_Application to the Chow ring._ ---
+Let $X$ be a non-singular algebraic space.
+:::
