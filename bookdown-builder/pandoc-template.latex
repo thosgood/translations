@@ -94,17 +94,6 @@ $endif$
 
 \renewcommand{\abstractname}{Translator's note}
 
-\begin{abstract}
-  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
-  \emph{This text is a translation into English of the following:}
-
-  \medskip\noindent
-  $original$
-
-  \medskip\noindent
-  \emph{The translator\footnote{\url{https://thosgood.com}} takes full responsibility for any errors introduced, and claims no rights to any of the mathematical content herein.}
-\end{abstract}
-
 \setcounter{footnote}{0}
 
 % N.B. the TOC is now found in _translator-note.Rmd
