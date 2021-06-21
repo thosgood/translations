@@ -25,7 +25,7 @@ shift $((OPTIND-1))
 # Where the local copy of the repo is
 TRANSLATIONS_DIR=~/translations
 # Where to "publish" files
-WEBSITE=/var/www/labs.thosgood.com
+WEBSITE=/var/www/labs.thosgood.com/translations
 
 # Clean-up
 cd $TRANSLATIONS_DIR
@@ -71,7 +71,7 @@ else
       # Build
       shpdflatex.sh $BASE &&
       # Deploy
-      cp $PREF.pdf $WEBSITE/builds
+      cp $PREF.pdf $WEBSITE
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     done
   fi
@@ -110,7 +110,7 @@ else
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     done
     # Deploy
-    cp -r output/* $WEBSITE/bookdown
+    cp -r output/* $WEBSITE
   fi
   printf "\nDone!\n"
 fi
