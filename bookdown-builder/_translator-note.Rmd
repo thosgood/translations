@@ -6,7 +6,10 @@ if (knitr::is_html_output()) {
 }
 ```
 
+\noindent
 This page is a translation into English of the following:
+
+\medskip
 
 ::: {.original-citation}
 ```{r,echo=FALSE,results='asis'}
@@ -15,8 +18,13 @@ cat(metadata$original)
 ```
 :::
 
+\medskip
+
+\noindent
 The translator ([Tim Hosgood](https://thosgood.com)) takes full responsibility for any errors introduced, and claims no rights to any of the mathematical content herein.
 
+\medskip
+\noindent
 Version: [`GIT_COMMIT_HASH_VARIABLE`](https://github.com/thosgood/translations/commit/GIT_COMMIT_HASH_VARIABLE)
 
 \tableofcontents
