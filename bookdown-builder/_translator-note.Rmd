@@ -1,14 +1,21 @@
-#### Translator's note {.unlisted .unnumbered}
+```{r,echo=FALSE,results='asis'}
+if (knitr::is_html_output()) {
+  library(rmarkdown)
+  cat("#### Translator's note {.unlisted .unnumbered}")
+}
+```
 
 This page is a translation into English of the following:
 
 ::: {.original-citation}
-```{r,echo=FALSE,results = 'asis'}
+```{r,echo=FALSE,results='asis'}
 library(rmarkdown)
 cat(metadata$original)
 ```
 :::
 
-[The translator](https://thosgood.com) takes full responsibility for any errors introduced, and claims no rights to any of the mathematical content herein.
+The translator ([Tim Hosgood](https://thosgood.com)) takes full responsibility for any errors introduced, and claims no rights to any of the mathematical content herein.
 
 Version: [`GIT_COMMIT_HASH_VARIABLE`](https://github.com/thosgood/translations/commit/GIT_COMMIT_HASH_VARIABLE)
+
+\tableofcontents
