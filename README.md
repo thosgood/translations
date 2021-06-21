@@ -15,7 +15,6 @@
 ## Technical
 
 - (PDF) header on title page
-- (PDF) git commit version
 - (PDF) link to html version in translator's note
 - (HTML) reading progress bar
 - (HTML) previews of (internal) links on hover?
