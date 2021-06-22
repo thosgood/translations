@@ -124,7 +124,7 @@ endowed with this topology, $E\otimes F$ is called the _projective topological t
 
 If $E$ and $F$ are normed, then $E\otimes F$ is normable, and we can even find a norm such that, for every _normed_ space $G$, the above isomorphism between $\BB(E,F;G)$ and $\LL(E\otimes F;G)$ preserves the natural norms.
 Further, such a norm is unique.
-This norm on $E\otimes F$, denoted by $u\mapsto\|u\|$, where the norms of $E$ and $F$ are implicit, is the lower bound of the quantities $\sum_i\|x_i\|\|y_i\|$ over all representations of $u$ in the form $u=\sum_i x_i\otimes y_i$ (and this norm has already been considered, in \cite{8}).
+This norm on $E\otimes F$, denoted by $u\mapsto\|u\|$, where the norms of $E$ and $F$ are implicit, is the lower bound of the quantities $\sum_i\|x_i\|\|y_i\|$ over all representations of $u$ in the form $u=\sum_i x_i\otimes y_i$ (and this norm has already been considered, in [@8]).
 It is also the gauge of the set $\Gamma(U\otimes V)$, where $U$ (resp. $V$) is the unit ball in $E$ (resp. $F$), and where $U\otimes V$ denotes the set of $x\otimes y$ such that $x\in U$ and $y\in V$ (with $\Gamma$ denoting, as per usual, the balanced hull).
 \oldpage{77}
 In the case where $E$ and $F$ are general locally convex spaces, a fundamental system of neighbourhoods of $0$ in $E\otimes F$ is obtained by taking the sets $\Gamma(U\otimes V)$, where $U$ (resp. $V$) runs over a fundamental system of neighbourhoods of $0$ in $E$ (resp. $F$).
@@ -166,3 +166,103 @@ $$
 $$
 where $(x_i)$ (resp. $(y_i)$) is a bounded sequence in $E$ (resp. $F$), and where $(\lambda_i)$ is a summable sequence of scalars.
 :::
+
+(It is also true that, if $(x_i)$, $(y_i)$, and $(\lambda_i)$ are given as above, then the series $\sum_i\lambda_i x_i\otimes y_i$ is always absolutely convergent in $E\hotimes F$, and so we have a _characterisation_ of the elements of $E\hotimes F$).
+If $E$ and $F$ are normed, then we can suppose in the above that $\|x_i\|\leq1$, $\|y_i\|\leq1$, $\sum_i|\lambda_i|\leq\|u\|_1+\varepsilon$, where $\varepsilon>0$ is arbitrary and given in advance.
+In these two statements, if $u$ runs over a compact subset of $E\hotimes F$, then we can suppose that the sequences $(x_i)$ and $(y_i)$ remain fixed (and we can even suppose that they are sequences that tend to $0$), and that $(\lambda_i)$ runs over a compact subset of $\ll^1$ (the space of summable sequences).
+We have an analogous statement for the concrete representation of convergent sequences in $E\hotimes F$.
+[Theorem 2](#section-1-theorem-2) and its previous variants serve mainly as a way to:
+
+{.itenv title="Corollary" latex="{Corollary}"}
+Let $E$ and $F$ be spaces of type $\FF$.
+Then every compact subset $K$ of $E\hotimes F$ is contained inside the canonical image of the unit ball of a space $E_A\hotimes F_B$, where $A$ (resp. $B$) is a compact disked subset of $E$ (resp. $F$).
+A fortiori, $K$ is contained in the closed convex hull of $A\otimes B$.
+:::
+
+This fact also implies that, on $\BB(E,F)$, the "bicompact convergence" topology is identical to the compact convergence topology on the dual of $E\hotimes F$.
+
+$\star$
+For the proof of [Theorem 2](#section-1-theorem-2), we suppose, for simplicity, that $E$ and $F$ are Banach spaces, and let $I$ be the product of their unit balls, and $i\mapsto x_i$ and $i\mapsto y_i$ the projections from $I$ to its factors.
+It is easy t see that the linear map $(\lambda_i)\mapsto\sum_i\lambda_i x_i\otimes y_i$ from $\ll^1(I)$ to $E\hotimes F$ is a metric homomorphism from the former to a dense subspace of the latter, and thus _onto_ the latter, whence it indeed follows that $E\hotimes F$ can be identified with a quotient space of $\ll^1(I)$.
+
+\oldpage{79}
+
+From [Theorem 2](#section-1-theorem-2), we can extract results of the following type:
+let $\scr{G}$ be a locally compact group (resp. a Lie group), then every summable function $f$ (resp. every infinitely differentiable function of compact support) on $\scr{G}$ is of the form $\sum\lambda_i g_i*h_i$, where $(\lambda_i)\in\ll^1$, and where $(g_i)$ and $(h_i)$ are bounded sequences in $\LL^i(\scr{G})$ (resp. in $\scr{D}(\scr{G})$, the space of infinitely differentiable functions of compact support on $\scr{G}$);
+we thus immediately conclude that $f$ is a linear combination of functions of positive type that are in $\LL(\scr{G})$ (resp. $\scr{D}(\scr{G})$).
+In the former case, we can also restrict to functions that are all of compact support (with the supports of $g_i$ and $h_i$ being contained inside a compact subset that depends only on the compact support of $f$).
+There is a simple direct proof in the case of $\LL^1(\scr{G})$, but I do not think that there is one for $\scr{D}(\scr{G})$, where the question presents difficulties even for $\scr{G}=\mathbb{R}$ (by using the Fourier transformation).
+$\star$
+
+
+## Calculation of $\LL^1\hotimes E$ {#section-1.3}
+
+[[PTT](#ref-PTT), chap. 1, §2, no. 2]
+
+\medskip
+
+Let $M$ be a locally compact space endowed with a measure $\mu\geq0$, $E$ a Banach space, and $\LL_E^1(\mu)$ the space of $\mu$-integrable maps from $M$ to $E$ ([@2]) endowed with its usual norm: $\|f\|_1=\int\|f(t)\|\dd\mu(t)$.
+We denote by $\LL^1(\mu)$ the space of $\mu$-summable scalar functions.
+Then there exists an obvious bilinear map $(\varphi,a)\mapsto\varphi\cdot a$ from $\LL^1(\mu)\times E$ to $\LL_E^1(\mu)$ that is of norm $\leq1$, and thus defines a linear map of norm $\leq1$ from $\LL^1(\mu)\hotimes E$ to $\LL_E^1(\mu)$.
+
+::: {.itenv #section-1-theorem-3 title="Theorem 3" latex="{Theorem 3}"}
+The above map from $\LL^1(\mu)\hotimes E$ to $\LL_E^1(\mu)$ is a metric isomorphism from the former space to the latter.
+:::
+
+To see this, we can immediately reduce to the case where $E$ is of finite dimension, and then proceed by transposition.
+It then suffices to apply the classical theorem of Dunford--Pettis that characterises continuous linear maps from $\LL^1(\mu)$ to $E'$.
+
+If $E$ is an arbitrary locally convex space, then we denote by $\LL_E^1(\mu)$ the completion of the separated space associated to the space of continuous maps with compact support from $M$ to $E$, endowed with its family of semi-norms $f\mapsto\int p(f(t))\dd\mu(t)$ (where $p$ runs over a fundamental family of continuous semi-norms on $E$).
+Then [Theorem 3](#section-1-theorem-3) easily implies that $\LL_E^1(\mu)$ is again isomorphic to $\LL^1(\mu)\hotimes E$.
+
+::: {.itenv title="Corollary" latex="{Corollary}"}
+If $E$ is a closed vector subspace of the Banach space $F$, then the canonical linear map from $\LL^1(\mu)\hotimes E$ to $\LL^1(\mu)\hotimes F$ is a metric isomorphism.
+:::
+
+\oldpage{80}
+This recovers, for example, the well-known fact that every continuous linear map from $E$ to the dual $\LL^\infty(\mu)$ of $\LL^1(\mu)$ can be extended to a linear map of the same norm from $F$ to $\LL^\infty(\mu)$;
+or, dually, that every continuous linear map from $\LL^1(\mu)$ to a quotient space $F'/E^0$ of a Banach dual by a weakly closed vector subspace comes from a linear map of the same norm from $\LL^1(\mu)$ to $F'$.
+
+$\star$
+The analogue of [Theorem 3](#section-1-theorem-3) for $\LL^p$ spaces is false for all $p>1$.
+However, [Theorem 3](#section-1-theorem-3) applies, in an essential way, in many important places in the theory outlined here.
+We now give some less important applications (see [[PTT](#ref-PTT), chap. 1, §2, no. 2] for details).
+In [Theorem 3](#section-1-theorem-3), if we take $E=c_0$ (the space of scalar sequences that converge to $0$), and note that $\LL_E^1(\mu)$ can then be identified with the space of latticially bounded sequences in $\LL^1(\mu)$ that converge to $0$ almost everywhere, then we see that such sequences in $\LL^1(\mu)$ form a category of invariant sequences from the topological-vectorial point of view.
+In particular, a continuous linear map from $\LL^1(\mu)$ to a space $\LL^1(\nu)$ sends latticially bounded sequences that converge to $0$ almost everywhere to sequences of the same type.
+We thus also see that the latticially bounded subsets of $\LL^1(\mu)$ form an invariant category from the topological-vectorial point of view.
+If we take $F=\ll^p$, with $1\leq p<+\infty$, then we similarly obtain a topological-vectorial interpretation of the sequences $(f_i)$ in $\LL^1(\mu)$ such that
+$$
+\int \left(
+  \sum_i |f_i(t)|^p
+\right)^{1/p}
+\dd\mu(t) < +\infty.
+$$
+Such sequences are sent to sequences of the same type by any continuous linear map from $\LL^1(\mu)$ to a space $\LL^1(\nu)$.
+Another interesting application of [Theorem 3](#section-1-theorem-3) is the following: every bounded subset $M$ of $\LL^1(\mu)\hotimes E$ is contained in the canonical image of the unit ball of a space $\LL^1(\mu)\hotimes E_A$, where $A$ is a closed bounded disk in the space $E$ of type $\FF$;
+a fortiori, $M$ is contained in the closed disked hull of $B\otimes A$, where $B$ is the unit ball of $\LL^1(\mu)$, which solves the ``problem of topologies'' described in \hyperref[1.1]{\S1.1}.
+$\star$
+
+
+## Other examples {#section-1.4}
+
+If $H$ is a Hilbert space, then the elements of $H'\hotimes H$, identified with endomorphisms of $H$ (the _Fredholm maps_ or _nuclear maps_ from $H$ to $H$ --- see **TO-DO**) are exactly the endomorphisms $u$ such that the positive Hermitian operator $\sqrt{u^*u}$ is compact and has a summable sequence of eigenvalues, and $\|u\|_1$ is then equal to the sum of the eigenvalues of $\sqrt{u^*u}$ (repeated with multiplicities, of course).
+\oldpage{81}
+We obtain the operators that have already been studied in [@4] and [@8].
+In fact, $u$ is also a Fredholm operator if and only if its Hermitian components $\frac12(u+u^*)$ and $\frac{1}{2i}(u-u^*)$ are, i.e. if they are compact Hermitian operators whose sequences of eigenvalues are summable.
+_Relation to Hilbert--Schmidt operators: If $A$ and $B$ are Hilbert--Schmidt operators, then $AB$ is a Fredholm operator, and $\|AB\|_1\leq\|A\|_2\|B\|_2$_;
+and, conversely, every Fredholm operator $u$ is the product of two Hilbert--Schmidt operators $A$ and $B$ of norm $\|A\|_2=\|B\|_2=\sqrt{\|u\|_1}$.
+All of these facts are elementary (one we know the spectral decomposition of compact Hermitian operators to a Hilbert space) and well known.
+
+Numerous other examples of products $E\hotimes F$, relating to _nuclear spaces_, will be seen in **TO-DO**.
+
+$\star$
+In the setting of infinite-dimensional Banach spaces, I do now know, even in particular cases, other concrete characterisations of the elements of $E\hotimes F$ apart from those that we have given.
+Also, the elements of $c_0\hotimes E$ (where $E$ can be any complete locally convex space) can be identified with _certain_ sequences in $E$ that converge to $0$, that we can call _nuclearly convergent to $0$_;
+but if $E$ is an infinite-dimensional Banach space, then we always obtain a strictly smaller class than the class of all sequences converging to $0$ (see **TO-DO**).
+We even show that (if $E$ is an infinite-dimensional Banach space), for any sequence $(\lambda_i)$ of positive scalars that is not square-summable, there exists a sequence $(x_i)$ in $E$ that does not converge nuclearly to $0$, and such that $\|x_i\|=\lambda_i$ for all $i$.
+However, if, for example, $E$ is the space $C(K)$ of continuous functions on a compact space, then we show that every square-summable sequence in $C(K)$ converges nuclearly to $0$.
+We also point out that, in any complete locally convex space, every summable sequence converges nuclearly to $0$.
+$\star$
+
+
+## $E\hhotimes F$ spaces {#section-1.5}
