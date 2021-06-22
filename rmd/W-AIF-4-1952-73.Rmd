@@ -40,9 +40,9 @@ favicon: "favicon.ico"
 
 ```{r,echo=FALSE,results='asis'}
 if (knitr::is_pdf_output()) {
-  print('\providecommand{\hhotimes}{\skew{0}{\widehat}{\skew{0}\widehat{\otimes}}}')
+  cat('\\providecommand{\\hhotimes}{\\skew{0}{\\widehat}{\\skew{0}\\widehat{\\otimes}}}')
 } else {
-  print('\providecommand{\hhotimes}{\widehat{\widehat{\otimes}}}')
+  cat('\\providecommand{\\hhotimes}{\\widehat{\\widehat{\\otimes}}}')
 }
 ```
 
