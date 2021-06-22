@@ -132,21 +132,21 @@ for $s$ to be transversal to the zero section, it is necessary and sufficient fo
 In what follows, suppose that we have a category $\cal{V}$ of non-singular algebraic spaces (the morphisms in this category being the morphisms of algebraic spaces).
 The only condition that we impose on $\cal{V}$ is the following:
 
-::: {.rmenv #condition-V1 title="V1" data-latex="{V1}"}
+::: {.rmenv #condition-V1 title="V1" latex="{V1}"}
 If $X\in\cal{V}$, and if $E$ is a vector bundle on $X$, then $\mathbb{P}(E)\in\cal{V}$.
 :::
 
 Suppose further that we have the following data:
 
-::: {.rmenv #data-a title="a" data-latex="{a}"}
+::: {.rmenv #data-a title="a" latex="{a}"}
 A contravariant functor $X\mapsto A(X)$ from $\cal{V}$ to the category of unital anticommutative graded rings.
 :::
 
-::: {.rmenv #data-b title="b" data-latex="{b}"}
+::: {.rmenv #data-b title="b" latex="{b}"}
 A homomorphism $p_X\colon\PP(X)\to A^2(X)$ that is functorial in $X\in\cal{V}$.
 :::
 
-::: {.rmenv #data-c title="c" data-latex="{c}"}
+::: {.rmenv #data-c title="c" latex="{c}"}
 For all $X\in\cal{V}$, and for every closed algebraic subspace $Y$ of $X$, of constant codimension $p$ in $X$, with $Y\in\cal{V}$, a group homomorphism
 $$
   i_*\colon A(Y)\to A(X)
@@ -159,7 +159,7 @@ The unit element of $A(X)$ will be denoted by $1_X$, and, if $X\in\cal{V}$, and 
 
 With this, we suppose that the following conditions are satisfied:
 
-::: {.rmenv #axiom-A1 title="A1" data-latex="{A1}"}
+::: {.rmenv #axiom-A1 title="A1" latex="{A1}"}
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $\mathbb{P}(E)$ the associated projective bundle, and $\xi_E$ the element of $A(\mathbb{P}(E))$ defined by
 $$
   \xi_E = p(\cl(L_E)).
@@ -172,7 +172,7 @@ $$
 form a basis of $A(\mathbb{P}(E))$ over $A(X)$.
 :::
 
-::: {.rmenv #axiom-A2 title="A2" data-latex="{A2}"}
+::: {.rmenv #axiom-A2 title="A2" latex="{A2}"}
 Let $X\in\cal{V}$, and let $L$ be a rank-$1$ vector bundle on $X$, and $s$ a regular section of $L$ that is transversal to the zero section, and such that the space $Y$ of zeros of $s$ belongs to $\cal{V}$.
 Then
 $$
@@ -180,12 +180,12 @@ $$
 $$
 :::
 
-::: {.rmenv #axiom-A3 title="A3" data-latex="{A3}"}
+::: {.rmenv #axiom-A3 title="A3" latex="{A3}"}
 Let $X,Y,Z\in\cal{V}$, with $Z\subset Y\subset X$, and let $i\colon Z\to Y$ and $j\colon Y\to X$ be the injection morphisms.
 Then $(ji)_* = j_*i_*$.
 :::
 
-::: {.rmenv #axiom-A4 title="A4" data-latex="{A4}"}
+::: {.rmenv #axiom-A4 title="A4" latex="{A4}"}
 Let $X,Y\in\cal{V}$, with $Y\subset X$, and let $i\colon Y\to X$ be the injection morphism.
 Then
 $$
@@ -198,7 +198,7 @@ for all $a\in A(X)$ and all $b\in A(Y)$,
 
 From these axioms we will prove two lemmas that will be useful in the [next section](#section-3).
 
-::: {.itenv #lemma-1 title="Lemma 1" data-latex="{Lemma 1}"}
+::: {.itenv #lemma-1 title="Lemma 1" latex="{Lemma 1}"}
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$.
 Consider, for all $1\leq i\leq p$, the bundle $X^{(i)}$ of flags of length $i$ in $E$.
 Then $X^{(i)}\in\cal{V}$, and the homomorphism $A(X)\to A(X^{(i)})$ induced by the projection $X^{(i)}\to X$ is \emph{injective}.
@@ -209,7 +209,7 @@ By [§1](#section-1), we can restrict, by induction on $i$, to the case of the p
 Then our claims are an immediate consequence of [V1](#condition-V1) and [A1](#A1) [since the element $1_{\mathbb{P}(E)}=(\xi_E)^0$ is free over the ring $A(X)$].
 :::
 
-::: {.itenv #lemma-2 title="Lemma 2" data-latex="{Lemma 2}"}
+::: {.itenv #lemma-2 title="Lemma 2" latex="{Lemma 2}"}
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, with $s$ a regular section of $E$, and $(E_i)_{0\leq i\leq p}$ a decreasing sequence of vector sub-bundles of $E$, with $\rank E_i=p-i$.
 Define, for $1\leq i\leq p$,
 $$
@@ -227,7 +227,7 @@ $$
 :::: {.proof}
 We will prove, by induction on $j$ (where $1\leq j\leq p$), that
 
-::: {.refeq #equation-star title="" data-latex=""}
+::: {.refeq #equation-star title="" latex=""}
 $$
   p_X(Y_j) = \prod_{1\leq i\leq j}\xi_i.
 \tag{$\star$}
@@ -258,17 +258,17 @@ Using the induction hypothesis, we then indeed recover the analogous formula, wi
 
 The following corollary will only be used in [§3](#section-3).
 
-::: {.itenv #lemma-2-corollary title="Corollary" data-latex="{Corollary}"}
+::: {.itenv #lemma-2-corollary title="Corollary" latex="{Corollary}"}
 Under the conditions of [Lemma 2](#lemma-2), if, further, $s$ is non-zero at every point, then $\prod_{1\leq i\leq p}\xi_i=0$.
 :::
 
-::: {.rmenv title="Remark" data-latex="{Remark}"}
+::: {.rmenv title="Remark" latex="{Remark}"}
 The introduction of the operation $i$ in [c.](#data-c), and the axioms [A2](#axiom-A2), [A3](#axiom-A3), and [A4](#axiom-A4) concerning this operation, only serve to provide us with technical means of being able to prove [the corollary to Lemma 2](#lemma-2-corollary).
 (Axiom [A4](#axiom-A4) would still have sufficed even if we had assumed that $b=1_Y$.)
 For the theory of Chern classes in [the following section](#section-3), we will only need the data of [a.](#data-a) and [b.](#data-b), axiom [A2](#axiom-A1), and [the corollary to Lemma 2](#lemma-2-corollary).
 :::
 
-::: {.rmenv title="Particular cases" data-latex="{Particular cases}"}
+::: {.rmenv title="Particular cases" latex="{Particular cases}"}
 We note, first of all, that condition [V1](#condition-V1) is satisfied for all reasonable categories of algebraic spaces;
 it is satisfied, in particular, for the categories of arbitrary non-singular algebraic spaces, of non-singular quasi-projective algebraic spaces, and of non-singular projective algebraic spaces.
 The verification for the two latter cases presents no difficulty, and is left to the reader (the result being a particular case of a more general result concerning blown-up varieties).
@@ -313,7 +313,7 @@ Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $\xi_E=p_
 By axiom [A1](#axiom-A1) from the previous section, $(\xi_E)^p$ can be written as a unique linear combination of the $(\xi_E)^i$ (for $0\leq i\leq p-1$) with coefficients in $A(X)$.
 This means that we can find, in a unique way, elements $c_i(E)\in A^{2i}(X)$ (defined for every integer $i\geq0$) satisfying the conditions
 
-::: {.refeq #equation-1 title="" data-latex=""}
+::: {.refeq #equation-1 title="" latex=""}
 $$
   \begin{gathered}
     \sum_{i=0}^p c_i(E)(\xi_E)^{p-i} = 0,
@@ -326,7 +326,7 @@ $$
 The $c_i(E)$ are called the _Chern classes_ of $E$, with $c_i(E)$ being called the $i$th Chern class.
 We define
 
-::: {.refeq #equation-2 title="" data-latex=""}
+::: {.refeq #equation-2 title="" latex=""}
 $$
   c(E) = \sum_i c_i(E)
 \tag{2}
@@ -336,7 +336,7 @@ $$
 and call $c(E)$ the _(total) Chern class_ of $E$;
 its data is equivalent to the data of all the $c_i(E)$.
 
-::: {.itenv #theorem-1 title="Theorem 1" data-latex="{Theorem 1}"}
+::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
 Suppose that we have the data of [a.](#data-a), [b.](#data-b), and [c.](#data-c) from the previous section, satisfying axioms [A1](#axiom-A1) to [A4](#axiom-A4).
 Then the Chern classes (defined by [(1)](#equation-1)) satisfy the following conditions:
 
@@ -380,7 +380,7 @@ We can thus reduce to determining $c(E)$ when $E$ is a rank-$p$ vector bundle th
 But then the additivity formula iii. proves (by induction on $p$) that $c(E)=\prod_{i=1}^p c(E_{i-1}/E_i)$.
 Finally, the normalisation formula ii. implies that
 
-::: {.refeq #equation-6 title="" data-latex=""}
+::: {.refeq #equation-6 title="" latex=""}
 $$
   c(E) = \prod_{i=1}^p (1+p_X\cl_X(E_{i-1}/E_i)).
 \tag{6}
@@ -494,7 +494,7 @@ This proves, by the definition of the $c_i(E)$, that the $c_i(E)$ are the elemen
 This finishes the proof of [Theorem 1](#theorem-1).
 ::::
 
-::: {.itenv #theorem-1-corollary title="Corollary" data-latex="{Corollary}"}
+::: {.itenv #theorem-1-corollary title="Corollary" latex="{Corollary}"}
 Let $X\in\cal{V}$, and let $E$ and $F$ be vector bundles on $X$.
 Then
 $$
@@ -512,7 +512,7 @@ In this case, the formulas follow immediately from [(6)](#equation-6).
 
 # Remarks and various addenda {#section-4}
 
-::: {.rmenv #remark-1 title="Remark 1" data-latex="{Remark 1}"}
+::: {.rmenv #remark-1 title="Remark 1" latex="{Remark 1}"}
 In all the above, we have only needed to work with elements of even degree in $A(X)$, which implies, in particular, that all the calculations were essentially commutative.
 We note also that the axioms [A1](#axiom-A1) to [A4](#axiom-A4) remain satisfied if we replace each $A(X)$ with the direct sum of the $A^{2i}(X)$.
 But then it seems sensible to divide all the degrees by $2$, and thus to assume from the start that the $A(X)$ were commutative, and that the homomorphism $p_X$ from $\PP(X)$ took its values, not in $A^2(X)$, but in $A^1(X)$.
@@ -521,7 +521,7 @@ This is what we assume in the following remark.
 
 \oldpage{148}
 
-:::: {.rmenv #remark-2 title="Remark 2" data-latex="{Remark 2}"}
+:::: {.rmenv #remark-2 title="Remark 2" latex="{Remark 2}"}
 Let $A$ be a commutative positively-graded ring with unit.
 Let $\widehat{A}$ be the ring given by the product of the $A^i$ (for $i\geq0$).
 Then the set of elements of $\widehat{A}$ of augmentation $1$ (i.e. whose degree-$0$ component is $1$) is a group under multiplication, which we denote by $1+\widehat{A}^+$.
@@ -534,7 +534,7 @@ then $(0,1+\widehat{A}^+)$ is a subgroup of this group, isomorphic to the multip
 With this in mind, we can define a (commutative unital) ring structure on $\widetilde{A}$, compatible with the additive structure, whose unit is $(1,1)$, and which is given, on the $(0,1+\widehat{A}^+)$ factor, by universal polynomial formulas (with integer coefficients).
 We will then have that
 
-::: {.refeq #equation-8 title="" data-latex=""}
+::: {.refeq #equation-8 title="" latex=""}
 $$
   (1,1+x_1)(1,1+y_1) = (1,1+(x_1+y_1))
 \tag{8}
@@ -550,7 +550,7 @@ $$
 $$
 for $i\geq0$ that make $\widetilde{A}$ a $\lambda$-ring, by which we mean that the following conditions are satisfied:
 
-::: {.refeq #equation-9 title="" data-latex=""}
+::: {.refeq #equation-9 title="" latex=""}
 $$
   \begin{aligned}
     \lambda^0(x) &= 1,
@@ -573,7 +573,7 @@ $$
 is an additive homomorphism from $\widetilde{A}$ to the multiplicative group of formal series of augmentation $1$, and is a right inverse to the natural homomorphism $(1+a_1t+\ldots)\mapsto a_1$ from this latter group to $\widetilde{A}$.
 The restrictions of the maps $\lambda^i$ to the factor $(0,1+\widetilde{A}^+)$ are defined by universal polynomial formulas (with integer coefficients), and
 
-::: {.refeq #equation-11 title="" data-latex=""}
+::: {.refeq #equation-11 title="" latex=""}
 $$
   \lambda^i(1,1+x_1) = 0
   \quad\text{for }i>1
@@ -631,7 +631,7 @@ We can thus also say that _the completed Chern class $\widetilde{c}(E)$ defines 
 
 \oldpage{150}
 
-:::: {.rmenv #remark-3 title="Remark 3" data-latex="{Remark 3}"}
+:::: {.rmenv #remark-3 title="Remark 3" latex="{Remark 3}"}
 _Application to the Chow ring._ ---
 Let $X$ be a non-singular algebraic space.
 Recall that, if $Y$ is an irreducible cycle on $X$, then we denote by $\gamma(Y)$ the element defined by $\scr{O}_Y$ in the group $K(X)$ of glasses of sheaves on $X$, and we extend this definition by linearity to the case where $Y$ is an arbitrary cycle.
@@ -651,7 +651,7 @@ Since $A^i(X)$ does not change if we remove a closed subset of codimension $>i$ 
 [As for its multiplicative structure, we can formally verify that it is given by the product $x_p\star y_q = -\frac{(p+q-1)!}{(p-1)!(q-1)!}x_p y_q$ for $x_p\in A^p(X)$ and $y_q\in A^q(X)$.]
 With this, we have the relations
 
-::: {.refeq #equation-15 title="" data-latex=""}
+::: {.refeq #equation-15 title="" latex=""}
 $$
   \begin{aligned}
     \psi\varphi &= (-1)^{i-1}(i-1)!\mathrm{id}_{A(X)}
@@ -666,7 +666,7 @@ Since $\varphi$ is surjective, the second equation follows from the first, which
 
 \oldpage{151}
 
-::: {.itenv #equation-16 title="Claim" data-latex="{Claim}"}
+::: {.itenv #equation-16 title="Claim" latex="{Claim}"}
 If $Y$ is a non-singular closed subvariety of $X$, of codimension $i$, then
 $$
   \begin{cases}
@@ -699,13 +699,13 @@ We will return to this questions in a later article.
 
 In this section, we assume that the category $\cal{V}$ further satisfies the following condition:
 
-::: {.rmenv #condition-V2 title="V2" data-latex="{V2}"}
+::: {.rmenv #condition-V2 title="V2" latex="{V2}"}
 For all $X\in\cal{V}$ and every non-singular closed subspace $Y$ of $X$, we have that $Y\in\cal{V}$.
 :::
 
 Furthermore, we assume that the following axiom is verified:
 
-::: {.rmenv #axiom-A5 title="A5" data-latex="{A5}"}
+::: {.rmenv #axiom-A5 title="A5" latex="{A5}"}
 Let $X,Y\in\cal{V}$, and let $Y'$ be a non-singular closed subspace of $Y$, $f$ a morphism from $X$ to $Y$ that is transversal to $Y'$, and $X'=f^{-1}(Y')$ [so $X'$ is a non-singular closed subspace of $X$, thus $X'\in\cal{V}$ and $p_X(X')$ is defined].
 Under these conditions,
 $$
@@ -722,7 +722,7 @@ Let $s$ be a regular section of $E$.
 Then $s(X)$ is a non-singular closed subspace of $\widehat{E}$, and so $s(X)\in\cal{V}$, and we propose to calculate $p_{\widehat{E}}(s(X))$.
 We will prove:
 
-::: {.itenv #lemma-3 title="Lemma 3" data-latex="{Lemma 3}"}
+::: {.itenv #lemma-3 title="Lemma 3" latex="{Lemma 3}"}
 With the above notation, if $s_0$ is the zero section of $E$, then
 $$
   p_{\widehat{E}}(s_0(X)) = \sum_{i=0}^p c_i(E)(\xi_{\widetilde{E}})^{p-i}.
@@ -772,7 +772,7 @@ and [(17)](#lemma-3) then follows.
 
 From this, we will deduce
 
-::: {.itenv #theorem-2 title="Theorem 2" data-latex="{Theorem 2}"}
+::: {.itenv #theorem-2 title="Theorem 2" latex="{Theorem 2}"}
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, $s$ a regular section of $E$ that is transversal to the zero section, and $Y$ the set of zeros of $s$ (which is thus a non-singular closed subspace of codimension $p$ of $X$).
 Under these conditions,
 $$
@@ -804,7 +804,7 @@ $$
 (where $s_0$ denotes the zero section of $E$).
 From this we deduce, for example:
 
-::: {.itenv #lemma-3-corollary title="Corollary" data-latex="{Corollary}"}
+::: {.itenv #lemma-3-corollary title="Corollary" latex="{Corollary}"}
 Suppose that we are in the setting of Chow theory ($\cal{V}$ being the category of non-singular quasi-projective algebraic spaces; $A(X)$ being the ring of cycle classes under rational equivalence).
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $s$ a regular section of $E$ such that the zero cycle $Z$ of $s$ exists.
 Then the class of $Z$ is $c_p(E)$.
@@ -812,7 +812,7 @@ Then the class of $Z$ is $c_p(E)$.
 
 \oldpage{154}
 
-::: {.rmenv title="Remark" data-latex="{Remark}"}
+::: {.rmenv title="Remark" latex="{Remark}"}
 Equation [(17)](#lemma-3) holds true even if we replace the zero section $s_0$ by an arbitrary section of $E$.
 We can see this by slightly modifying the proof of [Lemma 3](#lemma-3), but it is easy to deduce this formula from [Theorem 2](#theorem-2), noting that $s(X)$ is the set of zeros of a section (which is transversal to the zero section) of a suitable vector bundle on $\mathbb{P}(\widetilde{E})$, i.e. the bundle $L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)$, where $S$ is the (trivial) rank-$1$ subbundle of $\widetilde{E}$ defined by the section $s$.
 The right-hand side of [(17)](#lemma-3) is then exactly
