@@ -17,6 +17,8 @@
 - (PDF) header on title page
 - (PDF) link to html version in translator's note
 - (HTML) reading progress bar
+- (HTML) bring back sepia mode
+  + sync this up with [thosgood/fga](https://github.com/thosgood/fga)
 - (HTML) previews of (internal) links on hover?
   + if so, **definitely** have a way of disabling this (ideally in the header bar, alongside e.g. TOC toggle button)
 - (BOTH) include link to `.Rmd` source file on github
