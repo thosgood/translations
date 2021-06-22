@@ -14,6 +14,8 @@
 
 ## Technical
 
+- **switch to `bookdown::bs4_book()`**
+
 - (PDF) header on title page
 - (PDF) link to html version in translator's note
 - (HTML) reading progress bar
