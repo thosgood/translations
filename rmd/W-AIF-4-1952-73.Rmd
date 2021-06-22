@@ -39,10 +39,10 @@ favicon: "favicon.ico"
 \providecommand{\lotimes}{\overline{\otimes}}
 
 ```{r,echo=FALSE,results='asis'}
-if (knitr::is_pdf_output()) {
-  cat('\\providecommand{\\hhotimes}{\\skew{0}{\\widehat}{\\skew{0}\\widehat{\\otimes}}}')
-} else {
+if (knitr::is_html_output()) {
   cat('\\providecommand{\\hhotimes}{\\widehat{\\widehat{\\otimes}}}')
+} else {
+  cat('\\providecommand{\\hhotimes}{\\skew{0}{\\widehat}{\\skew{0}\\widehat{\\otimes}}}')
 }
 ```
 
