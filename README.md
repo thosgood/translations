@@ -14,6 +14,8 @@
 
 ## Technical
 
+- **consider different output format? just `html_document`?**
+
 - (PDF) header on title page
 - (PDF) link to html version in translator's note
 - (HTML) reading progress bar
