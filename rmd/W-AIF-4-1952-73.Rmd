@@ -246,7 +246,7 @@ $$
 $$
 Such sequences are sent to sequences of the same type by any continuous linear map from $\LL^1(\mu)$ to a space $\LL^1(\nu)$.
 Another interesting application of [Theorem 3](#section-1-theorem-3) is the following: every bounded subset $M$ of $\LL^1(\mu)\hotimes E$ is contained in the canonical image of the unit ball of a space $\LL^1(\mu)\hotimes E_A$, where $A$ is a closed bounded disk in the space $E$ of type $\FF$;
-a fortiori, $M$ is contained in the closed disked hull of $B\otimes A$, where $B$ is the unit ball of $\LL^1(\mu)$, which solves the ``problem of topologies'' described in \hyperref[1.1]{\S1.1}.
+a fortiori, $M$ is contained in the closed disked hull of $B\otimes A$, where $B$ is the unit ball of $\LL^1(\mu)$, which solves the "problem of topologies" described in [§1.1](#section-1.1).
 $\star$
 
 
@@ -273,3 +273,270 @@ $\star$
 
 
 ## $E\hhotimes F$ spaces {#section-1.5}
+
+[[PTT](#ref-PTT), chap. 1, §3, no. 3]
+
+\medskip
+
+If $E$ and $F$ are Banach spaces, then $E\otimes F$ can be considered as a vector subspace of the Banach space $\BB(E',F')$ of continuous bilinear forms on $E'\times F'$.
+\oldpage{82}
+The completion of $E\otimes F$ under the norm induced by $\BB(E',F')$ is denoted by $E\hhotimes F$, which is thus a complete normed vector subspace of $\BB(E',F')$.
+Every reasonable normed topology on $E\otimes F$ is included between the topology induced by $E\hotimes F$ and the topology induced by $E\hhotimes F$.
+If $E$ and $F$ are now both arbitrary locally convex spaces, then we can again consider $E\otimes F$ is a space of bilinear forms on $E'\times F'$, and endow it with the biequicontinuous-convergence topology (i.e. the topology given by uniform convergence on the products of an equicontinuous subset of $E'$ with an equicontinuous subset of $F'$):
+the completion of $E\otimes F$ under this topology is again denoted by $E\hhotimes F$.
+If $E$ and $F$ are complete, then the space $\sLL_e(E'_s,F'_s)$ of separately continuous bilinear forms on the product $E'_s\times F'_s$ of the weak duals $E'_s$ and $F'_s$ endowed with the biequicontinuous-convergence topology is complete, and so $E\hhotimes F$ can be identified with a topological vector subspace of $\sLL_e(E'_s,F'_s)$.
+Then the elements of $E\hhotimes F$ can be identified with certain separately weakly continuous bilinear maps on $E'\times F'$, or even with certain weakly continuous linear maps from $E'$ to $F$;
+these linear maps send equicontinuous subsets of $E'$ to relatively compact subsets of $F$, and the converse is true in all known cases (see **TO-DO**).
+
+The topology on $E\otimes F$ induced by $E\hotimes F$ is finer than that induced by $E\hhotimes F$, whence we have a canonical continuous linear map
+$$
+  E\hotimes F \to E\hhotimes F.
+$$
+
+An important, unsolved, problem is the question of whether or not this map is always bijective (see **TO-DO**).
+We note that it seems extremely plausible that, if $E$ and $F$ are Banach spaces such that the above map $E\hotimes F\to E\hhotimes F$ is a topological isomorphism (or even simply a topological homomorphism, i.e. here a map from the first space _onto_ the second), then $E$ or $F$ is of finite dimension.
+This is true if, for example, $E$ contains a vector subspace isomorphic to an $\ll^p$ space or to $c_0$.
+
+Let $E$ and $F$ be Banach spaces.
+The norm induced by the dual of $E\hotimes F$ on $E'\otimes F'$ is clearly the norm induced by $E'\hhotimes F'$.
+On the other hand, the norm induced on $E'\otimes F'$ by the dual of $E\hhotimes F$ is, in all known cases (see **TO-DO**), identical to the norm induced by $E'\hotimes F'$.
+This duality, which barely appears in the present summary, is a precious tool for various questions (e.g. [[PTT](#ref-PTT), chap. 1, §4, no. 6]).
+\oldpage{83}
+The following theorem (which is, truth be told, trivial), can be seen as the dual response to [Theorem 3](#section-1-theorem-3).
+
+::: {.itenv #section-1-theorem-4 title="Theorem 4" latex="{Theorem 4}"}
+Let $M$ be a locally compact space, let $\CC_0(M)$ the space of continuous scalar functions on $M$ that are "zero at infinity", endowed with the uniform convergence norm, and let $E$ be a locally convex complete space.
+Then $\CC_0(M)\hhotimes E$ is canonically isomorphic to the space $\CC_0(M,E)$ of continuous maps from $M$ to $E$ that are zero at infinity, endowed with the uniform convergence topology (and with the uniform norm if $E$ is a Banach space).
+In particular, $c_0\hhotimes E$ is isomorphic to the space of sequences in $E$ that tend to $0$.
+:::
+
+As with the spaces $C(K)\hotimes E$ below, here the spaces $\LL'(\mu)\hhotimes E$ do not, in general, have a special interpretation as functional spaces.
+We note, however, that _the space $\ll^1\hhotimes E$ can be understood as the space of summable sequences in $E$_ (i.e. of "commutatively convergent" sequences in $E$).
+
+
+## Tensor product of linear maps {#section-1.6}
+
+[[PTT](#ref-PTT), chap. 1, §1, no. 2]
+
+\medskip
+
+Let $E_i$ and $F_i$ ($i=1,2$) be locally convex spaces, and let $u_i$ be a continuous linear map from $E_i$ to $F_i$.
+In algebra, we define a linear map $u_1\otimes u_2$ from $E_1\otimes E_2$ to $F_1\otimes F_2$ by the formula $(u_1\otimes u_2)(x_1\otimes x_2)=u_1x_1\otimes u_2x_2$.
+This map is continuous if we endow $E_1\otimes E_2$ and $F_1\otimes F_2$ with the topologies induced by $E_1\hotimes E_2$ and $F_1\hotimes F_2$ (resp. by $E_1\hhotimes E_2$ and $F_1\hhotimes F_2$).
+It then follows that $u_1\otimes u_2$ extends, by continuity, to a continuous linear map $u_1\hotimes u_2$ from $E_1\hotimes E_2$ to $F_1\hotimes F_2$ (resp. $u_1\hhotimes u_2$ from $E_1\hhotimes E_2$ to $F_1\hhotimes F_2$).
+These maps will also simply be denoted by $u_1\otimes u_2$ whenever there is no fear of confusion.
+
+::: {.itenv #section-1-theorem-5 title="Theorem 5" latex="{Theorem 5}"}
+If each $u_i$ is a topological homomorphism from $E_i$ to a dense subspace of $F_i$, then $u_1\hotimes u_2$ is a topological homomorphism from $E_1\hotimes E_2$ to a dense subspace of $F_1\hotimes F_2$.
+If each $u_i$ is a topological isomorphism from $E_i$ to $F_i$, then $u_1\hhotimes u_2$ is a topological isomorphism from $E_1\hhotimes E_2$ to $F_1\hhotimes F_2$.
+:::
+
+These claims remain true if the $E_i$ and $F_i$ are normed and we consider _metric_ homomorphisms and _metric_ isomorphisms.
+Particularly interesting is the following corollary, which can also be obtained by an application of [Theorem 2](#section-1-theorem-2).
+
+::: {.itenv title="Corollary" latex="{Corollary}"}
+If the $E_i$ and $F_i$ are $\FF$-spaces ($i=1,2$), and the $u_i$ are
+homomorphisms from $E_i$ _onto_ $F_i$, then $u_1\hotimes u_2$ is a homomorphism from $E_1\hotimes E_2$ _onto_ $F_1\hotimes F_2$.
+:::
+
+\oldpage{84}
+As particular cases of this corollary, we obtain interesting lifting properties of vector functions with values in a quotient space of an $\FF$-space $E$.
+If e.g. $f$ is an infinitely differentiable map from an open subset of $\mathbb{R}^n$ to $E/F$, then it comes from an infinitely differentiable map from this same open subset to $E$.
+There is an analogous result for holomorphic functions, or infinitely differentiable functions on $\mathbb{R}^n$ that decay rapidly, or summable functions of a certain measure, etc.^[With respect to this point, we done that we can prove, by a completely different method, the following claim, which can be thought of as dual to the corollary of [Theorem 3](#section-1-theorem-3): _Let $M$ be a locally compact and paracompact space (e.g. a compact space), and $f$ a continuous map from $M$ to a quotient space $E/F$ of an $\FF$-space $E$. Then $f$ comes from a continuous map from $M$ to $E$._ Since the space $\sEE^{(m)}(V)$ of $m$-times continuously differentiable functions on a infinitely differentiable paracompact manifold $V$ is isomorphic to a direct factor of a space of the form $C(M)$ (as I noted in "Sur les applications linéaires faiblement compacts d'espaces du type $C(K)$", _Can. J. Math._ **5** (1953), p. 144), it thus follows that the analogous lifting theorem holds also for $m$-times continuously differentiable maps from $V$ to $E/F$.]
+Another application is the following:
+let $D$ be a differential operator in the space $\sEE(U)$ of infinitely differentiable functions on an open subset $U$ of $\mathbb{R}^n$, let $E$ be an $\FF$-space, and let $\sEE(U,E)$ be the space of infinitely differentiable maps from $U$ to $E$.
+Then we have $\sEE(U,E)=\sEE(U)\hotimes E=\sEE(U)\hhotimes E$ (see [§2.5](#section-2.5)).
+Let $D_E$ be the operator in $\sEE(U,E)$ defined by $D$, and then $D_E=D\hotimes1$, where $1$ is the identity on $E$.
+Then, if $D$ is a topological homomorphism (resp. an _onto_ topological homomorphism), then so too is $D_E$.
+Indeed, in the case of an onto homomorphism, this is a particular case of the corollary of [Theorem 5](#section-1-theorem-5), and, in the general case, we use [Theorem 5](#section-1-theorem-5) as well as the fact that, for every quotient space $F$ of $\sEE(U)$, we have $F\hotimes E=F\hhotimes E$ (since $\sEE(U)$, and thus $F$, are nuclear; see [Definition 1](#section-2-definition-1) in [§2.2](#section-2.2) and [Theorem 3](#section-2-theorem-3) in [§2.3](#section-2.3)).
+
+We note that, if $u_1$ and $u_2$ are topological isomorphisms, then $u_1\hotimes u_2$ is not, in general, a topological isomorphism (nor is, in general $u_1\hhotimes u_2$ a topological homomorphism, if $u_1$ and $u_2$ are _onto_ topological homomorphisms).
+If each $E_i$ is identified with a topological-vectorial subspace of $F_i$ by $u_i$, then the canonical map $u_1\hotimes u_2$ from $E_1\hotimes E_2$ to $F_1\hotimes F_2$ is a topological isomorphism if and only if every equicontinuous set of bilinear forms on $E_1\times E_2$ is the set of restrictions of an equicontinuous set of bilinear forms on $F_1\times F_2$.
+\oldpage{85}
+If $F_1$ and $F_2$ are of type $\FF$, then it suffices to consider sets consisting of _one single_ bilinear form.
+In general, this criterion will not hold true, but it is linked to an existence problem of topological complements.
+
+$\star$
+More precisely, if $E_1$ and $E_2$ are direct factors, then $E_1\hotimes E_2$ can be identified with a topological-vectorial subspace of $F_1\hotimes F_2$.
+Also, if $E$ is a topological-vectorial subspace of the Banach space $F$, and if the canonical map $E\hotimes G\to F\hotimes G$ is a topological isomorphism when $G=F'$, then $E''$ is a direct factor of $F''$;
+thus, in the frequent case where $E$ is already a direct factor of $E''$, $E$ will also be a direct factor of $F$.
+
+A useful case where the tensor product $u\hotimes v$ of two topological isomorphisms is a topological isomorphism is the following:
+_If $E''$ is the bidual of $E$, then $E\hotimes F$ can be identified with a topological-vectorial subspace (resp. a normed vector subspace, if $E$ and $F$ are normed) of $E''\hotimes F$_.
+$\star$
+
+
+## Nuclear maps {#section-1.7}
+
+[[PTT](#ref-PTT), chap. 1, §3, no. 2]
+\medskip
+
+Let $E$ and $F$ be Banach spaces.
+The continuous bilinear map $(x',y)\mapsto x'\otimes y$ from $E'\times F$ to $\LL(E,F)$ defines a natural continuous linear map from $E'\hotimes F$ to $\LL(E,F)$;
+the elements of the image of $E'\hotimes F$ in $\LL(E,F)$ are said to be _nuclear maps_ from $E$ to $F$.
+(We also define, between arbitrary locally convex spaces, the notions of _trace maps_ and _Fredholm maps_ --- see [Appendix 1](#appendix-1) --- which coincide with the notion of nuclear maps if $E$ and $F$ are Banach spaces; in this case, we can thus freely switch between saying "nuclear maps", "trace maps", or "Fredholm maps".)
+Nuclear maps from $E$ to $F$ form a vector space which can be identified with a quotient space of $E'\hotimes F$ (and with $E'\hotimes F$ itself in all known cases --- see "problem of bijectivity" in [§1](#section-1)).
+The quotient norm, again denoted by $u\mapsto\|u\|_1$, is called the _trace norm_ of the nuclear operator $u$.
+
+If $E$ and $F$ are arbitrary locally convex spaces, then a linear map $u$ from $E$ to $F$ is said to be _nuclear_ if it is the composition of a sequence of three operators
+$$
+  E \xrightarrow{\alpha} E_1 \xrightarrow{\beta} F_1 \xrightarrow{\gamma} F
+$$
+where $E_1$ and $F_1$ are Banach spaces, $\beta$ is a nuclear map from $E_1$ to $F_1$, and $\alpha$ and $\gamma$ are continuous linear maps.
+\oldpage{86}
+It is equivalent to say that there exists an weakly closed, equicontinuous, disked subset $A$ of $E'$, and a bounded disked subset $B$ of $F$ such that $F_B$ is complete, and finally some $u_0\in E'_A\hotimes F_B$ such that $u$ is the operator from $E$ to $F$ defined by $u_0$ (_a priori_, $u_0$ defines a nuclear map from $\widehat{E}_{A^0}$ to $F_B$).
+_A nuclear map is always compact_ (i.e. sends a suitable neighbourhood of $0$ to a relatively compact set).
+Even better: by the corollary of [Theorem 2](#section-1-theorem-2), we can suppose (in the above) that $B$ and $A$ are _compact_ subsets of $F$ and strong $E'$ (respectively).
+[Theorem 2](#section-1-theorem-2), applied directly, also gives the following: _nuclear maps from $E$ to $F$ are exactly the maps that are sums of series (always absolutely convergent in $\LL(E,F)$ endowed with the bounded-convergence topology) $u=\sum\lambda_i x'_i\otimes y_i$, where $(x'_i)$ is an equicontinuous sequence in $E'$, $(y_i)$ is a \todo a compact disk of $F$, and $(\lambda_i)$ is a summable sequence of scalars_.
+If we compose a nuclear map, on the left or on the right, with a continuous linear map, then we obtain another nuclear map.
+The dual of a nuclear map from $E$ to $F$ is a nuclear map from strong $F'$ to strong $E'$ (and even from $F'$ endowed with the uniform convergence on compact disks of $F$, to strong $E'$).
+
+Nuclear maps from $E$ to itself (more precisely, the slightly larger category of Fredholm maps from $E$ to itself) form a natural domain for _Fredholm theory_.
+Here, our interest lies in other properties of these operators, that result directly from either [Theorem 2](#section-1-theorem-2) or the corollary of [Theorem 5](#section-1-theorem-5).
+
+::: {.itenv #section-1-theorem-6 title="Theorem 6" latex="{Theorem 6}"}
+Let $E$ and $G$ be locally convex spaces, and $F$ a vector subspace of $E$.
+Then:
+
+a. Every nuclear map from $F$ to $G$ is the restriction of a nuclear map from $E$ to $G$.
+
+b. Suppose that $F$ is closed, and that every compact disc of $E/F$ is contained in the canonical image of a bounded disc $A$ of $E$ such that $E_A$ is complete (for example, a _complete_ bounded disc).
+    (It suffices, for example, for $E$ to be an $\FF$-space, or for it be the dual of an $\FF$-space and for $F$ to be _weakly_ closed.)
+    Then every nuclear map from $G$ to $E/F$ can be obtained from a nuclear map from $G$ to $E$ by passing to the quotient.
+:::
+
+We have analogous statements for "equinuclear" sets of maps, if by that we mean a set of maps from a locally convex space $M$ to another locally convex space $N$, contained in the set of maps defined by the unit ball of a space $M'_A\hotimes N_B$, where $A$ is a weakly closed equicontinuous disk of $M'$, and $B$ a bounded disk in $N$ such that $N_B$ is complete.
+
+\oldpage{87}
+We note that, if $u$ is a nuclear map from $E$ to $F$, $M$ a closed vector subspace of $E$ contained in the kernel of $u$, and $N$ a closed vector subspace of $F$ containing $u(E)$, then, in general, the linear map from $E/M$ to $F$ or from $E$ to $N$ defined by $u$ _is not nuclear_, even if $E$ and $F$ are reflexive Banach spaces.
+However, if $M$ (resp. $N$) admits a topological complement, then the map from $E/M$ to $F$ (resp. from $E$ to $N$) defined by $u$ will itself be nuclear.
+This is the case, in particular, if $E$ (resp. $F$) is a Hilbert space.
+
+
+## Integral linear maps, integral bilinear forms {#section-1.8}
+
+[[PTT](#ref-PTT), chap. 1, §4, no. 3 and no. 4]
+\medskip
+
+::: {.itenv #section-1-theorem-7 title="Theorem 7" latex="{Theorem 7}"}
+Let $E$ and $F$ be two locally convex (resp. normed) spaces, and $v$ a separately continuous bilinear form on $E\times F$.
+Then the following conditions are equivalent:
+
+a. $u\mapsto\langle u,v\rangle$ is a linear form on $E\otimes F$ that is continuous for the topology induced by $E\hhotimes F$ (resp. $u\mapsto\langle u,v\rangle$ is a linear form on $E\otimes F$ of norm $\leq1$ when $E\otimes F$ is endowed with the norm induced by $E\hhotimes F$).
+
+b. $v$ is contained in the closed disked hull in $\sBB_\mathrm{s}(E,F)$ (the space $\sBB(E,F)$ endowed with the simple-convergence topology) of a set $M\otimes N$, where $M$ is an equicontinuous subset of $E'$, and $N$ an equicontinuous subset of $F'$ (resp. $M$ the unit ball of $E'$, and $N$ the unit ball of $F'$).
+
+c. There exists a measure $\mu$ on the product space of a weakly compact equicontinuous subspace $M$ of $E'$ with a weakly compact equicontinuous subspace $N$ of $F'$ (resp. a measure $\mu$ of norm $\leq1$ on the product of the unit ball of $E'$ with the unit ball of $F'$, endowed with the product of the weak topologies) such that we have the formula
+    $$
+        v = \int_{M\times N} x'\otimes y' \dd\mu(x',y')
+    $$
+    (the weak integral in $\sBB(E,F)$, in duality with $E\otimes F$).
+
+d. There exists a compact space endowed with a positive measure $\mu$ of norm $\leq1$, a continuous linear map $\alpha$ from $E$ to $\LL^\infty(\mu)$, and a continuous linear map $\beta$ from $F$ to $\LL^\infty(\mu)$ (resp. the same, but with $\alpha$ and $\beta$ also of norm $\leq1$) such that we have $u(x,y)=\langle\alpha x,\beta y\rangle$ for $x\in E$, $y\in F$.
+:::
+
+\oldpage{88}
+A bilinear form on $E\times F$ is said to be _integral_ if it satisfies any of the equivalent conditions of [Theorem 7](#section-1-theorem-7).
+In particular, the dual of $E\hhotimes F$ can be identified with the space $\JJ(E,F)$ of integral bilinear forms on $E\times F$.
+If $E$ and $F$ are Banach spaces, then $\JJ(E,F)$ will be endowed with the dual norm of the Banach space $E\hhotimes F$, which we call the _integral norm_, and denote by $\|v\|'_1$.
+Similarly, a linear map $v$ from one locally convex space $E$ to another $G$ is said to be _integral_ if the corresponding bilinear form on $E\times G'$ is integral.
+
+If $E$ and $G$ are Banach spaces, then we also call the integral norm of the corresponding bilinear form of $v$ the integral norm of $v$.
+
+Recall that, in all known cases, when $E$ and $F$ are Banach, the natural linear map from $E'\hotimes F'$ to $\JJ(E,F)$ is a metric isomorphism from the first space to the second (see [§1.5](#section-1.5)), which is why we use the notation $\|v\|'_1$ for the integral norm, closely related to the notation $\|v\|_1$ for the trace norm.
+Criterion (d) of [Theorem 7](#section-1-theorem-7) takes the following form (which we state for Banach spaces, for simplicity) for integral linear maps:
+_Let $v$ be a linear map from one Banach space $E$ to another $F$. Then $v$ is integral and of integral norm $\leq1$ if and only if the map from $E$ to $F''$ that it defines can be obtained by composing a linear map of norm $\leq$ from $E$ to some space $\LL^\infty(\mu)$, constructed with a suitable positive measure of norm $\leq1$ on a compact space, with the identity map from $\LL^\infty(\mu)$ to $\LL^1(\mu)$, and finally with a linear map of norm $\leq$ from $\LL^1(\mu)$ to $F''$._
+Similarly, criterion (b) of [Theorem 7](#section-1-theorem-7) easily gives:
+_The linear map $v$ from $E$ to $F$ is integral and of integral norm $\leq1$ if and only if it is an adherent point in $\LL_s(E,F_s)$ (where $F_s$ denotes $F$ endowed with the weak topology, and $\LL_s(E,F_s)$ denotes $\LL(E,F_s)$ endowed with the simple-convergence topology) of the disked hull of the set of the $x'\otimes y$, where $x'$ (resp. $y$) runs over the unit ball of $E'$ (resp. of $F$); or if it is adherent to the set of nuclear operators of trace-norm $\leq1$._
+
+::: {.rmenv title="Examples" latex="{Examples}"}
+Let $E$ and $F$ be arbitrary locally convex spaces.
+Then every bilinear form on $E\times F$ defined by an element of a space $E'_A\hotimes F'_B$, where $A$ (resp. $B$) is a weakly closed disked equicontinuous subset of $E'$ (resp. of $F'$), is integral.
+Thus every nuclear map from $E$ to $F$ is integral.
+\oldpage{89}
+The converse is false, even for Banach spaces, since the identity map from $\LL^\infty(\mu)$ to $\LL^1(\mu)$ is integral, but it is not, in general, even compact.
+If $E=\CC(M)$ (resp. $F=\CC(N)$) is the space of continuous scalar functions on the compact space $M$ (resp. $N$), then we have seen ([Theorem 4](#section-1-theorem-4)) that $\CC(M)\hotimes\CC(N)$ can be identified with its norm to the space $\CC(M\times N)$, and so the space of integral bilinear forms on $\CC(M)\times\CC(N)$ can be identified with its norm to the space of Radon measures on the compact space $M\times N$.
+Other examples will be seen in [§1.9](#section-1.9).
+
+By composing an integral linear map on the left or on the right with a continuous linear map, we obtain another integral linear map.
+The transpose of an integral map from $E$ to $F$ is an integral map from strong $F'$ to strong $E'$.
+
+Using, for example, criterion (a) of [Theorem 7](#section-1-theorem-7), we see that, if $E_1$ and $E_2$ are locally convex spaces, and $F_1$ (resp. $F_2$) is a topological vector subspace of $E_1$ (resp. of $E_2$), then every integral bilinear form on $F_1\times F_2$ can be extended to a integral bilinear form on $E_1\times E_2$, with equal integral norm if $E_1$ and $E_2$ are normed (compare with [Theorem 6](#section-1-theorem-6)).
+The most important properties of integral maps are summarised in the following:
+:::
+
+::: {.itenv #section-1-theorem-8 title="Theorem 8" latex="{Theorem 8}"}
+Let $u$ be an integral linear map from a locally convex space $E$ to a locally convex space $F$.
+
+1. If $F$ is quasi-complete, then $u$ is weakly compact, and sends weakly compact subsets of $E$ to compact subsets of $F$.
+    If $v$ is a linear map from $F$ to a locally convex space $G$ that sends bounded subsets to weakly relatively compact subsets, then $v\circ u$ is a compact map.
+
+2. Let $v$ be a linear map from $F$ to an $\FF$-space $G$ that sends bounded subsets to weakly relatively compact subsets (resp. a linear map from a $\DF$-space $G$ to $E$ that sends bounded subsets to weakly relatively compact subsets of $E$).
+    Then $v\circ u$ (resp. $u\circ v$) is a _nuclear_ map from $E$ to $G$ (resp. from $G$ to $F''$).
+    If $E$, $F$, and $G$ are Banach spaces, then $\|v\circ u\|'_1\leq\|v\|\|u\|'$.
+:::
+
+::: {.itenv #section-1-corollary-1 title="Corollary 1" latex="{Corollary 1}"}
+The composition of two integral maps is a nuclear map.
+:::
+
+::: {.rmenv title="Other corollaries" latex="{Other corollaries}"}
+An integral map from $E$ to $F$ is nuclear if $F$ is a reflexive $\FF$-space, and it is
+a nuclear map from $E$ to $F''$ if $E$ is a reflexive $\DF$-space.
+\oldpage{90}
+An integral map from $E$ to $F$ sends summable sequences to absolutely summable sequences, and weakly convergent sequences to nuclearly convergent sequences (see the end of [§1.4](#section-1.4)).
+:::
+
+$\star$
+So, considering the unit circumference $T$ of the complex plane, endowed with its Haar measure $\mu$, suppose that the sequence $(a_n)$ in the set $\mathbb{Z}$ of integers is such that $(\varepsilon_n a_n)$ is the sequence of coefficients of a function in $\LL^\infty(\mu)$, for some sequence $(\varepsilon)$ of numbers equal to $+1$ or $-1$;
+then we can easily see that the sequence $a_nz^n\in\LL^\infty(\mu)$ is summable, and is thus an absolutely summable sequence in $\LL^1(\mu)$, whence, immediately, $(a_n)\in\ll^1$.
+We have thus obtained an analogue of the well-known theorem of Littlewood (in which $\LL^\infty$ is replaced by $\LL^1$, and $\ell^1$ by $\ell^2$).
+We note that Littlewood's theorem can be obtained in the same way, as a consequence of the following theorem, which has much more general consequences (and which will later be published, along with some of its various consequences):
+_every summable sequence in an $\LL^1(\mu)$-space (for an arbitrary measure) has a sequence of norms that is square summable_ (and even belonging to $\ell^2\hotimes\LL^1(\mu)$;
+this is dual to the theorem, noted at the end of [§1.4](#section-1.4), that says that every square summable sequence in a $\CC(K)$-space --- and even every sequence belonging to $\ell^2\hhotimes\CC(K)$ --- is nuclearly convergent to $0$).
+
+We will give some hints concerning the proof of [Theorem 8](#section-1-theorem-8), that rely in an essential manner on criterion (d) of [Theorem 7](#section-1-theorem-7).
+The fact that $u$ is a weakly compact map follows immediately from the fact that the identified map from $\LL^\infty(\mu)$ to $\LL^1(\mu)$ is a weakly compact map.
+The other claims of the theorem follow easily from the second part, which is more difficult.
+We can reduce to showing that every weakly compact linear map from $\LL^1(\mu)$ to an $\FF$-space $G$ induces a nuclear map from $\LL^\infty(\mu)$ to $G$, and thus ([Theorem 3](#section-1-theorem-3)) comes from some $f\in\LL^1_G(\mu)$.
+But a theorem of Dunford--Pettis--Phillips tells us that such a map is in fact given by a _strongly measurable and bounded_ map $f$ from $M$ to $G$.
+Note that [Corollary 1](#section-1-corollary-1), which is important due to its application in the theory of nuclear spaces, admits a simpler direct proof:
+we can reduce to showing that, if $\mu$ and $\nu$ are measures on compact $M$ and $N$, then a continuous linear map $u$ from $\LL^1(\mu)$ to $\LL^\infty(\nu)$ defines a _nuclear_ map from $\LL^\infty(\mu)$ to $\LL^1(\nu)$.
+But $u$ can be identified with a continuous linear form on $\LL^1(\mu)\hotimes\LL^1(\nu)$, which is isomorphic to the space $\LL^1(\mu\otimes\nu)$ ([Theorem 3](#section-1-theorem-3)), and so $u$ is defined by a measurable and bounded function $f$ on $M\times N$, which can be identified a fortiori with an element of $\LL^1(\mu\otimes\nu)=\LL^1(\mu)\hotimes\LL^1(\nu)$.
+This latter element indeed defines a nuclear map from $\LL^\infty(\mu)$ to $\LL^1(\nu)$, which happens to be exactly the map induced by $u$.
+QED.
+
+\oldpage{91}
+
+In [PTT](#ref-PTT), we deduce [Theorem 8](#section-1-theorem-8) from more general results (see [[PTT](#ref-PTT), chap. 1, §4, no. 2]).
+The majority of [[PTT](#ref-PTT), chap. 1, §4]  (the densest part of the whole work) is dedicated to the exposition of these results and their many consequences, which we cannot give in this summary.
+$\star$
+
+
+## Integral linear maps to an $\LL^1$ space or a $\CC_0(M)$ space {#section-1.9}
+
+[[PTT](#ref-PTT), chap. 1, §4, no. 4]
+
+\medskip
+
+$\star$
+We can characterise the integral linear from a locally convex space $E$ to an $\LL^1(\mu)$ space (where $\mu$ is an arbitrary measure on a locally compact space $M$): they are the linear maps that send a suitable neighbourhood $V$ of $0$ in $E$ to a _latticially bounded_ subset of $\LL^1(\mu)$.
+If $E$ is normed, with $V$ its unit ball, and $h=\sup_{x\in V}|ux|$ (so that $h$ is a positive element of $\LL^1(\mu)$), then $\|u\|'_1=\|h\|_1$.
+If $E$ or $\LL^1(\mu)$ is separable, then the theorem of Dunford--Pettis gives an equivalent criterion (which we state, as an example, in the case where $E$ is assumed to be normed):
+_there exists a weakly measurable map $f$ from $M$ to $E'$ such that $\|f(t)\|$ is a summable function of $t$, and such that, for all $x\in E$, $ux$ is the class in $\LL^1(\mu)$ of the function $t\mapsto\langle x,f(t)\rangle$; then $\|u\|'_1\leq\int\|f(t)\|\dd\mu(t)$ (and we have equality for a suitable choice of $f$)._
+We can also characterise the _nuclear_ maps from a locally convex space $E$ to $\LL^1(\mu)$: they are those which send a suitable neighbourhood $V$ of $0$ in $E$ to a subset $A$ of $\LL^1(\mu)$ which is latticially bounded and further _equimeasurable_ (by which we mean that, for every compact $K\subset M$, and every $\varepsilon>0$, there exists a compact $K_0$ such that $\mu(K\cap K_0^c)\leq\varepsilon$, and such that the $\varphi\in A$ agree almost everywhere on $K_0$ with the functions from an equicontinuous and uniformly bounded set of functions on $K_0$).
+If we suppose, for simplicity, that $E$ is a Banach space, then this is equivalent to saying that the map in question is given by an _integrable_ \cite{2} map $f$ from $M$ to $E'$ (and, indeed, it follows immediately from [Theorem 3](#section-1-theorem-3) that this indeed implies that $u$ is nuclear).
+
+\oldpage{92}
+
+Dually, let $M$ be a locally compact space, and $E$ a Banach space (for simplicity), and suppose that either $M$ is metrisable and countable at infinity, or that $E$ is separable.
+Then the integral maps $u$ from $\CC_0(M)$ (the space of continuous functions on $M$ that are "zero at infinity") to $E'$, i.e. the continuous linear forms on $\CC_0(M,E)=\CC_0(M)\hhotimes E$, are exactly those given by a measure $\mu$ on $M$ and a weakly $\mu$-measurable and bounded map $f$ from $M$ to $E'$ by the formula $u\varphi=\int\varphi(t)f(t)\dd\mu(t)$.
+We can further suppose that $\|f(t)\|=1$ for all $t$, and that $\|\mu\|_1=\|u\|'_1$.
+Using [Theorem 3](#section-1-theorem-3), we also find that the _nuclear_ maps from $\CC_0(M)$ to $E'$, or even from $\CC_0(M)$ to an arbitrary Banach space $F$, are exactly those given by a pair $(u,f)$ as above, but with $f$ being an _integrable_ map from $M$ to $F$;
+it is no longer necessary here to make any separability hypotheses.
+In particular, if $K$ and $L$ are compact spaces, $\mu$ a measure on $K$, and $N(x,y)$ a continuous scalar function on $K\times L$, then the map $f\mapsto\int f(x)N(x,y)\dd\mu(x)$ from $C(K)$ to $C(L)$, defined by the continuous kernel $N$, is nuclear.
+Note that we have just described two remarkable categories of "vectorial measures" on $M$, which we call _integral vectorial measures_ and _nuclear vectorial measures_ (respectively) on $M$.
+
+The fact that we can characterise the integral and nuclear maps from a Banach space (for example) $E$ to $\LL^1(\mu)$ by properties concerning their images of the unit ball is completely special to $\LL^1(\mu)$ (see the end of [§1.7](#section-1.7)) and is also linked to the corollary of [Theorem 3](#section-1-theorem-3).
+Similarly, we can show that the integral linear maps from $\LL^1(\mu)$ to a locally convex space $E$ can be characterised by properties concerning their images of the unit ball of $\LL^1(\mu)$, a feature that we will not further study here (see [[PTT](#ref-PTT), chap. 1, §4, no. 6]).
+$\star$
