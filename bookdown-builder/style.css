@@ -154,9 +154,14 @@ p.date {
   margin-bottom: 0 !important;
 }
 
+.itenv,
+.rmenv {
+  margin: 1em 0;
+  text-align: justify;
+}
+
 .itenv {
   font-style: italic;
-  margin: 1em 0;
 }
 .itenv em {
   font-style: normal !important;
@@ -164,7 +169,6 @@ p.date {
 
 .rmenv {
   font-style: normal;
-  margin: 1em 0;
 }
 
 .itenv:before,
