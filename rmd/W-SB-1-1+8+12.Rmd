@@ -85,10 +85,8 @@ $$
 tells us that $e(\beta)$ and $i(\beta)$ are _transpose_ to one another (the former acts on $\Lambda(E)$, and the latter on $\Lambda(E')$).
 Similarly, $e(\beta')$ and $i(\beta')$ are transpose.
 
-<!--
 
-\section{Notions concerning endomorphisms of algebras in general}
-\label{I.3}
+## Notions concerning endomorphisms of algebras in general {#I.3}
 
 We now study a _graded_ algebra $\Lambda$.
 We denote by $\alpha\mapsto\overline{\alpha}$ the automorphism that sends a homogeneous element $\alpha$ of degree $n$ to the element $(-1)^n\alpha$.
@@ -124,8 +122,7 @@ If $\Lambda$ is the exterior algebra $\Lambda(E)$ of a vector space $E$, then $i
 If $\theta$ is a derivation of $\Lambda(E)$, then $e(x)\theta$ is an antiderivation.
 
 
-\section{Notions concerning differentiable manifolds}
-\label{I.4}
+## Notions concerning differentiable manifolds {#I.4}
 
 For simplicity, we will restrict our study to that of infinitely differentiable manifolds;
 all the "functions" that we consider will be infinitely differentiable.
@@ -139,11 +136,10 @@ We denote by $\langle X,\omega\rangle$ the bilinear form defining this duality.
 The differential $\dd f$ of a real-valued function is a differential form (an element of $E'$).
 The algebra of "exterior differential forms" can be identified with the exterior algebra $\Lambda(E')$ (where $E'$ is considered as a module over the ring of real-valued functions);
 the operator $\dd$ (_exterior differentiation_) is characterised by the following three properties:
-\begin{enumerate}[1)]
-  \item for a function $f$ (an element of $\Lambda^0(E')$), $\dd f$ is the differential of $f$ ;
-  \item $\dd\dd=0$ ; and
-  \item $\dd$ is an _antiderivation_.
-\end{enumerate}
+
+1. for a function $f$ (an element of $\Lambda^0(E')$), $\dd f$ is the differential of $f$ ;
+2. $\dd\dd=0$ ; and
+3. $\dd$ is an _antiderivation_.
 
 Every vector field $X$ defines an _infinitesimal_ transformation, which we denote by $\theta(X)$, and which acts on $\Lambda(E)$ and $\Lambda(E')$.
 We first define $\theta(X)$ on $\Lambda^0(E)=\Lambda^0(E')$ by setting $\theta(X)\cdot f=\langle X,\dd f\rangle$.
@@ -154,30 +150,37 @@ $$
 $$
 This group acts on $\Lambda(E)$ and $\Lambda(E')$, and, by differentiating with respect to $t$ at $t=0$, we recover the operator $\theta(X)$.
 It can be calculated using the following rules (which don't need explicit knowledge of the automorphism group):
-\begin{itemize}
-  \item $\theta(X)$ _commutes_ with $\dd$ (on $\Lambda(E')$); to take $\theta(X)$ of a _product_ (either exterior, interior, or scalar), we apply the classical formula for taking the derivative of a product; and, in particular, on $\Lambda(E)$ and $\Lambda(E')$, $\theta(X)$ is a _derivation_.
-  \item If we apply $\theta(X)$ to a vector field $Y$, then we obtain $\theta(X)\cdot Y$; we have the fundamental formula
+
+1. $\theta(X)$ _commutes_ with $\dd$ (on $\Lambda(E')$); to take $\theta(X)$ of a _product_ (either exterior, interior, or scalar), we apply the classical formula for taking the derivative of a product; and, in particular, on $\Lambda(E)$ and $\Lambda(E')$, $\theta(X)$ is a _derivation_.
+
+2. If we apply $\theta(X)$ to a vector field $Y$, then we obtain $\theta(X)\cdot Y$; we have the fundamental formula
+
+    ::: {.eqref #equation-I.1}
     $$
-    \label{equation-I.1}
       \theta(\theta(X)\cdot Y) = \theta(X)\theta(Y) - \theta(Y)\theta(X),
     \tag{1}
     $$
+    :::
+
     which leads us to denote by $[X,Y]$ the vector field $\theta(X)\cdot Y$, and [(1)](#equation-I.1) then gives the _Jacobi identity_
+
 \oldpage{10}
-  \item Finally, we have the "fundamental formula of the calculation of variations":
+
+3. Finally, we have the "fundamental formula of the calculation of variations":
     on the space $\Lambda(E')$ of exterior differential forms,
+
+    ::: {.eqref #equation-I.2}
     $$
-    \label{equation-I.2}
       \theta(X) = i(X)\dd + \dd\cdot i(X),
     \tag{2}
     $$
+    :::
+
     where $i(X)$ denotes, as in [§I.2](#I.2), the interior product.
     (Proof: both sides of the equation are derivations that commute with $\dd$ and that are equal on functions).
-\end{itemize}
 
 
-\section{Lie groups}
-\label{I.5}
+## Lie groups {#I.5}
 
 Let $V$ denote the manifold of a Lie group $G$, and denote by $\frak{a}$ the subspace of $E$ given by vector fields that are _invariant under left-translations_ by $G$;
 we denote by $\frak{a}'$ the subspace of $E'$ given by _left-invariant_ differential forms (of degree $1$).
@@ -192,18 +195,22 @@ In particular, if $X$ and $Y$ are in $\frak{a}$, then $[X,Y]$ is in $\frak{a}$.
 The elements upon which $\theta(X)$ acts as zero (for _all_ $X\in\frak{a}$) are those that are simultaneously invariant under left- and right-translations, and are simply called _invariant elements_.
 
 Since $\theta(X)$ is zero on the scalars (constant functions), we have:
+
+::: {.eqref #equation-I.3}
 $$
-\label{equation-I.3}
   \langle \theta(X)\cdot Y,\omega \rangle + \langle Y,\theta(X)\cdot\omega \rangle
   = 0
   \qquad\mbox{for $Y\in\frak{a}$ and $\omega\in\frak{a}'$.}
 \tag{3}
 $$
+:::
+
 In other words, $\theta(X)$ (acting on forms) is the _transpose_ of $-\theta(X)$ (acting on vector fields).
 
 The vector space $\frak{a}$, endowed with the structure defined by the map $(X,Y)\mapsto[X,Y]$ from $\frak{a}\times\frak{a}$ to $\frak{a}$, is the _Lie algebra_ of the group $G$.
 
 
+<!--
 \section{Lie algebras}
 \label{I.6}
 
