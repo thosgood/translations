@@ -1,0 +1,134 @@
+--- 
+title: "On modifications and exceptional analytic sets"
+author: "Hans Grauert"
+date: "Hans Grauert"
+original: 'Grauert, H. "Über Modifikationen und exzeptionelle analytische Mengen". _Math. Ann._ **146** (1962), 331--368. [eudml.org/doc/160940](http://eudml.org/doc/160940).'
+bibliography: MA-146-1962-331.bib
+nocite: '@*'
+link-citations: true
+csl: maths-translations.csl
+reference-section-title: "Bibliography"
+github-repo: "thosgood/translations"
+favicon: "favicon.ico"
+---
+
+```{r, child = '_translator-note.Rmd'}
+```
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\PP}{\mathbb{P}}
+
+<!-- Content -->
+
+The term "modification" first appeared in a 1951 publication [@1] by H. Behnke and K. Stein.
+\oldpage{331}
+The authors used it to refer to a process that allows a given complex space to be modified.
+If $X$ is a complex space, and $N\subset X$ a low-dimensional analytic set, then $N$ is replaced by another set $N'$ such that the complex structure on $X\setminus N$ can be extended to the entire space $X'=(X\setminus N)\cup N'$.
+The newly obtained complex space $X'$ is then called a _modification_ of $X$.
+
+As already demonstrated in [@1], modifications can be very pathological.
+The interest therefore turned towards special classes of modifications.
+In [@12], H. Hopf considered so-called "$\sigma$-processes" on $n$-dimensional complex manifolds $M$.
+These modifications made it possible to replace any point $x\in M$ with a complex projective space $\PP^{n-1}$ of dimension $n-1$.
+The result is a new singularity-free complex manifold $M'$.
+There are more general modifications that modify the manifold $M$ at only one point $x\in M$, but the space thus obtained can then contain singular points, i.e. is just a complex space.
+
+This present work deals with the following question.
+Let $X$ be a complex space, and $A\subset X$ a complex-analytic set.
+Then when does there exist a modification $Y$ of $X$ where $A$ is replaced by a point $y$, and such that $X\setminus A=Y\setminus y$?
+
+If such a $Y$ exists, then $A$ is said to be an _exceptional analytic set_ in $X$, and we say that $A$ can be "_collapsed_" to a point.
+
+In general, such a $Y$ does not exist.
+If $X$ is a complex space, and $A\subset X$ is a compact connected analytic set, then, from a set-theoretic point of view, $A$ can of course always be replaced by a point $y_0$.
+Then $Y=(X\setminus A)\cup y_0$ has a canonical topological structure, $Y\setminus y_0=X\setminus A$ has a complex structure $\frak{S}$, and the identity $X\setminus A\to X\setminus y_0$ can be extended to a continuous map $\lambda\colon X\to Y$.
+Then $\lambda$ maps $X\setminus A$ topologically (and even biholomorphically) to $Y$, and sends $A$ to $y_0$.
+If $A$ can now be collapsed to a point, then $\frak{S}$ can be extended to the entire space $Y$, and $\lambda$ becomes a holomorphic map $X\to Y$.
+
+\oldpage{332}
+We now give an overview of the present work.
+In [§1](#section-1) we study the concepts of _pseudoconvexity_ and _holomorphic convexity_ on complex spaces.
+The reduction theory of Remmert then leads, in [§2](#section-2), to the first general theorem concerning exceptional analytic sets $A\subset X$.
+In order to simplify the somewhat strong assumption in this theorem, we consider, in [§3](#section-3), a coherent analytic sheaf $\frak{m}$ of germs of holomorphic functions that vanish on $A$, so that $A$ is exactly the zero set of $\frak{m}$.
+Using $\frak{m}$, we then endow $A$ with a normal bundle $N_\frak{m}$.
+The structure of $N_\frak{m}$ is then critical: $A$ is exceptional if $N$ is weakly negative.
+We use the word "negative" here in the sense of Kodaira's definition; our result shows that it can be defined in a purely algebraic way in the world of algebraic geometry.
+Also in [§3](#section-3), we obtain simple criteria for positive (negative) line bundles and characterising projective algebraic spaces.
+The well-known theorem of Kodaira (that every Hodge manifold $X$ is projective algebraic) is generalised to the case where $X$ is a normal complex space.
+Then [§4](#section-4) deals with the complex structure of neighbourhoods of analytic sets $A\subset X$, which can be collapsed to a point.
+The main result of this section is that the neighbourhoods of (special) exceptional analytic sets $A\subset X$ and $A'\subset X'$ are analytically equivalent if (**TO-DO: _and only if??_**) they are equivalent in a formal sense.
+This means that the complex structure can be "calculated", which makes it possible to solve one of Hirzebruch's problems [@11], and to transfer the propositions of Enriques and Kodaira from algebraic geometry to complex analysis.
+
+--- It should also be mentioned that, using the main results of [§4](#section-4), we construct a complex space $X$ with the following properties:
+
+1. $X$ is connected, compact, and of dimension $2$;
+2. $X$ is normal, and has only one non-regular points;
+3. there exist two analytically and algebraically independent meromorphic functions on $X$; and
+4. $X$ is not an algebraic variety (neither in the projective sense nor the more general sense of Weil).^[Some of the results of the present work were discovered in 1959, and published in [@7]. There are, however, some errors in [@7]: in Theorem 1, it should, of course, read "[...] such that $G$ is strongly pseudoconvex and $A$ is the maximal compact analytic subset of $G$"; furthermore, the criterion in Theorem 2 is only sufficient (see [§3.8](#section-3.8)); Theorem 3 is only proven in the present work in the case where the normal bundle $N(A)$ is weakly negative. --- The author has already presented, several times, previously, the example of the complex space $X$, and, since then, Hironaka has found more interesting examples of complex spaces of this type.]
+
+In contrast, as is well known, Kodaira and Chow [@4] have shown that every compact, $2$-dimensional complex manifold with two independent meromorphic functions is projective algebraic.
+
+
+# Complex spaces, pseudoconvexivity {#1}
+
+## --- {#1.1}
+
+Complex spaces are defined as in [@10].
+We always assume that they are reduced: their local rings contain no nilpotent elements.
+If $X$ is a complex space, $U=U(x)$ a neighbourhood, $A\subset G\subset \CC^n$ an analytic set in a domain $G$ of the space $\CC^n$ of the $n$-dimensional complex numbers, and $\tau$ a biholomorphic map $U\to A$, then $(U,\tau,A)$ is called a chart in $X$, and $\tau$ a biholomorphic embedding of $U$ in $G$.
+
+We always denote by $\scr{O}=\scr{O}(X)$ the sheaf of germs of locally holomorphic functions on $X$.
+If $A\subset X$ is an analytic subset, then we denote by $\frak{m}=\frak{m}(A)\subset\scr{O}$ the sheaf of germs of locally holomorphic functions that vanish on $A$.
+By a theorem of Cartan, $\frak{m}$ is coherent.
+For every subsheaf $\scr{I}\subset\scr{O}$, let $\scr{I}^k$ be the sheaf consisting of germs $f_x=f_{1x}\cdot\ldots\cdot f_{kx}$, where $f_{1x},\ldots,f_{kx}\in\scr{I}_x$ for $x\in X$, $k=1,2,\ldots$.
+
+Now^[A subscript $x$ always denotes the stalk of the sheaf at the point $x$. If $s$ is a section, then $s_x$ denotes its value at $x$. Holomorphic functions and sections in $\scr{O}$ are always considered to be the same thing. --- If $F$ is a complex-analytic vector bundle, then $\underline{F}$ always denotes the sheaf of germs of locally holomorphic sections in $F$.] let $x\in X$, $\frak{m}=\frak{m}(x)$, and $d(x)=\dim_\CC\frak{m}_x/\frak{m}_x^2$.
+If $\psi\colon X\to\CC^n$ is a holomorphic map, then $\psi$ defines, at each point $x\in X$, a homomorphism $\psi_x^*\colon\scr{O}_z(\CC^n)\to\scr{O}_x(X)$.
+This homomorphism maps the maximal ideal $\frak{m}_z\subset\scr{O}_z(\CC^n)$ to the maximal ideal $\frak{m}_x\subset\scr{O}_x(X)$.
+If the induced map $\frak{m}_z/\frak{m}_z^2\to\frak{m}_x/\frak{m}_x^2$ is surjective, then we say that $\psi$ is a _regular map_ at $x$.
+In the case where $X$ is a complex manifold, we see that $\frak{m}_x/\frak{m}_x^2$ is exactly the covariant tangent space of $X$.
+Then $\psi$ is regular at $x\in X$ if and only if the Jacobian matrix of $\psi$ at $x$ has rank equal to $\dim_x X$.
+
+We say that a map $\psi\colon X\to\CC^n$ is _biholomorphic_ if it is a bijection that is regular at every point $x\in X$.
+
+::: {.itenv #claim-1 title="(1)" latex="{(1)}"}
+Let $x$ be a point of a complex space $X$.
+Then there exists a neighbourhood $U=U(x)$ and a chart $(U,\tau,A)$ with $A\subset G$ and $\dim G=d(x)$.
+If $(U,\tau,A)$ is any such chart, and $\psi\colon U\to\CC^n$ is a regular holomorphic map, then there exists an open neighbourhood $V=V(z)$ of $z=\tau(x)$ in $G$, and a biholomorphic map $\hat{\psi}\colon V\to\CC^n$ such that $\psi|W=\hat{\psi}\circ\tau$ (where $W=\tau^{-1}(V)$).^[This statement and its proof were communicated to me by A. Andreotti.]
+:::
+
+Of course, $\psi|W$ is then also biholomorphic.
+
+::: {.proof}
+To prove [(1)](#claim-1), we may assume that $X$ is an analytic set in a domain $D\subset\CC^m$.
+Let $\hat{\frak{m}}_x$ be the maximal ideal in $\scr{O}_x(\CC^m)$, and $\frak{i}_x\subset\scr{O}_x(\CC^m)$ the ideal of germs of holomorphic functions that vanish on $X\subset D$.
+Let $r$ be the dimension of the image $\scr{F}$ of $\frak{i}_x$ under the natural homomorphism $\lambda\colon\frak{i}_x\to\hat{\frak{m}}_x/\hat{\frak{m}}_x^2$.
+Clearly $m=r+d(x)$.
+Let $f_1,\ldots,f_r$ be functions that are holomorphic on a neighbourhood of $x$, with $f_{vx}\in\frak{i}_x$, so that the elements $\lambda(f_{vx})$ for $v=1,\ldots,r$ span the complex vector space $\scr{F}$.
+Then the rank of the Jacobian matrix of $(f_1,\ldots,f_r)$ in $X$ is equal to $r$.
+Then, in a neighbourhood $W=W(x)$, the following properties apply:
+\oldpage{334}
+
+1. The functions $f_1,\ldots,f_r$ are holomorphic on $W$, and vanish on $X\cap W$;
+2. $\hat{G}=\{z\in W\mid f_v(z)=0\text{ for }v=1,2\ldots,r\}$ is a $d(x)$-dimensional analytic subset of $W$ that contains no singularities, and which is mapped to a domain in $\CC^{d(x)}$ under some biholomorphic map $\tau$.
+
+Now let $A=\tau(X\cap W)$ and $U'=W\cap X$, and we obtain a chart satisfying the required properties.
+
+To prove the second claim of [(1)](#claim-1), let $(U,\tau,A)$ be a chart with $A\subset G$ and $\dim G=d(x)$.
+We may assume that $U=A$ and that $\tau$ is the identity.
+Then $\lambda(\frak{i}_x)=0$, since $r=0$.
+If $f_1,\ldots,f_n$ are holomorphic functions on $U$ that define a holomorphic map $\psi\colon U\to\CC^n$, and if $\hat{f}_1,\ldots,\hat{f}_n$ are holomorphic continuations in an open neighbourhood of $x$ in $G$, then the rank of the Jacobian matrix of $(\hat{f}_1,\ldots,\hat{f}_n)$ at $x$ is equal to $d(x)=\dim G$.
+There thus exists a neighbourhood $W=W(x)$ in which the $\hat{f}_1,\ldots,\hat{f}_n$ are holomorphic and give a biholomorphic map $\psi\colon W\to\CC^n$.
+:::
+
+By the definition of a complex space, for every point $x\in X$ there is a non-empty system of charts $(U,\tau,A)$ such that $x\in U$.
+As we will show in this section, it is thus possible to transfer the concept of strictly plurisubharmonic functions to the setting of complex spaces.
+
