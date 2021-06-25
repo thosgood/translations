@@ -329,24 +329,22 @@ If $K$ is maximal and quasi-real, and $\frak{a}$ is _simple_, then the third Bet
 | $\Lambda(\frak{a})$ | exterior algebra of $\frak{a}$ | elements $\alpha,\beta,\ldots$ |
 | $\Lambda(\frak{a}')$ | exterior algebra of $\frak{a}'$ | elements $\alpha',\beta',\ldots$ |
 
-
-
-
-<!--
-\begin{itemize}
-  \item The operator $\theta(x)$ is the \emph{infinitesimal transformation defined by $x\in\frak{a}$} on $\Lambda(\frak{a})$;
+1. The operator $\theta(x)$ is the _infinitesimal transformation defined by $x\in\frak{a}$_ on $\Lambda(\frak{a})$;
     from now on, we denote by $\theta^*(x)$ (instead of $\theta(x)$) the operator that is the transpose of $-\theta(x)$ acting on $\Lambda(\frak{a}')$.
-  \item  The operator $e(x)$ is the \emph{(left) exterior product with $x\in\frak{a}$} on $\Lambda(\frak{a})$;
-    the operator $i(x)$ is the \emph{interior product with $x\in\frak{a}$} on $\Lambda(\frak{a}')$;
+
+2. The operator $e(x)$ is the _(left) exterior product with $x\in\frak{a}$_ on $\Lambda(\frak{a})$;
+    the operator $i(x)$ is the _interior product with $x\in\frak{a}$_ on $\Lambda(\frak{a}')$;
     $i(x)$ and $e(x)$ are the transpose of one another.
-  \item The operator $\partial$ is the _boundary_ operator on $\Lambda(\frak{a})$;
+
+3. The operator $\partial$ is the _boundary_ operator on $\Lambda(\frak{a})$;
     the operator $\delta$ is the _coboundary_ operator on $\Lambda(\frak{a}')$;
     $\delta$ is the transpose of $-\partial$.
-\end{itemize}
+
 
 These operators satisfy the following relations:
+
+::: {.eqref #equation-II.1}
 $$
-\label{equation-II.1}
   \begin{aligned}
     \partial\partial &= 0,
   \\\delta\delta &= 0,
@@ -357,21 +355,21 @@ $$
   \end{aligned}
 \tag{1}
 $$
+:::
 
-The \emph{homology vector space $\HH(\frak{a})$} is defined by $\partial$ acting on $\Lambda(\frak{a})$;
-the \emph{cohomology algebra $\HH(\frak{a}')$} is defined by $\delta$ acting on $\Lambda(\frak{a'})$.
+The _homology vector space $\HH(\frak{a})$_ is defined by $\partial$ acting on $\Lambda(\frak{a})$;
+the _cohomology algebra $\HH(\frak{a}')$_ is defined by $\delta$ acting on $\Lambda(\frak{a'})$.
 There is a multiplicative structure on $\HH(\frak{a}')$ because $\delta$ is an _antiderivation_.
 The vector spaces $\HH(\frak{a})$ and $\HH(\frak{a}')$ are canonically in duality.
 
 
-\section{Direct sum of two Lie algebras}
-\label{II.2}
+## Direct sum of two Lie algebras {#II.2}
 
 We say that $\frak{a}$ is the _direct sum_ of two sub-algebras $\frak{b},\frak{c}\subseteq\frak{a}$, and we write $\frak{a}=\frak{b}\oplus\frak{c}$, if
-\begin{enumerate}[1)]
-  \item the vector space $\frak{a}$ is the direct sum of the subspaces $\frak{b}$ and $\frak{c}$ ; and
-  \item $[x,y]=0$ for $x\in\frak{b}$ and $y\in\frak{c}$.
-\end{enumerate}
+
+1. the vector space $\frak{a}$ is the direct sum of the subspaces $\frak{b}$ and $\frak{c}$ ; and
+2. $[x,y]=0$ for $x\in\frak{b}$ and $y\in\frak{c}$.
+
 If this is the case, then $\Gamma(\frak{a})$ is canonically isomorphic to the tensor product $\Gamma(\frak{b})\otimes\Gamma(\frak{c})$;
 \oldpage{46}
 if we transport the multiplicative structure of $\Gamma(\frak{a})$ to this tensor product, then we see that
@@ -406,20 +404,19 @@ we recover the following theorem:
 _the cohomology algebra (with real coefficients) of $G_1\times G_2$ is canonically identified with the tensor product of the cohomology algebras of $G_1$ and $G_2$_.
 
 
-\section{Semi-simple Lie algebras}
-\label{II.3}
+## Semi-simple Lie algebras {#II.3}
 
 Every time that we speak of semi-simplicity, the field $K$ will be assumed to be of characteristic $0$.
 We have the following equivalent characterisations of semi-simple Lie algebras
-\begin{enumerate}[(a)]
-  \item every square-zero ideal (i.e. giving rise to an invariant abelian subgroup) is the ideal $\{0\}$ ;
-  \item the quadratic form $\tr(\theta(x)\theta(y))$ is regular ;
-  \item $\frak{a}$ is the direct sum of _simple_ algebras (i.e. algebras of dimension $>1$ with only trivial ideals, namely $\{0\}$ and the whole algebra itself);
+
+a. every square-zero ideal (i.e. giving rise to an invariant abelian subgroup) is the ideal $\{0\}$;
+b. the quadratic form $\tr(\theta(x)\theta(y))$ is regular;
+c. $\frak{a}$ is the direct sum of _simple_ algebras (i.e. algebras of dimension $>1$ with only trivial ideals, namely $\{0\}$ and the whole algebra itself);
     such a decomposition is then unique.
     (In principal, determining $\HH(\frak{a})$ and $\HH(\frak{a}')$ for semi-simple $\frak{a}$ thus reduces to determining the homology and cohomology of the simple algebras) ; and
+d. every _representation_ of $\frak{a}$ in the endomorphism algebra of a vector space $E$ (of finite dimension over $K$) is _completely reducible_ (i.e. every invariant subspace admits an invariant complement).
+
 \oldpage{47}
-  \item every _representation_ of $\frak{a}$ in the endomorphism algebra of a vector space $E$ (of finite dimension over $K$) is _completely reducible_ (i.e. every invariant subspace admits an invariant complement).
-\end{enumerate}
 
 Every quotient algebra of a semi-simple algebra is semi-simple.
 We thus deduce:
@@ -435,21 +432,17 @@ we are particularly interested in the homology and cohomology of reductive Lie a
 The Lie algebra of a compact group is always reductive.
 
 
-\section{Homology of reductive Lie algebras}
-\label{II.4}
+## Homology of reductive Lie algebras {#II.4}
 
 In the representation $x\mapsto\theta(x)$ of $\frak{a}$ in the endomorphism algebra of $\Gamma(\frak{a})$, by [(1)](#equation-II.1), the $\theta(x)$ is a of a cycle is a boundary;
 similarly, the $\theta^*(x)$ of a cocycle is a coboundary.
 
-\medskip
-\textbf{Lemma 1.}
-{\itshape
-  Let $x\mapsto\tau(x)$ be a completely reducible representation of a Lie algebra $\frak{a}$ in the endomorphism algebra of a finite-dimensional vector space $E$ endowed with an operator $d$ such that $dd=0$;
-  suppose that $\tau(x)d=d\tau(x)$, and that $\tau(x)$ sends cycles to boundaries.
-  Let $F$ be the subspace of "invariant" elements of $E$ (i.e. elements $\alpha$ such that $\tau(x)\cdot\alpha=0$ for all $x\in\frak{a}$).
-  Then $F$ is stable under $d$, and the canonical homology from the homology group $\HH(F)$ to the homology group $\HH(E)$ is an _isomorphism_ from the former to the latter.
-}
-\medskip
+::: {.itenv #lemma-1 title="Lemma 1" latex="{Lemma 1}"}
+Let $x\mapsto\tau(x)$ be a completely reducible representation of a Lie algebra $\frak{a}$ in the endomorphism algebra of a finite-dimensional vector space $E$ endowed with an operator $d$ such that $dd=0$;
+suppose that $\tau(x)d=d\tau(x)$, and that $\tau(x)$ sends cycles to boundaries.
+Let $F$ be the subspace of "invariant" elements of $E$ (i.e. elements $\alpha$ such that $\tau(x)\cdot\alpha=0$ for all $x\in\frak{a}$).
+Then $F$ is stable under $d$, and the canonical homology from the homology group $\HH(F)$ to the homology group $\HH(E)$ is an _isomorphism_ from the former to the latter.
+:::
 
 We can apply this to the representation $x\mapsto\theta(x)$ (resp. $x\mapsto\theta^*(x)$) of a _reductive_ algebra $\frak{a}$;
 then $F$ becomes $\frak{J}$ (resp. $\frak{J}'$), the sub-algebra of _invariant_ chains (resp. _invariant_ cochains).
@@ -464,72 +457,78 @@ $$
 $$
 (where $(x_k)$ and $(x'_k)$ are dual bases; see [§I](#I)).
 So $\HH(\frak{J})$ can be identified with $\frak{J}$,
-and
+and $\HH(\frak{J}')$ with $\frak{J}'$, and the lemma shows that $\frak{J}\to\HH(\frak{a})$ and $\frak{J}'\to\HH(\frak{a})$ are _onto isomorphisms_ (i.e there is one and only one invariant chain in each homology class; id. for cochains and cohomology).
 \oldpage{48}
-$\HH(\frak{J}')$ with $\frak{J}'$, and the lemma shows that $\frak{J}\to\HH(\frak{a})$ and $\frak{J}'\to\HH(\frak{a})$ are _onto isomorphisms_ (i.e there is one and only one invariant chain in each homology class; id. for cochains and cohomology).
 Furthermore, $\frak{J}'\to\HH(\frak{a}')$ is an isomorphism for the _algebra_ structure;
 we can not say the same of $\frak{J}\to\HH(\frak{a})$, since $\HH(\frak{a})$ has no multiplicative structure, but the identification of $\HH(\frak{a})$ with $\frak{J}$, which does have an algebra structure, precisely defines a multiplicative structure on $\HH(\frak{a})$, and allows us to speak about the _homology algebra_ of a reductive Lie algebra.
 We will prove that, if $\frak{a}$ is the Lie algebra of a compact connected group, then the multiplicative structure of $\HH(\frak{a})$ is precisely that which is defined by the "Pontrjagin product".
 
-\medskip
-\textbf{Remark.}
+::: {.rmenv title="Remark" latex="{Remark}"}
 On any reductive $\frak{a}$, there exists at least one _regular_ invariant quadratic form;
 it defines an isomorphism from the algebra $\Gamma(\frak{a})$ to the algebra $\Gamma(\frak{a})$, and from $\frak{J}$ to $\frak{J}'$;
 thus $\HH(\frak{a})$ and $\HH(\frak{a}')$ are (non-canonically) _isomorphic algebras_.
+:::
 
 
-\section{The first three Betti numbers of a semi-simple Lie algebra}
-\label{II.5}
+## The first three Betti numbers of a semi-simple Lie algebra {#II.5}
 
 A preliminary remark:
 for $\alpha'$ to be an _invariant_ cochain, it is necessary and sufficient that it be a cocycle, _and_ that the $i(x)\cdot\alpha'$ be cocycles for _all_ $x\in\frak{a}$ (by [(1)](#equation-II.1)).
 
-\medskip
-\textbf{The first Betti number is zero.}
+::: {.rmenv title="The first Betti number is zero" latex="{The first Betti number is zero}"}
 The equation
 $$
   \langle x\wedge y,\delta x'\rangle
   = -\langle[x,y],x'\rangle
 $$
 shows that, if $x'$ is a cocycle, then $x'$ is orthogonal to the derived algebra $\frak{a}^2$, and is thus zero if $\frak{a}$ is semi-simple.
+:::
 
-\medskip
-\textbf{The second Betti number is zero.}
+::: {.rmenv title="The second Betti number is zero" latex="{The second Betti number is zero}"}
 Every invariant cochain $\alpha'$ of degree $2$ is zero, since $i(x)\cdot\alpha'$ is a cocycle of degree $1$ for all $x$, and is thus zero.
+:::
 
-\medskip
-\textbf{The third Betti number is equal to the dimension of the vector space of invariant quadratic forms}, and, in particular, is always $\geq1$.
+:::: {.rmenv title="The third Betti number is equal to the dimension of the vector space of invariant quadratic forms" latex="{The third Betti number is equal to the dimension of the vector space of invariant quadratic forms}"}
+In particular, it is always $\geq1$.
 An invariant quadratic form is a _symmetric_ bilinear form $f(x,y)$ such that $f(\theta(z)\cdot x,y)+f(x,\theta(z)\cdot y)=0$ for all $z\in\frak{a}$.
 We define, as follows, an isomorphism from the vector space $(\frak{J}')^{(3)}$ of invariant cochains of degree $3$ to the space of invariant quadratic forms:
 let $\alpha'$ be invariant and of degree $3$;
 for every $x\in\frak{a}$, we know that $i(x)\cdot\alpha'$ is a cocycle of degree $2$, and thus cohomologous to $0$;
 there thus exists a unique cochain $x'$ of degree $1$ such that $\delta x'=i(x)\cdot\alpha'$;
-the map $x\mapsto x'$ from $\frak{a}$ to $\frak{a}'$ defines a
+the map $x\mapsto x'$ from $\frak{a}$ to $\frak{a}'$ defines a bilinear form $f(x,y)=\langle y,x'\rangle$.
 \oldpage{49}
-bilinear form $f(x,y)=\langle y,x'\rangle$.
 We have
+
+::: {.eqref #equation-II.2}
 $$
-\label{equation-II.2}
   f(x,[y,z])
   = -\langle x\wedge y\wedge z,\alpha'\rangle,
 \tag{2}
 $$
+:::
+
 and $f$ is symmetric and invariant.
 Conversely, if $f$ is a symmetric invariant bilinear form, then there exists a unique cochain $\alpha'$ such that [(2)](#equation-II.2) holds, and this cochain is invariant.
 QED.
+::::
 
-\medskip
-\textbf{Remark.}
+
+::: {.rmenv title="Remark" latex="{Remark}"}
 This converse holds even without the semi-simplicity assumption.
 In particular, the invariant symmetric bilinear form $\tr\theta(x)\theta(y)$ defines an invariant cochain of degree $3$, called the _Cartan cochain_.
+:::
 
-\medskip
-\textbf{Corollary.}
-{\itshape
-  If $\frak{a}$ is a Lie algebra such that the _uniqueness_ (up to a scalar multiple) of an invariant quadratic form is assured, then the third Betti number of $\frak{a}$ is equal to $1$.
-  This is notably the case for the algebra of a compact connected Lie group, or for a simple Lie algebra over an algebraically closed field.
-}
+::: {.itenv title="Corollary" latex="{Corollary}"}
+If $\frak{a}$ is a Lie algebra such that the _uniqueness_ (up to a scalar multiple) of an invariant quadratic form is assured, then the third Betti number of $\frak{a}$ is equal to $1$.
+This is notably the case for the algebra of a compact connected Lie group, or for a simple Lie algebra over an algebraically closed field.
+:::
 
+
+
+
+
+
+<!--
 \section{Homomorphisms from one Lie algebra to another}
 \label{II.6}
 
