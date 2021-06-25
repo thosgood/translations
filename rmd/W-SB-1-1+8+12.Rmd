@@ -164,18 +164,16 @@ It can be calculated using the following rules (which don't need explicit knowle
 
 \oldpage{10}
 
+::: {.eqref #equation-I.2}
 3. Finally, we have the "fundamental formula of the calculation of variations":
     on the space $\Lambda(E')$ of exterior differential forms,
-
-    ::: {.eqref #equation-I.2}
     $$
       \theta(X) = i(X)\dd + \dd\cdot i(X),
     \tag{2}
     $$
-    :::
-    
     where $i(X)$ denotes, as in [§I.2](#I.2), the interior product.
     (Proof: both sides of the equation are derivations that commute with $\dd$ and that are equal on functions).
+:::
 
 
 ## Lie groups {#I.5}
@@ -198,7 +196,7 @@ Since $\theta(X)$ is zero on the scalars (constant functions), we have:
 $$
   \langle \theta(X)\cdot Y,\omega \rangle + \langle Y,\theta(X)\cdot\omega \rangle
   = 0
-  \qquad\mbox{for $Y\in\frak{a}$ and $\omega\in\frak{a}'$.}
+  \qquad\text{for }Y\in\frak{a}\text{ and }\omega\in\frak{a}'.
 \tag{3}
 $$
 :::
@@ -208,9 +206,7 @@ In other words, $\theta(X)$ (acting on forms) is the _transpose_ of $-\theta(X)$
 The vector space $\frak{a}$, endowed with the structure defined by the map $(X,Y)\mapsto[X,Y]$ from $\frak{a}\times\frak{a}$ to $\frak{a}$, is the _Lie algebra_ of the group $G$.
 
 
-<!--
-\section{Lie algebras}
-\label{I.6}
+## Lie algebras {#I.6}
 
 We start with an abstract Lie algebra $\frak{a}$ (under the classical definition), taken over a field $K$ that is, for now, arbitrary.
 Let $n$ be the dimension of the vector space $\frak{a}$ over $K$.
@@ -237,11 +233,14 @@ The elements of $\Lambda(\frak{a})$ (resp. of $\Lambda(\frak{a}')$) for which $\
 The invariant elements of $\Lambda(\frak{a})$ form a _sub-algebra_ $\frak{J}$, and those of $\Lambda(\frak{a}')$ form a sub-algebra $\frak{J}'$.
 
 Equation [(2)](#equation-I.2) leads us to define an endomorphism $\delta$ of $\Lambda(\frak{a}')$ that is zero on the scalars, and such that
+
+::: {.eqref #equation-I.4}
 $$
-\label{equation-I.4}
   \theta(x) = i(x)\delta + \delta i(x).
 \tag{4}
 $$
+:::
+
 Furthermore, such an operator is unique, commutes with the $\theta(x)$, and satisfies $\delta\delta=0$;
 it is an _antiderivation_, characterised by
 $$
@@ -278,22 +277,20 @@ there is not, in general, a multiplication in $\HH(\frak{a})$, since $\partial$ 
 We have that $\HH(\frak{a})$ and $\HH(\frak{a}')$ are naturally in duality;
 for each degree $p$, $\HH^p(\frak{a})$ and $\HH^p(\frak{a}')$ are in duality, and thus of the same dimension.
 If $\frak{a}$ is the Lie algebra of a _compact connected group_, then $\HH(\frak{a}')$ can be identified with the cohomology algebra of the (topological) space of the group, by the de Rham theorem.
-This proves that
 \oldpage{12}
-any two compact connected groups that are locally isomorphic have the same Betti number.
+This proves that any two compact connected groups that are locally isomorphic have the same Betti number.
 In all cases, the common dimension of $\HH^p(\frak{a})$ and $\HH^p(\frak{a}')$ is called the _$p$-th Betti number_ of the Lie algebra $\frak{a}$.
 
-\medskip
-\textbf{Unimodularity.}
+::: {.rmenv #I-unimodularity title="Unimodularity" latex="{Unimodularity}"}
 We say that $\frak{a}$ is _unimodular_ if $\theta(x)$ (for _all_ $x\in\frak{a}$), considered as an endomorphism of $\frak{a}$ (the _adjoint_ representation) has _zero trace_;
 an equivalent condition is that the chain $\omega$ of degree $n$ is a _cycle_;
 another equivalent condition is that $\omega$ is _invariant_.
 
 If $\frak{a}$ is unimodular, then $\alpha\mapsto\omega\llp\alpha'$ defines an isomorphism from $\HH^p(\frak{a}')$ to $\HH^{n-p}(\frak{a})$;
 this corresponds to the "Poincaré duality theorem" for the Betti numbers of a manifold.
+:::
 
-\medskip
-\textbf{Expansions in a basis.}
+::: {.rmenv #I-expansions title="Expansions in a basis" latex="{Expansions in a basis}"}
 We can express $\delta$ and $\partial$ in terms of a basis $(x_k)$ of $\frak{a}$ and the dual basis $(x'_k)$ of $\frak{a}'$ (when $K$ is of characteristic $\neq2$):
 $$
   \begin{aligned}
@@ -305,23 +302,31 @@ $$
     \qquad\mbox{if $\frak{a}$ is _unimodular_.}
   \end{aligned}
 $$
+:::
 
-\medskip
-\textbf{Semi-simple Lie algebras.}
+::: {.rmenv #I-semisimple title="Semi-simple Lie algebras" latex="{Semi-simple Lie algebras}"}
 We say that a Lie algebra is _semi-simple_ if it has no radical, or, equivalently (at least if $K$ is of characteristic $0$), if all its representations are completely reducible.
 If $\frak{a}/\frak{c}$ is semi-simple (where $\frak{c}$ is the centre of $\frak{a}$), then we have a canonical isomorphism from $\HH(\frak{a}')$ to $\frak{J}'$, and from $\HH(\frak{a})$ to $\frak{J}$ (and thus a multiplicative structure on $\HH(\frak{a})$ in this case).
 
 If $\frak{a}$ is semi-simple, then its centre is trivial, the Betti numbers in dimensions $1$ and $2$ are zero, and the Betti number in dimension $3$ is equal to the dimension of the vector space of _invariant quadratic forms_ (where an invariant quadratic form is a bilinear map $f(x,y)$ such that $f(y,x)=f(x,y)$ and $f(\theta(z)\cdot x,y)+f(x,\theta(z)\cdot y)=0$).
+:::
 
-\medskip
-\textbf{Corollary.}
+::: {.rmenv title="Corollary" latex="{Corollary}"}
 If $K$ is maximal and quasi-real, and $\frak{a}$ is _simple_, then the third Betti number is equal to $1$.
+:::
+
+
+# Part II (March 1949)
+
+## Reminder of notation {#II.1}
+
+\oldpage{45}
 
 
 
-\part{(March 1949)}
-\label{II}
 
+
+<!--
 \oldpage{45}
 \section{Reminder of notation}
 \label{II.1}
