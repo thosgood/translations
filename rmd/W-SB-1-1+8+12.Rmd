@@ -1,0 +1,37 @@
+--- 
+title: "The work of Koszul"
+author: "Henri Cartan"
+date: "1948--49"
+original: 'Cartan, H. "Les travaux de Koszul". _Séminaire Bourbaki_ **1** (1952), Talk no. 1, 7--12 [[PDF]](http://www.numdam.org/book-part/SB_1948-1951__1__7_0); Talk no. 8, 45--52 [[PDF]](http://www.numdam.org/book-part/SB_1948-1951__1__45_0); Talk no. 12, 71--74 [[PDF]](http://www.numdam.org/book-part/SB_1948-1951__1__71_0).'
+github-repo: "thosgood/translations"
+favicon: "favicon.ico"
+---
+
+```{r, child = '_translator-note.Rmd'}
+```
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\providecommand{\llp}{\mathbin{\llcorner}}
+\providecommand{\lrp}{\mathbin{\lrcorner}}
+\providecommand{\dd}{\mathrm{d}}
+\providecommand{\RR}{\mathbb{R}}
+\providecommand{\HH}{\operatorname{H}}
+\providecommand{\tr}{\operatorname{tr}}
+
+<!-- Content -->
+
+# **I.** (December 1948) {.unnumbered #I}
+
+\oldpage{7}
+The homology and cohomology of a _compact_ Lie group can be directly studied via the Lie algebra of the group (cf. Chevalley and Eilenberg, "Cohomology theory of Lie groups and Lie algebras", _Trans. Amer. Math. Soc_ **63** (1948), 85--124).
+Proceeding like so, we can study Lie algebras over an arbitrary field (most often of characteristic zero);
+the compactness hypotheses are then replaced with _semi-simplicity_ hypotheses.
+The current conference aims to explain certain algebraic tools that are useful for this study, and to prove the first results obtained (notably the theorem on the third Betti number).
+In a later conference, we will introduce notions concerning a sub-algebra of a Lie algebra, and its corresponding "homogeneous space".
