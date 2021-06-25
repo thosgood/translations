@@ -254,7 +254,7 @@ $$
   \langle\partial\alpha,\alpha'\rangle
   = -\langle\alpha,\delta\alpha'\rangle.
 $$
-Then $\partial$ commutes with the $\theta(x)$, satisfies $\partial\partial=0$, maps $\Lambda^p(\frak{a})$ to $\Lambda^{p+1}(\frak{a})$, and is \emph{zero on $\frak{a}$};
+Then $\partial$ commutes with the $\theta(x)$, satisfies $\partial\partial=0$, maps $\Lambda^p(\frak{a})$ to $\Lambda^{p+1}(\frak{a})$, and is _zero on $\frak{a}$_;
 finally, we have that
 $$
   \begin{aligned}
@@ -410,10 +410,13 @@ Every time that we speak of semi-simplicity, the field $K$ will be assumed to be
 We have the following equivalent characterisations of semi-simple Lie algebras
 
 a. every square-zero ideal (i.e. giving rise to an invariant abelian subgroup) is the ideal $\{0\}$;
+
 b. the quadratic form $\tr(\theta(x)\theta(y))$ is regular;
+
 c. $\frak{a}$ is the direct sum of _simple_ algebras (i.e. algebras of dimension $>1$ with only trivial ideals, namely $\{0\}$ and the whole algebra itself);
     such a decomposition is then unique.
     (In principal, determining $\HH(\frak{a})$ and $\HH(\frak{a}')$ for semi-simple $\frak{a}$ thus reduces to determining the homology and cohomology of the simple algebras) ; and
+
 d. every _representation_ of $\frak{a}$ in the endomorphism algebra of a vector space $E$ (of finite dimension over $K$) is _completely reducible_ (i.e. every invariant subspace admits an invariant complement).
 
 \oldpage{47}
@@ -524,13 +527,7 @@ This is notably the case for the algebra of a compact connected Lie group, or fo
 :::
 
 
-
-
-
-
-<!--
-\section{Homomorphisms from one Lie algebra to another}
-\label{II.6}
+## Homomorphisms from one Lie algebra to another {#II.6}
 
 Let $\frak{b}$ and $\frak{a}$ be arbitrary Lie algebras (over the same field $K$), and let $\varphi$ be a homomorphism from $\frak{b}$ to $\frak{a}$;
 then $\varphi$ extends to a homomorphism, again denoted by $\varphi$, from the _algebra_ $\Gamma(\frak{b})$ to the _algebra_ $\Gamma(\frak{a})$.
@@ -539,32 +536,23 @@ furthermore, the extensions of $\varphi$ and $\varphi^*$ are _transpose to one a
 We have $\partial\varphi=\varphi\partial$ and $\delta\varphi^*=\varphi^*\delta$, whence a homomorphism $\widetilde{\varphi}$ from $\HH(\frak{b})$ to $\HH(\frak{a})$, and a homomorphism $\widetilde{\varphi}^*$ from $\HH^(\frak{a}')$ to $\HH(\frak{b}')$, with $\widetilde{\varphi}^*$ being the transpose of $\widetilde{\varphi}$.
 The homomorphism $\widetilde{\varphi}^*$ is also a homomorphism for the multiplicative structures.
 
-\medskip
-\textbf{Theorem 1.}
-\label{theorem1}
-{\itshape
-  If the algebras $\frak{a}$ and $\frak{b}$ are _reductive_, then $\widetilde{\varphi}$ is a homomorphism for the multiplicative structures of $\HH(\frak{b})$ and $\HH(\frak{a})$.
-}
-\medskip
+::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
+If the algebras $\frak{a}$ and $\frak{b}$ are _reductive_, then $\widetilde{\varphi}$ is a homomorphism for the multiplicative structures of $\HH(\frak{b})$ and $\HH(\frak{a})$.
+:::
 
 This can be proved by using:
 
-\medskip
-\textbf{Lemma 2.}
-\label{lemma2}
-{\itshape
-  Let $\frak{a}$ be an arbitrary Lie algebra;
-  then, for any chains $\alpha$ and $\beta$ of $\Gamma(\frak{a})$, the chain
-  $$
-    \partial(\alpha\wedge\beta) + (\partial\alpha)\wedge\beta - \overline{\alpha}\wedge(\partial\beta)
-  $$
-  is orthogonal to the invariant cochains.
-}
-\medskip
+::: {.itenv #lemma-2 title="Lemma 2" latex="{Lemma 2}"}
+Let $\frak{a}$ be an arbitrary Lie algebra;
+then, for any chains $\alpha$ and $\beta$ of $\Gamma(\frak{a})$, the chain
+$$
+  \partial(\alpha\wedge\beta) + (\partial\alpha)\wedge\beta - \overline{\alpha}\wedge(\partial\beta)
+$$
+is orthogonal to the invariant cochains.
+:::
 
-With this, we consider a reductive Lie algebra, and we will show that, if $\alpha$ and
+With this, we consider a reductive Lie algebra, and we will show that, if $\alpha$ and$\overline{\alpha}\wedge\partial\gamma$ are cycles, then $\overline{\alpha}\wedge\partial\gamma$ is a boundary:
 \oldpage{50}
-$\overline{\alpha}\wedge\partial\gamma$ are cycles, then $\overline{\alpha}\wedge\partial\gamma$ is a boundary:
 indeed, by [Lemma 2](#lemma-2),
 $\partial(\alpha\wedge\gamma)-\overline{\alpha}\wedge\partial\gamma$ is orthogonal to the invariant cochains, and, since it is a cycle, it is orthogonal to the coboundaries;
 it is thus orthogonal to all the cocycles, and thus is a boundary;
@@ -584,8 +572,7 @@ The proof of [Theorem 1](#theorem-1) goes as follows:
 $\beta_1$ and $\beta_2$ are _invariant_ chains of $\Gamma(\frak{b})$, and so $\varphi(\beta_1)$, $\varphi(\beta_2)$, and $\varphi(\beta_1\wedge\beta_2)$ are all cycles in $\Gamma(\frak{a})$, and so the class of $\varphi(\beta_1\wedge\beta_2)=\varphi(\beta_1)\wedge\varphi(\beta_2)$ is the product of the classes of $\varphi(\beta_1)$ and $\varphi(\beta_2)$.
 
 
-\section{The Hopf--Samelson theorem}
-\label{II.7}
+## The Hopf--Samelson theorem {#II.7}
 
 This theorem is proven for reductive Lie algebras, using [Theorem 1](#theorem-1) above.
 First, let $\frak{a}$ be an arbitrary Lie algebra, and $\varphi$ the "diagonal map" from $\frak{a}$ to $\frak{a}\oplus\frak{a}\subset\Gamma(\frak{a})\otimes\Gamma(\frak{x})$:
@@ -627,59 +614,49 @@ The duality between $A\otimes A$ and $A'\otimes A'$ is defined by $\langle\alpha
 In such a situation, we say that the homogeneous elements of degree $\geq1$ of $A$ (resp. of $A'$) that are orthogonal to the products $\alpha'\cdot\beta'$ with $\alpha'$ and $\beta'$ of degree $\geq1$ (resp. to the products $\alpha\cdot\beta$ etc.) are _primitive_.
 We can then prove the following theorem of algebra:
 
-\medskip
-\textbf{The Hopf--Samelson theorem.}
-{\itshape
-  The _primitive_ elements of are _odd degree_;
-  they generate a vector subspace $P$ of $A$ (resp. $P'$ of $A'$);
-  the canonical map $P\to A$ (resp. $P'\to A'$) can be extended to give an _isomorphism from the exterior algebra $\Gamma(P)$ onto $A$_ (resp. an isomorphism from $\Gamma(P')$ onto $A'$);
-  when restricted to $P$ and $P'$, the duality between $A$ and $A'$ defines a duality between $P$ and $P'$;
-  this duality can be extended in the usual way to give a duality between $\Gamma(P)$ and $\Gamma(P')$ that, by identifying $\Gamma(P)$ with $A$, and $\Gamma(P')$ with $A'$, recovers the existing duality between $A$ and $A'$.
-}
+::: {.itenv #HS-theorem title="The Hopf--Samelson theorem" latex="{The Hopf--Samelson theorem}"}
+The _primitive_ elements of are _odd degree_;
+they generate a vector subspace $P$ of $A$ (resp. $P'$ of $A'$);
+the canonical map $P\to A$ (resp. $P'\to A'$) can be extended to give an _isomorphism from the exterior algebra $\Gamma(P)$ onto $A$_ (resp. an isomorphism from $\Gamma(P')$ onto $A'$);
+when restricted to $P$ and $P'$, the duality between $A$ and $A'$ defines a duality between $P$ and $P'$;
+this duality can be extended in the usual way to give a duality between $\Gamma(P)$ and $\Gamma(P')$ that, by identifying $\Gamma(P)$ with $A$, and $\Gamma(P')$ with $A'$, recovers the existing duality between $A$ and $A'$.
+:::
 
 The above statement thus applies if we take $A$ to be the homology algebra $\HH(\frak{a})$ of a reductive Lie algebra, and $A'$ to then be the cohomology algebra $\HH(\frak{a}')$.
 
-\medskip
-\textbf{Remark.}
+::: {.rmenv title="Remark" latex="{Remark}"}
 In the case where $\frak{a}$ is the Lie algebra of a compact connected group, the dimension of the space $P$ of primitive elements is equal to the _rank_ of the group, that is, to the maximal dimension of the abelian sub-algebras of $\frak{a}$.
 We still do not have an algebraic proof of this fact, which would prove this statement for a reductive Lie algebra.
+:::
 
 
-\section{Homomorphisms from a reductive algebra to a reductive algebra}
-\label{II.8}
+## Homomorphisms from a reductive algebra to a reductive algebra {#II.8}
 
 Let $\frak{a}$ and $\frak{b}$ be reductive algebras, and $\varphi$ a homomorphism from $\frak{b}$ to $\frak{a}$;
 we keep the notation form [§II.6](#II.6).
 Then every _primitive_ element of $\HH(\frak{b})$ is sent, by $\widetilde{\varphi}$, to a _primitive_ element of $\HH(\frak{a})$;
 every _primitive_ element of $\HH(\frak{a}')$ is sent, by $\widetilde{\varphi}^*$, to a _primitive_ element of $\HH(\frak{b}')$.
-Taking
+Taking [Theorem 1](#theorem-1) into account (from [§II.6](#II.6)), we thus deduce:
+
 \oldpage{52}
-[Theorem 1](#theorem-1) into account (from [§II.6](#II.6)), we thus deduce:
 
-\medskip
-\textbf{Theorem 2.}
+::: {.itenv #theorem-2 title="Theorem 2" latex="{Theorem 2}"}
 _(cf. Samelson)._
-{\itshape
-  The ideal of zeros of $\widetilde{\varphi}$ is the _ideal_ of $\HH(\frak{b})$ generated by the _primitive_ elements of $\HH(\frak{b})$ whose image under $\widetilde{\varphi}$ is zero;
-  the sub-algebra given by the image of $\widetilde{\varphi}$ is the _sub-algebra_ of $\HH(\frak{a})$ generated by the unit and by the _primitive_ elements of $\HH(\frak{a})$ that belong to the image of $\widetilde{\varphi}$.
-  The analogous properties hold for cohomology algebras.
-}
+The ideal of zeros of $\widetilde{\varphi}$ is the _ideal_ of $\HH(\frak{b})$ generated by the _primitive_ elements of $\HH(\frak{b})$ whose image under $\widetilde{\varphi}$ is zero;
+the sub-algebra given by the image of $\widetilde{\varphi}$ is the _sub-algebra_ of $\HH(\frak{a})$ generated by the unit and by the _primitive_ elements of $\HH(\frak{a})$ that belong to the image of $\widetilde{\varphi}$.
+The analogous properties hold for cohomology algebras.
+:::
 
-\medskip
-\textbf{Corollary.}
-{\itshape
-  Let $n$ denote the dimension of $\frak{b}$.
-  For $\widetilde{\varphi}$ to be _bijective_, it suffices that $\widetilde{\varphi}(\omega)\neq0$, where $\omega$ is the generating element of $\HH_n(\frak{b})$.
-}
+::: {.itenv title="Corollary" latex="{Corollary}"}
+Let $n$ denote the dimension of $\frak{b}$.
+For $\widetilde{\varphi}$ to be _bijective_, it suffices that $\widetilde{\varphi}(\omega)\neq0$, where $\omega$ is the generating element of $\HH_n(\frak{b})$.
+:::
 
-\medskip
 The next talk will be dedicated to the study of _relative_ homology and cohomology:
 given a sub-algebra $\frak{b}$ of $\frak{a}$, we define the homology (resp. cohomology) of the "homogeneous space" $\frak{a}/\frak{b}$, and we study the relations between the homology (resp. cohomology) of $\frak{a}$, of $\frak{b}$, and of $\frak{a}/\frak{b}$.
 
 
-
-\part{(May 1949)}
-\label{III}
+# Part III (May 1949) {#III}
 
 We keep the notation from the previous talk.
 However, we now write $\Gamma^*(\frak{a})$ (instead of $\Gamma(\frak{a}')$) to denote the exterior algebra of the dual of $\frak{a}$, which is in duality with $\Gamma(\frak{a})$ (the exterior algebra of $\frak{a}$).
@@ -697,13 +674,12 @@ the $\frak{b}$ is also reductive (i.e. reductive in itself).
 If $\frak{a}$ is a Lie algebra of a _compact_ group (an algebra over the field of reals), then every sub-algebra of $\frak{a}$ is reductive in $\frak{a}$.
 
 
-\section{Relative chains and cochains}
-\label{III.1}
+## Relative chains and cochains {#III.1}
 
 Let $\frak{b}$ be a sub-algebra of a Lie algebra $\frak{a}$;
 this gives a bijective homomorphism $\varphi\colon\Gamma(\frak{b})\to\Gamma(\frak{a})$, and its transpose $\varphi^*\colon\Gamma^*(\frak{a})\to\Gamma^*(\frak{b})$ (which is _onto_).
-A subspace of $\Gamma(\frak{a})$ (resp. of $\Gamma^*(\frak{a})$) is said to be \emph{$\frak{b}-stable$} if it is stable under the endomorphisms $\theta(x)$ (resp. $\theta^*(x)$) for all $x\in\frak{b}$.
-We denote by $I(\frak{a},\frak{b})$ the subspace of chains of $\frak{a}$ that are \emph{invariant under $\frak{b}$}, that is, the $\alpha\in\Gamma(\frak{a})$ such that $\theta(x)\cdot\alpha=0$ for all $x\in\frak{b}$.
+A subspace of $\Gamma(\frak{a})$ (resp. of $\Gamma^*(\frak{a})$) is said to be _$\frak{b}-stable$_ if it is stable under the endomorphisms $\theta(x)$ (resp. $\theta^*(x)$) for all $x\in\frak{b}$.
+We denote by $I(\frak{a},\frak{b})$ the subspace of chains of $\frak{a}$ that are _invariant under $\frak{b}$_, that is, the $\alpha\in\Gamma(\frak{a})$ such that $\theta(x)\cdot\alpha=0$ for all $x\in\frak{b}$.
 There is the analogous definition of the subspace $I^*(\frak{a},\frak{b})$ of $\frak{b}$-invariant cochains of $\frak{a}$.
 
 \oldpage{72}
@@ -732,8 +708,7 @@ The following results (some of which are new) explain the relations between the 
 We note that $G$ is the fibre bundle with fibre $U$ and base $W$.
 
 
-\section{Canonical homomorphisms}
-\label{III.2}
+## Canonical homomorphisms {#III.2}
 
 We have
 $$
@@ -756,14 +731,13 @@ the image of $\widetilde{\varphi}^*$ is contained inside the kernel of $\widetil
 
 If $\frak{a}$ is a _reductive_ algebra, then the kernel of $\HH(\frak{a})\to\HH(\frak{a},\frak{b})$ is a two-sided _ideal_ of the _algebra_ $\HH_*(\frak{a})$.
 If, furthermore, $K$ is of characteristic $0$, then the Hopf theorem applies to $\HH^*(\frak{a})$, which can be identified with the exterior algebra of the subspace of its _primitive_ elements;
-then the image of $\HH^*(\frak{a},\frak{b})\to\HH^*(\frak{a})$ is a sub-algebra of $\HH^*(\frak{a})$ that is \emph{generated by the unit and by the primitive elements of $\HH^*(\frak{a})$}.
+then the image of $\HH^*(\frak{a},\frak{b})\to\HH^*(\frak{a})$ is a sub-algebra of $\HH^*(\frak{a})$ that is _generated by the unit and by the primitive elements of $\HH^*(\frak{a})$_.
 
-If $\frak{b}$ is a \emph{reductive sub-algebra of $\frak{a}$}, then we have a homology algebra $\HH_*(\frak{b})$, and the kernel of $\HH(\frak{b})\to\HH(\frak{a})$ is a two-sided _ideal_ of $\HH_*(\frak{b})$.
-If, furthermore, $K$ is of characteristic $0$, then the image of $\HH^*(\frak{a})\to\HH^*(\frak{b})$ is a sub-algebra of $\HH^*(\frak{b})$ that is \emph{generated by the unit and by the primitive elements of $\HH^*(\frak{b})$}.
+If $\frak{b}$ is a _reductive sub-algebra of $\frak{a}$_, then we have a homology algebra $\HH_*(\frak{b})$, and the kernel of $\HH(\frak{b})\to\HH(\frak{a})$ is a two-sided _ideal_ of $\HH_*(\frak{b})$.
+If, furthermore, $K$ is of characteristic $0$, then the image of $\HH^*(\frak{a})\to\HH^*(\frak{b})$ is a sub-algebra of $\HH^*(\frak{b})$ that is _generated by the unit and by the primitive elements of $\HH^*(\frak{b})$_.
 
 
-\section{Poincaré duality for relative homology and cohomology}
-\label{III.3}
+## Poincaré duality for relative homology and cohomology {#III.3}
 
 Let $n$ (resp. $m$) be the dimension of $\frak{a}$ (resp. $\frak{b}$).
 Let $\omega$ be the image in $\Gamma(\frak{a})$ of the $m$-dimensional chain of $\Gamma(\frak{b})$ (defined up to a constant factor).
@@ -775,7 +749,7 @@ So $\alpha'\mapsto i(\alpha')\cdot\tau$ defines an _isomorphism_ from $N^*(\frak
 From now on, suppose that $\frak{a}$ and $\frak{b}$ are _unimodular_;
 then $\dot{\tau}$ is a $\frak{b}$-invariant element of $\Gamma(\frak{a})/N(\frak{a},\frak{b})$, and so $\alpha'\mapsto i(\alpha')\cdot\lambda$ defines an isomorphism from $N^*(\frak{a},\frak{b})\cap I^*(\frak{a},\frak{b}) = L^*(\frak{a},\frak{b})$ onto the subspace of $\frak{b}$-invariant elements of $\Gamma(\frak{a})/N(\frak{a},\frak{b})$.
 
-If, furthermore, $\frak{b}$ is \emph{reductive in $\frak{a}$}, then this subspace can be identified with $L(\frak{a},\frak{b}) = \Gamma(\frak{a})/N(\frak{a},\frak{b})+\partial N(\frak{a},\frak{b})$.
+If, furthermore, $\frak{b}$ is _reductive in $\frak{a}$_, then this subspace can be identified with $L(\frak{a},\frak{b}) = \Gamma(\frak{a})/N(\frak{a},\frak{b})+\partial N(\frak{a},\frak{b})$.
 This gives an isomorphism $f$ from $L^*(\frak{a},\frak{b})$ onto $L(\frak{a},\frak{b})$.
 Furthermore,
 $$
@@ -783,20 +757,18 @@ $$
   = i(\delta\overline{\alpha}')\cdot\tau + i(\overline{\alpha}')\cdot\partial\tau.
 $$
 But the fact that $\frak{b}$ is reductive in $\frak{a}$ implies that $\partial\tau\in N+\partial N$, and since $i(\overline{\alpha}')\cdot(N+\partial N)\subset N+\partial N$, we have that $\partial f(\alpha')=f(\delta\overline{\alpha}')$.
-By passing to quotients, $f$ thus defines an \emph{isomorphism from $\HH(\frak{a},\frak{b})$ onto $\HH^*(\frak{a},\frak{b})$} that
+By passing to quotients, $f$ thus defines an _isomorphism from $\HH(\frak{a},\frak{b})$ onto $\HH^*(\frak{a},\frak{b})$_ that sends degree $p$ elements to degree $(n-m-p)$ elements.
 \oldpage{74}
-sends degree $p$ elements to degree $(n-m-p)$ elements.
-We thus deduce that the "relative" Betti numbers are equal for dimensions $p$ and $(n-m-p)$ ("Poincaré duality"), and that \emph{every non-zero ideal of $\HH^*(\frak{a},\frak{b})$ contains $\HH^{n-m}(\frak{a},\frak{b})$}.
+We thus deduce that the "relative" Betti numbers are equal for dimensions $p$ and $(n-m-p)$ ("Poincaré duality"), and that _every non-zero ideal of $\HH^*(\frak{a},\frak{b})$ contains $\HH^{n-m}(\frak{a},\frak{b})$_.
 
 
-\section{Sub-algebras that are not homologous to zero}
-\label{III.4}
+## Sub-algebras that are not homologous to zero {#III.4}
 
-From now on, we also suppose that the sub-algebra $\frak{b}$ of $\frak{a}$ is \emph{reductive in $\frak{a}$}.
+From now on, we also suppose that the sub-algebra $\frak{b}$ of $\frak{a}$ is _reductive in $\frak{a}$_.
 Let $m$ be the dimension of $\frak{b}$.
 
 For $\HH(\frak{b})\xrightarrow{\widetilde{\varphi}}\HH(\frak{a})$ to be _bijective_, it _suffices_ for $\HH_m(\frak{b})$ (which consists of multiples of a single element) to not be contained in the kernel of $\widetilde{\varphi}$ (since every two-sided ideal of $\HH_*(\frak{b})$ that does not contain $\HH_m(\frak{b})$ is zero).
-We then say that $\frak{b}$ is \emph{not homologous to zero in $\frak{a}$}.
+We then say that $\frak{b}$ is _not homologous to zero in $\frak{a}$_.
 
 If $\frak{b}$ is not homologous to zero in $\frak{a}$, then $\HH^*(\frak{a},\frak{b})\to\HH^*(\frak{a})$ is _bijective_ (and the converse is also true).
 So, if $\frak{a}$ is further assumed to be reductive, and the base field to be of characteristic $0$, then $\HH^*(\frak{a},\frak{b})$ has a subspace whose homogeneous components are of _odd degree_, and that can be identified with the _exterior algebra of this subspace_.
@@ -809,5 +781,4 @@ $$
 $$
 and we can show that this is an _onto isomorphism_ ("Samelson's theorem").
 
-The case of _sub-algebras that are homologous to zero_ will not be examined here (see instead the thesis of Koszul: _Bull. Soc. Math. France_ \textbf{78} (1950), 65--127).
- -->
+The case of _sub-algebras that are homologous to zero_ will not be examined here (see instead the thesis of Koszul: _Bull. Soc. Math. France_ **78** (1950), 65--127).
