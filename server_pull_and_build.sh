@@ -41,8 +41,8 @@ elif [ "$ALL_TYPE" == "rmd" ]; then
   NEW_RMD=$(find rmd _in-progress -name '*.Rmd')
 else
   # Only get changed files
-  NEW_TEX=$(git diff --name-only master origin/master | grep -E '.tex$')
-  NEW_RMD=$(git diff --name-only master origin/master | grep -E '.Rmd$')
+  NEW_TEX=$(git diff --name-only main origin/main | grep -E '.tex$')
+  NEW_RMD=$(git diff --name-only main origin/main | grep -E '.Rmd$')
 fi
 
 if [ -z "$NEW_TEX" ] && [ -z "$NEW_RMD" ]; then
