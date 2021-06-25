@@ -64,9 +64,8 @@ $$
   i(x'_1\wedge\ldots\wedge x'_p)
   = i(x'_p)\ldots i(x'_1).
 $$
-We write
 \oldpage{8}
-$\alpha\llp\alpha'$ to mean $i(\alpha')\cdot\alpha$.
+We write $\alpha\llp\alpha'$ to mean $i(\alpha')\cdot\alpha$.
 We similarly define $i(\alpha)$, which acts on $\Lambda(E')$;
 we denote $i(\alpha)\cdot\alpha'$ by $\alpha\lrp\alpha'$.
 We have $i(\alpha\wedge\beta)=i(\beta)i(\alpha)$.
@@ -163,7 +162,7 @@ It can be calculated using the following rules (which don't need explicit knowle
       \theta(\theta(X)\cdot Y) = \theta(X)\theta(Y) - \theta(Y)\theta(X),
     \tag{1}
     $$
-    which leads us to denote by $[X,Y]$ the vector field $\theta(X)\cdot Y$, and \hyperref[equation-I.1]{(1)} then gives the _Jacobi identity_
+    which leads us to denote by $[X,Y]$ the vector field $\theta(X)\cdot Y$, and [(1)](#equation-I.1) then gives the _Jacobi identity_
 \oldpage{10}
   \item Finally, we have the "fundamental formula of the calculation of variations":
     on the space $\Lambda(E')$ of exterior differential forms,
@@ -172,7 +171,7 @@ It can be calculated using the following rules (which don't need explicit knowle
       \theta(X) = i(X)\dd + \dd\cdot i(X),
     \tag{2}
     $$
-    where $i(X)$ denotes, as in \hyperref[I.2]{\S I.2}, the interior product.
+    where $i(X)$ denotes, as in [§I.2](#I.2), the interior product.
     (Proof: both sides of the equation are derivations that commute with $\dd$ and that are equal on functions).
 \end{itemize}
 
@@ -186,7 +185,7 @@ Then $\frak{a}$ and $\frak{a}'$ are $n$-dimensional vector spaces over the field
 The exterior algebra $\Lambda(\frak{a}')$ can be identified with the sub-algebra of $\Lambda(E')$ given by _left-invariant_ exterior differential forms, and it is _stable_ under the operator $\dd$ of exterior differentiation.
 (In particular, $\Lambda^0(\frak{a}')$ is the field of constant functions, identified with $\RR$).
 
-If $X\in\frak{a}$, then the automorphism group of $V$ defined by $X$ (cf. \hyperref[I.4]{\S I.4}) is the group of _right_-translations by elements of the subgroup of $G$;
+If $X\in\frak{a}$, then the automorphism group of $V$ defined by $X$ (cf. [§I.4](#I.4)) is the group of _right_-translations by elements of the subgroup of $G$;
 the orbit of the identity element.
 Thus $\Lambda(\frak{a})$ and $\Lambda(\frak{a}')$ are _stable_ under $\theta(X)$ if $X\in\frak{a}$.
 In particular, if $X$ and $Y$ are in $\frak{a}$, then $[X,Y]$ is in $\frak{a}$.
@@ -232,7 +231,7 @@ The $\theta(x)$ that acts on $\Lambda(\frak{a})$ is the _transpose_ of the $-\th
 The elements of $\Lambda(\frak{a})$ (resp. of $\Lambda(\frak{a}')$) for which $\theta(x)$ acts as zero (for _all_ $x\in\frak{a}$) are called _invariant_ (or _bi-invariant_) elements.
 The invariant elements of $\Lambda(\frak{a})$ form a _sub-algebra_ $\frak{J}$, and those of $\Lambda(\frak{a}')$ form a sub-algebra $\frak{J}'$.
 
-Equation \hyperref[equation-I.2]{(2)} leads us to define an endomorphism $\delta$ of $\Lambda(\frak{a}')$ that is zero on the scalars, and such that
+Equation [(2)](#equation-I.2) leads us to define an endomorphism $\delta$ of $\Lambda(\frak{a}')$ that is zero on the scalars, and such that
 $$
 \label{equation-I.4}
   \theta(x) = i(x)\delta + \delta i(x).
@@ -422,7 +421,7 @@ We have the following equivalent characterisations of semi-simple Lie algebras
 Every quotient algebra of a semi-simple algebra is semi-simple.
 We thus deduce:
 if $\frak{a}$ is semi-simple, then $\frak{a}$ is identical to the "derived" algebra $\frak{a}^2$.
-In particular, a semi-simple algebra is _unimodular_ (cf. \hyperref[I]{\S I}).
+In particular, a semi-simple algebra is _unimodular_ (cf. [§I](#I)).
 
 For every Lie algebra $\frak{a}$, the map $x\mapsto\theta(x)$ is a representation of $\frak{a}$ in the endomorphism algebra of the vector space $\Gamma(\frak{a})$;
 similarly, $x\mapsto\theta^*(\frak{a})$ is a representation in the endomorphism algebra of $\Gamma(\frak{a}')$.
@@ -436,7 +435,7 @@ The Lie algebra of a compact group is always reductive.
 \section{Homology of reductive Lie algebras}
 \label{II.4}
 
-In the representation $x\mapsto\theta(x)$ of $\frak{a}$ in the endomorphism algebra of $\Gamma(\frak{a})$, by \hyperref[equation-II.1]{(1)}, the $\theta(x)$ is a of a cycle is a boundary;
+In the representation $x\mapsto\theta(x)$ of $\frak{a}$ in the endomorphism algebra of $\Gamma(\frak{a})$, by [(1)](#equation-II.1), the $\theta(x)$ is a of a cycle is a boundary;
 similarly, the $\theta^*(x)$ of a cocycle is a coboundary.
 
 \medskip
@@ -460,7 +459,7 @@ $$
     &= \sum_k i(x'_k)^*\theta(x_k)
   \end{aligned}
 $$
-(where $(x_k)$ and $(x'_k)$ are dual bases; see \hyperref[I]{\S I}).
+(where $(x_k)$ and $(x'_k)$ are dual bases; see [§I](#I)).
 So $\HH(\frak{J})$ can be identified with $\frak{J}$,
 and
 \oldpage{48}
@@ -480,7 +479,7 @@ thus $\HH(\frak{a})$ and $\HH(\frak{a}')$ are (non-canonically) _isomorphic alge
 \label{II.5}
 
 A preliminary remark:
-for $\alpha'$ to be an _invariant_ cochain, it is necessary and sufficient that it be a cocycle, _and_ that the $i(x)\cdot\alpha'$ be cocycles for _all_ $x\in\frak{a}$ (by \hyperref[equation-II.1]{(1)}).
+for $\alpha'$ to be an _invariant_ cochain, it is necessary and sufficient that it be a cocycle, _and_ that the $i(x)\cdot\alpha'$ be cocycles for _all_ $x\in\frak{a}$ (by [(1)](#equation-II.1)).
 
 \medskip
 \textbf{The first Betti number is zero.}
@@ -513,7 +512,7 @@ $$
 \tag{2}
 $$
 and $f$ is symmetric and invariant.
-Conversely, if $f$ is a symmetric invariant bilinear form, then there exists a unique cochain $\alpha'$ such that \hyperref[equation-II.2]{(2)} holds, and this cochain is invariant.
+Conversely, if $f$ is a symmetric invariant bilinear form, then there exists a unique cochain $\alpha'$ such that [(2)](#equation-II.2) holds, and this cochain is invariant.
 QED.
 
 \medskip
@@ -564,7 +563,7 @@ This can be proved by using:
 With this, we consider a reductive Lie algebra, and we will show that, if $\alpha$ and
 \oldpage{50}
 $\overline{\alpha}\wedge\partial\gamma$ are cycles, then $\overline{\alpha}\wedge\partial\gamma$ is a boundary:
-indeed, by \hyperref[lemma2]{Lemma 2},
+indeed, by [Lemma 2](#lemma-2),
 $\partial(\alpha\wedge\gamma)-\overline{\alpha}\wedge\partial\gamma$ is orthogonal to the invariant cochains, and, since it is a cycle, it is orthogonal to the coboundaries;
 it is thus orthogonal to all the cocycles, and thus is a boundary;
 so $\overline{\alpha}\wedge\partial\gamma$ is indeed a boundary.
@@ -579,14 +578,14 @@ and, by what we have just shown, both of the terms on the right-hand side are bo
 
 From this it follows that, in a reductive Lie algebra, if $\alpha_1$ and $\alpha_2$ are cycles such that $\alpha_1\wedge\beta_1$ is a cycle, then the homology class of $\alpha_1\wedge\beta_1$ is the product of the homology classes of $\alpha_1$ and $\beta_1$.
 
-The proof of \hyperref[theorem1]{Theorem 1} goes as follows:
+The proof of [Theorem 1](#theorem-1) goes as follows:
 $\beta_1$ and $\beta_2$ are _invariant_ chains of $\Gamma(\frak{b})$, and so $\varphi(\beta_1)$, $\varphi(\beta_2)$, and $\varphi(\beta_1\wedge\beta_2)$ are all cycles in $\Gamma(\frak{a})$, and so the class of $\varphi(\beta_1\wedge\beta_2)=\varphi(\beta_1)\wedge\varphi(\beta_2)$ is the product of the classes of $\varphi(\beta_1)$ and $\varphi(\beta_2)$.
 
 
 \section{The Hopf--Samelson theorem}
 \label{II.7}
 
-This theorem is proven for reductive Lie algebras, using \hyperref[theorem1]{Theorem 1} above.
+This theorem is proven for reductive Lie algebras, using [Theorem 1](#theorem-1) above.
 First, let $\frak{a}$ be an arbitrary Lie algebra, and $\varphi$ the "diagonal map" from $\frak{a}$ to $\frak{a}\oplus\frak{a}\subset\Gamma(\frak{a})\otimes\Gamma(\frak{x})$:
 $$
   \varphi(x) = x\oplus x = x\otimes1 + 1\otimes x.
@@ -595,7 +594,7 @@ From this, we obtain a homomorphism $\varphi$ from $\Gamma(\frak{a})$ to $\Gamma
 $$
   \varphi(\alpha) = \alpha\times1 + \ldots + 1\otimes\alpha.
 $$
-The transpose map $\varphi^*$ from $\Gamma(\frak{a}')\otimes\Gamma(\frak{a}')$ to $\Gamma(\frak{a}')$ is an _algebra_ homomorphism (\hyperref[II.6]{\S II.6});
+The transpose map $\varphi^*$ from $\Gamma(\frak{a}')\otimes\Gamma(\frak{a}')$ to $\Gamma(\frak{a}')$ is an _algebra_ homomorphism ([§II.6](#II.6));
 it easily follows that
 $$
   \varphi^*(\alpha'\otimes\beta') = \alpha'\wedge\beta'.
@@ -648,12 +647,12 @@ We still do not have an algebraic proof of this fact, which would prove this sta
 \label{II.8}
 
 Let $\frak{a}$ and $\frak{b}$ be reductive algebras, and $\varphi$ a homomorphism from $\frak{b}$ to $\frak{a}$;
-we keep the notation form \hyperref[II.6]{\S II.6}.
+we keep the notation form [§II.6](#II.6).
 Then every _primitive_ element of $\HH(\frak{b})$ is sent, by $\widetilde{\varphi}$, to a _primitive_ element of $\HH(\frak{a})$;
 every _primitive_ element of $\HH(\frak{a}')$ is sent, by $\widetilde{\varphi}^*$, to a _primitive_ element of $\HH(\frak{b}')$.
 Taking
 \oldpage{52}
-\hyperref[theorem1]{Theorem 1} into account (from \hyperref[II.6]{\S II.6}), we thus deduce:
+[Theorem 1](#theorem-1) into account (from [§II.6](#II.6)), we thus deduce:
 
 \medskip
 \textbf{Theorem 2.}
