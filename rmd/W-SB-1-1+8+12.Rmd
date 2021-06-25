@@ -739,7 +739,7 @@ If, furthermore, $K$ is of characteristic $0$, then the image of $\HH^*(\frak{a}
 
 ## Poincaré duality for relative homology and cohomology {#III.3}
 
-Let $n$ (resp. $m$) be the dimension of $\frak{a}$ (resp. $\frak{b}$).
+<!-- Let $n$ (resp. $m$) be the dimension of $\frak{a}$ (resp. $\frak{b}$).
 Let $\omega$ be the image in $\Gamma(\frak{a})$ of the $m$-dimensional chain of $\Gamma(\frak{b})$ (defined up to a constant factor).
 Then $N(\frak{a},\frak{b})$ is the kernel of the endomorphism $\alpha\mapsto\omega\wedge\alpha$ of $\Gamma(\frak{a})$.
 Let $\tau\in\Gamma^{n-m}(\frak{a})$ be such that $\omega\wedge\tau\neq0$;
@@ -759,5 +759,26 @@ $$
 But the fact that $\frak{b}$ is reductive in $\frak{a}$ implies that $\partial\tau\in N+\partial N$, and since $i(\overline{\alpha}')\cdot(N+\partial N)\subset N+\partial N$, we have that $\partial f(\alpha')=f(\delta\overline{\alpha}')$.
 By passing to quotients, $f$ thus defines an _isomorphism from $\HH(\frak{a},\frak{b})$ onto $\HH^*(\frak{a},\frak{b})$_ that sends degree $p$ elements to degree $(n-m-p)$ elements.
 \oldpage{74}
-We thus deduce that the "relative" Betti numbers are equal for dimensions $p$ and $(n-m-p)$ ("Poincaré duality"), and that _every non-zero ideal of $\HH^*(\frak{a},\frak{b})$ contains $\HH^{n-m}(\frak{a},\frak{b})$_.
+We thus deduce that the "relative" Betti numbers are equal for dimensions $p$ and $(n-m-p)$ ("Poincaré duality"), and that _every non-zero ideal of $\HH^*(\frak{a},\frak{b})$ contains $\HH^{n-m}(\frak{a},\frak{b})$_. -->
 
+
+## Sub-algebras that are not homologous to zero {#III.4}
+
+From now on, we also suppose that the sub-algebra $\frak{b}$ of $\frak{a}$ is _reductive in $\frak{a}$_.
+Let $m$ be the dimension of $\frak{b}$.
+
+For $\HH(\frak{b})\xrightarrow{\widetilde{\varphi}}\HH(\frak{a})$ to be _bijective_, it _suffices_ for $\HH_m(\frak{b})$ (which consists of multiples of a single element) to not be contained in the kernel of $\widetilde{\varphi}$ (since every two-sided ideal of $\HH_*(\frak{b})$ that does not contain $\HH_m(\frak{b})$ is zero).
+We then say that $\frak{b}$ is _not homologous to zero in $\frak{a}$_.
+
+If $\frak{b}$ is not homologous to zero in $\frak{a}$, then $\HH^*(\frak{a},\frak{b})\to\HH^*(\frak{a})$ is _bijective_ (and the converse is also true).
+So, if $\frak{a}$ is further assumed to be reductive, and the base field to be of characteristic $0$, then $\HH^*(\frak{a},\frak{b})$ has a subspace whose homogeneous components are of _odd degree_, and that can be identified with the _exterior algebra of this subspace_.
+
+If $\frak{b}$ is not homologous to zero in $\frak{a}$, then $\HH^*(\frak{a})\to\HH^*(\frak{b})$ is evidently _onto_.
+If, furthermore, the field is of characteristic $0$, then we can define an isomorphism from the algebra $\HH^*(\frak{b})$ to the algebra $\HH^*(\frak{a})$, such that, by composing with the canonical map $\HH^*(\frak{a})\to\HH^*(\frak{b})$, we obtain the identity automorphism of $\HH^*(\frak{b})$.
+This map $\HH^*(\frak{b})\to\HH^*(\frak{a})$, along with the canonical map $\HH^*(\frak{a},\frak{b})\to\HH^*(\frak{a})$, define a _homomorphism of (graded) algebras_
+$$
+  \HH^*(\frak{b})\otimes\HH^*(\frak{a},\frak{b}) \to \HH^*(\frak{a}),
+$$
+and we can show that this is an _onto isomorphism_ ("Samelson's theorem").
+
+The case of _sub-algebras that are homologous to zero_ will not be examined here (see instead the thesis of Koszul: _Bull. Soc. Math. France_ **78** (1950), 65--127).
