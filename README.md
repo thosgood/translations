@@ -4,7 +4,6 @@
 
 - `.Rmd` versions of existing translations
   + [ ] `978-3-540-05190-9`
-  + [ ] `AIF-4-1952-73`
   + [ ] `BSMF-86-1958-97`
   + [ ] `MSRI-16-1989-79`
   + [ ] `MA-146-1962-331`
