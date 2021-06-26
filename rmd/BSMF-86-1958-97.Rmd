@@ -225,8 +225,9 @@ Conversely, if $Y\times Z\to Y$ is proper, then the composition $Z\to Y\times Z\
 Since the image of this map is a point, we immediately deduce that $Z$ is projective (by returning to the definition).
 :::
 
+(_[Trans.]_ The following corollary is labelled "Corollary 5" in the original, but this seems to be a numbering error).
+
 ::: {.itenv #corollary-5 title="Corollary" latex="{Corollary}"}
----^[_[Trans.]_ This corollary is labelled "Corollary 5" in the original, but this seems to be a numbering error.]
 For a morphism $f\colon X\to Y$ to be proper, it is necessary and sufficient for it to factor as $X\to \PP\times Y\to Y$, where $X\to \PP\times Y$ is an injection into a closed subvariety, and $\PP\times Y\to Y$ is the projection onto the second factor (where $\PP$ denotes some projective space).
 :::
 
@@ -873,7 +874,7 @@ b. If [R-R](#theorem-riemann-roch) is true of $\{fg,z\}$ and $\{f,y\}$, and if $
 :::
 
 ::: {.proof}
-_(of (a))._
+First we prove (a).
 By [R-R](#theorem-riemann-roch) for $g$, we have
 $$
   g_*(\ch(z)\cdot T(Z)) = \ch(y)\cdot T(Y).
@@ -885,10 +886,8 @@ $$
 $$
 
 Applying [R-R](#theorem-riemann-roch) for $\{f,y\}$, we see that the right-hand side of the above is equal to $\ch((fg)_!(z)\cdot T(X))$, which indeed proves [R-R](#theorem-riemann-roch) for $\{fg,z\}$.
-:::
 
-::: {.proof}
-_(of (b))._
+Now we prove (b).
 Let
 $$
   \begin{aligned}
@@ -950,9 +949,11 @@ b. an injection $f\colon Y\to X$ of a closed subvariety $Y$ of $X$.
 
 By [Lemma 16](#lemma-16), (a) follows from:
 
+\medskip
 a'. The homomorphism $K(X)\otimes K(\PP)\to K(X\times\PP)$ is surjective;
 
 a''. [R-R](#theorem-riemann-roch) is true for the map from $\PP$ to a point (or, in other words, the R-R-Hirzebruch formula is true for $\PP$).
+\medskip
 
 The next two sections are dedicated to the proof of (a') and (a'').
 The case of an injection (which is more difficult) will be covered later on.
