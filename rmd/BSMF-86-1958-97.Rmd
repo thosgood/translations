@@ -1,4 +1,4 @@
---- 
+---
 title: "The Riemann-Roch theorem"
 author: "Armand Borel and Jean-Pierre Serre"
 date: "1958"
@@ -274,8 +274,9 @@ For $q=0$, we have the sheaf associated to the presheaf given by the $\HH^0(f^{-
 this is the _direct image_ of the sheaf $\scr{F}$.
 We can show [@7] that the $\RR^qf$ are the _derived functors_ of the functor $\scr{F}\to\RR^0f(\scr{F})$ (where $\scr{F}$ runs over the category of all sheaves on $X$, coherent or not).
 
-\begin{rmenv}{Examples}
-  \phantom{.}
+::: {.rmenv title="Examples" latex="{Examples}"}
+—
+
   \begin{enumerate}
     \item If $X\to Y$ is an injection of a closed subvariety, then the sheaf $\RR^0f(\scr{F})$ is exactly the sheaf $\scr{F}$ extended by $0$ outside of $X$, and the sheaves $\RR^qf(\scr{F})$, for $q\geq1$, are zero (let $U$ be an affine open; then $f^{-1}(U)=U\cap X$ is affine, whence $\RR^qf(\scr{F})=0$).
       \label{example1}
@@ -302,10 +303,9 @@ to \hyperref[example3]{Example 3} above, then we see that $\RR^qf(\scr{O}_X)=0$ 
 We have seen (\hyperref[example2]{Example 2}) that the $\RR^qf(\scr{F})$ are not, in general, coherent sheaves on $Y$.
 However:
 
-\begin{itenv}{Theorem 1}
-\label{theorem1}
+::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
   If $f\colon X\to Y$ is proper, then the $\RR^qf(\scr{F})$, for $q>0$, are coherent sheaves on $Y$, for any coherent sheaf $\scr{F}$ on $X$.
-\end{itenv}
+:::
 
 Let $\PP$ be a projective space into which we can embed $X$, and let $G_f$ be the graph of $f$ in $\PP\times Y$.
 By definition of what it means to be a proper map, $G_f$ is closed in $\PP\times Y$.
@@ -314,18 +314,17 @@ if $\pi$ denotes the projection from $\PP\times Y$ to $Y$, then we immediately s
 _We can thus restrict to proving [Theorem 1](#theorem-1) for $\pi\colon \PP\times Y\to Y$_.
 Furthermore, since the question is local with respect to $Y$, we can assume that $Y$ is an affine variety.
 
-On $\PP$ we have a "standard" bundle $L$ of dimension $1$, whose sections are the linear forms (see \cite[chap. III, \S 2]{12});
+On $\PP$ we have a "standard" bundle $L$ of dimension $1$, whose sections are the linear forms (see [@12, Chap. III, §2]);
 this fibre defines a fibre on $X=\PP\times Y$ that we denote also by $L$.
 The sheaf associated to $L^n$ on $\PP\times Y$ will be denoted $\scr{O}_X(n)$.
 We then have:
 
-\begin{itenv}{Lemma 6}
-\label{lemma6}
+::: {.itenv #lemma-6 title="Lemma 6" latex="{Lemma 6}"}
   Every coherent algebraic sheaf $\scr{F}$ on $X=\PP\times Y$, with $Y$ affine, is isomorphic to a quotient of some direct sum of sheaves of the form $\scr{O}_X(n)$.
-\end{itenv}
+:::
 
 ::: {.proof}
-  When $Y$ consists of a single point, this is \cite[théorème 1, p. 247]{12}.  
+  When $Y$ consists of a single point, this is [@12, Théorème 1, p. 247].
   We are going to reduce to this particular case: let $Y\subset\PP'$ be an embedding of $Y$ into a projective space, and let $\overline{Y}$ be the closure of $Y$.
   By [Proposition 2](#proposition-2), the sheaf $\scr{F}$ can be extended to a sheaf $\overline{\scr{F}}$ on $\PP\times\overline{Y}$.
   The embedding of $\overline{Y}$ into $\PP'$ defines, on $\overline{Y}$ (and thus also on $\PP\times\overline{Y}$), a bundle $L'$ of dimension $1$.
@@ -336,10 +335,9 @@ We then have:
 
   [Of course, we could also give a direct proof, copied from the one in [@12].]
 
-\begin{itenv}{Lemma 7}
-\label{lemma7}
+::: {.itenv #lemma-7 title="Lemma 7" latex="{Lemma 7}"}
   The $\RR^q\pi(\scr{O}_X(n))$ are coherent sheaves on $Y$.
-\end{itenv}
+:::
 
 ::: {.proof}
   We explicitly calculate the sheaves $\RR^q\pi(\scr{O}_X(n))$.
@@ -384,11 +382,12 @@ We then have:
   It follows that $\RR^q\pi(\scr{F})$ admits a subsheaf of finite type, with the quotient being coherent.
   An immediate argument then shows that $\RR^q\pi(\scr{F})$ is of finite type.
   This result, having been proven for any coherent sheaf, also holds for $\scr{R}$.
-  The image of $\RR^q\pi(\scr{R})$ in $\RR^q\pi(\scr{L})$ is then a coherent sheaf (\cite[p. 208]{12}), and $\RR^q\pi(\scr{F})$ is an extension of two coherent sheaves, and is thus coherent (_id._).
+  The image of $\RR^q\pi(\scr{R})$ in $\RR^q\pi(\scr{L})$ is then a coherent sheaf ([@12, p. 208]), and $\RR^q\pi(\scr{F})$ is an extension of two coherent sheaves, and is thus coherent (_id._).
 :::
 
-\begin{rmenv}{Remarks}
-  \phantom{.}
+::: {.rmenv title="Remarks" latex="{Remarks}"}
+—
+
   \begin{enumerate}
     \item [Theorem 1](#theorem-1) holds true even if we don't suppose that $X$ is quasi-projective (we can restrict to this case by using Chow's lemma and the "devissage" of coherent sheaves, see [@6]).
     \item Grauert and Remmert have proven the analytic analogue of [Theorem 1](#theorem-1) for the projection $\pi\colon\PP\times Y\to Y$.
@@ -418,8 +417,8 @@ $$
 be an exact sequence of sheaves.
 To this exact sequence we associate the element $Q(E)=\scr{F}-\scr{F}'-\scr{F}''$ of $F(X)$.
 
-\begin{rmenv}{Definition}
-  We define the _group of classes of sheaves on $X$_ to be the quotient of $F(X)$ by the subgroup generated by the $Q(E)$, where $E$ runs over all short exact sequences.
+::: {.rmenv title="Definition" latex="{Definition}"}
+We define the _group of classes of sheaves on $X$_ to be the quotient of $F(X)$ by the subgroup generated by the $Q(E)$, where $E$ runs over all short exact sequences.
 :::
 
 This group will be denoted by $K(X)$ in what follows.
@@ -435,48 +434,44 @@ we define $F_1(X)$ to be the free group generated by $\cal{V}$, and $K_1(X)$ to 
 If $X$ is connected (which we will assume), then we know that we can identify vector bundles with locally free sheaves on $X$;
 we thus have $\cal{V}\subset\cal{C}$, and the injection $\cal{V}\to\cal{C}$ defines a canonical homomorphism $\varepsilon\colon K_1(X)\to K(X)$.
 
-\begin{itenv}{Theorem 2}
-\label{theorem2}
-  Suppose that $X$ is an irreducible non-singular quasi-projective variety.
-  Then the homomorphism $\varepsilon\colon K_1(X)\to K(X)$ defined above is a bijection.
-\end{itenv}
+::: {.itenv #theorem-2 title="Theorem 2" latex="{Theorem 2}"}
+Suppose that $X$ is an irreducible non-singular quasi-projective variety.
+Then the homomorphism $\varepsilon\colon K_1(X)\to K(X)$ defined above is a bijection.
+:::
 
 We will need a certain number of auxiliary results on the relation between $\cal{V}$ and $\cal{C}$:
 
-\begin{itenv}{Lemma 8}
-\label{lemma8}
-  Let $0\to\scr{Z}\to\scr{L}'\to\scr{L}\to0$ be an exact sequence such that $\scr{L}',\scr{L}\in\cal{V}$.
-  Then $\scr{Z}\in\cal{V}$.
-\end{itenv}
-
-::: {.proof}
-  \oldpage{106}
-  If $P\in X$, then the local module $\scr{L}_P$ is free over $\scr{O}_P$, and so a direct factor of $\scr{L}'_P$, which proves that $\scr{Z}_P$ is a projective $\scr{O}_P$-module, and thus free, since $\scr{O}_P$ is a local ring.
-  But a coherent algebraic sheaf such that all its stalks are free is itself locally free (see \cite[p. 242, lines 10--11 from the bottom]{12}).
+::: {.itenv #lemma-8 title="Lemma 8" latex="{Lemma 8}"}
+Let $0\to\scr{Z}\to\scr{L}'\to\scr{L}\to0$ be an exact sequence such that $\scr{L}',\scr{L}\in\cal{V}$.
+Then $\scr{Z}\in\cal{V}$.
 :::
 
-\begin{itenv}{Lemma 9}
-\label{lemma9}
-  Let $n=\dim X$, and let $0\to\scr{Z}\to\scr{L}_p\to\ldots\to\scr{L}_0\to\scr{F}\to0$ be an exact sequence, with $\scr{L}_i\in\cal{V}$.
-  If $p\geq n-1$, then $\scr{Z}\in\cal{V}$.
-\end{itenv}
-
 ::: {.proof}
-  This is again a local question.
-  So let $P\in X$;
-  the fact that the local ring $\scr{O}_P$ is a _regular_ local ring of dimension $n$ means that we can apply the syzygy theorem, and show that $\scr{Z}_P$ is $\scr{O}_P$-free, whence the desired result (noting that the hypothesis that $X$ is non-singular is used in an essential way).
+\oldpage{106}
+If $P\in X$, then the local module $\scr{L}_P$ is free over $\scr{O}_P$, and so a direct factor of $\scr{L}'_P$, which proves that $\scr{Z}_P$ is a projective $\scr{O}_P$-module, and thus free, since $\scr{O}_P$ is a local ring.
+But a coherent algebraic sheaf such that all its stalks are free is itself locally free (see [@12, p. 242, lines 10--11 from the bottom]).
 :::
 
-\begin{itenv}{Lemma 10}
-\label{lemma10}
-  Every $\scr{F}\in\cal{C}$ is a quotient of some $\scr{L}\in\cal{V}$.
-\end{itenv}
+::: {.itenv #lemma-9 title="Lemma 9" latex="{Lemma 9}"}
+Let $n=\dim X$, and let $0\to\scr{Z}\to\scr{L}_p\to\ldots\to\scr{L}_0\to\scr{F}\to0$ be an exact sequence, with $\scr{L}_i\in\cal{V}$.
+If $p\geq n-1$, then $\scr{Z}\in\cal{V}$.
+:::
 
 ::: {.proof}
-  Let $X\subset \PP$ be a projective embedding of $X$, and let $\overline{X}$ be its closure in $P$.
-  By [Proposition 2](#proposition-2), $\scr{F}$ can be extended to a sheaf $\scr{F}'$ on $\overline{X}$.
-  By \cite[théorème 1, p. 247]{12} (and see also [Lemma 6](#lemma-6)), the sheaf $\scr{F}'$ is the quotient of a direct sum of sheaves of the form $\scr{O}_{\overline{X}}(n)$, and thus a locally free sheaf on $\overline{X}$.
-  By restriction to $X$, we obtain the desired result.
+This is again a local question.
+So let $P\in X$;
+the fact that the local ring $\scr{O}_P$ is a _regular_ local ring of dimension $n$ means that we can apply the syzygy theorem, and show that $\scr{Z}_P$ is $\scr{O}_P$-free, whence the desired result (noting that the hypothesis that $X$ is non-singular is used in an essential way).
+:::
+
+::: {.itenv #lemma-10 title="Lemma 10" latex="{Lemma 10}"}
+Every $\scr{F}\in\cal{C}$ is a quotient of some $\scr{L}\in\cal{V}$.
+:::
+
+::: {.proof}
+Let $X\subset \PP$ be a projective embedding of $X$, and let $\overline{X}$ be its closure in $P$.
+By [Proposition 2](#proposition-2), $\scr{F}$ can be extended to a sheaf $\scr{F}'$ on $\overline{X}$.
+By [@12, Théorème 1, p. 247] (and see also [Lemma 6](#lemma-6)), the sheaf $\scr{F}'$ is the quotient of a direct sum of sheaves of the form $\scr{O}_{\overline{X}}(n)$, and thus a locally free sheaf on $\overline{X}$.
+By restriction to $X$, we obtain the desired result.
 :::
 
 \begin{itenv}{Corollary}
@@ -485,7 +480,7 @@ We will need a certain number of auxiliary results on the relation between $\cal
     0\to\scr{L}_n\to\scr{L}_{n-1}\to\ldots\to\scr{L}_0\to\scr{F}\to0
   $$
   with $\scr{L}_i\in\cal{V}$.
-\end{itenv}
+:::
 
 ::: {.proof}
   This is a consequence of [Lemma 9](#lemma-9) and [Lemma 10](#lemma-10).
@@ -502,14 +497,12 @@ We will need a certain number of auxiliary results on the relation between $\cal
   this is an element of $K_1(X)$;
   we define $\gamma(\scr{L})\in K(X)$ analogously.
   Suppose that the following two lemmas have been proven:
-  \begin{itenv}{Lemma 11}
-  \label{lemma11}
-    $\gamma_1(\scr{L})$ depends only on $\scr{F}$.
-  \end{itenv}
-  \begin{itenv}{Lemma 12}
-  \label{lemma12}
-    $\gamma_1(\scr{L})$ is an additive function of $\scr{F}$.
-  \end{itenv}
+  ::: {.itenv #lemma-11 title="Lemma 11" latex="{Lemma 11}"}
+      $\gamma_1(\scr{L})$ depends only on $\scr{F}$.
+  :::
+  ::: {.itenv #lemma-12 title="Lemma 12" latex="{Lemma 12}"}
+      $\gamma_1(\scr{L})$ is an additive function of $\scr{F}$.
+  :::
 
   Then, setting $\eta(\scr{F})=\gamma_1(\scr{L})$, we obtain a homomorphism $\eta\colon K(X)\to K_1(X)$.
   By the definition of $\scr{L}$, we have that
@@ -524,9 +517,8 @@ We will need a certain number of auxiliary results on the relation between $\cal
 
 ::: {.proof}[Proof of {[Lemma 11](#lemma-11)}]
   We first start by stating a corollary of [Lemma 10](#lemma-10):
-  \begin{itenv}{Lemma 13}
-  \label{lemma13}
-    Let $\scr{A},\scr{B},\scr{C}\in\cal{C}$, and let $u\colon\scr{A}\to\scr{B}$ and $v\colon\scr{C}\to\scr{B}$, with $u$ and $v$ surjective.
+  ::: {.itenv #lemma-13 title="Lemma 13" latex="{Lemma 13}"}
+      Let $\scr{A},\scr{B},\scr{C}\in\cal{C}$, and let $u\colon\scr{A}\to\scr{B}$ and $v\colon\scr{C}\to\scr{B}$, with $u$ and $v$ surjective.
     Then there exist $\scr{L}\in\cal{V}$, and $u'\colon\scr{L}\to\scr{C}$ and $v'\colon\scr{L}\to\scr{A}$, such that $v\circ u'=u\circ v'$, with $u'$ and $v'$ surjective:
     $$
       \begin{tikzcd}
@@ -536,7 +528,7 @@ We will need a certain number of auxiliary results on the relation between $\cal
         & \scr{B}
       \end{tikzcd}
     $$
-  \end{itenv}
+  :::
 
   ::: {.proof}
     Let $(\scr{A},\scr{C})$ be the subsheaf of $\scr{A}\times\scr{C}$ given by the elements having the same image in $\scr{B}$.
@@ -550,9 +542,8 @@ We will need a certain number of auxiliary results on the relation between $\cal
   But, if we denote by $\scr{L}_1$ the kernel of $\scr{L}''\to\scr{L}$, then $\scr{L}_1\in\cal{V}$, by [Lemma 8](#lemma-8), and the exact sequence of homology shows that $\HH^q(\scr{L}_1)=0$ for all $q\geq0$.
   We thus immediately deduce that $\gamma_1(\scr{L}_1)=0$, and, since $\gamma_1(\scr{L}'')=\gamma_1(\scr{L})+\gamma_1(\scr{L}_1)$, this gives the desired result.
   Everything thus relies only on proving the existence of the resolution $\scr{L}''$, which we do dimension by dimension (where [Lemma 9](#lemma-9) tells us that the procedure will eventually stop), using the following lemma:
-  \begin{itenv}{Lemma 14}
-  \label{lemma14}
-    Let
+  ::: {.itenv #lemma-14 title="Lemma 14" latex="{Lemma 14}"}
+      Let
     $$
       0\to\scr{Z}\to\scr{L}\to\scr{B}\to0
       \quad\text{and}\quad
@@ -595,7 +586,7 @@ We will need a certain number of auxiliary results on the relation between $\cal
         & 0
       \end{tikzcd}
     $$
-  \end{itenv}
+  :::
   ::: {.proof}
 \oldpage{108}
     By applying [Lemma 13](#lemma-13) to $\scr{L}\to\scr{B}$ and $\scr{B}''\to\scr{B}$, we see that $\scr{L}_1\to\scr{L}$ and $\scr{L}_1\to\scr{B}''$ are surjective.
@@ -666,10 +657,9 @@ are taken over the structure sheaf of $X$).
 Since $X$ is non-singular, $\Tor_p(\scr{F},\scr{G})=0$ when $p>\dim X$, which means that the alternating sum $\chi(\scr{F},\scr{G})=\sum(-1)^p\Tor_p(\scr{F},\scr{G})$ is a well-defined element of $K(X)$.
 The exact sequence of $\Tor$ shows that $\chi(\scr{F},\scr{G})$ is bilinear in $\scr{F}$ and $\scr{G}$, and so extends to a bilinear map from $K(X)\times K(X)$ to $K(X)$, that we will denote by $(x,x')\mapsto x\cdot x'$.
 
-\begin{itenv}{Proposition 6}
-\label{proposition6}
+::: {.itenv #proposition-6 title="Proposition 6" latex="{Proposition 6}"}
   The product defined above is commutative and associative.
-\end{itenv}
+:::
 
 ::: {.proof}
   Commutativity is trivial, since each $\Tor$ is commutative.
@@ -869,7 +859,7 @@ Then:
 \begin{itenv}{Theorem (Riemann-Roch)}
 \label{theoremriemannroch}
   $f_*(\ch(y)\cdot T(Y)) = \ch(f_!(y))\cdot T(X)$.
-\end{itenv}
+:::
 
 [The two sides of the equality are thought of as elements of $A(X)\otimes\mathbb{Q}$;
 with this in mind, we can say that [R-R](#theorem-riemann-roch) is a formula "modulo torsion";
@@ -894,15 +884,14 @@ this generality is somewhat illusory, by the linear character of [Theorem rieman
 The proof of [R-R](#theorem-riemann-roch) proceeds by reduction to particular cases of a projection and an injection.
 For this, we use the following lemma:
 
-\begin{itenv}{Lemma 15}
-\label{lemma15}
+::: {.itenv #lemma-15 title="Lemma 15" latex="{Lemma 15}"}
   Let $Z\xrightarrow{g}Y\xrightarrow{f}X$ be proper morphisms.
   Let $z\in K(Z)$ and let $y=g^!(z)$. Then:
   \begin{enumerate}[(a)]
     \item If [R-R](#theorem-riemann-roch) is true for $\{g,z\}$ and $\{f,y\}$, then it is also true for $\{fg,z\}$.
     \item If [R-R](#theorem-riemann-roch) is true of $\{fg,z\}$ and $\{f,y\}$, and if $f_*$ is injective, then [R-R](#theorem-riemann-roch) is also true for $\{g,z\}$.
   \end{enumerate}
-\end{itenv}
+:::
 
 ::: {.proof}[Proof of (a)]
   By [R-R](#theorem-riemann-roch) for $g$, we have
@@ -942,11 +931,10 @@ Now let $Y$ and $Y'$ be varieties, and consider their product $Y\times Y'$.
 The projections $Y\times Y'\to Y$ and $Y\times Y'\to Y'$ define homomorphisms $K(Y)\to K(Y\times Y')$ and $K(Y')\to K(Y\times Y')$, whence a homomorphism $K(Y)\otimes K(Y')\to K(Y\times Y')$.
 By an abuse of language, we also denote by $y\otimes y'$ the image in $K(Y\times Y')$ of the tensor product of two elements $y\in K(Y)$ and $y'\in K(Y')$.
 
-\begin{itenv}{Lemma 16}
-\label{lemma16}
+::: {.itenv #lemma-16 title="Lemma 16" latex="{Lemma 16}"}
   Let $f\colon Y\to X$ and $f'\colon Y'\to X'$ be proper morphisms, and let $y\in K(Y)$ and $y'\in K(Y')$.
   If [R-R](#theorem-riemann-roch) is true for $\{f,y\}$ and $\{f',y'\}$, then it is true for $\{f\times f',y\otimes y'\}$.
-\end{itenv}
+:::
 
 (We denote by $f\times f'\colon Y\times Y'\to X\times X'$ the product of $f$ and $f'$.)
 
@@ -992,14 +980,13 @@ The case of an injection (which is more difficult) will be covered later on.
 \section{Exactness and homotopy properties of \texorpdfstring{$K(X)$}{K(X)}}
 \label{section8}
 
-\begin{itenv}{Proposition 7}
-\label{proposition7}
+::: {.itenv #proposition-7 title="Proposition 7" latex="{Proposition 7}"}
   Let $X$ be an algebraic variety (singular or not), and $X'$ a closed subvariety of $X$, and set $U=X\setminus X'$.
   Then we have an exact sequence
   $$
     K(X') \to K(X) \to K(U) \to 0.
   $$
-\end{itenv}
+:::
 
 [The homomorphism $K(X')\to K(X)$ is that given by extending a sheaf on $X'$ by zero outside of $X'$;
 in the case where $X$ and $X'$ are non-singular, and denoting the canonical injection $X'\to X$ by $i$, this homomorphism is $i_!$.
@@ -1049,10 +1036,9 @@ This comes from the fact that $\scr{O}_{X\times Y}$ is $\scr{O}_X$-flat (i.e. an
 We can thus set $p^!(\scr{F})=\scr{F}\otimes_{\scr{O}_X}\scr{O}_{X\times Y}$ for any coherent sheaf $\scr{F}$ on $X$, and $p^!(\scr{F})$ is additive, and so defines some $K(X)\to K(X\times Y)$.
 Thus:
 
-\begin{itenv}{Proposition 8}
-\label{proposition8}
+::: {.itenv #proposition-8 title="Proposition 8" latex="{Proposition 8}"}
   If $Y$ is an affine line, then the homomorphism $p^!\colon K(X)\to K(X\times Y)$ is bijective.
-\end{itenv}
+:::
 
 ::: {.proof}
   Let $a$ be the origin in $Y$, and identify $X$ with $X\times\{a\}\subset X\times Y$.
@@ -1090,11 +1076,10 @@ Thus:
   In particular, we can suppose $X$ to be _affine, non-singular, and irreducible_ (since the complement of the set of singular points is a union of disjoint irreducible varieties).
   We will make use of the following dévissage lemma:
 
-  \begin{itenv}{Lemma 17}
-  \label{lemma17}
-    Let $Z$ be an algebraic variety.
+  ::: {.itenv #lemma-17 title="Lemma 17" latex="{Lemma 17}"}
+      Let $Z$ be an algebraic variety.
     Then the $\gamma_Z(\scr{O}_T)$ generate $K(Z)$, where $T$ runs over the set of irreducible subvarieties of $Z$.
-  \end{itenv}
+  :::
 
   ::: {.proof}
     We argue by induction on $\dim Z$;
@@ -1148,7 +1133,7 @@ Thus:
   $$
     K(X) = K(X\times Y).
   $$
-\end{itenv}
+:::
 
 ::: {.proof}
   This is immediate, by induction on $\dim Y$.
@@ -1160,10 +1145,9 @@ Thus:
 
 We will first prove claim (a') from the end of [§7](#section-7):
 
-\begin{itenv}{Proposition 9}
-\label{proposition9}
+::: {.itenv #proposition-9 title="Proposition 9" latex="{Proposition 9}"}
   For every variety $X$, and every projective space $\PP$, the homomorphism $K(X)\otimes K(\PP)\to K(X\times \PP)$ is surjective.
-\end{itenv}
+:::
 
 ::: {.proof}
   We argue by induction on $\dim\PP$.
@@ -1202,8 +1186,7 @@ We will first prove claim (a') from the end of [§7](#section-7):
 
 We now proceed to the proof of claim (a''):
 
-\begin{itenv}{Proposition 10}
-\label{proposition10}
+::: {.itenv #proposition-10 title="Proposition 10" latex="{Proposition 10}"}
   Let $\scr{F}$ be a coherent sheaf on a projective space $\PP$
 \oldpage{119}
   of dimension $r$.
@@ -1212,7 +1195,7 @@ We now proceed to the proof of claim (a''):
     x_r(\ch(\scr{F})\cdot T(\PP)) = \chi(\PP,\scr{F})
   $$
   is true.
-\end{itenv}
+:::
 
 ::: {.proof}
   Let $H$ be a hyperplane, and $x$ its class in $A^1(\PP)$.
@@ -1224,10 +1207,10 @@ We now proceed to the proof of claim (a''):
 
   We also know that $\scr{F}$ corresponds to a graded module $M$ over $k[X_0,\ldots,X_r]$.
   By the Hilbert syzygy theorem, $M$ admits a finite resolution by free graded modules;
-  it follows that $\scr{F}$ is equal [in $K(X)$] to a linear combination of sheaves $\scr{O}(n)$, defined in \cite[p. 246]{12}, and it suffices to verify the R-R-Hirzebruch formula for $\scr{F}=\scr{O}(n)$.
+  it follows that $\scr{F}$ is equal [in $K(X)$] to a linear combination of sheaves $\scr{O}(n)$, defined in [@12, p. 246], and it suffices to verify the R-R-Hirzebruch formula for $\scr{F}=\scr{O}(n)$.
   This sheaf is exactly the sheaf associated to the divisor $nH$;
   thus $\ch(\scr{F})=e^{nx}$.
-  Now, a direct calculation shows that $\chi(\PP,\scr{F})$ is equal to $\binom{n+r}{r}$ (see \cite[p. 275]{12}), and we are thus led to prove the formula:
+  Now, a direct calculation shows that $\chi(\PP,\scr{F})$ is equal to $\binom{n+r}{r}$ (see [@12, p. 275]), and we are thus led to prove the formula:
   $$
   \label{10equation*}
     x_r[e^{nx}\cdot x^{r+1}/(1-e^{-x})^{r+1}] = \binom{n+r}{r}.
@@ -1254,7 +1237,7 @@ Since we have proven (a') and (a''), we can state:
 
 \begin{itenv}{Corollary}
   [R-R](#theorem-riemann-roch) is true for the projection $X\times\PP\to X$.
-\end{itenv}
+:::
 
 ::: {.rmenv title="Remark" latex="{Remark}"}
   The fact that $K(\PP)$ is generated by the $\scr{O}(n)$ can also be seen, without using the syzygy theorem, by the cellular decomposition of $\PP$.
@@ -1327,7 +1310,7 @@ $$
 is exact at every point of $U$, and $\mathfrak{M}$ is thus, on $U$ a
 \oldpage{121}
 projective resolution of $\scr{O}_Y$ over $\scr{O}_X$.
-The exactness of \hyperref[section10cequation2]{(2)} at a point $b\in U\cap Y$ is a well-known result (see, for example, \cite[proposition 4.3, p. 151]{3}, taking into account the fact that $\scr{O}_{b,Y}=\scr{O}_{b,X}/(f_1,\ldots,f_p)$).
+The exactness of \hyperref[section10cequation2]{(2)} at a point $b\in U\cap Y$ is a well-known result (see, for example, [@3, Proposition 4.3, p. 151], taking into account the fact that $\scr{O}_{b,Y}=\scr{O}_{b,X}/(f_1,\ldots,f_p)$).
 For $b\in U\setminus(U\cap Y)$, we have that $\scr{O}_{b,Y}=0$, and the exactness of \hyperref[section10cequation2]{(2)} is then an elementary exercise left to the reader.
 
 ::: {.rmenv title="Remark" latex="{Remark}"}
@@ -1341,8 +1324,7 @@ For $b\in U\setminus(U\cap Y)$, we have that $\scr{O}_{b,Y}=0$, and the exactnes
   This exact sequence thus shows that $\gamma(Y)=1-[Y]^{-1}$.
 :::
 
-\begin{itenv}{Proposition 11}
-\label{proposition11}
+::: {.itenv #proposition-11 title="Proposition 11" latex="{Proposition 11}"}
   Let $Y_1,\ldots,Y_m$ be non-singular subvarieties of $X$ such that $Y_i$ intersects transversally with
   $$
     Y_{i-1} \cap\ldots\cap Y_1
@@ -1352,7 +1334,7 @@ For $b\in U\setminus(U\cap Y)$, we have that $\scr{O}_{b,Y}=0$, and the exactnes
   $$
     \gamma(Y_1\cap\ldots\cap Y_m) = \prod_i\gamma(Y_i).
   $$
-\end{itenv}
+:::
 
 ::: {.proof}
   An evident induction on $m$ shows that it suffices to consider the case of two subvarieties $Y$ and $Z$ that intersect transversally.
@@ -1389,7 +1371,7 @@ For $b\in U\setminus(U\cap Y)$, we have that $\scr{O}_{b,Y}=0$, and the exactnes
 \label{corollary-11}
   Let $Y$ be a non-singular hyperplane section of $Z$, and let $k$ be the dimension of $X$.
   Then $(1-[Y])^{k+1}=0$.
-\end{itenv}
+:::
 
 ::: {.proof}
   We take the non-singular hyperplane sections $Y_1,\ldots,Y_{k+1}$ whose intersection is empty, and such that the $Y_i$ intersect transversally with $Y_{i-1}\cap\ldots\cap Y_1$ ($i=2,\ldots,k+1$).
@@ -1405,14 +1387,13 @@ let $\scr{F}$ and $\scr{G}$ be sheaves of algebras on $X$.
 Then the direct sum of the $\Tor_i^{\scr{O}_X}(\scr{F},\scr{G})$ canonically admits the structure of a sheaf of graded (by $i$) algebras.
 If $\scr{F}$ admits, on $U$, a resolution $\scr{L}$ over $\scr{O}_X$ that is a sheaf of graded algebras, then the product in the homology of $\scr{L}\otimes\scr{G}$ induced by the products in $\scr{L}$ and $\scr{G}$ coincides, on $U$< the the aforementioned coupling of the $\Tor_i$.
 [Details left to the read;
-see \cite[chap. IX]{3} for some analogous and more general considerations.
-This follows from the classical result on maps from an acyclic complex (\cite[proposition 11, p. 76]{3}).]
+see [@3, Chap. IX] for some analogous and more general considerations.
+This follows from the classical result on maps from an acyclic complex ([@3, Proposition 11, p. 76]).]
 
-\begin{itenv}{Proposition 12}
-\label{proposition12}
+::: {.itenv #proposition-12 title="Proposition 12" latex="{Proposition 12}"}
   We have that $i^!i_!(y)=y\cdot\lambda_{-1}(E^*)$ for all $y\in K(Y)$.
   In particular, $i^!\gamma(Y)=\lambda_{-1}(E^*)$.
-\end{itenv}
+:::
 
 ::: {.proof}
   By linearity, and [Theorem 2](#theorem-2), we can restrict to proving [Proposition 12](#proposition-12) in the case where $y=\scr{F}$ is a locally free sheaf.
@@ -1489,8 +1470,7 @@ since $\scr{F}$ is annihilated by $\scr{I}(Y)$, the homomorphism $f$ has a zero 
 \end{align*}
 By comparing with [Proposition 12](#proposition-12), we see that the restrictions of $[Y]^{-1}$ to $Y$ and to $E^*$ define the same element of $K(Y)$.
 In fact,
-\begin{itenv}{Proposition 13}
-\label{proposition13}
+::: {.itenv #proposition-13 title="Proposition 13" latex="{Proposition 13}"}
   Suppose that $\codim Y=1$, and denote by $L$ the restriction of $[Y]$ to $Y$.
   Then:
   \begin{enumerate}[(a)]
@@ -1498,7 +1478,7 @@ In fact,
     \item $\gamma(Y) = 1-[Y]^{-1}$;
     \item $i^!i_!(y) = y\cdot(1-L^*).$
   \end{enumerate}
-\end{itenv}
+:::
 
 ::: {.proof}
 \oldpage{124}
@@ -1544,10 +1524,9 @@ $$
 $$
 where the first was proven in \hyperref[subsection5c]{\S5.c}, and the second was mentioned in [§6](#section-6) (whose notation we also continue to use).
 
-\begin{itenv}{Proposition 14}
-\label{proposition14}
+::: {.itenv #proposition-14 title="Proposition 14" latex="{Proposition 14}"}
   The equality \hyperref[section11equation1]{(1)} is true if $\codim_XY=1$ and $y=i^!(x)$ ($x\in K(X)$).
-\end{itenv}
+:::
 
 ::: {.proof}
   By using \hyperref[section11equation2]{(2)} and [Proposition 13](#proposition-13), we see that
@@ -1573,7 +1552,7 @@ where the first was proven in \hyperref[subsection5c]{\S5.c}, and the second was
 \begin{itenv}{Corollary 1}
 \label{corollary1}
   [R-R](#theorem-riemann-roch) is true if $X=Y\times\PP$, where $\PP$ is a projective space, and $i$ is the map $a\mapsto(a,p_0)$, with $p_0$ some fixed point of $\PP$.
-\end{itenv}
+:::
 
 ::: {.proof}
   The map $i$ is the product of the identity on $Y$ with the injection of a point into $\PP$.
@@ -1595,7 +1574,7 @@ where the first was proven in \hyperref[subsection5c]{\S5.c}, and the second was
 \begin{itenv}{Corollary 2}
 \label{corollary2}
   If the equality \hyperref[section11equation1]{(1)} is true whenever $2\dim Y\leq\dim X-2$, then it is true in general.
-\end{itenv}
+:::
 
 ::: {.proof}
   It suffices to compose $i$ with an injection $X\to X\times\PP$, where $\PP$ is of large dimension, and the apply \hyperref[corollary1]{Corollary 1} and part (b) of [Lemma 15](#lemma-15).
@@ -1720,14 +1699,13 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
 \section{Finishing the proof of R-R}
 \label{section13}
 
-\begin{itenv}{Lemma 18}
-\label{lemma18}
+::: {.itenv #lemma-18 title="Lemma 18" latex="{Lemma 18}"}
   Let $G$ be a vector bundle of rank $k$ on a variety $X$.
   Then
   $$
     \ch(\lambda_{-1}G) = c_k(G^*)T(G^*)^{-1}.
   $$
-\end{itenv}
+:::
 
 ::: {.proof}
   Write the Chern class $c(G)$ of $G$ in the form
@@ -1750,8 +1728,7 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
   $$
 :::
 
-\begin{itenv}{Lemma 19}
-\label{lemma19}
+::: {.itenv #lemma-19 title="Lemma 19" latex="{Lemma 19}"}
   In the notation of \hyperref[section12a]{\S12.a}, we have:
   \begin{enumerate}[(a)]
     \item $f_*(1) = 1$, and so $f_*f^*$ is the identity;
@@ -1759,17 +1736,16 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
     \item $f^!i_!(y) = j_!(g^!(y)\cdot\lambda_{-1}F^*)$ [$y\in K(Y)$];
     \item $\lambda_{-1}F\equiv0 \mod(1-L^*)$ if $p\geq\dim Y+2$.
   \end{enumerate}
-\end{itenv}
+:::
 
 ::: {.proof}
   This lemma will be proven in [§14](#section-14), [§15](#section-15), and [§16](#section-16).
 :::
 
 \oldpage{129}
-\begin{itenv}{Proposition 15}
-\label{proposition15}
+::: {.itenv #proposition-15 title="Proposition 15" latex="{Proposition 15}"}
   [R-R](#theorem-riemann-roch) is true for an injection.
-\end{itenv}
+:::
 
 ::: {.proof}
   We must (see [§11](#section-11)) establish the equality
@@ -1971,7 +1947,7 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
   which send $g$ to the homomorphism $\mu$ from the sequence \hyperref[section15equation1]{(1)}.
   The equality \hyperref[section15equation2]{(2)} then follows from \hyperref[section15equation1]{(1)} and \hyperref[section15equation6]{(6)}.
 
-  The equality \hyperref[section15equation4]{(4)} then follows from an associativity formula of $\Tor$ (see \cite[p. 345]{3}).
+  The equality \hyperref[section15equation4]{(4)} then follows from an associativity formula of $\Tor$ (see [@3, p. 345]).
   We consider $T(\scr{G},\scr{O}_{X'}) = \scr{G}\otimes_{\scr{O}_Y}\scr{O}_Y\otimes\scr{O}_{X'}$ as a functor in $\scr{G}$ and $\scr{O}_{X'}$.
   To calculate its left-derived functors $\LL_iT$, we have two spectral sequences, with respective $E_2$ pages
   \begin{align*}
@@ -1989,11 +1965,10 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
 \section{Proof of part (d) of Lemma 19}
 \label{section16}
 
-\begin{itenv}{Lemma 20}
-\label{lemma20}
+::: {.itenv #lemma-20 title="Lemma 20" latex="{Lemma 20}"}
   Let $G$ be an ample vector bundle of rank $(q+k)$ on $Y$ ($q=\dim Y$; $k\geq0$).
   Then $G$ contains a trivial subbundle of rank $k$.
-\end{itenv}
+:::
 
 ::: {.proof}
   The fact that $G$ is ample implies that, at each point $y$, the fibre $G_y$ is generated by its sections.
@@ -2014,11 +1989,10 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
   (For this proof, see [@1].)
 :::
 
-\begin{itenv}{Lemma 21}
-\label{lemma21}
+::: {.itenv #lemma-21 title="Lemma 21" latex="{Lemma 21}"}
   Let $G$ be a vector bundle of rank $p=q+k$ on $Y$ ($q=\dim Y$).
   Then $\lambda^s(G- k)=0$ for all $s\geq q+1$.
-\end{itenv}
+:::
 
 ::: {.proof}
   Let $h$ be the bundle associated to a hyperplane section of $Y$.
@@ -2071,8 +2045,7 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
   Since $\Delta P(n)=0$ for $n>n_0$, the $A_i$ ($1\leq i\leq m$) are zero by the induction hypothesis, whence clearly $A_0=0$ as well.
 :::
 
-\begin{itenv}{Lemma 22}
-\label{lemma22}
+::: {.itenv #lemma-22 title="Lemma 22" latex="{Lemma 22}"}
   Let $G$ and $L$ be vector bundles on $Y$, with respective ranks $p$ and $1$.
   Then
   \begin{enumerate}[(a)]
@@ -2080,7 +2053,7 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
     \item $\lambda_t G(1- L) \equiv 1\mod(1-L)$;
   \end{enumerate}
   and so, if $G_1\equiv G_2\mod(1-L)$ [$G_1,G_2\in K(Y)$], then $\lambda^iG_1\equiv\lambda^iG_2\mod(1-L)$ for all $i\geq1$.
-\end{itenv}
+:::
 
 ::: {.proof}
   \begin{enumerate}[(a)]
@@ -2126,14 +2099,13 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
 The following application (pointed out by Hirzebruch) is about "integration on the fibre" in an algebraic bundle.
 We place ourselves in the classical case, i.e. $k=\mathbb{C}$.
 
-\begin{itenv}{Proposition 16}
-\label{proposition16}
+::: {.itenv #proposition-16 title="Proposition 16" latex="{Proposition 16}"}
   Let $(E,B,F,g)$ be an algebraic bundle, where $E$, $B$, and $F$ are projective, irreducible, and non-singular, and let $\xi$ be the tangent bundle along the fibres.
   Then
   $$
     g_*(T(\xi)) = \operatorname{To}(F)\cdot1.
   $$
-\end{itenv}
+:::
 [Here $\operatorname{To}(X)$ denotes the Todd genus of $X$.]
 
 ::: {.proof}
