@@ -517,12 +517,11 @@ _(of [Lemma 11](#lemma-11))._
 Let $\scr{A},\scr{B},\scr{C}\in\cal{C}$, and let $u\colon\scr{A}\to\scr{B}$ and $v\colon\scr{C}\to\scr{B}$, with $u$ and $v$ surjective.
 Then there exist $\scr{L}\in\cal{V}$, and $u'\colon\scr{L}\to\scr{C}$ and $v'\colon\scr{L}\to\scr{A}$, such that $v\circ u'=u\circ v'$, with $u'$ and $v'$ surjective:
 $$
-  \begin{tikzcd}
-    \scr{L} \ar[r,"v'"] \ar[d,swap,"u'"]
-    & \scr{A} \ar[d,"u"]
-  \\\scr{C} \ar[r,swap,"v"]
-    & \scr{B}
-  \end{tikzcd}
+  \begin{CD}
+    \scr{L} @>v'>> \scr{A}
+  \\@Vu'VV @VVuV
+  \\\scr{C} @>>v> \scr{B}
+  \end{CD}
 $$
 :::
 
