@@ -826,7 +826,7 @@ for $x\in K(X)$.
 These formulas are well known when $x=\gamma(E)$, with $E$ a vector bundle on $X$, and the general case follows from linearity, by applying [Theorem 2](#theorem-2).
 
 
-# Statement of the Riemann--Roch theorem. First simplifications {#section-7}
+# Statement of the Riemann--Roch theorem; First simplifications {#section-7}
 
 Let $f\colon Y\to X$ be a proper morphism, with $X$ and $Y$ irreducible non-singular quasi-projective varieties.
 \oldpage{113}
@@ -843,39 +843,39 @@ $$
 :::
 
 [The two sides of the equality are thought of as elements of $A(X)\otimes\mathbb{Q}$;
-with this in mind, we can say that [R-R](#theorem-riemann-roch) is a formula "modulo torsion";
+with this in mind, we can say that [R--R](#theorem-riemann-roch) is a formula "modulo torsion";
 Grothendieck has more precise formulas, without torsion --- i.e. that hold in $A(X)$ --- but he does not yet know how to prove them except in characteristic zero.]
 
 We now show how the [Riemann--Roch theorem](#theorem-riemann-roch), in Grothendieck's form, _implies the Riemann--Roch formula of Hirzebruch [@9]_:
 
-We apply [R-R](#theorem-riemann-roch) to a projective $Y$, with $X$ consisting of a single point, and $y$ the class of a coherent sheaf $\scr{F}$ on $Y$.
+We apply [R--R](#theorem-riemann-roch) to a projective $Y$, with $X$ consisting of a single point, and $y$ the class of a coherent sheaf $\scr{F}$ on $Y$.
 Since $A(X)$ is simply $\mathbb{Z}$ in dimension $0$, and is zero in higher dimensions, $f_*(u)$, for $u\in A(Y)$, is simply the terms $x_n(u)$ of degree $n=\dim Y$ in $u$.
 Also, $T(X)=1$, and $f_!(y)$ is the alternating sum of the sheaves $\RR^qf(\scr{F})$;
 a sheaf on a point is simply a vector space of finite dimension;
 in particular, $\RR^qf(\scr{F})$ is the vector space $\HH^q(Y,\scr{F})$.
 On $X$, the map $\scr{G}\mapsto\ch(\scr{G})$ consists simply of taking the _rank_ of a sheaf;
-the right-hand side of [R-R](#theorem-riemann-roch) thus becomes $\sum(-1)^p\dim\HH^p(Y,\scr{F}) = \chi(Y,\scr{F})$, and [R-R](#theorem-riemann-roch) then reduces to the form given by Hirzebruch:
+the right-hand side of [R--R](#theorem-riemann-roch) thus becomes $\sum(-1)^p\dim\HH^p(Y,\scr{F}) = \chi(Y,\scr{F})$, and [R--R](#theorem-riemann-roch) then reduces to the form given by Hirzebruch:
 $$
   x_n(\ch(\scr{F})\cdot T(Y)) = \chi(Y,\scr{F}).
 $$
 
 We note that this formula is proven for any coherent sheaf, and not simply for vector bundles;
-this generality is somewhat illusory, by the linear character of [R-R](#theorem-riemann-roch) and by [Theorem 2](#theorem-2).
+this generality is somewhat illusory, by the linear character of [R--R](#theorem-riemann-roch) and by [Theorem 2](#theorem-2).
 
-The proof of [R-R](#theorem-riemann-roch) proceeds by reduction to particular cases of a projection and an injection.
+The proof of [R--R](#theorem-riemann-roch) proceeds by reduction to particular cases of a projection and an injection.
 For this, we use the following lemma:
 
 ::: {.itenv #lemma-15 title="Lemma 15" latex="{Lemma 15}"}
 Let $Z\xrightarrow{g}Y\xrightarrow{f}X$ be proper morphisms.
 Let $z\in K(Z)$ and let $y=g^!(z)$. Then:
 
-a. If [R-R](#theorem-riemann-roch) is true for $\{g,z\}$ and $\{f,y\}$, then it is also true for $\{fg,z\}$.
-b. If [R-R](#theorem-riemann-roch) is true of $\{fg,z\}$ and $\{f,y\}$, and if $f_*$ is injective, then [R-R](#theorem-riemann-roch) is also true for $\{g,z\}$.
+a. If [R--R](#theorem-riemann-roch) is true for $\{g,z\}$ and $\{f,y\}$, then it is also true for $\{fg,z\}$.
+b. If [R--R](#theorem-riemann-roch) is true of $\{fg,z\}$ and $\{f,y\}$, and if $f_*$ is injective, then [R--R](#theorem-riemann-roch) is also true for $\{g,z\}$.
 :::
 
 ::: {.proof}
 First we prove (a).
-By [R-R](#theorem-riemann-roch) for $g$, we have
+By [R--R](#theorem-riemann-roch) for $g$, we have
 $$
   g_*(\ch(z)\cdot T(Z)) = \ch(y)\cdot T(Y).
 $$
@@ -885,7 +885,7 @@ $$
   (fg)_*(\ch(z)\cdot T(Z)) = f_*(\ch(y)\cdot T(Y)).
 $$
 
-Applying [R-R](#theorem-riemann-roch) for $\{f,y\}$, we see that the right-hand side of the above is equal to $\ch((fg)_!(z)\cdot T(X))$, which indeed proves [R-R](#theorem-riemann-roch) for $\{fg,z\}$.
+Applying [R--R](#theorem-riemann-roch) for $\{f,y\}$, we see that the right-hand side of the above is equal to $\ch((fg)_!(z)\cdot T(X))$, which indeed proves [R--R](#theorem-riemann-roch) for $\{fg,z\}$.
 
 Now we prove (b).
 Let
@@ -897,13 +897,13 @@ $$
 $$
 We wish to show that $u=v$.
 Given the hypothesis on $f_*$, it suffices to prove that $f_*(u)=f_*(v)$.
-But [R-R](#theorem-riemann-roch) for $\{fg,z\}$ proves that
+But [R--R](#theorem-riemann-roch) for $\{fg,z\}$ proves that
 $$
   f_*(u) = \ch(x)\cdot T(X)
   \quad
   \text{where }x=(fg)_!(z)=f_!(y).
 $$
-Similarly, [R-R](#theorem-riemann-roch) for $\{f,y\}$ proves that
+Similarly, [R--R](#theorem-riemann-roch) for $\{f,y\}$ proves that
 $$
   f_*(v) = \ch(x)\cdot T(X).
 $$
@@ -915,7 +915,7 @@ By an abuse of language, we also denote by $y\otimes y'$ the image in $K(Y\times
 
 ::: {.itenv #lemma-16 title="Lemma 16" latex="{Lemma 16}"}
 Let $f\colon Y\to X$ and $f'\colon Y'\to X'$ be proper morphisms, and let $y\in K(Y)$ and $y'\in K(Y')$.
-If [R-R](#theorem-riemann-roch) is true for $\{f,y\}$ and $\{f',y'\}$, then it is true for $\{f\times f',y\otimes y'\}$.
+If [R--R](#theorem-riemann-roch) is true for $\{f,y\}$ and $\{f',y'\}$, then it is true for $\{f\times f',y\otimes y'\}$.
 :::
 
 (We denote by $f\times f'\colon Y\times Y'\to X\times X'$ the product of $f$ and $f'$.)
@@ -942,7 +942,7 @@ Formula (iii) is a consequence of the multiplicative property of $\ch$.
 
 [In fact, we will only use the above lemma in the case where one of the varieties $X'$ and $Y'$ consists of a single point.]
 
-[Lemma 15](#lemma-15), along with [the Corollary to Proposition 4](#corollary-5), shows that _it suffices to prove [R-R](#theorem-riemann-roch) in the two following cases:_
+[Lemma 15](#lemma-15), along with [the Corollary to Proposition 4](#corollary-5), shows that _it suffices to prove [R--R](#theorem-riemann-roch) in the two following cases:_
 
 a. $Y=X\times\PP$, with $\PP$ a projective space, and $f\colon X\times\PP\to X$ the projection onto the first factor.
 b. an injection $f\colon Y\to X$ of a closed subvariety $Y$ of $X$.
@@ -952,25 +952,16 @@ By [Lemma 16](#lemma-16), (a) follows from:
 \medskip
 a'. The homomorphism $K(X)\otimes K(\PP)\to K(X\times\PP)$ is surjective;
 
-a''. [R-R](#theorem-riemann-roch) is true for the map from $\PP$ to a point (or, in other words, the R-R-Hirzebruch formula is true for $\PP$).
+a''. [R--R](#theorem-riemann-roch) is true for the map from $\PP$ to a point (or, in other words, the R--R-Hirzebruch formula is true for $\PP$).
 \medskip
 
 The next two sections are dedicated to the proof of (a') and (a'').
 The case of an injection (which is more difficult) will be covered later on.
 
 
+# Exactness and homotopy properties of $K(X)$ {#section-8}
 
-
-
-
-
-<!--
-
-
-\section{Exactness and homotopy properties of \texorpdfstring{$K(X)$}{K(X)}}
-\label{section8}
-
-::: {.itenv #proposition-7 title="Proposition 7" latex="{Proposition 7}"}
+<!-- ::: {.itenv #proposition-7 title="Proposition 7" latex="{Proposition 7}"}
   Let $X$ be an algebraic variety (singular or not), and $X'$ a closed subvariety of $X$, and set $U=X\setminus X'$.
   Then we have an exact sequence
   $$
@@ -1127,12 +1118,12 @@ Thus:
 
 ::: {.proof}
   This is immediate, by induction on $\dim Y$.
-:::
+::: -->
 
 
-\section{Proof of the Riemann--Roch theorem for \texorpdfstring{$f\colon X\times\mathbf{P}\to X$}{f:XxP->X}}
-\label{section9}
+# Proof of the Riemann--Roch theorem for $f\colon X\times\mathbf{P}\to X$ {#section-9}
 
+<!--
 We will first prove claim (a') from the end of [§7](#section-7):
 
 ::: {.itenv #proposition-9 title="Proposition 9" latex="{Proposition 9}"}
@@ -1180,7 +1171,7 @@ We now proceed to the proof of claim (a''):
   Let $\scr{F}$ be a coherent sheaf on a projective space $\PP$
 \oldpage{119}
   of dimension $r$.
-  Then the R-R-Hirzebruch formula
+  Then the R--R-Hirzebruch formula
   $$
     x_r(\ch(\scr{F})\cdot T(\PP)) = \chi(\PP,\scr{F})
   $$
@@ -1197,7 +1188,7 @@ We now proceed to the proof of claim (a''):
 
   We also know that $\scr{F}$ corresponds to a graded module $M$ over $k[X_0,\ldots,X_r]$.
   By the Hilbert syzygy theorem, $M$ admits a finite resolution by free graded modules;
-  it follows that $\scr{F}$ is equal [in $K(X)$] to a linear combination of sheaves $\scr{O}(n)$, defined in [@12, p. 246], and it suffices to verify the R-R-Hirzebruch formula for $\scr{F}=\scr{O}(n)$.
+  it follows that $\scr{F}$ is equal [in $K(X)$] to a linear combination of sheaves $\scr{O}(n)$, defined in [@12, p. 246], and it suffices to verify the R--R-Hirzebruch formula for $\scr{F}=\scr{O}(n)$.
   This sheaf is exactly the sheaf associated to the divisor $nH$;
   thus $\ch(\scr{F})=e^{nx}$.
   Now, a direct calculation shows that $\chi(\PP,\scr{F})$ is equal to $\binom{n+r}{r}$ (see [@12, p. 275]), and we are thus led to prove the formula:
@@ -1226,7 +1217,7 @@ We now proceed to the proof of claim (a''):
 Since we have proven (a') and (a''), we can state:
 
 ::: {.itenv title="Corollary" latex="{Corollary}"}
-  [R-R](#theorem-riemann-roch) is true for the projection $X\times\PP\to X$.
+  [R--R](#theorem-riemann-roch) is true for the projection $X\times\PP\to X$.
 :::
 
 ::: {.rmenv title="Remark" latex="{Remark}"}
@@ -1237,18 +1228,16 @@ Since we have proven (a') and (a''), we can state:
   $$
     0 \to \scr{O}(-1) \to \scr{O} \to \scr{O}_H \to 0.
   $$
-:::
+::: -->
 
 
-\section{General remarks on the injection of a subvariety}
-\label{section10}
+# General remarks on the injection of a subvariety {#section-10}
 
 
-\subsection{Notation}
-\label{subsection10a}
+## Notation {#section-10.a}
 
+<!-- Before continuing the proof of [R--R](#theorem-riemann-roch), we first discuss the local resolution of the structure sheaf of a subvariety, and study some of its consequences.
 \oldpage{120}
-Before continuing the proof of [R-R](#theorem-riemann-roch), we first discuss the local resolution of the structure sheaf of a subvariety, and study some of its consequences.
 Some of these will be more general than necessary for our purposes, but they are interesting in their own right, and are no more difficult than the particular cases that we will need.
 
 In what follows, $Y$ is a (non-singular) subvariety of $X$, $i$ the injection of $Y$ into $X$, $p$ the codimension of $Y$ in $X$, $E$ the normal bundle of $Y$, and $\scr{I}(Y)$ the sheaf of local ideals of $Y$.
@@ -1261,8 +1250,12 @@ $$
 where $r$ is the restriction.
 
 Finally, write $F^*$ to mean the dual of a vector bundle $F$, and $[Z]$ to mean the bundle associated to a divisor $Z$.
-Recall that $c([Z])=1+Z$.
+Recall that $c([Z])=1+Z$. -->
 
+
+## Local parameters; Normal bundle {#section-10.b}
+
+<!--
 
 \subsection{Local parameters. Normal bundle}
 \label{subsection10b}
@@ -1280,10 +1273,12 @@ By using the local parameters, we see that
 the map $D\colon\scr{I}(Y)/\scr{I}(Y)^2 \to \scr{O}_Y(E^*)$ defined by $f\mapsto\dd f$ is an isomorphism of $\scr{O}_Y$-modules.
 :::
 
+-->
 
-\subsection{Local resolution of \texorpdfstring{$\scr{O}_Y$}{OY} over \texorpdfstring{$\scr{O}_X$}{OX}}
-\label{subsection10c}
 
+## Local resolution of $\scr{O}_Y$ over $\scr{O}_X$ {#section-10.c}
+
+<!--
 Let $V$ be a vector space over $k$ of dimension $p$, and $e_1,\ldots,e_p$ be a basis of $V$, and define $\mathfrak{M}_i = \scr{O}_X\otimes_k\bigwedge\nolimits^i V$.
 We endow the direct sum $\mathfrak{M}$ of the $\mathfrak{M}_i$ with a differential $\dd$ defined by^[As usual, the notation $\,\,\widehat{\,}\,\,\,$ indicates that the symbol below should be omitted.]
 $$
@@ -1367,11 +1362,13 @@ For $b\in U\setminus(U\cap Y)$, we have that $\scr{O}_{b,Y}=0$, and the exactnes
   Since $[Y_i]=[Y]$, [Proposition 11](#proposition-11) and the preceding remark show that $(1-[Y]^{-1})^{k+1} = 0$, whence the corollary, since $[Y]$ is invertible in $K(X)$.
 :::
 
+-->
 
-\subsection{}
-\label{subsection10d}
 
-We will use, here and later on, the following remark;
+## --- {#section-10.d}
+
+<!--
+We will use, both here and later on, the following remark;
 let $\scr{F}$ and $\scr{G}$ be sheaves of algebras on $X$.
 Then the direct sum of the $\Tor_i^{\scr{O}_X}(\scr{F},\scr{G})$ canonically admits the structure of a sheaf of graded (by $i$) algebras.
 If $\scr{F}$ admits, on $U$, a resolution $\scr{L}$ over $\scr{O}_X$ that is a sheaf of graded algebras, then the product in the homology of $\scr{L}\otimes\scr{G}$ induced by the products in $\scr{L}$ and $\scr{G}$ coincides, on $U$< the the aforementioned coupling of the $\Tor_i$.
@@ -1440,11 +1437,12 @@ This follows from the classical result on maps from an acyclic complex ([@3, Pro
   whence we have an isomorphism (for the moment, local, defined by the use of the parameters $f_i$) of the two sides of \hyperref[equation5]{(5)}.
   But $\mathfrak{M}$, thought of as a tensor product of the algebras $\scr{O}_Y$ and $\bigwedge V$, is clearly a differential graded algebra, and so the remark made at the start of \hyperref[subsection10d]{\S10.d} applies, and shows that, in fact, this isomorphism is intrinsic (and, in particular, does not depend on the chosen system of local parameters) and holds true over $X$.
 :::
+-->
 
 
-\subsection{Particular case of the divisor}
-\label{subsection10e}
+## Particular case of the divisor {#section-10.e}
 
+<!--
 In this case, we can use the resolution \hyperref[equation3]{(3)}, which is global.
 The $\Tor_i(\scr{F},\scr{O}_Y)$ are thus the homology groups of the complex
 $$
@@ -1479,12 +1477,13 @@ In fact,
   Also, on $U_i$, we can identify $E^*$ with the product $U_i\times k$ by applying $\dd f_i$ to the unit section.
   But, on $Y\cap U_i\cap U_j$, we have that $\dd f_i=f_{ij}\cdot\dd f_j$ (since $f_j=0$ on $Y$), and so we can define $E^*$ by the system of transition functions $\{f_{ij}^{-1}\}$, which proves (a).
 :::
+-->
 
 
-\section{Proof of R-R in the particular case of an injection}
-\label{section11}
+# Proof of R--R in the particular case of an injection {#section-11}
 
-Given the results of [§7](#section-7) and [§9](#section-9), it remains only to prove [R-R](#theorem-riemann-roch) for an injection.
+<!--
+Given the results of [§7](#section-7) and [§9](#section-9), it remains only to prove [R--R](#theorem-riemann-roch) for an injection.
 In the notation of \hyperref[subsection10a]{\S10.a}, the formula to prove is then equivalent to
 $$
 \label{section11equation1}
@@ -1497,7 +1496,7 @@ $$\begin{aligned}
   i_*(\ch y T^(E){-1}) &= i_*(\ch y\cdot T(Y)\cdot i^*(T(X))^{-1})
 \\i_*(\ch y T^(E){-1}) &= i_*(\ch y\cdot T(Y))\cdot T(X)^{-1}
 \end{aligned}$$
-and so \hyperref[section11equation1]{(1)} gives [R-R](#theorem-riemann-roch) if we multiply both sides by $T(X)$.
+and so \hyperref[section11equation1]{(1)} gives [R--R](#theorem-riemann-roch) if we multiply both sides by $T(X)$.
 
 To prove \hyperref[section11equation1]{(1)}, Grothendieck first considers the case where $Y$ is a divisor and $y\in i^!(K(X))$, and then reduces to this case by blowing up $X$ along $Y$.
 This first particular case will be covered below, and the general case of the injection will be covered in [§13](#section-13), where we will assume certain properties of blow ups that will be proven in [§14](#section-14), [§15](#section-15), and [§16](#section-16).
@@ -1540,16 +1539,16 @@ where the first was proven in \hyperref[subsection5c]{\S5.c}, and the second was
 
 \begin{itenv}{Corollary 1}
 \label{corollary1}
-  [R-R](#theorem-riemann-roch) is true if $X=Y\times\PP$, where $\PP$ is a projective space, and $i$ is the map $a\mapsto(a,p_0)$, with $p_0$ some fixed point of $\PP$.
+  [R--R](#theorem-riemann-roch) is true if $X=Y\times\PP$, where $\PP$ is a projective space, and $i$ is the map $a\mapsto(a,p_0)$, with $p_0$ some fixed point of $\PP$.
 :::
 
 ::: {.proof}
   The map $i$ is the product of the identity on $Y$ with the injection of a point into $\PP$.
-  Given [Lemma 16](#lemma-16), it suffices to prove [R-R](#theorem-riemann-roch) in this latter case.
+  Given [Lemma 16](#lemma-16), it suffices to prove [R--R](#theorem-riemann-roch) in this latter case.
   If $Y$ is a point, then $K(Y)=\mathbb{Z}$, and it suffices to consider the case where $y=1$.
   Since $1\in i^!(\PP)$, our claim follows from [Proposition 14](#proposition-14) if $\dim\PP=1$.
   Arguing by induction, we can assume that our claim is true for the injection $u\colon Y\to H$ of $Y$ into a hyperplane of $\PP$;
-  given part (a) of [Lemma 15](#lemma-15), it suffices to prove that [R-R](#theorem-riemann-roch) is true for $u_!(1)$ and the injection $v\colon H\to \PP$;
+  given part (a) of [Lemma 15](#lemma-15), it suffices to prove that [R--R](#theorem-riemann-roch) is true for $u_!(1)$ and the injection $v\colon H\to \PP$;
   this, itself, follows from [Proposition 14](#proposition-14) if we know that $u_!(1)\in v^!(K(\PP))$.
   But let $Z$ be a second hyperplane and $D$ a line of $H$ such that $Y=D\cap Z\cap H$.
   Then ([Proposition 11](#proposition-11)) $\gamma_H(Y) = \gamma_H(D)\cdot\gamma_H(H\cap Z)$.
@@ -1568,15 +1567,14 @@ where the first was proven in \hyperref[subsection5c]{\S5.c}, and the second was
 ::: {.proof}
   It suffices to compose $i$ with an injection $X\to X\times\PP$, where $\PP$ is of large dimension, and the apply \hyperref[corollary1]{Corollary 1} and part (b) of [Lemma 15](#lemma-15).
 :::
+-->
 
 
-\section{Blowing up along a subvariety}
-\label{section12}
+# Blowing up along a subvariety {#section-12}
 
+## Notation {#section-12.a}
 
-\subsection{Notation}
-\label{section12a}
-
+<!--
 We will write $X'$ to mean the variety obtained by blowing up $X$ along $Y$, $f$ to mean the projection from $X'$ to $X$, $g$ to mean the restriction of $f$ to $Y'=f^{-1}(Y)$, and $j$ to mean the injection from $Y'$ to $X'$.
 We will thus have the commutative diagram
 $$
@@ -1595,11 +1593,12 @@ We will see that $f$ is an isomorphism outside of $Y'$, that $g$ is the projecti
 \oldpage{126}
 with fibre equal to the projective space $\PP_{p-1}$ of dimension $(p-1)$, that $\codim_{X'}Y'=1$, and that $E'$ contains the restriction of $[Y']$ to $Y'$, which will be denoted $L$.
 Finally, we let $F=E'/L$, which is a vector bundle of rank $(p-1)$.
+-->
 
 
-\subsection{Definition of \texorpdfstring{$X'$}{X'} by local charts}
-\label{subsection12b}
+## Definition of #X'$ by local charts {#section-12.b}
 
+<!--
 Over an affine open subset $U$ that does not meet $Y$, we take $U$ itself as a local chart.
 Now suppose that $U\cap Y\neq\varnothing$, and that $Y$ admits, in $U$, uniformising parameters $f_i$ ($1\leq i\leq p$).
 Let $t_i$ be homogeneous coordinates of $\PP_{p-1}$.
@@ -1644,8 +1643,12 @@ $$
   f_it_j-f_jt_i = \sum_{m,n} a_{im}a_{jn}(g_ms_n-g_ns_m)
 $$
 and it easily follows that the correspondence in question is an isomorphism.
+-->
 
 
+## Projective embedding of $X'$ {#section-12.c}
+
+<!--
 \subsection{Projective embedding of \texorpdfstring{$X'$}{X'}}
 \label{subsection12c}
 
@@ -1683,9 +1686,13 @@ We also see that the $i$th homogeneous coordinate of $h(x')$ is $t_i/t_k$ ($1\le
 With this in mind, consider the map $\Psi$ from $X'$ to $X\times\PP_M$ defined by $\Psi(x')=(f(x'),(x'))$.
 Given (ii) and (iii), $\Psi$ is a bijective morphism, and it is clear that $\Psi$ is an isomorphism outside of $Y'$.
 By the projective normalisation and the Main Theorem of Zariski, we thus deduce that $X'$ is quasi-projective.
+-->
 
 
-\section{Finishing the proof of R-R}
+# Finishing the proof of R--R {#section-13}
+
+<!--
+\section{Finishing the proof of R--R}
 \label{section13}
 
 ::: {.itenv #lemma-18 title="Lemma 18" latex="{Lemma 18}"}
@@ -1733,7 +1740,7 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
 
 \oldpage{129}
 ::: {.itenv #proposition-15 title="Proposition 15" latex="{Proposition 15}"}
-  [R-R](#theorem-riemann-roch) is true for an injection.
+  [R--R](#theorem-riemann-roch) is true for an injection.
 :::
 
 ::: {.proof}
@@ -1744,7 +1751,7 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
     \tag{1}
   $$
   and it suffices to do this in the case where $p\geq\dim Y+2$ (\hyperref[corollary2]{Corollary 2} of [Proposition 15](#proposition-15)).
-  In this case, $g^!(y)\cdot\lambda_{-1}F^*\equiv0\mod(1-L^*)$, by part (d) of [Lemma 19](#lemma-19), and so is in the image of $K(X')$ under $j^!$ ([Proposition 13](#proposition-13)), and ([Proposition 14](#proposition-14)) we can apply [R-R](#theorem-riemann-roch) to $g^!(y)\cdot\lambda_{-1}F^*$ and $j$.
+  In this case, $g^!(y)\cdot\lambda_{-1}F^*\equiv0\mod(1-L^*)$, by part (d) of [Lemma 19](#lemma-19), and so is in the image of $K(X')$ under $j^!$ ([Proposition 13](#proposition-13)), and ([Proposition 14](#proposition-14)) we can apply [R--R](#theorem-riemann-roch) to $g^!(y)\cdot\lambda_{-1}F^*$ and $j$.
   This gives
   $$
   \label{proposition15equation2}
@@ -1787,11 +1794,12 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
   $$
   Given \hyperref[section11equation2]{(2)} (in [§11](#section-11)) and part (b) of [Lemma 19](#lemma-19), the image under $g_*$ of the right-hand side is equal to $\ch y\cdot T(E)^{-1}$, and the equality in \hyperref[proposition15equation4]{(4)} then follows from the fact that $f_*j_*=i_*g_*$.
 :::
+-->
 
 
-\section{Proof of parts (a) and (b) of Lemma 19}
-\label{section14}
+# Proof of parts (a) and (b) of Lemma 19 {#section-14}
 
+<!--
 The map $f$ if an isomorphism outside of $Y'$, and so is of local degree $1$, and so sends a fundamental cycle to a fundamental cycle, whence part (a) of [Lemma 19](#lemma-19).
 
 The map $g_*$ lowers the degree (which is the geometric codimension) by $p-1$, and corresponds to integration on the fibre.
@@ -1816,11 +1824,12 @@ whence
 $$
   g_*(c_{p-1}(F)) = 1.
 $$
+-->
 
 
-\section{Proof of part (c) of Lemma 19}
-\label{section15}
+# Proof of part (c) of Lemma 19 {#section-15}
 
+<!--
 In this section, we will write $\scr{J}$ to mean $\scr{I}(Y)$, and $\scr{J}'$ to mean $\scr{I}(Y')$.
 As we remarked in \hyperref[subsection10b]{\S10.b}, $\scr{J}'/\scr{J}'^2$ (resp. $\scr{J}/\scr{J}^2$) is the sheaf of germs of sections of $L^*$ (resp. $E^*$), and so $\scr{J}/\scr{J}^2\otimes_{\scr{O}_Y}\scr{O}_{Y'}$ is the sheaf of germs of sections of $g^!(E^*)=E'^*$.
 
@@ -1949,11 +1958,12 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
   $$
   since $E_2^{0j}$ and $E'^{j0}_2$ are equal to the right- and left-hand sides (respectively) of \hyperref[section15equation4]{(4)}, this proves the equality.
 :::
+-->
 
 
-\section{Proof of part (d) of Lemma 19}
-\label{section16}
+# Proof of part (d) of Lemma 19 {#section-16}
 
+<!--
 ::: {.itenv #lemma-20 title="Lemma 20" latex="{Lemma 20}"}
   Let $G$ be an ample vector bundle of rank $(q+k)$ on $Y$ ($q=\dim Y$; $k\geq0$).
   Then $G$ contains a trivial subbundle of rank $k$.
@@ -2080,11 +2090,12 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
 \oldpage{135}
   It thus suffices to show that $\lambda^{p-1}(E^*-2) = 0$ if $p\geq\dim Y+2$, which follows from [Lemma 21](#lemma-21).
 :::
+-->
 
 
-\section{An application of R-R}
-\label{section17}
+# An application of R--R {#section-17}
 
+<!--
 The following application (pointed out by Hirzebruch) is about "integration on the fibre" in an algebraic bundle.
 We place ourselves in the classical case, i.e. $k=\mathbb{C}$.
 
@@ -2106,7 +2117,7 @@ We place ourselves in the classical case, i.e. $k=\mathbb{C}$.
   $$
     g_*(T(X)) = T(B)\cdot g_*(T(\xi)).
   $$
-  We apply [R-R](#theorem-riemann-roch) to $g$ and the bundle $1$ on $X$, which gives us that
+  We apply [R--R](#theorem-riemann-roch) to $g$ and the bundle $1$ on $X$, which gives us that
   $$
     g_*(T(X)) = \ch g_!(1)\cdot T(B),
   $$
