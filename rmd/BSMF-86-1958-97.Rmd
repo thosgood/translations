@@ -268,7 +268,7 @@ Let $f\colon X\to Y$ be a morphism, with $Y$ a variety, and let $\scr{F}$ be a (
 We define, by the classical procedure of Leray, sheaves $\RR^qf(\scr{F})$ on $Y$ by setting
 $$
   \RR^qf(\scr{F})_U = \HH^q(f^{-1}(U),\scr{F})
-  \quad\mbox{for every open subset $U$ of $Y$.}
+  \quad\text{for every open subset }U\text{ of }Y.
 $$
 For $q=0$, we have the sheaf associated to the presheaf given by the $\HH^0(f^{-1}(U),\scr{F})$;
 this is the _direct image_ of the sheaf $\scr{F}$.
@@ -405,7 +405,7 @@ An element of $F(X)$ is thus a formal linear combination
 $$
   x = \sum n_i\scr{F}_i
   \quad
-  \mbox{where $n_i\in\mathbb{Z}$ and $\scr{F}_i\in\cal{C}$.}
+  \text{where }n_i\in\mathbb{Z}\text{ and }\scr{F}_i\in\cal{C}.
 $$
 We agree, of course, to identify isomorphic sheaves [if not, then $F(X)$ would not even be a "set"!].
 
@@ -554,7 +554,7 @@ By restriction to $X$, we obtain the desired result.
     $$
       0\to\scr{Z}''\to\scr{L}''\to\scr{B}''\to0
       \quad
-      \mbox{with $\scr{L}''\in\cal{V}$}
+      \text{with }\scr{L}''\in\cal{V}
     $$
     and find surjective homomorphisms
     $$
@@ -710,7 +710,7 @@ The map $E\mapsto\lambda_t(E)$ can thus be extended to a homomorphism $x\mapsto\
 $$
   1+a_1t+\ldots+a_nt^n+\ldots
   \quad
-  \mbox{with $a_i\in K(X)$.}
+  \text{with }a_i\in K(X).
 $$
 By definition, $\lambda^p(x)$ is the coefficient of $t^p$ in $\lambda_t(x)$.
 
@@ -743,7 +743,7 @@ We do, however, have the following formula:
 $$
   f_!(y\cdot f^!(x)) = f_!(y)\cdot x
   \quad
-  \mbox{for $x\in K(X)$ and $y\in K(Y)$.}
+  \text{for }x\in K(X)\text{ and }y\in K(Y).
 $$
 
 It suffices to prove this formula when $y=\gamma_Y(\scr{F})$ and $x=\gamma_X(\scr{L})$, where $\scr{F}$ (resp. $\scr{L}$) is a coherent sheaf on $Y$ (resp. a locally free sheaf on $X$).
@@ -919,7 +919,7 @@ For this, we use the following lemma:
   $$
     f_*(u) = \ch(x)\cdot T(X)
     \quad
-    \mbox{where $x=(fg)_!(z)=f_!(y)$.}
+    \text{where }x=(fg)_!(z)=f_!(y).
   $$
   Similarly, [R-R](#theorem-riemann-roch) for $\{f,y\}$ proves that
   $$
@@ -1361,7 +1361,7 @@ For $b\in U\setminus(U\cap Y)$, we have that $\scr{O}_{b,Y}=0$, and the exactnes
     \Tor_0 = \scr{O}_{Y\cap Z}
     \quad\text{and}\quad
     \Tor_i = 0
-    \quad\mbox{(for $i\geq1$),}
+    \quad\text{(for }i\geq1\text{),}
   $$
   which finishes the proof.
 :::
@@ -1442,7 +1442,7 @@ This follows from the classical result on maps from an acyclic complex ([@3, Pro
   Since the $f_i$ are local sections of $\scr{I}(Y)$, and this sheaf annihilates $\scr{F}$, it follows that, in \hyperref[equation6]{(6)}, the differential is identically zero, and so
   $$
     \Tor_i(\scr{F},\scr{O}_Y) = \scr{F}\otimes_k\bigwedge\nolimits^iV = \scr{F}\otimes_{\scr{O}_Y}\scr{O}_Y\otimes_k\bigwedge\nolimits^i V
-    \quad\mbox{($i\geq0$).}
+    \quad\text{(for }i\geq0\text{).}
   $$
   In the particular case where $\scr{F}=\scr{O}_Y$, this formula shows that
   $$
@@ -1466,7 +1466,7 @@ since $\scr{F}$ is annihilated by $\scr{I}(Y)$, the homomorphism $f$ has a zero 
 \begin{align*}
   \Tor_0(\scr{F},\scr{O}_Y) &= \scr{F}
 \\\Tor_1(\scr{F},\scr{O}_Y) &= [Y]^{-1}\cdot\scr{F}
-\\\Tor_i(\scr{F},\scr{O}_Y) &= 0 \qquad\mbox{($i\geq2$).}
+\\\Tor_i(\scr{F},\scr{O}_Y) &= 0 \qquad\text{(for }i\geq2\text{).}
 \end{align*}
 By comparing with [Proposition 12](#proposition-12), we see that the restrictions of $[Y]^{-1}$ to $Y$ and to $E^*$ define the same element of $K(Y)$.
 In fact,
@@ -1500,7 +1500,7 @@ In the notation of \hyperref[subsection10a]{\S10.a}, the formula to prove is the
 $$
 \label{section11equation1}
   \ch i_!y = i_*(\ch y\cdot T(E)^{-1})
-  \qquad\mbox{[$y\in K(Y)$].}
+  \qquad\text{(for }y\in K(Y)\text{).}
   \tag{1}
 $$
 Indeed, $E$ is the quotient of the tangent bundle of $X$ (restricted to $Y$) by the tangent bundle of $Y$, so $i^*T(X) = T(Y)\cdot T(E)$, whence
@@ -1638,7 +1638,7 @@ and we will have, as before, a canonical map $\mu_V$ from $g^{-1}(a)$ to the pro
 This leads us to define the change of charts in $U'\times V'$ by the rule:
 $$
   (t,u) = (s,v)
-  \quad\mbox{if [$v=u\not\in Y$] or [$v=u\in Y$ and $\mu_U(t)=\mu_V(s)$].}
+  \quad\text{if [}v=u\not\in Y\text{] or [}v=u\in Y\text{ and }\mu_U(t)=\mu_V(s)\text{].}
 $$
 We must show that this correspondence is an isomorphism.
 Let $c\in U\cap V$.
@@ -1857,7 +1857,7 @@ it thus suffices to prove that
 \begin{align*}
   \label{section15equation2}
     \Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) &= \lambda^i\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
-    \qquad\quad\mbox{($i\geq1$)}
+    \qquad\quad\text{(for }i\geq1\text{)}
     \tag{2}
 \\
   \label{section15equation3}
@@ -1866,7 +1866,7 @@ it thus suffices to prove that
 \\
   \label{section15equation4}
     \Tor_j^{\scr{O}_X}(\scr{G},\scr{O}_{X'}) &= \scr{G}\otimes_{\scr{O}_Y}\Tor_j^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
-    \quad\mbox{($j\geq1$).}
+    \quad\text{(for }j\geq1\text{).}
     \tag{4}
 \end{align*}
 \oldpage{131}
@@ -2021,7 +2021,7 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
   $$
   \label{lemma21equation1}
     \lambda^s(Gh^n- k) = \sum_{i=0}^{n_s} A_{s,i}\binom{n}{i}
-    \qquad\mbox{[$A_{s,i}\in K(Y)$].}
+    \qquad\text{(for }A_{s,i}\in K(Y)\text{).}
     \tag{1}
   $$
 
@@ -2032,7 +2032,7 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
   suffices to show that, if the polynomial
   $$
     P(n) = \sum_{i=0}^m A_i\binom{n}{i}
-    \qquad\mbox{[$A_i\in K(Y)$]}
+    \qquad\text{(for }A_i\in K(Y)\text{)}
   $$
   is zero for $n>n_0$, then all the $A_i$ are zero.
   For this, we proceed by induction on $m$, and consider the first difference
