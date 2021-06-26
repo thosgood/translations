@@ -258,11 +258,7 @@ instead of using embeddings into projective spaces, we use the fact that every v
 :::
 
 
-
-<!--
-
-\section{Image of a sheaf under a proper map}
-\label{section3}
+# Image of a sheaf under a proper map {#section-3}
 
 Let $f\colon X\to Y$ be a morphism, with $Y$ a variety, and let $\scr{F}$ be a (coherent algebraic, as always) sheaf on $X$.
 We define, by the classical procedure of Leray, sheaves $\RR^qf(\scr{F})$ on $Y$ by setting
@@ -274,42 +270,38 @@ For $q=0$, we have the sheaf associated to the presheaf given by the $\HH^0(f^{-
 this is the _direct image_ of the sheaf $\scr{F}$.
 We can show [@7] that the $\RR^qf$ are the _derived functors_ of the functor $\scr{F}\to\RR^0f(\scr{F})$ (where $\scr{F}$ runs over the category of all sheaves on $X$, coherent or not).
 
-::: {.rmenv title="Examples" latex="{Examples}"}
+::: {.rmenv #examples title="Examples" latex="{Examples}"}
 —
 
-  \begin{enumerate}
-    \item If $X\to Y$ is an injection of a closed subvariety, then the sheaf $\RR^0f(\scr{F})$ is exactly the sheaf $\scr{F}$ extended by $0$ outside of $X$, and the sheaves $\RR^qf(\scr{F})$, for $q\geq1$, are zero (let $U$ be an affine open; then $f^{-1}(U)=U\cap X$ is affine, whence $\RR^qf(\scr{F})=0$).
-      \label{example1}
-    \item Let $Y$ be a point.
-      A sheaf on a point is simply a group (or a $k$-vector space, if we are talking about algebraic sheaves).
-      The $\RR^qf(\scr{F})$ are then simply the cohomology groups $\HH^q(X,\scr{F})$;
-      we note that these are not necessarily vector spaces _of finite dimension_ (or, in other words, not necessarily _coherent_ sheaves on $Y$).
-        \label{example2}
-    \item Suppose that $f\colon X\to Y$ defines a birational isomorphism between the varieties $X$ and $Y$ (assumed to be projective and non-singular).
-      Take $\scr{F}$ to be the sheaf $\scr{O}_X$ of local rings of $X$;
-      we immediately see that $\RR^0f(\scr{O}_X)=\scr{O}_Y$.
-      Is it true that $\RR^qf(\scr{O}_X)=0$ for $q\geq1$?
-      We can at least verify this for "blow-ups", and it would be interesting to know the answer in the general case.
-      \label{example3}
-  \end{enumerate}
+1. If $X\to Y$ is an injection of a closed subvariety, then the sheaf $\RR^0f(\scr{F})$ is exactly the sheaf $\scr{F}$ extended by $0$ outside of $X$, and the sheaves $\RR^qf(\scr{F})$, for $q\geq1$, are zero (let $U$ be an affine open; then $f^{-1}(U)=U\cap X$ is affine, whence $\RR^qf(\scr{F})=0$).
+
+2. Let $Y$ be a point.
+    A sheaf on a point is simply a group (or a $k$-vector space, if we are talking about algebraic sheaves).
+    The $\RR^qf(\scr{F})$ are then simply the cohomology groups $\HH^q(X,\scr{F})$;
+    we note that these are not necessarily vector spaces _of finite dimension_ (or, in other words, not necessarily _coherent_ sheaves on $Y$).
+
+3. Suppose that $f\colon X\to Y$ defines a birational isomorphism between the varieties $X$ and $Y$ (assumed to be projective and non-singular).
+    Take $\scr{F}$ to be the sheaf $\scr{O}_X$ of local rings of $X$;
+    we immediately see that $\RR^0f(\scr{O}_X)=\scr{O}_Y$.
+    Is it true that $\RR^qf(\scr{O}_X)=0$ for $q\geq1$?
+    We can at least verify this for "blow-ups", and it would be interesting to know the answer in the general case.
 :::
 
 We note that Leray's theory can be translated without any changes (see [@7]);
 there is a spectral sequence abutting $\HH^\bullet(X,\scr{F})$, and with $E_2^{p,q}=\HH^p(Y,\RR^qf(\scr{F}))$.
-If we apply, for example, this spectral sequence
 \oldpage{103}
-to \hyperref[example3]{Example 3} above, then we see that $\RR^qf(\scr{O}_X)=0$ for $q\geq1$ implies that $\HH^\bullet(X,\scr{O}_X)=\HH^\bullet(Y,\scr{O}_Y)$.
+If we apply, for example, this spectral sequence to [Example 3](#examples) above, then we see that $\RR^qf(\scr{O}_X)=0$ for $q\geq1$ implies that $\HH^\bullet(X,\scr{O}_X)=\HH^\bullet(Y,\scr{O}_Y)$.
 
-We have seen (\hyperref[example2]{Example 2}) that the $\RR^qf(\scr{F})$ are not, in general, coherent sheaves on $Y$.
+We have seen ([Example 2](#examples)) that the $\RR^qf(\scr{F})$ are not, in general, coherent sheaves on $Y$.
 However:
 
 ::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
-  If $f\colon X\to Y$ is proper, then the $\RR^qf(\scr{F})$, for $q>0$, are coherent sheaves on $Y$, for any coherent sheaf $\scr{F}$ on $X$.
+If $f\colon X\to Y$ is proper, then the $\RR^qf(\scr{F})$, for $q>0$, are coherent sheaves on $Y$, for any coherent sheaf $\scr{F}$ on $X$.
 :::
 
 Let $\PP$ be a projective space into which we can embed $X$, and let $G_f$ be the graph of $f$ in $\PP\times Y$.
 By definition of what it means to be a proper map, $G_f$ is closed in $\PP\times Y$.
-Let $\scr{F}'$ be the sheaf on $\PP\times Y$ obtained by extending $\scr{F}$ by $0$ outside of $G_f=X$ (see \hyperref[example2]{Example 2});
+Let $\scr{F}'$ be the sheaf on $\PP\times Y$ obtained by extending $\scr{F}$ by $0$ outside of $G_f=X$ (see [Example 2](#examples));
 if $\pi$ denotes the projection from $\PP\times Y$ to $Y$, then we immediately see that $\RR^q\pi(\scr{F}')=\RR^qf(\scr{F})$.
 _We can thus restrict to proving [Theorem 1](#theorem-1) for $\pi\colon \PP\times Y\to Y$_.
 Furthermore, since the question is local with respect to $Y$, we can assume that $Y$ is an affine variety.
@@ -320,80 +312,83 @@ The sheaf associated to $L^n$ on $\PP\times Y$ will be denoted $\scr{O}_X(n)$.
 We then have:
 
 ::: {.itenv #lemma-6 title="Lemma 6" latex="{Lemma 6}"}
-  Every coherent algebraic sheaf $\scr{F}$ on $X=\PP\times Y$, with $Y$ affine, is isomorphic to a quotient of some direct sum of sheaves of the form $\scr{O}_X(n)$.
+Every coherent algebraic sheaf $\scr{F}$ on $X=\PP\times Y$, with $Y$ affine, is isomorphic to a quotient of some direct sum of sheaves of the form $\scr{O}_X(n)$.
 :::
 
 ::: {.proof}
-  When $Y$ consists of a single point, this is [@12, Théorème 1, p. 247].
-  We are going to reduce to this particular case: let $Y\subset\PP'$ be an embedding of $Y$ into a projective space, and let $\overline{Y}$ be the closure of $Y$.
-  By [Proposition 2](#proposition-2), the sheaf $\scr{F}$ can be extended to a sheaf $\overline{\scr{F}}$ on $\PP\times\overline{Y}$.
-  The embedding of $\overline{Y}$ into $\PP'$ defines, on $\overline{Y}$ (and thus also on $\PP\times\overline{Y}$), a bundle $L'$ of dimension $1$.
-  The product bundle $LL'$ corresponds to the well known embedding of $\PP\times\PP'$ into a projective space $P''$ (the "Segre" embedding, given by the products $x_i y_j$ of the homogeneous coordinates of the two projective spaces).
-  Then applying the result from [@12] cited above to $\overline{\scr{F}}$ and $\PP''$, we see that $\overline{\scr{F}}$ is a quotient of a direct sum of sheaves of the form $\scr{O}_{\PP\times\overline{Y}}(L^nL'^n)$;
-  by restricting to $\PP\times Y$, and taking into account the fact that $\PP'$ is _trivial_ on $Y$, we indeed obtain the desired result.
+When $Y$ consists of a single point, this is [@12, Théorème 1, p. 247].
+We are going to reduce to this particular case: let $Y\subset\PP'$ be an embedding of $Y$ into a projective space, and let $\overline{Y}$ be the closure of $Y$.
+By [Proposition 2](#proposition-2), the sheaf $\scr{F}$ can be extended to a sheaf $\overline{\scr{F}}$ on $\PP\times\overline{Y}$.
+The embedding of $\overline{Y}$ into $\PP'$ defines, on $\overline{Y}$ (and thus also on $\PP\times\overline{Y}$), a bundle $L'$ of dimension $1$.
+The product bundle $LL'$ corresponds to the well known embedding of $\PP\times\PP'$ into a projective space $P''$ (the "Segre" embedding, given by the products $x_i y_j$ of the homogeneous coordinates of the two projective spaces).
+Then applying the result from [@12] cited above to $\overline{\scr{F}}$ and $\PP''$, we see that $\overline{\scr{F}}$ is a quotient of a direct sum of sheaves of the form $\scr{O}_{\PP\times\overline{Y}}(L^nL'^n)$;
+by restricting to $\PP\times Y$, and taking into account the fact that $\PP'$ is _trivial_ on $Y$, we indeed obtain the desired result.
 :::
 
-  [Of course, we could also give a direct proof, copied from the one in [@12].]
+[Of course, we could also give a direct proof, copied from the one in [@12].]
 
 ::: {.itenv #lemma-7 title="Lemma 7" latex="{Lemma 7}"}
-  The $\RR^q\pi(\scr{O}_X(n))$ are coherent sheaves on $Y$.
+The $\RR^q\pi(\scr{O}_X(n))$ are coherent sheaves on $Y$.
 :::
 
 ::: {.proof}
-  We explicitly calculate the sheaves $\RR^q\pi(\scr{O}_X(n))$.
-  If $U$ is an affine open
-  \oldpage{104}
-  subset of $Y$, then
-  $$
-    \RR^q\pi(\scr{O}_X(n))_U = \HH^q(\PP\times U,\scr{O}_X(n)).
-  $$
+We explicitly calculate the sheaves $\RR^q\pi(\scr{O}_X(n))$.
+\oldpage{104}
+If $U$ is an affine open subset of $Y$, then
+$$
+  \RR^q\pi(\scr{O}_X(n))_U = \HH^q(\PP\times U,\scr{O}_X(n)).
+$$
 
-  If $\mathfrak{U}=\{U_i\}$ is an affine cover of $\PP$, then the $U_i\times U$ form an affine cover $\mathfrak{U}'$ of $\PP\times U$;
-  taking into account the fact that $\scr{O}_X(n)$ "comes from" $\PP$, we see that the complex $C(\mathfrak{U}',\scr{O}_X(n))$ is isomorphic to the tensor product $C(\mathfrak{U}',\scr{O}_{\PP}(n))\otimes_k\HH^0(U,\scr{O}_U)$.
-  The universal coefficient formula then shows that
-  $$
-    \HH^q(\PP\times U,\scr{O}_X(n)) = \HH^q(\PP,\scr{O}_{\PP}(n))\otimes_k\HH^0(U,\scr{O}_U).
-  $$
+If $\mathfrak{U}=\{U_i\}$ is an affine cover of $\PP$, then the $U_i\times U$ form an affine cover $\mathfrak{U}'$ of $\PP\times U$;
+taking into account the fact that $\scr{O}_X(n)$ "comes from" $\PP$, we see that the complex $C(\mathfrak{U}',\scr{O}_X(n))$ is isomorphic to the tensor product $C(\mathfrak{U}',\scr{O}_{\PP}(n))\otimes_k\HH^0(U,\scr{O}_U)$.
+The universal coefficient formula then shows that
+$$
+  \HH^q(\PP\times U,\scr{O}_X(n)) = \HH^q(\PP,\scr{O}_{\PP}(n))\otimes_k\HH^0(U,\scr{O}_U).
+$$
 
-  This latter equality implies that $\RR^q\pi(\scr{O}_X(n))$ is isomorphic to the sheaf $\scr{O}_Y\otimes_k V^q$, where $V^q=\HH^q(\PP,\scr{O}_P(n))$.
-  Since $V^q$ is a vector space of finite dimension over $k$, it is indeed a coherent sheaf on $Y$, which proves the lemma.
+This latter equality implies that $\RR^q\pi(\scr{O}_X(n))$ is isomorphic to the sheaf $\scr{O}_Y\otimes_k V^q$, where $V^q=\HH^q(\PP,\scr{O}_P(n))$.
+Since $V^q$ is a vector space of finite dimension over $k$, it is indeed a coherent sheaf on $Y$, which proves the lemma.
 :::
 
-  [The above proof applies more generally to any projection $\pi\colon Y\times Z\to Y$ with $Z$ projective, whenever the sheaf $\scr{F}$ is of the form $\scr{G}\otimes\scr{H}$, with $\scr{G}$ coherent on $Y$ and $\scr{H}$ coherent on $Z$.
-  We then find that $\RR^q\pi(\scr{F})=\scr{G}\otimes\HH^q(Z,\scr{H})$.
-  We could consider, even more generally, the case of a product map $Y\times Z\to Y'\times Z'$ ...]
+[The above proof applies more generally to any projection $\pi\colon Y\times Z\to Y$ with $Z$ projective, whenever the sheaf $\scr{F}$ is of the form $\scr{G}\otimes\scr{H}$, with $\scr{G}$ coherent on $Y$ and $\scr{H}$ coherent on $Z$.
+We then find that $\RR^q\pi(\scr{F})=\scr{G}\otimes\HH^q(Z,\scr{H})$.
+We could consider, even more generally, the case of a product map $Y\times Z\to Y'\times Z'$ ...]
 
-::: {.proof}[Proof of {[Theorem 1](#theorem-1)}]
-  We can now prove [Theorem 1](#theorem-1) for an arbitrary sheaf $\scr{F}$ on $X=\PP\times Y$.
-  We argue by decreasing induction on the integer $q$.
-  If $q>\dim X$, then it is clear that $\RR^q\pi(\scr{F})=0$.
-  So suppose that the theorem is proven for $q+1$.
-  By [Lemma 6](#lemma-6), there exists an exact sequence $0\to\scr{R}\to\scr{L}\to\scr{F}\to0$, where $\scr{L}$ is isomorphic to a direct sum of sheaves of the form $\scr{O}_X(n)$.
-  The exact sequence of cohomology (or the exact sequence of derived functors) shows that we have an exact sequence
-  $$
-    \RR^q\pi(\scr{R}) \to
-    \RR^q\pi(\scr{L}) \to
-    \RR^q\pi(\scr{F}) \to
-    \RR^{q+1}\pi(\scr{R}) \to
-    \RR^{q+1}\pi(\scr{L}).
-  $$
+::: {.proof}
+_Proof of [Theorem 1](#theorem-1)._
+We can now prove [Theorem 1](#theorem-1) for an arbitrary sheaf $\scr{F}$ on $X=\PP\times Y$.
+We argue by decreasing induction on the integer $q$.
+If $q>\dim X$, then it is clear that $\RR^q\pi(\scr{F})=0$.
+So suppose that the theorem is proven for $q+1$.
+By [Lemma 6](#lemma-6), there exists an exact sequence $0\to\scr{R}\to\scr{L}\to\scr{F}\to0$, where $\scr{L}$ is isomorphic to a direct sum of sheaves of the form $\scr{O}_X(n)$.
+The exact sequence of cohomology (or the exact sequence of derived functors) shows that we have an exact sequence
+$$
+  \RR^q\pi(\scr{R}) \to
+  \RR^q\pi(\scr{L}) \to
+  \RR^q\pi(\scr{F}) \to
+  \RR^{q+1}\pi(\scr{R}) \to
+  \RR^{q+1}\pi(\scr{L}).
+$$
 
-  Given the induction hypothesis and [Lemma 7](#lemma-7), the sheaves $\RR^q\pi(\scr{L})$, $\RR^{q+1}\pi(\scr{R})$, and $\RR^{q+1}\pi(\scr{L})$ are coherent.
-  It follows that $\RR^q\pi(\scr{F})$ admits a subsheaf of finite type, with the quotient being coherent.
-  An immediate argument then shows that $\RR^q\pi(\scr{F})$ is of finite type.
-  This result, having been proven for any coherent sheaf, also holds for $\scr{R}$.
-  The image of $\RR^q\pi(\scr{R})$ in $\RR^q\pi(\scr{L})$ is then a coherent sheaf ([@12, p. 208]), and $\RR^q\pi(\scr{F})$ is an extension of two coherent sheaves, and is thus coherent (_id._).
+Given the induction hypothesis and [Lemma 7](#lemma-7), the sheaves $\RR^q\pi(\scr{L})$, $\RR^{q+1}\pi(\scr{R})$, and $\RR^{q+1}\pi(\scr{L})$ are coherent.
+It follows that $\RR^q\pi(\scr{F})$ admits a subsheaf of finite type, with the quotient being coherent.
+An immediate argument then shows that $\RR^q\pi(\scr{F})$ is of finite type.
+This result, having been proven for any coherent sheaf, also holds for $\scr{R}$.
+The image of $\RR^q\pi(\scr{R})$ in $\RR^q\pi(\scr{L})$ is then a coherent sheaf ([@12, p. 208]), and $\RR^q\pi(\scr{F})$ is an extension of two coherent sheaves, and is thus coherent (_id._).
 :::
 
 ::: {.rmenv title="Remarks" latex="{Remarks}"}
 —
 
-  \begin{enumerate}
-    \item [Theorem 1](#theorem-1) holds true even if we don't suppose that $X$ is quasi-projective (we can restrict to this case by using Chow's lemma and the "devissage" of coherent sheaves, see [@6]).
-    \item Grauert and Remmert have proven the analytic analogue of [Theorem 1](#theorem-1) for the projection $\pi\colon\PP\times Y\to Y$.
-      Needless to say that the proof is more difficult!
-  \end{enumerate}
+1. [Theorem 1](#theorem-1) holds true even if we don't suppose that $X$ is quasi-projective (we can restrict to this case by using Chow's lemma and the "devissage" of coherent sheaves, see [@6]).
+
+2. Grauert and Remmert have proven the analytic analogue of [Theorem 1](#theorem-1) for the projection $\pi\colon\PP\times Y\to Y$.
+    Needless to say that the proof is more difficult!
 :::
+
+
+
+<!--
 
 
 \section{The group \texorpdfstring{$K(X)$}{K(X)} of classes of sheaves on a variety \texorpdfstring{$X$}{X}}
