@@ -564,23 +564,13 @@ $$
 $$
 such that the following diagram commutes:
 $$
-  \begin{tikzcd}
-    0 \rar
-    & \scr{Z} \rar
-    & \scr{L} \rar
-    & \scr{B} \rar
-    & 0
-  \\0 \rar
-    & \scr{Z}'' \rar \uar \dar
-    & \scr{L}'' \rar \uar \dar
-    & \scr{B}'' \rar \uar \dar
-    & 0
-  \\0 \rar
-    & \scr{Z}' \rar
-    & \scr{L}' \rar
-    & \scr{B}' \rar
-    & 0
-  \end{tikzcd}
+  \begin{CD}
+    0 @>>> \scr{Z} @>>> \scr{L} @>>> \scr{B} @>>> 0
+  \\@. @^^^ @^^^ @^^^ @.
+  \\0 @>>> \scr{Z}'' @>>> \scr{L}'' @>>> \scr{B}'' @>>> 0
+  \\@. @VVV @VVV @VVV @.
+  \\0 @>>> \scr{Z}' @>>> \scr{L}' @>>> \scr{B}' @>>> 0
+  \end{CD}
 $$
 :::
 
@@ -614,18 +604,11 @@ The additivity of $\gamma_1(\scr{L})$ will then be evident.
 To construct these resolutions, we proceed, again, dimension by dimension.
 Everything relies on proving that, given an exact sequence as above, we can extend it to a commutative diagram
 $$
-  \begin{tikzcd}
-    0 \rar
-    & \scr{F}' \rar
-    & \scr{F} \rar
-    & \scr{F}'' \rar
-    & 0
-  \\0 \rar
-    & \scr{L}' \rar\uar
-    & \scr{L} \rar\uar
-    & \scr{L}'' \rar\uar
-    & 0
-  \end{tikzcd}
+  \begin{CD}
+    0 @>>> \scr{F}' @>>> \scr{F} @>>> \scr{F}'' @>>> 0
+  \\@. @^^^ @^^^ @^^^ @.
+  \\0 @>>> \scr{L}' @>>> \scr{L} @>>> \scr{L}'' @>>> 0
+  \end{CD}
 $$
 with $\scr{L}',\scr{L},\scr{L}''\in\cal{V}$, and where the $\scr{L}\to\scr{F}$ are surjective.
 
