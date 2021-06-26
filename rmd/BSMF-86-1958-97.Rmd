@@ -1,8 +1,8 @@
 ---
-title: "The Riemann-Roch theorem"
+title: "The Riemann--Roch theorem"
 author: "Armand Borel and Jean-Pierre Serre"
 date: "1958"
-original: 'Borel, A. and Serre, J-.P. "Le théorème de Riemann-Roch". _Bulletin de la Société Mathématique de France_ **86** (1958), 97--136. DOI: [`10.24033/bsmf.1500`](https://www.doi.org/10.24033/bsmf.1500).'
+original: 'Borel, A. and Serre, J-.P. "Le théorème de Riemann--Roch". _Bulletin de la Société Mathématique de France_ **86** (1958), 97--136. DOI: [`10.24033/bsmf.1500`](https://www.doi.org/10.24033/bsmf.1500).'
 bibliography: BSMF-86-1958-97.bib
 nocite: '@*'
 link-citations: true
@@ -43,10 +43,10 @@ What follows constitutes the notes from a seminar that took place in Princeton i
 the new results that are included are due to Grothendieck;
 our contribution is solely of an editorial nature.
 
-The "Riemann-Roch theorem" of which we speak here holds true for (non-singular) algebraic varieties over a field of arbitrary characteristic;
+The "Riemann--Roch theorem" of which we speak here holds true for (non-singular) algebraic varieties over a field of arbitrary characteristic;
 in the classical case, where the base field is $\mathbb{C}$, this theorem encapsulates, as a particular example, the result proven a few years ago by Hirzebruch [@9].
 
-The full statement and proof of the Riemann-Roch theorem can be found in sections [7](#section-7) to [16](#section-16), with the last section being devoted to an application.
+The full statement and proof of the Riemann--Roch theorem can be found in sections [7](#section-7) to [16](#section-16), with the last section being devoted to an application.
 Sections [1](#section-1) to [6](#section-6) contain some preliminaries on coherent algebraic sheaves [@12].
 The terminology that we follow is the same as in [@12], up to one difference: to conform with a custom which is becoming more and more widespread, we use the word "morphism" instead of "regular map".
 
@@ -825,33 +825,27 @@ for $x\in K(X)$.
 These formulas are well known when $x=\gamma(E)$, with $E$ a vector bundle on $X$, and the general case follows from linearity, by applying [Theorem 2](#theorem-2).
 
 
+# Statement of the Riemann--Roch theorem. First simplifications {#section-7}
 
-
-
-
-
-<!--
-
-\section{Statement of the Riemann-Roch theorem. First simplifications}
-\label{section7}
-
-\oldpage{113}
 Let $f\colon Y\to X$ be a proper morphism, with $X$ and $Y$ irreducible non-singular quasi-projective varieties.
+\oldpage{113}
 We denote by $T(X)$ the Todd class of the tangent bundle of $X$;
 it is an element of $A(X)\otimes\mathbb{Q}$.
 Now let $y\in K(Y)$.
 Then:
 
-\begin{itenv}{Theorem (Riemann-Roch)}
-\label{theoremriemannroch}
-  $f_*(\ch(y)\cdot T(Y)) = \ch(f_!(y))\cdot T(X)$.
+::: {.itenv #theorem-riemann-roch title="Theorem (Riemann--Roch)" latex="{Theorem (Riemann--Roch)}"}
+—
+$$
+  f_*(\ch(y)\cdot T(Y)) = \ch(f_!(y))\cdot T(X).
+$$
 :::
 
 [The two sides of the equality are thought of as elements of $A(X)\otimes\mathbb{Q}$;
 with this in mind, we can say that [R-R](#theorem-riemann-roch) is a formula "modulo torsion";
 Grothendieck has more precise formulas, without torsion --- i.e. that hold in $A(X)$ --- but he does not yet know how to prove them except in characteristic zero.]
 
-We now show how the \hyperref[theoremriemannroch]{Riemann-Roch theorem}, in Grothendieck's form, _implies the Riemann-Roch formula of Hirzebruch [@9]_:
+We now show how the [Riemann--Roch theorem](#theorem-riemann-roch), in Grothendieck's form, _implies the Riemann--Roch formula of Hirzebruch [@9]_:
 
 We apply [R-R](#theorem-riemann-roch) to a projective $Y$, with $X$ consisting of a single point, and $y$ the class of a coherent sheaf $\scr{F}$ on $Y$.
 Since $A(X)$ is simply $\mathbb{Z}$ in dimension $0$, and is zero in higher dimensions, $f_*(u)$, for $u\in A(Y)$, is simply the terms $x_n(u)$ of degree $n=\dim Y$ in $u$.
@@ -865,52 +859,55 @@ $$
 $$
 
 We note that this formula is proven for any coherent sheaf, and not simply for vector bundles;
-this generality is somewhat illusory, by the linear character of [Theorem riemannroch]{R-R} and by \hyperref[theorem2](#theorem-riemannroch]{R-R} and by \hyperref[theorem2).
+this generality is somewhat illusory, by the linear character of [R-R](#theorem-riemann-roch) and by [Theorem 2](#theorem-2).
 
 The proof of [R-R](#theorem-riemann-roch) proceeds by reduction to particular cases of a projection and an injection.
 For this, we use the following lemma:
 
 ::: {.itenv #lemma-15 title="Lemma 15" latex="{Lemma 15}"}
-  Let $Z\xrightarrow{g}Y\xrightarrow{f}X$ be proper morphisms.
-  Let $z\in K(Z)$ and let $y=g^!(z)$. Then:
-  \begin{enumerate}[(a)]
-    \item If [R-R](#theorem-riemann-roch) is true for $\{g,z\}$ and $\{f,y\}$, then it is also true for $\{fg,z\}$.
-    \item If [R-R](#theorem-riemann-roch) is true of $\{fg,z\}$ and $\{f,y\}$, and if $f_*$ is injective, then [R-R](#theorem-riemann-roch) is also true for $\{g,z\}$.
-  \end{enumerate}
+Let $Z\xrightarrow{g}Y\xrightarrow{f}X$ be proper morphisms.
+Let $z\in K(Z)$ and let $y=g^!(z)$. Then:
+
+a. If [R-R](#theorem-riemann-roch) is true for $\{g,z\}$ and $\{f,y\}$, then it is also true for $\{fg,z\}$.
+b. If [R-R](#theorem-riemann-roch) is true of $\{fg,z\}$ and $\{f,y\}$, and if $f_*$ is injective, then [R-R](#theorem-riemann-roch) is also true for $\{g,z\}$.
 :::
 
-::: {.proof}[Proof of (a)]
-  By [R-R](#theorem-riemann-roch) for $g$, we have
-  $$
-    g_*(\ch(z)\cdot T(Z)) = \ch(y)\cdot T(Y).
-  $$
-  \oldpage{114}
-  Applying $f_*$ to both sides, and taking into account the fact that $(fg)_*=f_*g_*$, we see that
-  $$
-    (fg)_*(\ch(z)\cdot T(Z)) = f_*(\ch(y)\cdot T(Y)).
-  $$
+::: {.proof}
+_(of (a))._
+By [R-R](#theorem-riemann-roch) for $g$, we have
+$$
+  g_*(\ch(z)\cdot T(Z)) = \ch(y)\cdot T(Y).
+$$
+\oldpage{114}
+Applying $f_*$ to both sides, and taking into account the fact that $(fg)_*=f_*g_*$, we see that
+$$
+  (fg)_*(\ch(z)\cdot T(Z)) = f_*(\ch(y)\cdot T(Y)).
+$$
 
-  Applying [R-R](#theorem-riemann-roch) for $\{f,y\}$, we see that the right-hand side of the above is equal to $\ch((fg)_!(z)\cdot T(X))$, which indeed proves [R-R](#theorem-riemann-roch) for $\{fg,z\}$.
+Applying [R-R](#theorem-riemann-roch) for $\{f,y\}$, we see that the right-hand side of the above is equal to $\ch((fg)_!(z)\cdot T(X))$, which indeed proves [R-R](#theorem-riemann-roch) for $\{fg,z\}$.
 :::
 
-::: {.proof}[Proof of (b)]
-  Let
-  \begin{align*}
+::: {.proof}
+_(of (b))._
+Let
+$$
+  \begin{aligned}
     u &= g_*(\ch(z)\cdot T(Z))
   \\v &= \ch(y)\cdot T(Y).
-  \end{align*}
-  We wish to show that $u=v$.
-  Given the hypothesis on $f_*$, it suffices to prove that $f_*(u)=f_*(v)$.
-  But [R-R](#theorem-riemann-roch) for $\{fg,z\}$ proves that
-  $$
-    f_*(u) = \ch(x)\cdot T(X)
-    \quad
-    \text{where }x=(fg)_!(z)=f_!(y).
-  $$
-  Similarly, [R-R](#theorem-riemann-roch) for $\{f,y\}$ proves that
-  $$
-    f_*(v) = \ch(x)\cdot T(X).
-  $$
+  \end{aligned}
+$$
+We wish to show that $u=v$.
+Given the hypothesis on $f_*$, it suffices to prove that $f_*(u)=f_*(v)$.
+But [R-R](#theorem-riemann-roch) for $\{fg,z\}$ proves that
+$$
+  f_*(u) = \ch(x)\cdot T(X)
+  \quad
+  \text{where }x=(fg)_!(z)=f_!(y).
+$$
+Similarly, [R-R](#theorem-riemann-roch) for $\{f,y\}$ proves that
+$$
+  f_*(v) = \ch(x)\cdot T(X).
+$$
 :::
 
 Now let $Y$ and $Y'$ be varieties, and consider their product $Y\times Y'$.
@@ -918,49 +915,55 @@ The projections $Y\times Y'\to Y$ and $Y\times Y'\to Y'$ define homomorphisms $K
 By an abuse of language, we also denote by $y\otimes y'$ the image in $K(Y\times Y')$ of the tensor product of two elements $y\in K(Y)$ and $y'\in K(Y')$.
 
 ::: {.itenv #lemma-16 title="Lemma 16" latex="{Lemma 16}"}
-  Let $f\colon Y\to X$ and $f'\colon Y'\to X'$ be proper morphisms, and let $y\in K(Y)$ and $y'\in K(Y')$.
-  If [R-R](#theorem-riemann-roch) is true for $\{f,y\}$ and $\{f',y'\}$, then it is true for $\{f\times f',y\otimes y'\}$.
+Let $f\colon Y\to X$ and $f'\colon Y'\to X'$ be proper morphisms, and let $y\in K(Y)$ and $y'\in K(Y')$.
+If [R-R](#theorem-riemann-roch) is true for $\{f,y\}$ and $\{f',y'\}$, then it is true for $\{f\times f',y\otimes y'\}$.
 :::
 
 (We denote by $f\times f'\colon Y\times Y'\to X\times X'$ the product of $f$ and $f'$.)
 
 ::: {.proof}
-  The proof consists of a calculation analogous to that for [Lemma 15](#lemma-15);
-  we have to use the following formulas:
-  \begin{enumerate}[(i)]
-    \item $(f\times f')_!(y\otimes y') = f_!(y)\otimes f'_!(y')$;
-      \label{lemma16equation1}
-    \item $(f\times f')_*(x\otimes x') = f_*(x)\otimes f'_*(x')$, where $x\in A(Y)$ and $x\in A(Y')$;
-      \label{lemma16equation2}
-    \item $\ch(y\otimes y') = \ch(y)\otimes\ch(y')$.
-      \label{lemma16equation3}
-  \end{enumerate}
+The proof consists of a calculation analogous to that for [Lemma 15](#lemma-15);
+we have to use the following formulas:
 
-  \hyperref[lemma16equation1]{Formula (i)} can be proven by taking $y=\gamma(\scr{F})$ and $y'=\gamma(\scr{F}')$, and applying the K\"{u}nneth formula to calculate $(f\times f')_!(y\otimes y')$;
-  the validity of the K\"{u}nneth formula for coherent sheaves follows from the calculation of the cohomology by covers and from the Eilenberg-Zilber theorem (see the book by Godement on sheaves).
+i. $(f\times f')_!(y\otimes y') = f_!(y)\otimes f'_!(y')$;
+    \label{lemma16equation1}
+ii. $(f\times f')_*(x\otimes x') = f_*(x)\otimes f'_*(x')$, where $x\in A(Y)$ and $x\in A(Y')$;
+    \label{lemma16equation2}
+iii. $\ch(y\otimes y') = \ch(y)\otimes\ch(y')$.
+    \label{lemma16equation3}
 
-  \hyperref[lemma16equation2]{Formula (ii)} is immediate, whether we consider the point of view of classes of cycles (for linear equivalence), or the cohomological point of view (in the classical case).
+Formula (i) can be proven by taking $y=\gamma(\scr{F})$ and $y'=\gamma(\scr{F}')$, and applying the Künneth formula to calculate $(f\times f')_!(y\otimes y')$;
+the validity of the Künneth formula for coherent sheaves follows from the calculation of the cohomology by covers and from the Eilenberg-Zilber theorem (see the book by Godement on sheaves).
 
-  \oldpage{115}
-  \hyperref[lemma16equation3]{Formula (iii)} is a consequence of the multiplicative property of $\ch$.
+Formula (ii) is immediate, whether we consider the point of view of classes of cycles (for linear equivalence), or the cohomological point of view (in the classical case).
+
+\oldpage{115}
+Formula (iii) is a consequence of the multiplicative property of $\ch$.
 :::
 
 [In fact, we will only use the above lemma in the case where one of the varieties $X'$ and $Y'$ consists of a single point.]
 
-[Lemma 15](#lemma-15), along with the \hyperref[corollary5]{corollary} to [Proposition 4](#proposition-4), shows that _it suffices to prove [R-R](#theorem-riemann-roch) in the two following cases:_
-\begin{enumerate}[(a)]
-  \item $Y=X\times\PP$, with $\PP$ a projective space, and $f\colon X\times\PP\to X$ the projection onto the first factor.
-  \item an injection $f\colon Y\to X$ of a closed subvariety $Y$ of $X$.
-\end{enumerate}
+[Lemma 15](#lemma-15), along with [the Corollary to Proposition 4](#corollary-5), shows that _it suffices to prove [R-R](#theorem-riemann-roch) in the two following cases:_
+
+a. $Y=X\times\PP$, with $\PP$ a projective space, and $f\colon X\times\PP\to X$ the projection onto the first factor.
+b. an injection $f\colon Y\to X$ of a closed subvariety $Y$ of $X$.
 
 By [Lemma 16](#lemma-16), (a) follows from:
-\begin{enumerate}
-  \item[\rm{(a')}] The homomorphism $K(X)\otimes K(\PP)\to K(X\times\PP)$ is surjective;
-  \item[\rm{(a'')}] [R-R](#theorem-riemann-roch) is true for the map from $\PP$ to a point (or, in other words, the R-R-Hirzebruch formula is true for $\PP$).
-\end{enumerate}
+
+a'. The homomorphism $K(X)\otimes K(\PP)\to K(X\times\PP)$ is surjective;
+
+a''. [R-R](#theorem-riemann-roch) is true for the map from $\PP$ to a point (or, in other words, the R-R-Hirzebruch formula is true for $\PP$).
 
 The next two sections are dedicated to the proof of (a') and (a'').
 The case of an injection (which is more difficult) will be covered later on.
+
+
+
+
+
+
+
+<!--
 
 
 \section{Exactness and homotopy properties of \texorpdfstring{$K(X)$}{K(X)}}
@@ -1126,7 +1129,7 @@ Thus:
 :::
 
 
-\section{Proof of the Riemann-Roch theorem for \texorpdfstring{$f\colon X\times\mathbf{P}\to X$}{f:XxP->X}}
+\section{Proof of the Riemann--Roch theorem for \texorpdfstring{$f\colon X\times\mathbf{P}\to X$}{f:XxP->X}}
 \label{section9}
 
 We will first prove claim (a') from the end of [§7](#section-7):
@@ -1211,12 +1214,12 @@ We now proceed to the proof of claim (a''):
   $$
 
   By defining the new variable $y=1-e^{-x}$, we see that the left-hand side is equal to
-  \begin{align*}
+  $$\begin{aligned}
     \operatorname{Res}(\dd y\cdot y^{-r-1}\cdot(1-y)^{-n-1})
     &= z_r((1-y)^{-n-1})
   \\&= (-1)^r\binom{-n-1}{r}
     = \binom{n+r}{r}.
-  \end{align*}
+  \end{aligned}$$
 :::
 
 Since we have proven (a') and (a''), we can state:
@@ -1448,11 +1451,11 @@ $$
 $$
 where $\scr{F}$ is the multiplication by a local equation;
 since $\scr{F}$ is annihilated by $\scr{I}(Y)$, the homomorphism $f$ has a zero image, which implies that
-\begin{align*}
+$$\begin{aligned}
   \Tor_0(\scr{F},\scr{O}_Y) &= \scr{F}
 \\\Tor_1(\scr{F},\scr{O}_Y) &= [Y]^{-1}\cdot\scr{F}
 \\\Tor_i(\scr{F},\scr{O}_Y) &= 0 \qquad\text{(for }i\geq2\text{).}
-\end{align*}
+\end{aligned}$$
 By comparing with [Proposition 12](#proposition-12), we see that the restrictions of $[Y]^{-1}$ to $Y$ and to $E^*$ define the same element of $K(Y)$.
 In fact,
 ::: {.itenv #proposition-13 title="Proposition 13" latex="{Proposition 13}"}
@@ -1489,10 +1492,10 @@ $$
   \tag{1}
 $$
 Indeed, $E$ is the quotient of the tangent bundle of $X$ (restricted to $Y$) by the tangent bundle of $Y$, so $i^*T(X) = T(Y)\cdot T(E)$, whence
-\begin{align*}
+$$\begin{aligned}
   i_*(\ch y T^(E){-1}) &= i_*(\ch y\cdot T(Y)\cdot i^*(T(X))^{-1})
 \\i_*(\ch y T^(E){-1}) &= i_*(\ch y\cdot T(Y))\cdot T(X)^{-1}
-\end{align*}
+\end{aligned}$$
 and so \hyperref[section11equation1]{(1)} gives [R-R](#theorem-riemann-roch) if we multiply both sides by $T(X)$.
 
 To prove \hyperref[section11equation1]{(1)}, Grothendieck first considers the case where $Y$ is a divisor and $y\in i^!(K(X))$, and then reduces to this case by blowing up $X$ along $Y$.
@@ -1525,12 +1528,12 @@ where the first was proven in \hyperref[subsection5c]{\S5.c}, and the second was
     \ch(i_!) = \ch x\cdot\ch(1-[Y]^{-1}) = \ch x\cdot(1-e^{-Y}).
   $$
   The right-hand side of \hyperref[section11equation1]{(1)} is
-  \begin{align*}
+  $$\begin{aligned}
     i_*(\ch(i^!x)\cdot T(L)^{-1})
     &= i_*(i^*(\ch x)\cdot i^*(T([Y])^{-1}))
   \\&= \ch x\cdot T([Y])^{-1}\cdot i_*(1)
   \\&= \ch x\cdot T([Y])^{-1}\cdot Y
-  \end{align*}
+  \end{aligned}$$
   and \hyperref[section11equation1]{(1)} then follows from $T([Y])=Y/(1-e^{-Y})$.
 :::
 
@@ -1698,15 +1701,15 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
     c(G) = \prod_{i=1}^k (1+a_i).
   $$
   Then (see [@9])
-  \begin{align*}
+  $$\begin{aligned}
     c(G^*) &= \prod (1-a_i),
   \\c(\wedge^sG) &= \prod_{i_1<\ldots<i_s} (1+a_{i_1}+\ldots+a_{i_s}),
-  \end{align*}
+  \end{aligned}$$
   whence
-  \begin{align*}
+  $$\begin{aligned}
     c_k(G^*) &= (-1)^k a_1\ldots a_k,
   \\\ch(\lambda_{-1}G) &= \prod (1-e^{a_i}),
-  \end{align*}
+  \end{aligned}$$
   and so
   $$
     \ch(\lambda_{-1}G) = c_k(G^*)T(G^*)^{-1}.
@@ -1749,14 +1752,14 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
     \tag{2}
   $$
   To deduce \hyperref[proposition15equation1]{(1)} from this, it evidently suffices to show that
-  \begin{align*}
+  $$\begin{aligned}
   \label{proposition15equation3}
     f_*(\ch j_!(g^!y\cdot\lambda_{-1}F^*)) &= \ch i_! y
     \tag{3}
   \\
   \label{proposition15equation4}f_*j_*(\ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1}) &= i_*(\ch y\cdot T(E)^{-1}).
     \tag{4}
-  \end{align*}
+  \end{aligned}$$
   Part (c) of [Lemma 19](#lemma-19) shows that the left-hand side of \hyperref[proposition15equation3]{(3)} is equal to
   $$
     f_*(\ch f^!i_!y) = f_*^*(\ch i_!y)
@@ -1802,12 +1805,12 @@ $$
 and we evidently have that $g_*(u^i)=0$ ($0\leq i<p-1$) for dimension reasons.
 
 Since $E'/L=F$, we have that
-\begin{align*}
+$$\begin{aligned}
   c(E') &= c(F)(1-u)
 \\c(F) &= g^*(c(E))\cdot(1+u+u^2+\ldots)
 \\c_{p-1}(F) &= u^{p-1}+g^*(c_1(E))\cdot u^{p-2} +\ldots+ g^*(c_{p-1}(E))
 \\g_*(c_{p-1}(F)) &= g_*(u^{p-1})+c_1(E)g_*(u^{p-2}) +\ldots+ c_{p-1}(E)g_*(1)
-\end{align*}
+\end{aligned}$$
 whence
 $$
   g_*(c_{p-1}(F)) = 1.
@@ -1839,7 +1842,7 @@ $$
 $$
 Also, $f^!i_!(y)$ is the alternating sum of the $\Tor_i^{\scr{O}_X}(\scr{G},\scr{O}_{X'})$;
 it thus suffices to prove that
-\begin{align*}
+$$\begin{aligned}
   \label{section15equation2}
     \Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) &= \lambda^i\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
     \qquad\quad\text{(for }i\geq1\text{)}
@@ -1853,7 +1856,7 @@ it thus suffices to prove that
     \Tor_j^{\scr{O}_X}(\scr{G},\scr{O}_{X'}) &= \scr{G}\otimes_{\scr{O}_Y}\Tor_j^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
     \quad\text{(for }j\geq1\text{).}
     \tag{4}
-\end{align*}
+\end{aligned}$$
 \oldpage{131}
 The equalities \hyperref[section15equation3]{(3)} and \hyperref[section15equation4]{(4)} correspond to the particular case of part (c) of [Lemma 19](#lemma-19) where $y=1$;
 their proof will be analogous to that of [Proposition 12](#proposition-12) ([§10](#section-10)).
@@ -1875,10 +1878,10 @@ $$
   0 \to \scr{O}_{X'}\otimes_k\bigwedge\nolimits^p V' \to \ldots \to \scr{O}_{X'}
 $$
 where $V'$ has a basis $(e'_i)$, and where the differential is characterised by
-\begin{align*}
+$$\begin{aligned}
   \dd(1\otimes e'_j) &= f_j\otimes1
 \\\dd(1\otimes e'_i) &= (f_i-t_if_j/t_j)\otimes1
-\end{align*}
+\end{aligned}$$
 and by the fact that it extends to a differential of algebras.
 In this new complex, it is immediate that the cycles of exterior degree $s$ form $\scr{O}_{X'}\otimes_k\bigwedge\nolimits^s(e'_1,\ldots,\widehat{e'_j},\ldots,e'_p)$ and that the boundaries of exterior degree $s$ form the ideal
 $$
@@ -1935,10 +1938,10 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
   The equality \hyperref[section15equation4]{(4)} then follows from an associativity formula of $\Tor$ (see [@3, p. 345]).
   We consider $T(\scr{G},\scr{O}_{X'}) = \scr{G}\otimes_{\scr{O}_Y}\scr{O}_Y\otimes\scr{O}_{X'}$ as a functor in $\scr{G}$ and $\scr{O}_{X'}$.
   To calculate its left-derived functors $\LL_iT$, we have two spectral sequences, with respective $E_2$ pages
-  \begin{align*}
+  $$\begin{aligned}
     E_2^{ij} &= \Tor_i^{\scr{O}_Y}(\Tor_j^{\scr{O}_X}(\scr{O}_{X'},\scr{O}_Y),\scr{G})
   \\E'^{ij}_2 &= \Tor_j^{\scr{O}_X}(\Tor_i^{\scr{O}_Y}(\scr{G},\scr{O}_Y),\scr{O}_{X'}).
-  \end{align*}
+  \end{aligned}$$
   From this, it evidently follows that $E_2^{ij}=E'^{ji}_2=0$ if $i>0$, and thus that
   $$
     E_2^{0j} = E'^{j0}_2 = \LL_jT(\scr{G},\scr{O}_{X'})[]
@@ -2021,12 +2024,12 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
   $$
   is zero for $n>n_0$, then all the $A_i$ are zero.
   For this, we proceed by induction on $m$, and consider the first difference
-  \begin{align*}
+  $$\begin{aligned}
     \Delta P(n)
     &= P(n+1) - P(n)
   \\&= \sum_{i=1}^m A_i\binom{n}{i-1}
   \\&= \sum_{j=0}^{m-1} A_{j-1}\binom{n}{j}.
-  \end{align*}
+  \end{aligned}$$
   Since $\Delta P(n)=0$ for $n>n_0$, the $A_i$ ($1\leq i\leq m$) are zero by the induction hypothesis, whence clearly $A_0=0$ as well.
 :::
 
@@ -2043,12 +2046,12 @@ which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial rema
 ::: {.proof}
   \begin{enumerate}[(a)]
     \item We have that
-      \begin{align*}
+      $$\begin{aligned}
         \lambda_t(G-1)
         &= \lambda_t(G)/\lambda_t(1)
         = \lambda_t(G)\cdot(1+t)^{-1}
       \\&= \lambda_t(G)(1-t+t^2-t^3+\ldots)
-      \end{align*}
+      \end{aligned}$$
       and it suffices to compare the coefficients of $t^p$.
     \item We have that
       $$
@@ -2112,7 +2115,7 @@ We place ourselves in the classical case, i.e. $k=\mathbb{C}$.
   $$
   We need to calculate $g_!(1)$.
   Let $U$ be an affine open subset of $B$ over which the bundle is trivial.
-  By K\"{u}nneth (see the proof of [Lemma 16](#lemma-16)), we have that
+  By Künneth (see the proof of [Lemma 16](#lemma-16)), we have that
   $$
     \HH^q(U\times F,\scr{O}_X)
     = \sum_{i+j=q} \HH^i(U,\scr{O}_U)\otimes\HH^j(F,\scr{O}_F).
