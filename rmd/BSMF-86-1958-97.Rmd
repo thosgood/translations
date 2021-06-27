@@ -729,7 +729,7 @@ $$
 It suffices to prove this formula when $y=\gamma_Y(\scr{F})$ and $x=\gamma_X(\scr{L})$, where $\scr{F}$ (resp. $\scr{L}$) is a coherent sheaf on $Y$ (resp. a locally free sheaf on $X$).
 In this case, we even have the more precise formula
 
-::: {.eqref #equation-star}
+::: {.refeq #equation-star}
 $$
   \RR^qf(\scr{F}\otimes_{\scr{O}_Y}f^{-1}(\scr{L})) = \RR^qf(\scr{F})\otimes_{\scr{O}_X}\scr{L}
   \tag{$\star$}
@@ -1229,7 +1229,7 @@ Some of these will be more general than necessary for our purposes, but they are
 In what follows, $Y$ is a (non-singular) subvariety of $X$, $i$ the injection of $Y$ into $X$, $p$ the codimension of $Y$ in $X$, $E$ the normal bundle of $Y$, and $\scr{I}(Y)$ the sheaf of local ideals of $Y$.
 We thus have the exact sequence
 
-::: {.eqref #section-10.a-equation-1}
+::: {.refeq #section-10.a-equation-1}
 $$
   0 \to \scr{I}(Y) \to \scr{O}_X \xrightarrow{r} \scr{O}_Y \to 0
 \tag{1}
@@ -1266,7 +1266,7 @@ $$
 $$
 Then the sequence
 
-::: {.eqref #section-10.c-equation-2}
+::: {.refeq #section-10.c-equation-2}
 $$
   0 \to \mathfrak{M}_p \xrightarrow{\mathrm{d}} \mathfrak{M}_{p-1} \to \ldots \to \mathfrak{M}_1 \xrightarrow{\mathrm{d}} \scr{O}_X \xrightarrow{r} \scr{O}_Y \to 0
 \tag{2}
@@ -1281,7 +1281,7 @@ For $b\in U\setminus(U\cap Y)$, we have that $\scr{O}_{b,Y}=0$, and the exactnes
 :::: {.rmenv title="Remark" latex="{Remark}"}
 If $Y$ is a divisor, then [(1)](#section-10.a-equation-1) is exactly another way of writing the exact sequence of sheaves (which is exact on any $X$)
 
-::: {.eqref #section-10.c-equation-3}
+::: {.refeq #section-10.c-equation-3}
 $$
   0 \to \scr{O}_X([Y]^{-1}) \xrightarrow{f} \scr{O}_X \to \scr{O}_Y \to 0,
 \tag{3}
@@ -1366,7 +1366,7 @@ By linearity, and [Theorem 2](#theorem-2), we can restrict to proving [Propositi
 By definition, $i^!i_!(\scr{F})$ is the alternating sum of the $\Tor_i^{\scr{O}_X}(\scr{F},\scr{O}_Y)$, and, since $\scr{F}$ and the $\lambda^i E^*$ are locally free, $\scr{F}\cdot\lambda_{-1}E^*$ is the alternating sum of the $\scr{F}\otimes_{\scr{O}_Y}\lambda^i E^*$.
 Recalling [§10.b](#section-10.b), it thus suffices, to prove [Proposition 12](#proposition-12), to show that
 
-::: {.eqref #section-10.d-equation-4}
+::: {.refeq #section-10.d-equation-4}
 $$
   \Tor_1^{\scr{O}_X}(\scr{F},\scr{O}_Y)
   = \scr{F} \otimes_{\scr{O}_Y} \scr{I}(Y)/\scr{I}(Y)^2
@@ -1374,7 +1374,7 @@ $$
 $$
 :::
 
-::: {.eqref #section-10.d-equation-5}
+::: {.refeq #section-10.d-equation-5}
 $$
   \Tor_i^{\scr{O}_X}(\scr{F},\scr{O}_Y)
   = \scr{F} \otimes_{\scr{O}_Y} \lambda^i(\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_Y)).
@@ -1404,7 +1404,7 @@ $$
 $$
 which can also be written as
 
-::: {.eqref #section-10.d-equation-6}
+::: {.refeq #section-10.d-equation-6}
 $$
   0 \to \scr{F}\otimes_k\bigwedge\nolimits^p V \to \scr{F}\otimes_k\bigwedge\nolimits^{p-1}V \to \ldots \to \scr{F}
   \tag{6}
@@ -1473,7 +1473,7 @@ But, on $Y\cap U_i\cap U_j$, we have that $\dd f_i=f_{ij}\cdot\dd f_j$ (since $f
 Given the results of [§7](#section-7) and [§9](#section-9), it remains only to prove [R--R](#theorem-riemann-roch) for an injection.
 In the notation of [§10.a](#section-10.a), the formula to prove is then equivalent to
 
-::: {.eqref #section-11-equation-1}
+::: {.refeq #section-11-equation-1}
 $$
   \ch i_!y = i_*(\ch y\cdot T(E)^{-1})
   \qquad\text{(for }y\in K(Y)\text{).}
@@ -1495,7 +1495,7 @@ This first particular case will be covered below, and the general case of the in
 
 We will use, without explanation, the formulas
 
-::: {.eqref #section-11-equation-2}
+::: {.refeq #section-11-equation-2}
 $$
   \begin{aligned}
     f_!(y\cdot f^!(x)) = f_!(y)\cdot x
@@ -1725,7 +1725,7 @@ This lemma will be proven in [§14](#section-14), [§15](#section-15), and [§16
 :::: {.proof}
 We must (see [§11](#section-11)) establish the equality
 
-::: {.eqref #proposition-15-equation-1}
+::: {.refeq #proposition-15-equation-1}
 $$
   \ch i_!(y) = i_*(\ch y\cdot T(E)^{-1}),
 \tag{1}
@@ -1736,7 +1736,7 @@ and it suffices to do this in the case where $p\geq\dim Y+2$ ([Corollary 2 of Pr
 In this case, $g^!(y)\cdot\lambda_{-1}F^*\equiv0\mod(1-L^*)$, by part (d) of [Lemma 19](#lemma-19), and so is in the image of $K(X')$ under $j^!$ ([Proposition 13](#proposition-13)), and ([Proposition 14](#proposition-14)) we can apply [R--R](#theorem-riemann-roch) to $g^!(y)\cdot\lambda_{-1}F^*$ and $j$.
 This gives
 
-::: {.eqref #proposition-15-equation-2}
+::: {.refeq #proposition-15-equation-2}
 $$
   \ch j_!(g^! y\cdot\lambda_{-1}F^*)
   = j_*(\ch(g^! y\cdot \lambda_{-1}F^*)\cdot T(L)^{-1}).
@@ -1746,14 +1746,14 @@ $$
 
 To deduce [(1)](#proposition-15-equation-1) from this, it evidently suffices to show that
 
-::: {.eqref #proposition-15-equation-3}
+::: {.refeq #proposition-15-equation-3}
 $$
   f_*(\ch j_!(g^!y\cdot\lambda_{-1}F^*)) = \ch i_! y
 \tag{3}
 $$
 :::
 
-::: {.eqref #proposition-15-equation-4}
+::: {.refeq #proposition-15-equation-4}
 $$
   f_*j_*(\ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1}) = i_*(\ch y\cdot T(E)^{-1}).
 \tag{4}
@@ -1828,7 +1828,7 @@ the kernel of $\mu$ is the sheaf $\scr{O}_{Y'}(F^*)$ of germs of sections of $F^
 in fact, this verification is superfluous, since we know that the kernel of $\mu$ is locally free (see [Lemma 8](#lemma-8), [§4](#section-4)), and thus corresponds to a subbundle $N$ of $E'^*$ such that $E'^*/N=L^*$, and thus necessarily represents the same element as $F^*$ in $K(Y')$.
 We thus have the exact sequence
 
-::: {.eqref #section-15-equation-1}
+::: {.refeq #section-15-equation-1}
 $$
   - \to \scr{O}_{Y'}(F^*) \to \scr{J}/\scr{J}^2\otimes_{\scr{O}_Y}\scr{O}_{Y'} \xrightarrow{\mu} \scr{J}'/\scr{J}'^2 \to 0.
 \tag{1}
@@ -1844,7 +1844,7 @@ $$
 Also, $f^!i_!(y)$ is the alternating sum of the $\Tor_i^{\scr{O}_X}(\scr{G},\scr{O}_{X'})$;
 it thus suffices to prove that
 
-::: {.eqref #section-15-equation-2}
+::: {.refeq #section-15-equation-2}
 $$
   \Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
   = \lambda^i\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
@@ -1853,7 +1853,7 @@ $$
 $$
 :::
 
-::: {.eqref #section-15-equation-3}
+::: {.refeq #section-15-equation-3}
 $$
   \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
   = \scr{O}_{Y'}(F^*)
@@ -1861,7 +1861,7 @@ $$
 $$
 :::
 
-::: {.eqref #section-15-equation-4}
+::: {.refeq #section-15-equation-4}
 $$
   \Tor_j^{\scr{O}_X}(\scr{G},\scr{O}_{X'})
   = \scr{G}\otimes_{\scr{O}_Y}\Tor_j^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
@@ -1922,7 +1922,7 @@ $$
 $$
 It is clear that, if $b=f(b')$, then $\scr{J}'_{b'}=\scr{J}_b\cdot\scr{O}_{b',X'}$, and so the image of $g$ is $\scr{J}'$, and we obtain the exact sequence
 
-::: {.eqref #section-15-equation-5}
+::: {.refeq #section-15-equation-5}
 $$
   0 \to \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) \to \scr{J}\otimes_{\scr{O}_X}\scr{O}_{X'} \to \scr{J}' \to 0.
 \tag{5}
@@ -1938,7 +1938,7 @@ $$
 $$
 Also, $\scr{J}'$ can be identified with $\scr{O}_{X'}([Y']^{-1})$, and is locally free, and so $\Tor_1^{\scr{O}_{X'}}(\scr{J}',\scr{O}_{Y'}) = 0$, and the exact sequence of $\Tor$, applied to [(5)](#section-15-equation-5), gives the exact sequence
 
-::: {.eqref #section-15-equation-6}
+::: {.refeq #section-15-equation-6}
 $$
   0 \to \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) \to \scr{J}\otimes_{\scr{O}_X}\scr{O}_{Y'} \xrightarrow{g} \scr{J}'\otimes_{\scr{O}_{X'}}\scr{O}_{Y'} \to 0.
 \tag{6}
@@ -2032,7 +2032,7 @@ $$
 $$
 and so, finally,
 
-::: {.eqref #lemma-21-equation-1}
+::: {.refeq #lemma-21-equation-1}
 $$
   \lambda^s(Gh^n- k) = \sum_{i=0}^{n_s} A_{s,i}\binom{n}{i}
   \qquad\text{(for }A_{s,i}\in K(Y)\text{).}
