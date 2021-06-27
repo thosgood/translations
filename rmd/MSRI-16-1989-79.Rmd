@@ -66,7 +66,7 @@ $$
 $$ -->
 
 
-<!-- \section*{}
+# Introduction {-}
 
 \oldpage{3 (81)}
 The present article owes much to A. Grothendieck.
@@ -76,10 +76,10 @@ Around five years ago, he also said to me, with conviction, that the profinite c
 Every finite cover of $X$ can be described by equations with coefficients in the algebraic numbers.
 Applying an element of $\Gal(\cQQ/\QQ)$ to these coefficients, we obtain the equations of another cover.
 Understanding how $\Gal(\cQQ/\QQ)$ permutes the isomorphism classes of finite covers essentially reduces to understanding the Galois action on $\hat{\pi}_1$.
-``Essentially'', since I have omitted mentioning the base points, and since the Galois covers have not been thought of as $G$-covers, for $G$ their automorphism group.
+"Essentially", since I have omitted mentioning the base points, and since the Galois covers have not been thought of as $G$-covers, for $G$ their automorphism group.
 
 Up until now, we have not had the language necessary to study the Galois action on $\hat{\pi}_1$.
-A. Grothendieck and his students have developed a combinatorial description (``charts'') of finite covers of $X$, based on a decomposition of $\PP^1(\CC)$ into the two ``spherical triangles'' $\Im(z)\geq0$ and $\Im(z)\leq0$, with sides $[\infty,0]$, $[0,1]$, and $[1,\infty]$.
+A. Grothendieck and his students have developed a combinatorial description ("charts") of finite covers of $X$, based on a decomposition of $\PP^1(\CC)$ into the two ``spherical triangles'' $\Im(z)\geq0$ and $\Im(z)\leq0$, with sides $[\infty,0]$, $[0,1]$, and $[1,\infty]$.
 This has not helped in understanding the Galois action.
 We have only a few unresolved examples of covers whose Galois conjugates have been calculated.
 
@@ -92,42 +92,41 @@ The action, up to inner automorphism, does not depend on the choice of $x$.
 We would like to understand these actions.
 
 The nilpotent versions of $\pi_1$ is very close to cohomology.
-This is most visible in the theory of D. Sullivan (\cite{Su}, \cite{Mo}).
-Notation: for $\Gamma$ a finitely generated group, let $Z^i\Gamma$ be the decreasing central series, let $\Gamma^{(N)}=\Gamma/Z^{N+1}\Gamma$, and let $\Gamma^{[N]}=\Gamma^{(N)}/\mathrm{torsion}$ \hyperref[9.3]{(9.3)}.
-The theory of Malcev (\cite{Mal}) attaches a nilpotent Lie algebra over $\QQ$, denoted $\Lie\Gamma^{[N]}$, to $\Gamma^{[N]}$, such that $\Gamma^{[N]}$ is a congruence subgroup of the unipotent algebraic group over $\QQ$ of the Lie algebra $\Lie\Gamma^{[N]}$.
-By D. Sullivan, if $X$ is a differentiable manifold, then $\Lie\pi_1(X)^{[N]}\otimes\RR$ is determined, up to inner automorphism, by the differential-graded algebra $\Omega_X^\bullet$, taken
-\oldpage{4 (82)}
-up to quasi-isomorphism.
+This is most visible in the theory of D. Sullivan [@Su; @Mo].
+Notation: for $\Gamma$ a finitely generated group, let $Z^i\Gamma$ be the decreasing central series, let $\Gamma^{(N)}=\Gamma/Z^{N+1}\Gamma$, and let $\Gamma^{[N]}=\Gamma^{(N)}/\mathrm{torsion}$ [(9.3)](#chunk-9.3).
+The theory of Malcev [@Mal] attaches a nilpotent Lie algebra over $\QQ$, denoted $\Lie\Gamma^{[N]}$, to $\Gamma^{[N]}$, such that $\Gamma^{[N]}$ is a congruence subgroup of the unipotent algebraic group over $\QQ$ of the Lie algebra $\Lie\Gamma^{[N]}$.
+By D. Sullivan, if $X$ is a differentiable manifold, then $\Lie\pi_1(X)^{[N]}\otimes\RR$ is determined, up to inner automorphism, by the differential-graded algebra $\Omega_X^\bullet$, taken up to quasi-isomorphism.
 
-This close relation with cohomology hints that the study of nilpotent versions of $\hat{\pi}_1$ is far from the ``anabelian'' dream of A. Grothendieck.
+\oldpage{4 (82)}
+
+This close relation with cohomology hints that the study of nilpotent versions of $\hat{\pi}_1$ is far from the "anabelian" dream of A. Grothendieck.
 It allows us, however, to use his philosophy of motives.
 
 Let $k$ be a number field.
-If $X$ is an algebraic variety over $k$, then we have a whole series of parallel cohomology theories for $X$: the classical cohomology of $X(\CC)$ (for each complex embedding of $k$), crystalline cohomology (which is equal to de Rham cohomology if $X$ is smooth), $\ell$-adic cohomology, \ldots.
-The groups thus obtained are endowed with various additional structures (Hodge mixed, Galois action, \ldots) and are linked by comparison isomorphism.
-In \hyperref[1]{\S1}, we axiomatise the situation by defining ``realisation systems over $k$''.
+If $X$ is an algebraic variety over $k$, then we have a whole series of parallel cohomology theories for $X$: the classical cohomology of $X(\CC)$ (for each complex embedding of $k$), crystalline cohomology (which is equal to de Rham cohomology if $X$ is smooth), $\ell$-adic cohomology, ...
+The groups thus obtained are endowed with various additional structures (Hodge mixed, Galois action, ...) and are linked by comparison isomorphism.
+In [§1](#section-1), we axiomatise the situation by defining "realisation systems over $k$".
 The exact definition is not to be taken seriously: considering the applications --- and what we are capable of doing --- it could be wise to either add or remove data as much as axioms.
 The essential, for us, is that
-\begin{enumerate}[(i)]
-  \item The category of realisation systems is endowed with a $\otimes$ satisfying the usual properties: it is a Tannakian category over $\QQ$.
-  \item Conjecturally, the category of motives is a full subcategory of the category of realisation systems.
-\end{enumerate}
+
+i. The category of realisation systems is endowed with a $\otimes$ satisfying the usual properties: it is a Tannakian category over $\QQ$.
+
+ii. Conjecturally, the category of motives is a full subcategory of the category of realisation systems.
 
 Condition (ii) requires, in particular, that, for every variety $X$ over $k$ and for every $i$, the available cohomology theories, applied to $X$, give a realisation system $H^i(X)$ over $k$ (which we will denote by $H^i(X)_\mot$, and call the motivic $H^i$ of $X$).
 
-Analogous ideas have been independently developed by U. Jannsen \cite{J}.
-In \cite{J}, U. Jannsen defines (mixed) motives over $k$ as constituting the Tannakian subcategory (of the category of realisation systems) generated by the $H^i(X)$ for $X$ smooth and quasi-projective.
-Here we are still being imprecise, saying that a motive over $k$ is a realisation system ``of geometric origin''.
+Analogous ideas have been independently developed by U. Jannsen [@J].
+In [@J], U. Jannsen defines (mixed) motives over $k$ as constituting the Tannakian subcategory (of the category of realisation systems) generated by the $H^i(X)$ for $X$ smooth and quasi-projective.
+Here we are still being imprecise, saying that a motive over $k$ is a realisation system "of geometric origin".
 For $X$ over $k$ and $x\in X(k)$, we want, for example, to regard $\Lie\pi_1(X(\CC),x)^{[N]}$ as a realisation of a motive over $k$.
 
 This article owes much to an unpublished work of Z. Wojtkoviak.
 For $X=\PP^1\setminus\{0,1,\infty\}$ and $x\in X(\CC)$, I proposed to him a definition of the mixed Hodge structure of $\Lie\pi_1(X(\CC),x)^{[N]}$.
 He calculated it in part, for small $N$, and, to my extreme surprise, show that, for $N=4$, its description involves $\zeta(3)$.
-A decanted form of the calculations appear in \hyperref[19]{\S19}.
-In fact, the whole article originates from my desire to
+A decanted form of the calculations appear in [§19](#section-19).
+In fact, the whole article originates from my desire to understand the result of Z. Wojtkoviak.
 \oldpage{5 (83)}
-understand the result of Z. Wojtkoviak.
-I have also been helped by the answer by O. Gabber to my question ``How can we construct an extension of $\ZZ_\ell$ by $\ZZ_\ell(3)$, uniformly in $\ell$?'': ``By a class in $K_5(\QQ)$'', as well as by the conjectures of A. Beilinson on the values of $L$-functions.
+I have also been helped by the answer by O. Gabber to my question "How can we construct an extension of $\ZZ_\ell$ by $\ZZ_\ell(3)$, uniformly in $\ell$?": "By a class in $K_5(\QQ)$", as well as by the conjectures of A. Beilinson on the values of $L$-functions.
 
 If $X$ is an algebraic variety over a number field $k$, $x\in X(k)$, and $N$ an integer, then we want to have a realisation system $\Lie\pi_1(X,x)_\mot^{(N)}$.
 We can only succeed in constructing this under additional hypotheses on $X$: in the general case, certain realisations are missing.
@@ -140,12 +139,14 @@ We thus deduce that $\Lie\pi_1(X,x)_\mot^{(N)}$ is an iterated extension of Tate
 The fact that non-trivial extensions appear is what gives it its charm.
 
 I conjecture that, over a number field $k$, the group of motivic extensions of $\QQ$ by $\QQ(n)$ ($n>0$) is $K_{2n-1}(k)\otimes\QQ$.
-For a general framework into which we can place this conjecture, see \cite[§5]{B}.
+For a general framework into which we can place this conjecture, see [@B, §5].
 In particular, for $k=\QQ$, we want $\Ext^1(\QQ,\QQ(n))$ to be zero for $n$ even, and of dimension $1$ for $n\geq3$ odd.
-This is the motivic $\Ext^1$: extensions as realisation systems that ``come from algebraic geometry''.
+This is the motivic $\Ext^1$: extensions as realisation systems that "come from algebraic geometry".
 This conjecture places severe restrictions on $\Lie\pi_1(X,x)_\mot^{(N)}$, which are far from having been verified.
 What we know concerns, up to now, only the quotient by the second derived group.
 A large part of this article is dedicated to developing a language in which the consequences of the conjecture affecting $\Lie\pi_1(X,x)_\mot^{(N)}$ can be clearly stated.
+
+<!--
 
 We now go through this article, pointing out several shortcuts.
 
@@ -158,7 +159,7 @@ The definition has a crystalline component.
 The reader is invited to ignore this for a first approximation.
 The theory coincides with that of U. Jannsen
 \oldpage{6 (84)}
-\cite{J}.
+[@J].
 The crystalline aspect will be neglected in the rest of the introduction.
 
 In \hyperref[2]{\S2} we give examples.
@@ -266,7 +267,7 @@ It is only completely studied for smooth algebraic varieties whose smooth compac
 Another complaint: I sometimes only sketch the definition of structures that will be used in future calculations.
 
 In \hyperref[16]{\S16}, we finally explain what the $\ZZ(k)$-torsors from \hyperref[3]{\S3} have to do with the $\pi_1$ of the projective line minus three points.
-The justifying calculations are given in \hyperref[19]{\S19}.
+The justifying calculations are given in [§19](#section-19).
 We given, in \hyperref[17]{\S17} and \hyperref[18]{\S18}, a geometric explanation of some of their properties. -->
 
 
@@ -372,17 +373,17 @@ The most important for us will be de Rham and $\ell$-adic cohomology.
 
 - **$\ell$-adic cohomology.**
     Let $\ell$ be a prime number;
-    if $k$ is an algebraically closed field of characteristic $\neq\ell$, then we have the $\ell$-adic theory $X\mapsto\HH^i(X,\QQ_\ell)$ that associates, to $X$ over $k$, cohomology groups which are vector spaces over $\QQ_\ell$ [@SGA5, VI]{SGA5}.
+    if $k$ is an algebraically closed field of characteristic $\neq\ell$, then we have the $\ell$-adic theory $X\mapsto\HH^i(X,\QQ_\ell)$ that associates, to $X$ over $k$, cohomology groups which are vector spaces over $\QQ_\ell$ (cf. SGA 5, VI).
     They are defined from the cohomology groups with coefficients in $\ZZ/(\ell^n)$, and we allow ourselves to give, as reference for a theorem in $\ell$-adic cohomology, the place where its $\ZZ/(\ell^n)$ analogue is proved.
     The $\HH^i(X,\QQ_\ell)$ depend only on $X$.
     In particular, if $k$ is the algebraic closure of $k_0$, and if $X$ is given by extension of scalars of some $X_0$ over $k_0$, then $\Gal(k/k_0)$ acts (semi-$k$-linearly) on $X$, and thus acts on the $\HH^i(X,\QQ_\ell)$.
     This action is continuous.
     If $k'$ is an algebraically closed extension of $k$, and if $X'$ is given by extension of scalars of $X$, then $\HH^i(X,\QQ_\ell)\xrightarrow{\sim}\HH^i(X',\QQ_\ell)$.
     \oldpage{12 (90)}
-    This follows by passing to the limit in the base change theorem for a smooth morphism [@SGA4, XVI, 1.2]: $k'$ is the filtrant inductive limit of the $k$-algebras $A$ with $\Spec(A)$ smooth over $k$.
+    This follows by passing to the limit in the base change theorem for a smooth morphism [SGA 4, XVI, 1.2]: $k'$ is the filtrant inductive limit of the $k$-algebras $A$ with $\Spec(A)$ smooth over $k$.
 
 If $k=\CC$, then we have the topological space $X(\CC)$ of points of $X$, as well as its rational cohomology $\HH^\bullet(X(\CC),\QQ)$.
-We have canonical isomorphisms from [@G] and [@SGA4, XVI, 4.1]:
+We have canonical isomorphisms from [@G] and [SGA4, XVI, 4.1]:
 
 ::: {.eqtag #equation-1.1.1}
 $$
