@@ -153,7 +153,7 @@ It can be calculated using the following rules (which don't need explicit knowle
 
 1. $\theta(X)$ _commutes_ with $\dd$ (on $\Lambda(E')$); to take $\theta(X)$ of a _product_ (either exterior, interior, or scalar), we apply the classical formula for taking the derivative of a product; and, in particular, on $\Lambda(E)$ and $\Lambda(E')$, $\theta(X)$ is a _derivation_.
 
-::: {.refeq #equation-I.1}
+::: {.eqref #equation-I.1}
 2. If we apply $\theta(X)$ to a vector field $Y$, then we obtain $\theta(X)\cdot Y$; we have the fundamental formula
     $$
       \theta(\theta(X)\cdot Y) = \theta(X)\theta(Y) - \theta(Y)\theta(X),
@@ -164,7 +164,7 @@ It can be calculated using the following rules (which don't need explicit knowle
 
 \oldpage{10}
 
-::: {.refeq #equation-I.2}
+::: {.eqref #equation-I.2}
 3. Finally, we have the "fundamental formula of the calculation of variations":
     on the space $\Lambda(E')$ of exterior differential forms,
     $$
@@ -192,7 +192,7 @@ The elements upon which $\theta(X)$ acts as zero (for _all_ $X\in\frak{a}$) are 
 
 Since $\theta(X)$ is zero on the scalars (constant functions), we have:
 
-::: {.refeq #equation-I.3}
+::: {.eqref #equation-I.3}
 $$
   \langle \theta(X)\cdot Y,\omega \rangle + \langle Y,\theta(X)\cdot\omega \rangle
   = 0
@@ -234,7 +234,7 @@ The invariant elements of $\Lambda(\frak{a})$ form a _sub-algebra_ $\frak{J}$, a
 
 Equation [(2)](#equation-I.2) leads us to define an endomorphism $\delta$ of $\Lambda(\frak{a}')$ that is zero on the scalars, and such that
 
-::: {.refeq #equation-I.4}
+::: {.eqref #equation-I.4}
 $$
   \theta(x) = i(x)\delta + \delta i(x).
 \tag{4}
@@ -343,7 +343,7 @@ If $K$ is maximal and quasi-real, and $\frak{a}$ is _simple_, then the third Bet
 
 These operators satisfy the following relations:
 
-::: {.refeq #equation-II.1}
+::: {.eqref #equation-II.1}
 $$
   \begin{aligned}
     \partial\partial &= 0,
@@ -502,7 +502,7 @@ the map $x\mapsto x'$ from $\frak{a}$ to $\frak{a}'$ defines a bilinear form $f(
 \oldpage{49}
 We have
 
-::: {.refeq #equation-II.2}
+::: {.eqref #equation-II.2}
 $$
   f(x,[y,z])
   = -\langle x\wedge y\wedge z,\alpha'\rangle,
