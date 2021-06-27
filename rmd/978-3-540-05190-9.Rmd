@@ -141,7 +141,7 @@ following the tradition of topologists, a covering is a continuous map $f\colon 
 :::
 
 
-# (PART) Dictionary {.unnumbered}
+# (PART) Dictionary {-}
 
 In this chapter, we explain the relations between various aspects and various uses of the notion of "local systems of complex vectors".
 The equivalence between the points of view considered has been well known for a long time.
@@ -151,28 +151,3 @@ The equivalence between the points of view considered has been well known for a 
 We do not consider the "crystalline" point of view;
 see [@4; @10].
 
-
-# Local systems and the fundamental group {#I.1}
-
-::: {.rmenv #I.1.1 title="Definition 1.1" latex="{Definition 1.1}"}
-Let $X$ be a topological space.
-A _complex local system_ on $X$ is a sheaf of complex vectors on $X$ that, locally on $X$, is isomorphic to a constant sheaf $\mathbb{C}^n$ (n$\in\mathbb{N}$).
-:::
-
-::: {.rmenv #I.1.2 title="1.2" latex="{1.2}"}
-Let $X$ be a locally path-connected and locally simply path-connected topological space, along with a basepoint $x_0\in X$.
-To avoid any ambiguity, we point out that:
-
-a. The fundamental group $\pi_1(X,x_0)$ of $X$ at $x_0$ has elements given by homotopy classes of loops based at $x_0$;
-b. If $\alpha,\beta\in\pi_1(X,x_0)$ are represented by loops $a$ and $b$, then $\alpha\beta$ is represented by the loop $ab$ obtained by juxtaposing $b$ and $a$, in that order.
-
-Let $\scr{F}$ be a locally constant sheaf on $X$.
-For every path $a\colon[0,1]\to X$, the inverse image $a^*\scr{F}$ of $\scr{F}$ on $[0,1]$ is a locally constant, and thus constant, sheaf, and there exists exactly one isomorphism between $a^*\scr{F}$ and the constant sheaf defined by the set $(a^*\scr{F})_0 = \scr{F}_{a(0)}$.
-This isomorphism defines an isomorphism $a(\scr{F})$ between $(a^*\scr{F})_0$ and $(a^*\scr{F})_1$, i.e. an isomorphism
-$$
-    a(\scr{F})\colon \scr{F}_{a(0)} \to \scr{F}_{a(1)}.
-$$
-This isomorphism depends only on the homotopy class of $a$, and satisfies $ab(\scr{F}) = a(\scr{F})\cdot b(\scr{F})$.
-In particular, $\pi_1(X,x_0)$ acts (on the left) on the fibre $\scr{F}_{x_0}$ of $\scr{F}$ at $x_0$.
-It is well known that:
-:::
