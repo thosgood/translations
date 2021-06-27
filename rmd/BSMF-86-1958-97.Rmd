@@ -941,7 +941,7 @@ Formula (iii) is a consequence of the multiplicative property of $\ch$.
 
 [In fact, we will only use the above lemma in the case where one of the varieties $X'$ and $Y'$ consists of a single point.]
 
-[Lemma 15](#lemma-15), along with [the Corollary to Proposition 4](#corollary-5), shows that _it suffices to prove [R--R](#theorem-riemann-roch) in the two following cases:_
+[Lemma 15](#lemma-15), along with [the Corollary of Proposition 4](#corollary-5), shows that _it suffices to prove [R--R](#theorem-riemann-roch) in the two following cases:_
 
 a. $Y=X\times\PP$, with $\PP$ a projective space, and $f\colon X\times\PP\to X$ the projection onto the first factor.
 b. an injection $f\colon Y\to X$ of a closed subvariety $Y$ of $X$.
@@ -1141,7 +1141,7 @@ This diagram commutes:
 this is trivial for the second and third squares, and, for the first square, it suffices to verify locally, on affine opens, for example.
 Given the induction hypothesis, $\varepsilon_1$ is surjective.
 But $U$ is an affine space;
-the [Corollary to Proposition 8](#proposition-8-corollary) then shows that $K(U)=\mathbb{Z}$, and that $K(X\times U)=K(X)$, whence the fact that $\varepsilon_3$ is bijective.
+the [Corollary of Proposition 8](#proposition-8-corollary) then shows that $K(U)=\mathbb{Z}$, and that $K(X\times U)=K(X)$, whence the fact that $\varepsilon_3$ is bijective.
 The five lemma then shows that $\varepsilon_2$ is surjective.
 :::
 
@@ -1667,145 +1667,150 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
 
 # Finishing the proof of R--R {#section-13}
 
-<!--
-\section{Finishing the proof of R--R}
-\label{section13}
-
 ::: {.itenv #lemma-18 title="Lemma 18" latex="{Lemma 18}"}
-  Let $G$ be a vector bundle of rank $k$ on a variety $X$.
-  Then
-  $$
-    \ch(\lambda_{-1}G) = c_k(G^*)T(G^*)^{-1}.
-  $$
+Let $G$ be a vector bundle of rank $k$ on a variety $X$.
+Then
+$$
+  \ch(\lambda_{-1}G) = c_k(G^*)T(G^*)^{-1}.
+$$
 :::
 
 ::: {.proof}
-  Write the Chern class $c(G)$ of $G$ in the form
-  $$
-    c(G) = \prod_{i=1}^k (1+a_i).
-  $$
-  Then (see [@9])
-  $$\begin{aligned}
+Write the Chern class $c(G)$ of $G$ in the form
+$$
+  c(G) = \prod_{i=1}^k (1+a_i).
+$$
+Then (see [@9])
+$$
+  \begin{aligned}
     c(G^*) &= \prod (1-a_i),
   \\c(\wedge^sG) &= \prod_{i_1<\ldots<i_s} (1+a_{i_1}+\ldots+a_{i_s}),
-  \end{aligned}$$
-  whence
-  $$\begin{aligned}
+  \end{aligned}
+$$
+whence
+$$
+  \begin{aligned}
     c_k(G^*) &= (-1)^k a_1\ldots a_k,
   \\\ch(\lambda_{-1}G) &= \prod (1-e^{a_i}),
-  \end{aligned}$$
-  and so
-  $$
-    \ch(\lambda_{-1}G) = c_k(G^*)T(G^*)^{-1}.
-  $$
+  \end{aligned}
+$$
+and so
+$$
+  \ch(\lambda_{-1}G) = c_k(G^*)T(G^*)^{-1}.
+$$
 :::
 
 ::: {.itenv #lemma-19 title="Lemma 19" latex="{Lemma 19}"}
-  In the notation of \hyperref[section12a]{\S12.a}, we have:
-  \begin{enumerate}[(a)]
-    \item $f_*(1) = 1$, and so $f_*f^*$ is the identity;
-    \item $g_*(c_{p-1}(F)) = 1$;
-    \item $f^!i_!(y) = j_!(g^!(y)\cdot\lambda_{-1}F^*)$ [$y\in K(Y)$];
-    \item $\lambda_{-1}F\equiv0 \mod(1-L^*)$ if $p\geq\dim Y+2$.
-  \end{enumerate}
+In the notation of [§12.a](#section-12.a), we have:
+
+a. $f_*(1) = 1$, and so $f_*f^*$ is the identity;
+b. $g_*(c_{p-1}(F)) = 1$;
+c. $f^!i_!(y) = j_!(g^!(y)\cdot\lambda_{-1}F^*)$ [$y\in K(Y)$];
+d. $\lambda_{-1}F\equiv0 \mod(1-L^*)$ if $p\geq\dim Y+2$.
 :::
 
 ::: {.proof}
-  This lemma will be proven in [§14](#section-14), [§15](#section-15), and [§16](#section-16).
+This lemma will be proven in [§14](#section-14), [§15](#section-15), and [§16](#section-16).
 :::
 
 \oldpage{129}
+
 ::: {.itenv #proposition-15 title="Proposition 15" latex="{Proposition 15}"}
-  [R--R](#theorem-riemann-roch) is true for an injection.
+[R--R](#theorem-riemann-roch) is true for an injection.
 :::
 
-::: {.proof}
-  We must (see [§11](#section-11)) establish the equality
-  $$
-  \label{proposition15equation1}
-    \ch i_!(y) = i_*(\ch y\cdot T(E)^{-1}),
-    \tag{1}
-  $$
-  and it suffices to do this in the case where $p\geq\dim Y+2$ (\hyperref[corollary2]{Corollary 2} of [Proposition 15](#proposition-15)).
-  In this case, $g^!(y)\cdot\lambda_{-1}F^*\equiv0\mod(1-L^*)$, by part (d) of [Lemma 19](#lemma-19), and so is in the image of $K(X')$ under $j^!$ ([Proposition 13](#proposition-13)), and ([Proposition 14](#proposition-14)) we can apply [R--R](#theorem-riemann-roch) to $g^!(y)\cdot\lambda_{-1}F^*$ and $j$.
-  This gives
-  $$
-  \label{proposition15equation2}
-    \ch j_!(g^! y\cdot\lambda_{-1}F^*)
-    = j_*(\ch(g^! y\cdot \lambda_{-1}F^*)\cdot T(L)^{-1}).
-    \tag{2}
-  $$
-  To deduce \hyperref[proposition15equation1]{(1)} from this, it evidently suffices to show that
-  $$\begin{aligned}
-  \label{proposition15equation3}
+:::: {.proof}
+We must (see [§11](#section-11)) establish the equality
+
+::: {.eqref #proposition-15-equation-1}
+$$
+  \ch i_!(y) = i_*(\ch y\cdot T(E)^{-1}),
+\tag{1}
+$$
+:::
+
+and it suffices to do this in the case where $p\geq\dim Y+2$ ([Corollary 2 of Proposition 14](#corollary-2)).
+In this case, $g^!(y)\cdot\lambda_{-1}F^*\equiv0\mod(1-L^*)$, by part (d) of [Lemma 19](#lemma-19), and so is in the image of $K(X')$ under $j^!$ ([Proposition 13](#proposition-13)), and ([Proposition 14](#proposition-14)) we can apply [R--R](#theorem-riemann-roch) to $g^!(y)\cdot\lambda_{-1}F^*$ and $j$.
+This gives
+
+::: {.eqref #proposition-15-equation-2}
+$$
+  \ch j_!(g^! y\cdot\lambda_{-1}F^*)
+  = j_*(\ch(g^! y\cdot \lambda_{-1}F^*)\cdot T(L)^{-1}).
+\tag{2}
+$$
+:::
+
+To deduce [(1)](#proposition-15-equation-1) from this, it evidently suffices to show that
+
+::: {.eqref #proposition-15-equation-3-and-4}
+$$
+  \begin{aligned}
     f_*(\ch j_!(g^!y\cdot\lambda_{-1}F^*)) &= \ch i_! y
     \tag{3}
-  \\
-  \label{proposition15equation4}f_*j_*(\ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1}) &= i_*(\ch y\cdot T(E)^{-1}).
+  \\f_*j_*(\ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1}) &= i_*(\ch y\cdot T(E)^{-1}).
     \tag{4}
-  \end{aligned}$$
-  Part (c) of [Lemma 19](#lemma-19) shows that the left-hand side of \hyperref[proposition15equation3]{(3)} is equal to
-  $$
-    f_*(\ch f^!i_!y) = f_*^*(\ch i_!y)
-  $$
-  and thus equal to the right-hand side of \hyperref[proposition15equation3]{(3)}, given part (a) of [Lemma 19](#lemma-19).
+  \end{aligned}
+$$
+Part (c) of [Lemma 19](#lemma-19) shows that the left-hand side of [(3)](#proposition-15-equation-3-and-4) is equal to
+$$
+  f_*(\ch f^!i_!y) = f_*^*(\ch i_!y)
+$$
+and thus equal to the right-hand side of [(3)](#proposition-15-equation-3-and-4), given part (a) of [Lemma 19](#lemma-19).
 
-  Since $\ch$ is multiplicative, we have that
-  $$
-    \ch(g^!y\cdot\lambda_{-1}F^*)
-    = \ch g^!y\cdot\ch\lambda_{-1}F^*
-    = g^*(\ch y)\cdot\ch\lambda_{-1}F^*
-  $$
-  and so ([Lemma 18](#lemma-18))
-  $$
-    \ch(g^!y\cdot\lambda_{-1}F^*) = g^*(\ch y)c_{p-1}(F)\cdot T(F)^{-1}.
-  $$
-  But $E'/L=F$, so
-  $$
-    g^*(T(E)) = T(E') = T(F)\cdot T(L)
-  $$
-  whence
-  $$
-    \ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1} = c_{p-1}(F)\cdot g^*(\ch y\cdot T(E)^{-1}).
-  $$
-  Given [(2)](#section-11-equation-2) (in [§11](#section-11)) and part (b) of [Lemma 19](#lemma-19), the image under $g_*$ of the right-hand side is equal to $\ch y\cdot T(E)^{-1}$, and the equality in \hyperref[proposition15equation4]{(4)} then follows from the fact that $f_*j_*=i_*g_*$.
-:::
--->
+Since $\ch$ is multiplicative, we have that
+$$
+  \ch(g^!y\cdot\lambda_{-1}F^*)
+  = \ch g^!y\cdot\ch\lambda_{-1}F^*
+  = g^*(\ch y)\cdot\ch\lambda_{-1}F^*
+$$
+and so ([Lemma 18](#lemma-18))
+$$
+  \ch(g^!y\cdot\lambda_{-1}F^*) = g^*(\ch y)c_{p-1}(F)\cdot T(F)^{-1}.
+$$
+But $E'/L=F$, so
+$$
+  g^*(T(E)) = T(E') = T(F)\cdot T(L)
+$$
+whence
+$$
+  \ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1} = c_{p-1}(F)\cdot g^*(\ch y\cdot T(E)^{-1}).
+$$
+Given [(2)](#section-11-equation-2) (in [§11](#section-11)) and part (b) of [Lemma 19](#lemma-19), the image under $g_*$ of the right-hand side is equal to $\ch y\cdot T(E)^{-1}$, and the equality in [(4)](#proposition-15-equation-3-and-4) then follows from the fact that $f_*j_*=i_*g_*$.
+::::
 
 
 # Proof of parts (a) and (b) of Lemma 19 {#section-14}
 
-<!--
 The map $f$ if an isomorphism outside of $Y'$, and so is of local degree $1$, and so sends a fundamental cycle to a fundamental cycle, whence part (a) of [Lemma 19](#lemma-19).
 
 The map $g_*$ lowers the degree (which is the geometric codimension) by $p-1$, and corresponds to integration on the fibre.
 But also, the restriction of $L$ to a fibre $\PP_{p-1}$ of $g$ can be thought of as $k^p\setminus\{0\}$, the principal $k^*$-bundle, on the base $\PP_{p-1}$.
 We know that the first Chern class of this latter bundle is the opposite of the class of a hyperplane.
-If we
 \oldpage{130}
-set $-u=c_1(L)$, then this implies that
+If we set $-u=c_1(L)$, then this implies that
 $$
   g_*(u^{p-1}) = 1,
 $$
 and we evidently have that $g_*(u^i)=0$ ($0\leq i<p-1$) for dimension reasons.
 
 Since $E'/L=F$, we have that
-$$\begin{aligned}
-  c(E') &= c(F)(1-u)
-\\c(F) &= g^*(c(E))\cdot(1+u+u^2+\ldots)
-\\c_{p-1}(F) &= u^{p-1}+g^*(c_1(E))\cdot u^{p-2} +\ldots+ g^*(c_{p-1}(E))
-\\g_*(c_{p-1}(F)) &= g_*(u^{p-1})+c_1(E)g_*(u^{p-2}) +\ldots+ c_{p-1}(E)g_*(1)
-\end{aligned}$$
+$$
+  \begin{aligned}
+    c(E') &= c(F)(1-u)
+  \\c(F) &= g^*(c(E))\cdot(1+u+u^2+\ldots)
+  \\c_{p-1}(F) &= u^{p-1}+g^*(c_1(E))\cdot u^{p-2} +\ldots+ g^*(c_{p-1}(E))
+  \\g_*(c_{p-1}(F)) &= g_*(u^{p-1})+c_1(E)g_*(u^{p-2}) +\ldots+ c_{p-1}(E)g_*(1)
+  \end{aligned}
+$$
 whence
 $$
   g_*(c_{p-1}(F)) = 1.
 $$
--->
 
 
 # Proof of part (c) of Lemma 19 {#section-15}
 
-<!--
 In this section, we will write $\scr{J}$ to mean $\scr{I}(Y)$, and $\scr{J}'$ to mean $\scr{I}(Y')$.
 As we remarked in [§10.b](#section-10.b), $\scr{J}'/\scr{J}'^2$ (resp. $\scr{J}/\scr{J}^2$) is the sheaf of germs of sections of $L^*$ (resp. $E^*$), and so $\scr{J}/\scr{J}^2\otimes_{\scr{O}_Y}\scr{O}_{Y'}$ is the sheaf of germs of sections of $g^!(E^*)=E'^*$.
 
@@ -1814,11 +1819,13 @@ This again shows that $E'^*$ is sent to $L^*$, and thus that $L$ injects into $E
 the kernel of $\mu$ is the sheaf $\scr{O}_{Y'}(F^*)$ of germs of sections of $F^*$, as we can easily verify;
 in fact, this verification is superfluous, since we know that the kernel of $\mu$ is locally free (see [Lemma 8](#lemma-8), [§4](#section-4)), and thus corresponds to a subbundle $N$ of $E'^*$ such that $E'^*/N=L^*$, and thus necessarily represents the same element as $F^*$ in $K(Y')$.
 We thus have the exact sequence
+
+::: {.eqref #section-15-equation-1}
 $$
-\label{section15equation1}
   - \to \scr{O}_{Y'}(F^*) \to \scr{J}/\scr{J}^2\otimes_{\scr{O}_Y}\scr{O}_{Y'} \xrightarrow{\mu} \scr{J}'/\scr{J}'^2 \to 0.
-  \tag{1}
+\tag{1}
 $$
+:::
 
 By linearity, and [Theorem 2](#theorem-2), it suffices to prove part (c) of [Lemma 19](#lemma-19) in the case where $y=\scr{G}$ is a locally free sheaf.
 In this case, $g^!(y)=\scr{G}\otimes_{\scr{O}_Y}\scr{O}_{Y'}$ is locally free over $\scr{O}_Y$, and $g^!(y)\cdot\lambda_{-1}F^*$ is the alternating sum of the
@@ -1828,28 +1835,29 @@ $$
 $$
 Also, $f^!i_!(y)$ is the alternating sum of the $\Tor_i^{\scr{O}_X}(\scr{G},\scr{O}_{X'})$;
 it thus suffices to prove that
-$$\begin{aligned}
-  \label{section15equation2}
+
+::: {.eqref #section-15-equation-2-3-and-4}
+$$
+  \begin{aligned}
     \Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) &= \lambda^i\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
     \qquad\quad\text{(for }i\geq1\text{)}
     \tag{2}
-\\
-  \label{section15equation3}
-    \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) &= \scr{O}_{Y'}(F^*)
+  \\\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) &= \scr{O}_{Y'}(F^*)
     \tag{3}
-\\
-  \label{section15equation4}
+  \\
     \Tor_j^{\scr{O}_X}(\scr{G},\scr{O}_{X'}) &= \scr{G}\otimes_{\scr{O}_Y}\Tor_j^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
     \quad\text{(for }j\geq1\text{).}
     \tag{4}
-\end{aligned}$$
-\oldpage{131}
-The equalities \hyperref[section15equation3]{(3)} and \hyperref[section15equation4]{(4)} correspond to the particular case of part (c) of [Lemma 19](#lemma-19) where $y=1$;
-their proof will be analogous to that of [Proposition 12](#proposition-12) ([§10](#section-10)).
-We will first prove \hyperref[section15equation2]{(2)}, as well as the fact that the $\Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})$ are annihilated by $\scr{J}'$, and can thus be identified with sheaves on $Y'$.
+  \end{aligned}
+$$
 
-It is clear that the two sides of \hyperref[section15equation2]{(2)} are zero on an open subset that does not meet $Y'$.
-To prove \hyperref[section15equation2]{(2)} in the neighbourhood of a point $b'\in Y'$, we reuse the notation from [§10.c](#section-10.c) and \hyperref[subsection12b]{\S12.b}.
+\oldpage{131}
+The equalities [(3)](#section-15-equation-2-3-and-4) and [(4)](#section-15-equation-2-3-and-4) correspond to the particular case of part (c) of [Lemma 19](#lemma-19) where $y=1$;
+their proof will be analogous to that of [Proposition 12](#proposition-12) ([§10](#section-10)).
+We will first prove [(2)](#section-15-equation-2-3-and-4), as well as the fact that the $\Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})$ are annihilated by $\scr{J}'$, and can thus be identified with sheaves on $Y'$.
+
+It is clear that the two sides of [(2)](#section-15-equation-2-3-and-4) are zero on an open subset that does not meet $Y'$.
+To prove [(2)](#section-15-equation-2-3-and-4) in the neighbourhood of a point $b'\in Y'$, we reuse the notation from [§10.c](#section-10.c) and [§12.b](#section-12.b).
 So we need to calculate the homology of the complex
 $$
   0 \to \mathfrak{M}_p\otimes_{\scr{O}_X}\scr{O}_{X'} \to \ldots \to \scr{O}_{X'}
@@ -1864,10 +1872,12 @@ $$
   0 \to \scr{O}_{X'}\otimes_k\bigwedge\nolimits^p V' \to \ldots \to \scr{O}_{X'}
 $$
 where $V'$ has a basis $(e'_i)$, and where the differential is characterised by
-$$\begin{aligned}
-  \dd(1\otimes e'_j) &= f_j\otimes1
-\\\dd(1\otimes e'_i) &= (f_i-t_if_j/t_j)\otimes1
-\end{aligned}$$
+$$
+  \begin{aligned}
+    \dd(1\otimes e'_j) &= f_j\otimes1
+  \\\dd(1\otimes e'_i) &= (f_i-t_if_j/t_j)\otimes1
+  \end{aligned}
+$$
 and by the fact that it extends to a differential of algebras.
 In this new complex, it is immediate that the cycles of exterior degree $s$ form $\scr{O}_{X'}\otimes_k\bigwedge\nolimits^s(e'_1,\ldots,\widehat{e'_j},\ldots,e'_p)$ and that the boundaries of exterior degree $s$ form the ideal
 $$
@@ -1879,252 +1889,265 @@ $$
   \cong
   \scr{O}_{Y'}\otimes_k\bigwedge\nolimits^i(e'_1,\ldots,\widehat{e'_j},\ldots,e'_p),
 $$
-which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial remark of [§10.d](#section-10.d) into account, also gives \hyperref[section15equation2]{(2)}.
+which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial remark of [§10.d](#section-10.d) into account, also gives [(2)](#section-15-equation-2-3-and-4).
 
-::: {.proof}{Proof of {\hyperref[section15equation3]{(3)}}}
-  The exact sequence of $\Tor$, applied to
-  $$
-    0\to\scr{J}\to\scr{O}_X\to\scr{O}_Y\to0,
-  $$
-  gives the exact sequence
-  $$
-    0 \to \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) \to \scr{J}\otimes_{\scr{O}_X}\scr{O}_{X'} \xrightarrow{g} \scr{O}_{X'}.
-  $$
-  It is clear that, if $b=f(b')$, then $\scr{J}'_{b'}=\scr{J}_b\cdot\scr{O}_{b',X'}$, and so the image of $g$ is $\scr{J}'$, and we obtain the exact sequence
-  $$
-  \label{section15equation5}
-    0 \to \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) \to \scr{J}\otimes_{\scr{O}_X}\scr{O}_{X'} \to \scr{J}' \to 0.
-    \tag{5}
-  $$
+:::: {.proof}
+_(of [(3)](#section-15-equation-2-3-and-4))._
+The exact sequence of $\Tor$, applied to
+$$
+  0\to\scr{J}\to\scr{O}_X\to\scr{O}_Y\to0,
+$$
+gives the exact sequence
+$$
+  0 \to \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) \to \scr{J}\otimes_{\scr{O}_X}\scr{O}_{X'} \xrightarrow{g} \scr{O}_{X'}.
+$$
+It is clear that, if $b=f(b')$, then $\scr{J}'_{b'}=\scr{J}_b\cdot\scr{O}_{b',X'}$, and so the image of $g$ is $\scr{J}'$, and we obtain the exact sequence
+
+::: {.eqref #section-15-equation-5}
+$$
+  0 \to \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) \to \scr{J}\otimes_{\scr{O}_X}\scr{O}_{X'} \to \scr{J}' \to 0.
+\tag{5}
+$$
+:::
+
 \newpage{132}
-  Since $\Tor_1(\scr{O}_Y,\scr{O}_{X'})$ is a sheaf on $Y'$, we can write
-  $$
-    \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})\otimes_{\scr{O}_{X'}}\scr{O}_{Y'}
-    = \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})\otimes_{\scr{O}_{Y'}}\scr{O}_{Y'}
-    = \Tor_1(\scr{O}_Y,\scr{O}_{X'}).
-  $$
-  Also, $\scr{J}'$ can be identified with $\scr{O}_{X'}([Y']^{-1})$, and is locally free, and so $\Tor_1^{\scr{O}_{X'}}(\scr{J}',\scr{O}_{Y'}) = 0$, and the exact sequence of $\Tor$, applied to \hyperref[section15equation5]{(5)}, gives the exact sequence
-  $$
-  \label{section15equation6}
-    0 \to \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) \to \scr{J}\otimes_{\scr{O}_X}\scr{O}_{Y'} \xrightarrow{g} \scr{J}'\otimes_{\scr{O}_{X'}}\scr{O}_{Y'} \to 0.
-    \tag{6}
-  $$
-  It is immediate that the canonical image of $\scr{J}^2\otimes_{\scr{O}_X}\scr{O}_{Y'}$ (resp. $\scr{J}'^2\otimes_{\scr{O}_{X'}}\scr{O}_{Y'}$) in $\scr{J}\otimes_{\scr{O}_X}\otimes\scr{O}_{Y'}$ (resp. $\scr{J}'\otimes_{\scr{O}_{X'}}\scr{O}_{Y'}$) is zero, whence we have canonical isomorphisms
-  \begin{gather*}
+Since $\Tor_1(\scr{O}_Y,\scr{O}_{X'})$ is a sheaf on $Y'$, we can write
+$$
+  \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})\otimes_{\scr{O}_{X'}}\scr{O}_{Y'}
+  = \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})\otimes_{\scr{O}_{Y'}}\scr{O}_{Y'}
+  = \Tor_1(\scr{O}_Y,\scr{O}_{X'}).
+$$
+Also, $\scr{J}'$ can be identified with $\scr{O}_{X'}([Y']^{-1})$, and is locally free, and so $\Tor_1^{\scr{O}_{X'}}(\scr{J}',\scr{O}_{Y'}) = 0$, and the exact sequence of $\Tor$, applied to [(5)](#section-15-equation-5), gives the exact sequence
+
+::: {.eqref #section-15-equation-6}
+$$
+  0 \to \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) \to \scr{J}\otimes_{\scr{O}_X}\scr{O}_{Y'} \xrightarrow{g} \scr{J}'\otimes_{\scr{O}_{X'}}\scr{O}_{Y'} \to 0.
+\tag{6}
+$$
+:::
+
+It is immediate that the canonical image of $\scr{J}^2\otimes_{\scr{O}_X}\scr{O}_{Y'}$ (resp. $\scr{J}'^2\otimes_{\scr{O}_{X'}}\scr{O}_{Y'}$) in $\scr{J}\otimes_{\scr{O}_X}\otimes\scr{O}_{Y'}$ (resp. $\scr{J}'\otimes_{\scr{O}_{X'}}\scr{O}_{Y'}$) is zero, whence we have canonical isomorphisms
+$$
+  \begin{gathered}
     \scr{J}\otimes_{\scr{O}_X}\scr{O}_{Y'}
     = \scr{J}/\scr{J}^2\otimes_{\scr{O}_X}\scr{O}_{Y'}
     = \scr{J}/\scr{J}^2\otimes_{\scr{O}_Y}\scr{O}_{Y'}
   \\\scr{J}'\otimes_{\scr{O}_{X'}}\scr{O}_{Y'}
     = \scr{J}'/\scr{J}'^2\otimes_{\scr{O}_{X'}}\scr{O}_{Y'}
     = \scr{J}'/\scr{J}'^2
-  \end{gather*}
-  which send $g$ to the homomorphism $\mu$ from the sequence \hyperref[section15equation1]{(1)}.
-  The equality \hyperref[section15equation2]{(2)} then follows from \hyperref[section15equation1]{(1)} and \hyperref[section15equation6]{(6)}.
+  \end{gathered}
+$$
+which send $g$ to the homomorphism $\mu$ from the sequence [(1)](#section-15-equation-1).
+The equality [(2)](#section-15-equation-2-3-and-4) then follows from [(1)](#section-15-equation-1) and [(6)](#section-15-equation-6).
 
-  The equality \hyperref[section15equation4]{(4)} then follows from an associativity formula of $\Tor$ (see [@3, p. 345]).
-  We consider $T(\scr{G},\scr{O}_{X'}) = \scr{G}\otimes_{\scr{O}_Y}\scr{O}_Y\otimes\scr{O}_{X'}$ as a functor in $\scr{G}$ and $\scr{O}_{X'}$.
-  To calculate its left-derived functors $\LL_iT$, we have two spectral sequences, with respective $E_2$ pages
-  $$\begin{aligned}
+The equality [(4)](#section-15-equation-2-3-and-4) then follows from an associativity formula of $\Tor$ (see [@3, p. 345]).
+We consider $T(\scr{G},\scr{O}_{X'}) = \scr{G}\otimes_{\scr{O}_Y}\scr{O}_Y\otimes\scr{O}_{X'}$ as a functor in $\scr{G}$ and $\scr{O}_{X'}$.
+To calculate its left-derived functors $\LL_iT$, we have two spectral sequences, with respective $E_2$ pages
+$$
+  \begin{aligned}
     E_2^{ij} &= \Tor_i^{\scr{O}_Y}(\Tor_j^{\scr{O}_X}(\scr{O}_{X'},\scr{O}_Y),\scr{G})
   \\E'^{ij}_2 &= \Tor_j^{\scr{O}_X}(\Tor_i^{\scr{O}_Y}(\scr{G},\scr{O}_Y),\scr{O}_{X'}).
-  \end{aligned}$$
-  From this, it evidently follows that $E_2^{ij}=E'^{ji}_2=0$ if $i>0$, and thus that
-  $$
-    E_2^{0j} = E'^{j0}_2 = \LL_jT(\scr{G},\scr{O}_{X'})[]
-  $$
-  since $E_2^{0j}$ and $E'^{j0}_2$ are equal to the right- and left-hand sides (respectively) of \hyperref[section15equation4]{(4)}, this proves the equality.
-:::
--->
+  \end{aligned}
+$$
+From this, it evidently follows that $E_2^{ij}=E'^{ji}_2=0$ if $i>0$, and thus that
+$$
+  E_2^{0j} = E'^{j0}_2 = \LL_jT(\scr{G},\scr{O}_{X'})[]
+$$
+since $E_2^{0j}$ and $E'^{j0}_2$ are equal to the right- and left-hand sides (respectively) of [(4)](#section-15-equation-2-3-and-4), this proves the equality.
+::::
 
 
 # Proof of part (d) of Lemma 19 {#section-16}
 
-<!--
 ::: {.itenv #lemma-20 title="Lemma 20" latex="{Lemma 20}"}
-  Let $G$ be an ample vector bundle of rank $(q+k)$ on $Y$ ($q=\dim Y$; $k\geq0$).
-  Then $G$ contains a trivial subbundle of rank $k$.
+Let $G$ be an ample vector bundle of rank $(q+k)$ on $Y$ ($q=\dim Y$; $k\geq0$).
+Then $G$ contains a trivial subbundle of rank $k$.
 :::
 
 ::: {.proof}
-  The fact that $G$ is ample implies that, at each point $y$, the fibre $G_y$ is generated by its sections.
-  So there exists a finite-dimensional $k$-vector space $V$ of sections, such that the map $r_y\colon V\to G_y$, that sends each section to its value at $y$, is surjective for all $y\in Y$.
-  (If $Y$ is not complete, take a cover by affine open subsets that are complete, and then extract a finite subcover by "quasi-compactness".)
-  We thus have an exact sequence
-  $$
-    0 \to N_y \to V \to E_y \to 0
-  $$
+The fact that $G$ is ample implies that, at each point $y$, the fibre $G_y$ is generated by its sections.
+So there exists a finite-dimensional $k$-vector space $V$ of sections, such that the map $r_y\colon V\to G_y$, that sends each section to its value at $y$, is surjective for all $y\in Y$.
+(If $Y$ is not complete, take a cover by affine open subsets that are complete, and then extract a finite subcover by "quasi-compactness".)
+We thus have an exact sequence
+$$
+  0 \to N_y \to V \to E_y \to 0
+$$
 \oldpage{133}
-  for all $y\in Y$, where $\codim_V N_y=q+k$.
-  The $N_y$ form a vector subbundle $N'$ of the trivial bundle $V\times Y$, by [Lemma 8](#lemma-8) ([§4](#section-4)).
-  The injection of the $N_y$ into $V$ thus defines a morphism $u\colon N\to V$.
-  Since $\dim V=q+\dim N_y$, the closure of $\operatorname{Im}u$ is of codimension $\geq k$.
-  Since $\operatorname{Im}u$ is a union of vector subspaces, $\overline{\operatorname{Im}u}$ is an algebraic homogeneous space;
-  consequently, there exists a subspace $W$ of dimension $k$ whose intersection with $\overline{\operatorname{Im}u}$ is $\{0\}$.
-  Then $W\cap N_y=(0)$ for all $y\in Y$, and so $W$ defines the required subbundle.
-  (For this proof, see [@1].)
+for all $y\in Y$, where $\codim_V N_y=q+k$.
+The $N_y$ form a vector subbundle $N'$ of the trivial bundle $V\times Y$, by [Lemma 8](#lemma-8) ([§4](#section-4)).
+The injection of the $N_y$ into $V$ thus defines a morphism $u\colon N\to V$.
+Since $\dim V=q+\dim N_y$, the closure of $\operatorname{Im}u$ is of codimension $\geq k$.
+Since $\operatorname{Im}u$ is a union of vector subspaces, $\overline{\operatorname{Im}u}$ is an algebraic homogeneous space;
+consequently, there exists a subspace $W$ of dimension $k$ whose intersection with $\overline{\operatorname{Im}u}$ is $\{0\}$.
+Then $W\cap N_y=(0)$ for all $y\in Y$, and so $W$ defines the required subbundle.
+(For this proof, see [@1].)
 :::
 
 ::: {.itenv #lemma-21 title="Lemma 21" latex="{Lemma 21}"}
-  Let $G$ be a vector bundle of rank $p=q+k$ on $Y$ ($q=\dim Y$).
-  Then $\lambda^s(G- k)=0$ for all $s\geq q+1$.
+Let $G$ be a vector bundle of rank $p=q+k$ on $Y$ ($q=\dim Y$).
+Then $\lambda^s(G- k)=0$ for all $s\geq q+1$.
 :::
 
-::: {.proof}
-  Let $h$ be the bundle associated to a hyperplane section of $Y$.
-  Then (by \hyperref[corollary-11]{the corollary} to [Proposition 11](#proposition-11), [§10](#section-10))
-  $$
-    (1-h)^{q+1} = 0
-  $$
-  and so $h=1+u$, with $u^{q+1}=0$, whence
-  $$
-    h^n = \sum_{0\leq i\leq q}\binom{n}{i}u^i.
-  $$
-  It follows that
-  $$
-    \lambda_t(Gh^n- k) = \prod_{i=1}^q \lambda_t(Gu^i)^{\binom{n}{i}}\cdot(1-t)^{-k}
-  $$
-  and the reader can, from this, deduce that $\lambda^s(Gh^n- k)$ is of the form
-  $$
-    \lambda^s(Gh^n- k) = \sum_{i=1}^{m_s} B_{s,i}P_{s,i}(n)
-  $$
-  where $B_{s,i}\in K(Y)$, and where $P_{s,i}(n)$ is a polynomial with rational coefficients that, for all $n>0$ large enough, takes integer values.
-  We then know (Hilbert) that $P_{s,i}$ is a $\mathbb{Z}$-linear combination of the polynomials
-  $$
-    \binom{X}{j} = X(X-1)\ldots(X-j+1)/j!
-  $$
-  and so, finally,
-  $$
-  \label{lemma21equation1}
-    \lambda^s(Gh^n- k) = \sum_{i=0}^{n_s} A_{s,i}\binom{n}{i}
-    \qquad\text{(for }A_{s,i}\in K(Y)\text{).}
-    \tag{1}
-  $$
+:::: {.proof}
+Let $h$ be the bundle associated to a hyperplane section of $Y$.
+Then (by [the Corollary of Proposition 11](#proposition-11-corollary))
+$$
+  (1-h)^{q+1} = 0
+$$
+and so $h=1+u$, with $u^{q+1}=0$, whence
+$$
+  h^n = \sum_{0\leq i\leq q}\binom{n}{i}u^i.
+$$
+It follows that
+$$
+  \lambda_t(Gh^n- k) = \prod_{i=1}^q \lambda_t(Gu^i)^{\binom{n}{i}}\cdot(1-t)^{-k}
+$$
+and the reader can, from this, deduce that $\lambda^s(Gh^n- k)$ is of the form
+$$
+  \lambda^s(Gh^n- k) = \sum_{i=1}^{m_s} B_{s,i}P_{s,i}(n)
+$$
+where $B_{s,i}\in K(Y)$, and where $P_{s,i}(n)$ is a polynomial with rational coefficients that, for all $n>0$ large enough, takes integer values.
+We then know (Hilbert) that $P_{s,i}$ is a $\mathbb{Z}$-linear combination of the polynomials
+$$
+  \binom{X}{j} = X(X-1)\ldots(X-j+1)/j!
+$$
+and so, finally,
 
-  For $n>n_0$, the bundle $Gh^n$ is ample ([@12]), and so ([Lemma 20](#lemma-20)) contains a trivial bundle of rank $k$< and $Gh^n- k$ can be identified with a bundle of rank $q$;
-  its $s$th exterior power is then evidently zero for all $s\geq q+1$.
-  Given \hyperref[lemma21equation1]{(1)}, it
+::: {.eqref #lemma-21-equation-1}
+$$
+\label{lemma21equation1}
+  \lambda^s(Gh^n- k) = \sum_{i=0}^{n_s} A_{s,i}\binom{n}{i}
+  \qquad\text{(for }A_{s,i}\in K(Y)\text{).}
+  \tag{1}
+$$
+:::
+
+For $n>n_0$, the bundle $Gh^n$ is ample ([@12]), and so ([Lemma 20](#lemma-20)) contains a trivial bundle of rank $k$< and $Gh^n- k$ can be identified with a bundle of rank $q$;
+its $s$th exterior power is then evidently zero for all $s\geq q+1$.
+Given [(1)](#lemma-21-equation-1), it
+suffices to show that, if the polynomial
 \oldpage{134}
-  suffices to show that, if the polynomial
-  $$
-    P(n) = \sum_{i=0}^m A_i\binom{n}{i}
-    \qquad\text{(for }A_i\in K(Y)\text{)}
-  $$
-  is zero for $n>n_0$, then all the $A_i$ are zero.
-  For this, we proceed by induction on $m$, and consider the first difference
-  $$\begin{aligned}
-    \Delta P(n)
-    &= P(n+1) - P(n)
-  \\&= \sum_{i=1}^m A_i\binom{n}{i-1}
-  \\&= \sum_{j=0}^{m-1} A_{j-1}\binom{n}{j}.
-  \end{aligned}$$
-  Since $\Delta P(n)=0$ for $n>n_0$, the $A_i$ ($1\leq i\leq m$) are zero by the induction hypothesis, whence clearly $A_0=0$ as well.
-:::
+$$
+  P(n) = \sum_{i=0}^m A_i\binom{n}{i}
+  \qquad\text{(for }A_i\in K(Y)\text{)}
+$$
+is zero for $n>n_0$, then all the $A_i$ are zero.
+For this, we proceed by induction on $m$, and consider the first difference
+$$\begin{aligned}
+  \Delta P(n)
+  &= P(n+1) - P(n)
+\\&= \sum_{i=1}^m A_i\binom{n}{i-1}
+\\&= \sum_{j=0}^{m-1} A_{j-1}\binom{n}{j}.
+\end{aligned}$$
+Since $\Delta P(n)=0$ for $n>n_0$, the $A_i$ ($1\leq i\leq m$) are zero by the induction hypothesis, whence clearly $A_0=0$ as well.
+::::
 
 ::: {.itenv #lemma-22 title="Lemma 22" latex="{Lemma 22}"}
-  Let $G$ and $L$ be vector bundles on $Y$, with respective ranks $p$ and $1$.
-  Then
-  \begin{enumerate}[(a)]
-    \item $\lambda^p(G-1) = (-1)^p\lambda_{-1}(G)$;
-    \item $\lambda_t G(1- L) \equiv 1\mod(1-L)$;
-  \end{enumerate}
-  and so, if $G_1\equiv G_2\mod(1-L)$ [$G_1,G_2\in K(Y)$], then $\lambda^iG_1\equiv\lambda^iG_2\mod(1-L)$ for all $i\geq1$.
+Let $G$ and $L$ be vector bundles on $Y$, with respective ranks $p$ and $1$.
+Then
+
+a. $\lambda^p(G-1) = (-1)^p\lambda_{-1}(G)$;
+b. $\lambda_t G(1- L) \equiv 1\mod(1-L)$;
+
+and so, if $G_1\equiv G_2\mod(1-L)$ [$G_1,G_2\in K(Y)$], then $\lambda^iG_1\equiv\lambda^iG_2\mod(1-L)$ for all $i\geq1$.
 :::
 
 ::: {.proof}
-  \begin{enumerate}[(a)]
-    \item We have that
-      $$\begin{aligned}
+—
+
+a. We have that
+    $$
+      \begin{aligned}
         \lambda_t(G-1)
         &= \lambda_t(G)/\lambda_t(1)
         = \lambda_t(G)\cdot(1+t)^{-1}
       \\&= \lambda_t(G)(1-t+t^2-t^3+\ldots)
-      \end{aligned}$$
-      and it suffices to compare the coefficients of $t^p$.
-    \item We have that
-      $$
-        \lambda^i(G\cdot L)
-        = L^i\cdot\lambda^i G
-        \equiv \lambda^i(G)\mod(1-L)
-      $$
-      or, again, $\lambda_t(GL)\equiv\lambda_t(G)\mod(1-L)$, which gives (b).
-  \end{enumerate}
+      \end{aligned}
+    $$
+    and it suffices to compare the coefficients of $t^p$.
+
+b. We have that
+    $$
+      \lambda^i(G\cdot L)
+      = L^i\cdot\lambda^i G
+      \equiv \lambda^i(G)\mod(1-L)
+    $$
+    or, again, $\lambda_t(GL)\equiv\lambda_t(G)\mod(1-L)$, which gives (b).
 :::
 
-::: {.proof}{Proof of part (d) of [Lemma 19](#lemma-19)}
-  By [Lemma 22](#lemma-22), we have that
-  $$
-    (-1)^{p-1}\lambda_{-1}F^* = \lambda^{p-1}(F^*-1).
-  $$
-  But $E'^*/F^*=L^*$, so $F^*-1\equiv E'^*-2\mod(1-L^*)$, whence ([Lemma 22](#lemma-22))
-  $$
-    \lambda_{-1}F^* \equiv \lambda^{p-1}(E'^*-2) \mod(1-L^*),
-  $$
-  which can also be written as
-  $$
-    \lambda_{-1}F^* \equiv g^!(\lambda^{p-1}(E'^*-2)) \mod(1-L^*).
-  $$
+::: {.proof}
+_(of part (d) of [Lemma 19](#lemma-19))._
+By [Lemma 22](#lemma-22), we have that
+$$
+  (-1)^{p-1}\lambda_{-1}F^* = \lambda^{p-1}(F^*-1).
+$$
+But $E'^*/F^*=L^*$, so $F^*-1\equiv E'^*-2\mod(1-L^*)$, whence ([Lemma 22](#lemma-22))
+$$
+  \lambda_{-1}F^* \equiv \lambda^{p-1}(E'^*-2) \mod(1-L^*),
+$$
+which can also be written as
+$$
+  \lambda_{-1}F^* \equiv g^!(\lambda^{p-1}(E'^*-2)) \mod(1-L^*).
+$$
 \oldpage{135}
-  It thus suffices to show that $\lambda^{p-1}(E^*-2) = 0$ if $p\geq\dim Y+2$, which follows from [Lemma 21](#lemma-21).
+It thus suffices to show that $\lambda^{p-1}(E^*-2) = 0$ if $p\geq\dim Y+2$, which follows from [Lemma 21](#lemma-21).
 :::
--->
 
 
 # An application of R--R {#section-17}
 
-<!--
 The following application (pointed out by Hirzebruch) is about "integration on the fibre" in an algebraic bundle.
 We place ourselves in the classical case, i.e. $k=\mathbb{C}$.
 
 ::: {.itenv #proposition-16 title="Proposition 16" latex="{Proposition 16}"}
-  Let $(E,B,F,g)$ be an algebraic bundle, where $E$, $B$, and $F$ are projective, irreducible, and non-singular, and let $\xi$ be the tangent bundle along the fibres.
-  Then
-  $$
-    g_*(T(\xi)) = \operatorname{To}(F)\cdot1.
-  $$
+Let $(E,B,F,g)$ be an algebraic bundle, where $E$, $B$, and $F$ are projective, irreducible, and non-singular, and let $\xi$ be the tangent bundle along the fibres.
+Then
+$$
+  g_*(T(\xi)) = \operatorname{To}(F)\cdot1.
+$$
 :::
 [Here $\operatorname{To}(X)$ denotes the Todd genus of $X$.]
 
 ::: {.proof}
-  The tangent bundle to $E$ is an extension of $\xi$ by the fibre induced by the tangent bundle to $B$, so
-  $$
-    T(X) = g^*(T(B))\cdot T(\xi),
-  $$
-  whence
-  $$
-    g_*(T(X)) = T(B)\cdot g_*(T(\xi)).
-  $$
-  We apply [R--R](#theorem-riemann-roch) to $g$ and the bundle $1$ on $X$, which gives us that
-  $$
-    g_*(T(X)) = \ch g_!(1)\cdot T(B),
-  $$
-  and so, given the above,
-  $$
-    g_*(T(\xi)) = \ch g_!(1).
-  $$
-  We need to calculate $g_!(1)$.
-  Let $U$ be an affine open subset of $B$ over which the bundle is trivial.
-  By Künneth (see the proof of [Lemma 16](#lemma-16)), we have that
-  $$
-    \HH^q(U\times F,\scr{O}_X)
-    = \sum_{i+j=q} \HH^i(U,\scr{O}_U)\otimes\HH^j(F,\scr{O}_F).
-  $$
-  Since $U$ is affine, $\HH^i(U,\scr{O}_U)=0$ for $i>0$, and $\HH^0$ can be identified with regular functions on $U$.
-  But, in an algebraic bundle, the structure group $G$ is connected (by hypothesis), and so acts trivially on $\HH^j(F,\scr{O}_F)$, which is the type-$(0,j)$ component of $\HH^j(F,\mathbb{C})$.^[We do not know if the fact that $G$ acts trivially on the $\HH^j(F,\scr{O}_F)$ remains true in characteristic $p>0$. This is why we had to assume that $k=\mathbb{C}$.]
-  It thus follows that
-  $$
-    g_!(1)
-    = \scr{O}_B \otimes \left(
-      \sum_q (-1)^q \HH^q(F,\scr{O}_F)
-    \right).
-  $$
-  Then $g_!(1)$ is the alternating sum of trivial bundles, and so $g_!(1)$ has exactly one component, which is in degree $0$, and which is the alternating sum of the $\dim\HH^q(F,\scr{O}_F)$, which proves the proposition.
+The tangent bundle to $E$ is an extension of $\xi$ by the fibre induced by the tangent bundle to $B$, so
+$$
+  T(X) = g^*(T(B))\cdot T(\xi),
+$$
+whence
+$$
+  g_*(T(X)) = T(B)\cdot g_*(T(\xi)).
+$$
+We apply [R--R](#theorem-riemann-roch) to $g$ and the bundle $1$ on $X$, which gives us that
+$$
+  g_*(T(X)) = \ch g_!(1)\cdot T(B),
+$$
+and so, given the above,
+$$
+  g_*(T(\xi)) = \ch g_!(1).
+$$
+We need to calculate $g_!(1)$.
+Let $U$ be an affine open subset of $B$ over which the bundle is trivial.
+By Künneth (see the proof of [Lemma 16](#lemma-16)), we have that
+$$
+  \HH^q(U\times F,\scr{O}_X)
+  = \sum_{i+j=q} \HH^i(U,\scr{O}_U)\otimes\HH^j(F,\scr{O}_F).
+$$
+Since $U$ is affine, $\HH^i(U,\scr{O}_U)=0$ for $i>0$, and $\HH^0$ can be identified with regular functions on $U$.
+But, in an algebraic bundle, the structure group $G$ is connected (by hypothesis), and so acts trivially on $\HH^j(F,\scr{O}_F)$, which is the type-$(0,j)$ component of $\HH^j(F,\mathbb{C})$.^[We do not know if the fact that $G$ acts trivially on the $\HH^j(F,\scr{O}_F)$ remains true in characteristic $p>0$. This is why we had to assume that $k=\mathbb{C}$.]
+It thus follows that
+$$
+  g_!(1)
+  = \scr{O}_B \otimes \left(
+    \sum_q (-1)^q \HH^q(F,\scr{O}_F)
+  \right).
+$$
+Then $g_!(1)$ is the alternating sum of trivial bundles, and so $g_!(1)$ has exactly one component, which is in degree $0$, and which is the alternating sum of the $\dim\HH^q(F,\scr{O}_F)$, which proves the proposition.
 :::
 
 \oldpage{136}
-::: {.rmenv title="Remark" latex="{Remark}"}
-  This proposition implies that the multiplicative sequence that defines the Todd class is "strictly multiplicative" for algebraic fibres, in the terminology of Borel-Hirzebruch [@2].
-  In particular, it thus follows that $\operatorname{To}(E)=\operatorname{To}(B)\cdot\operatorname{To}(F)$.
-  In [@2], this property, of strict multiplicativity, is proven in the differentiable, almost-complex case, and where also the fibre is some $G/T$ or associated space.
-:::
 
--->
+::: {.rmenv title="Remark" latex="{Remark}"}
+This proposition implies that the multiplicative sequence that defines the Todd class is "strictly multiplicative" for algebraic fibres, in the terminology of Borel-Hirzebruch [@2].
+In particular, it thus follows that $\operatorname{To}(E)=\operatorname{To}(B)\cdot\operatorname{To}(F)$.
+In [@2], this property, of strict multiplicativity, is proven in the differentiable, almost-complex case, and where also the fibre is some $G/T$ or associated space.
+:::
