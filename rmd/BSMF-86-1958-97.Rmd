@@ -1743,20 +1743,25 @@ $$
 
 To deduce [(1)](#proposition-15-equation-1) from this, it evidently suffices to show that
 
-::: {.eqref #proposition-15-equation-3-and-4}
+::: {.eqref #proposition-15-equation-3}
 $$
-  \begin{aligned}
-    f_*(\ch j_!(g^!y\cdot\lambda_{-1}F^*)) &= \ch i_! y
-    \tag{3}
-  \\f_*j_*(\ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1}) &= i_*(\ch y\cdot T(E)^{-1}).
-    \tag{4}
-  \end{aligned}
+  f_*(\ch j_!(g^!y\cdot\lambda_{-1}F^*)) = \ch i_! y
+\tag{3}
 $$
-Part (c) of [Lemma 19](#lemma-19) shows that the left-hand side of [(3)](#proposition-15-equation-3-and-4) is equal to
+:::
+
+::: {.eqref #proposition-15-equation-4}
+$$
+  f_*j_*(\ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1}) = i_*(\ch y\cdot T(E)^{-1}).
+\tag{4}
+$$
+:::
+
+Part (c) of [Lemma 19](#lemma-19) shows that the left-hand side of [(3)](#proposition-15-equation-3) is equal to
 $$
   f_*(\ch f^!i_!y) = f_*^*(\ch i_!y)
 $$
-and thus equal to the right-hand side of [(3)](#proposition-15-equation-3-and-4), given part (a) of [Lemma 19](#lemma-19).
+and thus equal to the right-hand side of [(3)](#proposition-15-equation-3), given part (a) of [Lemma 19](#lemma-19).
 
 Since $\ch$ is multiplicative, we have that
 $$
@@ -1776,7 +1781,7 @@ whence
 $$
   \ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1} = c_{p-1}(F)\cdot g^*(\ch y\cdot T(E)^{-1}).
 $$
-Given [(2)](#section-11-equation-2) (in [§11](#section-11)) and part (b) of [Lemma 19](#lemma-19), the image under $g_*$ of the right-hand side is equal to $\ch y\cdot T(E)^{-1}$, and the equality in [(4)](#proposition-15-equation-3-and-4) then follows from the fact that $f_*j_*=i_*g_*$.
+Given [(2)](#section-11-equation-2) (in [§11](#section-11)) and part (b) of [Lemma 19](#lemma-19), the image under $g_*$ of the right-hand side is equal to $\ch y\cdot T(E)^{-1}$, and the equality in [(4)](#proposition-15-equation-4) then follows from the fact that $f_*j_*=i_*g_*$.
 ::::
 
 
@@ -1836,28 +1841,39 @@ $$
 Also, $f^!i_!(y)$ is the alternating sum of the $\Tor_i^{\scr{O}_X}(\scr{G},\scr{O}_{X'})$;
 it thus suffices to prove that
 
-::: {.eqref #section-15-equation-2-3-and-4}
+::: {.eqref #section-15-equation-2}
 $$
-  \begin{aligned}
-    \Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) &= \lambda^i\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
-    \qquad\quad\text{(for }i\geq1\text{)}
-    \tag{2}
-  \\\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) &= \scr{O}_{Y'}(F^*)
-    \tag{3}
-  \\
-    \Tor_j^{\scr{O}_X}(\scr{G},\scr{O}_{X'}) &= \scr{G}\otimes_{\scr{O}_Y}\Tor_j^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
-    \quad\text{(for }j\geq1\text{).}
-    \tag{4}
-  \end{aligned}
+  \Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
+  = \lambda^i\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
+  \qquad\quad\text{(for }i\geq1\text{)}
+\tag{2}
 $$
+:::
+
+::: {.eqref #section-15-equation-3}
+$$
+  \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
+  = \scr{O}_{Y'}(F^*)
+\tag{3}
+$$
+:::
+
+::: {.eqref #section-15-equation-4}
+$$
+  \Tor_j^{\scr{O}_X}(\scr{G},\scr{O}_{X'})
+  = \scr{G}\otimes_{\scr{O}_Y}\Tor_j^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
+  \quad\text{(for }j\geq1\text{).}
+\tag{4}
+$$
+:::
 
 \oldpage{131}
-The equalities [(3)](#section-15-equation-2-3-and-4) and [(4)](#section-15-equation-2-3-and-4) correspond to the particular case of part (c) of [Lemma 19](#lemma-19) where $y=1$;
+The equalities [(3)](#section-15-equation-3) and [(4)](#section-15-equation-4) correspond to the particular case of part (c) of [Lemma 19](#lemma-19) where $y=1$;
 their proof will be analogous to that of [Proposition 12](#proposition-12) ([§10](#section-10)).
-We will first prove [(2)](#section-15-equation-2-3-and-4), as well as the fact that the $\Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})$ are annihilated by $\scr{J}'$, and can thus be identified with sheaves on $Y'$.
+We will first prove [(2)](#section-15-equation-2), as well as the fact that the $\Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})$ are annihilated by $\scr{J}'$, and can thus be identified with sheaves on $Y'$.
 
-It is clear that the two sides of [(2)](#section-15-equation-2-3-and-4) are zero on an open subset that does not meet $Y'$.
-To prove [(2)](#section-15-equation-2-3-and-4) in the neighbourhood of a point $b'\in Y'$, we reuse the notation from [§10.c](#section-10.c) and [§12.b](#section-12.b).
+It is clear that the two sides of [(2)](#section-15-equation-2) are zero on an open subset that does not meet $Y'$.
+To prove [(2)](#section-15-equation-2) in the neighbourhood of a point $b'\in Y'$, we reuse the notation from [§10.c](#section-10.c) and [§12.b](#section-12.b).
 So we need to calculate the homology of the complex
 $$
   0 \to \mathfrak{M}_p\otimes_{\scr{O}_X}\scr{O}_{X'} \to \ldots \to \scr{O}_{X'}
@@ -1889,10 +1905,10 @@ $$
   \cong
   \scr{O}_{Y'}\otimes_k\bigwedge\nolimits^i(e'_1,\ldots,\widehat{e'_j},\ldots,e'_p),
 $$
-which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial remark of [§10.d](#section-10.d) into account, also gives [(2)](#section-15-equation-2-3-and-4).
+which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial remark of [§10.d](#section-10.d) into account, also gives [(2)](#section-15-equation-2).
 
 :::: {.proof}
-_(of [(3)](#section-15-equation-2-3-and-4))._
+_(of [(3)](#section-15-equation-3))._
 The exact sequence of $\Tor$, applied to
 $$
   0\to\scr{J}\to\scr{O}_X\to\scr{O}_Y\to0,
@@ -1938,9 +1954,9 @@ $$
   \end{gathered}
 $$
 which send $g$ to the homomorphism $\mu$ from the sequence [(1)](#section-15-equation-1).
-The equality [(2)](#section-15-equation-2-3-and-4) then follows from [(1)](#section-15-equation-1) and [(6)](#section-15-equation-6).
+The equality [(2)](#section-15-equation-2) then follows from [(1)](#section-15-equation-1) and [(6)](#section-15-equation-6).
 
-The equality [(4)](#section-15-equation-2-3-and-4) then follows from an associativity formula of $\Tor$ (see [@3, p. 345]).
+The equality [(4)](#section-15-equation-4) then follows from an associativity formula of $\Tor$ (see [@3, p. 345]).
 We consider $T(\scr{G},\scr{O}_{X'}) = \scr{G}\otimes_{\scr{O}_Y}\scr{O}_Y\otimes\scr{O}_{X'}$ as a functor in $\scr{G}$ and $\scr{O}_{X'}$.
 To calculate its left-derived functors $\LL_iT$, we have two spectral sequences, with respective $E_2$ pages
 $$
@@ -1953,7 +1969,7 @@ From this, it evidently follows that $E_2^{ij}=E'^{ji}_2=0$ if $i>0$, and thus t
 $$
   E_2^{0j} = E'^{j0}_2 = \LL_jT(\scr{G},\scr{O}_{X'})[]
 $$
-since $E_2^{0j}$ and $E'^{j0}_2$ are equal to the right- and left-hand sides (respectively) of [(4)](#section-15-equation-2-3-and-4), this proves the equality.
+since $E_2^{0j}$ and $E'^{j0}_2$ are equal to the right- and left-hand sides (respectively) of [(4)](#section-15-equation-4), this proves the equality.
 ::::
 
 
