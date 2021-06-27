@@ -925,11 +925,8 @@ The proof consists of a calculation analogous to that for [Lemma 15](#lemma-15);
 we have to use the following formulas:
 
 i. $(f\times f')_!(y\otimes y') = f_!(y)\otimes f'_!(y')$;
-    \label{lemma16equation1}
 ii. $(f\times f')_*(x\otimes x') = f_*(x)\otimes f'_*(x')$, where $x\in A(Y)$ and $x\in A(Y')$;
-    \label{lemma16equation2}
 iii. $\ch(y\otimes y') = \ch(y)\otimes\ch(y')$.
-    \label{lemma16equation3}
 
 Formula (i) can be proven by taking $y=\gamma(\scr{F})$ and $y'=\gamma(\scr{F}')$, and applying the Künneth formula to calculate $(f\times f')_!(y\otimes y')$;
 the validity of the Künneth formula for coherent sheaves follows from the calculation of the cohomology by covers and from the Eilenberg-Zilber theorem (see the book by Godement on sheaves).
@@ -961,12 +958,12 @@ The case of an injection (which is more difficult) will be covered later on.
 
 # Exactness and homotopy properties of $K(X)$ {#section-8}
 
-<!-- ::: {.itenv #proposition-7 title="Proposition 7" latex="{Proposition 7}"}
-  Let $X$ be an algebraic variety (singular or not), and $X'$ a closed subvariety of $X$, and set $U=X\setminus X'$.
-  Then we have an exact sequence
-  $$
-    K(X') \to K(X) \to K(U) \to 0.
-  $$
+::: {.itenv #proposition-7 title="Proposition 7" latex="{Proposition 7}"}
+Let $X$ be an algebraic variety (singular or not), and $X'$ a closed subvariety of $X$, and set $U=X\setminus X'$.
+Then we have an exact sequence
+$$
+  K(X') \to K(X) \to K(U) \to 0.
+$$
 :::
 
 [The homomorphism $K(X')\to K(X)$ is that given by extending a sheaf on $X'$ by zero outside of $X'$;
@@ -975,260 +972,247 @@ As for $K(X)\to K(U)$, this is the restriction homomorphism;
 in the case where $X$ is non-singular, and denoting the canonical injection $U\to X$ by $j$, this homomorphism is $j^!$.]
 
 ::: {.proof}
-  Let $A=K(X)/\operatorname{Im} K(X')$.
-  We will define a homomorphism from $K(U)$ to $A$.
-  For this, let $\scr{F}$ be a coherent sheaf on $U$;
-  by [Proposition 2](#proposition-2), we can extend $\scr{F}$ to a sheaf $\scr{G}$ on $X$.
-  We will show that the image of $\gamma_X(\scr{G})$ in $A$ does not depend on $\scr{G}$, but only on $\scr{F}$.
-  So let $\scr{G}$ and $\scr{G}'$ be extensions of $\scr{F}$.
-  Embed $\scr{F}$ diagonally into $\scr{F}\times\scr{F}=(\scr{G}\times\scr{G}')|U$;
-  by [Proposition 1](#proposition-1), there exists a subsheaf $\scr{G}''$ of $\scr{G}\times\scr{G}'$ such that its restriction to $U$ is $\scr{F}$, and everything then relies on proving that
-  $$
-    \gamma_X(\scr{G}'') \equiv \gamma_X(\scr{G}') \mod \operatorname{Im}K(X')
-  $$
-  and similarly for $\scr{G}'$.
-  But, since $\scr{G}''\subset\scr{G}\times\scr{G}'$, we have a homomorphism $f\colon\scr{G}''\to\scr{G}$ that is bijective over $U$.
-  Let $\scr{N}$ and $\scr{Q}$ be the kernel and cokernel (respectively) of $f$;
-  then
-  $$
-    \gamma_X(\scr{G}'') - \gamma_X(\scr{G})
-    \equiv \gamma_X(\scr{N}) - \gamma_X(\scr{Q}).
-  $$
-  But $\scr{N}$ and $\scr{Q}$ are supported outside of $X'$;
-  if $\scr{I}$ denotes the sheaf
+Let $A=K(X)/\operatorname{Im} K(X')$.
+We will define a homomorphism from $K(U)$ to $A$.
+For this, let $\scr{F}$ be a coherent sheaf on $U$;
+by [Proposition 2](#proposition-2), we can extend $\scr{F}$ to a sheaf $\scr{G}$ on $X$.
+We will show that the image of $\gamma_X(\scr{G})$ in $A$ does not depend on $\scr{G}$, but only on $\scr{F}$.
+So let $\scr{G}$ and $\scr{G}'$ be extensions of $\scr{F}$.
+Embed $\scr{F}$ diagonally into $\scr{F}\times\scr{F}=(\scr{G}\times\scr{G}')|U$;
+by [Proposition 1](#proposition-1), there exists a subsheaf $\scr{G}''$ of $\scr{G}\times\scr{G}'$ such that its restriction to $U$ is $\scr{F}$, and everything then relies on proving that
+$$
+  \gamma_X(\scr{G}'') \equiv \gamma_X(\scr{G}') \mod \operatorname{Im}K(X')
+$$
+and similarly for $\scr{G}'$.
+But, since $\scr{G}''\subset\scr{G}\times\scr{G}'$, we have a homomorphism $f\colon\scr{G}''\to\scr{G}$ that is bijective over $U$.
+Let $\scr{N}$ and $\scr{Q}$ be the kernel and cokernel (respectively) of $f$;
+then
+$$
+  \gamma_X(\scr{G}'') - \gamma_X(\scr{G})
+  \equiv \gamma_X(\scr{N}) - \gamma_X(\scr{Q}).
+$$
+But $\scr{N}$ and $\scr{Q}$ are supported outside of $X'$;
 \oldpage{116}
-  of ideals of $X'$ in $\scr{O}_X$, then there exists an integer $n>0$ such that $\scr{I}^n\scr{N}=0$, and similarly for $\scr{Q}$ (this is a local statement that is essentially equivalent to the "Nullstellensatz", see [@14]);
-  we thus conclude that $\scr{N}$ and $\scr{Q}$ admit composition series whose successive quotients are annihilated by $\scr{I}$, i.e. are coherent on $X'$, and so
-  $$
-    \gamma_X(\scr{Q}) \equiv \gamma_X(\scr{N}) \equiv 0 \mod \operatorname{Im}K(X').
-  $$
-  The independence of $\gamma_X(\scr{G}) \mod\operatorname{Im}K(X)$ is thus proven, and so we obtain a well-defined element $\eta(\scr{F})\in A$.
-  If $0\to\scr{F}'\to\scr{F}\to\scr{F}''\to0$ is an exact sequence on $U$, then we can extend $\scr{F}$ and $\scr{G}$ to $X$, and $\scr{F}'$ to a subsheaf $\scr{G}'$ of $\scr{G}$ (see [Proposition 1](#proposition-1)).
-  The sheaf $\scr{G}''=\scr{G}/\scr{G}'$ extends $\scr{F}''$, which proves that $\eta(\scr{F})=\eta(\scr{F}')+\eta(\scr{F}'')$.
-  The operation $\eta$, being additive, defines $\eta\colon K(U)\to A$.
-  If we denote by $\varepsilon$ the canonical homomorphism from $A$ to $K(U)$, we immediately see that $\eta\circ\varepsilon=1$ and $\varepsilon\circ\eta=1$, which finishes the proof.
+if $\scr{I}$ denotes the sheaf of ideals of $X'$ in $\scr{O}_X$, then there exists an integer $n>0$ such that $\scr{I}^n\scr{N}=0$, and similarly for $\scr{Q}$ (this is a local statement that is essentially equivalent to the "Nullstellensatz", see [@14]);
+we thus conclude that $\scr{N}$ and $\scr{Q}$ admit composition series whose successive quotients are annihilated by $\scr{I}$, i.e. are coherent on $X'$, and so
+$$
+  \gamma_X(\scr{Q}) \equiv \gamma_X(\scr{N}) \equiv 0 \mod \operatorname{Im}K(X').
+$$
+The independence of $\gamma_X(\scr{G}) \mod\operatorname{Im}K(X)$ is thus proven, and so we obtain a well-defined element $\eta(\scr{F})\in A$.
+If $0\to\scr{F}'\to\scr{F}\to\scr{F}''\to0$ is an exact sequence on $U$, then we can extend $\scr{F}$ and $\scr{G}$ to $X$, and $\scr{F}'$ to a subsheaf $\scr{G}'$ of $\scr{G}$ (see [Proposition 1](#proposition-1)).
+The sheaf $\scr{G}''=\scr{G}/\scr{G}'$ extends $\scr{F}''$, which proves that $\eta(\scr{F})=\eta(\scr{F}')+\eta(\scr{F}'')$.
+The operation $\eta$, being additive, defines $\eta\colon K(U)\to A$.
+If we denote by $\varepsilon$ the canonical homomorphism from $A$ to $K(U)$, we immediately see that $\eta\circ\varepsilon=1$ and $\varepsilon\circ\eta=1$, which finishes the proof.
 :::
 
 Now let $X$ and $Y$ be varieties.
 Denote by $p\colon X\times Y\to X$ the canonical projection.
-If $X$ and $Y$ are _non-singular_, then the homomorphism $p^!\colon K(X)\to K(X\times Y)$ is defined (see \hyperref[subsection5c]{\S5.c}, as well as [§7](#section-7)).
+If $X$ and $Y$ are _non-singular_, then the homomorphism $p^!\colon K(X)\to K(X\times Y)$ is defined (see [§5.c](#section-5.c), as well as [§7](#section-7)).
 In fact, this homomorphism can be defined _in the general case_.
 This comes from the fact that $\scr{O}_{X\times Y}$ is $\scr{O}_X$-flat (i.e. an annihilator of $\Tor$), since it is a ring of fractions of the usual tensor product $\scr{O}_X\otimes_k\scr{O}_Y$.
 We can thus set $p^!(\scr{F})=\scr{F}\otimes_{\scr{O}_X}\scr{O}_{X\times Y}$ for any coherent sheaf $\scr{F}$ on $X$, and $p^!(\scr{F})$ is additive, and so defines some $K(X)\to K(X\times Y)$.
 Thus:
 
 ::: {.itenv #proposition-8 title="Proposition 8" latex="{Proposition 8}"}
-  If $Y$ is an affine line, then the homomorphism $p^!\colon K(X)\to K(X\times Y)$ is bijective.
+If $Y$ is an affine line, then the homomorphism $p^!\colon K(X)\to K(X\times Y)$ is bijective.
 :::
 
-::: {.proof}
-  Let $a$ be the origin in $Y$, and identify $X$ with $X\times\{a\}\subset X\times Y$.
-  We have an exact sequence:
-  $$
-    0 \to \scr{O}_{X\times Y} \xrightarrow{t} \scr{O}_{X\times Y} \to \scr{O}_X \to 0
-  $$
-  where $t$ denotes the projection $X\times Y\to Y$, considered as a function to $X\times Y$.
-  This exact sequence shows that $\Tor_p^{\scr{O}_{X\times Y}}(\scr{O}_X,\scr{F})=0$ for $p\geq2$, if $\scr{F}$ is a coherent sheaf on $X\times Y$.
-  We can thus define $\pi_a\colon K(X\times Y)\to K(X)$ by setting
-  $$
-    \pi_a(\scr{F}) = \Tor_0(\scr{O}_X,\scr{F}) - \Tor_1(\scr{O}_X,\scr{F});
-  $$
-  we see, furthermore, that $\pi_a\circ p^1=1$, which already shows that $p^1$ is _injective_.
-  From now on, we will consider $K(X)$ as _embedded_ into $K(X\times Y)$.
+:::: {.proof}
+Let $a$ be the origin in $Y$, and identify $X$ with $X\times\{a\}\subset X\times Y$.
+We have an exact sequence:
+$$
+  0 \to \scr{O}_{X\times Y} \xrightarrow{t} \scr{O}_{X\times Y} \to \scr{O}_X \to 0
+$$
+where $t$ denotes the projection $X\times Y\to Y$, considered as a function to $X\times Y$.
+This exact sequence shows that $\Tor_p^{\scr{O}_{X\times Y}}(\scr{O}_X,\scr{F})=0$ for $p\geq2$, if $\scr{F}$ is a coherent sheaf on $X\times Y$.
+We can thus define $\pi_a\colon K(X\times Y)\to K(X)$ by setting
+$$
+  \pi_a(\scr{F}) = \Tor_0(\scr{O}_X,\scr{F}) - \Tor_1(\scr{O}_X,\scr{F});
+$$
+we see, furthermore, that $\pi_a\circ p^1=1$, which already shows that $p^1$ is _injective_.
+From now on, we will consider $K(X)$ as _embedded_ into $K(X\times Y)$.
 
-  To prove that $K(X)=K(X\times Y)$, we argue by induction on $n=\dim X$, and we use the following diagram (where $X'$ is closed in $X$, and $U=X\setminus X'$):
-  $$
-    \begin{tikzcd}
-      K(X') \rar \dar
-      & K(X) \rar \dar
-      & K(U) \rar \dar
-      & 0
-    \\K(X'\times Y) \rar
-      & K(X\times Y) \rar
-      & K(U\times Y) \rar
-      & 0
-    \end{tikzcd}
-  $$
+To prove that $K(X)=K(X\times Y)$, we argue by induction on $n=\dim X$, and we use the following diagram (where $X'$ is closed in $X$, and $U=X\setminus X'$):
+$$
+  \begin{CD}
+    K(X') @>>> K(X) @>>> K(U) @>>> 0
+  \\@VVV @VVV @VVV @.
+  \\K(X'\times Y) @>>> K(X\times Y) @>>> K(U\times Y) @>>> 0
+  \end{CD}
+$$
 
 \oldpage{117}
-  By [Proposition 7](#proposition-7), the rows of this diagram are exact.
-  We thus conclude that, if $K(X')=K(X'\times Y)$ (which is the case, by the induction hypothesis, if $\dim X'<n$), every element of $K(X\times Y)$ whose restriction to $U\times Y$ is in $K(U)$ is also an element of $K(X)$.
-  In other words, we can "neglect" the subvarieties of $X$ of dimension $<n$.
-  In particular, we can suppose $X$ to be _affine, non-singular, and irreducible_ (since the complement of the set of singular points is a union of disjoint irreducible varieties).
-  We will make use of the following dévissage lemma:
 
-  ::: {.itenv #lemma-17 title="Lemma 17" latex="{Lemma 17}"}
-      Let $Z$ be an algebraic variety.
-    Then the $\gamma_Z(\scr{O}_T)$ generate $K(Z)$, where $T$ runs over the set of irreducible subvarieties of $Z$.
-  :::
+By [Proposition 7](#proposition-7), the rows of this diagram are exact.
+We thus conclude that, if $K(X')=K(X'\times Y)$ (which is the case, by the induction hypothesis, if $\dim X'<n$), every element of $K(X\times Y)$ whose restriction to $U\times Y$ is in $K(U)$ is also an element of $K(X)$.
+In other words, we can "neglect" the subvarieties of $X$ of dimension $<n$.
+In particular, we can suppose $X$ to be _affine, non-singular, and irreducible_ (since the complement of the set of singular points is a union of disjoint irreducible varieties).
+We will make use of the following dévissage lemma:
 
-  ::: {.proof}
-    We argue by induction on $\dim Z$;
-    using [Proposition 7](#proposition-7), we can assume that $Z$ is irreducible.
-    Let $\scr{F}$ be a sheaf on $Z$;
-    if $\scr{F}$ is a torsion sheaf, then it is concentrated on a subvariety, and the induction hypothesis shows that it is contained in the subgroup $K'(Z)$ of $K(Z)$ generated by the $\gamma_Z(\scr{O}_T)$.
-    In the case where $\scr{F}$ is torsion-free, we embed it into $\scr{F}\otimes_{\scr{O}_Z}K$, where $K$ is the field of rational functions on $Z$;
-    we then have that $\scr{F}\otimes K=K^n$, and from this we conclude that $\scr{F}$ is isomorphic to $(\scr{O}_Z)^n$ modulo a torsion sheaf;
-    whence the result.
-    (For more details, see [@14], or [@6].)
-  :::
-
-  By applying [Lemma 17](#lemma-17) to the case that interests us, we see that it suffices to show that $\gamma(\scr{O}_T)\in K(X)$ for every irreducible subvariety $T$ of $X\times Y$.
-  If $\proj_X(T)\neq X$, then it is evident, by the induction hypothesis;
-  if $T=X\times Y$, then it is even more evident.
-  Thus the only remaining case is when $\dim T=n$, and $\proj_X(T)$ is dense in $X$.
-  If $A$ denotes the coordinate ring of $X$, then $T$ corresponds to a minimal prime ideal $\mathfrak{p}$ in the coordinate ring $A[t]$ of $X\times Y$;
-  the fact that the projection from $T$ to $X$ is dense implies that $A\cap\mathfrak{p}=0$.
-  Let $S$ be the set of invertible elements of $A$, and let $K=A_S$ te bhe field of fractions of $A$.
-  We have that $A[t]_S=K[t]$, and the fact that $\mathfrak{p}\cap S=\varnothing$ implies that $\mathfrak{p}$ is of the form $\mathfrak{p}'\cap A[t]$, where $\mathfrak{p}'$ is a non-zero prime ideal of $K[t]$.
-  There thus exists an irreducible polynomial $P(t)$, with coefficients in $A$ if we want, such that $\mathfrak{p}$ is the set of polynomials of $A[t]$ that are divisible by $P(t)$ in $K[t]$.
-  Then
-  $$
-    A[t] \supset \mathfrak{p} \supset P(t)\cdot A[t] = \mathfrak{q}.
-  $$
-  The sheaf $\scr{O}_T$ corresponds to the module $A[t]/\mathfrak{p}$;
-  let $\scr{F}$ be the sheaf that corresponds to $A[t]/\mathfrak{q}$.
-  Since $\mathfrak{p}_S=\mathfrak{q}_S$, there exists some $a\in S$ such that $a\cdot(\mathfrak{p}/\mathfrak{q})=0$, which shows that $\scr{O}_T$ is congruent to $\scr{F}$ modulo an element of $K(X'\times Y)$, with $\dim X'<\dim X$.
-  Also, the exact sequence
-  $$
-    0 \to \scr{O}_{X\times Y} \xrightarrow{P(t)} \scr{O}_{X\times Y} \to \scr{F} \to 0
-  $$
-  shows that $\gamma(\scr{F})=0$ in $K(X\times Y)$, whence
-  $$
-    \gamma(\scr{O}_T) \in \operatorname{Im} K(X'\times Y) = \operatorname{Im} K(X') \subset K(X)
-  $$
-  which finishes the proof.
-:::
-
-\oldpage{118}
-::: {.rmenv title="Remark" latex="{Remark}[Cartier]"}
-  We can avoid the need for the dévissage lemma by applying, to an arbitrary module $M$ over $A[t]$, the procedure applied above to the prime ideal $\mathfrak{p}$.
-  We form $M\otimes_A K=M_S$, which is a $K[t]$-module.
-  The structure of modules over principal rings shows that the group of classes of $K[t]$-modules is infinite cyclic, generated by the module $A[t]$.
-  Since passing to $M_S$ consists of "neglecting" everything that is concentrated on $X'\times Y$, the result follows.
-:::
-
-::: {.itenv title="Corollary" latex="{Corollary}"}
-\label{corollary-8}
-  If $Y$ is an affine space $k^n$, then
-  $$
-    K(X) = K(X\times Y).
-  $$
+::: {.itenv #lemma-17 title="Lemma 17" latex="{Lemma 17}"}
+Let $Z$ be an algebraic variety.
+Then the $\gamma_Z(\scr{O}_T)$ generate $K(Z)$, where $T$ runs over the set of irreducible subvarieties of $Z$.
 :::
 
 ::: {.proof}
-  This is immediate, by induction on $\dim Y$.
-::: -->
+We argue by induction on $\dim Z$;
+using [Proposition 7](#proposition-7), we can assume that $Z$ is irreducible.
+Let $\scr{F}$ be a sheaf on $Z$;
+if $\scr{F}$ is a torsion sheaf, then it is concentrated on a subvariety, and the induction hypothesis shows that it is contained in the subgroup $K'(Z)$ of $K(Z)$ generated by the $\gamma_Z(\scr{O}_T)$.
+In the case where $\scr{F}$ is torsion-free, we embed it into $\scr{F}\otimes_{\scr{O}_Z}K$, where $K$ is the field of rational functions on $Z$;
+we then have that $\scr{F}\otimes K=K^n$, and from this we conclude that $\scr{F}$ is isomorphic to $(\scr{O}_Z)^n$ modulo a torsion sheaf;
+whence the result.
+(For more details, see [@14], or [@6].)
+:::
+
+By applying [Lemma 17](#lemma-17) to the case that interests us, we see that it suffices to show that $\gamma(\scr{O}_T)\in K(X)$ for every irreducible subvariety $T$ of $X\times Y$.
+If $\proj_X(T)\neq X$, then it is evident, by the induction hypothesis;
+if $T=X\times Y$, then it is even more evident.
+Thus the only remaining case is when $\dim T=n$, and $\proj_X(T)$ is dense in $X$.
+If $A$ denotes the coordinate ring of $X$, then $T$ corresponds to a minimal prime ideal $\mathfrak{p}$ in the coordinate ring $A[t]$ of $X\times Y$;
+the fact that the projection from $T$ to $X$ is dense implies that $A\cap\mathfrak{p}=0$.
+Let $S$ be the set of invertible elements of $A$, and let $K=A_S$ te bhe field of fractions of $A$.
+We have that $A[t]_S=K[t]$, and the fact that $\mathfrak{p}\cap S=\varnothing$ implies that $\mathfrak{p}$ is of the form $\mathfrak{p}'\cap A[t]$, where $\mathfrak{p}'$ is a non-zero prime ideal of $K[t]$.
+There thus exists an irreducible polynomial $P(t)$, with coefficients in $A$ if we want, such that $\mathfrak{p}$ is the set of polynomials of $A[t]$ that are divisible by $P(t)$ in $K[t]$.
+Then
+$$
+  A[t] \supset \mathfrak{p} \supset P(t)\cdot A[t] = \mathfrak{q}.
+$$
+The sheaf $\scr{O}_T$ corresponds to the module $A[t]/\mathfrak{p}$;
+let $\scr{F}$ be the sheaf that corresponds to $A[t]/\mathfrak{q}$.
+Since $\mathfrak{p}_S=\mathfrak{q}_S$, there exists some $a\in S$ such that $a\cdot(\mathfrak{p}/\mathfrak{q})=0$, which shows that $\scr{O}_T$ is congruent to $\scr{F}$ modulo an element of $K(X'\times Y)$, with $\dim X'<\dim X$.
+Also, the exact sequence
+$$
+  0 \to \scr{O}_{X\times Y} \xrightarrow{P(t)} \scr{O}_{X\times Y} \to \scr{F} \to 0
+$$
+shows that $\gamma(\scr{F})=0$ in $K(X\times Y)$, whence
+$$
+  \gamma(\scr{O}_T) \in \operatorname{Im} K(X'\times Y) = \operatorname{Im} K(X') \subset K(X)
+$$
+which finishes the proof.
+::::
+
+\oldpage{118}
+
+::: {.rmenv title="Remark" latex="{Remark}[Cartier]"}
+We can avoid the need for the dévissage lemma by applying, to an arbitrary module $M$ over $A[t]$, the procedure applied above to the prime ideal $\mathfrak{p}$.
+We form $M\otimes_A K=M_S$, which is a $K[t]$-module.
+The structure of modules over principal rings shows that the group of classes of $K[t]$-modules is infinite cyclic, generated by the module $A[t]$.
+Since passing to $M_S$ consists of "neglecting" everything that is concentrated on $X'\times Y$, the result follows.
+:::
+
+::: {.itenv #proposition-8-corollary title="Corollary" latex="{Corollary}"}
+If $Y$ is an affine space $k^n$, then
+$$
+  K(X) = K(X\times Y).
+$$
+:::
+
+::: {.proof}
+This is immediate, by induction on $\dim Y$.
+:::
 
 
 # Proof of the Riemann--Roch theorem for $f\colon X\times\mathbf{P}\to X$ {#section-9}
 
-<!--
+
 We will first prove claim (a') from the end of [§7](#section-7):
 
 ::: {.itenv #proposition-9 title="Proposition 9" latex="{Proposition 9}"}
-  For every variety $X$, and every projective space $\PP$, the homomorphism $K(X)\otimes K(\PP)\to K(X\times \PP)$ is surjective.
+For every variety $X$, and every projective space $\PP$, the homomorphism $K(X)\otimes K(\PP)\to K(X\times \PP)$ is surjective.
 :::
 
 ::: {.proof}
-  We argue by induction on $\dim\PP$.
-  For $\dim\PP=0$, the proposition is trivial.
-  So let $\PP'$ be a hyperplane in $\PP$, and let $U=\PP\setminus\PP'$.
-  We then have a diagram of exact sequences
-  $$
-    \begin{tikzcd}
-      K(X)\otimes K(\PP') \rar \dar[swap,"\varepsilon_1"]
-      & K(X)\otimes K(\PP) \rar \dar[swap,"\varepsilon_2"]
-      & K(X)\otimes K(U) \rar \dar[swap,"\varepsilon_3"]
-      & 0
-    \\K(X\times\PP') \rar
-      & K(X\times\PP) \rar
-      & K(X\times U) \rar
-      & 0
-    \end{tikzcd}
-  $$
+We argue by induction on $\dim\PP$.
+For $\dim\PP=0$, the proposition is trivial.
+So let $\PP'$ be a hyperplane in $\PP$, and let $U=\PP\setminus\PP'$.
+We then have a diagram of exact sequences
+$$
+  \begin{CD}
+    K(X)\otimes K(\PP') @>>> K(X)\otimes K(\PP) @>>> K(X)\otimes K(U) @>>> 0
+  \\@VV\varepsilon_1V @VV\varepsilon_2V @VV\varepsilon_3V @.
+  \\K(X\times\PP') @>>> K(X\times\PP) @>>> K(X\times U) @>>> 0
+  \end{CD}
+$$
 
-  This diagram commutes:
-  this is trivial for the second and third squares, and, for the first square, it suffices to verify locally, on affine opens, for example.
-  Given the induction hypothesis, $\varepsilon_1$ is surjective.
-  But $U$ is an affine space;
-  the \hyperref[corollary-8]{corollary} to [Proposition 8](#proposition-8) then shows that $K(U)=\mathbb{Z}$, and that $K(X\times U)=K(X)$, whence the fact that $\varepsilon_3$ is bijective.
-  The five lemma then shows that $\varepsilon_2$ is surjective.
+This diagram commutes:
+this is trivial for the second and third squares, and, for the first square, it suffices to verify locally, on affine opens, for example.
+Given the induction hypothesis, $\varepsilon_1$ is surjective.
+But $U$ is an affine space;
+the [Corollary to Proposition 8](#proposition-8-corollary) then shows that $K(U)=\mathbb{Z}$, and that $K(X\times U)=K(X)$, whence the fact that $\varepsilon_3$ is bijective.
+The five lemma then shows that $\varepsilon_2$ is surjective.
 :::
 
 ::: {.rmenv title="Remark" latex="{Remark}"}
-  The above proof shows that
-  $$
-    K(X)\otimes K(Y) \to K(X\times Y)
-  $$
-  is surjective whenever $Y$ admits an _algebraic cellular decomposition_, where the cells are _affine spaces_.
-  This is notably the case if $Y$ is a Grassmannian.
+The above proof shows that
+$$
+  K(X)\otimes K(Y) \to K(X\times Y)
+$$
+is surjective whenever $Y$ admits an _algebraic cellular decomposition_, where the cells are _affine spaces_.
+This is notably the case if $Y$ is a Grassmannian.
 :::
 
 We now proceed to the proof of claim (a''):
 
 ::: {.itenv #proposition-10 title="Proposition 10" latex="{Proposition 10}"}
-  Let $\scr{F}$ be a coherent sheaf on a projective space $\PP$
+Let $\scr{F}$ be a coherent sheaf on a projective space $\PP$ of dimension $r$.
 \oldpage{119}
-  of dimension $r$.
-  Then the R--R-Hirzebruch formula
-  $$
-    x_r(\ch(\scr{F})\cdot T(\PP)) = \chi(\PP,\scr{F})
-  $$
-  is true.
+Then the R--R-Hirzebruch formula
+$$
+  x_r(\ch(\scr{F})\cdot T(\PP)) = \chi(\PP,\scr{F})
+$$
+holds true.
 :::
 
 ::: {.proof}
-  Let $H$ be a hyperplane, and $x$ its class in $A^1(\PP)$.
-  We know that the Chern polynomial of $\PP$ is $(1+tx)^{r+1}$;
-  thus
-  $$
-    T(\PP) = x^{r+1}/(1-e^{-x})^{r+1}.
-  $$
+Let $H$ be a hyperplane, and $x$ its class in $A^1(\PP)$.
+We know that the Chern polynomial of $\PP$ is $(1+tx)^{r+1}$;
+thus
+$$
+  T(\PP) = x^{r+1}/(1-e^{-x})^{r+1}.
+$$
 
-  We also know that $\scr{F}$ corresponds to a graded module $M$ over $k[X_0,\ldots,X_r]$.
-  By the Hilbert syzygy theorem, $M$ admits a finite resolution by free graded modules;
-  it follows that $\scr{F}$ is equal [in $K(X)$] to a linear combination of sheaves $\scr{O}(n)$, defined in [@12, p. 246], and it suffices to verify the R--R-Hirzebruch formula for $\scr{F}=\scr{O}(n)$.
-  This sheaf is exactly the sheaf associated to the divisor $nH$;
-  thus $\ch(\scr{F})=e^{nx}$.
-  Now, a direct calculation shows that $\chi(\PP,\scr{F})$ is equal to $\binom{n+r}{r}$ (see [@12, p. 275]), and we are thus led to prove the formula:
-  $$
-  \label{10equation*}
-    x_r[e^{nx}\cdot x^{r+1}/(1-e^{-x})^{r+1}] = \binom{n+r}{r}.
-    \tag{$\star$}
-  $$
+We also know that $\scr{F}$ corresponds to a graded module $M$ over $k[X_0,\ldots,X_r]$.
+By the Hilbert syzygy theorem, $M$ admits a finite resolution by free graded modules;
+it follows that $\scr{F}$ is equal [in $K(X)$] to a linear combination of sheaves $\scr{O}(n)$, defined in [@12, p. 246], and it suffices to verify the R--R-Hirzebruch formula for $\scr{F}=\scr{O}(n)$.
+This sheaf is exactly the sheaf associated to the divisor $nH$;
+thus $\ch(\scr{F})=e^{nx}$.
+Now, a direct calculation shows that $\chi(\PP,\scr{F})$ is equal to $\binom{n+r}{r}$ (see [@12, p. 275]), and we are thus led to prove the formula:
+$$
+  x_r[e^{nx}\cdot x^{r+1}/(1-e^{-x})^{r+1}] = \binom{n+r}{r}.
+  \tag{$\star$}
+$$
 
-  It is useful to write this formula in terms of residues:
-  $$
-  \label{10equation**}
-    \operatorname{Res}[e^{nx}\dd x/(1-e^{-x})^{r+1}] = \binom{n+r}{r}.
-    \tag{$\star\star$}
-  $$
+It is useful to write this formula in terms of residues:
+$$
+  \operatorname{Res}[e^{nx}\dd x/(1-e^{-x})^{r+1}] = \binom{n+r}{r}.
+  \tag{$\star\star$}
+$$
 
-  By defining the new variable $y=1-e^{-x}$, we see that the left-hand side is equal to
-  $$\begin{aligned}
-    \operatorname{Res}(\dd y\cdot y^{-r-1}\cdot(1-y)^{-n-1})
-    &= z_r((1-y)^{-n-1})
-  \\&= (-1)^r\binom{-n-1}{r}
-    = \binom{n+r}{r}.
-  \end{aligned}$$
+By defining the new variable $y=1-e^{-x}$, we see that the left-hand side is equal to
+$$\begin{aligned}
+  \operatorname{Res}(\dd y\cdot y^{-r-1}\cdot(1-y)^{-n-1})
+  &= z_r((1-y)^{-n-1})
+\\&= (-1)^r\binom{-n-1}{r}
+  = \binom{n+r}{r}.
+\end{aligned}$$
 :::
 
 Since we have proven (a') and (a''), we can state:
 
 ::: {.itenv title="Corollary" latex="{Corollary}"}
-  [R--R](#theorem-riemann-roch) is true for the projection $X\times\PP\to X$.
+[R--R](#theorem-riemann-roch) is true for the projection $X\times\PP\to X$.
 :::
 
 ::: {.rmenv title="Remark" latex="{Remark}"}
-  The fact that $K(\PP)$ is generated by the $\scr{O}(n)$ can also be seen, without using the syzygy theorem, by the cellular decomposition of $\PP$.
-  We again obtain the complete structure of $K(\PP)$:
-  if we denote by $\alpha$ the class in $K(\PP)$ of the $\scr{O}_H$, then the elements $1,\alpha,\alpha^2,\ldots,\alpha^r$ form a _basis_ of $K(\PP)$, and $\alpha^{r+1}=0$.
-  The $\scr{O}(n)$ are equal to $(1-\alpha)^{-n}$, as shown by the exact sequence
-  $$
-    0 \to \scr{O}(-1) \to \scr{O} \to \scr{O}_H \to 0.
-  $$
-::: -->
+The fact that $K(\PP)$ is generated by the $\scr{O}(n)$ can also be seen, without using the syzygy theorem, by the cellular decomposition of $\PP$.
+We again obtain the complete structure of $K(\PP)$:
+if we denote by $\alpha$ the class in $K(\PP)$ of the $\scr{O}_H$, then the elements $1,\alpha,\alpha^2,\ldots,\alpha^r$ form a _basis_ of $K(\PP)$, and $\alpha^{r+1}=0$.
+The $\scr{O}(n)$ are equal to $(1-\alpha)^{-n}$, as shown by the exact sequence
+$$
+  0 \to \scr{O}(-1) \to \scr{O} \to \scr{O}_H \to 0.
+$$
+:::
 
 
 # General remarks on the injection of a subvariety {#section-10}
@@ -1236,29 +1220,27 @@ Since we have proven (a') and (a''), we can state:
 
 ## Notation {#section-10.a}
 
-<!-- Before continuing the proof of [R--R](#theorem-riemann-roch), we first discuss the local resolution of the structure sheaf of a subvariety, and study some of its consequences.
+Before continuing the proof of [R--R](#theorem-riemann-roch), we first discuss the local resolution of the structure sheaf of a subvariety, and study some of its consequences.
 \oldpage{120}
 Some of these will be more general than necessary for our purposes, but they are interesting in their own right, and are no more difficult than the particular cases that we will need.
 
 In what follows, $Y$ is a (non-singular) subvariety of $X$, $i$ the injection of $Y$ into $X$, $p$ the codimension of $Y$ in $X$, $E$ the normal bundle of $Y$, and $\scr{I}(Y)$ the sheaf of local ideals of $Y$.
 We thus have the exact sequence
+
+::: {.eqref #section-10.a-equation-1}
 $$
-\label{section10aequation1}
   0 \to \scr{I}(Y) \to \scr{O}_X \xrightarrow{r} \scr{O}_Y \to 0
-  \tag{1}
+\tag{1}
 $$
+:::
+
 where $r$ is the restriction.
 
 Finally, write $F^*$ to mean the dual of a vector bundle $F$, and $[Z]$ to mean the bundle associated to a divisor $Z$.
-Recall that $c([Z])=1+Z$. -->
+Recall that $c([Z])=1+Z$.
 
 
 ## Local parameters; Normal bundle {#section-10.b}
-
-<!--
-
-\subsection{Local parameters. Normal bundle}
-\label{subsection10b}
 
 Let $a\in Y$.
 Then there exists an affine open subset $U\subset X$ containing $a$, and functions $f_1,\ldots,f_p$ that are regular on $U$, and that form a system of local parameters, or a system of "uniformising" parameters, for $Y$.
@@ -1273,96 +1255,95 @@ By using the local parameters, we see that
 the map $D\colon\scr{I}(Y)/\scr{I}(Y)^2 \to \scr{O}_Y(E^*)$ defined by $f\mapsto\dd f$ is an isomorphism of $\scr{O}_Y$-modules.
 :::
 
--->
-
 
 ## Local resolution of $\scr{O}_Y$ over $\scr{O}_X$ {#section-10.c}
 
-<!--
 Let $V$ be a vector space over $k$ of dimension $p$, and $e_1,\ldots,e_p$ be a basis of $V$, and define $\mathfrak{M}_i = \scr{O}_X\otimes_k\bigwedge\nolimits^i V$.
-We endow the direct sum $\mathfrak{M}$ of the $\mathfrak{M}_i$ with a differential $\dd$ defined by^[As usual, the notation $\,\,\widehat{\,}\,\,\,$ indicates that the symbol below should be omitted.]
+We endow the direct sum $\mathfrak{M}$ of the $\mathfrak{M}_i$ with a differential $\dd$ defined by^[As usual, the notation $\,\,\widehat{\,}\,\,\,$ indicates that the symbol below the hat should be omitted.]
 $$
   \dd\,(f\otimes e_{i_1}\wedge\ldots\wedge e_{i_k})
   = \sum_j (-1)^i f\cdot f_{i_j}\otimes e_{i_1}\wedge\ldots\wedge \widehat{e_{i_j}} \wedge\ldots\wedge e_{i_k}.
 $$
 Then the sequence
-$$
-\label{section10cequation2}
-  0 \to \mathfrak{M}_p \xrightarrow{\mathrm{d}} \mathfrak{M}_{p-1} \to \ldots \to \mathfrak{M}_1 \xrightarrow{\mathrm{d}} \scr{O}_X \xrightarrow{r} \scr{O}_Y \to 0
-  \tag{2}
-$$
-is exact at every point of $U$, and $\mathfrak{M}$ is thus, on $U$ a
-\oldpage{121}
-projective resolution of $\scr{O}_Y$ over $\scr{O}_X$.
-The exactness of \hyperref[section10cequation2]{(2)} at a point $b\in U\cap Y$ is a well-known result (see, for example, [@3, Proposition 4.3, p. 151], taking into account the fact that $\scr{O}_{b,Y}=\scr{O}_{b,X}/(f_1,\ldots,f_p)$).
-For $b\in U\setminus(U\cap Y)$, we have that $\scr{O}_{b,Y}=0$, and the exactness of \hyperref[section10cequation2]{(2)} is then an elementary exercise left to the reader.
 
-::: {.rmenv title="Remark" latex="{Remark}"}
-  If $Y$ is a divisor, the \hyperref[section10aequation1]{(1)} is exactly another way of writing the exact sequence of sheaves (which is exact on any $X$)
-  $$
-  \label{equation3}
-    0 \to \scr{O}_X([Y]^{-1}) \xrightarrow{f} \scr{O}_X \to \scr{O}_Y \to 0,
-    \tag{3}
-  $$
-  where $f$ is the multiplication by a local equation on $Y$.
-  This exact sequence thus shows that $\gamma(Y)=1-[Y]^{-1}$.
+::: {.eqref #section-10.c-equation-2}
+$$
+  0 \to \mathfrak{M}_p \xrightarrow{\mathrm{d}} \mathfrak{M}_{p-1} \to \ldots \to \mathfrak{M}_1 \xrightarrow{\mathrm{d}} \scr{O}_X \xrightarrow{r} \scr{O}_Y \to 0
+\tag{2}
+$$
 :::
 
+is exact at every point of $U$, and $\mathfrak{M}$ is thus, on $U$, a projective resolution of $\scr{O}_Y$ over $\scr{O}_X$.
+\oldpage{121}
+The exactness of [(2)](#section-10.c-equation-2) at a point $b\in U\cap Y$ is a well-known result (see, for example, [@3, Proposition 4.3, p. 151], taking into account the fact that $\scr{O}_{b,Y}=\scr{O}_{b,X}/(f_1,\ldots,f_p)$).
+For $b\in U\setminus(U\cap Y)$, we have that $\scr{O}_{b,Y}=0$, and the exactness of [(2)](#section-10.c-equation-2) is then an elementary exercise left to the reader.
+
+:::: {.rmenv title="Remark" latex="{Remark}"}
+If $Y$ is a divisor, then [(1)](#section-10.a-equation-1) is exactly another way of writing the exact sequence of sheaves (which is exact on any $X$)
+
+::: {.eqref #section-10.c-equation-3}
+$$
+  0 \to \scr{O}_X([Y]^{-1}) \xrightarrow{f} \scr{O}_X \to \scr{O}_Y \to 0,
+\tag{3}
+$$
+:::
+
+where $f$ is the multiplication by a local equation on $Y$.
+This exact sequence thus shows that $\gamma(Y)=1-[Y]^{-1}$.
+::::
+
 ::: {.itenv #proposition-11 title="Proposition 11" latex="{Proposition 11}"}
-  Let $Y_1,\ldots,Y_m$ be non-singular subvarieties of $X$ such that $Y_i$ intersects transversally with
-  $$
-    Y_{i-1} \cap\ldots\cap Y_1
-  $$
-  ($i=2,\ldots,m$).
-  Then
-  $$
-    \gamma(Y_1\cap\ldots\cap Y_m) = \prod_i\gamma(Y_i).
-  $$
+Let $Y_1,\ldots,Y_m$ be non-singular subvarieties of $X$ such that $Y_i$ intersects transversally with
+$$
+  Y_{i-1} \cap\ldots\cap Y_1
+$$
+($i=2,\ldots,m$).
+Then
+$$
+  \gamma(Y_1\cap\ldots\cap Y_m) = \prod_i\gamma(Y_i).
+$$
 :::
 
 ::: {.proof}
-  An evident induction on $m$ shows that it suffices to consider the case of two subvarieties $Y$ and $Z$ that intersect transversally.
+An evident induction on $m$ shows that it suffices to consider the case of two subvarieties $Y$ and $Z$ that intersect transversally.
 
-  By definition, $\gamma(Y)\cdot\gamma(Z)$ is the alternating sum of the $\Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_Z)$.
-  It is clear that these sheaves, and the sheaf $\scr{O}_{Y\cap Z}$, are equal (and zero) at any point not contained inside $Y\cap Z$, which, in particular, proves our claim if $Y\cap Z=\varnothing$.
+By definition, $\gamma(Y)\cdot\gamma(Z)$ is the alternating sum of the $\Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_Z)$.
+It is clear that these sheaves, and the sheaf $\scr{O}_{Y\cap Z}$, are equal (and zero) at any point not contained inside $Y\cap Z$, which, in particular, proves our claim if $Y\cap Z=\varnothing$.
 
-  Now let $a\in Y\cap Z$.
-  Since $Y$ and $Z$ intersect transversally, we can find an affine open subset $U$ containing $a$, and functions $f_1,\ldots,f_p$ and $g_1,\ldots,g_q$ that are regular on $U$ such that the $f_i$ (resp. the $g_j$; resp, the $f_i$ and the $g_j$) form a system of uniformising parameters for $Y$ (resp. for $Z$; resp. for $Y\cap Z$).
-  To calculate the $\Tor_i(\scr{O}_Y,\scr{O}_Z)$, we resolve $\scr{O}_Y$ by using \hyperref[section10cequation2]{(2)}.
-  We must thus determine the homology of the complex
-  $$
-    0 \to \mathfrak{M}_n\otimes_{\scr{O}_X}\scr{O}_Z \to \ldots \to \scr{O}_X\otimes_{\scr{O}_X}\scr{O}_Z
-  $$
-  which can also be written as
-  $$
-    0 \to \scr{O}_Z\otimes_k\bigwedge\nolimits^p V \to \ldots \to \scr{O}_Z\otimes_k V \to \scr{O}_Z
-  $$
-  endowed with the same differential as above, with the $f_i$ being considered as element of $\scr{O}_Z$.
-  Since $\scr{O}_{a,Z} = \scr{O}_{a,X}/(g_1,\ldots,g_q)$, the $f_i$ generate a perfect ideal inside;
-  so this complex is acyclic (see \hyperref[subsection10c]{\S10.c}) and its $0$th homology group is $\scr{O}_{a,Z}(f_1,\ldots,f_p)$, i.e. $\scr{O}_{a,Y\cap Z}$.
-  Thus
-  $$
-    \Tor_0 = \scr{O}_{Y\cap Z}
-    \quad\text{and}\quad
-    \Tor_i = 0
-    \quad\text{(for }i\geq1\text{),}
-  $$
-  which finishes the proof.
+Now let $a\in Y\cap Z$.
+Since $Y$ and $Z$ intersect transversally, we can find an affine open subset $U$ containing $a$, and functions $f_1,\ldots,f_p$ and $g_1,\ldots,g_q$ that are regular on $U$ such that the $f_i$ (resp. the $g_j$; resp, the $f_i$ and the $g_j$) form a system of uniformising parameters for $Y$ (resp. for $Z$; resp. for $Y\cap Z$).
+To calculate the $\Tor_i(\scr{O}_Y,\scr{O}_Z)$, we resolve $\scr{O}_Y$ by using [(2)](#section-10.c-equation-2).
+We must thus determine the homology of the complex
+$$
+  0 \to \mathfrak{M}_n\otimes_{\scr{O}_X}\scr{O}_Z \to \ldots \to \scr{O}_X\otimes_{\scr{O}_X}\scr{O}_Z
+$$
+which can also be written as
+$$
+  0 \to \scr{O}_Z\otimes_k\bigwedge\nolimits^p V \to \ldots \to \scr{O}_Z\otimes_k V \to \scr{O}_Z
+$$
+endowed with the same differential as above, with the $f_i$ being considered as element of $\scr{O}_Z$.
+Since $\scr{O}_{a,Z} = \scr{O}_{a,X}/(g_1,\ldots,g_q)$, the $f_i$ generate a perfect ideal inside;
+so this complex is acyclic (see [§10.c](#section-10.c)) and its $0$-th homology group is $\scr{O}_{a,Z}(f_1,\ldots,f_p)$, i.e. $\scr{O}_{a,Y\cap Z}$.
+Thus
+$$
+  \Tor_0 = \scr{O}_{Y\cap Z}
+  \quad\text{and}\quad
+  \Tor_i = 0
+  \quad\text{(for }i\geq1\text{),}
+$$
+which finishes the proof.
 :::
 
 \oldpage{122}
-::: {.itenv title="Corollary" latex="{Corollary}"}
-\label{corollary-11}
-  Let $Y$ be a non-singular hyperplane section of $Z$, and let $k$ be the dimension of $X$.
-  Then $(1-[Y])^{k+1}=0$.
+::: {.itenv #proposition-11-corollary title="Corollary" latex="{Corollary}"}
+Let $Y$ be a non-singular hyperplane section of $Z$, and let $k$ be the dimension of $X$.
+Then $(1-[Y])^{k+1}=0$.
 :::
 
 ::: {.proof}
-  We take the non-singular hyperplane sections $Y_1,\ldots,Y_{k+1}$ whose intersection is empty, and such that the $Y_i$ intersect transversally with $Y_{i-1}\cap\ldots\cap Y_1$ ($i=2,\ldots,k+1$).
-  Since $[Y_i]=[Y]$, [Proposition 11](#proposition-11) and the preceding remark show that $(1-[Y]^{-1})^{k+1} = 0$, whence the corollary, since $[Y]$ is invertible in $K(X)$.
+We take the non-singular hyperplane sections $Y_1,\ldots,Y_{k+1}$ whose intersection is empty, and such that the $Y_i$ intersect transversally with $Y_{i-1}\cap\ldots\cap Y_1$ ($i=2,\ldots,k+1$).
+Since $[Y_i]=[Y]$, [Proposition 11](#proposition-11) and the preceding remark show that $(1-[Y]^{-1})^{k+1} = 0$, whence the corollary, since $[Y]$ is invertible in $K(X)$.
 :::
-
--->
 
 
 ## --- {#section-10.d}
@@ -1400,7 +1381,7 @@ This follows from the classical result on maps from an acyclic complex ([@3, Pro
   [In \hyperref[equation5]{(5)}, $\lambda^i$ is the $i$th exterior power of a sheaf which is locally free, given \hyperref[equation4]{(4)}.]
 
   Unless otherwise mentioned, $\Tor$ and $\otimes$ are taken over $\scr{O}_X$.
-  The exact sequence of $\Tor$, applied to \hyperref[section10aequation1]{(1)}, gives the exact sequence
+  The exact sequence of $\Tor$, applied to [(1)](#section-10.a-equation-1), gives the exact sequence
   $$
     0 \to \Tor_1(\scr{F},\scr{O}_Y) \to \scr{I}(Y)\otimes\scr{F} \xrightarrow{g} \scr{F}
   $$
@@ -1510,7 +1491,7 @@ $$
   \end{aligned}
   \tag{2}
 $$
-where the first was proven in \hyperref[subsection5c]{\S5.c}, and the second was mentioned in [§6](#section-6) (whose notation we also continue to use).
+where the first was proven in [§5.c](#section-5.c), and the second was mentioned in [§6](#section-6) (whose notation we also continue to use).
 
 ::: {.itenv #proposition-14 title="Proposition 14" latex="{Proposition 14}"}
   The equality \hyperref[section11equation1]{(1)} is true if $\codim_XY=1$ and $y=i^!(x)$ ($x\in K(X)$).
@@ -1873,7 +1854,7 @@ their proof will be analogous to that of [Proposition 12](#proposition-12) ([§1
 We will first prove \hyperref[section15equation2]{(2)}, as well as the fact that the $\Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})$ are annihilated by $\scr{J}'$, and can thus be identified with sheaves on $Y'$.
 
 It is clear that the two sides of \hyperref[section15equation2]{(2)} are zero on an open subset that does not meet $Y'$.
-To prove \hyperref[section15equation2]{(2)} in the neighbourhood of a point $b'\in Y'$, we reuse the notation from \hyperref[subsection10c]{\S10.c} and \hyperref[subsection12b]{\S12.b}.
+To prove \hyperref[section15equation2]{(2)} in the neighbourhood of a point $b'\in Y'$, we reuse the notation from [§10.c](#section-10.c) and \hyperref[subsection12b]{\S12.b}.
 So we need to calculate the homology of the complex
 $$
   0 \to \mathfrak{M}_p\otimes_{\scr{O}_X}\scr{O}_{X'} \to \ldots \to \scr{O}_{X'}
