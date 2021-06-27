@@ -370,17 +370,16 @@ The most important for us will be de Rham and $\ell$-adic cohomology.
     We can define the $\HH_\DR^i(X)$ by reduction to the smooth case, by the methods of [@D3], or, if $X$ admits an embedding into a smooth variety $Z$, as the hypercohomology of the de Rham complex of the formal completion of $Z$ along $X$ (R. Hartshorne, _On the de Rham cohomology of algebraic varieties_, Publ. Math. IHES **45** (1975), p. 5--99);
     more intrinsically, it is the crystalline cohomology of $X$ (A. Grothendieck, _Crystals and the de Rham cohomology of schemes_, Notes by J. Coates and O. Jussila, in: "dix exposés sur la cohomologie des schémas", North Holland (1968)).
 
-::: {.rmenv title="$\ell$-adic cohomology" latex="{$\ell$-adic cohomology}"}
-Let $\ell$ be a prime number;
-if $k$ is an algebraically closed field of characteristic $\neq\ell$, then we have the $\ell$-adic theory $X\mapsto\HH^i(X,\QQ_\ell)$ that associates, to $X$ over $k$, cohomology groups which are vector spaces over $\QQ_\ell$ [@SGA5, VI]{SGA5}.
-They are defined from the cohomology groups with coefficients in $\ZZ/(\ell^n)$, and we allow ourselves to give, as reference for a theorem in $\ell$-adic cohomology, the place where its $\ZZ/(\ell^n)$ analogue is proved.
-The $\HH^i(X,\QQ_\ell)$ depend only on $X$.
-In particular, if $k$ is the algebraic closure of $k_0$, and if $X$ is given by extension of scalars of some $X_0$ over $k_0$, then $\Gal(k/k_0)$ acts (semi-$k$-linearly) on $X$, and thus acts on the $\HH^i(X,\QQ_\ell)$.
-This action is continuous.
-If $k'$ is an algebraically closed extension of $k$, and if $X'$ is given by extension of scalars of $X$, then $\HH^i(X,\QQ_\ell)\xrightarrow{\sim}\HH^i(X',\QQ_\ell)$.
-\oldpage{12 (90)}
-This follows by passing to the limit in the base change theorem for a smooth morphism [@SGA4, XVI, 1.2]: $k'$ is the filtrant inductive limit of the $k$-algebras $A$ with $\Spec(A)$ smooth over $k$.
-:::
+- **$\ell$-adic cohomology.**
+    Let $\ell$ be a prime number;
+    if $k$ is an algebraically closed field of characteristic $\neq\ell$, then we have the $\ell$-adic theory $X\mapsto\HH^i(X,\QQ_\ell)$ that associates, to $X$ over $k$, cohomology groups which are vector spaces over $\QQ_\ell$ [@SGA5, VI]{SGA5}.
+    They are defined from the cohomology groups with coefficients in $\ZZ/(\ell^n)$, and we allow ourselves to give, as reference for a theorem in $\ell$-adic cohomology, the place where its $\ZZ/(\ell^n)$ analogue is proved.
+    The $\HH^i(X,\QQ_\ell)$ depend only on $X$.
+    In particular, if $k$ is the algebraic closure of $k_0$, and if $X$ is given by extension of scalars of some $X_0$ over $k_0$, then $\Gal(k/k_0)$ acts (semi-$k$-linearly) on $X$, and thus acts on the $\HH^i(X,\QQ_\ell)$.
+    This action is continuous.
+    If $k'$ is an algebraically closed extension of $k$, and if $X'$ is given by extension of scalars of $X$, then $\HH^i(X,\QQ_\ell)\xrightarrow{\sim}\HH^i(X',\QQ_\ell)$.
+    \oldpage{12 (90)}
+    This follows by passing to the limit in the base change theorem for a smooth morphism [@SGA4, XVI, 1.2]: $k'$ is the filtrant inductive limit of the $k$-algebras $A$ with $\Spec(A)$ smooth over $k$.
 
 If $k=\CC$, then we have the topological space $X(\CC)$ of points of $X$, as well as its rational cohomology $\HH^\bullet(X(\CC),\QQ)$.
 We have canonical isomorphisms from [@G] and [@SGA4, XVI, 4.1]:
@@ -417,4 +416,3 @@ $$
 
 where $X(\CC)$ is the topological space of points of the complex algebraic variety given by the extension of scalars via $\sigma$ of $X$.
 ::::
-
