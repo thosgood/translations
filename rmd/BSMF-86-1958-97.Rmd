@@ -15,6 +15,8 @@ favicon: "favicon.ico"
 ```{r, child = '_translator-note.Rmd'}
 ```
 
+(_[Trans.]_ In the original article, subsections were numbered e.g. 5.a, 5.b, ...; here they are numbered 5.1, 5.2, ...)
+
 \providecommand{\scr}[1]{{\mathscr{#1}}}
 \renewcommand{\cal}[1]{{\mathcal{#1}}}
 \renewcommand{\frak}[1]{{\mathfrak{#1}}}
@@ -1251,9 +1253,7 @@ Also, $\scr{I}(Y)/\scr{I}(Y)^2$ is a sheaf concentrated on $Y$, and annihilated 
 It is immediate that $f\mapsto\dd f$ is a homomorphism of $\scr{O}_Y$-modules from $\scr{I}(Y)/\scr{I}(Y)^2$ to the sheaf $\scr{O}_Y(E^*)$ of germs of sections of $E^*$.
 By using the local parameters, we see that
 
-::: {.itenv}
-the map $D\colon\scr{I}(Y)/\scr{I}(Y)^2 \to \scr{O}_Y(E^*)$ defined by $f\mapsto\dd f$ is an isomorphism of $\scr{O}_Y$-modules.
-:::
+_the map $D\colon\scr{I}(Y)/\scr{I}(Y)^2 \to \scr{O}_Y(E^*)$ defined by $f\mapsto\dd f$ is an isomorphism of $\scr{O}_Y$-modules._
 
 
 ## Local resolution of $\scr{O}_Y$ over $\scr{O}_X$ {#section-10.c}
@@ -1348,7 +1348,6 @@ Since $[Y_i]=[Y]$, [Proposition 11](#proposition-11) and the preceding remark sh
 
 ## --- {#section-10.d}
 
-<!--
 We will use, both here and later on, the following remark;
 let $\scr{F}$ and $\scr{G}$ be sheaves of algebras on $X$.
 Then the direct sum of the $\Tor_i^{\scr{O}_X}(\scr{F},\scr{G})$ canonically admits the structure of a sheaf of graded (by $i$) algebras.
@@ -1358,223 +1357,230 @@ see [@3, Chap. IX] for some analogous and more general considerations.
 This follows from the classical result on maps from an acyclic complex ([@3, Proposition 11, p. 76]).]
 
 ::: {.itenv #proposition-12 title="Proposition 12" latex="{Proposition 12}"}
-  We have that $i^!i_!(y)=y\cdot\lambda_{-1}(E^*)$ for all $y\in K(Y)$.
+We have that $i^!i_!(y)=y\cdot\lambda_{-1}(E^*)$ for all $y\in K(Y)$.
   In particular, $i^!\gamma(Y)=\lambda_{-1}(E^*)$.
 :::
 
-::: {.proof}
-  By linearity, and [Theorem 2](#theorem-2), we can restrict to proving [Proposition 12](#proposition-12) in the case where $y=\scr{F}$ is a locally free sheaf.
-  By definition, $i^!i_!(\scr{F})$ is the alternating sum of the $\Tor_i^{\scr{O}_X}(\scr{F},\scr{O}_Y)$, and, since $\scr{F}$ and the $\lambda^i E^*$ are locally free, $\scr{F}\cdot\lambda_{-1}E^*$ is the alternating sum of the $\scr{F}\otimes_{\scr{O}_Y}\lambda^i E^*$.
-  Recalling \hyperref[subsection10b]{\S10.b}, it thus suffices, to prove [Proposition 12](#proposition-12), to show that
-  $$
-  \label{equation4}
-    \Tor_1^{\scr{O}_X}(\scr{F},\scr{O}_Y)
-    = \scr{F} \otimes_{\scr{O}_Y} \scr{I}(Y)/\scr{I}(Y)^2
-    \tag{4}
-  $$
-  $$
-  \label{equation5}
-    \Tor_i^{\scr{O}_X}(\scr{F},\scr{O}_Y)
-    = \scr{F} \otimes_{\scr{O}_Y} \lambda^i(\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_Y)).
-    \tag{5}
-  $$
-  [In \hyperref[equation5]{(5)}, $\lambda^i$ is the $i$th exterior power of a sheaf which is locally free, given \hyperref[equation4]{(4)}.]
+:::: {.proof}
+By linearity, and [Theorem 2](#theorem-2), we can restrict to proving [Proposition 12](#proposition-12) in the case where $y=\scr{F}$ is a locally free sheaf.
+By definition, $i^!i_!(\scr{F})$ is the alternating sum of the $\Tor_i^{\scr{O}_X}(\scr{F},\scr{O}_Y)$, and, since $\scr{F}$ and the $\lambda^i E^*$ are locally free, $\scr{F}\cdot\lambda_{-1}E^*$ is the alternating sum of the $\scr{F}\otimes_{\scr{O}_Y}\lambda^i E^*$.
+Recalling [§10.b](#section-10.b), it thus suffices, to prove [Proposition 12](#proposition-12), to show that
 
-  Unless otherwise mentioned, $\Tor$ and $\otimes$ are taken over $\scr{O}_X$.
-  The exact sequence of $\Tor$, applied to [(1)](#section-10.a-equation-1), gives the exact sequence
-  $$
-    0 \to \Tor_1(\scr{F},\scr{O}_Y) \to \scr{I}(Y)\otimes\scr{F} \xrightarrow{g} \scr{F}
-  $$
-  where $g$ is defined by $g(u\otimes v)=u\cdot v$.
-  Since $\scr{I}(Y)$ annihilates $\scr{F}$, $g$ has a zero image, and so
-  $$
-    \Tor_1(\scr{F},\scr{O}_Y) = \scr{I}(Y)\otimes\scr{F}.
-  $$
-  But, since $\scr{F}$ is a sheaf on $Y$, it is annihilated by $\scr{I}(Y)$, and so the image of $\scr{I}(Y)^2\otimes\scr{F}$ in $\scr{I}(Y)\otimes\scr{F}$ is zero, and $\scr{I}(Y)\otimes\scr{F}$ can be identified with $\scr{I}(Y)/\scr{I}(Y)^2\otimes\scr{F}$.
-  Finally, since, in this product, the two sheaves are
-\oldpage{123}
-  over $\scr{O}_Y$, their $\otimes$ over $\scr{O}$ can be identified with their tensor product over $\scr{O}_Y$, which finishes the proof of \hyperref[equation4]{(4)}.
-
-  Using the notation of \hyperref[subsection10b]{\S10.b}, the $\Tor_i(\scr{F},\scr{O}_Y)$ are, on $U$, the homology groups of the complex
-  $$
-    0\to\mathfrak{M}_p\otimes\scr{F}\to\mathfrak{M}_{p-1}\otimes\scr{F}\to\ldots\to\scr{F}
-  $$
-  which can also be written as
-  $$
-  \label{equation6}
-    0 \to \scr{F}\otimes_k\bigwedge\nolimits^p V \to \scr{F}\otimes_k\bigwedge\nolimits^{p-1}V \to \ldots \to \scr{F}
-    \tag{6}
-  $$
-  endowed with the differential that extends $\dd$ and is zero on $\scr{F}$.
-  Since the $f_i$ are local sections of $\scr{I}(Y)$, and this sheaf annihilates $\scr{F}$, it follows that, in \hyperref[equation6]{(6)}, the differential is identically zero, and so
-  $$
-    \Tor_i(\scr{F},\scr{O}_Y) = \scr{F}\otimes_k\bigwedge\nolimits^iV = \scr{F}\otimes_{\scr{O}_Y}\scr{O}_Y\otimes_k\bigwedge\nolimits^i V
-    \quad\text{(for }i\geq0\text{).}
-  $$
-  In the particular case where $\scr{F}=\scr{O}_Y$, this formula shows that
-  $$
-    \Tor_1(\scr{O}_Y,\scr{O}_Y) = \scr{O}_Y\otimes_k V
-  $$
-  whence we have an isomorphism (for the moment, local, defined by the use of the parameters $f_i$) of the two sides of \hyperref[equation5]{(5)}.
-  But $\mathfrak{M}$, thought of as a tensor product of the algebras $\scr{O}_Y$ and $\bigwedge V$, is clearly a differential graded algebra, and so the remark made at the start of \hyperref[subsection10d]{\S10.d} applies, and shows that, in fact, this isomorphism is intrinsic (and, in particular, does not depend on the chosen system of local parameters) and holds true over $X$.
+::: {.eqref #section-10.d-equation-4}
+$$
+  \Tor_1^{\scr{O}_X}(\scr{F},\scr{O}_Y)
+  = \scr{F} \otimes_{\scr{O}_Y} \scr{I}(Y)/\scr{I}(Y)^2
+\tag{4}
+$$
 :::
--->
+
+::: {.eqref #section-10.d-equation-5}
+$$
+  \Tor_i^{\scr{O}_X}(\scr{F},\scr{O}_Y)
+  = \scr{F} \otimes_{\scr{O}_Y} \lambda^i(\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_Y)).
+\tag{5}
+$$
+:::
+
+[In [(5)](#section-10.d-equation-5), $\lambda^i$ is the $i$th exterior power of a sheaf which is locally free, given [(4)](#section-10.d-equation-4).]
+
+Unless otherwise mentioned, $\Tor$ and $\otimes$ are taken over $\scr{O}_X$.
+The exact sequence of $\Tor$, applied to [(1)](#section-10.a-equation-1), gives the exact sequence
+$$
+  0 \to \Tor_1(\scr{F},\scr{O}_Y) \to \scr{I}(Y)\otimes\scr{F} \xrightarrow{g} \scr{F}
+$$
+where $g$ is defined by $g(u\otimes v)=u\cdot v$.
+Since $\scr{I}(Y)$ annihilates $\scr{F}$, $g$ has a zero image, and so
+$$
+  \Tor_1(\scr{F},\scr{O}_Y) = \scr{I}(Y)\otimes\scr{F}.
+$$
+But, since $\scr{F}$ is a sheaf on $Y$, it is annihilated by $\scr{I}(Y)$, and so the image of $\scr{I}(Y)^2\otimes\scr{F}$ in $\scr{I}(Y)\otimes\scr{F}$ is zero, and $\scr{I}(Y)\otimes\scr{F}$ can be identified with $\scr{I}(Y)/\scr{I}(Y)^2\otimes\scr{F}$.
+\oldpage{123}
+Finally, since, in this product, the two sheaves are over $\scr{O}_Y$, their $\otimes$ over $\scr{O}$ can be identified with their tensor product over $\scr{O}_Y$, which finishes the proof of [(4)](#section-10.d-equation-4).
+
+Using the notation of [§10.b](#section-10.b), the $\Tor_i(\scr{F},\scr{O}_Y)$ are, on $U$, the homology groups of the complex
+$$
+  0\to\mathfrak{M}_p\otimes\scr{F}\to\mathfrak{M}_{p-1}\otimes\scr{F}\to\ldots\to\scr{F}
+$$
+which can also be written as
+
+::: {.eqref #section-10.d-equation-6}
+$$
+  0 \to \scr{F}\otimes_k\bigwedge\nolimits^p V \to \scr{F}\otimes_k\bigwedge\nolimits^{p-1}V \to \ldots \to \scr{F}
+  \tag{6}
+$$
+:::
+
+endowed with the differential that extends $\dd$ and is zero on $\scr{F}$.
+Since the $f_i$ are local sections of $\scr{I}(Y)$, and this sheaf annihilates $\scr{F}$, it follows that, in [(6)](#section-10.d-equation-6), the differential is identically zero, and so
+$$
+  \Tor_i(\scr{F},\scr{O}_Y) = \scr{F}\otimes_k\bigwedge\nolimits^iV = \scr{F}\otimes_{\scr{O}_Y}\scr{O}_Y\otimes_k\bigwedge\nolimits^i V
+  \quad\text{(for }i\geq0\text{).}
+$$
+In the particular case where $\scr{F}=\scr{O}_Y$, this formula shows that
+$$
+  \Tor_1(\scr{O}_Y,\scr{O}_Y) = \scr{O}_Y\otimes_k V
+$$
+whence we have an isomorphism (for the moment, local, defined by the use of the parameters $f_i$) of the two sides of [(5)](#section-10.d-equation-5).
+But $\mathfrak{M}$, thought of as a tensor product of the algebras $\scr{O}_Y$ and $\bigwedge V$, is clearly a differential graded algebra, and so the remark made at the start of [§10.d](#section-10.d) applies, and shows that, in fact, this isomorphism is intrinsic (and, in particular, does not depend on the chosen system of local parameters) and holds true over $X$.
+::::
 
 
 ## Particular case of the divisor {#section-10.e}
 
-<!--
-In this case, we can use the resolution \hyperref[equation3]{(3)}, which is global.
+In this case, we can use the resolution [(3)](#section-10.c-equation-3), which is global.
 The $\Tor_i(\scr{F},\scr{O}_Y)$ are thus the homology groups of the complex
 $$
   \ldots \to 0 \to \scr{O}_Y([Y]^{-1})\otimes\scr{F} \xrightarrow{f}\scr{F}
 $$
 where $\scr{F}$ is the multiplication by a local equation;
 since $\scr{F}$ is annihilated by $\scr{I}(Y)$, the homomorphism $f$ has a zero image, which implies that
-$$\begin{aligned}
-  \Tor_0(\scr{F},\scr{O}_Y) &= \scr{F}
-\\\Tor_1(\scr{F},\scr{O}_Y) &= [Y]^{-1}\cdot\scr{F}
-\\\Tor_i(\scr{F},\scr{O}_Y) &= 0 \qquad\text{(for }i\geq2\text{).}
-\end{aligned}$$
+$$
+  \begin{aligned}
+    \Tor_0(\scr{F},\scr{O}_Y) &= \scr{F}
+  \\\Tor_1(\scr{F},\scr{O}_Y) &= [Y]^{-1}\cdot\scr{F}
+  \\\Tor_i(\scr{F},\scr{O}_Y) &= 0 \qquad\text{(for }i\geq2\text{).}
+  \end{aligned}
+$$
 By comparing with [Proposition 12](#proposition-12), we see that the restrictions of $[Y]^{-1}$ to $Y$ and to $E^*$ define the same element of $K(Y)$.
 In fact,
+
 ::: {.itenv #proposition-13 title="Proposition 13" latex="{Proposition 13}"}
-  Suppose that $\codim Y=1$, and denote by $L$ the restriction of $[Y]$ to $Y$.
-  Then:
-  \begin{enumerate}[(a)]
-    \item $L=E$;
-    \item $\gamma(Y) = 1-[Y]^{-1}$;
-    \item $i^!i_!(y) = y\cdot(1-L^*).$
-  \end{enumerate}
+Suppose that $\codim Y=1$, and denote by $L$ the restriction of $[Y]$ to $Y$.
+Then:
+
+a. $L=E$;
+b. $\gamma(Y) = 1-[Y]^{-1}$;
+c. $i^!i_!(y) = y\cdot(1-L^*).$
 :::
+
+\oldpage{124}
 
 ::: {.proof}
-\oldpage{124}
-  Claim (c) was proven above, and (b) was proven in the remark of \hyperref[subsection10b]{\S10.b}.
-  It remains only to prove (a).
+Claim (c) was proven above, and (b) was proven in the remark of [§10.b](#section-10.b).
+It remains only to prove (a).
 
-  Let $(U_i)$ be a cover of $U$ such that, on $U_i$, $Y$ is defined by one equation $f_i=0$, with the differential $\dd f_i$ being non-zero at every point of $Y\cap U_i$, and let $f_{ij}=f_i/f_j$ on $U_i\cap U_j$.
-  We know that $[Y]$ is defined by the system $\{f_{ij}\}$ of transition functions.
-  Also, on $U_i$, we can identify $E^*$ with the product $U_i\times k$ by applying $\dd f_i$ to the unit section.
-  But, on $Y\cap U_i\cap U_j$, we have that $\dd f_i=f_{ij}\cdot\dd f_j$ (since $f_j=0$ on $Y$), and so we can define $E^*$ by the system of transition functions $\{f_{ij}^{-1}\}$, which proves (a).
+Let $(U_i)$ be a cover of $U$ such that, on $U_i$, $Y$ is defined by one equation $f_i=0$, with the differential $\dd f_i$ being non-zero at every point of $Y\cap U_i$, and let $f_{ij}=f_i/f_j$ on $U_i\cap U_j$.
+We know that $[Y]$ is defined by the system $\{f_{ij}\}$ of transition functions.
+Also, on $U_i$, we can identify $E^*$ with the product $U_i\times k$ by applying $\dd f_i$ to the unit section.
+But, on $Y\cap U_i\cap U_j$, we have that $\dd f_i=f_{ij}\cdot\dd f_j$ (since $f_j=0$ on $Y$), and so we can define $E^*$ by the system of transition functions $\{f_{ij}^{-1}\}$, which proves (a).
 :::
--->
+
 
 
 # Proof of R--R in the particular case of an injection {#section-11}
 
-<!--
 Given the results of [§7](#section-7) and [§9](#section-9), it remains only to prove [R--R](#theorem-riemann-roch) for an injection.
-In the notation of \hyperref[subsection10a]{\S10.a}, the formula to prove is then equivalent to
+In the notation of [§10.a](#section-10.a), the formula to prove is then equivalent to
+
+::: {.eqref #section-11-equation-1}
 $$
-\label{section11equation1}
   \ch i_!y = i_*(\ch y\cdot T(E)^{-1})
   \qquad\text{(for }y\in K(Y)\text{).}
-  \tag{1}
+\tag{1}
 $$
-Indeed, $E$ is the quotient of the tangent bundle of $X$ (restricted to $Y$) by the tangent bundle of $Y$, so $i^*T(X) = T(Y)\cdot T(E)$, whence
-$$\begin{aligned}
-  i_*(\ch y T^(E){-1}) &= i_*(\ch y\cdot T(Y)\cdot i^*(T(X))^{-1})
-\\i_*(\ch y T^(E){-1}) &= i_*(\ch y\cdot T(Y))\cdot T(X)^{-1}
-\end{aligned}$$
-and so \hyperref[section11equation1]{(1)} gives [R--R](#theorem-riemann-roch) if we multiply both sides by $T(X)$.
+:::
 
-To prove \hyperref[section11equation1]{(1)}, Grothendieck first considers the case where $Y$ is a divisor and $y\in i^!(K(X))$, and then reduces to this case by blowing up $X$ along $Y$.
+Indeed, $E$ is the quotient of the tangent bundle of $X$ (restricted to $Y$) by the tangent bundle of $Y$, so $i^*T(X) = T(Y)\cdot T(E)$, whence
+$$
+  \begin{aligned}
+    i_*(\ch y T^(E){-1}) &= i_*(\ch y\cdot T(Y)\cdot i^*(T(X))^{-1})
+  \\i_*(\ch y T^(E){-1}) &= i_*(\ch y\cdot T(Y))\cdot T(X)^{-1}
+  \end{aligned}
+$$
+and so [(1)](#section-11-equation-1) gives [R--R](#theorem-riemann-roch) if we multiply both sides by $T(X)$.
+
+To prove [(1)](#section-11-equation-1), Grothendieck first considers the case where $Y$ is a divisor and $y\in i^!(K(X))$, and then reduces to this case by blowing up $X$ along $Y$.
 This first particular case will be covered below, and the general case of the injection will be covered in [§13](#section-13), where we will assume certain properties of blow ups that will be proven in [§14](#section-14), [§15](#section-15), and [§16](#section-16).
 
 We will use, without explanation, the formulas
+
+::: {.eqref #section-11-equation-2}
 $$
-\label{section11equation2}
   \begin{aligned}
     f_!(y\cdot f^!(x)) = f_!(y)\cdot x
   \\f_*(y\cdot f^*(x)) = f_*(y)\cdot x
   \end{aligned}
-  \tag{2}
+\tag{2}
 $$
+
 where the first was proven in [§5.c](#section-5.c), and the second was mentioned in [§6](#section-6) (whose notation we also continue to use).
 
 ::: {.itenv #proposition-14 title="Proposition 14" latex="{Proposition 14}"}
-  The equality \hyperref[section11equation1]{(1)} is true if $\codim_XY=1$ and $y=i^!(x)$ ($x\in K(X)$).
+The equality [(1)](#section-11-equation-1) is true if $\codim_XY=1$ and $y=i^!(x)$ ($x\in K(X)$).
 :::
 
 ::: {.proof}
-  By using \hyperref[section11equation2]{(2)} and [Proposition 13](#proposition-13), we see that
-  $$
-    \ch(i_!i^!(x)) = \ch(x\cdot i_!(1)) = \ch(x\cdot(1-[Y]^{-1})).
-  $$
-  Since $x\mapsto\ch x$ is a ring homomorphism, and since $c([Y])=1+Y$,
+By using [(2)](#section-11-equation-2) and [Proposition 13](#proposition-13), we see that
+$$
+  \ch(i_!i^!(x)) = \ch(x\cdot i_!(1)) = \ch(x\cdot(1-[Y]^{-1})).
+$$
 \oldpage{125}
-  this implies that
-  $$
-    \ch(i_!) = \ch x\cdot\ch(1-[Y]^{-1}) = \ch x\cdot(1-e^{-Y}).
-  $$
-  The right-hand side of \hyperref[section11equation1]{(1)} is
-  $$\begin{aligned}
+Since $x\mapsto\ch x$ is a ring homomorphism, and since $c([Y])=1+Y$, this implies that
+$$
+  \ch(i_!) = \ch x\cdot\ch(1-[Y]^{-1}) = \ch x\cdot(1-e^{-Y}).
+$$
+The right-hand side of [(1)](#section-11-equation-1) is
+$$
+  \begin{aligned}
     i_*(\ch(i^!x)\cdot T(L)^{-1})
     &= i_*(i^*(\ch x)\cdot i^*(T([Y])^{-1}))
   \\&= \ch x\cdot T([Y])^{-1}\cdot i_*(1)
   \\&= \ch x\cdot T([Y])^{-1}\cdot Y
-  \end{aligned}$$
-  and \hyperref[section11equation1]{(1)} then follows from $T([Y])=Y/(1-e^{-Y})$.
+  \end{aligned}
+$$
+and [(1)](#section-11-equation-1) then follows from $T([Y])=Y/(1-e^{-Y})$.
 :::
 
-\begin{itenv}{Corollary 1}
-\label{corollary1}
-  [R--R](#theorem-riemann-roch) is true if $X=Y\times\PP$, where $\PP$ is a projective space, and $i$ is the map $a\mapsto(a,p_0)$, with $p_0$ some fixed point of $\PP$.
-:::
-
-::: {.proof}
-  The map $i$ is the product of the identity on $Y$ with the injection of a point into $\PP$.
-  Given [Lemma 16](#lemma-16), it suffices to prove [R--R](#theorem-riemann-roch) in this latter case.
-  If $Y$ is a point, then $K(Y)=\mathbb{Z}$, and it suffices to consider the case where $y=1$.
-  Since $1\in i^!(\PP)$, our claim follows from [Proposition 14](#proposition-14) if $\dim\PP=1$.
-  Arguing by induction, we can assume that our claim is true for the injection $u\colon Y\to H$ of $Y$ into a hyperplane of $\PP$;
-  given part (a) of [Lemma 15](#lemma-15), it suffices to prove that [R--R](#theorem-riemann-roch) is true for $u_!(1)$ and the injection $v\colon H\to \PP$;
-  this, itself, follows from [Proposition 14](#proposition-14) if we know that $u_!(1)\in v^!(K(\PP))$.
-  But let $Z$ be a second hyperplane and $D$ a line of $H$ such that $Y=D\cap Z\cap H$.
-  Then ([Proposition 11](#proposition-11)) $\gamma_H(Y) = \gamma_H(D)\cdot\gamma_H(H\cap Z)$.
-  By part (b) of [Proposition 13](#proposition-13), $\gamma_H(H\cap Z)=1-[H\cap Z]^{-1}$;
-  since $[H\cap Z]$ can be identified with the restriction of $[H]$ to $H$, part (c) of [Proposition 13](#proposition-13) then shows that
-  $$
-    u_!(1) = \gamma_H(Y) = v^!v_!(\gamma_H(D)) = v^!(\gamma_{\PP}(D)).
-  $$
-:::
-
-\begin{itenv}{Corollary 2}
-\label{corollary2}
-  If the equality \hyperref[section11equation1]{(1)} is true whenever $2\dim Y\leq\dim X-2$, then it is true in general.
+::: {.itenv #corollary-1 title="Corollary 1" latex="{Corollary 1}"}
+[R--R](#theorem-riemann-roch) is true if $X=Y\times\PP$, where $\PP$ is a projective space, and $i$ is the map $a\mapsto(a,p_0)$, with $p_0$ some fixed point of $\PP$.
 :::
 
 ::: {.proof}
-  It suffices to compose $i$ with an injection $X\to X\times\PP$, where $\PP$ is of large dimension, and the apply \hyperref[corollary1]{Corollary 1} and part (b) of [Lemma 15](#lemma-15).
+The map $i$ is the product of the identity on $Y$ with the injection of a point into $\PP$.
+Given [Lemma 16](#lemma-16), it suffices to prove [R--R](#theorem-riemann-roch) in this latter case.
+If $Y$ is a point, then $K(Y)=\mathbb{Z}$, and it suffices to consider the case where $y=1$.
+Since $1\in i^!(\PP)$, our claim follows from [Proposition 14](#proposition-14) if $\dim\PP=1$.
+Arguing by induction, we can assume that our claim is true for the injection $u\colon Y\to H$ of $Y$ into a hyperplane of $\PP$;
+given part (a) of [Lemma 15](#lemma-15), it suffices to prove that [R--R](#theorem-riemann-roch) is true for $u_!(1)$ and the injection $v\colon H\to \PP$;
+this, itself, follows from [Proposition 14](#proposition-14) if we know that $u_!(1)\in v^!(K(\PP))$.
+But let $Z$ be a second hyperplane and $D$ a line of $H$ such that $Y=D\cap Z\cap H$.
+Then ([Proposition 11](#proposition-11)) $\gamma_H(Y) = \gamma_H(D)\cdot\gamma_H(H\cap Z)$.
+By part (b) of [Proposition 13](#proposition-13), $\gamma_H(H\cap Z)=1-[H\cap Z]^{-1}$;
+since $[H\cap Z]$ can be identified with the restriction of $[H]$ to $H$, part (c) of [Proposition 13](#proposition-13) then shows that
+$$
+  u_!(1) = \gamma_H(Y) = v^!v_!(\gamma_H(D)) = v^!(\gamma_{\PP}(D)).
+$$
 :::
--->
+
+::: {.itenv #corollary-2 title="Corollary 2" latex="{Corollary 2}"}
+If the equality [(1)](#section-11-equation-1) is true whenever $2\dim Y\leq\dim X-2$, then it is true in general.
+:::
+
+::: {.proof}
+It suffices to compose $i$ with an injection $X\to X\times\PP$, where $\PP$ is of large dimension, and the apply [Corollary 1](#corollary-1) and part (b) of [Lemma 15](#lemma-15).
+:::
 
 
 # Blowing up along a subvariety {#section-12}
 
 ## Notation {#section-12.a}
 
-<!--
 We will write $X'$ to mean the variety obtained by blowing up $X$ along $Y$, $f$ to mean the projection from $X'$ to $X$, $g$ to mean the restriction of $f$ to $Y'=f^{-1}(Y)$, and $j$ to mean the injection from $Y'$ to $X'$.
 We will thus have the commutative diagram
 $$
-\label{section12aequation1}
-  \begin{tikzcd}
-    Y' \rar["j"] \dar[swap,"g"]
-    & X' \dar["f"]
-  \\ Y \rar[swap,"i"]
-    & X
-  \end{tikzcd}
-  \tag{1}
+  \begin{CD}
+    Y' @>j>> X'
+  \\@VgVV @VVfV
+  \\Y @>>i> X
+  \end{CD}
+\tag{1}
 $$
 As before, $E$ is the normal bundle of $Y$ in $X$, and $p=\codim_XY$.
 We will sometimes write $E'$ to mean the inverse image of $E$.
-We will see that $f$ is an isomorphism outside of $Y'$, that $g$ is the projection into a fibration
+We will see that $f$ is an isomorphism outside of $Y'$, that $g$ is the projection into a fibration with fibre equal to the projective space $\PP_{p-1}$ of dimension $(p-1)$, that $\codim_{X'}Y'=1$, and that $E'$ contains the restriction of $[Y']$ to $Y'$, which will be denoted $L$.
 \oldpage{126}
-with fibre equal to the projective space $\PP_{p-1}$ of dimension $(p-1)$, that $\codim_{X'}Y'=1$, and that $E'$ contains the restriction of $[Y']$ to $Y'$, which will be denoted $L$.
 Finally, we let $F=E'/L$, which is a vector bundle of rank $(p-1)$.
--->
 
 
 ## Definition of $X'$ by local charts {#section-12.b}
@@ -1773,7 +1779,7 @@ By the projective normalisation and the Main Theorem of Zariski, we thus deduce 
   $$
     \ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1} = c_{p-1}(F)\cdot g^*(\ch y\cdot T(E)^{-1}).
   $$
-  Given \hyperref[section11equation2]{(2)} (in [§11](#section-11)) and part (b) of [Lemma 19](#lemma-19), the image under $g_*$ of the right-hand side is equal to $\ch y\cdot T(E)^{-1}$, and the equality in \hyperref[proposition15equation4]{(4)} then follows from the fact that $f_*j_*=i_*g_*$.
+  Given [(2)](#section-11-equation-2) (in [§11](#section-11)) and part (b) of [Lemma 19](#lemma-19), the image under $g_*$ of the right-hand side is equal to $\ch y\cdot T(E)^{-1}$, and the equality in \hyperref[proposition15equation4]{(4)} then follows from the fact that $f_*j_*=i_*g_*$.
 :::
 -->
 
@@ -1812,7 +1818,7 @@ $$
 
 <!--
 In this section, we will write $\scr{J}$ to mean $\scr{I}(Y)$, and $\scr{J}'$ to mean $\scr{I}(Y')$.
-As we remarked in \hyperref[subsection10b]{\S10.b}, $\scr{J}'/\scr{J}'^2$ (resp. $\scr{J}/\scr{J}^2$) is the sheaf of germs of sections of $L^*$ (resp. $E^*$), and so $\scr{J}/\scr{J}^2\otimes_{\scr{O}_Y}\scr{O}_{Y'}$ is the sheaf of germs of sections of $g^!(E^*)=E'^*$.
+As we remarked in [§10.b](#section-10.b), $\scr{J}'/\scr{J}'^2$ (resp. $\scr{J}/\scr{J}^2$) is the sheaf of germs of sections of $L^*$ (resp. $E^*$), and so $\scr{J}/\scr{J}^2\otimes_{\scr{O}_Y}\scr{O}_{Y'}$ is the sheaf of germs of sections of $g^!(E^*)=E'^*$.
 
 By associating, to an element $u\in\scr{J}_x$, the element $u\circ f\in\scr{J}'_{x'}(f(x')=x)$, we evidently define a surjective homomorphism of $\scr{O}_{Y'}$-modules $\mu\colon\scr{J}/\scr{J}^2\otimes_{\scr{O}_Y}\scr{O}_{Y'}\to\scr{J}'/\scr{J}'^2$.
 This again shows that $E'^*$ is sent to $L^*$, and thus that $L$ injects into $E'$;
@@ -1884,7 +1890,7 @@ $$
   \cong
   \scr{O}_{Y'}\otimes_k\bigwedge\nolimits^i(e'_1,\ldots,\widehat{e'_j},\ldots,e'_p),
 $$
-which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial remark of \hyperref[subsection10d]{\S10.d} into account, also gives \hyperref[section15equation2]{(2)}.
+which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial remark of [§10.d](#section-10.d) into account, also gives \hyperref[section15equation2]{(2)}.
 
 ::: {.proof}{Proof of {\hyperref[section15equation3]{(3)}}}
   The exact sequence of $\Tor$, applied to
