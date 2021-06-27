@@ -4,7 +4,6 @@
 
 - `.Rmd` versions of existing translations
   + [ ] `978-3-540-05190-9`
-  + [ ] `MSRI-16-1989-79`
 
 
 ## Technical
