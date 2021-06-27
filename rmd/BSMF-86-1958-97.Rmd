@@ -1296,8 +1296,8 @@ This exact sequence thus shows that $\gamma(Y)=1-[Y]^{-1}$.
 Let $Y_1,\ldots,Y_m$ be non-singular subvarieties of $X$ such that $Y_i$ intersects transversally with
 $$
   Y_{i-1} \cap\ldots\cap Y_1
+  \quad\text{(for }i=2,\ldots,m\text{).}
 $$
-($i=2,\ldots,m$).
 Then
 $$
   \gamma(Y_1\cap\ldots\cap Y_m) = \prod_i\gamma(Y_i).
@@ -1503,6 +1503,7 @@ $$
   \end{aligned}
 \tag{2}
 $$
+:::
 
 where the first was proven in [§5.c](#section-5.c), and the second was mentioned in [§6](#section-6) (whose notation we also continue to use).
 
@@ -1585,7 +1586,6 @@ Finally, we let $F=E'/L$, which is a vector bundle of rank $(p-1)$.
 
 ## Definition of $X'$ by local charts {#section-12.b}
 
-<!--
 Over an affine open subset $U$ that does not meet $Y$, we take $U$ itself as a local chart.
 Now suppose that $U\cap Y\neq\varnothing$, and that $Y$ admits, in $U$, uniformising parameters $f_i$ ($1\leq i\leq p$).
 Let $t_i$ be homogeneous coordinates of $\PP_{p-1}$.
@@ -1617,9 +1617,8 @@ $$
 $$
 We must show that this correspondence is an isomorphism.
 Let $c\in U\cap V$.
-Since the $(f_i)$ and the $(g_i($ are two systems of local parameters for $Y$, the exist elements $a_{ij}\in\scr{O}_{c,X}$ that form an invertible matrix in $\scr{O}_{c,X}$
+Since the $(f_i)$ and the $(g_i($ are two systems of local parameters for $Y$, the exist elements $a_{ij}\in\scr{O}_{c,X}$ that form an invertible matrix in $\scr{O}_{c,X}$ such that
 \oldpage{127}
-such that
 $$
   f_i = \sum_j a_{ij}g_j
 $$
@@ -1630,50 +1629,40 @@ $$
   f_it_j-f_jt_i = \sum_{m,n} a_{im}a_{jn}(g_ms_n-g_ns_m)
 $$
 and it easily follows that the correspondence in question is an isomorphism.
--->
 
 
 ## Projective embedding of $X'$ {#section-12.c}
-
-<!--
-\subsection{Projective embedding of \texorpdfstring{$X'$}{X'}}
-\label{subsection12c}
 
 We consider an embedding of $X$ into some projective space $\PP_N$ of dimension $N$, with homogeneous coordinates $(z_i)$.
 Let $\varphi_i$ ($1\leq i\leq s$) be a basis for the ideal of $Y$ consisting of homogeneous polynomials, and let $m$ be an integer $\geq$ the maximum of the degrees of the $\varphi_i$.
 Let $(h_1,\ldots,h_M)$ be a basis for the $k$-vector space of forms of degree $m$ in the $z_i$ that are zero on $Y$.
 We can then take $h_i$ to be the products of the form $\varphi_j\cdot\mu$ ($1\leq j\leq s$) where $\mu$ runs over the set of monomials in the $z_i$ whose degrees are equal to $m-\deg(\varphi_j)$.
 It follows immediately that:
-\begin{enumerate}[(i)]
-  \item Given $x\in X\setminus Y$, there exists some $j$ such that $h_j(x)\neq0$.
+
+i. Given $x\in X\setminus Y$, there exists some $j$ such that $h_j(x)\neq0$.
     Given $y\in Y$, there exists some form $g$ of degree $m$, and a set $I$ of $p$ elements of $\{0,1,\ldots,M\}$ such that the $h_i/g$ ($i\in I$) form, in a suitable affine open neighbourhood of $y$, a system of local parameters for $Y$, and such that the $h_i/g\in\scr{O}_{y,X}$ ($i=0,\ldots,M$).
-\end{enumerate}
 
 The $h_i$ are  sections of the bundle $H^m$, where $H$ is the bundle associated to a hyperplane section of $X$.
 We denote by $h'_i$ the corresponding sections of the inverse-image bundle, and we consider, in the usual way, "the map" $h\colon x'\mapsto(h'_0(x'),\ldots,h'_M(x'))$ from $X$ to $\PP_M$ defined by this space of sections.
 _A priori_, this is not really a map, since it is not defined at the points where all the $h'_i$ vanish simultaneously.
 However, we want to show that:
 
-\begin{enumerate}[(i)]
-  \setcounter{enumi}{1}
-  \item $h$ is a morphism;
-  \item if $u',v'\in Y'$ have the same image in $Y$, and are distinct, then $h(u')\neq h(v')$.
-\end{enumerate}
+ii. $h$ is a morphism;
+iii. if $u',v'\in Y'$ have the same image in $Y$, and are distinct, then $h(u')\neq h(v')$.
 
 To prove (ii), it suffices to show that, given $x'\in X'$, there exists some index $k$ such that $h'_i/h'_k\in\scr{O}_{x,X}$ ($0\leq i\leq M$), since the $h'_i(x')/h'_k(x')$ will then be the coordinates of $h(x')$, and at least one of these quotients is non-zero.
 Given (i), the existence of $h'_i$ is evident if $x'\not\in Y$.
 Now let $x'\in Y$.
-We can apply the second claim of (i), and, to simplify notation,
 \oldpage{128}
-we suppose that the $f_i=h_i/g$ ($i=1,\ldots,p$) form a system of local parameters;
-let $t_1,\ldots,t_p$ be the homogeneous coordinates of $x'$ in $\PP$ (the notation from the start of \hyperref[subsection12b]{\S12.b}), and suppose that $t_k\neq0$.
+We can apply the second claim of (i), and, to simplify notation, we suppose that the $f_i=h_i/g$ ($i=1,\ldots,p$) form a system of local parameters;
+let $t_1,\ldots,t_p$ be the homogeneous coordinates of $x'$ in $\PP$ (the notation from the start of [§12.b](#section-12.b), and suppose that $t_k\neq0$.
 Then $f'_k=0$ is a local equation for $Y'$, and so the $h'_j/g'$ are all divisible by $f'_k$ in $\scr{O}_{x',X'}$, and so $h$ is a morphism in $x'$.
 We also see that the $i$th homogeneous coordinate of $h(x')$ is $t_i/t_k$ ($1\leq i\leq p$), which evidently implies (iii).
 
 With this in mind, consider the map $\Psi$ from $X'$ to $X\times\PP_M$ defined by $\Psi(x')=(f(x'),(x'))$.
 Given (ii) and (iii), $\Psi$ is a bijective morphism, and it is clear that $\Psi$ is an isomorphism outside of $Y'$.
 By the projective normalisation and the Main Theorem of Zariski, we thus deduce that $X'$ is quasi-projective.
--->
+
 
 
 # Finishing the proof of R--R {#section-13}
