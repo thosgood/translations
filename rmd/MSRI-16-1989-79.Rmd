@@ -384,14 +384,14 @@ The most important for us will be de Rham and $\ell$-adic cohomology.
 If $k=\CC$, then we have the topological space $X(\CC)$ of points of $X$, as well as its rational cohomology $\HH^\bullet(X(\CC),\QQ)$.
 We have canonical isomorphisms from [@G] and [@SGA4, XVI, 4.1]:
 
-::: {.refeq #equation-1.1.1}
+::: {.eqtag #equation-1.1.1}
 $$
   \HH_\DR^i(X) = \HH^i(X(\CC),\QQ)\otimes_{\QQ}\CC
 \tag{1.1.1}
 $$
 :::
 
-::: {.refeq #equation-1.1.2}
+::: {.eqtag #equation-1.1.2}
 $$
   \HH^i(X,\QQ_\ell) = \HH^i(X(\CC),\QQ)\otimes_{\QQ}\QQ_\ell.
 \tag{1.1.2}
@@ -400,14 +400,14 @@ $$
 
 If $k$ is a field of characteristic $0$, and $\sigma\colon k\to\CC$ a complex embedding, with $\overline{k}$ the algebraic closure of $k$ in $\CC$ via $\sigma$, then we obtain the isomorphisms
 
-::: {.refeq #equation-1.1.3}
+::: {.eqtag #equation-1.1.3}
 $$
   \HH_\DR^i(X)\otimes_{k,\sigma}\CC = \HH^i(X(\CC),\QQ)\otimes_{\QQ}\CC
 \tag{1.1.3}
 $$
 :::
 
-::: {.refeq #equation-1.1.4}
+::: {.eqtag #equation-1.1.4}
 $$
   \HH^i(X\otimes\overline{k},\QQ_\ell) = \HH^i(X(\CC),\QQ)\otimes_{\QQ}\QQ_\ell
 \tag{1.1.4}

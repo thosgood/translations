@@ -227,7 +227,7 @@ $$
 :::: {.proof}
 We will prove, by induction on $j$ (where $1\leq j\leq p$), that
 
-::: {.refeq #equation-star title="" latex=""}
+::: {.eqtag #equation-star title="" latex=""}
 $$
   p_X(Y_j) = \prod_{1\leq i\leq j}\xi_i.
 \tag{$\star$}
@@ -313,7 +313,7 @@ Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $\xi_E=p_
 By axiom [A1](#axiom-A1) from the previous section, $(\xi_E)^p$ can be written as a unique linear combination of the $(\xi_E)^i$ (for $0\leq i\leq p-1$) with coefficients in $A(X)$.
 This means that we can find, in a unique way, elements $c_i(E)\in A^{2i}(X)$ (defined for every integer $i\geq0$) satisfying the conditions
 
-::: {.refeq #equation-1 title="" latex=""}
+::: {.eqtag #equation-1 title="" latex=""}
 $$
   \begin{gathered}
     \sum_{i=0}^p c_i(E)(\xi_E)^{p-i} = 0,
@@ -326,7 +326,7 @@ $$
 The $c_i(E)$ are called the _Chern classes_ of $E$, with $c_i(E)$ being called the $i$th Chern class.
 We define
 
-::: {.refeq #equation-2 title="" latex=""}
+::: {.eqtag #equation-2 title="" latex=""}
 $$
   c(E) = \sum_i c_i(E)
 \tag{2}
@@ -380,7 +380,7 @@ We can thus reduce to determining $c(E)$ when $E$ is a rank-$p$ vector bundle th
 But then the additivity formula iii. proves (by induction on $p$) that $c(E)=\prod_{i=1}^p c(E_{i-1}/E_i)$.
 Finally, the normalisation formula ii. implies that
 
-::: {.refeq #equation-6 title="" latex=""}
+::: {.eqtag #equation-6 title="" latex=""}
 $$
   c(E) = \prod_{i=1}^p (1+p_X\cl_X(E_{i-1}/E_i)).
 \tag{6}
@@ -534,7 +534,7 @@ then $(0,1+\widehat{A}^+)$ is a subgroup of this group, isomorphic to the multip
 With this in mind, we can define a (commutative unital) ring structure on $\widetilde{A}$, compatible with the additive structure, whose unit is $(1,1)$, and which is given, on the $(0,1+\widehat{A}^+)$ factor, by universal polynomial formulas (with integer coefficients).
 We will then have that
 
-::: {.refeq #equation-8 title="" latex=""}
+::: {.eqtag #equation-8 title="" latex=""}
 $$
   (1,1+x_1)(1,1+y_1) = (1,1+(x_1+y_1))
 \tag{8}
@@ -550,7 +550,7 @@ $$
 $$
 for $i\geq0$ that make $\widetilde{A}$ a $\lambda$-ring, by which we mean that the following conditions are satisfied:
 
-::: {.refeq #equation-9 title="" latex=""}
+::: {.eqtag #equation-9 title="" latex=""}
 $$
   \begin{aligned}
     \lambda^0(x) &= 1,
@@ -573,7 +573,7 @@ $$
 is an additive homomorphism from $\widetilde{A}$ to the multiplicative group of formal series of augmentation $1$, and is a right inverse to the natural homomorphism $(1+a_1t+\ldots)\mapsto a_1$ from this latter group to $\widetilde{A}$.
 The restrictions of the maps $\lambda^i$ to the factor $(0,1+\widetilde{A}^+)$ are defined by universal polynomial formulas (with integer coefficients), and
 
-::: {.refeq #equation-11 title="" latex=""}
+::: {.eqtag #equation-11 title="" latex=""}
 $$
   \lambda^i(1,1+x_1) = 0
   \quad\text{for }i>1
@@ -651,7 +651,7 @@ Since $A^i(X)$ does not change if we remove a closed subset of codimension $>i$ 
 [As for its multiplicative structure, we can formally verify that it is given by the product $x_p\star y_q = -\frac{(p+q-1)!}{(p-1)!(q-1)!}x_p y_q$ for $x_p\in A^p(X)$ and $y_q\in A^q(X)$.]
 With this, we have the relations
 
-::: {.refeq #equation-15 title="" latex=""}
+::: {.eqtag #equation-15 title="" latex=""}
 $$
   \begin{aligned}
     \psi\varphi &= (-1)^{i-1}(i-1)!\mathrm{id}_{A(X)}
