@@ -457,14 +457,14 @@ $$
   \begin{CD}
     \HH_\mot^i(X\times Y) @>\longleftarrow>> \HH_\mot^i(Y\times X)
   \\@VVV @VVV
-    \HH_\mot^j(X)\otimes\HH_\mot^k(Y) @>>{(-i)^{jk}}> \HH_\mot^k(Y)\otimes\HH_\mot^j(X)
+  \\\HH_\mot^j(X)\otimes\HH_\mot^k(Y) @>>{(-i)^{jk}}> \HH_\mot^k(Y)\otimes\HH_\mot^j(X)
   \end{CD}
 $$
 $$
   \begin{CD}
     \HH_\mot^i((X\times Y)\times Z) @>\longleftarrow>> \HH_\mot^i(X\times(Y\times X))
   \\@VVV @VVV
-    (\HH_\mot^j(X)\otimes\HH_\mot^k(Y))\otimes\HH_\mot^\ell(Z) @>>\longleftarrow> \HH_\mot^j(X)\otimes(\HH_\mot^k(Y)\otimes\HH_\mot^\ell(Z)).
+  \\(\HH_\mot^j(X)\otimes\HH_\mot^k(Y))\otimes\HH_\mot^\ell(Z) @>>\longleftarrow> \HH_\mot^j(X)\otimes(\HH_\mot^k(Y)\otimes\HH_\mot^\ell(Z)).
   \end{CD}
 $$
 
