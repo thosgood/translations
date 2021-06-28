@@ -96,9 +96,9 @@ If we choose a base point $x\in X(\QQ)=\QQ\setminus\{0,1\}$, then $\Gal(\cQQ/\QQ
 The action, up to inner automorphism, does not depend on the choice of $x$.
 We would like to understand these actions.
 
-The nilpotent versions of $\pi_1$ is very close to cohomology.
+The nilpotent versions of $\pi_1$ are very close to cohomology.
 This is most visible in the theory of D. Sullivan [@Su; @Mo].
-Notation: for $\Gamma$ a finitely generated group, let $Z^i\Gamma$ be the decreasing central series, let $\Gamma^{(N)}=\Gamma/Z^{N+1}\Gamma$, and let $\Gamma^{[N]}=\Gamma^{(N)}/\mathrm{torsion}$ [(9.3)](#chunk-9.3).
+_Notation:_ for $\Gamma$ a finitely generated group, let $Z^i\Gamma$ be the decreasing central series, let $\Gamma^{(N)}=\Gamma/Z^{N+1}\Gamma$, and let $\Gamma^{[N]}=\Gamma^{(N)}/\mathrm{torsion}$ [(9.3)](#chunk-9.3).
 The theory of Malcev [@Mal] attaches a nilpotent Lie algebra over $\QQ$, denoted $\Lie\Gamma^{[N]}$, to $\Gamma^{[N]}$, such that $\Gamma^{[N]}$ is a congruence subgroup of the unipotent algebraic group over $\QQ$ of the Lie algebra $\Lie\Gamma^{[N]}$.
 By D. Sullivan, if $X$ is a differentiable manifold, then $\Lie\pi_1(X)^{[N]}\otimes\RR$ is determined, up to inner automorphism, by the differential-graded algebra $\Omega_X^\bullet$, taken up to quasi-isomorphism.
 
@@ -515,6 +515,6 @@ a. $M\otimes N$ is pure of weight $m+n)$;
 b. for $m\neq n$, $\Hom(M,N)=0$; and
 c. for $m\leq n$, $\Ext^1(M,N)=0$.
 
-Often, the pure motives (or the direct sums of pure motives) are simply called motives, and their category admits the conjectural description [@Kl; @Man];
+Often, pure motives (or direct sums of pure motives) are simply called _motives_, and their category admits the conjectural description [@Kl; @Man];
 the more general motives, considered here, are then called _mixed motives_
 :::
