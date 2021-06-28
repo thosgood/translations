@@ -30,11 +30,14 @@ favicon: "favicon.ico"
 \providecommand{\hZZ}{\widehat{\bb{Z}}}
 \providecommand{\RR}{\bb{R}}
 \renewcommand{\AA}{\bb{A}}
+\providecommand{\AAf}{\AA^\mathrm{f}}
 \providecommand{\CC}{\bb{C}}
 \providecommand{\FF}{\bb{F}}
 \providecommand{\QQ}{\bb{Q}}
 \providecommand{\cQQ}{\overline{\QQ}}
 \providecommand{\DR}{{\mathrm{DR}}}
+\providecommand{\cris}{{\mathrm{cris}}}
+\providecommand{\B}{{\mathrm{B}}}
 \providecommand{\simto}{\xrightarrow{\sim}}
 
 \providecommand{\Gal}{\operatorname{Gal}}
@@ -301,11 +304,11 @@ $$
   \\\QQ_\ell &= \ZZ_\ell\otimes\QQ.
   \end{aligned}
 $$
-We denote by $\hZZ$ the profinite completion of $\ZZ$, and by $\AA^f$ the ring of finite adeles:
+We denote by $\hZZ$ the profinite completion of $\ZZ$, and by $\AAf$ the ring of finite adeles:
 $$
   \begin{gathered}
     \hZZ \xrightarrow{\sim} \prod_\ell \ZZ_\ell,
-  \\\AA^f = \hZZ\otimes\QQ.
+  \\\AAf = \hZZ\otimes\QQ.
   \end{gathered}
 $$
 We denote by $\cQQ$ the algebraic closure of $\QQ$ in $\CC$.
@@ -519,11 +522,106 @@ Often, pure motives (or direct sums of pure motives) are simply called _motives_
 the more general motives, considered here, are then called _mixed motives_
 :::
 
-1.  An ordered list can contain block-level elements ind html, it means
-    that divs are also allowed.
+:::: {.rmenv #chunk-1.4 title="1.4" latex="{1.4}"}
+If we cannot define the category of motives, we can at least describe a sequence of compatibilities between the $\HH^i(X)$ taken in the various cohomological theories, i.e. describe compatibilities that should exist between the various realisations of a motive.
+We will explain the case of motives over $\QQ$:
+a motive over $\QQ$ should give rise to a system [(M1)](#M1) to [(M10)](#M10) as below, satisfying axioms [(AM1)](#AM1) to [(AM5)](#AM5).
 
-2.  Let's see the problem!
+_Terminology:_
+all the vector spaces are assumed to be of finite dimension;
+"_almost every_ prime number" means "all, except for a finite number".
 
-    ::: {.proof}
-    This is an example.
-    :::
+\oldpage{93}
+
+::: {.rmenv #M1 title="(M1)" latex="{(M1)}"}
+A vector space $M_\BB$ over $\QQ$, called the _Betti realisation_.
+:::
+
+::: {.rmenv #M2 title="(M2)" latex="{(M2)}"}
+A vector space $M_\DR$ over $\QQ$, called the _de Rham realisation_.
+:::
+
+::: {.rmenv #M3 title="(M3)" latex="{(M3)}"}
+A module $M_\AAf$ over $\AAf$, called the _étale cohomology realisation_, which is of finite type, by [(M5)](#M5).
+:::
+
+::: {.rmenv #M4 title="(M4)" latex="{(M4)}"}
+For almost every prime number $p$, a vector space $M_{\cris p}$ over $\QQ_p$, called the _crystalline realisation_ of the mod-$p$ reduction.
+:::
+
+::: {.rmenv #M5 title="(M5)" latex="{(M5)}"}
+Comparison isomorphisms
+$$
+  \begin{aligned}
+    \comp_{\DR,\BB}\colon
+    &M_\BB\otimes\CC \simto M_\DR\otimes\CC
+  \\\comp_{\AAf,\BB}\colon
+    &M_\BB\otimes\AAf \simto M_\AAf
+  \\\comp_{\cris p,\DR}\colon
+    &M_\DR\otimes\QQ_p \simto M_{\cris p}
+  \end{aligned}
+$$
+:::
+
+::: {.rmenv #M6 title="(M6)" latex="{(M6)}"}
+$M_\BB$, $M_\DR$, $M_\AAf$, and $M_{\cris p}$ are endowed with a finite increasing filtration $W$, called the _weight filtration_.
+We also denote by $W$ the filtrations that are induced by extension of scalars.
+The comparison isomorphisms respect $W$.
+:::
+
+::: {.rmenv #M7 title="(M7)" latex="{(M7)}"}
+$M_\BB$ is endowed with an involution $F_\infty$, called the _Frobenius at infinity_, which respects $W$.
+:::
+
+::: {.rmenv #M8 title="(M8)" latex="{(M8)}"}
+$M_\DR$ is endowed with a finite decreasing filtration $F$, called the _Hodge filtration_.
+We also denote by $F$ the filtrations that are induced by extension of scalars.
+:::
+
+::: {.rmenv #M9 title="(M9)" latex="{(M9)}"}
+$M_\AAf$ is endowed with an action of $\Gal(\cQQ/\QQ)$ which respects $W$.
+:::
+
+::: {.rmenv #M10 title="(M10)" latex="{(M10)}"}
+$M_{\cris p}$ is endowed with an automorphism
+$$
+  \phi_p\colon M_{\cris p}\to M_{\cris p},
+$$
+called the _crystalline Frobenius_, which respects $W$.
+:::
+
+::: {.rmenv #AM1 title="(AM1)" latex="{(AM1)}"}
+$M_\BB$, endowed with $W$ and with the filtration $F$ of $M_\BB\otimes\CC=M_\DR\otimes\CC$, is a mixed Hodge $\QQ$-structure [@D2, 2.3.8].
+:::
+
+::: {.rmenv #AM2 title="(AM2)" latex="{(AM2)}"}
+We have two real structures on $M_\BB\otimes\CC$ (identified with $M_\DR\otimes\CC$ by the comparison isomorphism), namely $M_\BB\otimes\RR$ and $M_\DR\otimes\RR$;
+these define antilinear involutions $c_\BB$ and $c_\DR$, of which $M_\BB\otimes\RR$ and $M_\DR\otimes\RR$ are (respectively) the fixed points.
+These involutions, as well as the linear involution extending $F_\infty$, all commute with one another, and satisfy
+$$
+  F_\infty = c_\BB c_\DR.
+$$
+\oldpage{94}
+In other words, $c_\DR$ respects $M_\BB\subset M_\BB\otimes\CC=M_\DR\otimes\CC$, and $c_\DR|M_B=F_\infty$.
+:::
+
+::: {.rmenv #AM3 title="(AM3)" latex="{(AM3)}"}
+For each prime number $\ell$, let $M_\ell$ be given by extension of scalars of $M_\AAf$, so that $M_\AAf$ is then a restricted product of the $M_\ell$.
+There exists a finite set $S$ of prime numbers such that, for each $\ell$, the representation $M_\ell$ of $\Gal(\cQQ/\QQ)$ is unramified outsied of $S$ and $\ell$.
+:::
+
+::: {.rmenv #AM4 title="(AM4)" latex="{(AM4)}"}
+For large enough $S$, if $p\not\in S$, then, for all $\ell\neq p$, the eigenvalues of a geometric Frobenius at $p$ on the $\Gr_n^W(M_\ell)$, and those of $\phi_p$ on the $\Gr_n^W(M_{\cris p})$, are algebraic numbers whose complex conjugates are all of absolute value $p^{n/2}$, and are $\ell'$-adic units for $\ell'\neq p$.
+:::
+
+::: {.rmenv #AM5 title="(AM5)" latex="{(AM5)}"}
+Let $c\in\Gal(\cQQ/\QQ)$ be complex conjugation.
+Then $c$ acts on $M_\AAf$ respecting $M_\BB\subset M_\AAf$, and induces the involution $F_\infty$ on $M_\BB$.
+:::
+::::
+
+::: {.rmenv #chunk-1.5 title="Remarks 1.5" latex="{Remarks 1.5}"}
+—
+
+i. If
+:::
