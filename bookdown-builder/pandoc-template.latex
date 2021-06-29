@@ -55,12 +55,12 @@
   {\par\medskip}
 
 \newenvironment{titenv}[1]
-  {\phantomsection\par\smallskip\noindent\textbf{#1.}\itshape}
-  {\par\smallskip}
+  {\phantomsection\par\noindent\textbf{#1.}\itshape}
+  {\par}
 
 \newenvironment{trmenv}[1]
-  {\phantomsection\par\smallskip\noindent\textbf{#1.}\rmfamily}
-  {\par\smallskip}
+  {\phantomsection\par\noindent\textbf{#1.}\rmfamily}
+  {\par}
 
 \newenvironment{eqtag}
   {}
