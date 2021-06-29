@@ -535,23 +535,23 @@ all the vector spaces are assumed to be of finite dimension;
 
 \oldpage{93}
 
-::: {.rmenv #M1 title="(M1)" latex="{(M1)}"}
+::: {.trmenv #M1 title="(M1)" latex="{(M1)}"}
 A vector space $M_\BB$ over $\QQ$, called the _Betti realisation_.
 :::
 
-::: {.rmenv #M2 title="(M2)" latex="{(M2)}"}
+::: {.trmenv #M2 title="(M2)" latex="{(M2)}"}
 A vector space $M_\DR$ over $\QQ$, called the _de Rham realisation_.
 :::
 
-::: {.rmenv #M3 title="(M3)" latex="{(M3)}"}
+::: {.trmenv #M3 title="(M3)" latex="{(M3)}"}
 A module $M_\AAf$ over $\AAf$, called the _étale cohomology realisation_, which is of finite type, by [(M5)](#M5).
 :::
 
-::: {.rmenv #M4 title="(M4)" latex="{(M4)}"}
+::: {.trmenv #M4 title="(M4)" latex="{(M4)}"}
 For almost every prime number $p$, a vector space $M_{\cris p}$ over $\QQ_p$, called the _crystalline realisation_ of the mod-$p$ reduction.
 :::
 
-::: {.rmenv #M5 title="(M5)" latex="{(M5)}"}
+::: {.trmenv #M5 title="(M5)" latex="{(M5)}"}
 Comparison isomorphisms
 $$
   \begin{aligned}
@@ -565,26 +565,26 @@ $$
 $$
 :::
 
-::: {.rmenv #M6 title="(M6)" latex="{(M6)}"}
+::: {.trmenv #M6 title="(M6)" latex="{(M6)}"}
 $M_\BB$, $M_\DR$, $M_\AAf$, and $M_{\cris p}$ are endowed with a finite increasing filtration $W$, called the _weight filtration_.
 We also denote by $W$ the filtrations that are induced by extension of scalars.
 The comparison isomorphisms respect $W$.
 :::
 
-::: {.rmenv #M7 title="(M7)" latex="{(M7)}"}
+::: {.trmenv #M7 title="(M7)" latex="{(M7)}"}
 $M_\BB$ is endowed with an involution $F_\infty$, called the _Frobenius at infinity_, which respects $W$.
 :::
 
-::: {.rmenv #M8 title="(M8)" latex="{(M8)}"}
+::: {.trmenv #M8 title="(M8)" latex="{(M8)}"}
 $M_\DR$ is endowed with a finite decreasing filtration $F$, called the _Hodge filtration_.
 We also denote by $F$ the filtrations that are induced by extension of scalars.
 :::
 
-::: {.rmenv #M9 title="(M9)" latex="{(M9)}"}
+::: {.trmenv #M9 title="(M9)" latex="{(M9)}"}
 $M_\AAf$ is endowed with an action of $\Gal(\cQQ/\QQ)$ which respects $W$.
 :::
 
-::: {.rmenv #M10 title="(M10)" latex="{(M10)}"}
+::: {.trmenv #M10 title="(M10)" latex="{(M10)}"}
 $M_{\cris p}$ is endowed with an automorphism
 $$
   \phi_p\colon M_{\cris p}\to M_{\cris p},
@@ -592,11 +592,11 @@ $$
 called the _crystalline Frobenius_, which respects $W$.
 :::
 
-::: {.rmenv #AM1 title="(AM1)" latex="{(AM1)}"}
+::: {.trmenv #AM1 title="(AM1)" latex="{(AM1)}"}
 $M_\BB$, endowed with $W$ and with the filtration $F$ of $M_\BB\otimes\CC=M_\DR\otimes\CC$, is a mixed Hodge $\QQ$-structure [@D2, Definition 2.3.8].
 :::
 
-::: {.rmenv #AM2 title="(AM2)" latex="{(AM2)}"}
+::: {.trmenv #AM2 title="(AM2)" latex="{(AM2)}"}
 We have two real structures on $M_\BB\otimes\CC$ (identified with $M_\DR\otimes\CC$ by the comparison isomorphism), namely $M_\BB\otimes\RR$ and $M_\DR\otimes\RR$;
 these define antilinear involutions $c_\BB$ and $c_\DR$, of which $M_\BB\otimes\RR$ and $M_\DR\otimes\RR$ are (respectively) the fixed points.
 These involutions, as well as the linear involution extending $F_\infty$, all commute with one another, and satisfy
@@ -607,16 +607,16 @@ $$
 In other words, $c_\DR$ respects $M_\BB\subset M_\BB\otimes\CC=M_\DR\otimes\CC$, and $c_\DR|M_B=F_\infty$.
 :::
 
-::: {.rmenv #AM3 title="(AM3)" latex="{(AM3)}"}
+::: {.trmenv #AM3 title="(AM3)" latex="{(AM3)}"}
 For each prime number $\ell$, let $M_\ell$ be given by extension of scalars of $M_\AAf$, so that $M_\AAf$ is then a restricted product of the $M_\ell$.
 There exists a finite set $S$ of prime numbers such that, for each $\ell$, the representation $M_\ell$ of $\Gal(\cQQ/\QQ)$ is unramified outsied of $S$ and $\ell$.
 :::
 
-::: {.rmenv #AM4 title="(AM4)" latex="{(AM4)}"}
+::: {.trmenv #AM4 title="(AM4)" latex="{(AM4)}"}
 For large enough $S$, if $p\not\in S$, then, for all $\ell\neq p$, the eigenvalues of a geometric Frobenius at $p$ on the $\Gr_n^W(M_\ell)$, and those of $\phi_p$ on the $\Gr_n^W(M_{\cris p})$, are algebraic numbers whose complex conjugates are all of absolute value $p^{n/2}$, and are $\ell'$-adic units for $\ell'\neq p$.
 :::
 
-::: {.rmenv #AM5 title="(AM5)" latex="{(AM5)}"}
+::: {.trmenv #AM5 title="(AM5)" latex="{(AM5)}"}
 Let $c\in\Gal(\cQQ/\QQ)$ be complex conjugation.
 Then $c$ acts on $M_\AAf$ respecting $M_\BB\subset M_\AAf$, and induces the involution $F_\infty$ on $M_\BB$.
 :::

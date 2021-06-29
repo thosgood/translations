@@ -165,19 +165,30 @@ p.date {
   text-align: justify;
 }
 
-.itenv {
+.titenv,
+.trmenv {
+  margin: 0.5em 0;
+  text-align: justify;
+}
+
+.itenv,
+.titenv {
   font-style: italic;
 }
-.itenv em {
+.itenv em,
+.titenv em {
   font-style: normal !important;
 }
 
-.rmenv {
+.rmenv,
+.trmenv {
   font-style: normal;
 }
 
 .itenv:before,
-.rmenv:before {
+.rmenv:before,
+.titenv:before,
+.trmenv:before {
   content: attr(title)".";
   font-style: normal;
   font-weight: bold;
@@ -186,13 +197,17 @@ p.date {
 }
 
 .itenv > p:first-of-type,
-.rmenv > p:first-of-type {
+.rmenv > p:first-of-type,
+.titenv > p:first-of-type,
+.trmenv > p:first-of-type {
   margin-top: 0 !important;
   display: inline;
 }
 
 .itenv > :last-child,
-.rmenv > :last-child {
+.rmenv > :last-child,
+.titenv > :last-child,
+.trmenv > :last-child {
   margin-bottom: 0 !important;
 }
 

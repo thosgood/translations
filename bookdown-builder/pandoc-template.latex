@@ -54,6 +54,14 @@
   {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
   {\par\medskip}
 
+\newenvironment{titenv}[1]
+  {\phantomsection\par\smallskip\noindent\textbf{#1.}\itshape}
+  {\par\smallskip}
+
+\newenvironment{trmenv}[1]
+  {\phantomsection\par\smallskip\noindent\textbf{#1.}\rmfamily}
+  {\par\smallskip}
+
 \newenvironment{eqtag}
   {}
   {}
