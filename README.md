@@ -19,6 +19,7 @@
   + if so, **definitely** have a way of disabling this (ideally in the header bar, alongside e.g. TOC toggle button)
 - (HTML) maths in the TOC still looks weird... (e.g. $f^!$ won't display)
   + seems that super/subscripts seem to cause problems? (see also `AIF-4-...`)
+- (HTML) when anchors are inside other anchors, all the anchors appear when you hover over them...
 - (BOTH) include link to `.Rmd` source file on github
   + make the `view` metadata in `_bookdown.yml` work somehow...
   + link to the `.tex` file instead in the pdf?
