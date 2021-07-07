@@ -49,10 +49,12 @@ favicon: "favicon.ico"
 \providecommand{\limind}{\operatorname{lim\,ind}}
 \providecommand{\limproj}{\operatorname{lim\,proj}}
 \providecommand{\HH}{\operatorname{H}}
+\providecommand{\bHH}{\bb{H}}
 \providecommand{\shIsom}{\underline{\operatorname{Isom}}}
 \providecommand{\real}{\operatorname{real}}
 \providecommand{\comp}{\operatorname{comp}}
 \providecommand{\Gr}{\operatorname{Gr}}
+\providecommand{\Fr}(\operatorname{Fr})
 
 <!-- Content -->
 
@@ -172,7 +174,7 @@ The crystalline aspect will be neglected in the rest of the introduction.
 
 In [§2](#section-2) we give examples.
 We also explain what an extension of the unit realisation system $\ZZ$ by a realisation system $M$ with integer coefficients is.
-_Terminologie:_ $M$-torsor, or torsor under $M$.
+_Terminology:_ $M$-torsor, or torsor under $M$.
 _Example:_ the Kummer $\ZZ(1)$-torsor, where $\ZZ(1)$ is the Tate motive.
 
 In [§3](#section-3) we describe certain remarkable torsors, which can be said to be cyclotomic, under the Tate motive $\ZZ(k)$.
@@ -345,7 +347,7 @@ The twisting $X^P$ is the contracted product $P\times^G X=(P\times X)/G$, and is
 An _$(H,G)$-bitorsor_ (cf. SGA 7, VII.1, or Girard, _Cohomologie non abelienne_, III 1.5) is a space which is simultaneously a left principal homogeneous space under $H$ and a right principal homogeneous space under $G$, with the $G$- and $H$-actions commuting with one another.
 If $P$ is a $G$-torsor, then the sheaf of automorphisms of $P$ is the twisting $G^P$ of $G$ by $P$ (under the action of $G$ on itself by inner automorphisms), and $P$ is a $(G^P,P)$-bitorsor.
 By this construction, the data of an $(H,G)$-bitorsor $P$ is equivalent to the data of a $G$-torsor $P$ along with an isomorphism between $H$ and $G^P$.
-Notation: we will write ${}_HP_G$ to mean that $P$ is an $(H,G)$-bitorsor.
+_Notation:_ we will write ${}_HP_G$ to mean that $P$ is an $(H,G)$-bitorsor.
 
 We will use the following operations on torsors and bitorsors.
 
@@ -379,7 +381,7 @@ The most important for us will be de Rham and $\ell$-adic cohomology.
     The de Rham cohomology groups $\HH_\DR^i(X)$ are the hypercohomology groups of the de Rham complex:
     $$
       \HH_\DR^i(X)
-      \coloneqq \mathbb{H}^i(X,\Omega_{X/k}^\bullet)
+      \coloneqq \bHH^i(X,\Omega_{X/k}^\bullet)
     $$
     cf. [@G].
     These are vector spaces over $k$.
@@ -646,4 +648,25 @@ We will often tacitly use these remarks to describe a system [(M1)--(M10)](#chun
 A scheme $X$ of finite type over $\QQ$ should define, for each $i$, a motive $M\coloneqq \HH_\mot^i(X)$.
 \oldpage{95}
 In this section, we will partially describe the system [(M1)--(M10)](#chunk-1.4) of realisations of $M$ in the case where $X$ is separated and smooth over $\QQ$.
+
+We have $M_\BB=\HH^i(X(\CC),\QQ)$, and $F_\infty$ is induced by the complex conjugation of $X(\CC)$;
+$M_\DR=\HH_\DR^i(X)\coloneqq\bHH^i(X,\Omega_X^\bullet)$, and the Hodge filtration that that of the mixed Hodge theory [@D2, Section 3.2];
+$M_\ell=\HH^i(X\otimes\cQQ,\QQ_\ell)$ is the $\ell$-adic étale cohomology of the scheme over $\cQQ$ induced from $X$ by extension of scalars, and the action of $\Gal(\cQQ,\QQ)$ is given by structure transport.
+_Notation:_ $X\otimes\cQQ$, cf. [(0.4)](#chunk-0.4).
+
+Suppose that $X$ is smooth and proper, and let $S$ be a finite set of prime numbers such that $X$ is the general fibre of $X^\sim$, which is smooth and proper over $\Spec(\ZZ)\setminus S$.
+For $p\not\in S$, $M_\crisp$ is the crystalline cohomology of the reduction $X^\sim\otimes\FF_p$ of $X$ modulo $p$, tensored over $\ZZ_p$ with $\QQ_p$.
+The crystalline Frobenius $\phi_p$ is induced by the inverse image morphism of the Frobenius $\Fr\colon X^\sim\otimes\FF_p\to X^\sim\otimes\FF_p$.
+
+More generally, suppose that we have some smooth and proper $\overline{X}$ over $\Spec(\ZZ)\setminus S$, as well as a relative normal crossing divisor $D$;
+let $X$ be the general fibre of $\overline{X}\setminus D$.
+Then the realisation $M_\crisp$ is defined for $p\not\in S$;
+its most natural definition is given by the generalisation of the crystalline theory, considered by Faltings in [@Fa, IV], to the "logarithmic poles" case.
+
+The comparison isomorphism $\comp_{\DR,\BB}$ is [(1.1.3)](#equation-1.1.3), and the comparison isomorphism $\comp_{\ell,\BB}$ is [(1.1.4)](#equation-1.1.4).
+
+In the smooth and proper case, the comparison isomorphism $\comp_{\crisp,\DR}$ comes from §7.26 of (P. Berthelot and A. Ogus, _Notes on crystalline cohomology_, Princeton University Press and Tokyo University Press, 1978).
+For the general case, see [@Fa, IV].
+Finally, the weight filtration $W$ is that of the mixed Hodge theory from [@D2, Section 3.2].
+See also [@D5].
 :::
