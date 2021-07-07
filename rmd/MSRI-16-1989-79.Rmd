@@ -548,7 +548,7 @@ A module $M_\AAf$ over $\AAf$, called the _étale cohomology realisation_, which
 :::
 
 ::: {.trmenv #M4 title="(M4)" latex="{(M4)}"}
-For almost every prime number $p$, a vector space $M_{\cris p}$ over $\QQ_p$, called the _crystalline realisation_ of the mod-$p$ reduction.
+For almost every prime number $p$, a vector space $M_{\cris,p}$ over $\QQ_p$, called the _crystalline realisation_ of the mod-$p$ reduction.
 :::
 
 ::: {.trmenv #M5 title="(M5)" latex="{(M5)}"}
@@ -559,14 +559,14 @@ $$
     &M_\BB\otimes\CC \simto M_\DR\otimes\CC
   \\\comp_{\AAf,\BB}\colon
     &M_\BB\otimes\AAf \simto M_\AAf
-  \\\comp_{\cris p,\DR}\colon
-    &M_\DR\otimes\QQ_p \simto M_{\cris p}
+  \\\comp_{\cris,p,\DR}\colon
+    &M_\DR\otimes\QQ_p \simto M_{\cris,p}
   \end{aligned}
 $$
 :::
 
 ::: {.trmenv #M6 title="(M6)" latex="{(M6)}"}
-$M_\BB$, $M_\DR$, $M_\AAf$, and $M_{\cris p}$ are endowed with a finite increasing filtration $W$, called the _weight filtration_.
+$M_\BB$, $M_\DR$, $M_\AAf$, and $M_{\cris,p}$ are endowed with a finite increasing filtration $W$, called the _weight filtration_.
 We also denote by $W$ the filtrations that are induced by extension of scalars.
 The comparison isomorphisms respect $W$.
 :::
@@ -585,9 +585,9 @@ $M_\AAf$ is endowed with an action of $\Gal(\cQQ/\QQ)$ which respects $W$.
 :::
 
 ::: {.trmenv #M10 title="(M10)" latex="{(M10)}"}
-$M_{\cris p}$ is endowed with an automorphism
+$M_{\cris,p}$ is endowed with an automorphism
 $$
-  \phi_p\colon M_{\cris p}\to M_{\cris p},
+  \phi_p\colon M_{\cris,p}\to M_{\cris,p},
 $$
 called the _crystalline Frobenius_, which respects $W$.
 :::
@@ -613,7 +613,7 @@ There exists a finite set $S$ of prime numbers such that, for each $\ell$, the r
 :::
 
 ::: {.trmenv #AM4 title="(AM4)" latex="{(AM4)}"}
-For large enough $S$, if $p\not\in S$, then, for all $\ell\neq p$, the eigenvalues of a geometric Frobenius at $p$ on the $\Gr_n^W(M_\ell)$, and those of $\phi_p$ on the $\Gr_n^W(M_{\cris p})$, are algebraic numbers whose complex conjugates are all of absolute value $p^{n/2}$, and are $\ell'$-adic units for $\ell'\neq p$.
+For large enough $S$, if $p\not\in S$, then, for all $\ell\neq p$, the eigenvalues of a geometric Frobenius at $p$ on the $\Gr_n^W(M_\ell)$, and those of $\phi_p$ on the $\Gr_n^W(M_{\cris,p})$, are algebraic numbers whose complex conjugates are all of absolute value $p^{n/2}$, and are $\ell'$-adic units for $\ell'\neq p$.
 :::
 
 ::: {.trmenv #AM5 title="(AM5)" latex="{(AM5)}"}
