@@ -9,12 +9,12 @@
       katex.render(this.textContent, this, {displayMode: display, fleqn: true, throwOnError: false});
     });
     
-    //add anchor links to headers and itenv/rmenv
+    //add anchor links to headers and itenv/rmenv/eqtag
     $('.section h1, .section h2, .section h3, .section h4, .section h5').each(function() {
       anchor = '#' + $(this).parent().attr('id');
       $(this).addClass("hasAnchor").prepend('<a href="' + anchor + '" class="anchor"></a>');
     });
-    $('.itenv, .rmenv, .titenv, .trmenv').each(function() {
+    $('.itenv, .rmenv, .titenv, .trmenv, .eqtag').each(function() {
       if ($(this).attr('id') !== undefined) {
         anchor = '#' + $(this).attr('id');
         $(this).addClass("hasAnchor").prepend('<a href="' + anchor + '" class="anchor"></a>');
