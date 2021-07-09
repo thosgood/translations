@@ -321,7 +321,7 @@ We note, however, that _the space $\ll^1\hhotimes E$ can be understood as the sp
 
 \medskip
 
-Let $E_i$ and $F_i$ ($i=1,2$) be locally convex spaces, and let $u_i$ be a continuous linear map from $E_i$ to $F_i$.
+Let $E_i$ and $F_i$ (for $i=1,2$) be locally convex spaces, and let $u_i$ be a continuous linear map from $E_i$ to $F_i$.
 In algebra, we define a linear map $u_1\otimes u_2$ from $E_1\otimes E_2$ to $F_1\otimes F_2$ by the formula $(u_1\otimes u_2)(x_1\otimes x_2)=u_1x_1\otimes u_2x_2$.
 This map is continuous if we endow $E_1\otimes E_2$ and $F_1\otimes F_2$ with the topologies induced by $E_1\hotimes E_2$ and $F_1\hotimes F_2$ (resp. by $E_1\hhotimes E_2$ and $F_1\hhotimes F_2$).
 It then follows that $u_1\otimes u_2$ extends, by continuity, to a continuous linear map $u_1\hotimes u_2$ from $E_1\hotimes E_2$ to $F_1\hotimes F_2$ (resp. $u_1\hhotimes u_2$ from $E_1\hhotimes E_2$ to $F_1\hhotimes F_2$).
@@ -336,7 +336,7 @@ These claims remain true if the $E_i$ and $F_i$ are normed and we consider _metr
 Particularly interesting is the following corollary, which can also be obtained by an application of [Theorem 2](#section-1-theorem-2).
 
 ::: {.itenv title="Corollary" latex="{Corollary}"}
-If the $E_i$ and $F_i$ are $\FF$-spaces ($i=1,2$), and the $u_i$ are
+If the $E_i$ and $F_i$ are $\FF$-spaces (for $i=1,2$), and the $u_i$ are
 homomorphisms from $E_i$ _onto_ $F_i$, then $u_1\hotimes u_2$ is a homomorphism from $E_1\hotimes E_2$ _onto_ $F_1\hotimes F_2$.
 :::
 
@@ -602,4 +602,36 @@ We can easily show that its trace is exactly $\int N(x,x)\dd\um(x)$.
 The most important problem that remains to be solved in the theory of topological tensor products is the following "_bijectivity problem_":
 \oldpage{95}
 is the canonical map from $E\hotimes F$ to $E\hhotimes F$ always bijective?
-By the Hahn--Banach theorem, this problem can be turned into of the variations of the
+By the Hahn--Banach theorem, this problem can be turned into of the variations of the "_approximation problem_":
+is every continuous bilinear form on $E\times F$ the limit, in the weak topology defined by $E\hotimes F$, of degenerate continuous bilinear forms, i.e. of those coming from $E'\otimes F'$?
+Under this form of the problem, we see that we can reduce to the case where $E$ and $F$ are Banach spaces.
+Since then the bicompact-convergence topology (i.e. uniform convergence on products of a compact of $E$ with a compact of $F$) on $\BB(E,F)$ gives the dual $E\hotimes F$ (cf. [§1.2, Theorem 2](#section-1-theorem-2)), we can replace the weak topology defined by $E\hotimes F$ in the "approximation problem" with the bicompact-convergence topology.
+This also proves that we can assume $E$ and $F$ to be separable.
+By continuing with such procedures (notably the systematic use of [Theorem 2](#section-1-theorem-2)), we have given, in [[PTT](#ref-PTT), chap. 1, §5, prop. 37], a large number of other equivalent formulations of the above conjecture.
+It suffices, for example, to assume in the above that $E$ is a topological-vectorial subspace of $c_0$, and that $F$ is its dual.
+It even suffices to prove that, if $u\in E'\hotimes E$ defines a zero nuclear operator, then $\Tr u=0$.
+A more concrete formulation of this latter statement is the following:
+let $u=(u_{ij})$ be a matrix that represents an element of $\ll^1\hotimes c_0$ (i.e. such that $\sum_i\sup_j|u_{ij}|<+\infty$), and such that $u^2=0$;
+then $\Tr u=\sum u_{ii}=0$.
+Another formulation:
+let $K(x,y)$ be a continuous kernel on $X\times X$ (where $X$ is a compact space endowed with a positive measure $\mu$) such that $K\circ K=0$;
+then $\Tr K=\int K(x,x)\dd\mu(x)=0$.
+Or:
+let $f(x,y)$ be a continuous function on the product of two compact spaces $X$ and $Y$;
+then $f$ is the uniform limit of linear combinations of functions of the type $f(x,b)f(a,y)$.
+In these latter two examples, it suffices to do the proof in only _one_ case for which the general conjecture has been proven, provided that $\mu$ is not the sum of a sequence of discrete masses in the first case, or that $X$ and $Y$ are infinite in the second case.
+Other formulations are given in what follows.
+
+We say that a locally convex space $E$ satisfies the _approximation condition_ if the identity map from $E$ to itself is the limit, in the topology given by uniform convergence on every precompact subset, of continuous linear maps of finite rank.
+\oldpage{96}
+Then, for _every_ locally convex space $F$, _every_ continuous linear map from $E$ to $F$, or from $F$ to $E$, is the limit, in the precompact-convergence topology, of continuous linear maps of finite rank.
+If $E$ is a Banach space, then this also implies that, for every Banach space $F$, every compact linear map from $F$ to $E$ is the limit, in the sense of the _norm_, of continuous linear maps of finite rank;
+or even that, for every Banach space $G$, the space $G\hhotimes E$ is identical to the space of compact and weakly continuous linear maps from $G'$ to $E$.
+We can show, by using [Theorem 2](#section-1-theorem-2), that this is equivalent to the fact that, for every Banach space $F$, the canonical map from $E\hotimes F$ to $\BB(E',F')$ is bijective;
+and, in this condition, it suffices to take $F=E'$ (and we thus have here a _bijectivity condition_), and even to suppose that the trace of any $u\in E'\hotimes E$ that defines a zero operator is zero.
+--- We can show that the dual $E'$ of a Banach space $E$ satisfies the approximation condition if and only if every compact linear map from $E$ to a Banach space $F$ is the limit, in the sense of the norm, of continuous linear maps of finite rank, and that this implies that $E$ itself satisfies the approximation condition.
+--- The "approximation problem" described above can also be stated as follows:
+does every locally convex space satisfy the approximation condition?
+We have already seen that we can restrict to closed vector subspaces of $c_0$.
+
+The spaces $\LL^p$ (for $1\leq p\leq+\infty$)
