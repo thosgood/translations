@@ -42,7 +42,8 @@ html {
   white-space: normal !important;
 }
 
-.book-summary nav ul.summary li a span {
+.book-summary nav ul.summary li .katex-html base,
+.book-summary nav ul.summary li .katex-html base span{
   position: relative;
   display: inline-block;
   white-space: nowrap;
