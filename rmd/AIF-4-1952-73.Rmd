@@ -35,7 +35,7 @@ favicon: "favicon.ico"
 \providecommand{\FF}{(\mathscr{F})}
 \providecommand{\DD}{(\mathscr{D})}
 \providecommand{\DDp}{(\mathscr{D}')}
-\providecommand{\hotimes}{\widehat{\otimes}}
+\providecommand{\hotimes}{\hat{\otimes}}
 \providecommand{\scr}{\mathscr}
 \providecommand{\dd}{\mathrm{d}}
 \providecommand{\lotimes}{\bar{\otimes}}
@@ -43,9 +43,9 @@ favicon: "favicon.ico"
 
 ```{r,echo=FALSE,results='asis'}
 if (knitr::is_html_output()) {
-  cat('\\providecommand{\\hhotimes}{\\widehat{\\widehat{\\otimes}}}')
+  cat('\\providecommand{\\hhotimes}{\\hat{\\hat{\\otimes}}}')
 } else {
-  cat('\\providecommand{\\hhotimes}{\\skew{0}{\\widehat}{\\skew{0}\\widehat{\\otimes}}}')
+  cat('\\providecommand{\\hhotimes}{\\skew{0}{\\hat}{\\skew{0}\\hat{\\otimes}}}')
 }
 ```
 
