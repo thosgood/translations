@@ -6,6 +6,7 @@
     //render maths with KaTeX
     $('eq').map(function() {
       if (document.querySelector('.book-summary').contains(this)) {
+        // don't do anything in the table of contents
         return;
       } else {
         var display = (this.getAttribute('env') == "displaymath");
