@@ -33,6 +33,8 @@ favicon: "favicon.ico"
 \providecommand{\sEE}{\mathscr{E}}
 \providecommand{\DF}{(\mathscr{DF})}
 \providecommand{\FF}{(\mathscr{F})}
+\providecommand{\DD}{(\mathscr{D})}
+\providecommand{\DDp}{(\mathscr{D}')}
 \providecommand{\hotimes}{\widehat{\otimes}}
 \providecommand{\scr}{\mathscr}
 \providecommand{\dd}{\mathrm{d}}
@@ -634,4 +636,40 @@ and, in this condition, it suffices to take $F=E'$ (and we thus have here a _bij
 does every locally convex space satisfy the approximation condition?
 We have already seen that we can restrict to closed vector subspaces of $c_0$.
 
-The spaces $\LL^p$ (for $1\leq p\leq+\infty$)
+The spaces $\LL^p$ (for $1\leq p\leq+\infty$), constructed from an arbitrary measure, the spaces $\CC(K)$ (of continuous functions on a compact space $K$), as well as the duals, biduals, etc. of these spaces, all satisfy the approximation condition (and even the stronger "metric approximation condition"; see below).
+Nuclear spaces satisfy the approximation condition (see [§2](#section-2)), and so too, more generally, do spaces that are isomorphic to subspaces of products of Hilbert spaces (these types of spaces arising rather frequently in practice).
+I give other examples in [[PTT](#ref-PTT), chap. 1, §5, no. 3], including, notably, the most important amongst the Banach spaces given by distributions over $\mathbb{R}^n$ (essentially those that are between $\DD$ and $\DDp$ and that are stable under translation and under multiplication by $\varphi\in\DD$).
+
+We say that a Banach space $E$ satisfies the _metric approximation condition_ if the identity map from $E$ to itself is the limit, uniform on every compact subset, of linear applications of finite rank _and of norm $\leq1$_.
+This is a metric strengthening of the approximation condition, and we can give analogous reformulations ([[PTT](#ref-PTT), chap. 1, §5, no. 2]).
+\oldpage{97}
+We note the following:
+for every Banach space $F$, the canonical map from $E\hotimes F$ to the space $\JJ(E',F')$ of integral bilinear forms on $E'\times F'$ is a metric isomorphism.
+It again suffices to prove that the canonical map from $E\hotimes E'$ to $\JJ(E',E)$ is a metric isomorphism.
+We do not know of any Banach space that does not satisfy the metric approximation condition.
+
+We can again prove that $E'$ satisfies the metric approximation condition if and only if, for every Banach space $F$, the canonical map from $E'\hotimes F'$ to the space $\JJ(E,F)$ of integral bilinear forms on $E\times F$ is a metric isomorphism;
+we can then prove that $E$ then also satisfies the metric approximation condition.
+More profound is the following result:
+
+::: {.itenv #section-1-theorem-9 title="Theorem 9" latex="{Theorem 9}"}
+Let $E$, $F$, and $G$ be Banach spaces, and $u$ (resp. $v$) a continuous linear map from $E$ to $F$ (resp. from $F$ to $G$).
+Suppose that one of the maps ($u$ or $v$) is weakly compact, and that the other is the uniform limit, on every compact subset, of continuous linear maps of finite rank.
+Then $w=v\circ u$ is the uniform limit, on every compact subset, of continuous linear maps of finite rank _and of norm $\leq\|w\|$_.
+:::
+
+::: {.itenv title="Corollary" latex="{Corollary}"}
+Let $E$ be a reflexive Banach space.
+For $E$ to satisfy the metric approximation condition, it suffices for it to satisfy the approximation condition.
+:::
+
+These statements give conclusions of a metric nature from purely topological hypotheses, and thus hold true if we replace the given norms by equivalent norms.
+In this respect, the corollary to [Theorem 9](#section-1-theorem-9) gives, even for a Hilbert space, a new approximation result.
+
+
+# Nuclear spaces {#section-2}
+
+## Introduction to nuclear spaces {#section-2.1}
+
+\oldpage{98}
+In the majority of examples where $E$ is a
