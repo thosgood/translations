@@ -42,15 +42,19 @@ html {
   white-space: normal !important;
 }
 
-.book-summary nav ul.summary li .katex-html {
-  /*position: absolute;
+.book-summary nav ul.summary li .katex {
+  margin: default !important;
+  padding: default !important;
+}
+
+.book-summary nav ul.summary li .katex-mathml {
+  position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
   border: 0;
   height: 1px;
   width: 1px;
-  overflow: hidden;*/
-  display: none !important;
+  overflow: hidden;
 }
 
 
