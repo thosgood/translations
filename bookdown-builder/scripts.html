@@ -5,8 +5,12 @@
   $document.ready(function() {
     //render maths with KaTeX
     $('eq').map(function() {
-      var display = (this.getAttribute('env') == "displaymath");
-      katex.render(this.textContent, this, {displayMode: display, fleqn: true, throwOnError: false});
+      if (document.querySelector('.book-summary').contains(this)) {
+        return;
+      } else {
+        var display = (this.getAttribute('env') == "displaymath");
+        katex.render(this.textContent, this, {displayMode: display, fleqn: true, throwOnError: false});
+      };
     });
     
     //add anchor links to headers and itenv/rmenv/eqtag
