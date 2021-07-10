@@ -42,9 +42,10 @@ html {
   white-space: normal !important;
 }
 
-.book-summary nav ul.summary li .katex {
-  margin: default !important;
-  padding: default !important;
+.book-summary nav ul.summary li a span {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .book-summary nav ul.summary li .katex-mathml {
