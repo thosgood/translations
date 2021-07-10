@@ -42,10 +42,9 @@ html {
   white-space: normal !important;
 }
 
-.book-summary nav ul.summary li a eq > katex > .katex-html > base span {
-  position: relative;
+.book-summary nav ul.summary li a .katex .katex-html base .vlist,
+.book-summary nav ul.summary li a .katex .katex-html base .vlist .pstrut {
   display: inline-block;
-  white-space: nowrap;
 }
 
 .book-summary nav ul.summary li .katex-mathml {
