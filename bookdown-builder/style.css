@@ -32,18 +32,22 @@ html {
 
 /* TOC */
 
-.book .book-summary nav ul.summary h4 {
+.book-summary > nav > ul.summary h4 {
   font-size: 1rem;
   padding-left: 1em;
   margin: 1.18rem 0;
 }
 
-.book .book-summary nav ul.summary li > a,
-.book .book-summary nav ul.summary li > span {
+.book-summary > nav > ul.summary li > a {
   white-space: normal !important;
 }
 
-.book .book-summary nav ul.summary .katex-mathml {
+.book-summary > nav > ul.summary li .katex {
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+.book-summary > nav > ul.summary li .katex-mathml {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
@@ -53,21 +57,16 @@ html {
   overflow: hidden;
 }
 
-.book .book-summary nav ul.summary .katex {
-  display: inline-block !important;
-  white-space: nowrap !important;
-}
-
 
 /* Header */
 
-.book .book-header h1 {
+.book-header h1 {
   text-align: left;
   padding-left: 100px;
   opacity: 1;
 }
 
-.book .book-header .katex-mathml {
+.book-header .katex-mathml {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
@@ -198,7 +197,7 @@ p.date {
 
 /* Anchor links */
 
-.book .book-body .page-wrapper .page-inner section.normal {
+.book-body .page-wrapper .page-inner section.normal {
   overflow: visible !important; /* so anchor link doesn't get cut off */
 }
 
