@@ -625,7 +625,7 @@ Then $c$ acts on $M_\AAf$ respecting $M_\BB\subset M_\AAf$, and induces the invo
 :::
 ::::
 
-::: {.rmenv #chunk-1.5 title="Remarks 1.5" latex="{Remarks 1.5}"}
+::: {.rmenv #chunk-1.5 title="1.5 Remarks" latex="{1.5 Remarks}"}
 —
 
 i. If $M_\DR$ is given, then the data of $M_\BB$, $F_\infty$, and $\comp_{\DR,\BB}$ satisfying [(AM2)](#AM2) is equivalent to that of a new rational structure $M_\BB\subset M_\DR\otimes\CC$ that is stable under complex conjugation $c_\DR$ (set $F_\infty=c_\DR|M_\BB$).
@@ -669,4 +669,34 @@ In the smooth and proper case, the comparison isomorphism $\comp_{\crisp,\DR}$ c
 For the general case, see [@Fa, IV].
 Finally, the weight filtration $W$ is that of the mixed Hodge theory from [@D2, Section 3.2].
 See also [@D5].
+:::
+
+::: {.rmenv #chunk-1.7 title="1.7" latex="{1.7}"}
+An additional data that we have on the cohomology $M\coloneqq\HH_\mot^i(X)$ when $X$ is smooth over $\QQ$ is that of a comparison isomorphism, for almost all $p$, in the sense of Fontaine--Messing (cf. [@FM; @Fa]), relating $M_p$, endowed with the action of a decomposition group of $p$, to $M_\DR\otimes\QQ_p$, endowed with its Hodge filtration and its crystalline Frobenius.
+
+For all $p$, we should also have a "crystalline" structure of the following type.
+
+- **Semi-stable case.**
+    Let $T_p$ be the Zariski tangent space of $\Spec(\ZZ_p)$ at its closed point.
+\oldpage{96}
+    We complete it to a projective line $\overline{T}_p$ over $\FF_p$, and we can lift $(\overline{T}_p,0,\infty)$ to a projective line endowed with two marked points over $\ZZ_p$: $(\overline{T}_p^\sim,0,\infty)$.
+    We want an $F$-isocrystal with logarithmic poles on $(\overline{T}_p,0,\infty)$ (cf. [@Fa]).
+    Such an object induces, on $\overline{T}_p^\sim\otimes\QQ_p$, a module with connection $\cal{V}$ with logarithmic poles at $0$ and at $\infty$, and we want for the residue of the connection at $0$ and at $\infty$ to be nilpotent.
+    If $\varphi$ is a section of $\overline{T}_p^\sim$, over $\Spec(\ZZ_p)$, with derivative equal to $1$ at the closed point, then $\varphi^*\cal{V}$ is independent of the choice of $\varphi$, and $\comp_{\DR,\crisp}$ should then be identified with the de Rham realisation $\otimes\QQ_p$.
+
+- **General case.**
+    The data of the previous type, over a large-enough finite Galois extension $E$ of $\QQ_p$ that is $\Gal(E/\QQ_p)$-equivariant.
+
+A Fontaine--Messing comparison isomorphism should again link this object and $M_p$ endowed with the action of a decomposition group of $p$.
+:::
+
+::: {.rmenv #chunk-1.8 title="1.9 Variant" latex="{1.9 Variant}"}
+We should also have [(M1)--(M10)](#chunk-1.4) for $M\coloneqq\HH_\mot^i(X)$, where $X$ is not necessarily smooth.
+The crystalline data pose a problem.
+
+We would also like to have [(M1)--(M10)](#chunk-1.4) for cohomology with proper support.
+:::
+
+::: {.rmenv #chunk-1.9 title="1.9 Definition" latex="{1.9 Definition}"}
+A _realisation system_ is a system [(M1)--(M10)](#chunk-1.4) that satisfies [(A1)--(A5)](#chunk-1.4).
 :::
