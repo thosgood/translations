@@ -217,3 +217,69 @@ If $\scr{F}$ is a locally constant sheaf on $X$, then there exists exactly one a
 # **2.** Integrable connections and local systems {- #I.2}
 
 \oldpage{5}
+
+:::: {.rmenv #I.2.1 title="2.1" latex="{2.1}"}
+Let $X$ be an analytic space [(0.1)](#zero.1).
+We define a (holomorphic) _vector bundle_ on $X$ to be a locally free sheaf of modules that is of finite type over the structure sheaf $\cal{O}$ of $X$.
+If $\cal{V}$ is a vector bundle on $X$, and $x$ a point of $X$, then we denote by $\cal{V}_{(x)}$ the free $\cal{O}_{(x)}$-module of finite type of germs of sections of $\cal{V}$.
+If $\mathfrak{m}_x$ is the maximal ideal of $\cal{O}_{(x)}$, then we define the _fibre at $x$ of the vector bundle $\cal{V}$_ to be the **TO-DO** of finite rank
+
+::: {.eqtag #I.2.1.1}
+$$
+  \cal{V}_x = \cal{V}_{(x)} \otimes_{\cal{O}_{(x)}} \cal{O}_{(x)}/\mathfrak{m}_x.
+\tag{2.1.1}
+$$
+:::
+
+If $f\colon X\to Y$ is a morphism of analytic spaces, then the _inverse image_ of a vector bundle $\cal{V}$ on $Y$ is the vector bundle $f^*\cal{V}$ on $X$ given by the inverse image of $\cal{V}$ as a coherent module:
+if $f^\sbullet\cal{V}$ is the sheaf-theoretic inverse image of $\cal{V}$, then
+
+::: {.eqtag #I.2.1.2}
+$$
+  f^*\cal{V} \simeq \cal{O}_X \otimes_{f^*\cal{O}_Y} f^\sbullet\cal{V}
+\tag{2.1.2}
+$$
+:::
+
+In particular, if $x\colon P\to X$ is the morphism from the point space $P$ to $X$ defined by a point $x$ of $X$, then
+
+::: {.eqtag #I.2.1.3}
+$$
+  \cal{V}_x \simeq x^*\cal{V}.
+\tag{2.1.3}
+$$
+:::
+::::
+
+:::: {.rmenv #I.2.2 title="2.2" latex="{2.2}"}
+Let $X$ be a complex-analytic manifold [(0.7)](#zero.7) and $\cal{V}$ a vector bundle on $X$.
+The old school would have defined a (holomorphic) connection on $\cal{V}$ as the data, for every pair of points $(x,y)$ that are first order infinitesimal neighbours in $X$, of an isomorphism $\gamma_{y,x}\colon\cal{V}_x\to\cal{V}_y$ that depends holomorphically on $(x,y)$ and is such that $\gamma_{x,x}=\id$.
+
+Suitably interpreted, this "definition" coincides with the currently fashionable definition [(2.2.4)](#I.2.2.4) given below (which we not be use in the rest of the section).
+
+It suffices to take "point" to mean "point with values in any analytic space":
+
+\oldpage{6}
+
+::: {.rmenv #I.2.2.1 title="2.2.1" latex="{2.2.1}"}
+_A point in an analytic space $X$ with values in an analytic space $S$_ is a morphism from $S$ to $X$.
+:::
+
+::: {.rmenv #I.2.2.2 title="2.2.2" latex="{2.2.2}"}
+If $Y$ is a subspace of $X$, then the _$n$-th infinitesimal neighbourhood_ of $Y$ in $X$ is the subspace of $X$ defined locally by the $(n+1)$-th power of the ideal of $\cal{O}_X$ that defines $Y$.
+:::
+
+::: {.rmenv #I.2.2.3 title="2.2.3" latex="{2.2.3}"}
+Two points $x,y\in X$ with values in $S$ are said to be _first order infinitesimal neighbours_ if the map $(x,y)\colon S\to X\times X$ that they define factors through the first order infinitesimal neighbourhood of the diagonal of $X\times X$.
+:::
+
+::: {.rmenv #I.2.2.4 title="2.2.4" latex="{2.2.4}"}
+If $X$ is a complex-analytic manifold and $\cal{V}$ is a vector bundle on $X$, then a (_holomorphic_) _connection_ $\gamma$ on $\cal{V}$ consists of the following data:
+
+for every pair $(x,y)$ of points of $X$ with values in an arbitrary analytic space $S$, with $x$ and $y$ first order infinitesimal neighbours, an isomorphism $\gamma_{x,y}\colon x^*\cal{V}\to y^*\cal{V}$;
+this data is subject to the conditions:
+
+i. (_Functoriality_) For any $f\colon T\to S$ and any first order infinitesimal neighbours $x,y\colon S\rightrightarrows X$, we have $f^*(\gamma_{y,x})=\gamma_{yf,xf}$.
+ii. We have $\gamma_{x,x}=\id$.
+:::
+::::
