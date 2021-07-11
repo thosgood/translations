@@ -676,5 +676,24 @@ In the majority of examples where $E$ is a given concrete complex locally convex
 But we do often know how to concretely describe a locally convex space $P$ sitting between $E\hotimes F$ and $E\hhotimes F$, or at least between $E\hotimes F$ and $\sBB_e(E'_s,F'_s)$ ("sitting between" meaning that the maps $E\hotimes F\to P$ and $P\to\sBB_e(E'_s,F'_s)$ are continuous).
 
 ::: {.rmenv #section-2-example-1 title="Example 1" latex="{Example 1}"}
-Let
+Let $E=\LL^p(\mu)$, where $1\leq p<+\infty$;
+if $F$ is a Banach space (and, by extension, if $F$ is an aribtrary complex locally convex space), the we define the space $\LL_F^p(\mu)$ of "$p$-th power integrable" maps from the measured space $M$ to $F$ (cf. [@2]) in a natural way, and we easily see that
+$$
+  \LL^p\hotimes F \subset \LL_F^p \subset \LL^p\hhotimes F.
+$$
+In general, $\LL_F^p$ is different from $\LL^p\hotimes F$ and $\LL^p\hhotimes F$, and the elements of $\LL^p\hotimes F$ do not admit an obvious internal characterisation as maps from $M$ to $F$ (unless $p=1$, in which case see [§1, Theorem 3](#section-1-theorem-3)), whereas the elements of $\LL^p\hhotimes F$ can not even be interpreted, in general, as measurable or scalar-measurable maps from $M$ to $F$.
 :::
+
+::: {.rmenv #section-2-example-2 title="Example 2" latex="{Example 2}"}
+For spaces $E$ consisting of actual functions (and not only of classes of functions, like $\LL^p$), we can often characterise $\sBB_e(E'_s,F'_s)$, thanks to the following:
+:::
+
+\oldpage{99}
+
+::: {.itenv title="Lemma" latex="{Lemma}"}
+Let $E$ be a function space on a set $M$, endowed with a locally convex topology that is finer than the simple-convergence topology.
+Then, for every complete locally convex space $F$, we can interpret $\sBB_e(E'_s,F'_s)$ as the space of maps $f$ from $M$ to $F$ such that, for all $y'\in F'$, the function $f_{y'}(t)=\langle f(t),y'\rangle$ belongs to $E$ (with $f$ belonging **TO-DO: scalairement** to $E$), and such that $f_{y'}$ runs over a weakly relatively compact subset of $E$ as $y'$ runs over an equicontinuous subset of $F'$.
+(This second condition is excessive if $E$ is reflexive and of type $\FF$ or type (**TO-DO**)).
+:::
+
+But 
