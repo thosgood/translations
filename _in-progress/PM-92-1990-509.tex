@@ -657,12 +657,31 @@ For all $\chi\in\ZZ$, we thus have the class $\chi\cdot\scr{O}(1)$ in $\Pic_\QQ(
 
 \begin{itenv}{Proposition}
   \begin{enumerate}[(i)]
-    \item \todo
+    \item In the diagram
+      \[
+        \begin{tikzcd}
+          \hat{Z} \ar[r,"\phi_-"] \ar[d,swap,"\phi_+"] \ar[dr,"\psi"]
+          & Z_- \ar[d,"f_-"]
+        \\Z_+ \ar[r,swap,"f_+"]
+          & Z
+        \end{tikzcd}
+      \]
+      both $f_+$ and $f_-$ are proper and birational;
+      $\psi$ (resp. $\phi_+$; $\phi_-$) is the blow-up of $0$ in $Z$ (resp. of $\Proj(A_+)=\dot{X}_+/k^*$ in $Z_+$; of $\Proj(A_-)=\dot{X}_-/k^*$ in $Z_-$).
+    \item For every $\chi\in\ZZ$, we have
+      \[
+        \phi_+^*\scr{O}_\chi^+(1) - \phi_-^*\scr{O}_\chi^-(1)
+        = \chi\psi^{-1}(0)
+      \]
+      in $\Pic_{\QQ}(\hat{Z})$.
   \end{enumerate}
 \end{itenv}
 
+In the case studied before, we take $A_\pm=k[N_\pm]$, with the grading induced by the action of $T$ on $N$, and not the grading as an algebra of polynomials.
 
 
+\subsection{Quotients associated to two contiguous open faces}
+\label{2.3}
 
 
 
