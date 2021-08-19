@@ -216,10 +216,10 @@ a.anchor {
 
 .hasAnchor:hover a.anchor,
 a.anchor:hover {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
-@media (max-width: 1144px) { /* don't show anchor link on small screens */
+@media (max-width: 800px) { /* don't show anchor link on small screens */
   .hasAnchor:hover a.anchor {
     visibility: hidden;
   }
