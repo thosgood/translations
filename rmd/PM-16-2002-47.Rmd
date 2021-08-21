@@ -1,0 +1,66 @@
+--- 
+title: "Automorphism of holomorphic foliations on rational surfaces"
+author: "Percy Fernández Sánchez"
+date: "2002"
+original: 'Fernández Sánchez, P. " Automorfismo de foliaciones holomorfas sobre superficies racionales". _Pro Mathematica_ **16** (2002), 47--59. [`promathematica/article/view/8182`](https://revistas.pucp.edu.pe/index.php/promathematica/article/view/8182).'
+bibliography: PM-16-2002-47.bib
+nocite: '@*'
+link-citations: true
+csl: maths-translations.csl
+reference-section-title: "Bibliography"
+github-repo: "thosgood/translations"
+favicon: "favicon.ico"
+---
+
+```{r, child = '_translator-note.Rmd'}
+```
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\providecommand{\num}{}
+\providecommand{\Aut}{\operatorname{Aut}}
+\providecommand{\Sing}{\operatorname{Sing}}
+
+<!-- Content -->
+
+\oldpage{47}
+
+::: {.rmenv #summary title="Summary" latex="{Summary}"}
+In this work we classify holomorphic foliations with infinite automorphism group on a rational surface.
+As a consequence of this result, we prove that the automorphism group of a foliation of general type with singularities on a rational surface is finite.
+:::
+
+# Introduction
+
+\oldpage{48}
+
+Schwarz proved that the automorphism group of a Riemann surface of genus greater than $2$ is finite.
+Andreotti, in [@1], generalises this result, proving that the bimeromorphism group of an algebraic variety of general type is finite, these being analogous to Riemann surfaces of genus greater than $2$.
+In the case of algebraic surfaces, there is even a **???** for this number, cf. [@14].
+
+In this work, we first classify holomorphic foliations with singularities on rational surfaces.
+
+::: {.itenv #theorem-A title="Theorem A" latex="{Theorem A}"}
+Let $\cal{F}$ be a foliation on a rational surface $M$.
+If $\#\Aut(\cal{F})=+\infty$, then $\cal{F}$ is bimeromorphic to a Riccati foliation or a rational fibration.
+:::
+
+We then prove a result analogous to that of Andreotti for holomorphic foliations on rational surfaces (surfaces bimeromorphic to the projective plane).
+
+::: {.itenv #theorem-B title="Theorem B" latex="{Theorem B}"}
+The automorphism group of a foliation of general type with singularities on a rational surface is finite.
+:::
+
+
+# Preliminaries
+
+For the basic notions of holomorphic foliations, we recommend the books [@4; @13; @2].
+A holomorphic foliation $\cal{F}$ with isolated singularities on an algebraic surface $M$ can be defined as a family $\{X_i\}$ of holomorphic vector fields defined on an open cover $\{U_i\}$ of $M$ that satisfies the cocycle condition $X_i=g_{ij}X_j$ whenever $U_i\cap U_j\neq\varnothing$, where $\{g_{ij}\}$ are nowhere-zero holomorphic functions defined on $U_i\cap U_j$.
+In this case, $\{g_{ij}\}$ defines a line bundle $T_{\cal{G}}^*$ on $M$ called the _cotangent_ (or _canonical_) _bundle_.
+The set of singularities $\Sing(\cal{G})$ of $\cal{G}$ is defined as $\Sing(\cal{G})_{/U_i}=\{X_i=0\}$, and it is always possible to suppose that $\dim(\Sing(\cal{G}))=0$.
