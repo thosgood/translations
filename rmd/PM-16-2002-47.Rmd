@@ -2,7 +2,7 @@
 title: "Automorphism of holomorphic foliations on rational surfaces"
 author: "Percy Fernández Sánchez"
 date: "2002"
-original: 'Fernández Sánchez, P. " Automorfismo de foliaciones holomorfas sobre superficies racionales". _Pro Mathematica_ **16** (2002), 47--59. [`promathematica/article/view/8182`](https://revistas.pucp.edu.pe/index.php/promathematica/article/view/8182).'
+original: 'Fernández Sánchez, P. " Automorfismo de foliaciones holomorfas sobre superficies racionales". _Pro Mathematica_ **16** (2002), 47--59. [(Available online)](https://revistas.pucp.edu.pe/index.php/promathematica/article/view/8182).'
 bibliography: PM-16-2002-47.bib
 nocite: '@*'
 link-citations: true
@@ -23,7 +23,7 @@ favicon: "favicon.ico"
 
 <!-- Shortcuts -->
 
-\providecommand{\num}{}
+\providecommand{\num}{\#}
 \providecommand{\Aut}{\operatorname{Aut}}
 \providecommand{\Sing}{\operatorname{Sing}}
 
@@ -31,7 +31,7 @@ favicon: "favicon.ico"
 
 \oldpage{47}
 
-::: {.rmenv #summary title="Summary" latex="{Summary}"}
+::: {.rmenv #abstract title="Abstract" latex="{Abstract}"}
 In this work we classify holomorphic foliations with infinite automorphism group on a rational surface.
 As a consequence of this result, we prove that the automorphism group of a foliation of general type with singularities on a rational surface is finite.
 :::
@@ -48,7 +48,7 @@ In this work, we first classify holomorphic foliations with singularities on rat
 
 ::: {.itenv #theorem-A title="Theorem A" latex="{Theorem A}"}
 Let $\cal{F}$ be a foliation on a rational surface $M$.
-If $\#\Aut(\cal{F})=+\infty$, then $\cal{F}$ is bimeromorphic to a Riccati foliation or a rational fibration.
+If $\num\Aut(\cal{F})=+\infty$, then $\cal{F}$ is bimeromorphic to a Riccati foliation or a rational fibration.
 :::
 
 We then prove a result analogous to that of Andreotti for holomorphic foliations on rational surfaces (surfaces bimeromorphic to the projective plane).
