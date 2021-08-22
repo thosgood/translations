@@ -15,6 +15,7 @@ favicon: "favicon.ico"
 ```{r, child = '_translator-note.Rmd'}
 ```
 
+
 \providecommand{\scr}[1]{{\mathscr{#1}}}
 \renewcommand{\cal}[1]{{\mathcal{#1}}}
 \renewcommand{\frak}[1]{{\mathfrak{#1}}}
@@ -24,6 +25,8 @@ favicon: "favicon.ico"
 <!-- Shortcuts -->
 
 \providecommand{\OO}{\cal{O}}
+\providecommand{\CC}{\mathbb{C}}
+\renewcommand{\hat}{\widehat}
 
 <!-- Content -->
 
@@ -54,3 +57,24 @@ Of course, every complex space is also a formal complex space.
 The structure sheaf $\OO_X$ of a formal complex space $X$ is always coherent with local Noetherian stalks (((1.1)[#equation-1.1] and ((1.4))[#equation-1.4]).
 It is important remark that, as in the case of complex spaces, the **???** of compact Stein subsets of $X$ are excellent Noetherian rings (((1.4))[#equation-1.4] and ((1.10))[#equation-1.10]).
 Formal complex spaces can be (locally) embedded into **???**, cf. ((1.7))[#equation-1.7].
+
+Formal complex manifolds, i.e. formal complex spaces whose stalks are all regular, are studied in [§2](#section-2).
+Every point of a formal manifold has an open neighbourhood that is isomorphic to the formal completion of an open subspace of $\CC^n$ along an analytic subset.
+A formal Dolbeault complex can be defined for any formal complex space, and, in the case of formal manifolds, this is a fine resolution of the structure sheaf.
+This follows directly from the following statement, which is the main result of [§2](#section-2):
+
+::: {.itenv}
+Let $Y$ be an open subset of $\CC^n$, $S\subseteq Y$ an analytic set in $Y$, and $\hat{Y}$ the formal completion of $Y$ along $S$.
+Let $\scr{E}_Y^{0,\bullet}$ be the ordinary Dolbeault complex of $Y$, $\scr{I}^{(\infty)}(S)$ the ideal of functions of $\scr{E}_Y$ that are flat on $S$, and $\scr{E}_{\hat{Y}}^{0,\bullet} \coloneqq \scr{E}_Y^{0,\bullet}/\scr{I}^{(\infty)}(S)\scr{E}_Y^{0,\bullet}$ the formal Dolbeault complex of $Y$.
+Then the sequence
+$$
+  0 \to
+  \OO_{\hat{Y}} \to
+  \scr{E}_{\hat{Y}} \xrightarrow{\bar{\partial}}
+  \scr{E}_Y^{0,1} \xrightarrow{\bar{\partial}}
+  \ldots \to
+  \scr{E}_Y^{0,n} \to
+  0
+$$
+is exact.
+:::
