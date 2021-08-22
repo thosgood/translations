@@ -63,7 +63,7 @@ Every point of a formal manifold has an open neighbourhood that is isomorphic to
 A formal Dolbeault complex can be defined for any formal complex space, and, in the case of formal manifolds, this is a fine resolution of the structure sheaf.
 This follows directly from the following statement, which is the main result of [§2](#section-2):
 
-::: {.itenv}
+::: {.itenv title="Lemma" latex="{Lemma}"}
 Let $Y$ be an open subset of $\CC^n$, $S\subseteq Y$ an analytic set in $Y$, and $\hat{Y}$ the formal completion of $Y$ along $S$.
 Let $\scr{E}_Y^{0,\bullet}$ be the ordinary Dolbeault complex of $Y$, $\scr{I}^{(\infty)}(S)$ the ideal of functions of $\scr{E}_Y$ that are flat on $S$, and $\scr{E}_{\hat{Y}}^{0,\bullet} \coloneqq \scr{E}_Y^{0,\bullet}/\scr{I}^{(\infty)}(S)\scr{E}_Y^{0,\bullet}$ the formal Dolbeault complex of $Y$.
 Then the sequence
