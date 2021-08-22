@@ -23,6 +23,8 @@ favicon: "favicon.ico"
 
 <!-- Shortcuts -->
 
+\providecommand{\OO}{\cal{O}}
+
 <!-- Content -->
 
 \oldpage{253}
@@ -37,3 +39,18 @@ We further study the question of exactness of the formal Dolbeault and de Rham c
 
 
 # Introduction {-}
+
+In 1958, Grothendieck introduced formal schemes in algebraic geometry, following on from earlier ideas by Zariski.
+Since then, the theory of formal schemes has become an important tool in algebraic geometry, cf. e.g. [@13; @20; @2].
+Formal structures appeared in (global) analytic geometry for the first time in Grauert's comparison theorem;
+this is clearly expressed in the proof given in [@3].
+In [@24], Krasnov then explicitly introduced formal complex spaces, and, in particular, formal complex manifolds, and used this to prove theorems about modifications of complex manifolds.
+
+\oldpage{254}
+In the present article, we first develop the basic theory of formal complex spaces.
+These are introduced in (§1)[#section-1] as inductive limits of a suitable system of complex spaces.
+We obtain special formal complex spaces if we consider the formal completions of complex spaces along analytical subsets.
+Of course, every complex space is also a formal complex space.
+The structure sheaf $\OO_X$ of a formal complex space $X$ is always coherent with local Noetherian stalks (((1.1)[#equation-1.1] and ((1.4))[#equation-1.4]).
+It is important remark that, as in the case of complex spaces, the **???** of compact Stein subsets of $X$ are excellent Noetherian rings (((1.4))[#equation-1.4] and ((1.10))[#equation-1.10]).
+Formal complex spaces can be (locally) embedded into **???**, cf. ((1.7))[#equation-1.7].
