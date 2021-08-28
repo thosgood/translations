@@ -23,7 +23,7 @@ favicon: "favicon.ico"
 
 <!-- Shortcuts -->
 
-\providecommand{\sbullet}{{\mathbin{\vcenter{\hbox{\scalebox{.5}{$\bullet$}}}}}}
+\providecommand{\sbullet}{\star}
 \providecommand{\id}{\mathrm{Id}}
 \providecommand{\PP}{\mathbb{P}}
 \renewcommand{\AA}{\mathbb{A}}
@@ -280,6 +280,6 @@ for every pair $(x,y)$ of points of $X$ with values in an arbitrary analytic spa
 this data is subject to the conditions:
 
 i. (_Functoriality_) For any $f\colon T\to S$ and any first order infinitesimal neighbours $x,y\colon S\rightrightarrows X$, we have $f^*(\gamma_{y,x})=\gamma_{yf,xf}$.
-ii. We have $\gamma_{x,x}=\id$.
+ii. $\gamma_{x,x}=\id$.
 :::
 ::::
