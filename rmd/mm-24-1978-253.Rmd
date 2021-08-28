@@ -27,6 +27,7 @@ favicon: "favicon.ico"
 \providecommand{\OO}{\cal{O}}
 \providecommand{\CC}{\mathbb{C}}
 \renewcommand{\hat}{\widehat}
+\providecommand{\Ker}{\operatorname{Ker}}
 
 <!-- Content -->
 
@@ -78,3 +79,44 @@ $$
 $$
 is exact.
 :::
+
+The fact that $\OO_{\hat{Y}}=\Ker(\scr{E}_{\hat{Y}}\xrightarrow{\bar{\partial}}\scr{E}_{\hat{Y}}^{0,1})$ is exact has already been shown by Krasnov.
+\oldpage{255}
+To prove this, we reduce the problem, using a resolution of singularities and Hironaka's vanishing theorem, to the case where $S$ is a normal crossing divisor.
+In this special case, the problem can be solved by "concrete" calculation using theorems of Malgrange.
+
+An analogous statement can be made for the formal de Rham complex.
+In fact, the following more general statement ([(2.11)](#equation-2.11)) holds:
+
+::: {.itenv title="Lemma" latex="{Lemma}"}
+Let $S$ be an analytic set in a complex space $Y$, defined by a coherent sheaf of $\OO_Y$-ideals $\scr{J}$, and let $\Omega_{\hat{Y}}^\bullet\coloneqq\varinjlim_k\Omega_Y^\bullet/\scr{J}^{k+1}\Omega_Y^\bullet$.
+If $Y\setminus S$ is non-singular, then, for all $n\in\mathbb{N}$, the canonical homomorphism
+$$
+  \scr{H}^n(\Omega_Y^\bullet|S) \to \scr{H}^n(\Omega_{\hat{Y}}^\bullet)
+$$
+is bijective.
+:::
+
+In the special case where $Y$ is a manifold, then $\Omega_{\hat{Y}}^\bullet$ is a resolution of the constant sheaf $\mathbb{C}_S$.
+This latter claim can also be found in Hartshorne [@16].
+
+In [§3](#section-3), **???** between formal complex spaces are considered.
+For such maps, Grauert's coherent law ([(3.1)](#equation-3.1)) applies.
+In [§4](#section-4) we show how the most important statements of the relative comparison theory between algebraic and analytic geometry [@15; @5] can be transferred to the case where the base is a formal complex space.
+
+In [§5](#section-5) we use the results of [§4](#section-4) to study formal meromorphic functions.
+We mention here the following statement ([(5.2)](#equation-5.2)):
+
+::: {.itenv title="Corollary" latex="{Corollary}"}
+Let $T$ be a connected exceptional analytic set in a normal complex space $X$, let $X\to Y$ the associated contraction of $T$ to a point $y\in Y$, and let $\hat{X}$ be the formal completion of $X$ along $T$.
+Then the ring $M(\hat{X})$ of meromorphic functions on $\hat{X}$ agrees with the quotient field $Q(\hat{\OO}_{Y,y})$ of the completion of the stalks $\OO_{Y,y}$ of $y$ in $Y$.
+:::
+
+In addition, we determine the ring of meromorphic functions on the product of a normal formal complex space $Y$ with a compact complex algebraic space $Z$ ([(5.3)](#equation-5.3)).
+\oldpage{256}
+In the case where $Z$ is the complex projective space $\mathbb{P}_{\mathbb{C}}^r$, we obtain a corollary of Andreotti--Stoll [@1, Theorem 6.9].
+
+Some results from the present article have already been used in [@4] and [@7].
+
+
+# Formal complex spaces {#section-1}
