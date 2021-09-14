@@ -773,3 +773,30 @@ A fortiori, if $E$ is quasi-complete, then $E$ is of type **TO-DO**, and thus re
 
 We thus also conclude that a nuclear Banach space is of finite dimension.
 Furthermore:
+
+::: {.itenv #section-2-corollary-2 title="Corollary 2" latex="{Corollary 2}"}
+Let $E$ be a nuclear space, and $F$ an arbitrary locally convex space.
+If $F$ is quasi-complete, then every bounded linear map from $E$ to $F$ is nuclear.
+If $E$ is barrelled (e.g. if $E$ is of type $\FF$), then every bounded linear map from $F$ to $E'$ is nuclear.
+:::
+
+::: {.itenv #section-2-corollary-3 title="Corollary 3" latex="{Corollary 3}"}
+Let $E$ and $F$ be locally convex spaces, with $E$ nuclear.
+Then the continuous bilinear forms on $E\times F$ are exactly the "nuclear" bilinear forms, i.e. those which come from an element of a space of the form $E'_A\hotimes F'_B$, where $A$ (resp. $B$) is an equicontinuous weakly closed disk in $E'$ (resp. $F'$).
+:::
+
+We do not know of any case where we have $E\hotimes F=E\hhotimes F$ without having either $E$ or $F$ already nuclear (in this problem, we can easily reduce to the case where $E$ and $F$ are both of type $\FF$).
+We can show that, if $F$ is the space $c_0$ or $\ell^1$, or, more generally, if $F$ admits a quotient space isomorphic to either $c_0$ or $\ell^1$, then the statement that $E\hotimes F=E\hhotimes F$ already implies that $E$ is nuclear.
+Combining this with Banach's classical "isomorphism theorem", we obtain:
+
+::: {.itenv #section-2-theorem-2 title="Theorem 2" latex="{Theorem 2}"}
+Let $E$ be an $\FF$-space.
+For $E$ to be nuclear, it is necessary and sufficient for every summable sequence in $E$ to be absolutely summable, or also for every sequence in $E$ that converges to zero to converge to zero nuclearly (cf. the end of (§2.4)[#section-2.4]).
+:::
+
+In particular, if $E$ is a Banach space, then each of the two above conditions imply that $E$ is of finite dimension: in the first case, we thus recover a recent theorem of Dvoretzky--Rogers.
+
+
+## Invariance properties, examples of nuclear spaces {#section-2.3}
+
+[[PTT](#ref-PTT), chap. 2, §2, no. 2 and no. 3]
