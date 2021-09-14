@@ -736,3 +736,40 @@ these are the _nuclear spaces_.
 By [§2.1](#section-2.1), a locally convex space is said to be _nuclear_ if, for every locally convex space $F$, the canonical map from $E\hotimes F$ to $E\hhotimes F$ is a topological-vectorial isomorphism from the first space to the second (or, equivalently, if these two spaces induce the same topology on $E\otimes F$).
 It actually suffices to check this condition only in the case where $F$ is a Banach space.
 Further, $E$ is nuclear if and only if its completion is nuclear.
+
+::: {.itenv #section-2-theorem-1 title="Theorem 1" latex="{Theorem 1}"}
+Let $E$ be a locally convex space.
+Then the following conditions are equivalent:
+
+a. $E$ is nuclear.
+
+b. Every continuous linear map from $E$ to a Banach space $F$ is nuclear ((§1.7)[#section-1.7]).
+
+c. For every equicontinuous weakly closed disk $A$ in $E'$, there exists another $B\supset A$ such that the identity map from $E'_A$ to $E'_B$ is nuclear.
+
+If $E$ is then complete, we have, for every complete locally convex space $F$, that
+$$
+  E\hotimes F = E\hhotimes F = \sBB_e(E'_s,F'_s)
+$$
+(i.e. topological-vectorial isomorphisms).
+:::
+
+$\star$
+The hard part of the proof consists of showing that (a) implies (c).
+By taking the dual of condition (a), we find that, for every equicontinuous weakly closed disk $A$ of $E'$, there exists another $B\supset A$ such that the identity map from $E'_A$ to $E'_B$ is _integral_ ((§1.8)[#section-1.8]).
+Applying the same result to $B$, and using the corollary of [Theorem 8](#section-1-theorem-8), we find (c).
+We note that we have only used the fact that, for every _Banach_ space $F$, the canonical map from $E\hotimes F$ to $E\hhotimes F$ is a _weak_ isomorphism.
+$\star$
+
+\oldpage{101}
+
+Since a nuclear map is a fortiori compact, (c) implies the following:
+
+::: {.itenv #section-2-corollary-1 title="Corollary 1" latex="{Corollary 1}"}
+Let $E$ be a nuclear space.
+Then the bounded subsets of $E$ are precompact (and $E$ is even a Schwartz space, cf. [@6]).
+A fortiori, if $E$ is quasi-complete, then $E$ is of type **TO-DO**, and thus reflexive.
+:::
+
+We thus also conclude that a nuclear Banach space is of finite dimension.
+Furthermore:
