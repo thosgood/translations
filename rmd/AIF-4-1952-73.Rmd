@@ -27,6 +27,7 @@ favicon: "favicon.ico"
 \providecommand{\LL}{\mathrm{L}}
 \providecommand{\JJ}{\mathrm{J}}
 \providecommand{\CC}{\mathrm{C}}
+\providecommand{\RR}{\mathbb{R}}
 \renewcommand{\ll}{\ell}
 \providecommand{\sBB}{\mathscr{B}}
 \providecommand{\sLL}{\mathscr{L}}
@@ -172,7 +173,7 @@ $\star$
 Let $E$ and $F$ be $\FF$ spaces.
 Then every element of $E\hotimes F$ is the sum of an absolutely convergent series of the form
 $$
-    u = \sum_i \lambda_i x_i \otimes y_i
+  u = \sum_i \lambda_i x_i \otimes y_i
 $$
 where $(x_i)$ (resp. $(y_i)$) is a bounded sequence in $E$ (resp. $F$), and where $(\lambda_i)$ is a summable sequence of scalars.
 :::
@@ -201,7 +202,7 @@ From [Theorem 2](#section-1-theorem-2), we can extract results of the following 
 let $\scr{G}$ be a locally compact group (resp. a Lie group), then every summable function $f$ (resp. every infinitely differentiable function of compact support) on $\scr{G}$ is of the form $\sum\lambda_i g_i*h_i$, where $(\lambda_i)\in\ll^1$, and where $(g_i)$ and $(h_i)$ are bounded sequences in $\LL^i(\scr{G})$ (resp. in $\scr{D}(\scr{G})$, the space of infinitely differentiable functions of compact support on $\scr{G}$);
 we thus immediately conclude that $f$ is a linear combination of functions of positive type that are in $\LL(\scr{G})$ (resp. $\scr{D}(\scr{G})$).
 In the former case, we can also restrict to functions that are all of compact support (with the supports of $g_i$ and $h_i$ being contained inside a compact subset that depends only on the compact support of $f$).
-There is a simple direct proof in the case of $\LL^1(\scr{G})$, but I do not think that there is one for $\scr{D}(\scr{G})$, where the question presents difficulties even for $\scr{G}=\mathbb{R}$ (by using the Fourier transformation).
+There is a simple direct proof in the case of $\LL^1(\scr{G})$, but I do not think that there is one for $\scr{D}(\scr{G})$, where the question presents difficulties even for $\scr{G}=\RR$ (by using the Fourier transformation).
 $\star$
 
 
@@ -242,10 +243,10 @@ In particular, a continuous linear map from $\LL^1(\mu)$ to a space $\LL^1(\nu)$
 We thus also see that the latticially bounded subsets of $\LL^1(\mu)$ form an invariant category from the topological-vectorial point of view.
 If we take $F=\ll^p$, with $1\leq p<+\infty$, then we similarly obtain a topological-vectorial interpretation of the sequences $(f_i)$ in $\LL^1(\mu)$ such that
 $$
-\int \left(
-  \sum_i |f_i(t)|^p
-\right)^{1/p}
-\dd\mu(t) < +\infty.
+  \int \left(
+    \sum_i |f_i(t)|^p
+  \right)^{1/p}
+  \dd\mu(t) < +\infty.
 $$
 Such sequences are sent to sequences of the same type by any continuous linear map from $\LL^1(\mu)$ to a space $\LL^1(\nu)$.
 Another interesting application of [Theorem 3](#section-1-theorem-3) is the following: every bounded subset $M$ of $\LL^1(\mu)\hotimes E$ is contained in the canonical image of the unit ball of a space $\LL^1(\mu)\hotimes E_A$, where $A$ is a closed bounded disk in the space $E$ of type $\FF$;
@@ -344,10 +345,10 @@ homomorphisms from $E_i$ _onto_ $F_i$, then $u_1\hotimes u_2$ is a homomorphism 
 
 \oldpage{84}
 As particular cases of this corollary, we obtain interesting lifting properties of vector functions with values in a quotient space of an $\FF$-space $E$.
-If e.g. $f$ is an infinitely differentiable map from an open subset of $\mathbb{R}^n$ to $E/F$, then it comes from an infinitely differentiable map from this same open subset to $E$.
-There is an analogous result for holomorphic functions, or infinitely differentiable functions on $\mathbb{R}^n$ that decay rapidly, or summable functions of a certain measure, etc.^[With respect to this point, we done that we can prove, by a completely different method, the following claim, which can be thought of as dual to the corollary of [Theorem 3](#section-1-theorem-3): _Let $M$ be a locally compact and paracompact space (e.g. a compact space), and $f$ a continuous map from $M$ to a quotient space $E/F$ of an $\FF$-space $E$. Then $f$ comes from a continuous map from $M$ to $E$._ Since the space $\sEE^{(m)}(V)$ of $m$-times continuously differentiable functions on a infinitely differentiable paracompact manifold $V$ is isomorphic to a direct factor of a space of the form $C(M)$ (as I noted in "Sur les applications linéaires faiblement compacts d'espaces du type $C(K)$", _Can. J. Math._ **5** (1953), p. 144), it thus follows that the analogous lifting theorem holds also for $m$-times continuously differentiable maps from $V$ to $E/F$.]
+If e.g. $f$ is an infinitely differentiable map from an open subset of $\RR^n$ to $E/F$, then it comes from an infinitely differentiable map from this same open subset to $E$.
+There is an analogous result for holomorphic functions, or infinitely differentiable functions on $\RR^n$ that decay rapidly, or summable functions of a certain measure, etc.^[With respect to this point, we done that we can prove, by a completely different method, the following claim, which can be thought of as dual to the corollary of [Theorem 3](#section-1-theorem-3): _Let $M$ be a locally compact and paracompact space (e.g. a compact space), and $f$ a continuous map from $M$ to a quotient space $E/F$ of an $\FF$-space $E$. Then $f$ comes from a continuous map from $M$ to $E$._ Since the space $\sEE^{(m)}(V)$ of $m$-times continuously differentiable functions on a infinitely differentiable paracompact manifold $V$ is isomorphic to a direct factor of a space of the form $C(M)$ (as I noted in "Sur les applications linéaires faiblement compacts d'espaces du type $C(K)$", _Can. J. Math._ **5** (1953), p. 144), it thus follows that the analogous lifting theorem holds also for $m$-times continuously differentiable maps from $V$ to $E/F$.]
 Another application is the following:
-let $D$ be a differential operator in the space $\sEE(U)$ of infinitely differentiable functions on an open subset $U$ of $\mathbb{R}^n$, let $E$ be an $\FF$-space, and let $\sEE(U,E)$ be the space of infinitely differentiable maps from $U$ to $E$.
+let $D$ be a differential operator in the space $\sEE(U)$ of infinitely differentiable functions on an open subset $U$ of $\RR^n$, let $E$ be an $\FF$-space, and let $\sEE(U,E)$ be the space of infinitely differentiable maps from $U$ to $E$.
 Then we have $\sEE(U,E)=\sEE(U)\hotimes E=\sEE(U)\hhotimes E$ (see [§2.5](#section-2.5)).
 Let $D_E$ be the operator in $\sEE(U,E)$ defined by $D$, and then $D_E=D\hotimes1$, where $1$ is the identity on $E$.
 Then, if $D$ is a topological homomorphism (resp. an _onto_ topological homomorphism), then so too is $D_E$.
@@ -431,7 +432,7 @@ b. $v$ is contained in the closed disked hull in $\sBB_\mathrm{s}(E,F)$ (the spa
 
 c. There exists a measure $\mu$ on the product space of a weakly compact equicontinuous subspace $M$ of $E'$ with a weakly compact equicontinuous subspace $N$ of $F'$ (resp. a measure $\mu$ of norm $\leq1$ on the product of the unit ball of $E'$ with the unit ball of $F'$, endowed with the product of the weak topologies) such that we have the formula
     $$
-        v = \int_{M\times N} x'\otimes y' \dd\mu(x',y')
+      v = \int_{M\times N} x'\otimes y' \dd\mu(x',y')
     $$
     (the weak integral in $\sBB(E,F)$, in duality with $E\otimes F$).
 
@@ -638,7 +639,7 @@ We have already seen that we can restrict to closed vector subspaces of $c_0$.
 
 The spaces $\LL^p$ (for $1\leq p\leq+\infty$), constructed from an arbitrary measure, the spaces $\CC(K)$ (of continuous functions on a compact space $K$), as well as the duals, biduals, etc. of these spaces, all satisfy the approximation condition (and even the stronger "metric approximation condition"; see below).
 Nuclear spaces satisfy the approximation condition (see [§2](#section-2)), and so too, more generally, do spaces that are isomorphic to subspaces of products of Hilbert spaces (these types of spaces arising rather frequently in practice).
-I give other examples in [[PTT](#ref-PTT), chap. 1, §5, no. 3], including, notably, the most important amongst the Banach spaces given by distributions over $\mathbb{R}^n$ (essentially those that are between $\DD$ and $\DDp$ and that are stable under translation and under multiplication by $\varphi\in\DD$).
+I give other examples in [[PTT](#ref-PTT), chap. 1, §5, no. 3], including, notably, the most important amongst the Banach spaces given by distributions over $\RR^n$ (essentially those that are between $\DD$ and $\DDp$ and that are stable under translation and under multiplication by $\varphi\in\DD$).
 
 We say that a Banach space $E$ satisfies the _metric approximation condition_ if the identity map from $E$ to itself is the limit, uniform on every compact subset, of linear applications of finite rank _and of norm $\leq1$_.
 This is a metric strengthening of the approximation condition, and we can give analogous reformulations ([[PTT](#ref-PTT), chap. 1, §5, no. 2]).
@@ -696,4 +697,42 @@ Then, for every complete locally convex space $F$, we can interpret $\sBB_e(E'_s
 (This second condition is excessive if $E$ is reflexive and of type $\FF$ or type (**TO-DO**)).
 :::
 
-But 
+But in a case such as the above, we do not, in general, have a handle on the space $E\hotimes F$.
+
+We thus appreciate the simplifications that arise in the case where we know in advance that $E\hotimes F=E\hhotimes F$, or even that $E\hotimes F=\sBB_e(E'_s,F'_s)$ (with these equalities being assumed to involve the topologies).
+Then we can often concretely determine $E\hotimes F=E\hhotimes F=\sBB_e(E'_s,F'_s)$;
+for example, if we know a priori an intermediate space $P$ between $E\hotimes F$ and $\sBB_e(E'_s,F'_s)$.
+At the same time, we will then have determined the space of weakly continuous linear maps from $E'$ to $F$, or from $F'$ to $E$, since these spaces are in fact identified with $\sBB_e(E'_s,F'_s)$.
+And the dual $\BB(E,F)$ of $E\hotimes F$, i.e. the space of continuous bilinear forms on $E\times F$, will then be identical to the dual of $E\hhotimes F$, or also to the dual of $P$, and can thus often be concretely understood.
+
+For example, the essence of L. Schwartz's "kernel theorem" says that the space of continuous bilinear forms on $\mathcal{E}(\RR^m)\times\mathcal{E}(\RR^m)$ is identical to the space of bilinear forms defined by the distributions on $\RR^m\times\RR^n$ with compact support.
+The latter are a priori the continuous linear forms on $\mathcal{E}(\RR^m\times\RR^n)$, but we directly see (as a particular case of the above lemma) that $\mathcal{E}(\RR^m\times\RR^n)$ is identified with the space
+$$
+  E\hhotimes F = \sBB_e(E'_s,F'_s)
+$$
+where $E=\mathcal{E}(\RR^m)$ and $F=\mathcal{E}(\RR^n)$, and so a priori the distribution on $\RR^m\times\RR^n$ are the _integral_ ([§1.8](#section-1.8)) bilinear forms on $\mathcal{E}(\RR^m)\times\mathcal{E}(\RR^m)$.
+The kernel theorem, which says that _all_ continuous bilinear forms on $\mathcal{E}(\RR^m)\times\mathcal{E}(\RR^m)$ are obtained in this way, i.e. that the transpose of the canonical map from $\mathcal{E}(\RR^m)\hotimes\mathcal{E}(\RR^m)$ to $\mathcal{E}(\RR^m)\hhotimes\mathcal{E}(\RR^m)$ is a _surjective_ map, also implies (by a classical theorem of $\FF$-spaces) that we in fact have that
+$$
+  \mathcal{E}(\RR^m)\hotimes\mathcal{E}(\RR^m)
+  = \mathcal{E}(\RR^m)\hhotimes\mathcal{E}(\RR^m).
+$$
+\oldpage{100}
+In fact, the proof of the theorem even shows that
+$$
+  \mathcal{E}(\RR^m)\hotimes F
+  = \mathcal{E}(\RR^m)\hhotimes F
+$$
+(a space which is isomorphic, when $F$ is complete, to the space of infinitely differentiable maps from $\RR^m$ to $F$) for _every_ locally convex space $F$.
+
+We thus see that, in general, _the claim that $E\hotimes F=E\hhotimes F$ for two given spaces $E$ and $F$ should be seen as an algebraic-topological equivalent of L. Schwartz's kernel theorem_.
+In what follows, we will study the spaces $E$, such as $\mathcal{E}(\RR^m)$, for which we have $E\hotimes F=E\hhotimes F$ for _every_ locally convex space $F$:
+these are the _nuclear spaces_.
+
+
+## Characterisation of nuclear spaces {#section-2.2}
+
+[[PTT](#ref-PTT), chap. 2, §2, no. 1]
+
+By [§2.1](#section-2.1), a locally convex space is said to be _nuclear_ if, for every locally convex space $F$, the canonical map from $E\hotimes F$ to $E\hhotimes F$ is a topological-vectorial isomorphism from the first space to the second (or, equivalently, if these two spaces induce the same topology on $E\otimes F$).
+It actually suffices to check this condition only in the case where $F$ is a Banach space.
+Further, $E$ is nuclear if and only if its completion is nuclear.
