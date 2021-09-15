@@ -30,12 +30,16 @@ favicon: "favicon.ico"
 \providecommand{\RR}{\mathbb{R}}
 \renewcommand{\ll}{\ell}
 \providecommand{\sBB}{\mathscr{B}}
-\providecommand{\sLL}{\mathscr{L}}
+\providecommand{\sDD}{\mathscr{D}}
 \providecommand{\sEE}{\mathscr{E}}
-\providecommand{\DF}{(\mathscr{DF})}
-\providecommand{\FF}{(\mathscr{F})}
+\providecommand{\sHH}{\mathscr{H}}
+\providecommand{\sLL}{\mathscr{L}}
+\providecommand{\sOO}{\mathscr{O}}
 \providecommand{\DD}{(\mathscr{D})}
 \providecommand{\DDp}{(\mathscr{D}')}
+\providecommand{\DF}{(\mathscr{DF})}
+\providecommand{\FF}{(\mathscr{F})}
+\providecommand{\MM}{(\mathscr{M})}
 \providecommand{\hotimes}{\hat{\otimes}}
 \providecommand{\scr}{\mathscr}
 \providecommand{\dd}{\mathrm{d}}
@@ -705,27 +709,27 @@ for example, if we know a priori an intermediate space $P$ between $E\hotimes F$
 At the same time, we will then have determined the space of weakly continuous linear maps from $E'$ to $F$, or from $F'$ to $E$, since these spaces are in fact identified with $\sBB_e(E'_s,F'_s)$.
 And the dual $\BB(E,F)$ of $E\hotimes F$, i.e. the space of continuous bilinear forms on $E\times F$, will then be identical to the dual of $E\hhotimes F$, or also to the dual of $P$, and can thus often be concretely understood.
 
-For example, the essence of L. Schwartz's "kernel theorem" says that the space of continuous bilinear forms on $\mathcal{E}(\RR^m)\times\mathcal{E}(\RR^m)$ is identical to the space of bilinear forms defined by the distributions on $\RR^m\times\RR^n$ with compact support.
-The latter are a priori the continuous linear forms on $\mathcal{E}(\RR^m\times\RR^n)$, but we directly see (as a particular case of the above lemma) that $\mathcal{E}(\RR^m\times\RR^n)$ is identified with the space
+For example, the essence of L. Schwartz's "kernel theorem" says that the space of continuous bilinear forms on $\sEE(\RR^m)\times\sEE(\RR^m)$ is identical to the space of bilinear forms defined by the distributions on $\RR^m\times\RR^n$ with compact support.
+The latter are a priori the continuous linear forms on $\sEE(\RR^m\times\RR^n)$, but we directly see (as a particular case of the above lemma) that $\sEE(\RR^m\times\RR^n)$ is identified with the space
 $$
   E\hhotimes F = \sBB_e(E'_s,F'_s)
 $$
-where $E=\mathcal{E}(\RR^m)$ and $F=\mathcal{E}(\RR^n)$, and so a priori the distribution on $\RR^m\times\RR^n$ are the _integral_ ([§1.8](#section-1.8)) bilinear forms on $\mathcal{E}(\RR^m)\times\mathcal{E}(\RR^m)$.
-The kernel theorem, which says that _all_ continuous bilinear forms on $\mathcal{E}(\RR^m)\times\mathcal{E}(\RR^m)$ are obtained in this way, i.e. that the transpose of the canonical map from $\mathcal{E}(\RR^m)\hotimes\mathcal{E}(\RR^m)$ to $\mathcal{E}(\RR^m)\hhotimes\mathcal{E}(\RR^m)$ is a _surjective_ map, also implies (by a classical theorem of $\FF$-spaces) that we in fact have that
+where $E=\sEE(\RR^m)$ and $F=\sEE(\RR^n)$, and so a priori the distribution on $\RR^m\times\RR^n$ are the _integral_ ([§1.8](#section-1.8)) bilinear forms on $\sEE(\RR^m)\times\sEE(\RR^m)$.
+The kernel theorem, which says that _all_ continuous bilinear forms on $\sEE(\RR^m)\times\sEE(\RR^m)$ are obtained in this way, i.e. that the transpose of the canonical map from $\sEE(\RR^m)\hotimes\sEE(\RR^m)$ to $\sEE(\RR^m)\hhotimes\sEE(\RR^m)$ is a _surjective_ map, also implies (by a classical theorem of $\FF$-spaces) that we in fact have that
 $$
-  \mathcal{E}(\RR^m)\hotimes\mathcal{E}(\RR^m)
-  = \mathcal{E}(\RR^m)\hhotimes\mathcal{E}(\RR^m).
+  \sEE(\RR^m)\hotimes\sEE(\RR^m)
+  = \sEE(\RR^m)\hhotimes\sEE(\RR^m).
 $$
 \oldpage{100}
 In fact, the proof of the theorem even shows that
 $$
-  \mathcal{E}(\RR^m)\hotimes F
-  = \mathcal{E}(\RR^m)\hhotimes F
+  \sEE(\RR^m)\hotimes F
+  = \sEE(\RR^m)\hhotimes F
 $$
 (a space which is isomorphic, when $F$ is complete, to the space of infinitely differentiable maps from $\RR^m$ to $F$) for _every_ locally convex space $F$.
 
 We thus see that, in general, _the claim that $E\hotimes F=E\hhotimes F$ for two given spaces $E$ and $F$ should be seen as an algebraic-topological equivalent of L. Schwartz's kernel theorem_.
-In what follows, we will study the spaces $E$, such as $\mathcal{E}(\RR^m)$, for which we have $E\hotimes F=E\hhotimes F$ for _every_ locally convex space $F$:
+In what follows, we will study the spaces $E$, such as $\sEE(\RR^m)$, for which we have $E\hotimes F=E\hhotimes F$ for _every_ locally convex space $F$:
 these are the _nuclear spaces_.
 
 
@@ -820,5 +824,90 @@ The class of nuclear spaces enjoys a remarkable stability property, expressed in
 :::
 
 $\star$
-From
+Of these claims, (2) and (5) are the most difficult (the others follow reasonably simply from the criteria of [Theorem 1](#section-2-theorem-1)).
+The proof given in [[PTT](#ref-PTT)], which relies on rather acute techniques, can be replaced by the systematic use of criterion (c) of [Theorem 1](#section-2-theorem-1), along with the two following facts:
+
+1. If $E$ is a nuclear space, then there exists a fundamental family of equicontinuous subsets $A$ of $E'$ such that $E'_A$ is a Hilbert space (i.e. $E$ is isomorphic to a vector subspace of the product of a family of Hilbert spaces);
+2. The remark made at the end of [§1.7](#section-1.7).
 $\star$
+
+From [Theorem 3](#section-2-theorem-3), we obtain the following results:
+if $E$ is a vector space endowed with the finest topology making some family of linear maps $f_i$ from $E$ to nuclear spaces $E_i$ continuous, then $E$ is nuclear;
+if $E$ is a vector space, and $u_i$ are linear maps from a sequence of nuclear spaces $E_i$ to $E$ such that $E$ is generated by the union of the $u_i(E_i)$, and if endow $E$ with the finest locally convex topology making the $u_i$ continuous, then $E$ is nuclear;
+if $E$ is a nuclear space of type $\FF$ or $\DF$, and $F$ is a nuclear space, then $\LL_b(E,F)$ is nuclear, and so too is the dual of $\LL_b(E,F)$ if $F$ is also of type $\FF$ or $\DF$.
+
+[Theorem 3](#section-2-theorem-3), along with the fact that the space $\sEE(U)$ of infinitely differentiable functions on an open subsets $U$ of $\RR^n$ is nuclear ([§2.1](#section-2.1)), allows us to easily prove the following:
+
+::: {.itenv title="Corollary" latex="{Corollary}"}
+All of the following are nuclear:
+the spaces $\sEE$, $\sEE'$, $\sDD$, and $\sDD'$, constructed on an open subset $U$ of $\RR^n$;
+the spaces **TO-DO**, $(\sOO_M)$, and $(\sOO'_C)$, constructed on $\RR^n$;
+and the strong duals of these latter two spaces.
+The space $\sHH$ of holomorphic functions on a complex-analytic manifold is also nuclear.
+(For the definitions of the above spaces, see [@9]).
+:::
+
+\oldpage{103}
+
+$\star$
+Consider an increasing sequence of positive sequences $a^{(n)}=(a_i^{(n)})$, and let $E$ be the corresponding "echelon" space (see [@7]), i.e. the space of sequences $(x_i)$ such that $\sum_i x_ia_i^{(n)}$ is absolutely summable for all $n$.
+Note that $E$ is endowed with a natural topology of an $\FF$ space.
+_For $E$ to be nuclear, it is necessary and sufficient for there to exist, for all $n$, some $m\geq n$ such that the sequence $a^{(n)}/a^{(m)}=(a_i^{(n)}/a_i^{(m)})$ to be summable_ (where we take a quotient of two zero terms to be zero).
+Thus the space $(s)$ of rapidly decreasing sequences, as well as its dual $(s')$ (the space of slowly increasing sequences), is nuclear.
+(This easily recovers, thanks to the Fourier transform, the fact that $\sEE(\RR^n)$, and, more generally, $\sEE(U)$, is nuclear.)
+The above statement also allows us to construct echelon spaces that are of type $\MM$ (and even of type **TO-DO**, see [@6, Section 3]) but not nuclear.
+$\star$
+
+
+## Lifting properties {#section-2.4}
+
+[[PTT](#ref-PTT), chap. 2, §3, no. 1]
+
+[Theorem 6 of §1.7](#section-1-theorem-6) can be specialised as follows:
+
+::: {.itenv #section-2-theorem-4 title="Theorem 4" latex="{Theorem 4}"}
+—
+
+1. Let $E_1$ and $E_2$ be locally convex spaces, and $F_1$ (resp. $F_2$) a vector subspace of $E_1$ (resp. $E_2$).
+    Suppose that $F_1$ or $F_2$ is nuclear.
+    Then every continuous bilinear form on $F_1\times F_2$ is the restriction of a nuclear bilinear form on $E_1\times E_2$.
+
+2. Let $E$ and $G$ be locally convex spaces, and $F$ a vector subspace of $E$.
+    Suppose that $F$ is nuclear and that $G$ is quasi-complete, or that $G$ is the strong dual of a quasi-barrelled nuclear space (for example, that $G$ is a complete nuclear space of type $\FF$ or $\DF$).
+    Then every bounded linear map from $F$ to $G$ is the restriction of a nuclear map from $E$ to $G$.
+
+3. Let $E$ and $G$ be locally convex spaces, and $F$ a closed vector subspace of $E$, such that every compact disk of $E/F$ is contained in the canonical image of a bounded complete disk of $E$.
+    Suppose that $G$ is nuclear, or that $E/F$ is isomorphic to the strong dual of a quasi-barrelled nuclear space (for example, that $E$ is a complete nuclear space of type $\FF$ or $\DF$).
+    Then every bounded linear map from $G$ to $E/F$ comes from a nuclear map from $G$ to $E$.
+:::
+
+A variant of the above properties is the following:
+Let $E$ be a locally convex space, $F$ a nuclear vector subspace, and $A$ an equicontinuous disk in $E'$;
+then there exists a linear map from $F'_A$ to $E'$ that is right inverse to the canonical map from $E'$ to $F'$, and that sends $A$ to an equicontinuous subset of $E'$.
+\oldpage{104}
+We note again the following "lifting" property, which is an easy consequence of the above results:
+
+::: {.itenv #section-2-theorem-5 title="Theorem 5" latex="{Theorem 5}"}
+Let $E$ and $F$ be locally convex spaces, both of type $\FF$, or both of type $\DF$.
+Suppose that $E$ is nuclear, and let $A$ be a bounded disk in $P=E\hotimes F$.
+Then there exists a sequence $(x_i)$ that tends to zero in $E$, an equicontinuous sequence of linear maps $u\mapsto y_i(u)$ from $P_A$ to $F$, and a fixed summable sequence $(\lambda_i)$, such that
+$$
+  u = \sum \lambda_i x_i\otimes y_i(u)
+$$
+for all $u\in P_A$.
+:::
+
+::: {.itenv title="Corollary" latex="{Corollary}"}
+The bounded disk $A$ is contained in the closed disked hull of a set $B\otimes C$, where $B$ (resp. $C$) is some bounded subset of $E$ (resp. $F$).
+Thus, on $\BB(E,F)$, the bibounded convergence topology and the topology of the strong dual of $E\hotimes F$ are identical.
+:::
+
+We note again that the analogue of [Theorem 5](#section-2-theorem-5) for the representation of _convergent sequences_ in $E\hotimes F$ also holds true.
+
+
+## The tensor product of a nuclear space with an arbitrary locally convex space {#section-2.5}
+
+[[PTT](#ref-PTT), chap. 2, §3, no. 2 and no. 3]
+
+The duality theory for $E\hotimes F$ is particularly simple when $E$ is nuclear, and when $E$ and $F$ are both of type $\FF$, or both of type $\DF$.
+In fact, the above results easily give:
