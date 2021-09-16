@@ -188,7 +188,7 @@ In these two statements, if $u$ runs over a compact subset of $E\hotimes F$, the
 We have an analogous statement for the concrete representation of convergent sequences in $E\hotimes F$.
 [Theorem 2](#section-1-theorem-2) and its previous variants serve mainly as a way to:
 
-{.itenv title="Corollary" latex="{Corollary}"}
+::: {.itenv title="Corollary" latex="{Corollary}"}
 Let $E$ and $F$ be spaces of type $\FF$.
 Then every compact subset $K$ of $E\hotimes F$ is contained inside the canonical image of the unit ball of a space $E_A\hotimes F_B$, where $A$ (resp. $B$) is a compact disked subset of $E$ (resp. $F$).
 A fortiori, $K$ is contained in the closed convex hull of $A\otimes B$.
@@ -695,7 +695,7 @@ For spaces $E$ consisting of actual functions (and not only of classes of functi
 
 \oldpage{99}
 
-::: {.itenv title="Lemma" latex="{Lemma}"}
+::: {.itenv #section-1-lemma title="Lemma" latex="{Lemma}"}
 Let $E$ be a function space on a set $M$, endowed with a locally convex topology that is finer than the simple-convergence topology.
 Then, for every complete locally convex space $F$, we can interpret $\sBB_e(E'_s,F'_s)$ as the space of maps $f$ from $M$ to $F$ such that, for all $y'\in F'$, the function $f_{y'}(t)=\langle f(t),y'\rangle$ belongs to $E$ (with $f$ belonging **TO-DO: scalairement** to $E$), and such that $f_{y'}$ runs over a weakly relatively compact subset of $E$ as $y'$ runs over an equicontinuous subset of $F'$.
 (This second condition is excessive if $E$ is reflexive and of type $\FF$ or type (**TO-DO**)).
@@ -927,3 +927,37 @@ But even in the case of the tensor product $E'\hotimes E$, where $E$ is nuclear 
 The product $E\hotimes F$ (with $E$ nuclear) gives rise to many invariance theorems:
 for $E\hotimes F$ to be reflexive (resp. of type $\MM$, resp. of type **TO-DO**, resp. quasi-normable), it suffices (and is necessary, if $F$ is complete) for $F$ to be so.
 But it can be the case that $E$ and $F$ are bornological and barrelled without $E\hotimes F$ being so (cf. **TO-DO**).
+
+By the comments of [§2.1](#section-2.1), concretely determining $E\hotimes F$ when $E$ is nuclear usually poses no difficulty.
+We now give some examples (where $F$ is assumed to be a complete locally convex space).
+
+Let $\sEE=\sEE(V)$ be the space of infinitely differentiable functions on some given infinitely differentiable manifold $V$.
+Then $\sEE\hotimes F$ is the space of infinitely differentiable functions from $V$ to $F$ (endowed with its natural topology).
+The analogous statement holds when we replace $\sEE$ by the subspace $E$ of functions satisfying some given system of partial differential equations $\mathrm{D}_if=0$.
+
+
+Let $\sHH=\sHH(V)$ be the space of holomorphic functions on some given complex-analytic manifold $V$.
+Then $\sHH\hotimes F$ is the space of holomorphic maps from $V$ to $F$ (endowed with the compact convergence topology).
+
+In particular, we find that
+$$
+  \begin{aligned}
+    \sEE(U)\hotimes\sEE(V) &= \sEE(U\times V)
+  \\\sHH(U)\hotimes\sHH(V) &= \sHH(U\times V)
+  \end{aligned}
+$$
+where $U$ and $V$ are some given infinitely differentiable (resp. holomorphic) manifolds.
+
+Let **TO-DO** be the space of "infinitely differentiable and rapidly decreasing" functions on $\RR^n$ (cf. [@9, t. 2]).
+Then **TO-DO** is the space of maps from $\RR^n$ to $F$ that are "infinitely differentiable and rapidly decreasing", i.e. infinitely differentiable, and such that, for every derivation multi-index $\mathrm{D}^p$, and for every polynomial $P$ on $\RR^n$, the function $P\mathrm{D}^pf$ is bounded on $\RR^n$.
+In particular,
+**TO-DO**
+
+We have analogous statements given by taking $E=(\sOO_M)$ (the space of "infinitely differentiable and slowly increasing" functions) or $E=(\sOO_C)$ (the space of "infinitely differentiable and very slowly increasing" functions, the strong dual of the space $(\sOO'_C)$ of rapidly decreasing distributions [@9]), etc.
+\oldpage{106}
+We also note that, by using the [Lemma in §1](#section-1-lemma), we find that a map $f$ with values in $F$ is infinitely differentiable (resp. holomorphic, resp. "infinitely differentiable and rapidly decreasing", resp. "infinitely differentiable and slowly increasing", etc.) if and only if it is so "scalar-wise", i.e. if and only if, for all $y'\in F'$, the scalar-valued function $\langle f(t),y'\rangle$ has the property in question.
+
+
+## $p$-power summable operators, application to nuclear spaces {#section-2.6}
+
+[[PTT](#ref-PTT), chap. 2, §1, no. 1 to no. 6, and §2, no. 4]
