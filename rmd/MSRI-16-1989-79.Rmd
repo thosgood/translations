@@ -700,3 +700,35 @@ We would also like to have [(M1)--(M10)](#chunk-1.4) for cohomology with proper 
 ::: {.rmenv #chunk-1.9 title="1.9 Definition" latex="{1.9 Definition}"}
 A _realisation system_ is a system [(M1)--(M10)](#chunk-1.4) that satisfies [(A1)--(A5)](#chunk-1.4).
 :::
+
+We understand [(M4)](#M4), $\comp_{\crisp,\DR}$, and [(M10)](#M10) as a germ --- in the filter of complements of finite sets of prime numbers --- of systems of automorphisms $\phi_p$ of the $M_\DR\otimes\QQ_p$
+
+:::{.itenv #chunk-1.10 title="Proposition 1.10" latex="{Proposition 1.10}"}
+Realisation systems form a Tannakian category.
+:::
+
+::: {.proof}
+As in [@J], the key point is that a morphism of mixed Hodge $\QQ$-structures is strictly compatible with the filtrations $W$ and $F$, and that its kernel and cokernel are mixed Hodge $\QQ$-structures [@D2, Theorem 2.3.5].
+We thus deduce that every morphism of realisation systems is strictly compatible with $W$ and $F$.
+(For $W$, we can instead use [(AM4)](#AM4).)
+
+So it is clear that the kernels and cokernels again form realisation systems, and that a bijective morphism is an isomorphism.
+We have direct sums, and so the category is abelian.
+
+We have an obvious tensor product, which is associative and commutative, and a way of taking duals.
+We also have a fibre functor, or, indeed, two: ${}_\BB$ and ${}_\DR$, with values in $\QQ$-vector spaces.
+The category of realisation systems is thus Tannakian and **TO-DO**: the fibre functor ${}_\BB$ (resp. ${}_\DR$) identifies it with the category of representations of the group scheme $G_\BB$ (resp. $G_\DR$) of its automorphisms (cf. [@Sa] or [@DM, Theorem 2.11]).
+:::
+
+\oldpage{97}
+
+We hope that the realisation functors define a fully faithful functor from the category of motives over $\QQ$ to the category of realisation systems.
+If this were not the case, then the philosophy of motives would lose much of its interest.
+This leads to the following provisional "definition":
+
+::: {.rmenv #chunk-1.11 title="1.11 Definition" latex="{1.11 Definition}"}
+The _category of motives_ over $\QQ$ is the subcategory of the category of realisation systems [(1.9)](#chunk-1.9) generated (under $\oplus$, $\otimes$, dual, and sub-quotient) by the category of systems of geometric origin.
+:::
+
+This definition is not really a definition, since "of geometric origin" has not been defined.
+Worse still, I do not have any definition to propose that I can confidently say is good.
