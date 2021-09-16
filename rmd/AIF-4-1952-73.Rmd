@@ -504,7 +504,7 @@ _every summable sequence in an $\LL^1(\mu)$-space (for an arbitrary measure) has
 this is dual to the theorem, noted at the end of [§1.4](#section-1.4), that says that every square summable sequence in a $\CC(K)$-space --- and even every sequence belonging to $\ell^2\hhotimes\CC(K)$ --- is nuclearly convergent to $0$).
 
 We will give some hints concerning the proof of [Theorem 8](#section-1-theorem-8), that rely in an essential manner on criterion (d) of [Theorem 7](#section-1-theorem-7).
-The fact that $u$ is a weakly compact map follows immediately from the fact that the identified map from $\LL^\infty(\mu)$ to $\LL^1(\mu)$ is a weakly compact map.
+The fact that $u$ is a weakly compact map follows immediately from the fact that the identity map from $\LL^\infty(\mu)$ to $\LL^1(\mu)$ is a weakly compact map.
 The other claims of the theorem follow easily from the second part, which is more difficult.
 We can reduce to showing that every weakly compact linear map from $\LL^1(\mu)$ to an $\FF$-space $G$ induces a nuclear map from $\LL^\infty(\mu)$ to $G$, and thus ([Theorem 3](#section-1-theorem-3)) comes from some $f\in\LL^1_G(\mu)$.
 But a theorem of Dunford--Pettis--Phillips tells us that such a map is in fact given by a _strongly measurable and bounded_ map $f$ from $M$ to $G$.
@@ -706,11 +706,11 @@ But in a case such as the above, we do not, in general, have a handle on the spa
 We thus appreciate the simplifications that arise in the case where we know in advance that $E\hotimes F=E\hhotimes F$, or even that $E\hotimes F=\sBB_e(E'_s,F'_s)$ (with these equalities being assumed to involve the topologies).
 Then we can often concretely determine $E\hotimes F=E\hhotimes F=\sBB_e(E'_s,F'_s)$;
 for example, if we know a priori an intermediate space $P$ between $E\hotimes F$ and $\sBB_e(E'_s,F'_s)$.
-At the same time, we will then have determined the space of weakly continuous linear maps from $E'$ to $F$, or from $F'$ to $E$, since these spaces are in fact identified with $\sBB_e(E'_s,F'_s)$.
+At the same time, we will then have determined the space of weakly continuous linear maps from $E'$ to $F$, or from $F'$ to $E$, since these spaces can in fact be identified with $\sBB_e(E'_s,F'_s)$.
 And the dual $\BB(E,F)$ of $E\hotimes F$, i.e. the space of continuous bilinear forms on $E\times F$, will then be identical to the dual of $E\hhotimes F$, or also to the dual of $P$, and can thus often be concretely understood.
 
 For example, the essence of L. Schwartz's "kernel theorem" says that the space of continuous bilinear forms on $\sEE(\RR^m)\times\sEE(\RR^m)$ is identical to the space of bilinear forms defined by the distributions on $\RR^m\times\RR^n$ with compact support.
-The latter are a priori the continuous linear forms on $\sEE(\RR^m\times\RR^n)$, but we directly see (as a particular case of the above lemma) that $\sEE(\RR^m\times\RR^n)$ is identified with the space
+The latter are a priori the continuous linear forms on $\sEE(\RR^m\times\RR^n)$, but we directly see (as a particular case of the above lemma) that $\sEE(\RR^m\times\RR^n)$ can be identified with the space
 $$
   E\hhotimes F = \sBB_e(E'_s,F'_s)
 $$
@@ -911,3 +911,19 @@ We note again that the analogue of [Theorem 5](#section-2-theorem-5) for the rep
 
 The duality theory for $E\hotimes F$ is particularly simple when $E$ is nuclear, and when $E$ and $F$ are both of type $\FF$, or both of type $\DF$.
 In fact, the above results easily give:
+
+::: {.itenv #section-2-theorem-6 title="Theorem 6" latex="{Theorem 6}"}
+Let $E$ and $F$ be locally convex spaces, both of type $\FF$, or both of type $\DF$.
+If $E$ is nuclear, then the strong dual of $E\hotimes F$, which can be identified with $\BB(E,F)$ endowed with the bibounded convergence topology (cf. the corollary of [Theorem 5](#section-2-theorem-5)), can also be identified with $E'\hotimes F'$.
+:::
+
+Subsequently, if $E$ is complete, and thus reflexive, then the bidual of $E\hotimes F$, endowed with the strong topology of the dual of $(E\otimes F)'$, can be identified with $E\hotimes F''_b$, where $F''_b$ denotes the strong dual of $F'$.
+
+In general, if $E$ is nuclear and complete, but $E$ and $F$ are otherwise arbitrary, and if we again take the "natural" topologies on the biduals (cf. Introduction), then we can prove that the bidual of $E\hotimes F$ can be identified with a dense topological-vectorial subspace of $E\hotimes F''$ (see [[PTT](#ref-PTT), chap. 1, §4, no. 2, prop. 25], where we give a more general statement).
+As for the dual of $E\hotimes F$, whose elements are characterised by [Corollary 3 of Theorem 1](#section-2-corollary-3), it will, in general, no longer be identical to $E'\hotimes F'$ at all, but, under rather strong conditions (such as if $F$ is reflexive), it will be a dense topological-vectorial subspace of $E'\lotimes F$ (see **TO-DO**).
+\oldpage{105}
+But even in the case of the tensor product $E'\hotimes E$, where $E$ is nuclear and of type $\FF$ or type $\DF$, the strong dual of $E\hotimes F$ will often often not be complete (and thus distinct from $E'\lotimes F'$): see **TO-DO**.
+
+The product $E\hotimes F$ (with $E$ nuclear) gives rise to many invariance theorems:
+for $E\hotimes F$ to be reflexive (resp. of type $\MM$, resp. of type **TO-DO**, resp. quasi-normable), it suffices (and is necessary, if $F$ is complete) for $F$ to be so.
+But it can be the case that $E$ and $F$ are bornological and barrelled without $E\hotimes F$ being so (cf. **TO-DO**).
