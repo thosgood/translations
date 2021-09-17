@@ -45,8 +45,8 @@ favicon: "favicon.ico"
 \providecommand{\scr}{\mathscr}
 \providecommand{\dd}{\mathrm{d}}
 \providecommand{\lotimes}{\bar{\otimes}}
-\providecommand{\potimes}{{\otimes^{(p)}}}
-\providecommand{\spotimes}{{\otimes^{[p]}}}
+\providecommand{\potimes}[1][p]{{\otimes^{(#1)}}}
+\providecommand{\spotimes}[1][p]{{\otimes^{[#1]}}}
 \providecommand{\Tr}{\operatorname{Tr}}
 
 ```{r,echo=FALSE,results='asis'}
@@ -988,4 +988,62 @@ When $E$ and $F$ are arbitrary locally convex spaces, the semi-norms of $E$ and 
 this space is metrisable and complete if $E$ and $F$ are metrisable and complete.
 Consequently, if $E$ is of type $\DF$, and $F$ of type $\FF$, then $\LL^{(p)}(E,F)$ is a complete metrisable topological-vectorial space (which is, in general, not locally convex) isomorphic to a quotient space of $E'\potimes F$.
 
-We can also, for $0\leq p<1$, introduce the space $E\spotimes F$
+We can also, for $0\leq p<1$, introduce the space $E\spotimes F$ of _Fredholm kernels of order $\leq p$_, which is defined to be the intersection of the spaces $E\potimes[q] F$ for $p<q\leq1$.
+Endowed with the topology that is the upper bound of the topologies induced by the spaces $E\potimes[q] F$, this is a topological-vectorial space (which is not, in general, locally convex), which is metrisable and complete if $E$ and $F$ are metrisable and complete.
+We analogously define the topological-vectorial spaces $\LL^{[p]}(E,F)$ as the intersection of the spaces $\LL^{(q)}(E,F)$ for $p<q\leq1$.
+The introduction of these topologies allows us to prove the following:
+let $E$ and $F$ both be $\FF$-spaces;
+then every element of $E\spotimes F$ (where $0\leq p<1$) is of the form $\sum\lambda_i x_i\otimes y_i$, where $(\lambda_i)\in\ell^{[p]}$, and where $(x_i)$ (resp. $(y_i)$) is a bounded sequence in $E$ (resp. $F$);
+further, if $(u_\alpha)$ is a sequence that tends to zero in $E\potimes F$ (resp. in $E\spotimes F$), then $u_\alpha=\sum\lambda_i^\alpha x_i\otimes y_i$, where the bounded sequences $(x_i)$ and $(y_i)$ are fixed, and where $\lambda^\alpha=(\lambda_i^\alpha)$ tends to zero in $\ell^p$ (resp. $\ell^{[p]}$).
+(We denote by $\ell^{[p]}$ the space given by the intersection of the spaces $\ell^q$ for $p<q\leq1$, endowed with the topology that is the upper bound of the topologies induced by the $\ell^q$, which in fact gives a complete metrisable space).
+The most important application of these results is the following:
+
+::: {.itenv #section-2-theorem-7 title="Theorem 7" latex="{Theorem 7}"}
+Let $E$ be a $\DF$-space, and $F$ an $\FF$-space.
+Then every map of order zero from $E$ to $F$ is of the form $\sum\lambda_i x'_i\otimes y_i$, where $(\lambda_i)$ is a _rapidly decreasing_ sequence of scalars, and where $(x'_i)$ (resp. $(y_i)$) is a sequence that tends to zero in $E'$ (resp. $F$).
+:::
+
+Let $E$ be an arbitrary locally convex space.
+Then every Fredholm kernel element of $E'\lotimes E$ admits a _Fredholm determinant_ $\det(1-zu)$, which is an entire function in the complex variable $z$, and whose zeros are the inverses of the eigenvalues $z_i$ of the Fredholm operator defined by $u$ (where we count the zeros and the eigenvalues with multiplicity).
+We have the following:
+
+\oldpage{108}
+
+::: {.itenv #section-2-theorem-8 title="Theorem 8" latex="{Theorem 8}"}
+If $u\in E'\potimes E$, then the Fredholm determinant of $u$ is an entire function of order $\leq q$, where $1/q=1/p-1/2$, and the sequence of eigenvalues of $u$ is $p$-th power summable.
+If $p\leq2/3$ (and so $q\leq1$), then $\det(1-zu)$ is an entire function _of genus zero_, and thus identical to the infinite product $\prod(1-zz_i)$ (where the $z_i$ are the eigenvalues of $u$, repeated according to their order of multiplicity).
+If $E$ is a Banach space, then we have
+$$
+  \left(\sum|z_i|^q\right)^{\frac1q} \leq (S_p(u))^{\frac1p}.
+$$
+:::
+
+::: {.itenv #section-2-theorem-8-corollary-1 title="Corollary 1" latex="{Corollary 1}"}
+The sequence of eigenvalues of a Fredholm operator is square summable.
+:::
+
+::: {.itenv #section-2-theorem-8-corollary-2 title="Corollary 2" latex="{Corollary 2}"}
+If $u$ is a $\frac23$-summable Fredholm operator, then $\tr u=\sum_i z_i$ (where the $z_i$ are the eigenvalues of $u$).
+:::
+
+::: {.itenv #section-2-theorem-8-corollary-3 title="Corollary 3" latex="{Corollary 3}"}
+The sequence of eigenvalues of a Fredholm operator of order zero in $E$, arranged in order of decreasing **TO-DO**, is a rapidly decreasing sequence.
+:::
+
+Furthermore, we can show that, under the conditions of [Theorem 8](#section-2-theorem-8), when $E$ is a Banach space, the sequence of eigenvalues of $u\in E'\potimes E$, as an unordered $q$-th power summable sequence, depends continuously on $u$.
+This implies that, if $u_\alpha\to u$ in $E'\potimes E$, then we can arrange the eigenvalues of $u_\alpha$ into a sequence $\lambda^{(\alpha)}=(\lambda_i^{(\alpha)})$ such that $\lambda^{(\alpha)}\to\lambda^{(0)}$ in $\ell^q$.
+We have an analogous result for $E'\spotimes E$.
+
+By iterating Fredholm kernels, we obtain kernels that have stronger and stronger "decreasing properties":
+
+::: {.itenv #section-2-theorem-9 title="Theorem 9" latex="{Theorem 9}"}
+Let $u$ be a Fredholm kernel given by the composition of $n$ Fredholm kernels $u_i$, with each $u_i$ being $p_i$-th power summable (with $0<p_i\leq1$).
+Then $u$ is $p$-th power summable, where
+$$
+  \frac1p = \left\sum\frac{1}{p_i}\right)-\frac{n+1}{2}.
+$$
+If $u_i\in E'_i\potimes[p_i]E_{i+1}$, where the $E_i$ are Banach spaces, then
+$$
+  S_p(u)^{\frac1p} \leq \prod\left(S_{p_i}(u_i)\right)^{\frac{1}{p_i}}.
+$$
+:::
