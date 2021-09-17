@@ -45,8 +45,8 @@ favicon: "favicon.ico"
 \providecommand{\scr}{\mathscr}
 \providecommand{\dd}{\mathrm{d}}
 \providecommand{\lotimes}{\bar{\otimes}}
-\providecommand{\potimes}[1][p]{{\otimes^{(#1)}}}
-\providecommand{\spotimes}[1][p]{{\otimes^{[#1]}}}
+\providecommand{\potimes}[1][p]{\overset{(#1)}{\otimes}}
+\providecommand{\spotimes}[1][p]{\overset{[#1]}{\otimes}}
 \providecommand{\Tr}{\operatorname{Tr}}
 
 ```{r,echo=FALSE,results='asis'}
@@ -963,7 +963,7 @@ We have analogous statements given by taking $E=(\sOO_M)$ (the space of "infinit
 We also note that, by using the [Lemma in §1](#section-1-lemma), we find that a map $f$ with values in $F$ is infinitely differentiable (resp. holomorphic, resp. "infinitely differentiable and rapidly decreasing", resp. "infinitely differentiable and slowly increasing", etc.) if and only if it is so "scalar-wise", i.e. if and only if, for all $y'\in F'$, the scalar-valued function $\langle f(t),y'\rangle$ has the property in question.
 
 
-## $p$-power summable operators, application to nuclear spaces {#section-2.6}
+## $p$-th power summable operators, application to nuclear spaces {#section-2.6}
 
 [[PTT](#ref-PTT), chap. 2, §1, no. 1 to no. 6, and §2, no. 4]
 
