@@ -35,6 +35,7 @@ favicon: "favicon.ico"
 \providecommand{\sHH}{\mathscr{H}}
 \providecommand{\sLL}{\mathscr{L}}
 \providecommand{\sOO}{\mathscr{O}}
+\providecommand{\sSS}{\mathscr{S}}
 \providecommand{\DD}{(\mathscr{D})}
 \providecommand{\DDp}{(\mathscr{D}')}
 \providecommand{\DF}{(\mathscr{DF})}
@@ -841,7 +842,7 @@ if $E$ is a nuclear space of type $\FF$ or $\DF$, and $F$ is a nuclear space, th
 ::: {.itenv title="Corollary" latex="{Corollary}"}
 All of the following are nuclear:
 the spaces $\sEE$, $\sEE'$, $\sDD$, and $\sDD'$, constructed on an open subset $U$ of $\RR^n$;
-the spaces **TO-DO**, $(\sOO_M)$, and $(\sOO'_C)$, constructed on $\RR^n$;
+the spaces $(\sSS)$, $(\sSS')$, $(\sOO_M)$, and $(\sOO'_C)$, constructed on $\RR^n$;
 and the strong duals of these latter two spaces.
 The space $\sHH$ of holomorphic functions on a complex-analytic manifold is also nuclear.
 (For the definitions of the above spaces, see [@9]).
@@ -948,10 +949,12 @@ $$
 $$
 where $U$ and $V$ are some given infinitely differentiable (resp. holomorphic) manifolds.
 
-Let **TO-DO** be the space of "infinitely differentiable and rapidly decreasing" functions on $\RR^n$ (cf. [@9, t. 2]).
-Then **TO-DO** is the space of maps from $\RR^n$ to $F$ that are "infinitely differentiable and rapidly decreasing", i.e. infinitely differentiable, and such that, for every derivation multi-index $\mathrm{D}^p$, and for every polynomial $P$ on $\RR^n$, the function $P\mathrm{D}^pf$ is bounded on $\RR^n$.
+Let $\sSS=\sSS(\RR^n)$ be the space of "infinitely differentiable and rapidly decreasing" functions on $\RR^n$ (cf. [@9, t. 2]).
+Then $\sSS\hotimes F$ is the space of maps from $\RR^n$ to $F$ that are "infinitely differentiable and rapidly decreasing", i.e. infinitely differentiable, and such that, for every derivation multi-index $\mathrm{D}^p$, and for every polynomial $P$ on $\RR^n$, the function $P\mathrm{D}^pf$ is bounded on $\RR^n$.
 In particular,
-**TO-DO**
+$$
+  \sSS(\RR^m)\hotimes\sSS(\RR^n) = \sSS(\RR^m\times\RR^n).
+$$
 
 We have analogous statements given by taking $E=(\sOO_M)$ (the space of "infinitely differentiable and slowly increasing" functions) or $E=(\sOO_C)$ (the space of "infinitely differentiable and very slowly increasing" functions, the strong dual of the space $(\sOO'_C)$ of rapidly decreasing distributions [@9]), etc.
 \oldpage{106}
