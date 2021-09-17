@@ -2,7 +2,7 @@
 title: "Summary of essential results in the theory of topological tensor products and nuclear spaces"
 author: "A. Grothendieck"
 date: "1952"
-original: 'Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". _Annales de l’institut Fourier_ **4** (1952), 73-122. DOI: [10.5802/aif.46](https://doi.org/10.5802/aif.46).'
+original: 'Grothendieck, A. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". _Annales de l’institut Fourier_ **4** (1952), 73-112. DOI: [10.5802/aif.46](https://doi.org/10.5802/aif.46).'
 bibliography: AIF-4-1952-73.bib
 nocite: '@*'
 link-citations: true
@@ -45,6 +45,8 @@ favicon: "favicon.ico"
 \providecommand{\scr}{\mathscr}
 \providecommand{\dd}{\mathrm{d}}
 \providecommand{\lotimes}{\bar{\otimes}}
+\providecommand{\potimes}{{\otimes^{(p)}}}
+\providecommand{\spotimes}{{\otimes^{[p]}}}
 \providecommand{\Tr}{\operatorname{Tr}}
 
 ```{r,echo=FALSE,results='asis'}
@@ -383,7 +385,7 @@ $\star$
 Let $E$ and $F$ be Banach spaces.
 The continuous bilinear map $(x',y)\mapsto x'\otimes y$ from $E'\times F$ to $\LL(E,F)$ defines a natural continuous linear map from $E'\hotimes F$ to $\LL(E,F)$;
 the elements of the image of $E'\hotimes F$ in $\LL(E,F)$ are said to be _nuclear maps_ from $E$ to $F$.
-(We also define, between arbitrary locally convex spaces, the notions of _trace maps_ and _Fredholm maps_ --- see [Appendix 1](#appendix-1) --- which coincide with the notion of nuclear maps if $E$ and $F$ are Banach spaces; in this case, we can thus freely switch between saying "nuclear maps", "trace maps", or "Fredholm maps".)
+(We also define, between arbitrary locally convex spaces, the notions of _trace maps_ and _Fredholm maps_ --- see [Appendix 1](#section-1-appendix-1) --- which coincide with the notion of nuclear maps if $E$ and $F$ are Banach spaces; in this case, we can thus freely switch between saying "nuclear maps", "trace maps", or "Fredholm maps".)
 Nuclear maps from $E$ to $F$ form a vector space which can be identified with a quotient space of $E'\hotimes F$ (and with $E'\hotimes F$ itself in all known cases --- see "problem of bijectivity" in [§1](#section-1)).
 The quotient norm, again denoted by $u\mapsto\|u\|_1$, is called the _trace norm_ of the nuclear operator $u$.
 
@@ -551,7 +553,7 @@ Similarly, we can show that the integral linear maps from $\LL^1(\mu)$ to a loca
 $\star$
 
 
-## Appendix 1: Various variants of the notion of topological tensor product {.unnumbered #appendix-1}
+## Appendix 1: Various variants of the notion of topological tensor product {.unnumbered #section-1-appendix-1}
 
 [[PTT](#ref-PTT), chap. 1, §3]
 
@@ -603,7 +605,7 @@ This formula immediately generalises for the natural pairing corresponding to an
 We can easily show that its trace is exactly $\int N(x,x)\dd\mu(x)$.
 
 
-## Appendix 2: The properties and problems of approximation {.unnumbered #appendix-2}
+## Appendix 2: The properties and problems of approximation {.unnumbered #section-1-appendix-2}
 
 [[PTT](#ref-PTT), chap. 1, §5]
 
@@ -964,3 +966,26 @@ We also note that, by using the [Lemma in §1](#section-1-lemma), we find that a
 ## $p$-power summable operators, application to nuclear spaces {#section-2.6}
 
 [[PTT](#ref-PTT), chap. 2, §1, no. 1 to no. 6, and §2, no. 4]
+
+Let $E$ and $F$ be locally convex spaces.
+Among the elements of of $E\lotimes F$ (see the definition in [§1, Appendix 1](#section-1-appendix-1)), we have given the name of _Fredholm kernels_ to those which come from an element of some space $E_A\hotimes F_B$, where $A$ (resp. $B$) is a bounded disk in $E$ (resp. $F$) such that $E_A$ (resp. $F_B$) is complete;
+we can then even suppose $A$ and $B$ to be compact ([§1, Appendix 1](#section-1-appendix-1)).
+More generally, if $0<p\leq1$, then we call any element of $E\lotimes F$ of the form $\sum\lambda_i x_i\otimes y_i$, where $(\lambda_i)\in\ell^p$ and $(x_i)$ (resp. $(y_i)$) is a sequence inside a compact subset of $E$ (resp. $F$), a _$p$-th power summable Fredholm kernel in $E\lotimes F$_.
+(If $p=1$, then we recover Fredholm kernels).
+The set of $p$-th power summable Fredholm kernels in $E\lotimes F$ is denoted by $E\potimes F$.
+
+We define a _$p$-th power summable map_ from $E$ to $F$ to be any linear map from $E$ to $F$ that comes from a $p$-th power summable Fredholm kernel in $E'\lotimes F$ (if $p=1$, then we recover Fredholm maps, introduced in [§1, Appendix 1](#section-1-appendix-1)).
+The space of these maps, denoted by $\LL^{(p)}(E,F)$, can thus be identified with a quotient space of $E'\potimes F$, and even with $E'\potimes F$ in all known cases (see the "problem of bijectivity" in [§1, Appendix 2](#section-1-appendix-2));
+this is always the case, for example, if $p\leq2/3$.
+When $E$ and $F$ are Banach spaces, we can introduce a "distance to the origin" function on $E\otimes F$, by
+$$
+  S_p(u) = \inf\sum|\lambda_i|^p
+$$
+where the infimum is taken over all representations $u=\sum\lambda_i x_i\otimes y_i$ with $\|x_i\|,\|y_i\|\leq 1$.
+Then $E\potimes F$ becomes a complete metrisable topological-vectorial space which is, in general, _not locally convex_.
+When $E$ and $F$ are arbitrary locally convex spaces, the semi-norms of $E$ and $F$ allow us to define a system of **TO-DO** on $E\potimes F$, which again make a topological-vectorial space (which is, in general, not locally convex);
+\oldpage{107}
+this space is metrisable and complete if $E$ and $F$ are metrisable and complete.
+Consequently, if $E$ is of type $\DF$, and $F$ of type $\FF$, then $\LL^{(p)}(E,F)$ is a complete metrisable topological-vectorial space (which is, in general, not locally convex) isomorphic to a quotient space of $E'\potimes F$.
+
+We can also, for $0\leq p<1$, introduce the space $E\spotimes F$
