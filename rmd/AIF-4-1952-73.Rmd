@@ -40,6 +40,7 @@ favicon: "favicon.ico"
 \providecommand{\DDp}{(\mathscr{D}')}
 \providecommand{\DF}{(\mathscr{DF})}
 \providecommand{\FF}{(\mathscr{F})}
+\providecommand{\LF}{(\mathscr{LF})}
 \providecommand{\MM}{(\mathscr{M})}
 \providecommand{\hotimes}{\hat{\otimes}}
 \providecommand{\scr}{\mathscr}
@@ -263,7 +264,7 @@ $\star$
 
 ## Other examples {#section-1.4}
 
-If $H$ is a Hilbert space, then the elements of $H'\hotimes H$, identified with endomorphisms of $H$ (the _Fredholm maps_ or _nuclear maps_ from $H$ to $H$ --- see **TO-DO**) are exactly the endomorphisms $u$ such that the positive Hermitian operator $\sqrt{u^*u}$ is compact and has a summable sequence of eigenvalues, and $\|u\|_1$ is then equal to the sum of the eigenvalues of $\sqrt{u^*u}$ (repeated with multiplicities, of course).
+If $H$ is a Hilbert space, then the elements of $H'\hotimes H$, identified with endomorphisms of $H$ (the _Fredholm maps_ or _nuclear maps_ from $H$ to $H$ --- see [§1.7](#section-1.7)) are exactly the endomorphisms $u$ such that the positive Hermitian operator $\sqrt{u^*u}$ is compact and has a summable sequence of eigenvalues, and $\|u\|_1$ is then equal to the sum of the eigenvalues of $\sqrt{u^*u}$ (repeated with multiplicities, of course).
 \oldpage{81}
 We obtain the operators that have already been studied in [@4] and [@8].
 In fact, $u$ is also a Fredholm operator if and only if its Hermitian components $\frac12(u+u^*)$ and $\frac{1}{2i}(u-u^*)$ are, i.e. if they are compact Hermitian operators whose sequences of eigenvalues are summable.
@@ -271,12 +272,12 @@ _Relation to Hilbert--Schmidt operators: If $A$ and $B$ are Hilbert--Schmidt ope
 and, conversely, every Fredholm operator $u$ is the product of two Hilbert--Schmidt operators $A$ and $B$ of norm $\|A\|_2=\|B\|_2=\sqrt{\|u\|_1}$.
 All of these facts are elementary (one we know the spectral decomposition of compact Hermitian operators to a Hilbert space) and well known.
 
-Numerous other examples of products $E\hotimes F$, relating to _nuclear spaces_, will be seen in **TO-DO**.
+Numerous other examples of products $E\hotimes F$, relating to _nuclear spaces_, will be seen in [§2.5](#section-2.5).
 
 $\star$
 In the setting of infinite-dimensional Banach spaces, I do now know, even in particular cases, other concrete characterisations of the elements of $E\hotimes F$ apart from those that we have given.
 Also, the elements of $c_0\hotimes E$ (where $E$ can be any complete locally convex space) can be identified with _certain_ sequences in $E$ that converge to $0$, that we can call _nuclearly convergent to $0$_;
-but if $E$ is an infinite-dimensional Banach space, then we always obtain a strictly smaller class than the class of all sequences converging to $0$ (see **TO-DO**).
+but if $E$ is an infinite-dimensional Banach space, then we always obtain a strictly smaller class than the class of all sequences that converge to $0$ (see [§2.2, Theorem 2](#section-2-theorem-2)).
 We even show that (if $E$ is an infinite-dimensional Banach space), for any sequence $(\lambda_i)$ of positive scalars that is not square-summable, there exists a sequence $(x_i)$ in $E$ that does not converge nuclearly to $0$, and such that $\|x_i\|=\lambda_i$ for all $i$.
 However, if, for example, $E$ is the space $C(K)$ of continuous functions on a compact space, then we show that every square-summable sequence in $C(K)$ converges nuclearly to $0$.
 We also point out that, in any complete locally convex space, every summable sequence converges nuclearly to $0$.
@@ -297,20 +298,20 @@ If $E$ and $F$ are now both arbitrary locally convex spaces, then we can again c
 the completion of $E\otimes F$ under this topology is again denoted by $E\hhotimes F$.
 If $E$ and $F$ are complete, then the space $\sLL_e(E'_s,F'_s)$ of separately continuous bilinear forms on the product $E'_s\times F'_s$ of the weak duals $E'_s$ and $F'_s$ endowed with the biequicontinuous-convergence topology is complete, and so $E\hhotimes F$ can be identified with a topological vector subspace of $\sLL_e(E'_s,F'_s)$.
 Then the elements of $E\hhotimes F$ can be identified with certain separately weakly continuous bilinear maps on $E'\times F'$, or even with certain weakly continuous linear maps from $E'$ to $F$;
-these linear maps send equicontinuous subsets of $E'$ to relatively compact subsets of $F$, and the converse is true in all known cases (see **TO-DO**).
+these linear maps send equicontinuous subsets of $E'$ to relatively compact subsets of $F$, and the converse is true in all known cases (see [§1, Appendix 2](#section-1-appendix-2)).
 
 The topology on $E\otimes F$ induced by $E\hotimes F$ is finer than that induced by $E\hhotimes F$, whence we have a canonical continuous linear map
 $$
   E\hotimes F \to E\hhotimes F.
 $$
 
-An important, unsolved, problem is the question of whether or not this map is always bijective (see **TO-DO**).
+An important, unsolved, problem is the question of whether or not this map is always bijective (see [§1, Appendix 2](#section-1-appendix-2)).
 We note that it seems extremely plausible that, if $E$ and $F$ are Banach spaces such that the above map $E\hotimes F\to E\hhotimes F$ is a topological isomorphism (or even simply a topological homomorphism, i.e. here a map from the first space _onto_ the second), then $E$ or $F$ is of finite dimension.
 This is true if, for example, $E$ contains a vector subspace isomorphic to an $\ll^p$ space or to $c_0$.
 
 Let $E$ and $F$ be Banach spaces.
 The norm induced by the dual of $E\hotimes F$ on $E'\otimes F'$ is clearly the norm induced by $E'\hhotimes F'$.
-On the other hand, the norm induced on $E'\otimes F'$ by the dual of $E\hhotimes F$ is, in all known cases (see **TO-DO**), identical to the norm induced by $E'\hotimes F'$.
+On the other hand, the norm induced on $E'\otimes F'$ by the dual of $E\hhotimes F$ is, in all known cases (see [§1, Appendix 2](#section-1-appendix-2)), identical to the norm induced by $E'\hotimes F'$.
 This duality, which barely appears in the present summary, is a precious tool for various questions (e.g. [[PTT](#ref-PTT), chap. 1, §4, no. 6]).
 \oldpage{83}
 The following theorem (which is, truth be told, trivial), can be seen as the dual response to [Theorem 3](#section-1-theorem-3).
@@ -398,7 +399,7 @@ where $E_1$ and $F_1$ are Banach spaces, $\beta$ is a nuclear map from $E_1$ to 
 It is equivalent to say that there exists an weakly closed, equicontinuous, disked subset $A$ of $E'$, and a bounded disked subset $B$ of $F$ such that $F_B$ is complete, and finally some $u_0\in E'_A\hotimes F_B$ such that $u$ is the operator from $E$ to $F$ defined by $u_0$ (_a priori_, $u_0$ defines a nuclear map from $\widehat{E}_{A^0}$ to $F_B$).
 _A nuclear map is always compact_ (i.e. sends a suitable neighbourhood of $0$ to a relatively compact set).
 Even better: by the corollary of [Theorem 2](#section-1-theorem-2), we can suppose (in the above) that $B$ and $A$ are _compact_ subsets of $F$ and strong $E'$ (respectively).
-[Theorem 2](#section-1-theorem-2), applied directly, also gives the following: _nuclear maps from $E$ to $F$ are exactly the maps that are sums of series (always absolutely convergent in $\LL(E,F)$ endowed with the bounded-convergence topology) $u=\sum\lambda_i x'_i\otimes y_i$, where $(x'_i)$ is an equicontinuous sequence in $E'$, $(y_i)$ is a **TO-DO** a compact disk of $F$, and $(\lambda_i)$ is a summable sequence of scalars_.
+[Theorem 2](#section-1-theorem-2), applied directly, also gives the following: _nuclear maps from $E$ to $F$ are exactly the maps that are sums of series (always absolutely convergent in $\LL(E,F)$ endowed with the bounded-convergence topology) $u=\sum\lambda_i x'_i\otimes y_i$, where $(x'_i)$ is an equicontinuous sequence in $E'$, $(y_i)$ is a sequence contained in a compact disk of $F$, and $(\lambda_i)$ is a summable sequence of scalars_.
 If we compose a nuclear map, on the left or on the right, with a continuous linear map, then we obtain another nuclear map.
 The dual of a nuclear map from $E$ to $F$ is a nuclear map from strong $F'$ to strong $E'$ (and even from $F'$ endowed with the uniform convergence on compact disks of $F$, to strong $E'$).
 
@@ -700,8 +701,8 @@ For spaces $E$ consisting of actual functions (and not only of classes of functi
 
 ::: {.itenv #section-1-lemma title="Lemma" latex="{Lemma}"}
 Let $E$ be a function space on a set $M$, endowed with a locally convex topology that is finer than the simple-convergence topology.
-Then, for every complete locally convex space $F$, we can interpret $\sBB_e(E'_s,F'_s)$ as the space of maps $f$ from $M$ to $F$ such that, for all $y'\in F'$, the function $f_{y'}(t)=\langle f(t),y'\rangle$ belongs to $E$ (with $f$ belonging **TO-DO: scalairement** to $E$), and such that $f_{y'}$ runs over a weakly relatively compact subset of $E$ as $y'$ runs over an equicontinuous subset of $F'$.
-(This second condition is excessive if $E$ is reflexive and of type $\FF$ or type (**TO-DO**)).
+Then, for every complete locally convex space $F$, we can interpret $\sBB_e(E'_s,F'_s)$ as the space of maps $f$ from $M$ to $F$ such that, for all $y'\in F'$, the function $f_{y'}(t)=\langle f(t),y'\rangle$ belongs to $E$ (i.e. $f$ belonging _scalar-wise_ to $E$), and such that $f_{y'}$ runs over a weakly relatively compact subset of $E$ as $y'$ runs over an equicontinuous subset of $F'$.
+(This second condition is excessive if $E$ is reflexive and of type $\FF$ or type $\LF$).
 :::
 
 But in a case such as the above, we do not, in general, have a handle on the space $E\hotimes F$.
@@ -775,7 +776,7 @@ Since a nuclear map is a fortiori compact, (c) implies the following:
 ::: {.itenv #section-2-corollary-1 title="Corollary 1" latex="{Corollary 1}"}
 Let $E$ be a nuclear space.
 Then the bounded subsets of $E$ are precompact (and $E$ is even a Schwartz space, cf. [@6]).
-A fortiori, if $E$ is quasi-complete, then $E$ is of type **TO-DO**, and thus reflexive.
+A fortiori, if $E$ is quasi-complete, then $E$ is of type $\MM$, and thus reflexive.
 :::
 
 We thus also conclude that a nuclear Banach space is of finite dimension.
@@ -858,7 +859,7 @@ Note that $E$ is endowed with a natural topology of an $\FF$ space.
 _For $E$ to be nuclear, it is necessary and sufficient for there to exist, for all $n$, some $m\geq n$ such that the sequence $a^{(n)}/a^{(m)}=(a_i^{(n)}/a_i^{(m)})$ to be summable_ (where we take a quotient of two zero terms to be zero).
 Thus the space $(s)$ of rapidly decreasing sequences, as well as its dual $(s')$ (the space of slowly increasing sequences), is nuclear.
 (This easily recovers, thanks to the Fourier transform, the fact that $\sEE(\RR^n)$, and, more generally, $\sEE(U)$, is nuclear.)
-The above statement also allows us to construct echelon spaces that are of type $\MM$ (and even of type **TO-DO**, see [@6, Section 3]) but not nuclear.
+The above statement also allows us to construct echelon spaces that are of type $\MM$ (and even of type $(\sSS)$, see [@6, Section 3]) but not nuclear.
 $\star$
 
 
@@ -923,13 +924,13 @@ If $E$ is nuclear, then the strong dual of $E\hotimes F$, which can be identifie
 Subsequently, if $E$ is complete, and thus reflexive, then the bidual of $E\hotimes F$, endowed with the strong topology of the dual of $(E\otimes F)'$, can be identified with $E\hotimes F''_b$, where $F''_b$ denotes the strong dual of $F'$.
 
 In general, if $E$ is nuclear and complete, but $E$ and $F$ are otherwise arbitrary, and if we again take the "natural" topologies on the biduals (cf. Introduction), then we can prove that the bidual of $E\hotimes F$ can be identified with a dense topological-vectorial subspace of $E\hotimes F''$ (see [[PTT](#ref-PTT), chap. 1, §4, no. 2, prop. 25], where we give a more general statement).
-As for the dual of $E\hotimes F$, whose elements are characterised by [Corollary 3 of Theorem 1](#section-2-corollary-3), it will, in general, no longer be identical to $E'\hotimes F'$ at all, but, under rather strong conditions (such as if $F$ is reflexive), it will be a dense topological-vectorial subspace of $E'\lotimes F$ (see **TO-DO**).
+As for the dual of $E\hotimes F$, whose elements are characterised by [Corollary 3 of Theorem 1](#section-2-corollary-3), it will, in general, no longer be identical to $E'\hotimes F'$ at all, but, under rather strong conditions (such as if $F$ is reflexive), it will be a dense topological-vectorial subspace of $E'\lotimes F$ (see the definition in [§1, Appendix 1](#section-1-appendix-1)).
 \oldpage{105}
-But even in the case of the tensor product $E'\hotimes E$, where $E$ is nuclear and of type $\FF$ or type $\DF$, the strong dual of $E\hotimes F$ will often often not be complete (and thus distinct from $E'\lotimes F'$): see **TO-DO**.
+But even in the case of the tensor product $E'\hotimes E$, where $E$ is nuclear and of type $\FF$ or type $\DF$, the strong dual of $E\hotimes F$ will often often not be complete (and thus distinct from $E'\lotimes F'$): see [the appendix](#section-2-appendix).
 
 The product $E\hotimes F$ (with $E$ nuclear) gives rise to many invariance theorems:
-for $E\hotimes F$ to be reflexive (resp. of type $\MM$, resp. of type **TO-DO**, resp. quasi-normable), it suffices (and is necessary, if $F$ is complete) for $F$ to be so.
-But it can be the case that $E$ and $F$ are bornological and barrelled without $E\hotimes F$ being so (cf. **TO-DO**).
+for $E\hotimes F$ to be reflexive (resp. of type $\MM$, resp. of type $(\sSS)$, resp. quasi-normable), it suffices (and is necessary, if $F$ is complete) for $F$ to be so.
+But it can be the case that $E$ and $F$ are bornological and barrelled without $E\hotimes F$ being so (see [the appendix](#section-2-appendix)).
 
 By the comments of [§2.1](#section-2.1), concretely determining $E\hotimes F$ when $E$ is nuclear usually poses no difficulty.
 We now give some examples (where $F$ is assumed to be a complete locally convex space).
@@ -983,7 +984,7 @@ $$
 $$
 where the infimum is taken over all representations $u=\sum\lambda_i x_i\otimes y_i$ with $\|x_i\|,\|y_i\|\leq 1$.
 Then $E\potimes F$ becomes a complete metrisable topological-vectorial space which is, in general, _not locally convex_.
-When $E$ and $F$ are arbitrary locally convex spaces, the semi-norms of $E$ and $F$ allow us to define a system of **TO-DO** on $E\potimes F$, which again make a topological-vectorial space (which is, in general, not locally convex);
+When $E$ and $F$ are arbitrary locally convex spaces, the semi-norms of $E$ and $F$ allow us to define a system of "distances to the origin" on $E\potimes F$, which again make a topological-vectorial space (which is, in general, not locally convex);
 \oldpage{107}
 this space is metrisable and complete if $E$ and $F$ are metrisable and complete.
 Consequently, if $E$ is of type $\DF$, and $F$ of type $\FF$, then $\LL^{(p)}(E,F)$ is a complete metrisable topological-vectorial space (which is, in general, not locally convex) isomorphic to a quotient space of $E'\potimes F$.
@@ -1047,3 +1048,11 @@ $$
   S_p(u)^{\frac1p} \leq \prod\left(S_{p_i}(u_i)\right)^{\frac{1}{p_i}}.
 $$
 :::
+
+In any case, the composition of $n$ Fredholm operators (for $n\geq3$) is is $(2/(n-1))$-th power summable.
+For $n=2$ or $n=3$, the formula $1/p=(\sum(1/p_i))-(n+1)/2$ does not give any information, but it seems that we should replace $n+1$ by $n-1$ in it.
+
+\oldpage{109}
+
+For more details on the above classes of operators, I refer the reader to [[PTT](#ref-PTT), chap. 2, §1].
+We note only that we can show that, 
