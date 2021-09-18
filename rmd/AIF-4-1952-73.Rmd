@@ -1115,7 +1115,7 @@ It turns out that the hypotheses necessary for this theorem are satisfied when $
 When, further, $E$ is the dual of a nuclear echelon space, or, more generally, if $E$ is the inductive limit (in the general sense) of a sequence of normed spaces $a^{(n)}\ell^1$ (where, for a given sequence $a^{(n)}=(a_i^{(n)})$, we write $a^{(n)}\ell^1$ to denote the set of sequences given by a product of $a^{(n)}$ with some summable sequence), then we can give an explicit exact criterion for $E\hotimes F$ to be bornological: _for $E\hotimes F$ to be bornological, it is necessary and sufficient that, for each integer $n_0>0$, there exist an integer $n>0$ such that, for every integer $m>0$ and every positive sequence $\lambda=(\lambda_i)\in E'$, there exists some $R>0$ such that, for every pair $(i,j)$ of indices, one of the two following inequalities holds:_
 $$
   \lambda_i a_i^{(m)}b_j^{(m)} \leq Rb_j^{(n)}
-  \quad\mbox{or}\quad
+  \quad\text{or}\quad
   Ra_i^{(n)}b^{(n)} \geq a_i^{(m)}b_j^{(n_0)}.
 $$
 This statement is perfectly manageable in all particular cases, despite its barbaric aspect.
