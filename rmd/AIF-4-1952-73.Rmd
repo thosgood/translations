@@ -799,7 +799,7 @@ Combining this with Banach's classical "isomorphism theorem", we obtain:
 
 ::: {.itenv #section-2-theorem-2 title="Theorem 2" latex="{Theorem 2}"}
 Let $E$ be an $\FF$-space.
-For $E$ to be nuclear, it is necessary and sufficient for every summable sequence in $E$ to be absolutely summable, or also for every sequence in $E$ that converges to zero to converge to zero nuclearly (cf. the end of (§2.4)[#section-2.4]).
+For $E$ to be nuclear, it is necessary and sufficient for every summable sequence in $E$ to be absolutely summable, or also for every sequence in $E$ that converges to $0$ to converge to $0$ nuclearly (cf. the end of (§2.4)[#section-2.4]).
 :::
 
 In particular, if $E$ is a Banach space, then each of the two above conditions imply that $E$ is of finite dimension: in the first case, we thus recover a recent theorem of Dvoretzky--Rogers.
@@ -894,7 +894,7 @@ We note again the following "lifting" property, which is an easy consequence of 
 ::: {.itenv #section-2-theorem-5 title="Theorem 5" latex="{Theorem 5}"}
 Let $E$ and $F$ be locally convex spaces, both of type $\FF$, or both of type $\DF$.
 Suppose that $E$ is nuclear, and let $A$ be a bounded disk in $P=E\hotimes F$.
-Then there exists a sequence $(x_i)$ that tends to zero in $E$, an equicontinuous sequence of linear maps $u\mapsto y_i(u)$ from $P_A$ to $F$, and a fixed summable sequence $(\lambda_i)$, such that
+Then there exists a sequence $(x_i)$ that tends to $0$ in $E$, an equicontinuous sequence of linear maps $u\mapsto y_i(u)$ from $P_A$ to $F$, and a fixed summable sequence $(\lambda_i)$, such that
 $$
   u = \sum \lambda_i x_i\otimes y_i(u)
 $$
@@ -995,13 +995,13 @@ We analogously define the topological-vectorial spaces $\LL^{[p]}(E,F)$ as the i
 The introduction of these topologies allows us to prove the following:
 let $E$ and $F$ both be $\FF$-spaces;
 then every element of $E\spotimes F$ (where $0\leq p<1$) is of the form $\sum\lambda_i x_i\otimes y_i$, where $(\lambda_i)\in\ell^{[p]}$, and where $(x_i)$ (resp. $(y_i)$) is a bounded sequence in $E$ (resp. $F$);
-further, if $(u_\alpha)$ is a sequence that tends to zero in $E\potimes F$ (resp. in $E\spotimes F$), then $u_\alpha=\sum\lambda_i^\alpha x_i\otimes y_i$, where the bounded sequences $(x_i)$ and $(y_i)$ are fixed, and where $\lambda^\alpha=(\lambda_i^\alpha)$ tends to zero in $\ell^p$ (resp. $\ell^{[p]}$).
+further, if $(u_\alpha)$ is a sequence that tends to $0$ in $E\potimes F$ (resp. in $E\spotimes F$), then $u_\alpha=\sum\lambda_i^\alpha x_i\otimes y_i$, where the bounded sequences $(x_i)$ and $(y_i)$ are fixed, and where $\lambda^\alpha=(\lambda_i^\alpha)$ tends to $0$ in $\ell^p$ (resp. $\ell^{[p]}$).
 (We denote by $\ell^{[p]}$ the space given by the intersection of the spaces $\ell^q$ for $p<q\leq1$, endowed with the topology that is the upper bound of the topologies induced by the $\ell^q$, which in fact gives a complete metrisable space).
 The most important application of these results is the following:
 
 ::: {.itenv #section-2-theorem-7 title="Theorem 7" latex="{Theorem 7}"}
 Let $E$ be a $\DF$-space, and $F$ an $\FF$-space.
-Then every map of order zero from $E$ to $F$ is of the form $\sum\lambda_i x'_i\otimes y_i$, where $(\lambda_i)$ is a _rapidly decreasing_ sequence of scalars, and where $(x'_i)$ (resp. $(y_i)$) is a sequence that tends to zero in $E'$ (resp. $F$).
+Then every map of order $0$ from $E$ to $F$ is of the form $\sum\lambda_i x'_i\otimes y_i$, where $(\lambda_i)$ is a _rapidly decreasing_ sequence of scalars, and where $(x'_i)$ (resp. $(y_i)$) is a sequence that tends to $0$ in $E'$ (resp. $F$).
 :::
 
 Let $E$ be an arbitrary locally convex space.
@@ -1012,7 +1012,7 @@ We have the following:
 
 ::: {.itenv #section-2-theorem-8 title="Theorem 8" latex="{Theorem 8}"}
 If $u\in E'\potimes E$, then the Fredholm determinant of $u$ is an entire function of order $\leq q$, where $1/q=1/p-1/2$, and the sequence of eigenvalues of $u$ is $p$-th power summable.
-If $p\leq2/3$ (and so $q\leq1$), then $\det(1-zu)$ is an entire function _of genus zero_, and thus identical to the infinite product $\prod(1-zz_i)$ (where the $z_i$ are the eigenvalues of $u$, repeated according to their order of multiplicity).
+If $p\leq2/3$ (and so $q\leq1$), then $\det(1-zu)$ is an entire function _of genus $0$_, and thus identical to the infinite product $\prod(1-zz_i)$ (where the $z_i$ are the eigenvalues of $u$, repeated according to their order of multiplicity).
 If $E$ is a Banach space, then we have
 $$
   \left(\sum|z_i|^q\right)^{\frac1q} \leq (S_p(u))^{\frac1p}.
@@ -1028,7 +1028,7 @@ If $u$ is a $\frac23$-summable Fredholm operator, then $\Tr u=\sum_i z_i$ (where
 :::
 
 ::: {.itenv #section-2-theorem-8-corollary-3 title="Corollary 3" latex="{Corollary 3}"}
-The sequence of eigenvalues of a Fredholm operator of order zero in $E$, arranged in order of decreasing **TO-DO**, is a rapidly decreasing sequence.
+The sequence of eigenvalues of a Fredholm operator of order $0$ in $E$, arranged in order of decreasing **TO-DO**, is a rapidly decreasing sequence.
 :::
 
 Furthermore, we can show that, under the conditions of [Theorem 8](#section-2-theorem-8), when $E$ is a Banach space, the sequence of eigenvalues of $u\in E'\potimes E$, as an unordered $q$-th power summable sequence, depends continuously on $u$.
@@ -1055,4 +1055,13 @@ For $n=2$ or $n=3$, the formula $1/p=(\sum(1/p_i))-(n+1)/2$ does not give any in
 \oldpage{109}
 
 For more details on the above classes of operators, I refer the reader to [[PTT](#ref-PTT), chap. 2, §1].
-We note only that we can show that, 
+We note only that we can show that, up to a small numerical uncertainty in the value of the exponents (uncertainty being the very nature of things), the fact that, for an operator to be $p$-th power summable, it suffices to study the properties of the image of a suitable neighbourhood of $0$ in $E$ (the unit ball, if $E$ is a Banach space).
+The uncertainty disappears for operators of order $0$, which are characterised exactly by the fact that they send a suitable neighbourhood of $0$ in $E$ to a subset of $F$ that is "of order $0$" [[PTT](#ref-PTT), chap. 2, §1, no. 5].
+When $F$ is of type $\FF$, the subsets of $F$ of order $0$ are the subsets contained in the closed disked hull of a "rapidly decreasing" sequence in $F$.
+
+The combination of [Theorem 1](#section-2-theorem-1) and [Theorem 9](#section-2-theorem-9) gives:
+
+::: {.itenv #section-2-theorem-10 title="Theorem 10" latex="{Theorem 10}"}
+Let $E$ be a nuclear space.
+Then, for every $\varepsilon>0$, and every weakly closed equicontinuous disk $A$ in $E'$, there exists a weakly closed equicontinuous disk $B\supset A$ such that the identity map from $E'_A$ to $E'_B$ is $\varepsilon$-th power summable.
+:::
