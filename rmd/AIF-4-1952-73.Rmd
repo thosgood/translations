@@ -1093,3 +1093,41 @@ this claim can be made explicit in the same way as the analogous claim found aft
 ## On the spaces $E\hotimes F$ with $E$ of type $\DF$ and $F$ of type $\FF$ {#section-2-appendix}
 
 [[PTT](#ref-PTT), chap. 2, §4]
+
+The theory of duality for spaces of the form $E\hotimes F$, which is very simple when $E$ is nuclear and $E$ and $F$ are both of type $\FF$, or both of type $\DF$ (see [Theorem 6](#section-2-theorem-6)), becomes more complicated in the general case.
+We can show, when $E$ is nuclear, that the strong dual $\BB(E,F)$ of $E\hotimes F$ can be identified with a dense vector subspace of $E'\lotimes F'$, but with a topology that is a priori _less fine_ (and sometimes strictly less fine) than the topology induced by $E'\lotimes F'$.
+When $F$ is reflexive (for example), these topologies coincide;
+and when, further, $E$ and $F$ are both of type $\FF$, or both of type $\DF$, then $\BB(E,F)$ is a $\LF$ space, in the general sense (the generalised inductive limit of a sequence of spaces of type $\FF$, cf. [[PTT](#ref-PTT), Introduction, IV]).
+But often, even if $E$ and $F$ are both nuclear, with $E$ of type $\DF$ and $F$ of type $\FF$, the dual $\BB(E,F)$ of $E\hotimes F$ is distinct from $E'\lotimes F'$, i.e. $\BB(E,F)$ is not complete (a fortiori $E\hotimes F$ is not then bornological).
+\oldpage{111}
+For example, if $E$ is the direct topological sum of a sequence of lines, then the disagreeable situation described above arises whenever $F$ is a non-normable $\FF$ space that admits a continuous true norm.
+In [[PTT](#ref-PTT), chap. 2, §4, no. 1, prop. 14], we study a more general case, implying, for example, that, for the space $\sEE'\hotimes\sEE=\LL(\sEE,\sEE)$ (where $\sEE=\sEE(\RR^n)$, which is a Schwartz space), the same troubles arise.
+Other important analogous spaces, such as $\sSS'\hotimes\sSS=\LL(\sSS,\sSS)$ (where $\sSS=\sSS(\RR^n)$ is the space of "infinitely differentiable rapidly decreasing" functions on $\RR^n$) are, however, bornological;
+but we do not have simple criteria that allow us to recognise, in general, if $E\hotimes F$ is bornological or not.
+Without supposing $E$ or $F$ to be nuclear, if $E$ is of type $\DF$ and $F$ of type $\FF$, then we can, under hypotheses that are more than sufficient in practice, we can confirm the equivalence of the following conditions:
+
+a. $E\hotimes F$ is bornological;
+b. $E\hotimes F$ is barrelled;
+c. $\BB(E,F)$ is complete;
+d. $\BB(E,F)$ is quasi-complete (or just complete for sequences).
+
+It turns out that the hypotheses necessary for this theorem are satisfied when $F$ is the the "echelon" space constructed by the procedure of G. Köthe [@7] from an increasing sequence of positive sequences $(b^n)=(b_i^{(n)})$.
+When, further, $E$ is the dual of a nuclear echelon space, or, more generally, if $E$ is the inductive limit (in the general sense) of a sequence of normed spaces $a^{(n)}\ell^1$ (where, for a given sequence $a^{(n)}=(a_i^{(n)})$, we write $a^{(n)}\ell^1$ to denote the set of sequences given by a product of $a^{(n)}$ with some summable sequence), then we can give an explicit exact criterion for $E\hotimes F$ to be bornological: _for $E\hotimes F$ to be bornological, it is necessary and sufficient that, for each integer $n_0>0$, there exist an integer $n>0$ such that, for every integer $m>0$ and every positive sequence $\lambda=(\lambda_i)\in E'$, there exists some $R>0$ such that, for every pair $(i,j)$ of indices, one of the two following inequalities holds:_
+$$
+  \lambda_i a_i^{(m)}b_j^{(m)} \leq Rb_j^{(n)}
+  \quad\mbox{or}\quad
+  Ra_i^{(n)}b^{(n)} \geq a_i^{(m)}b_j^{(n_0)}.
+$$
+This statement is perfectly manageable in all particular cases, despite its barbaric aspect.
+In [[PTT](#ref-PTT), chap. 2, §4, no .4], I apply this criterion to an interesting class of echelon spaces, including many interesting spaces in analysis.
+We find, for example, that, if $F$ is the space of holomorphic functions on an open subset $U$ of the complex plane, then $F'\hotimes F=\LL(F,F)$ is bornological if $U=\mathbb{C}$, but not bornological if $U$ is the unit circle!
+
+The most important consequence of this criterion is that the space $(s')\hotimes(s)$, where $(s)$ is the space of rapidly decreasing sequences, is bornological.
+\oldpage{112}
+Since $(s)$ is isomorphic, by the Hermite transform, to the space $\sSS(\RR^n)$ of "infinitely differentiable rapidly decreasing" functions on $\RR^n$, the space $\sSS'\otimes\sSS$ is also bornological.
+We can, for example, thus conclude that the spaces $(\sOO_M)$ and $(\sOO'_C)$ of L. Schwartz are bornological [[PTT](#ref-PTT), chap. 2, §4, no .4].
+So, combining this with the results of [§2.3](#section-2.3), we obtain the following:
+
+::: {.itenv #section-2-theorem-11 title="Theorem 11" latex="{Theorem 11}"}
+The spaces $(\sOO_M)$ and $(\sOO'_C)$ are bornological, complete, and nuclear, and their duals are bornological complete nuclear $\LF$ spaces.
+:::
