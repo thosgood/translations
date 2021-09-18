@@ -732,3 +732,34 @@ The _category of motives_ over $\QQ$ is the subcategory of the category of reali
 
 This definition is not really a definition, since "of geometric origin" has not been defined.
 Worse still, I do not have any definition to propose that I can confidently say is good.
+
+::: {.rmenv #chunk-1.12 title="1.12 Remark" latex="{1.12 Remark}"}
+We would hope that the realisations of motives have properties not included in the definition [(1.9)](#chunk-1.9) of realisation systems.
+Some reasons for not including them:
+
+a. we do not know how to verify them in practice;
+b. we no longer know how to prove [(1.10)](#chunk-1.10) if we do include them.
+
+Thus.
+
+i. We would like that, for almost all $p$, the Frobenius characteristic polynomial $\det(1-F_pt,M_\ell)$ at $p$ have rational coefficients that are independent of $\ell\neq p$.
+    It should also agree with $\det(1-\phi_pt,M_\crisp)$.
+    We do not know how to verify this for $\HH_\mot^i(X)$ (with $X$ smooth), nor for a direct factor of $\HH_\mot^i(X)$ (with $X$ an abelian variety), and reason (b) above also applies.
+
+ii. We would like to complete [(AM4)](#AM4) by a condition for all $p$, cf. 1.8.5 in [P. Deligne, "La conjecture de Weil II", _Publ. Math. IHES_ **52** (1980), 137--252].
+    Reasons (a) and (b) above also apply.
+
+iii. The Hodge structure $\Gr_n^W(M_\BB)$ should be polarisable.
+    More precisely, there should exist, for all $n$, a morphism of realisation systems
+    $$
+      \Gr_n^W(M)\otimes\Gr_n^W(M) \to \QQ(-n)
+    $$
+    (see [(2.1)](#chunk-2.1) for the definition of $\QQ(-n)$) that induces a polarisation of the weight-$n$ Hodge structure $\Gr_n^W(M_\BB)=\Gr_n^W(M_\BB)$.
+    Here, neither reason (a) nor reason (b) apply.
+:::
+
+\oldpage{98}
+
+::: {.rmenv #chunk-1.13 title="1.13 Remark" latex="{1.13 Remark}"}
+The
+:::
