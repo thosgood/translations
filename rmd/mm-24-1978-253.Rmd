@@ -28,6 +28,8 @@ favicon: "favicon.ico"
 \providecommand{\CC}{\mathbb{C}}
 \renewcommand{\hat}{\widehat}
 \providecommand{\Ker}{\operatorname{Ker}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\NN}{\mathbb{N}}
 
 <!-- Content -->
 
@@ -123,3 +125,16 @@ Some results from the present article have already been used in [@4] and [@7].
 
 Let $X=(X,\OO_X)$ be a locally ringed space.
 For $x\in X$, let $\frak{m}_x$ be the maximal ideal of the stalk $\OO_x$ of $X$ at the point $x$.
+We denote by $\scr{I}_X$ the $\OO_X$ ideal whose sections over an open subset $U$ of $X$ are exactly the elements of $\Gamma(U,\OO_X)$ such that $f_x\in\frak{m}_x$ for all $x\in X$.
+
+::: {.rmenv title="Definition" latex="{Definition}"}
+A locally ringed space $X=(X,\OO_X)$ over $\Spec\CC$ is called a *formal complex space* if the following conditions are satisfied:
+
+1. $X_n\coloneqq (X,\OO_X/\scr{I}_X^{n+1})$ is a complex space for all $n\in\NN$; and
+2. the canonical homomorphism $\OO_X\to\varinjlim_n\OO_X/\scr{I}_X^{n+1}$ is bijective.
+:::
+
+Formal complex spaces form a category, with $\CC$-morphisms as the morphisms.
+If $f\colon X\to Y$ is a morphism between formal complex spaces, then the associated homomorphisms $\OO_{Y,f(x)}\to\OO_{X,x}$ are local.
+In particular, we have that $\scr{I}_Y\OO_X\subseteq\scr{I}_X$.
+If $X$ is a complex space, then $\scr{I}_X=\scr{N}_X$ is the sheaf of nilpotent elements of $X$, and so every complex space is also a formal complex space.
