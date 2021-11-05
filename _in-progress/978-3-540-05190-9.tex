@@ -4496,9 +4496,102 @@ We call $\widetilde{\cal{V}}$ the \emph{canonical extension} of $\cal{V}$.
 \begin{proof}
 ---
   \begin{enumerate}[(a)]
-    \item Let
+    \item Let $e\colon\cal{O}^n\to\cal{V}$ be a (multiform) horizontal basis of $\cal{V}$, and $\cal{V}_1$ an extension of $\cal{V}$.
+      Condition~(i) implies that $e\colon\cal{O}^n\to\cal{V}_1|X^*$ has growth $\order((\log\|x\|)^k)$.
+      Condition~(ii) implies that the dual basis $e'\colon\cal{O}^n\to\cal{V}_1|X^*$ has growth at most $\order((\log\|x\|)^k)$.
+      If $\cal{V}_1$ and $\cal{V}_2$ are two extensions of $\cal{V}$ satisfying (i) and (ii), then the identity map $i$ of $\cal{V}$ fits into the commutative diagram
+      \[
+        \begin{tikzcd}
+          \cal{V}_1|X^*
+            \rar["i"] \dar[swap,"e^{-1}"]
+          & \cal{V}_2|X^*
+            \dar["e"]
+        \\\cal{O}^n
+            \rar[equal]
+          & \cal{O}^n
+        \end{tikzcd}
+      \]
+\oldpage{93}
+      By hypothesis, $e^{-1}$ and $e$, and thus $i$, have growth $\order((\log\|x\|)^k)$, and so $i$ is regular, and so $i^{-1}$ is also regular:
+      the identity of $\cal{V}$ extends to an isomorphism between $\cal{V}_1$ and $\cal{V}_2$.
+      This proves the uniqueness of $\widetilde{\cal{V}}$.
+
+    \item Let $\cal{V}_0$ be a vector space endowed with a unipotent action of $\pi_1(X^*)$, and let $-2\pi i U_i$ be the nilpotent determination of the logarithm of the action of $T_i$, i.e.
+      \[
+      \label{II.5.2.1}
+        U_i = \frac{1}{2\pi i}\sum\frac{(I-T_i)^k}{k}.
+      \tag{5.2.1}
+      \]
+
+      Let $\widetilde{\cal{V}}_0$ be the vector bundle on $X$ defined by $\cal{V}_0$, and endowed with the connection matrix
+      \[
+      \label{II.5.2.2}
+        \Gamma = \sum U_i\frac{\dd z_i}{z_i}.
+      \tag{5.2.2}
+      \]
+
+      The (multiform) horizontal sections of $\widetilde{\cal{V}}_0$ are of the form
+      \[
+      \label{II.5.2.3}
+        v(z) = \exp\left(-\sum(\log z_i) U_i\right)(v_0).
+      \tag{5.2.3}
+      \]
+      The exponential series reduces here to a finite sum, and thus to a polynomial in the $\log z_i$.
+
+      The vector bundle $\widetilde{\cal{V}}_0$ satisfies (i), (ii), (iii), and (iv).
+      Further, if $e_0$ is a basis of $\cal{V}_0$, then the relation between the coordinates of a section $v$ of $\widetilde{\cal{V}}_0$ in the basis $e_0$, or in the horizontal basis $e_1$ given by \hyperref[II.5.2.3]{(5.2.3)}, is given by
+      \[
+        \begin{cases}
+          e_0 &= \exp\left(\sum_{i=1}^n(\log z_i)U_i\right)e_1
+        \\e_1 &= \exp\left(\sum_{i=1}^n(\log z_i)U_i\right)e_0
+        \end{cases}
+      \]
+      and (c) is satisfied.
+      Finally, $\widetilde{\cal{V}}_0$ is an exact functor in $\cal{V}_0$, and its construction is compatible with $\otimes$, $\shHom$, $\wedge^p$, \ldots.
+      Given the dictionary in \hyperref[I.1.2]{(I.1.2)}, this proves (a), (c), and (d), and shows that (i)+(ii)$\implies$(iii)+(iv).
+
+    \item Let $\cal{V}_1$ be an extension of $\cal{V}$ satisfying (iii) and (iv).
+      To prove (i), we reduce to the case where $\cal{V}_1\sim\cal{O}^n$ is free.
+      Let $\Gamma$ be the connection matrix, and write
+      \[
+        \Gamma
+        = \sum\Gamma_{0,i}\frac{\dd z_i}{z_i} + \Gamma''
+        = \Gamma'+\Gamma''
+      \]
+      with $\Gamma_{0,i}$ constant, and $\Gamma''$ holomorphic.
+      Let $e$ be a (multiform) horizontal basis for the connection $\Gamma'$ (which is of the type considered in (b)).
+      If $a\cdot e$ is a (multiform) horizontal basis for $\Gamma$, then
+      \[
+        \nabla (a\cdot e)
+        = \dd a\cdot\nabla e + a\cdot\nabla e
+        = 0
+      \]
+      whence the bound
+      \[
+        |\dd a| \leq C^{te}|a|(\log\|z\|)^k.
+      \]
+      This proves that $\cal{V}_1$ satisfies (i), and (ii) follows by considering $\cal{V}_1^\vee$.
   \end{enumerate}
 \end{proof}
+
+\begin{rmenv}{5.3}
+\label{II.5.3}
+  If we do not suppose $\cal{V}$ to be unipotent along $Y$, then it is still possible to ``make'' an extension of $\cal{V}$ on $X$, but its construction, which is much more arbitrary, depends on the choice of a section $\tau$ of the projection of $\CC$ to $\CC/\ZZ$.
+  Choosing $\tau$ is equivalent to choosing a logarithm function: we set
+  \[
+    \log_\tau(x) = 2\pi i\tau\left(\frac{1}{2\pi i}\log z\right).
+  \]
+  One of the least bad choices is
+  \[
+  \label{II.5.3.1}
+    0 \leq \Re(\tau) < 1.
+  \tag{5.3.1}
+  \]
+\end{rmenv}
+
+\begin{itenv}{Proposition 5.4}
+\label{II.5.4}
+\end{itenv}
 
 
 
