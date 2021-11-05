@@ -138,3 +138,16 @@ Formal complex spaces form a category, with $\CC$-morphisms as the morphisms.
 If $f\colon X\to Y$ is a morphism between formal complex spaces, then the associated homomorphisms $\OO_{Y,f(x)}\to\OO_{X,x}$ are local.
 In particular, we have that $\scr{I}_Y\OO_X\subseteq\scr{I}_X$.
 If $X$ is a complex space, then $\scr{I}_X=\scr{N}_X$ is the sheaf of nilpotent elements of $X$, and so every complex space is also a formal complex space.
+
+As usual, we say that a subset of a complex space is Stein compact if it is a compact, semi-analytic subset that has an neighbourhood system of open Stein sets.
+This definition can be extended in a trivial way to formal complex spaces: A subset $K$ of a formal complex space $X$ is said to be *Stein compact* if $K$, regarded as a subset of the complex space $X_n$, is Stein compact, for all $n$.
+Because a complex space is Stein if and only if its reduction is, this condition only needs to be checked for $n=0$.
+
+\oldpage{5}
+
+The following lemma is fundamental for what follows.
+
+::: {.itenv title="Lemma 1.1" latex="{Lemma 1.1}"}
+Let $X=(X,\OO_X)$ be a formal complex space, and $K\subseteq X$ a Stein compact subset.
+Then the following hold:
+:::
