@@ -40,6 +40,7 @@ favicon: "favicon.ico"
 \providecommand{\crisp}{{\cris\,\,p}}
 \providecommand{\BB}{{\mathrm{B}}}
 \providecommand{\simto}{\xrightarrow{\sim}}
+\providecommand{\et}{\mathrm{et}}
 
 \providecommand{\Gal}{\operatorname{Gal}}
 \providecommand{\Lie}{\operatorname{Lie}}
@@ -459,7 +460,7 @@ $$
 $$
 :::
 
-\oldpage{91}
+\oldpage{13 (91)}
 giving rise to commutative diagrams
 $$
   \begin{CD}
@@ -501,7 +502,7 @@ However, the philosophy of motives is not made any less useful by this fact:
 it organises known facts, poses questions, and suggests precise conjectures.
 :::
 
-\oldpage{92}
+\oldpage{14 (92)}
 
 ::: {.rmenv #chunk-1.3 title="1.3" latex="{1.3}"}
 In each of the known theories, the $\HH^i(X)$ are endowed with an increasing filtration $W$, known as the _weight filtration_ [@D5], as well as comparison isomorphisms such that [(1.1.1)](#equation-1.1.1) and [(1.1.2)](#equation-1.1.2) are compatible with $W$.
@@ -536,7 +537,7 @@ _Terminology:_
 all the vector spaces are assumed to be of finite dimension;
 "_almost every_ prime number" means "all, except for a finite number".
 
-\oldpage{93}
+\oldpage{15 (93)}
 
 ::: {.trmenv #M1 title="(M1)" latex="{(M1)}"}
 A vector space $M_\BB$ over $\QQ$, called the _Betti realisation_.
@@ -606,7 +607,7 @@ These involutions, as well as the linear involution extending $F_\infty$, all co
 $$
   F_\infty = c_\BB c_\DR.
 $$
-\oldpage{94}
+\oldpage{16 (94)}
 In other words, $c_\DR$ respects $M_\BB\subset M_\BB\otimes\CC=M_\DR\otimes\CC$, and $c_\DR|M_\BB=F_\infty$.
 :::
 
@@ -646,7 +647,7 @@ We will often tacitly use these remarks to describe a system [(M1)--(M10)](#chun
 
 ::: {.rmenv #chunk-1.6 title="1.6" latex="{1.6}"}
 A scheme $X$ of finite type over $\QQ$ should define, for each $i$, a motive $M\coloneqq \HH_\mot^i(X)$.
-\oldpage{95}
+\oldpage{17 (95)}
 In this section, we will partially describe the system [(M1)--(M10)](#chunk-1.4) of realisations of $M$ in the case where $X$ is separated and smooth over $\QQ$.
 
 We have $M_\BB=\HH^i(X(\CC),\QQ)$, and $F_\infty$ is induced by the complex conjugation of $X(\CC)$;
@@ -678,7 +679,7 @@ For all $p$, we should also have a "crystalline" structure of the following type
 
 - **Semi-stable case.**
     Let $T_p$ be the Zariski tangent space of $\Spec(\ZZ_p)$ at its closed point.
-\oldpage{96}
+\oldpage{18 (96)}
     We complete it to a projective line $\overline{T}_p$ over $\FF_p$, and we can lift $(\overline{T}_p,0,\infty)$ to a projective line endowed with two marked points over $\ZZ_p$: $(\overline{T}_p^\sim,0,\infty)$.
     We want an $F$-isocrystal with logarithmic poles on $(\overline{T}_p,0,\infty)$ (cf. [@Fa]).
     Such an object induces, on $\overline{T}_p^\sim\otimes\QQ_p$, a module with connection $\cal{V}$ with logarithmic poles at $0$ and at $\infty$, and we want for the residue of the connection at $0$ and at $\infty$ to be nilpotent.
@@ -720,7 +721,7 @@ We also have a fibre functor, or, indeed, two: ${}_\BB$ and ${}_\DR$, with value
 The category of realisation systems is thus Tannakian and **TO-DO**: the fibre functor ${}_\BB$ (resp. ${}_\DR$) identifies it with the category of representations of the group scheme $G_\BB$ (resp. $G_\DR$) of its automorphisms (cf. [@Sa] or [@DM, Theorem 2.11]).
 :::
 
-\oldpage{97}
+\oldpage{19 (97)}
 
 We hope that the realisation functors define a fully faithful functor from the category of motives over $\QQ$ to the category of realisation systems.
 If this were not the case, then the philosophy of motives would lose much of its interest.
@@ -758,7 +759,7 @@ iii. The Hodge structure $\Gr_n^W(M_\BB)$ should be polarisable.
     Here, neither reason (a) nor reason (b) apply.
 :::
 
-\oldpage{98}
+\oldpage{20 (98)}
 
 ::: {.rmenv #chunk-1.13 title="1.13 Remark" latex="{1.13 Remark}"}
 The treatment of crystalline structures is not satisfying.
@@ -798,4 +799,44 @@ _Notation:_ we write $M_\ell$ (resp. $M_{\ZZ_\ell}$, $M_\AAf$) for $(M_\AAf)_\el
 
 If $M=\HH_\mot^i(X)$, and $a$ is the morphism $X\to\Spec(\QQ)$, then $M_\ell=\RR^ia_*\QQ_\ell$, and $M_{\ZZ_\ell}$ is equal to the image of $\RR^ia_*\ZZ_\ell$ in $M_\ell$.
 We have that $\RR^ia_*\ZZ_\ell(\bar{k})=\HH^i(X\otimes_\QQ\bar{k},\ZZ_\ell)$.
+
+::: {.trmenv #Mp4 title="(M'4)" latex="{(M'4)}"}
+For almost all primes $p$, an $F$-isocrystal $M_\crisp$ on $\FF_p$, i.e. a vector space $M_\crisp$ over $\QQ_p$ endowed with an automorphism $\phi_p$.
+:::
+
+\oldpage{21 (99)}
+
+::: {.trmenv #Mp5 title="(M'5)" latex="{(M'5)}"}
+Comparison isomorphisms
+$$
+  \begin{aligned}
+    \comp_{\DR,\BB}&\colon M_\BB(C)\otimes C \simto M_\DR\otimes C
+  \\\comp_{\AAf,\BB}&\colon M_\BB(C)\otimes\AAf \simto M_\AAf(\cQQ_C)
+  \\\comp_{\crisp,\DR}&\colon M_\DR\otimes\QQ_p \simto M_\crisp
+  \end{aligned}
+$$
+that are functorial in $C$, where $\cQQ_C$ is the algebraic closure of $\QQ$ in $C$.
+The first is equivalent to the data of $\comp_{\DR,\BB}$ as in [(M5)](#M5) satisfying [(AM2)](#AM2);
+the second is equivalent to the data of $\comp_{\AAf,\BB}$ as in [(M5)](#M5) satisfying [(AM5)](#AM5).
+:::
+
+In [(M'3)](#Mp3), instead of giving the $M_\AAf$, we could have given only the $\QQ_\ell$-sheaves $M_\ell$, replacing $\comp_{\AAf,\BB}$ by the $\comp_{\ell,\BB}\colon M_B(C)\otimes\QQ_\ell\simto M_\ell(\cQQ_C)$ and requiring the existence of an integer lattice $L\subset M_B(\CC)$ such that the $\comp_{\ell,\BB}(L\otimes\ZZ_\ell)$ be stable under $\Gal(\cQQ/\QQ)$.
+They define the $M_{\ZZ_\ell}$ of [(M'3)](#Mp3).
+
+::: {.trmenv #Mp6 title="(M'6)" latex="{(M'6)}"}
+$W$ is a filtration of the objects of [(M'1)](#Mp1) to [(M'4)](#Mp4), respected by the comparison isomorphisms.
+:::
+
+A definition essentially equivalent to [(1.9)](#chunk-1.9) is then the following: a _realisation system_ is a system [(M'1)](#Mp1) to [(M'6)](#Mp6), and [(M'8)](#Mp8), satisfying axioms [(AM1)](#AM1), [(AM2)](#AM2), and [(AM4)](#AM4) (suitably modified in the evident way).
+
+The data of [(M'1)](#Mp1) is equivalent to a sheaf of $\QQ$-vector spaces on the étale site of $\Spec\RR$.
+From this point of view, $\comp_{\ell,\BB}$ is an isomorphism to $\Spec(\RR)_\et$ between the inverse image of $M_\ell$ and the $\QQ_\ell$-sheaf induced by $M_\BB$.
+
+In the language of sheaves, [(AM3)](#AM3) implies that $M_\ell$ comes from a smooth $\QQ_\ell$-sheaf on $\Spec(\ZZ)\setminus S\setminus\{\ell\}$.
+The language of sheaves makes it clear that, for all $p$, $M_\ell$ defines a $\QQ_\ell$-sheaf on $\Spec(\QQ_p)$ (cf. the analogous case of $\RR$ below).
+The choice of a decomposition group is not required.
 ::::
+
+::: {.rmenv #chunk-1.5 title="1.15 Variant" latex="{1.15 Variant}"}
+Let $P$ be a finite set of prime numbers.
+:::
