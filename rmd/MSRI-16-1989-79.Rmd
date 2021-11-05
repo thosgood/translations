@@ -34,7 +34,7 @@ favicon: "favicon.ico"
 \providecommand{\CC}{\bb{C}}
 \providecommand{\FF}{\bb{F}}
 \providecommand{\QQ}{\bb{Q}}
-\providecommand{\cQQ}{\overline{\QQ}}
+\providecommand{\cQQ}{\bar{\QQ}}
 \providecommand{\DR}{{\mathrm{DR}}}
 \providecommand{\cris}{{\mathrm{cris}}}
 \providecommand{\crisp}{{\cris\,\,p}}
@@ -92,7 +92,7 @@ Understanding how $\Gal(\cQQ/\QQ)$ permutes the isomorphism classes of finite co
 "Essentially", since I have omitted mentioning the base points, and since the Galois covers have not been thought of as $G$-covers, for $G$ their automorphism group.
 
 Up until now, we have not had the language necessary to study the Galois action on $\hat{\pi}_1$.
-A. Grothendieck and his students have developed a combinatorial description ("charts") of finite covers of $X$, based on a decomposition of $\PP^1(\CC)$ into the two ``spherical triangles'' $\Im(z)\geq0$ and $\Im(z)\leq0$, with sides $[\infty,0]$, $[0,1]$, and $[1,\infty]$.
+A. Grothendieck and his students have developed a combinatorial description ("charts") of finite covers of $X$, based on a decomposition of $\PP^1(\CC)$ into the two "spherical triangles" $\Im(z)\geq0$ and $\Im(z)\leq0$, with sides $[\infty,0]$, $[0,1]$, and $[1,\infty]$.
 This has not helped in understanding the Galois action.
 We have only a few unresolved examples of covers whose Galois conjugates have been calculated.
 
@@ -766,6 +766,36 @@ In the definition of realisation systems, I have not included the data  given in
 I have nevertheless included the data of $\phi_p$, despite its appearance as a bizarre addition, because the calculations in [§19](#section-19) give an interesting result.
 :::
 
-::: {.rmenv #chunk-1.14 title="1.14" latex="{1.14}"}
-Here
+:::: {.rmenv #chunk-1.14 title="1.14" latex="{1.14}"}
+Here is a variant of the statement of [(1.4)](#chunk-1.4).
+This formulation, which is less elementary, highlights the role of $F_\infty$.
+
+::: {.trmenv #Mp1 title="(M'1)" latex="{(M'1)}"}
+To every algebraic closure $C$ of $\RR$ is attached, in a functorial way, $M_\BB(C)$.
 :::
+
+From [(M'1)](#Mp1) we deduce the data of [(M1)](#M1) and [(M7)](#M7) by setting $M_\BB\coloneqq M_\BB(\CC)$, and the taking $F_\infty$ induced by $z\mapsto\bar{z}\colon\CC\to\CC$.
+For $M=\HH_\mot^i(X)$, we will have $M_\BB(C)=\HH^i(X(C),\QQ)$.
+
+::: {.trmenv #Mp2 title="(M'2)" latex="{(M'2)}"}
+The same as [(M2)](#M2).
+:::
+
+::: {.trmenv #Mp8 title="(M'8)" latex="{(M'8)}"}
+The same as [(M8)](#M8).
+:::
+
+::: {.trmenv #Mp3 title="(M'3)" latex="{(M'3)}"}
+An $\AAf$-sheaf $M_\AAf$ on $\Spec(\QQ)$.
+:::
+
+By "$\AAf$-sheaf" we mean the data, for all $\ell$, of a $\QQ_\ell$-sheaf $\cal{F}_\ell$, and, for almost all $\ell$, of a $\ZZ_\ell$-sheaf $\cal{F}_{\ZZ_\ell}\subset\cal{F}_\ell$ which generates $\cal{F}_\ell$: the germ of the system of the $\cal{F}_{\ZZ_\ell}$ is given.
+On the spectrum of a field $k$, the data of $\cal{F}_\ell$ (resp. $\cal{F}_{\ZZ_\ell}$) is equivalent to that of, for every algebraic closure $\bar{k}$ of $k$, a $\QQ_\ell$-vector space $\cal{F}_\ell(\bar{k})$ (resp. a $\ZZ_\ell$-module $\cal{F}_{\ZZ_\ell}(\bar{k})$ of finite type), functorially in $\bar{k}$, and such that the action of $\Gal(\bar{k}/k)$ is continuous.
+Note that $\cal{F}_\AAf(\bar{k})$ is the restricted product of the $\cal{F}_\ell(\bar{k})$ with respect to the $\cal{F}_{\ZZ_\ell}(\bar{k})$.
+
+From [(M'3)](#Mp3), we deduce the data of [(M3)](#M3) and [(M9)](#M9) by setting $M_\AAf\coloneqq(M_\AAf)_\AAf(\cQQ)$.
+_Notation:_ we write $M_\ell$ (resp. $M_{\ZZ_\ell}$, $M_\AAf$) for $(M_\AAf)_\ell$ (resp. $(M_\AAf)_{\ZZ_\ell}$, $(M_\AAf)_\AAf$).
+
+If $M=\HH_\mot^i(X)$, and $a$ is the morphism $X\to\Spec(\QQ)$, then $M_\ell=\RR^ia_*\QQ_\ell$, and $M_{\ZZ_\ell}$ is equal to the image of $\RR^ia_*\ZZ_\ell$ in $M_\ell$.
+We have that $\RR^ia_*\ZZ_\ell(\bar{k})=\HH^i(X\otimes_\QQ\bar{k},\ZZ_\ell)$.
+::::
