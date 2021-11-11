@@ -4444,7 +4444,7 @@ By the Lefschetz principle, this does not reduce the level of generality.
 
 \begin{rmenv}{5.1}
 \label{II.5.1}
-  Let $D$ be the open unit disk, $D^*=D\setminus\{0\}$, $X=D^{n+m}$, $Y_i=\pr_i^{-1}(\{0\})$, and $Y=\bigcup_{i=1}^n Y_i$.
+  Let $D$ be the open unit disc, $D^*=D\setminus\{0\}$, $X=D^{n+m}$, $Y_i=\pr_i^{-1}(\{0\})$, and $Y=\bigcup_{i=1}^n Y_i$.
   Set $X^*=X\setminus Y=(D^*)^n\times D^m$.
   We have
   \[
@@ -4648,9 +4648,33 @@ We call $\widetilde{\cal{V}}$ the \emph{canonical extension} of $\cal{V}$.
 \label{II.5.5}
 ---
 \begin{enumerate}[(i)]
-  \item If
+  \item If we define $\tau$ by \hyperref[II.5.3.1]{(5.3.1)}, then $\widetilde{\cal{V}}(\tau)$ satisfies \hyperref[II.5.2]{(5.2)}~(c).
+    We also call this extension the \emph{canonical extension} of $\cal{V}$.
+\oldpage{96}
+  \item An extension of the form $\widetilde{\cal{V}}(\tau)$ has the property that, in a suitable basis of $\widetilde{\cal{V}}(\tau)$, the connection matrix takes the form
+    \[
+      \Gamma = \sum_i\Gamma_i\frac{\dd z_i}{z_i}
+    \]
+    where the $\Gamma_i$ are connection matrices that pairwise commute.
 \end{enumerate}
 \end{rmenv}
+
+\begin{itenv}{Corollary 5.6}
+\label{II.5.6}
+  \emph{(N.~Katz).}
+  Let $\cal{V}$ be a vector bundle on the unit disc $D$, and $\Gamma$ a connection on $\cal{V}|D^*$ whose matrix presents a simple pole at $0$.
+  Suppose that, for any distinct eigenvalues $\alpha$ and $\beta$ of $\Res(\Gamma)$, we have $\alpha-\beta\in\ZZ$.
+  Then the monodromy transformation $T$ is conjugate, in the linear group, to $\exp(-2\pi i\Res(\Gamma))$.
+\end{itenv}
+
+\begin{proof}
+  By \hyperref[II.5.4]{(5.4)}, $\cal{V}$ is of the form $\widetilde{\cal{V}}_0(\tau)$ for some suitable $\cal{V}_0$;
+  we conclude by direct calculation \hyperref[II.1.17.1]{(1.17.1)}.
+\end{proof}
+
+\begin{itenv}{Proposition 5.7}
+  Let
+\end{itenv}
 
 
 
