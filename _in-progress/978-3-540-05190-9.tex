@@ -4594,7 +4594,43 @@ We call $\widetilde{\cal{V}}$ the \emph{canonical extension} of $\cal{V}$.
   \emph{(Manin \cite{19}).}
   Let $\tau$ be as in \hyperref[II.5.3]{(5.3)}, and let $\cal{V}$ be a vector bundle with an integrable connection on $X^*$.
   Then there exists a unique extension $\widetilde{\cal{V}}(\tau)$ of the vector bundle $\cal{V}$ to a vector bundle on $X$ that satisfies the following conditions:
+  \begin{enumerate}[(i)]
+    \item The connection matrix of $\cal{V}$, in an arbitrary local basis of $\widetilde{\cal{V}}(\tau)$, presents at worst a logarithmic pole along $Y$;
+    \item The residue $\Res_i(\Gamma)$ of the connection along $Y_i$ (for $1\leq i\leq n$) has eigenvalues in the image of $\tau$.
+  \end{enumerate}
+
+  The extension $\widetilde{\cal{V}}(\tau)$ of $\cal{V}$ is functorial and exact in $\cal{V}$.
+
+  (We note that the construction of $\widetilde{\cal{V}}(\tau)$ is not, in general, compatible with $\otimes$.)
 \end{itenv}
+
+\oldpage{95}
+
+\begin{proof}
+  For every homomorphism $\lambda\colon\pi_1(X^*)\to\CC^*$, let $U_{\lambda,\tau}$ (or simply $U_\lambda$) be the vector bundle $\cal{O}$ on $X$ endowed with the connection matrix
+  \[
+    \Gamma_\lambda = \sum\frac{-1}{2\pi i}(\log_\tau\lambda(T_i))\frac{\dd z_i}{z_i}.
+  \]
+
+  By construction, $U_\lambda$ satisfies (i) and (ii), and admits $\lambda$ as its monodromy.
+
+  Let $\cal{V}$ be an arbitrary vector bundle with integrable connection on $X^*$.
+  Then $\cal{V}$ admits a unique decomposition
+  \[
+    V \simeq \bigoplus_\lambda (U_\lambda|X^*)\otimes\cal{V}_\lambda
+  \]
+  with $\cal{V}_\lambda$ unipotent along $Y$.
+  The direct factor $(U_\lambda|X^*)\otimes\cal{V}_\lambda$ of $\cal{V}$ is the largest sub-bundle of $\cal{V}$ on which the $T_i-\lambda(T_i)$ are nilpotent.
+  The extension (cf. \hyperref[II.5.2]{(5.2)})
+  \[
+  \label{II.5.4.1}
+    \widetilde{\cal{V}}_\tau = \bigoplus_\lambda U_\lambda\otimes\widetilde{\cal{V}}_\lambda
+  \tag{5.4.1}
+  \]
+  of $\cal{V}$ satisfies (i) and (ii), and is exact and functorial in $\cal{V}$.
+
+  To prove that the extension problem has only one solution, it suffices to prove this locally on $Y$ outside of a subset of codimension~$\geq2$ in $X$.
+\end{proof}
 
 
 
