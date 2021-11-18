@@ -10,6 +10,9 @@ csl: maths-translations.csl
 reference-section-title: "Bibliography"
 github-repo: "thosgood/translations"
 favicon: "favicon.ico"
+output:
+  bookdown::pdf_book:
+    toc: false
 ---
 
 ```{r, child = '_translator-note.Rmd'}
@@ -43,20 +46,24 @@ This dictionary has, as its most notable sources sources, [@3] and the conjectur
 Up until now, it has mainly served to formulate conjectures in Hodge theory, and it has sometimes even suggested a proof.
 
 
-# 1 {- #section-1}
+# 1 {.unnumbered #section-1}
 
 ::: {.rmenv #definition-1.1 title="Definition 1.1" latex="{Definition 1.1}"}
 A *mixed Hodge structure $H$* consists of
 
 a. a $\ZZ$-module $H_\ZZ$ of finite type (the "*integer lattice*");
+
 b. a finite increasing filtration $W$ of $H_\QQ = H_\ZZ\otimes\QQ$ (the "*weight filtration*");
+
 c. a finite decreasing filtration $F$ of $H_\CC = H_\ZZ\otimes\CC$ (the "*Hodge filtration*").
 
 This data is subject to the following condition:
 there exists a (unique) bigradation of $\Gr_W(H_\CC)$ by subspaces $H^{p,q}$ such that
 
 i. $\Gr_W^n(H_\CC) = \bigoplus_{p+q=n}H^{p,q}$
+
 ii. the filtration $F$ induces on $\Gr_W(H_\CC)$ the filtration \[\Gr_W(F)^p = \bigoplus_{p'\geq p} H^{p',q'}\]
+
 iii. $\overline{H^{pq}}=H^{qp}$.
 :::
 
@@ -78,7 +85,7 @@ We can show that mixed Hodge structures form an abelian category.
 If $f\colon H\to H'$ is a morphism, then $f_\QQ$ and $f_\CC$ are strictly compatible with the filtrations $W$ and $F$ (cf. [@1, s. 2.3.5]).
 
 
-# 2 {- #section-2}
+# 2 {.unnumbered #section-2}
 
 Let $A$ be a normal integral ring of finite type over $\ZZ$, with field of fractions $K$, and $\overline{K}$ an algebraic closure of $K$.
 \oldpage{426}
@@ -117,7 +124,7 @@ It is trivial that every morphism $f\colon H\to H'$ is strictly compatible with 
 [Principle 2.1](#principle-2.1) agrees with the fact that every extension of $\mathbb{G}_m$ ("weight $-2$") by an abelian variety ("weight $-1>-2$") is trivial.
 
 
-# 3 {- #section-3}
+# 3 {.unnumbered #section-3}
 
 ::: {.rmenv #translation title="Translation" latex="{Translation}"}
 The Galois modules that appear in $l$-adic cohomology have, as analogues, over $\CC$, mixed Hodge structures.
@@ -132,7 +139,7 @@ We further have the dictionary
 :::
 
 
-# 4 {- #section-4}
+# 4 {.unnumbered #section-4}
 
 Let $X$ be a complex algebraic variety (i.e. a scheme of finite type over $\CC$ that we assume to be separated).
 Then there exists a subfield $K$ of $\CC$, of finite type over $\QQ$, such that $X$ can be defined over $K$ (i.e. it comes from an extension of scalars of $K$ to $\CC$ applied to a $K$-scheme $X'$).
@@ -161,7 +168,7 @@ $$
 $$
 
 
-# 5 {- #section-5}
+# 5 {.unnumbered #section-5}
 
 If $f\colon H\to H'$ is a Galois-compatible morphism between $\QQ_l$-vector spaces of different weights, then $f=0$.
 Similarly, if $f\colon H\to H'$ is a morphism of pure mixed Hodge structures of different weights, then $f$ is torsion.
@@ -174,7 +181,7 @@ Then $f=0$.
 :::
 
 
-# 6 {- #section-6}
+# 6 {.unnumbered #section-6}
 
 Let $X$ be a smooth projective variety over $\CC$, let $D=\sum_1^n D_i$ a normal crossing divisor in $X$, with $D_i$ all smooth divisors, and let $j$ be the inclusion of $U=X\setminus D$ into $X$.
 For $Q\subset[1,n]$, we set $D_q=\bigcap_{i\in Q}D_i$.
@@ -203,7 +210,7 @@ $$
 $$
 
 
-# 7 {- #section-7}
+# 7 {.unnumbered #section-7}
 
 In integer cohomology, for the usual topology, the Leray spectral sequence for $j$ is of the form
 $$
@@ -229,7 +236,7 @@ In fact, to endow the cohomology groups $H^\bullet$ with a mixed Hodge structure
 $E_2^{pq}$ should then carry a natural Hodge structure (of weight $p+2q$), and the filtration $W$ is the abutment of $E$.
 
 
-# 8 {- #section-8}
+# 8 {.unnumbered #section-8}
 
 Let $\Spec(V)$ be the spectrum of a Henselian discrete valuation ring (a *Henselian trait*) with field of fractions $K$, and residue field $k$ that is of finite type over the prime field of characteristic $p$.
 Let $\overline{K}$ be an algebraic closure of $K$, and let $H$ be a vector space of finite dimension over $\QQ_l$ (for $l\neq p$), on which $\Gal(\overline{K}/K)$ acts continuously.
@@ -277,7 +284,7 @@ $L$ increases the degree by $2$, and $\Gr M$ (8.4) decreases it by $2$.
 :::
 
 
-# 9 {- #section-9}
+# 9 {.unnumbered #section-9}
 
 Let $D$ be the unit disc, $D^*=D\setminus\{0\}$, and $X$
 $$
