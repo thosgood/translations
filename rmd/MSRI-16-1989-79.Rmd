@@ -38,9 +38,11 @@ favicon: "favicon.ico"
 \providecommand{\DR}{{\mathrm{DR}}}
 \providecommand{\cris}{{\mathrm{cris}}}
 \providecommand{\crisp}{{\cris\,\,p}}
+\providecommand{\crisv}{{\cris\,\,v}}
 \providecommand{\BB}{{\mathrm{B}}}
 \providecommand{\simto}{\xrightarrow{\sim}}
 \providecommand{\et}{\mathrm{et}}
+\providecommand{\OO}{\cal{O}}
 
 \providecommand{\Gal}{\operatorname{Gal}}
 \providecommand{\Lie}{\operatorname{Lie}}
@@ -860,8 +862,116 @@ The case where $S$ is open in the spectrum of the ring of integers of a number f
 For $S$ finite and étale over an open of $\Spec(\ZZ)$, we can also reduce to [(1.15)](#chunk-1.15): see [(1.17)](#chunk-1.17).
 :::
 
-::: {.rmenv #chunk-1.16 title="1.16 Example" latex="{1.16 Example}"}
+:::: {.rmenv #chunk-1.16 title="1.16 Example" latex="{1.16 Example}"}
 (The motivic $\HH^0$ of the spectrum of a number field).
 
 Let $E$ be a finite extension of $\QQ$, unramified outside of a finite set $P$ of prime numbers.
+We are going to expand on [(1.6)](#chunk-1.6) for $\Spec(E)$ and, more precisely, define a realisation system $A\coloneqq\HH_\mot^0(\Spec(E))$ that is smooth over $\Spec(\ZZ)\setminus P$.
+The motive $A$ is of Hodge type $(0,0)$.
+This determines $W$ and $F$.
+We have that $A_\DR=E$, viewed as a vector space over $\QQ$.
+
+Let $\Hom(E,\CC)=\Spec(E)(\CC)$ be the set of homomorphisms (which are automatically embeddings) from $E$ to $\CC$.
+We have that $A_\BB=\QQ^{\Hom(E,\CC)}$, with $F_\intfy$ induced by the complex conjugation of $\CC$.
+The comparison isomorphism $\DR/\BB$ from $A_\BB\otimes\CC=\CC^{\Hom(E,\CC)}$ to $A_\DR\otimes\CC=E\otimes\CC$ is the $\CC$-linear extension of the map
+$$
+  \begin{aligned}
+    E &\longrightarrow \CC^{\Hom(E,\CC)}
+  \\e &\longmapsto (\sigma\mapsto\sigma(e)).
+  \end{aligned}
+$$
+
+Since every embedding of $E$ into $\CC$ factors through $\cQQ$, $\Gal(\cQQ/\QQ)$ acts on $\Hom(E,\CC)$,
+This action induces the Galois action on $A_\AAf\coloneqq A_\BB\otimes\AAf$ (cf. [(1.5.ii)](#chunk-1.5)).
+
+For $p\not\in P$, and $v$ running over the places of $E$ over $p$, we have that $E\otimes\QQ_p=\prod E_v$, and $\phi_p$ is the automorphism of $E\otimes\QQ_p$ that induces on each $E_v$ the unique lift of the Frobenius $x\mapsto x^p$ of the residue field (cf. [(1.5.iii)](#chunk-1.5)).
+
+\oldpage{23 (101)}
+
+The motive $A$ is endowed with a product
+::: {.eqtag #equation-1.16.1}
+$$
+  A\otimes A\to A
+\tag{1.16.1}
+$$
+:::
+namely the cup product, which makes $A$ a commutative ring with unit in the Tannakian category of motives (cf. [(5.3)](#chunk-5.3)).
+On $A_\DR=E$, it is the product.
+On $A_\BB$, it is given by $(q_1(\sigma))(q_2(\sigma))=(q_1(\sigma)q_2(\sigma))$.
+::::
+
+::: {.rmenv #chunk-1.17 title="1.17 Definition" latex="{1.17 Definition}"}
+Let $\OO$ be the ring of $P$-integers of $E$.
+With the above notation, a _smooth realisation system on $\Spec(\OO)$_ is a realisation system $N$ on $\Spec(\ZZ)\setminus P$ (cf. [(1.15)](#chunk-1.15)) endowed with the structure of an $A$-module $A\otimes N\to N$ (cf. [(5.3)](#chunk-5.3)) over $A\coloneqq\HH_\mot^0(\Spec(E))$.
+:::
+
+Similarly for "motive" and "over $\Spec(E)$" (taking the limit over $P$).
+
+:::: {.rmenv #chunk-1.18 title="1.18" latex="{1.18}"}
+We will now show how a realisation system $N$, smooth over $S=\Spec(\OO)$ (as in [(1.17)](#chunk-1.17)), can be described in terms of a *realisation system over $E$*, of the following type.
+
+::: {.trmenv #M17E title="(M1,7)<sub>E</sub>" latex="{(M1,7)\textsubscript{E}}"}
+For each embedding $\sigma$ of $E$ into $\CC$, a vector space $M_\sigma$ over $\QQ$, the Betti realisation with respect to $\sigma$, and an involutive system of isomorphisms $F_\infty\colon M_\sigma\simto M_{\bar{\sigma}}$.
+:::
+
+We have $N_\BB=\bigoplus M_\sigma$, with the evident structure of a module over $A_\BB=\QQ^{\Hom(E,\CC)}$, and $F_\infty$ is the sum of the $F_\infty$.
+As in [(1.14)](#chunk-1.14), we have a variant:
+
+::: {.trmenv #Mp1E title="(M'1)<sub>E</sub>" latex="{(M'1)\textsubscript{E}}"}
+For each embedding of $E$ into an algebraic closure $C$ of $\RR$, a vector space $M_\sigma$ over $\QQ$, functorial in $C$.
+:::
+
+::: {.trmenv #Mp2E title="(M'2)<sub>E</sub>" latex="{(M'2)\textsubscript{E}}"}
+An $E$-vector space $M_\DR$.
+:::
+
+::: {.trmenv #Mp8E title="(M'8)<sub>E</sub>" latex="{(M'8)\textsubscript{E}}"}
+A filtration $F$ of $M_\DR$, the Hodge filtration.
+:::
+
+We have $N_\DR=M_\DR$, with the structure of an $A_\DR$-module given by that of the vector space over $E$.
+
+::: {.trmenv #Mp3E title="(M'3)<sub>E</sub>" latex="{(M'3)\textsubscript{E}}"}
+(cf. [(M3)](#M3), [(M9)](#M9)) An $\AAf$-sheaf $M_\AAf$ on $\Spec(E)$ (cf. [(1.14)](#chunk-1.14)).
+:::
+
+We define $N_\AAf$ as its direct image over $\Spec(\QQ)$: $N_\AAf(\cQQ)$ is the sum over the $\sigma\colon E\to\cQQ$ of the $M_AAf(\cQQ)$.
+
+::: {.trmenv #Mp3E title="(M'3)<sub>E</sub>" latex="{(M'3)\textsubscript{E}}"}
+For each place $v$ of $E$ over $p\not\in P$, a vector space $M_\crisv$ over the completion $E_v$ of $E$ at $v$.
+Let $F_v^*$ be the automorphism of $E_v$ that induces $x\mapsto x^p$ on the residue field.
+We give an $F_v^*$-linear $\phi_v\colon M_\crisv\mapsto M_\crisv$.
+:::
+
+We have $E\otimes\QQ_p=\bigoplus_{v|p}E_v$, and $N_\crisp$ is the sum of the $M_\crisv$.
+
+\oldpage{24 (102)}
+
+::: {.trmenv #Mp5E title="(M'5)<sub>E</sub>" latex="{(M'5)\textsubscript{E}}"}
+Comparison isomorphisms
+$$
+  \begin{aligned}
+    \comp_{\DR,\sigma}\colon M_\sigma(C)\otimes C
+    &\simto M_\DR\otimes_{E,\sigma}C
+  \\\comp_{\AAf,\sigma}\colon M_{\sigma}\otimes\AAf
+    &\simto M_\AAf(\bar{E}_C)
+  \end{aligned}
+$$
+both functorial in $C$ (where $\bar{E}_C$ is the algebraic closure of $E$ in $C$, with respect to $\sigma$), as well as
+$$
+  \comp_{\crisv,\DR}\colon M_\DR\otimes_E E_v \simto M_\crisv.
+$$
+:::
+
+By summing over $\sigma$ (resp. $v$), these give [(M'5)](#Mp5).
+
+::: {.trmenv #Mp6E title="(M'6)<sub>E</sub>" latex="{(M'6)\textsubscript{E}}"}
+$W$ is a filtration of the objects [(M'1)<sub>E</sub>](#Mp1E), [(M'2)<sub>E</sub>](#Mp2E), [(M'3)<sub>E</sub>](#Mp3E), and [(M'4)<sub>E</sub>](#Mp4E), respected by the comparison isomorphisms.
+:::
+
+We leave to the reader the task of translating axioms [(AM1)](#AM1), [(AM3)](#AM3), and [(AM4)](#AM4), which remain to be imposed, into this language (cf. [(1.14)](#chunk-1.14)).
+::::
+
+::: {.rmenv #chunk-1.19 title="1.19" latex="{1.19}"}
+With
 :::
