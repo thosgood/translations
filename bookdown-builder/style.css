@@ -118,8 +118,8 @@ p.date {
   background-color: inherit !important;
   padding: 0;
 }
-.page-inner code:before,
-.page-inner code:after {
+.page-inner code::before,
+.page-inner code::after {
   letter-spacing: 0 !important;
   content: '' !important;
 }
@@ -169,10 +169,10 @@ p.date {
   font-style: normal;
 }
 
-.itenv:before,
-.rmenv:before,
-.titenv:before,
-.trmenv:before {
+.itenv::before,
+.rmenv::before,
+.titenv::before,
+.trmenv::before {
   content: attr(title)".";
   font-style: normal;
   font-weight: bold;

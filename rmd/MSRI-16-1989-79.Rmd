@@ -910,34 +910,34 @@ Similarly for "motive" and "over $\Spec(E)$" (taking the limit over $P$).
 :::: {.rmenv #chunk-1.18 title="1.18" latex="{1.18}"}
 We will now show how a realisation system $N$, smooth over $S=\Spec(\OO)$ (as in [(1.17)](#chunk-1.17)), can be described in terms of a *realisation system over $E$*, of the following type.
 
-::: {.trmenv #M17E title="(M1,7)<sub>E</sub>" latex="{(M1,7)\textsubscript{E}}"}
+::: {.trmenv #M17E title="(M1,7)E" latex="{(M1,7)\textsubscript{E}}"}
 For each embedding $\sigma$ of $E$ into $\CC$, a vector space $M_\sigma$ over $\QQ$, the Betti realisation with respect to $\sigma$, and an involutive system of isomorphisms $F_\infty\colon M_\sigma\simto M_{\bar{\sigma}}$.
 :::
 
 We have $N_\BB=\bigoplus M_\sigma$, with the evident structure of a module over $A_\BB=\QQ^{\Hom(E,\CC)}$, and $F_\infty$ is the sum of the $F_\infty$.
 As in [(1.14)](#chunk-1.14), we have a variant:
 
-::: {.trmenv #Mp1E title="(M'1)<sub>E</sub>" latex="{(M'1)\textsubscript{E}}"}
+::: {.trmenv #Mp1E title="(M'1)E" latex="{(M'1)\textsubscript{E}}"}
 For each embedding of $E$ into an algebraic closure $C$ of $\RR$, a vector space $M_\sigma$ over $\QQ$, functorial in $C$.
 :::
 
-::: {.trmenv #Mp2E title="(M'2)<sub>E</sub>" latex="{(M'2)\textsubscript{E}}"}
+::: {.trmenv #Mp2E title="(M'2)E" latex="{(M'2)\textsubscript{E}}"}
 An $E$-vector space $M_\DR$.
 :::
 
-::: {.trmenv #Mp8E title="(M'8)<sub>E</sub>" latex="{(M'8)\textsubscript{E}}"}
+::: {.trmenv #Mp8E title="(M'8)E" latex="{(M'8)\textsubscript{E}}"}
 A filtration $F$ of $M_\DR$, the Hodge filtration.
 :::
 
 We have $N_\DR=M_\DR$, with the structure of an $A_\DR$-module given by that of the vector space over $E$.
 
-::: {.trmenv #Mp3E title="(M'3)<sub>E</sub>" latex="{(M'3)\textsubscript{E}}"}
+::: {.trmenv #Mp3E title="(M'3)E" latex="{(M'3)\textsubscript{E}}"}
 (cf. [(M3)](#M3), [(M9)](#M9)) An $\AAf$-sheaf $M_\AAf$ on $\Spec(E)$ (cf. [(1.14)](#chunk-1.14)).
 :::
 
 We define $N_\AAf$ as its direct image over $\Spec(\QQ)$: $N_\AAf(\cQQ)$ is the sum over the $\sigma\colon E\to\cQQ$ of the $M_AAf(\cQQ)$.
 
-::: {.trmenv #Mp3E title="(M'3)<sub>E</sub>" latex="{(M'3)\textsubscript{E}}"}
+::: {.trmenv #Mp3E title="(M'3)E" latex="{(M'3)\textsubscript{E}}"}
 For each place $v$ of $E$ over $p\not\in P$, a vector space $M_\crisv$ over the completion $E_v$ of $E$ at $v$.
 Let $F_v^*$ be the automorphism of $E_v$ that induces $x\mapsto x^p$ on the residue field.
 We give an $F_v^*$-linear $\phi_v\colon M_\crisv\mapsto M_\crisv$.
@@ -947,7 +947,7 @@ We have $E\otimes\QQ_p=\bigoplus_{v|p}E_v$, and $N_\crisp$ is the sum of the $M_
 
 \oldpage{24 (102)}
 
-::: {.trmenv #Mp5E title="(M'5)<sub>E</sub>" latex="{(M'5)\textsubscript{E}}"}
+::: {.trmenv #Mp5E title="(M'5)E" latex="{(M'5)\textsubscript{E}}"}
 Comparison isomorphisms
 $$
   \begin{aligned}
@@ -965,8 +965,8 @@ $$
 
 By summing over $\sigma$ (resp. $v$), these give [(M'5)](#Mp5).
 
-::: {.trmenv #Mp6E title="(M'6)<sub>E</sub>" latex="{(M'6)\textsubscript{E}}"}
-$W$ is a filtration of the objects [(M'1)<sub>E</sub>](#Mp1E), [(M'2)<sub>E</sub>](#Mp2E), [(M'3)<sub>E</sub>](#Mp3E), and [(M'4)<sub>E</sub>](#Mp4E), respected by the comparison isomorphisms.
+::: {.trmenv #Mp6E title="(M'6)E" latex="{(M'6)\textsubscript{E}}"}
+$W$ is a filtration of the objects [(M'1)E](#Mp1E), [(M'2)E](#Mp2E), [(M'3)E](#Mp3E), and [(M'4)E](#Mp4E), respected by the comparison isomorphisms.
 :::
 
 We leave to the reader the task of translating axioms [(AM1)](#AM1), [(AM3)](#AM3), and [(AM4)](#AM4), which remain to be imposed, into this language (cf. [(1.14)](#chunk-1.14)).
