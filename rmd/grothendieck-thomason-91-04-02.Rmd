@@ -27,6 +27,9 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 <!-- Shortcuts -->
 
+\providecommand{\Cat}{\mathsf{Cat}}
+\providecommand{\Fl}{\operatorname{Fl}}
+
 <!-- Content -->
 
 *Les Aumettes, 2nd of April 1991.*
@@ -44,3 +47,24 @@ But all this seems to me part of the domain of the tool, and I would prefer, in 
 The main ideas were, for the most part, born over 25 years ago, and I see the enduring seedlings of them in my solitary reflections from the years '56 and '57, when I first had the need of categories of "coefficients" that were less prohibitively large than the interminable complexes of chains or of cochains, and the idea (after long periods of perplexity) of constructing such categories via passing to a category of fractions (a notion that had to be invented by considering concrete elements) by "inverting" the quasi-isomorphisms.
 The principal conceptual work that remained to be done --- and that now seems to me as equally fascinating (as much as for its beauty as for its evident impact on the foundations of a cohomological algebra in the spirit of a theory of cohomological coefficients) as in the times of my first loves with cohomology --- was to clarify the intrinsic structure of these categories.
 The fact that this work, that I had confided to Verdier around 1960, and that was meant to be the subject of his thesis [@13], had still not yet been done, even in the case of ordinary and abelian derived categories, which nevertheless have ended up (by necessity) being used daily in both geometry and analysis, says a lot about the state of mentality in the mathematical community with regards to foundations.
+
+This mood of contempt for essential foundational work (and, more generally, for anything that does not follow the fashion of the moment), I mentioned in my last letter, and I also come back to it many times in the pages of *Récoltes et Semailles* [@8], and it is one thing (amongst many others) that quite is simply beyond me.
+Your response to my letter shows that you absolutely did not understand.
+It wasn't a letter to "complain" about this, or to say that it bothered me.
+But it was an impossible attempt to share a pain.
+I knew deep down that it was hopeless;
+for everybody shuns pain, that is, shuns knowledge (for there is no knowledge from the soul that is free from pain).
+A very rare attempt, possibly the only one in my life (at least, I can't remember another), and probably the last...
+
+There are two directions of ideas, intimately linked, that I want to talk to you about, and that I have been especially keen to develop since the end of October (when I resumed mathematical reflection [@9] for an indefinite period).
+They are already sketched out here and there (along with a number of other key ideas of topological algebra) in *Pursuing Stacks* [@6, Section 69].
+In this 1983 reflection, which has helped me a lot these days, I end up spreading myself rather thin by following lateral paths, rather than returning to the essential ideas of my initial point.
+As another useful source for anybody interested in these basic questions, I point to two or three letters to Larry Breen, which I thought that I would include in the published text of *Pursuing Stacks* [@7].
+On the one hand, I would like to talk to you about categories of models and the notion of "derivators" (replacing the defunct "derived categories" of Verdier, which are decidedly inadequate for our needs).
+On the other hand, I have a lot to say about $\Cat$ as a category of models for all kinds of "homotopy types".
+But this will probably be for another time (assuming that your interest survives reading this letter).
+So today it will be the category of models and the notion of a derivator.
+
+
+# The only essential structure of a category of models is the data of the "localiser" $W\subset\Fl(\cal{M})$
+
