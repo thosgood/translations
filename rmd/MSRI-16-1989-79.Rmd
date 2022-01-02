@@ -65,6 +65,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 <!-- Content -->
 
+
 # Leitfaden {.unnumbered .unlisted}
 
 ```{r leitfaden,engine='tikz',engine.opts=list(template="tikz2pdf.tex"),fig.width=6}
@@ -450,7 +451,7 @@ The known theories would then be deduced from the motivic theory by applying _re
 
 The category $\cal{M}(k)$ should be an abelian category, with $\Hom$ groups of finite dimension over $\QQ$.
 It should be endowed with a tensor product $\otimes\colon\cal{M}(k)\times\cal{M}(k)\to\cal{M}(k)$ and associativity and commutative data $(X\otimes Y)\otimes Z\simto X\otimes(Y\otimes Z)$ and $X\otimes Y\to Y\otimes X$ satisfying the usual properties
---- more precisely, making $\cal{M}(k)$ into a Tannakian category [@S; @DM; @D4].
+--- more precisely, making $\cal{M}(k)$ into a Tannakian category [@Sa; @DM; @D4].
 By the theory of Tannakian categories, $\cal{M}(k)$ would be the category of representations of a gerbe whose band is affine over $\Spec(\QQ)$.
 For $k$ of characteristic $0$, the category $\cal{M}(k)$ with its tensor product should be equivalent to the category of representations of an scheme in affine groups (i.e. a proalgebraically affine group) over $\QQ$.
 
