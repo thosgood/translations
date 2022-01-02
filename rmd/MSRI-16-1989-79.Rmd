@@ -16,16 +16,6 @@ favicon: "favicon.ico"
 $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 ```
 
-```{r echo=FALSE,warning=FALSE}
- library(knitr)
-  opts_chunk$set(cache=TRUE,
-                 echo=FALSE,
-                 fig.pos='H',
-                 fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png',
-                 fig.align='center'
-                )
-```
-
 ```{r, child = '_translator-note.Rmd'}
 ```
 
@@ -80,12 +70,18 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 **!!!TO-DO!!!**
 
-```{r,engine='tikz',fig.width=6}
-\usetikzlibrary{cd}
-\begin{equation*}
-  \ldots
-\end{equation*}
-```
+  <!-- \begin{tikzcd}[row sep=1em]
+    1 \ar[dd, no head] & 4 \ar[d, no head] & & 9 \ar[d, no head] &
+  \\& 5 \ar[d, no head] & & 10 \ar[dl, no head] \ar[dr, no head] &
+  \\2 \ar[dd, no head] \ar[dr, no head] & 6 \ar[d, no head] & 11 \ar[ddr, no head] & & 12 \ar[ddl, no head]
+  \\& 7 \ar[d, no head] \ar[drr, no head] & & &
+  \\3 \ar[dddddrr, no head] & 8 & & 13 \ar[d, no head] &
+  \\ & & & 14 \ar[d, no head] &
+  \\ & & & 15 \ar[d, no head] &
+  \\ & & & 16 \ar[d, no head] \ar[dr, no head] \ar[ddl, no head] &
+  \\ & & & 17 \ar[dl, no head, dashed] & 18
+  \\ & & 19 & &
+  \end{tikzcd} -->
 
 
 # Introduction {-}
