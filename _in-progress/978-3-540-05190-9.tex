@@ -4674,7 +4674,44 @@ We call $\widetilde{\cal{V}}$ the \emph{canonical extension} of $\cal{V}$.
 
 \begin{itenv}{Proposition 5.7}
 \label{II.5.7}
-  Let $X$ be a complex-analytic space, 
+  Let $X$ be a complex-analytic space, $Y$ a closed subspace of $X$ such that $X^*=X\setminus Y$ is smooth, $j$ the inclusion of $X^*$ into $X$, and $\cal{V}$ a vector bundle with integrable connection $\nabla$ on $X^*$.
+  We denote by $e$ a horizontal (multiform) basis of $\cal{V}$, and by $\|\cdot\|$ a norm on $X^*$ with respect to $Y$.
+  Then
+  \begin{enumerate}[(i)]
+    \item There exists exactly one meromorphic structure on $\cal{V}$ along $Y$ with respect to which $\nabla$ is a regular connection.
+    \item Let $\widetilde{\cal{V}}$ be the subsheaf of $j_*\cal{V}$ consisting of sections whose coordinates in the basis $e$ have growth of at most $\order((\log\|x\|)^k)$ (for large enough $k$) along $Y$.
+      Then $\widetilde{\cal{V}}$ is a coherent analytic sheaf on $X$;
+      the extension $\widetilde{\cal{V}}$ of $\cal{V}$ defines the meromorphic structure in (i).
+  \end{enumerate}
+\end{itenv}
+
+\begin{proof}
+  Both claims (i) and (ii) are local on $X$.
+  By Hironaka \cite{12}, we can assume the existence of a resolution of singularities $\pi\colon X_1\to X$ such that $\pi^{-1}(Y)$ is a normal crossing divisor and $\pi$ is an isomorphism over $X^*$.
+  Let $\widetilde{\cal{V}}_1$ be the canonical extension \hyperref[II.5.5]{(5.5.i)} of $\cal{V}$ to $X_1$.
+\oldpage{97}
+  By \hyperref[II.5.5]{(5.5.i)} and \hyperref[II.2.19]{(2.19)}, we have that $\widetilde{\cal{V}}=\pi_*\widetilde{\cal{V}}_1$.
+  By Grauert's finiteness theorem (for a projective morphism), $\widetilde{\cal{V}}$ is thus coherent analytic.
+
+  For the meromorphic structure along $\pi^{-1}(Y)$ defined by $\widetilde{\cal{V}}_1$, the connection $\nabla$ is regular.
+  Since this structure is the inverse image of that defined by $\widetilde{\cal{V}}$, we conclude, by \hyperref[II.4.3]{(4.3)} that $\nabla$ is regular with respect to the extension $\widetilde{\cal{V}}$.
+  Finally, suppose that $\nabla$ is regular for the meromorphic structure defined by an extension $\cal{V}'$.
+  We see, by \hyperref[II.4.1]{(4.1.iii)} applied to the dual bundle, and by \hyperref[II.5.2]{(5.2.c)}, that $\pi^*\cal{V}'$ and $\widetilde{\cal{V}}_1$ define the same meromorphic structure along $\pi^{-1}(Y)$.
+  Claim (i) then follows.
+\end{proof}
+
+\begin{itenv}{Corollary 5.8}
+\label{II.5.8}
+  Let $X$ and $Y$ be as in \hyperref[II.5.7]{(5.7)}.
+  If a vector bundle $\cal{V}$ on $X^*=X\setminus Y$ admits an integrable connection, then it admits a coherent extension on $X$;
+  in particular, if $\codim_X(Y)\geq2$, then $j_*\cal{V}$ is coherent.
+\end{itenv}
+
+It immediately follows from \hyperref[II.5.7]{(5.7)} and \hyperref[II.2.22]{(2.22)} that:
+
+\begin{itenv}{Theorem 5.9}
+\label{II.5.9}
+  Let $X$
 \end{itenv}
 
 
