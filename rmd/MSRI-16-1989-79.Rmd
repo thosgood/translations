@@ -16,9 +16,6 @@ favicon: "favicon.ico"
 $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 ```
 
-```{r, child = '_translator-note.Rmd'}
-```
-
 ```{r echo=FALSE,warning=FALSE}
  library(knitr)
   opts_chunk$set(cache=TRUE,
@@ -27,6 +24,9 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
                  fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png',
                  fig.align='center'
                 )
+```
+
+```{r, child = '_translator-note.Rmd'}
 ```
 
 \providecommand{\scr}[1]{{\mathscr{#1}}}
