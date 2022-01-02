@@ -81,6 +81,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 **!!!TO-DO!!!**
 
 ```{r,engine='tikz',fig.width=6}
+\usetikzlibrary{cd}
 \begin{equation*}
   \begin{tikzcd}[row sep=1em]
     1 \ar[dd, no head] & 4 \ar[d, no head] & & 9 \ar[d, no head] &
