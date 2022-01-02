@@ -12,6 +12,10 @@ github-repo: "thosgood/translations"
 favicon: "favicon.ico"
 ---
 
+```{js, echo = FALSE}
+$(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
+```
+
 ```{r, child = '_translator-note.Rmd'}
 ```
 
