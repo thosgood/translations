@@ -19,6 +19,16 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 ```{r, child = '_translator-note.Rmd'}
 ```
 
+```{r echo=FALSE,warning=FALSE}
+ library(knitr)
+  opts_chunk$set(cache=TRUE,
+                 echo=FALSE,
+                 fig.pos='H',
+                 fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png',
+                 fig.align='center'
+                )
+```
+
 \providecommand{\scr}[1]{{\mathscr{#1}}}
 \renewcommand{\cal}[1]{{\mathcal{#1}}}
 \renewcommand{\frak}[1]{{\mathfrak{#1}}}
@@ -68,7 +78,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 # Leitfaden {.unnumbered .unlisted}
 
-```{r leitfaden,echo=FALSE,engine='tikz',engine.opts=list(template="tikz2pdf.tex"),fig.width=6}
+```{r leitfaden,engine='tikz',engine.opts=list(template="tikz2pdf.tex"),fig.width=6}
 \begin{equation*}
   \begin{tikzcd}[row sep=1em]
     1 \ar[dd, no head] & 4 \ar[d, no head] & & 9 \ar[d, no head] &
