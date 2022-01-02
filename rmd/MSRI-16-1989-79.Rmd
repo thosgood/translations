@@ -80,8 +80,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 **!!!TO-DO!!!**
 
-<!-- 
-```{r leitfaden,engine='tikz',engine.opts=list(template="tikz2pdf.tex"),fig.width=6}
+```{r,engine='tikz',fig.width=6}
 \begin{equation*}
   \begin{tikzcd}[row sep=1em]
     1 \ar[dd, no head] & 4 \ar[d, no head] & & 9 \ar[d, no head] &
@@ -96,7 +95,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
   \\ & & 19 & &
   \end{tikzcd}
 \end{equation*}
-``` -->
+```
 
 
 # Introduction {-}
