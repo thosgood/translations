@@ -10,6 +10,10 @@ csl: maths-translations.csl
 reference-section-title: "Bibliography"
 ---
 
+```{js, echo = FALSE}
+$(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
+```
+
 ```{r, child = if (knitr::is_html_output()) '_translator-note.Rmd'}
 ```
 
