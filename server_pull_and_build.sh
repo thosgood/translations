@@ -107,7 +107,7 @@ else
       mv output/_main.html "output/$PREF.html" &&
       # Clean-up
       rm index.Rmd &&
-      rm *.bib
+      rm *.bib &&
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     done
     # Deploy
