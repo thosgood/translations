@@ -58,6 +58,7 @@ else
   # Get the git commit hash
   COMMIT=$(git rev-parse --short HEAD)
   if ! [ -z "$NEW_TEX" ]; then
+    mkdir -p $TRANSLATIONS_DIR/builds
     cd $TRANSLATIONS_DIR/builds
     for FILE in $NEW_TEX; do
       BASE=${FILE##*/}
