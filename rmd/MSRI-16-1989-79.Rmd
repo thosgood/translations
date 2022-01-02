@@ -979,5 +979,22 @@ We leave to the reader the task of translating axioms [(AM1)](#AM1), [(AM3)](#AM
 ::::
 
 ::: {.rmenv #chunk-1.19 title="1.19" latex="{1.19}"}
-With
+With the definition [(1.17)](#chunk-1.17) of smooth realisation systems over $S=\Spec(\OO)$, the functor given by forgetting the $A$-module structure, which takes values in smooth realisation systems over $\Spec(\ZZ)\setminus P$, is called the "*direct image of $S$ in $\Spec(\ZZ)\setiminus P$*".
+In the various realisations of [(1.18)](#chunk-1.18), it corresponds to the direct image.
+Its left adjoint, $M\mapsto A\otimes M$ (cf. [(5.3)](#chunk-5.3)), is the *inverse image*.
+:::
+
+::: {.rmenv #chunk-1.20 title="1.20" latex="{1.20}"}
+If $S$ is an open of the spectrum of the ring of integers of a finite extension $E$ of $\QQ$, then we can modify the description in [(1.18)](#chunk-1.18) as follows to define smooth realisation systems over $S$.
+
+- In [(AM3)](#AM3), we ask for each $\QQ_\ell$-sheaf $M_\ell$ induced by $M_\AAf$ to come from a smooth $\QQ_\ell$-sheaf on $S[1/\ell]$.
+- In [(M'4)E](#Mp4E), for each residue field $k(v)$ of $S$, we ask for $M_\crisv$ over the field of fractions $K_v$ of Witt vectors over $k(v)$, endowed with a semi-linear $\phi_v$.
+    The crystalline comparison isomorphism of [(M'5)E](#Mp5E) then becomes
+    $$
+      M_\DR\otimes E_v \simto M_\crisv\otimes_{K_v}E_v.
+    $$
+:::
+
+::: {.rmenv #chunk-1.21 title="1.21" latex="{1.21}"}
+Let $S$ be smooth over $\Spec(\ZZ)$.
 :::
