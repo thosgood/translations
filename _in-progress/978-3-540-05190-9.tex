@@ -4394,7 +4394,7 @@ We note that the above proof already contains the essential part of the proof of
 
 \begin{proof}
   We have \mbox{(ii)$\implies$\hyperref[II.4.1]{(4.1.i)}$\implies$\hyperref[II.4.1]{(4.1.ii)}$\implies$(ii)}.
-  Also, \hyperref[II.4.1]{(4.1.iv)} implies that $\nabla$ is meromorphic in codimension~$1$ on $\overline{X}$, and thus meromorphic, and thus algebraic (by GAGA).
+  Also, \hyperref[II.4.1]{(4.1.iv)} implies that $\nabla$ is meromorphic in codimension~$1$ on $\overline{X}$, and thus meromorphic, and thus algebraic (by \cite{GAGA}).
   We thus have
   \[
     \mbox{(iii')}
@@ -4711,24 +4711,33 @@ It immediately follows from \hyperref[II.5.7]{(5.7)} and \hyperref[II.2.22]{(2.2
 
 \begin{itenv}{Theorem 5.9}
 \label{II.5.9}
-  Let $X$ be
+  Let $X$ be a (smooth) complex algebraic variety.
+  Then the functor $\cal{V}\mapsto\cal{V}^\an$ gives an equivalence of categories between
+  \begin{enumerate}[(i)]
+    \item the category of algebraic vector bundles on $X$ endowed with a regular integrable connection; and
+    \item the category of holomorphic vector bundles on $X^\an$ endowed with an integrable connection.
+  \end{enumerate}
 \end{itenv}
 
+If $X$ is connected and endowed with a base point $x_0$, then \hyperref[II.5.9]{Theorem~5.9} gives a purely algebraic description of the category of complex finite-dimensional representations of the (usual) fundamental group $\pi_1(X,x_0)$.
 
+We can modify the above proof of \hyperref[II.5.9]{Theorem~5.9} so that it no longer uses Lojasiewicz \cite{17}.
 
+\hyperref[II.5.9]{Theorem~5.9} is local on $X$ for the Zariski topology.
+We thus do not lose any generality in supposing that $X$ admits a normal projective compactification $\overline{X}$.
 
+Let us prove fully faithfulness:
+\oldpage{98}
+a horizontal morphism $f\colon\cal{V}^\an\to\cal{W}^\an$ is identified with a horizontal section of $\shHom(\cal{V},\cal{W})^\an$.
+By \hyperref[II.4.1]{(4.1.iii)}, $f$ is of moderate growth at infinity, and is thus algebraic \hyperref[II.2.24]{(2.24)}.
+In fact, it even suffices to show that $f$ is of moderate growth in codimension~$1$ at infinity, and this does not require Lojasiewicz.
 
+Finally, by Hironaka \cite{12}, we can take $\overline{X}$ to be smooth, and such that $Y=\overline{X}\setminus X$ is a normal crossing divisor.
+Locally, the situation is then isomorphic to that which was studied in \hyperref[II.5.4]{(5.4)}.
+A choice of $\tau$ as in \hyperref[II.5.3]{(5.3)} thus gives us an extension $\widetilde{\cal{V}}_\tau$ of $\cal{V}$ to a vector bundle on $\overline{X}$.
+With respect to $\widetilde{\cal{V}}_\tau$< the connection of $\cal{V}$ is meromorphic and regular along $Y$.
 
-
-
-\todo
-
-
-
-
-
-
-
+By \cite{GAGA}, the bundle $\widetilde{\cal{V}}_\tau$ and the connection $\nabla$ are both algebraisable, and this solves the problem in question.
 
 
 
