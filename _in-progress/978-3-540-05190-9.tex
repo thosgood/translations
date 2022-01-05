@@ -84,6 +84,7 @@
 \newcommand{\SO}{\mathrm{SO}}
 \newcommand{\tg}{\mathrm{tg}}
 \newcommand{\an}{\mathrm{an}}
+\newcommand{\cl}{\mathrm{cl}}
 \newcommand{\detrow}[2]{\operatorname{det}(#1,#2)}
 \newcommand{\simto}{\xrightarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
 \newcommand{\order}{\mathcal{O}}
@@ -4744,8 +4745,103 @@ By \cite{GAGA}, the bundle $\widetilde{\cal{V}}_\tau$ and the connection $\nabla
 \section{Comparison theorem}
 \label{II.6}
 
+\begin{rmenv}{6.1}
+\label{II.6.1}
+  Let $X$ be a smooth scheme of finite type over $\CC$, and $\cal{V}$ a vector bundle on $X$ endowed with a \emph{regular} integrable connection.
+  We denote by $V$ the local system of horizontal sections of $\cal{V}^\an$ on underlying the topological space $X_\cl$ of $X^\an$.
+  By the Poincaré lemma \hyperref[I.2.19]{(I.2.19)}, we have
+  \[
+  \label{II.6.1.1}
+    \HH^\bullet(X_\cl,V)
+    \simto \mathbb{H}^\bullet(X_\cl,\Omega_{X^\an}^\bullet(\cal{V}))
+  \tag{6.1.1}
+  \]
+  where the right-hand side denotes the hypercohomology of the analytic de Rham complex.
+  We also have an arrow
+  \[
+  \label{II.6.1.2}
+    \mathbb{H}^\bullet(X,\Omega_X^\bullet(\cal{V}))
+    \to \mathbb{H}^\bullet(X_\cl,\Omega_{X^\an}^\bullet(\cal{V}))
+  \tag{6.1.2}
+  \]
+  from the algebraic hypercohomology to the analytic hypercohomology.
+\end{rmenv}
 
+\begin{itenv}{Theorem 6.2}
+\label{II.6.2}
+  Under the hypotheses of \hyperref[II.6.1]{(6.1)}, the arrow \hyperref[II.6.1.2]{(6.1.2)} is an isomorphism.
+\end{itenv}
 
+\oldpage{99}
+
+The proof that we will give for this theorem is basically a simplification of the proof that Grothendieck \cite{9} uses for the particular case where $\cal{V}$ is the structure sheaf $\cal{O}$ endowed with the natural connection.
+It will be the subject of \hyperref[II.6.3]{(6.3)} to \hyperref[II.6.9]{(6.9)}.
+
+We note, first of all, as in loc. cit., that \hyperref[II.6.2]{(6.2)} is equivalent to the following particular case.
+
+\begin{itenv}{Corollary 6.3}
+\label{II.6.3}
+  Under the hypotheses of \hyperref[II.6.1]{(6.1)}, with $X$ affine, we have
+  \[
+    \HH^\bullet(\Gamma(X,\Omega_X^\bullet(\cal{V})))
+    \simto \HH^\bullet(X_\cl,V).
+  \]
+\end{itenv}
+
+\begin{proof}
+  If $X$ is affine, then $\HH^q(X,\Omega_X^p(\cal{V}))=0$ for $q>0$, and so
+  \[
+    \mathbb{H}^p(X,\Omega_X^\bullet(\cal{V}))
+    \simeq \HH^p(\Gamma(X,\Omega_X^\bullet(\cal{V})))
+  \]
+  and so \hyperref[II.6.2]{(6.2)} is synonymous with \hyperref[II.6.3]{(6.3)}.
+  But then, if \hyperref[II.6.2]{(6.2)} is true when $X$ is affine, then we see, as in loc. cit., via the Leray spectral sequence for an open cover applied to the two sides of \hyperref[II.6.1.2]{(6.1.2)}, that \hyperref[II.6.2]{(6.2)} is true in the general case.
+\end{proof}
+
+\begin{rmenv}{6.4}
+\label{II.6.4}
+  This reduction to the affine case shows that we do not lose any generality in supposing that $X$ admits a compactification $j\colon X\hookrightarrow\overline{X}$ with $\overline{X}$ complete.
+  By Hironaka's resolution of singularities \cite{12}, we can thus choose $\overline{X}$ such that
+  \begin{enumerate}[a)]
+    \item $\overline{X}$ is smooth; and
+    \item $X$ is the complement in $\overline{X}$ of a normal crossing divisor $Y$ equal to a union of smooth divisors: $Y=\cup_{i=1}^k Y_i$.
+  \end{enumerate}
+
+  The morphism $j$ is then an affine morphism;
+  the morphism $j^\an$ is then a Stein morphism, i.e. the inverse image of a (small) Stein open subset of $\overline{X}$ is a Stein open subset of $X$.
+  Thus
+  \[
+  \label{II.6.4.1}
+    \RR^i j_*\Omega_X^p(\cal{V}) = 0
+    \qquad\mbox{for $i>0$}
+  \tag{6.4.1}
+  \]
+\oldpage{100}
+  \[
+  \label{II.6.4.2}
+    \RR^i j_*^\an\Omega_{X^\an}^p(\cal{V}) = 0
+    \qquad\mbox{for $i>0$}
+  \tag{6.4.2}
+  \]
+  from which it formally follows that
+  \[
+  \label{II.6.4.3}
+    \mathbb{H}^\bullet(\overline{X},j_*\Omega_X^\bullet(\cal{V}))
+    \simto \mathbb{H}^\bullet(X,\Omega_X^\bullet(\cal{V}))
+  \tag{6.4.3}
+  \]
+  \[
+  \label{II.6.4.4}
+    \mathbb{H}^\bullet(\overline{X}_\cl,j_*^\an\Omega_{X^\an}^\bullet(\cal{V}))
+    \simto \mathbb{H}^\bullet(X_\cl,\Omega_{X^\an}^\bullet(\cal{V})).
+  \tag{6.4.4}
+  \]
+\end{rmenv}
+
+\begin{itenv}{Lemma 6.5}
+\label{II.6.5}
+  Let
+\end{itenv}
 
 
 
