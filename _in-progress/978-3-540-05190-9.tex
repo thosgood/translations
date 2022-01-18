@@ -85,9 +85,11 @@
 \newcommand{\tg}{\mathrm{tg}}
 \newcommand{\an}{\mathrm{an}}
 \newcommand{\cl}{\mathrm{cl}}
+\newcommand{\mm}{\mathrm{m}}
 \newcommand{\detrow}[2]{\operatorname{det}(#1,#2)}
 \newcommand{\simto}{\xrightarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
 \newcommand{\order}{\mathcal{O}}
+\newcommand{\circlednumber}[1]{\raisebox{.5pt}{\textcircled{\raisebox{-.9pt}{#1}}}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -4840,8 +4842,8 @@ We note, first of all, as in loc. cit., that \hyperref[II.6.2]{(6.2)} is equival
 
 \begin{itenv}{Lemma 6.5}
 \label{II.6.5}
-  Let \scr{F} be a \emph{quasi-coherent} algebraic sheaf on a proper scheme $X$ over $\CC$.
-  Let $\epsilon\colon X_\cl\to X$ be the canonical continuous map, and $\scr{F}^\an=\OO_{X^\an}\otimes_{\epsilon^*\OO_X}\epsilon^*\scr{F}$.
+  Let $\scr{F}$ be a \emph{quasi-coherent} algebraic sheaf on a proper scheme $X$ over $\CC$.
+  Let $\epsilon\colon X_\cl\to X$ be the canonical continuous map, and $\scr{F}^\an=\cal{O}_{X^\an}\otimes_{\epsilon^*\cal{O}_X}\epsilon^*\scr{F}$.
   Then
   \[
     \HH^\bullet(X,\scr{F}) \simto \HH^\bullet(X_\cl,\scr{F}^\an).
@@ -4914,8 +4916,46 @@ We note, first of all, as in loc. cit., that \hyperref[II.6.2]{(6.2)} is equival
 
 \begin{rmenv}{6.7}
 \label{II.6.7}
-  The
+  The complex $[j_*\Omega_X^\bullet(\scr{V})]^\an$ is exactly the sheaf of sections of $\Omega_{X^\an}^\bullet(\scr{V})$ that are meromorphic along $Y$;
+  we denote this by $j_*^\mm\Omega_X^\bullet(\scr{V})$.
+  The arrows in \hyperref[II.6.4.3]{(6.4.3)}, \hyperref[II.6.4.4]{(6.4.4)}, and \hyperref[II.6.6.1]{(6.6.1)} for $j_*^\mm\Omega_{X^\an}^\bullet(\scr{V})$ fit into a commutative diagram
+  \[
+  \label{II.6.7.1}
+    \begin{tikzcd}
+      \mathbb{H}^\bullet(\overline{X},j_*\Omega_X^\bullet(\scr{V}))
+        \ar[r,"\sim"]
+        \ar[r,swap,"\mbox{\hyperref[II.6.4.3]{(6.4.3)}}"]
+        \ar[d,"\sim"]
+        \ar[d,swap,"\mbox{\hyperref[II.6.6.1]{(6.6.1)}}"]
+      & \mathbb{H}^\bullet(X,\Omega_X^\bullet(\scr{V}))
+        \ar[dd,"\circlednumber{1}"]
+    \\\mathbb{H}^\bullet(\overline{X},j_*^\mm\Omega_{X^\an}^\bullet(\scr{V}))
+        \ar[d,swap,"\circlednumber{2}"]
+    \\\mathbb{H}^\bullet(\overline{X}_\cl,j_*\Omega_{X^\an}^\bullet(\scr{V}))
+        \ar[r,"\sim"]
+        \ar[r,swap,"\mbox{\hyperref[II.6.4.4]{(6.4.4)}}"]
+      & \mathbb{H}^\bullet(X_\cl,\Omega_{X^\an}^\bullet(\scr{V}))
+      & \HH^\bullet(X_\cl,\scr{V})
+        \ar[l,swap,"\sim"]
+        \ar[l,"\mbox{\hyperref[II.6.1.1]{(6.1.1)}}"]
+    \end{tikzcd}
+  \tag{6.7.1}
+  \]
+
+  To prove \hyperref[II.6.2]{(6.2)}, it thus suffices to prove that the arrow $\circlednumber{2}$ is an isomorphism.
+  More precisely:
 \end{rmenv}
+
+\oldpage{102}
+
+\begin{itenv}{Proposition 6.8}
+\label{II.6.8}
+  The morphism of complexes
+  \[
+    j_*^\mm\Omega_{X^\an}^\bullet(\scr{V}) \to j_*\Omega_{X^\an}^\bullet(\scr{V})
+  \]
+  induces an isomorphism on the cohomology sheaves.
+\end{itenv}
 
 
 
