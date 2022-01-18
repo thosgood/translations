@@ -4840,8 +4840,82 @@ We note, first of all, as in loc. cit., that \hyperref[II.6.2]{(6.2)} is equival
 
 \begin{itenv}{Lemma 6.5}
 \label{II.6.5}
-  Let
+  Let \scr{F} be a \emph{quasi-coherent} algebraic sheaf on a proper scheme $X$ over $\CC$.
+  Let $\epsilon\colon X_\cl\to X$ be the canonical continuous map, and $\scr{F}^\an=\OO_{X^\an}\otimes_{\epsilon^*\OO_X}\epsilon^*\scr{F}$.
+  Then
+  \[
+    \HH^\bullet(X,\scr{F}) \simto \HH^\bullet(X_\cl,\scr{F}^\an).
+  \]
 \end{itenv}
+
+\begin{proof}
+  By (EGA~I, 9.4.9), the sheaf $\scr{F}$ is the filtrant inductive limit of its coherent algebraic subsheaves:
+  \[
+    \scr{F} = \varinjlim\scr{F}_i.
+  \]
+  The inverse image and tensor product functors commute with inductive limits, and so
+  \[
+    \scr{F}^\an = \varinjlim\scr{F}_i^\an.
+  \]
+
+  If $X$ is a compact topological space, then the functors $\HH^i(X,-)$ commute with filtrant inductive limits (T.F.~II, 4.12, p.~194), and so
+  \[
+  \label{II.6.5.1}
+    \varinjlim\HH^\bullet(X_\cl,\scr{F}_i^\an) \simto \HH^\bullet(X_\cl,\scr{F}^\an).
+  \tag{6.5.1}
+  \]
+  Similarly (loc. cit.),
+  \[
+  \label{II.6.5.2}
+    \varinjlim\HH^\bullet(X,\scr{F}_i) \simto \HH^\bullet(X,\scr{F}).
+  \tag{6.5.2}
+  \]
+
+  By GAGA, we have that
+  \[
+    \HH^\bullet(X,\scr{F}_i) \simto \HH^\bullet(X_\cl,\scr{F}_i^\an)
+  \]
+  and \hyperref[II.6.5]{(6.5)} then follows by comparing \hyperref[II.6.5.1]{(6.5.1)} and \hyperref[II.6.5.2]{(6.5.2)}.
+\end{proof}
+
+\oldpage{101}
+
+\begin{rmenv}{6.6}
+\label{II.6.6}
+  Under the hypotheses of \hyperref[II.6.5]{(6.5)}, every differential operator $D\colon\scr{F}\to\scr{G}$ between coherent algebraic sheaves extends uniquely to a differential operator $D^\an\colon\scr{F}^\an\to\scr{G}^\an$.
+  To construct $D^\an$, we factor $D$ as
+  \[
+    \scr{F} \xrightarrow{j_N} P^N(\scr{F}) \xrightarrow{L} \scr{G}
+  \]
+  where $L$ is linear.
+  Note that $(P^N(\scr{F}))^\an=P^N(\scr{F}^\an)$, and set $D^\an=L^\an\circ j_N^\an$.
+
+  The same construction applies to a differential operator $D\colon\scr{F}\to\scr{G}$ between quasi-coherent algebraic sheaves, and gives $D^\an\colon\scr{F}^\an\to\scr{G}^\an$.
+  We can also define $D^\an$ in the quasi-coherent case by passing to the inductive limit from the coherent case.
+
+  If $K$ is a complex of quasi-coherent sheaves on $X$, with $X$ a proper scheme over $\CC$, and with the differentials of $K$ being differential operators, then
+  \[
+  \label{II.6.6.1}
+    \mathbb{H}^\bullet(X,K) \simto \mathbb{H}^\bullet(X_\cl,K^\an).
+  \tag{6.6.1}
+  \]
+
+  Indeed, we have a morphism of spectral sequences of hypercohomology
+  \[
+    \begin{aligned}
+      E_1^{pq} = \HH^q(X,K^p)
+      &\Rightarrow \mathbb{H}^\bullet(X,K)
+    \\E_1^{pq} = \HH^q(X_\cl,(K^\an)^p)
+      &\Rightarrow \mathbb{H}^\bullet(X_\cl,K^\an)
+    \end{aligned}
+  \]
+  and we conclude by applying \hyperref[II.6.5]{(6.5)} to the terms $E_1$.
+\end{rmenv}
+
+\begin{rmenv}{6.7}
+\label{II.6.7}
+  The
+\end{rmenv}
 
 
 
