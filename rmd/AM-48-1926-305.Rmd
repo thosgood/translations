@@ -227,3 +227,145 @@ $$
 In the first one, $2a>|\Re z|$; in the second, both terms on the right-hand side satisfy the same difference equation, which is also satisfied by $\GG(z)$, by Equation (9).
 
 
+# 2 {.unnumbered #section-2}
+
+The asymptotic representation and the estimates of $\GG(z)$, with which we now concern ourselves, can be obtained by expanding Equation (11).
+
+\oldpage{309}
+Different areas of the $z$-plane have to be examined on a case-by-case basis.
+Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\geq0$; if $y>0$, then we assume that $0<\varphi<\pi$; $x-iy = \overline{z}$.
+
+
+## I {.unnumbered #I}
+
+*For $|y|\geq1$ and $a\leq A$,*
+$$
+  \GG(z)
+  = a^{-z} \Gamma(z) \left(
+    1 + \frac{\chi(z)}{z}
+  \right) + a^z \Gamma(z) \left(
+    1 - \frac{\chi(-z)}{z}
+  \right)
+\tag{17}
+$$
+*where the absolute value of the function $\chi(z)=\chi(z;a)$ is bounded above by a value depending only on $A$.*
+
+We know, by Equation (11), that
+$$
+  \chi(z)
+  = \frac{za^2}{1-z} \left(
+    1 + \sum_{n=2}^\infty \frac{a^{2n-2}}{n!(2-z)(3-z)\ldots(n-z)}
+  \right)
+$$
+whence, without further ado, the claim.
+
+
+## II {.unnumbered #II}
+
+*Let $\varepsilon$ and $A$ be fixed positive numbers.*
+*Set*
+$$
+  \frac{a^z\GG(z)}{\Gamma(z)} - 1
+  = \psi(z) = \psi(z;a).
+\tag{18}
+$$
+*Then, in the half-plane $x\geq\varepsilon$,*
+$$
+  \lim_{|z|\to\infty} \psi(z) = 0,
+\tag{19}
+$$
+*and, in fact, if $a\leq A$, then this convergence is uniform in $z$ and $a$.*
+
+It follows, from Stirling's formula, that there exists some constant $C$ such that, for $y\geq1$, $x\geq\varepsilon$, and $r\geq ae$,
+$$
+  \left\vert
+    a^{2z} \frac{\Gamma(-z)}{\Gamma(z)}
+  \right\vert \leq a^{2x}Cr^{-2x}e^{-(\pi-2\varphi)y+2x}
+  \leq C\left(
+    \frac{ae}{r}
+  \right)^{2\varepsilon}.
+\tag{20}
+$$
+In the part of the half-plane where $x\geq\varepsilon$, where $y\geq1$, claim (II) follows directly from Equations (17), (18), and (20);
+it also follows, by symmetry, in the part where $y\leq-1$.
+Then the only remaining part is the half-strip
+$$
+  x\geq\varepsilon,
+  \quad -1\leq y\leq 1.
+$$
+By the already-proven part of claim (II), Equation (18) tends to zero as $z\to\infty$.
+\oldpage{310}
+Since Equation (18) is entire and of finite order, by well-known general theorems^[See G. Pólya and G. Szegö, Aufgaben und Lehrsätze aus der Analysis (Berlin 1925), Bd. 1, Aufgaben III 333, III 339.], it must tend uniformly to zero in the entire half-strip as $z\to\infty$;
+this completes the proof of claim (II).
+Of course, instead of using general theorems, Equation (18) could also be used on suitable curves intersecting the half-strip, e.g. to estimate on the straight lines $x=k+\frac12$, for $k=0,1,2,3,\ldots$.
+In the case where $k=0$, we investigate such an estimation for a different purpose, c.f. Equation (22).
+
+
+## III (.unnumbered #III)
+
+*If $a\leq\frac14$, then there are no zeros of $\GG(z;a)$ outside of the strip $-\frac12<x<\frac12$.*
+
+Since $\GG(z)$ is even, it suffices to consider the half-plane $x\geq\frac12$.
+On the straight line $x=\frac12$,
+$$
+  z+\overline{z} = 1,
+  \quad \overline{z} = 1-z
+$$
+and so, by the symmetry of the values with respect to the real axis,
+$$
+  |\Gamma(1-z)| = |\Gamma(z)|,
+$$
+whence
+$$
+  \left\vert
+    \frac{\Gamma(-z)}{\Gamma(z)}
+  \right\vert = \left\vert
+    \frac{\Gamma(1-z)}{-z\Gamma(z)}
+  \right\vert = \frac{1}{|z|} \leq 2
+  \qquad\left(
+    x=\frac12
+  \right).
+\tag{21}
+$$
+Using Equation (21), it follows from Equation (11) that, on the straight line $x=\frac12$,
+$$
+  \begin{aligned}
+    |\psi(z)|
+    &= \left\vert
+      \frac{a^z\GG(z)}{\Gamma(z)} - 1
+    \right\vert
+  \\&= \left\vert
+      \sum_{n=1}^\infty \frac{a^{2n}}{n!(1-z)\ldots(n-z)}
+      + \frac{a^{2z}\Gamma(-z)}{\Gamma(z)} \left(
+        1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!(1+z)\ldots(n+z)}
+      \right)
+    \right\vert
+  \\&\leq \sum_{n=1}^\infty \frac{a^{2n}}{n!\frac12\cdot\frac32\cdot\ldots\cdot\frac{2n-1}{2}} + a\cdot2 \left(
+    1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!\frac32\cdot\frac52\cdot\ldots\cdot\frac{2n+1}{2}}
+  \right)
+  \\&= \sum_{n=1}^\infty \frac{(2a)^{2n}}{(2n)!} + \sum_{n=0}^\infty \frac{(2a)^{2n+1}}{(2n+1)!}
+  \\&= e^{2a}-1.
+  \end{aligned}
+\tag{22}
+$$
+\oldpage{311}
+It then follows from Equation (22) that
+$$
+  |\psi(z)| = |\psi(z;a)| < 1
+  \qquad\text{for }x=\frac12$ and $a\leq\frac14.
+\tag{23}
+$$
+It follows from claim (II) that there exists some number $R$ such that
+$$
+  |\psi(z)| = |\psi(z;a)| <1
+  \qquad\text{for }x\geq\frac12\text{, }r\geq R\text{, and }a\leq\frac14.
+\tag{24}
+$$
+Furthermore, $|\psi(z)|<1$ is also satisfied in the circle segment $\{x\geq\frac12,r\leq R\}$, since the inequality in question, by Equations (23) and (24), is satisfied on the boundary of the circle segment.
+Thus $|\psi(z)|<1$ is satisfied in the whole half-plane $x\geq\frac12$;
+thus $\GG(z)$, cf. Equation (18), does not disappear in this half-plane.
+
+For what follows, it is useful to have in mind a certain partition of the plane (cf. the above figure): the strip $-1\leq x\leq 1$ is denoted by $\SS$; the part of the plane where both $r\leq R$ and $|x|>1$ is denoted by $\TT$; the remaining part, which extends to infinity, is denoted by $\UU$.
+We pick the number $R=R(A)$ depending on a certain positive number $A$ such that, inside, and on the boundary of, $\UU$, the inequality $|\psi(z)|<1$ is satisfied for $a\leq A$.
+From Equation (18) it follows that $\GG(z)$ does not vanish inside, or on the boundary of, $\UU$.
+
