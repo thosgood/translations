@@ -1,4 +1,4 @@
---- 
+---
 title: "What are motives used for?"
 author: "Pierre Deligne"
 date: "1994"
@@ -97,8 +97,8 @@ This method is inspired by that which Lefschetz [@24] uses for surfaces.
 The idea is that, if $(H_t)_{t\in\PP^1}$ is a pencil of hyperplane sections, then constructing the cycle $Z$ on $X$ reduces to constructing the cycles $Z_i=Z\cap H_t$.
 In good cases:
 
-a. the cohomology class $c\in H_\ZZ^{d,d}(X)$ that we wish to be that of a cycle $Z$ restricts to zero on the $H_t$ ;
-b. if $Z$ exists, then its cohomology class $c$ determines the class of the $Z_t$ in the intermediate Jacobians $J^d(H_t)$ ; and
+a. the cohomology class $c\in H_\ZZ^{d,d}(X)$ that we wish to be that of a cycle $Z$ restricts to zero on the $H_t$;
+b. if $Z$ exists, then its cohomology class $c$ determines the class of the $Z_t$ in the intermediate Jacobians $J^d(H_t)$; and
 c. the construction of $Z$ reduces to constructing the cycles $Z_t$ of classes defining a given section of the family of the $J^d(H_t)$.
 
 We can thus conclude that every element of $J^d(H_t)$ is the class of a cycle of codimension $d$ that is cohomologous to zero.
@@ -321,7 +321,7 @@ Its construction in the general case is due to Borovoi [@6].
 
 A point of the Shimura variety over a field $\FF$ containing $E(G,X)$ should correspond to
 
-a. an exact $\otimes$-functor $x$ from the category $\Rep(G)$ of representations of $G$ to the category of pure motives over $\FF$ ; and
+a. an exact $\otimes$-functor $x$ from the category $\Rep(G)$ of representations of $G$ to the category of pure motives over $\FF$; and
 b. an integer structure.
     In terms of finite adelic realisations (the restriction of the product of $\ell$-adic realisations), we can describe this as an isomorphism of $\otimes$-functors
     $$
@@ -363,3 +363,456 @@ For progress in this direction, see Langlands--Rapoport [@23].
 
 
 # Cohomology theories {#section-2}
+
+## 2.1 {.unnumbered #section-2.1}
+
+A geometric construction, possible in one of the usual cohomology theories, should make sense "motivically", and thus have an analogue in the other usual theories.
+
+This principal has been crucial in developing mixed Hodge theory.
+Grothendieck saw that each $H^i(X)$ should split as subquotients of cohomology of non-singular projective varieties.
+The mixed motive $H_\mot^i(X)$ should thus have a class in the Grothendieck group of pure motives.
+In characteristic $0$, the Hodge number $h^{pq}$ of the Hodge realisation of a pure motive defines a homomorphism from this Grothendieck group to $\ZZ$.
+The Hodge numbers $h^{pq}(H_\mot^i(X))$ should thus have some meaning.
+
+To go any further, we must convince ourselves that every motive has a weight filtration $W$, that is increasing, and with $\Gr_i^W(M)$ pure of weight $i$ (= a direct factor of $H_\mot^i(X)$ for non-singular projective $X$).
+Is is for the $H^1$ of curves, i.e. for the $1$-motives, that I am convinced of this fact, and the first test that the definition of mixed Hodge structures had to pass was that they recover $1$-motives over $\CC$ as a particular case (Deligne [@9, Section 10]).
+
+\oldpage{152}
+The same principle of transfer has allowed us to conjecture the asymptotic behaviour of a variation of Hodge structures on a punctured disc, or a product of punctured discs.
+
+::: {.rmenv title="Warning" latex="{Warning}"}
+Let $(S,\eta,s)$ be a line, with $S$ the spectrum of a complete discrete valuation ring.
+By Raynaud, an abelian variety on the generic point $\eta$, with semi-stable reduction, admits a rigid-analytic description as the cokernel of an arrow defining a $1$-motive.
+At the same time, in Hodge theory, if $\scr{H}$ is a variation of polarised Hodge structures of type $\{(1,0),(0,1)\}$ on a punctured disk $D^*$, then the monodromy endows $\scr{H}_0$ with a weight filtration $W$ that, combined with the original Hodge filtration, makes $\scr{H}$ into a variation of mixed Hodge structures on a punctured neighbourhood of $0$.
+
+We should not hope for an analogous behaviour for motives, since the transversality condition is non-trivial in Hodge theory.
+In general, an object that describes the asymptotic behaviour should exist only on the punctured Zariski tangent space (assuming a semi-stable reduction), and it should not be enough to allow us to reconstruct the object we started with.
+For example, if $\scr{H}$ is a variation of polarised Hodge structures on $D^*=D\setminus\{0\}$, then the asymptotic nilpotent orbit due to W. Schmid is a variation of mixed Hodge structures on the punctured (at $0$) tangent space, and, if $\scr{H}$ is extended to $D$, then it is the constant variation with value being the fibre at $0$ of the extension.
+
+The theory of Morihiko Saito ([@29]), which gives the six operations (and the evanescent cycles) in mixed Hodge theory is in part inspired by the $\ell$-adic theory and by the motivic point of view.
+Conversely, it suggests that, if we wish to consider motives over a base $S$, then instead of wanting to have motives $M$ with $\ell$-adic realisations of $\ell$-adic sheaves on $S$, it might be preferable to have motives with realisations in perverse sheaves.
+In any case, it is only in such a framework that we might hope to have a weight filtration.
+
+It is again the philosophy of motives that led Grothendieck to conjecture the existence of the "mysterious" functor linking the $p$-adic étale cohomology of a variety defined over $\QQ_p$, assumed to be of good reduction, and its de Rham cohomology:
+since it exists for $H^1$, i.e. for motives which are the abelian varieties, it should always exist, in a way that is compatible with the tensor product.
+:::
+
+
+# 2.2 {.unnumbered #section-2.2}
+
+Let $X_0$ be an algebraic variety over $k$, and let $X$ be given by extension of scalars of $X_0$ by an algebraic closure $\overline{k}$ of $k$.
+For $x\in X_0(k)$, the profinite fundamental group $\pi_1(X,x)$ is endowed with an action of $\Gal(\overline{k}/k)$.
+Suppose, for simplicity, that $X$ is normal.
+The functor "the fibre at $x$" then gives an equivalence of categories:
+$$
+  \begin{gathered}
+  \text{smooth }\QQ_\ell\text{-sheaves on }X_0
+\\\downarrow
+\\\ell\text{-adic representations of }\Gal(\overline{k}/k)\text{ endowed with an equivariant action of }\pi_1(X,x).
+  \end{gathered}
+$$
+
+\oldpage{153}
+I do not know in which sense $\pi_1(X,x)$ is motivic.
+The situation changes for its pro-$\ell$-completion $\pi_1(X,x)_\ell^\wedge$.
+The abelianisation of this group is $H^1(X,\ZZ_\ell)$, and its $H_2$ is contained in that of $X$.
+There should exist a motivic group scheme $\pi_1(X,x)_\un$ over $k$ such that
+
+a. For every usual cohomology theory $H$, the corresponding realisation of $\pi_1(X,x)_\un$ over $\overline{k}$ has "local systems" (in the sense of $H$) on $X$ as its linear representations, which are unipotent.
+b. The functor "the fibre at $x$" gives an equivalence of categories:
+    $$
+      \begin{gathered}
+        \text{smooth motives over }X_0\text{ that are iterated extensions}
+      \\\text{of inverse images of motives over }k
+      \\\downarrow
+      \\\text{motives over }k\text{ endowed with an action of }\pi_1(X,x)_\un.
+      \end{gathered}
+    $$
+
+In (a), the local systems in question are not assumed to be motivic.
+By (b), those that are motivic, however, form a faithful system of representations.
+
+This philosophy has been inspired by the Hodge theory of $\pi_1$: see Steenbrink--Zucker [@30].
+
+More generally, suppose that we have a set $A$ of pure motives over $X_0$.
+The above corresponds to $A=\varnothing$, or, equivalently, $A$ consisting of just the unit motive.
+There should exist a motivic group scheme $\pi_1(X,x)_A$ over $k$, where the $\pi_1$ is motivic relative to $A$, such that
+
+a'. Over $\overline{k}$, its realisation relative to the theory $H$ has "local systems" on $X$ that are iterated extensions of subquotients of tensor products of realisations of objects of $A$ and their duals as its representations.
+
+b'. The functor "the fibre at $x$" gives an equivalence of categories:
+    $$
+      \begin{gathered}
+        \text{smooth motives over }X_0\text{ that are tensor products of objects of }A,
+      \\\text{of their duals, and of inverse images of motives over }k
+      \\\downarrow
+      \\\text{motives over }k\text{ endowed with an action of }\pi_1(X,x)_A.
+      \end{gathered}
+    $$
+
+In (a'), the subquotients are taken over $X$ and are not assumed to be motivic.
+
+In Hodge theory, this suggests the following questions.
+Let $X$ be smooth and connected over $\CC$, and let $x\in X$.
+Let $A$ be a set of variations of polarisable Hodge structures on $X$.
+Let $\scr{A}$ be the Tannakian category of local $\QQ$-systems on $X$ generated (by $\otimes$, dual, subquotients, and extensions) by the underlying local systems of the objects of $A$.
+Let $\scr{A}_H$ be the Tannakian category of variations of mixed Hodge structures on $X$ that are admissible (in the sense of Steenbrink--Zucker [@30]) and generated (by $\otimes$, dual, subquotients, and extensions) by $A$ and the weight-graded polarisable constant variations.
+
+On $\scr{A}$, we have the fibre functor "the fibre at $x$", denoted by $\omega_x$.
+Let $G=\Aut^\otimes(\omega_x)$.
+This is the Zariski closure of $\pi_1(X,x)$ in the product of the $\GL(H_x)$, where $H$ is an object of $\scr{A}$.
+Let $\scr{H}(G)$ be the Hopf algebra of which $G$ is the spectrum.
+
+\oldpage{154}
+For $M$ in $\scr{A}_H$, the underlying local system $M_Q$ is in $\scr{A}$, so that $G$ acts on its fibre $(M_Q)_x$ at $x$: this fibre is an $\scr{H}(G)$-comodule:^[*[Trans.] In the original, this equation is labelled (2.2.21), but it seems like it should instead be (2.2.1).*]
+$$
+  (M_Q)_x \to (M_Q)_x\otimes\scr{H}(G).
+\tag{2.2.1}
+$$
+
+The Hopf algebra $\scr{H}(G)$ should admit the structure of a mixed Hodge ind-structure, i.e. $G$ should be an affine group scheme in the Tannakian category of mixed Hodge structures, in such a way that
+
+a. the arrows in (2.2.1) are mixed Hodge morphisms; and
+b. the functor $M\mapsto M_x$ gives an equivalence between $\scr{A}$ and the category of mixed Hodge structures $H$ with polarisable associated graded algebras that are endowed with a comodule structure $H\to H\otimes\scr{H}(G)$ that is a mixed Hodge morphism.
+
+
+# Absolute cohomology {#section-3}
+
+## 3.1 {.unnumbered #section-3.1}
+
+In each of the usual cohomology theories, the functors $H^i(X)$ come from a functor $R\Gamma(X)$ with values in a triangulated category $\scr{D}$.
+This is endowed with a $t$-structure (the data of subcategories $\scr{D}^{\leq0}$ and $\scr{D}^{\geq0}$ satisfying suitable axioms: Beilinson--Bernstein--Deligne [@3, Section 1.3]), with its heart (the abelian subcategory given by the intersection of $\scr{D}^{\leq0}$ and $\scr{D}^{\geq0}$) being the category in which $H^\bullet$ takes its values, and
+$$
+  H^i(X) = H^iR\Gamma(X)
+$$
+in the sense of this $t$-structure.
+
+We might hope that these functors $R\Gamma$ are the "realisations" of a motivic functor $R\Gamma$:
+we wish for the existence of a triangulated category $\scr{D}(k)$, with a $t$-structure whose heart is the category $\scr{M}(k)$ of mixed motives over $k$, as well as a functor $R\Gamma_\mot$ with values in $\scr{D}(k)$, which recover the $R\Gamma$ in the various theories by applying realisation functors.
+
+A triangulated category $\scr{D}$ with a $t$-structure is not always the derived category of its heart $\scr{C}$.
+For example: let $X$ be a finite connected CW-complex, and let $\scr{D}\subset D^b(X,\QQ)$ be the derived subcategory of the derived category consisting of complexes of sheaves with locally constant cohomology.
+Its heart is the abelian category of locally constant sheaves of $\QQ$-vector spaces over $X$.
+We have a natural functor $D^b(\scr{C})\to\scr{D}$, but this functor is only an equivalence if $X$ is a $K(\pi,1)$.
+
+In this section, we assume the existence of $\scr{D}(k)$ and of the aforementioned "realisation" functors.
+We also assume the existence of a "Tate twist" in $\scr{D}(k)$, which is an auto-equivalence of the category, and corresponds to the usual Tate twist via the realisation functors.
+Finally, we assume that the category $\scr{M}(k)$ is Tannakian, and that the $\ell$-adic cohomology if a fibre functor.
+This implies that, if $\varphi\colon M_1\to M_2$ is a morphism of motives whose $\ell$-adic realisation is an isomorphism, then $\varphi$ is an isomorphism.
+
+For $M_1$ and $M_2$ in $\scr{M}(k)$, set
+$$
+  \Ext^i(M_1,M_2) = \Hom_{\scr{D}(k)}(M_1,M_2[i]).
+$$
+\oldpage{155}
+These are the usual $\Hom$ and $\Ext$ for $i=0,1$, but, for $i>1$, they can differ from the Yoneda $\Ext$, which are the $\Hom(M_1,M_2[i])$ in $D^b(\scr{M}(k))$.
+
+For each of the usual cohomology theories, these motivic $\Ext^i$ should be sent to the $\Ext^i$ of the corresponding realisations of $M_1$ and $M_2$.
+
+
+## 3.2 {.unnumbered #section-3.2}
+
+If $X$ is an algebraic variety over $k$< then we define the *absolute cohomology groups* of $X$ to be the
+$$
+  H^i_\abs(X) := \Hom_{\scr{D}(k)}(1,R\Gamma_\mot(X)[i]),
+$$
+where $1$ is the unit motive.
+We will also consider the
+$$
+  H^i_\abs(X,\QQ(j)) := \Hom_{\scr{D}(k)}(1,R\Gamma_\mot(X)(j)[i]).
+$$
+
+These groups are often called the *motivic cohomology groups*.
+They are vector spaces over $\QQ$.
+They are not to be confused with the $H^i_\mot(X)$, which are motives over $k$.
+The two are linked by a spectral sequence:
+$$
+  E_2^{pq} = \Ext^p(1,H_\mot^q(X)) \Rightarrow H_\abs^{p+q}(X).
+\tag{3.2.1}
+$$
+If $M$ is a motive, then we write $H^p_\abs(M)$ to mean $\Ext^p(1,M)=\Hom_{\scr{D}(k)}(1,M[p])$.
+With this notation, the spectral sequence (3.2.1) can be written as
+$$
+  E_2^{pq} = H_\abs^p(H_\mot^q(X)) \Rightarrow H_\abs^{p+q}(X).
+\tag{3.2.2}
+$$
+
+The $\ell$-adic analogue is the following:
+a variety $X$ over $k$ (with algebraic closure $\overline{k}$) defines $\ell$-adic cohomology groups $H^i(X\otimes_k\overline{k},\QQ_\ell)$, which we wish to be realisations of motives $H_\mot^i(X)$.
+The variety $X$ also has an absolute étale cohomology $H^i(X,\QQ_\ell)$, which is the abutment of a spectral sequence:
+$$
+  H^p(\Gal(\overline{k}/k), H^q(X\otimes_k\overline{k},\QQ_\ell)) \Rightarrow H^i(X,\QQ_\ell).
+$$
+
+If $X$ is projective and smooth over $k$, then we wish for $R\Gamma_\mot(X)$ to be (non-canonically) isomorphic to the direct sum in $\scr{D}(X)$ of the $H_\mot^i(X)[-i]$.
+This would follow from the following hypothesis:
+
+::: {.itenv title="($*$)" latex="{($*$)}"}
+If $\scr{L}$ is an invertible sheaf on $X$, then we have
+$$c_1(\scr{L})\colon R\Gamma_\mot(X)\to R\Gamma_\mot(X)(1)[2]$$
+which, after taking the $\ell$-adic realisation, gives the cup product with the Chern class $c_1(\scr{L})$ of
+$$\scr{L}\colon H^i(X\otimes_k\overline{k},\QQ_\ell) \to H^{i+2}(X\otimes_k\overline{k},\QQ_\ell(1)).$$
+:::
+
+In fact, take $\scr{L}$ to be ample.
+Since the $\ell$-adic realisation functor is a fibre functor, it follows from ($*$) and the difficult Lefschetz theorem that, for $X$ of pure dimension $N$, the
+$$
+  c_1(\scr{L})^i\colon H_\mot^{N-i}(X) \to H_\mot^{N+i}(X)(i)
+$$
+are isomorphisms.
+We can then apply Deligne [@8].
+
+\oldpage{156}
+Analysing the proof, we can thus obtain, for every ample invertible sheaf $\scr{L}$, multiple canonical decompositions:
+$$
+  \varphi_\scr{L}\colon R\Gamma_\mot(X) \leftrightarrow \bigoplus H_\mot^i(X)[-i].
+$$
+See Deligne, "Décompositions dans la catégorie dérivée", in this volume.
+
+::: {.rmenv title="Warning" latex="{Warning}"}
+These arguments are essentially rational, since they depend on the difficult Lefschetz theorem.
+If we had an integer variety of $\scr{D}(X)$, then we should expect for $R\Gamma(X)$ in this setting to not always be a sum of the $H^i(X)[-i]$.
+:::
+
+
+## 3.3 {.unnumbered #section-3.3}
+
+Let $X$ be smooth over $k$.
+The various "classes" of an algebraic cycle $Z$ of codimension $d$ should come from a motivic class
+$$
+  \cl(Z) \in \Hom(1,R\Gamma_\mot(X)[2d](d)) =: H_\abs^{2d}(X,\QQ(d)).
+\tag{3.3.1}
+$$
+The class in (3.3.1) should depend only on the linear equivalence class of $Z$.
+
+If $X$ is smooth and projective, and if we have chosen a decomposition
+$$
+  R\Gamma_\mot(X) \simeq \bigoplus H_\mot^i(X)[-i]
+$$
+(cf. [§3.2](#section-3.2)), then the class in (3.3.1) is equivalent to a series of classes
+$$
+  \cl_n(Z) \in \Ext^n(1,H_\mot^{2d-n}(X)(d)) = H_\abs^n(H_\mot^{2d-n}(X)(d)).
+\tag{3.3.2}
+$$
+The first of these classes that is non-zero does not depend on the chosen decomposition.
+
+
+## 3.4 {.unnumbered #section-3.4}
+
+::: {.rmenv title="Example" latex="{Example}"}
+In Hodge theory, $Z$ defines first of all an integer cohomology class of type $(d,d)$, i.e. a morphism of Hodge structures
+$$
+  \ZZ \to H^{2d}(X)(d).
+$$
+If this class is zero, then $Z$ has a class in the intermediate Jacobian:
+$$
+  J_d(X) = H^{2d-1}(X,\CC)/F^d\oplus H^{2d-1}(X,\ZZ),
+$$
+which is exactly the group
+$$
+  \Ext^1(\ZZ,H^{2d-1}(X)(d))
+$$
+in the category of mixed Hodge structures.
+The story ends here, since the abelian category of mixed Hodge $\QQ$-structures is of cohomological dimension $1$.
+:::
+
+
+## 3.5 {.unnumbered #section-3.5}
+
+::: {.rmenv title="Example" latex="{Example}"}
+Let $X$ be smooth and projective, and of pure dimension $N$ over an algebraically closed field $k$.
+Let $\scr{O}(1)$ be an ample invertible sheaf.
+We will show how we can associate a class $\cl(D)$ in $\Pic^0(X)\otimes\QQ$ to a divisor $D$, where the theory of motives interprets this Picard group as $H_\abs^1(X)(1)$.
+
+\oldpage{157}
+By a theorem of A. Weil [@31, Theorem 7], the map
+$$
+  E\mapsto E\cdot c_1(\scr{O}(1))^{N-1}
+$$
+from linear equivalence classes of divisors to linear equivalence classes of $0$-cycles induces an isogeny
+$$
+  \varphi\colon \Pic^0(X) \to J(X),
+$$
+and thus a bijection from $\Pic^0(X)\otimes\QQ$ to $J(X)\otimes\QQ$.
+We set
+$$
+  \cl_1(D) = \varphi^{-1}\cl
+  \left(
+    D\cdot c_1(\scr{O}(1))^{N-1}
+    - \frac{\deg(D\cdot c_1(\scr{O}(1))^{N-1})}{\deg(c_1(\scr{O}(1))^N)}
+    \cdot c_1(\scr{O}(1))^N
+  \right).
+$$
+:::
+
+
+## 3.6 {.unnumbered #section-3.6}
+
+::: {.rmenv title="Example" latex="{Example}"}
+We now work, not over the spectrum of a field, but instead over a base $S$ which is smooth over an algebraically closed field $k$.
+Let $f\colon X\to S$ be smooth and projective over $S$, and let $Z$ be a cycle of codimension $d$.
+We work in $\ell$-adic cohomology, with $\ell$ invertible over $S$.
+The cycle $Z$ has a class in
+$$
+  H^{2d}(X,\ZZ_\ell(d)) = \Hom_{D(S)}(\ZZ_\ell, Rf_*\ZZ_\ell[2d](d)).
+$$
+If we choose a decomposition
+$$
+  Rf_*\QQ_\ell \simeq \sum R^if_*\QQ_\ell[-i],
+\tag{3.6.1}
+$$
+then this class gives rise to a series of classes:
+$$
+  \cl_n(Z) \in \Ext^n(\ZZ,R^{2d-n}f_*\QQ_\ell(d)) = H^n(S,R^{2d-n}f_*\QQ_\ell(d)).
+\tag{3.6.2}
+$$
+
+If $X$ is of the form $X_0\times_{\Spec(k)}S$, and if the decomposition (3.6.1) comes from the unique analogous decomposition of the cohomology of $X_0$, then these classes can be identified with the Künneth components of the cohomology class of $Z$.
+:::
+
+
+## 3.7 {.unnumbered #section-3.7}
+
+Suppose that $X$ is smooth over a field.
+Decompose the K-theory group $K_n(X)\otimes\QQ$ by the eigenvalues of the Adams operations:
+$$
+  K_n(X)\otimes\QQ = \bigoplus K_n(X)^{(j)}
+$$
+where, on $K_n(X)^{(j)}$, the Adams operation $\Psi_k$ acts by multiplication by $k^j$.
+Recall that $K_0(X)^{(j)}$ is the Chow group of cycles of codimension $j$, modulo rational equivalence, tensored with $\QQ$.
+
+The example of the usual cohomology theories leads to us hope that the Chern classes
+$$
+  \ch^j\colon K_n(X)\otimes\QQ \to H_\abs^{2j-n}(X,\QQ(j))
+$$
+will factor through $K_n(X)^{(j)}$.
+
+An optimistic conjecture is that the "Chern class" morphisms are isomorphisms:
+$$
+  \ch^j\colon K_n(x)^{(j)} \xrightarrow{\sim} H_\abs^{2j-n}(X,\QQ(j)) := \Hom(1,R\Gamma(X)(j)[2j-n]).
+\tag{3.7.1}
+$$
+
+\oldpage{158}
+This conjecture underlies the terminology "absolute motivic cohomology group" for the $K_n(X)^{(j)}$, as well as the notation
+$$
+  H_\scr{M}^{2j-n}(X,\QQ(j)) := K_n(X)^{(j)}.
+$$
+
+Block [@4] proposed an interpretation of the $K_n(X)^{(j)}$ as "higher Chow groups" $\Ch^j(X;n)$.
+His argument has a hole (moving lemma insufficient) that he promises to fix.
+This interpretation makes the definition of $\ch^j$ more natural, but the interpretation in terms of K-theory remains necessary for explicit calculation in the case of number fields.
+The higher Chow groups have the advantage of having an natural integer structure.
+
+
+## 3.8 {.unnumbered #section-3.8}
+
+Thanks to Beilinson, the conjecture (3.7.1) can be deduced from certain hypotheses, of which the most important are
+
+a. the functor $X\mapsto K_\bullet(X)$ factors through $R\Gamma_\mot$; and
+b. the category $\scr{D}(k)$ is the derived category of the category of motives.
+
+The conjecture has striking consequences for the two sides of (3.7.1).
+They disappear, for trivial reasons, in different regions of the $(n,j)$-plane:
+
+a. If $M$ is a motive, then $\Ext^i(1,M)=0$ for $i<0$, and $\Ext^0(1,M)=\Hom(1,M)$.
+    From this, it follows that $\Hom(1,R\Gamma(X)(j)[N])=0$ for $N<0$, or for $N=0$ and $j\neq0$.
+    In K-theory, this gives the conjecture by Beilinson and Soulé that $K_n(X)^{(j)}=0$ for $2j<n$, as well as for $2j\leq n$ if $j\neq0$.
+b. The Chow group $\Ch^j(X)$ of algebraic cycles of codimension $j$ is zero for $j>\dim X$, and, similarly, $\Ch^j(X;n)$ is zero for $j>\dim(X)+n$.
+    Furthermore, $\Ch^j(X;n)=0$ for $n<0$.
+
+Applying (3.7.1), we thus deduce:
+
+::: {.itenv #vanishings-3.8.1 title="Vanishings 3.8.1" latex="{Vanishings 3.8.1}"}
+—
+
+i. If $M$ is a pure motive of weight $w$, then $\Hom^i(1,M)=0$ for $i>-w$.
+ii. If $M$ is effective of weight $w$, and $b>0$, then $\Hom^i(1,M(w+b))=0$ for $i>w+b$.
+:::
+
+::: {.proof}
+For (i), suppose that $M$ is a direct factor of $H_\mot^a(X)(c)$, with $c\geq0$, and $X$ a smooth projective variety.
+The $\Ext^i(1,M)$ is then a direct factor of $\Ch^c(X;2c-i-a)$, and, if it is non-zero, then $2c-i-a\geq0$, i.e. $i\leq 2c-a=-w$.
+
+For (ii), We again use the weak Lefschetz theorem (the $\ell$-adic, and thus motivic if the $\ell$-adic cohomology is a fibre functor, version) to suppose that $\dim(X)\leq a$.
+We suppose that $c\geq a$, and we must prove the vanishing of $\Ext^i(1,H_\mot^a(X)(c))$ for $i>(c-a)+a=c$.
+This inequality is equivalent to $c>a+(2c-i-a)\geq\dim(X)+(2c-i-a)$.
+:::
+
+If (3.7.1) is an isomorphism then this would also imply the weak Lefschetz theorems for the Chow groups, as well as the conjectures on the Chow groups presented at this conference by J.P. Murre.
+
+
+## 3.9 {.unnumbered #section-3.9}
+
+\oldpage{159}
+If $M$ is the unit motive, then [3.8.1.ii](#vanishings-3.8.1) demands that
+$$
+  H_\abs^n(\Spec(k),\QQ(j)) = 0 \quad\mbox{for $n>j$}.
+\tag{3.9.1}
+$$
+
+It is not clear to me if we should hope for an analogue of (3.9.1) over $\ZZ$.
+If we define the $H_\abs^n(\Spec(k),\ZZ(j))$ as being the higher Chow groups, then (3.9.1) is trivially true.
+
+A more concrete question is the following: suppose that we could define Galois cohomology classes in the $H^n(\Gal(\overline{k}/k),\ZZ_\ell(j))$ in a way that was "independent of $\ell$"; if $n>j$, then (3.9.1) demands that these classes be torsion; should we hope for them to actually be zero?
+
+
+## 3.10 {.unnumbered #section-3.10}
+
+::: {.rmenv title="Example" latex="{Example}"}
+Let $G$ be an simply connected and absolutely simple algebraic group over a field $k$.
+Over the algebraic closure $\overline{k}$ of $k$, the relations between the cohomology of $G$, $BG$, and $BT$ (where $T$ is a maximal torus) show that, in each of the usual cohomology theories, $H^i(G_{\overline{k}})=0$ for $i=1,2$, and that $H^3(G_{\overline{k}})(2)$ has a natural generator $a$.
+Now work in $\ell$-adic cohomology.
+Over $k$, the absolute $\ell$-adic cohomology of $G$ is the direct sum of that of a point and of a reduced cohomology $\widetilde{H}$, related to $G_{\overline{k}}$ by a Hochschild--Serre exact sequence.
+We thus have that $\widetilde{H}^i(G,\ZZ_\ell(2))=0$ for $i\leq2$, and that $\widetilde{H}^3(G,\ZZ_\ell(2))$ is isomorphic to $\ZZ_\ell$, with a natural generator $a$.
+This generator is primitive, and thus defines a homomorphism
+$$
+  G(k) \to H^3(\Spec(k),\ZZ_\ell(2)).
+$$
+We can show that, as predicted by [§3.9](#section-3.9), this arrow is zero:
+by Mercurev--Suslin [@27], the $H^3$ is torsion free, and a trace argument shows that the image is torsion:
+$G$ splits over a finite extension $k'$ of $k$, and $G(k')$ is equal to its derived group, at least if $|k'|\geq4$.
+
+The same circle of ideas allows us to construct a canonical central extension of $G(k)$ by $H^2(\Spec(k),\ZZ/n(2))$, equal to $K_2(k)/nK_2(k)$ by Mercurev--Suslin [@27].
+Recall that, for split $G$, a canonical central extension of $G(k)$ by $K_2(k)$ was constructed by Matsumoto [@25, Section 5.11].
+:::
+
+
+## 3.11 {.unnumbered #section-3.11}
+
+If $M$ is a motive over $\QQ$, then $H_\abs^1(M)$ appears in the Beilinson conjecture concerning the behaviour at $s=0$ of the $L$-function of $M$ (Beilinson [@2] and the talks by Soulé, Nekovar, and Scholl at this conference).
+I refer to these talks for a description of the conjecture and what is known about it.
+
+
+## 3.12 {.unnumbered #section-3.12}
+
+If $F$ is a number field, then (3.7.1) predicts that, in the category of motives over $F$, we have that
+$$
+  \Ext^1(\QQ(0),\QQ(j)) = K_{2j-1}(F)\otimes\QQ,
+\tag{3.12.1}
+$$
+with vanishing of the $\Ext^n$ for $n\geq2$.
+The claim in (3.12.1) imposes severe restrictions on the category of motives that are iterated extensions of Tate motives, and on the realisation systems attached to an object of this category.
+See Deligne [@14], where an example considered in detail is that of the Lie algebra of the unipotent $\pi_1$ of the projective line minus three points.
+
+\oldpage{160}
+Here is a programme to prove the consequences of (3.12.1) for such realisation systems.
+
+A. Define a Tannakian category $\scr{T}$, with simple objects being the tensor powers $\QQ(n)$, for $n\in\ZZ$, of an object $\QQ(1)$ of rank $1$ for which (3.12.1) is true "by definition".
+
+The idea is that Bloch's higher Chow groups $\Ch^n(\Spec(F),i)$ are given by a simplicial complex that is graded by the codimension $n$ of cycles, and that the product is almost given by a graded simplicial commutative algebra structure.
+We say "almost", since the intersection of two cycles is not always defined, but only "in general".
+Rationally, it should be possible to replace this almost algebra by a true commutative bigraded differential algebra, with $d$ of degree $(1,0)$, and
+
+- $A^{\bullet,m}=0$ for $m<0$;
+- $A^{\bullet,0}$ consisting only of $\QQ$ in degree $0$; and
+- $H^\bullet(A^{\bullet,n})$ consisting only of $K_{2n-1}(F)\otimes\QQ$ in degree $1$.
+
+We can then define $\scr{T}$ as a suitable category of bigraded differential modules, and with morphisms up to homotopy.
+
+This part of the programme has essentially been carried out by May [@26].
+For a cubic variety, see the talk of Bloch in this volume.
+
+B. Define, for each of the usual cohomology theories, a "realisation" fibre functor on the Tannakian category $\scr{T}$ of (A).
+
+C. Show that the mixed Tate motives in which we are interested (for example, $\Lie\pi_1(\PP^1\setminus\{0,1,\infty\})$) --- or, rather, the systems of their realisations --- come from an object of $\scr{T}$.
