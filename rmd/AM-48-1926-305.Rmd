@@ -302,7 +302,7 @@ Of course, instead of using general theorems, Equation (18) could also be used o
 In the case where $k=0$, we investigate such an estimation for a different purpose, c.f. Equation (22).
 
 
-## III (.unnumbered #III)
+## III {.unnumbered #III}
 
 *If $a\leq\frac14$, then there are no zeros of $\GG(z;a)$ outside of the strip $-\frac12<x<\frac12$.*
 
@@ -369,4 +369,276 @@ thus $\GG(z)$, cf. Equation (18), does not disappear in this half-plane.
 For what follows, it is useful to have in mind a certain partition of the plane (cf. the above figure): the strip $-1\leq x\leq 1$ is denoted by $\SS$; the part of the plane where both $r\leq R$ and $|x|>1$ is denoted by $\TT$; the remaining part, which extends to infinity, is denoted by $\UU$.
 We pick the number $R=R(A)$ depending on a certain positive number $A$ such that, inside, and on the boundary of, $\UU$, the inequality $|\psi(z)|<1$ is satisfied for $a\leq A$.
 From Equation (18) it follows that $\GG(z)$ does not vanish inside, or on the boundary of, $\UU$.
+
+
+# 3 {.unnumbered #section-3}
+
+We will now study consequences of the difference equation in (9), and link them to those that we have just obtained from the representation in Equation (11).
+
+## IV (.unnumbered #IV)
+
+*$\GG(z)$ has no zeros on the straight lines $x=1$ or $x=-1$, i.e. on the boundary of $\SS$.*
+
+\oldpage{312}
+There are two things that we have to consider:
+firstly, the difference equation and the symmetry of $\GG(z)$; secondly, the asymptotic properties of $\GG(z)$.
+
+Firstly:
+the function $\GG(z)$ is even, and takes real values for all $z$.
+From this it follows that, if $y$ is real, then $\GG(iy)$ is real, and the two values $\GG(1+iy)$ and $\GG(-1+iy)$ are complex conjugate.
+So Equation (9) implies, for $z=iy$, that
+$$
+  y\GG(iy) = 2a\Im\GG(1+iy).
+\tag{25}
+$$
+
+Secondly:
+it is not possible for $\GG(z)$ to vanish at two points simultaneously if the line connecting them is parallel to the real axis and is of length $1$.
+This is since, if $\GG(c)=0$ and $\GG(c-1)=0$, then Equation (9) would imply that $\GG(c+1)=0$ as well, and thus that $\GG(c+2)=0$, $\GG(c+3)=0$, $\ldots$, and so $\GG(z)$ would have zeros in the region $\UU$ (see the figure); but this would be a contradiction.
+
+For real $z$, $\GG(z)$ is positive (cf. Equation (7)).
+On one hand, $\GG(1+iy)=0$ implies that $y\neq0$, and, on the other hand, $\GG(1+iy)=0$ implies that $\Im\GG(1+iy)=0$, and thus Equation (25) implies that $\GG(iy)=0$.
+However, the simultaneous vanishing of $\GG(1+iy)$ and $\GG(iy)$ is impossible, and thus $\GG(1+iy)\neq0$.
+
+
+## V (.unnumbered #V)
+
+*There are no zeros of $\GG(z)$ outside of the strip $\SS$.*
+
+This has already been proven for $a\leq\frac14$, cf. [(III)](#III).
+Let
+$$
+  \frac14 \leq a \leq A.
+\tag{26}
+$$
+As we have already established, there are no zeros of $\GG(z)$ in the region $\UU$ nor on its boundary.
+If we take [(IV)](#IV) into account as well, we see that there are no zeros of $\GG(z)$ on the boundary of $\TT$ either.
+If $z$ varies along the boundary of $\TT$, and $a$ in the closed interval Equation (26), then $\GG(z;a)$ is a continuous non-zero function of $z$ and $a$.
+Thus the integral
+$$
+  \frac{1}{2\pi i} \int \frac{\GG'(z;a)\dd z}{\GG(z;a)}
+\tag{27}
+$$
+(along the boundary of $\TT$ in the positive direction) is a continuous function of $a$.
+The integral Equation (27) calculates an integer, namely the number of zeros of $\GG(z;a)$ that lie inside $\TT$.
+A continuous function that takes only integer values is constant.
+Thus the integral is always equal to $0$, since it is equal to zero for $a=\frac14$, cf. [(III)](#III).
+
+
+## VI {.unnumbered #VI}
+
+*All the zeros of $\GG(z)$ lying inside the strip $\SS$ are simple and purely imaginary.*
+\oldpage{313}
+
+It follows from Equation (17) and from Stirling's formula that, in the strip $1\leq x\leq 1$, for $y\to+\infty$,
+$$
+  \GG(x+iy)
+  =
+  \frac{1}{\sqrt{2\pi y}} e^{-\frac\pi2 y+ i\frac\pi2 x}
+  \left\{
+    \left(\frac{y}{a}\right)^x e^{i\Phi} + 
+    \left(\frac{y}{a}\right)^{-x} e^{-i\Phi}
+  \right\} + \error\left(
+    e^{-\frac\pi2 y} y^{|z| - \frac32}
+  \right)
+\tag{28}
+$$
+uniformly in $x$, where, for abbreviation, we set
+$$
+  \Phi = y\log\frac{y}{a} - y - \frac\pi4.
+\tag{29}
+$$
+A weakened form of [claim (VI)](#VI), in which we replace "*all* the zeros" with "*all but finitely many* zeros", can be proved using only Equations (28) and (29); a proof of the full result needs more.
+
+Consider the branch of $\log\GG(z)$ that is real for $z=1$;
+by [(IV)](#IV), it can be extended indefinitely along the straight line $x=1$.
+Consider $\Im\log\GG(1+iy)$ as $y$ goes from $0$ to $+\infty$, and denote the *smallest* positive value of $y$ for which
+$$
+  \Im\log\GG(1+iy) = (2n+1)\frac\pi2
+$$
+does *not* hold by $y_n$ ($n=0,1,2,3,\ldots$).
+In the curly brackets on the right-hand side of Equation (28), the $a^{-x}y^xe^{i\Phi}$ term dominates when $x=1$;
+by Equation (29), we can exclude the possibility that
+$$
+  \Im\log\GG(1+iy) \to +\infty
+  \qquad\mbox{as $y\to\infty$}.
+$$
+Thus the $y_n$ exist for $n=0,1,2,3,\ldots$.
+
+Denote by $R_n$ the rectangle whose four corners are
+$$
+  1+iy_n, \;\; -1+iy_n, \;\; -1-iy_n, \;\; 1-iy_n.
+$$
+By [(IV)](#IV), there are no zeros of $\GG(z)$ on the vertical sides of $R_n$;
+we will soon show that, for sufficiently large $n$, there are also none on the horizontal sides.
+Let
+
+- $H_n$ denote the change in $\Im\log\GG(z)$ when $z$ moves in a straight line from $1+iy_n$ to $-1+iy_n$;
+- $N_n$ denote the number of *purely imaginary* zeros of $\GG(z)$ lying inside $R_n$, counted *without* multiplicity;
+- $N_n+N_n^*$ denote the number of *all* zeros of $\GG(z)$ lying inside $R_n$, counted *with* multiplicity.
+
+\oldpage{314}
+So $N_n^*$ includes the number of any not purely imaginary zeros of $\GG(z)$ inside $R_n$.
+Furthermore, every purely imaginary zero inside $R_n$ of multiplicity $m$ contributes $m-1$ to $N_n^*$.
+Both $N_n$ and $N_n^*$ are non-decreasing as $n$ increases.
+
+The total change of $\Im\log\GG(z)$ as $z$ traces out the boundary of the rectangle $R_n$ one time in the positive direction is
+$$
+  2\pi(N_n + N_n^*) = 2H_n + (2n+1)2\pi
+\tag{30}
+$$
+as follows from the definitions of $y_n$ and $H_n$ and from symmetry.
+
+By definition, $\Im\log\GG(1+iy)$ takes the value $(v-1/2)\pi$ for $y=y_{v-1}$, and the value $(v+1/2)\pi$ for $y=y_v$;
+there thus exists at least one $\eta$ with $y_{v-1}<\eta<y_v$ such that
+$$
+  \Im\log\GG(1+i\eta) = v\pi.
+$$
+From this it follows that
+$$
+  \Im\GG(1+i\eta) = 0
+$$
+and, by Equation (25), that
+$$
+  \GG(i\eta) = 0.
+$$
+
+Then $-i\eta$, along with $i\eta$, is also a zero of $\GG(z)$, and so, for $v=1,2,3,\ldots$ and $n$ fixed, we have proven the existence of at least $2n$ purely imaginary zeros in the rectangle $R_n$;
+i.e. we have
+$$
+  N_n \geqslant 2n.
+\tag{31}
+$$
+So Equations (30) and (31) give
+$$
+  2\pi N_n^* \leqslant 2H_n + 2\pi.
+\tag{32}
+$$
+Denote by $\Phi_n$ the value of Equation (29) at $y=y_n$.
+Since, as mentioned above, the first term in the curly brackets of Equation (28) dominates when $x=1$, we have that
+$$
+  \Im\log\GG(1+iy_n)
+  = (2n+1)\frac\pi2
+  \equiv \Phi_n + \frac\pi2 + \varepsilon_n \mod2\pi,
+$$
+where
+$$
+  \lim_{n\to\infty}\varepsilon_n = 0.
+$$
+\oldpage{315}
+Since $\Phi_n=n\pi-\varepsilon_n$, for $y=y_n$ with $n$ large enough, the value of $e^{i\Phi_n}$ is almost $(-1)^n$, and the term in the curly brackets in Equation (28) is almost real.
+Two things follow from this:
+
+1. For $y=y_n$ in Equation (28), the leading term in Equation (28) dominates over the error term $\error$ in all of the segment $-1\leqslant x\leqslant 1$, and so $\GG(z)$ has no zeros on the horizontal sides of $R_n$, as we had previously claimed.
+2. Moving along an arc in this segment, the $e^{i\pi x/2}$ factor dominates in $\GG(z)$, or, more precisely, for arbitrary $\varepsilon$ we have
+    $$
+      H_n < -\pi + \varepsilon
+    \tag{33}
+    $$
+    for $n$ sufficiently large.
+    Then Equations (32) and (33) give
+    $$
+      2\pi N_n^* < 2\varepsilon.
+    $$
+
+Thus $N_n^*$ is a non-negative integer, and equal to $0$ for sufficiently large $n$, and thus always equal to $0$, since $N_n^*$ is non-decreasing for increasing $n$;
+so we have proven [(VI)](#VI).
+
+Now, [(IV)](#IV), [(V)](#V), and [(VI)](#VI) form a complete partition of the plane, and show that *all the zeros of $\GG(z)$ are purely imaginary and simple*.
+The above observation also shows that the number of zeros with ordinate between $0$ and $y$ is
+$$
+  \frac{y}{\pi}\log\frac{y}{a} - \frac{y}{\pi} + \error(1).
+$$
+
+
+# 4 {.unnumbered #section-4}
+
+In order to be able to prove all of the claims in the introduction, we will need two simple, general lemmas.
+
+::: {.itenv #lemma-i title="Lemma I" latex="{Lemma I}"}
+Let $F(u)$ be analytic, and taking real values for any non-negative real $u$.
+Further, let
+$$
+  \lim_{u\to\infty} u^2 F^{(n)}(u) = 0
+\tag{34}
+$$
+for $n=0,1,2,\ldots$ (with $F^{(0)}(u)=F(u)$).
+If $F(u)$ is not an even function, then the function
+$$
+  G(x) = \int_0^\infty F(u)\cos xu \dd u
+\tag{35}
+$$
+is non-zero for sufficiently large real $x$.
+:::
+
+::: {.proof}
+Since $F(u)$ is not even, there exists some integer $q$ such that
+$$
+  F'(0) = F'''(0) = \ldots = F^{(2q-3)}(0) = 0,
+  \qquad F^{(2q-1)}(0) \neq 0.
+$$
+\oldpage{316}
+Taking Equation (34) into account, we obtain, by repeated partial integration,
+$$
+  G(x) = (-1)^q \frac{F^{(2q-1)}(0)}{x^{2q}} + \frac{{(-1)^{q+1}}}{x^{2q+1}} \int_0^\infty F^{(2q+1)}(u)\sin xu \dd u.
+$$
+From this it follows, again using Equation (34), that
+$$
+  \lim_{x\to\infty} x^{2q}G(x) = (-1)^q F^{(2q-1)}(0) \neq 0,
+$$
+whence our claim.
+:::
+
+If we take $F(u)$ to be the right-hand side of Equation (4), or, more generally, take $F(u)$ in Equation (35) to be the sum of finitely many terms of the series in Equation (3), then we obtain an entire function $G(x)$ which, by the theory of Hadamard, can easily be proven to have infinitely many zeros.
+Of these zeros, by [Lemma I](#lemma-i), only finitely many are real, since the function $F(u)$ is clearly not even.
+The function $\Phi(u)$ in the integral representation Equation (2) of the $\xi$-function must, by [Lemma I](#lemma-i), be even (which could also be shown directly).
+
+::: {.itenv #lemma-ii title="Lemma II" latex="{Lemma II}"}
+Let $a$ be a positive constant, and $G(z)$ an entire function of genus $0$ or $1$, that takes real values for real $z$, with no complex zeros and at least one real zero.
+Then the function
+$$
+  G(z-ia) + G(z+ia)
+\tag{36}
+$$
+has only real zeros.^[The corresponding result for polynomials is a special case of a theorem of Ch. Biehler. See e.g. G. Pólya and G. Szegö, op. cit., Aufgabe III 25.]
+:::
+
+::: {.proof}
+The hypotheses on $G(z)$ imply that
+$$
+  G(z) = c z^q e^{\alpha z} \prod\left(1-\frac{z}{\alpha_n}\right)e^{z/\alpha_n},
+$$
+where $c,\alpha,\alpha_1,\alpha_2,\ldots$ are real constants, with $\alpha_n\neq0$ for $n=1,2,\ldots$ such that $\alpha_1^{-2}+\alpha_2^{-2}+\ldots$ converges, and where $q$ is a non-negative integer.
+(If $G(z)$ has no zeros, i.e. when $G(z)$ reduces to $ce^{\alpha z}$, then Equation (36) can be identically zero.)
+Let $z=x+iy$ be a zero of the function Equation (36), so that
+$$
+  |G(z-ia)| = |G(z+ia)|
+$$
+and thus
+$$
+  1
+  =
+  \left\vert
+    \frac{G(z-ia)}{G(z+ia)}
+  \right\vert^2
+  =
+  \left(
+    \frac{x^2+(y-a)^2}{x^2+(y+a)^2}
+  \right)^q
+  \prod \frac{(x-\alpha_n)^2+(y-a)^2}{(x-\alpha_n)^2+(y+a)^2}.
+$$
+\oldpage{317}
+If $y>0$ then all the factors of the right-hand side are $<1$, and if $y<0$ then all the factors of the right-hand side are $>1$.
+Thus, for there to be at least one factor, it must be the case that $y=0$.
+:::
+
+The fact that $\GG(\frac12 iz)$ has only real zeros has already been proven.
+That $\GG(\frac12 iz)$ also satisfies the genus hypothesis of [Lemma II](#lemma-ii) follows easily from the theory of Hadamard.
+If we apply [Lemma II](#lemma-ii) to $G(z)=\GG(\frac12 iz;\pi)$ and $a=9/2$, then, by Equation (8), we obtain that all the zeros of $\xi^*(z)$ are real.
+
+By Equations (8), (17), and (19), we also see that, in the half-plane $y\geqslant\varepsilon$ (for fixed $\varepsilon>0$), as $z\to\infty$,
+$$
+  \xi^*(iz) \sim \frac12 z^2 \pi^{-\frac{z}{2}-\frac14} \Gamma\left(\frac{z}{2}+\frac14\right).
+$$
+This formula should be compared with Equation (1).^[*Note added during editing (5th February, 1926).* By suitably extending [Lemma II](#lemma-ii), we can prove that the function $$\xi^{**}(z) = 4\pi\int_0^\infty\left[2\pi\left(e^{\frac{9u}{2}} + e^{-\frac{9u}{2}}\right)-3\left(e^{\frac{5u}{2}} + e^{-\frac{5u}{2}}\right)\right]e^{-\pi(e^{2u}+e^{-2u})} \cos zu \dd u,$$which "better" approximates the true $\xi$-function, also has only real zeros.]
 
