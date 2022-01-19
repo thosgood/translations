@@ -100,7 +100,7 @@
             <text variable="title" font-style="italic"/>
             <text macro="edition"/>
             <text macro="publisher"/>
-            <text macro="series" font-style="italic"/>
+            <text variable="collection-title" form="short" text-case="title" font-style="italic" suffix=", "/>
             <text macro="volume" font-weight="bold"/>
           </group>
         </if>
