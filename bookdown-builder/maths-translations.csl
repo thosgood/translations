@@ -100,13 +100,16 @@
             <text variable="title" font-style="italic"/>
             <text macro="edition"/>
             <text macro="publisher"/>
+            <text macro="series" font-style="italic"/>
+            <text macro="volume" font-weight="bold"/>
           </group>
         </if>
-        <else-if type="chapter paper-conference" match="any">
+        <else-if type="incollection chapter paper-conference" match="any">
           <text variable="title" quotes="true" suffix=", "/>
           <text term="in" suffix=": "/>
           <text macro="editor" suffix=", "/>
           <text variable="container-title" form="short" text-case="title" font-style="italic" suffix=", "/>
+          <text macro="volume" font-weight="bold"/>
           <text macro="edition" suffix=", "/>
           <text macro="publisher"/>
           <group delimiter=" ">
