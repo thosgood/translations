@@ -781,7 +781,7 @@ $$
 $$
 then we know that $c_p(E)=\sum_{r+s=p}c_r(E')\cdot c_s(E'')$.
 
-As in [§5.b](#section-5.b), this can be understood as a multiplicative property of the Chern polynomial $c_t(E)=\sum c_p(E)t^p$, and allows us to define $c_t(x)$ for all $x\in K(X)$.
+As in [§5.2](#section-5.b), this can be understood as a multiplicative property of the Chern polynomial $c_t(E)=\sum c_p(E)t^p$, and allows us to define $c_t(x)$ for all $x\in K(X)$.
 The $c_p(x)$ are homogeneous elements of degree $2p$ of $\HH^\bullet(X,\mathbb{Z})$.
 
 In the case of an arbitrary base field, Grothendieck proceeded in the same way, but replacing $\HH^\bullet(X)$ with the graded ring $A(X)$ of _cycle classes_ on $X$, under linear equivalence (\`{a} la Chow).
@@ -1015,7 +1015,7 @@ If we denote by $\varepsilon$ the canonical homomorphism from $A$ to $K(U)$, we 
 
 Now let $X$ and $Y$ be varieties.
 Denote by $p\colon X\times Y\to X$ the canonical projection.
-If $X$ and $Y$ are _non-singular_, then the homomorphism $p^!\colon K(X)\to K(X\times Y)$ is defined (see [§5.c](#section-5.c), as well as [§7](#section-7)).
+If $X$ and $Y$ are _non-singular_, then the homomorphism $p^!\colon K(X)\to K(X\times Y)$ is defined (see [§5.3](#section-5.c), as well as [§7](#section-7)).
 In fact, this homomorphism can be defined _in the general case_.
 This comes from the fact that $\scr{O}_{X\times Y}$ is $\scr{O}_X$-flat (i.e. an annihilator of $\Tor$), since it is a ring of fractions of the usual tensor product $\scr{O}_X\otimes_k\scr{O}_Y$.
 We can thus set $p^!(\scr{F})=\scr{F}\otimes_{\scr{O}_X}\scr{O}_{X\times Y}$ for any coherent sheaf $\scr{F}$ on $X$, and $p^!(\scr{F})$ is additive, and so defines some $K(X)\to K(X\times Y)$.
@@ -1329,7 +1329,7 @@ $$
 $$
 endowed with the same differential as above, with the $f_i$ being considered as element of $\scr{O}_Z$.
 Since $\scr{O}_{a,Z} = \scr{O}_{a,X}/(g_1,\ldots,g_q)$, the $f_i$ generate a perfect ideal inside;
-so this complex is acyclic (see [§10.c](#section-10.c)) and its $0$-th homology group is $\scr{O}_{a,Z}(f_1,\ldots,f_p)$, i.e. $\scr{O}_{a,Y\cap Z}$.
+so this complex is acyclic (see [§10.3](#section-10.c)) and its $0$-th homology group is $\scr{O}_{a,Z}(f_1,\ldots,f_p)$, i.e. $\scr{O}_{a,Y\cap Z}$.
 Thus
 $$
   \Tor_0 = \scr{O}_{Y\cap Z}
@@ -1370,7 +1370,7 @@ We have that $i^!i_!(y)=y\cdot\lambda_{-1}(E^*)$ for all $y\in K(Y)$.
 :::: {.proof}
 By linearity, and [Theorem 2](#theorem-2), we can restrict to proving [Proposition 12](#proposition-12) in the case where $y=\scr{F}$ is a locally free sheaf.
 By definition, $i^!i_!(\scr{F})$ is the alternating sum of the $\Tor_i^{\scr{O}_X}(\scr{F},\scr{O}_Y)$, and, since $\scr{F}$ and the $\lambda^i E^*$ are locally free, $\scr{F}\cdot\lambda_{-1}E^*$ is the alternating sum of the $\scr{F}\otimes_{\scr{O}_Y}\lambda^i E^*$.
-Recalling [§10.b](#section-10.b), it thus suffices, to prove [Proposition 12](#proposition-12), to show that
+Recalling [§10.2](#section-10.b), it thus suffices, to prove [Proposition 12](#proposition-12), to show that
 
 ::: {.eqtag #section-10.d-equation-4}
 $$
@@ -1404,7 +1404,7 @@ But, since $\scr{F}$ is a sheaf on $Y$, it is annihilated by $\scr{I}(Y)$, and s
 \oldpage{123}
 Finally, since, in this product, the two sheaves are over $\scr{O}_Y$, their $\otimes$ over $\scr{O}$ can be identified with their tensor product over $\scr{O}_Y$, which finishes the proof of [(4)](#section-10.d-equation-4).
 
-Using the notation of [§10.b](#section-10.b), the $\Tor_i(\scr{F},\scr{O}_Y)$ are, on $U$, the homology groups of the complex
+Using the notation of [§10.2](#section-10.b), the $\Tor_i(\scr{F},\scr{O}_Y)$ are, on $U$, the homology groups of the complex
 $$
   0\to\mathfrak{M}_p\otimes\scr{F}\to\mathfrak{M}_{p-1}\otimes\scr{F}\to\ldots\to\scr{F}
 $$
@@ -1428,7 +1428,7 @@ $$
   \Tor_1(\scr{O}_Y,\scr{O}_Y) = \scr{O}_Y\otimes_k V
 $$
 whence we have an isomorphism (for the moment, local, defined by the use of the parameters $f_i$) of the two sides of [(5)](#section-10.d-equation-5).
-But $\mathfrak{M}$, thought of as a tensor product of the algebras $\scr{O}_Y$ and $\bigwedge V$, is clearly a differential graded algebra, and so the remark made at the start of [§10.d](#section-10.d) applies, and shows that, in fact, this isomorphism is intrinsic (and, in particular, does not depend on the chosen system of local parameters) and holds true over $X$.
+But $\mathfrak{M}$, thought of as a tensor product of the algebras $\scr{O}_Y$ and $\bigwedge V$, is clearly a differential graded algebra, and so the remark made at the start of [§10.4](#section-10.d) applies, and shows that, in fact, this isomorphism is intrinsic (and, in particular, does not depend on the chosen system of local parameters) and holds true over $X$.
 ::::
 
 
@@ -1463,7 +1463,7 @@ c. $i^!i_!(y) = y\cdot(1-L^*).$
 \oldpage{124}
 
 ::: {.proof}
-Claim (c) was proven above, and (b) was proven in the remark of [§10.b](#section-10.b).
+Claim (c) was proven above, and (b) was proven in the remark of [§10.2](#section-10.b).
 It remains only to prove (a).
 
 Let $(U_i)$ be a cover of $U$ such that, on $U_i$, $Y$ is defined by one equation $f_i=0$, with the differential $\dd f_i$ being non-zero at every point of $Y\cap U_i$, and let $f_{ij}=f_i/f_j$ on $U_i\cap U_j$.
@@ -1477,7 +1477,7 @@ But, on $Y\cap U_i\cap U_j$, we have that $\dd f_i=f_{ij}\cdot\dd f_j$ (since $f
 # Proof of R--R in the particular case of an injection {#section-11}
 
 Given the results of [§7](#section-7) and [§9](#section-9), it remains only to prove [R--R](#theorem-riemann-roch) for an injection.
-In the notation of [§10.a](#section-10.a), the formula to prove is then equivalent to
+In the notation of [§10.1](#section-10.a), the formula to prove is then equivalent to
 
 ::: {.eqtag #section-11-equation-1}
 $$
@@ -1511,7 +1511,7 @@ $$
 $$
 :::
 
-where the first was proven in [§5.c](#section-5.c), and the second was mentioned in [§6](#section-6) (whose notation we also continue to use).
+where the first was proven in [§5.3](#section-5.c), and the second was mentioned in [§6](#section-6) (whose notation we also continue to use).
 
 ::: {.itenv #proposition-14 title="Proposition 14" latex="{Proposition 14}"}
 The equality [(1)](#section-11-equation-1) is true if $\codim_XY=1$ and $y=i^!(x)$ ($x\in K(X)$).
@@ -1661,7 +1661,7 @@ Given (i), the existence of $h'_i$ is evident if $x'\not\in Y$.
 Now let $x'\in Y$.
 \oldpage{128}
 We can apply the second claim of (i), and, to simplify notation, we suppose that the $f_i=h_i/g$ ($i=1,\ldots,p$) form a system of local parameters;
-let $t_1,\ldots,t_p$ be the homogeneous coordinates of $x'$ in $\PP$ (the notation from the start of [§12.b](#section-12.b), and suppose that $t_k\neq0$.
+let $t_1,\ldots,t_p$ be the homogeneous coordinates of $x'$ in $\PP$ (the notation from the start of [§12.2](#section-12.b), and suppose that $t_k\neq0$.
 Then $f'_k=0$ is a local equation for $Y'$, and so the $h'_j/g'$ are all divisible by $f'_k$ in $\scr{O}_{x',X'}$, and so $h$ is a morphism in $x'$.
 We also see that the $i$th homogeneous coordinate of $h(x')$ is $t_i/t_k$ ($1\leq i\leq p$), which evidently implies (iii).
 
@@ -1707,7 +1707,7 @@ $$
 :::
 
 ::: {.itenv #lemma-19 title="Lemma 19" latex="{Lemma 19}"}
-In the notation of [§12.a](#section-12.a), we have:
+In the notation of [§12.1](#section-12.a), we have:
 
 a. $f_*(1) = 1$, and so $f_*f^*$ is the identity;
 
@@ -1826,7 +1826,7 @@ $$
 # Proof of part (c) of Lemma 19 {#section-15}
 
 In this section, we will write $\scr{J}$ to mean $\scr{I}(Y)$, and $\scr{J}'$ to mean $\scr{I}(Y')$.
-As we remarked in [§10.b](#section-10.b), $\scr{J}'/\scr{J}'^2$ (resp. $\scr{J}/\scr{J}^2$) is the sheaf of germs of sections of $L^*$ (resp. $E^*$), and so $\scr{J}/\scr{J}^2\otimes_{\scr{O}_Y}\scr{O}_{Y'}$ is the sheaf of germs of sections of $g^!(E^*)=E'^*$.
+As we remarked in [§10.2](#section-10.b), $\scr{J}'/\scr{J}'^2$ (resp. $\scr{J}/\scr{J}^2$) is the sheaf of germs of sections of $L^*$ (resp. $E^*$), and so $\scr{J}/\scr{J}^2\otimes_{\scr{O}_Y}\scr{O}_{Y'}$ is the sheaf of germs of sections of $g^!(E^*)=E'^*$.
 
 By associating, to an element $u\in\scr{J}_x$, the element $u\circ f\in\scr{J}'_{x'}(f(x')=x)$, we evidently define a surjective homomorphism of $\scr{O}_{Y'}$-modules $\mu\colon\scr{J}/\scr{J}^2\otimes_{\scr{O}_Y}\scr{O}_{Y'}\to\scr{J}'/\scr{J}'^2$.
 This again shows that $E'^*$ is sent to $L^*$, and thus that $L$ injects into $E'$;
@@ -1882,7 +1882,7 @@ their proof will be analogous to that of [Proposition 12](#proposition-12) ([§1
 We will first prove [(2)](#section-15-equation-2), as well as the fact that the $\Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})$ are annihilated by $\scr{J}'$, and can thus be identified with sheaves on $Y'$.
 
 It is clear that the two sides of [(2)](#section-15-equation-2) are zero on an open subset that does not meet $Y'$.
-To prove [(2)](#section-15-equation-2) in the neighbourhood of a point $b'\in Y'$, we reuse the notation from [§10.c](#section-10.c) and [§12.b](#section-12.b).
+To prove [(2)](#section-15-equation-2) in the neighbourhood of a point $b'\in Y'$, we reuse the notation from [§10.3](#section-10.c) and [§12.2](#section-12.b).
 So we need to calculate the homology of the complex
 $$
   0 \to \mathfrak{M}_p\otimes_{\scr{O}_X}\scr{O}_{X'} \to \ldots \to \scr{O}_{X'}
@@ -1914,7 +1914,7 @@ $$
   \cong
   \scr{O}_{Y'}\otimes_k\bigwedge\nolimits^i(e'_1,\ldots,\widehat{e'_j},\ldots,e'_p),
 $$
-which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial remark of [§10.d](#section-10.d) into account, also gives [(2)](#section-15-equation-2).
+which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial remark of [§10.4](#section-10.d) into account, also gives [(2)](#section-15-equation-2).
 
 :::: {.proof}
 _(of [(3)](#section-15-equation-3))._
