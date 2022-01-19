@@ -101,7 +101,7 @@
             <text macro="edition"/>
             <text macro="publisher"/>
             <text variable="collection-title" form="short" text-case="title" font-style="italic" suffix=", "/>
-            <text macro="volume" font-weight="bold"/>
+            <text variable="volume" font-weight="bold"/>
           </group>
         </if>
         <else-if type="incollection chapter paper-conference" match="any">
@@ -109,7 +109,7 @@
           <text term="in" suffix=": "/>
           <text macro="editor" suffix=", "/>
           <text variable="container-title" form="short" text-case="title" font-style="italic" suffix=", "/>
-          <text macro="volume" font-weight="bold"/>
+          <text variable="volume" font-weight="bold"/>
           <text macro="edition" suffix=", "/>
           <text macro="publisher"/>
           <group delimiter=" ">
