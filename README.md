@@ -1,11 +1,5 @@
 # To-do list
 
-## Translation-al
-
-- `.Rmd` versions of existing translations
-  + [ ] `978-3-540-05190-9`
-
-
 ## Technical
 
 - **consider different output format? just `html_document`?**
