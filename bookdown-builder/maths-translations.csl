@@ -107,7 +107,7 @@
         <else-if type="incollection chapter paper-conference" match="any">
           <text variable="title" quotes="true" suffix=", "/>
           <text term="in" suffix=": "/>
-          <group delimiter=". ">
+          <group delimiter=". " suffix=". ">
             <text macro="editor" suffix=", "/>
             <text variable="container-title" form="short" text-case="title" font-style="italic"/>
             <text variable="volume" font-weight="bold"/>
