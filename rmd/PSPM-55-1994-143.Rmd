@@ -197,7 +197,7 @@ The $\pi_1$ at $x$ is obtained by taking its fibre at $x$.
 Let $\scr{M}$ be a full subcategory of the category of mixed motives over $k$, stable under $\otimes$, taking duals, and sub-quotients, and let $\scr{M}_\mathrm{pur}$ be the full subcategory of direct sums of pure motives in $\scr{M}$.
 We have an exact functor that is compatible with the tensor product, given by $M\mapsto\Gr^W(M)$, from $\scr{M}$ to $\scr{M}_\mathrm{pur}$.
 In $\scr{M}_\mathrm{pur}$ there exists a motivic pro-unipotent group scheme $U$, acting functorially on $\Gr^W(M)$ for $M$ in $\scr{M}$, and such that $M\mapsto\Gr^W(M)$ is an equivalence between $\scr{M}$ and the category of representations (in $\scr{M}_\mathrm{pur}$) of $U$.
-This is a consequence of Deligne [@§5, Section 8.17].
+This is a consequence of Deligne [@5, Section 8.17].
 
 We can similarly define and work with motivic schemes, motivic torsors, ... .
 
@@ -398,7 +398,7 @@ since it exists for $H^1$, i.e. for motives which are the abelian varieties, it 
 :::
 
 
-# 2.2 {.unnumbered #section-2.2}
+## 2.2 {.unnumbered #section-2.2}
 
 Let $X_0$ be an algebraic variety over $k$, and let $X$ be given by extension of scalars of $X_0$ by an algebraic closure $\overline{k}$ of $k$.
 For $x\in X_0(k)$, the profinite fundamental group $\pi_1(X,x)$ is endowed with an action of $\Gal(\overline{k}/k)$.
@@ -747,7 +747,7 @@ If (3.7.1) is an isomorphism then this would also imply the weak Lefschetz theor
 \oldpage{159}
 If $M$ is the unit motive, then [3.8.1.ii](#vanishings-3.8.1) demands that
 $$
-  H_\abs^n(\Spec(k),\QQ(j)) = 0 \quad\mbox{for $n>j$}.
+  H_\abs^n(\Spec(k),\QQ(j)) = 0 \quad\text{for }n>j.
 \tag{3.9.1}
 $$
 
