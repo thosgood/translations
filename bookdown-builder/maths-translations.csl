@@ -108,9 +108,8 @@
           <text variable="title" quotes="true" suffix=", "/>
           <text term="in" suffix=": "/>
           <text macro="editor" suffix=", "/>
-          <text variable="container-title" form="short" text-case="title" font-style="italic" suffix=", "/>
-          <text variable="volume" font-weight="bold"/>
-          <text macro="edition" suffix=", "/>
+          <text variable="container-title" form="short" text-case="title" font-style="italic"/>
+          <text variable="volume" font-weight="bold" suffix=", "/>
           <text macro="publisher"/>
           <group delimiter=" ">
             <label variable="page" form="short" prefix=": "/>
