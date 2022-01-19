@@ -1,0 +1,387 @@
+--- 
+title: "A comment about the integral representation of the Riemann xi-function"
+author: "George Pólya"
+date: "1926"
+original: 'Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen $\xi$-Funktion". _Acta Math._ **48** (1926), 305--317. DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).'
+github-repo: "thosgood/translations"
+favicon: "favicon.ico"
+---
+
+```{js, echo = FALSE}
+$(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
+```
+
+```{r, child = '_translator-note.Rmd'}
+```
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\newcommand{\dd}{\operatorname{d}\!}
+\newcommand{\GG}{\frak{G}}
+\newcommand{\UU}{\scr{U}}
+\newcommand{\TT}{\scr{T}}
+\renewcommand{\SS}{\scr{S}}
+\newcommand{\error}{\cal{O}}
+
+<!-- Content -->
+
+*[Translator.] The numbering of the footnotes in the original has not been replicated in this translation, since this would have resulted in multiple footnotes with the same number on one page. We also thank [Juan Arias de Reyna](https://personal.us.es/arias/) for their Spanish translation of this paper, which helped greatly.*
+
+The Riemann $\xi$-function, defined by the formula
+\oldpage{305}
+$$
+  \xi(iz)
+  =
+  \frac12 \left(
+    z^2 - \frac14
+  \right) \pi^{-\frac{z}{2}-\frac14} \Gamma \left(
+    \frac{z}{2} + \frac14
+  \right) \zeta \left(
+    \frac12 + z
+  \right),
+\tag{1}
+$$
+was represented by Riemann himself by an infinite trigonometric integral, namely^[B. Riemann, Werke (1876), S. 138.]
+$$
+  \xi(z) = 2\int_0^\infty \Phi(u)\cos(zu)\dd u
+\tag{2}
+$$
+$$
+  \Phi(u) = 2\pi e^{\frac{5u}{2}} \sum_{n=1}^\infty (2\pi e^{2u}n^2 - 3) n^2 e^{-n^2\pi e^{2u}}.
+\tag{3}
+$$
+It is evident that
+$$
+  \Phi(u) \sim 4\pi^2 e^{\frac{9u}{2}-\pi e^{2u}}
+  \quad\text{as }u\to+\infty.
+\tag{4}
+$$
+Furthermore (see [§4](#section-4)), $\Phi(u)$ is an even function.
+Therefore
+$$
+  \Phi(u) \sim 4\pi^2 \left(
+    e^{\frac{9u}{2}} + e^{-\frac{9u}{2}}
+  \right) e^{-\pi(e^{2u}+e^{-2u})}
+  \quad\text{as }u\to\pm\infty.
+\tag{5}
+$$
+
+\oldpage{306}
+With regards to the Riemann hypothesis, one could ask the following question^[This was casually mentioned by Prof. Landau in a conversation in 1913.]: does the function given by replacing $\Phi(u)$ in the right-hand side of Equation (2) with the right-hand side of Equation (4) have only real zeros?
+
+The answer is no (see [§4](#section-4)): the resulting function has infinitely many imaginary zeros.
+If, however, the right-hand side of Equation (5) is used, instead of the right-hand side of Equation (4), then we obtain the function
+$$
+  \xi^*(z) = 8\pi^2 \int_0^\infty \left(
+    e^{\frac{9u}{2}} + e^{-\frac{9u}{2}}
+  \right) e^{-\pi(e^{2u}+e^{-2u})} \cos(zu) \dd u,
+\tag{6}
+$$
+which one could call the "modified $\xi$-function", and $\xi^*(z)$ in fact *has only real zeros*.
+Incidentally,
+$$
+  \xi(z) \sim \xi^*(z)
+$$
+if $z$ tends towards $\infty$ in some closed ray based at the point $0$ and not containing the real axis.
+If we denote by $N(r)$ the number of zeros of $\xi(z)$ in the circular region $|z|\leq r$, and by $N^*(r)$ the number of zeros of $\xi^*(z)$ in the same region, then
+$$
+  N(r) \sim N^*(r)
+$$
+and even
+$$
+  N(r) - N^*(r) = O(\log r).
+$$
+
+In what follows, I provide a proof of the fact that all the zeros of $\xi^*(z)$ are real.
+The proof focuses on another entire function, namely the function
+$$
+  \GG(z) = \GG(z;a) = \int_{-\infty}^{+\infty} e^{-a(e^u+e^{-u})+zu} \dd u,
+\tag{7}
+$$
+which has some nice, simple properties.
+The parameter $a$ is always a positive value.
+We can express $\xi^*(z)$ in terms of $\GG(z)$.
+\oldpage{307}
+Indeed,
+$$
+  \xi^*(z) = 2\pi^2 \left\{
+    \GG\left(
+      \frac{iz}{2} - \frac94; \pi
+    \right) +
+    \GG\left(
+      \frac{iz}{2} + \frac94; \pi
+    \right)
+  \right\}
+\tag{8}
+$$
+as one can easily derive from Equations (6) and (7).
+I will show that $\GG(iz)$ *has only real zeros*.
+From this, the same property then easily follows for $\xi^*(z)$.
+
+
+# 1 {.unnumbered #section-1}
+
+The most important property of the entire function $\GG(z)$ is that is satisfies a simple difference equation;
+namely
+$$
+  z\GG(z) = a(\GG(z+1) - \GG(z-1))
+\tag{9}
+$$
+as can easily be proven by partial integration.
+Note also that $\GG(z)$ is even:
+$$
+  \GG(-z) = \GG(z).
+\tag{10}
+$$
+Furthermore, if $z$ is not an integer, then
+$$
+  \begin{aligned}
+    \GG(z)
+    &= a^{-z}\Gamma(z) \left(
+      1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!(1-z)(2-z)\ldots(n-z)}
+    \right)
+  \\&+ a^z\Gamma(-z) \left(
+      1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!(1+z)(2+z)\ldots(n+z)}
+    \right).
+  \end{aligned}
+\tag{11}
+$$
+
+The proof of Equation (11) goes as follows: write
+$$
+  \Gamma(z)
+  = \int_0^a e^{-v} v^{z-1} \dd v + \int_a^\infty e^{-v} v^{z-1} \dd v
+  = P(z) + Q(z),
+\tag{12}
+$$
+$$
+  P(z) = P(z;a) = \sum_{n=0}^\infty \frac{(-1)^n a^{z+n}}{n!(z+n)},
+\tag{13}
+$$
+$$
+  Q(z) = Q(z;a) = a^z \int_0^\infty e^{-ae^u+uz} \dd u.
+\tag{14}
+$$
+
+Now,
+$$
+  \begin{aligned}
+    \GG(z)
+    &= \int_0^\infty e^{-a(e^u+e^{-u})} (e^{uz}+e^{-uz}) \dd u
+  \\&= \int_0^\infty \sum_{n=0}^\infty e^{-ae^u} \frac{(-a)^n}{n!} (e^{(-n+z)u}+e^{(-n-z)u}) \dd u.
+  \end{aligned}
+$$
+From this it follows, by Equation (14), after exchanging the order of summation and integration (which can easily be justified by absolute convergence), that
+\oldpage{308}
+$$
+  \GG(z)
+  = a^{-z}\sum_{n=0}^\infty \frac{(-1)^n a^{2n}}{n!} Q(-n+z)
+  + a^z\sum_{n=0}^\infty \frac{(-1)^n a^{2n}}{n!} Q(-n-z).
+\tag{15}
+$$
+On the other hand, evidently
+$$
+  \begin{aligned}
+    0
+    &= \sum_{k=0}^\infty \sum_{l=0}^\infty \frac{(-1)^{k+l}a^{k+l}}{k!l!} \left(
+      \frac{1}{-k+z+l} + \frac{1}{k-z-l}
+    \right)
+  \\&= a^{-z} \sum_{k=0}^\infty \frac{(-1)^ka^{2k}}{k!} \sum_{l=0}^\infty \frac{(-1)^la^{-k+z+l}}{l!(-k+z+l)}
+  \\&+ a^z \sum_{l=0}^\infty \frac{(-1)^la^{2l}}{l!} \sum_{k=0}^\infty \frac{(-1)^ka^{-l-z+k}}{k!(-l-z+k)}
+  \end{aligned}
+$$
+and so, by Equation (13),
+$$
+  \GG(z)
+  = a^{-z} \sum_{k=0}^\infty \frac{(-1)^ka^{2k}}{k!} P(-k+z)
+  + a^z \sum_{l=0}^\infty \frac{(-1)^la^{2l}}{l!} P(-l-z).
+\tag{16}
+$$
+It follows from Equations (12), (15), and (16) that
+$$
+  \GG(z)
+  = a^{-z} \sum_{n=0}^\infty \frac{(-1)^na^{2n}}{n!} \Gamma(-n+z)
+  + a^z \sum_{n=0}^\infty \frac{(-1)^na^{2n}}{n!} \Gamma(-n-z),
+$$
+which is equivalent to Equation (11).
+
+I will also state here, without proof, the two following representations, which will not be used in what follows:
+$$
+  \begin{aligned}
+    \GG(z)
+    &= \frac{1}{2\pi i} \int_{a-i\infty}^{a+i\infty} \Gamma\left(
+      s - \frac{z}{2}
+    \right) \Gamma \left(
+      s + \frac{z}{2}
+    \right) a^{-2s} \dd s,
+  \\\GG(z)
+    &= \frac{\pi}{\sin(\pi z)} e^{\frac{i\pi z}{2}} J_{-z}(2ia) - \frac{\pi}{\sin(\pi z)} e^{-\frac{i\pi z}{2}} J_z(2ia).
+  \end{aligned}
+$$
+In the first one, $2a>|\Re z|$; in the second, both terms on the right-hand side satisfy the same difference equation, which is also satisfied by $\GG(z)$, by Equation (9).
+
+
+# 2 {.unnumbered #section-2}
+
+The asymptotic representation and the estimates of $\GG(z)$, with which we now concern ourselves, can be obtained by expanding Equation (11).
+
+\oldpage{309}
+Different areas of the $z$-plane have to be examined on a case-by-case basis.
+Fix $z = x+iy + re^{i\varphi}$, where $x$, $y$, $r$, and $\varphi$ are real; $r\geq0$; if $y>0$, then we assume that $0<\varphi<\pi$; $x-iy = \overline{z}$.
+
+i. *For $|y|\geq1$ and $a\leq A$,*
+    $$
+      \GG(z)
+      = a^{-z} \Gamma(z) \left(
+        1 + \frac{\chi(z)}{z}
+      \right) + a^z \Gamma(z) \left(
+        1 - \frac{\chi(-z)}{z}
+      \right)
+    \tag{17}
+    $$
+    *where the absolute value of the function $\chi(z)=\chi(z;a)$ is bounded above by a value depending only on $A$.*
+    We know, by Equation (11), that
+    $$
+      \chi(z)
+      = \frac{za^2}{1-z} \left(
+        1 + \sum_{n=2}^\infty \frac{a^{2n-2}}{n!(2-z)(3-z)\ldots(n-z)}
+      \right)
+    $$
+    whence, without further ado, the claim.
+
+ii. *Let $\varepsilon$ and $A$ be fixed positive numbers.*
+    *Set*
+    $$
+      \frac{a^z\GG(z)}{\Gamma(z)} - 1
+      = \psi(z) = \psi(z;a).
+    \tag{18}
+    $$
+    *Then, in the half-plane $x\geq\varepsilon$,*
+    $$
+      \lim_{|z|\to\infty} \psi(z) = 0,
+    \tag{19}
+    $$
+    *and, in fact, if $a\leq A$, then this convergence is uniform in $z$ and $a$.*
+    It follows, from Stirling's formula, that there exists some constant $C$ such that, for $y\geq1$, $x\geq\varepsilon$, and $r\geq ae$,
+    $$
+      \left\vert
+        a^{2z} \frac{\Gamma(-z)}{\Gamma(z)}
+      \right\vert \leq a^{2x}Cr^{-2x}e^{-(\pi-2\varphi)y+2x}
+      \leq C\left(
+        \frac{ae}{r}
+      \right)^{2\varepsilon}.
+    \tag{20}
+    $$
+    In the part of the half-plane where $x\geq\varepsilon$, where $y\geq1$, claim (ii) follows directly from Equations (17), (18), and (20);
+    it also follows, by symmetry, in the part where $y\leq-1$.
+    Then the only remaining part is the half-strip
+    $$
+      x\geq\varepsilon,
+      \quad -1\leq y\leq 1.
+    $$
+    By the already-proven part of claim (ii), Equation (18) tends to zero as $z\to\infty$.
+    \oldpage{310}
+    Since Equation (18) is entire and of finite order, by well-known general theorems^[See G. Pólya and G. Szegö, Aufgaben und Lehrsätze aus der Analysis (Berlin 1925), Bd. 1, Aufgaben III 333, III 339.], it must tend uniformly to zero in the entire half-strip as $z\to\infty$;
+    this completes the proof of claim (ii).
+    Of course, instead of using general theorems, Equation (18) could also be used on suitable curves intersecting the half-strip, e.g. to estimate on the straight lines $x=k+\frac12$, for $k=0,1,2,3,\ldots$.
+    In the case where $k=0$, we investigate such an estimation for a different purpose, c.f. Equation (22).
+
+iii. *If $a\leq\frac14$, then there are no zeros of $\GG(z;a)$ outside of the strip $-\frac12<x<\frac12$.*
+    Since $\GG(z)$ is even, it suffices to consider the half-plane $x\geq\frac12$.
+    On the straight line $x=\frac12$,
+    $$
+      z+\overline{z} = 1,
+      \quad \overline{z} = 1-z
+    $$
+    and so, by the symmetry of the values with respect to the real axis,
+    $$
+      |\Gamma(1-z)| = |\Gamma(z)|,
+    $$
+    whence
+    $$
+      \left\vert
+        \frac{\Gamma(-z)}{\Gamma(z)}
+      \right\vert = \left\vert
+        \frac{\Gamma(1-z)}{-z\Gamma(z)}
+      \right\vert = \frac{1}{|z|} \leq 2
+      \qquad\left(
+        x=\frac12
+      \right).
+    \tag{21}
+    $$
+    Using Equation (21), it follows from Equation (11) that, on the straight line $x=\frac12$,
+    $$
+      \begin{aligned}
+        |\psi(z)|
+        &= \left\vert
+          \frac{a^z\GG(z)}{\Gamma(z)} - 1
+        \right\vert
+      \\&= \left\vert
+          \sum_{n=1}^\infty \frac{a^{2n}}{n!(1-z)\ldots(n-z)}
+          + \frac{a^{2z}\Gamma(-z)}{\Gamma(z)} \left(
+            1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!(1+z)\ldots(n+z)}
+          \right)
+        \right\vert
+      \\&\leq \sum_{n=1}^\infty \frac{a^{2n}}{n!\frac12\cdot\frac32\cdot\ldots\cdot\frac{2n-1}{2}} + a\cdot2 \left(
+        1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!\frac32\cdot\frac52\cdot\ldots\cdot\frac{2n+1}{2}}
+      \right)
+      \\&= \sum_{n=1}^\infty \frac{(2a)^{2n}}{(2n)!} + \sum_{n=0}^\infty \frac{(2a)^{2n+1}}{(2n+1)!}
+      \\&= e^{2a}-1.
+      \end{aligned}
+    \tag{22}
+    $$
+    \oldpage{311}
+    It then follows from Equation (22) that
+    $$
+      |\psi(z)| = |\psi(z;a)| < 1
+      \qquad\text{for }x=\frac12$ and $a\leq\frac14.
+    \tag{23}
+    $$
+    It follows from claim (ii) that there exists some number $R$ such that
+    $$
+      |\psi(z)| = |\psi(z;a)| <1
+      \qquad\text{for }x\geq\frac12\text{, }r\geq R\text{, and }a\leq\frac14.
+    \tag{24}
+    $$
+    Furthermore, $|\psi(z)|<1$ is also satisfied in the circle segment $\{x\geq\frac12,r\leq R\}$, since the inequality in question, by Equations (23) and (24), is satisfied on the boundary of the circle segment.
+    Thus $|\psi(z)|<1$ is satisfied in the whole half-plane $x\geq\frac12$;
+    thus $\GG(z)$, cf. Equation (18), does not disappear in this half-plane.
+
+For what follows, it is useful to have in mind a certain partition of the plane (cf. the above figure): the strip $-1\leq x\leq 1$ is denoted by $\SS$; the part of the plane where both $r\leq R$ and $|x|>1$ is denoted by $\TT$; the remaining part, which extends to infinity, is denoted by $\UU$.
+We pick the number $R=R(A)$ depending on a certain positive number $A$ such that, inside, and on the boundary of, $\UU$, the inequality $|\psi(z)|<1$ is satisfied for $a\leq A$.
+From Equation (18) it follows that $\GG(z)$ does not vanish inside, or on the boundary of, $\UU$.
+
+
+# 3 {.unnumbered #section-3}
+
+We will now study consequences of the difference equation in (9), and link them to those that we have just obtained from the representation in Equation (11).
+
+iv. *$\GG(z)$ has no zeros on the straight lines $x=1$ or $x=-1$, i.e. on the boundary of $\SS$.*
+    \oldpage{312}
+    There are two things that we have to consider:
+    firstly, the difference equation and the symmetry of $\GG(z)$; secondly, the asymptotic properties of $\GG(z)$.
+
+    Firstly:
+    the function $\GG(z)$ is even, and takes real values for all $z$.
+    From this it follows that, if $y$ is real, then $\GG(iy)$ is real, and the two values $\GG(1+iy)$ and $\GG(-1+iy)$ are complex conjugate.
+    So Equation (9) implies, for $z=iy$, that
+    $$
+      y\GG(iy) = 2a\Im\GG(1+iy).
+    \tag{25}
+    $$
+
+    Secondly:
+    it is not possible for $\GG(z)$ to vanish at two points simultaneously if the line connecting them is parallel to the real axis and is of length~$1$.
+    This is since, if $\GG(c)=0$ and $\GG(c-1)=0$, then Equation (9) would imply that $\GG(c+1)=0$ as well, and thus that $\GG(c+2)=0$, $\GG(c+3)=0$, ..., and so $\GG(z)$ would have zeros in the region $\UU$ (see the figure); but this would be a contradiction.
+
+    For real $z$, $\GG(z)$ is positive (cf. Equation (7)).
+    On one hand, $\GG(1+iy)=0$ implies that $y\neq0$, and, on the other hand, $\GG(1+iy)=0$ implies that $\Im\GG(1+iy)=0$, and thus Equation (25) implies that $\GG(iy)=0$.
+    However, the simultaneous vanishing of $\GG(1+iy)$ and $\GG(iy)$ is impossible, and thus $\GG(1+iy)\neq0$.
+
+v. *There are no zeros of $\GG(z)$ outside of the strip $\SS$.*
