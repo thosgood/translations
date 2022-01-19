@@ -1,0 +1,134 @@
+--- 
+title: "Notes on the Riemann $\zeta$ function, 2"
+author: "Michel Balazard, Eric Saias, and Marc Yor"
+date: "1999"
+original: 'Balazard, M., Saias, E., and Yor, M. "Notes sur la fonction $\zeta$ de Riemann, 2". _Advances in Mathematics_ **143** (1999), 284--287.'
+bibliography: AIM-143-1999-284.bib
+nocite: '@*'
+link-citations: true
+csl: maths-translations.csl
+reference-section-title: "Bibliography"
+github-repo: "thosgood/translations"
+favicon: "favicon.ico"
+---
+
+```{js, echo = FALSE}
+$(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
+```
+
+```{r, child = '_translator-note.Rmd'}
+```
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\newcommand{\dd}{\operatorname{d}\!}
+
+<!-- Content -->
+
+# Introduction {-}
+
+\oldpage{284}
+
+We denote by $\sum_{\Re\rho>1/2}$ a sum over the possible zeros of $\zeta(s)$ with real part greater than $\frac12$, where the zeros of multiplicity $m$ are counted $m$ times.
+The goal of this note is the proof of the following result.
+
+::: {.itenv title="Theorem" latex="{Theorem}"}
+We have
+$$
+  \frac{1}{2\pi}\int_{\Re(s)=1/2} \frac{\log|\zeta(s)|}{|s|^2}|\dd s|
+  = \sum_{\Re\rho>1/2} \log\left|\frac{\rho}{1-\rho}\right|.
+\tag{1}
+$$
+In particular, the Riemann hypothesis is true if and only if
+$$
+  \int_{\Re(s)=1/2} \frac{\log|\zeta(s)|}{|s|^2}|\dd s| = 0.
+$$
+:::
+
+::: {.proof}
+This proof consists of two steps.
+
+*First step.*
+We start by stating some properties satisfied by a generic function $f$ in the Hardy space $H^p(\mathbf{D})$, where $\mathbf{D}=\{z\in\mathbb{C}:|z|<1\}$, and $p$ is a positive real number.
+We denote by $f^*$ the function defined almost everywhere on the trigonometric circle $\partial\mathbf{D}=\{z\in\mathbb{C}:|z|=1\}$ by $f^*(e^{i\theta})=\lim_{r\to1^-}f(re^{i\theta})$.
+We use the letter $z$ to denote an element of the trigonometric disc $\mathbf{D}$, and write
+$$
+  s = s(z) = \frac12+\frac{1+z}{2(1-z)} = \frac{1}{1-z}.
+$$
+This formula defines a conformal representation of the disc $\mathbf{D}$ in the semi-plane $\Re(s)>1/2$.
+
+\oldpage{285}
+
+By Jensen's formula (see, for example, [@4, Theorem 3.61]), we have, for $f(0)\neq0$ and $r<1$,
+$$
+  \frac{1}{2\pi}\int_{-\pi}^\pi \log|f(re^{i\theta})|\dd\theta
+  = \log|f(0)| + \sum_{\substack{|\alpha|<r\\f(\alpha)=0}} \log\frac{r}{|a|}
+\tag{2}
+$$
+where, in the sum, the zeros of multiplicity $m$ are counted $m$ times.
+Denote by
+$$
+  \exp\left\{
+    -\int_{-\pi}^\pi \frac{e^{i\theta}+z}{e^{i\theta}-z}\dd\mu(\theta)
+  \right\}
+$$
+the singular interior factor of $f$.
+As $r$ tends to $1$, Equation (2) becomes (cf. [@2, p. 68])
+$$
+  \frac{1}{2\pi}\int_{-\pi}^\pi \log|f(re^{i\theta})|\dd\theta
+  = \log|f(0)| + \sum_{\substack{|\alpha|<1\\f(\alpha)=0}} \log\frac{1}{|a|} + \int_{-\pi}^\pi\dd\mu(\theta).
+\tag{3}
+$$
+This formula is a consequence of the factorisation theorem for functions in $H^p$;
+it is stated in [@2] for $p=1$, but also holds for all positive values of $p$.
+
+*Second step.*
+Now consider the function
+$$
+  f(z) = (s-1)\zeta(s)
+$$
+(where $s=1/(1-z)$).
+The elementary properties of the Riemann $\zeta$ function (see, for example, [@5]) allow us to show that, on one hand, $f$ belongs to the Hardy space $H^{1/3}(\mathbf{D})$, and, on the other hand, that the measure $\mu$ associated to the singular interior factor of $f$ is zero (for this latter point, it suffices to reuse the argument developed by Bercovici and Foias for the interior factor of the functions $(\theta-\theta^s)\zeta(s)(s+1/2)/s$, found in the proof of [@1, Proposition 2.1]).
+We can equally show that
+$$
+  \begin{aligned}
+    \int_{-\pi}^\pi \log|f^*(e^{i\theta})|\dd\theta
+    &= \int_{\Re(s)=1/2} \frac{\log|\zeta(s)|}{|s|^2}|\dd s|,
+  \\\log|f(0)|
+    &= 0,
+  \\\sum_{\substack{|\alpha|<1\\f(\alpha)=0}} \log\frac{1}{|\alpha|}
+    &= \sum_{\Re\rho>1/2} \log\left|\frac{\rho}{1-\rho}\right|.
+  \end{aligned}
+$$
+With all this information, our result follows from Equation (3).
+:::
+
+\oldpage{286}
+
+We finish with some remarks.
+There are statements related to ours in the works [@7; @6] of Wang and Volchkov.
+It is even possible that Jensen himself was aware of Equation (1) (the reader can consult the article [@3] where Jensen informs Mittag–Leffler of his discovery of Equation (2)).
+It seem interesting, however, to present things as we have done here, and this is for the following three reasons:
+
+a. Equation (1) is simpler than those that appear in [@7; @6];
+b. we show here that, to establish Equation (1), it is natural to place ourselves in the framework of Hardy spaces;
+c. the form of the integral in Equation (1) allows us to interpret this result via Brownian motion, as we show below.
+
+Denote by $Z=X+iY$ the planar Brownian motion from $0$ (or from $1$), and by $Z_{T_{1/2}}=\frac12+iY_{T_{1/2}}$ its first point of impact on the critical line $\Re s=1/2$, where $T_{1/2}:=\inf\{t:X_t=1/2\}$.
+We know that $Y_{T_{1/2}}$ follows a Cauchy law with parameter $1/2$.
+In other words, the law of $Y_{T_{1/2}}$ has density $1/2\pi(1/4+t^2)$.
+Thus the second part of the theorem can be stated in the following manner: the Riemann hypothesis is true if and only if
+$$
+  \mathbb{E}[\log|\zeta(Z_{T_{1/2}})] = 0.
+$$
+
+
+## Thanks
+
+We thank Luis Báez-Duarte, Michel Delasneri, Catherine Donati, Laurent Habsieger, Aleksandar Ivić, and Alain Plagne for useful conversations.
