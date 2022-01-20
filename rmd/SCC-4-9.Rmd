@@ -298,7 +298,7 @@ Then there exists a linear group $L=\mathrm{GL}(m)$ along with an algebraic homo
 :::
 
 ::: {.proof}
-Let $\fk{a}$ be the local ring of functions on $G$ defined at the identity element $e$, and let $\scr{J}$ be its maximal ideal;
+Let $\frak{a}$ be the local ring of functions on $G$ defined at the identity element $e$, and let $\scr{J}$ be its maximal ideal;
 set $T_n=\scr{J}/\scr{J}^n$.
 For all $n$, $T_n$ is a finite-dimensional vector space.
 Every element $x\in G$ defines an inner automorphism $\alpha(x)\colon G\to G$ that induces an automorphism $\operatorname{Ad}_n(x)\colon T_n\to T_n$.
@@ -306,7 +306,7 @@ Let $C_n$ be the kernel of $\operatorname{Ad}_n\colon G\to\mathrm{GL}(T_n)$.
 The $C_n$ form a decreasing sequence of subvarieties of $G$.
 Such a sequence is stationary, and so there exists some $n_0$ such that $C_n=C_{n_0}$ for all $n\geq n_0$.
 We now show that $C_{n_0}=C$:
-if $x\in C_{n_0}$, then $\operatorname{Ad}_n(x)$ is the identity for all $n$, and so the automorphism of $\fk{a}$ defined by the inner automorphism $\alpha(x)$ of $G$ is the identity, since the local ring $\fk{a}$ is separated.
+if $x\in C_{n_0}$, then $\operatorname{Ad}_n(x)$ is the identity for all $n$, and so the automorphism of $\frak{a}$ defined by the inner automorphism $\alpha(x)$ of $G$ is the identity, since the local ring $\frak{a}$ is separated.
 Consequently, since $G$ is connected (and thus irreducible), $\alpha(x)$ is the identity.
 Whence the proposition, taking $L=\mathrm{GL}(T_{n_0})$.
 :::
