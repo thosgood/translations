@@ -100,14 +100,14 @@ If $\mathfrak{a}$ is an ideal of $A$, then we denote by $W(\mathfrak{a})$ the se
 
 Then
 $$
-  \begin{gathered}
+  \begin{array}{cc}
     W(\mathfrak{a}) \subset V(A)
-  \\U(\mathfrak{a})\subset V(A),
+    & U(\mathfrak{a})\subset V(A)
   \\W\left(\sum\mathfrak{a}_i\right) = \bigcap_i W(\mathfrak{a}_i)
-  \\W(\mathfrak{a}\cap\mathfrak{b}) = W(\mathfrak{a}\cdot\mathfrak{b}) = W(\mathfrak{a})\cup W(\mathfrak{b})
+    & W(\mathfrak{a}\cap\mathfrak{b}) = W(\mathfrak{a}\cdot\mathfrak{b}) = W(\mathfrak{a})\cup W(\mathfrak{b})
   \\U\left(\sum\mathfrak{a}_i\right) = \bigcup_i U(\mathfrak{a}_i)
-  \\U(\mathfrak{a}\cap\mathfrak{b}) = U(\mathfrak{a}\cdot\mathfrak{b}) = U(\mathfrak{a})\cap U(\mathfrak{b}).
-  \end{gathered}
+    & U(\mathfrak{a}\cap\mathfrak{b}) = U(\mathfrak{a}\cdot\mathfrak{b}) = U(\mathfrak{a})\cap U(\mathfrak{b}).
+  \end{array}
 $$
 
 The set $U(\mathfrak{a})$ increases with $\mathfrak{a}$ and $W(\mathfrak{a})$ decreases when $\mathfrak{a}$ increases.
