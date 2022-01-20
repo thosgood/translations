@@ -1,0 +1,470 @@
+--- 
+title: "Quasi-coherent sheaves"
+author: "P. Gabriel"
+date: "1958--59"
+original: 'Gabriel, P. "Faisceaux quasi-cohérents". _Séminaire Claude Chevalley_ **4** (1958--59), Talk no. 1. Numdam: [`SCC_1958-1959__4__A1_0`](http://www.numdam.org/item/SCC_1958-1959__4__A1_0)'
+bibliography: SCC-4-1.bib
+nocite: '@*'
+link-citations: true
+csl: maths-translations.csl
+reference-section-title: "Bibliography"
+github-repo: "thosgood/translations"
+favicon: "favicon.ico"
+---
+
+```{js, echo = FALSE}
+$(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
+```
+
+```{r, child = '_translator-note.Rmd'}
+```
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\newcommand{\HH}{\operatorname{H}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Coker}{\operatorname{Coker}}
+
+<!-- Content -->
+
+\oldpage{1-01}
+We assume prior knowledge of the definitions and elementary properties of sheaves of modules on a topological space, i.e. [@2, chapitre I, §1; chapitre II, §§1--2].
+We define a presheaf $\scr{P}$ on a base $\mathscr{B}$ of open subsets of a topological space $X$, with values in a category $\cal{C}$, to be the following data:
+
+a. for every open subset $U$ in $\mathscr{B}$, an object $\scr{P}(U)$ of $\cal{C}$, that we may also denote by $\Gamma(U,\scr{P})$;
+b. for every pair $(U,V)$ of open subsets $U$ in $\mathscr{B}$ such that $U\subset V$, a morphism $\rho_{UV}\colon\scr{P}(V)\to\scr{P}(U)$.
+    The morphism $\rho_{UV}$ will be called the restriction of $V$ to $U$.
+    We further suppose that, if $U\subset V\subset W$ are open subsets in $\mathscr{B}$, then $\rho_{UV}\circ\rho_{VW}=\rho_{UW}$.
+
+The construction of the sheaf $\widetilde{\scr{P}}$ associated to a presheaf $\scr{P}$ can be easily generalised to the case of presheaves on a base of open subsets.
+If $\mathfrak{U}=(U_i)_{i\in I}$ is a cover of the open subset $U\in\mathscr{B}$, where $U_i\in\mathscr{B}$, and $U_i\cap U_j\in\mathscr{B}$, and if $\scr{P}$ is a presheaf of rings (resp. of modules) on the base $\mathscr{B}$, then we write $\HH^0(\mathfrak{U},\scr{P})$ to mean the subring (resp. submodule) of $\prod_{i\in I}\scr{P}(U_i)$ given by the $(X_i)_{i\in I}$ such that $\rho_{U_i\cap U_j,U_i}(X_i) = \rho_{U_i\cap U_j,U_j}(X_j)$ for every pair $i,j\in I$.
+We then have canonical maps:
+$$
+  \scr{P}(U) \to \HH^0(\mathfrak{U},\scr{P}) \to \widetilde{\scr{P}}(U);
+$$
+if these maps are injective for every cover $\mathfrak{U}$ satisfying the conditions above, then $\widetilde{\scr{P}}(U)$ is the union of the $\HH^0(\mathfrak{U},\scr{P})$.
+
+
+# Preliminaries on localisation {#section-1}
+
+Let $A$ be a unital commutative ring.
+A submonoid $S$ of the multiplicative monoid of $A$ (i.e. a non-empty subset of $A$ such that, if it contains $s$ and $t$, then it contains $s\cdot t$) is said to be *complete* if it satisfies the following condition:
+if $s\cdot t\in S$, then $s\in S$ and $t\in S$.
+\oldpage{1-02}
+To every multiplicative submonoid $S$, we associate a complete monoid $\widetilde{S}$ in the following way:
+$s\in\widetilde{S}$ if and only if there exists some $t$ in $A$ such that $s\cdot t\in S$.
+The prime ideals that meet $S$ also meet $\widetilde{S}$, and vice versa.
+Furthermore, the complement of $\widetilde{S}$ in $A$ is a union of prime ideals (the ideals that are maximal amongst those that do not meet $\widetilde{S}$ are prime).
+
+If now $M$ denotes a unital $A$-module, and $S$ a multiplicative submonoid of $A$, then we denote by $M_S$ the following abelian group:
+
+The set $M_S$ is the quotient of $M\times S$ by the equivalence relation
+$$
+  (m,s) = (n,t) \iff \exists r\in S\text{ such that }r(mt-ns)=0.
+$$
+
+The addition in $M\times S$ is defined by $(m,s)+(n,t)=(mt+ns,st)$;
+our equivalence relation is compatible with the addition, whence we get the structure of an abelian group on $M_S$.
+We denote by $m/s$ the class of $(m,s)$ in $M_S$.
+
+We have a bilinear map $A_S\otimes_\mathbb{Z}M_S\to M_S$ defined by passing to quotients from the map $((a,s),(m,t))\mapsto(am,st)$.
+Taking $M=A$, we see that $A_S$ is a ring and, more generally, $M_S$ is an $A_S$-module.
+The map $\psi\colon m\mapsto m/1$ from $M$ to $M_S$ is compatible with the ring homomorphism $\varphi\colon a\mapsto a/1$ from $A$ to $A_S$ (i.e. it is a homomorphism of abelian groups such that $\psi(a\cdot m)=\varphi(a)\cdot\psi(m)$).
+
+We can furthermore easily prove the following claims:
+the correspondence $M\mapsto M_S$ is functorial (in the evident way);
+the functor $M\mapsto M_S$ is exact (i.e. if $0\to M\to M'\to M''\to 0$ is an exact sequence of $A$-modules, then $0\to M_S\to M'_S\to M''_S\to 0$ is an exact sequence of $A$-modules) and commutes with inductive limits (i.e. if $(M_i)_{i\in I}$ is an inductive system of $A$-modules, and $L$ an inductive limit of this system, then the $(M_i)_S$ form an inductive system of $A_S$-modules, and the homomorphisms $(M_i)_S\to L_S$ induced by the $M_i\to L$ define $L_S$ as an inductive limit of the system $((M_i)_S)$); the canonical map $M\otimes_A A_S\to M_S$ is bijective.
+
+If $S$ and $T$ are submonoids, then the abelian groups $(M_S)_T$, $(M_T)_S$, and $M_{S\cdot T}$ are all canonically isomorphic to one another, where $S\cdot T$ denotes the monoid given by products $s\cdot t$ with $s\in S$ and $t\in T$.
+Identifying the rings $(A_S)_T$, $(A_T)_S$, and $A_{S\cdot T}$, which are themselves all canonically isomorphic to one another, the isomorphisms between $(M_S)_T$, $(M_T)_S$, and $M_{S\cdot T}$ are isomorphisms of modules.
+
+\oldpage{1-03}
+If $S$ is contained in a submonoid $S'$ of the multiplicative monoid of $A$, then there is a canonical map from $M_S$ to $M_{S'}$ that sends each element $m_s$ of $M_S$ (where $m\in M$ and $s\in S$) to the element of $M_{S'}$ denoted by the same symbol.
+The map $A_S\to A_{S'}$ is a ring homomorphism;
+the map $M_S\to M_{S'}$ is that which corresponds to the map $M\otimes_A A_S\to M\otimes_A A_{S'}$, induced by $A_S\to A_{S'}$.
+If $S'=\widetilde{S}$ is the smallest complete monoid containing $S$, then the map $M_S\to M_{\widetilde{S}}$ is bijective.
+Finally, if $S$ is the union of an increasingly-ordered filtered family of monoids $S_i$, then $M_S$ can be identified with $\varinjlim M_{S_i}$.
+
+
+# The prime spectrum of a commutative ring {#section-2}
+
+Let $A$ be a unital commutative ring, and $V(A)$ the set of prime ideals of $A$.
+If $\mathfrak{a}$ is an ideal of $A$, then we denote by $W(\mathfrak{a})$ the set of prime ideals that contain $\mathfrak{a}$, and $U(\mathfrak{a})=V(A)\setminus W(\mathfrak{a})$.
+
+Then
+$$
+  \begin{gathered}
+    W(\mathfrak{a}) \subset V(A), \quad U(\mathfrak{a})\subset V(A),
+  \\W(\sum\mathfrak{a}_i) = \bigcap_i W(\mathfrak{a}_i),
+  \quad W(\mathfrak{a}\cap\mathfrak{b}) = W(\mathfrak{a}\cdot\mathfrak{b}) = W(\mathfrak{a})\cup W(\mathfrak{b}),
+  \\U(\sum\mathfrak{a}_i) = \bigcup_i U(\mathfrak{a}_i),
+  \quad U(\mathfrak{a}\cap\mathfrak{b}) = U(\mathfrak{a}\cdot\mathfrak{b}) = U(\mathfrak{a})\cap U(\mathfrak{b}).
+  \end{gathered}
+$$
+
+The set $U(\mathfrak{a})$ increases with $\mathfrak{a}$ and $W(\mathfrak{a})$ decreases when $\mathfrak{a}$ increases.
+Finally, $W(\mathfrak{a})=W(\mathfrak{b})$ if and only if every element of $\mathfrak{a}$ has a power in $\mathfrak{b}$, and vice versa:
+indeed, to say that $W(\mathfrak{a})\subset W(\mathfrak{b})$ is to say that every prime ideal that contains $\mathfrak{a}$ also contains $\mathfrak{b}$, i.e. that $\mathfrak{b}$ is contained in the intersection of the prime ideals containing $\mathfrak{a}$, and it is classical that this latter intersection consists of the elements that have a power in $\mathfrak{a}$.
+
+The sets $U(\mathfrak{a})$ are the open subsets of a topology on $V(A)$, and, endowed with this topology, $V(A)$ is called the *prime spectrum of $A$*.
+
+If the ideal $\mathfrak{a}$ is generated by the $(f_i)$, then $U(\mathfrak{a})$ is the union of the $U((f_i))=U_{f_i}$;
+since $U_f\cap U_g=U_{fg}$, the $U_f$ thus form a base of open subsets when $f$ runs over the elements of $A$.
+Every open subset of the form $U_f$ is said to be *special*.
+Every special open subset is *quasi-compact*:
+indeed, if $U_f$ is the union of some $U(\mathfrak{a}_i)$, then $U_f=\bigcup_i U(\mathfrak{a}_i)=U(\sum\mathfrak{a}_i)$, and a power $f^n$ of $f$ belongs to $\sum_i\mathfrak{a}_i$, and thus to the sum of a finite number of the $\mathfrak{a}_i$.
+
+In particular, $V=U_i$ is quasi-compact.
+Finally, if the ring $A$ is *Noetherian*, then every increasing sequence of ideals stabilises, and the same is true for every increasing sequence of open subsets.
+\oldpage{1-04}
+The prime spectrum is thus a Zariski topological space.
+
+
+# Quasi-coherent sheaves on $V(A)$ {#section-3}
+
+Now let $M$ be a unital module over the ring $A$.
+We are going to define a *presheaf $\mathfrak{M}^*$ on the base of special open subsets of $V(A)$*.
+For this, we will associate, to each $f\in A$, the multiplicatively-stable system $S_f$ given by the complement in $A$ of the union of the prime ideals of $U_f$.
+The system $S_f$ is the complete multiplicatively-stable system generated by $f$.
+We then have the equivalence:
+$$
+  S_f \subset S_g \mapsto U_f \supset U_g.
+$$
+
+With this in mind, we will define the presheaf $\mathfrak{M}^*$ by the formulas $\mathfrak{M}^*(U_f)=M_{S_f}$, which we will also denote by $\mathfrak{M}_f$;
+if $U_f\supset U_g$, then the restriction map $\rho\colon\mathfrak{M}^*(U_f)\to\mathfrak{M}^*(U_g)$ is the canonical map from $\mathfrak{M}_{S_f}$ to $\mathfrak{M}_{S_g}$.
+These definitions clearly do not depend on the elements $f$ and $g$ that define $U_f$ and $U_g$;
+furthermore, the axioms of a presheaf are satisfied, thanks to the properties of localisation.
+
+We will denote by $\mathfrak{M}$ the sheaf associated to the presheaf $\mathfrak{M}^*$.
+Since the $A_f$ are rings, and the $M_f$ are $A_f$-modules, $\mathfrak{A}^*$ is a presheaf of rings, $\mathfrak{M}^*$ a presheaf of $\mathfrak{A}^*$-modules, $\mathfrak{A}$ a sheaf of rings, and $\mathfrak{M}$ a sheaf of $\mathfrak{A}$-modules.
+Furthermore, the functors that send $M$ to $\mathfrak{M}^*$ and $\mathfrak{M}$ are exact, since the functor that sends $M$ to the $M_f$ is exact.
+We define an *algebraic sheaf* on $V(A)$ to be any sheaf of modules over the sheaf of rings $\mathfrak{A}$.
+We define a *quasi-coherent sheaf* on $V(A)$ to be any sheaf isomorphic to a sheaf of the form $\mathfrak{A}(M)$ for some $M$.
+We will first be interested in the sections of such a sheaf over a special open subset $U_f$.
+
+For this, we note that the prime ideals of $A_f$ are the images under the map $A\mapsto A_f$ of the prime ideals of $A$ that do not contain $f$.
+Furthermore, the canonical application thus defined from the spectrum $V(A_f)$ of $A_f$ to $V(A)$ is a homomorphism from $V(A_f)$ to $U_f$.
+Finally, the sheaf on $V(A_f)$ associated to the module $M_f$ can be identified with the restriction of $\mathfrak{M}$ to $U_f$.
+
+More generally, if $S$ is a multiplicatively-stable system (that we can assume to be complete) of $A$, then let $E_S$ be the topological subspace of $V(A)$ consisting of the prime ideals that do not meet $S$.
+\oldpage{1-05}
+The canonical map $A\mapsto A_S$ induces a homomorphism from $V(A_S)$ to $E_S$;
+if $S$ is generated by the $f_i$, then $E_S$ is the intersection of the $U_{f_i}$, and, conversely, every intersection of special open subsets of $V(A)$ is of the form $E_S$.
+We will see that the restriction of $\mathfrak{M}$ to the subspace $E_S$ can be identified with the sheaf $\mathfrak{M}_S$ associated to the $A_S$-module $M_S$.
+
+For every prime ideal $\mathfrak{p}$, we denote by $A_\mathfrak{p}$ and $M_\mathfrak{p}$ the ring and the module obtained by localisation of the multiplicative system $S=A\setminus\mathfrak{p}$.
+
+::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
+—
+
+a. If $\mathfrak{p}$ is a point of $V(A)$, then the localised ring $\mathfrak{A}_\mathfrak{p}$ (the fibre of the sheaf $\mathfrak{A}$ over $\mathfrak{p}$) is canonically isomorphic to $A_\mathfrak{p}$;
+    Identifying $\mathfrak{A}_\mathfrak{p}$ with $A_\mathfrak{p}$, the localised module $\mathfrak{M}_\mathfrak{p}$ of the sheaf $\mathfrak{M}$ at $\mathfrak{p}$ is canonically isomorphic to $M_\mathfrak{p}$, and thus to $M\otimes_A A_\mathfrak{p}$.
+b. The canonical map from $M_f=\mathfrak{M}^*(U_f)$ to $\mathfrak{M}(U_f)$ is an isomorphism.
+:::
+
+::: {.proof}
+The first claim of (a) follows from the fact that
+$$
+  \begin{aligned}
+    \mathfrak{A}_\mathfrak{p}
+    &= \varinjlim_{U_f\ni\mathfrak{p}} \mathfrak{A}^*(U_f)
+  \\&= \varinjlim_{f\not\in\mathfrak{p}} A_f
+  \\&= A_\mathfrak{p};
+  \end{aligned}
+$$
+the second claim of (a) can be proven in the same way.
+
+We now show that the map $M_f\to\mathfrak{M}(U_f)$ is *injective*:
+Since $U_f=V(A_f)$, we can always assume that $f=1$ and $U_f=V(A)$.
+The kernel of the map $M\to\mathfrak{M}(V)$ then consists of the $m$ such that $m\otimes_A1_{A_\mathfrak{p}}=0$ for every prime ideal $\mathfrak{p}$, i.e. the $m$ whose annihilator is not contained in any prime ideal:
+the kernel is thus zero.
+
+Similarly, the map $M_f\to\mathfrak{M}(U_f)$ is *surjective*:
+it suffices to prove this in the case where $f=1$ and $U_f=V$.
+By the above, $\mathfrak{M}(V)=\Gamma(\mathfrak{M})$ is the union of the $\HH^0(\mathfrak{U},\mathfrak{M}^*)$ where $\mathfrak{U}$ runs over the finite covers of $V$ by special open subsets;
+it thus suffices to prove that the map $M\to\HH^0(\mathfrak{U},\mathfrak{M})$ is surjective for every finite cover by special open subsets.
+
+For this, let $(f_i)_{i=1,\ldots,p}$ be elements of $A$ such that $V=\bigcup U_{f_i}$, and let $X_i$ be the elements of $M_{f_i}$ such that $X_i$ and $X_j$ have the same image in $M_{f_i\cdot f_j}$;
+even if we replace $f_i$ by one of its powers, we can still suppose that $X_i$ is of the form $m_i/f_i$, where $m_i\in M$.
+Since $X_i$ and $X_j$ have the same image in $M_{f_i\cdot f_j}$,
+$$
+  \frac{m_i f_j - m_j f_i}{f_i f_j} = 0 \in M_{f_i\cdot f_j}.
+$$
+\oldpage{1-06}
+In other words,
+$$
+  (f_i\cdot f_j)^r(m_if_j\cdot m_jf_i) = 0 \in M\text{ for }r\text{ large enough.}
+$$
+
+Also, the $U_{f_i}=U_{f_i^{r+1}}$ cover $V$, i.e. the $f_i^{r+1}$ generate $A$, i.e. we have a relation of the form $1=\sum_{i=1}^p a_i f_i^{r+1}$, where $a_i\in A$.
+It follows that, if $m=\sum_i m_ia_if_i^{r+1}$, then
+$$
+  \begin{aligned}
+    f_j^{r+1}
+    &= \sum_i a_im_if_i^rf_j^{r+1}
+  \\&= \sum_i a_im_jf_j^rf_i^{r+1}
+  \\&= m_jf_j^r
+  \end{aligned}
+$$
+and, in $M_{f_j}$, we have the equality $X_j=m_j/f_j=m/1$ for all $j$.
+:::
+
+::: {.itenv #corollary-1 title="Corollary 1" latex="{Corollary 1}"}
+If $S$ is a multiplicatively-stable subset of $A$, then the restriction of the sheaf $\mathfrak{M}$ to $E_S$ can be identified with the sheaf $\mathfrak{M}_S$ on $V(A_S)$ associated to $M_S$.
+:::
+
+::: {.proof}
+Let $f$ be an element of $A$.
+The open subset $E_S\cap U_f$ of $E_S$ can then be identified with $E_{S\cdot S_f}$, and, consequently,
+$$
+  \begin{aligned}
+    \mathfrak{M}_S(E_S\cap U_f)
+    &= M_{S\cdot S_f}
+  \\&= (M_S)_f
+  \\&= \varinjlim_{U_g\supset E_S}M_{f\cdot g}.
+  \end{aligned}
+$$
+The natural maps $M_{f\cdot g}=\mathfrak{M}(U_{fg})\to\mathfrak{M}(E_S\cap U_f)$ thus extend to give a map
+$$
+  \mathfrak{M}_S(E_S\cap U_f) \to \mathfrak{M}(E_S\cap U_f)
+$$
+and induce a morphism of sheaves:
+$$
+  \mathfrak{M}_S \to \mathfrak{M}|E_S.
+$$
+
+But if $\mathfrak{p}\in E_S$, then the fibre of $\mathfrak{M}_S$ over $\mathfrak{p}$ is exactly $(M_S)_\mathfrak{p}=M_\mathfrak{p}$, and the above map induces an isomorphism over each $\mathfrak{p}$:
+the map is thus an isomorphism of sheaves.
+:::
+
+\oldpage{1-07}
+::: {.itenv #corollary-2 title="Corollary 2" latex="{Corollary 2}"}
+$M_S$ is the module of sections of $\mathfrak{M}$ over $E_S$.
+:::
+
+::: {.itenv #corollary-3 title="Corollary 3" latex="{Corollary 3}"}
+If $M$ and $N$ are $A$-modules, then the map $$\varphi\colon\Hom(M,N)\to\Hom(\mathfrak{M},\mathfrak{N})$$ defined by the functor $M\mapsto\mathfrak{M}$ is bijective.
+:::
+
+::: {.proof}
+We will exhibit an inverse map $\psi$.
+For this, let $\Gamma$ be the functor that sends any sheaf of $\mathfrak{A}$-modules to its module of sections over $V(A)$.
+The functor $\Gamma$ defines a map from $\Hom(\mathfrak{M},\mathfrak{N})$ to $\Hom(\Gamma(\mathfrak{M}),\Gamma(\mathfrak{N}))$, and thus, since this latter group is isomorphic to $\Hom(M,N)$ by an explicit isomorphism described above, a map $\psi$ from $\Hom(\mathfrak{M},\mathfrak{N})$ to $\Hom(M,N)$.
+Then $\varphi$ and $\psi$ are inverse to one another.
+:::
+
+It follows from [this corollary](#corollary-3), along with the exactness of the functor $M\mapsto\mathfrak{M}$, that, if $u\colon\scr{F}\to\scr{G}$ is a morphism of quasi-coherent sheaves, then $\Ker u$ and $\Coker u$ are quasi-coherent sheaves.
+
+::: {.itenv #theorem-2 title="Theorem 2" latex="{Theorem 2}"}
+If $\scr{F}$ is an algebraic sheaf on $V(A)$, then the following are equivalent:
+
+a. $\scr{F}$ is quasi-coherent.
+b. For every special open subset $U_f$, the natural map
+    $$
+      \Gamma(V,\scr{F})\otimes_A A_f \to \Gamma(U_f,\scr{F})
+    $$
+    is bijective.
+c. For every point $\mathfrak{p}$ of $V$, the natural map
+    $$
+      \Gamma(V,\scr{F})\otimes_A A_\mathfrak{p} \to \scr{F}_\mathfrak{p}
+    $$
+    is bijective.
+d. $\scr{F}$ is locally isomorphic to a quasi-coherent sheaf, i.e. every point $\mathfrak{p}$ of $V$ has a special neighbourhood $U_f$ such that $\scr{F}|U_f$ is a coherent sheaf.
+:::
+
+::: {.proof}
+We have already seen that (a)$\implies$(b), (a)$\implies$(c), and (a)$\implies$(d).
+
+We will first show that (b)$\implies$(a):
+Let $M=\Gamma(V,\scr{F})$.
+Then, for every affine open subset $U_f$ we have restrictions: $M\to\Gamma(U_f,\scr{F})$, and since $\Gamma(U_f,\scr{F})$ is an $A_f$-module, it follows that we have a map:
+$$
+  M_f = M\otimes_A A_f \to \Gamma(U_f,\scr{F}).
+$$
+\oldpage{1-08}
+
+These maps induce a morphism of sheaves: $\mathfrak{M}\to\scr{F}$.
+
+This morphism will be bijective if the induced maps $\mathfrak{M}(U_f)\to\scr{F}(U_f)$ are bijective (and so (b)$\implies$(a)) or if the induced maps $\mathfrak{M}_\mathfrak{p}\to\scr{F}_\mathfrak{p}$ are bijective (and so (c)$\implies$(a)).
+
+It remains only to show that (d)$\implies$(a).
+The proof that follows is due to Grothendieck.
+
+We note first of all that the map $A\to A_f$ endows every $A_f$-module with an $A$-module structure, and thus associates, to every quasi-coherent sheaf $\scr{F}$ on $U_f$, a quasi-coherent sheaf $\overline{\scr{F}}$ on $V$ (we will return later to this operation).
+Furthermore, if $U_g$ is an affine open subset of $V$, then:
+$$
+  \Gamma(U_g,\overline{\scr{F}})
+  = \Gamma(V,\overline{\scr{F}})_g
+  = \Gamma(U_f,\scr{F})_g
+  = \Gamma(U_f\cap U_g,\scr{F}).
+$$
+
+So take some algebraic sheaf $\scr{G}$ on $V$ such that there exists a cover of $V$ by special open subsets $U_{f_i}$ with the condition that $\scr{G}|U_{f_i}$ is quasi-coherent.
+We will now show that $\scr{G}$ is quasi-coherent.
+
+Since $\scr{G}$ is a sheaf, we have, for all $U_g$, an exact sequence of the form:
+$$
+  0
+  \to \Gamma(U_g,\scr{G})
+  \to \prod_i \Gamma(U_g\cap U_i,\scr{G})
+  \to \prod_{i<j} \Gamma(U_g\cap U_i\cap U_j,\scr{G})
+$$
+or even
+$$
+  0
+  \to \Gamma(U_g,\scr{G})
+  \to \prod_i \Gamma)U_g,\overline{\scr{G}|U_i})
+  \to \prod_{i\leq j} \Gamma(U_g,\overline{\scr{G}|U_i\cap U_j}).
+$$
+
+The two latter terms of the exact sequence are the sections over $U_g$ of the sheaves associated to the modules
+$$
+  M = \prod_i \Gamma(U_i,\scr{G}|U_i)
+  \mbox{ and }
+  N = \prod_{i<j} \Gamma(U_i\cap U_j,\scr{G}).
+$$
+Letting $g$ vary, we obtain, by taking the limit, an "exact sequence of sheaves": $0\to\scr{G}\to\mathfrak{M}\to\mathfrak{N}$.
+The sheaf $\scr{G}$ is thus the kernel of a morphism of quasi-coherent sheaves: $\scr{G}$ is quasi-coherent.
+:::
+
+
+# Coherent sheaves on $V(A)$ {#section-4}
+
+From now on we will suppose that *$A$ is a Noetherian ring*.
+\oldpage{1-09}
+Then it is well known that the category of Noetherian $A$-modules agrees with that of $A$-modules of finite type.
+We define a *coherent sheaf on $V(A)$* to be any sheaf $\scr{F}$ that is isomorphic to a sheaf of the type $\mathfrak{M}$, where $M$ is an $A$-module of finite type.
+The sheaf $\scr{F}$ is thus quasi-coherent, and it is a sheaf of finite type
+(a sheaf $\scr{F}$ of $\mathfrak{A}$-modules on a topological space $X$ is said to be *of finite type* if every point of $X$ admits a neighbourhood $U$ along with a surjection $\mathfrak{A}^p|U\to\scr{F}|U\to0$, where $\mathfrak{A}^p$ is sheaf given by the direct sum of $p$ sheaves, each isomorphic to $\mathfrak{A}$.
+Such a surjection induces a map
+$$
+  \Gamma(U,\mathfrak{A}^p) = \Gamma(U,\mathfrak{A})^p \to \Gamma(U,\scr{F})
+$$
+and defines $p$ surjections from $\scr{F}$ to $U$, i.e. the images of the basis vectors of $\Gamma(U,\mathfrak{A})^p$.
+Conversely, the data of $p$ sections of $\scr{F}$ over $U$ defines a map $A^p|U\to\scr{F}|U$).
+
+::: {.itenv #theorem-3 title="Theorem 3" latex="{Theorem 3}"}
+If $A$ is Noetherian and if $\scr{F}$ is an algebraic sheaf on $V(A)$, then the following are equivalent:
+
+a. $\scr{F}$ is a coherent algebraic sheaf on $V(A)$.
+b. $\scr{F}$ is quasi-coherent and of finite type.
+c. $\scr{F}$ is of finite type, and, for every open subset $U$ and every morphism $\varphi\colon\scr{G}\to\scr{F}|U$, where $\scr{G}$ is a sheaf of finite type on $U$, the kernel $\Ker\varphi$ is of finite type on $U$.
+:::
+
+::: {.proof}
+We already know that (a)$\implies$(b).
+Conversely, if $\scr{F}$ is quasi-coherent and of finite type, then there exists a cover $(U_i)_{i\in I}$ of $V(A)$ by special open subsets such that $\Gamma(U_{f_i},\scr{F})$ is an $A_{f_i}$-module of finite type.
+Since $V(A)$ is quasi-compact, we can always assume that this cover is finite, and that $\scr{F}$ is of the form $\mathfrak{M}$:
+we then need to prove that $M$ is an $A$-module of finite type.
+But, for all $i$, there exists a finite number of $m_{i_k}\in M$ that generate $M_{f_i}$, and, if $N$ denotes the submodule generated by all the $m_{i_k}$, then $N$ is an $A$-module of finite type, and clearly $\mathfrak{N}=\mathfrak{M}$, whence $N=M$.
+
+\bigskip
+Now for (c)$\implies$(b):
+If $\scr{F}$ is of finite type, then every point admits a special neighbourhood $U$ over which we have a surjection:
+\oldpage{1-10}
+$$
+  \mathfrak{A}^p|U \to \scr{F}|U \to 0.
+$$
+
+Since the kernel of this surjection is also of finite type, we in fact have an exact sequence (provided that the special open subset $U$ is small enough):
+$$
+  \mathfrak{A}^q|U \to \mathfrak{A}^p|U \to \scr{F}|U \to 0.
+$$
+
+The sheaf $\scr{F}$ is thus, on every small enough special open subset, the cokernel of a morphism of quasi-coherent sheaves:
+so $\scr{F}$ is locally quasi-coherent, and is thus quasi-coherent.
+
+\bigskip
+Finally, (a)$\implies$(c):
+If $\scr{F}$ is coherent, then $\scr{F}$ is of finite type.
+Furthermore, if $\varphi\colon\scr{G}\to\scr{F}|U$ is a morphism, then we can always assume that $U$ is a special open subset that is small enough such that we have a surjection $\psi\colon\mathfrak{A}^p|U\to\scr{G}\to0$.
+
+We then have the following diagram:
+$$
+  \begin{CD}
+    @. \mathfrak{A}^p|U @.
+  \\@. @V{\psi}VV @.
+  \\\Ker\varphi @>>> \scr{G} @>>{\varphi}> \scr{F}|U
+  \\@. @VVV @.
+  \\@. 0 @.
+  \end{CD}
+$$
+and we define $\chi=\varphi\circ\psi$.
+
+The sheaves $\mathfrak{A}^p|U$ and $\scr{F}|U$ are coherent on $U$, and $\chi$ is thus induced by a morphism $\chi'\colon\mathfrak{A}^p(U)\to\scr{F}(U)$.
+This "resolution" of $\Gamma(U,\scr{F})=\scr{F}(U)$ extends to a resolution
+$$
+  \Gamma(U,A)^q \to \Gamma(U,A)^p \to \Gamma(U,\scr{F}).
+$$
+
+This latter exact sequence allows us to complete the diagram and show that, on $U$, $\Ker\varphi$ is the quotient of a sheaf of finite type:
+$$
+  \begin{CD}
+    \mathfrak{A}^q|U @>>> \mathfrak{A}^p|U @>{\chi}>> \scr{F}|U
+  \\@VVV @V{\psi}VV @|
+  \\\Ker\varphi @>>> \scr{G} @>>{\varphi}> \scr{F}|U
+  \\@VVV @VVV @.
+  \\0 0 @.
+$$
+:::
+
+\oldpage{1-11}
+
+::: {.rmenv #remark-theorem-3 title="Remark" latex="{Remark}"}
+Claim (c) gives a characterisation of coherent sheaves, which does not require the base of special open subsets of $V(A)$.
+In fact, if $V$ is an arbitrary topological space, and $\mathfrak{A}$ a sheaf of rings on $V$, then the sheaves of $\mathfrak{A}$-modules that satisfy (c) are the objects of an abelian subcategory of the category of sheaves of $\mathfrak{A}$-modules (see Serre [@4]).
+In the case considered here, the quasi-coherent sheaves are the inductive limits of coherent sheaves.
+:::
+
+
+# The maximal spectrum of a Jacobson ring {#section-5}
+
+We are going to apply the above to algebraic geometry.
+For this, we denote by $\Omega(A)$ the *maximal spectrum of $A$*, which is defined to be the topological subspace of $V(A)$ consisting of the maximal ideals of $A$.
+We further suppose that $A$ is a *Jacobson ring*, i.e. that every prime ideal is the intersection of maximal ideals (see [@1] and [@3]).
+The following proposition then holds:
+
+::: {.itenv #proposition title="Proposition" latex="{Proposition}"}
+The following are equivalent:
+
+a. $A$ is a Jacobson ring.
+b. The correspondence $U\mapsto U\cap\Omega(A)$ between open subsets of $V(A)$ and of $\Omega(A)$ is bijective.
+c. The correspondence $W\mapsto W\cap\Omega(A)$ between closed subsets of $V(A)$ and of $\Omega(A)$ is bijective.
+:::
+
+::: {.proof}
+The equivalence of (b) and (c) is trivial.
+On the other hand, the closed subsets of $V$ correspond to the ideals of $A$ that are intersections of prime ideals.
+The closed subsets of $\Omega$ correspond to the ideals of $A$ that are intersections of maximal ideals.
+The two families of ideals agree if and only if $A$ is a Jacobson ring.
+:::
+
+Under this last hypothesis, the spaces $V(A)$ and $\Omega(A)$ thus have the same lattice of open subsets.
+It clearly follows that the sheaves on $V$ and on $\Omega$ "are in bijective correspondence".
+In particular, we define a *special open subset of $\Omega$* to be the restriction of any special open subset of $V$, and a *quasi-coherent* (resp. *coherent*) *algebraic sheaf on $\Omega$* to be the restriction of any quasi-coherent (resp. coherent) algebraic sheaf on $V$.
+The properties of these sheaves on $V$ extend (up to evident modifications) to their restrictions to $\Omega$.
+
+In particular, every algebra of finite type over a field is a Jacobson ring.
+If $k$ is an algebraically closed field, $V$ an affine algebraic set over $k$, and $A$ its coordinate ring, then $V$ is homeomorphic to the maximal spectrum $\Omega(A)$ of $A$.
+\oldpage{1-12}
+The sheaf of rings $\mathfrak{A}|\Omega(A)$ is called the *sheaf of germs of regular functions on $V$*.
+
+Similarly, a sheaf of modules over this sheaf of rings is said to be *algebraic* (resp. *quasi-coherent algebraic*, resp. *coherent algebraic*) if it is the restriction of a sheaf on $V(A)$ with the named property.
+
+
+# Quasi-coherent sheaves on an algebraic variety {#section-6}
+
+More generally, if $X$ is an arbitrary algebraic set over $k$, then we define a *quasi-coherent* (resp. *coherent*) *algebraic sheaf on $X$* to be any sheaf $\scr{F}$ such that there exists a cover of $X$ by affine open subsets $U_i$ such that $\scr{F}|U_i$ is quasi-coherent (resp. coherent).
+By [the remark] that follows Theorem 3](#remark-theorem-3), this is equivalent to saying that, for every affine open subset $U$, the sheaf $\scr{F}|U$ is quasi-coherent (resp. coherent).
+
+In particular, the sheaf of rings $\mathfrak{A}$ such that, for every affine open subset $U$, $\mathfrak{A}(U)$ is the ring of regular functions on $U$ (with the evident restrictions), is a coherent sheaf.
+We call it the *sheaf of germs of regular functions*.
+Every sheaf of modules over $\mathfrak{A}$ is said to be *algebraic*.
