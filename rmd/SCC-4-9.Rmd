@@ -2,7 +2,7 @@
 title: "Abelian varieties"
 author: "A. Douady"
 date: "1958--59"
-original: 'Douady, A. "Variétés abéliennes". _Séminaire Claude Chevalley_ **4** (1958--59), Talk no. 9. [Numdam: SCC_1958-1959__4__A9_0](http://www.numdam.org/item/SCC_1958-1959__4__A9_0)'
+original: 'Douady, A. "Variétés abéliennes". _Séminaire Claude Chevalley_ **4** (1958--59), Talk no. 9. [`http://www.numdam.org/item/SCC_1958-1959__4__A9_0`](http://www.numdam.org/item/SCC_1958-1959__4__A9_0)'
 bibliography: SCC-4-9.bib
 nocite: '@*'
 link-citations: true
@@ -30,3 +30,129 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \renewcommand{\codim}{\operatorname{codim}}
 
 <!-- Content -->
+
+# Algebraic groups {#section-1}
+
+\oldpage{9-01}
+
+::: {.rmenv title="Definition" latex="{Definition}"}
+An *algebraic group* is a pair $(G,\varphi)$, where $G$ is an algebraic variety and $\varphi$ is a morphism from $G\times G$ to $G$ that endows the set of points of $G$ with the structure of a group.
+:::
+
+::: {.rmenv title="Properties" latex="{Properties}"}
+For every point $a$ of $G$, the translations $l_a$ and $r_a$ defined by $l_a(x)=\varphi(a,x)$ and $r_a(x)=\varphi(x,a)$ are automorphisms of the algebraic variety structure of $G$.
+
+Every point $x$ of $G$ is simple (indeed, if $y$ is a simple point of $G$, then there exists an automorphism of $G$ that sends $y$ to $x$).
+
+If $G$ is connected, then $G$ is irreducible.
+The map $\pi\colon G\to G$ that, to any point, associates its inverse under the group law is a morphism (and thus an automorphism) of the algebraic variety structure.
+The proof of this property uses the fact that a bijective (and thus radicial) morphism from one variety to another is birational if it is unramified ([@1, p. 211, Corollary 2 to Proposition 3, Section II, Chapter VI]).
+
+(There would be no problem with asking for $G$ to be connected as part of the definition of algebraic groups).
+:::
+
+::: {.rmenv title="Definition" latex="{Definition}"}
+An *abelian variety* is an algebraic group whose variety is connected (and thus irreducible) and complete.
+:::
+
+We will show that this implies that the group is commutative.
+
+
+# A property of complete varieties {#section-2}
+
+Recall that a variety $V$ is said to be complete if, for every variety $T$ and every closed subset $F\subset T\times V$, the projection from $F$ to $T$ is closed.
+In the classical case, this property is equivalent to compactness.
+
+
+## Proposition 0 {#section-2.A}
+
+::: {.itenv #proposition-0 title="Proposition 0" latex="{Proposition 0}"}
+Let $V$ be a complete connected variety, $T$ a connected variety, and $f$ a morphism from $T\times V$ to another variety $U$.
+Then, if, for some $t_0\in T$, $f(t_0,v)$ does not depend on $v$, then
+$$
+  f(t,v)=\varphi(t)
+  \quad\text{for all }t,v
+$$
+where $\varphi$ is a morphism from $T$ to $U$.
+:::
+
+\oldpage{9-02}
+::: {.proof}
+If $v_1,v_2\in V$, then the set $P_{v_1,v_2}$ of $t\in T$ such that $f(t,v_1)=f(t,v_2)$ is closed in $T$.
+The set $P=\bigcap P_{v_1,v_2}$ of $t\in T$ for which $f(t,v)$ does not depend on $v$ is thus also closed.
+We will now show that it is also open.
+If $t_1\in P$, then $f(t_1,v)=u_1$ for all $v$.
+Let $U\setminus F$ be an affine neighbourhood of $u_1$, with $F$ closed, so $f^{-1}(F)$ is closed, $G=\operatorname{pr}_T(f^{-1}(F))$ is closed, and $T\setminus G$ is a neighbourhood of $t_1$.
+For $t'\in T\setminus G$, $f$ defines a morphism $v\mapsto f(t',v)$ from $V$, which is complete and connected, to $U\setminus F$, which is affine.
+This map is necessarily constant.
+Thus $P\supset T\setminus G$ is a neighbourhood of each of its points, i.e. an open subset.
+
+Since $T$ is connected, if $t_0\in P$, then $P=T$, which finishes the proof.
+(To see that $\varphi$ is a morphism, it suffices to take a point $v_0\in V$, without worrying about the case where $V=\varnothing$).
+:::
+
+::: {.rmenv title="Remark" latex="{Remark}"}
+There is an analogous statement in analytic geometry:
+let $V$ be a compact connected complex-analytic space, $T$ a connected topological space, and $f$ a continuous map from $T\times V$ to another analytic space $U$, such that $f$ induces, for all $t\in T$, a holomorphic map $f_t$ from $\{t\}\times V$ to $U$.
+Then, if $f_t$ is constant for $t=t_0$, then it is constant for all $t\in T$.
+In other words, a holomorphic map from $V$ to $U$ that is homotopic to a constant map amongst holomorphic maps is constant.
+The hypothesis that $f_t$ be holomorphic for all $t$ is essential: there are counter-examples with non-Kähler varieties $V$.
+:::
+
+
+## Consequences of Proposition 0 {#section-2.B}
+
+::: {.itenv #proposition-1 title="Proposition 1" latex="{Proposition 1}"}
+If $V$ is a complete connected variety, $T$ a connected variety, and $G$ an algebraic group, then every morphism $f\colon T\times V\to G$ is of the form
+$$
+  f(t,v) = \varphi_1(t)\times\varphi_2(v)
+$$
+where $\varphi_1$ and $\varphi_2$ are morphisms from $T$ and $V$ (respectively) to $G$.
+:::
+
+::: {.proof}
+  Let $t_0\in T$.
+  Consider $f(t,v)\cdot f(t_0,v)^{-1}$;
+  this is a morphism from $T\times V$ to $G$ that, for $t=t_0$ and arbitrary $v$, takes the value $e$ (the identity element in $G$).
+  We thus have
+  $$
+    \begin{aligned}
+      f(t,v)\cdot f(t_0,v)^{-1} &= \varphi_1(t)
+    \\\implies f(t,v) &= \varphi_1(t)\cdot f(t_0,v).
+    \end{aligned}\qedhere
+  $$
+:::
+
+::: {.rmenv #remark-1 title="Remark 1" latex="{Remark 1}"}
+"By an analogous argument we can show", or "by considering the dual group of $G$, we deduce" that $f(t,v)$ can also be written in the form $\psi_1(v)\psi_2(t)$.
+:::
+
+\oldpage{9-03}
+
+::: {.rmenv #remark-2 title="Remark 2" latex="{Remark 2}"}
+If $\varphi_1(t)\varphi_2(v)=\varphi'_1(t)\varphi'_2(v)$, then $\varphi'_1(t)=\varphi_1(t)\cdot a$ and $\varphi'_2(v)=\varphi_2(v)$, where $a$ is some fixed element of $G$.
+:::
+
+::: {.itenv #proposition-2 title="Proposition 2" latex="{Proposition 2}"}
+Let $G$ be a connected group, and $V$ a complete connected variety;
+suppose that $e\in V\subset G$.
+Then $V$ is contained in the centre of $G$.
+:::
+
+::: {.proof}
+Consider $f\colon G\times V\to G$ defined by $f(g,v)=v\cdot g\cdot v^{-1}$.
+If $g=e$, then $f$ does not depend on $v$.
+So $f(g,v)=\varphi(g)$.
+Setting $v=e$, we find that $\varphi(g)=g$, and so $vgv^{-1}=g$, which proves the proposition.
+:::
+
+In particular:
+
+::: {.itenv #theorem-0 title="Theorem 0" latex="{Theorem 0}"}
+The underlying group of an abelian variety is abelian.
+:::
+
+(For another proof of this result, see the [Appendix](#appendix)).
+
+
+# Functions with values in an abelian variety {#section-3}
