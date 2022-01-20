@@ -157,3 +157,163 @@ The underlying group of an abelian variety is abelian.
 
 
 # Functions with values in an abelian variety {#section-3}
+
+::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
+Every function $f$ on a non-singular variety $U$ with values in an abelian variety $A$ is a morphism.
+:::
+
+This theorem results from the combination of two lemmas.
+
+::: {.itenv #lemma-1 title="Lemma 1" latex="{Lemma 1}"}
+If $f$ is a function defined on a non-singular variety $U$ with values in an algebraic group $G$, then the set $S$ of points of $U$ where $f$ is not defined is of pure codimension $1$.
+:::
+
+::: {.proof}
+Let $\varphi$ be the function from $U\times U$ to $G$ defined by $\varphi(u,u')=f(u)f(u')^{-1}$.
+Let $X$ be an affine neighbourhood of $e$ in $G$, and $\varphi_0$ the function from $U\times U$ to $X$ that only differs from $\varphi$ in the definition of its domain;
+there is no worry that $\varphi(U)$ might not be contained in $G\setminus X$, since, if $f$ is defined at $u$, then $\varphi$ is defined at $(u,u)$, and there it takes the value $e$;
+more precisely, we will show that the following three properties are equivalent:
+
+a. $f$ is defined at $u$;
+b. $\varphi$ is defined at $(u,u)$;
+c. $\varphi_0$ is defined at $(u,u)$.
+
+Firstly, (a)$\implies$(b)$\iff$(c) is evident.
+
+We now show that (b)$\implies$(a).
+If $\varphi$ is defined at $(u,u)$, let $v\in U$ be such that $f$ is defined at $v$, and such that $\varphi$ is defined at $(u,v)$;
+then, for all $u'$ where $f$ is defined,
+$$
+  f(u') = f(u')\cdot f(v)^{-1}\cdot f(v) = \varphi(u',v)\cdot f(v).
+$$
+The function $f_0$ defined by $f_0(u')=\varphi(u',v)\cdot f(v)$ agrees with $f$, and is defined at the point $u$, and so (b)$\implies$(a).
+\oldpage{9-04}
+
+This shows that the intersection of with the diagonal of the set $H$ of points of $U\times U$ where $\varphi_0$ is not defined is $S$, or rather the image of $S$ under the diagonal map.
+But the sets of points at which a numerical function on a normal variety is not defined is of pure codimension $1$;
+this is thus also true if we replace "numerical function" with "function with values in an affine variety".
+So $H$ is of pure codimension $1$.
+Since $U\times U$ is not singular, the codimension in $U\times U$ of $H\cap\Delta$ is $\leq\codim H+\codim\Delta = \dim U+1$, which shows that every component of $H\cap\Delta$ is of codimension $\leq1$ in $\Delta$.
+:::
+
+::: {.rmenv title="Remark" latex="{Remark}"}
+The hypothesis that $U$ be non-singular is essential, both for [Lemma 1](#lemma-1) and for [Theorem 1](#theorem-1).
+:::
+
+::: {.rmenv title="Counter-example" latex="{Counter-example}"}
+Let $U$ be a cone in $K^3$ that has a cubic $G$ of genus $1$ in the $2$-dimensional projective space as its base.
+Then $G$ can be endowed with a group structure.
+The projection $f$ from $U$ to $G$ is defined at every point except for the origin;
+$S$ is thus of codimension $2$.
+:::
+
+::: {.itenv #lemma-2 title="Lemma 2" latex="{Lemma 2}"}
+If $f$ is a function defined on a normal variety $U$ with values in a complete variety $V$, then the set $S$ of points of $U$ where $f$ is not defined is of codimension $>1$.
+:::
+
+::: {.proof}
+Since $V$ is complete, there exists a variety $W$ contained in $D^r$ (where $D$ denotes the projective line), a morphism $p$ from $W$ to $V$, and a function $s$ from $V$ to $W$ such that $p\circ s=I_V$.
+Then $f=p\circ(s\circ f)$ will be defined whenever $s\circ f$ is defined.
+But $s\circ f$ can be considered as taking values in $D^r$, since $W$ is closed in $D^r$, and will thus be defined whenever the $r$ coordinate functions of $f$ are defined.
+These functions take values in $D$, and so, since $U$ is normal, the set of points where they are not defined is of codimension $>1$ [@1, p. 166, Corollary to Proposition 2, Section 1, Chapter V].
+:::
+
+
+# Functions defined on a product with values in an abelian variety {#section-4}
+
+::: {.itenv #theorem-2 title="Theorem 2" latex="{Theorem 2}"}
+Let $X$ and $Y$ be irreducible varieties, and $f$ a function defined on $X\times Y$ with values in an abelian variety $A$ (whose group law is written additively).
+Then $f$ is of the form $f(x,y)=f_1(x)+f_2(y)$, where $f_1$ and $f_2$ are functions from $X$ and $Y$ (respectively) to $A$.
+:::
+
+::: {.rmenv title="Remark" latex="{Remark}"}
+This implies that $f$ is defined at the points where $f_1$ and $f_2$ are both defined, and at these points only.
+:::
+
+\oldpage{9-05}
+::: {.proof}
+Let $(x_0,y_0)$ be a simple point of $X\times Y$.
+By considering the function $g$ on $X\times Y$, defined by
+$$
+  g(x,y) = f(x,y) - f(x_0,y) - f(x,y_0) + f(x_0,y_0),
+$$
+we can reduce to showing that, if a function $g$ with values in $A$ is zero on
+$$
+  X\vee Y = \{x_0\}\times Y \cup X\times\{y_0\},
+$$
+then it is zero on $X\times Y$.
+
+We will successively reduce to the following particular cases:
+
+a. $X$ is a curve;
+b. $X$ is a complete non-singular curve, and $Y$ is non-singular.
+
+*Reduction to (a).*
+The set of points $x_1$ of $X$ such that there exists an irreducible curve containing $x_0$ and $x_1$, where $x_0$ is a simple point, is dense in $X$.
+But (a) implies that $g$ is zero at every point $(x_1,y)$ of the open set on which it is defined, and thus at every point of a dense set, and thus everywhere.
+
+*Reduction to (b).*
+If $X$ is an irreducible curve, then there exists a curve $X_1$ that is both complete and normal (and thus non-singular), as well as a rational equivalence from $X$ to $X_1$, defined at $x_0$.
+Also, if $Y_1$ is the open subset of simple points of $Y$, then $Y_1$ is birationally equivalent to $Y$.
+The function $g$, defined on $X\times Y$, has a corresponding function $g_1$, defined on $X_1\times Y_1$, and it clearly suffices to prove the theorem for the function $g_1$.
+
+*Proof in case (b).*
+The variety $X\times Y$ is a product of two non-singular varieties, and thus itself non-singular, and so $g$ is a morphism, by [Theorem 1](#theorem-1).
+Its value does not depend on $x$ for $y=y_0$, and thus also for all $y$, by [Proposition 0](#proposition-0), since $X$ is complete.
+It is zero for $x=x_0$, and thus for all $x$.
+
+This concludes the proof of the theorem.
+:::
+
+::: {.itenv #corollary-1 title="Corollary 1" latex="{Corollary 1}"}
+Every function $f$ defined on an algebraic group $G$ with values in an abelian variety $A$ is of the form $h+a$, where $h$ is a homomorphism from $G$ to $A$, and $a$ is a constant.
+:::
+
+::: {.proof}
+Set $h(x)=f(x)-f(e)$.
+Then the function $g\colon G\times G\to A$ defined by $g(x,y)=h(x\cdot y)$ is of the form $g_1(x)+g_2(y)$.
+We can impose that $g_1(e)=0$, and then $g_2(e)=0$.
+By successively taking $x=e$ and then $y=e$, we find that $g_1=g_2=h$.
+Whence $h(x,y)=h(x)+h(y)$.
+:::
+
+::: {.itenv #corollary-2 title="Corollary 2" latex="{Corollary 2}"}
+Every function $f$ defined on a line $D$ with values in an abelian variety $A$ is constant.
+:::
+
+\oldpage{9-06}
+::: {.proof}
+By [Theorem 1](#theorem-1), $f$ is everywhere defined, and by [Corollary 1](#corollary-1) applied to the multiplicative group, we have that $f(xy)=f(x)+f(y)+a$.
+Setting $x=0$, we have $f(0)=f(0)+f(y)+a$, whence $f(y)=-a$.
+:::
+
+
+# Appendix: adjoint representations {.unnumbered #appendix}
+
+We can also obtain [Theorem 0](#theorem-0) from the following proposition:
+
+::: {.itenv #proposition-3 title="Proposition 3" latex="{Proposition 3}"}
+Let $G$ be a connected algebraic group, and let $C$ be the centre of $G$.
+Then there exists a linear group $L=\mathrm{GL}(m)$ along with an algebraic homomorphism $f\colon G\to L$ such that $f^{-1}(e)=C$.
+:::
+
+::: {.proof}
+Let $\fk{a}$ be the local ring of functions on $G$ defined at the identity element $e$, and let $\scr{J}$ be its maximal ideal;
+set $T_n=\scr{J}/\scr{J}^n$.
+For all $n$, $T_n$ is a finite-dimensional vector space.
+Every element $x\in G$ defines an inner automorphism $\alpha(x)\colon G\to G$ that induces an automorphism $\operatorname{Ad}_n(x)\colon T_n\to T_n$.
+Let $C_n$ be the kernel of $\operatorname{Ad}_n\colon G\to\mathrm{GL}(T_n)$.
+The $C_n$ form a decreasing sequence of subvarieties of $G$.
+Such a sequence is stationary, and so there exists some $n_0$ such that $C_n=C_{n_0}$ for all $n\geq n_0$.
+We now show that $C_{n_0}=C$:
+if $x\in C_{n_0}$, then $\operatorname{Ad}_n(x)$ is the identity for all $n$, and so the automorphism of $\fk{a}$ defined by the inner automorphism $\alpha(x)$ of $G$ is the identity, since the local ring $\fk{a}$ is separated.
+Consequently, since $G$ is connected (and thus irreducible), $\alpha(x)$ is the identity.
+Whence the proposition, taking $L=\mathrm{GL}(T_{n_0})$.
+:::
+
+::: {.rmenv title="Remark" latex="{Remark}"}
+In characteristic $p\neq0$, the monomorphism $G/C\to L$ is not necessarily an isomorphism from $G/C$ to its image.\marginpar{\dbend}
+For example, consider $G=k^*\times k$ endowed with the group law $\varphi((a,b),(a',b))=(aa',b+a^pb')$.
+:::
+
+We deduce [Proposition 2](#proposition-2) and [Theorem 0](#theorem-0) from [Proposition 3](#proposition-3) by noting that $L$ is an affine variety, and that, if $V$ is complete and connected, then every morphism from $V$ to $L$ is constant.
