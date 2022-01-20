@@ -111,16 +111,16 @@ where $\varphi_1$ and $\varphi_2$ are morphisms from $T$ and $V$ (respectively) 
 :::
 
 ::: {.proof}
-  Let $t_0\in T$.
-  Consider $f(t,v)\cdot f(t_0,v)^{-1}$;
-  this is a morphism from $T\times V$ to $G$ that, for $t=t_0$ and arbitrary $v$, takes the value $e$ (the identity element in $G$).
-  We thus have
-  $$
-    \begin{aligned}
-      f(t,v)\cdot f(t_0,v)^{-1} &= \varphi_1(t)
-    \\\implies f(t,v) &= \varphi_1(t)\cdot f(t_0,v).
-    \end{aligned}\qedhere
-  $$
+Let $t_0\in T$.
+Consider $f(t,v)\cdot f(t_0,v)^{-1}$;
+this is a morphism from $T\times V$ to $G$ that, for $t=t_0$ and arbitrary $v$, takes the value $e$ (the identity element in $G$).
+We thus have
+$$
+  \begin{aligned}
+    f(t,v)\cdot f(t_0,v)^{-1} &= \varphi_1(t)
+  \\\implies f(t,v) &= \varphi_1(t)\cdot f(t_0,v).
+  \end{aligned}
+$$
 :::
 
 ::: {.rmenv #remark-1 title="Remark 1" latex="{Remark 1}"}
