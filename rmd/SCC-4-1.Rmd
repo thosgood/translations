@@ -101,11 +101,12 @@ If $\mathfrak{a}$ is an ideal of $A$, then we denote by $W(\mathfrak{a})$ the se
 Then
 $$
   \begin{gathered}
-    W(\mathfrak{a}) \subset V(A), \quad U(\mathfrak{a})\subset V(A),
-  \\W(\sum\mathfrak{a}_i) = \bigcap_i W(\mathfrak{a}_i),
-  \quad W(\mathfrak{a}\cap\mathfrak{b}) = W(\mathfrak{a}\cdot\mathfrak{b}) = W(\mathfrak{a})\cup W(\mathfrak{b}),
-  \\U(\sum\mathfrak{a}_i) = \bigcup_i U(\mathfrak{a}_i),
-  \quad U(\mathfrak{a}\cap\mathfrak{b}) = U(\mathfrak{a}\cdot\mathfrak{b}) = U(\mathfrak{a})\cap U(\mathfrak{b}).
+    W(\mathfrak{a}) \subset V(A)
+  \\U(\mathfrak{a})\subset V(A),
+  \\W\left(\sum\mathfrak{a}_i\right) = \bigcap_i W(\mathfrak{a}_i)
+  \\W(\mathfrak{a}\cap\mathfrak{b}) = W(\mathfrak{a}\cdot\mathfrak{b}) = W(\mathfrak{a})\cup W(\mathfrak{b})
+  \\U\left(\sum\mathfrak{a}_i\right) = \bigcup_i U(\mathfrak{a}_i)
+  \\U(\mathfrak{a}\cap\mathfrak{b}) = U(\mathfrak{a}\cdot\mathfrak{b}) = U(\mathfrak{a})\cap U(\mathfrak{b}).
   \end{gathered}
 $$
 
@@ -223,12 +224,10 @@ If $S$ is a multiplicatively-stable subset of $A$, then the restriction of the s
 Let $f$ be an element of $A$.
 The open subset $E_S\cap U_f$ of $E_S$ can then be identified with $E_{S\cdot S_f}$, and, consequently,
 $$
-  \begin{aligned}
-    \mathfrak{M}_S(E_S\cap U_f)
-    &= M_{S\cdot S_f}
-  \\&= (M_S)_f
-  \\&= \varinjlim_{U_g\supset E_S}M_{f\cdot g}.
-  \end{aligned}
+  \mathfrak{M}_S(E_S\cap U_f)
+  = M_{S\cdot S_f}
+  = (M_S)_f
+  = \varinjlim_{U_g\supset E_S}M_{f\cdot g}.
 $$
 The natural maps $M_{f\cdot g}=\mathfrak{M}(U_{fg})\to\mathfrak{M}(E_S\cap U_f)$ thus extend to give a map
 $$
@@ -326,7 +325,7 @@ $$
 The two latter terms of the exact sequence are the sections over $U_g$ of the sheaves associated to the modules
 $$
   M = \prod_i \Gamma(U_i,\scr{G}|U_i)
-  \mbox{ and }
+  \quad\text{ and }\quad
   N = \prod_{i<j} \Gamma(U_i\cap U_j,\scr{G}).
 $$
 Letting $g$ vary, we obtain, by taking the limit, an "exact sequence of sheaves": $0\to\scr{G}\to\mathfrak{M}\to\mathfrak{N}$.
@@ -395,7 +394,7 @@ $$
   \\@. 0 @.
   \end{CD}
 $$
-and we define $\chi=\varphi\circ\psi$.
+and we define $\chi=\varphi\circ\psi\colon\mathfrak{A}^p|U\to\scr{F}|U$.
 
 The sheaves $\mathfrak{A}^p|U$ and $\scr{F}|U$ are coherent on $U$, and $\chi$ is thus induced by a morphism $\chi'\colon\mathfrak{A}^p(U)\to\scr{F}(U)$.
 This "resolution" of $\Gamma(U,\scr{F})=\scr{F}(U)$ extends to a resolution
@@ -410,7 +409,7 @@ $$
   \\@VVV @V{\psi}VV @|
   \\\Ker\varphi @>>> \scr{G} @>>{\varphi}> \scr{F}|U
   \\@VVV @VVV @.
-  \\0 0 @.
+  \\0 @. 0 @.
   \end{CD}
 $$
 :::
