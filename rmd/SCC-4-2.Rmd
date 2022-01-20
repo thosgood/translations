@@ -1,0 +1,321 @@
+--- 
+title: "Serre's theorem"
+author: "P. Gabriel"
+date: "1958--59"
+original: 'Gabriel, P. "Le théorème de Serre". _Séminaire Claude Chevalley_ **4** (1958--59), Talk no. 2. Numdam: [`SCC_1958-1959__4__A2_0`](http://www.numdam.org/item/SCC_1958-1959__4__A2_0)'
+bibliography: SCC-4-1.bib
+nocite: '@*'
+link-citations: true
+csl: maths-translations.csl
+reference-section-title: "Bibliography"
+github-repo: "thosgood/translations"
+favicon: "favicon.ico"
+---
+
+```{js, echo = FALSE}
+$(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
+```
+
+```{r, child = '_translator-note.Rmd'}
+```
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+<!-- Content -->
+
+# (PART) Affine algebraic sets and classical functors {-}
+
+# Ringed topological spaces {#section-1}
+
+\oldpage{2-01}
+From now on, and unless otherwise mentioned, the rings we consider will be assumed to be commutative, with a unit element, and *Noetherian*.
+We define a *ringed topological space* $(V,\scr{A})$ to be a topological space $V$ endowed with the structure defined by the data of a sheaf of rings $\scr{A}$.
+If $(V,\scr{A})$ and $(W,\scr{B})$ are two ringed topological spaces, then we define a morphism from the first to the second by the data of:
+
+a. a continuous map $\psi\colon V\to W$;
+b. for every open subset $U$ of $W$, a ring homomorphism
+    $$
+      \varphi_U\colon\scr{B}(U)\to\scr{A}(\varphi^{-1}(U))
+    $$
+    that is compatible with the restriction maps.
+
+The composition of two morphisms is defined in the evident way, and we speak of the category of ringed topological spaces.
+In what follows, $V$ will almost always be a Zariski space.
+To such a $V$, we often associate a topological space $S(V)$, which is *the scheme of $V$*, and which is defined in the following way:
+
+- the points of $S(V)$ are the closed irreducible subsets of $V$;
+- the closed subsets of $S(V)$ are the sets $\scr{F}$, where $F$ is a closed subset of $V$, and $\scr{F}$ denotes the set of closed irreducible subsets of $V$ that are contained in $F$.
+
+It is then clear that the correspondence $F\mapsto\scr{F}$ between closed subsets of $V$ and closed subsets of $S(V)$ is bijective, that $S(V)$ is a Zariski space, and that every closed irreducible subset of $S(V)$ is the closure of a unique point.
+To every sheaf on $V$, we canonically associate a sheaf on $S(V)$.
+In particular, if $(V,\scr{A})$ is a ringed topological space, and if $V$ is a Zariski space, then we denote by $(S(V),S(\scr{A}))$ the *scheme of $(V,\scr{A})$*, which is defined to be the ringed topological space given by $S(V)$ and the sheaf associated to $\scr{A}$.
+\oldpage{2-02}
+Of course, the scheme of $(S(V),S(\scr{A}))$ is isomorphic to $(S(V),S(\scr{A}))$.
+
+If $A$ is a Noetherian Jacobson ring, and $(\Omega(A),\scr{U})$ is the ringed topological space defined by its maximal spectrum, then the associated scheme is exactly $(V(A),\scr{U})$ (see Talk no. 1).
+If $(V,\scr{A})$ is an algebraic set endowed with the sheaf of germs of regular functions, then the associated scheme has been defined by Chevalley in [@3] and [@4].
+In this case, $V$ is the subspace of $S(V)$ given by the closed points, and $\scr{A}$ is the restriction of $S(\scr{A})$ to $V$.
+From now on, we will almost always restrict to the case of algebraic sets over an algebraically closed field.
+
+
+# Sheaves of ideals of an algebraic set {#section-2}
+
+If $V$ is an algebraic set, and $\scr{A}$ its sheaf of germs of regular functions, then the notion of quasi-coherent (resp. coherent) sheaves generalises the notion of a module (resp. module of finite type) over the ring of coordinates of an affine algebraic set.
+We similarly generalise the notions of support and dimension: if $\scr{F}$ is a coherent algebraic sheaf on $V$, then its *support* is the set of points $x$ of $V$ where the fibre $\scr{F}_x$ of $\scr{F}$ is not zero (if the fibre of $\scr{F}$ is zero at $x$, then it is zero on a neighbourhood of $x$, since $\scr{F}$ is coherent, and thus the support is closed).
+We then define the *dimension of $\scr{F}$* to be the dimension of its support.
+When $V$ is affine and the coherent sheaf $\scr{F}$ is associated to a module $M$ of finite type, then the support of $\scr{F}$ is given by the set of maximal ideals of the coordinate ring that contain the annihilator of $M$.
+
+The notion of an ideal generalises in the following way: we define a *sheaf of ideals* of $(V,\scr{A})$ to be any quasi-coherent (and thus coherent) subsheaf of $\scr{A}$.
+We then find the inevitable correspondence between ideals and closed subsets:
+
+If $\scr{I}$ is a sheaf of ideals, then we associate to it the following closed subset $W(\scr{I})$ of $V$:
+
+> $x\in W(\scr{I})$ if and only if $\scr{I}_x$, the fibre of $\scr{I}$ at $x$, is a proper ideal of $\scr{O}_x$ (i.e. $\scr{I}_x\neq\scr{O}_x$), or if and only if the germs of the functions defined by $\scr{I}$ at $x$ are zero.
+$W(\scr{I})$ is thus the support of $\scr{A}|\scr{I}$.
+
+Conversely, if $W$ is a closed subset of $V$, then we associate to it the following sheaf of ideals $\scr{I}(W)$:
+\oldpage{2-03}
+
+>The sections of $\scr{I}(W)$ on an open subset $U$ are the regular functions defined on $U$ that are zero on $U\cap W$.
+If $\scr{I}(U,x)$ denotes the inverse image in $\scr{A}(U)$ of the maximal ideal of $\scr{O}_x$, then $\Gamma(U,\scr{I}(W))$ is the intersection of the $\scr{I}(U,x)$ where $x$ runs over $U\cap W$.
+
+If $U$ is an affine open subset, then the sheaf of ideals $\scr{I}(W)|U$ is exactly the sheaf associated to the ideal $\Gamma(U,\scr{I}(W))$ of $\scr{A}(U)$, which shows that $\scr{I}(W)$ is coherent.
+
+::: {.itenv #proposition-1 title="Proposition 1" latex="{Proposition 1}"}
+—
+
+a. The map $W\mapsto\scr{I}(W)$ gives a bijective correspondence between the closed subsets of $V$ and the sheaves of ideals $\scr{I}$ that satisfy the following condition:
+    for every $x\in V$, $\scr{I}_x$ is either equal to $\scr{O}_x$ or equal to an intersection of prime ideals of $\scr{O}_x$.
+b. The map $W\mapsto\scr{I}(W)$ associates the closed subsets whose connected components are all irreducible to the sheaves of prime ideals (for every $x$, $\scr{I}_x$ is either equal to $\scr{O}_x$ or equal to a prime ideal).
+:::
+
+::: {.proof}
+—
+
+a. It suffices to give a proof in the case where $(V,\scr{A})$ is an affine algebraic set.
+    So let $A=\scr{A}(V)$, and $\mathfrak{a}=\Gamma(V,\scr{I}(W))$.
+    We have already seen that $\mathfrak{a}$ is then the intersection of the prime ideals $\scr{I}(V,x)$, where $x$ runs over $W$.
+    So $\mathfrak{a}$ is an intersection of prime ideals.
+    Since the correspondence between intersections of prime ideals of $A$ and closed subsets of $V$ is bijective, so too is the correspondence between ideals of $A$ and sheaves of ideals of $(V,\scr{A})$;
+    it remains only to show, conversely, that the sheaf associated to an intersection $\mathfrak{a}$ of prime ideals satisfies the condition of the proposition: this follows from the conservation properties of the prime decomposition under localisation.
+b. The proof is analogous.
+:::
+
+
+# The ring of rational functions of an algebraic set {#section-3}
+
+We recall that, if $V$ is an algebraic set, then we define a *rational function on $V$* to be a regular map $f$ from an everywhere-dense open subset of $V$ to the field of constants $K$.
+We further suppose that the domain of definition of $f$ cannot be extended.
+The rational functions on $V$ form an algebra $K(V)$ over $K$.
+If we denote by $V_i$ the irreducible components of $V$, then $K(V)$ is isomorphic to the product $\prod_i K(V_i)$, with the isomorphism being the obvious one.
+Finally, if $V$ is irreducible, and if $U$ is an affine open subset of $V$, then $K(V)$ is exactly the field of fractions of the coordinate ring of $U$.
+
+The sheaf $\scr{K}(V)$ of rational functions on $V$ is then defined in the following way:
+
+> to every open subset $U$ of $V$, we associate the ring $K(U)$ of rational functions on $U$, with the restrictions being obvious.
+
+\oldpage{2-04}
+It is clear that this defines a quasi-coherent sheaf on $V$.
+Furthermore, if we denote by $V_i$ the irreducible components of $V$, then $K(U)$ is exactly the product $\prod_{V_i\cap U\neq\varnothing}K(V_i)$.
+It thus follows that the sheaf $\scr{K}(V)$ is obtained in the following way:
+let $\scr{K}_i$ be the sheaf on $V$ that is zero outside of $V_i$, and that is constant with fibre $K(V_i)$ on $V_i$.
+Then $\scr{K}(V)$ is the product of the sheaves $\scr{K}_i$.
+
+
+# Characterisation of affine algebraic sets {#section-4}
+
+Let $(V,\scr{A})$ be an algebraic set endowed with its sheaf of rings, and let $A=\Gamma(V,\scr{A})$ be the coordinate ring of $V$.
+We know that we then have a canonical morphism $(V,\scr{A})\to(S(V),S(\scr{A}))$, and that $(V,\scr{A})$ is affine if and only if $(S(V),S(\scr{A}))$ is the prime spectrum of an algebra over $K$, of finite type and with no nilpotent elements.
+
+We will now define a morphism $(S(V),S(\scr{A}))\to(V(A),\scr{U})$.
+For this, let $x$ be an arbitrary element of $S(V)$, and let $S(\scr{A})_x$ be the fibre of $S(\scr{A})$ at $x$: this an a local ring, and we have a restriction homomorphism $A\to S(\scr{A})_x$.
+We denote by $\mathfrak{p}_x$ the prime ideal of $A$ given by the inverse image under this homomorphism of the maximal ideal of $S(\scr{A})_x$.
+It is an ideal of functions on $V$ that are zero on the closed point $x$.
+
+The map $\varphi\colon x\mapsto\mathfrak{p}_x$ is a continuous map from $S(V)$ to $V(A)$.
+Indeed, it suffices to show that the inverse image of a special open subset $U_f$ of $V(A)$ is an open subset of $S(V)$.
+But $\varphi^{-1}(U_f)$ consists of points $x$ of $S(V)$ such that the image $f_x$ of $f$ in $\scr{A}_x$ is invertible, and if $f_x$ is invertible at $x$, then $f_y$ is invertible for $y$ in a neighbourhood of $x$.
+QED.
+
+It follows from the above that $1/f$ is a section of $S(\scr{A})$ over $\varphi^{-1}(U_f)$, and so the canonical map from $A$ to $\Gamma(\varphi^{-1}(U_f),S(\scr{A}))$ extends to a homomorphism:
+$$
+  \varphi_{U_f}\colon A_f \to \Gamma(\varphi^{-1}(U_f), S(\scr{A})).
+$$
+
+The $\varphi_{U_f}$ are compatible with the restriction maps, and, by "passing to the inductive limit", they define a morphism of ringed topological spaces:
+\oldpage{2-05}
+$$
+  \varphi\colon (S(V),S(\scr{A})) \to (V(A),\scr{U}).
+$$
+
+It is clear that $\varphi$ is an isomorphism if and only if $(V,\scr{A})$ is an affine algebraic set.
+The following theorem further examines this case:
+
+::: {.itenv title="Serre's Theorem" latex="{Serre's Theorem}"}
+The following are equivalent:
+
+a. $(V,\scr{A})$ is an affine algebraic set.
+b. If $0\to\scr{F}\to\scr{G}\to\scr{H}\to0$ is an exact sequence of quasi-coherent sheaves, then the sections over $V$ form an exact sequence.
+c. If $0\to\scr{F}\to\scr{G}\to\scr{H}\to0$ is an exact sequence of coherent sheaves, then the sections over $V$ form an exact sequence.
+d. There exist sections $f_i$ of $\scr{A}$ over $V$ such that:
+    - the ideal generated by the $f_i$ is equal to $A$; and
+    - the open subsets $V_{f_i}$ of $V$, where the $f_i$ are non-zero, are affine open subsets, and they cover $V$.
+:::
+
+:::: {.proof}
+It remains only to show that (c) implies (d), and that (d) implies (a).
+
+\bigskip
+For (c)$\implies$(d), consider:
+
+::: {.itenv #lemma-1 title="Lemma 1" latex="{Lemma 1}"}
+If $\scr{F}$ is a non-zero coherent sheaf, then $\Gamma(V,\scr{F})$ is non-zero.
+:::
+
+::: {.proof}
+Indeed, the support of $\scr{F}$ contains a closed point, say $x$.
+
+The fibre $\scr{F}_x$ of $\scr{F}$ is non-zero at $x$, and, if $\mathfrak{m}_x$ denotes the maximal ideal of $\scr{A}_x$, then $\scr{F}_x|\mathfrak{m}_x\scr{F}_x$ is non-zero (by the Nakayama lemma).
+The sheaf $\scr{G}$ that is zero away from $x$ and "has the value" $\scr{F}_x|\mathfrak{m}_x\scr{F}_x$ at $x$ is then coherent, and we clearly have a surjection:
+$$
+  \scr{F}\to\scr{G}\to0.
+$$
+
+It thus follows that we have an epimorphism from $\Gamma(V,\scr{F})$ to $\Gamma(V,\scr{G}) = \scr{F}_x|\mathfrak{m}_x\scr{F}_x$, and $\Gamma(V,\scr{F})$ is non-zero.
+:::
+
+With this proven, let $f$ be a section of $\scr{A}$ over $V$ (a regular function on $V$).
+If $U$ is an arbitrary open subset of $V$, then we denote by $U_f$ the set of points of $U$ where $f$ is non-zero.
+The existence of the cover $(U_{f_i})$ will be a consequence of:
+\oldpage{2-06}
+
+::: {.itenv #lemma-2 title="Lemma 2" latex="{Lemma 2}"}
+If $x$ is an arbitrary point of $V$, and $U$ is an affine open subset of $V$ containing $x$, then there exists a regular function $f$ on $V$ such that $V_f=U_f$, and such that $V_f$ contains $x$.
+:::
+
+::: {.proof}
+Let $W$ be the complement of $U$ in $V$, and let $\scr{I}(W)$ (resp. $\scr{I}(W,x)$) be the sheaf of germs of functions that are zero on $W$ (resp. on $W$ and $x$).
+We then have an exact sequence:
+$$
+  0 \to \scr{I}(W,x) \to \scr{I}(W) \to \scr{I}(W)|\scr{I}(W,x) \to 0
+$$
+and the sheaf $\scr{I}(W)|\scr{I}(W,x)$ is clearly non-zero.
+So there exists a section $f$ of $\scr{I}(W)$ that does not belong to $\Gamma(\scr{I}(W,x))$;
+this is the desired function.
+:::
+
+The quasi-compactness of $V$, along with [Lemma 2](#lemma-2), imply the existence of an affine cover of $V$ by a finite number of $V_{f_i}$.
+It remains only to show that the ideal generated by the $f_i$ is $A$.
+But if $U$ is an affine open subset, then the $U_{f_i}$ cover $U$, and it follows that restrictions of the $f_i$ to $\scr{A}(U)$ generate the unit ideal.
+In other words, if there are $p$ sections $f_i$, and if $\scr{A}^p$ denotes the direct sum of $p$ sheaves, each isomorphic to $\scr{A}$, then the morphism from $\scr{A}^p$ to $\scr{A}$ defined by the $f_i$ is surjective.
+The same is true for the morphism $A^p\to A$ defined by the $f_i$.
+
+\bigskip
+For (d)$\implies$(a):
+we will show that the morphism
+$$
+  \varphi\colon (S(V),S(\scr{A})) \to (V(A),\scr{U})
+$$
+is an isomorphism, and that $A$ is an algebra of finite type with no nilpotent elements.
+
+Note first of all that, if $f\in A$ is a regular function on $V$, then the coordinate ring of $V_f$ is exactly $A_f$.
+Indeed, if $A_i$ denotes the coordinate ring of $V_{f_i}$, and $A_{ij}=A_{if_j}=A_{jf_i}$ the coordinate ring of $V_{f_i}\cap V_{f_j}=V_{f_i\cdot f_j}$, then we have the famous exact sequence (see Talk no. 1):
+$$
+  0 \to A \to \prod_i A_i \to \prod_{i\neq j}A_{ij}
+$$
+whence (by the exactness of the functor $M\mapsto M_f$) we have the exact sequence:
+$$
+  0 \to A_f \to \prod_i(A_i)_f \to \prod(A_{ij})_f.
+$$
+
+But the $(A_i)_f$ and $(A_{ij})_f$ are clearly the coordinate rings of $V_{f_i}\cap V_f$ and $V_{f_i}\cap V_{f_j}\cap V_f$;
+thus $A_f$ is coordinate ring of $V_f$.
+\oldpage{2-07}
+
+From this we see that the map $S(V)\to V(A)$ is injective, and that it induces an isomorphism
+$$
+  (S(V_{f_i}), \scr{A}|S(V_{f_i})) \to (V(A)_{f_i}, \scr{U}|V(A)_{f_i}).
+$$
+
+Also, the $V(A)_{f_i}$ cover $V(A)$, since the $f_i$ generate the unite ideal.
+By gluing the pieces together, we thus obtain an isomorphism
+$$
+  (S(V),S(\scr{A})) \to (V(A),\scr{U})
+$$
+and it remains only to show that $A$ is of finite type and has no nilpotent elements.
+
+But $A$ is an algebra of functions, and has no nilpotent elements.
+Now, for all $i$, let $a_{i_k}$ be a finite number of elements of $A$ such that the images of $f_i$ and $a_{i_k}$ in $A_{f_i}$ generate the ring $A_{f_i}$.
+Finally, let $a_i\in A$ be such that $\sum a_i f_i=1$ in $A$.
+We will show that the $f_i$, $a_{i_k}$, and $a_i$ all together generate the ring $A$:
+
+Indeed, by taking a suitable power of the formula $\sum a_i f_i=1$, we obtain formulas $\sum a_i(m)f_i^m=1$, where the $a_i(m)$ can be expressed in terms of the $a_i$ and $f_i$.
+If now $x$ is an element of $A$, then its image in $A_{f_i}$ can be written as $x_i|f_i^p$ for some $p$ large enough.
+It then follows (see Talk no. 1) that, for $n$ large enough, we have
+$$
+  x = \sum_i a_i(n+p) x_i f_i^n
+$$
+which finishes the proof.
+::::
+
+::: {.itenv #corollary title="Corollary" latex="Corollary"}
+If $V$ is an affine algebraic set, $U$ an open subset of $V$, $A$ the coordinate ring of $V$, and $\scr{U}(U)$ the coordinate ring of $U$, then the following are equivalent:
+
+a. $U$ is an affine open subset.
+b. If $M$ is an $A$-module, then the canonical homomorphism
+    $$
+      M\otimes_A\scr{U}(U) \to \scr{M}(U)
+    $$
+    is bijective.
+
+\oldpage{2-08}
+Furthermore, if one of these equivalent properties is satisfied, then $\scr{U}(U)$ is $A$-flat.
+:::
+
+::: {.proof}
+(a)$\implies$(b):
+Indeed, $M\mapsto\scr{M}(U)$ is then a right-exact functor in $M$, where $M$ runs over all $A$-modules.
+In particular, if
+$$
+  L_1 \to L_0 \to M \to 0
+$$
+is a resolution of $M$ by free $A$-modules, then we have the diagram
+$$
+  \begin{CD}
+    L_1\otimes_A\scr{U}(U) @>>> L_0\otimes_A\scr{U}(U) @>>> M\otimes_A\scr{U}(U) @>>> 0
+  \\@VV{w}V @VV{v}V @VV{u}V @.
+  \\\scr{L}_1(U) @>>> \scr{L}_0(U) @>>> \scr{M}(U) @>>> 0
+  \end{CD}
+$$
+
+Since $v$ and $w$ are isomorphisms, so too is $u$.
+
+\bigskip
+(b)$\implies$(a):
+We will show that, if
+$$
+  0 \to \scr{F}' \to\scr{G}' \to \scr{H}' \to 0
+$$
+is an exact sequence of coherent sheaves on $U$, then the sections on $U$ give an exact sequence.
+
+But there exists an exact sequence
+$$
+  0 \to \scr{F} \to \scr{G} \to \scr{H} \to 0
+$$
+of coherent sheaves on $V$ such that $\scr{F}|U=\scr{F}'$, $\scr{G}|U=\scr{G}'$, and $\scr{H}|U=\scr{H}'$ (see \cite{1}, with the proof in the appendix of \cite{2}).
+So, if $M$, $N$, and $P$ are the modules associated to $\scr{F}$, $\scr{G}$, and $\scr{H}$, then the sequence
+$$
+  M\otimes_A\scr{U}(U) \to N\otimes_A\scr{U}(U) \to P\otimes_A\scr{U}(U) \to 0
+$$
+is exact, which proves that the homomorphism
+$$
+  \scr{G}'(U) = N\otimes_A\scr{U}(U) \to \scr{H}'(U) = P\otimes_A\scr{U}(U)
+$$
+is surjective.
+:::
