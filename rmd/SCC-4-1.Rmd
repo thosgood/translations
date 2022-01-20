@@ -173,12 +173,10 @@ b. The canonical map from $M_f=\mathfrak{M}^*(U_f)$ to $\mathfrak{M}(U_f)$ is an
 ::: {.proof}
 The first claim of (a) follows from the fact that
 $$
-  \begin{aligned}
-    \mathfrak{A}_\mathfrak{p}
-    &= \varinjlim_{U_f\ni\mathfrak{p}} \mathfrak{A}^*(U_f)
-  \\&= \varinjlim_{f\not\in\mathfrak{p}} A_f
-  \\&= A_\mathfrak{p};
-  \end{aligned}
+  \mathfrak{A}_\mathfrak{p}
+  = \varinjlim_{U_f\ni\mathfrak{p}} \mathfrak{A}^*(U_f)
+  = \varinjlim_{f\not\in\mathfrak{p}} A_f
+  = A_\mathfrak{p};
 $$
 the second claim of (a) can be proven in the same way.
 
