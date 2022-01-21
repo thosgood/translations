@@ -242,13 +242,13 @@ $$
   \HH^1(X,\cal{O}_X)\otimes\HH^0(D,\Theta_D) \to
   0.
 $$
-But we know that $\HH^0(D,\Theta_D)$ is the Lie algebra $\fk{a}$ of the group
+But we know that $\HH^0(D,\Theta_D)$ is the Lie algebra $\frak{a}$ of the group
 $$
   A = \GL(2,\CC)/\CC^* = \SL(2,\CC)/\{\pm1\}
 $$
 of automorphisms of $D$, and that $\HH^1(D,\Theta_D)=0$, as we can easily see by taking a cover of $D$ by two open subsets.
 We have already seen (in [Talk no. 1]) that, if $X=E/\Gamma$, then $\HH^1(X,\cal{O})=\Hom(\Gamma,\CC)/\Hom_{\CC}(E,\CC)$ is of dimension $2$.
-So $\HH^1(V_0,\Theta_2)=\HH^1(X,\cal{O})\otimes\fk{a}$ is of dimension $6$.
+So $\HH^1(V_0,\Theta_2)=\HH^1(X,\cal{O})\otimes\frak{a}$ is of dimension $6$.
 The cup product
 $$
   \HH^1(V_0,\Theta_2)\otimes\HH^1(V_0,\Theta_2) \to \HH^2(V_0,\Theta_2)
@@ -258,7 +258,7 @@ $$
   [(\gamma\otimes\alpha)\smile(\gamma'\otimes\alpha')]
   = (\gamma\smile\gamma')\otimes[\alpha,\alpha'].
 $$
-The cone of elements $\varphi\in\HH^1(V_0,\Theta_2)$ such that $[\varphi\smile\varphi]=0$ can be identified with the cone of rank $1$ tensors in $\HH^1(X,\cal{O})\otimes\fk{a}$.
+The cone of elements $\varphi\in\HH^1(V_0,\Theta_2)$ such that $[\varphi\smile\varphi]=0$ can be identified with the cone of rank $1$ tensors in $\HH^1(X,\cal{O})\otimes\frak{a}$.
 Indeed, if $\varphi=\gamma\otimes\alpha$, then
 $$
   [\varphi\smile\varphi]
@@ -291,8 +291,8 @@ There exists a mixed space $\pi\colon V\to B$ and a point $b_0\in B$ such that
 3. for every subspace $B'$ of $B$ that has no singularities at $b_0$, the Spencer--Kodaira map $\rho$ from the tangent space of $B'$ at $b_0$ to $\HH^1(V_0,\Theta)$ agrees with $\sigma\colon B'\to\HH^1(V_0,\Theta_2)$.
 :::
 
-Let $H$ be the analytic space of homomorphisms from $\Gamma$ to $\fk{a}$ whose images are contained in a vector subspace of $\fk{a}$ that is $1$-dimensional over $\CC$ (i.e. $(4\times2)$ matrices of rank $1$ with coefficients in $\CC$).
-For every $h\in H$, $e\circ h$ is a homomorphism from $\Gamma$ to $A$, where $e\colon\fk{a}\to A$ denotes the exponential map, and we construct a manifold $V_h$ that is fibred over $X$ with fibre $D$ as follows: $V_h$ is the quotient of $E\times D$ by the equivalence relation defined by $\Gamma$ acting via
+Let $H$ be the analytic space of homomorphisms from $\Gamma$ to $\frak{a}$ whose images are contained in a vector subspace of $\frak{a}$ that is $1$-dimensional over $\CC$ (i.e. $(4\times2)$ matrices of rank $1$ with coefficients in $\CC$).
+For every $h\in H$, $e\circ h$ is a homomorphism from $\Gamma$ to $A$, where $e\colon\frak{a}\to A$ denotes the exponential map, and we construct a manifold $V_h$ that is fibred over $X$ with fibre $D$ as follows: $V_h$ is the quotient of $E\times D$ by the equivalence relation defined by $\Gamma$ acting via
 $$
   \gamma\star(x,y) = (x+\gamma,((e\circ h)(\gamma))\cdot y).
 $$
@@ -300,8 +300,8 @@ These manifolds are the fibres of a mixed space $W\to H$, where $W$ is the quoti
 $$
   \gamma\star(h,x,y) = (h,x+y,(e\circ h(y))\cdot y).
 $$
-We now place the following equivalence relation on $H$: we have $h'\sim h$ if and only if $(h'-h)$ extends to an $\CC$-linear map $f\colon E\to\fk{a}$.
-Note that, if $h'(\Gamma)$ and $h(\Gamma)$ are contained in the same subspace $L$ of $\fk{a}$ of dimension $1$ over $\CC$ (or if $h'\sim h$), then we also have $f(E)\subset L$ (or $h\sim0$ and $h'\sim0$).
+We now place the following equivalence relation on $H$: we have $h'\sim h$ if and only if $(h'-h)$ extends to an $\CC$-linear map $f\colon E\to\frak{a}$.
+Note that, if $h'(\Gamma)$ and $h(\Gamma)$ are contained in the same subspace $L$ of $\frak{a}$ of dimension $1$ over $\CC$ (or if $h'\sim h$), then we also have $f(E)\subset L$ (or $h\sim0$ and $h'\sim0$).
 In both cases, $V_h$ and $V_{h'}$ are isomorphic, and we have an isomorphism $i_{h',h}\colon V_h\to V_{h'}$ defined by
 $$
   i_{h',h}(x,y) = (x,e\circ f(x)\cdot y)
@@ -328,7 +328,7 @@ $$
 
 ## 3. Calculating $\rho_0$ {.unnumbered #section-III.3}
 
-Let $T$ be the Zariski tangent space of $B$ at $b_0$, i.e. the dual of $\fk{I}/\fk{I}^2$, where $\fk{I}$ is the ideal of germs at $b_0$ of analytic functions on $B$ that are zero at $b_0$.
+Let $T$ be the Zariski tangent space of $B$ at $b_0$, i.e. the dual of $\frak{I}/\frak{I}^2$, where $\frak{I}$ is the ideal of germs at $b_0$ of analytic functions on $B$ that are zero at $b_0$.
 Then $T_0$ can be identified with $\Hom(\Gamma,a)/\Hom_{\CC}(E,a)$.
 Also,
 $$
