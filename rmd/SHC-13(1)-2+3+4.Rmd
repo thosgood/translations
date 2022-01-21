@@ -45,9 +45,9 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 **!!to-do: explain why there is no talk no. 1, and why we're only doing the first three talks after this!!**
 
-# (PART) Mixed manifolds and mixed spaces {-}
+# (PART\*) 2. Mixed manifolds and mixed spaces {-}
 
-# I. Category of models {#two-section-I}
+# I. Category of models {.unnumbered #two-section-I}
 
 \oldpage{2-01}
 Let $B$ be a topological space.
@@ -88,9 +88,9 @@ If $f_1$ is a $\mathscr{C}^\infty$ map from one $\mathscr{C}^\infty$ manifold to
 We thus obtain, for every category of topological spaces, a fibred category $\mathscr{S}^n$ (resp. $\mathscr{C}^\infty\mathscr{S}^n$, resp. ...).
 
 
-# II. The definition of mixed spaces and mixed varieties {#two-section-II}
+# II. The definition of mixed spaces and mixed varieties {.unnumbered #two-section-II}
 
-## 1. First definition {#two-section-II.1}
+## 1. First definition {.unnumbered #two-section-II.1}
 
 Let $B$ and $V$ be separated spaces, and let $\pi\colon V\to B$ be a continuous map.
 The structure of a *mixed space* over $B$ is defined on $V$ by a system of charts $\varphi_i\colon U_i\to V$, where the $(U_i)$ are objects of $\mathscr{S}_B^n$;
@@ -126,7 +126,7 @@ commutes, and such that, for any charts $\varphi_i\colon U_i\to V$ and $\varphi'
 \oldpage{2-03}
 
 
-## 2. An equivalent definition {#two-section-II.2}
+## 2. An equivalent definition {.unnumbered #two-section-II.2}
 
 We now give another way of defining mixed spaces, equivalent to the above.
 
@@ -145,7 +145,7 @@ A *mixed space* is a pre-mixed space $\pi\colon V\to B$ such that every point $y
 The morphisms of mixed spaces are the same: mixed spaces form a *full subcategory*.
 
 
-## 3. Deformations {#two-section-II.3}
+## 3. Deformations {.unnumbered #two-section-II.3}
 
 A mixed space $\pi\colon V\to B$ is said to be *proper* if $B$ is locally compact and the map $\pi$ is proper (i.e. the inverse image of any compact subset is compact).
 If it is a mixed manifold, then we can show that it is a fibred manifold that is locally trivial with respect to the underlying $\mathscr{C}^\infty$ structure, but the previous talk shows that, in general, any two fibres are not isomorphic as $\CC$-analytic manifolds.
@@ -167,9 +167,9 @@ The deformation is said to be *locally universal* is furthermore the germ of $f_
 It seems that every compact $\CC$-analytic manifold $V_0$ admits a locally complete $\CC$-analytic deformation, and a locally universal one if the group of automorphisms of $V_0$ is discrete.
 
 
-# III. Vector fields {#two-section-III}
+# III. Vector fields {.unnumbered #two-section-III}
 
-## 1. Study on models {#two-section-III.1}
+## 1. Study on models {.unnumbered #two-section-III.1}
 
 Let $B$ be a space, $U$ an object of $\mathscr{S}_B$ (i.e. an open subset of $B\times\CC^n$), $b_0$ a point of $B$, and set $U_0=\pi^{-1}(b_0)$.
 
@@ -220,7 +220,7 @@ which shows that $f_*\omega$ is indeed a projectable holomorphic field.
 A *projectable holomorphic field on $U$* is a $\mathscr{C}^\infty$ field of vectors tangent to $U$ that induces a projectable holomorphic field on each fibre.
 
 
-## 2. Vector fields on a mixed manifold {#two-section-III.2}
+## 2. Vector fields on a mixed manifold {.unnumbered #two-section-III.2}
 
 Let $\pi\colon V\to B$ be a $(\mathscr{C}^\infty,\CC)$-mixed manifold (resp. ..., resp. a $\CC$-analytic mixed space).
 By transporting along the charts, we define the notions of
@@ -247,7 +247,7 @@ For $e^\xi\colon W\to V$ to be a morphism of mixed spaces over a map from an ope
 The proof is left to the reader.
 
 
-# IV. The Spencer--Kodaira map {#two-section-IV}
+# IV. The Spencer--Kodaira map {.unnumbered #two-section-IV}
 
 Let $\pi\colon V\to B$ be a mixed manifold (resp. a $\CC$-analytic mixed space), $b\in B$, and $V_0=\pi^{-1}(b_0)$.
 Let $T_0$ be the tangent space to $B$ at $b_0$ (resp. the Zariski tangent space).
@@ -290,13 +290,12 @@ The next talk aims to show that, in a certain sense, $\rho$ indicates the non-tr
 
 
 
-# (PART) Regular deformations {-}
+# (PART\*) 3. Regular deformations {-}
+
+# I. The map $\widetilde{\rho}$ {.unnumbered #three-section-I}
 
 All throughout this talk, $B$ is a $\mathscr{C}^\infty$ manifold (resp. $\RR$-analytic, resp. $\CC$-analytic); $\pi\colon V\to B$ denotes a proper mixed manifold; $b_0$ is a point of $B$; and $V_0=\pi^{-1}(b_0)$ is thus a compact $\CC$-analytic manifold.
 \oldpage{3-01}
-
-
-# I. The map $\widetilde{\rho}$ {#three-section-I}
 
 Let $\widetilde{\Theta}$ (resp. $\widetilde{\Pi}$) be the sheaf of germs of vertical holomorphic (resp. locally projectable holomorphic) vector fields on $V$.
 The quotient sheaf $\widetilde{\Lambda}=\widetilde{\Pi}/\widetilde{\Theta}$ is exactly the inverse image under $\pi$ of the sheaf $\widetilde{T}$ of germs of $\mathscr{C}^\infty$ fields (resp. ...) of tangent vectors on $B$.
@@ -369,7 +368,7 @@ b. *(Sufficiency).*
 :::
 
 
-# II. The regular case {#three-section-II}
+# II. The regular case {.unnumbered #three-section-II}
 
 For all $b\in B$, set $V_b=\pi^{-1}(b)$.
 Consider the family $\{\HH^1(V_b;\Theta_b)\}_{b\in B}$ of finite-dimensional $\CC$-vector spaces, and, for all $b\in B$,  the map
@@ -412,9 +411,9 @@ is zero for all $b$.
 At the end of this talk, we will construct a counter-example which shows that it is necessary to assume that the mixed manifold is regular.
 
 
-# III. An example of non-regular deformation: Hopf manifolds {#three-section-III}
+# III. An example of non-regular deformation: Hopf manifolds {.unnumbered #three-section-III}
 
-## 1. Hopf manifolds {#three-section-III.1}
+## 1. Hopf manifolds {.unnumbered #three-section-III.1}
 
 Let $n\geq2$ be an integer, and let $b$ be an $(n\times n)$ matrix with coefficients in $\CC$, whose eigenvalues are all of modulus $>1$.
 The free group $L(b)$ generated by $b$ acts freely on $\widetilde{V}=\CC^n\setminus\{0\}$, and the quotient space $\widetilde{V}/L(b)$, which we call the *Hopf manifold defined by $b$*, is a compact $\CC$-analytic manifold that is homeomorphic to $S^{2n-1}\times S^1$.
@@ -491,7 +490,7 @@ Then [Proposition 2](#three-proposition-2) follows from remarking that, if an el
 ::::
 
 
-## 2. Mixed manifolds whose fibres are Hopf manifolds {#three-section-III.2}
+## 2. Mixed manifolds whose fibres are Hopf manifolds {.unnumbered #three-section-III.2}
 
 Let $B$ be the set of all $(n\times n)$ matrices with coefficients in $\CC$ with eigenvalues all of modulus $>1$.
 \oldpage{3-06}
@@ -505,7 +504,7 @@ Note that the dimension of $\HH^1(V_b;\Theta_b)$ is an upper semi-continuous fun
 This is a general result, that we hope to be able to prove in a later talk of this seminar.
 
 
-## 3. Calculation of $\rho$ {#three-section-III.3}
+## 3. Calculation of $\rho$ {.unnumbered #three-section-III.3}
 
 We have $T_b=\Hom(\CC^n,\CC^n)=L\subset\HH^0(\widetilde{V};\Theta)$, and we defined, to prove [Proposition 2](#three-proposition-2), a surjective map $\delta_*\colon L\to\HH^1(V_b;\Theta)$.
 
@@ -541,7 +540,7 @@ We thus deduce that $\theta=\delta_*(ab^{-1})$, which proves [Proposition 3](#th
 :::
 
 
-## 4. A counter-example {#three-section-III.4}
+## 4. A counter-example {.unnumbered #three-section-III.4}
 
 Take $n=2$, and $\sigma\in\CC$ such that $|\sigma|>1$.
 Let $B'\subset B$ be the set of matrices of the form
@@ -591,7 +590,7 @@ and this is zero for all $t$, since, if $t\neq0$, then $\rho'_{\varphi(t)}$ is z
 However, the mixed manifold $V^\varphi$ is not locally trivial, since $V_0^\varphi$ is not isomorphic to $V_t^\varphi$ for $t\neq0$.
 
 
-## 5. Question (K. Srinivasacharyulu) {#three-section-III.5}
+## 5. Question (K. Srinivasacharyulu) {.unnumbered #three-section-III.5}
 
 We know that the Hopf manifolds are non-K\"{a}hler, and thus non-algebraic.
 For $n=2$, the manifold $V_b$ admits non-constant meromorphic functions if and only if $b$ can be diagonalised with eigenvalues $\sigma_1$ and $\sigma_2$ satisfying $\sigma_1^p=\sigma_2^q$ for some integers $p$ and $q$ (and there is then the function $x_1^px_2^{-q}$).
@@ -600,7 +599,7 @@ An analogous phenomenon arises for deformations of complex tori.
 Is this result general?
 
 
-# Appendix {#three-appendix}
+# Appendix {.unnumbered #three-appendix}
 
 With the notation of [§III.1](#three-section-III.1), let $f\colon V_b\to V_{b'}$ be an isomorphism of $\CC$-analytic manifolds.
 This lifts to an isomorphism of universal coverings
@@ -633,9 +632,9 @@ $$
 
 
 
-# (PART) The primary obstruction to deformation {-}
+# (PART\*) 4. The primary obstruction to deformation {-}
 
-# Introduction {#four-introduction}
+# Introduction {.unnumbered #four-introduction}
 
 \oldpage{4-01}
 Let $V_0$ be a compact complex-analytic manifold, and let $\Theta$ be the sheaf of germs of holomorphic fields of tangent vectors.
@@ -646,7 +645,7 @@ this condition is written $[a\smile a]=0$.
 We will then give an example where this condition is not satisfied.
 
 
-# I. Exact sequences of sheaves of algebras {#four-section-I}
+# I. Exact sequences of sheaves of algebras {.unnumbered #four-section-I}
 
 Let $K$ be a commutative ring, and let $\Phi$, $\Phi_1$, and $\Phi_2$ be sheaves of $K$-modules on some space $X$, and suppose that we have some given homomorphism $\Phi_1\otimes\Phi_2\to\Phi$, written as a product.
 We define, for any cover $\scr{U}$ of $X$, the *cup product*
@@ -704,7 +703,7 @@ So the cocycle $\delta\eta\smile\beta$ is cohomologous to $0$ in $\HH^{p+q+1}(X;
 :::
 
 
-# II. The primary obstruction {#four-section-II}
+# II. The primary obstruction {.unnumbered #four-section-II}
 
 Let $V_0$ be a complex-analytic manifold, and $\Theta_0$ the sheaf of germs of holomorphic fields of tangent vectors.
 Then $\Theta_0$ is a sheaf of Lie algebras, and, if $a,b\in\HH^\bullet(V_0,\Theta_0)$, then we denote by $[a\smile b]$ the cup product defined by the bracket $[-,-]\colon\Theta_0\otimes\Theta_0\to\Theta_0$.
@@ -812,9 +811,9 @@ Kodaira, Spencer, and Nijenhuis [@4-4] have shown that, if $\HH^2(V_0,\Theta)=0$
 In this case, we even have a locally universal deformation whose base is a manifold, and $\rho$ is an isomorphism from the tangent space of this manifold to $\HH^1(V_0,\Theta)$
 
 
-# III. An example of obstruction {#four-section-III}
+# III. An example of obstruction {.unnumbered #four-section-III}
 
-## 1. The manifold $V_0$ {#four-section-III.1}
+## 1. The manifold $V_0$ {.unnumbered #four-section-III.1}
 
 Let $X=E/\Gamma$ be a $2$-dimensional complex torus, i.e. $E\cong\CC^2$ and $\Gamma\cong\ZZ^4$, and let $D$ the be projective line $\PP^1\CC$.
 Set $V_0=X\times D$.
@@ -870,7 +869,7 @@ $$
 $$
 
 
-## 2. The mixed space $V$ {#four-section-III.2}
+## 2. The mixed space $V$ {.unnumbered #four-section-III.2}
 
 In this example, every element of $\HH^1(V_0,\Theta_2)$ whose primary obstruction is zero is a deformation vector.
 More precisely:
@@ -920,7 +919,7 @@ $$
 $$
 
 
-## 3. Calculating $\rho_0$ {#four-section-III.3}
+## 3. Calculating $\rho_0$ {.unnumbered #four-section-III.3}
 
 Let $T$ be the Zariski tangent space of $B$ at $b_0$, i.e. the dual of $\frak{I}/\frak{I}^2$, where $\frak{I}$ is the ideal of germs at $b_0$ of analytic functions on $B$ that are zero at $b_0$.
 Then $T_0$ can be identified with $\Hom(\Gamma,a)/\Hom_{\CC}(E,a)$.
@@ -959,11 +958,11 @@ This is a cocycle whose cohomology class is (up to a sign) the element of $\HH^1
 QED.
 
 
-# (PART) Appendix: Higher obstructions {- #four-appendix}
+# (APPENDIX) Appendix: Higher obstructions {- #four-appendix}
 
-# I. Definition of obstructions {#four-appendix-I}
+# I. Definition of obstructions {.unnumbered #four-appendix-I}
 
-## 1. The sheaf of germs of vertical automorphisms {#four-appendix-I.1}
+## 1. The sheaf of germs of vertical automorphisms {.unnumbered #four-appendix-I.1}
 
 Let $V_0$ be a $\CC$-analytic manifold, which we assume to be compact, and $B$ a $\CC$-analytic space, and let $b_0\in B$.
 \oldpage{4-10}
