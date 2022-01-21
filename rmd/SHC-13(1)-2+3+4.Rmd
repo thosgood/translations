@@ -296,7 +296,7 @@ All throughout this talk, $B$ is a $\mathscr{C}^\infty$ manifold (resp. $\RR$-an
 \oldpage{3-01}
 
 
-## I. The map $\widetilde{\rho}$ {.unnumbered #three-section-I}
+# I. The map $\widetilde{\rho}$ {.unnumbered #three-section-I}
 
 Let $\widetilde{\Theta}$ (resp. $\widetilde{\Pi}$) be the sheaf of germs of vertical holomorphic (resp. locally projectable holomorphic) vector fields on $V$.
 The quotient sheaf $\widetilde{\Lambda}=\widetilde{\Pi}/\widetilde{\Theta}$ is exactly the inverse image under $\pi$ of the sheaf $\widetilde{T}$ of germs of $\mathscr{C}^\infty$ fields (resp. ...) of tangent vectors on $B$.
@@ -359,7 +359,7 @@ b. *(Sufficiency).*
     $$
       f(t_1,\ldots,t_p,y) = e^{\xi_1}(t_1,e^{\xi_2}(\ldots,e^{\xi_p}(t_p,y)\ldots)).
     $$
-    It follows from the proposition stated in [@1, Section III.2] that $f$ induces an isomorphism of mixed manifolds from $U\times V_0$ to $\pi^{-1}(f_1(U))$ over $f_1$, where $U$ is a sufficiently small cubical neighbourhood of $0$ in $\RR^p$, and $f_1$ is the map from $U$ to $B$ defined by
+    It follows from the proposition stated in [@3-1, Section III.2] that $f$ induces an isomorphism of mixed manifolds from $U\times V_0$ to $\pi^{-1}(f_1(U))$ over $f_1$, where $U$ is a sufficiently small cubical neighbourhood of $0$ in $\RR^p$, and $f_1$ is the map from $U$ to $B$ defined by
     $$
       f_1(t_1,\ldots,t_p) = e^{\eta_1}(t_1,e^{\eta_2}(\ldots,e^{\eta_p}(t_p,b_0)\ldots)),
     $$
@@ -390,7 +390,7 @@ We say that the proper mixed manifold $\pi\colon V\to B$ is *regular* if
 2. we can endow $E=\bigcup_{b\in B}\HH^1(V_b;\Theta_b)$ with the structure of a $\mathscr{C}^\infty$ vector bundle (resp. ...) such that $\widetilde{\varepsilon}$ is an isomorphism from the sheaf $\mathrm{R}^1\pi_*\widetilde{\Theta}$ to the sheaf of germs of $\mathscr{C}^\infty$ sections (resp. ...) of the bundle $E$.
 :::
 
-In fact, Kodaira and Spencer have shown [@2] that, by identifying the $\HH^1$ spaces with spaces of harmonic forms, condition (2) is a consequence of condition (1).
+In fact, Kodaira and Spencer have shown [@3-2] that, by identifying the $\HH^1$ spaces with spaces of harmonic forms, condition (2) is a consequence of condition (1).
 
 Then [Theorem 1](#three-theorem-1) has the following corollary:
 
@@ -808,7 +808,7 @@ If $V_0$ is a compact complex-analytic manifold, and $a\in\HH^1(V_0,\Theta)$, th
 For $a$ to be a deformation vector, it is necessary that this primary obstruction be zero;
 but it is not sufficient: we can define a sequence of set-theoretic maps $\omega_n$, called *obstructions*, with $\omega_1\colon\HH^1(V_0,\Theta)\to\HH^2(V_0,\Theta)$ given by $\omega_1(a)=[a\smile a]$, and with $\omega_{k+1}$ defined on the subset of $\HH^1(V_0,\Theta)$ where $\omega_k$ vanishes, with values in varying quotients^[See the [Appendix](#four-appendix).] of $\HH^2(V_0,\Theta)$, and a necessary condition for $a$ to be a deformation vector is that all the $\omega_k(a)$ be defined and real.
 I do not know if *this* condition is sufficient.
-Kodaira, Spencer, and Nijenhuis [@4] have shown that, if $\HH^2(V_0,\Theta)=0$, then every element of $\HH^1(V_0,\Theta)$ is a deformation vector.
+Kodaira, Spencer, and Nijenhuis [@4-4] have shown that, if $\HH^2(V_0,\Theta)=0$, then every element of $\HH^1(V_0,\Theta)$ is a deformation vector.
 In this case, we even have a locally universal deformation whose base is a manifold, and $\rho$ is an isomorphism from the tangent space of this manifold to $\HH^1(V_0,\Theta)$
 
 
