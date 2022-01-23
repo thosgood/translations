@@ -979,3 +979,32 @@ Let $V_0$ be a $\CC$-analytic manifold, which we assume to be compact, and $B$ a
 \oldpage{4-10}
 We are going to define a sheaf $\Gamma$ of non-abelian groups on $V_0$.
 For every open subset $U$ of $V_0$, consider the isomorphisms of analytic varieties $\gamma\colon W\to W'$, where $W$ and $W'$ are open subsets of $B\times V_0$ that contain $\{b_0\}\times U$, such that the following conditions are satisfied:
+
+1. $\pi_1\gamma=\pi_1$ is the projection $B\times V_0$ to $B$;
+2. $\gamma$ is the identity on $\{b_0\}\times U$.
+
+Then $\Gamma(U)$ consists of equivalence classes of these isomorphisms, where we identify $\gamma_1$ with $\gamma_2$ if they agree on a neighbourhood of $\{b_0\}\times U$.
+
+It is clear that $\Gamma(U)$ is a group under composition of isomorphisms, and that the $\Gamam(U)$ form a sheaf $\Gamma$ of non-abelian groups.
+
+::: {.itenv #four-proposition-1 title="Proposition 1" latex="{Proposition 1}"}
+We can identify $\HH^1(V_0,\Gamma)$ with the set of classes of deformation germs of $V_0$ over $(B,b_0)$.
+:::
+
+Recall that a deformation germ of $V_0$ over $(B,b_0)$ is a deformation of $V_0$ over a neighbourhood of $b_0$ in $B$, and that two such deformations $(B',b_0,V',\pi',\iota')$ and $(B'',b_0,V'',\pi'',\iota'')$ are locally equivalent if there exists a neighbourhood $W'$ of $(\pi')^{-1}(b_0)$ in $V'$, a neighbourhood $W''$ of $(\pi'')^{-1}(b_0)$ in $V''$, and an isomorphism $\varphi$ from $W'$ to $W''$ such that the diagram
+$$
+  \begin{CD}
+    V_0 @= V_0
+  \\@VVV @VVV
+  \\W' @>{\varphi}>> W''
+  \\@V{\pi'}VV @VV{\pi''}V
+  \\B @= B
+  \end{CD}
+$$
+commutes.
+\oldpage{4-11}
+
+::: {.proof}
+*(Proof of [Proposition 1](#four-proposition-1)).*
+Let $(B',b_0,V',\pi',\iota')$ be a deformation of V_0$ over a neighbourhood $V'$ of $b_0$ in $B$.
+:::
