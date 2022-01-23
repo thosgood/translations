@@ -38,6 +38,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\Hom}{\operatorname{Hom}}
 \providecommand{\GL}{\operatorname{GL}}
 \providecommand{\SL}{\operatorname{SL}}
+\providecommand{\Ker}{\operatorname{Ker}}
 
 <!-- Content -->
 
@@ -1006,5 +1007,135 @@ commutes.
 
 ::: {.proof}
 *(Proof of [Proposition 1](#four-proposition-1)).*
-Let $(B',b_0,V',\pi',\iota')$ be a deformation of V_0$ over a neighbourhood $V'$ of $b_0$ in $B$.
+Let $(B',b_0,V,\pi,\iota)$ be a deformation of V_0$ over a neighbourhood $V'$ of $b_0$ in $B$.
+Then we can find a cover $\{U_i\}$ of $V_0$ and a cover $\{W_i\}$ of a neighbourhood of $\iota(V_0)$ in $V$, along with isomorphisms $\{h_i\}$, where $h_i$ is an isomorphism from a neighbourhood of $\{b_0\}\times U_i$ in $B\times V_0$ to $W_i$ that agrees with $\iota$ on $\{b_0\}\times U_i$, and such that $\pi\circ h_i=\pi_1$.
+
+Set $\gamma_{ij}=h^{-1}_i\circ h_j$.
+We can show that the $\gamma_{ij}$ define an element of $\Gamma(U_i\cap U_j)$, and that $\gamma_{ij}\circ\gamma_{jk}=\gamma_{ik}$.
+The $\gamma_{ij}$ thus form a cocycle $\gamma\in\operatorname{Z}^1(V_0,\{U_i\};\Gamma)$.
+Such a cocycle is said to be *associated to the deformation*.
+It will still be associated to the deformation if pass to a finer cover.
+Let $(B',b_0,V',\pi',\iota')$ be a deformation that is locally equivalent to the first, and let $\gamma'$ be a cocycle associated to this deformation.
+We can suppose, by refining the covers if necessary, that the cocycles $\gamma$ and $\gamma'$ are defined with respect to the same cover $\{U_i\}$ of $V_0$.
+Let $f$ be an isomorphism from a neighbourhood of $\iota(V_0)$ in $V$ to a neighbourhood of $\iota'(V_0)$ in $V'$.
+Set $f_i=(h'_i)^{-1}\circ f\circ h_i$.
+Then $f_i\in\Gamma(U_i)$, and
+$$
+  f_i\circ\gamma_{ij} = \gamma'_{ij}\circ f_j.
+$$
+We thus conclude that the cocycles associated to a deformation form a cohomology class that depends only on the local class of the deformation.
+
+Conversely, suppose we have a locally finite cover $\{U_i\}$ of $V_0$ and a cocycle $\gamma\in\operatorname{Z}^1(V_0,\{U_i\};\Gamma)$.
+Then $\gamma_{ij}$ can be represented by an isomorphism from an open $W_{ij}$ of $B\times V_0$ to another open $W_{ji}$, with the two open subsets both containing $\{b_0\}\times U_{ij}$.
+Pick a **!!to-do!!** $\{U'_i\}$ of the cover $\{U_i\}$, and take some neighbourhood $B''$ of $b_0$ in $B$ small enough such that $B''\times U'_{ij}\subset W_{ij}$ for all $(i,j)$, and such that the equality $\gamma_{ij}\circ\gamma_{jk}=\gamma_{ik}$ holds wherever it is defined in $B''\times U'_{ijk}$.
+We thus obtain a deformation $V$ of $V_0$ on $B''$ by gluing the $B''\times U'_i$ via the $\gamma_{ij}$.
+
+Finally, we can show that all the above does indeed define a bijection between the set of local classes of deformations of $V_0$ over $(B,b_0)$ and $\HH^1(V_0;\Gamma)$.
 :::
+
+
+## 2. Higher obstructions {.unnumbered #four-appendix-I.2}
+
+\oldpage{4-12}
+For every open subset $U\subset V_0$, the group $\Gamma(U)$ is naturally filtered: denote by $\scr{F}_k(U)$ the group of vertical automorphisms that are tangent to the identity up to order $k-1$.
+Then $\Gamma$ becomes a filtered sheaf:
+$$
+  \Gamma = \scr{F}_1 \supset \scr{F}_2 \supset \ldots
+  \qquad\text{and }\bigcap \scr{F}_k=\{0\}.
+$$
+Set
+$$
+  \begin{aligned}
+    \scr{Q}_k &= \Gamma/\scr{F}_{k+1}
+  \\\scr{G}_k &= \scr{F}_k/\scr{F})_{k+1} = \Ker(\scr{Q}_k\to\scr{Q}_{k-1}).
+  \end{aligned}
+$$
+For all $k$, $\scr{G}_k$ is a sheaf of abelian groups, which we will write additively.
+If $B=\CC$ and $b_0=0$ (we then speak of *the deformation in one parameter*), for all $k$, $\scr{G}_k$ can be identified with the sheaf $\Theta$ of germs of vector fields tangent to $V_0$.
+In the general case,
+$$
+  \scr{G}_k = \frak{m}^k/\frak{m}^{k+1}\otimes\Theta
+$$
+where $\frak{m}$ is the maximal ideal of the point $b_0$ in $B$.
+
+Now, if $a\in\scr{F}_p$ and $b\in\scr{F}_q$, then the commutator $aba^{-1}b^{-1}$ is in $\scr{F}_{p+q}$, and this defines a map $\scr{G}_p\otimes\scr{G}_q\to\scr{G}_{p+q}$ which endows $\scr{G}_\bullet=\bigoplus\scr{G}_k$ with the structure of a sheaf of Lie algebras that is isomorphic to the tensor product of $\Theta$ with the graded algebra associated to the maximal ideal $\frak{m}$ of $b_0$ in $B$ filtered by powers.
+
+The exact sequence of non-abelian groups
+$$
+  0 \to \scr{G}_{k+1} \to \scr{Q}_{k+1} \to \scr{Q}_k \to 0
+$$
+in which $\scr{G}_{k+1}$ is a subgroup of $\scr{Q}_{k+1}$ contained in its centre gives rise [@4-1] to an exact sequence of pointed sets
+\oldpage{4-13}
+$$
+  \HH^1(V_0;\scr{Q}_{k+1}) \to \HH^1(V_0;\scr{Q}_k) \xrightarrow{\delta_k} \HH^2(V_0;\scr{G}_{k+1})
+$$
+i.e. for an element $q\in\HH^1(V_0,\scr{Q}_k)$ to be in the image of $\HH^1(V_0;\scr{Q}_{k+1})$, it is necessary and sufficient for $\delta_k q=0$ in $\HH^2(V_0;\scr{G}_{k+1})$.
+A *necessary* condition for $q$ to be in the image of $\HH^1(V_0;\Gamma)\to\HH^1(V_0;\scr{Q}_k)$ is thus $\delta_k q=0$ in $\HH^2(V_0;\scr{G}_{k+1})$.
+
+::: {.rmenv title="Definition" latex="{Definition}"}
+Let $q\in\HH^1(V_0;\scr{Q}_i)$, and let $k\geq i$.
+We define an *obstruction of order $k$ of the element $q$* to be the direct image in $\HH^2(V_0;\scr{G}_{k+1})$ under $\delta_k$ of the inverse image of $q$ in $\HH^1(V_0;\scr{Q}_k)$.
+It is thus a subset of $\HH^2(V_0;\scr{G}_{k+1})$.
+The obstruction is said to be *trivial* if the identity element belongs to this subset.
+Being trivial is a necessary and sufficient condition for $q$ to be in the image of $\HH^1(V_0;\scr{Q}_{k+1})$, and a necessary condition for $q$ to be in the image of $\HH^1(V_0;\Gamma)$.
+:::
+
+::: {.rmenv title="Warning" latex="{Warning}"}
+If $q$ is not in the image of $\HH^1(V_0,\scr{Q}_k)$, then its obstruction of order $k$ is empty, and thus non-trivial.
+:::
+
+This definition is used most of all in the case of deformations in one parameter ($B=\CC$ and $b_0=0$), where $\scr{G}_{k+1}=\Theta$ for all $k$, and $\scr{Q}_1=\scr{G}_1=\Theta$.
+The successive obstructions of an element $a\in\HH^1(V_0;\Theta)$ are thus subsets of $\HH^2(V_0;\Theta)$, and for $a$ to be a deformation vector, it must be the case that all of its obstructions are trivial.
+Indeed, the element of $\HH^1(V_0;\Theta)$ that corresponds, under the identifications we have made ($\Theta=\scr{Q}_1=\Gamma/\scr{F}_2$, and [Proposition 1](#four-proposition-1)), to a deformation germ is exactly the image under the Spencer--Kodaira map $\rho$ of the canonical basis vector of the tangent space to $\CC$ at $0$.
+
+
+
+# II. Calculation of obstructions {.unnumbered #four-appendix-II}
+
+## 1. Relation to the sheaf $\Omega$ {.unnumbered #four-appendix-II.1}
+
+From now on, we work in the case of deformations in one parameter, i.e. $B=\CC$ and $b_0=0$.
+
+Let $\Omega$ be the sheaf of universal enveloping algebras of the Lie algebras of the sheaf $\Theta$ (i.e. $\Omega(U)$ is the universal enveloping algebra of $\Theta(U)$).
+\oldpage{4-14}
+
+Then $\Omega$ contains $\Theta$ as a subsheaf, and even as a direct factor (by the Poincaré--Birkhoff--Witt Theorem in characteristic $0$).
+For all $k$, consider the sheaf of algebras $\Omega_k=\Omega[t]/(t^{k+1})$.
+For $i\leq k$, we have a map of sheaves of sets
+$$
+  \exp_i\colon \Theta \to \Omega_k
+$$
+defined by
+$$
+  \exp_i(\Theta) = \sum_p\frac{1}{M} \Theta^p t^p
+$$
+
+::: {.itenv #four-proposition-2 title="Proposition 2" latex="{Proposition 2}"}
+*(Campbell--Hausdorff).*
+We can identify $\scr{Q}_k$ with the sheaf of multiplicative subgroups of $\Omega_k$ generated by the images of the $\exp_i$ for $i\leq k$.
+:::
+
+The proof of this proposition will not be given here.
+We denote by $\Omega_k^*$ the sheaf of multiplicative subgroups of $\Omega_k$ consisting of the elements whose constant terms is $1$.
+The commutative diagram of sheaves of (non-abelian) groups
+$$
+  \begin{CD}
+    0 @>>> \Theta @>>> \scr{Q}_{k+1} @>>> \scr{Q}_k @>>> 0
+  \\@. @VVV @VVV @VVV @.
+  \\0 @>>> \Omega @>>> \Omega_{k+1}^* @>>> \Omega_k^* @>>> 0
+  \end{CD}
+$$
+gives rise to a commutative diagram of sets
+$$
+  \begin{CD}
+    \HH^1(V_0;\scr{Q}_k) @>{\delta_k}>> \HH^2(V_0;\Theta)
+  \\@VVV @VVV
+  \\\HH^1(V_0;\Omega_k^*) @>>{\delta_k}> \HH^2(V_0;\Omega)
+  \end{CD}
+$$
+in which $\HH^2(V_0;\Theta)$ is a vector subspace of $\HH^2(V_0;\Omega)$.
+
+
+## 2. Calculation of the primary obstruction {.unnumbered #four-appendix-II.2}
+
+
