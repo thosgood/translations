@@ -1177,6 +1177,56 @@ Then $(1+\alpha_{ij}t+\beta{ij}t^2)$ is a cocycle in $\Omega_2^\times$, and we c
 This cocycle can be lifted to $\Omega_3^\times$ as the cochain $(1+\alpha_{ij}t+\beta_{ij}t^2)$, and we have that
 $$
   \begin{aligned}
-    ()
+    (1+\alpha_{ij}t+\beta_{ij}t^2) (1+\alpha_{jk}t+\beta_{jk}t^2)
+    &= 1+ (\alpha_{ij}+\alpha_{jk})t + (\beta_{ij}+\beta_{jk}+\alpha_{ij}\alpha_{jk})t^2 + (\alpha_{ij}\beta_{jk}+\beta_{ij}\alpha_{jk})t^3
+  \\&= (1 + \alpha_{ik}t + \beta{ik}t^2) (1+ (\alpha_{ij}\beta_{jk}+\beta_{ij}\alpha_{jk})t^3).
   \end{aligned}
 $$
+The secondary obstruction of $a$ is thus the cohomology class of the cocycle $(\alpha_{ij}\beta_{jk}+\beta_{ij}\alpha_{jk})\in\operatorname{Z}^2(V_0;\Omega)$.
+This class depends on the choice of the cochain $\beta$: if we choose some other $\beta'=\beta+\theta$, where $\Theta\in\operatorname{Z}^1(V_0;\Theta)$, then the cocycle is modified by $\alpha\smile\theta+\theta\smile\alpha$, and its class by an element of $[a\smile\HH^1(V_0;\Theta)]$.
+We recover the *Massey triple product* $(a,a,a)$ taken in the algebra $\Omega$, but with a slightly more restrictive indetermination.
+
+We can try to calculate this secondary obstruction without leaving the sheaf $\Theta$, but the calculations are then much more complicated: we must take a cochain $\beta=(\beta_{ij})$ such that $\delta\beta+\frac12[a\smile a]=0$.
+Then the secondary obstruction of $\alpha$ is the class of the cocycle
+$$
+  [\alpha_{ij},\beta_{jk}] + \frac16[[\alpha_{ij},\alpha_{jk}],\alpha_ij+2\alpha_{jk}].
+$$
+The calculation done in the sheaf of enveloping algebras $\Omega$ can be generalised to obstructions of order $r$: we are led to determining, by induction, cochains $\omega_r$ such that
+$$
+  \begin{cases}
+    \omega_1 = \alpha
+  \\\delta\omega_r + \sum_{p+q=r}\omega_p\smile\omega_q = 0
+  \\1 + \sum_{1\leq p\leq r}\omega_p t^p \in \operatorname{C}^1(V_0;\scr{Q}_r)
+  \end{cases}
+$$
+
+
+## 4. Using spectral sequences {.unnumbered #four-appendix-II.4}
+
+\oldpage{4-17}
+
+::: {.itenv #four-proposition-3 title="Proposition 3" latex="{Proposition 3}"}
+Let $\varphi\colon V_0\to X$ be an arbitrary map, which gives rise to a spectral sequence of graded Lie algebras
+$$
+  \HH^\bullet(X;\RR^\bullet\varphi\Theta) \Rightarrow \HH^\bullet(V_0;\Theta).
+$$
+Let
+$$
+  a \in \HH^1(X;\varphi_*\Theta) \subset \HH^1(V_0;\Theta).
+$$
+If the element
+$$
+  -\frac12[a\smile a] \in \HH^2(X;\varphi_*\Theta) = E_2^{2,0}
+$$
+is non-zero, but is the image under the differential $\dd_2$ of the spectral sequence of an element $b\in E_2^{0,1}$, then the image of the secondary obstruction of $a$ in $E_\infty^{1,1}$ consists of the elements of the form $[a,b]$.
+In particular, if, for all $b$ such that $\dd_2 b=-\frac12[a,a]$, we have that $[a,b]\neq0$, then the secondary obstruction is non-trivial.
+:::
+
+::: {.rmenv title="Warning" latex="{Warning}"}
+However, if $[a,b]=0$ in $E^{1,1}$, then we can only say that the secondary obstruction comes from $E_\infty^{2,0}$, and if this group is non-zero, then we cannot conclude anything.
+:::
+
+::: {.proof}
+Let $\alpha$ be a cocycle on $V_0$ representing the class $a$.
+The
+:::
