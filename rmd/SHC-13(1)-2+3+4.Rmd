@@ -1228,5 +1228,44 @@ However, if $[a,b]=0$ in $E^{1,1}$, then we can only say that the secondary obst
 
 ::: {.proof}
 Let $\alpha$ be a cocycle on $V_0$ representing the class $a$.
-The
+The element $b\in E_2^{0,1}$ can be represented by a cochain
+$$
+  \beta = (\beta_{ij}) \in \operatorname{C}^1(V_0;\Theta)
+$$
+such that
+\oldpage{4-16}
+$$
+  \delta\beta + \frac12[a\smile a] = 0.
+$$
+We thus obtain a cochain
+$$
+  \beta' \in \operatorname{C}^1(V_0;\Omega)
+$$
+such that
+$$
+  1 + \alpha t + \beta' t^2 \in \operatorname{C}^1(V_0;\scr{Q}_2)
+$$
+by setting $\beta'_{ij}=\beta_{ij}+\frac12\alpha_{ij}^2$;
+this cochain satisfies $\delta\beta'+\alpha\smile\alpha=0$.
+But this new cochain represents, in the $E_2^{0,1}$ term of the spectral sequence of the sheaf $\Omega$, the same element $b$ as the cochain $\beta$, since it differs from it by a cochain that comes from $X$.
+The secondary obstruction is thus the class of the cocycle $\alpha\smile\beta'+\beta'\smile\alpha$, which represents in the $E^{1,1}$ term of the spectral sequence the element $[a,b]$.
 :::
+
+This proposition allows us to construct non-trivial examples of secondary obstructions.
+Consider the group $N$ of matrices of the form
+$$
+  \begin{pmatrix}
+    1 & x & y
+  \\0 & 1 & z
+  \\0 & 0 & 1
+  \end{pmatrix}
+$$
+where $x,y,z\in\CC$, and let $Y=N/\Gamma$, where $\Gamma$ is the subgroup of $N$ consisting of elements where $x,y,z\in\ZZ+i\ZZ$.
+Then $Y$ is fibred over a complex torus of dimension two $T^2\cong\CC^2/\ZZ^4$.
+We find non-trivial secondary obstruction elements in $\HH^1(V_0;\Theta)$, where $V_0$ is the product of $Y$ with a projective line $D$.
+(We use the spectral sequence obtained by projecting onto $T^2\times D$).
+This variety has a "versal" deformation whose Zariski tangent space of the base $B$ can be identified via the Spencer--Kodaira map $\rho$ with $\HH^1(V_0;\Theta)$.
+Further, $B$ has, at its base point $b_0$, a conic singularity of degree $3$, whose equation is given by the secondary obstruction.
+
+\oldpage{4-19}
+I do not know of any examples of non-trivial secondary obstructions on varieties $V_0$ that satisfy $\HH^0(V_0;\Theta)=0$, but some very likely exist.
