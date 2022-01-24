@@ -63,6 +63,14 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\Gr}{\operatorname{Gr}}
 \providecommand{\Fr}{\operatorname{Fr}}
 
+```{r,echo=FALSE,results='asis'}
+if (knitr::is_html_output()) {
+  cat('\\providecommand{\\simto}{\\xrightarrow{\\sim}}')
+} else {
+  cat('\\providecommand{\\simto}{\\newcommand{\\simto}{\\xrightarrow{\\raisebox{-0.7ex}[0ex][0ex]{$\\sim$}}}}')
+}
+```
+
 <!-- Content -->
 
 # Leitfaden {.unnumbered .unlisted}
@@ -992,8 +1000,51 @@ If $S$ is an open of the spectrum of the ring of integers of a finite extension 
     $$
 :::
 
-::: {.rmenv #chunk-1.21 title="1.21" latex="{1.21}"}
+:::: {.rmenv #chunk-1.21 title="1.21" latex="{1.21}"}
 Let $S$ be smooth over $\Spec(\ZZ)$.
 Here is a provisional definition of smooth realisation systems over $S$, inspired by [(1.18)](#chunk-1.18).
-The data are
+The data is as follows:
+
+::: {.trmenv #Mp1S title="(M'1)S" latex="{(M'1)\textsubscript{S}}"}
+For $C$ an algebraic closure of $\RR$, a locally constant sheaf $M_\BB(C)$ of $\QQ$-vector spaces on $S(C)$, functorial in $C$.
+We set $M_\BB\coloneqq M_\BB(\CC)$.
 :::
+
+\oldpage{25 (103)}
+
+::: {.trmenv #Mp2S title="(M'2)S" latex="{(M'2)\textsubscript{S}}"}
+A vector bundle $M_\DR$ with integrable connection on $S_\QQ$, assumed to be regularly singular at infinity.
+:::
+
+::: {.trmenv #Mp8S title="(M'8)S" latex="{(M'8)\textsubscript{S}}"}
+A filtration $F$ of $M_\DR$ by vector subbundles: the Hodge filtration.
+We assume "transversality":
+$$
+  \nabla F^p \subset \Omega^1\otimes F^{p-1}.
+$$
+:::
+
+::: {.trmenv #Mp3S title="(M'3)S" latex="{(M'3)\textsubscript{S}}"}
+A smooth $\AAf$-sheaf $M_\AAf$ on $S_\QQ$.
+:::
+
+::: {.trmenv #Mp4S title="(M'4)S" latex="{(M'4)\textsubscript{S}}"}
+For every prime number $p$, an $F$-isocrystal $M_\crisp$ on the reduction $S_p$ of $S$ $\mod p$.
+:::
+
+::: {.trmenv #Mp5S title="(M'5)S" latex="{(M'5)\textsubscript{S}}"}
+Comparison isomorphisms
+$$
+  \begin{aligned}
+    \comp_{\DR,\BB}\colon
+    &M_\BB(C)\otimes C \simto (M_\DR\otimes C)^\nabla
+  \\\comp_{\AAf,\BB}\colon
+    &M_\BB^{(C)}\otimes\AAf \to \text{inverse image on }S(C)\text{ of }M_\AAf
+  \end{aligned}
+$$
+that are functorial in $C$, where we denote by $M_\DR\otimes C$ the inverse image of $M_\DR$ on $S_C$, and by $(-)\nabla$ the sheaf of its horizontal sections on $S(C)$.
+Instead of giving $M_\AAf$ in [(M'3)](#Mp3), we can only give the $\QQ_\ell$ sheaves $M_\ell$ that are deduced from it, along with the comparison isomorphisms $\comp_{\ell,\BB}$ from $M_\BB\otimes\QQ_\ell$ to the inverse image of $M_\ell$, and impose the existence of a lattice $L$ in $M_\BB(C)$ such that $L\otimes\ZZ_\ell$ corresponds to a $\ZZ_\ell$-sheaf $L_\ell$ with $L_\ell\otimes\QQ_\ell\simto M_\ell$, cf. [(1.14)][(#chunk-1.14)].
+
+As for $\comp_{\crisp,\DR}$, let $S_{(p)}^\an$ be the rigid analytic space
+:::
+::::
