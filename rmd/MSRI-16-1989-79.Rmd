@@ -44,6 +44,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\crisp}{{\cris\,\,p}}
 \providecommand{\crisv}{{\cris\,\,v}}
 \providecommand{\BB}{{\mathrm{B}}}
+\providecommand{\simto}{\xrightarrow{\sim}}
 \providecommand{\et}{\mathrm{et}}
 \providecommand{\OO}{\cal{O}}
 \providecommand{\an}{\mathrm{an}}
@@ -63,13 +64,6 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\Gr}{\operatorname{Gr}}
 \providecommand{\Fr}{\operatorname{Fr}}
 
-```{r,echo=FALSE,results='asis'}
-if (knitr::is_html_output()) {
-  cat('\\providecommand{\\simto}{\\xrightarrow{\\sim}}')
-} else {
-  cat('\\providecommand{\\simto}{\\newcommand{\\simto}{\\xrightarrow{\\raisebox{-0.7ex}[0ex][0ex]{$\\sim$}}}}')
-}
-```
 
 <!-- Content -->
 
@@ -1043,7 +1037,7 @@ $$
   \end{aligned}
 $$
 that are functorial in $C$, where we denote by $M_\DR\otimes C$ the inverse image of $M_\DR$ on $S_C$, and by $(-)\nabla$ the sheaf of its horizontal sections on $S(C)$.
-Instead of giving $M_\AAf$ in [(M'3)](#Mp3), we can only give the $\QQ_\ell$ sheaves $M_\ell$ that are deduced from it, along with the comparison isomorphisms $\comp_{\ell,\BB}$ from $M_\BB\otimes\QQ_\ell$ to the inverse image of $M_\ell$, and impose the existence of a lattice $L$ in $M_\BB(C)$ such that $L\otimes\ZZ_\ell$ corresponds to a $\ZZ_\ell$-sheaf $L_\ell$ with $L_\ell\otimes\QQ_\ell\simto M_\ell$, cf. [(1.14)][(#chunk-1.14)].
+Instead of giving $M_\AAf$ in [(M'3)](#Mp3), we can only give the $\QQ_\ell$ sheaves $M_\ell$ that are deduced from it, along with the comparison isomorphisms $\comp_{\ell,\BB}$ from $M_\BB\otimes\QQ_\ell$ to the inverse image of $M_\ell$, and impose the existence of a lattice $L$ in $M_\BB(C)$ such that $L\otimes\ZZ_\ell$ corresponds to a $\ZZ_\ell$-sheaf $L_\ell$ with $L_\ell\otimes\QQ_\ell\simto M_\ell$, cf. [(1.14)](#chunk-1.14).
 
 As for $\comp_{\crisp,\DR}$, let $S_{(p)}^\an$ be the rigid analytic space
 :::
