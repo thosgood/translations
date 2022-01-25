@@ -32,6 +32,8 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 <!-- Content -->
 
+\oldpage{2}
+
 *Les Aumettes, 2nd of April 1991.*
 
 Dear Thomason,
@@ -48,6 +50,7 @@ The main ideas were, for the most part, born over 25 years ago, and I see the en
 The principal conceptual work that remained to be done --- and that now seems to me as equally fascinating (as much as for its beauty as for its evident impact on the foundations of a cohomological algebra in the spirit of a theory of cohomological coefficients) as in the times of my first loves with cohomology --- was to clarify the intrinsic structure of these categories.
 The fact that this work, that I had confided to Verdier around 1960, and that was meant to be the subject of his thesis [@13], had still not yet been done, even in the case of ordinary and abelian derived categories, which nevertheless have ended up (by necessity) being used daily in both geometry and analysis, says a lot about the state of mentality in the mathematical community with regards to foundations.
 
+\oldpage{3}
 This mood of contempt for essential foundational work (and, more generally, for anything that does not follow the fashion of the moment), I mentioned in my last letter, and I also come back to it many times in the pages of *Récoltes et Semailles* [@8], and it is one thing (amongst many others) that quite is simply beyond me.
 Your response to my letter shows that you absolutely did not understand.
 It wasn't a letter to "complain" about this, or to say that it bothered me.
@@ -74,4 +77,12 @@ Such supplementary structures are useful insofar as they allow us to make essent
 But they are no more essential for the intrinsic meaning of the operations (which they have actually tended to obscure up until now) than the more of less arbitrary choice of a basis for a module in linear algebra.
 As terminology, I will speak of "categories with cofibrations" (or "with fibrations"), or of "Quillen categories" (or "Quillen triples"), etc. whenever such supplementary structures appear.
 
-By
+By their richness of delicately intertwined structures, it is the *closed Quillen triples* $(W,C,F)$ that are, to me, the most beautiful structure discovered so far of the "enriched" category of models.
+I had thought that I could do without them, but in the end I could not, and I believe that they will continue to be useful (if not absolutely essential).
+\oldpage{4}
+In the opposite direction, in terms of the economic use of means used to construct the essentials, it is the notion of a *category with cofibrations*, or *with fibrations*, by K.S. Brown [@3] (with the quite obvious generalisation given by Anderson [@1]) that appears the most beautiful to me.
+However, I did not manage to understand the justification for the system of axioms that you proposed to me in your first letter, which placed you somewhere halfway between Quillen [@10] and Brown [@3].
+Your axioms^[*[Editor] The letter from Thomason to Grothendieck on the 3rd of January, 1991 [@7]. See also [@14; @15].*] (seen as extending those of Quillen) seem to me to be prohibitively demanding, when compared to those of Brown--Anderson --- apart from the fact, only, that you do not seem to require for the sets $C$ and $F$ to be stable under composition; but I hardly know of an example where this axiom would cause a problem.
+Please enlighten me if there is something that I am missing.
+
+An example: if a structure of fibrations (in the sense of Brown--Anderson) satisfies the familiar condition of "properness" (which is the case for the structures considered first of all by Brown, where all the objects are fibrant over the final object), then we can replace this structure $(W,F)$ with another $(W,F_W)$ that is canonically associated with the localiser $W$, i.e. with the category of models in question, by taking $F_W$ to be the set of arrows in $\cal{M}$ that are, what I call, *$W$-fibrations* $f\colon X\to Y$, i.e. those that are squarable and such that the change of base functor $Y'\mapsto X'=X\times_Y Y'$ from $\cal{M}/Y$ to $\cal{M}/X$ sends quasi-isomorphisms to quasi-isomorphisms.
