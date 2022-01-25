@@ -54,6 +54,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\Ext}{\operatorname{Ext}}
 \providecommand{\Spec}{\operatorname{Spec}}
 \providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\End}{\operatorname{End}}
 \providecommand{\limind}{\operatorname{lim\,ind}}
 \providecommand{\limproj}{\operatorname{lim\,proj}}
 \providecommand{\HH}{\operatorname{H}}
@@ -1033,12 +1034,82 @@ $$
     \comp_{\DR,\BB}\colon
     &M_\BB(C)\otimes C \simto (M_\DR\otimes C)^\nabla
   \\\comp_{\AAf,\BB}\colon
-    &M_\BB^{(C)}\otimes\AAf \to \text{inverse image on }S(C)\text{ of }M_\AAf
+    &M_\BB^{(C)}\otimes\AAf \to \text{inverse image of }M_\AAf\text{ on }S(C)
   \end{aligned}
 $$
 that are functorial in $C$, where we denote by $M_\DR\otimes C$ the inverse image of $M_\DR$ on $S_C$, and by $(-)\nabla$ the sheaf of its horizontal sections on $S(C)$.
-Instead of giving $M_\AAf$ in [(M'3)](#Mp3), we can only give the $\QQ_\ell$ sheaves $M_\ell$ that are deduced from it, along with the comparison isomorphisms $\comp_{\ell,\BB}$ from $M_\BB\otimes\QQ_\ell$ to the inverse image of $M_\ell$, and impose the existence of a lattice $L$ in $M_\BB(C)$ such that $L\otimes\ZZ_\ell$ corresponds to a $\ZZ_\ell$-sheaf $L_\ell$ with $L_\ell\otimes\QQ_\ell\simto M_\ell$, cf. [(1.14)](#chunk-1.14).
+Instead of giving $M_\AAf$ in [(M'3)S](#Mp3S), we can only give the $\QQ_\ell$ sheaves $M_\ell$ that are deduced from it, along with the comparison isomorphisms $\comp_{\ell,\BB}$ from $M_\BB\otimes\QQ_\ell$ to the inverse image of $M_\ell$, and impose the existence of a lattice $L$ in $M_\BB(C)$ such that $L\otimes\ZZ_\ell$ corresponds to a $\ZZ_\ell$-sheaf $L_\ell$ with $L_\ell\otimes\QQ_\ell\simto M_\ell$, cf. [(1.14)](#chunk-1.14).
 
-As for $\comp_{\crisp,\DR}$, let $S_{(p)}^\an$ be the rigid analytic space
+As for $\comp_{\crisp,\DR}$, let $S_{(p)}^\an$ be the rigid analytic space that is the general fibre of the formal scheme over $\ZZ_p$ given by the formal completion of $S$ along $S_p$;
+we want an isomorphism between bundles with connection on $S_{(p)}^\an$ induced by $M_\DR$ and $M_\crisp$.
+:::
+
+::: {.trmenv #Mp6S title="(M'6)S" latex="{(M'6)\textsubscript{S}}"}
+A filtration $W$ of the objects [(M'1)S](#Mp1S) to [(M'4)S](#Mp4S), respected by the comparison isomorphisms.
+:::
+
+The axioms are modified as follows.
+In [(AM1)](#AM1), we want a variation of mixed Hodge structures;
+[(AM3)](#AM3) becomes: $M_\ell$ comes from a smooth $\QQ_\ell$-sheaf on $S[1/\ell]$;
+for [(AM4)](#AM4), a condition is imposed for every closed point of $S$.
+
+As a catch-all, this category does the job (cf. [(1.13)](#chunk-1.13) nonetheless).
+Additional axioms will always be natural, notably concerning the behaviour at infinity of the variation of mixed Hodge structures $H_\BB$ (cf. [@SZ]).
+::::
+
+\oldpage{26 (104)}
+
+::: {.rmenv #chunk-1.22 title="1.22 Definition" latex="{1.22 Definition}"}
+Let $E$ be a finite extension of $\QQ$.
+Then a realisation system *with coefficients in $E$* is a realisation system $M$ endowed with the structure of an $E$-modules, $E\to\End(M)$.
+:::
+
+Up until now, our motives have been "isomotives": the $\Hom$ are vector spaces over $\QQ$.
+For motives with integer coefficients, I propose the following definitions.
+
+::: {.rmenv #chunk-1.23 title="1.23 Definition" latex="{1.23 Definition}"}
+A realisation system $M$ over $\QQ$ (resp. $\Spec\ZZ\setminus P$) *with integer coefficients* is a realisation system, denoted by $M\otimes\QQ$, endowed with a lattice $M_\BB\subset(M\otimes\QQ)_\BB$ such that, for all $\ell$, $M_\ell\coloneqq M_\BB\otimes\ZZ_\ell\subset(M\otimes\QQ)_\ell$ is stable under $\Gal(\cQQ/\QQ)$.
+:::
+
+:::: {.rmenv #chunk-1.24 title="1.24" latex="{1.24}"}
+On a more general base $S$, a realisation system *with integer coefficients* is a realisation system $M\otimes\QQ$ endowed with a local system of torsion-free $\ZZ$-modules $M_\BB\subset(M\otimes\QQ)_\BB$ satisfying $M_\BB\otimes\QQ\simto(M\otimes\QQ)_\BB$ (a "lattice") and such that the $\ZZ_\ell$-sheaf $M_\BB\otimes\ZZ_\ell$ on $S(\CC)$ corresponds, under $\comp_{\ell,\BB}$, to a smooth $\ZZ_\ell$-sheaf $M_\ell\subset(M\otimes\QQ)_\ell$ on $S[1/\ell]$.
+
+This causes us to modify [(M'1)S](#Mp1S), [(M'3)S](#Mp3S), and [(M'5)S](#Mp5S) as follows.
+
+::: {.trmenv #Mp1SZ title="(M'1)SZ" latex="{(M'1)\textsubscript{SZ}}"}
+$M_\BB(C)$ is a local system of free $\ZZ$-modules.
+:::
+
+::: {.trmenv #Mp3SZ title="(M'3)SZ" latex="{(M'3)\textsubscript{SZ}}"}
+The data of a $\ZZ_\ell$-sheaf $M_\ell$ on $S[1/\ell]$.
+:::
+
+::: {.trmenv #Mp5SZ title="(M'5)SZ" latex="{(M'5)\textsubscript{SZ}}"}
+Replace $\comp_{\AAf,\BB}$ by isomorphisms $\comp_{\ell,\BB}$ from $M_\BB\otimes\ZZ_\ell$ to the inverse image of $M_\ell$ on $S(C)$.
 :::
 ::::
+
+::: {.rmenv #chunk-1.25 title="1.25" latex="{1.25}"}
+In [(1.24)](#chunk-1.24), the data of the $M_\ell$ is equivalent to that of a projective system of sheaves of $\ZZ/(n)$-modules on the $S[1/n]$:
+$$
+  M_{\ZZ/(n)}\colon \prod_{\ell|n}M_\ell/n M_\ell
+$$
+and the data of the comparison morphisms is equivalent to that of an isomorphism of projective systems from $\comp_{\AA/n,\BB}\colon M_\BB\otimes\ZZ/(n)$ to the inverse image of $M_{\ZZ/(n)}$ on $S(C)$.
+
+In the setting of [(1.23)](#chunk-1.23), we can prefer to think of the $M_{\ZZ/(n)}$ as representations of $\Gal(\cQQ/\QQ)$.
+We again set $M_{\hZZ}=\limproj M_{\ZZ/(n)}=\prod M_\ell$.
+:::
+
+::: {.rmenv #chunk-1.26 title="1.26" latex="{1.26}"}
+Combining the variants in [(1.22)](#chunk-1.22) and [(1.24)](#chunk-1.24), we similarly define motives over $S$ with coefficients in the ring of integers of a finite extension of $\QQ$.
+:::
+
+
+
+# Examples {#section-2}
+
+\oldpage{27 (105)}
+
+::: {.rmenv #chunk-2.1 title="2.1" latex="{2.1}"}
+The
+:::
