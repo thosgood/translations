@@ -28,7 +28,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 <!-- Shortcuts -->
 
 \providecommand{\Cat}{\mathsf{Cat}}
-\providecommand{\Fl}{\operatorname{Fl}}
+\providecommand{\Mor}{\operatorname{Mor}}
 
 <!-- Content -->
 
@@ -71,7 +71,7 @@ But this will probably be for another time (assuming that your interest survives
 So today it will be the category of models and the notion of a derivator.
 
 
-# The only essential structure of a category of models is the data of the "localiser" $W\subset\Fl(\cal{M})$
+# The only essential structure of a category of models is the data of the "localiser" $W\subset\Mor(\cal{M})$
 
 I also call a category $\cal{M}$ endowed with such a "localiser" (containing all isomorphisms, and containing the remaining arrow in the set $\{u,v,uv\}$ whenever it contains any two in that set) a "category of models".
 The essential homotopical constructions are independent of all supplementary structures, such as a set $C$ of "cofibrations" or a set $F$ of "fibrations", or even both together.
