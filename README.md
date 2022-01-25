@@ -3,6 +3,7 @@
 ## Technical
 
 - **consider different output format? just `html_document`?**
+  + (https://github.com/thosgood/bookdown-maths when it's done)
 
 - (PDF) header on title page
 - (PDF) link to html version in translator's note
