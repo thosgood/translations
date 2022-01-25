@@ -4997,7 +4997,41 @@ is acyclic at $0$.
 \end{itenv}
 
 \begin{proof}
-  Let
+  Let $F$ be a filtration on $\CC^d$ such that the successive quotients $F^i/F^{i+1}$ are of dimension~$1$ for $0\leq i<d$, and such that the $\Gamma_i$ are compatible with $F$.
+
+  It suffices to prove that $\Gr_F(K)$ is acyclic, and this leads us to reduce to the case where $d=1$.
+  We set $\gamma_i=\Gamma_i$ (so that $\gamma_i\in\CC\setminus\NN^+$).
+  The complexes $\Omega_X^\bullet\langle Y\rangle(\scr{V})$ and $j_*\Omega_{X^*}^\bullet(\scr{V})$ are then morally tensor products of analogous complexes for $n+m=1$.
+  This suggests to consider first of all the case where $n=1$ and $m=0$.
+  The global sections of the complexes in question are then
+  \begin{enumerate}[(a)]
+    \item $\mbox{functions on $D$}\xrightarrow{\nabla=\dd+\gamma\dd z/z}\mbox{differential form with a simple pole at $0$}$
+    \item $\mbox{functions on $D^*$}\xrightarrow{\nabla=\dd+\gamma\dd z/z}\mbox{differential form on $D^*$}$.
+  \end{enumerate}
+
+  We write functions and differential forms as Laurent series.
+  A morphism $r$ of complexes that is a left inverse to the inclusion $i\colon\mbox{(a)}\hookrightarrow\mbox{(b)}$ is then a morphism that sends $f$ (resp. $f\frac{\dd z}{z}$) to $g$ (resp. $g\frac{\dd z}{z}$), where $g$ is given by ``forgetting the polar part'' of $f$, i.e.
+  \[
+    f = \sum_n a_n z^n
+    \implies
+    g = \sum_{n\geq0} a_n z^n.
+  \]
+  We have that $r\circ i=\id$, and $\id-i\circ r=\nabla H+H\nabla$, where
+  \[
+    H\left(\sum_n a_n z^n\right)
+    = \sum_{n<0} a_n(\gamma+n)^{-1}z^n.
+  \]
+  The same formulas still make sense for the morphism of complexes of germs of sections at $0$, i.e.
+  \[
+    i_0\colon \left(\Omega_X\langle0\rangle(\scr{V})\right)_0 \to \left(j_*\Omega_{X^*}(\scr{V})\right)_0
+  \]
+  and show that $i_0$ is a homotopy equivalence.
+
+  We deal with the general case by transposing the fact that a tensor product of
+\oldpage{104}
+  homotopy equivalences is again a homotopy equivalence.
+
+  We will
 \end{proof}
 
 
