@@ -5031,8 +5031,109 @@ is acyclic at $0$.
 \oldpage{104}
   homotopy equivalences is again a homotopy equivalence.
 
-  We will
+  We will write a germ at $0$ of a section of $j_*\Omega_{X^*}^\bullet(\scr{V})$ (where $\scr{V}=\cal{O}$) in the form
+  \[
+    \alpha = \sum_{\substack{P\subset[1,m]\\Q\subset[n+1,n+m]}} \alpha_{P,Q}\frac{\dd z^P}{z^P}\dd z^Q.
+  \]
+  We have
+  \[
+    \begin{aligned}
+      \dd\alpha &= \sum_{i=1}^{n+m} \dd_i\alpha
+    \\\dd_i\alpha &= \left(\dd z_i\wedge\partial_i + \frac{\dd z_i}{z_i}\wedge\gamma_i\right)\alpha.
+    \end{aligned}
+  \]
+  These decompositions exhibit $j_*\Omega_{X^*}^\bullet(\scr{V})$ as an $(n+m)$-complex, of which $\Omega_X^*\langle Y\rangle(\scr{V})$ is an $(n+m)$-complex.
+
+  We can expand the coefficients $\alpha_{P,Q}$ into a Laurent series
+  \[
+    \alpha_{P,Q} = \sum_{\underline{\ell}\in\ZZ^n\times\NN^m} a_{P,Q}^{\underline{\ell}} z^{\underline{\ell}}.
+  \]
+  We then set
+  \[
+    \begin{aligned}
+      r_i(\alpha_{P,Q})
+      &= \sum_{\underline{\ell}_i\geq0} a_{P,Q}^{\underline{\ell}} z^{\underline{\ell}}
+      \quad\mbox{for $i\leq n$}
+    \\r(\alpha_{P,Q})
+      &= \sum_{\underline{\ell}\in\NN^n\times\NN^m} a_{P,Q}^{\underline{\ell}} z^{\underline{\ell}}
+    \\r_i(\alpha)
+      &= \sum_{P,Q} r_i(\alpha_{P,Q})\frac{\dd z^P}{z^P}\dd z^Q
+      \quad\mbox{for $i\leq n$}
+    \\r(\alpha)
+      &= \sum_{P,Q} r(\alpha_{P,Q})\frac{\dd z^P}{z^P}\dd z^Q.
+    \end{aligned}
+  \]
+
+  We can show that
+  \begin{enumerate}[(a)]
+    \item $r_i$ is an endomorphism of complexes;
+    \item the $r_i$ commute pairwise, and their product is $r$; and
+    \item $r$ is a retraction of $(j_*\Omega_{X^*}^\bullet(\scr{V}))_0$ to $(\Omega_X^\bullet\langle Y\rangle(\scr{V}))_0$.
+  \end{enumerate}
+
+  We further set
+  \[
+    \begin{aligned}
+      H_i(\alpha_{P,Q})
+      &= \sum_{\underline{\ell}_1<0} a_{P,Q}^{\underline{\ell}}(\gamma_i+\underline{\ell}_i)^{-1} z^{\underline{\ell}}
+      \quad\mbox{for $i\leq n$}
+    \\H_i(\alpha)
+      &= \sum_{i\in P} (-1)^{k_p} H_i(\alpha_{P,Q})\frac{\dd z^{P\setminus\{i\}}}{z^{P\setminus\{i\}}}\dd z^Q
+    \end{aligned}
+  \]
+  where $k_P=|P\cap[1,i-1]|$.
+
+  We can show that
+  \begin{enumerate}[(a)]
+  \setcounter{enumi}{3}
+    \item $1-r_i=d_iH_i+H_id_i$;
+    \item $d_iH_j+H_jd_i=0$ for $i\neq j$; and
+    \item $1-r_i=dH_i+H_id$.
+  \end{enumerate}
+
+  Since $1$ is homotopic to $r_i$, it is also homotopic to the composition $r$ of the $r_i$, and $r$ is an inverse up to homotopy of the inclusion morphism $i$ of $(\Omega_X^\bullet\langle Y\rangle(\scr{V}))_0$ into $j_*\Omega_{X^*}^\bullet(\scr{V})$.
+  This finishes the proof of \hyperref[II.6.9]{(6.9)} and thus of \hyperref[II.6.2]{(6.2)}
 \end{proof}
+
+\begin{itenv}{Corollary 6.10}
+\label{II.6.10}
+  Let $X$ be a smooth scheme of finite type over $\CC$, $Y$ a normal crossing divisor on $X$, $\scr{V}$ a vector bundle on $X$, and $\Gamma$ a regular integrable connection on the restriction of $\scr{V}$ to $X^*=X\setminus Y$.
+  Suppose that $\Gamma$ presents a logarithmic pole along $Y$, and that the residue of $\Gamma$ along the components of $Y$ does not have any positive integer eigenvalues.
+  Then, denoting by $V$ the local system defined by $\scr{V}$ on $X_\cl^*$, we have
+  \[
+    \mathbb{H}^\bullet(X,\Omega_X^\bullet\langle Y\rangle(\scr{V}))
+    \simto \HH^\bullet(X_\cl^*,V).
+  \]
+\end{itenv}
+
+\begin{proof}
+  This follows immediately from \hyperref[II.3.15]{(3.15)} and \hyperref[II.6.2]{(6.2)}.
+\end{proof}
+
+\begin{itenv}{Corollary 6.11}
+\label{II.6.11}
+  Under the hypotheses of \hyperref[II.6.10]{(6.10)}, with $X$ affine, we have
+  \[
+    \HH^\bullet(\Gamma(X,\Omega_X^\bullet\langle Y\rangle(\scr{V})))
+    \simto \HH^\bullet(X_\cl^*,V).
+  \]
+\end{itenv}
+
+In other words, to calculate the cohomology of $X^*$ with coefficients in $V$, it suffices to consider the complex of algebraic differential forms on $X^*$ with coefficients in $\scr{V}$ that present only a simple logarithmic poly along $Y$.
+We suppose here that $X$, and not only $X^*$, is affine.
+
+\begin{rmenv}{6.12}
+\label{II.6.12}
+  I do not have any satisfying relative analogue to \hyperref[II.6.2]{(6.2)}.
+\oldpage{106}
+  The main difficult is that, for a smooth morphism $f\colon X\to S$ of smooth schemes of finite type over $\CC$, the sheaves $\RR^i f_*\underline{\CC}$ (calculated in the transcendent topology) are not in general locally constant, and thus do \emph{not} have vector bundles with integrable connections as algebraic analogues.
+  It is easy, however, to make the above results more complicated by adding ``generic parameters''.
+\end{rmenv}
+
+\begin{itenv}{Theorem 6.13}
+\label{II.6.13}
+  Let
+\end{itenv}
 
 
 
