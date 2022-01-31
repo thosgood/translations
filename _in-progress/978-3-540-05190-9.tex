@@ -4,7 +4,7 @@
 
 \title{Regular singular differential equations}
 \author{Pierre Deligne}
-\date{}
+\date{1970}
 
 \newcommand{\doctype}{French book}
 \newcommand{\origcit}{%
@@ -5187,6 +5187,31 @@ In \hyperref[II.6.13]{(6.13)}, we can reduce to the case where $S_1$ is irreduci
   \]
   with $\overline{X}_\eta$ proper over $k(\eta)$.
   This is the case if $(X_1)_\eta$ is quasi-projective, or even, by Nagata \cite{20}, just separated.
+
+  By Hironaka's resolution of singularities applied to the scheme $\overline{X}_\eta$ over the field $k(\eta)$, there thus exists another compactification \hyperref[II.6.15.1]{(6.15.1)} of $(X_1)_\eta$ induced by the previous one by blowing up, and this time with $\overline{X}_\eta$ smooth and $(X_1)_\eta$ being the complement in $\overline{X}_\eta$ of a normal crossing divisor.
+  Given the syllogisms of EGA~IV on $\varprojlim$ of schemes, there thus exists a Zariski open $S$ of $S_1$ along with a commutative diagram
+  \[
+    \begin{tikzcd}
+      X_1|S \rar[hook,"j"] \dar[swap,"f"]
+      & \overline{X} \dlar["\overline{f}"]
+    \\S
+    \end{tikzcd}
+  \]
+  satisfying the hypotheses of \hyperref[II.6.14]{(6.14)} and such that $\overline{f}^{-1}(\eta)=\overline{X}_\eta$.
+  So, in this case, we can conclude by \hyperref[II.6.14]{(6.14)}.
+\end{rmenv}
+
+\begin{rmenv}{6.16}
+\label{II.6.16}
+  In the general case, let $\cal{U}=(U_i)$ be a finite cover of $X$ by open subsets that are compactifiable in the above sense, and let $S$ be the intersection of the open subsets constructed in \hyperref[II.6.15]{(6.15)} with respect to the compactifiable morphisms
+  \[
+  \label{II.6.16.1}
+    U_{i_1}\cap\ldots\cap U_{i_k} \to S_1.
+  \tag{6.16.1}
+  \]
+
+\oldpage{108}
+  We
 \end{rmenv}
 
 
