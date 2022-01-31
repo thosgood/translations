@@ -88,6 +88,7 @@
 \newcommand{\mm}{\mathrm{m}}
 \newcommand{\detrow}[2]{\operatorname{det}(#1,#2)}
 \newcommand{\simto}{\xrightarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
+\newcommand{\simfrom}{\xleftarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
 \newcommand{\order}{\mathcal{O}}
 \newcommand{\circlednumber}[1]{\raisebox{.5pt}{\textcircled{\raisebox{-.9pt}{#1}}}}
 
@@ -4916,26 +4917,26 @@ We note, first of all, as in loc. cit., that \hyperref[II.6.2]{(6.2)} is equival
 
 \begin{rmenv}{6.7}
 \label{II.6.7}
-  The complex $[j_*\Omega_X^\bullet(\scr{V})]^\an$ is exactly the sheaf of sections of $\Omega_{X^\an}^\bullet(\scr{V})$ that are meromorphic along $Y$;
-  we denote this by $j_*^\mm\Omega_X^\bullet(\scr{V})$.
-  The arrows in \hyperref[II.6.4.3]{(6.4.3)}, \hyperref[II.6.4.4]{(6.4.4)}, and \hyperref[II.6.6.1]{(6.6.1)} for $j_*^\mm\Omega_{X^\an}^\bullet(\scr{V})$ fit into a commutative diagram
+  The complex $[j_*\Omega_X^\bullet(\cal{V})]^\an$ is exactly the sheaf of sections of $\Omega_{X^\an}^\bullet(\cal{V})$ that are meromorphic along $Y$;
+  we denote this by $j_*^\mm\Omega_X^\bullet(\cal{V})$.
+  The arrows in \hyperref[II.6.4.3]{(6.4.3)}, \hyperref[II.6.4.4]{(6.4.4)}, and \hyperref[II.6.6.1]{(6.6.1)} for $j_*^\mm\Omega_{X^\an}^\bullet(\cal{V})$ fit into a commutative diagram
   \[
   \label{II.6.7.1}
     \begin{tikzcd}
-      \mathbb{H}^\bullet(\overline{X},j_*\Omega_X^\bullet(\scr{V}))
+      \mathbb{H}^\bullet(\overline{X},j_*\Omega_X^\bullet(\cal{V}))
         \ar[r,"\sim"]
         \ar[r,swap,"\mbox{\hyperref[II.6.4.3]{(6.4.3)}}"]
         \ar[d,"\sim"]
         \ar[d,swap,"\mbox{\hyperref[II.6.6.1]{(6.6.1)}}"]
-      & \mathbb{H}^\bullet(X,\Omega_X^\bullet(\scr{V}))
+      & \mathbb{H}^\bullet(X,\Omega_X^\bullet(\cal{V}))
         \ar[dd,"\circlednumber{1}"]
-    \\\mathbb{H}^\bullet(\overline{X},j_*^\mm\Omega_{X^\an}^\bullet(\scr{V}))
+    \\\mathbb{H}^\bullet(\overline{X},j_*^\mm\Omega_{X^\an}^\bullet(\cal{V}))
         \ar[d,swap,"\circlednumber{2}"]
-    \\\mathbb{H}^\bullet(\overline{X}_\cl,j_*\Omega_{X^\an}^\bullet(\scr{V}))
+    \\\mathbb{H}^\bullet(\overline{X}_\cl,j_*\Omega_{X^\an}^\bullet(\cal{V}))
         \ar[r,"\sim"]
         \ar[r,swap,"\mbox{\hyperref[II.6.4.4]{(6.4.4)}}"]
-      & \mathbb{H}^\bullet(X_\cl,\Omega_{X^\an}^\bullet(\scr{V}))
-      & \HH^\bullet(X_\cl,\scr{V})
+      & \mathbb{H}^\bullet(X_\cl,\Omega_{X^\an}^\bullet(\cal{V}))
+      & \HH^\bullet(X_\cl,\cal{V})
         \ar[l,swap,"\sim"]
         \ar[l,"\mbox{\hyperref[II.6.1.1]{(6.1.1)}}"]
     \end{tikzcd}
@@ -4952,46 +4953,46 @@ We note, first of all, as in loc. cit., that \hyperref[II.6.2]{(6.2)} is equival
 \label{II.6.8}
   The morphism of complexes
   \[
-    j_*^\mm\Omega_{X^\an}^\bullet(\scr{V}) \to j_*\Omega_{X^\an}^\bullet(\scr{V})
+    j_*^\mm\Omega_{X^\an}^\bullet(\cal{V}) \to j_*\Omega_{X^\an}^\bullet(\cal{V})
   \]
   induces an isomorphism on the cohomology sheaves.
 \end{itenv}
 
 The GAGA theorems have thus allowed us to reduce a global algebraic/analytic comparison problem to a local meromorphic/essential singularity comparison problem.
 
-Let $\scr{V}_0$ be an extension of the algebraic vector bundle $\scr{V}$ to a vector bundle on $X$ such that, with respect to $\scr{V}_0$, we have:
+Let $\cal{V}_0$ be an extension of the algebraic vector bundle $\cal{V}$ to a vector bundle on $X$ such that, with respect to $\cal{V}_0$, we have:
 
 \begin{itenv}{6.8.1}
 \label{II.6.8.1}
-the connection on $\scr{V}$ presents at worst a logarithmic poly along $Y$, and the residues of the connection along the components of $Y$ never have positive integer eigenvalues.
+the connection on $\cal{V}$ presents at worst a logarithmic poly along $Y$, and the residues of the connection along the components of $Y$ never have positive integer eigenvalues.
 \end{itenv}
 
-We can take $\scr{V}_0$ to be the canonical extension \hyperref[II.5.6]{(5.6)} of $\scr{V}$.
+We can take $\cal{V}_0$ to be the canonical extension \hyperref[II.5.6]{(5.6)} of $\cal{V}$.
 By \hyperref[II.3.13]{(3.13)}, the complex
 \[
-  j_*^\mm\Omega_{X^\an}^\bullet(\scr{V}) / \Omega_{X^\an}^\bullet\langle Y\rangle(\scr{V}_0)
+  j_*^\mm\Omega_{X^\an}^\bullet(\cal{V}) / \Omega_{X^\an}^\bullet\langle Y\rangle(\cal{V}_0)
 \]
 is acyclic.
 The claim of \hyperref[II.6.8]{(6.8)} is equivalent to the acyclicity of the analogous complex
 \[
 \label{II.6.8.2}
-  j_*\Omega_{X^\an}^\bullet(\scr{V}) / \Omega_{X^\an}^\bullet\langle Y\rangle(\scr{V}_0).
+  j_*\Omega_{X^\an}^\bullet(\cal{V}) / \Omega_{X^\an}^\bullet\langle Y\rangle(\cal{V}_0).
 \tag{6.8.2}
 \]
 
-If we take $\scr{V}_0$ to be an extension of the type $\scr{V}(\tau)$ (cf. \hyperref[II.5.4]{(5.4)}), then we can locally put $\scr{V}$ into a canonical form \hyperref[II.5.6]{(5.6.ii)}, and it then remains to prove the following lemma.
+If we take $\cal{V}_0$ to be an extension of the type $\cal{V}(\tau)$ (cf. \hyperref[II.5.4]{(5.4)}), then we can locally put $\cal{V}$ into a canonical form \hyperref[II.5.6]{(5.6.ii)}, and it then remains to prove the following lemma.
 
 \begin{itenv}{Lemma 6.9}
 \label{II.6.9}
 Let $\Gamma_1,\ldots,\Gamma_n\in\GL_d(\CC)$ be matrices that commute with one another, and that do not have any positive integer eigenvalues.
-Let $X=D^{n+m}$, $X^*=(D^*)^n\times D^m$, $j\colon X^*\hookrightarrow X$, and $Y=X\setminus X^*$, and let $\Gamma$ be the connection on $\cal{O}^d=\scr{V}$ given by
+Let $X=D^{n+m}$, $X^*=(D^*)^n\times D^m$, $j\colon X^*\hookrightarrow X$, and $Y=X\setminus X^*$, and let $\Gamma$ be the connection on $\cal{O}^d=\cal{V}$ given by
 \[
   \Gamma = \sum_{i=1}^n \Gamma_i \frac{\dd z_i}{z_i}.
 \]
 \oldpage{103}
 Then the complex of sheaves
 \[
-  K = j_*\Omega_{X^*}^\bullet(\scr{V}) / \Omega_X^\bullet\langle Y\rangle(\scr{V})
+  K = j_*\Omega_{X^*}^\bullet(\cal{V}) / \Omega_X^\bullet\langle Y\rangle(\cal{V})
 \]
 is acyclic at $0$.
 \end{itenv}
@@ -5001,7 +5002,7 @@ is acyclic at $0$.
 
   It suffices to prove that $\Gr_F(K)$ is acyclic, and this leads us to reduce to the case where $d=1$.
   We set $\gamma_i=\Gamma_i$ (so that $\gamma_i\in\CC\setminus\NN^+$).
-  The complexes $\Omega_X^\bullet\langle Y\rangle(\scr{V})$ and $j_*\Omega_{X^*}^\bullet(\scr{V})$ are then morally tensor products of analogous complexes for $n+m=1$.
+  The complexes $\Omega_X^\bullet\langle Y\rangle(\cal{V})$ and $j_*\Omega_{X^*}^\bullet(\cal{V})$ are then morally tensor products of analogous complexes for $n+m=1$.
   This suggests to consider first of all the case where $n=1$ and $m=0$.
   The global sections of the complexes in question are then
   \begin{enumerate}[(a)]
@@ -5023,7 +5024,7 @@ is acyclic at $0$.
   \]
   The same formulas still make sense for the morphism of complexes of germs of sections at $0$, i.e.
   \[
-    i_0\colon \left(\Omega_X\langle0\rangle(\scr{V})\right)_0 \to \left(j_*\Omega_{X^*}(\scr{V})\right)_0
+    i_0\colon \left(\Omega_X\langle0\rangle(\cal{V})\right)_0 \to \left(j_*\Omega_{X^*}(\cal{V})\right)_0
   \]
   and show that $i_0$ is a homotopy equivalence.
 
@@ -5031,7 +5032,7 @@ is acyclic at $0$.
 \oldpage{104}
   homotopy equivalences is again a homotopy equivalence.
 
-  We will write a germ at $0$ of a section of $j_*\Omega_{X^*}^\bullet(\scr{V})$ (where $\scr{V}=\cal{O}$) in the form
+  We will write a germ at $0$ of a section of $j_*\Omega_{X^*}^\bullet(\cal{V})$ (where $\cal{V}=\cal{O}$) in the form
   \[
     \alpha = \sum_{\substack{P\subset[1,m]\\Q\subset[n+1,n+m]}} \alpha_{P,Q}\frac{\dd z^P}{z^P}\dd z^Q.
   \]
@@ -5042,7 +5043,7 @@ is acyclic at $0$.
     \\\dd_i\alpha &= \left(\dd z_i\wedge\partial_i + \frac{\dd z_i}{z_i}\wedge\gamma_i\right)\alpha.
     \end{aligned}
   \]
-  These decompositions exhibit $j_*\Omega_{X^*}^\bullet(\scr{V})$ as an $(n+m)$-complex, of which $\Omega_X^*\langle Y\rangle(\scr{V})$ is an $(n+m)$-complex.
+  These decompositions exhibit $j_*\Omega_{X^*}^\bullet(\cal{V})$ as an $(n+m)$-complex, of which $\Omega_X^*\langle Y\rangle(\cal{V})$ is an $(n+m)$-complex.
 
   We can expand the coefficients $\alpha_{P,Q}$ into a Laurent series
   \[
@@ -5068,7 +5069,7 @@ is acyclic at $0$.
   \begin{enumerate}[(a)]
     \item $r_i$ is an endomorphism of complexes;
     \item the $r_i$ commute pairwise, and their product is $r$; and
-    \item $r$ is a retraction of $(j_*\Omega_{X^*}^\bullet(\scr{V}))_0$ to $(\Omega_X^\bullet\langle Y\rangle(\scr{V}))_0$.
+    \item $r$ is a retraction of $(j_*\Omega_{X^*}^\bullet(\cal{V}))_0$ to $(\Omega_X^\bullet\langle Y\rangle(\cal{V}))_0$.
   \end{enumerate}
 
   We further set
@@ -5091,17 +5092,17 @@ is acyclic at $0$.
     \item $1-r_i=dH_i+H_id$.
   \end{enumerate}
 
-  Since $1$ is homotopic to $r_i$, it is also homotopic to the composition $r$ of the $r_i$, and $r$ is an inverse up to homotopy of the inclusion morphism $i$ of $(\Omega_X^\bullet\langle Y\rangle(\scr{V}))_0$ into $j_*\Omega_{X^*}^\bullet(\scr{V})$.
+  Since $1$ is homotopic to $r_i$, it is also homotopic to the composition $r$ of the $r_i$, and $r$ is an inverse up to homotopy of the inclusion morphism $i$ of $(\Omega_X^\bullet\langle Y\rangle(\cal{V}))_0$ into $j_*\Omega_{X^*}^\bullet(\cal{V})$.
   This finishes the proof of \hyperref[II.6.9]{(6.9)} and thus of \hyperref[II.6.2]{(6.2)}
 \end{proof}
 
 \begin{itenv}{Corollary 6.10}
 \label{II.6.10}
-  Let $X$ be a smooth scheme of finite type over $\CC$, $Y$ a normal crossing divisor on $X$, $\scr{V}$ a vector bundle on $X$, and $\Gamma$ a regular integrable connection on the restriction of $\scr{V}$ to $X^*=X\setminus Y$.
+  Let $X$ be a smooth scheme of finite type over $\CC$, $Y$ a normal crossing divisor on $X$, $\cal{V}$ a vector bundle on $X$, and $\Gamma$ a regular integrable connection on the restriction of $\cal{V}$ to $X^*=X\setminus Y$.
   Suppose that $\Gamma$ presents a logarithmic pole along $Y$, and that the residue of $\Gamma$ along the components of $Y$ does not have any positive integer eigenvalues.
-  Then, denoting by $V$ the local system defined by $\scr{V}$ on $X_\cl^*$, we have
+  Then, denoting by $V$ the local system defined by $\cal{V}$ on $X_\cl^*$, we have
   \[
-    \mathbb{H}^\bullet(X,\Omega_X^\bullet\langle Y\rangle(\scr{V}))
+    \mathbb{H}^\bullet(X,\Omega_X^\bullet\langle Y\rangle(\cal{V}))
     \simto \HH^\bullet(X_\cl^*,V).
   \]
 \end{itenv}
@@ -5114,12 +5115,12 @@ is acyclic at $0$.
 \label{II.6.11}
   Under the hypotheses of \hyperref[II.6.10]{(6.10)}, with $X$ affine, we have
   \[
-    \HH^\bullet(\Gamma(X,\Omega_X^\bullet\langle Y\rangle(\scr{V})))
+    \HH^\bullet(\Gamma(X,\Omega_X^\bullet\langle Y\rangle(\cal{V})))
     \simto \HH^\bullet(X_\cl^*,V).
   \]
 \end{itenv}
 
-In other words, to calculate the cohomology of $X^*$ with coefficients in $V$, it suffices to consider the complex of algebraic differential forms on $X^*$ with coefficients in $\scr{V}$ that present only a simple logarithmic poly along $Y$.
+In other words, to calculate the cohomology of $X^*$ with coefficients in $V$, it suffices to consider the complex of algebraic differential forms on $X^*$ with coefficients in $\cal{V}$ that present only a simple logarithmic poly along $Y$.
 We suppose here that $X$, and not only $X^*$, is affine.
 
 \begin{rmenv}{6.12}
@@ -5132,8 +5133,61 @@ We suppose here that $X$, and not only $X^*$, is affine.
 
 \begin{itenv}{Theorem 6.13}
 \label{II.6.13}
-  Let
+  Let $f_1\colon X_1\to S_1$ be a smooth morphism between smooth schemes of finite type over $\CC$.
+  Then there exists a Zariski dense open subset $S$ of $S_1$ such that the morphism $f\colon X\to S$ induced by $f_1$ by the base change from $S_1$ to $S$ satisfies the following condition.
+
+  For any vector bundle with \emph{regular} integrable connection $\cal{V}$ on $X$, defining a local system $V$ on $X_\cl$, we have that
+  \begin{enumerate}[(i)]
+    \item the sheaves $\RR^i f_*^\an(V)$ are local systems on $S$, and their construction is compatible with any base change;
+    \item the sheaves $\mathbb{R}^i f_*(\Omega_{X/S}^\bullet(\cal{V}))$ and $\RR^i f_*^\an(\Omega_{X^\an/S^\an}^\bullet(\cal{V}))$ are locally free and of finite type, and their construction is compatible with any base change;
+    \item the canonical maps
+      \[
+        \cal{O}_S^\an\otimes\RR^i f_*^\an(V)
+        \simto \mathbb{R}^i f_*^\an\left(\Omega_{X^\an/S^\an}^\bullet(\cal{V})\right)
+        \simfrom \mathbb{R}^i f_*\left(\Omega_{X/S}^\bullet(\cal{V}\right)^\an
+      \]
+      are isomorphisms.
+  \end{enumerate}
 \end{itenv}
+
+More precisely, we have:
+
+\begin{itenv}{Proposition 6.14}
+\label{II.6.14}
+  Let $f\colon X\to S$ be a morphism between smooth schemes of finite type over $\CC$, admitting a compactification $\overline{X}$
+  \[
+  \label{II.6.14.1}
+    \begin{tikzcd}
+      X \rrar[hook,"j"] \drar[swap,"f"]
+      && \overline{X} \dlar["\overline{f}"]
+    \\&S&
+    \end{tikzcd}
+  \tag{6.14.1}
+  \]
+  that is proper and smooth over $S$, and such that there exists a relative normal crossing divisor $Y\subset\overline{X}$ of which $X$ is the complement.
+
+\oldpage{107}
+  Then the conclusions of \hyperref[II.6.13]{(6.13)} are satisfied by $f$.
+\end{itenv}
+
+We prove first of all that \hyperref[II.6.14]{(6.14)} implies \hyperref[II.6.13]{(6.13)}.
+In \hyperref[II.6.13]{(6.13)}, we can reduce to the case where $S_1$ is irreducible, with generic point $\eta$.
+
+\begin{rmenv}{6.15}
+\label{II.6.15}
+  Suppose first of all that $(f_1)_\eta$ admits a compactification
+  \[
+  \label{II.6.15.1}
+    \begin{tikzcd}
+      (X_1)_\eta \rrar[hook] \drar[swap]
+      && \overline{X}_\eta \dlar
+    \\&\Spec(k(\eta))&
+    \end{tikzcd}
+  \tag{6.15.1}
+  \]
+  with $\overline{X}_\eta$ proper over $k(\eta)$.
+  This is the case if $(X_1)_\eta$ is quasi-projective, or even, by Nagata \cite{20}, just separated.
+\end{rmenv}
 
 
 
