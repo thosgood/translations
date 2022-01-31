@@ -88,3 +88,23 @@ Your axioms^[*[Editor] The letter from Thomason to Grothendieck on the 3rd of Ja
 Please enlighten me if there is something that I am missing.
 
 An example: if a structure of fibrations (in the sense of Brown--Anderson) satisfies the familiar condition of "properness" (which is the case for the structures considered first of all by Brown, where all the objects are fibrant over the final object), then we can replace this structure $(W,F)$ with another $(W,F_W)$ that is canonically associated with the localiser $W$, i.e. with the category of models in question, by taking $F_W$ to be the set of arrows in $\cal{M}$ that are, what I call, *$W$-fibrations* $f\colon X\to Y$, i.e. those that are squarable and such that the change of base functor $Y'\mapsto X'=X\times_Y Y'$ from $\cal{M}/Y$ to $\cal{M}/X$ sends quasi-isomorphisms to quasi-isomorphisms.
+For every localiser, this gives a set of arrows that contains all isomorphisms, and that is stable under composition, change of base, and direct factors.
+Saying that $(W,F_W)$ is a Brown structure is equivalent to saying that there exist "enough $W$-fibrations", by which I mean that every arrow $u$ factors as $u=fi$, with $i\in W$ and $f\in F_W$.
+Dually, for categories with cofibrations $(W,C)$, we can (in the proper case) replace this with some structure $(W,C_W)$ canonically associated to the localiser, and by introducing the set of *$W$-cofibrations*.
+In this way, I tend to mostly think of a proper (and not "canonical") structure of fibrations $(W,F)$ as a recipe or criterion for characterising *certain* $W$-fibrations, with which it often suffices to work, since there are "enough"of them.
+And yet, I have found in the case of $\mathsf{Cat}$ that working with $W$-fibrations (which is much less restrictive than the Quillen "fibrations" that you introduced) has been essential.
+And I have been persuaded that it should also be very useful in a category of models, such as $\Delta^\wedge$ (semi-simplicial sets), since, because everything is substantially less demanding than the notion of Kan fibrations, being a $W$-fibration already implies everything that I consider (whether right or wrong) as the essential cohomological and homotopical properties of Kan fibrations (which, to me, are *not* in the nature of extension-lifting properties of morphisms).
+This should allow us (by considering infinite "paths") to construct, in $\Delta^\wedge$, the analogue of the path spaces of Cartan--Serre, without having to replace the complex $K$ by a Kan envelop beforehand.
+This is what I have verified anyway in the case of $\mathsf{Cat}$ (without having to take a detour via $\Delta^\wedge$), which is a very close neighbour [@9, Chapter VII].
+This is part of what I wanted to talk to you about next.
+
+
+# Prederivators, derivators
+
+\oldpage{5}
+When I said that the essential homotopical structures are already contained in the localiser $W$, I was thinking most notably of the exact sequences of fibrations and of cofibrations, which is a decisive test.
+I remain astonished that Quillen does not even mention this subject in his brilliant (and beautiful) work [@10], and I presume that he succeeded (as many others did after him) in not seeing it.
+(To see it, he would have no doubt had to have not been blinded by the contempt *a priori* that he expresses for every research into foundations that went beyond what he had just done, with such success...)
+But the thing becomes evident in the derivators point of view.
+
+The main idea of derivators
