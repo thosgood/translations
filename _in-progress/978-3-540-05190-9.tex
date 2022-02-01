@@ -5139,7 +5139,7 @@ We suppose here that $X$, and not only $X^*$, is affine.
   For any vector bundle with \emph{regular} integrable connection $\cal{V}$ on $X$, defining a local system $V$ on $X_\cl$, we have that
   \begin{enumerate}[(i)]
     \item the sheaves $\RR^i f_*^\an(V)$ are local systems on $S$, and their construction is compatible with any base change;
-    \item the sheaves $\mathbb{R}^i f_*(\Omega_{X/S}^\bullet(\cal{V}))$ and $\RR^i f_*^\an(\Omega_{X^\an/S^\an}^\bullet(\cal{V}))$ are locally free and of finite type, and their construction is compatible with any base change;
+    \item the sheaves $\mathbb{R}^i f_*(\Omega_{X/S}^\bullet(\cal{V}))$ and $\RR^i f_*^\an(\Omega_{X^\an/S^\an}^\bullet(\cal{V}))$ are locally free and of finite type, and their construction is compatible with any base change; and
     \item the canonical maps
       \[
         \cal{O}_S^\an\otimes\RR^i f_*^\an(V)
@@ -5211,7 +5211,81 @@ In \hyperref[II.6.13]{(6.13)}, we can reduce to the case where $S_1$ is irreduci
   \]
 
 \oldpage{108}
-  We
+  We have the conclusions of \hyperref[II.6.13]{(6.13)} for the morphisms induced from the morphisms in \hyperref[II.6.16.1] by restriction to $S$.
+  The Leray spectral sequence for the cover $\cal{U}$ thus tells us, for $f\colon X=X_1|S\to S$, that
+  \begin{enumerate}[(a)]
+    \item $f$ satisfies \hyperref[II.6.13]{(6.13.i)} and \hyperref[II.6.13]{(6.13.iii)}, after any base change; and
+    \item the sheaves $\mathbb{R}^i f_*\Omega_{X/S}^\bullet(\cal{V})$ are coherent, and this remains true after any base change $T\to S$.
+  \end{enumerate}
+
+  Finally, it is clear that (a)+(b)$\implies$\hyperref[II.6.13]{(6.13.ii)}.
+\end{rmenv}
+
+\begin{rmenv}{6.17}
+\label{II.6.17}
+  We now prove \hyperref[II.6.14]{(6.14)}.
+  Under the hypotheses of \hyperref[II.6.14]{(6.14)}, the pair $(\overline{X},Y)$ is $C^\infty$-locally constant on $S$.
+  We can show this by lifting vector fields on $S$ to vector fields on $\overline{X}$ tangent $Y$.
+  Claim~(i) of \hyperref[II.6.13]{(6.13)} then follows.
+
+  By \hyperref[I.2.30]{(I.2.30)}, the morphism
+  \[
+  \label{II.6.17.1}
+    \cal{O}_S^\an \otimes \RR^i f_*^\an V
+    \simto \RR^i f_*^\an\left(\Omega_{X/S}^\bullet(\cal{V}^\an)\right)
+  \tag{6.17.1}
+  \]
+  is an isomorphism, and this remains true after any base change.
+
+  To finish the proof, it remains to show that the sheaves $\mathbb{R}^i f_*(\Omega_{X/S}^\bullet(\cal{V}))$ are coherent, and satisfy
+  \[
+    \RR^i f_*\left(\Omega_{X/S}^\bullet(\cal{V})\right)^\an
+    \simto \RR^i f_*^\an\left(\Omega_{X/S}^\bullet(\cal{V}^\an)\right),
+  \]
+  and that these two properties remain true after any base change.
+
+  The proof is parallel to that of \hyperref[II.6.13]{(6.13)}:
+  \begin{enumerate}[(a)]
+    \item Let $\cal{V}_0$ be the canonical extension \hyperref[II.5.5]{(5.5)} of $\cal{V}$ to $\overline{X}$.
+      By \hyperref[II.3.16]{(3.16)}, the injection
+      \[
+        \varphi\colon \Omega_{\overline{X}/S}^\bullet\langle Y\rangle(\cal{V})
+        \to j_*\Omega_{X/S}^\bullet(\cal{V})
+      \]
+      is a quasi-isomorphism, and so too is
+      \[
+        \varphi^\an\colon \Omega_{\overline{X}^\an/S^\an}^\bullet\langle Y\rangle(\cal{V}^\an)
+        \to j_*^\mm\Omega_{X^\an/S^\an}^\bullet(\cal{V});
+      \]
+      this remains true after any base change.
+      The finiteness theorem (EGA~III, 3.2.1) then implies that, after any base change, the sheaves
+\oldpage{109}
+      \[
+        \RR^i \overline{f}_* \left(\Omega_{\overline{X}/S}^\bullet\langle Y\rangle(\cal{V})\right)
+        \simto \RR^i f_*\left(\Omega_{X/S}^\bullet\langle Y\rangle(\cal{V})\right)
+      \]
+      are algebraically coherent.
+      Proceeding as in \hyperref[II.6.7]{(6.7)}, this time using the relative variants of GAGA, we can reduce \hyperref[II.6.14]{(6.14)} to the following lemma:
+  \end{enumerate}
+\end{rmenv}
+
+\begin{itenv}{Lemma 6.18}
+\label{II.6.18}
+  The morphism of complexes
+  \[
+    j_*^\mm\Omega_{\overline{X}^\an/\overline{S}^\an}^\bullet(\cal{V})
+    \to j_*\Omega_{\overline{X}^\an/\overline{S}^\an}^\bullet(\cal{V})
+  \]
+  induces an isomorphism on the cohomology sheaves, and this remains true after any base change.
+\end{itenv}
+
+\begin{proof}
+  This is a local problem on $\overline{X}$, and we treat it by putting $\cal{V}$ into a canonical form \hyperref[II.5.6]{(5.6.ii)} and repeating the proof of \hyperref[II.6.9]{(6.9)}.
+\end{proof}
+
+\begin{rmenv}{6.19}
+\label{II.6.19}
+  The example
 \end{rmenv}
 
 
