@@ -303,7 +303,7 @@ If $X$ is connected, with base point $x_0$, then the sheaf $\Pi_1(X)$ correspond
   Let $X$ be an analytic space \hyperref[0.1]{(0.1)}.
   We define a (holomorphic) \emph{vector bundle} on $X$ to be a locally free sheaf of modules that is of finite type over the structure sheaf $\cal{O}$ of $X$.
   If $\cal{V}$ is a vector bundle on $X$, and $x$ a point of $X$, then we denote by $\cal{V}_{(x)}$ the free $\cal{O}_{(x)}$-module of finite type of germs of sections of $\cal{V}$.
-  If $\mathfrak{m}_x$ is the maximal ideal of $\cal{O}_{(x)}$, then we define the \emph{fibre at $x$ of the vector bundle $\cal{V}$} to be the \todo of finite rank
+  If $\mathfrak{m}_x$ is the maximal ideal of $\cal{O}_{(x)}$, then we define the \emph{fibre at $x$ of the vector bundle $\cal{V}$} to be the $\CC$-vector space of finite rank
   \[
   \label{I.2.1.1}
     \cal{V}_x = \cal{V}_{(x)} \otimes_{\cal{O}_{(x)}} \cal{O}_{(x)}/\mathfrak{m}_x.
@@ -1157,7 +1157,7 @@ Some results in general topology (\hyperref[I.2.24]{(2.24)} to \hyperref[I.2.27]
   Let $\cal{V}$ be an arbitrary holomorphic vector bundle on $X$.
   The choice of a basis $e\colon\CC^n\simto\cal{V}$ of $\cal{V}$ allows us to think of $\cal{V}$ as being defined by a
 \oldpage{22}
-  constant vector \todo ($\CC^n$), and the above remarks apply:
+  constant vector space ($\CC^n$), and the above remarks apply:
   connections on $\cal{V}$ correspond, via \hyperref[I.3.1.2]{(3.1.2)}, with $(n\times n)$-matrices of differential forms on $X$.
   If $\omega_e$ is the matrix of the connection $\nabla$ in the basis $e$, and if $f\colon\CC^n\to\simto\cal{V}$ is another basis of $\cal{V}$, with matrix $A\in\GL_n(\cal{O})$ (where $A=e^{-1}f$), then \hyperref[I.3.1.2]{(3.1.2)}
   \[
@@ -1364,7 +1364,7 @@ In particular, it follows from \hyperref[I.4.5]{(4.5.ii)} and from \hyperref[I.2
 \label{I.4.6}
   To a differential equation $E$ on $\scr{L}$, we have thus associated
   \begin{enumerate}[a)]
-    \item a holomorphic vector bundle $\cal{V}$ endowed with a connection (which is automatically integrable) \todo ; and
+    \item a holomorphic vector bundle $\cal{V}$ endowed with a connection (which is automatically integrable) on the bundle $P^{n-1}(\scr{L})$ ; and
     \item a surjective homomorphism $\lambda\colon\cal{V}\to\scr{L}$ (by $i=0$ in \hyperref[I.4.2.3]{(4.2.3)}).
   \end{enumerate}
   Furthermore, the solutions of $E$ are exactly the images under $\lambda$ of the horizontal sections of $\cal{V}$.
@@ -1546,13 +1546,13 @@ In this section, we specialise the results of \hyperref[I.4]{(4)} to the case wh
       & \PP_S^1.
     \end{tikzcd}
   \]
-  Then there exists exactly one \todo ($S$-automorphism) of $\PP_S^1$ that sends $u$ to $v$.
+  Then there exists exactly one projective transformation ($S$-automorphism) of $\PP_S^1$ that sends $u$ to $v$.
 \end{itenv}
 
 \begin{proof}
   The problem is local on $S$, which allows us to suppose that $X_2$ is defined by the $\cal{O}_S$-algebra $\cal{O}_S[T]/(T^3)$, and that $u(X_2)$ and $v(X_2)$ are contained inside the same affine line, say, $\AA_S^1$.
   By translation, we can assume that $u(0)=v(0)=0$.
-  We must then prove the existence and uniqueness of a \todo $p(x)=(ax+b)(cx+d)$ that satisfies $p(0)=0$, with first derivative $p'(0)\neq0$ and given second derivative $p''(0)$.
+  We must then prove the existence and uniqueness of a projective transformation $p(x)=(ax+b)(cx+d)$ that satisfies $p(0)=0$, with first derivative $p'(0)\neq0$ and given second derivative $p''(0)$.
   We have that $b=0$, and $p$ can be written uniquely in the form
 \oldpage{30}
   \[
@@ -1947,7 +1947,7 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
   \[
     (f,g)\colon X\to\PP^1(\CC)
   \]
-  \todo the projective connection.
+  belongs to the projective connection.
   We have that
   \[
     \begin{aligned}
@@ -1978,7 +1978,7 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
     \end{aligned}
   \]
 
-  We conclude by noting that $(a,b)$ is uniquely determined by $(-a,\frac13b-\frac{1}{12}(a^2+2a'))$, and that, for any holomorphic function $g$ on an open subset $U$ of $\CC$, there exists a unique projective connection on $U$ satisfying $\theta(\varphi)=g$, for $\varphi$ \todo the connection (same proof as for \hyperref[I.5.10]{(5.10)}, or \hyperref[I.5.8]{(5.8)}).
+  We conclude by noting that $(a,b)$ is uniquely determined by $(-a,\frac13b-\frac{1}{12}(a^2+2a'))$, and that, for any holomorphic function $g$ on an open subset $U$ of $\CC$, there exists a unique projective connection on $U$ satisfying $\theta(\varphi)=g$, for $\varphi$ belonging to the connection (same proof as for \hyperref[I.5.10]{(5.10)}, or \hyperref[I.5.8]{(5.8)}).
 \end{proof}
 
 
@@ -1998,7 +1998,6 @@ If $\scr{F}$ is a sheaf on $X$, then we pose:
   A \emph{multiform section} of $\scr{F}$ on $X$ is a global section of the inverse image $\pi^*\scr{F}$ of $\scr{F}$ on $\widetilde{X}_{x_0}$.
 
   If $s$ is a multiform section of $\scr{F}$ on $X$, then a \emph{determination of $s$ at a point $x$ of $X$} is an element of the fibre $\scr{F}_{(x)}$ of $\scr{F}$ at $x$ that is an inverse image of $s$ under a local section of $\pi$ at $x$.
-  \textbf{\todo (check)}
   Each point in $\pi^{-1}(x)$ thus defines a determination of $s$ at $x$.
   We define the \emph{base determination} of $s$ at $x_0$ to be the determination defined by $\widetilde{x}_0$.
   We define a \emph{determination of $s$ on an open subset $U$ of $X$} to be a section of $\scr{F}$ over $U$ whose \todo at every point of $U$ is a determination of $s$ at that point.
@@ -2011,7 +2010,7 @@ If $\scr{F}$ is a sheaf on $X$, then we pose:
 
 \begin{rmenv}{Example 6.4}
 \label{I.6.4}
-  If $\scr{F}$ is a coherent analytic sheaf on a complex-analytic space, then $\scr{F}$ satisfies the principle of analytic continuation if and only if $\scr{F}$ has no \todo components.
+  If $\scr{F}$ is a coherent analytic sheaf on a complex-analytic space, then $\scr{F}$ satisfies the principle of analytic continuation if and only if $\scr{F}$ has no embedded components.
 \end{rmenv}
 
 \begin{itenv}{Proposition 6.5}
@@ -2827,7 +2826,7 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
     Let $\nabla$ be the connection on $\cal{O}^n$ given by the matrix $U\cdot\frac{\dd z}{z}$ for some $U\in\GL_n(\CC)$.
     Then the general solution of the equation $\nabla e=0$ is
     \[
-      e = \exp(-\log z\cdot U)f = \todo
+      e = \exp(-\log z\cdot U)f \coloneqq z^{-U}\cdot f
     \]
     and thus the monodromy is the automorphism of $\cal{O}^n$ given by the constant matrix $\exp(-2\pi iU)$.
   \end{itenv}
@@ -3603,7 +3602,7 @@ We can also immediately deduce, from \hyperref[II.2.18]{(2.18)} and \cite{GAGA} 
 
 \oldpage{72}
 
-This section brings together some constructions that are ``local at infinity\todo'' of which we will later have use.
+This section brings together some constructions that are ``local at infinity'' of which we will later have use.
 
 \begin{rmenv}{Definition 3.1}
 \label{II.3.1}
@@ -3753,7 +3752,7 @@ This section brings together some constructions that are ``local at infinity\tod
 \label{II.3.4}
   Let $Y$ be a normal crossing divisor in $S$.
   Locally on $X$, we can write $Y$ as a sum of smooth divisors $Y_i$.
-  We denote by $Y^p$ (resp. $\widetilde{Y}^p$) the union (resp. disjoint sum) of the $p$-fold intersections (??\todo??) of the $Y_i$;
+  We denote by $Y^p$ (resp. $\widetilde{Y}^p$) the union (resp. disjoint sum) of the $p$-fold intersections of the $Y_i$;
   the $Y^p$, thus locally defined, glue to give a subspace $Y^p$ of $X$, and the $\widetilde{Y}^p$ glue to give the normalised variety of $Y^p$.
   We have $\widetilde{Y}^0=Y^0=X$, and we set $\widetilde{Y}=Y^1$.
   Let $a\colon Y^p\to X$ be the projection.
