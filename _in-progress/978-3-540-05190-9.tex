@@ -1535,7 +1535,7 @@ In this section, we specialise the results of \hyperref[I.4]{(4)} to the case wh
 \label{I.5.1}
   Let $S$ be an analytic space, and let $q\colon X_2\to S$ be an analytic space over $S$ that is locally isomorphic to the finite analytic space over $S$ defined by the $\cal{O}_S$-algebra $\cal{O}_S[T]/(T^3)$.
 
-  The fact that the group $\mathrm{PGL}_2$ acts \todo on $\PP^1$ has the following infinitesimal analogue.
+  The fact that the group $\mathrm{PGL}_2$ acts sharply $3$-transitively on $\PP^1$ has the following infinitesimal analogue.
 \end{rmenv}
 
 \begin{itenv}{Lemma 5.2}
@@ -1650,7 +1650,7 @@ It is not difficult to show that such a morphism $\gamma$ is defined by a unique
   A \emph{projective connection} on $X$ is a morphism $\gamma\colon X_3\hookrightarrow P_\tg$ that makes the diagram in \hyperref[I.5.6.1]{(5.6.1)} commute.
 \end{rmenv}
 
-Intuitively, giving a projective connection (the infinitesimal version) allows us to define \todo
+Intuitively, giving a projective connection (the infinitesimal version) allows us to define the cross-ratio of 4 infinitesimally-neighbouring points, and we then know how to define the cross-ration of 4 neighbouring points (the local form of \hyperref[II.5.6]{(5.6)}).
 
 \begin{rmenv}{5.7}
 \label{I.5.7}
@@ -1876,7 +1876,7 @@ Intuitively, giving a projective connection (the infinitesimal version) allows u
       The equation then reduces to \hyperref[I.5.9.2]{(5.9.2)}.
   \end{enumerate}
 
-  We will only need to use the fact that $\theta(f)$ can be expressed in terms of \todo:
+  We will only need to use the fact that $\theta(f)$ can be expressed in terms of cross-ratios:
   we have, for $Z_i\sim Z$,
   \[
   \label{I.5.9.4}
@@ -5598,7 +5598,49 @@ It also shows that the sum of the $i_x(\cal{V})$ is independent of the arbitrary
 
 \begin{rmenv}{7.5}
 \label{II.7.5}
-  Let
+  Let $(u'_i)_{i\in I}$ and $(H'_{ij})_{i,j\in I}$ be another system satisfying \hyperref[II.7.4.1]{(7.4.1)}, \hyperref[II.7.4.2]{(7.4.2)}, and \hyperref[II.7.4.3]{(7.4.3)}, and let $H_i$ be a homotopy
+  \[
+  \label{II.7.5.1}
+    u'_i - u_i = dH_i + H_id.
+  \tag{7.5.1}
+  \]
+  Suppose that
+  \[
+  \label{II.7.5.2}
+    H_i + H_{ij} = H'_{ij} + H_j
+    \qquad\mbox{(on $U_i\cap U_j$).}
+  \tag{7.5.2}
+  \]
+
+  We then have
+  \[
+    u'-u = dH+Hd
+  \]
+  with the homotopy $H$ having non-zero coordinates given by
+  \[
+    H_{\sigma(0)}\colon f_*(U_\sigma,K^n) \to f_*(U_\sigma,L^{n-1}).
+  \]
+
+  Similarly, by \hyperref[II.7.5.1]{(7.5.1)} and \hyperref[II.7.5.2]{(7.5.2)}, respectively,
+  \[
+    \begin{aligned}
+      u'_1 - u_1 &= d'H + Hd'
+    \\u'_2 - u_2 &= d''H + Hd''.
+    \end{aligned}
+  \]
+
+  Equation~\hyperref[II.7.4.3]{(7.4.3)} implies that $H_{ii}=0$.
+  The morphism \hyperref[II.7.4.4]{(7.4.4)} thus induces a morphism $u_\alt$ (or, simply, $u$)
+  \[
+  \label{II.7.5.3}
+    u_\alt\colon f_*(\cal{U},\alt,K) \to f_*(\cal{U},\alt,L).
+  \tag{7.5.3}
+  \]
+  Similarly, under the hypotheses of hyperref[II.7.5.1]{(7.5.1)} and \hyperref[II.7.5.2]{(7.5.2)}, $u_\alt$ and $u'_\alt$ are homotopic.
+\end{rmenv}
+
+\begin{rmenv}{7.6}
+\label{II.7.6}
 \end{rmenv}
 
 
