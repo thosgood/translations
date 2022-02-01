@@ -5508,12 +5508,12 @@ It also shows that the sum of the $i_x(\cal{V})$ is independent of the arbitrary
     = \prod_{\sigma\in\Hom(\Delta_n,I)} f_*(U_\sigma,\scr{F})
   \]
   on $S$ form a simplicial system of sheaves, functorially in $\scr{F}$.
-  If $K$ is a bounded-below complex of sheaves on $X$, then we denote by $f_*(\cal{U},K)$ the simple complex associated to the double complex of the $f_*(\cal{U},K^n)(\Delta_m)$, in which we take the first differential to be that induced by the functoriality of the differential $\dd$ of $K$, i.e.
+  If $K$ is a bounded-below complex of sheaves on $X$, then we denote by $f_*(\cal{U},K)$ the simple complex associated to the double complex of the $f_*(\cal{U},K^n)(\Delta_m)$, in which we take the first differential to be that induced by the functoriality of the differential $d$ of $K$, i.e.
   \[
   \label{II.7.3.1}
-    \dd
-    = \dd'+\dd''
-    = f_*(\cal{U},\dd) + (-1)^n\sum(-1)^i\partial_i.
+    d
+    = d'+d''
+    = f_*(\cal{U},d) + (-1)^n\sum(-1)^i\partial_i.
   \tag{7.3.1}
   \]
 
@@ -5548,6 +5548,57 @@ It also shows that the sum of the $i_x(\cal{V})$ is independent of the arbitrary
 \begin{rmenv}{7.4}
 \label{II.7.4}
   Let $K$ and $L$ be complexes on $X$.
+  For each $i$, let $u_i$ be the morphism of complexes
+  \[
+  \label{II.7.4.1}
+    u_i\colon K|U_i \to L|U_i
+  \tag{7.4.1}
+  \]
+  and, for each pair $(i,j)$, let $H_{ij}$ be a homotopy
+  \[
+  \label{II.7.4.2}
+    u_i - u_j = d H_{ij} + H_{ij}d
+    \qquad\mbox{(on $U_i\cap U_j$).}
+  \tag{7.4.2}
+  \]
+
+  Suppose that
+  \[
+  \label{II.7.4.3}
+    H_{ij} + H_{jk} = H_{ik}.
+  \tag{7.4.3}
+  \]
+
+  From this data, we obtain a morphism of complexes
+  \[
+  \label{II.7.4.4}
+    u\colon f_*(\cal{U},K) \to f_*(\cal{U},L)
+  \tag{7.4.4}
+  \]
+  as the sum of the morphisms of graded objects
+  \[
+    \begin{aligned}
+      u_1^\bullet = f_*(U_\sigma,u_{\sigma(0)})
+      &\colon f_*(U_\sigma,K^n) \to f_*(U_\sigma,L^n)
+    \\u_2^\bullet = (-1)^n\prod_{\partial_0\tau=\sigma} H_{\tau(1),\tau(0)}
+    &\colon f_*(U_\sigma,K^n) \to \prod_{\partial_0\tau=\sigma} f_*(U,L^{n-1}).
+    \end{aligned}
+  \]
+
+  We note why $u=u'+u''$ commutes with $d=d'+d''$.
+  We have
+  \oldpage{115}
+  \[
+    [u,d] = [u_1,d'] + [u_1,d''] + [u_2,d'] + [u_2,d''].
+  \]
+  The bracket $[u_1,d']$ is zero, since the $u_1$ are morphisms of complexes.
+  The equation $[u_2,d'']=0$ is synonymous to \hyperref[II.7.4.3]{(7.4.3)}.
+  Finally, $[u_1,d'']=-[u_2,d']$ by \hyperref[II.7.4.2]{(7.4.2)}.
+\end{rmenv}
+
+\begin{rmenv}{7.5}
+\label{II.7.5}
+  Let
 \end{rmenv}
 
 
