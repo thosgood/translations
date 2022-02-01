@@ -5355,28 +5355,130 @@ By \hyperref[II.1.10]{(1.10)}, $i_x(\cal{V})=0$ if and only if $\cal{V}$ is regu
 \end{itenv}
 
 We prove first of all that \hyperref[II.6.21]{(6.21.ii)} implies \hyperref[II.6.21]{(6.21.i)} and \hyperref[II.6.20]{(6.20)}.
-By
+By \hyperref[II.6.21]{(6.21.ii)}, for each $x\in Y$ we have extensions $\cal{V}_1$ and $\cal{V}_2$ of $\cal{V}$ to $X\cup\{x\}$ that satisfy ($\alpha$), ($\beta$), and ($\gamma$).
+These extensions glue to give extensions $\cal{V}_1$ and $\cal{V}_2$ of $\cal{V}$ to $\overline{X}$.
+By ($\beta$), we have complexes
+\[
+  K_k\colon \cal{V}_1(kY) \to \Omega_{\overline{X}}^1\langle Y\rangle(\cal{V}_2(kY))
+  \qquad\mbox{(for $k\geq0$).}
+\]
+By ($\gamma$), the complex $K_{k+1}/K_k$ is acyclic, and
+\[
+  \mathbb{H}(\overline{X},K_{k+1}) \to \mathbb{H}(\overline{X},K_k)
+\]
+whence
+\oldpage{111}
+\[
+  \begin{aligned}
+    \mathbb{H}(\overline{X},K_0)
+    \simto& \varinjlim\mathbb{H}(\overline{X},K_k)
+  \\\simto& \mathbb{H}(\overline{X},\varinjlim K_k)
+  \\\cong& \mathbb{H}(\overline{X},j_*\Omega_X^\bullet(\cal{V}))
+  \\\simto& \mathbb{H}(X,\Omega_X^\bullet(\cal{V})).
+  \end{aligned}
+\]
 
+This isomorphism proves \hyperref[II.6.20]{(6.20.i)}.
+Furthermore, by ($\alpha$), we have that
+\[
+  \begin{aligned}
+    \chi_\mathrm{DR}(\cal{V})
+    &= \chi(\overline{X},\cal{V}_1) - \chi(\overline{X},\Omega_X^1\langle Y\rangle\otimes\cal{V}_2)
+  \\&= \chi(\overline{X},\cal{V}_1) - \chi(\overline{X},\Omega_{\overline{X}}^1\langle Y\rangle\otimes\cal{V}_1) - \chi(\overline{X},\Omega_{\overline{X}}^1\langle Y\rangle\otimes\cal{V}_2/\cal{V}_1)
+  \\&= \dim\cal{V}_1\cdot(\chi(\overline{X},\cal{O}) - \chi(\overline{X},\Omega_{\overline{X}}^1\langle Y\rangle)) - \sum_{x\in Y} i_x(\cal{V})
+  \\&= n\chi(X) - \sum_{x\in Y} i_x(\cal{V})
+  \end{aligned}
+\]
+whence
+\[
+\label{II.6.21.1}
+  \chi_\mathrm{DR}^\an(\cal{V}) - \chi_\mathrm{DR}(\cal{V})
+  = \sum_{x\in Y} i_x(\cal{V}).
+\tag{6.21.1}
+\]
+This equation shows that \hyperref[II.6.20]{(6.20.c)}$\implies$hyperref[II.6.20]{(6.20.a)}.
+It also shows that the sum of the $i_x(\cal{V})$ is independent of the arbitrary choices used for each of the $i_x(\cal{V})$, whence \hyperref[II.6.21]{(6.21.i)}.
 
+\begin{rmenv}{6.22}
+\label{II.6.22}
+  We now prove \hyperref[II.6.21]{(6.21.ii)}.
+  Let $e$ be the basis $(\nabla_\tau^i v)_{0\leq i<n}$ of $\cal{V}$, and denote again by $\cal{V}$ the unique extension of $\cal{V}$ to $X\cup\{x\}$ such that $e$ extends to a basis of $\cal{V}$.
+  Let $\Gamma$ be the matrix of the connection in this basis of $\cal{V}$, and in the basis of $\Omega_X^1$ dual to $\tau$.
+  We will show that
+  \[
+  \label{II.6.22.1}
+    (n+\Gamma)\cal{V}_{(x)} \supset \cal{V}_{(x)}
+    \qquad\mbox{for almost all $n\in\ZZ$.}
+  \tag{6.22.1}
+  \]
 
+  By direct calculation, from the fact that the matrix of $\Gamma$ has only one column of coefficients presenting poles
+  \[
+    \Gamma =
+    \begin{pmatrix}
+      0 & 0 & 0 & \cdots & a_0
+    \\1 & 0 & 0 & \cdots & a_1
+    \\0 & 1 & 0 & & \vdots
+    \\\vdots & \vdots & \ddots & & \vdots
+    \\0 & \ldots & 0 & 1 & a_{n-1}
+    \end{pmatrix}
+  \]
+  \oldpage{112}
+  we see that
+  \[
+    \dim\left((n+\Gamma)\cal{V}_{(x)} + \cal{V}_{(x)}/\cal{V}_{(x)}\right)
+    = i_x(\cal{V}).
+  \]
 
+  On the other hand,
+  \[
+    \begin{aligned}
+      \left[(n+\Gamma)\cal{V}_{(x)} : \cal{V}_{(x)}\right]
+      &\coloneqq \dim\left((n+\Gamma)\cal{V}_{(x)}/(n+\Gamma)\cal{V}_{(x)}\cap\cal{V}_{(x)}\right)
+    \\&= -\dim\left(\cal{V}_{(x)}/(n+\Gamma)\cal{V}_{(x)}\cap\cal{V}_{(x)}\right)
+    \\&= -v_x\det(n+\Gamma).
+    \end{aligned}
+  \]
 
-
-
-
-\todo
-
-
-
-
-
-
+  For almost all $n$,
+  \[
+    -v_x \todo
+  \]
+  and \hyperref[II.6.22.1]{(6.22.1)} then follows by comparison.
+  Let $z$ be a uniformiser at $x$, and set $\cal{V}_1=\cal{V}(Nx)$ and $e_1=z^{-N}e$.
+  In this new basis, the matrix of the connection is $\Gamma_1=\Gamma-N$, so that, for large enough $N$, we have, for all $n\leq0$,
+  \[
+    (n+\Gamma_1)(\cal{V}_1)_{(x)} \supset (\cal{V}_1)_{(x)}.
+  \]
+  We define $\cal{V}_2$ by the formula
+  \[
+    (\cal{V}_2)_{(x)} = \Gamma_1((\cal{V}_1)_{(x)}).
+  \]
+  Since $\cal{V}_1\subset\cal{V}_2$, conditions ($\alpha$) and ($\beta$) of \hyperref[II.6.21]{(6.21)} are satisfied, and $\nabla_\tau$ sends $\cal{V}_1(kx)$ to $\cal{V}_2(kx)$ (for $k\geq0$).
+  Finally, $\Gr^k(\nabla)$ from \hyperref[II.6.21]{(6.21)} can be identified with the fibre at $x$ of $\Gamma_1-k\colon\cal{V}_1(n)\to\cal{V}_2(n)$.
+  This morphism is surjective, since
+  \[
+    (\Gamma_1-k)(\cal{V}_1)_{(x)} \supset (\cal{V}_1)_{(x)}
+  \]
+  and
+  \[
+    (\Gamma_1-k)(\cal{V}_1)_{(x)} + (\cal{V}_1)_{(x)}
+    \supset \Gamma_1(\cal{V}_1)_{(x)} = (\cal{V}_2)_{(x)}.
+  \]
+  This finishes the proof of \hyperref[II.6.21]{(6.21)} and \hyperref[II.6.20]{(6.20)}.
+\end{rmenv}
 
 
 
 
 \section{Regularity theorem}
 \label{II.7}
+
+\oldpage{113}
+\begin{rmenv}{7.1}
+\label{II.7.1}
+  In \cite{8},
+\end{rmenv}
 
 
 
