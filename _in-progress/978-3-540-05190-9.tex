@@ -16,6 +16,7 @@
 
 
 \usepackage{amssymb,amsmath}
+\usepackage{mathtools}
 
 \usepackage{hyperref}
 \usepackage{xcolor}
@@ -5285,8 +5286,63 @@ In \hyperref[II.6.13]{(6.13)}, we can reduce to the case where $S_1$ is irreduci
 
 \begin{rmenv}{6.19}
 \label{II.6.19}
-  The example
+  The example that follows shows that algebraic vector bundles with irregular integrable connections can give rise to horrible pathologies.
+  Let $X$ be a smooth separated complex algebraic curve, $\cal{V}$ a vector bundles of dimension~$n$ with a connection on $X$, and $V$ the local system on $X_\cl$ defined by $\cal{V}^\an$.
+  Then
+  \[
+    \begin{aligned}
+      \chi_\mathrm{DR}^\an(\cal{V})
+      &\coloneqq \sum (-1)^i \dim\mathbb{H}^i\left(X_\cl,\Omega_{X^\an}^\bullet(\cal{V})\right)
+    \\&= \sum (-1)^i \dim\HH^i(X_\cl,V)
+    \\&= n\cdot\chi(X_\cl).
+    \end{aligned}
+  \]
+
+  We also define (cf. \hyperref[II.6.20]{(6.20.i)})
+  \[
+    \chi_\mathrm{DR}(\cal{V})
+    = \sum (-1)^i \dim\mathbb{H}^i\left(X,\Omega_X^\bullet(\cal{V})\right).
+  \]
 \end{rmenv}
+
+\begin{itenv}{Proposition 6.20}
+\label{II.6.20}
+  Under the above hypotheses,
+  \begin{enumerate}[(i)]
+    \item the vector spaces $\mathbb{H}^i(X,\Omega_X^\bullet(\cal{V}))$ are of finite dimension; and
+    \item the following conditions are equivalent:
+      \begin{enumerate}[(a)]
+        \item the connection on $\cal{V}$ is regular;
+        \item $\mathbb{H}^\bullet(X,\Omega_X^\bullet(\cal{V}))\simto\mathbb{H}^\bullet(X_\cl,\Omega_{X^\an}^\bullet(\cal{V}))$;
+        \item $\chi_\mathrm{DR}^\an(\cal{V})=\chi_\mathrm{DR}(\cal{V})$.
+      \end{enumerate}
+  \end{enumerate}
+\end{itenv}
+
+We have that (a)$\implies$(b), by \hyperref[II.6.2]{(6.2)}, and that (b)$\implies$(c).
+
+Let $j\colon X\hookrightarrow\overline{X}$ be the smooth projective completion of $X$.
+For $x\in Y=\overline{X}\setminus X$, pick, in a neighbourhood $U$ of $x$,
+\begin{enumerate}[(a)]
+  \item a vector field $\tau$ that disappears simply at $x$, with inverse a form with residue equal to $1$ at $x$; and
+  \item a section $v$ of $\cal{V}$ such that the $\nabla_\tau^i v$ (for $0\leq i<n$) form a basis of $\cal{V}$ on $U\setminus\{x\}$.
+\end{enumerate}
+
+Let $\nabla_\tau^n v=\sum_{i=0}^{n-1}a_i\nabla_\tau^i v$.
+Set
+\[
+  i_x(\cal{V}) = \sup\left\{0,\sup\{-v_X(a_i)\}\right\}.
+\]
+
+By \hyperref[II.1.10]{(1.10)}, $i_x(\cal{V})=0$ if and only if $\cal{V}$ is regular at $x$.
+
+\begin{itenv}{Lemma 6.21}
+\label{II.6.21}
+---
+\begin{enumerate}[(i)]
+  \item The non-negative
+\end{enumerate}
+\end{itenv}
 
 
 
