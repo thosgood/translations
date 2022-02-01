@@ -87,6 +87,7 @@
 \newcommand{\an}{\mathrm{an}}
 \newcommand{\cl}{\mathrm{cl}}
 \newcommand{\mm}{\mathrm{m}}
+\newcommand{\alt}{\mathrm{alt}}
 \newcommand{\detrow}[2]{\operatorname{det}(#1,#2)}
 \newcommand{\simto}{\xrightarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
 \newcommand{\simfrom}{\xleftarrow{\raisebox{-0.7ex}[0ex][0ex]{$\sim$}}}
@@ -5477,7 +5478,76 @@ It also shows that the sum of the $i_x(\cal{V})$ is independent of the arbitrary
 \oldpage{113}
 \begin{rmenv}{7.1}
 \label{II.7.1}
-  In \cite{8},
+  In \cite{8}, P.A.~Griffiths proves the regularity theorem \hyperref[II.7.9] below in the particular case of a generically smooth projective morphism $f\colon X\to\PP^1$, and for constant coefficients.
+  The principle of his method is to directly estimate the order of growth of the horizontal sections of $\RR f_*\Omega_{X/S}^\bullet$, and to apply the criterion of \hyperref[II.4.1]{(4.1.iii)}.
+  His method, suitably generalised, allows us to prove \hyperref[II.7.9]{(7.9)}, but obtaining \hyperref[II.7.11]{(7.11)} seems more difficult.
+  Analogous results, expressed in the language of functions in the Nilsson class, can be found in \cite{22}.
+
+  In \cite{14}, K.~Katz gives, in the case of constant coefficients, an ``arithmetic'' proof of \hyperref[II.7.9]{(7.9)}.
+  The method followed here is also equally due to him.
+  It was rediscovered independently by the author.
+\end{rmenv}
+
+\begin{rmenv}{7.2}
+\label{II.7.2}
+  The purely algebraic construction, recalled in \hyperref[II.7.6]{(7.6)}, of the Gauss--Manin connection is due to Katz--Oda \cite{15}.
+\end{rmenv}
+
+\begin{rmenv}{7.3}
+\label{II.7.3}
+  Let $f\colon X\to S$ be a continuous map between topological spaces, and $\cal{U}=(U_i)_{i\in I}$ an open cover of $X$.
+  We set $\Delta_n=[0,n]$, and, for $\sigma\in\Hom(\Delta_n,I)$, we denote by $j_\sigma$ the inclusion of $U_\sigma=\bigcap_{i\leq n}U_{\sigma(i)}$ into $X$.
+  For $\scr{F}$ a sheaf on $X$, we denote by $f_*(U_\sigma,\scr{F})$ the sheaf
+  \[
+    (fj_\sigma)_* j_\sigma^* \scr{F}
+  \]
+  on $S$.
+  The sheaves
+  \[
+    f_*(\cal{U},\scr{F})(\Delta_n)
+    = \prod_{\sigma\in\Hom(\Delta_n,I)} f_*(U_\sigma,\scr{F})
+  \]
+  on $S$ form a simplicial system of sheaves, functorially in $\scr{F}$.
+  If $K$ is a bounded-below complex of sheaves on $X$, then we denote by $f_*(\cal{U},K)$ the simple complex associated to the double complex of the $f_*(\cal{U},K^n)(\Delta_m)$, in which we take the first differential to be that induced by the functoriality of the differential $\dd$ of $K$, i.e.
+  \[
+  \label{II.7.3.1}
+    \dd
+    = \dd'+\dd''
+    = f_*(\cal{U},\dd) + (-1)^n\sum(-1)^i\partial_i.
+  \tag{7.3.1}
+  \]
+
+\oldpage{114}
+  If $I$ is totally ordered, then we denote by $f_*(\cal{U},\alt,K)$ the sub-complex obtained by restricting to the strictly increasing maps $\sigma\in\Hom_<(\Delta_n,I)$, i.e.
+  \[
+    f_*(\cal{U},\alt,K)^k
+    = \sum_{n+m=k} \prod_{\sigma\in\Hom_<(\Delta_m,I)} f_*(U_\sigma,K^n).
+  \]
+
+  The following are well known:
+
+  \begin{rmenv}{7.3.2}
+  \label{II.7.3.2}
+    The inclusion of $f_*(\cal{U},\alt,K)$ into $f_*(\cal{U},K)$ is a homotopy equivalence.
+  \end{rmenv}
+
+  \begin{rmenv}{7.3.3}
+  \label{II.7.3.3}
+    If, for any $n$ and any $\sigma$, we have
+    \[
+      \RR^i(fj_\sigma)_* j_\sigma^* K^n = 0
+      \qquad\mbox{(for $i>0$)}
+    \]
+    then
+    \[
+      \scr{H}^i f_*(\cal{U},K) \simto \RR^i f_* K.
+    \]
+  \end{rmenv}
+\end{rmenv}
+
+\begin{rmenv}{7.4}
+\label{II.7.4}
+  Let $K$ and $L$ be complexes on $X$.
 \end{rmenv}
 
 
