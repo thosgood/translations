@@ -2330,6 +2330,7 @@ They are either due to N.~Katz (see, most notably, \cite{14,15}), or classical (
 We can easily show, using \hyperref[II.1.6]{(1.6)}, that the triple $(\cal{O}',\dd,\Omega')$ again satisfies \hyperref[II.1.4.1]{(1.4.1)}.
 
 \begin{rmenv}{1.7}
+\label{II.1.7}
   We will mostly be interested in the following examples.
   Let $X$ be a non-singular complex algebraic curve, and let $x\in X$.
   We choose one of the following:
@@ -2875,6 +2876,7 @@ This proposition gives us a procedure for calculating $r$ for a given vector bun
 \end{rmenv}
 
 \begin{itenv}{Theorem 1.19}
+\label{II.1.19}
   Let $V$ be a vector bundle on $D^*$ that is meromorphic at $0$, endowed with a connection $\nabla$.
   Then the following conditions are equivalent:
   \begin{enumerate}[(i)]
@@ -3540,6 +3542,7 @@ This is the case in the following well-known proposition, which shows that the k
 \end{proof}
 
 \begin{rmenv}{Remarks 2.20}
+\label{II.2.20}
   \begin{enumerate}[(i)]
     \item Let $X=D^{n+m}$ and $X^*=(D^*)^n\times D^m$;
       then $Y$ is a normal crossing divisor in $X$.
@@ -3941,6 +3944,7 @@ This section brings together some constructions that are ``local at infinity'' o
   The dual of the vector bundle $\Omega_X^1\langle Y\rangle$ is the bundle $T_X^1\langle-Y\rangle$ of vector fields $v$ on $X$ that satisfy
 \oldpage{79}
   \begin{rmenv}{3.9.1}
+  \label{II.3.9.1}
     For $P\subset[1,n]$, $v|Y_P$ is tangent to $Y_P$.
   \end{rmenv}
 
@@ -5228,7 +5232,7 @@ In \hyperref[II.6.13]{(6.13)}, we can reduce to the case where $S_1$ is irreduci
   We can show this by lifting vector fields on $S$ to vector fields on $\overline{X}$ tangent $Y$.
   Claim~(i) of \hyperref[II.6.13]{(6.13)} then follows.
 
-  By \hyperref[I.2.30]{(I.2.30)}, the morphism
+  By \hyperref[I.2.28]{(I.2.28)}, the morphism
   \[
   \label{II.6.17.1}
     \cal{O}_S^\an \otimes \RR^i f_*^\an V
@@ -5371,10 +5375,10 @@ whence
 \[
   \begin{aligned}
     \mathbb{H}(\overline{X},K_0)
-    \simto& \varinjlim\mathbb{H}(\overline{X},K_k)
-  \\\simto& \mathbb{H}(\overline{X},\varinjlim K_k)
-  \\\cong& \mathbb{H}(\overline{X},j_*\Omega_X^\bullet(\cal{V}))
-  \\\simto& \mathbb{H}(X,\Omega_X^\bullet(\cal{V})).
+    \simto&\,\, \varinjlim\mathbb{H}(\overline{X},K_k)
+  \\\simto&\,\, \mathbb{H}(\overline{X},\varinjlim K_k)
+  \\\cong&\,\, \mathbb{H}(\overline{X},j_*\Omega_X^\bullet(\cal{V}))
+  \\\simto&\,\, \mathbb{H}(X,\Omega_X^\bullet(\cal{V})).
   \end{aligned}
 \]
 
@@ -5744,42 +5748,147 @@ It also shows that the sum of the $i_x(\cal{V})$ is independent of the arbitrary
   If $\cal{V}$ is a vector bundle with regular integrable connection on $X$, then the Gauss--Manin connection on $\RR^if_*(\Omega_{X/S}^\bullet(\cal{V}))$ is regular.
 \end{itenv}
 
-By \hyperref[II.4.6]{(4.6.iii)}
+By \hyperref[II.4.6]{(4.6.iii)}, it suffices to prove \hyperref[II.7.4]{(7.4)} after having replaced $S$ by a Zariski dense open.
+By \hyperref[II.6.13]{(6.13)} and the definition \hyperref[II.4.4]{(4.4.iii)} of regular connections, it suffices to consider the case where $S$ is separated and of dimension~$1$.
 
-\emph{\textbf{TO-DO}}
+If $\cal{U}=(U_i)_{i\in I}$ is a finite open cover of $X$, then there exists a Zariski dense open subset $S_i$ of $S$ such that, for $j$ an inclusion morphism
+\[
+  j\colon U_{i_r}\cap\ldots\cap U_{i_p} \hookrightarrow X,
+\]
+the $\cal{O}_{S_1}$-modules
+\[
+\label{II.7.9.1}
+  \RR^i(fj)_*j^*(\Omega_{X/S}^\bullet(\cal{V}))|S_1
+\tag{7.9.1}
+\]
+are locally free.
+The Leray spectral sequence for $\cal{U}$ thus induces a spectral sequence of locally free $\cal{O}_{S_1}$-modules with connections, with the differentials $d_2$ being horizontal.
+By \hyperref[II.4.6]{(4.6.i)}, it suffices to show that the Gauss--Manin connections on the $\cal{O}_{S_1}$-modules \hyperref[II.7.9.1]{(7.9.1)} are regular.
+This allows us to assume that $f$ factors through a proper morphism.
+By further shrinking $S_1$, and using the resolution of singularities, we see that this leads us to the crucial case where the following conditions are satisfied (cf. the proof that \hyperref[II.6.14](6.14)$\implies$\hyperref[II.6.13]{(6.13)}).
 
+\begin{rmenv}{7.9.2}
+\label{II.7.9.2}
+  $S$ is the complement, in a smooth projective curve $\overline{S}$, of a finite set $T$ of points;
+  $X$ is the complement, in a smooth proper scheme $\overline{X}$, of a normal crossing divisor;
+\oldpage{119}
+  $f$ is the restriction to $X$ of a morphism $\overline{f}\colon\overline{X}\to\overline{S}$ such that $Y\supset f^{-1}(T)$;
+  $\overline{f}^{-1}(S)$ is smooth over $S$, and $Y\cap\overline{f}^{-1}(S)$ is a relative normal crossing divisor on $S$.
+  \[
+    \begin{tikzcd}
+      X \rar[hook] \dar
+      & \overline{X} \dar
+      & Y \lar[hook]
+      & f^{-1}(T) \lar[hook] \dar
+    \\S \rar
+      & \overline{S}
+      && T \ar[ll]
+    \end{tikzcd}
+  \]
 
+  We denote again by $\cal{V}$ a locally free extension of $\cal{V}$ to $\overline{X}$ satisfying the following two conditions:
+\end{rmenv}
 
+\begin{rmenv}{7.9.3}
+\label{II.7.9.3}
+  The matrix of the connection of $\cal{V}|X$ presents at worst logarithmic poles along $Y$.
+\end{rmenv}
 
+\begin{rmenv}{7.9.4}
+\label{II.7.9.4}
+  The residues of the connection along the components of $Y\cap f^{-1}(S)$ do not have any strictly positive integer eigenvalues.
+\end{rmenv}
 
+The hypothesis of \hyperref[II.7.9.4]{(7.9.4)} guarantees \hyperref[II.3.14]{(3.14.i)} that
+\[
+\label{II.7.9.5}
+  \RR^i f_*(\Omega_{f^{-1}(S)/S}^\bullet\langle Y\rangle(\cal{V}))
+  \simto \RR^i f_*(\Omega_{X/S}^\bullet(\cal{V})).
+\tag{7.9.5}
+\]
+Denote by $\RR_0^i(\overline{f})$ the locally free module over $\overline{S}$ given by the quotient of $\RR^i\overline{f}_*(\Omega_{\overline{X}/\overline{S}}^\bullet\langle Y\rangle(\cal{V}))$ (\hyperref[II.3.3.3]{(3.3.3)} and \hyperref[II.3.3.2]{(3.3.2)}) by its torsion sub-sheaf.
+Let $V$ be the local system on $X^\an$ defined by $\cal{V}$.
+By \hyperref[II.6.14]{(6.14)}, we have that
+\[
+  \RR_0^i(\overline{f})^\an \simeq \RR^i f_*^\an V\otimes_\CC\cal{O}_{S^\an}.
+\]
 
+\begin{itenv}{Lemma 7.10}
+\label{II.7.10}
+  The Gauss--Manin connection on $\RR_0^i(\overline{f})|S$ presents at worst a simple pole at each point $t\in T$.
+\end{itenv}
 
+\begin{proof}
+  Let $t\in T$, and let $v$ be a vector field on $S$ defined on a neighbourhood of $t$ that vanishes simply at $t$.
+  It suffices to show that the endomorphisms \hyperref[II.7.6]{(7.6)} $\scr{H}^i\theta(\underline{v})=\nabla_v$ of the sheaves $\RR_0^i(\overline{f})|S$ extend to endomorphisms of the sheaves $\RR_0^i(\overline{f})$.
 
+\oldpage{120}
+  Let $\cal{U}=(U_i)_{i\in I}$ be an open affine cover of $\overline{X}$.
+  By \hyperref[II.3.3.2.3]{(3.3.2.3)} (or, rather, its variant \hyperref[II.3.3.3]{(3.3.3)}), we can lift $v$ to a family $\underline{v}$ of vector fields $v_i$ on the $U_i$ such that
+  \[
+  \label{II.7.10.1}
+    \big\langle v_i,\Omega_{\overline{X}}^\bullet\langle Y\rangle\big\rangle \subset \cal{O}_{U_i}.
+  \tag{7.10.1}
+  \]
 
+  From \hyperref[II.7.10.1]{(7.10.1)}, we can extract the fact that
+  \[
+  \label{II.7.10.2}
+    v_i\llcorner\Omega_{\overline{X}}^\bullet\langle Y\rangle
+    \subset \Omega_{\overline{X}}^\bullet\langle Y\rangle
+    \qquad\mbox{(on $U_i$)}
+  \tag{7.10.2}
+  \]
+  since $\Omega_{\overline{X}}^p\langle Y\rangle=\wedge^p\Omega_{\overline{X}}^1\langle Y\rangle$.
+  The Lie derivative satisfies
+  \[
+    \cal{L}_{v_i} = d\circ(v_i\llcorner) + (v_i\llcorner)\circ d
+  \]
+  and we also have that
+  \[
+  \label{II.7.10.3}
+    \cal{L}_{v_i}\Omega_{\overline{X}}^\bullet\langle Y\rangle
+    \subset \Omega_{\overline{X}}^\bullet\langle Y\rangle
+    \qquad\mbox{(on $U_i$).}
+  \tag{7.10.3}
+  \]
+  Since $\Omega_{\overline{X}/\overline{S}}^\bullet\langle Y\rangle$ is a homomorphic image of $\Omega_{\overline{X}}^\bullet\langle Y\rangle$ \hyperref[II.3.3.2]{(3.3.2)}, we have that
+  \[
+  \label{II.7.10.4}
+    (v_i-v_j)\llcorner\Omega_{\overline{X}/\overline{S}}^\bullet\langle Y\rangle
+    \subset \Omega_{\overline{X}/\overline{S}}^\bullet\langle Y\rangle
+    \qquad\mbox{(on $U_i\cap U_j$)}
+  \tag{7.10.4}
+  \]
+  \[
+  \label{II.7.10.5}
+    \cal{L}_{v_i}\Omega_{\overline{X}/\overline{S}}^\bullet\langle Y\rangle
+    \subset \Omega_{\overline{X}/\overline{S}}^\bullet\langle Y\rangle
+    \qquad\mbox{(on $U_i$).}
+  \tag{7.10.5}
+  \]
+  By \hyperref[II.7.9.3]{(7.9.3)}, $\nabla_{v_i}(\cal{V})\subset\cal{V}$;
+  this, combined with \hyperref[II.7.10.4]{(7.10.4)} and \hyperref[II.7.10.5]{(7.10.5)}, gives us that
+  \[
+  \label{II.7.10.6}
+    (v_i-v_j)\llcorner\Omega_{\overline{X}/\overline{S}}^\bullet\langle Y\rangle(\cal{V})
+    \subset \Omega_{\overline{X}/\overline{S}}^\bullet\langle Y\rangle(\cal{V})
+    \qquad\mbox{(on $U_i\cap U_j$)}
+  \tag{7.10.6}
+  \]
+  \[
+  \label{II.7.10.7}
+    \cal{L}_{v_i}\Omega_{\overline{X}/\overline{S}}^\bullet\langle Y\rangle(\cal{V})
+    \subset \Omega_{\overline{X}/\overline{S}}^\bullet\langle Y\rangle(\cal{V})
+    \qquad\mbox{(on $U_i$).}
+  \tag{7.10.7}
+  \]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  The general construction \hyperref[II.7.4]{(7.4)} associates to $\cal{L}_{v_i}$ and to $(v_i-v_j)\llcorner$ an endomorphism $\theta(\underline{v})$ of $\RR^\bullet f_*(\Omega_{\overline{X}/\overline{S}}^\bullet\langle Y\rangle(\cal{V}))$.
+  This endomorphism is compatible, via \hyperref[II.7.9.5]{(7.9.5)}, with the endomorphism of the same name of $\RR^\bullet f_*(\Omega_{X/S}^\bullet(\cal{V}))$.
+  By \hyperref[II.7.7]{(7.7)}, it can be identified with $\nabla_v$.
+  This proves \hyperref[II.7.10]{(7.10)}, and finishes the proof of \hyperref[II.7.9]{(7.9)}.
+\end{proof}
 
 The following variant of \hyperref[II.7.9]{(7.9)} can be proven in the same way as \hyperref[II.7.10]{(7.10)}.
 
