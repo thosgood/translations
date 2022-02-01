@@ -110,7 +110,6 @@
 \DeclareMathOperator{\Res}{Res}
 \DeclareMathOperator{\codim}{codim}
 
-\newcommand{\todo}{\textbf{ !TO-DO! }}
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
 
@@ -5443,7 +5442,7 @@ It also shows that the sum of the $i_x(\cal{V})$ is independent of the arbitrary
 
   For almost all $n$,
   \[
-    -v_x \todo
+    -v_x\det(n+\Gamma) = -v_x P_\mathrm{char}(\Gamma,-n) = i_x(\cal{V})
   \]
   and \hyperref[II.6.22.1]{(6.22.1)} then follows by comparison.
   Let $z$ be a uniformiser at $x$, and set $\cal{V}_1=\cal{V}(Nx)$ and $e_1=z^{-N}e$.
@@ -5705,9 +5704,49 @@ It also shows that the sum of the $i_x(\cal{V})$ is independent of the arbitrary
   Let $\epsilon$ be the continuous identity map from $X^\an$ to $X$.
   If $\cal{U}$ is a Stein open cover of $X^\an$, and $\underline{v}$ a family of holomorphic liftings of $v$, then the construction in \hyperref[II.7.4]{(7.4)} gives us an endomorphism $\theta^\an(\underline{v})$ of $\RR^if_*^\an(\Omega_{X^\an/S^\an}^\bullet(\cal{V}))$.
 
-  Similarly,
+  Similarly, let $\cal{O}_\infty$ be the sheaf of $C^\infty$ functions with complex values on $S$, $\Omega_{\infty,X/S}^\bullet(\cal{V})$ the complex of relative $C^\infty$ differential forms on $X$ with values in $\cal{V}$, $\cal{U}$ an open cover of $X$, and $\underline{v}$ a family of $C^\infty$ liftings of $v$.
+  Then the construction in \hyperref[II.7.4]{(7.4)} gives us an endomorphism $\theta^\infty(\underline{v})$ of $\RR^if_*^\an(\Omega_{\infty,X/S}^\bullet(\cal{V}))$.
+
+  These endomorphisms do not depend on the choice of $\cal{U}$, nor on the choice of $\underline{v}$, and are compatible with the inclusions
+  \[
+    \begin{tikzcd}
+      \epsilon^\sbullet \RR^i f_*(\Omega_{X/S}^\bullet(\cal{V}))
+        \rar[hook]
+      & \RR^i f_*^\an(\Omega_{X^\an/S^\an}^\bullet(\cal{V}))
+        \rar \dar[equal]
+      & \RR^i f_*^\an(\Omega_{\infty,X/S}^\bullet(\cal{V}))
+        \dar[equal]
+    \\& \RR^i f_*^\an(V)\otimes_\CC\cal{O}_{S^\an}
+        \rar
+      & \RR^i f_*^\an(V)\otimes_\CC\cal{O}_\infty
+    \end{tikzcd}
+  \]
+  It thus suffices to show that $\theta^\infty(\underline{v})$ agrees with the Gauss--Manin connection.
+  To calculate $\theta^\infty(\underline{v})$, we can take $\cal{U}=\{X\}$, and $\underline{v}=\{v_0\}$ to be a $C^\infty$ lifting of $v$, and work with the complex $f_*(\cal{U},\alt,\Omega_{\infty,X/S}^\bullet(\cal{V}))$.
+  We have
+  \[
+    f_*(\cal{U},\alt,\Omega_{\infty,X/S}^\bullet(\cal{V})) = f_*(\Omega_{\infty,X/S}^\bullet(\cal{V}))
+  \]
+  and $\theta(\underline{v})$ is exactly the Lie derivative along $v_0$, which evidently induces $\nabla_v$ on the cohomology.
 \end{proof}
 
+\begin{rmenv}{7.8}
+\label{II.7.8}
+\oldpage{118}
+  Let $f\colon X\to S$ be a smooth morphism between smooth schemes of finite type over $\CC$, and $\cal{V}$ a vector bundle with integrable connection on $X$.
+  The lecture will find in Katz--Oda \cite{15} a proof that the construction  in \hyperref[II.7.6]{(7.6)} always gives an integrable connection, said to be \emph{Gauss--Manin}, on the quasi-coherent sheaves $\RR^if_*\Omega_{X/S}^\bullet(\cal{V})$.
+  We will not use this fact.
+\end{rmenv}
+
+\begin{itenv}{Theorem 7.9}
+\label{II.7.9}
+  Let $f\colon X\to S$ be a smooth morphism between smooth schemes of finite type over $\CC$ satisfying the conclusions (i), (ii), and (iii) of \hyperref[II.6.3]{(6.3)}.
+  If $\cal{V}$ is a vector bundle with regular integrable connection on $X$, then the Gauss--Manin connection on $\RR^if_*(\Omega_{X/S}^\bullet(\cal{V}))$ is regular.
+\end{itenv}
+
+By \hyperref[II.4.6]{(4.6.iii)}
+
+\emph{\textbf{TO-DO}}
 
 
 
@@ -5717,7 +5756,6 @@ It also shows that the sum of the $i_x(\cal{V})$ is independent of the arbitrary
 
 
 
-\todo
 
 
 
@@ -5727,6 +5765,40 @@ It also shows that the sum of the $i_x(\cal{V})$ is independent of the arbitrary
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The following variant of \hyperref[II.7.9]{(7.9)} can be proven in the same way as \hyperref[II.7.10]{(7.10)}.
+
+\begin{itenv}{Proposition 7.11}
+\label{II.7.11}
+\oldpage{121}
+  Let $D$ be the unit disc, $D^*=D\setminus\{0\}$, $X$ a smooth analytic space, $f\colon X\to D$ a proper morphism, $Y$ a normal crossing divisor of $X$ such that $Y\supset f^{-1}(0)$, $X^*=X\setminus Y$, $\cal{V}$ a vector bundle on $X$, $\Gamma$ an integrable connection on $\cal{V}|X^*$ satisfying \hyperref[II.7.9.3]{(7.9.3)} and \hyperref[II.7.9.4]{(7.9.4)}, and $V$ the corresponding local system on $(X^*)^\an$.
+  Suppose that $f|f^{-1}(D^*)$ is smooth, and that $Y\cap f^{-1}(D^*)$ is a relative normal crossing divisor.
+  Set
+  \[
+    \RR_0^i(f) = \RR^i f_*\Omega_{X/D}^\bullet\langle Y\rangle(\cal{V})/T
+  \]
+  where $T$ is the torsion at $\{0\}$.
+  Then
+  \[
+    \RR_0^i(f)|D^* \simto \RR^i f_*V\otimes_\CC\cal{O}_{D^*}
+  \]
+  and the corresponding connection on $\RR_0^i(f)|D^*$ presents at worst a simple pole at $0$.
+\end{itenv}
 
 
 
