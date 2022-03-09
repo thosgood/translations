@@ -38,13 +38,13 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\CC}{\bb{C}}
 \providecommand{\FF}{\bb{F}}
 \providecommand{\QQ}{\bb{Q}}
-\providecommand{\cQQ}{\bar{\QQ}}
 \providecommand{\DR}{{\mathrm{DR}}}
 \providecommand{\cris}{{\mathrm{cris}}}
 \providecommand{\crisp}{{\cris\,\,p}}
 \providecommand{\crisv}{{\cris\,\,v}}
 \providecommand{\BB}{{\mathrm{B}}}
 \providecommand{\simto}{\xrightarrow{\sim}}
+\providecommand{\simfrom}{\xleftarrow{\sim}}
 \providecommand{\et}{\mathrm{et}}
 \providecommand{\OO}{\cal{O}}
 \providecommand{\an}{\mathrm{an}}
@@ -91,11 +91,11 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \oldpage{3 (81)}
 The present article owes much to A. Grothendieck.
 He invented the philosophy of motives, which is our guiding thread.
-Around five years ago, he also said to me, with conviction, that the profinite completion $\hat{\pi}_1$ of the fundamental group of $X\coloneqq\PP^1(\CC)\setminus\{0,1,\infty\}$, with the action of $\Gal(\cQQ/\QQ)$, is a remarkable object, and that it must be studied.
+Around five years ago, he also said to me, with conviction, that the profinite completion $\hat{\pi}_1$ of the fundamental group of $X\coloneqq\PP^1(\CC)\setminus\{0,1,\infty\}$, with the action of $\Gal(\bar{\QQ}/\QQ)$, is a remarkable object, and that it must be studied.
 
 Every finite cover of $X$ can be described by equations with coefficients in the algebraic numbers.
-Applying an element of $\Gal(\cQQ/\QQ)$ to these coefficients, we obtain the equations of another cover.
-Understanding how $\Gal(\cQQ/\QQ)$ permutes the isomorphism classes of finite covers essentially reduces to understanding the Galois action on $\hat{\pi}_1$.
+Applying an element of $\Gal(\bar{\QQ}/\QQ)$ to these coefficients, we obtain the equations of another cover.
+Understanding how $\Gal(\bar{\QQ}/\QQ)$ permutes the isomorphism classes of finite covers essentially reduces to understanding the Galois action on $\hat{\pi}_1$.
 "Essentially", since I have omitted mentioning the base points, and since the Galois covers have not been thought of as $G$-covers, for $G$ their automorphism group.
 
 Up until now, we have not had the language necessary to study the Galois action on $\hat{\pi}_1$.
@@ -107,7 +107,7 @@ In this article, we only consider when $\hat{\pi}_1$ is rendered nilpotent, i.e.
 The profinite group $\hat{\pi}_1^{(N)}$ is a product over primes $\ell$ of nilpotent pro-$\ell$-groups: $\hat{\pi}_1^{(N)} = \prod_\ell \hat{\pi}_1^{(N)}{}\!_\ell$.
 Each $\hat{\pi}_1^{(N)}{}\!_\ell$ is an $\ell$-adic Lie group.
 It admits a Lie algebra $\Lie\hat{\pi}_1^{(N)}{}\!_\ell$, which is a Lie algebra over $\QQ_\ell$.
-If we choose a base point $x\in X(\QQ)=\QQ\setminus\{0,1\}$, then $\Gal(\cQQ/\QQ)$ acts on these Lie algebras.
+If we choose a base point $x\in X(\QQ)=\QQ\setminus\{0,1\}$, then $\Gal(\bar{\QQ}/\QQ)$ acts on these Lie algebras.
 The action, up to inner automorphism, does not depend on the choice of $x$.
 We would like to understand these actions.
 
@@ -323,7 +323,7 @@ $$
   \\\AAf = \hZZ\otimes\QQ.
   \end{gathered}
 $$
-We denote by $\cQQ$ the algebraic closure of $\QQ$ in $\CC$.
+We denote by $\bar{\QQ}$ the algebraic closure of $\QQ$ in $\CC$.
 :::
 
 ::: {.rmenv #chunk-0.3 title="0.3" latex="{0.3}"}
@@ -591,7 +591,7 @@ We also denote by $F$ the filtrations that are induced by extension of scalars.
 :::
 
 ::: {.trmenv #M9 title="(M9)" latex="{(M9)}"}
-$M_\AAf$ is endowed with an action of $\Gal(\cQQ/\QQ)$ which respects $W$.
+$M_\AAf$ is endowed with an action of $\Gal(\bar{\QQ}/\QQ)$ which respects $W$.
 :::
 
 ::: {.trmenv #M10 title="(M10)" latex="{(M10)}"}
@@ -619,7 +619,7 @@ In other words, $c_\DR$ respects $M_\BB\subset M_\BB\otimes\CC=M_\DR\otimes\CC$,
 
 ::: {.trmenv #AM3 title="(AM3)" latex="{(AM3)}"}
 For each prime number $\ell$, let $M_\ell$ be given by extension of scalars of $M_\AAf$, so that $M_\AAf$ is then a restricted product of the $M_\ell$.
-There exists a finite set $S$ of prime numbers such that, for each $\ell$, the representation $M_\ell$ of $\Gal(\cQQ/\QQ)$ is unramified outsied of $S$ and $\ell$.
+There exists a finite set $S$ of prime numbers such that, for each $\ell$, the representation $M_\ell$ of $\Gal(\bar{\QQ}/\QQ)$ is unramified outsied of $S$ and $\ell$.
 :::
 
 ::: {.trmenv #AM4 title="(AM4)" latex="{(AM4)}"}
@@ -627,7 +627,7 @@ For large enough $S$, if $p\not\in S$, then, for all $\ell\neq p$, the eigenvalu
 :::
 
 ::: {.trmenv #AM5 title="(AM5)" latex="{(AM5)}"}
-Let $c\in\Gal(\cQQ/\QQ)$ be complex conjugation.
+Let $c\in\Gal(\bar{\QQ}/\QQ)$ be complex conjugation.
 Then $c$ acts on $M_\AAf$ respecting $M_\BB\subset M_\AAf$, and induces the involution $F_\infty$ on $M_\BB$.
 :::
 ::::
@@ -643,7 +643,7 @@ ii. The data of $M_\AAf$, $\comp_{\AAf,\BB}$, and the Galois action, all togethe
     We define $M_\AAf$ from the $M_\ell$ as the restricted product of the $M_\ell$ with respect to the $\comp_{\ell,\BB}(L\otimes\ZZ_\ell)$ for an arbitrary lattice $L$: this restricted product is Galois stable, and the $\comp_{\ell,\BB}$ induce $\comp_{\AAf,\BB}$.
 
     The data of $M_\ell$, $\comp_{\ell,\BB}$, and the Galois action (resp. $M_\AAf$, $\comp_{\AAf,\BB}$, and the action), all together, are also equivalent to the data of a Galois action on $M_\BB\otimes\QQ_\ell$ (resp. $M_\BB\otimes\AAf$).
-    By [(M6)](#M6) and [(M9)](#M9), the filtration of $M_\BB\otimes\QQ_\ell$ (resp. $M_\BB\otimes\AAf$) induced by $W$ must be stable under $\Gal(\cQQ/\QQ)$.
+    By [(M6)](#M6) and [(M9)](#M9), the filtration of $M_\BB\otimes\QQ_\ell$ (resp. $M_\BB\otimes\AAf$) induced by $W$ must be stable under $\Gal(\bar{\QQ}/\QQ)$.
 
 iii. If $M_\DR$ is given, then the data of $M_{\crisp}$, along with its crystalline Frobenius and $\comp_{\crisp,\DR}$, is equivalent to the data of an automorphism $\phi_p$ of $M_\DR\otimes\QQ_p$.
     By [(M6)](#M6) and [(M10)](#M10), the filtration of $M_\DR\otimes\QQ_p$ induced by $W$ must be stable under $\phi_p$.
@@ -658,8 +658,8 @@ In this section, we will partially describe the system [(M1)--(M10)](#chunk-1.4)
 
 We have $M_\BB=\HH^i(X(\CC),\QQ)$, and $F_\infty$ is induced by the complex conjugation of $X(\CC)$;
 $M_\DR=\HH_\DR^i(X)\coloneqq\bHH^i(X,\Omega_X^\bullet)$, and the Hodge filtration that that of the mixed Hodge theory [@D2, Section 3.2];
-$M_\ell=\HH^i(X\otimes\cQQ,\QQ_\ell)$ is the $\ell$-adic étale cohomology of the scheme over $\cQQ$ induced from $X$ by extension of scalars, and the action of $\Gal(\cQQ,\QQ)$ is given by structure transport.
-_Notation:_ $X\otimes\cQQ$, cf. [(0.4)](#chunk-0.4).
+$M_\ell=\HH^i(X\otimes\bar{\QQ},\QQ_\ell)$ is the $\ell$-adic étale cohomology of the scheme over $\bar{\QQ}$ induced from $X$ by extension of scalars, and the action of $\Gal(\bar{\QQ},\QQ)$ is given by structure transport.
+_Notation:_ $X\otimes\bar{\QQ}$, cf. [(0.4)](#chunk-0.4).
 
 Suppose that $X$ is smooth and proper, and let $S$ be a finite set of prime numbers such that $X$ is the general fibre of $X^\sim$, which is smooth and proper over $\Spec(\ZZ)\setminus S$.
 For $p\not\in S$, $M_\crisp$ is the crystalline cohomology of the reduction $X^\sim\otimes\FF_p$ of $X$ modulo $p$, tensored over $\ZZ_p$ with $\QQ_p$.
@@ -800,7 +800,7 @@ By "$\AAf$-sheaf" we mean the data, for all $\ell$, of a $\QQ_\ell$-sheaf $\cal{
 On the spectrum of a field $k$, the data of $\cal{F}_\ell$ (resp. $\cal{F}_{\ZZ_\ell}$) is equivalent to that of, for every algebraic closure $\bar{k}$ of $k$, a $\QQ_\ell$-vector space $\cal{F}_\ell(\bar{k})$ (resp. a $\ZZ_\ell$-module $\cal{F}_{\ZZ_\ell}(\bar{k})$ of finite type), functorially in $\bar{k}$, and such that the action of $\Gal(\bar{k}/k)$ is continuous.
 Note that $\cal{F}_\AAf(\bar{k})$ is the restricted product of the $\cal{F}_\ell(\bar{k})$ with respect to the $\cal{F}_{\ZZ_\ell}(\bar{k})$.
 
-From [(M'3)](#Mp3), we deduce the data of [(M3)](#M3) and [(M9)](#M9) by setting $M_\AAf\coloneqq(M_\AAf)_\AAf(\cQQ)$.
+From [(M'3)](#Mp3), we deduce the data of [(M3)](#M3) and [(M9)](#M9) by setting $M_\AAf\coloneqq(M_\AAf)_\AAf(\bar{\QQ})$.
 _Notation:_ we write $M_\ell$ (resp. $M_{\ZZ_\ell}$, $M_\AAf$) for $(M_\AAf)_\ell$ (resp. $(M_\AAf)_{\ZZ_\ell}$, $(M_\AAf)_\AAf$).
 
 If $M=\HH_\mot^i(X)$, and $a$ is the morphism $X\to\Spec(\QQ)$, then $M_\ell=\RR^ia_*\QQ_\ell$, and $M_{\ZZ_\ell}$ is equal to the image of $\RR^ia_*\ZZ_\ell$ in $M_\ell$.
@@ -817,16 +817,16 @@ Comparison isomorphisms
 $$
   \begin{aligned}
     \comp_{\DR,\BB}&\colon M_\BB(C)\otimes C \simto M_\DR\otimes C
-  \\\comp_{\AAf,\BB}&\colon M_\BB(C)\otimes\AAf \simto M_\AAf(\cQQ_C)
+  \\\comp_{\AAf,\BB}&\colon M_\BB(C)\otimes\AAf \simto M_\AAf(\bar{\QQ}_C)
   \\\comp_{\crisp,\DR}&\colon M_\DR\otimes\QQ_p \simto M_\crisp
   \end{aligned}
 $$
-that are functorial in $C$, where $\cQQ_C$ is the algebraic closure of $\QQ$ in $C$.
+that are functorial in $C$, where $\bar{\QQ}_C$ is the algebraic closure of $\QQ$ in $C$.
 The first is equivalent to the data of $\comp_{\DR,\BB}$ as in [(M5)](#M5) satisfying [(AM2)](#AM2);
 the second is equivalent to the data of $\comp_{\AAf,\BB}$ as in [(M5)](#M5) satisfying [(AM5)](#AM5).
 :::
 
-In [(M'3)](#Mp3), instead of giving the $M_\AAf$, we could have given only the $\QQ_\ell$-sheaves $M_\ell$, replacing $\comp_{\AAf,\BB}$ by the $\comp_{\ell,\BB}\colon M_B(C)\otimes\QQ_\ell\simto M_\ell(\cQQ_C)$ and requiring the existence of an integer lattice $L\subset M_B(\CC)$ such that the $\comp_{\ell,\BB}(L\otimes\ZZ_\ell)$ be stable under $\Gal(\cQQ/\QQ)$.
+In [(M'3)](#Mp3), instead of giving the $M_\AAf$, we could have given only the $\QQ_\ell$-sheaves $M_\ell$, replacing $\comp_{\AAf,\BB}$ by the $\comp_{\ell,\BB}\colon M_B(C)\otimes\QQ_\ell\simto M_\ell(\bar{\QQ}_C)$ and requiring the existence of an integer lattice $L\subset M_B(\CC)$ such that the $\comp_{\ell,\BB}(L\otimes\ZZ_\ell)$ be stable under $\Gal(\bar{\QQ}/\QQ)$.
 They define the $M_{\ZZ_\ell}$ of [(M'3)](#Mp3).
 
 ::: {.trmenv #Mp6 title="(M'6)" latex="{(M'6)}"}
@@ -885,7 +885,7 @@ $$
   \end{aligned}
 $$
 
-Since every embedding of $E$ into $\CC$ factors through $\cQQ$, $\Gal(\cQQ/\QQ)$ acts on $\Hom(E,\CC)$,
+Since every embedding of $E$ into $\CC$ factors through $\bar{\QQ}$, $\Gal(\bar{\QQ}/\QQ)$ acts on $\Hom(E,\CC)$,
 This action induces the Galois action on $A_\AAf\coloneqq A_\BB\otimes\AAf$ (cf. [(1.5.ii)](#chunk-1.5)).
 
 For $p\not\in P$, and $v$ running over the places of $E$ over $p$, we have that $E\otimes\QQ_p=\prod E_v$, and $\phi_p$ is the automorphism of $E\otimes\QQ_p$ that induces on each $E_v$ the unique lift of the Frobenius $x\mapsto x^p$ of the residue field (cf. [(1.5.iii)](#chunk-1.5)).
@@ -941,7 +941,7 @@ We have $N_\DR=M_\DR$, with the structure of an $A_\DR$-module given by that of 
 (cf. [(M3)](#M3), [(M9)](#M9)) An $\AAf$-sheaf $M_\AAf$ on $\Spec(E)$ (cf. [(1.14)](#chunk-1.14)).
 :::
 
-We define $N_\AAf$ as its direct image over $\Spec(\QQ)$: $N_\AAf(\cQQ)$ is the sum over the $\sigma\colon E\to\cQQ$ of the $M_AAf(\cQQ)$.
+We define $N_\AAf$ as its direct image over $\Spec(\QQ)$: $N_\AAf(\bar{\QQ})$ is the sum over the $\sigma\colon E\to\bar{\QQ}$ of the $M_AAf(\bar{\QQ})$.
 
 ::: {.trmenv #Mp4E title="(M'4)E" latex="{(M'4)\textsubscript{E}}"}
 For each place $v$ of $E$ over $p\not\in P$, a vector space $M_\crisv$ over the completion $E_v$ of $E$ at $v$.
@@ -1068,7 +1068,7 @@ Up until now, our motives have been "isomotives": the $\Hom$ are vector spaces o
 For motives with integer coefficients, I propose the following definitions.
 
 ::: {.rmenv #chunk-1.23 title="1.23 Definition" latex="{1.23 Definition}"}
-A realisation system $M$ over $\QQ$ (resp. $\Spec\ZZ\setminus P$) *with integer coefficients* is a realisation system, denoted by $M\otimes\QQ$, endowed with a lattice $M_\BB\subset(M\otimes\QQ)_\BB$ such that, for all $\ell$, $M_\ell\coloneqq M_\BB\otimes\ZZ_\ell\subset(M\otimes\QQ)_\ell$ is stable under $\Gal(\cQQ/\QQ)$.
+A realisation system $M$ over $\QQ$ (resp. $\Spec\ZZ\setminus P$) *with integer coefficients* is a realisation system, denoted by $M\otimes\QQ$, endowed with a lattice $M_\BB\subset(M\otimes\QQ)_\BB$ such that, for all $\ell$, $M_\ell\coloneqq M_\BB\otimes\ZZ_\ell\subset(M\otimes\QQ)_\ell$ is stable under $\Gal(\bar{\QQ}/\QQ)$.
 :::
 
 :::: {.rmenv #chunk-1.24 title="1.24" latex="{1.24}"}
@@ -1096,7 +1096,7 @@ $$
 $$
 and the data of the comparison morphisms is equivalent to that of an isomorphism of projective systems from $\comp_{\AA/n,\BB}\colon M_\BB\otimes\ZZ/(n)$ to the inverse image of $M_{\ZZ/(n)}$ on $S(C)$.
 
-In the setting of [(1.23)](#chunk-1.23), we can prefer to think of the $M_{\ZZ/(n)}$ as representations of $\Gal(\cQQ/\QQ)$.
+In the setting of [(1.23)](#chunk-1.23), we can prefer to think of the $M_{\ZZ/(n)}$ as representations of $\Gal(\bar{\QQ}/\QQ)$.
 We again set $M_{\hZZ}=\limproj M_{\ZZ/(n)}=\prod M_\ell$.
 :::
 
@@ -1111,5 +1111,39 @@ Combining the variants in [(1.22)](#chunk-1.22) and [(1.24)](#chunk-1.24), we si
 \oldpage{27 (105)}
 
 ::: {.rmenv #chunk-2.1 title="2.1" latex="{2.1}"}
-The
+The *Tate motive* $\ZZ(1)$ is a motive over $\Spec(\ZZ)$ [(1.15)](#chunk-1.15) with integer coefficients [(1.23)](#chunk-1.23).
+Here is its description as a realisation system, in the language of [(1.9)](#chunk-1.9) and [(1.14)](#chunk-1.14) (along with [(1.25)](#chunk-1.25)):
+
+- [(M1)](#M1) and [(M7)](#M7): $\ZZ(1)_\BB=2\pi i\ZZ\subset\CC$ and $F_\infty=-1$.
+- [(M'1)](#Mp1): $\ZZ(1)_\BB(C)=2\pi i\ZZ\subset C$.
+- [(M2)](#M2) and [(M'2)](#Mp2): $\ZZ(1)_\DR=\QQ(1)_\DR=\QQ$.
+- [(M3)](#M3) and [(M9)](#M9): $\ZZ(1)_{\ZZ/n}$ is the group $\mu_n\subset\CC^\times$ of $n$-th roots of unity.
+    The transition morphisms are the $\mu_n\to\mu_m\colon x\mapsto x^{n/m}$ for $m|n$.
+    The action of $\Gal(\bar{\QQ}/\QQ)$ is its action on the $\mu_n$.
+    In the variant [(M'3)](#Mp3), we have $\ZZ(1)_{\ZZ/n}(\bar{k})=\mu_n(\bar{k})$.
+
+    We thus have that $\ZZ(1)_\ell=\limproj\mu_{\ell^n}(\CC)$.
+- [(M4)](#M4), [(M10)](#M10), and [(M'4)](#Mp4): $\ZZ(1)_\crisp=\QQ_p$ and $\phi_p=1/p$.
+- [(M5)](#M5): The canonical comparison isomorphism $\comp_{\DR,\BB}$ is induced by the inclusions $\ZZ(1)_\BB=2\pi i\ZZ\subset\CC$ and $\ZZ(1)_\DR=\QQ\subset\CC$, i.e.
+    $$
+      \ZZ(1)_\BB\otimes\CC \simto \CC \simfrom \ZZ(1)_\DR\otimes\CC.
+    $$
+    The isomorphism $\comp_{\ZZ/n,\BB}$ [(1.25)](#chunk-1.25) is induced by
+    $$
+      \exp(x/n)\colon \ZZ(1)_\BB \to \ZZ/n(1)\subset\CC^\times.
+    $$
+    The isomorphism $\comp_{\crisp,\DR}$ is induced by the inclusion $\QQ\subset\QQ_p$.
+- [(M'5)](#Mp5): Replace $\CC$ by $C$ in [(M5)](#M5).
+- [(M6)](#M6) and [(M8)](#M8): $\ZZ(1)$ is of pure weight $-2$, and $\ZZ(1)_\DR$ is of pure Hodge filtration $-1$: the Hodge type is $(-1,-1)$.
+:::
+
+::: {.rmenv title="Notation" latex="{Notation}"}
+$\ZZ(n)\coloneqq\ZZ(1)^{\otimes n}$, $\QQ(n)\coloneqq\ZZ(n)\otimes\QQ$, and, for any motive $M$, $M(n)\coloneqq M\otimes\ZZ(n)$.
+Depending on the context, we also denote by $(n)$ taking the tensor product with a realisation of $\ZZ(n)$.
+
+If $X$ is smooth and projective over $k$, and absolutely irreducible of dimension $n$, then $\HH_\mot^{2n}(X)$ is the motive over $k$ induced from $\QQ(-n)$ by change of base from $\QQ$ to $k$.
+:::
+
+::: {.rmenv #chunk-2.2 title="2.2" latex="{2.2}"}
+For $A$
 :::
