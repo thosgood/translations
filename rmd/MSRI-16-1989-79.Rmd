@@ -33,6 +33,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\ZZ}{\bb{Z}}
 \providecommand{\hZZ}{\widehat{\bb{Z}}}
 \providecommand{\RR}{\bb{R}}
+\providecommand{\Gm}{\bb{G}_\mathrm{m}}
 \renewcommand{\AA}{\bb{A}}
 \providecommand{\AAf}{\AA^\mathrm{f}}
 \providecommand{\CC}{\bb{C}}
@@ -1145,5 +1146,72 @@ If $X$ is smooth and projective over $k$, and absolutely irreducible of dimensio
 :::
 
 ::: {.rmenv #chunk-2.2 title="2.2" latex="{2.2}"}
-For $A$
+For an abelian variety $A$ over $\QQ$, we denote by $T(A)\otimes\QQ$ the motive $\HH_1^\mot(A)$ that is dual to $\HH_\mot^1(A)$, and by $T(A)$ the motive with integer coefficients defined by the integer structure $\HH_1(A(\CC),\ZZ)\subset\HH_1(A(\CC),\QQ)=(T(A)\otimes\QQ)_\BB$.
+\oldpage{28 (106)}
+The functor $A\mapsto T(A)$ is fully faithful: from $T(A)$ we can recover $\Lie(A)=T(A)_\DR/F^0$ and the complex torus
+$$
+  A(\CC)
+  = T(A)_\BB\setminus\Lie(A)
+  = T(A)_\BB\setminus T(A)_\DR\otimes\CC/F^0.
+$$
+The complex torus $A(\CC)$ determines the abelian variety $A_\CC$ over $\CC$ induced by $A$, and the $\QQ$-structure is uniquely determined by that of the Lie algebra.
+
+An abelian scheme $A$ over $S$ similarly defines a smooth motive with integer coefficients $T(A)$ over $S$.
+:::
+
+::: {.rmenv #chunk-2.3 title="2.3" latex="{2.3}"}
+Recall that a *smooth $1$-motive* $X$ over a scheme $S$ consists of
+
+a. a group scheme $L$ over $S$ that, locally, for the étale topology, is a constant group scheme defined by a free $\ZZ$-module of finite type;
+    an abelian scheme $A$ over $S$, and a torus $T$ over $S$;
+b. an extension $E$ of $A$ by $T$, and a morphism $\bar{u}\colon L\to A$;
+c. a morphism $u\colon L\to E$ lifting $\bar{u}$.
+
+We write $X=[L\xrightarrow{u}E]$.
+
+A $1$-motive $X$ over $\QQ$ defines a motive over $\QQ$ with integer coefficients $T(X)$ (cf. [@D3, Section 10, but the crystalline aspect is missing]), and the functor $X\mapsto T(X)$ is fully faithful (cf. [@D3, both 10.1.3 and 2.2]).
+
+For $X=[\ZZ\to0]$, $T(X)$ is the unit motive $\ZZ(0)$.
+For $X=[0\to\Gm]$, $T(X)$ is the Tate motive $\ZZ(1)$.
+For an abelian variety $A$ and $X=[0\to A]$, $T(X)=T(A)$.
+Of course, here, as in [(2.2)](#chunk-2.2), we can take more general bases than $\Spec(\QQ)$.
+:::
+
+:::: {.rmenv #chunk-2.4 title="2.4" latex="{2.4}"}
+I conjecture that the set of motives with integer coefficients of the form $T(X)$ for some $1$-motive $X$ is stable under extensions.
+If $T'$ is a motive with integer coefficients, with $T'\otimes\QQ\simto T(X)\otimes\QQ$, then $T'$ is of the form $T(X')$ with $X'$ isogenous to $X$.
+The conjecture is thus equivalent to the claim that the set of motives $T(X)\otimes\QQ$, for $1$-motives $X$, is stable under extensions.
+The word "conjecture" is an abuse of terminology, since the statement itself is not precise.
+What is conjectured is that every realisation system [(1.9)](#chunk-1.9) (or [(1.24)](#chunk-1.24), over $S$) that is an extension $T(X)$ by $T(Y)$ (for $1$-motives $X$ and $Y$), and "natural", "coming from geometry", is isomorphic to that defined by a $1$-motive $Z$ that is an extension of $X$ by $Y$.
+
+\oldpage{29 (107)}
+A point $a$ of an abelian variety $A$ over $\QQ$ defines a $1$-motive $[\ZZ\xrightarrow{u}A]$ with $u(1)=a$.
+The motive $T([\ZZ\xrightarrow{u}A])$ is an extension of $\ZZ(0)$ by $T(A)$, and the conjecture, applied to $\ZZ(0)$ and $T(A)$, implies that
+$$
+  A(\QQ) \simto \Ext^1(\ZZ(0),T(A))
+$$
+or, equivalently,
+$$
+  A(\QQ)\otimes\QQ \simto \Ext^1(\QQ(0),T(A)\otimes\QQ)
+$$
+(where $\Ext^1$ is in the abelian category of motives).
+
+More generally, if $E$ is an extension of an abelian variety by a torus, we want
+$$
+  E(\QQ) \simto \Ext^1(\ZZ(0),T(E))
+$$
+and similarly for more general bases that $\Spec(\QQ)$.
+
+The case $E=\Gm$ is particularly interesting: for every smooth scheme $S$ over $\Spec(\ZZ)$, we want, in the category of motives with integer coefficients over $S$,
+
+::: {.eqtag #equation-2.4.1}
+$$
+  \Gamma(S,\OO_S^\times) \simto \Ext^1(\ZZ(0),\ZZ(1)).
+\tag{2.4.1}
+$$
+:::
+::::
+
+::: {.rmenv #chunk-2.5 title="2.5" latex="{2.5}"}
+Let
 :::
