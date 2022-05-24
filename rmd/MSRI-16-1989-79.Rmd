@@ -1356,17 +1356,17 @@ Transition and comparison morphisms are defined as in [(2.9)](#chunk-2.9).
 We now explain what the $F$-crystal structure is at $p$.
 Let $\hGm$ be the completion of $\Gm$ along its fibre of characteristic $p$, and $\hGm\otimes\QQ_p$ the corresponding rigid analytic space.
 For a Frobenius lifting $\widetilde{F}\colon\hGm\to\hGm$, the crystalline Frobenius is a morphism $\phi_p[\widetilde{F}]$, over $\hGm\otimes\QQ_p$, from $\widetilde{F}^\bullet K(q)_\DR$ to $K(q)_\DR$ that is horizontal and compatible with the torsor structures.
-If we change $\widetilde{F}$ to $\widetilde{F}'$, then $\widetilde{F}$ and $\widetilde{F}'$ have the same reduction modulo $p$, the connection $\nabla$ gives an isomorphism of $\widetilde{F}^\bullet K(q)_\DR$ with $\widetilde{F}^{'\bullet} K(q)_\DR$, and the diagram
+If we change $\widetilde{F}$ to $\widetilde{F}'$, then $\widetilde{F}$ and $\widetilde{F}'$ have the same reduction modulo $p$, the connection $\nabla$ gives an isomorphism of $\widetilde{F}^\bullet K(q)_\DR$ with $\widetilde{F}'^{\bullet} K(q)_\DR$, and the diagram
 $$
   \begin{CD}
     \widetilde{F}^\bullet K(q)_\DR @>{\phi_p[\widetilde{F}]}>> K(q)_\DR
   \\@| @|
-  \\\widetilde{F}^{'\bullet} K(q)_\DR @>>{\phi_p[\widetilde{F}']}> K(q)_\DR
+  \\\widetilde{F}'^{\bullet} K(q)_\DR @>>{\phi_p[\widetilde{F}']}> K(q)_\DR
   \end{CD}
 $$
 commutes.
 
-In terms of $\phi_p^{-1}\colon K(q)_\DR\to\widetilde{F}^{'\bullet} K(q)_\DR$, and via the identifications $K(q)_\DR=\ZZ(1)_\DR=\OO$, whence $\widetilde{F}^{'\bullet}=\OO$, the compatibility with the torsor structures and with the connections can be written as
+In terms of $\phi_p^{-1}\colon K(q)_\DR\to\widetilde{F}'^{\bullet} K(q)_\DR$, and via the identifications $K(q)_\DR=\ZZ(1)_\DR=\OO$, whence $\widetilde{F}'^{\bullet}=\OO$, the compatibility with the torsor structures and with the connections can be written as
 $$
   \begin{aligned}
     \phi_p^{-1}(k+m)
