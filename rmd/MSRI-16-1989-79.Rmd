@@ -1271,7 +1271,7 @@ i. A system of torsors, [(M1)P](#M1P) to [(M10)P](#M10P) in [(2.5)](#chunk-2.5),
 ii. If $M$ is a motive, then the torsor $P$ under $M$ is *motivic* (or a *torsor in motives*) if the extension $E$ is a motive.
 :::
 
-::: {.rmenv #chunk-2.7 title="2.7" latex="{2.7}"}
+:::: {.rmenv #chunk-2.7 title="2.7" latex="{2.7}"}
 Let $M$ be a realisation system with integer coefficients.
 An *extension* $E$ of $\ZZ(0)$ by $M$ is an extension $E\otimes\QQ$ of $\QQ(0)$ by $M\otimes\QQ$, endowed with an integer structure such that the sequence $0\to M_\BB\to E_\BB\to\ZZ\to0$ is exact.
 
@@ -1279,4 +1279,63 @@ As in [(2.5)](#chunk-2.5), such an extension is described by a system of torsors
 As in [(1.24)](#chunk-1.24) and [(1.25)](#chunk-1.25), this corresponds to modifying [(2.5)](#chunk-2.5) as follows:
 
 \oldpage{31 (109)}
+
+::: {.trmenv #M1PZ title="(M1)P$\ZZ$" latex="{(M1)P$\ZZ$}"}
+$P_\BB$ is an $M_\BB$-torsor.
+:::
+
+::: {.trmenv #M3,9PZ title="(M3,9)P$\ZZ$" latex="{(M3,9)P$\ZZ$}"}
+$P_\ell$ is, for each $\ell$, a $\Gal(\bar{\QQ}/\QQ)$-equivariant $M_\ell$-torsor.
+It is equivalent to give a projective system of equivariant $M_{\ZZ/(n)}$-torsors $P_{\ZZ/(n)}$, or their projective limit $P_{\hZZ}$, which is an equivariant $M_{\hZZ}$-torsor.
+:::
+
+::: {.trmenv #M5PZ title="(M5)P$\ZZ$" latex="{(M5)P$\ZZ$}"}
+Replace $\comp_{\AAf,\BB}$ by $\comp_{\ell,\BB}$ for each $\ell$, or $\comp_{\ZZ/(n),\BB}$, or $\comp_{\hZZ,\BB}$.
+:::
+
+Such a system of torsors, which defines an extension of $\ZZ(0)$ by $M$, is also called a *torsor under $M$*.
+It is said to be *motivic* if the corresponding extension is, i.e. if the torsor under $M\otimes\QQ$ that it defines is motivic.
+::::
+
+:::: {.rmenv #chunk-2.8 title="2.8" latex="{2.8}"}
+We leave to the reader the task of understanding the constructions with bases $S$ more general than $\Spec(\QQ)$.
+We note only that, in the de Rham realisation, $P_\DR$ is an $M_\DR$-torsor on $S_\QQ$.
+It is endowed with a restriction of the structure group $F^0P_\DR\subset P_\DR$ to $F^0M_\DR$.
+It is also endowed with an integrable connection $\nabla$.
+Along each section $p$ of $P_\DR$, the vertical tangent space can be identified with $M_\DR$;
+the connection $\nabla$ is thus a morphism
+$$
+  \nabla\colon P_\DR\to\Omega^1\otimes M_\DR.
+$$
+It satisfies $\nabla(p+m)=\nabla p+\nabla m$.
+Transversality becomes the following:
+
+::: {.trmenv #chunk-2.8.1 title="2.8.1" latex="{2.8.1}"}
+For a local section $p$ of $F^0P_\DR$, $\nabla p\in\Omega^1\otimes F^{-1}(M_\DR)$.
+:::
+::::
+
+::: {.rmenv #chunk-2.9 title="2.9" latex="{2.9}"}
+We explicitly describe the torsor in motives $K(x)$ under $\ZZ(1)$ (the *Kummer torsor*) corresponding to $x\in\QQ^\times$ as in [(2.4.1)](#chunk-2.4.1).
+
+The $\ZZ(1)_\BB$-torsor $K(x)_\BB$ is the torsor under $2\pi i\ZZ$ of logarithms of $x$.
+Since $F^0\ZZ(1)_\DR=0$, we have $K(x)_\DR=\ZZ(1)_\DR=\QQ$.
+The $(\ZZ/(n))(1)$-torsor $K(x)_{\ZZ/(n)}$ is the torsor of $n$-th roots of unity of $x$.
+The transition morphisms $K(x)/_{\ZZ(nm)}\to K(x)_{\ZZ/(n)}$ are given by $y\mapsto y^m$.
+The Galois action is evident.
+
+The morphism $\comp_{\DR,\BB}$ is induced by the inclusion of $K(x)_\BB$ into $\CC$.
+The morphism $\comp_{\ZZ/(n),\BB}$ is induced by $K(x)_\BB\to K(x)_{\ZZ/(n)}$ given by $z\mapsto\exp(z/n)$.
+
+The crystalline Frobenius $\phi_p\colon K(x)_\DR\otimes\QQ_p\to K(x)_\DR\otimes\QQ_p$, i.e. $\QQ_p\to\QQ_p$, is defined for $x$ a unit at $p$.
+We denote by $\log$ the $p$-adic logarithm, which is characterised by
+$$
+  \phi_p^{-1}(0) = \log(x^{1-p}).
+$$
+:::
+
+\oldpage{32 (110)}
+
+::: {.rmenv #chunk-2.10 title="2.10" latex="{2.10}"}
+On
 :::
