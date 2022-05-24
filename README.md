@@ -1,6 +1,10 @@
 # To-do list
 
-## Technical
+## Bugs
+
+- (PDF) sometimes the content of an environment starts on a new line (e.g. 2.1, 2.4, 2.6, 2.7 etc. in `MSRI-16-1989-79`)
+
+## Improvements
 
 - **consider different output format? just `html_document`?**
   + (https://github.com/thosgood/bookdown-maths when it's done)

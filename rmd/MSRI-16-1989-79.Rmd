@@ -27,6 +27,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 <!-- Shortcuts -->
 
+<!-- General shortcuts -->
 \providecommand{\mot}{\mathrm{mot}}
 \providecommand{\bb}[1]{{\mathbb{#1}}}
 \providecommand{\PP}{\bb{P}}
@@ -34,6 +35,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\hZZ}{\widehat{\bb{Z}}}
 \providecommand{\RR}{\bb{R}}
 \providecommand{\Gm}{\bb{G}_\mathrm{m}}
+\providecommand{\hGm}{G_\mathrm{m}^\wedge}
 \renewcommand{\AA}{\bb{A}}
 \providecommand{\AAf}{\AA^\mathrm{f}}
 \providecommand{\CC}{\bb{C}}
@@ -49,7 +51,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\et}{\mathrm{et}}
 \providecommand{\OO}{\cal{O}}
 \providecommand{\an}{\mathrm{an}}
-
+<!-- DeclareMathOperator-type things -->
 \providecommand{\Gal}{\operatorname{Gal}}
 \providecommand{\Lie}{\operatorname{Lie}}
 \providecommand{\Ext}{\operatorname{Ext}}
@@ -65,6 +67,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\comp}{\operatorname{comp}}
 \providecommand{\Gr}{\operatorname{Gr}}
 \providecommand{\Fr}{\operatorname{Fr}}
+\providecommand{\dd}{\operatorname{d}}
 
 
 <!-- Content -->
@@ -1320,7 +1323,7 @@ We explicitly describe the torsor in motives $K(x)$ under $\ZZ(1)$ (the *Kummer 
 
 The $\ZZ(1)_\BB$-torsor $K(x)_\BB$ is the torsor under $2\pi i\ZZ$ of logarithms of $x$.
 Since $F^0\ZZ(1)_\DR=0$, we have $K(x)_\DR=\ZZ(1)_\DR=\QQ$.
-The $(\ZZ/(n))(1)$-torsor $K(x)_{\ZZ/(n)}$ is the torsor of $n$-th roots of unity of $x$.
+The $\ZZ/(n)(1)$-torsor $K(x)_{\ZZ/(n)}$ is the torsor of $n$-th roots of unity of $x$.
 The transition morphisms $K(x)/_{\ZZ(nm)}\to K(x)_{\ZZ/(n)}$ are given by $y\mapsto y^m$.
 The Galois action is evident.
 
@@ -1337,5 +1340,56 @@ $$
 \oldpage{32 (110)}
 
 ::: {.rmenv #chunk-2.10 title="2.10" latex="{2.10}"}
-On
+On $\Gm=\Spec\ZZ[q,q^{-1}]$, the universal section $q$ of $\Gm$ also defines a torsor in motives $K(q)$ under $\ZZ(1)$, on the base $\Gm$.
+We now describe it.
+
+The $\ZZ(1)_\BB$-torsor $K(q)_\BB$ on $C^\times$ is the local system of logarithms of $q$.
+Since $F^0\ZZ(1)_\DR=0$, $K(q)_\DR$ is trivial: $K(n)_\DR=\OO$ (on ${\Gm}_\QQ$).
+It is endowed with the integrable connection $\nabla\colon K(q)_\DR\to\Omega^1\otimes\ZZ(1)_\DR=\Omega^1$ given by
+$$
+  \nabla u = \dd u - \frac{\dd q}{q}.
+$$
+The $\ZZ/(n)(1)$-torsor $K(q)_{\ZZ/(n)}$ is that of the $n$-th roots of $q$.
+This is a locally constant sheaf on $(\Gm\otimes\ZZ[1/n])_\et$.
+Transition and comparison morphisms are defined as in [(2.9)](#chunk-2.9).
+
+We now explain what the $F$-crystal structure is at $p$.
+Let $\hGm$ be the completion of $\Gm$ along its fibre of characteristic $p$, and $\hGm\otimes\QQ_p$ the corresponding rigid analytic space.
+For a Frobenius lifting $\widetilde{F}\colon\hGm\to\hGm$, the crystalline Frobenius is a morphism $\phi_p[\widetilde{F}]$, over $\hGm\otimes\QQ_p$, from $\widetilde{F}^\bullet K(q)_\DR$ to $K(q)_\DR$ that is horizontal and compatible with the torsor structures.
+If we change $\widetilde{F}$ to $\widetilde{F}'$, then $\widetilde{F}$ and $\widetilde{F}'$ have the same reduction modulo $p$, the connection $\nabla$ gives an isomorphism of $\widetilde{F}^\bullet K(q)_\DR$ with ${\widetilde{F}'}^\bullet K(q)_\DR$, and the diagram
+$$
+  \begin{CD}
+    \widetilde{F}^\bullet K(q)_\DR @>{\phi_p[\widetilde{F}]}>> K(q)_\DR
+  \\@| @|
+  \\{\widetilde{F}'}^\bullet K(q)_\DR @>>{\phi_p[\widetilde{F}']}> K(q)_\DR
+  \end{CD}
+$$
+commutes.
+
+In terms of $\phi_p^{-1}\colon K(q)_\DR\to{\widetilde{F}'}^\bullet K(q)_\DR$, and via the identifications $K(q)_\DR=\ZZ(1)_\DR=\OO$, whence ${\widetilde{F}'}^\bullet=\OO$, the compatibility with the torsor structures and with the connections can be written as
+$$
+  \begin{aligned}
+    \phi_p^{-1}(k+m)
+    &= \phi_p^{-1}(k) + pm
+  \\\dd\phi_p^{-1}(0) = \widetilde{F}^\bullet\left(\frac{\dd q}{q}\right) - p\frac{\dd q}{q}.
+  \end{aligned}
+$$
+When we change the Frobenius lifting, we have
+$$
+  \phi_p^{-1}[\widetilde{F}'](0) - \phi_p^{-1}[\widetilde{F}](0)
+  = \log(\widetilde{F}'/\widetilde{F}).
+$$
+For $\widetilde{F}\colon q\mapsto q^p$, we have
+$$
+  \phi_p^{-1}[q\mapsto q^p](0) = 0.
+$$
+\oldpage{32 (111)}
+For $x\in\QQ$ a unit at $p$, and $\widetilde{F}$ such that $\widetilde{F}(x)=x$, we thus have $\phi_p^{-1}[\widetilde{F}](0)=\log(x/x^p)$ at $x$, as required by [(2.9)](#chunk-2.9)
 :::
+
+
+
+# Torsors under $\ZZ(n)$ {#section-3}
+
+\oldpage{33 (112)}
+The study
