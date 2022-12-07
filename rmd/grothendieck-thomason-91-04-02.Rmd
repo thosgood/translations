@@ -28,10 +28,14 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 <!-- Shortcuts -->
 
 \providecommand{\Cat}{\mathsf{Cat}}
+\providecommand{\CAT}{\mathsf{CAT}}
+\providecommand{\Set}{\mathsf{Set}}
+\providecommand{\Top}{\mathsf{Top}}
+\providecommand{\Topcat}{\mathsf{Topcat}}
 \providecommand{\Diag}{\mathsf{Diag}}
 \providecommand{\Mor}{\operatorname{Mor}}
-\providecommand{\DD}{\operatorname{D}}
 \providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\DD}{\operatorname{D}}
 
 <!-- Content -->
 
@@ -148,4 +152,41 @@ When we only talk about pre-derivators, in the the cases that I know of we can t
 It is when we have to worry about satisfying the rather draconian axioms of derivators that we are forced to considerably restrict the domain, as I mentioned, or at least the arrows $u\colon X\to Y$ that we consider in $\Cat$, when we work with not only the corresponding inverse image functor $u^*$ but also with the direct images $u_!$ and $u_*$.
 But I am getting ahead of myself...
 
-On
+On the subject of domain, I want to again add that, in my eyes, the domain $\Cat$ does not represent, in any way, the complete significance of a given derivator.
+This, and more generally a pre-derivator $D$, being defined as a $2$-functor between $2$-categories
+$$
+  D\colon\Diag^\circ\to\CAT
+$$
+(where $\CAT$ denotes the category of $\mathfrak{U}$-categories contained ($\subset$) in the reference universe $\mathfrak{U}$, always implicit, whilst $\Cat$ denotes the category of "small" categories, i.e. those that are elements of $\mathfrak{U}$), it follows (in a not-at-all-tautological way) from the axioms of derivators (that I do not spell out here) that the category $D(X)$ (of "coefficients of type $D$ on $X$") associated to a small category $X$ *depends only, up to equivalence, on the topos defined by $X$*, and thus only on the category $X^\wedge=\underline{\Hom}(X^\circ,\Set)$ of presheaves of sets on $X$.
+More precisely, if $f\colon X\to Y$ is an arrow in $\Cat$, then the "inverse image" functor
+$$
+  f^*\colon D(Y)\to D(X)
+$$
+for coefficients of type $D$ is an equivalence of categories, provided that the similar functor $Y^\wedge\to X^\wedge$ (which corresponds to a particularly important derivator on $\Cat$...) is an equivalence of categories;
+i.e. provided that $f$ is fully faithful and that every object of $Y$ is a direct factor of an object of the form $f(x)$ (or provided that $f$ induces an equivalence between the "Karoubi envelopes" of $X$ and of $Y$).
+This also implies, when $\Diag$ is equal to the whole of $\Cat$, that we can regard $D$ as coming from a $2$-functor
+$$
+  \underline{\Topcat}^\circ\to\CAT
+$$
+going from the $2$-category of "categorical" toposes (i.e. those equivalent to a topos coming from some $X$ in $\Cat$) to the category $\CAT$.
+With this, we can hope to extend the derivator, i.e. the theory of coefficients in question, to the whole category $\underline{\Top}$ of toposes, i.e. to a functor (which we again denote by $D$)
+$$
+  D\colon\underline{\Top}^\circ\to\CAT.
+$$
+I believe that this is always possible, and in an essentially unique way.
+This is true in all the concrete cases that I have looked at.
+If, for example, $D$ is the (abelian) derivator defined by an abelian category via the category of complexes and the notion of quasi-isomorphism, we obtain, for every topos $\mathcal{X}$ (supposing that the category is that of $k$-modules, where $k$ is an arbitrary ring), the derived category $D(\mathcal{X},k)$ of $k$-modules on $\mathcal{X}$, and this $D(\mathcal{X},k)$ does indeed depend contravariantly on $\mathcal{X}$.
+It is true that, when trying to define the *covariant* laws $f_!$ and $f_*$, or, more precisely, when trying to establish their existence, we struggle with $f_!$, with this $f_!$ existing only by placing draconian hypotheses on $f$.
+\oldpage{8}
+(In any case, I am cheating a bit here, for lacking of having spelled out the restrictions on the degrees of the complexes, like $D^+(\mathcal{X},k)$ or $D^-(\mathcal{X},k)$. But here is not the place to enter into technicalities.)
+
+As for the axioms for derivators, the most essential of all is the existence, for every arrow $f\colon X\to Y$ in $\Diag$, of functors $f_!$ and $f_*$ from $D(X)$ to $D(Y)$, left and right adjoint (respectively) to $f^*$.
+To develop (in the base category, say) the theory of the *exact sequence of suspension*, it is the existence of $f_!$ that we need, and for this it suffices that $\Diag$ contain the finite ordered sets (and even strictly less, if we insist).
+But I point out that the canonical sequences that we thus construct with the help of a single functor $f_!$ and under the hypothesis that the derivator be "pointed" (i.e. the $D(X)$ are pointed and the functors $f^*$ are compatible with the zero objects) are only exact if we impose a suitable (left) "exactness axiom", as part of the handful of axioms of a derivator;
+and dually for the exact sequence of cosuspension.
+These constructions still work not only in every category $D(e)$, but also naturally in the $D(X)$, for $X$ in $\Diag$.
+(In fact, $D(X)$ can be considered as the base category of an "induced derivator" $D_X\colon Y\mapsto D(X\times Y)$, to which we can apply the general results. The axioms of derivators are such that they are stable under passing from a derivator to an induced derivator.)
+This suggests to disentangle the notions of "left derivator" (postulating the existence of homological direct images $f_!$, excluding the cohomological direct images $f_*$) and "right derivator", including the dual aspect of the homotopical formalism.^[*[Editor] In "Les Dérivateurs" [@9], Grothendieck makes the opposite choice concerning the terminology of left or right derivator, justified by the left or right exactness properties of the pre-derivator, implied by the existence of $f_*$ or $f_!$, respectively.*]
+But I point out right away that certain properties of derivators seem important to me, and even when their *statement* relies only on one of the two structures (left or right), they are proven using the existence of the two covariances simultaneously.
+
+To
