@@ -28,8 +28,10 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 <!-- Shortcuts -->
 
 \providecommand{\Cat}{\mathsf{Cat}}
+\providecommand{\Diag}{\mathsf{Diag}}
 \providecommand{\Mor}{\operatorname{Mor}}
 \providecommand{\DD}{\operatorname{D}}
+\providecommand{\Hom}{\operatorname{Hom}}
 
 <!-- Content -->
 
@@ -129,4 +131,21 @@ The same idea had the appearance of working for the non-commutative variants of 
 But it was only a few months ago that I permitted myself the leisure of verifying that my intuition was good and well justified.
 (Stewardship work, almost, as I have done hundreds and thousands of times!)
 
-This point
+With this point in mind, it is now very clear that the notion of derivator (even more than that of a model category, which is, in my eyes, a simple "non-intrinsic" intermediary to constructing derivators) is one of the four of five most fundamental notions in algebraic topology, which for thirty years now has been waiting to be developed.
+As for notions of comparable scope, I can only think of that of *topos*, and those of *$n$-categories* and *$n$-stacks* on a topos (notions that still haven't been defined to this day, except for $n\leq2$).
+But for me, the "paradise lost" for algebraic topology is by no means the eternal semi-simplicial category $\Delta^\wedge$, no matter how useful it might be, and even less so is it topological spaces (both of which live inside the $2$-category of toposes, which is like a common envelope), but instead the category $\Cat$ of small categories, thought of with a geometric eye by the set of intuitions, astonishingly rich, coming from toposes.
+Indeed, the toposes that have as sheaves of sets the $\mathcal{C}^\wedge$, with $\mathcal{C}$ in $\Cat$, are by far the simplest of the known toposes, and it is because I believe this that I stressed so much the examples of these ("categorical") toposes in SGA 4 IV [@2].
+
+I now come to the definition, as I understand it, of a "*pre-derivator*" $D$ --- it being understood that the more delicate notion of "derivator" is deduced from this by imposing some quite natural axioms, the list of which I will give to you if you ask me.
+To develop an algebra of derivators (and first of all, pre-derivators), we must first fix a common "*domain*" for those that we will consider, i.e. a full subcategory $\Diag$ of $\Cat$.
+The case which I prefer at the moment is that where $\Diag$ is all of $\Cat$, in which case I interpret a derivator as being a sort of "theory of coefficients" (homological or cohomological or homotopical, they are all the same) on $\Cat$, where this category is thought of as a category *of objects of a geometric and spatial nature*, like "spaces", strictly speaking, much more than of an algebraic nature;
+just as commutative rings (via their spectra) and the schemes that we construct with them are, for me, geometric-topological objects in essence, and by no means algebraic.
+(Algebra being only an intermediary to obtain the geometric vision, which is the fundamental one).
+A more or less diametrically opposite case is that where $\Diag$ is the category of finite ordered sets, or even, at a push, an even more restricted category.
+But to be fully comfortable, one has to suppose sooner or later that the category $\Diag$ ("category of indices" or "types of diagrams" for the derivators in question) is stable under the typical constructions on categories: finite products, subcategories, pushouts, even $\underline{\Hom}$;
+and also, of course, taking the opposite category, which happens particularly often when passing from a statement to its dual, in particular.
+When we only talk about pre-derivators, in the the cases that I know of we can take the domain to be all of $\Cat$.
+It is when we have to worry about satisfying the rather draconian axioms of derivators that we are forced to considerably restrict the domain, as I mentioned, or at least the arrows $u\colon X\to Y$ that we consider in $\Cat$, when we work with not only the corresponding inverse image functor $u^*$ but also with the direct images $u_!$ and $u_*$.
+But I am getting ahead of myself...
+
+On
