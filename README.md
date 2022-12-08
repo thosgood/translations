@@ -24,4 +24,3 @@
   + seems that super/subscripts seem to cause problems? (see also `AIF-4-...`)
 - (HTML) when anchors are inside other anchors, all the anchors appear when you hover over them... (e.g. Deligne's "minus three points")
 - (HTML) option to have split-by-section (e.g. `MSRI-16-1989-79` would be easier to read if each section was on a separate page)
-- (HTML) make the title (in the nav bar) always on, not just "on hover"
