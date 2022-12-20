@@ -258,7 +258,7 @@ On this subject, a remark on the subject of the functoriality of the prederivato
 It is clear that we obtain a $2$-functor
 $$
   \mathsf{MOD}\to\mathsf{PREDER}
-\tag{*}
+\tag{$*$}
 $$
 on the $2$-category of model categories (which is not a $\frak{U}$-category, if we do not make restrictions on the categories in question and on the admissible functors, as well as asking for compatibility with localisers).
 But if we have two model categories, then it is necessary to introduce in the category
@@ -268,4 +268,10 @@ $$
   \underline{\Hom}_{\mathrm{Loc}}(\cal{M},\cal{M}')
 $$
 (the latter notation if the localisers $W$ and $W'$ are implicit in the notation $\cal{W}$ and $\cal{W}'$) a natural localiser $W_{\cal{M},\cal{M}'}$ consisting of morphisms $u\colon F\to G$ between morphisms $F$ and $G$ of model categories such that $u(x)\colon F(x)\to G(x)$ is in $W'$ for all $x\in\cal{M}$.
-We call these the "*quasi-isomorphisms*" (*with respect to the localisers $W$ and $W'$*)
+We call these the "*quasi-isomorphisms*" (*with respect to the localisers $W$ and $W'$*).
+It is clear that the quasi-isomorphisms are sent to isomorphisms by the above $2$-functor, and so, by passing to the category of fractions, we find a functor (induced from ($*$))
+$$
+  \cal{H}(\cal{M},\cal{M}')\to\underline{\Hom}(\DD_{\cal{M}},\DD_{\cal{M}'})
+\tag{$**$}
+$$
+where it is implicit in the notation that $\cal{M}$ and $\cal{M}'$ are endowed with their localisers $W$ and $W'$.
