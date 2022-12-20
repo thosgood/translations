@@ -74,20 +74,20 @@ They are already sketched out here and there (along with a number of other key i
 In this 1983 reflection, which has helped me a lot these days, I end up spreading myself rather thin by following lateral paths, rather than returning to the essential ideas of my initial point.
 As another useful source for anybody interested in these basic questions, I point to two or three letters to Larry Breen, which I thought that I would include in the published text of *Pursuing Stacks* [@7].
 On the one hand, I would like to talk to you about categories of models and the notion of "derivators" (replacing the defunct "derived categories" of Verdier, which are decidedly inadequate for our needs).
-On the other hand, I have a lot to say about $\Cat$ as a category of models for all kinds of "homotopy types".
+On the other hand, I have a lot to say about $\Cat$ as a model category for all kinds of "homotopy types".
 But this will probably be for another time (assuming that your interest survives reading this letter).
-So today it will be the category of models and the notion of a derivator.
+So today it will be the model category and the notion of a derivator.
 
 
-# The only essential structure of a category of models is the data of the "localiser" $W\subset\Mor(\cal{M})$
+# The only essential structure of a model category is the data of the "localiser" $W\subset\Mor(\cal{M})$
 
-I also call a category $\cal{M}$ endowed with such a "localiser" (containing all isomorphisms, and containing the remaining arrow in the set $\{u,v,uv\}$ whenever it contains any two in that set) a "category of models".
+I also call a category $\cal{M}$ endowed with such a "localiser" (containing all isomorphisms, and containing the remaining arrow in the set $\{u,v,uv\}$ whenever it contains any two in that set) a "model category".
 The essential homotopical constructions are independent of all supplementary structures, such as a set $C$ of "cofibrations" or a set $F$ of "fibrations", or even both together.
 Such supplementary structures are useful insofar as they allow us to make essential constructions more explicit, as well as establishing their existence.
 But they are no more essential for the intrinsic meaning of the operations (which they have actually tended to obscure up until now) than the more of less arbitrary choice of a basis for a module in linear algebra.
 As terminology, I will speak of "categories with cofibrations" (or "with fibrations"), or of "Quillen categories" (or "Quillen triples"), etc. whenever such supplementary structures appear.
 
-By their richness of delicately intertwined structures, it is the *closed Quillen triples* $(W,C,F)$ that are, to me, the most beautiful structure discovered so far of the "enriched" category of models.
+By their richness of delicately intertwined structures, it is the *closed Quillen triples* $(W,C,F)$ that are, to me, the most beautiful structure discovered so far of the "enriched" model category.
 I had thought that I could do without them, but in the end I could not, and I believe that they will continue to be useful (if not absolutely essential).
 \oldpage{4}
 In the opposite direction, in terms of the economic use of means used to construct the essentials, it is the notion of a *category with cofibrations*, or *with fibrations*, by K.S. Brown [@3] (with the quite obvious generalisation given by Anderson [@1]) that appears the most beautiful to me.
@@ -95,13 +95,13 @@ However, I did not manage to understand the justification for the system of axio
 Your axioms^[*[Editor] The letter from Thomason to Grothendieck on the 3rd of January, 1991 [@7]. See also [@14; @15].*] (seen as extending those of Quillen) seem to me to be prohibitively demanding, when compared to those of Brown--Anderson --- apart from the fact, only, that you do not seem to require for the sets $C$ and $F$ to be stable under composition; but I hardly know of an example where this axiom would cause a problem.
 Please enlighten me if there is something that I am missing.
 
-An example: if a structure of fibrations (in the sense of Brown--Anderson) satisfies the familiar condition of "properness" (which is the case for the structures considered first of all by Brown, where all the objects are fibrant over the final object), then we can replace this structure $(W,F)$ with another $(W,F_W)$ that is canonically associated with the localiser $W$, i.e. with the category of models in question, by taking $F_W$ to be the set of arrows in $\cal{M}$ that are, what I call, *$W$-fibrations* $f\colon X\to Y$, i.e. those that are squarable and such that the change of base functor $Y'\mapsto X'=X\times_Y Y'$ from $\cal{M}/Y$ to $\cal{M}/X$ sends quasi-isomorphisms to quasi-isomorphisms.
+An example: if a structure of fibrations (in the sense of Brown--Anderson) satisfies the familiar condition of "properness" (which is the case for the structures considered first of all by Brown, where all the objects are fibrant over the final object), then we can replace this structure $(W,F)$ with another $(W,F_W)$ that is canonically associated with the localiser $W$, i.e. with the model category in question, by taking $F_W$ to be the set of arrows in $\cal{M}$ that are, what I call, *$W$-fibrations* $f\colon X\to Y$, i.e. those that are squarable and such that the change of base functor $Y'\mapsto X'=X\times_Y Y'$ from $\cal{M}/Y$ to $\cal{M}/X$ sends quasi-isomorphisms to quasi-isomorphisms.
 For every localiser, this gives a set of arrows that contains all isomorphisms, and that is stable under composition, change of base, and direct factors.
 Saying that $(W,F_W)$ is a Brown structure is equivalent to saying that there exist "enough $W$-fibrations", by which I mean that every arrow $u$ factors as $u=fi$, with $i\in W$ and $f\in F_W$.
 Dually, for categories with cofibrations $(W,C)$, we can (in the proper case) replace this with some structure $(W,C_W)$ canonically associated to the localiser, and by introducing the set of *$W$-cofibrations*.
 In this way, I tend to mostly think of a proper (and not "canonical") structure of fibrations $(W,F)$ as a recipe or criterion for characterising *certain* $W$-fibrations, with which it often suffices to work, since there are "enough"of them.
 And yet, I have found in the case of $\mathsf{Cat}$ that working with $W$-fibrations (which is much less restrictive than the Quillen "fibrations" that you introduced) has been essential.
-And I have been persuaded that it should also be very useful in a category of models, such as $\Delta^\wedge$ (semi-simplicial sets), since, because everything is substantially less demanding than the notion of Kan fibrations, being a $W$-fibration already implies everything that I consider (whether right or wrong) as the essential cohomological and homotopical properties of Kan fibrations (which, to me, are *not* in the nature of extension-lifting properties of morphisms).
+And I have been persuaded that it should also be very useful in a model category, such as $\Delta^\wedge$ (semi-simplicial sets), since, because everything is substantially less demanding than the notion of Kan fibrations, being a $W$-fibration already implies everything that I consider (whether right or wrong) as the essential cohomological and homotopical properties of Kan fibrations (which, to me, are *not* in the nature of extension-lifting properties of morphisms).
 This should allow us (by considering infinite "paths") to construct, in $\Delta^\wedge$, the analogue of the path spaces of Cartan--Serre, without having to replace the complex $K$ by a Kan envelop beforehand.
 This is what I have verified anyway in the case of $\mathsf{Cat}$ (without having to take a detour via $\Delta^\wedge$), which is a very close neighbour [@9, Chapter VII].
 This is part of what I wanted to talk to you about next.
@@ -254,4 +254,18 @@ In this outline, I foresee an "algebra of derivators" (consisting of a certain n
 I have a feeling, from an allusion in your January letter, that you have some idea of intuition for this type of structure, and we can discuss it again.
 But I emphasise right away that, for me, the true purpose of operations on the level of model categories is to obtain operations on the associated derivators (or prederivators, to begin with).
 
-On this subject,
+On this subject, a remark on the subject of the functoriality of the prederivator associated to a model category $(\cal{M},W)$.
+It is clear that we obtain a $2$-functor
+$$
+  \mathsf{MOD}\to\mathsf{PREDER}
+\tag{*}
+$$
+on the $2$-category of model categories (which is not a $\frak{U}$-category, if we do not make restrictions on the categories in question and on the admissible functors, as well as asking for compatibility with localisers).
+But if we have two model categories, then it is necessary to introduce in the category
+$$
+  \underline{\Hom}((\cal{M},W),(\cal{M}',W'))
+  \quad\text{or}\quad
+  \underline{\Hom}_{\mathrm{Loc}}(\cal{M},\cal{M}')
+$$
+(the latter notation if the localisers $W$ and $W'$ are implicit in the notation $\cal{W}$ and $\cal{W}'$) a natural localiser $W_{\cal{M},\cal{M}'}$ consisting of morphisms $u\colon F\to G$ between morphisms $F$ and $G$ of model categories such that $u(x)\colon F(x)\to G(x)$ is in $W'$ for all $x\in\cal{M}$.
+We call these the "*quasi-isomorphisms*" (*with respect to the localisers $W$ and $W'$*)
