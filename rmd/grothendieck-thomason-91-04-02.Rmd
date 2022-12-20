@@ -252,9 +252,9 @@ Unlike you, I have no qualms here in supposing the category $\cal{M}$ to be stab
 I would not be surprised if there were a theorem that says that every derivator on $\Cat$ can be described by such a model category (up to equivalence of derivators), or at least as the filtrant inductive limit of such derivators.
 In this outline, I foresee an "algebra of derivators" (consisting of a certain number of fundamental operations within the $2$-category of all derivators, on $\Cat$, say, as a domain), which would be the reflection of algebraic operations of a similar nature, which are carried out on the level of model categories.
 I have a feeling, from an allusion in your January letter, that you have some idea of intuition for this type of structure, and we can discuss it again.
-But I emphasise right away that, for me, the true purpose of operations on the level of model categories is to obtain operations on the associated derivators (or prederivators, to begin with).
+But I emphasise right away that, for me, the true purpose of operations on the level of model categories is to obtain operations on the associated derivators (or pre-derivators, to begin with).
 
-On this subject, a remark on the subject of the functoriality of the prederivator associated to a model category $(\cal{M},W)$.
+On this subject, a remark on the subject of the functoriality of the pre-derivator associated to a model category $(\cal{M},W)$.
 It is clear that we obtain a $2$-functor
 $$
   \mathsf{MOD}\to\mathsf{PREDER}
@@ -275,4 +275,10 @@ $$
 \tag{$**$}
 $$
 where it is implicit in the notation that $\cal{M}$ and $\cal{M}'$ are endowed with their localisers $W$ and $W'$.
-In this way,
+In this way, model categories can now be regarded as the $0$-objects of a $2$-category, of which the arrow categories are the localised categories $\cal{H}(\cal{M},\cal{M}')$ above, and we obtain a canonical $2$-functor from this $2$-category, that I want to call the derived category (?) of the category of model categories, and which I denote by $\mathsf{DERMOD}$, to that of pre-derivators, from the functor ($**$):
+$$
+  \mathsf{DERMOD}\to\mathsf{PREDER}.
+\tag{$***$}
+$$
+\oldpage{11}
+The
