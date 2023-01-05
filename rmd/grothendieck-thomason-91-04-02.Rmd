@@ -284,4 +284,36 @@ $$
 The point at which I want to arrive is the following: if $\cal{M}$ and $\cal{M}'$ are model categories that are *equivalent* as $0$-objects of this $2$-category, then the associated prederivators are equivalent, and thus, for all practical purposes, can be identified (at least, when the initial equivalence is given).
 This (and of course numerous examples) illustrates the extent to which a model category is a "cumbersome" object (if I dare say so), encompassing inessential aspects, as opposed to the associated derivator, which, in my eyes, represents the quintessence from the "homotopical" or "cohomological" point of view.
 It is a bit like the data of a basis for a vector space, or of a system of generators and relations for a group, or a system of equations for a variety.^[One of the first comparisons that occurred to me (which was lost en route) seems more striking: the relation between a model category and its associated derivator resembles, to me, that between a complex in an abelian category and the corresponding object in the derived category. And the conceptual effort that I had to make to arrive at the notion of derived category is somewhat similar to that (more modest, in my opinion) which people will have to one day provide in order to access the notion of derivator an the "yoga of derivators" --- which can only be acquired by working with them!]
-There is
+There is no downside to working with these "super-structures", and quite often we cannot do without them.
+It is, however, important, for a deep understanding, to not lose sight of the essential geometric objects (vector spaces, groups, varieties, derivators) and their intrinsic character, or to let them become blurred.
+
+I do not know if it is reasonable to expect, for the $2$-functor above ($***$), faithfulness or essential surjectivity properties, by restricting, if necessary, to the model categories in question, so as to ensure, for example, that they give rise to *derivators*, not only prederivators.
+In any case, this is one of the questions that we should indeed consider on day (in this world, if there is time, and if not, in another...)^[*[Editor] This problem was studied by O. Renaudin [@11].*]
+
+But I have to return to the case where we are given a fixed model category $(\cal{M},W)$, and to the big question of the existence of the functors $f_!$ and $f_*$.
+Technically speaking, it is here, evidently, that we find one of the most crucial questions for the development of algebraic topology, as I consider it.
+But for this fundamental question, I have only fragments of a good answer, and they are manifestly unsatisfying (and probably also insufficient in the long run).
+Taking the case where $\Diag$ is equal to $\Cat$: I admit (to my shame!) that I have not even constructed an example of a model category that is stable under small (inductive and projective) limits such that the functors $f_!$ and $f_*$ do not exist for every arrow $f$ in $\Cat$, for the associated prederivator.
+In fact, I don't even expect them to exist, even if we make hypotheses of the type "$W$ is stable under filtrant inductive limits, and the category $\cal{M}$ is accessible and $W$ is an accessible subset of $\Mor(\cal{M})$" (hypotheses which seem to me to be relatively trivial).
+\oldpage{12}
+On the other hand, I have not been able to prove the existence of these functors except for extremely particular cases, that I will avoid explaining in this letter (which is becoming prohibitively long).
+I do not know of a case where I know how to establish this, without at least supposing that the model category is associated to a closed Quillen triple (and even more)!
+This situation is however better if we are less demanding and take the domain $\Diag$ to be (say) the category of finite ordered sets.
+In this case, it suffices that $W$ be associated to a category of cofibrations (for $f_!$ to exist) or fibrations (for $f_*$ to exist), without further requiring (to indeed have a derivator) that these two dual structures be linked to one another other than by the common localiser $W$.
+
+It is the moment to say that the work of Anderson [@1] (of which you sent me a photocopy), where he claims to give a sketch of a very general theorem of this type (which would have indeed answered my wishes!) is completely a joke --- even in the case of a finite ordered set $I$, with structure morphism $I\to e$, i.e. for the existence of ordinary homotopy limits on $I$.
+His so-called proof idea is stupid in in two places that seem essential to me, and I strongly doubt that it is fixable, even though I have no counter-example to the theorem that he states, and which he does not even deign to prove.
+Having looked at this work (if we can call it that) with attention, I am happy that it is not yours --- it made me gnash my teeth from start to finish, and more besides.
+I do not regret it, since if I learnt hardly any maths by reading it, I learnt something much less easy and less pleasing than maths, and more important.
+
+I am amazed that ten years have passed since this article without anybody apparently noticing that it does not hold water.
+Obviously, this theorem was like a piece in a museum, a feat for nothing --- nobody gave a damn.
+Even amongst those more "popular" than him, theorems are often no longer an open door to something that we had not seen before and which we see now, nor even a tool for forcing open doors that cannot be opened smoothly --- but a trophy.
+It then doesn't matter whether it is true or false --- it makes absolutely no different any more...
+
+Unless you need clarifications, I think it is useless to enter into details --- you are very capable of finding where it screws up by yourself (around any "it is evident that...").
+And also, it is time that I stop, even though I have not yet arrived at that which, technically, was planned to be the main substance of my letter: the "factorisation theorem", and its application to stability theorems for Quillen structures.
+This will probably be my next letter, if you are interested in continuing this correspondence.
+In which case I will be very happy to have you as an interlocutor of my cogitations!
+
+In the meantime, best wishes.
