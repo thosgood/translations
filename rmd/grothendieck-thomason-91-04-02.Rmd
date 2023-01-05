@@ -141,20 +141,20 @@ As for notions of comparable scope, I can only think of that of *topos*, and tho
 But for me, the "paradise lost" for algebraic topology is by no means the eternal semi-simplicial category $\Delta^\wedge$, no matter how useful it might be, and even less so is it topological spaces (both of which live inside the $2$-category of toposes, which is like a common envelope), but instead the category $\Cat$ of small categories, thought of with a geometric eye by the set of intuitions, astonishingly rich, coming from toposes.
 Indeed, the toposes that have as sheaves of sets the $\cal{C}^\wedge$, with $\cal{C}$ in $\Cat$, are by far the simplest of the known toposes, and it is because I believe this that I stressed so much the examples of these ("categorical") toposes in SGA 4 IV [@2].
 
-I now come to the definition, as I understand it, of a "*pre-derivator*" $D$ --- it being understood that the more delicate notion of "derivator" is deduced from this by imposing some quite natural axioms, the list of which I will give to you if you ask me.
-To develop an algebra of derivators (and first of all, pre-derivators), we must first fix a common "*domain*" for those that we will consider, i.e. a full subcategory $\Diag$ of $\Cat$.
+I now come to the definition, as I understand it, of a "*prederivator*" $D$ --- it being understood that the more delicate notion of "derivator" is deduced from this by imposing some quite natural axioms, the list of which I will give to you if you ask me.
+To develop an algebra of derivators (and first of all, prederivators), we must first fix a common "*domain*" for those that we will consider, i.e. a full subcategory $\Diag$ of $\Cat$.
 The case which I prefer at the moment is that where $\Diag$ is all of $\Cat$, in which case I interpret a derivator as being a sort of "theory of coefficients" (homological or cohomological or homotopical, they are all the same) on $\Cat$, where this category is thought of as a category *of objects of a geometric and spatial nature*, like "spaces", strictly speaking, much more than of an algebraic nature;
 just as commutative rings (via their spectra) and the schemes that we construct with them are, for me, geometric-topological objects in essence, and by no means algebraic.
 (Algebra being only an intermediary to obtain the geometric vision, which is the fundamental one).
 A more or less diametrically opposite case is that where $\Diag$ is the category of finite ordered sets, or even, at a push, an even more restricted category.
 But to be fully comfortable, one has to suppose sooner or later that the category $\Diag$ ("category of indices" or "types of diagrams" for the derivators in question) is stable under the typical constructions on categories: finite products, subcategories, pushouts, even $\underline{\Hom}$;
 and also, of course, taking the opposite category, which happens particularly often when passing from a statement to its dual, in particular.
-When we only talk about pre-derivators, in the the cases that I know of we can take the domain to be all of $\Cat$.
+When we only talk about prederivators, in the the cases that I know of we can take the domain to be all of $\Cat$.
 It is when we have to worry about satisfying the rather draconian axioms of derivators that we are forced to considerably restrict the domain, as I mentioned, or at least the arrows $u\colon X\to Y$ that we consider in $\Cat$, when we work with not only the corresponding inverse image functor $u^*$ but also with the direct images $u_!$ and $u_*$.
 But I am getting ahead of myself...
 
 On the subject of domain, I want to again add that, in my eyes, the domain $\Cat$ does not represent, in any way, the complete significance of a given derivator.
-This, and more generally a pre-derivator $D$, being defined as a $2$-functor between $2$-categories
+This, and more generally a prederivator $D$, being defined as a $2$-functor between $2$-categories
 $$
   D\colon\Diag^\circ\to\CAT
 $$
@@ -187,10 +187,10 @@ But I point out that the canonical sequences that we thus construct with the hel
 and dually for the exact sequence of cosuspension.
 These constructions still work not only in every category $D(e)$, but also naturally in the $D(X)$, for $X$ in $\Diag$.
 (In fact, $D(X)$ can be considered as the base category of an "induced derivator" $D_X\colon Y\mapsto D(X\times Y)$, to which we can apply the general results. The axioms of derivators are such that they are stable under passing from a derivator to an induced derivator.)
-This suggests to disentangle the notions of "left derivator" (postulating the existence of homological direct images $f_!$, excluding the cohomological direct images $f_*$) and "right derivator", including the dual aspect of the homotopical formalism.^[*[Editor] In "Les Dérivateurs" [@9], Grothendieck makes the opposite choice concerning the terminology of left or right derivator, justified by the left or right exactness properties of the pre-derivator, implied by the existence of $f_*$ or $f_!$, respectively.*]
+This suggests to disentangle the notions of "left derivator" (postulating the existence of homological direct images $f_!$, excluding the cohomological direct images $f_*$) and "right derivator", including the dual aspect of the homotopical formalism.^[*[Editor] In "Les Dérivateurs" [@9], Grothendieck makes the opposite choice concerning the terminology of left or right derivator, justified by the left or right exactness properties of the prederivator, implied by the existence of $f_*$ or $f_!$, respectively.*]
 But I point out right away that certain properties of derivators seem important to me, and even when their *statement* relies only on one of the two structures (left or right), they are proven using the existence of the two covariances simultaneously.
 
-To finish these generalities on the notion of derivators, I would like to stress that it is essential, in the notion of pre-derivator (which is the unique base data), that $D\colon\Diag\to\CAT$ is indeed a $2$-functor, and not just a functor;
+To finish these generalities on the notion of derivators, I would like to stress that it is essential, in the notion of prederivator (which is the unique base data), that $D\colon\Diag\to\CAT$ is indeed a $2$-functor, and not just a functor;
 in other words, one has to give not only the $D(X)$ for $X\in\Diag$, and the $f^*=f_D^*=D(f)$ for the arrows $f\colon X\to Y$, but for an arrow $u\colon f\to f'$ between two arrows $f,f'\colon X\to Y$, one has to give a functorial homomorphism
 $$
   u^*\colon {f'}^*\to f^*
@@ -228,10 +228,10 @@ Additionally, I have let myself be guided by the intuitions and reflexes acquire
 But this is something else that I will speak to you about, concerning $\Cat$, another time, if you are interested.
 
 
-# The pre-derivator defined by a model category, and the problem of existence of $f_!$ and $f_*$
+# The prederivator defined by a model category, and the problem of existence of $f_!$ and $f_*$
 
 The majority of derivators that I know are defined by means of a model category $(\cal{M},W)$.
-Such a category always defines a pre-derivator on all of $\Cat$, by setting
+Such a category always defines a prederivator on all of $\Cat$, by setting
 $$
   D_{(\cal{M},W)}(X) = \cal{M}(X)(W(X))^{-1}
 $$
@@ -252,9 +252,9 @@ Unlike you, I have no qualms here in supposing the category $\cal{M}$ to be stab
 I would not be surprised if there were a theorem that says that every derivator on $\Cat$ can be described by such a model category (up to equivalence of derivators), or at least as the filtrant inductive limit of such derivators.
 In this outline, I foresee an "algebra of derivators" (consisting of a certain number of fundamental operations within the $2$-category of all derivators, on $\Cat$, say, as a domain), which would be the reflection of algebraic operations of a similar nature, which are carried out on the level of model categories.
 I have a feeling, from an allusion in your January letter, that you have some idea of intuition for this type of structure, and we can discuss it again.
-But I emphasise right away that, for me, the true purpose of operations on the level of model categories is to obtain operations on the associated derivators (or pre-derivators, to begin with).
+But I emphasise right away that, for me, the true purpose of operations on the level of model categories is to obtain operations on the associated derivators (or prederivators, to begin with).
 
-On this subject, a remark on the subject of the functoriality of the pre-derivator associated to a model category $(\cal{M},W)$.
+On this subject, a remark on the subject of the functoriality of the prederivator associated to a model category $(\cal{M},W)$.
 It is clear that we obtain a $2$-functor
 $$
   \mathsf{MOD}\to\mathsf{PREDER}
@@ -275,10 +275,13 @@ $$
 \tag{$**$}
 $$
 where it is implicit in the notation that $\cal{M}$ and $\cal{M}'$ are endowed with their localisers $W$ and $W'$.
-In this way, model categories can now be regarded as the $0$-objects of a $2$-category, of which the arrow categories are the localised categories $\cal{H}(\cal{M},\cal{M}')$ above, and we obtain a canonical $2$-functor from this $2$-category, that I want to call the derived category (?) of the category of model categories, and which I denote by $\mathsf{DERMOD}$, to that of pre-derivators, from the functor ($**$):
+In this way, model categories can now be regarded as the $0$-objects of a $2$-category, of which the arrow categories are the localised categories $\cal{H}(\cal{M},\cal{M}')$ above, and we obtain a canonical $2$-functor from this $2$-category, that I want to call the derived category (?) of the category of model categories, and which I denote by $\mathsf{DERMOD}$, to that of prederivators, from the functor ($**$):
 $$
   \mathsf{DERMOD}\to\mathsf{PREDER}.
 \tag{$***$}
 $$
 \oldpage{11}
-The
+The point at which I want to arrive is the following: if $\cal{M}$ and $\cal{M}'$ are model categories that are *equivalent* as $0$-objects of this $2$-category, then the associated prederivators are equivalent, and thus, for all practical purposes, can be identified (at least, when the initial equivalence is given).
+This (and of course numerous examples) illustrates the extent to which a model category is a "cumbersome" object (if I dare say so), encompassing inessential aspects, as opposed to the associated derivator, which, in my eyes, represents the quintessence from the "homotopical" or "cohomological" point of view.
+It is a bit like the data of a basis for a vector space, or of a system of generators and relations for a group, or a system of equations for a variety.^[One of the first comparisons that occurred to me (which was lost en route) seems more striking: the relation between a model category and its associated derivator resembles, to me, that between a complex in an abelian category and the corresponding object in the derived category. And the conceptual effort that I had to make to arrive at the notion of derived category is somewhat similar to that (more modest, in my opinion) which people will have to one day provide in order to access the notion of derivator an the "yoga of derivators" --- which can only be acquired by working with them!]
+There is
