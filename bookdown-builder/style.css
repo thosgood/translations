@@ -184,6 +184,13 @@ p.date {
   display: inline;
 }
 
+.itenv > p,
+.rmenv > p,
+.titenv > p,
+.trmenv > p {
+  margin-top: 0.85em !important;
+}
+
 .itenv > p:first-of-type,
 .rmenv > p:first-of-type,
 .titenv > p:first-of-type,
