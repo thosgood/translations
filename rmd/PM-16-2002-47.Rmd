@@ -42,6 +42,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\PGL}{\operatorname{PGL}}
 \providecommand{\GL}{\operatorname{GL}}
 \providecommand{\PSL}{\operatorname{PSL}}
+\providecommand{\gl}{\operatorname{gl}}
 
 <!-- Content -->
 
@@ -182,7 +183,7 @@ Since $\GL(3,\CC)$ is quasi-projective, the proof is complete.
 :::
 
 ::: {.rmenv #example-2 title="Example 2" latex="{Example 2}"}
-Suppose that a foliation $\cal{F}$ is defined on $\PP_\CC^2$ by the $1$-form $\omega=P(x,y)\dd{x}+(Q(x,y)-yP(x,y))\dd{y}$, where $P,Q\in\CC[x+\frac{1}{2\alpha}y-\frac{1}{2}y^2]$ for some $\alpha\in\CC^\times$.
+Suppose that a foliation $\cal{F}$ is defined on $\PP_\CC^2$ by the $1$-form $\omega=P(x,y)\dd{x}+(Q(x,y)-yP(x,y))\dd{y}$, where $P,Q\in\CC[x+\frac{1}{2\alpha}y-\frac{1}{2}y^2]$ for some $\alpha\in\CC^*$.
 Such foliations are invariant under $T(x,y)=(x+\frac{1}{\alpha}y,y+\frac{1}{\alpha})$.
 So $\Aut(\cal{F})$ contains infinitely many elements of $\{T^n\mid n\in\ZZ\}$.
 Since the flow of $X=(y-\frac{1}{2\alpha})\frac{\partial}{\partial x}+\frac{\partial}{\partial y}$
@@ -210,6 +211,8 @@ To obtain a holomorphic vector field in the Lie algebra of $\Aut(\cal{F})$, as i
 
 # Automorphisms of holomorphic foliations on the projective plane {#section-3}
 
+\oldpage{52}
+
 ::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
 Let $\cal{F}$ be a holomorphic foliation on $\PP_\CC^2$.
 If $\#\Aut(\cal{F})=+\infty$ in a suitable affine coordinate system, then either $\cal{F}$ is induced by one of the following $1$-forms:
@@ -226,5 +229,149 @@ Recall that the automorphism group of $\PP_\CC^2$ is isomorphic to $\PSL(3,\CC)$
 Since $\#\Aut(\cal{F})=+\infty$, [Corollary 1](#corollary-1) tells us that $\Aut(\cal{F})$ is a linear algebraic subgroup of $\PSL(3,\CC)$.
 In particular, $\Aut(\cal{F})$ has a non-trivial Lie algebra, and so, by the Martinelli--Bochner theorem, there exists a global vector field $X$ on $\PP_\CC^2$ whose flow is in $\Aut(\cal{F})$.
 
-Any
+Any global holomorphic vector field $X$ on $\PP_\CC^2$ can be represented in homogeneous coordinates $(x,y,z)$ in the form
+$$
+  X(x,y,z)
+  = M\cdot(x,y,z)^t
+$$
+where $M\in\gl(3,\CC)$.
+Analysing the possible canonical Jordan forms, we have essentially three distinct cases.
+
+Firstly, suppose that the canonical Jordan form of $M$ is
+$$
+  M
+  = \begin{bmatrix}
+    \alpha & 1 & 0
+  \\0 & \alpha & 1
+  \\0 & 0 & \alpha
+  \end{bmatrix}
+$$
+where $\alpha\in\CC^*$.
+In this case, the action $\phi_t$ induced by $X$ can be written in the affine plane $\{z=1\}$ as
+$$
+  \phi_t(x,y)
+  = (x+ty+\frac{t^2}{2}, y+t).
+$$
+\oldpage{53}
+Therefore the orbits of $X$ are rational curves, and $X$ admits a rational first integral $x-y^2/2$.
+If $\cal{F}$ is defined by the $1$-form $\omega=P(x,y)\dd{x}+Q(x,y)\dd{y}$ then $\phi_t^*\omega=\lambda(t)\omega$.
+Thus $\lambda\equiv1$ and
+$$
+  \begin{cases}
+    P = P\circ\phi_t
+  \\Q = tP\circ\phi_t + Q\circ\phi_t.
+  \end{cases}
+$$
+Thus $\omega=P\dd{x}+(R-yP)\dd{y}$, where $P=P\circ\phi_t$ and $R=R\circ\phi_t$.
+In other words, $R$ and $P$ are integrals for the foliation defined by $X$.
+Since $x-y^2/2$ is also a first integral and its fibres are connected, the Stein factorisation theorem [@8] implies that $P,R\in\CC[x-y^2/2]$.
+
+Now consider $M$ of the form
+$$
+  M
+  = \begin{bmatrix}
+    \alpha & 1 & 0
+  \\0 & \alpha & 0
+  \\0 & 0 & \beta
+  \end{bmatrix}
+$$
+where $\alpha,\beta\in\CC^*$.
+Here the induced action $\phi_t$ is, in affine coordinates $\{z=1\}$,
+$$
+  \phi_t(x,y)
+  = e^{t(\alpha-\beta)}(x+ty,y).
+$$
+As in the previous cases, $\cal{F}$ at $\{z=1\}$ is defined by $\omega=P(x,y)\dd{x}+Q(x,y)\dd{y}$.
+Since $\phi_t^*\omega=\lambda(t)\omega$, we see that
+$$
+  \begin{aligned}
+    \lambda(t)P(x,y)
+    &= e^{t(\alpha-\beta)}P\circ\phi_t
+    \tag{1}
+  \\\lambda(t)Q(x,y)
+    &= e^{t(\alpha-\beta)}(Q\circ\phi_t + tP\circ\phi_t).
+    \tag{2}
+  \end{aligned}
+$$
+Write $P(x,y)$ as a sum of its homogeneous components $P(x,y)=\sum_j P_j(x,y)$.
+From (1) we deduce that, if $P_j(x,y)$ is not zero, then $\lambda(t)=e^{t(\alpha-\beta)(j+1)}$.
+Comparing again with (1), we see that $P_j(x,y)=P_j(x+ty,y)$.
+This implies that $P_j$ does not depend on $x$, and so $P(x,y)=p_jy^j$.
+Using a similar argument with $Q(x,y)$, we can show that $Q(x,y)=-p_jxy^{j-1}+q_jy^j$.
+Then the $1$-form $\omega$ can be written as
+$$
+  \omega
+  = yp(y)\dd{x} + (q(y)-xp(y))\dd{y}.
+$$
+
+The remaining case is when $M$ is diagonalisable, i.e.
+$$
+  M
+  = \begin{bmatrix}
+    \alpha & 0 & 0
+  \\0 & \beta & 0
+  \\0 & 0 & \gamma
+  \end{bmatrix}
+$$
+where $\alpha,\beta,\gamma\in\CC^*$.
+\oldpage{54}
+As in the previous cases, we can choose an affine coordinate system in which the foliation $\cal{F}$ is described by $\omega=P\dd{x}+Q\dd{y}$ and the action $\phi_t$ induced by $X$ is of the form
+$$
+  \phi_t(x,y)
+  = (e^{t(\alpha-\gamma)}x,e^{t(\beta-\gamma)y}).
+$$
+Proceeding as before, we obtain the following relations:
+$$
+  \begin{aligned}
+    \lambda(t)P(x,y)
+    &= e^{t(\alpha-\gamma)}P\circ\phi_t
+    \tag{3}
+  \\\lambda(t)Q(x,y)
+    &= e^{t(\beta-\gamma)}Q\circ\phi_t.
+    \tag{4}
+  \end{aligned}
+$$
+If we write $P(x,y)=\sum_{i,j}p_{ij}x^iy^j$ and $Q(x,y)=\sum_{i,j}q_{ij}x^iy^j$ then we can deduce from (3) the relations
+$$
+  \begin{aligned}
+    \lambda(t)
+    &= e^{t(\alpha-\gamma)(i+1)+t(\beta-\gamma)j}
+    \quad\text{if }p_{ij}\neq0
+    \tag{5}
+  \\\lambda(t)
+    &= e^{t(\alpha-\gamma)i+t(\beta-\gamma)(j+1)}
+    \quad\text{if }q_{ij}\neq0.
+    \tag{6}
+  \end{aligned}
+$$
+Note that $X$ admits a rational first integral if and only if $(\alpha-\gamma)/(\beta-\gamma)=m/n\in\QQ$.
+
+Suppose that $X$ has an rational first integral, and consider the group
+$$
+  G
+  = \{ (l,k)\in\ZZ\oplus\ZZ \mid e^{t(\alpha-\gamma)l}=e^{t(\beta-\gamma)k}\text{ for all }t\in\CC \}.
+$$
+Since $G$ is cyclic and generated by $(n,m)$, let $(l_0,k_0)\in\ZZ\oplus\ZZ$ be such that $\lambda(t)=e^{t(\alpha-\gamma)l_0+t(\beta-\gamma)k_0}$.
+Then
+$$
+  \omega
+  = x^{l_0}y^{k_0}(yp(y^m/x^n)\dd{x} + xq(y^m/x^n)\dd{y}).
+$$
+
+Finally, assume that $(\alpha-\gamma)/(\beta-\gamma)\not\in\QQ$.
+Then there exists $t_0\in\CC^*$ such that $e^{t_0(\alpha-\gamma)n}\neq e^{t_0(\beta-\gamma)m}$ for any integers $n$ and $m$ that are not both zero.
+This implies that there exists a unique pair of integers $(k,l)$ such that $\lambda(t_0)=e^{t_0(\alpha-\gamma)l+t_0(\beta-\gamma)k}$.
+As a consequence of (3), we conclude that $P(x,y)=p_{lk}x^{l-1}y^k$ and $Q(x,y)=q_{lk}x^ly^{k-1}$.
+Thus
+$$
+  \omega
+  = x^{l-1}y^{k-1}(p_{lk}y\dd{x} + q_{lk}x\dd{y})
+$$
+and clearly $\cal{F}$ is a linear foliation.
+:::
+
+\oldpage{55}
+
+::: {.itenv #corollary-2 title="Corollary 2" latex="{Corollary 2}"}
+Let
 :::
