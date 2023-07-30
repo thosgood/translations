@@ -212,11 +212,13 @@ To obtain a holomorphic vector field in the Lie algebra of $\Aut(\cal{F})$, as i
 
 ::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
 Let $\cal{F}$ be a holomorphic foliation on $\PP_\CC^2$.
-If $\#\Aut(\cal{F})=+\infty$ in a suitable affine coordinate system, then $\cal{F}$ is induced by one of the following $1$-forms:
+If $\#\Aut(\cal{F})=+\infty$ in a suitable affine coordinate system, then either $\cal{F}$ is induced by one of the following $1$-forms:
 
 1. $\omega=P\dd{x}+(Q-yP)\dd{y}$, where $P,Q\in\CC[x-\frac{y^2}{2}]$;
 2. $\omega=yp(y)\dd{x}+(xp(y)-q(y))\dd{y}$, where $p,q\in\CC[t]$;
-3. $\omega=yp(y^m/x^n)\dd{x}+xq(y^m/x^n)\dd{y}$, or $\cal{F}$ is linear.
+3. $\omega=yp(y^m/x^n)\dd{x}+xq(y^m/x^n)\dd{y}$
+
+or $\cal{F}$ is linear.
 :::
 
 ::: {.proof}
