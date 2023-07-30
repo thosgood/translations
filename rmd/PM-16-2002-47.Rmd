@@ -38,6 +38,9 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\tang}{\operatorname{tang}}
 \providecommand{\Aut}{\operatorname{Aut}}
 \providecommand{\CS}{\operatorname{CS}}
+\providecommand{\Kod}{\operatorname{Kod}}
+\providecommand{\PGL}{\operatorname{PGL}}
+\providecommand{\GL}{\operatorname{GL}}
 
 <!-- Content -->
 
@@ -56,14 +59,14 @@ In the case of algebraic surfaces, there is even a bound for this number, see [@
 
 In this work we first classify the holomorphic foliations with singularities on rational surfaces.
 
-::: {.rmenv #theorem-A title="Theorem A" latex="{Theorem A}"}
+::: {.itenv #theorem-A title="Theorem A" latex="{Theorem A}"}
 Let $\cal{F}$ be a foliation on a rational surface $M$.
 If $\#\Aut(\cal{F})=+\infty$ then $\cal{F}$ is bimeromorphic to a Riccati foliation or to a rational fibration.
 :::
 
 We then prove a result analogous to that of Andreotti for holomorphic foliations on rational surfaces (surfaces bimeromorphic to the projective plane).
 
-::: {.rmenv #theorem-B title="Theorem B" latex="{Theorem B}"}
+::: {.itenv #theorem-B title="Theorem B" latex="{Theorem B}"}
 The automorphism group of a holomorphic foliation of general type with singularities on a rational surface is finite.
 :::
 
@@ -111,9 +114,101 @@ $$
   = h\dd f + f\eta.
 $$
 
-We define the *Camacho--Sad index* by
+We define the *Camacho--Sad index* at $p$ by
 $$
   \CS_p(\cal{F},C)
   = \frac{-1}{2\pi i}\int_\gamma\frac{\eta}{h}
 $$
-where $\gamma$ is
+where $\gamma$ is a loop around $p$ on $\{f=0\}$.
+Define $\CS(\cal{F},C)=\sum_{p\in\Sing\cal{F}\cap C}\CS_p(\cal{F},C)$.
+The *Camacho--Sad index theorem* [@5] says that
+$$
+  \CS(\cal{F},C)
+  = C^2.
+$$
+Recall that a *reduced foliation* is a foliation $\cal{F}$ such that every singularity $p$ is reduced in the sense of Seidenberg, i.e. for every vector field $X$ that generates $\cal{F}$, and every singular point $p$ of $X$, the eigenvalues of the linear part of $X$ are not both zero, and their quotient, when it is defined, is not a positive rational number.
+If one of the values is zero and the other non-zero, then the singularity is said to be a *saddle node*.
+
+\oldpage{50}
+::: {.rmenv #definition-1 title="Definition 1" latex="{Definition 1}"}
+Let $\cal{F}$ be a foliation on the complete surface $S$, and $\cal{G}$ an arbitrary reduced foliation that is bimeromorphically equivalent to $\cal{F}$.
+The *Kodaira dimension* of $\cal{F}$ is given by
+$$
+  \Kod(\cal{F})
+  = \limsup_{n\to\infty} \frac{\log h^0(S,K_\cal{G}^{\otimes n})}{\log n}.
+$$
+:::
+
+The concept of Kodaira dimension for holomorphic foliations was introduced independently by L.G. Mendes and M. McQuillan, see [@2], [@12], and [@11].
+
+It has been proven that the Kodaira dimension is well defined and is a bimeromorphic invariant of $\cal{F}$, see [@12].
+
+When the foliation has Kodaira dimension $2$, we say that the foliation is of *general type*.
+This terminology is justified since there exists a partial classification of foliations of Kodaira dimension less than $2$.
+For more details, see [@11] and [@2].
+
+A *fibration* at $M$ on a compact Riemann surface $B$ is a surjective holomorphic map $f\colon M\to B$.
+A *generic* fibre of $f$ is the preimage of a regular value of $f$.
+If all the generic fibres are connected then the fibration $f$ is said to be *connected*.
+If all the fibres are rational curves then the fibration $f$ is said to be a *rational* fibration.
+
+A foliation $\cal{F}$ at $M$ is said to be a *Riccati* foliation if there exists a rational fibration whose fibres are transversal to $\cal{F}$.
+
+In [@12], it was proven that Riccati foliations and rational fibrations have dimension at most $1$.
+
+The *bimeromorphism* (resp. *automorphism*) *group* of the foliation $\cal{F}$ is the maximal subgroup of the bimeromorphisms (resp. automorphisms) of $M$ that leave the foliation invariant.
+
+In the case of $\PP_\CC^2$, a foliation $\cal{F}$ can be defined in affine coordinates $z=1$ by a $1$-form $\omega=A\dd x+B\dd y$, where $A$ and $B$ are complex polynomials in the variables $x,y$.
+In this case, we can show that:
+
+\oldpage{51}
+::: {.itenv #proposition-1 title="Proposition 1" latex="{Proposition 1}"}
+The automorphism group of a holomorphic foliation on $\PP_\CC^2$ is a Lie group.
+Furthermore, it is quasi-projective, and thus has a finite number of connected components.
+:::
+
+::: {.proof}
+By definition, $\Aut(\cal{F})$ is the set of elements $g$ of $\PGL(3,\CC)$ that leave $\cal{F}$ invariant.
+So if $\cal{F}$ is given by a homogeneous $1$-form $\omega=\sum P_i\dd x_i$ then, by definition, $\omega$ and $g^*\omega$ define the same foliation, and are thus linearly dependent.
+Thus
+$$
+  \Aut(cal{F})
+  = \PP(\{ g\in\GL(3,\CC) \mid g^*\omega\wedge\omega = 0 \})
+$$
+where $\PP(A)$ denotes the projectivisation of $A$.
+It is clear that $\Aut(\cal{F})$ is a Lie group.
+Since $\GL(3,\CC)$ is quasi-projective, the proof is complete.
+:::
+
+::: {.rmenv #example-2 title="Example 2" latex="{Example 2}"}
+Suppose that a foliation $\cal{F}$ is defined on $\PP_\CC^2$ by the $1$-form $\omega=P(x,y)\dd x+(Q(x,y)-yP(x,y))\dd y$, where $P,Q\in\CC[x+\frac{1}{2\alpha}y-\frac{1}{2}y^2]$ for some $\alpha\in\CC^\times$.
+Such foliations are invariant under $T(x,y)=(x+\frac{1}{\alpha}y,y+\frac{1}{\alpha})$.
+So $\Aut(\cal{F})$ contains infinitely many elements of $\{T^n\mid n\in\ZZ\}$.
+Since the flow of $X=(y-\frac{1}{2\alpha})\frac{\partial}{\partial x}+\frac{\partial}{\partial y}$
+$$
+  X_t(x,y)
+  = \left(\begin{smallmatrix}1&t\\0&1\end{smallmatrix}\right)\left(\begin{smallmatrix}x\\y\end{smallmatrix}\right) + \left(\begin{smallmatrix}\frac{1}{2}t^2-\frac{1}{2\alpha}t\\t\end{smallmatrix}\right)
+$$
+satisfies $X_t^*\omega=\omega$, we see that $X_t$ belongs to the Lie algebra of $\Aut(\cal{F})$.
+Note that $X_{1/\alpha}=T$.
+:::
+
+The following result shows that this example is general.
+
+::: {.itenv #corollary-1 title="Corollary 1" latex="{Corollary 1}"}
+If $\Aut(\cal{F})$ has an infinite number of elements then the dimension of $\Aut(\cal{F})$ is not zero.
+:::
+
+::: {.proof}
+Suppose, for contradiction, that $\dim\Aut(\cal{F})=0$.
+Then, by [Proposition 1](#proposition-1), $\Aut(\cal{F})$ has only a finite number of elements, which contradicts the hypothesis.
+:::
+
+To obtain a holomorphic vector field in the Lie algebra of $\Aut(\cal{F})$, as in [Example 2](#example-2), we apply the Martinelli--Bochner theorem [@10] which says the following: the automorphism group of a compact complex variety is a Lie group whose Lie algebra consists of globally defined holomorphic vector fields on the variety.
+
+
+# Automorphisms of holomorphic foliations on the projective plane {#section-3}
+
+::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
+Let
+:::
