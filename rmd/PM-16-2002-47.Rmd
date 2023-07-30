@@ -1,0 +1,52 @@
+--- 
+title: "Automorphisms of holomorphic foliations on rational surfaces"
+author: "Percy Fernández Sánchez"
+date: "1971"
+original: 'Sánchez, PF. "Automorfismo de foliaciones holomorfas sobre superficies racionales". _Pro Mathematica_ **16** (2002), 47--59. [revistas.pucp.edu.pe/index.php/promathematica/article/view/8182/8478](https://revistas.pucp.edu.pe/index.php/promathematica/article/view/8182/8478).'
+bibliography: PM-16-2002-47.bib
+nocite: '@*'
+link-citations: true
+csl: maths-translations.csl
+reference-section-title: "Bibliography"
+github-repo: "thosgood/translations"
+favicon: "favicon.ico"
+---
+
+```{js, echo = FALSE}
+$(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
+```
+
+```{r, child = '_translator-note.Rmd'}
+```
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\providecommand{\ZZ}{\mathbb{Z}}
+\providecommand{\QQ}{\mathbb{Q}}
+\providecommand{\CC}{\mathbb{C}}
+\providecommand{\PP}{\mathbb{P}}
+\providecommand{\id}{\mathrm{id}}
+
+\providecommand{\Sing}{\operatorname{Sing}}
+\providecommand{\tang}{\operatorname{tang}}
+\providecommand{\Aut}{\operatorname{Aut}}
+
+<!-- Content -->
+
+
+::: {.rmenv #abstract title="Abstract" latex="{Abstract}"}
+In this work, we classify the holomorphic foliations with infinite automorphism group on a rational surface.
+As a consequence of this result, we prove that the automorphism group of a foliation of general type with singularities on a rational surface is finite.
+:::
+
+# Introduction { #introduction}
+
+\oldpage{48}
+Schwarz proved that the group of automorphisms of a Riemann surface of genus more than 2 is finite.
+Andreotti, in [@1], generalised this result, proving that the group of bimeromorphisms of an algebraic variety of general type is finite,
