@@ -41,6 +41,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\Kod}{\operatorname{Kod}}
 \providecommand{\PGL}{\operatorname{PGL}}
 \providecommand{\GL}{\operatorname{GL}}
+\providecommand{\PSL}{\operatorname{PSL}}
 
 <!-- Content -->
 
@@ -85,7 +86,7 @@ Let $p\in C$ and let $\{f=0\}$ be a reduced local equation of $C$ around $p$.
 Suppose that $\cal{F}$ is represented in a coordinate neighbourhood $(U,(x,y))$ of $p=(0,0)$ by the holomorphic $1$-form
 $$
   \omega
-  = a(x,y)\dd x + b(x,y) \dd y.
+  = a(x,y)\dd{x} + b(x,y) \dd{y}.
 $$
 When $C$ is not $\cal{F}$-invariant, we define the *tangency* between $\cal{F}$ and $C$ at $p$ by
 $$
@@ -107,11 +108,11 @@ $$
 $$
 :::
 
-Now suppose that $C$ is $\cal{F}$-invariant, so that $\omega\wedge\dd f=f\Theta$, where $\Theta$ is a holomorphic $2$-form.
+Now suppose that $C$ is $\cal{F}$-invariant, so that $\omega\wedge\dd{f}=f\Theta$, where $\Theta$ is a holomorphic $2$-form.
 Then there exist relatively prime holomorphic functions $g$ and $h$ defined on $U$, along with a holomorphic $1$-form $\eta$, such that
 $$
   g\omega
-  = h\dd f + f\eta.
+  = h\dd{f} + f\eta.
 $$
 
 We define the *Camacho--Sad index* at $p$ by
@@ -158,7 +159,7 @@ In [@12], it was proven that Riccati foliations and rational fibrations have dim
 
 The *bimeromorphism* (resp. *automorphism*) *group* of the foliation $\cal{F}$ is the maximal subgroup of the bimeromorphisms (resp. automorphisms) of $M$ that leave the foliation invariant.
 
-In the case of $\PP_\CC^2$, a foliation $\cal{F}$ can be defined in affine coordinates $z=1$ by a $1$-form $\omega=A\dd x+B\dd y$, where $A$ and $B$ are complex polynomials in the variables $x,y$.
+In the case of $\PP_\CC^2$, a foliation $\cal{F}$ can be defined in affine coordinates $z=1$ by a $1$-form $\omega=A\dd{x}+B\dd{y}$, where $A$ and $B$ are complex polynomials in the variables $x,y$.
 In this case, we can show that:
 
 \oldpage{51}
@@ -169,7 +170,7 @@ Furthermore, it is quasi-projective, and thus has a finite number of connected c
 
 ::: {.proof}
 By definition, $\Aut(\cal{F})$ is the set of elements $g$ of $\PGL(3,\CC)$ that leave $\cal{F}$ invariant.
-So if $\cal{F}$ is given by a homogeneous $1$-form $\omega=\sum P_i\dd x_i$ then, by definition, $\omega$ and $g^*\omega$ define the same foliation, and are thus linearly dependent.
+So if $\cal{F}$ is given by a homogeneous $1$-form $\omega=\sum P_i\dd{x}_i$ then, by definition, $\omega$ and $g^*\omega$ define the same foliation, and are thus linearly dependent.
 Thus
 $$
   \Aut(cal{F})
@@ -181,7 +182,7 @@ Since $\GL(3,\CC)$ is quasi-projective, the proof is complete.
 :::
 
 ::: {.rmenv #example-2 title="Example 2" latex="{Example 2}"}
-Suppose that a foliation $\cal{F}$ is defined on $\PP_\CC^2$ by the $1$-form $\omega=P(x,y)\dd x+(Q(x,y)-yP(x,y))\dd y$, where $P,Q\in\CC[x+\frac{1}{2\alpha}y-\frac{1}{2}y^2]$ for some $\alpha\in\CC^\times$.
+Suppose that a foliation $\cal{F}$ is defined on $\PP_\CC^2$ by the $1$-form $\omega=P(x,y)\dd{x}+(Q(x,y)-yP(x,y))\dd{y}$, where $P,Q\in\CC[x+\frac{1}{2\alpha}y-\frac{1}{2}y^2]$ for some $\alpha\in\CC^\times$.
 Such foliations are invariant under $T(x,y)=(x+\frac{1}{\alpha}y,y+\frac{1}{\alpha})$.
 So $\Aut(\cal{F})$ contains infinitely many elements of $\{T^n\mid n\in\ZZ\}$.
 Since the flow of $X=(y-\frac{1}{2\alpha})\frac{\partial}{\partial x}+\frac{\partial}{\partial y}$
@@ -210,5 +211,18 @@ To obtain a holomorphic vector field in the Lie algebra of $\Aut(\cal{F})$, as i
 # Automorphisms of holomorphic foliations on the projective plane {#section-3}
 
 ::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
-Let
+Let $\cal{F}$ be a holomorphic foliation on $\PP_\CC^2$.
+If $\#\Aut(\cal{F})=+\infty$ in a suitable affine coordinate system, then $\cal{F}$ is induced by one of the following $1$-forms:
+
+1. $\omega=P\dd{x}+(Q-yP)\dd{y}$, where $P,Q\in\CC[x-\frac{y^2}{2}]$;
+2. $\omega=yp(y)\dd{x}+(xp(y)-q(y))\dd{y}$, where $p,q\in\CC[t]$;
+3. $\omega=yp(y^m/x^n)\dd{x}+xq(y^m/x^n)\dd{y}$, or $\cal{F}$ is linear.
+:::
+
+::: {.proof}
+Recall that the automorphism group of $\PP_\CC^2$ is isomorphic to $\PSL(3,\CC)$.
+Since $\#\Aut(\cal{F})=+\infty$, [Corollary 1](#corollary-1) tells us that $\Aut(\cal{F})$ is a linear algebraic subgroup of $\PSL(3,\CC)$.
+In particular, $\Aut(\cal{F})$ has a non-trivial Lie algebra, and so, by the Martinelli--Bochner theorem, there exists a global vector field $X$ on $\PP_\CC^2$ whose flow is in $\Aut(\cal{F})$.
+
+Any
 :::
