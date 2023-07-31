@@ -283,14 +283,16 @@ $$
 $$
 As in the previous cases, $\cal{F}$ at $\{z=1\}$ is defined by $\omega=P(x,y)\dd{x}+Q(x,y)\dd{y}$.
 Since $\phi_t^*\omega=\lambda(t)\omega$, we see that
-\begin{align}
+$$
   \lambda(t)P(x,y)
-  &= e^{t(\alpha-\beta)}P\circ\phi_t
+  = e^{t(\alpha-\beta)}P\circ\phi_t
   \tag{1}
-\\\lambda(t)Q(x,y)
-  &= e^{t(\alpha-\beta)}(Q\circ\phi_t + tP\circ\phi_t).
+$$
+$$
+  \lambda(t)Q(x,y)
+  = e^{t(\alpha-\beta)}(Q\circ\phi_t + tP\circ\phi_t).
   \tag{2}
-\end{align}
+$$
 Write $P(x,y)$ as a sum of its homogeneous components $P(x,y)=\sum_j P_j(x,y)$.
 From (1) we deduce that, if $P_j(x,y)$ is not zero, then $\lambda(t)=e^{t(\alpha-\beta)(j+1)}$.
 Comparing again with (1), we see that $P_j(x,y)=P_j(x+ty,y)$.
@@ -320,27 +322,27 @@ $$
 $$
 Proceeding as before, we obtain the following relations:
 $$
-  \begin{aligned}
-    \lambda(t)P(x,y)
-    &= e^{t(\alpha-\gamma)}P\circ\phi_t
-    \tag{3}
-  \\\lambda(t)Q(x,y)
-    &= e^{t(\beta-\gamma)}Q\circ\phi_t.
-    \tag{4}
-  \end{aligned}
+  \lambda(t)P(x,y)
+  = e^{t(\alpha-\gamma)}P\circ\phi_t
+  \tag{3}
+$$
+$$
+  \lambda(t)Q(x,y)
+  = e^{t(\beta-\gamma)}Q\circ\phi_t.
+  \tag{4}
 $$
 If we write $P(x,y)=\sum_{i,j}p_{ij}x^iy^j$ and $Q(x,y)=\sum_{i,j}q_{ij}x^iy^j$ then we can deduce from (3) the relations
 $$
-  \begin{aligned}
-    \lambda(t)
-    &= e^{t(\alpha-\gamma)(i+1)+t(\beta-\gamma)j}
-    \quad\text{if }p_{ij}\neq0
-    \tag{5}
-  \\\lambda(t)
-    &= e^{t(\alpha-\gamma)i+t(\beta-\gamma)(j+1)}
-    \quad\text{if }q_{ij}\neq0.
-    \tag{6}
-  \end{aligned}
+  \lambda(t)
+  = e^{t(\alpha-\gamma)(i+1)+t(\beta-\gamma)j}
+  \quad\text{if }p_{ij}\neq0
+  \tag{5}
+$$
+$$
+  \lambda(t)
+  = e^{t(\alpha-\gamma)i+t(\beta-\gamma)(j+1)}
+  \quad\text{if }q_{ij}\neq0.
+  \tag{6}
 $$
 Note that $X$ admits a rational first integral if and only if $(\alpha-\gamma)/(\beta-\gamma)=m/n\in\QQ$.
 
