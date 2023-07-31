@@ -283,16 +283,14 @@ $$
 $$
 As in the previous cases, $\cal{F}$ at $\{z=1\}$ is defined by $\omega=P(x,y)\dd{x}+Q(x,y)\dd{y}$.
 Since $\phi_t^*\omega=\lambda(t)\omega$, we see that
-$$
-  \begin{aligned}
-    \lambda(t)P(x,y)
-    &= e^{t(\alpha-\beta)}P\circ\phi_t
-    \tag{1}
-  \\\lambda(t)Q(x,y)
-    &= e^{t(\alpha-\beta)}(Q\circ\phi_t + tP\circ\phi_t).
-    \tag{2}
-  \end{aligned}
-$$
+\begin{align}
+  \lambda(t)P(x,y)
+  &= e^{t(\alpha-\beta)}P\circ\phi_t
+  \tag{1}
+\\\lambda(t)Q(x,y)
+  &= e^{t(\alpha-\beta)}(Q\circ\phi_t + tP\circ\phi_t).
+  \tag{2}
+\end{align}
 Write $P(x,y)$ as a sum of its homogeneous components $P(x,y)=\sum_j P_j(x,y)$.
 From (1) we deduce that, if $P_j(x,y)$ is not zero, then $\lambda(t)=e^{t(\alpha-\beta)(j+1)}$.
 Comparing again with (1), we see that $P_j(x,y)=P_j(x+ty,y)$.
