@@ -77,8 +77,8 @@ The automorphism group of a holomorphic foliation of general type with singulari
 
 For the basic notions of holomorphic foliations, we recommend the books [@4], [@13], and [@2].
 A holomorphic foliation $\cal{F}$ with isolated singularities on an algebraic surface $M$ can be defined by a family of holomorphic vector fields $\{X_i\}$ defined on an open cover $\{U_i\}$ of $M$ satisfying the cocycle condition $X_i=g_{ij}X_j$ whenever $U_i\cap U_j\neq\varnothing$, where the $\{g_{ij}\}$ are nowhere-zero holomorphic functions defined on the $U_i\cap U_j$.
-In this case, the $\{g_{ij}\}$ define a line bundle $T_\cal{F}^*$ on $M$ called the *cotangent*, or *canonical*, *bundle*.
-The set of singularities $\Sing(\cal{F})$ of $\cal{F}$ is defined as $\Sing(\cal{F})/_{U_i}=\{X_i=0\}$, and it is always possible to suppose that $\dim\Sing(\cal{F})=0$.
+In this case, the $\{g_{ij}\}$ define a line bundle $T_\cal{G}^*$ on $M$ called the *cotangent*, or *canonical*, *bundle*.
+The set of singularities $\Sing(\cal{G})$ of $\cal{G}$ is defined as $\Sing(\cal{G})/_{U_i}=\{X_i=0\}$, and it is always possible to suppose that $\dim\Sing(\cal{G})=0$.
 
 Let $\cal{F}$ be a holomorphic foliation on a complex surface $M$.
 Consider a compact curve $C$ on $M$.
@@ -373,5 +373,46 @@ and clearly $\cal{F}$ is a linear foliation.
 \oldpage{55}
 
 ::: {.itenv #corollary-2 title="Corollary 2" latex="{Corollary 2}"}
-Let
+Let $\cal{F}$ be a holomorphic foliation defined on $\PP_\CC^2$.
+Suppose that $\#\Aut(\cal{F})=+\infty$.
+Then $\cal{F}$ is birationally equivalent to a Riccati foliation.
+:::
+
+::: {.proof}
+From the proof of the [previous theorem](#theorem-1) we have that the foliation defined by $X$ has no rational first integral, and so $\cal{F}$ is linear.
+In particular, $\cal{F}$ is a Riccati foliation after a blow-up.
+
+Now suppose that the foliation $\cal{G}$ defined by $X$ has a first integral, i.e. is a pencil of rational curves.
+Let $\sigma\colon M\to\PP_\CC^2$ be the minimal resolution of $\cal{G}$.
+As we blow-up the singular points of $X$, we obtain a holomorphic field of vectors of $\widetilde{X}$ defined on all of $M$ that belong to the Lie algebra of $\Aut(\sigma^*\cal{F})$.
+
+Thus the geometric place of the tangencies of $\sigma^*\cal{F}$ and $\widetilde{X}$ must be invariant under $\sigma^*\cal{F}$, see [@6] and [@7].
+So $\sigma^*\cal{G}$ is a rational fibration, and we thus obtain that $\sigma^*\cal{F}$ is a Riccati foliation.
+:::
+
+::: {.itenv #proposition-2 title="Proposition 2" latex="{Proposition 2}"}
+Let $\cal{F}$ be a holomorphic foliation of general type on a compact complex surface $M$.
+Then $\Aut(\cal{F})$ is isomorphic to a linear algebraic group.
+:::
+
+::: {.proof}
+Since $\cal{F}$ is of general type, for a sufficiently large integer $m$, the $m$-th pluricanonical map $\phi_m$ is a bimeromorphism between $M$ and the closure of its image, denoted by $N$.
+
+Note that the group $\Aut(\cal{F})$ acts naturally on the projectivisation of $\mathrm{H}^0(M,K_\cal{F}^{\otimes m})$.
+If $\sigma$ is a section of $K_\cal{F}^{\otimes m}$ and $\alpha$ is an automorphism of $\cal{F}$, then the action is given by $\alpha(\sigma)=\alpha^*\sigma$.
+
+Since $\phi_m$ is a bimeromorphism between $M$ and $N$, this action induces a monomorphism of groups
+$$
+  \psi\colon \Aut(\cal{F}) \to \PSL(k,\CC)
+$$
+where $k=\dim_\CC\mathrm{H}^0(M,K_\cal{F}^{\otimes m})-1$.
+
+\oldpage{56}
+Note that the image of $\psi$ is precisely the automorphism of $\PP_\CC^{k-1}$ that leaves $N$ and $\cal{G}$ invariant, and so we can conclude that $\Aut(\cal{F})\cong\Aut(\cal{G})$ is a linear algebraic subgroup of $\PSL(k,\CC)$.
+:::
+
+In the proof of our principal result, we approximately follows the arguments of Brunella in [@2, pp.86--88].
+
+::: {.rmenv title="Proof of Theorem A" latex="{Proof of Theorem A}"}
+If
 :::
