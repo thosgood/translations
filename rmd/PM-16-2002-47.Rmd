@@ -413,7 +413,8 @@ Note that the image of $\psi$ is precisely the automorphism of $\PP_\CC^{k-1}$ t
 
 In the proof of our principal result, we approximately follows the arguments of Brunella in [@2, pp.86--88].
 
-::: {.rmenv title="Proof of Theorem A" latex="{Proof of Theorem A}"}
+::: {.proof}
+*(Proof of [Theorem A](#theorem-A)).*
 If $\#\Aut(\cal{F})=+\infty$, then [Proposition 2](#proposition-2) implies that $\dim\Aut(\cal{F}>0$, and by the Martinelli--Bochner theorem we have a holomorphic vector field $X$ that determines a holomorphic foliation $\cal{G}$.
 Since on a rational surface there exists a finite number of exceptional curves, these have to be invariant under $X$.
 Thus we can suppose that $M$ is minimal after making some contractions.
@@ -432,5 +433,32 @@ It is thus invariant under the flow of $X$ and there are two cases:
     So we have two cases:
 
     a. There are two $\cal{G}$-invariant fibres, and there does not exist a singularity outside of $\Gamma_n$, and so both singularities on $\Gamma_n$ are saddle nodes and, by the index theorem, $\Gamma_n^2=0$, which is a contradiction.
-    b. If
+    b. If there is only one $\cal{G}$-invariant fibre $F$, then the multiplicity of $X/_{\Gamma_n}$ at the singular point is $2$. Now, if $X$ has no singularities on $F$ outside of $\Gamma_n$, then $X/_F$ has multiplicity $2$. Thus, again by the index theorem, $\Gamma_n^2=0$, which is a contradiction.
+
+Resuming, we have a fibre $F$ and a point $p\in F$ such that $X(p)=0$ and $p\not\in\Gamma_n$.
+Blowing-up at $p$ and blowing-down the strict transform of $F$ we arrive at $\Sigma_{n-1}$.
+Since $X$ is still holomorphic, we blow-up at singularities of $X$ and shrink invariant curves.
+Following this procedure we reduce our problem to $\Sigma_1=\PP_\CC^1\times\PP_\CC^1$, and in this case $X=X_1\oplus X_2$, where $X_i$ is a holomorphic vector field on $\PP_\CC^1$.
+
+From here we apply a blow-up and two blow-downs to arrive at $\PP_\CC^2$, with $X$ still a holomorphic vector field.^[*[Trans.] The original has a figure here, showing this bimeromorphism between $\PP_\CC^1\times\PP_\CC^1$ and $\PP_\CC^2$, which I have not tried to reproduce.*]
+To finish, we apply [Corollary 2](#corollary-2).
 :::
+
+::: {.proof}
+*(Proof of [Theorem B](#theorem-B)).*
+By Theorem 3.3.1 in [@12], we know that the Riccati foliations and rational fibrations have Kodaira dimension less than $2$.
+Thus by [Theorem A](#theorem-A) we know that, if a foliation is of general type, then its automorphism group must be finite.
+:::
+
+
+## Final commentary {#section-4}
+
+This result that we have proven in this article for rational surfaces is valid for any complex surface, see [@6] and [@7].
+In this latter article we also prove some results in dimension higher than $2$, on the characterisation of foliations with infinite automorphism groups that are algebraic linear.
+Some questions naturally arise, such as "what is the optimal dimension for the group $\Aut(\cal{F})$ of a foliation of general type?", but were not answered due to the difficulties that appear.
+This question is relevant since the unique foliation with known automorphism group is the Jouanoulo foliation, see [@9].
+
+
+## Thanks {#section-5}
+
+This article is a summary of a part of my doctoral thesis [@6] which was written under the direction of Professor Cesar Camacho and an article co-authored with Jorge Pereira to whom I thank for the many comments and suggestions.
