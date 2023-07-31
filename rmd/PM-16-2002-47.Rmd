@@ -414,5 +414,23 @@ Note that the image of $\psi$ is precisely the automorphism of $\PP_\CC^{k-1}$ t
 In the proof of our principal result, we approximately follows the arguments of Brunella in [@2, pp.86--88].
 
 ::: {.rmenv title="Proof of Theorem A" latex="{Proof of Theorem A}"}
-If
+If $\#\Aut(\cal{F})=+\infty$, then [Proposition 2](#proposition-2) implies that $\dim\Aut(\cal{F}>0$, and by the Martinelli--Bochner theorem we have a holomorphic vector field $X$ that determines a holomorphic foliation $\cal{G}$.
+Since on a rational surface there exists a finite number of exceptional curves, these have to be invariant under $X$.
+Thus we can suppose that $M$ is minimal after making some contractions.
+If $M$ is not $\PP_\CC^2$ then it is a Hirzebruch surface $\Sigma_n$.
+We first prove that there exists a singularity of the foliation $\cal{G}$ outside the rational curve $\Gamma_n$, where $\Gamma_n$ is the unique curve on $\Sigma_n$ with the property $\Gamma^2=-n$.
+It is thus invariant under the flow of $X$ and there are two cases:
+
+1. $X|_{\Gamma_n}=0$.
+    If there is a fibre $F$ (of a rational fibration of $M$ on $\Gamma_n$) that is not invariant then we have that $\tang(\cal{G},F)>0$.
+    Since $\cal{G}$ only has zero divisors, $T_\cal{G}\cdot F\geq0$, but on the other hand $T_\cal{G}\cdot F=F^2-\tang(\cal{G},F)=-\tang(\cal{G},F)<0$.
+    So $F$ is invariant under $\cal{G}$, and so $X$ is tangent to a rational fibration.
+    Since $\tang(\cal{G},F)$ is invariant under $\cal{F}$ and $X$ (see [@6]), it must be a rational fibration or a Riccati foliation.
+2. $X|_{\Gamma_n}\neq0$.
+    Then $X$ has more than two zeros on $\Gamma_n$ and, by the argument used in the previous case, the fibres that pass through these points are $\cal{G}$-invariant.
+    Furthermore, the Poincaré--Hopf index of $X|_{\Gamma_n}$ agrees with the multiplicity of zeros of $X|_{\Gamma_n}$.
+    So we have two cases:
+
+    a. There are two $\cal{G}$-invariant fibres, and there does not exist a singularity outside of $\Gamma_n$, and so both singularities on $\Gamma_n$ are saddle nodes and, by the index theorem, $\Gamma_n^2=0$, which is a contradiction.
+    b. If
 :::
