@@ -296,7 +296,7 @@ In the expression $\Gr_H\Gr_G\Gr_F(A)$, $G$ and $H$ thus play a symmetric role, 
 Two *finite* filtrations $F$ and $\overline{F}$ on $A$ are said to be *$n$-opposite* if $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q\neq n$.
 :::
 
-:::: {.rmenv #chunk-1.2.4 title="1.2.4" latex="{1.2.4}"}
+::: {.rmenv #chunk-1.2.4 title="1.2.4" latex="{1.2.4}"}
 If $A^{p,q}$ is a bigraded object of $\scr{A}$ such that
 
 a. $A^{p,q}=0$ except for a finite number of pairs $(p,q)$, and
@@ -304,29 +304,23 @@ b. $A^{p,q}=0$ for $p+q\neq n$
 
 \oldpage{10}
 then we define two $n$-opposite filtrations of $A=\sum_{p,q}A^{p,q}$ by setting
-::: {.eqtag #equation-1.2.4.1 title="" latex=""}
 $$
   F^p(A)
   = \sum_{p'\geq p} A^{p',q'}
 \tag{1.2.4.1}
 $$
-:::
-::: {.eqtag #equation-1.2.4.2 title="" latex=""}
 $$
   \overline{F}^q(A)
   = \sum_{q'\geq q} A^{p',q'}.
 \tag{1.2.4.2}
 $$
-:::
 We have
-::: {.eqtag #equation-1.2.4.3 title="" latex=""}
 $$
   \Gr_F^p\Gr_{\overline{F}}^q(A)
   = A^{p,q}.
 \tag{1.2.4.3}
 $$
 :::
-::::
 
 Conversely:
 
@@ -357,21 +351,20 @@ i. The condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q>n$ implies that $F^
     Dually ([(1.1.6)](#chunk-1.1.6), [(1.1.7)](#chunk-1.1.7), [(1.1.10)](#chunk-1.1.10)), the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q<n$ is equivalent to the condition $A=F^p(A)+\overline{F}^q(A)$ for $(1-p)+(1-q)>-n$, i.e. for $p+q\leq n+1$, and the claim then follows.
 
 ii. If $F$ and $\overline{F}$ are $n$-opposite, then we can prove by decreasing induction on $p$ that
-::: {.eqtag #equation-1.2.5.1 title="" latex=""}
-$$
-  \bigoplus_{p'\geq p} A^{p',q'}
-  \simto F^p(A).
-\tag{1.2.5.1}
-$$
-:::
-    a. For $F^p(A)=0$, the claim is evident.
-    b. The decomposition $A=F^{p+1}(A)\oplus\overline{F}^{n-p}(A)$ induces on $F^p(A)\supset F^{p+1}(A)$ a decomposition
     $$
-      F^p(A)
-      = F^{p+1}(A)\oplus(F^p(A)\cap\overline{F}^{n-p}(A))
+      \bigoplus_{p'\geq p} A^{p',q'}
+      \simto F^p(A).
+    \tag{1.2.5.1}
     $$
-    and we conclude by induction.
 
-    For $p$ small enough, we have $F^p(A)=A$.
-    By
+  a. For $F^p(A)=0$, the claim is evident.
+  b. The decomposition $A=F^{p+1}(A)\oplus\overline{F}^{n-p}(A)$ induces on $F^p(A)\supset F^{p+1}(A)$ a decomposition
+  $$
+    F^p(A)
+    = F^{p+1}(A)\oplus(F^p(A)\cap\overline{F}^{n-p}(A))
+  $$
+  and we conclude by induction.
+
+  For $p$ small enough, we have $F^p(A)=A$.
+  By
 :::
