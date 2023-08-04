@@ -365,7 +365,62 @@ ii. If $F$ and $\overline{F}$ are $n$-opposite, then we can prove by decreasing 
       = F^{p+1}(A)\oplus(F^p(A)\cap\overline{F}^{n-p}(A))
     $$
     and we conclude by induction.
-
   For $p$ small enough, we have $F^p(A)=A$.
-  By
+  By (1.2.5.1), the $A^{p,q}$ thus form a bigrading of $A$, and $F$ satisfies (1.2.4.1).
+  The fact that $\overline{F}$ satisfies (1.2.4.2) then follows by symmetry.
+:::
+
+::: {.rmenv #chunk-1.2.6 title="1.2.6" latex="{1.2.6}"}
+The constructions [(1.2.4)](#chunk-1.2.4) and [(1.2.5)](#chunk-1.2.5) establish equivalences of categories that are quasi-inverse to one another between objects of $\scr{A}$ endowed with two finite $n$-opposite filtrations and bigraded objects of $\scr{A}$ of the type considered in [(1.2.4)](#chunk-1.2.4).
+:::
+
+\oldpage{11}
+
+::: {.itenv #definition-1.2.7 title="Definition 1.2.7" latex="{Definition 1.2.7}"}
+Three *finite* filtrations $W$, $F$, and $\overline{F}$ on $A$ are said to be *opposite* if
+$$
+  \Gr_F^p\Gr_{\overline{F}}^q\Gr_W^n(A)
+  = 0
+$$
+for $p+q+n\neq0$.
+:::
+
+This condition is symmetric in $F$ and $\overline{F}$.
+It implies that $F$ and $\overline{F}$ induce on $W^n(A)/W^{n+1}(A)$ two $(-n)$-opposite filtrations.
+We set
+$$
+  A^{p,q}
+  = \Gr_F^p\Gr_{\overline{F}}^q\Gr_F^{-p-q}(A)
+$$
+whence decompositions [(1.2.4)](#chunk-1.2.4), [(1.2.5)](#chunk-1.2.5)
+$$
+  W^n(A)/W^{n+1}(A)
+  = \bigoplus_{p+q=-n} A^{p,q}
+\tag{1.2.7.1}
+$$
+which makes $\Gr_W(A)$ into a bigraded object.
+
+::: {.itenv #lemma-1.2.8 title="Lemma 1.2.8" latex="{Lemma 1.2.8}"}
+Let $W$, $F$, and $\overline{F}$ be three finite opposite filtrations, and $\sigma$ a sequence $(p_i,q_i)_{i\geq0}$ pairs of integers satisfying
+
+a. $p_i\leq p_j$ and $q_i\leq q_j$ for $i\geq j$, and
+b. $p_i+q_i=p_0+q_0-i+1$ for $i>0$.
+
+Set $p=p_0$, $q=q_0$, $n=-p-q$, and
+$$
+  A_\sigma
+  = \left( \sum_{0\leq i}(W^{n+i}(A)\cap F^{p_i}(A)) \right)
+  \cap \left( \sum_{0\leq i}(W^{n+i}(A)\cap\overline{F}^{q_i}(A)) \right).
+$$
+Then the projection from $W^n(A)$ to $\Gr_W^n(A)$ induces an isomorphism
+$$
+  A_\sigma
+  \simto A^{p,q} \subset \Gr_W^n(A).
+$$
+:::
+
+::: {.proof}
+We will prove by induction on $k$ the following claim:
+
+> ($*_k$) The projection of
 :::
