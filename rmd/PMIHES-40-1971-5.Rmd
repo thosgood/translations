@@ -39,7 +39,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \renewcommand{\Im}{\operatorname{Im}}
 \providecommand{\Coim}{\operatorname{Coim}}
 \renewcommand{\Ker}{\operatorname{Ker}}
-\renewcommand{\Coker}{\operatorname{Coker}}
+\providecommand{\Coker}{\operatorname{Coker}}
 \providecommand{\simto}{\xrightarrow{\sim}}
 \providecommand{\op}{\circ}
 \providecommand{\Hom}{\operatorname{Hom}}
