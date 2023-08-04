@@ -233,9 +233,8 @@ a.anchor {
 
 .hasAnchor:hover a.anchor,
 a.anchor:hover {
-  /*opacity: 0.6;*/
-  /* hiding anchors until I can figure out how to treat nested ones */
-  visibility: hidden;
+  opacity: 0.6;
+  /* need to figure out how to treat anchors for nested chunks */
 }
 
 @media (max-width: 800px) { /* don't show anchor link on small screens */
