@@ -92,7 +92,7 @@ The proof is done by induction on $n=\dim X$, with the case $n=0$ being immediat
 So suppose that $n>0$, and that the theorem is true in dimension $<n$.
 We can consider $K(Y)$ as a subcategory of $K(X)$ (where $Y$ is some given closed subset of $X$), and then $\cal{K}\cap K(Y)$ is a subcategory of $K(Y)$ satisfying the conditions of [Theorem 2](#theorem-2), and so, if $\dim Y<n$, then the induction hypothesis implies that $K(Y)=K(Y)\cap\cal{K}$, i.e. $K(Y)\subset\cal{K}$.
 
-::: {.itenv title="Lemma 1" latex="{Lemma 1}"}
+::: {.itenv #lemma-1 title="Lemma 1" latex="{Lemma 1}"}
 Let $Y$ be a closed subset of $X$, and $\scr{A}$ a coherent $\scr{O}_X$-module such that $\supp\scr{A}\subset Y$.
 Let $\scr{I}_Y$ be the sheaf of ideals of $\scr{O}_X$ defined by $Y$.
 Then there exists an integer $k$ such that $\scr{I}_Y^k\scr{A}=0$.
