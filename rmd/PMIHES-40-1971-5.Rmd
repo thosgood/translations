@@ -667,5 +667,73 @@ Theorem [(1.2.10)](#theorem-1.2.10) translates trivially to this variation.
 ## The two filtrations lemma {#section-1.3}
 
 ::: {.rmenv #chunk-1.3.1 title="1.3.1" latex="{1.3.1}"}
-Let
+Let $K$ be a differential complex of objects of $\scr{A}$, endowed with a filtration $F$.
+The filtration is said to be *biregular* if it induces a finite filtration on each component of $K$.
+
+We recall the definition of the terms $E_r^{pq}(K,F)$, or simply $E_r^{pq}$, of the spectral sequence defined by $F$.
+We set
+$$
+  Z_r^{pq}
+  = \Ker(d\colon F^p(K^{p+q})\to F^{p+q+1}/F^{p+r}(K^{p+q+1}))
+$$
+and dually we define $B_r^{pq}$ by the formula
+$$
+  K^{p+q}/B_r^{pq}
+  = \Coker(d\colon F^{p-r+1}(K^{p+q+1})\to K^{p+q}/F^{p+1}(K^{p+q})).
+$$
+These formulas still make sense for $r=\infty$.
+
+We note that the use here of the notation $B_r^{pq}$ is different to that of Godement [@15].
+
+We have, by definition:
+$$
+  E_r^{pq}
+  = \Im(Z_r^{pq}\to K^{p+q}/B_r^{pq})
+\tag{1.3.1.1}
+$$
+$$
+  = Z_r^{pq}/(B_r^{pq}\cap Z_r^{pq})
+\tag{1.3.1.2}
+$$
+$$
+  = \Ker(K^{p+q}/B_r^{pq}\to K^{p+q}/(Z_r^{pq}+B_r^{pq})).
+\tag{1.3.1.3}
+$$
+We can thus write
+$$
+  \begin{aligned}
+    B_r^{p\bullet}\cap Z_r^{p\bullet}
+    &\coloneqq (dF^{p-r+1}+F^{p+1}) \cap (d^{-1}F^{p+r}\cap F^p)
+  \\&= (dF^{p-r+1}\cap F^p) + (F^{p+1}\cap d^{-1}F^{p+r})
+  \end{aligned}
+\tag{1.3.1.4}
+$$
+since $dF^{p-r+1}\subset d^{-1}F^{p+r}$ and $F^{p+1}\subset F^p$.
+
+\oldpage{15}
+For $r<\infty$, the $E_r$ form a complex graded by the degree $p-r(p+q)$, and $E_{r+1}$ can be expressed as the cohomology of this complex:
+$$
+  E_{r+1}^{pq}
+  = \HH(E_r^{p-r,q+r-1} \xrightarrow{d_r} E_r^{pq} \xrightarrow{d_r} E_r^{p+r,q-r+1}).
+\tag{1.3.1.5}
+$$
+
+For $r=0$, we have
+$$
+  E_0^{\bullet\bullet}
+  = \Gr_F^\bullet(K^\bullet).
+\tag{1.3.1.6}
+$$
+:::
+
+::: {.itenv #proposition-1.3.2 title="Proposition 1.3.2" latex="{Proposition 1.3.2}"}
+Let $K$ be a complex endowed with a biregular filtration $F$.
+The following conditions are equivalent:
+
+i. The spectral sequence defined by $F$ degenerates ($E_1=E_\infty$).
+ii. The morphisms $d\colon K^i\to K^{i+1}$ are strictly compatible with the filtrations.
+:::
+
+::: {.proof}
+We
 :::
