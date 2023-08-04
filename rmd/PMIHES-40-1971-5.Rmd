@@ -46,11 +46,10 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 <!-- Content -->
 
-\oldpage{5}
-
-*Work presented as a doctoral thesis at l'Université d'Orsay.*
-
 # Introduction {.unnumbered #introduction}
+
+\oldpage{5}
+*Work presented as a doctoral thesis at l'Université d'Orsay.*
 
 By Hodge, the cohomology space $\HH^n(X,\CC)$ of a compact Kähler variety $X$ is endowed with a "Hodge structure" of weight $n$, i.e. a natural bigrading
 $$
@@ -344,6 +343,8 @@ ii. If $F$ and $\overline{F}$ are $n$-opposite, and if we set
   then $A$ is the direct sum of the $A^{p,q}$, and $F$ and $\overline{F}$ come from the bigrading $A^{p,q}$ of $A$ by the procedure of [(1.2.4)](#chunk-1.2.4).
 :::
 
+**!!TO-DO: why is the following proof not appearing in the PDF version?!!**
+
 ::: {.proof}
 —
 
@@ -371,7 +372,7 @@ ii. If $F$ and $\overline{F}$ are $n$-opposite, then we can prove by decreasing 
 :::
 
 ::: {.rmenv #chunk-1.2.6 title="1.2.6" latex="{1.2.6}"}
-The constructions [(1.2.4)](#chunk-1.2.4) and [(1.2.5)](#chunk-1.2.5) establish equivalences of categories that are quasi-inverse to one another between objects of $\scr{A}$ endowed with two finite $n$-opposite filtrations and bigraded objects of $\scr{A}$ of the type considered in [(1.2.4)](#chunk-1.2.4).
+The constructions [(1.2.4)](#chunk-1.2.4) and [(1.2.5)](#proposition-1.2.5) establish equivalences of categories that are quasi-inverse to one another between objects of $\scr{A}$ endowed with two finite $n$-opposite filtrations and bigraded objects of $\scr{A}$ of the type considered in [(1.2.4)](#chunk-1.2.4).
 :::
 
 \oldpage{11}
@@ -392,7 +393,7 @@ $$
   A^{p,q}
   = \Gr_F^p\Gr_{\overline{F}}^q\Gr_F^{-p-q}(A)
 $$
-whence decompositions [(1.2.4)](#chunk-1.2.4), [(1.2.5)](#chunk-1.2.5)
+whence decompositions [(1.2.4)](#chunk-1.2.4), [(1.2.5)](#proposition-1.2.5)
 $$
   W^n(A)/W^{n+1}(A)
   = \bigoplus_{p+q=-n} A^{p,q}
@@ -422,14 +423,142 @@ $$
 ::: {.proof}
 We will prove by induction on $k$ the following claim:
 
-> ($*_k$) The projection from $W^n(A)/W^{n+k}$ to $\Gr_W^n(A)$ induces an isomorphism from
-> $$
->   \left(
->   \left( \sum_{i<k} (W^{n+i}(A)\cap F^{p_i}(A)) + W^{n+k}(A) \right)
->   \cap \left( \sum_{i<k} (W^{n+i}(A)\cap\overline{F}^{q_i}(A)) + W^{n+k}(A) \right)
->   \right) / W^{n+k}(A)
-> $$
-> to $A^{p,q}\subset\Gr_W^n(A)$.
+($*_k$) The projection from $W^n(A)/W^{n+k}$ to $\Gr_W^n(A)$ induces an isomorphism from
+$$
+  \left(
+  \left( \sum_{i<k} (W^{n+i}(A)\cap F^{p_i}(A)) + W^{n+k}(A) \right)
+  \cap \left( \sum_{i<k} (W^{n+i}(A)\cap\overline{F}^{q_i}(A)) + W^{n+k}(A) \right)
+  \right) / W^{n+k}(A)
+  $$
+to $A^{p,q}\subset\Gr_W^n(A)$.
 
-For $k=1$
+For $k=1$, this is exactly the definition of $A^{p,q}$.
+
+By [(1.2.5)](#proposition-1.2.5), i., we have
+$$
+  F^{p_k}(\Gr_W^{n+k}(A)) \oplus \overline{F}^{q_k}(\Gr_W^{n+k}(A))
+  \simto \Gr_W^{n+k}(A).
+\tag{1.2.8.1}
+$$
+Set
+$$
+  \begin{aligned}
+    B &= \sum_{i<k} (W^{n+i}(A)\cap F^{p_i}(A))
+  \\C &= \sum_{i<k} (W^{n+i}(A)\cap\overline{F}^{q_i}(A))
+  \\B' &= (W^{n+k}(A)\cap F^{p_k}(A)) + W^{n+k+1}(A)
+  \\C' &= (W^{n+k}(A)\cap\overline{F}^{q_k}(A)) + W^{n+k+1}(A)
+  \\D &= W^{n+k}(A)
+  \\E &= W^{n+k+1}(A).
+  \end{aligned}
+$$
+
+\oldpage{12}
+Equation (1.2.8.1) can then be written as
+$$
+  \begin{aligned}
+    B'+C' &= D
+  \\B'\cap C' &= E.
+  \end{aligned}
+$$
+We also have, since $p_k\leq p_i$ (for $i\leq k$),
+$$
+  B\cap D
+  \subset F^{p_k}(A) \cap W^{n+k}(A)
+  \subset B'
+$$
+and, since $q_k\leq q_i$ (for $i\leq k$),
+$$
+  C\cap D
+  \subset \overline{F}^{q_k}(A)\cap W^{n+k}(A)
+  \subset C'.
+$$
+
+The claim ($*_{k+1}$) and then follows from ($*_k$) and the following lemma.
+:::
+
+::: {.itenv #lemma-1.2.9 title="Lemma 1.2.9" latex="{Lemma 1.2.9}"}
+Let $B$, $C$, $B'$, $C'$, $D$, and $E$ be sub-objects of $A$.
+Suppose that
+$$
+  \begin{aligned}
+    B'+C' &= D
+  \\B'\cap C' &= E
+  \\B\cap D &\subset B'
+  \\C\cap D &\subset C'.
+  \end{aligned}
+$$
+Then
+$$
+  ((B+B')\cap(C+C'))/E
+  \simto ((B+D)\cap(C+D))/D.
+$$
+:::
+
+::: {.proof}
+To prove surjectivity, we write
+$$
+  \begin{aligned}
+    ((B+B')\cap(C+C'))+D
+    &= (((B+B')\cap(C+C'))+B')+C'
+  \\&= ((B+B')\cap(C+C'+B'))+C'
+  \\&= (B+B'+C')\cap(C+C'+B')
+  \\&= (B+D)\cap(C+D).
+  \end{aligned}
+$$
+
+To prove injectivity, we write
+$$
+  (B+B')\cap(C+C')\cap D
+  = ((B+B')\cap D)\cap((C+C')\cap D).
+$$
+Since $B'\subset D$, we have
+$$
+  \begin{aligned}
+    (B+B')\cap D
+    &= (B\cap D)+B'
+  \\&= B'
+  \end{aligned}
+$$
+and similarly
+$$
+  (C+C')\cap D
+  = C'
+$$
+and
+$$
+  \begin{aligned}
+    (B+B')\cap(C+C')\cap D
+    &= B'\cap C'
+  \\&= E.
+  \end{aligned}
+$$
+:::
+
+This finishes the proof of [(1.2.8)](#lemma-1.2.8) by noting that [(1.2.8)](#lemma-1.2.8) is equivalent to ($*_k$) for large $k$.
+
+::: {.itenv #theorem-1.2.10 title="Theorem 1.2.10" latex="{Theorem 1.2.10}"}
+Let $\scr{A}$ be an abelian category, and provisionally denote by $\scr{A}'$ the category of objects of $\scr{A}$ endowed with three opposite filtrations $W$, $F$, and $\overline{F}$.
+The morphisms in $\scr{A}'$ are the morphisms of $\scr{A}$ that are compatible with the three filtrations.
+
+i. $\scr{A}'$ is an abelian category.
+ii. The kernel (resp. cokernel) of an arrow $f\colon A\to B$ in $\scr{A}'$ is the kernel (resp. cokernel) of $f$ in $\scr{A}$, endowed with the filtrations induced by those of $A$ (resp. the quotients of those of $B$).
+iii. Every morphism $f\colon A\to B$ in $\scr{A}'$ is strictly compatible with the filtrations $W$, $F$, and $\overline{F}$;
+  the morphism $\Gr_W(f)$ is compatible with the bigradings of $\Gr_W(A)$ and $\Gr_W(B)$;
+  the morphisms $\Gr_F(f)$ and $\Gr_{\overline{F}}(f)$ are strictly compatible with the filtration induced by $W$.
+iv. The "forget the filtrations" functors, $\Gr_W$, $\Gr_F$, and $\Gr_{\overline{F}}$, and
+  $$
+    \begin{gathered}
+      \Gr_W\Gr_F
+      \simeq \Gr_F\Gr_W
+    \\\simeq \Gr_{\overline{F}}\Gr_F\Gr_W
+    \\\simeq \Gr_{\overline{F}}\Gr_W
+      \simeq \Gr_W\Gr_{\overline{F}}
+    \end{gathered}
+  $$
+  from $\scr{A}'$ to $\scr{A}$ are exact.
+:::
+
+\oldpage{13}
+::: {.proof}
+Denote
 :::
