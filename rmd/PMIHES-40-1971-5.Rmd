@@ -269,5 +269,109 @@ These constructions are compatible with composition of functors, in a sense whos
 ## Opposite filtrations {#section-1.2}
 
 ::: {.rmenv #chunk-1.2.1 label="1.2.1" latex="{1.2.1}"}
-Let $A$
+Let $A$ be an object of $\scr{A}$ endowed with filtrations $F$ and $G$.
+By definition, $\Gr_F^n(A)$ is a quotient of a sub-object of $A$ and, as such, is endowed with a filtration induced by $G$ [(1.1.10)](#chunk-1.1.10).
+Passing to the associated graded defines a bigraded object $(\Gr_G^n\Gr_F^m(A))_{n,m\in\ZZ}$.
+By a lemma of Zassenhaus, $\Gr_G^n\Gr_F^m(A)$ and $\Gr_F^m\Gr_G^n(A)$ are canonically isomorphic: if we define the induced filtrations [(1.1.10)](#chunk-1.1.10) as quotient filtrations of the induced filtrations on a sub-object, then we have
+$$
+  \begin{aligned}
+    \Gr_G^n\Gr_F^m(A)
+    \cong (F^m(A)\cap G^n(A)) &/ ((F^{m+1}(A)\cap G^n(A)) + (F^m(A)\cap G^{n+1}(A)))
+  \\&=
+  \\\Gr_F^m\Gr_G^n(A)
+    \cong (G^n(A)\cap F^m(A)) &/ ((G^{n+1}(A)\cap F^m(A)) + (G^n(A)\cap F^{m+1}(A)))
+  \end{aligned}
+$$
+:::
+
+::: {.rmenv #chunk-1.2.2 title="1.2.2" latex="{1.2.2}"}
+Let $H$ be a third filtration of $A$.
+It induces a filtration on $\Gr_F(A)$, and thus on $\Gr_G\Gr_F(A)$.
+It also induces a filtration on $\Gr_F\Gr_G(A)$.
+We note that these filtrations do not in general correspond to one another under the isomorphism [(1.2.1)](#chunk-1.2.1).
+In the expression $\Gr_H\Gr_G\Gr_F(A)$, $G$ and $H$ thus play a symmetric role, but not $F$ and $G$.
+:::
+
+::: {.rmenv #definition-1.2.3 title="1.2.3" latex="{1.2.3}"}
+Two *finite* filtrations $F$ and $\overline{F}$ on $A$ are said to be *$n$-opposite* if $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q\neq n$.
+:::
+
+:::: {.rmenv #chunk-1.2.4 title="1.2.4" latex="{1.2.4}"}
+If $A^{p,q}$ is a bigraded object of $\scr{A}$ such that
+
+a. $A^{p,q}=0$ except for a finite number of pairs $(p,q)$, and
+b. $A^{p,q}=0$ for $p+q\neq n$
+
+\oldpage{10}
+then we define two $n$-opposite filtrations of $A=\sum_{p,q}A^{p,q}$ by setting
+::: {.eqtag #equation-1.2.4.1 title="" latex=""}
+$$
+  F^p(A)
+  = \sum_{p'\geq p} A^{p',q'}
+\tag{1.2.4.1}
+$$
+:::
+::: {.eqtag #equation-1.2.4.2 title="" latex=""}
+$$
+  \overline{F}^q(A)
+  = \sum_{q'\geq q} A^{p',q'}.
+\tag{1.2.4.2}
+$$
+:::
+We have
+::: {.eqtag #equation-1.2.4.3 title="" latex=""}
+$$
+  \Gr_F^p\Gr_{\overline{F}}^q(A)
+  = A^{p,q}.
+\tag{1.2.4.3}
+$$
+:::
+::::
+
+Conversely:
+
+::: {.itenv #proposition-1.2.5 title="Proposition 1.2.5" latex="{Proposition 1.2.5}"}
+i. Let $F$ and $\overline{F}$ be finite filtrations on $A$.
+    For $F$ and $\overline{F}$ to be $n$-opposite, it is necessary and sufficient that, for all $p,q$,
+    $$
+      [p+q=n+1]
+      \implies [F^p(A)\oplus\overline{F}^q(A) \simto A].
+    $$
+
+ii. If $F$ and $\overline{F}$ are $n$-opposite, and if we set
+    $$
+      \begin{cases}
+        A^{p,q} = 0
+        &\text{for }p+q\neq n
+      \\A^{p,q} = F^p(A)\cap\overline{F}^q(A)
+        &\text{for }p+q=n
+      \end{cases}
+    $$
+    then $A$ is the direct sum of the $A^{p,q}$, and $F$ and $\overline{F}$ come from the bigrading $A^{p,q}$ of $A$ by the procedure of [(1.2.4)](#chunk-1.2.4).
+:::
+
+::: {.proof}
+i. The condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q>n$ implies that $F^p\cap\overline{F}^q=(F^{p+1}\cap\overline{F}^q)+(F^p\cap\overline{F}^{q+1})$ for $p+q>n$.
+    By hypothesis, $F^p\cap\overline{F}^q$ is zero for large enough $p+q$;
+    by decreasing induction, we thus deduce that the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q>n$ is equivalent to the condition $F^p(A)\cap\overline{F}^q(A)=0$ for $p+q>n$.
+    Dually ([(1.1.6)](#chunk-1.1.6), [(1.1.7)](#chunk-1.1.7), [(1.1.10)](#chunk-1.1.10)), the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q<n$ is equivalent to the condition $A=F^p(A)+\overline{F}^q(A)$ for $(1-p)+(1-q)>-n$, i.e. for $p+q\leq n+1$, and the claim then follows.
+
+ii. If $F$ and $\overline{F}$ are $n$-opposite, then we can prove by decreasing induction on $p$ that
+::: {.eqtag #equation-1.2.5.1 title="" latex=""}
+$$
+  \bigoplus_{p'\geq p} A^{p',q'}
+  \simto F^p(A).
+\tag{1.2.5.1}
+$$
+:::
+    a. For $F^p(A)=0$, the claim is evident.
+    b. The decomposition $A=F^{p+1}(A)\oplus\overline{F}^{n-p}(A)$ induces on $F^p(A)\supset F^{p+1}(A)$ a decomposition
+    $$
+      F^p(A)
+      = F^{p+1}(A)\oplus(F^p(A)\cap\overline{F}^{n-p}(A))
+    $$
+    and we conclude by induction.
+
+    For $p$ small enough, we have $F^p(A)=A$.
+    By
 :::
