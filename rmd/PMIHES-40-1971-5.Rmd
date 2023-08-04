@@ -434,7 +434,7 @@ to $A^{p,q}\subset\Gr_W^n(A)$.
 
 For $k=1$, this is exactly the definition of $A^{p,q}$.
 
-By [(1.2.5), i.](#proposition-1.2.5) we have
+By [(1.2.5), (i)](#proposition-1.2.5) we have
 $$
   F^{p_k}(\Gr_W^{n+k}(A)) \oplus \overline{F}^{q_k}(\Gr_W^{n+k}(A))
   \simto \Gr_W^{n+k}(A).
@@ -582,7 +582,7 @@ $$
   \qquad\text{(for }i=0,1\text{)}.
 \tag{1.2.10.1}
 $$
-Claim iii. then follows from the following lemma:
+Claim (iii) then follows from the following lemma:
 
 ::: {.itenv #lemma-1.2.11 title="Lemma 1.2.11" latex="{Lemma 1.2.11}"}
 The $A_i^{p,q}$ give a bigrading of $A$.
@@ -625,5 +625,47 @@ Equation (1.2.11.2) then follows.
 
 ::: {.rmenv #chunk-1.2.12 title="1.2.12" latex="{1.2.12}"}
 We now prove [(1.2.10)](#theorem-1.2.10).
+Let $f\colon A\to B$ in $\scr{A}'$ and endow $K=\Ker(f)$ with the filtrations induced by those of $A$.
+By [(1.2.11)](#lemma-1.2.11), $\Gr_W(K)\hookrightarrow\Gr_W(A)$;
+furthermore, the filtration $F$ (resp. $\overline{F}$) on $K$ induces on $\Gr_W(K)$ the inverse image filtration of the filtration $F$ on $\Gr_W(A)$.
+The sub-object $\Gr_W(K)$ of $\Gr_W(A)$ is then compatible with the bigrading of $\Gr_W(A)$:
+$$
+  \Gr_W(K)
+  = \bigoplus_{p,q}(\Gr_W(K)\cap A^{p,q}).
+$$
+
+We thus deduce that
+$$
+  \Gr_F^p\Gr_{\overline{F}}^q\Gr_W^n(K)
+  \hookrightarrow \Gr_F^p\Gr_{\overline{F}}^q\Gr_W^n(A);
+$$
+\oldpage{14}
+the filtrations of $W$, $F$, and $\overline{F}$ on $K$ are thus opposite, and $K$ is a kernel of $f$ in $\scr{A}'$.
+This, combined with the dual result, proves (ii).
+
+If $f$ is an arrow of $\scr{A}'$, then the canonical morphism from $\Coim(f)$ to $\Im(f)$ is an isomorphism in $\scr{A}$;
+by (iii), it is also an isomorphism in $\scr{A}'$, which is thus abelian.
+
+The "forget the filtrations" functor is exact by (ii).
+The exactness of the other functors in (iv) follows immediately from (ii), (iii), and [(1.1.11), (i) or (ii)](#proposition-1.1.11).
+:::
+
+::: {.rmenv #chunk-1.2.13 title="1.2.13" latex="{1.2.13}"}
+Let $A$ be an object of $\scr{A}$ endowed with a finite *increasing* filtration $W_\bullet$, and two finite decreasing filtrations $F$ and $\overline{F}$.
+The construction [(1.1.3)](#chunk-1.1.3) associates to $W_\bullet$ a decreasing filtration $W^\bullet$.
+We say that the filtrations $W_\bullet$, $F$, and $\overline{F}$ are *opposite* if the filtrations $W^\bullet$, $F$, and $\overline{F}$ are, i.e. if, for all $n$, the filtrations induced by $F$ and $\overline{F}$ on
+$$
+  \Gr_n^W(A)
+  = W_n(A)/W_{n-1}(A)
+$$
+are $n$-opposite.
+
+Theorem [(1.2.10)](#theorem-1.2.10) translates trivially to this variation.
+:::
+
+
+## The two filtrations lemma {#section-1.3}
+
+::: {.rmenv #chunk-1.3.1 title="1.3.1" latex="{1.3.1}"}
 Let
 :::
