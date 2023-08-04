@@ -422,5 +422,14 @@ $$
 ::: {.proof}
 We will prove by induction on $k$ the following claim:
 
-> ($*_k$) The projection of
+> ($*_k$) The projection from $W^n(A)/W^{n+k}$ to $\Gr_W^n(A)$ induces an isomorphism from
+> $$
+>   \left(
+>   \left( \sum_{i<k} (W^{n+i}(A)\cap F^{p_i}(A)) + W^{n+k}(A) \right)
+>   \cap \left( \sum_{i<k} (W^{n+i}(A)\cap\overline{F}^{q_i}(A)) + W^{n+k}(A) \right)
+>   \right) / W^{n+k}(A)
+> $$
+> to $A^{p,q}\subset\Gr_W^n(A)$.
+
+For $k=1$
 :::
