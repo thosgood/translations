@@ -43,6 +43,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\simto}{\xrightarrow{\sim}}
 \providecommand{\op}{\circ}
 \providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Dec}{\operatorname{Dec}}
 
 <!-- Content -->
 
@@ -193,6 +194,8 @@ In particular, if $\Sigma\colon A\xrightarrow{f}B\xrightarrow{G}C$ is a **!!TO-D
 The reader can show that:
 
 ::: {.itenv #proposition-1.1.11 title="Proposition 1.1.11" latex="{Proposition 1.1.11}"}
+—
+
 i. Let $f\colon(A,F)\to(B,F)$ be a morphism of filtered objects with finite filtrations.
   For $f$ to be strict, it is necessary and sufficient that the sequence
   $$
@@ -324,6 +327,8 @@ $$
 Conversely:
 
 ::: {.itenv #proposition-1.2.5 title="Proposition 1.2.5" latex="{Proposition 1.2.5}"}
+—
+
 i. Let $F$ and $\overline{F}$ be finite filtrations on $A$.
   For $F$ and $\overline{F}$ to be $n$-opposite, it is necessary and sufficient that, for all $p,q$,
   $$
@@ -735,5 +740,82 @@ ii. The morphisms $d\colon K^i\to K^{i+1}$ are strictly compatible with the filt
 :::
 
 ::: {.proof}
-We
+We will prove this in the case where $\scr{A}$ is a category of modules.
+For fixed $p$ and $q$, the hypothesis that the arrows $d_r$ with domains $E_r^{pq}$ be zero for $r\geq1$ implies that, if $x\in F^p(K^{p+q})$ satisfies $dx\in F^{p+1}(K^{p+q+1})$, then there exists $y\in K^{p+q}$ such that $dy=0$ and such that $x$ and $y$ have the same image in $E_1^{pq}$.
+Modifying $y$ by a boundary, and setting $z=x-y$, we then have
+$$
+  \forall x\in F^p(K^{p+q})
+  \left[
+    dx\in F^{p+1}(K^{p+q+1})
+    \implies \exists z\text{ s.t. } z\in F^{p+1}(K^{p+q}) \text{ and } dz=dx
+  \right]
+$$
+or, in other words,
+$$
+  F^{p+1}(K^{p+q+1}) \cap dF^p(K^{p+q})
+  = dF^{p+1}(K^{p+q}).
+\tag{1}
+$$
+
+If this condition is satisfied for arbitrary $p$ and $q$, then by induction on $r$ we have
+$$
+  F^{p+r} \cap dF^p
+  = dF^{p+r}
+$$
+which, for large $p+r$, can be written as
+$$
+  F^p \cap dK
+  = dF^p.
+\tag{2}
+$$
+
+Claim (2) trivially implies (1), and is equivalent to (ii), which proves the proposition.
+:::
+
+::: {.rmenv #chunk-1.3.3 title="1.3.3" latex="{1.3.3}"}
+If $(K,F)$ is a filtered complex, we denote by $\Dec(K)$ the complex $K$ endowed with the *shifted filtration*
+$$
+  \Dec(F)^p K^n
+  = Z_1^{p+n,-p}.
+$$
+
+This filtration is compatible with the differentials:
+$$
+  \begin{aligned}
+    dZ_1^{p+n,-p}
+    &\subset F^{p+n+1}(K^{n+1}) \cap \Ker(d)
+  \\&\subset Z_\infty^{p+n+1,-p}
+  \\&\subset Z_1^{p+n+1,-p}.
+  \end{aligned}
+$$
+
+Since
+$$
+  \begin{aligned}
+    Z_1^{p+1+n,-p-1}
+    &\subset F^{p+1+n}(K^n)
+  \\&\subset B_1^{p+n,-p}
+  \\&\subset Z_1^{p+n,-p}
+  \end{aligned}
+\tag{1.3.3.1}
+$$
+the evident arrow from $Z_1^{p+n,-p}/Z_1^{p+1+n,-p-1}$ to $Z_1^{p+n,-p}/B_1^{p+n,-p}$ is a morphism
+$$
+  u\colon E_0^{p,n-p}(\Dec(K)) \to E_1^{p+n,-p}(K).
+\tag{1.3.3.2}
+$$
+:::
+
+::: {.itenv #proposition-1.3.4 title="Proposition 1.3.4" latex="{Proposition 1.3.4}"}
+—
+
+i. The morphisms (1.3.3.2) form a morphism of graded complexes from $E_0(\Dec(K))$ to $E_1(K)$.
+ii. This morphism induces an isomorphism on cohomology.
+iii. It induces step by step (via (1.3.1.5)) isomorphisms of graded complexes $E_r(\Dec(K))\simto E_{r+1}(K)$ (for $r\geq1$).
+:::
+
+\oldpage{16}
+
+::: {.proof}
+Let
 :::
