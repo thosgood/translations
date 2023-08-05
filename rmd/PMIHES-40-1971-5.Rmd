@@ -175,9 +175,8 @@ $$
 $$
 :::
 
-\oldpage{8}
-
 ::: {.itenv #lemma-1.1.9 title="Lemma 1.1.9" latex="{Lemma 1.1.9}"}
+\oldpage{8}
 If $X$ and $Y$ are sub-objects of $A$, with $X\subset Y$, then on $Y/X\simto\Ker(A/X\to A/Y)$ the quotient filtration of $Y$ agrees with that induced by that of $A/X$.
 In the diagram
 **!!TO-DO: diagram!!**
@@ -380,9 +379,8 @@ ii. If $F$ and $\overline{F}$ are $n$-opposite, then we can prove by decreasing 
 The constructions [(1.2.4)](#chunk-1.2.4) and [(1.2.5)](#proposition-1.2.5) establish equivalences of categories that are quasi-inverse to one another between objects of $\scr{A}$ endowed with two finite $n$-opposite filtrations and bigraded objects of $\scr{A}$ of the type considered in [(1.2.4)](#chunk-1.2.4).
 :::
 
-\oldpage{11}
-
 ::: {.itenv #definition-1.2.7 title="Definition 1.2.7" latex="{Definition 1.2.7}"}
+\oldpage{11}
 Three *finite* filtrations $W$, $F$, and $\overline{F}$ on $A$ are said to be *opposite* if
 $$
   \Gr_F^p\Gr_{\overline{F}}^q\Gr_W^n(A)
@@ -814,8 +812,154 @@ ii. This morphism induces an isomorphism on cohomology.
 iii. It induces step by step (via (1.3.1.5)) isomorphisms of graded complexes $E_r(\Dec(K))\simto E_{r+1}(K)$ (for $r\geq1$).
 :::
 
+::: {.proof}
 \oldpage{16}
+Let $F'$ be the filtration on $K$ defined by
+$$
+  {F'}^p(K^n)
+  = \Dec(F)^{p-n}(K^n)
+  = Z_1^{p,n-p}.
+$$
+We trivially have isomorphisms
+$$
+  E_r^{p,n-p}(\Dec(K))
+  = E_{r+1}^{p+n,-p}(K,F')
+\tag{1.3.4.1}
+$$
+that are compatible with the $d_r$ and with (1.3.1.5).
+The map $u$ comes from (1.3.4.1) and from the identity map
+$$
+  (K,F') \to (K,F).
+$$
+This proves (i), and it remains to show that, for $r\geq2$,
+$$
+  E_r^{pq}(K,F')
+  \simto E_r^{pq}(K,F).
+$$
+We have
+$$
+  \begin{aligned}
+    Z_r^{pq}(K,F')
+    &= Z_r^{pq}(K,F)
+    \qquad\text{(for }r\geq1\text{)}
+  \\Z_r^{pq}(K,F') \cap B_r^{pq}(K,F')
+    &= Z_r^{pq}(K,F) \cap B_r^{pq}(K,F)
+    \qquad\text{(for }r\geq2\text{)}
+  \end{aligned}
+$$
+and we can then apply (1.3.1.2).
+:::
+
+::: {.rmenv #chunk-1.3.5 title="1.3.5" latex="{1.3.5}"}
+The construction [(1.3.3)](#chunk-1.3.3) is not self-dual.
+The dual construction consists of defining
+$$
+  \Dec^\bullet(F)^pK^n
+  = B_1^{p+n-1,-p+1}.
+$$
+We then have morphisms
+$$
+  E_0^{p,n-p}(\Dec(K))
+  \to E_1^{p+n,p}(K)
+  \to E_0^{p,n-p}(\Dec^\bullet(K))
+$$
+and, for $r\geq1$, isomorphisms
+$$
+  E_r^{p,n-p}(\Dec(K))
+  \simto E_{r+1}^{p+n,p}(K)
+  \simto E_{r}^{p,n-p}(\Dec^\bullet(K)).
+$$
+:::
+
+Recall that a morphism of complexes is said to be a *quasi-isomorphism* if it induces an isomorphism on cohomology.
+
+::: {.rmenv #definition-1.3.6 title="Definition 1.3.6" latex="{Definition 1.3.6}"}
+—
+
+i. A morphism $f\colon(K,F)\to(K',F')$ of filtered complexes with biregular filtrations is a *filtered quasi-isomorphism* if $\Gr_F(f)$ is a quasi-isomorphism, i.e. if the $E_1^{pq}(f)$ are isomorphisms.
+ii. A morphism $f\colon(K,F,W)\to(K,F',W')$ of biregular bifiltered complexes is a *bifiltered quasi-isomorphism* if $\Gr_F\Gr_W(f)$ is a quasi-isomorphism.
+:::
+
+::: {.rmenv #chunk-1.3.7 title="1.3.7" latex="{1.3.7}"}
+Let $K$ be a differential complex of objects of $\scr{A}$, endowed with two filtrations $F$ and $W$.
+Let $E_r^{pq}$ be the spectral sequence defined by $W$.
+The filtration $F$ induces on $E_r^{pq}$ various filtrations, which we will compare.
+:::
+
+::: {.rmenv #chunk-1.3.8 title="1.3.8" latex="{1.3.8}"}
+Equation (1.3.1.2) identifies $E_r^{pq}$ with a quotient of a sub-object of $K^{p+q}$.
+The $E_r^{pq}$ term is thusly given by endowing with a filtration $F_d$ induced by $F$, called the *first direct filtration*.
+:::
+
+::: {.rmenv #chunk-1.3.9 title="1.3.9" latex="{1.3.9}"}
+Dually, Equation (1.3.1.3) identifies $E_r^{pq}$ with a sub-object of a quotient of $K^{p+q}$, whence a new filtration $F_{d^*}$ induced by $F$, called the *second direct filtration*.
+:::
+
+::: {.itenv #lemma-1.3.10 title="Lemma 1.3.10" latex="{Lemma 1.3.10}"}
+\oldpage{17}
+On $E_0$ and $E_1$, we have $F_d=F_{d^*}$.
+:::
 
 ::: {.proof}
-Let
+For $r=0,1$, we have $B_r^{pq}\subset Z_r^{pq}$, and we apply (1.1.9).
+:::
+
+::: {.rmenv #chunk-1.3.11 title="1.3.11" latex="{1.3.11}"}
+Equation (1.3.1.5) identifies $E_{r+1}^{pq}$ with a quotient of a sub-object of $E_r^{pq}$.
+We define the *recurrent filtration* $F_r$ on the $E_r^{pq}$ by the conditions
+
+i. On $E_0^{pq}$, $F_r=F_d=F_{d^*}$.
+ii. On $E_{r+1}^{pq}$, the recurrent filtration is that induced by the recurrent filtration of $E_r^{pq}$.
+:::
+
+::: {.rmenv #chunk-1.3.12 title="1.3.12" latex="{1.3.12}"}
+Definitions [(1.3.8)](#chunk-1.3.8) and [(1.3.9)](#chunk-1.3.9) still make sense for $r=\infty$.
+If the filtration on $K$ is biregular, then the direct filtrations on $E_\infty^{pq}$ coincide with those on $E_r^{pq}=E_\infty^{pq}$ for large enough $r$, and we define the recurrent filtration on $E_\infty^{pq}$ as agreeing with that on $E_r^{pq}$ for large enough $r$.
+
+The filtrations $F$ and $W$ each induce a filtration on $H^\bullet(K)$, and $E_\infty^{\bullet\bullet}=\Gr_W^\bullet(\HH^\bullet(K))$.
+The filtration $F$ on $\HH^\bullet(K)$ then induces on $E_\infty^{pq}$ a new filtration.
+:::
+
+::: {.itenv #proposition-1.3.13 title="Proposition 1.3.13" latex="{Proposition 1.3.13}"}
+—
+
+i. For the first direct filtration, the morphisms $d_r$ are compatible with the filtrations.
+  If $E_{r+1}^{pq}$ is considered as a quotient of a sub-object of $E_r^{pq}$, then the first direct filtration on $E_{r+1}^{pq}$ is finer than the filtration $F'$ induced by the first direct filtration on $E_r^{pq}$Y we have $F_d(E_{r+1}^{pq})\subset F'(E_{r+1}^{pq})$.
+ii. Dually, the morphisms $d_r$ are compatible with the second direct filtration, and the second direct filtration on $E_{r+1}^{pq}$ is less fine than the filtration induced by that of $E_r^{pq}$.
+iii. $F_d(E_r^{pq})\subset F_r(E_r^{pq})\subset F_{d^*}(E_r^{pq})$.
+iv. On $E_\infty^{pq}$, the filtration induced by the filtration $F$ of $\HH^\bullet(K)$ [(1.3.12)](#chunk-1.3.12) is finer than the first direct filtration and less fine than the second.
+:::
+
+::: {.proof}
+Claim (i) is evident, (ii) is its dual, and (iii) follows by induction.
+The first claim of (iv) is easy to verify, and the second is its dual.
+:::
+
+::: {.rmenv #chunk-1.3.14 title="1.3.14" latex="{1.3.14}"}
+We denote by $\Dec(K)$ (resp. $\Dec^\bullet(K)$) the complex $K$ endowed with the filtrations $\Dec(W)$ and $F$ (resp. $\Dec^\bullet(W)$ and $F$).
+
+It is clear by (1.3.4.1) that the isomorphism [(1.3.4)](#proposition-1.3.4) sends the first direct filtration on $E_r(\Dec(K))$ to the second direct filtration on $E_{r+1}(K)$ (for $r\geq1$).
+The dual isomorphism [(1.3.5)](#chunk-1.3.5) sends the second direct filtration on $E_r(\Dec^\bullet(K))$ to the second direct filtration on $E_{r+1}(K)$.
+:::
+
+::: {.itenv #lemma-1.3.15 title="Lemma 1.3.15" latex="{Lemma 1.3.15}"}
+If the filtration $F$ is biregular, and if, on the $\Gr_W^p(K)$, the morphisms $d$ are strictly compatible with the filtration induced by $F$, then
+
+i. The morphism (1.3.3.2) of graded complexes filtered by $F$
+  $$
+    u\colon \Gr_{\Dec(W)}(K)
+    \to E_1(K,W)
+  $$
+  is a filtered quasi-isomorphism.
+ii. Dually, the morphism [(1.3.5)](#chunk-1.3.5)
+  $$
+    u\colon E_1(K,W)
+    \to \Gr_{\Dec^\bullet(W)}(K)
+  $$
+  is a filtered quasi-isomorphism.
+:::
+
+::: {.proof}
+\oldpage{18}
+It suffices, by duality, to prove (i).
 :::
