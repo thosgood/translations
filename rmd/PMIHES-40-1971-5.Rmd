@@ -809,7 +809,7 @@ $$
 
 i. The morphisms (1.3.3.2) form a morphism of graded complexes from $E_0(\Dec(K))$ to $E_1(K)$.
 ii. This morphism induces an isomorphism on cohomology.
-iii. It induces step by step (via (1.3.1.5)) isomorphisms of graded complexes $E_r(\Dec(K))\simto E_{r+1}(K)$ (for $r\geq1$).
+iii. It induces step-by-step (via (1.3.1.5)) isomorphisms of graded complexes $E_r(\Dec(K))\simto E_{r+1}(K)$ (for $r\geq1$).
 :::
 
 ::: {.proof}
@@ -962,4 +962,92 @@ ii. Dually, the morphism [(1.3.5)](#chunk-1.3.5)
 ::: {.proof}
 \oldpage{18}
 It suffices, by duality, to prove (i).
+
+By [(1.3.3)](#chunk-1.3.3) and [(1.3.4)](#proposition-1.3.4), the complex $E_1(K,W)$ filtered by $F$ is a quotient of the filtered complex $\Gr_{\Dec(W)}(K)$.
+Let $U$ be the filtered complex given by the kernel, which is acyclic by [(1.3.4), (ii)](#proposition-1.3.4).
+The long exact sequence in cohomology associated to the exact sequence of complexes
+$$
+  0
+  \to \Gr_F(U)
+  \to \Gr_F(\Gr_{\Dec(W)}(K))
+  \to \Gr_F(E_1(K,W))
+  \to 0
+$$
+shows that $u$ is a filtered quasi-isomorphism if and only if $\Gr_F(U)$ is an acyclic complex.
+By [(1.3.2)](#proposition-1.3.2), and since $U$ is acyclic, this reduces to asking that the differentials of $U$ be strictly compatible with the filtration $F$.
+From (1.3.3.1) we obtain that $U$ is the sum over $p$ of the complexes
+$$
+  (U^p)^n
+  = B_1^{p+n,-p}/Z_1^{p+1+n,-p-1}
+$$
+endowed with the filtration induced by $F$.
+
+Each differential $d$ of each of the complexes $U^p$ fits into a commutative diagram of filtered objects of the following type, where, for simplicity, we have omitted the total or complementary degree:
+**!!TO-DO: diagram!!**
+By hypothesis, the morphism $(1)$ is strict.
+Since the square $(2)$ is exactly the canonical decomposition of $(1)$, the arrow $(3)$ is a filtered isomorphism.
+The arrows of the trapezium $(4)$ are isomorphisms;
+they are thus filtered isomorphisms, since $(3)$ is a filtered isomorphism.
+The fact that $(5)$ is a filtered isomorphism implies that $d$ is strict.
+This proves the lemma.
+:::
+
+::: {.itenv #theorem-1.3.16 title="Theorem 1.3.16" latex="{Theorem 1.3.16}"}
+Let $K$ be a complex endowed with two filtrations, $W$ and $F$, with the filtration $F$ biregular.
+Let $r_0\geq0$ be an integer, and suppose that, for $0\leq r<r_0$, the differentials of the graded complex $E_r(K,W)$ are strictly compatible with the filtration $F$.
+Then, for $r\leq r_0+1$, $F_d=F_r=F_{d^*}$ on $E_r^{pq}$.
+:::
+
+::: {.proof}
+We will prove the theorem by induction on $r_0$.
+For $r_0=0$, the hypothesis is empty, and we apply [(1.3.10)](#lemma-1.3.10) and [(1.3.13), (iii)](#proposition-1.3.13).
+For $r_0\geq1$, by the inductive hypothesis, we have $F_d=F_r=F_{d^*}$ on $E_r^{pq}$ for $r\leq r_0$.
+
+\oldpage{19}
+By [(1.3.15)](#lemma-1.3.15), the morphism $u\colon E_0(\Dec(K))\to E_1(K)$ is a filtered quasi-isomorphism.
+It thus induces a filtered isomorphism from $\HH^\bullet(\Dec(K))$ to $\HH^\bullet(E_1(K))$:
+$$
+  u\colon (E_1(\Dec(K)),F_r)
+  \simto (E_2(K),F_r).
+$$
+Step-by-step, we thus deduce that the canonical isomorphism from $E_s(\Dec(K))$ to $E_{s+1}$ (for $s\geq1$) is a filtered isomorphism for the recurrent filtration.
+
+On $E_1(\Dec(K))$, $F_r=F_d$ [(1.3.10)](#lemma-1.3.10), and we already know [(1.3.14)](#chunk-1.3.14) that $u'$ is a filtered isomorphism
+$$
+  u'\colon (E_1(\Dec(K)),F_d)
+  \simto (E_2(K),F_d).
+$$
+
+On $E_2(K)$, we thus have $F_d=F_r$.
+This, combined with the dual result, proves the theorem for $r_0=1$.
+
+Suppose that $r_0\geq2$.
+Then the arrows $d_1$ of $E_1(K)$ are strictly compatible with the filtrations, and thus so too are the arrows $d_0$ of $E_0(\Dec(K))$ (indeed, $u$ induces an isomorphism of spectral sequences, and we apply criterion [(1.3.2)](#proposition-1.3.2)).
+
+For $0<s<r_0-1$, the isomorphism $(E_s(\Dec(K)),F_r)\cong(E_{s+1}(K),F_r)$ shows that the $d_s$ are strictly compatible with the recurrent filtrations.
+
+By the induction hypothesis, we thus have $F_d=F_r$ on $E_s(\Dec(K))$ for $s\leq s_0$.
+The isomorphism $(E_s(\Dec(K)),F_d)\cong(E_{s+1}(K),F_d)$ [(1.3.13)](#proposition-1.3.13) then shows that $F_d=F_r$ on $E_r(K)$ for $r\leq r_0+1$.
+This, combined with the dual result, proves the theorem.
+:::
+
+::: {.itenv #corollary-1.3.17 title="Corollary 1.3.17" latex="{Corollary 1.3.17}"}
+Under the general hypotheses of [(1.3.16)](#theorem-1.3.16), suppose that, for all $r$, the differentials $d_r$ are strictly compatible with the recurrent filtrations on the $E_r$.
+Then, on $E_\infty$, the filtrations $F_d$, $F_r$, and $F_{d^*}$ agree, and coincide with the filtration induced by the filtration $F$ of $\HH^\bullet(K)$.
+:::
+
+::: {.proof}
+This follows immediately from [(1.3.16)](#theorem-1.3.16) and [(1.3.13), (iv)](#proposition-1.3.13).
+:::
+
+
+## Hypercohomology of filtered complexes {#section-1.4}
+
+In this section, we recall some standard constructions in hypercohomology.
+We do not use the language of derived categories, which would be more natural here.
+
+*Throughout this entire section, by "complex" we mean "bounded-below complex".*
+
+::: {.rmenv #chunk-1.4.1 title="1.4.1" latex="{1.4.1}"}
+Let
 :::
