@@ -44,6 +44,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\op}{\circ}
 \providecommand{\Hom}{\operatorname{Hom}}
 \providecommand{\Dec}{\operatorname{Dec}}
+\providecommand{\RR}{\operatorname{R}}
 
 <!-- Content -->
 
@@ -1049,5 +1050,31 @@ We do not use the language of derived categories, which would be more natural he
 *Throughout this entire section, by "complex" we mean "bounded-below complex".*
 
 ::: {.rmenv #chunk-1.4.1 title="1.4.1" latex="{1.4.1}"}
+Let $T$ be a left-exact functor from an abelian category $\scr{A}$ to an abelian category $\scr{B}$.
+Suppose that every object of $\scr{A}$ injects into an injective object;
+the derived functors $\RR^iT\colon\scr{A}\to\scr{B}$ are then defined.
+An object $A$ of $\scr{A}$ is said to be *acyclic* for $T$ if $\RR^iT(A)=0$ for $i>0$.
+:::
+
+::: {.rmenv #chunk-1.4.2 title="1.4.2" latex="{1.4.2}"}
+Let $(A,F)$ be a filtered object with finite filtration, and $TF$ the filtration of $TA$ by its sub-objects $TF^p(A)$ (these are sub-objects since $T$ is left exact).
+If $\Gr_F(A)$ is $T$-acyclic, then the $F^p(A)$ are $T$-acyclic as successive extensions of $T$-acyclic objects.
+The image under $T$ of the sequence
+$$
+  0
+  \to F^{p+1}(A)
+  \to F^p(A)
+  \to \Gr^p(A)
+  \to 0
+$$
+\oldpage{20}
+is thus exact, and
+$$
+  \Gr_{FT}TA \simto T\Gr_FA.
+\tag{1.4.2.1}
+$$
+:::
+
+::: {.rmenv #chunk-1.4.3 title="1.4.3" latex="{1.4.3}"}
 Let
 :::
