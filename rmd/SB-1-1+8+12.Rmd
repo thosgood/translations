@@ -157,19 +157,14 @@ It can be calculated using the following rules (which don't need explicit knowle
 
 1. $\theta(X)$ _commutes_ with $\dd$ (on $\Lambda(E')$); to take $\theta(X)$ of a _product_ (either exterior, interior, or scalar), we apply the classical formula for taking the derivative of a product; and, in particular, on $\Lambda(E)$ and $\Lambda(E')$, $\theta(X)$ is a _derivation_.
 
-::: {.eqtag #equation-I.1}
 2. If we apply $\theta(X)$ to a vector field $Y$, then we obtain $\theta(X)\cdot Y$; we have the fundamental formula
     $$
       \theta(\theta(X)\cdot Y) = \theta(X)\theta(Y) - \theta(Y)\theta(X),
     \tag{1}
     $$
-    which leads us to denote by $[X,Y]$ the vector field $\theta(X)\cdot Y$, and [(1)](#equation-I.1) then gives the _Jacobi identity_
-:::
+    which leads us to denote by $[X,Y]$ the vector field $\theta(X)\cdot Y$, and (1) then gives the _Jacobi identity_
 
-\oldpage{10}
-
-::: {.eqtag #equation-I.2}
-3. Finally, we have the "fundamental formula of the calculation of variations":
+3. \oldpage{10}Finally, we have the "fundamental formula of the calculation of variations":
     on the space $\Lambda(E')$ of exterior differential forms,
     $$
       \theta(X) = i(X)\dd + \dd\cdot i(X),
@@ -177,7 +172,6 @@ It can be calculated using the following rules (which don't need explicit knowle
     $$
     where $i(X)$ denotes, as in [§I.2](#I.2), the interior product.
     (Proof: both sides of the equation are derivations that commute with $\dd$ and that are equal on functions).
-:::
 
 
 ## Lie groups {#I.5}
@@ -195,16 +189,12 @@ In particular, if $X$ and $Y$ are in $\frak{a}$, then $[X,Y]$ is in $\frak{a}$.
 The elements upon which $\theta(X)$ acts as zero (for _all_ $X\in\frak{a}$) are those that are simultaneously invariant under left- and right-translations, and are simply called _invariant elements_.
 
 Since $\theta(X)$ is zero on the scalars (constant functions), we have:
-
-::: {.eqtag #equation-I.3}
 $$
   \langle \theta(X)\cdot Y,\omega \rangle + \langle Y,\theta(X)\cdot\omega \rangle
   = 0
   \qquad\text{for }Y\in\frak{a}\text{ and }\omega\in\frak{a}'.
 \tag{3}
 $$
-:::
-
 In other words, $\theta(X)$ (acting on forms) is the _transpose_ of $-\theta(X)$ (acting on vector fields).
 
 The vector space $\frak{a}$, endowed with the structure defined by the map $(X,Y)\mapsto[X,Y]$ from $\frak{a}\times\frak{a}$ to $\frak{a}$, is the _Lie algebra_ of the group $G$.
@@ -236,15 +226,11 @@ The $\theta(x)$ that acts on $\Lambda(\frak{a})$ is the _transpose_ of the $-\th
 The elements of $\Lambda(\frak{a})$ (resp. of $\Lambda(\frak{a}')$) for which $\theta(x)$ acts as zero (for _all_ $x\in\frak{a}$) are called _invariant_ (or _bi-invariant_) elements.
 The invariant elements of $\Lambda(\frak{a})$ form a _sub-algebra_ $\frak{J}$, and those of $\Lambda(\frak{a}')$ form a sub-algebra $\frak{J}'$.
 
-Equation [(2)](#equation-I.2) leads us to define an endomorphism $\delta$ of $\Lambda(\frak{a}')$ that is zero on the scalars, and such that
-
-::: {.eqtag #equation-I.4}
+Equation (2) leads us to define an endomorphism $\delta$ of $\Lambda(\frak{a}')$ that is zero on the scalars, and such that
 $$
   \theta(x) = i(x)\delta + \delta i(x).
 \tag{4}
 $$
-:::
-
 Furthermore, such an operator is unique, commutes with the $\theta(x)$, and satisfies $\delta\delta=0$;
 it is an _antiderivation_, characterised by
 $$
@@ -346,8 +332,6 @@ If $K$ is maximal and quasi-real, and $\frak{a}$ is _simple_, then the third Bet
 
 
 These operators satisfy the following relations:
-
-::: {.eqtag #equation-II.1}
 $$
   \begin{aligned}
     \partial\partial &= 0,
@@ -359,7 +343,6 @@ $$
   \end{aligned}
 \tag{1}
 $$
-:::
 
 The _homology vector space $\HH(\frak{a})$_ is defined by $\partial$ acting on $\Lambda(\frak{a})$;
 the _cohomology algebra $\HH(\frak{a}')$_ is defined by $\delta$ acting on $\Lambda(\frak{a'})$.
@@ -441,7 +424,7 @@ The Lie algebra of a compact group is always reductive.
 
 ## Homology of reductive Lie algebras {#II.4}
 
-In the representation $x\mapsto\theta(x)$ of $\frak{a}$ in the endomorphism algebra of $\Gamma(\frak{a})$, by [(1)](#equation-II.1), the $\theta(x)$ is a of a cycle is a boundary;
+In the representation $x\mapsto\theta(x)$ of $\frak{a}$ in the endomorphism algebra of $\Gamma(\frak{a})$, by (1), the $\theta(x)$ is a of a cycle is a boundary;
 similarly, the $\theta^*(x)$ of a cocycle is a coboundary.
 
 ::: {.itenv #lemma-1 title="Lemma 1" latex="{Lemma 1}"}
@@ -480,7 +463,7 @@ thus $\HH(\frak{a})$ and $\HH(\frak{a}')$ are (non-canonically) _isomorphic alge
 ## The first three Betti numbers of a semi-simple Lie algebra {#II.5}
 
 A preliminary remark:
-for $\alpha'$ to be an _invariant_ cochain, it is necessary and sufficient that it be a cocycle, _and_ that the $i(x)\cdot\alpha'$ be cocycles for _all_ $x\in\frak{a}$ (by [(1)](#equation-II.1)).
+for $\alpha'$ to be an _invariant_ cochain, it is necessary and sufficient that it be a cocycle, _and_ that the $i(x)\cdot\alpha'$ be cocycles for _all_ $x\in\frak{a}$ (by (1)).
 
 ::: {.rmenv title="The first Betti number is zero" latex="{The first Betti number is zero}"}
 The equation
@@ -505,17 +488,13 @@ there thus exists a unique cochain $x'$ of degree $1$ such that $\delta x'=i(x)\
 the map $x\mapsto x'$ from $\frak{a}$ to $\frak{a}'$ defines a bilinear form $f(x,y)=\langle y,x'\rangle$.
 \oldpage{49}
 We have
-
-::: {.eqtag #equation-II.2}
 $$
   f(x,[y,z])
   = -\langle x\wedge y\wedge z,\alpha'\rangle,
 \tag{2}
 $$
-:::
-
 and $f$ is symmetric and invariant.
-Conversely, if $f$ is a symmetric invariant bilinear form, then there exists a unique cochain $\alpha'$ such that [(2)](#equation-II.2) holds, and this cochain is invariant.
+Conversely, if $f$ is a symmetric invariant bilinear form, then there exists a unique cochain $\alpha'$ such that (2) holds, and this cochain is invariant.
 QED.
 ::::
 

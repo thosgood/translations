@@ -1076,5 +1076,49 @@ $$
 :::
 
 ::: {.rmenv #chunk-1.4.3 title="1.4.3" latex="{1.4.3}"}
-Let
+Let $A$ be an object endowed with finite filtrations $F$ and $W$ such that $\Gr_F\Gr_W A$ are $T$-acyclic.
+The objects $\Gr_FA$ and $\Gr_WA$ are then $T$-acyclic, as well as the $F^q(A)\cap W^p(A)$.
+The sequences
+$$
+  0
+  \to T(F^q\cap W^{p+1})
+  \to T(F^q\cap W^p)
+  \to T((F^q\cap W^p)/(F^q\cap W^{p+1}))
+  \to 0
+$$
+are thus exact, and $T(F^q(\Gr_W^p(A)))$ is the image in $T(\Gr_W^p(A))$ of $T(F^p\cap W^q)$.
+The diagram
+$$
+  \begin{CD}
+    T(F^q\cap W^p) @>>> T(F^q\Gr_W^pA) @>>> T\Gr_W^pA
+  \\@V{\cong}VV @. @VV{\cong}V
+  \\TF^q\cap TW^p @= TF^q\cap TW^p @>>> \Gr_{TW}^pTA
+  \end{CD}
+$$
+then shows that the isomorphism (1.4.2.1) relative to $W$ sends the filtration $\Gr_{TW}(TF)$ to the filtration $T(\Gr_W(F))$.
+:::
+
+::: {.rmenv #chunk-1.4.4 title="1.4.4" latex="{1.4.4}"}
+Let $K$ be a complex of objects of $\scr{A}$.
+The *hypercohomology objects* $\RR^iT(K)$ are calculated as follows:
+
+a. We choose a quasi-isomorphism $i\colon K\to K$ such that the components of $K'$ are acyclic for $T$.
+  For example, we can take $K'$ to be the simple complex associated to an injective Cartan--Eilenberg resolution of $K$.
+b. We set
+  $$
+    \RR^iT(K)
+    = \HH^i(T(K')).
+  $$
+
+We can show that $\RR^iT(K)$ does not depend on the choice of $K'$, but depends functorially on $K$, and that a quasi-isomorphism $f\colon K_1\to K_2$ induces *isomorphisms*
+$$
+  \RR^iT(f)\colon
+  \RR^iT(K_1)
+  \to \RR^iT(K_2).
+$$
+:::
+
+::: {.rmenv #chunk-1.4.5 title="1.4.5" latex="{1.4.5}"}
+Let $F$ be a biregular filtration of $K$.
+
 :::

@@ -734,25 +734,21 @@ $$
 
 It suffices to prove this formula when $y=\gamma_Y(\scr{F})$ and $x=\gamma_X(\scr{L})$, where $\scr{F}$ (resp. $\scr{L}$) is a coherent sheaf on $Y$ (resp. a locally free sheaf on $X$).
 In this case, we even have the more precise formula
-
-::: {.eqtag #equation-star}
 $$
   \RR^qf(\scr{F}\otimes_{\scr{O}_Y}f^{-1}(\scr{L})) = \RR^qf(\scr{F})\otimes_{\scr{O}_X}\scr{L}
   \tag{$\star$}
 $$
-:::
-
 where we set
 $$
   f^{-1}(\scr{L}) = \scr{L}\otimes_{\scr{O}_X}\scr{O}_Y.
 $$
 
 \oldpage{111}
-To prove [($\star$)](#equation-star), we first note that
+To prove ($\star$), we first note that
 $$
   \scr{F}\otimes_{\scr{O}_Y}f^{-1}(\scr{L}) = \scr{F}\otimes_{\scr{O}_X}\scr{L}.
 $$
-Returning to the definition of $\RR^qf$, we define a canonical homomorphism from the right-hand side of [($\star$)](#equation-star) to the left-hand side;
+Returning to the definition of $\RR^qf$, we define a canonical homomorphism from the right-hand side of ($\star$) to the left-hand side;
 to show that it is an isomorphism we can argue locally.
 We can thus restrict to the case where $\scr{L}=\scr{O}_X$, and in this case our claim is trivial.
 
@@ -1234,14 +1230,10 @@ Some of these will be more general than necessary for our purposes, but they are
 
 In what follows, $Y$ is a (non-singular) subvariety of $X$, $i$ the injection of $Y$ into $X$, $p$ the codimension of $Y$ in $X$, $E$ the normal bundle of $Y$, and $\scr{I}(Y)$ the sheaf of local ideals of $Y$.
 We thus have the exact sequence
-
-::: {.eqtag #section-10.a-equation-1}
 $$
   0 \to \scr{I}(Y) \to \scr{O}_X \xrightarrow{r} \scr{O}_Y \to 0
 \tag{1}
 $$
-:::
-
 where $r$ is the restriction.
 
 Finally, write $F^*$ to mean the dual of a vector bundle $F$, and $[Z]$ to mean the bundle associated to a divisor $Z$.
@@ -1271,32 +1263,24 @@ $$
   = \sum_j (-1)^i f\cdot f_{i_j}\otimes e_{i_1}\wedge\ldots\wedge \widehat{e_{i_j}} \wedge\ldots\wedge e_{i_k}.
 $$
 Then the sequence
-
-::: {.eqtag #section-10.c-equation-2}
 $$
   0 \to \mathfrak{M}_p \xrightarrow{\mathrm{d}} \mathfrak{M}_{p-1} \to \ldots \to \mathfrak{M}_1 \xrightarrow{\mathrm{d}} \scr{O}_X \xrightarrow{r} \scr{O}_Y \to 0
 \tag{2}
 $$
-:::
-
 is exact at every point of $U$, and $\mathfrak{M}$ is thus, on $U$, a projective resolution of $\scr{O}_Y$ over $\scr{O}_X$.
 \oldpage{121}
-The exactness of [(2)](#section-10.c-equation-2) at a point $b\in U\cap Y$ is a well-known result (see, for example, [@3, Proposition 4.3, p. 151], taking into account the fact that $\scr{O}_{b,Y}=\scr{O}_{b,X}/(f_1,\ldots,f_p)$).
-For $b\in U\setminus(U\cap Y)$, we have that $\scr{O}_{b,Y}=0$, and the exactness of [(2)](#section-10.c-equation-2) is then an elementary exercise left to the reader.
+The exactness of (2) at a point $b\in U\cap Y$ is a well-known result (see, for example, [@3, Proposition 4.3, p. 151], taking into account the fact that $\scr{O}_{b,Y}=\scr{O}_{b,X}/(f_1,\ldots,f_p)$).
+For $b\in U\setminus(U\cap Y)$, we have that $\scr{O}_{b,Y}=0$, and the exactness of (2) is then an elementary exercise left to the reader.
 
-:::: {.rmenv title="Remark" latex="{Remark}"}
-If $Y$ is a divisor, then [(1)](#section-10.a-equation-1) is exactly another way of writing the exact sequence of sheaves (which is exact on any $X$)
-
-::: {.eqtag #section-10.c-equation-3}
+::: {.rmenv title="Remark" latex="{Remark}"}
+If $Y$ is a divisor, then (1) is exactly another way of writing the exact sequence of sheaves (which is exact on any $X$)
 $$
   0 \to \scr{O}_X([Y]^{-1}) \xrightarrow{f} \scr{O}_X \to \scr{O}_Y \to 0,
 \tag{3}
 $$
-:::
-
 where $f$ is the multiplication by a local equation on $Y$.
 This exact sequence thus shows that $\gamma(Y)=1-[Y]^{-1}$.
-::::
+:::
 
 ::: {.itenv #proposition-11 title="Proposition 11" latex="{Proposition 11}"}
 Let $Y_1,\ldots,Y_m$ be non-singular subvarieties of $X$ such that $Y_i$ intersects transversally with
@@ -1318,7 +1302,7 @@ It is clear that these sheaves, and the sheaf $\scr{O}_{Y\cap Z}$, are equal (an
 
 Now let $a\in Y\cap Z$.
 Since $Y$ and $Z$ intersect transversally, we can find an affine open subset $U$ containing $a$, and functions $f_1,\ldots,f_p$ and $g_1,\ldots,g_q$ that are regular on $U$ such that the $f_i$ (resp. the $g_j$; resp, the $f_i$ and the $g_j$) form a system of uniformising parameters for $Y$ (resp. for $Z$; resp. for $Y\cap Z$).
-To calculate the $\Tor_i(\scr{O}_Y,\scr{O}_Z)$, we resolve $\scr{O}_Y$ by using [(2)](#section-10.c-equation-2).
+To calculate the $\Tor_i(\scr{O}_Y,\scr{O}_Z)$, we resolve $\scr{O}_Y$ by using (2).
 We must thus determine the homology of the complex
 $$
   0 \to \mathfrak{M}_n\otimes_{\scr{O}_X}\scr{O}_Z \to \ldots \to \scr{O}_X\otimes_{\scr{O}_X}\scr{O}_Z
@@ -1371,27 +1355,20 @@ We have that $i^!i_!(y)=y\cdot\lambda_{-1}(E^*)$ for all $y\in K(Y)$.
 By linearity, and [Theorem 2](#theorem-2), we can restrict to proving [Proposition 12](#proposition-12) in the case where $y=\scr{F}$ is a locally free sheaf.
 By definition, $i^!i_!(\scr{F})$ is the alternating sum of the $\Tor_i^{\scr{O}_X}(\scr{F},\scr{O}_Y)$, and, since $\scr{F}$ and the $\lambda^i E^*$ are locally free, $\scr{F}\cdot\lambda_{-1}E^*$ is the alternating sum of the $\scr{F}\otimes_{\scr{O}_Y}\lambda^i E^*$.
 Recalling [§10.2](#section-10.b), it thus suffices, to prove [Proposition 12](#proposition-12), to show that
-
-::: {.eqtag #section-10.d-equation-4}
 $$
   \Tor_1^{\scr{O}_X}(\scr{F},\scr{O}_Y)
   = \scr{F} \otimes_{\scr{O}_Y} \scr{I}(Y)/\scr{I}(Y)^2
 \tag{4}
 $$
-:::
-
-::: {.eqtag #section-10.d-equation-5}
 $$
   \Tor_i^{\scr{O}_X}(\scr{F},\scr{O}_Y)
   = \scr{F} \otimes_{\scr{O}_Y} \lambda^i(\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_Y)).
 \tag{5}
 $$
-:::
-
-[In [(5)](#section-10.d-equation-5), $\lambda^i$ is the $i$th exterior power of a sheaf which is locally free, given [(4)](#section-10.d-equation-4).]
+[In (5), $\lambda^i$ is the $i$th exterior power of a sheaf which is locally free, given (4).]
 
 Unless otherwise mentioned, $\Tor$ and $\otimes$ are taken over $\scr{O}_X$.
-The exact sequence of $\Tor$, applied to [(1)](#section-10.a-equation-1), gives the exact sequence
+The exact sequence of $\Tor$, applied to (1), gives the exact sequence
 $$
   0 \to \Tor_1(\scr{F},\scr{O}_Y) \to \scr{I}(Y)\otimes\scr{F} \xrightarrow{g} \scr{F}
 $$
@@ -1402,23 +1379,19 @@ $$
 $$
 But, since $\scr{F}$ is a sheaf on $Y$, it is annihilated by $\scr{I}(Y)$, and so the image of $\scr{I}(Y)^2\otimes\scr{F}$ in $\scr{I}(Y)\otimes\scr{F}$ is zero, and $\scr{I}(Y)\otimes\scr{F}$ can be identified with $\scr{I}(Y)/\scr{I}(Y)^2\otimes\scr{F}$.
 \oldpage{123}
-Finally, since, in this product, the two sheaves are over $\scr{O}_Y$, their $\otimes$ over $\scr{O}$ can be identified with their tensor product over $\scr{O}_Y$, which finishes the proof of [(4)](#section-10.d-equation-4).
+Finally, since, in this product, the two sheaves are over $\scr{O}_Y$, their $\otimes$ over $\scr{O}$ can be identified with their tensor product over $\scr{O}_Y$, which finishes the proof of (4).
 
 Using the notation of [§10.2](#section-10.b), the $\Tor_i(\scr{F},\scr{O}_Y)$ are, on $U$, the homology groups of the complex
 $$
   0\to\mathfrak{M}_p\otimes\scr{F}\to\mathfrak{M}_{p-1}\otimes\scr{F}\to\ldots\to\scr{F}
 $$
 which can also be written as
-
-::: {.eqtag #section-10.d-equation-6}
 $$
   0 \to \scr{F}\otimes_k\bigwedge\nolimits^p V \to \scr{F}\otimes_k\bigwedge\nolimits^{p-1}V \to \ldots \to \scr{F}
   \tag{6}
 $$
-:::
-
 endowed with the differential that extends $\dd$ and is zero on $\scr{F}$.
-Since the $f_i$ are local sections of $\scr{I}(Y)$, and this sheaf annihilates $\scr{F}$, it follows that, in [(6)](#section-10.d-equation-6), the differential is identically zero, and so
+Since the $f_i$ are local sections of $\scr{I}(Y)$, and this sheaf annihilates $\scr{F}$, it follows that, in (6), the differential is identically zero, and so
 $$
   \Tor_i(\scr{F},\scr{O}_Y) = \scr{F}\otimes_k\bigwedge\nolimits^iV = \scr{F}\otimes_{\scr{O}_Y}\scr{O}_Y\otimes_k\bigwedge\nolimits^i V
   \quad\text{(for }i\geq0\text{).}
@@ -1427,14 +1400,14 @@ In the particular case where $\scr{F}=\scr{O}_Y$, this formula shows that
 $$
   \Tor_1(\scr{O}_Y,\scr{O}_Y) = \scr{O}_Y\otimes_k V
 $$
-whence we have an isomorphism (for the moment, local, defined by the use of the parameters $f_i$) of the two sides of [(5)](#section-10.d-equation-5).
+whence we have an isomorphism (for the moment, local, defined by the use of the parameters $f_i$) of the two sides of (5).
 But $\mathfrak{M}$, thought of as a tensor product of the algebras $\scr{O}_Y$ and $\bigwedge V$, is clearly a differential graded algebra, and so the remark made at the start of [§10.4](#section-10.d) applies, and shows that, in fact, this isomorphism is intrinsic (and, in particular, does not depend on the chosen system of local parameters) and holds true over $X$.
 ::::
 
 
 ## Particular case of the divisor {#section-10.e}
 
-In this case, we can use the resolution [(3)](#section-10.c-equation-3), which is global.
+In this case, we can use the resolution (3), which is global.
 The $\Tor_i(\scr{F},\scr{O}_Y)$ are thus the homology groups of the complex
 $$
   \ldots \to 0 \to \scr{O}_Y([Y]^{-1})\otimes\scr{F} \xrightarrow{f}\scr{F}
@@ -1478,15 +1451,11 @@ But, on $Y\cap U_i\cap U_j$, we have that $\dd f_i=f_{ij}\cdot\dd f_j$ (since $f
 
 Given the results of [§7](#section-7) and [§9](#section-9), it remains only to prove [R--R](#theorem-riemann-roch) for an injection.
 In the notation of [§10.1](#section-10.a), the formula to prove is then equivalent to
-
-::: {.eqtag #section-11-equation-1}
 $$
   \ch i_!y = i_*(\ch y\cdot T(E)^{-1})
   \qquad\text{(for }y\in K(Y)\text{).}
 \tag{1}
 $$
-:::
-
 Indeed, $E$ is the quotient of the tangent bundle of $X$ (restricted to $Y$) by the tangent bundle of $Y$, so $i^*T(X) = T(Y)\cdot T(E)$, whence
 $$
   \begin{aligned}
@@ -1494,14 +1463,12 @@ $$
   \\i_*(\ch y T^(E){-1}) &= i_*(\ch y\cdot T(Y))\cdot T(X)^{-1}
   \end{aligned}
 $$
-and so [(1)](#section-11-equation-1) gives [R--R](#theorem-riemann-roch) if we multiply both sides by $T(X)$.
+and so (1) gives [R--R](#theorem-riemann-roch) if we multiply both sides by $T(X)$.
 
-To prove [(1)](#section-11-equation-1), Grothendieck first considers the case where $Y$ is a divisor and $y\in i^!(K(X))$, and then reduces to this case by blowing up $X$ along $Y$.
+To prove (1), Grothendieck first considers the case where $Y$ is a divisor and $y\in i^!(K(X))$, and then reduces to this case by blowing up $X$ along $Y$.
 This first particular case will be covered below, and the general case of the injection will be covered in [§13](#section-13), where we will assume certain properties of blow ups that will be proven in [§14](#section-14), [§15](#section-15), and [§16](#section-16).
 
 We will use, without explanation, the formulas
-
-::: {.eqtag #section-11-equation-2}
 $$
   \begin{aligned}
     f_!(y\cdot f^!(x)) = f_!(y)\cdot x
@@ -1509,16 +1476,14 @@ $$
   \end{aligned}
 \tag{2}
 $$
-:::
-
 where the first was proven in [§5.3](#section-5.c), and the second was mentioned in [§6](#section-6) (whose notation we also continue to use).
 
 ::: {.itenv #proposition-14 title="Proposition 14" latex="{Proposition 14}"}
-The equality [(1)](#section-11-equation-1) is true if $\codim_XY=1$ and $y=i^!(x)$ ($x\in K(X)$).
+The equality (1) is true if $\codim_XY=1$ and $y=i^!(x)$ ($x\in K(X)$).
 :::
 
 ::: {.proof}
-By using [(2)](#section-11-equation-2) and [Proposition 13](#proposition-13), we see that
+By using (2) and [Proposition 13](#proposition-13), we see that
 $$
   \ch(i_!i^!(x)) = \ch(x\cdot i_!(1)) = \ch(x\cdot(1-[Y]^{-1})).
 $$
@@ -1527,7 +1492,7 @@ Since $x\mapsto\ch x$ is a ring homomorphism, and since $c([Y])=1+Y$, this impli
 $$
   \ch(i_!) = \ch x\cdot\ch(1-[Y]^{-1}) = \ch x\cdot(1-e^{-Y}).
 $$
-The right-hand side of [(1)](#section-11-equation-1) is
+The right-hand side of (1) is
 $$
   \begin{aligned}
     i_*(\ch(i^!x)\cdot T(L)^{-1})
@@ -1536,7 +1501,7 @@ $$
   \\&= \ch x\cdot T([Y])^{-1}\cdot Y
   \end{aligned}
 $$
-and [(1)](#section-11-equation-1) then follows from $T([Y])=Y/(1-e^{-Y})$.
+and (1) then follows from $T([Y])=Y/(1-e^{-Y})$.
 :::
 
 ::: {.itenv #corollary-1 title="Corollary 1" latex="{Corollary 1}"}
@@ -1561,7 +1526,7 @@ $$
 :::
 
 ::: {.itenv #corollary-2 title="Corollary 2" latex="{Corollary 2}"}
-If the equality [(1)](#section-11-equation-1) is true whenever $2\dim Y\leq\dim X-2$, then it is true in general.
+If the equality (1) is true whenever $2\dim Y\leq\dim X-2$, then it is true in general.
 :::
 
 ::: {.proof}
@@ -1730,47 +1695,33 @@ This lemma will be proven in [§14](#section-14), [§15](#section-15), and [§16
 
 :::: {.proof}
 We must (see [§11](#section-11)) establish the equality
-
-::: {.eqtag #proposition-15-equation-1}
 $$
   \ch i_!(y) = i_*(\ch y\cdot T(E)^{-1}),
 \tag{1}
 $$
-:::
-
 and it suffices to do this in the case where $p\geq\dim Y+2$ ([Corollary 2 of Proposition 14](#corollary-2)).
 In this case, $g^!(y)\cdot\lambda_{-1}F^*\equiv0\mod(1-L^*)$, by part (d) of [Lemma 19](#lemma-19), and so is in the image of $K(X')$ under $j^!$ ([Proposition 13](#proposition-13)), and ([Proposition 14](#proposition-14)) we can apply [R--R](#theorem-riemann-roch) to $g^!(y)\cdot\lambda_{-1}F^*$ and $j$.
 This gives
-
-::: {.eqtag #proposition-15-equation-2}
 $$
   \ch j_!(g^! y\cdot\lambda_{-1}F^*)
   = j_*(\ch(g^! y\cdot \lambda_{-1}F^*)\cdot T(L)^{-1}).
 \tag{2}
 $$
-:::
-
-To deduce [(1)](#proposition-15-equation-1) from this, it evidently suffices to show that
-
-::: {.eqtag #proposition-15-equation-3}
+To deduce (1) from this, it evidently suffices to show that
 $$
   f_*(\ch j_!(g^!y\cdot\lambda_{-1}F^*)) = \ch i_! y
 \tag{3}
 $$
-:::
-
-::: {.eqtag #proposition-15-equation-4}
 $$
   f_*j_*(\ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1}) = i_*(\ch y\cdot T(E)^{-1}).
 \tag{4}
 $$
-:::
 
-Part (c) of [Lemma 19](#lemma-19) shows that the left-hand side of [(3)](#proposition-15-equation-3) is equal to
+Part (c) of [Lemma 19](#lemma-19) shows that the left-hand side of (3) is equal to
 $$
   f_*(\ch f^!i_!y) = f_*^*(\ch i_!y)
 $$
-and thus equal to the right-hand side of [(3)](#proposition-15-equation-3), given part (a) of [Lemma 19](#lemma-19).
+and thus equal to the right-hand side of (3), given part (a) of [Lemma 19](#lemma-19).
 
 Since $\ch$ is multiplicative, we have that
 $$
@@ -1790,7 +1741,7 @@ whence
 $$
   \ch(g^!y\cdot\lambda_{-1}F^*)\cdot T(L)^{-1} = c_{p-1}(F)\cdot g^*(\ch y\cdot T(E)^{-1}).
 $$
-Given [(2)](#section-11-equation-2) (in [§11](#section-11)) and part (b) of [Lemma 19](#lemma-19), the image under $g_*$ of the right-hand side is equal to $\ch y\cdot T(E)^{-1}$, and the equality in [(4)](#proposition-15-equation-4) then follows from the fact that $f_*j_*=i_*g_*$.
+Given (2) (in [§11](#section-11)) and part (b) of [Lemma 19](#lemma-19), the image under $g_*$ of the right-hand side is equal to $\ch y\cdot T(E)^{-1}$, and the equality in (4) then follows from the fact that $f_*j_*=i_*g_*$.
 ::::
 
 
@@ -1833,13 +1784,10 @@ This again shows that $E'^*$ is sent to $L^*$, and thus that $L$ injects into $E
 the kernel of $\mu$ is the sheaf $\scr{O}_{Y'}(F^*)$ of germs of sections of $F^*$, as we can easily verify;
 in fact, this verification is superfluous, since we know that the kernel of $\mu$ is locally free (see [Lemma 8](#lemma-8), [§4](#section-4)), and thus corresponds to a subbundle $N$ of $E'^*$ such that $E'^*/N=L^*$, and thus necessarily represents the same element as $F^*$ in $K(Y')$.
 We thus have the exact sequence
-
-::: {.eqtag #section-15-equation-1}
 $$
   - \to \scr{O}_{Y'}(F^*) \to \scr{J}/\scr{J}^2\otimes_{\scr{O}_Y}\scr{O}_{Y'} \xrightarrow{\mu} \scr{J}'/\scr{J}'^2 \to 0.
 \tag{1}
 $$
-:::
 
 By linearity, and [Theorem 2](#theorem-2), it suffices to prove part (c) of [Lemma 19](#lemma-19) in the case where $y=\scr{G}$ is a locally free sheaf.
 In this case, $g^!(y)=\scr{G}\otimes_{\scr{O}_Y}\scr{O}_{Y'}$ is locally free over $\scr{O}_Y$, and $g^!(y)\cdot\lambda_{-1}F^*$ is the alternating sum of the
@@ -1849,40 +1797,30 @@ $$
 $$
 Also, $f^!i_!(y)$ is the alternating sum of the $\Tor_i^{\scr{O}_X}(\scr{G},\scr{O}_{X'})$;
 it thus suffices to prove that
-
-::: {.eqtag #section-15-equation-2}
 $$
   \Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
   = \lambda^i\Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
   \qquad\quad\text{(for }i\geq1\text{)}
 \tag{2}
 $$
-:::
-
-::: {.eqtag #section-15-equation-3}
 $$
   \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
   = \scr{O}_{Y'}(F^*)
 \tag{3}
 $$
-:::
-
-::: {.eqtag #section-15-equation-4}
 $$
   \Tor_j^{\scr{O}_X}(\scr{G},\scr{O}_{X'})
   = \scr{G}\otimes_{\scr{O}_Y}\Tor_j^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})
   \quad\text{(for }j\geq1\text{).}
 \tag{4}
 $$
-:::
 
-\oldpage{131}
-The equalities [(3)](#section-15-equation-3) and [(4)](#section-15-equation-4) correspond to the particular case of part (c) of [Lemma 19](#lemma-19) where $y=1$;
+\oldpage{131}The equalities (3) and (4) correspond to the particular case of part (c) of [Lemma 19](#lemma-19) where $y=1$;
 their proof will be analogous to that of [Proposition 12](#proposition-12) ([§10](#section-10)).
-We will first prove [(2)](#section-15-equation-2), as well as the fact that the $\Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})$ are annihilated by $\scr{J}'$, and can thus be identified with sheaves on $Y'$.
+We will first prove (2), as well as the fact that the $\Tor_i^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})$ are annihilated by $\scr{J}'$, and can thus be identified with sheaves on $Y'$.
 
-It is clear that the two sides of [(2)](#section-15-equation-2) are zero on an open subset that does not meet $Y'$.
-To prove [(2)](#section-15-equation-2) in the neighbourhood of a point $b'\in Y'$, we reuse the notation from [§10.3](#section-10.c) and [§12.2](#section-12.b).
+It is clear that the two sides of (2) are zero on an open subset that does not meet $Y'$.
+To prove (2) in the neighbourhood of a point $b'\in Y'$, we reuse the notation from [§10.3](#section-10.c) and [§12.2](#section-12.b).
 So we need to calculate the homology of the complex
 $$
   0 \to \mathfrak{M}_p\otimes_{\scr{O}_X}\scr{O}_{X'} \to \ldots \to \scr{O}_{X'}
@@ -1914,10 +1852,10 @@ $$
   \cong
   \scr{O}_{Y'}\otimes_k\bigwedge\nolimits^i(e'_1,\ldots,\widehat{e'_j},\ldots,e'_p),
 $$
-which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial remark of [§10.4](#section-10.d) into account, also gives [(2)](#section-15-equation-2).
+which proves that the $\Tor_i$ are sheaves on $Y'$, and, taking the initial remark of [§10.4](#section-10.d) into account, also gives (2).
 
 :::: {.proof}
-_(of [(3)](#section-15-equation-3))._
+_(of (3))._
 The exact sequence of $\Tor$, applied to
 $$
   0\to\scr{J}\to\scr{O}_X\to\scr{O}_Y\to0,
@@ -1928,7 +1866,7 @@ $$
 $$
 It is clear that, if $b=f(b')$, then $\scr{J}'_{b'}=\scr{J}_b\cdot\scr{O}_{b',X'}$, and so the image of $g$ is $\scr{J}'$, and we obtain the exact sequence
 
-::: {.eqtag #section-15-equation-5}
+::: {.qta
 $$
   0 \to \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) \to \scr{J}\otimes_{\scr{O}_X}\scr{O}_{X'} \to \scr{J}' \to 0.
 \tag{5}
@@ -1942,9 +1880,9 @@ $$
   = \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'})\otimes_{\scr{O}_{Y'}}\scr{O}_{Y'}
   = \Tor_1(\scr{O}_Y,\scr{O}_{X'}).
 $$
-Also, $\scr{J}'$ can be identified with $\scr{O}_{X'}([Y']^{-1})$, and is locally free, and so $\Tor_1^{\scr{O}_{X'}}(\scr{J}',\scr{O}_{Y'}) = 0$, and the exact sequence of $\Tor$, applied to [(5)](#section-15-equation-5), gives the exact sequence
+Also, $\scr{J}'$ can be identified with $\scr{O}_{X'}([Y']^{-1})$, and is locally free, and so $\Tor_1^{\scr{O}_{X'}}(\scr{J}',\scr{O}_{Y'}) = 0$, and the exact sequence of $\Tor$, applied to (5), gives the exact sequence
 
-::: {.eqtag #section-15-equation-6}
+::: {.qta
 $$
   0 \to \Tor_1^{\scr{O}_X}(\scr{O}_Y,\scr{O}_{X'}) \to \scr{J}\otimes_{\scr{O}_X}\scr{O}_{Y'} \xrightarrow{g} \scr{J}'\otimes_{\scr{O}_{X'}}\scr{O}_{Y'} \to 0.
 \tag{6}
@@ -1962,10 +1900,10 @@ $$
     = \scr{J}'/\scr{J}'^2
   \end{gathered}
 $$
-which send $g$ to the homomorphism $\mu$ from the sequence [(1)](#section-15-equation-1).
-The equality [(2)](#section-15-equation-2) then follows from [(1)](#section-15-equation-1) and [(6)](#section-15-equation-6).
+which send $g$ to the homomorphism $\mu$ from the sequence (1).
+The equality (2) then follows from (1) and (6).
 
-The equality [(4)](#section-15-equation-4) then follows from an associativity formula of $\Tor$ (see [@3, p. 345]).
+The equality (4) then follows from an associativity formula of $\Tor$ (see [@3, p. 345]).
 We consider $T(\scr{G},\scr{O}_{X'}) = \scr{G}\otimes_{\scr{O}_Y}\scr{O}_Y\otimes\scr{O}_{X'}$ as a functor in $\scr{G}$ and $\scr{O}_{X'}$.
 To calculate its left-derived functors $\LL_iT$, we have two spectral sequences, with respective $E_2$ pages
 $$
@@ -1978,7 +1916,7 @@ From this, it evidently follows that $E_2^{ij}=E'^{ji}_2=0$ if $i>0$, and thus t
 $$
   E_2^{0j} = E'^{j0}_2 = \LL_jT(\scr{G},\scr{O}_{X'})[]
 $$
-since $E_2^{0j}$ and $E'^{j0}_2$ are equal to the right- and left-hand sides (respectively) of [(4)](#section-15-equation-4), this proves the equality.
+since $E_2^{0j}$ and $E'^{j0}_2$ are equal to the right- and left-hand sides (respectively) of (4), this proves the equality.
 ::::
 
 
@@ -2037,18 +1975,15 @@ $$
   \binom{X}{j} = X(X-1)\ldots(X-j+1)/j!
 $$
 and so, finally,
-
-::: {.eqtag #lemma-21-equation-1}
 $$
   \lambda^s(Gh^n- k) = \sum_{i=0}^{n_s} A_{s,i}\binom{n}{i}
   \qquad\text{(for }A_{s,i}\in K(Y)\text{).}
 \tag{1}
 $$
-:::
 
 For $n>n_0$, the bundle $Gh^n$ is ample ([@12]), and so ([Lemma 20](#lemma-20)) contains a trivial bundle of rank $k$< and $Gh^n- k$ can be identified with a bundle of rank $q$;
 its $s$th exterior power is then evidently zero for all $s\geq q+1$.
-Given [(1)](#lemma-21-equation-1), it
+Given (1), it
 suffices to show that, if the polynomial
 \oldpage{134}
 $$

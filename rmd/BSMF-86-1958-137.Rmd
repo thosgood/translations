@@ -232,14 +232,10 @@ $$
 
 :::: {.proof}
 We will prove, by induction on $j$ (where $1\leq j\leq p$), that
-
-::: {.eqtag #equation-star title="" latex=""}
 $$
   p_X(Y_j) = \prod_{1\leq i\leq j}\xi_i.
 \tag{$\star$}
 $$
-:::
-
 For $j=1$, this equation is exactly axiom [A2](#axiom-A2).
 Now suppose that the equation has been proven for some $j<p$;
 we will prove it for $j+1$.
@@ -318,8 +314,6 @@ We now given some particular cases where the conditions in this section are sati
 Let $X\in\cal{V}$, and let $E$ be a rank-$p$ vector bundle on $X$, and $\xi_E=p_X(\cl(L_E))$ the fundamental class in $A^2(\mathbb{P}(E))$.
 By axiom [A1](#axiom-A1) from the previous section, $(\xi_E)^p$ can be written as a unique linear combination of the $(\xi_E)^i$ (for $0\leq i\leq p-1$) with coefficients in $A(X)$.
 This means that we can find, in a unique way, elements $c_i(E)\in A^{2i}(X)$ (defined for every integer $i\geq0$) satisfying the conditions
-
-::: {.eqtag #equation-1 title="" latex=""}
 $$
   \begin{gathered}
     \sum_{i=0}^p c_i(E)(\xi_E)^{p-i} = 0,
@@ -327,24 +321,19 @@ $$
   \end{gathered}
 \tag{1}
 $$
-:::
 
 The $c_i(E)$ are called the _Chern classes_ of $E$, with $c_i(E)$ being called the $i$th Chern class.
 We define
-
-::: {.eqtag #equation-2 title="" latex=""}
 $$
   c(E) = \sum_i c_i(E)
 \tag{2}
 $$
-:::
-
 and call $c(E)$ the _(total) Chern class_ of $E$;
 its data is equivalent to the data of all the $c_i(E)$.
 
 ::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
 Suppose that we have the data of [a.](#data-a), [b.](#data-b), and [c.](#data-c) from the previous section, satisfying axioms [A1](#axiom-A1) to [A4](#axiom-A4).
-Then the Chern classes (defined by [(1)](#equation-1)) satisfy the following conditions:
+Then the Chern classes (defined by (1)) satisfy the following conditions:
 
 i. _Functoriality._ ---
     Let $f\colon X\to Y$ be a morphism in $\cal{V}$, and let $E$ be a vector bundle on $Y$.
@@ -385,15 +374,11 @@ But $f^{-1}(E)$ splits completely.
 We can thus reduce to determining $c(E)$ when $E$ is a rank-$p$ vector bundle that splits completely, and which is thus endowed with a composition series $(E_i)_{0\leq i\leq p}$, with $\rank E_i=p-i$,
 But then the additivity formula iii. proves (by induction on $p$) that $c(E)=\prod_{i=1}^p c(E_{i-1}/E_i)$.
 Finally, the normalisation formula ii. implies that
-
-::: {.eqtag #equation-6 title="" latex=""}
 $$
   c(E) = \prod_{i=1}^p (1+p_X\cl_X(E_{i-1}/E_i)).
 \tag{6}
 $$
-:::
-
-We now show that the Chern classes defined by [(1)](#equation-1) do indeed satisfy i., ii., and iii.
+We now show that the Chern classes defined by (1) do indeed satisfy i., ii., and iii.
 
 \medskip
 
@@ -440,7 +425,7 @@ for $1\leq i\leq p$.
 
 _Proof of ii._ ---
 Suppose that $E$ is of rank $1$, so that $\mathbb{P}(E)=X$, $L_E=\check{E}$, and $\xi_E = p_X\cl_X(\check{E}) = -p_X\cl_X(E)$.
-Equation [(1)](#equation-1) can then be written as
+Equation (1) can then be written as
 $$
   \xi_E + c_1(E) = 0
 $$
@@ -458,8 +443,8 @@ Using [Lemma 1](#lemma-1) twice, we find that $P\in\cal{V}$, and that the homomo
 Then, to prove [(5)](#theorem-1), it suffices to prove the formula that follows from it by applying $g^*$ to both sides, which, by functoriality ([i.](#theorem-1)), reduces to proving the multiplicativity formula for the inverse image of the exact sequence $0\to E'\to E\to E''\to 0$ under $g$.
 But it is immediate that $g^{-1}(E')$ and $g^{-1}(E'')$ split completely.
 We can thus reduce to proving the additivity formula in the case where the factors $E'$ and $E''$ split completely.
-But then the splittings of $E'$ and $E''$ define a splitting of $E$, and it clearly suffices to prove [(6)](#equation-6) for each of the composition series of $E'$, $E''$, and $E$ thus obtained.
-This leads us to prove [(6)](#equation-6) for a completely split vector bundle.
+But then the splittings of $E'$ and $E''$ define a splitting of $E$, and it clearly suffices to prove (6) for each of the composition series of $E'$, $E''$, and $E$ thus obtained.
+This leads us to prove (6) for a completely split vector bundle.
 
 So let $X'=\mathbb{P}(E)$, with $f'$ the projection from $X'$ to $X$, and define
 $$
@@ -495,7 +480,7 @@ So we are under the conditions of [the corollary to Lemma 2](#lemma-2-corollary)
 $$
   \prod_{i=1}^p (\xi_E+\xi'_i) = 0.
 $$
-This proves, by the definition of the $c_i(E)$, that the $c_i(E)$ are the elementary symmetric functions in the $\xi_i$, which is exactly [(6)](#equation-6).
+This proves, by the definition of the $c_i(E)$, that the $c_i(E)$ are the elementary symmetric functions in the $\xi_i$, which is exactly (6).
 
 This finishes the proof of [Theorem 1](#theorem-1).
 ::::
@@ -512,7 +497,7 @@ and, similarly, the Chern classes of the exterior powers $\bigwedge E$ (resp. of
 
 ::: {.proof}
 Passing to a flag variety, as per usual, we can reduce to the case where $E$ and $F$ are completely split.
-In this case, the formulas follow immediately from [(6)](#equation-6).
+In this case, the formulas follow immediately from (6).
 :::
 
 
@@ -539,14 +524,10 @@ whose composition is written additively;
 then $(0,1+\widehat{A}^+)$ is a subgroup of this group, isomorphic to the multiplicative group $1+\widehat{A}^+$.
 With this in mind, we can define a (commutative unital) ring structure on $\widetilde{A}$, compatible with the additive structure, whose unit is $(1,1)$, and which is given, on the $(0,1+\widehat{A}^+)$ factor, by universal polynomial formulas (with integer coefficients).
 We will then have that
-
-::: {.eqtag #equation-8 title="" latex=""}
 $$
   (1,1+x_1)(1,1+y_1) = (1,1+(x_1+y_1))
 \tag{8}
 $$
-:::
-
 for $x_1,y_1\in A^1$, and these formulas indeed suffice to characterise the polynomials that define the composition law (taking into account the associativity of the composition law).
 
 We can also define (non-additive!) maps
@@ -555,8 +536,6 @@ $$
   \quad(i\geq0)
 $$
 for $i\geq0$ that make $\widetilde{A}$ a $\lambda$-ring, by which we mean that the following conditions are satisfied:
-
-::: {.eqtag #equation-9 title="" latex=""}
 $$
   \begin{aligned}
     \lambda^0(x) &= 1,
@@ -565,8 +544,6 @@ $$
   \end{aligned}
 \tag{9}
 $$
-:::
-
 which also implies that the map
 $$
   \lambda\colon \widetilde{A} \to 1+\widetilde{A}[[t]]^+
@@ -578,16 +555,12 @@ $$
 $$
 is an additive homomorphism from $\widetilde{A}$ to the multiplicative group of formal series of augmentation $1$, and is a right inverse to the natural homomorphism $(1+a_1t+\ldots)\mapsto a_1$ from this latter group to $\widetilde{A}$.
 The restrictions of the maps $\lambda^i$ to the factor $(0,1+\widetilde{A}^+)$ are defined by universal polynomial formulas (with integer coefficients), and
-
-::: {.eqtag #equation-11 title="" latex=""}
 $$
   \lambda^i(1,1+x_1) = 0
   \quad\text{for }i>1
 \tag{11}
 $$
-:::
-
-if $x_1\in A^1$, and this formula indeed suffices to characterise the polynomials defining the $\lambda^i$ [taking into account the formulas in [(9)](#equation-9)].
+if $x_1\in A^1$, and this formula indeed suffices to characterise the polynomials defining the $\lambda^i$ [taking into account the formulas in (9)].
 
 \oldpage{149}
 
@@ -604,8 +577,8 @@ $$
   \quad\text{if }i>1
 \tag{13}
 $$
-(where here $1$ is the zero element of $1+K[[t]]^+$) [these formulas being the ``multiplicative'' analogues to [(8)](#equation-8) and [(11)](#equation-11)].
-These formulas suffice to characterise [taking into account [(9)](#equation-9) and the associativity of the multiplication] the polynomials that define $f\circ g$ and the $\lambda^i(f)$.
+(where here $1$ is the zero element of $1+K[[t]]^+$) [these formulas being the ``multiplicative'' analogues to (8) and (11)].
+These formulas suffice to characterise [taking into account (9) and the associativity of the multiplication] the polynomials that define $f\circ g$ and the $\lambda^i(f)$.
 
 It is the detailed study of $\lambda$-rings in general, and of certain specific $\lambda$-rings (the ring of classes of vector bundles on an algebraic variety, and the ring of classes of representations of an algebraic group) that held the key to the first algebraic proof of the Riemann-Roch theorem, in the form given in the paper preceding this one.^[[Trans.] This is referring to Borel, A; Serre, J.-P. "Le théorème de Riemann--Roch." _Bull. Soc. Math. France_ **86** (1958), 97--136.]
 This proof is, for now, only valid in characteristic $0$, but it gives, however, finer results than the second proof, which uses blow-up varieties.
@@ -656,8 +629,6 @@ For this, consider the homomorphism $\widetilde{c}$ from the $\lambda$-ring $K(X
 Since $A^i(X)$ does not change if we remove a closed subset of codimension $>i$ from $X$, we immediately see that $\widetilde{c}$ is compatible with the filtrations, and thus defines, by passing to the associated graded rings, _a homomorphism $\psi$ from $GK(X)$ to the graded ring $A'(X)$ associated to the filtered ring $\widetilde{A(X)}$, which can itself be identified (as a graded group) with $A(X)$_.
 [As for its multiplicative structure, we can formally verify that it is given by the product $x_p\star y_q = -\frac{(p+q-1)!}{(p-1)!(q-1)!}x_p y_q$ for $x_p\in A^p(X)$ and $y_q\in A^q(X)$.]
 With this, we have the relations
-
-::: {.eqtag #equation-15 title="" latex=""}
 $$
   \begin{aligned}
     \psi\varphi &= (-1)^{i-1}(i-1)!\mathrm{id}_{A(X)}
@@ -665,8 +636,6 @@ $$
   \end{aligned}
 \tag{15}
 $$
-:::
-
 in degree $i$.
 Since $\varphi$ is surjective, the second equation follows from the first, which, by what we have already said, is equivalent to the following statement:
 
@@ -689,7 +658,7 @@ Equation [(16)](#equation-16) is plausible _a priori_ when we note that, since t
 further, $\psi\varphi$ must be a ring homomorphism from $A'(X)=G(\widetilde{A(X)})$ (whose multiplicative structure has been explained above) to $A(X)$.
 We will not give here the full proof of [(16)](#equation-16), instead only noting that, if set aside the problem of torsion, this equation is a particular case of the Riemann-Roch theorem [applied to the injection of $Y$ into $X$, and the unit element of $K(Y)$.]
 
-The equations in [(15)](#equation-15) indeed show that _$\varphi$ and $\psi$ are isomorphisms, up to a torsion group_.
+The equations in (15) indeed show that _$\varphi$ and $\psi$ are isomorphisms, up to a torsion group_.
 (I do not know if $\varphi$ is in fact an isomorphism;
 it is at least the case in degrees $i=1$ and $i=2$.)
 It also follows that _$\widetilde{c}$ is an isomorphism, up to torsion, from $K(X)$ to $A(X)$_.

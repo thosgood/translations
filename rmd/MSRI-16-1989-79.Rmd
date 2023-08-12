@@ -417,37 +417,24 @@ The most important for us will be de Rham and $\ell$-adic cohomology.
 
 If $k=\CC$, then we have the topological space $X(\CC)$ of points of $X$, as well as its rational cohomology $\HH^\bullet(X(\CC),\QQ)$.
 We have canonical isomorphisms from [@G] and [SGA4, XVI, 4.1]:
-
-::: {.eqtag #equation-1.1.1}
 $$
   \HH_\DR^i(X) = \HH^i(X(\CC),\QQ)\otimes_{\QQ}\CC
 \tag{1.1.1}
 $$
-:::
-
-::: {.eqtag #equation-1.1.2}
 $$
   \HH^i(X,\QQ_\ell) = \HH^i(X(\CC),\QQ)\otimes_{\QQ}\QQ_\ell.
 \tag{1.1.2}
 $$
-:::
 
 If $k$ is a field of characteristic $0$, and $\sigma\colon k\to\CC$ a complex embedding, with $\bar{k}$ the algebraic closure of $k$ in $\CC$ via $\sigma$, then we obtain the isomorphisms
-
-::: {.eqtag #equation-1.1.3}
 $$
   \HH_\DR^i(X)\otimes_{k,\sigma}\CC = \HH^i(X(\CC),\QQ)\otimes_{\QQ}\CC
 \tag{1.1.3}
 $$
-:::
-
-::: {.eqtag #equation-1.1.4}
 $$
   \HH^i(X\otimes\bar{k},\QQ_\ell) = \HH^i(X(\CC),\QQ)\otimes_{\QQ}\QQ_\ell
 \tag{1.1.4}
 $$
-:::
-
 where $X(\CC)$ is the topological space of points of the complex algebraic variety given by the extension of scalars via $\sigma$ of $X$.
 
 The existence of parallel cohomology theories lead A. Grothendieck to conjecture the existence, for all base fields $k$, of a motivic theory $X\mapsto\HH_\mot^i(X)$, defined on algebraic varieties (i.e. schemes of finite type) over $k$ and with values in a category $\cal{M}(k)$ (to be defined) of motives over $k$.
@@ -461,17 +448,12 @@ For $k$ of characteristic $0$, the category $\cal{M}(k)$ with its tensor product
 
 Each $\HH_\mot^i(X)$ would be a contravariant functor in $X$.
 We should also have Künneth isomorphisms
-
-::: {.eqtag #equation-1.1.5}
 $$
   \HH_\mot^i(X\times Y)
   \simeq \bigoplus_{i=j+k} \HH_\mot^j(X)\otimes\HH_\mot^k(Y)
 \tag{1.1.5}
 $$
-:::
-
-\oldpage{13 (91)}
-giving rise to commutative diagrams
+\oldpage{13 (91)}giving rise to commutative diagrams
 $$
   \begin{CD}
     \HH_\mot^i(X\times Y) @>\longleftarrow>> \HH_\mot^i(Y\times X)
@@ -515,7 +497,7 @@ it organises known facts, poses questions, and suggests precise conjectures.
 \oldpage{14 (92)}
 
 ::: {.rmenv #chunk-1.3 title="1.3" latex="{1.3}"}
-In each of the known theories, the $\HH^i(X)$ are endowed with an increasing filtration $W$, known as the _weight filtration_ [@D5], as well as comparison isomorphisms such that [(1.1.1)](#equation-1.1.1) and [(1.1.2)](#equation-1.1.2) are compatible with $W$.
+In each of the known theories, the $\HH^i(X)$ are endowed with an increasing filtration $W$, known as the _weight filtration_ [@D5], as well as comparison isomorphisms such that (1.1.1) and (1.1.2) are compatible with $W$.
 Furthermore, every natural map is strictly compatible with $W$.
 From this, we get a new requirement for the category of motives:
 every motive is endowed with a weight filtration $W$, compatible with the tensor product, and strictly compatible with every morphism $f\colon M\to N$, i.e.
@@ -674,7 +656,7 @@ let $X$ be the general fibre of $\overline{X}\setminus D$.
 Then the realisation $M_\crisp$ is defined for $p\not\in S$;
 its most natural definition is given by the generalisation of the crystalline theory, considered by Faltings in [@Fa, IV], to the "logarithmic poles" case.
 
-The comparison isomorphism $\comp_{\DR,\BB}$ is [(1.1.3)](#equation-1.1.3), and the comparison isomorphism $\comp_{\ell,\BB}$ is [(1.1.4)](#equation-1.1.4).
+The comparison isomorphism $\comp_{\DR,\BB}$ is (1.1.3), and the comparison isomorphism $\comp_{\ell,\BB}$ is (1.1.4).
 
 In the smooth and proper case, the comparison isomorphism $\comp_{\crisp,\DR}$ comes from §7.26 of [P. Berthelot and A. Ogus, _Notes on crystalline cohomology_, Princeton University Press and Tokyo University Press, 1978].
 For the general case, see [@Fa, IV].
@@ -897,14 +879,10 @@ For $p\not\in P$, and $v$ running over the places of $E$ over $p$, we have that 
 \oldpage{23 (101)}
 
 The motive $A$ is endowed with a product
-
-::: {.eqtag #equation-1.16.1}
 $$
   A\otimes A\to A
 \tag{1.16.1}
 $$
-:::
-
 namely the cup product, which makes $A$ a commutative ring with unit in the Tannakian category of motives (cf. [(5.3)](#chunk-5.3)).
 On $A_\DR=E$, it is the product.
 On $A_\BB$, it is given by $(q_1(\sigma))(q_2(\sigma))=(q_1(\sigma)q_2(\sigma))$.
@@ -1180,7 +1158,7 @@ For an abelian variety $A$ and $X=[0\to A]$, $T(X)=T(A)$.
 Of course, here, as in [(2.2)](#chunk-2.2), we can take more general bases than $\Spec(\QQ)$.
 :::
 
-:::: {.rmenv #chunk-2.4 title="2.4" latex="{2.4}"}
+::: {.rmenv #chunk-2.4 title="2.4" latex="{2.4}"}
 I conjecture that the set of motives with integer coefficients of the form $T(X)$ for some $1$-motive $X$ is stable under extensions.
 If $T'$ is a motive with integer coefficients, with $T'\otimes\QQ\simto T(X)\otimes\QQ$, then $T'$ is of the form $T(X')$ with $X'$ isogenous to $X$.
 The conjecture is thus equivalent to the claim that the set of motives $T(X)\otimes\QQ$, for $1$-motives $X$, is stable under extensions.
@@ -1206,14 +1184,11 @@ $$
 and similarly for more general bases that $\Spec(\QQ)$.
 
 The case $E=\Gm$ is particularly interesting: for every smooth scheme $S$ over $\Spec(\ZZ)$, we want, in the category of motives with integer coefficients over $S$,
-
-::: {.eqtag #equation-2.4.1}
 $$
   \Gamma(S,\OO_S^\times) \simto \Ext^1(\ZZ(0),\ZZ(1)).
 \tag{2.4.1}
 $$
 :::
-::::
 
 :::: {.rmenv #chunk-2.5 title="2.5" latex="{2.5}"}
 Let $M$ be a realisation system [(1.9)](#chunk-1.9).
@@ -1383,13 +1358,38 @@ For $\widetilde{F}\colon q\mapsto q^p$, we have
 $$
   \phi_p^{-1}[q\mapsto q^p](0) = 0.
 $$
-\oldpage{32 (111)}
-For $x\in\QQ$ a unit at $p$, and $\widetilde{F}$ such that $\widetilde{F}(x)=x$, we thus have $\phi_p^{-1}[\widetilde{F}](0)=\log(x/x^p)$ at $x$, as required by [(2.9)](#chunk-2.9)
+\oldpage{32 (111)}For $x\in\QQ$ a unit at $p$, and $\widetilde{F}$ such that $\widetilde{F}(x)=x$, we thus have $\phi_p^{-1}[\widetilde{F}](0)=\log(x/x^p)$ at $x$, as required by [(2.9)](#chunk-2.9)
 :::
 
 
 
 # Torsors under $\ZZ(n)$ {#section-3}
 
-\oldpage{33 (112)}
-The study
+\oldpage{33 (112)}The study of the fundamental group of $\PP^1\setminus\{0,1,\infty\}$ reveals, for each $k\geq2$, a torsor $P_{1,k}$ under $\ZZ(k)$ on $\Spec(\ZZ)$.
+We will describe these torsors in this section.
+The relation with $\pi_1$ will be explained in [§16](#section-16) (see [(16.23)](#chunk-16.23)) and the calculations to justify this will be given in [§19](#section-19).
+We will then describe the torsors $P_{d,k}$ under $\ZZ(k)$ on $\Spec(\QQ(\sqrt[d]{1}))$, given by an analogous construction [(16.28)](#chunk-16.28).
+
+The sum of the $\P_{d,k}$ and of $(-1)^k$ times its symmetry under $\zeta\mapsto\zeta^{-1}$ is torsion.
+This is essentially equivalent to the adelic integral formulas for the value of the Dirichlet $L$ functions at negative integers: [(3.6)](#chunk-3.6), [(3.8)](#chunk-3.8), [(3.9)](#chunk-3.9), and [(3.14)](#chunk-3.14).
+A geometric interpretation, which allows us to reprove these formulas, will be given in [§18](#section-18).
+
+A geometric interpretation of the relations of distributions [(3.13)](#chunk-3.13) will be given in [§17](#section-17).
+
+::: {.rmenv #chunk-3.1 title="3.1" latex="{3.1}"}
+We denote by $P$ the torsor $P_{1,k}$ that we are going to define.
+At the same time, we will define a trivialisation $u_\BB\in P_\BB$ of its Betti realisation.
+Since $F^0\ZZ(k)_\DR=0$, we necessarily have that $P_\DR=\ZZ(k)_\DR=\QQ$.
+The Betti structure is
+$$
+  \begin{aligned}
+    P_\BB
+    &= u_\BB + (2\pi i)^k\ZZ \subset \PP_{\DR,\CC} = \CC
+    \quad\text{with}
+  \\u_\BB
+    &= -(k-1)!\zeta(k)
+  \end{aligned}
+\tag{3.1.1_k}
+$$
+where $\zeta$ is the Riemann $\zeta$ function.
+:::
