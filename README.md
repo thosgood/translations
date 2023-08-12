@@ -19,7 +19,8 @@
   + make the `view` metadata in `_bookdown.yml` work somehow...
   + link to the `.tex` file instead in the pdf?
 - (BOTH) figure out a better standard for where to insert `\oldpage{}`
-  + **should be at start/end of lines, never on a line by itself?**
+  + *should be at start/end of lines, never on a line by itself?*
+  + **go back an fix this in all Rmd files**
 
 - (HTML) previews of internal links (e.g. equations, sections, footnotes, and citations) on hover?
   + if so, **definitely** have a way of disabling this (ideally in the header bar, alongside e.g. TOC toggle button)
