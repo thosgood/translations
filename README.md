@@ -3,6 +3,7 @@
 ## Bugs
 
 - (PDF) sometimes the content of an environment starts on a new line (e.g. 2.1, 2.4, 2.6, 2.7 etc. in `MSRI-16-1989-79`)
+  + see also e.g. any theorem that starts with an em-dash followed by a new line (e.g. Theorem 1 in `SHC-9-2`)
 
 ## Improvements
 
