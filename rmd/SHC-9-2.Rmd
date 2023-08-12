@@ -37,8 +37,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 <!-- Content -->
 
-\oldpage{2-01}
-The aim of this talk is to generalise certain theorems of Serre.
+\oldpage{2-01}The aim of this talk is to generalise certain theorems of Serre.
 It makes fundamental use of the techniques of Serre [@1; @2; @3].
 
 
@@ -66,10 +65,8 @@ b. If $X$ is affine with coordinate ring $A(X)$, then, for every coherent $\scr{
 c. Under the conditions of b), we have that $\HH^i(X,\scr{A})=0$ for $i>0$.
 :::
 
-\oldpage{2-02}
-
 ::: {.proof}
-For the proofs, which are very elementary, see [@1, chapitre 2, paragraphes 2,3,4], or a talk of Cartier in the 1957 *Séminaire Grothendieck*.
+\oldpage{2-02}For the proofs, which are very elementary, see [@1, chapitre 2, paragraphes 2,3,4], or a talk of Cartier in the 1957 *Séminaire Grothendieck*.
 :::
 
 
@@ -111,8 +108,7 @@ we take $\scr{A}_i=\scr{I}_Y^i\scr{A}$.
 In the case where $\dim Y<n$, by induction on the length of
 this composition series, using [Definition 1](#definition-1) and the fact that $K(Y)\subset\cal{K}$, we see that, *if $\dim\supp\scr{A}<n$, then $\scr{A}\in\cal{K}$.*
 
-\oldpage{2-03}
-Suppose first of all that $X$ is irreducible.
+\oldpage{2-03}Suppose first of all that $X$ is irreducible.
 For $\scr{A}\in K(X)$, let $T(\scr{A})$ be the torsion submodule of $\scr{A}$ (whose stalks are the torsion submodules of $\scr{A}_x$).
 
 ::: {.itenv #lemma-2 title="Lemma 2" latex="{Lemma 2}"}
@@ -145,8 +141,7 @@ where $\scr{Q}$ is defined as the cokernel of the injection homomorphism.
 We immediately see that $\scr{Q}\otimes_{\scr{O}}\scr{R}=0$, and so $\scr{Q}$ is a torsion module, and so $\supp\scr{Q}\neq X$ ([Lemma 2](#lemma-2)), whence $\scr{Q}\in\cal{K}$.
 (We implicitly make use of the fact that $\scr{A}_0+\scr{O}_X^k$ is a coherent $\scr{O}$-module, which can be easily verified).
 Then $\scr{A}_0\in\cal{K}$ *if and only if* $\scr{A}_0+\scr{O}_X^k\in\cal{K}$.
-\oldpage{2-04}
-Similarly, the analogous exact sequence $0\to\scr{O}_X^k\to\scr{A}_0+\scr{O}_X^k\to\scr{Q}'\to0$, where $\supp\scr{Q}\neq X$, and whence $\scr{Q}'\in\cal{K}$, implies that $\scr{A}_0+\scr{O}_X^k\in\cal{K}$ *if and only if* $\scr{O}_X^k\in\cal{K}$.
+\oldpage{2-04}Similarly, the analogous exact sequence $0\to\scr{O}_X^k\to\scr{A}_0+\scr{O}_X^k\to\scr{Q}'\to0$, where $\supp\scr{Q}\neq X$, and whence $\scr{Q}'\in\cal{K}$, implies that $\scr{A}_0+\scr{O}_X^k\in\cal{K}$ *if and only if* $\scr{O}_X^k\in\cal{K}$.
 Finally, suppose that $k>0$, i.e. that $\scr{A}$ is not a torsion $\scr{O}$-module, i.e. that $\supp\scr{A}=X$;
 then $\scr{O}_X^k\in\cal{K}$ *if and only if* $\scr{O}_X\in\cal{K}$, as follows immediately from [Definition 1](#definition-1).
 So the above "if and only if"s imply that, if $\scr{A}$ is such that $\supp\scr{A}\neq X$, then $\scr{A}\in\cal{K}$ *if and only if* $\scr{O}_X\in\cal{K}$.
@@ -175,8 +170,7 @@ This suffices to prove that, if $X$ is complete, then the $\Gamma(X,\scr{A})$, f
 
 Let $X$ be a topological space, and write $\cal{C}^X$ to denote the category of abelian sheaves on $X$.
 We define, in the usual manner, injective sheaves, and we can prove the existence, for all $\scr{A}\in\cal{C}^X$, of a resolution $C(\scr{A})$ of $\scr{A}$ by injective sheaves, which allows us to develop the theory of right-derived functors.
-\oldpage{2-05}
-In particular, consider the left-exact functor $\Gamma(X,\scr{A})$ from $\cal{C}^X$ to the category $\cal{C}$ of abelian groups;
+\oldpage{2-05}In particular, consider the left-exact functor $\Gamma(X,\scr{A})$ from $\cal{C}^X$ to the category $\cal{C}$ of abelian groups;
 its derived functors are denoted $\HH^i(X,\scr{A})$.
 So
 $$
@@ -215,8 +209,7 @@ $$
 \tag{1}
 $$
 whose direct definition is evident (noting that we have a natural homomorphism $f^{-1}(f_*(\scr{A}))\to A$).
-\oldpage{2-06}
-Furthermore, *if $\RR^qf_*(\scr{A})=0$ for $q>0$, then the homomorphisms in Equation (1) are isomorphisms*.
+\oldpage{2-06}Furthermore, *if $\RR^qf_*(\scr{A})=0$ for $q>0$, then the homomorphisms in Equation (1) are isomorphisms*.
 This follows immediately from the spectral sequence, or, even more simply, from the fact that $f_*(C(\scr{A}))$ is an injective resolution of $f_*(\scr{A})$.
 
 For the results of this section, see the 1957 *Séminaire Grothendieck*.
@@ -247,8 +240,7 @@ We could also give a direct proof of (b) by calculating $\HH^i(\mathbf{P},\scr{O
 Now suppose that $k=\mathbf{C}$ is the field of complex numbers, so that $\mathbf{P}$ is also endowed with the structure of an analytic space, which we denote by $\mathbf{P}^h$;
 this is itself endowed with a sheaf of analytic local rings, which we denote by $\scr{O}^h$;
 finally, we can define, as above, the sheaves $\scr{O}^h(n)$.
-With this, we have:
-\oldpage{2-07}
+\oldpage{2-07}With this, we have:
 
 ::: {.itenv #corollary-3 title="Corollary" latex="{Corollary}"}
 —
@@ -287,8 +279,8 @@ For $X$ to be complete, it is necessary and sufficient for the morphism from $X$
 If $X$ is a locally closed subset of a complete variety $X'$, then for $f\colon X\to Y$ to be proper, it is necessary and sufficient for its graph to be closed.
 Combining this with Chow's lemma ([§7](#section-7), [Lemma 4](#lemma-4)), the fact that an algebraic subset of an algebraic set over the complex numbers is closed if and only it is closed for the topology of the underlying space [@2, proposition 7, page 12], and the fact that a complex projective space is compact, we easily conclude, from the
 above criterion that, in the "classical case", a morphism is proper if and only if the map of underlying analytic spaces is proper in the usual sense (i.e. the inverse image of a compact subset being compact);
-compare with [@2, proposition 12, proposition 6], where a particular case is proven: $X$ is complete if and only if it is compact.
-\oldpage{2-08}
+\oldpage{2-08}compare with [@2, proposition 12, proposition 6], where a particular case is proven: $X$ is complete if and only if it is compact.
+
 
 ::: {.itenv #theorem-4 title="Theorem 4" latex="{Theorem 4}"}
 Let $f\colon X\to Y$ be a proper morphism of algebraic sets.
@@ -329,8 +321,7 @@ $$
 
 We will see that, if $X$ is complete, then the homomorphisms in Equation (2) are isomorphisms.
 However, we will actually prove a more general result.
-\oldpage{2-09}
-Let
+\oldpage{2-09}Let
 $$
   f\colon X\to Y
 $$
@@ -388,8 +379,7 @@ Since $A\to A^h$ sends coherent algebraic sheaves to coherent analytic sheaves (
 Under the conditions of [Theorem 5](#theorem-5), the $f^h(\scr{A}^h)$ are coherent analytic sheaves.
 :::
 
-\oldpage{2-10}
-It is very plausible that, more generally, if $g\colon V\to W$ is a proper holomorphic map of analytic spaces, and if $\scr{F}$ is a coherent analytic sheaf on $V$, then $g_*(\scr{F})$ is a coherent analytic sheaf.
+\oldpage{2-10}It is very plausible that, more generally, if $g\colon V\to W$ is a proper holomorphic map of analytic spaces, and if $\scr{F}$ is a coherent analytic sheaf on $V$, then $g_*(\scr{F})$ is a coherent analytic sheaf.
 This is indeed true if the sets $f^{-1}(y)$ (for $y\in W$) are finite (as we can see by a classical theorem of Oka; see the 1953/54 *Séminaire Cartan*), or if $W$ consists of a single point (by a result of Serre-Cartan, *loc. cit.*).
 
 ::: {.itenv #corollary3-5 title="Corollary 3" latex="{Corollary 3}"}
@@ -423,8 +413,7 @@ Let $X$ be a an irreducible algebraic set
 Then there exists an algebraic set $X'$ that is locally closed in some projective space $\mathbf{P}$, and a proper birational morphism $g\colon X'\to X$.
 :::
 
-\oldpage{2-11}
-Recall ([§5](#section-5)) that "proper implies, in this case, that the graph of $g$ is a *closed* subset of $\mathbf{P}\times X$.
+\oldpage{2-11}Recall ([§5](#section-5)) that "proper implies, in this case, that the graph of $g$ is a *closed* subset of $\mathbf{P}\times X$.
 Here we only make use of the fact that $g$ is *proper* and *surjective*.
 
 :::: {.proof}
@@ -464,8 +453,7 @@ Applying the lemma to $f'\colon X'\to X$, we immediately see, from the definitio
 $$
   \RR^p(ff')_*(\scr{O}(n)) = \RR^pf_*(f'(\scr{O}(n))) = \RR^pf_*(\scr{A}).
 $$
-\oldpage{2-12}
-But the first object is zero for $p>0$ and large enough $n$, by [Lemma 5](#lemma-5) applied to $ff'\colon X'\to Y$, and so $\RR^pf_*(\scr{A})=0$ for $p>0$, and, a fortiori, $\RR^pf_*(\scr{A})$ is coherent for $p>0$;
+\oldpage{2-12}But the first object is zero for $p>0$ and large enough $n$, by [Lemma 5](#lemma-5) applied to $ff'\colon X'\to Y$, and so $\RR^pf_*(\scr{A})=0$ for $p>0$, and, a fortiori, $\RR^pf_*(\scr{A})$ is coherent for $p>0$;
 similarly, $f_*(\scr{A})$ is coherent, since $f_*(\scr{A})=(ff')_*(\scr{O}(n))$, and so it suffices to apply [Lemma 5](#lemma-5) to $ff'$.
 This thus proves that $\scr{A}\in\cal{K}$ in the setting of [Theorem 4](#theorem-4).
 In the setting of [Theorem 5](#theorem-5), the same argument proves that, if $n$ is large enough, $\RR^pf_*^h(\scr{A}^h)=0$ for $p>0$, and, a fortiori, the homomorphisms in Equation (4) are isomorphisms for $q>0$;
@@ -494,8 +482,7 @@ $$
   = \HH^0(\mathbf{P},\scr{O}(n))\otimes\HH^0(X',\scr{O}_W^h)
 $$
 for every Stein open subset $W'$ of $W$.
-\oldpage{2-13}
-But $H^\bullet(\mathbf{P}^h\times W',\scr{O}(n)^h)$ can be calculated by a *vectorial-topological variant of the Künneth theorem* (using the fact that the space $\HH^0(W',\scr{O}_{W'}^h)$ is \emph{nuclear};
+\oldpage{2-13}But $H^\bullet(\mathbf{P}^h\times W',\scr{O}(n)^h)$ can be calculated by a *vectorial-topological variant of the Künneth theorem* (using the fact that the space $\HH^0(W',\scr{O}_{W'}^h)$ is \emph{nuclear};
 see the 1953/54 \emph{Séminaire Schwartz});
 taking into account the fact that $\HH^i(W',\scr{O}_W)=0$ for $i>0$, we see that it is equal to $\HH^i(\mathbf{P}^h,\scr{O}(n)^h)\otimes\HH^0(W',\scr{O}_w)$, by a fundamental theorem of Cartan concerning Stein varieties (which, for our purposes here, it suffices to know for a polycylinder and the structure sheaf. where it is an easy consequence of the aforementioned vectorial-topological Künneth theorem).
 The above claims then follow from corollary (b) of [Theorem 3](#theorem-3), taking into account the fact that $\HH^0(\mathbf{P}^h,\scr{O}(n)^h)=\HH^0(\mathbf{P},\scr{O}(n))$ (which is proven in the proof of that corollary).
@@ -526,8 +513,7 @@ $$
   \\f_*^h*(\scr{L}'(n)^h) @>>> f_*^h*(\scr{L}(n)^h) @>>> f_*^h*(\scr{A}(n)^h) @>>> 0
   \end{CD}
 $$
-\oldpage{2-14}
-Since, for $n$ large enough, the first two vertical arrows are isomorphisms, so too is the third, by the five lemma, which finishes the proof.
+\oldpage{2-14}Since, for $n$ large enough, the first two vertical arrows are isomorphisms, so too is the third, by the five lemma, which finishes the proof.
 ::::
 
 ::: {.rmenv title="Remark" latex="{Remark}"}
@@ -571,8 +557,7 @@ $$
 :::
 
 From [Corollary 1](#corollary1-6) and the exactness of the functor $\cal{C}\to\cal{C}^h$ also follows the fact that, if $\scr{F}$ and $\scr{G}$ are coherent analytic sheaves on $X$ that come from algebraic sheaves, and if $u$ is a homomorphism from $\scr{F}$ to $\scr{G}$, then the kernel, cokernel, image, and coimage of $u$ all also come from algebraic sheaves.
-\oldpage{2-15}
-In particular, if $X$ is embedded into a projective space $\mathbf{P}$, then every coherent analytic sheaf on $X$ is isomorphic to the cokernel of a homomorphism $\scr{L}^h\to\scr{L}'^h$, where $\scr{L}$ and $\scr{L}'$ are direct sums of finitely many sheaves of the form $\scr{O}(k)$ (part (a) of the [Corollary of Theorem 3](#corollary-3));
+\oldpage{2-15}In particular, if $X$ is embedded into a projective space $\mathbf{P}$, then every coherent analytic sheaf on $X$ is isomorphic to the cokernel of a homomorphism $\scr{L}^h\to\scr{L}'^h$, where $\scr{L}$ and $\scr{L}'$ are direct sums of finitely many sheaves of the form $\scr{O}(k)$ (part (a) of the [Corollary of Theorem 3](#corollary-3));
 it thus follows that [Theorem 6](#theorem-6) is also true if $X$ is *projective* (Serre).
 
 Let $0\to\scr{F}'\to\scr{F}\to\scr{F}''\to0$ be an exact sequence of coherent analytic sheaves on $X^h$, and suppose that $\scr{F}'$ and $\scr{F}''$ come from coherent algebraic sheaves;
@@ -607,8 +592,7 @@ $$
 $$
 (where the tensor product makes sense, since $\scr{O}_X^h$ is a module over $f^{-1}(\scr{O}_X^h)$, which can be identified with a subsheaf (of rings) of $\scr{O}_X^h$).
 It is easy to prove that, if $\scr{F}$ is coherent, then so too is $\scr{F}'$.
-\oldpage{2-16}
-Furthermore, there is a natural homomorphism
+\oldpage{2-16}Furthermore, there is a natural homomorphism
 $$
   \scr{F} \to f_*^h(\scr{F}')
 $$
