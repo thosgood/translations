@@ -26,6 +26,7 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+
 %% Header and footer %%
 
 \usepackage{fancyhdr}
@@ -47,12 +48,12 @@
 \usepackage{amsthm}
 
 \newenvironment{itenv}[1]
-  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
-  {\par\medskip}
+  {\phantomsection\par\smallskip\noindent\textbf{#1.}\itshape}
+  {\par\smallskip}
 
 \newenvironment{rmenv}[1]
-  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
-  {\par\medskip}
+  {\phantomsection\par\smallskip\noindent\textbf{#1.}\rmfamily}
+  {\par\smallskip}
 
 \newenvironment{titenv}[1]
   {\phantomsection\par\noindent\textbf{#1.}\itshape}
