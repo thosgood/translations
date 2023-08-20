@@ -185,10 +185,10 @@ The crystalline aspect will be neglected in the rest of the introduction.
 
 In [§2](#section-2) we give examples.
 We also explain what an extension of the unit realisation system $\ZZ$ by a realisation system $M$ with integer coefficients is.
-_Terminology:_ $M$-torsor, or torsor under $M$.
+_Terminology:_ $M$-torsor, or torsor for $M$.
 _Example:_ the Kummer $\ZZ(1)$-torsor, where $\ZZ(1)$ is the Tate motive.
 
-In [§3](#section-3) we describe certain remarkable torsors, which can be said to be cyclotomic, under the Tate motive $\ZZ(k)$.
+In [§3](#section-3) we describe certain remarkable torsors, which can be said to be cyclotomic, for the Tate motive $\ZZ(k)$.
 [§16](#section-16) explains how these torsors naturally appear in the study of $\pi_1$ of $\PP^1\setminus\{0,1,\infty\}$.
 The description here is direct, but unmotivated.
 The claim that some of these torsors are of finite order ([(3.5)](#chunk-3.5), [(3.14)](#3.14)) lets us recover the known formulas expressing the Dirichlet $L$-functions in negative integers as integrals of distributions over $\hZZ$ with values in $\hZZ$: a version of Kummer congruences.
@@ -230,13 +230,13 @@ a. giving a motivic meaning to $\pi_1(X,x)^{(N)}$, not only to its Lie algebra;
 b. giving a motivic meaning to the torsor [(0.6)](#chunk-0.6) of homotopy classes of paths from $b_1$ to $b_2$;
 
 c. in [(1)](#figure-1), the "monodromy around $0$" loop is only unambiguously determined for $b$ "close to $0$".
-    We must define what it means for a base point to be "close to $0$".
+  We must define what it means for a base point to be "close to $0$".
 
 \oldpage{7 (85)}
 
 Our solution will be to define a motivic linear group as being an Ind-object in the category of motives, endowed with the structure of a commutative Hopf algebra.
 To avoid speculation: consider the group in realisation systems, and replace "motive" by "realisation system".
-There is an analogous definition for torsors under a group.
+There is an analogous definition for torsors for a group.
 We separately define a notion of "integer" structures.
 This definition has the advantage that the standard constructions in algebraic geometry (decreasing central series, quotients, pushing forward a $G$-torsor by $G\to H$, twisting by a torsor, ...) all translate automatically to the motivic case.
 This, in an arbitrary Tannakian category, is explained in [§5](#section-5).
@@ -349,13 +349,13 @@ $$
 ::: {.rmenv #chunk-0.5 title="0.5" latex="{0.5}"}
 Let $G$ be a sheaf of groups on a site $\cal{S}$, or, equivalently, in a topos $T$.
 Useful particular case: if $\cal{S}$ is a point, then a sheaf is a set and $G$ is a group.
-A _$G$-torsor_, or _torsor under $G$_, is a sheaf $P$ endowed with a right $G$-action such that $P$ is locally isomorphic to $G$ acting on itself by translations on the right.
-We also call such an object a _right $G$-principal homogeneous space_, or a _right principal homogeneous space under $G$_.
+A _$G$-torsor_, or _torsor for $G$_, is a sheaf $P$ endowed with a right $G$-action such that $P$ is locally isomorphic to $G$ acting on itself by translations on the right.
+We also call such an object a _right $G$-principal homogeneous space_, or a _right principal homogeneous space for $G$_.
 \oldpage{10 (88)}
 If $P$ is a $G$-torsor, then a sheaf $X$ on which $G$ acts can be _twisted_ by $P$.
 The twisting $X^P$ is the contracted product $P\times^G X=(P\times X)/G$, and is endowed with $\alpha\colon P\to\shIsom(X,X^P)$ satisfying $\alpha(pg)=\alpha(p)g$.
 
-An _$(H,G)$-bitorsor_ (cf. SGA 7, VII.1, or Girard, _Cohomologie non abelienne_, III 1.5) is a space which is simultaneously a left principal homogeneous space under $H$ and a right principal homogeneous space under $G$, with the $G$- and $H$-actions commuting with one another.
+An _$(H,G)$-bitorsor_ (cf. SGA 7, VII.1, or Girard, _Cohomologie non abelienne_, III 1.5) is a space which is simultaneously a left principal homogeneous space for $H$ and a right principal homogeneous space for $G$, with the $G$- and $H$-actions commuting with one another.
 If $P$ is a $G$-torsor, then the sheaf of automorphisms of $P$ is the twisting $G^P$ of $G$ by $P$ (under the action of $G$ on itself by inner automorphisms), and $P$ is a $(G^P,P)$-bitorsor.
 By this construction, the data of an $(H,G)$-bitorsor $P$ is equivalent to the data of a $G$-torsor $P$ along with an isomorphism between $H$ and $G^P$.
 _Notation:_ we will write ${}_HP_G$ to mean that $P$ is an $(H,G)$-bitorsor.
@@ -363,16 +363,16 @@ _Notation:_ we will write ${}_HP_G$ to mean that $P$ is an $(H,G)$-bitorsor.
 We will use the following operations on torsors and bitorsors.
 
 - **Pushing forward:** (or **transporting**) a $G$-torsor $P$ by $\varphi\colon G\to H$ to obtain an $H$-torsor $\varphi(P)$.
-    A _$\varphi$-morphism_ from the $G$-torsor $P$ to the $H$-torsor $Q$ is some $u\colon P\to Q$ such that $u(pg)=u(p)\varphi(g)$.
-    A $\varphi$-morphism factors uniquely through an isomorphism of $H$-torsors between $\varphi(P)$ and $Q$.
+  A _$\varphi$-morphism_ from the $G$-torsor $P$ to the $H$-torsor $Q$ is some $u\colon P\to Q$ such that $u(pg)=u(p)\varphi(g)$.
+  A $\varphi$-morphism factors uniquely through an isomorphism of $H$-torsors between $\varphi(P)$ and $Q$.
 
 - **Composition:** of a $(G_1,G_2)$-bitorsor $P$ and a $(G_2,G_3)$-bitorsor $Q$:
-    the $(G_1,G_3)$-bitorsor $P\circ Q$ given by the contracted product $P\times^{G_2}Q=(P\times Q)/G_2$.
+  the $(G_1,G_3)$-bitorsor $P\circ Q$ given by the contracted product $P\times^{G_2}Q=(P\times Q)/G_2$.
 
 - **Inverse:** of ${}_{G_1}P_{G_2}$:
-    the $(G_2,G_1)$-bitorsor $P^{-1}$, unique up to isomorphism, endowed with $(p\mapsto p^{-1})\colon P\to P^{-1}$ such that $(g_1pg_2)^{-1}=g_2^{-1}p^{-1}g_1^{-1}$.
+  the $(G_2,G_1)$-bitorsor $P^{-1}$, unique up to isomorphism, endowed with $(p\mapsto p^{-1})\colon P\to P^{-1}$ such that $(g_1pg_2)^{-1}=g_2^{-1}p^{-1}g_1^{-1}$.
 
-    For $G$-torsors $P$ and $Q$, the sheaf $\shIsom(P,Q)$ of isomorphisms of $G$-torsors from $P$ to $Q$ is the $(G^Q,G^P)$-bitorsor $G\circ P^{-1}$.
+  For $G$-torsors $P$ and $Q$, the sheaf $\shIsom(P,Q)$ of isomorphisms of $G$-torsors from $P$ to $Q$ is the $(G^Q,G^P)$-bitorsor $G\circ P^{-1}$.
 
 If the site $\cal{S}$ is such that the representable functors $h_S$ are sheaves, then we can transport these operations to $\cal{S}$ via the fully faithful functor $S\mapsto h_S$, with each construction only being defined if it does not leave the collection of representable sheaves.
 :::
@@ -387,33 +387,33 @@ For algebraic varieties, we have various parallel cohomology theories.
 The most important for us will be de Rham and $\ell$-adic cohomology.
 
 - **De Rham cohomology.**
-    Let $k$ be a field of characteristic $0$, and $X$ an algebraic variety over $k$.
-    Suppose that $X$ is smooth.
-    The de Rham cohomology groups $\HH_\DR^i(X)$ are the hypercohomology groups of the de Rham complex:
-    $$
-      \HH_\DR^i(X)
-      \coloneqq \bHH^i(X,\Omega_{X/k}^\bullet)
-    $$
-    cf. [@G].
-    These are vector spaces over $k$.
-    If $k'$ is an extension of $k$, and $X'$ over $k'$ is given by extension of scalars of $X$, then
-    $$
-      \HH_\DR^i(X') = \HH_\DR^i(X)\otimes_k k'.
-    $$
-    If $X$ is not smooth, then the de Rham complex no longer gives a reasonable theory.
-    We can define the $\HH_\DR^i(X)$ by reduction to the smooth case, by the methods of [@D3], or, if $X$ admits an embedding into a smooth variety $Z$, as the hypercohomology of the de Rham complex of the formal completion of $Z$ along $X$ (R. Hartshorne, _On the de Rham cohomology of algebraic varieties_, Publ. Math. IHÉS **45** (1975), p. 5--99);
-    more intrinsically, it is the crystalline cohomology of $X$ (A. Grothendieck, _Crystals and the de Rham cohomology of schemes_, Notes by J. Coates and O. Jussila, in: "dix exposés sur la cohomologie des schémas", North Holland (1968)).
+  Let $k$ be a field of characteristic $0$, and $X$ an algebraic variety over $k$.
+  Suppose that $X$ is smooth.
+  The de Rham cohomology groups $\HH_\DR^i(X)$ are the hypercohomology groups of the de Rham complex:
+  $$
+    \HH_\DR^i(X)
+    \coloneqq \bHH^i(X,\Omega_{X/k}^\bullet)
+  $$
+  cf. [@G].
+  These are vector spaces over $k$.
+  If $k'$ is an extension of $k$, and $X'$ over $k'$ is given by extension of scalars of $X$, then
+  $$
+    \HH_\DR^i(X') = \HH_\DR^i(X)\otimes_k k'.
+  $$
+  If $X$ is not smooth, then the de Rham complex no longer gives a reasonable theory.
+  We can define the $\HH_\DR^i(X)$ by reduction to the smooth case, by the methods of [@D3], or, if $X$ admits an embedding into a smooth variety $Z$, as the hypercohomology of the de Rham complex of the formal completion of $Z$ along $X$ (R. Hartshorne, _On the de Rham cohomology of algebraic varieties_, Publ. Math. IHÉS **45** (1975), p. 5--99);
+  more intrinsically, it is the crystalline cohomology of $X$ (A. Grothendieck, _Crystals and the de Rham cohomology of schemes_, Notes by J. Coates and O. Jussila, in: "dix exposés sur la cohomologie des schémas", North Holland (1968)).
 
 - **$\ell$-adic cohomology.**
-    Let $\ell$ be a prime number;
-    if $k$ is an algebraically closed field of characteristic $\neq\ell$, then we have the $\ell$-adic theory $X\mapsto\HH^i(X,\QQ_\ell)$ that associates, to $X$ over $k$, cohomology groups which are vector spaces over $\QQ_\ell$ (cf. SGA 5, VI).
-    They are defined from the cohomology groups with coefficients in $\ZZ/(\ell^n)$, and we allow ourselves to give, as reference for a theorem in $\ell$-adic cohomology, the place where its $\ZZ/(\ell^n)$ analogue is proved.
-    The $\HH^i(X,\QQ_\ell)$ depend only on $X$.
-    In particular, if $k$ is the algebraic closure of $k_0$, and if $X$ is given by extension of scalars of some $X_0$ over $k_0$, then $\Gal(k/k_0)$ acts (semi-$k$-linearly) on $X$, and thus acts on the $\HH^i(X,\QQ_\ell)$.
-    This action is continuous.
-    If $k'$ is an algebraically closed extension of $k$, and if $X'$ is given by extension of scalars of $X$, then $\HH^i(X,\QQ_\ell)\xrightarrow{\sim}\HH^i(X',\QQ_\ell)$.
-    \oldpage{12 (90)}
-    This follows by passing to the limit in the base change theorem for a smooth morphism [SGA 4, XVI, 1.2]: $k'$ is the filtrant inductive limit of the $k$-algebras $A$ with $\Spec(A)$ smooth over $k$.
+  Let $\ell$ be a prime number;
+  if $k$ is an algebraically closed field of characteristic $\neq\ell$, then we have the $\ell$-adic theory $X\mapsto\HH^i(X,\QQ_\ell)$ that associates, to $X$ over $k$, cohomology groups which are vector spaces over $\QQ_\ell$ (cf. SGA 5, VI).
+  They are defined from the cohomology groups with coefficients in $\ZZ/(\ell^n)$, and we allow ourselves to give, as reference for a theorem in $\ell$-adic cohomology, the place where its $\ZZ/(\ell^n)$ analogue is proved.
+  The $\HH^i(X,\QQ_\ell)$ depend only on $X$.
+  In particular, if $k$ is the algebraic closure of $k_0$, and if $X$ is given by extension of scalars of some $X_0$ over $k_0$, then $\Gal(k/k_0)$ acts (semi-$k$-linearly) on $X$, and thus acts on the $\HH^i(X,\QQ_\ell)$.
+  This action is continuous.
+  If $k'$ is an algebraically closed extension of $k$, and if $X'$ is given by extension of scalars of $X$, then $\HH^i(X,\QQ_\ell)\xrightarrow{\sim}\HH^i(X',\QQ_\ell)$.
+  \oldpage{12 (90)}
+  This follows by passing to the limit in the base change theorem for a smooth morphism [SGA 4, XVI, 1.2]: $k'$ is the filtrant inductive limit of the $k$-algebras $A$ with $\Spec(A)$ smooth over $k$.
 
 If $k=\CC$, then we have the topological space $X(\CC)$ of points of $X$, as well as its rational cohomology $\HH^\bullet(X(\CC),\QQ)$.
 We have canonical isomorphisms from [@G] and [SGA4, XVI, 4.1]:
@@ -622,17 +622,17 @@ Then $c$ acts on $M_\AAf$ respecting $M_\BB\subset M_\AAf$, and induces the invo
 —
 
 i. If $M_\DR$ is given, then the data of $M_\BB$, $F_\infty$, and $\comp_{\DR,\BB}$ satisfying [(AM2)](#AM2) is equivalent to that of a new rational structure $M_\BB\subset M_\DR\otimes\CC$ that is stable under complex conjugation $c_\DR$ (set $F_\infty=c_\DR|M_\BB$).
-    By [(M6)](#M6), the filtration $W$ of $M_\DR$ must remain rational for this new rational structure.
+  By [(M6)](#M6), the filtration $W$ of $M_\DR$ must remain rational for this new rational structure.
 
 ii. The data of $M_\AAf$, $\comp_{\AAf,\BB}$, and the Galois action, all together, are equivalent to the data of a $\QQ_\ell$-vector space $M_\ell$ for all $\ell$, along with a Galois action on $M_\ell$ and comparison isomorphisms $\comp_{\ell,\BB}\colon M_\BB\otimes\QQ\simto M_\ell$.
-    We have to assume the existence of a lattice $L\subset M_\BB$ such that the $\comp_{\ell,\BB}(L\otimes\ZZ_\ell)$ are Galois stable.
-    We define $M_\AAf$ from the $M_\ell$ as the restricted product of the $M_\ell$ with respect to the $\comp_{\ell,\BB}(L\otimes\ZZ_\ell)$ for an arbitrary lattice $L$: this restricted product is Galois stable, and the $\comp_{\ell,\BB}$ induce $\comp_{\AAf,\BB}$.
+  We have to assume the existence of a lattice $L\subset M_\BB$ such that the $\comp_{\ell,\BB}(L\otimes\ZZ_\ell)$ are Galois stable.
+  We define $M_\AAf$ from the $M_\ell$ as the restricted product of the $M_\ell$ with respect to the $\comp_{\ell,\BB}(L\otimes\ZZ_\ell)$ for an arbitrary lattice $L$: this restricted product is Galois stable, and the $\comp_{\ell,\BB}$ induce $\comp_{\AAf,\BB}$.
 
-    The data of $M_\ell$, $\comp_{\ell,\BB}$, and the Galois action (resp. $M_\AAf$, $\comp_{\AAf,\BB}$, and the action), all together, are also equivalent to the data of a Galois action on $M_\BB\otimes\QQ_\ell$ (resp. $M_\BB\otimes\AAf$).
-    By [(M6)](#M6) and [(M9)](#M9), the filtration of $M_\BB\otimes\QQ_\ell$ (resp. $M_\BB\otimes\AAf$) induced by $W$ must be stable under $\Gal(\bar{\QQ}/\QQ)$.
+  The data of $M_\ell$, $\comp_{\ell,\BB}$, and the Galois action (resp. $M_\AAf$, $\comp_{\AAf,\BB}$, and the action), all together, are also equivalent to the data of a Galois action on $M_\BB\otimes\QQ_\ell$ (resp. $M_\BB\otimes\AAf$).
+  By [(M6)](#M6) and [(M9)](#M9), the filtration of $M_\BB\otimes\QQ_\ell$ (resp. $M_\BB\otimes\AAf$) induced by $W$ must be stable under $\Gal(\bar{\QQ}/\QQ)$.
 
 iii. If $M_\DR$ is given, then the data of $M_{\crisp}$, along with its crystalline Frobenius and $\comp_{\crisp,\DR}$, is equivalent to the data of an automorphism $\phi_p$ of $M_\DR\otimes\QQ_p$.
-    By [(M6)](#M6) and [(M10)](#M10), the filtration of $M_\DR\otimes\QQ_p$ induced by $W$ must be stable under $\phi_p$.
+  By [(M6)](#M6) and [(M10)](#M10), the filtration of $M_\DR\otimes\QQ_p$ induced by $W$ must be stable under $\phi_p$.
 
 We will often tacitly use these remarks to describe a system [(M1)--(M10)](#chunk-1.4).
 :::
@@ -670,15 +670,14 @@ An additional data that we have on the cohomology $M\coloneqq\HH_\mot^i(X)$ when
 For all $p$, we should also have a "crystalline" structure of the following type.
 
 - **Semi-stable case.**
-    Let $T_p$ be the Zariski tangent space of $\Spec(\ZZ_p)$ at its closed point.
-\oldpage{18 (96)}
-    We complete it to a projective line $\overline{T}_p$ over $\FF_p$, and we can lift $(\overline{T}_p,0,\infty)$ to a projective line endowed with two marked points over $\ZZ_p$: $(\overline{T}_p^\sim,0,\infty)$.
-    We want an $F$-isocrystal with logarithmic poles on $(\overline{T}_p,0,\infty)$ (cf. [@Fa]).
-    Such an object induces, on $\overline{T}_p^\sim\otimes\QQ_p$, a module with connection $\cal{V}$ with logarithmic poles at $0$ and at $\infty$, and we want for the residue of the connection at $0$ and at $\infty$ to be nilpotent.
-    If $\varphi$ is a section of $\overline{T}_p^\sim$, over $\Spec(\ZZ_p)$, with derivative equal to $1$ at the closed point, then $\varphi^*\cal{V}$ is independent of the choice of $\varphi$, and $\comp_{\DR,\crisp}$ should then be identified with the de Rham realisation $\otimes\QQ_p$.
+  Let $T_p$ be the Zariski tangent space of $\Spec(\ZZ_p)$ at its closed point.
+  \oldpage{18 (96)}We complete it to a projective line $\overline{T}_p$ over $\FF_p$, and we can lift $(\overline{T}_p,0,\infty)$ to a projective line endowed with two marked points over $\ZZ_p$: $(\overline{T}_p^\sim,0,\infty)$.
+  We want an $F$-isocrystal with logarithmic poles on $(\overline{T}_p,0,\infty)$ (cf. [@Fa]).
+  Such an object induces, on $\overline{T}_p^\sim\otimes\QQ_p$, a module with connection $\cal{V}$ with logarithmic poles at $0$ and at $\infty$, and we want for the residue of the connection at $0$ and at $\infty$ to be nilpotent.
+  If $\varphi$ is a section of $\overline{T}_p^\sim$, over $\Spec(\ZZ_p)$, with derivative equal to $1$ at the closed point, then $\varphi^*\cal{V}$ is independent of the choice of $\varphi$, and $\comp_{\DR,\crisp}$ should then be identified with the de Rham realisation $\otimes\QQ_p$.
 
 - **General case.**
-    The data of the previous type, over a large-enough finite Galois extension $E$ of $\QQ_p$ that is $\Gal(E/\QQ_p)$-equivariant.
+  The data of the previous type, over a large-enough finite Galois extension $E$ of $\QQ_p$ that is $\Gal(E/\QQ_p)$-equivariant.
 
 A Fontaine--Messing comparison isomorphism should again link this object and $M_p$ endowed with the action of a decomposition group of $p$.
 :::
@@ -736,19 +735,19 @@ b. we no longer know how to prove [(1.10)](#chunk-1.10) if we do include them.
 Thus.
 
 i. We would like that, for almost all $p$, the Frobenius characteristic polynomial $\det(1-F_pt,M_\ell)$ at $p$ have rational coefficients that are independent of $\ell\neq p$.
-    It should also agree with $\det(1-\phi_pt,M_\crisp)$.
-    We do not know how to verify this for $\HH_\mot^i(X)$ (with $X$ smooth), nor for a direct factor of $\HH_\mot^i(X)$ (with $X$ an abelian variety), and reason (b) above also applies.
+  It should also agree with $\det(1-\phi_pt,M_\crisp)$.
+  We do not know how to verify this for $\HH_\mot^i(X)$ (with $X$ smooth), nor for a direct factor of $\HH_\mot^i(X)$ (with $X$ an abelian variety), and reason (b) above also applies.
 
 ii. We would like to complete [(AM4)](#AM4) by a condition for all $p$, cf. 1.8.5 in [P. Deligne, "La conjecture de Weil II", _Publ. Math. IHÉS_ **52** (1980), 137--252].
-    Reasons (a) and (b) above also apply.
+  Reasons (a) and (b) above also apply.
 
 iii. The Hodge structure $\Gr_n^W(M_\BB)$ should be polarisable.
-    More precisely, there should exist, for all $n$, a morphism of realisation systems
-    $$
-      \Gr_n^W(M)\otimes\Gr_n^W(M) \to \QQ(-n)
-    $$
-    (see [(2.1)](#chunk-2.1) for the definition of $\QQ(-n)$) that induces a polarisation of the weight-$n$ Hodge structure $\Gr_n^W(M_\BB)=\Gr_n^W(M_\BB)$.
-    Here, neither reason (a) nor reason (b) apply.
+  More precisely, there should exist, for all $n$, a morphism of realisation systems
+  $$
+    \Gr_n^W(M)\otimes\Gr_n^W(M) \to \QQ(-n)
+  $$
+  (see [(2.1)](#chunk-2.1) for the definition of $\QQ(-n)$) that induces a polarisation of the weight-$n$ Hodge structure $\Gr_n^W(M_\BB)=\Gr_n^W(M_\BB)$.
+  Here, neither reason (a) nor reason (b) apply.
 :::
 
 \oldpage{20 (98)}
@@ -971,10 +970,10 @@ If $S$ is an open of the spectrum of the ring of integers of a finite extension 
 
 - In [(AM3)](#AM3), we ask for each $\QQ_\ell$-sheaf $M_\ell$ induced by $M_\AAf$ to come from a smooth $\QQ_\ell$-sheaf on $S[1/\ell]$.
 - In [(M'4)E](#Mp4E), for each residue field $k(v)$ of $S$, we ask for $M_\crisv$ over the field of fractions $K_v$ of Witt vectors over $k(v)$, endowed with a semi-linear $\phi_v$.
-    The crystalline comparison isomorphism of [(M'5)E](#Mp5E) then becomes
-    $$
-      M_\DR\otimes E_v \simto M_\crisv\otimes_{K_v}E_v.
-    $$
+  The crystalline comparison isomorphism of [(M'5)E](#Mp5E) then becomes
+  $$
+    M_\DR\otimes E_v \simto M_\crisv\otimes_{K_v}E_v.
+  $$
 :::
 
 :::: {.rmenv #chunk-1.21 title="1.21" latex="{1.21}"}
@@ -1100,21 +1099,21 @@ Here is its description as a realisation system, in the language of [(1.9)](#chu
 - [(M'1)](#Mp1): $\ZZ(1)_\BB(C)=2\pi i\ZZ\subset C$.
 - [(M2)](#M2) and [(M'2)](#Mp2): $\ZZ(1)_\DR=\QQ(1)_\DR=\QQ$.
 - [(M3)](#M3) and [(M9)](#M9): $\ZZ(1)_{\ZZ/n}$ is the group $\mu_n\subset\CC^\times$ of $n$-th roots of unity.
-    The transition morphisms are the $\mu_n\to\mu_m\colon x\mapsto x^{n/m}$ for $m|n$.
-    The action of $\Gal(\bar{\QQ}/\QQ)$ is its action on the $\mu_n$.
-    In the variant [(M'3)](#Mp3), we have $\ZZ(1)_{\ZZ/n}(\bar{k})=\mu_n(\bar{k})$.
+  The transition morphisms are the $\mu_n\to\mu_m\colon x\mapsto x^{n/m}$ for $m|n$.
+  The action of $\Gal(\bar{\QQ}/\QQ)$ is its action on the $\mu_n$.
+  In the variant [(M'3)](#Mp3), we have $\ZZ(1)_{\ZZ/n}(\bar{k})=\mu_n(\bar{k})$.
 
-    We thus have that $\ZZ(1)_\ell=\limproj\mu_{\ell^n}(\CC)$.
+  We thus have that $\ZZ(1)_\ell=\limproj\mu_{\ell^n}(\CC)$.
 - [(M4)](#M4), [(M10)](#M10), and [(M'4)](#Mp4): $\ZZ(1)_\crisp=\QQ_p$ and $\phi_p=1/p$.
 - [(M5)](#M5): The canonical comparison isomorphism $\comp_{\DR,\BB}$ is induced by the inclusions $\ZZ(1)_\BB=2\pi i\ZZ\subset\CC$ and $\ZZ(1)_\DR=\QQ\subset\CC$, i.e.
-    $$
-      \ZZ(1)_\BB\otimes\CC \simto \CC \simfrom \ZZ(1)_\DR\otimes\CC.
-    $$
-    The isomorphism $\comp_{\ZZ/n,\BB}$ [(1.25)](#chunk-1.25) is induced by
-    $$
-      \exp(x/n)\colon \ZZ(1)_\BB \to \ZZ/n(1)\subset\CC^\times.
-    $$
-    The isomorphism $\comp_{\crisp,\DR}$ is induced by the inclusion $\QQ\subset\QQ_p$.
+  $$
+    \ZZ(1)_\BB\otimes\CC \simto \CC \simfrom \ZZ(1)_\DR\otimes\CC.
+  $$
+  The isomorphism $\comp_{\ZZ/n,\BB}$ [(1.25)](#chunk-1.25) is induced by
+  $$
+    \exp(x/n)\colon \ZZ(1)_\BB \to \ZZ/n(1)\subset\CC^\times.
+  $$
+  The isomorphism $\comp_{\crisp,\DR}$ is induced by the inclusion $\QQ\subset\QQ_p$.
 - [(M'5)](#Mp5): Replace $\CC$ by $C$ in [(M5)](#M5).
 - [(M6)](#M6) and [(M8)](#M8): $\ZZ(1)$ is of pure weight $-2$, and $\ZZ(1)_\DR$ is of pure Hodge filtration $-1$: the Hodge type is $(-1,-1)$.
 :::
@@ -1144,7 +1143,7 @@ An abelian scheme $A$ over $S$ similarly defines a smooth motive with integer co
 Recall that a *smooth $1$-motive* $X$ over a scheme $S$ consists of
 
 a. a group scheme $L$ over $S$ that, locally, for the étale topology, is a constant group scheme defined by a free $\ZZ$-module of finite type;
-    an abelian scheme $A$ over $S$, and a torus $T$ over $S$;
+  an abelian scheme $A$ over $S$, and a torus $T$ over $S$;
 b. an extension $E$ of $A$ by $T$, and a morphism $\bar{u}\colon L\to A$;
 c. a morphism $u\colon L\to E$ lifting $\bar{u}$.
 
@@ -1196,11 +1195,11 @@ We spell out what a realisation system $E$ given by an extension of $\QQ(0)$ by 
 
 ::: {.trmenv #M1P title="(M1)P" latex="{(M1)P}"}
 $E_\BB$ is an extension $M_\BB\to E_\BB\xrightarrow{u}\QQ$ of $\QQ$ by $M_\BB$.
-Its data is equivalent to that of $P_\BB\coloneqq u^{-1}(1)$, endowed with its structure as a torsor (principal homogeneous space) under $M_\BB$, i.e. $m\in M_\BB$ acts on $P_\BB$ via $p\mapsto p+m$.
+Its data is equivalent to that of $P_\BB\coloneqq u^{-1}(1)$, endowed with its structure as a torsor (principal homogeneous space) for $M_\BB$, i.e. $m\in M_\BB$ acts on $P_\BB$ via $p\mapsto p+m$.
 :::
 
 ::: {.trmenv #M234P title="(M2,3,4)P" latex="{(M2,3,4)P}"}
-Similarly, the data of $E_\DR$ (resp. $E_\AAf$, $E_\crisp$) is equivalent to that of a torsor $P_\DR$ (resp. $P_\AAf$, $P_\crisp$) under $M_\DR$ (resp. $M_\AAf$, $M_\crisp$).
+Similarly, the data of $E_\DR$ (resp. $E_\AAf$, $E_\crisp$) is equivalent to that of a torsor $P_\DR$ (resp. $P_\AAf$, $P_\crisp$) for $M_\DR$ (resp. $M_\AAf$, $M_\crisp$).
 :::
 
 ::: {.trmenv #M5P title="(M5)P" latex="{(M5)P}"}
@@ -1220,10 +1219,10 @@ Axiom [(AM2)](#AM2) for $E$ is that this involution is induced by the $\CC$-anti
 :::
 
 ::: {.trmenv #M8P title="(M8)P" latex="{(M8)P}"}
-The data of the Hodge filtration of $E_\DR$ is equivalent to that of the intersection $F^0P_\DR$ of $F^0E_\DR$ over $P_\DR$, which is a torsor under $F^0M_\DR$: for $p>0$, $F^pE_\DR=F^pM_\DR$; for $p=0$, $F^0E_\DR$ is generated by $F^0P_\DR$; and for $p<0$, $F^pE_\DR$ is the sum of $F^0E_\DR$ and $F^pM_\DR$.
+The data of the Hodge filtration of $E_\DR$ is equivalent to that of the intersection $F^0P_\DR$ of $F^0E_\DR$ over $P_\DR$, which is a torsor for $F^0M_\DR$: for $p>0$, $F^pE_\DR=F^pM_\DR$; for $p=0$, $F^0E_\DR$ is generated by $F^0P_\DR$; and for $p<0$, $F^pE_\DR$ is the sum of $F^0E_\DR$ and $F^pM_\DR$.
 In other words, the data [(M8)](#M8) for $E_\DR$ is that of a reduction of the structure group of $P_\DR$, from $M_\DR$ to $F^0M_\DR$.
 
-The data of [(M1)](#M1), [(M2)](#M2), $\comp_{\DR/\BB}$, and [(M8)](#M8) are equivalent to the data of a torsor $F^0P_\DR$ under $F^0M_\DR$ and, in the $M_\DR\otimes\CC=M_\BB\otimes\CC$ torsor $P_{\DR,\CC}$ which is induced by $F^0M_\DR\to M_\DR\otimes\CC$, a $\QQ$-structure $P_\BB\subset P_{\DR,\CC}$ that is an $M_\BB$ torsor.
+The data of [(M1)](#M1), [(M2)](#M2), $\comp_{\DR/\BB}$, and [(M8)](#M8) are equivalent to the data of a torsor $F^0P_\DR$ for $F^0M_\DR$ and, in the $M_\DR\otimes\CC=M_\BB\otimes\CC$ torsor $P_{\DR,\CC}$ which is induced by $F^0M_\DR\to M_\DR\otimes\CC$, a $\QQ$-structure $P_\BB\subset P_{\DR,\CC}$ that is an $M_\BB$ torsor.
 :::
 
 ::: {.trmenv #M9P title="(M9)P" latex="{(M9)P}"}
@@ -1246,7 +1245,7 @@ We note only that [(AM1)](#AM1) and [(AM4)](#AM4) follow from the same axioms fo
 
 i. A system of torsors, [(M1)P](#M1P) to [(M10)P](#M10P) in [(2.5)](#chunk-2.5), that satisfies the conditions required in order to define an extension $E$ of $\QQ(0)$ by a realisation system $M$ is called a *torsor in realisation systems*.
 
-ii. If $M$ is a motive, then the torsor $P$ under $M$ is *motivic* (or a *torsor in motives*) if the extension $E$ is a motive.
+ii. If $M$ is a motive, then the torsor $P$ for $M$ is *motivic* (or a *torsor in motives*) if the extension $E$ is a motive.
 :::
 
 :::: {.rmenv #chunk-2.7 title="2.7" latex="{2.7}"}
@@ -1270,8 +1269,8 @@ It is equivalent to give a projective system of equivariant $M_{\ZZ/(n)}$-torsor
 Replace $\comp_{\AAf,\BB}$ by $\comp_{\ell,\BB}$ for each $\ell$, or $\comp_{\ZZ/(n),\BB}$, or $\comp_{\hZZ,\BB}$.
 :::
 
-Such a system of torsors, which defines an extension of $\ZZ(0)$ by $M$, is also called a *torsor under $M$*.
-It is said to be *motivic* if the corresponding extension is, i.e. if the torsor under $M\otimes\QQ$ that it defines is motivic.
+Such a system of torsors, which defines an extension of $\ZZ(0)$ by $M$, is also called a *torsor for $M$*.
+It is said to be *motivic* if the corresponding extension is, i.e. if the torsor for $M\otimes\QQ$ that it defines is motivic.
 ::::
 
 :::: {.rmenv #chunk-2.8 title="2.8" latex="{2.8}"}
@@ -1293,9 +1292,9 @@ For a local section $p$ of $F^0P_\DR$, $\nabla p\in\Omega^1\otimes F^{-1}(M_\DR)
 ::::
 
 ::: {.rmenv #chunk-2.9 title="2.9" latex="{2.9}"}
-We explicitly describe the torsor in motives $K(x)$ under $\ZZ(1)$ (the *Kummer torsor*) corresponding to $x\in\QQ^\times$ as in [(2.4.1)](#chunk-2.4.1).
+We explicitly describe the torsor in motives $K(x)$ for $\ZZ(1)$ (the *Kummer torsor*) corresponding to $x\in\QQ^\times$ as in [(2.4.1)](#chunk-2.4.1).
 
-The $\ZZ(1)_\BB$-torsor $K(x)_\BB$ is the torsor under $2\pi i\ZZ$ of logarithms of $x$.
+The $\ZZ(1)_\BB$-torsor $K(x)_\BB$ is the torsor for $2\pi i\ZZ$ of logarithms of $x$.
 Since $F^0\ZZ(1)_\DR=0$, we have $K(x)_\DR=\ZZ(1)_\DR=\QQ$.
 The $\ZZ/(n)(1)$-torsor $K(x)_{\ZZ/(n)}$ is the torsor of $n$-th roots of unity of $x$.
 The transition morphisms $K(x)/_{\ZZ(nm)}\to K(x)_{\ZZ/(n)}$ are given by $y\mapsto y^m$.
@@ -1314,7 +1313,7 @@ $$
 \oldpage{32 (110)}
 
 ::: {.rmenv #chunk-2.10 title="2.10" latex="{2.10}"}
-On $\Gm=\Spec\ZZ[q,q^{-1}]$, the universal section $q$ of $\Gm$ also defines a torsor in motives $K(q)$ under $\ZZ(1)$, on the base $\Gm$.
+On $\Gm=\Spec\ZZ[q,q^{-1}]$, the universal section $q$ of $\Gm$ also defines a torsor in motives $K(q)$ for $\ZZ(1)$, on the base $\Gm$.
 We now describe it.
 
 The $\ZZ(1)_\BB$-torsor $K(q)_\BB$ on $C^\times$ is the local system of logarithms of $q$.
@@ -1363,12 +1362,12 @@ $$
 
 
 
-# Torsors under $\ZZ(n)$ {#section-3}
+# Torsors for $\ZZ(n)$ {#section-3}
 
-\oldpage{33 (112)}The study of the fundamental group of $\PP^1\setminus\{0,1,\infty\}$ reveals, for each $k\geq2$, a torsor $P_{1,k}$ under $\ZZ(k)$ on $\Spec(\ZZ)$.
+\oldpage{33 (112)}The study of the fundamental group of $\PP^1\setminus\{0,1,\infty\}$ reveals, for each $k\geq2$, a torsor $P_{1,k}$ for $\ZZ(k)$ on $\Spec(\ZZ)$.
 We will describe these torsors in this section.
 The relation with $\pi_1$ will be explained in [§16](#section-16) (see [(16.23)](#chunk-16.23)) and the calculations to justify this will be given in [§19](#section-19).
-We will then describe the torsors $P_{d,k}$ under $\ZZ(k)$ on $\Spec(\QQ(\sqrt[d]{1}))$, given by an analogous construction [(16.28)](#chunk-16.28).
+We will then describe the torsors $P_{d,k}$ for $\ZZ(k)$ on $\Spec(\QQ(\sqrt[d]{1}))$, given by an analogous construction [(16.28)](#chunk-16.28).
 
 The sum of the $\P_{d,k}$ and of $(-1)^k$ times its symmetry under $\zeta\mapsto\zeta^{-1}$ is torsion.
 This is essentially equivalent to the adelic integral formulas for the value of the Dirichlet $L$ functions at negative integers: [(3.6)](#chunk-3.6), [(3.8)](#chunk-3.8), [(3.9)](#chunk-3.9), and [(3.14)](#chunk-3.14).
