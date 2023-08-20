@@ -110,6 +110,9 @@ else
       rm *.bib &&
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     done
+    if [ -z "_main.Rmd" ]; then
+      rm _main.Rmd
+    fi
     # Deploy
     cp -r output/* $WEBSITE
   fi
