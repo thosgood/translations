@@ -264,7 +264,7 @@ $$
 which finishes the proof.
 ::::
 
-::: {.itenv #corollary title="Corollary" latex="Corollary"}
+::: {.itenv #corollary title="Corollary" latex="{Corollary}"}
 If $V$ is an affine algebraic set, $U$ an open subset of $V$, $A$ the coordinate ring of $V$, and $\scr{U}(U)$ the coordinate ring of $U$, then the following are equivalent:
 
 a. $U$ is an affine open subset.
@@ -308,7 +308,7 @@ But there exists an exact sequence
 $$
   0 \to \scr{F} \to \scr{G} \to \scr{H} \to 0
 $$
-of coherent sheaves on $V$ such that $\scr{F}|U=\scr{F}'$, $\scr{G}|U=\scr{G}'$, and $\scr{H}|U=\scr{H}'$ (see \cite{1}, with the proof in the appendix of \cite{2}).
+of coherent sheaves on $V$ such that $\scr{F}|U=\scr{F}'$, $\scr{G}|U=\scr{G}'$, and $\scr{H}|U=\scr{H}'$ (see [@1], with the proof in the appendix of [@2]).
 So, if $M$, $N$, and $P$ are the modules associated to $\scr{F}$, $\scr{G}$, and $\scr{H}$, then the sequence
 $$
   M\otimes_A\scr{U}(U) \to N\otimes_A\scr{U}(U) \to P\otimes_A\scr{U}(U) \to 0

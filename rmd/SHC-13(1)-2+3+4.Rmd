@@ -114,7 +114,7 @@ In this case, $V$ itself is a $\CC$-analytic space, and the fibres $V_x=\pi^{-1}
 
 If $B$ is a $\mathscr{C}^\infty$ manifold (resp. $\RR$-analytic, resp. $\CC$-analytic), and if the change of chart maps are all $\mathscr{C}^\infty$ (resp. ...), then we have a *$(\mathscr{C}^\infty,\CC)$-mixed manifold* (resp. $(\RR,\CC)$, resp. $(\CC,\CC)$).
 In this case, $V$ itself is a manifold.
-Note that the notion of a $(\CC,\CC)$-mixed manifold, or a $\CC$-analytic mixed manifold, reduces to simply having a $\CC$-analytic manifold $V$ endowed with a projection $\pi\colon V\to B$ onto another $\CC$-analytic manifold such that $\pi$ is of maximal rank at every point.^[*[Trans.] The more common modern nomenclature is to simply call such an object a* family of complex manifolds*.*]
+Note that the notion of a $(\CC,\CC)$-mixed manifold, or a $\CC$-analytic mixed manifold, reduces to simply having a $\CC$-analytic manifold $V$ endowed with a projection $\pi\colon V\to B$ onto another $\CC$-analytic manifold such that $\pi$ is of maximal rank at every point.^[*[Trans.] The more common modern nomenclature is to simply call such an object a family of complex manifolds.*]
 
 Let $\pi\colon V\to B$ and $\pi'\colon V'\to B'$ be mixed spaces, and let $f_1\colon B\to B'$ be a continuous (resp. ...) map.
 Then a *morphism from $V$ to $V'$ over $f_1$* is a continuous map $f\colon V\to V'$ such that the diagram
@@ -339,7 +339,7 @@ $$
   \\T_0 @>>{\rho_0}> \HH^1(V_0;\Theta_0)
   \end{CD}
 $$
-where $\rho_0$ is the Spencer--Kodaira map \cite{2}.
+where $\rho_0$ is the Spencer--Kodaira map [@2].
 
 ::: {.itenv #three-theorem-1 title="Theorem 1" latex="{Theorem 1}"}
 For the proper mixed manifold $\pi\colon V\to B$ to be locally trivial in a neighbourhood of the point $b_0\in B$, it is necessary and sufficient for the map $\widetilde{\rho}_0\colon\widetilde{T}_0\to\HH^1(V_0;\widetilde{\Theta})$ to be zero.
