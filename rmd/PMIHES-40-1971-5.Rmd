@@ -50,8 +50,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 # Introduction {.unnumbered #introduction}
 
-\oldpage{5}
-*Work presented as a doctoral thesis at l'Université d'Orsay.*
+\oldpage{5}*Work presented as a doctoral thesis at l'Université d'Orsay.*
 
 By Hodge, the cohomology space $\HH^n(X,\CC)$ of a compact Kähler variety $X$ is endowed with a "Hodge structure" of weight $n$, i.e. a natural bigrading
 $$
@@ -63,8 +62,7 @@ We will show here that the complex cohomology of a non-singular, not necessarily
 
 The reader will find an explanation in [@14] of the yoga that underlies this construction.
 
-\oldpage{6}
-The proof, which is essentially algebraic, relies on one hand on Hodge theory, and on the other on Hironaka's resolution of singularities, which allows us, via a spectral sequence, "to express" the cohomology of a non-singular quasi-projective algebraic variety in terms of the cohomology of non-singular projective varieties.
+\oldpage{6}The proof, which is essentially algebraic, relies on one hand on Hodge theory, and on the other on Hironaka's resolution of singularities, which allows us, via a spectral sequence, "to express" the cohomology of a non-singular quasi-projective algebraic variety in terms of the cohomology of non-singular projective varieties.
 
 [Section 1](#section-1) contains, apart from reminders on filtrations gathered together for the ease of the reader, two key results:
 
@@ -112,8 +110,7 @@ for $n\in\ZZ$.
 
 ::: {.rmenv #chunk-1.1.3 title="1.1.3" latex="{1.1.3}"}
 If $R$ is a decreasing (resp. increasing) filtration of $A$, then the $F_n(A)=F^{-n}(A)$ (resp the $F^n(A)=F_{-n}(A)$) form an increasing (resp. decreasing) filtration of $A$.
-\oldpage{7}
-This allows us in principal to consider only decreasing filtrations;
+\oldpage{7}This allows us in principal to consider only decreasing filtrations;
 *unless otherwise explicitly mentioned, when we say "filtration" we always mean "decreasing filtration"*.
 :::
 
@@ -177,8 +174,7 @@ $$
 :::
 
 ::: {.itenv #lemma-1.1.9 title="Lemma 1.1.9" latex="{Lemma 1.1.9}"}
-\oldpage{8}
-If $X$ and $Y$ are sub-objects of $A$, with $X\subset Y$, then on $Y/X\simto\Ker(A/X\to A/Y)$ the quotient filtration of $Y$ agrees with that induced by that of $A/X$.
+\oldpage{8}If $X$ and $Y$ are sub-objects of $A$, with $X\subset Y$, then on $Y/X\simto\Ker(A/X\to A/Y)$ the quotient filtration of $Y$ agrees with that induced by that of $A/X$.
 In the diagram
 **!!TO-DO: diagram!!**
 the arrows are strict.
@@ -238,8 +234,7 @@ $$
   = \bigcap_{\sum k_i=k} \Ker(H(A_i)\to H(A_i/F^{k_i}(A_i))).
 $$
 
-\oldpage{9}
-If $H$ is exact, then the two definitions are equivalent.
+\oldpage{9}If $H$ is exact, then the two definitions are equivalent.
 
 We extend these definitions to contravariant functors in certain variables by [(1.1.6)](#chunk-1.1.6).
 In particular, for the left-exact functor $\Hom$, we set
@@ -304,8 +299,7 @@ If $A^{p,q}$ is a bigraded object of $\scr{A}$ such that
 a. $A^{p,q}=0$ except for a finite number of pairs $(p,q)$, and
 b. $A^{p,q}=0$ for $p+q\neq n$
 
-\oldpage{10}
-then we define two $n$-opposite filtrations of $A=\sum_{p,q}A^{p,q}$ by setting
+\oldpage{10}then we define two $n$-opposite filtrations of $A=\sum_{p,q}A^{p,q}$ by setting
 $$
   F^p(A)
   = \sum_{p'\geq p} A^{p',q'}
@@ -381,8 +375,7 @@ The constructions [(1.2.4)](#chunk-1.2.4) and [(1.2.5)](#proposition-1.2.5) esta
 :::
 
 ::: {.itenv #definition-1.2.7 title="Definition 1.2.7" latex="{Definition 1.2.7}"}
-Three *finite* filtrations $W$, $F$, and $\overline{F}$ on $A$ are said to be *opposite* if
-\oldpage{11}
+\oldpage{11}Three *finite* filtrations $W$, $F$, and $\overline{F}$ on $A$ are said to be *opposite* if
 $$
   \Gr_F^p\Gr_{\overline{F}}^q\Gr_W^n(A)
   = 0
@@ -456,8 +449,7 @@ $$
   \end{aligned}
 $$
 
-\oldpage{12}
-Equation (1.2.8.1) can then be written as
+\oldpage{12}Equation (1.2.8.1) can then be written as
 $$
   \begin{aligned}
     B'+C' &= D
@@ -562,8 +554,7 @@ iv. The "forget the filtrations" functors, $\Gr_W$, $\Gr_F$, and $\Gr_{\overline
   from $\scr{A}'$ to $\scr{A}$ are exact.
 :::
 
-\oldpage{13}
-Denote by $\sigma_0(p,q)$ and $\sigma_1(p,q)$ the sequences
+\oldpage{13}Denote by $\sigma_0(p,q)$ and $\sigma_1(p,q)$ the sequences
 $$
   \begin{aligned}
     \sigma_0(p,q)
@@ -643,8 +634,7 @@ $$
   \Gr_F^p\Gr_{\overline{F}}^q\Gr_W^n(K)
   \hookrightarrow \Gr_F^p\Gr_{\overline{F}}^q\Gr_W^n(A);
 $$
-\oldpage{14}
-the filtrations of $W$, $F$, and $\overline{F}$ on $K$ are thus opposite, and $K$ is a kernel of $f$ in $\scr{A}'$.
+\oldpage{14}the filtrations of $W$, $F$, and $\overline{F}$ on $K$ are thus opposite, and $K$ is a kernel of $f$ in $\scr{A}'$.
 This, combined with the dual result, proves (ii).
 
 If $f$ is an arrow of $\scr{A}'$, then the canonical morphism from $\Coim(f)$ to $\Im(f)$ is an isomorphism in $\scr{A}$;
@@ -714,8 +704,7 @@ $$
 $$
 since $dF^{p-r+1}\subset d^{-1}F^{p+r}$ and $F^{p+1}\subset F^p$.
 
-\oldpage{15}
-For $r<\infty$, the $E_r$ form a complex graded by the degree $p-r(p+q)$, and $E_{r+1}$ can be expressed as the cohomology of this complex:
+\oldpage{15}For $r<\infty$, the $E_r$ form a complex graded by the degree $p-r(p+q)$, and $E_{r+1}$ can be expressed as the cohomology of this complex:
 $$
   E_{r+1}^{pq}
   = \HH(E_r^{p-r,q+r-1} \xrightarrow{d_r} E_r^{pq} \xrightarrow{d_r} E_r^{p+r,q-r+1}).
@@ -814,8 +803,7 @@ iii. It induces step-by-step (via (1.3.1.5)) isomorphisms of graded complexes $E
 :::
 
 ::: {.proof}
-Let $F'$ be the filtration on $K$ defined by
-\oldpage{16}
+\oldpage{16}Let $F'$ be the filtration on $K$ defined by
 $$
   {F'}^p(K^n)
   = \Dec(F)^{p-n}(K^n)
@@ -897,8 +885,7 @@ Dually, Equation (1.3.1.3) identifies $E_r^{pq}$ with a sub-object of a quotient
 :::
 
 ::: {.itenv #lemma-1.3.10 title="Lemma 1.3.10" latex="{Lemma 1.3.10}"}
-\oldpage{17}
-On $E_0$ and $E_1$, we have $F_d=F_{d^*}$.
+\oldpage{17}On $E_0$ and $E_1$, we have $F_d=F_{d^*}$.
 :::
 
 ::: {.proof}
@@ -962,9 +949,8 @@ ii. Dually, the morphism [(1.3.5)](#chunk-1.3.5)
 
 ::: {.proof}
 It suffices, by duality, to prove (i).
-\oldpage{18}
 
-By [(1.3.3)](#chunk-1.3.3) and [(1.3.4)](#proposition-1.3.4), the complex $E_1(K,W)$ filtered by $F$ is a quotient of the filtered complex $\Gr_{\Dec(W)}(K)$.
+\oldpage{18}By [(1.3.3)](#chunk-1.3.3) and [(1.3.4)](#proposition-1.3.4), the complex $E_1(K,W)$ filtered by $F$ is a quotient of the filtered complex $\Gr_{\Dec(W)}(K)$.
 Let $U$ be the filtered complex given by the kernel, which is acyclic by [(1.3.4), (ii)](#proposition-1.3.4).
 The long exact sequence in cohomology associated to the exact sequence of complexes
 $$
@@ -1004,8 +990,7 @@ We will prove the theorem by induction on $r_0$.
 For $r_0=0$, the hypothesis is empty, and we apply [(1.3.10)](#lemma-1.3.10) and [(1.3.13), (iii)](#proposition-1.3.13).
 For $r_0\geq1$, by the inductive hypothesis, we have $F_d=F_r=F_{d^*}$ on $E_r^{pq}$ for $r\leq r_0$.
 
-\oldpage{19}
-By [(1.3.15)](#lemma-1.3.15), the morphism $u\colon E_0(\Dec(K))\to E_1(K)$ is a filtered quasi-isomorphism.
+\oldpage{19}By [(1.3.15)](#lemma-1.3.15), the morphism $u\colon E_0(\Dec(K))\to E_1(K)$ is a filtered quasi-isomorphism.
 It thus induces a filtered isomorphism from $\HH^\bullet(\Dec(K))$ to $\HH^\bullet(E_1(K))$:
 $$
   u\colon (E_1(\Dec(K)),F_r)
@@ -1067,8 +1052,7 @@ $$
   \to \Gr^p(A)
   \to 0
 $$
-\oldpage{20}
-is thus exact, and
+\oldpage{20}is thus exact, and
 $$
   \Gr_{FT}TA \simto T\Gr_FA.
 \tag{1.4.2.1}
@@ -1120,5 +1104,27 @@ $$
 
 ::: {.rmenv #chunk-1.4.5 title="1.4.5" latex="{1.4.5}"}
 Let $F$ be a biregular filtration of $K$.
-A *$T$-acyclic filtered resolution* of $K$ is
+A *$T$-acyclic filtered resolution* of $K$ is a filtered quasi-isomorphism $i\colon K\to K'$ from $K$ to a filtered biregular complex such that the $\Gr^p({K'}^n)$ are acyclic for $T$.
+If $K'$ is such a resolution, then the ${K'}^n$ are acyclic for $T$, and the filtered complex (cf. [(1.4.2)](#chunk-1.4.2)) $T(K')$ defines a spectral sequence
+$$
+  E_1^{pq}
+  = \RR^{p+q}T(\Gr^p(K))
+  \Rightarrow \RR^{p+q}T(K).
+$$
+This is independent of the choice of $K'$.
+We call this the *hypercohomology spectral sequence of the filtered complex $K$*.
+It depends functorially on $K$, and a filtered quasi-isomorphism induces an isomorphism of spectral sequences.
+
+\oldpage{21}The differentials $d_1$ of this spectral sequence are the connection morphisms defined by the short exact sequences
+$$
+  0
+  \to \Gr^{p+1}K
+  \to F^pK/F^{p+2}K
+  \to \Gr^pK
+  \to 0.
+$$
+:::
+
+::: {.rmenv #chunk-1.4.6 title="1.4.6" latex="{1.4.6}"}
+Let $K$ be a complex.
 :::
