@@ -29,10 +29,98 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 \providecommand{\RR}{\mathbb{R}}
 \providecommand{\ZZ}{\mathbb{Z}}
-\providecommand{\CCinfty}{\mathcal{C}^\infty}
+\providecommand{\NN}{\mathbb{N}}
+\providecommand{\CCinfty}{\mathrm{C}^\infty}
+\providecommand{\DL}{\operatorname{DL}}
 
 <!-- Content -->
 
-# Introduction {-}
+# Introduction
 
 \oldpage{127}We consider the standard torus $T^2=\RR^2/\ZZ^2$ endowed with its $\CCinfty$ differential structure.
+The projection onto $T^2$ of a line $y=\alpha x$ of $\RR$ defines a one-parameter subgroup of $T^2$ denoted $[\alpha]$.
+The quotient group is denoted $T_\alpha=T^2/[\alpha]$, and its quotient topology is the trivial one.
+The study of singular objects, of which $T_\alpha$ is the most well known example, has provoked the development of different techniques, algebraic or geometric, such as, amongst others: $C^*$-algebras ([@3] and [@7]), $Q$-varieties [@1], and analytic schemes [@2].
+We want to illustrate here the technique of *diffeological spaces*, initially developed by J.-M. Souriau for the study of groups of infinite dimension, but which applies to all quotients (possibly singular) of Lie groups.
+The quotient $T_\alpha$ can be endowed with the structure of a diffeological group (we refer to the references [@8] and [@4] for the details concerning this notion).
+This structure agrees with the canonical Lie group structure if $\alpha$ is rational.
+Here this structure is characterised by the following definition [@8]:
+
+> $f\in\DL(\RR^n,T_\alpha)$ if and only if $f$ is defined on an open $\Omega$ of $\RR^n$ with values in $T_\alpha$ and satisfies the following condition: for all $x$ in $\Omega$, there exists an open neighbourhood $V$ of $x$, and a map $F\in\CCinfty(V,T^2)$ that lifts $f$, i.e. on $V$ we have the relation
+> $$
+>   P_\alpha\circ F
+>   = f.
+> \tag{1}
+> $$
+
+In the above, $P_\alpha$ is the canonical epimorphism from $T^2$ to $T_\alpha$, and $\DL(\RR^n,T_\alpha)$ is by definition the family of differentiable maps of opens in $\RR^n$ to $T_\alpha$ (also called *$n$-plots* of $T_\alpha$).
+THe set of $n$-plots as $n$ runs over $\NN$ characterises the diffeological structure of $T_\alpha$.
+
+The differentiable maps from $T_\alpha$ to a "diffeological space" $E$ are the maps $\varphi\colon T_\alpha\to E$ such that, for every plot $f$ of $T_\alpha$, the composite $\varphi\circ f$ is a plot of $E$.
+In particular, the diffeomorphisms from $T_\alpha$ to $E$ are the bi-differentiable bijections.
+
+For every diffeological group and every homogeneous space (quotient of a diffeological group by an arbitrary subgroup) we can define the notion of connectivity, and thus simple connectivity.
+In the connected case, we can also define the universal covering and the fundamental group, which depend only on the diffeological structure ([@4] and [@8]).
+
+We illustrate these techniques in the precise case of irrational windings of the torus.
+The passage to the universal covering of these quotients allows us to give a complete diffeological classification;
+we can also make explicit the group of diffeomorphisms of $T_\alpha$.
+\oldpage{128}For the classification, there is agreement with the results obtained by the theory of $C^*$-algebras (cf. [@3] and [@7]);
+we also find a similar classification starting from schemes of varieties [@2].
+
+
+# Covering and fundamental group
+
+We briefly describe the construction of the universal covering of a homogeneous diffeological space:
+
+> Let $G$ be a connected diffeological group, and $p\colon\widetilde{G}\to G$ its universal covering.
+> Let $H$ be an arbitrary subgroup of $G$;
+> set $\widetilde{H}=p^{-1}(H)$, and let $\widetilde{H}_0$ be its identity component.
+> We have the diagram
+> $$
+>   \begin{CD}
+>     \widetilde{G} @>>> \widetilde{G}/\widetilde{H}_0
+>   \\@VVV @VVV
+>   \\G @>>> G/H
+>   \end{CD}
+> \tag{2}
+> $$
+> and $\widetilde{G}/\widetilde{H}_0$ is then the universal covering of $G/H$, and $\widetilde{H}/\widetilde{H}_0$ is its fundamental group.
+
+Conversely, every connected covering of $G/H$ is given by a quotient $\widetilde{G}/K$, where $K$ is an intermediary subgroup $\widetilde{H}_0\subset K\subset\widetilde{H}$.
+
+In the particular case that interests us, writing $D_\alpha$ to mean the line $y=\alpha x$, and $\xi$ to mean the vector $(0,1)$, we have:
+$$
+  \begin{aligned}
+    G &= T^2
+  \\\widetilde{G} &= \RR^2
+  \\H &= [\alpha]
+  \\\widetilde{H} &= D_\alpha + (\ZZ+\alpha\ZZ)\xi.
+  \end{aligned}
+$$
+
+Connectivity coincides with connectivity by differentiable arcs, and an easy calculation then shows that
+$$
+  \widetilde{T}_\alpha = \RR
+  \qquad\text{and}\qquad
+  \pi_1(T_\alpha) = \ZZ^2.
+\tag{8}
+$$
+
+Some comments: the diffeological universal covering of $T_\alpha$ is thus the projection $\pi_\alpha\colon\RR\to\RR/(\ZZ_\alpha\ZZ)$;
+the fibre-type $\ZZ+\alpha\ZZ$ is diffeologically discrete, i.e. the only differentiable maps with values in the fibre are the constants;
+finally, the action of $\pi_1(T_\alpha)$ on $\RR$ is given by $(n,m)(x)=x+n+\alpha m$.
+The other connected coverings of $T_\alpha$ are of the type
+$$
+  \RR(k\ZZ+\alpha p\ZZ)
+  \qquad\text{or}\qquad
+  (k,p)\in\ZZ^2.
+\tag{4}
+$$
+
+The number of sheets, when $k.p\neq0$, is equal to $k.p$.
+
+
+# Classification of the $T_\alpha$
+
+Let
