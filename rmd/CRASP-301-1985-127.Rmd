@@ -32,6 +32,8 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\NN}{\mathbb{N}}
 \providecommand{\CCinfty}{\mathrm{C}^\infty}
 \providecommand{\DL}{\operatorname{DL}}
+\providecommand{\Diff}{\operatorname{Diff}}
+\providecommand{\GL}{\operatorname{GL}}
 
 <!-- Content -->
 
@@ -123,4 +125,61 @@ The number of sheets, when $k.p\neq0$, is equal to $k.p$.
 
 # Classification of the $T_\alpha$
 
-Let
+Let $T_\alpha$ and $T_\beta$ be irrational toruses.
+Then every diffeomorphism $\varphi\in\Diff(T_\alpha,T_\beta)$ lifts to an isomorphism $f$ of their universal coverings:
+$$
+  \begin{CD}
+    \RR @>f>> \RR
+  \\@V{\pi_\alpha}VV @VV{\pi_\beta}V
+  \\T_\alpha @>>\varphi> T_\beta
+  \end{CD}
+$$
+and the equality $\pi_\alpha\circ f=\varphi\circ\pi_\beta$ says that, for all $x\in\RR$ and $(n,m)\in\ZZ^2$, there exists $(p,q)\in\ZZ^2$ such that
+$$
+  f(x + n + \alpha m)
+  = f(x) + p + \beta q
+$$
+differentiable at $x$.
+Furthermore, $f$ induces an isomorphism from $\ZZ+\alpha\ZZ$ to $\ZZ+\beta\ZZ$;
+there thus exists a matrix in $\GL(2,\ZZ)$ such that
+$$
+  \begin{pmatrix}
+    p\\q
+  \end{pmatrix}
+  = \begin{pmatrix}
+    a & c
+  \\b & d
+  \end{pmatrix}
+  \times
+  \begin{pmatrix}
+    m\\n
+  \end{pmatrix}
+$$
+with $a,b,c,d\in\ZZ$ such that $ad-bc=\pm1$;
+the differentiability of $f$ implies that $f'(m+\alpha n)=f'(0)$ for all $m,n\in\ZZ$;
+\oldpage{129}we thus have, by density of $\ZZ+\alpha\ZZ$ in $\RR$, that $f'(x)=f'(0)$, and so $f$ is affine: $f(x)=\lambda x+r$ for some $\lambda\neq0$.
+Applied to $x=n+\alpha m$, this implies that $\lambda=c+\beta d$ and $\alpha=(a\beta+b)/(c\beta+d)$;
+thus $\alpha$ and $\beta$ are equivalent modulo $\GL(2,\ZZ)$, and so the action on $\RR$ is given by
+$$
+  \begin{pmatrix}
+    a&c
+  \\b&d
+  \end{pmatrix}
+  (x)
+  = (ax+b)/(cx+d).
+$$
+
+Conversely, we see that, if $\alpha\sim\beta$ modulo $\GL(2,\ZZ)$, then the map $f(x)=(c+\beta d)x+r$, with $c$ and $d$ coprime, projects onto a diffeomorphism from $T_\alpha$ to $T_\beta$.
+
+::: {.itenv title="Theorem" latex="{Theorem}"}
+Two irrational toruses $T_\alpha$ and $T_\beta$ are diffeomorphic if and only if $\alpha\sim\beta$ modulo $\GL(2,\ZZ)$.
+:::
+
+::: {.itenv title="Remark" latex="{Remark}"}
+This theorem is trivial satisfied for *rational toruses*.
+:::
+
+
+# Diffeomorphisms of $T_\alpha$.
+
+We
