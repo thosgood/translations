@@ -34,6 +34,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\DL}{\operatorname{DL}}
 \providecommand{\Diff}{\operatorname{Diff}}
 \providecommand{\GL}{\operatorname{GL}}
+\providecommand{\Stab}{\operatorname{Stab}}
 
 <!-- Content -->
 
@@ -120,7 +121,7 @@ $$
 \tag{4}
 $$
 
-The number of sheets, when $k.p\neq0$, is equal to $k.p$.
+The number of sheets, when $k\cdot p\neq0$, is equal to $k\cdot p$.
 
 
 # Classification of the $T_\alpha$
@@ -182,4 +183,72 @@ This theorem is trivial satisfied for *rational toruses*.
 
 # Diffeomorphisms of $T_\alpha$.
 
-We
+We have seen in the previous section that the only diffeomorphisms from one irrational torus to another are the projections of affine maps of the form $f(x)=(c+\beta d)x+r$, with $r\in\RR$, and $c,d\in\ZZ$ coprime.
+If we impose the condition that $f$ projects onto a diffeomorphism of $T_\alpha$ into itself then there must further exist $(a,b)\in\ZZ^2$ such that
+$$
+  \begin{pmatrix}
+    a&c
+  \\b&d
+  \end{pmatrix}
+  \in\Stab(\alpha)
+\tag{6}
+$$
+where $\Stab(\alpha)$ is the isotropy group of $\alpha$ under the action of $\GL(2,\ZZ)$.
+This condition $(6)$ is the translation of $\alpha=(a\beta+b)/(c\beta+d)$ for $\alpha=\beta$;
+these maps constitute a subgroup of the affine group of $\RR$.
+By characterising their projections, we determine all the diffeomorphisms of $T_\alpha$ into itself.
+Two affine maps of the above type project onto the same diffeomorphism if and only if
+$$
+  \begin{aligned}
+    (c,d)
+    &= (c',d')
+  \\\pi_\alpha(r)
+    &= \pi_\alpha(r').
+  \end{aligned}
+\tag{7}
+$$
+
+We define on $\Stab(\alpha)\times T_\alpha$ the affine law
+$$
+  \begin{aligned}
+    (M,\rho)\cdot(M',\rho')
+    &= (MM',M\cdot\rho'+\rho)
+  \\M\cdot\rho
+    &= \pi_\alpha[(c+\alpha d)x]
+    \qquad\text{if }\pi_\alpha(x) = \rho
+  \end{aligned}
+\tag{8}
+$$
+where $M$ is a matrix in $\GL(2,\ZZ)$ with coefficients $(a,b,c,d)$.
+This is a diffeological group law for which
+$$
+  (M,\pi_\alpha(x))
+  \longmapsto (\pi_\alpha(x) \mapsto \pi_\alpha[(c+\alpha d)x])
+\tag{9}
+$$
+is a differentiable isomorphism from $\Stab(\alpha)\times T_\alpha$ to $\Diff(T_\alpha)$.
+
+The action of $\GL(2,\ZZ)$ on a real number can be understood by the modification of its prime coefficients in its decomposition into continued fractions;
+thus two reals are equivalent modulo $\GL(2,\ZZ)$ if and only if they have the same decomposition after a certain rank (which is not necessarily the same for both of them).
+The quadratic irrationals are the reals whose coefficient sequences become periodic;
+thus removing or adding periods to the sequence leaves the number unchanged (cf. [@9] for these questions).
+From these remarks, we can show that
+$$
+  \Stab(\alpha)
+  = \ZZ_2
+  = \left\{
+    \begin{pmatrix}
+      1&0
+    \\0&1
+    \end{pmatrix}
+    ,
+    \begin{pmatrix}
+      -1&0
+    \\0&-1
+    \end{pmatrix}
+  \right\}
+\tag{10}
+$$
+if $\alpha$ is a non-quadratic irrational.
+
+\oldpage{130}
