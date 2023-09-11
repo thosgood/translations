@@ -36,6 +36,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\Gr}{\operatorname{Gr}}
 \providecommand{\Ker}{\operatorname{Ker}}
 \providecommand{\HH}{\operatorname{H}}
+\providecommand{\sHH}{\operatorname{\scr{H}}}
 \renewcommand{\Im}{\operatorname{Im}}
 \providecommand{\Coim}{\operatorname{Coim}}
 \renewcommand{\Ker}{\operatorname{Ker}}
@@ -1127,4 +1128,62 @@ $$
 
 ::: {.rmenv #chunk-1.4.6 title="1.4.6" latex="{1.4.6}"}
 Let $K$ be a complex.
+We denote by $\tau_{\leq p}(K)$ the following subcomplex:
+$$
+  \tau_{\leq p}(K)^n
+  = \begin{cases}
+    K^n
+    &\text{for }n<p
+  \\\Ker(d)
+    &\text{for }n=p
+  \\0
+    &\text{for }n>p.
+  \end{cases}
+$$
+
+The *filtration*, said to be *canonical*, of $K$ by the $\tau_{\leq p}(K)$ is induced by shifting the trivial filtration $G$ for which $G^0(K)=K$ and $G^1(K)=0$.
+We have, for the canonical filtration,
+$$
+  \begin{aligned}
+    E_1^{pq} = 0
+    &\qquad\text{if }p+q\neq-p
+  \\\\H^{-p}
+    &\qquad\text{if }p+q=-p.
+  \end{aligned}
+$$
+A quasi-isomorphism $f\colon K\to K'$ is automatically a filtered quasi-isomorphism for the canonical filtrations.
+:::
+
+::: {.rmenv #chunk-1.4.7 title="1.4.7" latex="{1.4.7}"}
+The subcomplexes $\sigma_{\geq p}(K)$ of $K$
+$$
+  \sigma_{\geq p}(K)^n
+  = \begin{cases}
+    0
+    &\text{if }n<p
+  \\K^n
+    &\text{if }n\geqp
+  \end{cases}
+$$
+define a biregular filtration, called the *stupid filtration* of $K$.
+
+The hypercohomology spectral sequences attached to the stupid or canonical filtrations of $K$ are the two *hypercohomology spectral sequences* of $K$.
+:::
+
+::: {.rmenv #chunk-1.4.8 title="Example 1.4.8" latex="{Example 1.4.8}"}
+Let $f\colon X\to Y$ be a continuous map between topological spaces, and let $\scr{F}$ be an abelian sheaf on $X$.
+Let $\scr{F}^\bullet$ be a resolution of $\scr{F}$ by $f_*$-acyclic sheaves.
+We have $\RR^i f_*\scr{F}\simeq\sHH^i(f_*\scr{F}^\bullet)$.
+We take the functor $T$ to be the functor $\Gamma(Y,-)$.
+The hypercohomology spectral sequence of the complex $f_*\scr{F}^\bullet$ endowed with its canonical filtration (1.4.6)
+$$
+  E_1^{pq}
+  = \HH^{2p+q}(Y,\RR^{-p}f_*\scr{F})
+  \Rightarrow \HH^{p+q}(X,\scr{F})
+$$
+is exactly, up to the renumbering $E_r^{pq}\mapsto E_{r+1}^{2p+q,-p}$, the *Leray spectral sequence* for $f$ and $\scr{F}$.
+:::
+
+::: {.rmenv #chunk-1.4.9 title="1.4.9" latex="{1.4.9}"}
+Let
 :::
