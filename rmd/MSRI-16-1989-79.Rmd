@@ -68,6 +68,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\Gr}{\operatorname{Gr}}
 \providecommand{\Fr}{\operatorname{Fr}}
 \providecommand{\dd}{\operatorname{d}}
+\providecommand{\vp}{\operatorname{vp}}
 
 
 <!-- Content -->
@@ -1420,4 +1421,56 @@ It follows from (3.1.5) that the $\comp_{\ZZ/(N),\BB}$ are compatible with the t
 
 ::: {.rmenv #chunk-3.2 title="3.2" latex="{3.2}"}
 \oldpage{35 (114)}Some preliminaries, before defining $\phi_p$.
+The $k$-logarithm is defined for $|z|\leq1$ by
+$$
+  \ell_k(z)
+  = \sum z^n/n^k.
+\tag{3.2.1}
+$$
+The $\zeta(k)$ in the formula giving $P_\BB$ appears in our approach as the value at $1$ of $\ell_k$.
+Let $p$ be a prime number and consider the formal series
+$$
+  \ell_k^{(p)}
+  = \sum_{p\nmid n} z^n/n^k.
+\tag{3.2.2}
+$$
+This is the Taylor series expansion of a rigid analytic function on the projective line over $\QQ_p$ with the open disc of radius $1$ centred at $1$ removed.
+Indeed, we have
+$$
+  \ell_k^{(p)}(z)
+  = \lim_N \frac{1}{1-z^{p^N}} \sum_{n=1, p\nmid n}^{p^N-1} z^n/n^k.
+\tag{3.2.3}
+$$
+From (3.2.3) we get the identity
+$$
+  \ell_k^{(p)}(1/z)
+  = -(-1)^k\ell_k^{(p)}(z).
+\tag{3.2.4}
+$$
+
+A formal series calculation gives, for $(N,p)=1$,
+$$
+  N^{k-1}\sum_{u^N=z} \ell_k^{(p)}(u)
+  = \ell_k^{(p)}(z).
+\tag{3.2.5}
+$$
+This leads us to define the "principal value" at $1$
+$$
+  \vp\ell_k^{(p)}(1)
+  \coloneqq \frac{N^{k-1}}{1-N^{k-1}} \sum_{\alpha^N=1,\alpha\neq1} \ell_k^{(p)}(\alpha).
+\tag{3.2.6}
+$$
+This number is independent of the choice of $N$ coprime to $p$.
+By (3.2.4), it is zero for $k$ even.
+
+With this notation, the crystalline Frobenius $\phi_p$ is given by
+$$
+  \phi_p^{-1}(0)
+  = (k-1)!p^k\cdot\vp\ell_k^{(p)}(1).
+\tag{3.2.7k}
+$$
+:::
+
+::: {.rmenv #chunk-3.3 title="Remark 3.3" latex="{Remark 3.3}"}
+\oldpage{115}We
 :::
