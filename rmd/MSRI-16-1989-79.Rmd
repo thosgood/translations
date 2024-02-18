@@ -69,6 +69,8 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\Fr}{\operatorname{Fr}}
 \providecommand{\dd}{\operatorname{d}}
 \providecommand{\vp}{\operatorname{vp}}
+\providecommand{\cl}{\operatorname{cl}}
+\providecommand{\Tr}{\operatorname{Tr}}
 
 
 <!-- Content -->
@@ -93,7 +95,7 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 
 # Introduction {-}
 
-\oldpage{3 (81)}The present article owes much to A. Grothendieck.
+\oldpage{81}The present article owes much to A. Grothendieck.
 He invented the philosophy of motives, which is our guiding thread.
 Around five years ago, he also said to me, with conviction, that the profinite completion $\hat{\pi}_1$ of the fundamental group of $X\coloneqq\PP^1(\CC)\setminus\{0,1,\infty\}$, with the action of $\Gal(\bar{\QQ}/\QQ)$, is a remarkable object, and that it must be studied.
 
@@ -121,7 +123,7 @@ _Notation:_ for $\Gamma$ a finitely generated group, let $Z^i\Gamma$ be the decr
 The theory of Malcev [@Mal] attaches a nilpotent Lie algebra over $\QQ$, denoted $\Lie\Gamma^{[N]}$, to $\Gamma^{[N]}$, such that $\Gamma^{[N]}$ is a congruence subgroup of the unipotent algebraic group over $\QQ$ of the Lie algebra $\Lie\Gamma^{[N]}$.
 By D. Sullivan, if $X$ is a differentiable manifold, then $\Lie\pi_1(X)^{[N]}\otimes\RR$ is determined, up to inner automorphism, by the differential-graded algebra $\Omega_X^\bullet$, taken up to quasi-isomorphism.
 
-\oldpage{4 (82)}This close relation with cohomology hints that the study of nilpotent versions of $\hat{\pi}_1$ is far from the "anabelian" dream of A. Grothendieck.
+\oldpage{82}This close relation with cohomology hints that the study of nilpotent versions of $\hat{\pi}_1$ is far from the "anabelian" dream of A. Grothendieck.
 It allows us, however, to use his philosophy of motives.
 
 Let $k$ be a number field.
@@ -147,7 +149,7 @@ For $X=\PP^1\setminus\{0,1,\infty\}$ and $x\in X(\CC)$, I proposed to him a defi
 He calculated it in part, for small $N$, and, to my extreme surprise, show that, for $N=4$, its description involves $\zeta(3)$.
 A decanted form of the calculations appear in [§19](#section-19).
 In fact, the whole article originates from my desire to understand the result of Z. Wojtkoviak.
-\oldpage{5 (83)}I have also been helped by the answer by O. Gabber to my question "How can we construct an extension of $\ZZ_\ell$ by $\ZZ_\ell(3)$, uniformly in $\ell$?": "By a class in $K_5(\QQ)$", as well as by the conjectures of A. Beilinson on the values of $L$-functions.
+\oldpage{83}I have also been helped by the answer by O. Gabber to my question "How can we construct an extension of $\ZZ_\ell$ by $\ZZ_\ell(3)$, uniformly in $\ell$?": "By a class in $K_5(\QQ)$", as well as by the conjectures of A. Beilinson on the values of $L$-functions.
 
 If $X$ is an algebraic variety over a number field $k$, $x\in X(k)$, and $N$ an integer, then we want to have a realisation system $\Lie\pi_1(X,x)_\mot^{(N)}$.
 We can only succeed in constructing this under additional hypotheses on $X$: in the general case, certain realisations are missing.
@@ -177,7 +179,7 @@ in the category of realisation systems with integer coefficients (= endowed with
 The definition has a crystalline component.
 The reader is invited to ignore this for a first approximation.
 The theory coincides with that of U. Jannsen [@J].
-\oldpage{6 (84)}The crystalline aspect will be neglected in the rest of the introduction.
+\oldpage{84}The crystalline aspect will be neglected in the rest of the introduction.
 
 In [§2](#section-2) we give examples.
 We also explain what an extension of the unit realisation system $\ZZ$ by a realisation system $M$ with integer coefficients is.
@@ -228,7 +230,7 @@ b. giving a motivic meaning to the torsor [(0.6)](#chunk-0.6) of homotopy classe
 c. in [(1)](#figure-1), the "monodromy around $0$" loop is only unambiguously determined for $b$ "close to $0$".
   We must define what it means for a base point to be "close to $0$".
 
-\oldpage{7 (85)}Our solution will be to define a motivic linear group as being an Ind-object in the category of motives, endowed with the structure of a commutative Hopf algebra.
+\oldpage{85}Our solution will be to define a motivic linear group as being an Ind-object in the category of motives, endowed with the structure of a commutative Hopf algebra.
 To avoid speculation: consider the group in realisation systems, and replace "motive" by "realisation system".
 There is an analogous definition for torsors for a group.
 We separately define a notion of "integer" structures.
@@ -268,7 +270,7 @@ By this construction, a non-zero tangent vector at $s$ can act as a base point i
 The same phenomenon occurs in the profinite theory of $\pi_1$, and in the "de Rham" theory.
 Be aware that $\mathcal{B}(v)=\mathcal{B}(\lambda v)$ for real $\lambda>0$, but that this fact has no analogue in the other theories.
 There constructions are explained in [§15](#section-15).
-\oldpage{8 (86)}They allow us, in the definition of the motivic $\pi_1$ of $X$, to take a base point "at infinity", like the tangent vector $v$ at $s$.
+\oldpage{86}They allow us, in the definition of the motivic $\pi_1$ of $X$, to take a base point "at infinity", like the tangent vector $v$ at $s$.
 
 Let $X=\PP^1\setminus\{0,1,\infty\}$.
 An algebraic meaning of "base point close to $0$" is "non-zero tangent vector at $0$".
@@ -299,7 +301,7 @@ We give, in [§17](#section-17) and [§18](#section-18), a geometric explanation
 
 # Terminology and notation {#section-0 .unnumbered}
 
-\oldpage{9 (87)}
+\oldpage{87}
 
 ::: {.rmenv #chunk-0.1 title="0.1" latex="{0.1}"}
 We denote inductive limits and projective limits by $\limind$ and $\limproj$.
@@ -344,7 +346,7 @@ Let $G$ be a sheaf of groups on a site $\cal{S}$, or, equivalently, in a topos $
 Useful particular case: if $\cal{S}$ is a point, then a sheaf is a set and $G$ is a group.
 A _$G$-torsor_, or _torsor for $G$_, is a sheaf $P$ endowed with a right $G$-action such that $P$ is locally isomorphic to $G$ acting on itself by translations on the right.
 We also call such an object a _right $G$-principal homogeneous space_, or a _right principal homogeneous space for $G$_.
-\oldpage{10 (88)}If $P$ is a $G$-torsor, then a sheaf $X$ on which $G$ acts can be _twisted_ by $P$.
+\oldpage{88}If $P$ is a $G$-torsor, then a sheaf $X$ on which $G$ acts can be _twisted_ by $P$.
 The twisting $X^P$ is the contracted product $P\times^G X=(P\times X)/G$, and is endowed with $\alpha\colon P\to\shIsom(X,X^P)$ satisfying $\alpha(pg)=\alpha(p)g$.
 
 An _$(H,G)$-bitorsor_ (cf. SGA 7, VII.1, or Girard, _Cohomologie non abelienne_, III 1.5) is a space which is simultaneously a left principal homogeneous space for $H$ and a right principal homogeneous space for $G$, with the $G$- and $H$-actions commuting with one another.
@@ -372,7 +374,7 @@ If the site $\cal{S}$ is such that the representable functors $h_S$ are sheaves,
 
 # Mixed Motives {#section-1}
 
-\oldpage{11 (89)}
+\oldpage{89}
 
 :::: {.rmenv #chunk-1.1 title="1.1" latex="{1.1}"}
 For algebraic varieties, we have various parallel cohomology theories.
@@ -404,7 +406,7 @@ The most important for us will be de Rham and $\ell$-adic cohomology.
   In particular, if $k$ is the algebraic closure of $k_0$, and if $X$ is given by extension of scalars of some $X_0$ over $k_0$, then $\Gal(k/k_0)$ acts (semi-$k$-linearly) on $X$, and thus acts on the $\HH^i(X,\QQ_\ell)$.
   This action is continuous.
   If $k'$ is an algebraically closed extension of $k$, and if $X'$ is given by extension of scalars of $X$, then $\HH^i(X,\QQ_\ell)\xrightarrow{\sim}\HH^i(X',\QQ_\ell)$.
-  \oldpage{12 (90)}This follows by passing to the limit in the base change theorem for a smooth morphism [SGA 4, XVI, 1.2]: $k'$ is the filtrant inductive limit of the $k$-algebras $A$ with $\Spec(A)$ smooth over $k$.
+  \oldpage{90}This follows by passing to the limit in the base change theorem for a smooth morphism [SGA 4, XVI, 1.2]: $k'$ is the filtrant inductive limit of the $k$-algebras $A$ with $\Spec(A)$ smooth over $k$.
 
 If $k=\CC$, then we have the topological space $X(\CC)$ of points of $X$, as well as its rational cohomology $\HH^\bullet(X(\CC),\QQ)$.
 We have canonical isomorphisms from [@G] and [SGA4, XVI, 4.1]:
@@ -444,7 +446,7 @@ $$
   \simeq \bigoplus_{i=j+k} \HH_\mot^j(X)\otimes\HH_\mot^k(Y)
 \tag{1.1.5}
 $$
-\oldpage{13 (91)}giving rise to commutative diagrams
+\oldpage{91}giving rise to commutative diagrams
 $$
   \begin{CD}
     \HH_\mot^i(X\times Y) @>\longleftarrow>> \HH_\mot^i(Y\times X)
@@ -486,7 +488,7 @@ it organises known facts, poses questions, and suggests precise conjectures.
 :::
 
 ::: {.rmenv #chunk-1.3 title="1.3" latex="{1.3}"}
-\oldpage{14 (92)}In each of the known theories, the $\HH^i(X)$ are endowed with an increasing filtration $W$, known as the _weight filtration_ [@D5], as well as comparison isomorphisms such that (1.1.1) and (1.1.2) are compatible with $W$.
+\oldpage{92}In each of the known theories, the $\HH^i(X)$ are endowed with an increasing filtration $W$, known as the _weight filtration_ [@D5], as well as comparison isomorphisms such that (1.1.1) and (1.1.2) are compatible with $W$.
 Furthermore, every natural map is strictly compatible with $W$.
 From this, we get a new requirement for the category of motives:
 every motive is endowed with a weight filtration $W$, compatible with the tensor product, and strictly compatible with every morphism $f\colon M\to N$, i.e.
@@ -516,7 +518,7 @@ a motive over $\QQ$ should give rise to a system [(M1)](#M1) to [(M10)](#M10) as
 
 _Terminology:_
 all the vector spaces are assumed to be of finite dimension;
-\oldpage{15 (93)}"_almost every_ prime number" means "all, except for a finite number".
+\oldpage{93}"_almost every_ prime number" means "all, except for a finite number".
 
 ::: {.trmenv #M1 title="(M1)" latex="{(M1)}"}
 A vector space $M_\BB$ over $\QQ$, called the _Betti realisation_.
@@ -586,7 +588,7 @@ These involutions, as well as the linear involution extending $F_\infty$, all co
 $$
   F_\infty = c_\BB c_\DR.
 $$
-\oldpage{16 (94)}In other words, $c_\DR$ respects $M_\BB\subset M_\BB\otimes\CC=M_\DR\otimes\CC$, and $c_\DR|M_\BB=F_\infty$.
+\oldpage{94}In other words, $c_\DR$ respects $M_\BB\subset M_\BB\otimes\CC=M_\DR\otimes\CC$, and $c_\DR|M_\BB=F_\infty$.
 :::
 
 ::: {.trmenv #AM3 title="(AM3)" latex="{(AM3)}"}
@@ -625,7 +627,7 @@ We will often tacitly use these remarks to describe a system [(M1)--(M10)](#chun
 
 ::: {.rmenv #chunk-1.6 title="1.6" latex="{1.6}"}
 A scheme $X$ of finite type over $\QQ$ should define, for each $i$, a motive $M\coloneqq \HH_\mot^i(X)$.
-\oldpage{17 (95)}In this section, we will partially describe the system [(M1)--(M10)](#chunk-1.4) of realisations of $M$ in the case where $X$ is separated and smooth over $\QQ$.
+\oldpage{95}In this section, we will partially describe the system [(M1)--(M10)](#chunk-1.4) of realisations of $M$ in the case where $X$ is separated and smooth over $\QQ$.
 
 We have $M_\BB=\HH^i(X(\CC),\QQ)$, and $F_\infty$ is induced by the complex conjugation of $X(\CC)$;
 $M_\DR=\HH_\DR^i(X)\coloneqq\bHH^i(X,\Omega_X^\bullet)$, and the Hodge filtration that that of the mixed Hodge theory [@D2, Section 3.2];
@@ -656,7 +658,7 @@ For all $p$, we should also have a "crystalline" structure of the following type
 
 - **Semi-stable case.**
   Let $T_p$ be the Zariski tangent space of $\Spec(\ZZ_p)$ at its closed point.
-  \oldpage{18 (96)}We complete it to a projective line $\overline{T}_p$ over $\FF_p$, and we can lift $(\overline{T}_p,0,\infty)$ to a projective line endowed with two marked points over $\ZZ_p$: $(\overline{T}_p^\sim,0,\infty)$.
+  \oldpage{96}We complete it to a projective line $\overline{T}_p$ over $\FF_p$, and we can lift $(\overline{T}_p,0,\infty)$ to a projective line endowed with two marked points over $\ZZ_p$: $(\overline{T}_p^\sim,0,\infty)$.
   We want an $F$-isocrystal with logarithmic poles on $(\overline{T}_p,0,\infty)$ (cf. [@Fa]).
   Such an object induces, on $\overline{T}_p^\sim\otimes\QQ_p$, a module with connection $\cal{V}$ with logarithmic poles at $0$ and at $\infty$, and we want for the residue of the connection at $0$ and at $\infty$ to be nilpotent.
   If $\varphi$ is a section of $\overline{T}_p^\sim$, over $\Spec(\ZZ_p)$, with derivative equal to $1$ at the closed point, then $\varphi^*\cal{V}$ is independent of the choice of $\varphi$, and $\comp_{\DR,\crisp}$ should then be identified with the de Rham realisation $\otimes\QQ_p$.
@@ -680,7 +682,7 @@ A _realisation system_ is a system [(M1)--(M10)](#chunk-1.4) that satisfies [(A1
 
 We understand [(M4)](#M4), $\comp_{\crisp,\DR}$, and [(M10)](#M10) as a germ --- in the filter of complements of finite sets of prime numbers --- of systems of automorphisms $\phi_p$ of the $M_\DR\otimes\QQ_p$
 
-:::{.itenv #chunk-1.10 title="Proposition 1.10" latex="{Proposition 1.10}"}
+::: {.itenv #chunk-1.10 title="Proposition 1.10" latex="{Proposition 1.10}"}
 Realisation systems form a Tannakian category.
 :::
 
@@ -697,7 +699,7 @@ We also have a fibre functor, or, indeed, two: ${}_\BB$ and ${}_\DR$, with value
 The category of realisation systems is thus Tannakian and **TO-DO**: the fibre functor ${}_\BB$ (resp. ${}_\DR$) identifies it with the category of representations of the group scheme $G_\BB$ (resp. $G_\DR$) of its automorphisms (cf. [@Sa] or [@DM, Theorem 2.11]).
 :::
 
-\oldpage{19 (97)}We hope that the realisation functors define a fully faithful functor from the category of motives over $\QQ$ to the category of realisation systems.
+\oldpage{97}We hope that the realisation functors define a fully faithful functor from the category of motives over $\QQ$ to the category of realisation systems.
 If this were not the case, then the philosophy of motives would lose much of its interest.
 This leads to the following provisional "definition":
 
@@ -734,7 +736,7 @@ iii. The Hodge structure $\Gr_n^W(M_\BB)$ should be polarisable.
 :::
 
 ::: {.rmenv #chunk-1.13 title="1.13 Remark" latex="{1.13 Remark}"}
-\oldpage{20 (98)}The treatment of crystalline structures is not satisfying.
+\oldpage{98}The treatment of crystalline structures is not satisfying.
 In the definition of realisation systems, I have not included the data  given in [(1.7)](#chunk-1.7), for the want of verifying their existence in the case of Lie algebras of $\pi_1$ that interest us.
 I have nevertheless included the data of $\phi_p$, despite its appearance as a bizarre addition, because the calculations in [§19](#section-19) give an interesting result.
 :::
@@ -777,7 +779,7 @@ For almost all primes $p$, an $F$-isocrystal $M_\crisp$ on $\FF_p$, i.e. a vecto
 :::
 
 ::: {.trmenv #Mp5 title="(M'5)" latex="{(M'5)}"}
-\oldpage{21 (99)}Comparison isomorphisms
+\oldpage{99}Comparison isomorphisms
 $$
   \begin{aligned}
     \comp_{\DR,\BB}&\colon M_\BB(C)\otimes C \simto M_\DR\otimes C
@@ -816,7 +818,7 @@ The category [(1.9)](#chunk-1.9) of realisation systems on $\Spec(\QQ)$ is the i
 Instead of saying "smooth over $\Spec(\ZZ)\setminus P$", we also say "of good reduction outside of $P$".
 This terminology is erroneous in that the categories in question are not subcategories of the category of realisation systems on $\Spec(\QQ)$ (cf. [(1.7)](#chunk-1.7) again).
 
-\oldpage{22 (100)}In the language of [(1.14)](#chunk-1.14), in [(M'3)](#Mp3) we need to give $M_\ell$ as a smooth $\QQ_\ell$-sheaf on $\Spec(\ZZ[1/\ell])\setminus P$ instead of on $\Spec(\QQ)$, and we need to modify [(M'4)](#Mp4) like [(M4)](#M4).
+\oldpage{100}In the language of [(1.14)](#chunk-1.14), in [(M'3)](#Mp3) we need to give $M_\ell$ as a smooth $\QQ_\ell$-sheaf on $\Spec(\ZZ[1/\ell])\setminus P$ instead of on $\Spec(\QQ)$, and we need to modify [(M'4)](#Mp4) like [(M4)](#M4).
 
 The objects [(1.15)](#chunk-1.15) belonging to the subcategory generated by the objects of geometric origin (cf. [(1.11)](#chunk-1.11)) will be called *smooth (mixed) motives on $\Spec(\ZZ)\setminus P$*.
 We hope that this gives a full subcategory of the category of motives on $\Spec(\QQ)$.
@@ -852,7 +854,7 @@ This action induces the Galois action on $A_\AAf\coloneqq A_\BB\otimes\AAf$ (cf.
 
 For $p\not\in P$, and $v$ running over the places of $E$ over $p$, we have that $E\otimes\QQ_p=\prod E_v$, and $\phi_p$ is the automorphism of $E\otimes\QQ_p$ that induces on each $E_v$ the unique lift of the Frobenius $x\mapsto x^p$ of the residue field (cf. [(1.5.iii)](#chunk-1.5)).
 
-\oldpage{23 (101)}The motive $A$ is endowed with a product
+\oldpage{101}The motive $A$ is endowed with a product
 $$
   A\otimes A\to A
 \tag{1.16.1}
@@ -905,7 +907,7 @@ Let $F_v^*$ be the automorphism of $E_v$ that induces $x\mapsto x^p$ on the resi
 We give an $F_v^*$-linear $\phi_v\colon M_\crisv\mapsto M_\crisv$.
 :::
 
-\oldpage{24 (102)}We have $E\otimes\QQ_p=\bigoplus_{v|p}E_v$, and $N_\crisp$ is the sum of the $M_\crisv$.
+\oldpage{102}We have $E\otimes\QQ_p=\bigoplus_{v\mid p}E_v$, and $N_\crisp$ is the sum of the $M_\crisv$.
 
 ::: {.trmenv #Mp5E title="(M'5)E" latex="{(M'5)\textsubscript{E}}"}
 Comparison isomorphisms
@@ -960,7 +962,7 @@ We set $M_\BB\coloneqq M_\BB(\CC)$.
 :::
 
 ::: {.trmenv #Mp2S title="(M'2)S" latex="{(M'2)\textsubscript{S}}"}
-\oldpage{25 (103)}A vector bundle $M_\DR$ with integrable connection on $S_\QQ$, assumed to be regularly singular at infinity.
+\oldpage{103}A vector bundle $M_\DR$ with integrable connection on $S_\QQ$, assumed to be regularly singular at infinity.
 :::
 
 ::: {.trmenv #Mp8S title="(M'8)S" latex="{(M'8)\textsubscript{S}}"}
@@ -1010,7 +1012,7 @@ Additional axioms will always be natural, notably concerning the behaviour at in
 ::::
 
 ::: {.rmenv #chunk-1.22 title="1.22 Definition" latex="{1.22 Definition}"}
-\oldpage{26 (104)}Let $E$ be a finite extension of $\QQ$.
+\oldpage{104}Let $E$ be a finite extension of $\QQ$.
 Then a realisation system *with coefficients in $E$* is a realisation system $M$ endowed with the structure of an $E$-modules, $E\to\End(M)$.
 :::
 
@@ -1042,7 +1044,7 @@ Replace $\comp_{\AAf,\BB}$ by isomorphisms $\comp_{\ell,\BB}$ from $M_\BB\otimes
 ::: {.rmenv #chunk-1.25 title="1.25" latex="{1.25}"}
 In [(1.24)](#chunk-1.24), the data of the $M_\ell$ is equivalent to that of a projective system of sheaves of $\ZZ/(n)$-modules on the $S[1/n]$:
 $$
-  M_{\ZZ/(n)}\colon \prod_{\ell|n}M_\ell/n M_\ell
+  M_{\ZZ/(n)}\colon \prod_{\ell\mid n}M_\ell/n M_\ell
 $$
 and the data of the comparison morphisms is equivalent to that of an isomorphism of projective systems from $\comp_{\AA/n,\BB}\colon M_\BB\otimes\ZZ/(n)$ to the inverse image of $M_{\ZZ/(n)}$ on $S(C)$.
 
@@ -1059,14 +1061,14 @@ Combining the variants in [(1.22)](#chunk-1.22) and [(1.24)](#chunk-1.24), we si
 # Examples {#section-2}
 
 ::: {.rmenv #chunk-2.1 title="2.1" latex="{2.1}"}
-\oldpage{27 (105)}The *Tate motive* $\ZZ(1)$ is a motive over $\Spec(\ZZ)$ [(1.15)](#chunk-1.15) with integer coefficients [(1.23)](#chunk-1.23).
+\oldpage{105}The *Tate motive* $\ZZ(1)$ is a motive over $\Spec(\ZZ)$ [(1.15)](#chunk-1.15) with integer coefficients [(1.23)](#chunk-1.23).
 Here is its description as a realisation system, in the language of [(1.9)](#chunk-1.9) and [(1.14)](#chunk-1.14) (along with [(1.25)](#chunk-1.25)):
 
 - [(M1)](#M1) and [(M7)](#M7): $\ZZ(1)_\BB=2\pi i\ZZ\subset\CC$ and $F_\infty=-1$.
 - [(M'1)](#Mp1): $\ZZ(1)_\BB(C)=2\pi i\ZZ\subset C$.
 - [(M2)](#M2) and [(M'2)](#Mp2): $\ZZ(1)_\DR=\QQ(1)_\DR=\QQ$.
 - [(M3)](#M3) and [(M9)](#M9): $\ZZ(1)_{\ZZ/n}$ is the group $\mu_n\subset\CC^\times$ of $n$-th roots of unity.
-  The transition morphisms are the $\mu_n\to\mu_m\colon x\mapsto x^{n/m}$ for $m|n$.
+  The transition morphisms are the $\mu_n\to\mu_m\colon x\mapsto x^{n/m}$ for $m\mid n$.
   The action of $\Gal(\bar{\QQ}/\QQ)$ is its action on the $\mu_n$.
   In the variant [(M'3)](#Mp3), we have $\ZZ(1)_{\ZZ/n}(\bar{k})=\mu_n(\bar{k})$.
 
@@ -1094,7 +1096,7 @@ If $X$ is smooth and projective over $k$, and absolutely irreducible of dimensio
 
 ::: {.rmenv #chunk-2.2 title="2.2" latex="{2.2}"}
 For an abelian variety $A$ over $\QQ$, we denote by $T(A)\otimes\QQ$ the motive $\HH_1^\mot(A)$ that is dual to $\HH_\mot^1(A)$, and by $T(A)$ the motive with integer coefficients defined by the integer structure $\HH_1(A(\CC),\ZZ)\subset\HH_1(A(\CC),\QQ)=(T(A)\otimes\QQ)_\BB$.
-\oldpage{28 (106)}The functor $A\mapsto T(A)$ is fully faithful: from $T(A)$ we can recover $\Lie(A)=T(A)_\DR/F^0$ and the complex torus
+\oldpage{106}The functor $A\mapsto T(A)$ is fully faithful: from $T(A)$ we can recover $\Lie(A)=T(A)_\DR/F^0$ and the complex torus
 $$
   A(\CC)
   = T(A)_\BB\setminus\Lie(A)
@@ -1130,7 +1132,7 @@ The conjecture is thus equivalent to the claim that the set of motives $T(X)\oti
 The word "conjecture" is an abuse of terminology, since the statement itself is not precise.
 What is conjectured is that every realisation system [(1.9)](#chunk-1.9) (or [(1.24)](#chunk-1.24), over $S$) that is an extension $T(X)$ by $T(Y)$ (for $1$-motives $X$ and $Y$), and "natural", "coming from geometry", is isomorphic to that defined by a $1$-motive $Z$ that is an extension of $X$ by $Y$.
 
-\oldpage{29 (107)}A point $a$ of an abelian variety $A$ over $\QQ$ defines a $1$-motive $[\ZZ\xrightarrow{u}A]$ with $u(1)=a$.
+\oldpage{107}A point $a$ of an abelian variety $A$ over $\QQ$ defines a $1$-motive $[\ZZ\xrightarrow{u}A]$ with $u(1)=a$.
 The motive $T([\ZZ\xrightarrow{u}A])$ is an extension of $\ZZ(0)$ by $T(A)$, and the conjecture, applied to $\ZZ(0)$ and $T(A)$, implies that
 $$
   A(\QQ) \simto \Ext^1(\ZZ(0),T(A))
@@ -1177,7 +1179,7 @@ Since $M$ is, by hypothesis, of weight $\leq-1$, and $\QQ(0)$ is of pure weight 
 :::
 
 ::: {.trmenv #M7P title="(M7)P" latex="{(M7)P}"}
-\oldpage{30 (108)}The data of $F_\infty$ for $E$ is equivalent to that of an involution of $P_\BB$ that is compatible with that of $M_\BB$.
+\oldpage{108}The data of $F_\infty$ for $E$ is equivalent to that of an involution of $P_\BB$ that is compatible with that of $M_\BB$.
 Axiom [(AM2)](#AM2) for $E$ is that this involution is induced by the $\CC$-antilinear involution of $P_{\BB,\CC}=\PP_{\DR,\CC}$ with fixed points $P_{\DR,\RR}$.
 :::
 
@@ -1216,7 +1218,7 @@ Let $M$ be a realisation system with integer coefficients.
 An *extension* $E$ of $\ZZ(0)$ by $M$ is an extension $E\otimes\QQ$ of $\QQ(0)$ by $M\otimes\QQ$, endowed with an integer structure such that the sequence $0\to M_\BB\to E_\BB\to\ZZ\to0$ is exact.
 
 As in [(2.5)](#chunk-2.5), such an extension is described by a system of torsors.
-\oldpage{31 (109)}As in [(1.24)](#chunk-1.24) and [(1.25)](#chunk-1.25), this corresponds to modifying [(2.5)](#chunk-2.5) as follows:
+\oldpage{109}As in [(1.24)](#chunk-1.24) and [(1.25)](#chunk-1.25), this corresponds to modifying [(2.5)](#chunk-2.5) as follows:
 
 ::: {.trmenv #M1PZ title="(M1)PZ" latex="{(M1)P$\ZZ$}"}
 $P_\BB$ is an $M_\BB$-torsor.
@@ -1273,7 +1275,7 @@ $$
 :::
 
 ::: {.rmenv #chunk-2.10 title="2.10" latex="{2.10}"}
-\oldpage{32 (110)}On $\Gm=\Spec\ZZ[q,q^{-1}]$, the universal section $q$ of $\Gm$ also defines a torsor in motives $K(q)$ for $\ZZ(1)$, on the base $\Gm$.
+\oldpage{110}On $\Gm=\Spec\ZZ[q,q^{-1}]$, the universal section $q$ of $\Gm$ also defines a torsor in motives $K(q)$ for $\ZZ(1)$, on the base $\Gm$.
 We now describe it.
 
 The $\ZZ(1)_\BB$-torsor $K(q)_\BB$ on $C^\times$ is the local system of logarithms of $q$.
@@ -1317,14 +1319,14 @@ For $\widetilde{F}\colon q\mapsto q^p$, we have
 $$
   \phi_p^{-1}[q\mapsto q^p](0) = 0.
 $$
-\oldpage{32 (111)}For $x\in\QQ$ a unit at $p$, and $\widetilde{F}$ such that $\widetilde{F}(x)=x$, we thus have $\phi_p^{-1}[\widetilde{F}](0)=\log(x/x^p)$ at $x$, as required by [(2.9)](#chunk-2.9)
+\oldpage{111}For $x\in\QQ$ a unit at $p$, and $\widetilde{F}$ such that $\widetilde{F}(x)=x$, we thus have $\phi_p^{-1}[\widetilde{F}](0)=\log(x/x^p)$ at $x$, as required by [(2.9)](#chunk-2.9)
 :::
 
 
 
 # Torsors for $\ZZ(n)$ {#section-3}
 
-\oldpage{33 (112)}The study of the fundamental group of $\PP^1\setminus\{0,1,\infty\}$ reveals, for each $k\geq2$, a torsor $P_{1,k}$ for $\ZZ(k)$ on $\Spec(\ZZ)$.
+\oldpage{112}The study of the fundamental group of $\PP^1\setminus\{0,1,\infty\}$ reveals, for each $k\geq2$, a torsor $P_{1,k}$ for $\ZZ(k)$ on $\Spec(\ZZ)$.
 We will describe these torsors in this section.
 The relation with $\pi_1$ will be explained in [§16](#section-16) (see [(16.23)](#chunk-16.23)) and the calculations to justify this will be given in [§19](#section-19).
 We will then describe the torsors $P_{d,k}$ for $\ZZ(k)$ on $\Spec(\QQ(\sqrt[d]{1}))$, given by an analogous construction [(16.28)](#chunk-16.28).
@@ -1372,7 +1374,7 @@ $$
   \coloneqq \sum_{\alpha^N=1} \alpha^{\otimes(k-1)}T_N(\alpha).
 \tag{3.1.2k}
 $$
-\oldpage{34 (113)}It is equivalent to sum over the $\alpha\neq1$.
+\oldpage{113}It is equivalent to sum over the $\alpha\neq1$.
 This definition still makes sense in any algebraic closure $\overline{k}$ of $\QQ$, and the action of $\Gal(\bar{\QQ}/\QQ)$ is given by transport of structure.
 
 We now define the transition morphisms $P_{\ZZ/(NM)}\to P_{\ZZ/(N)}$.
@@ -1420,7 +1422,7 @@ It follows from (3.1.5) that the $\comp_{\ZZ/(N),\BB}$ are compatible with the t
 :::
 
 ::: {.rmenv #chunk-3.2 title="3.2" latex="{3.2}"}
-\oldpage{35 (114)}Some preliminaries, before defining $\phi_p$.
+\oldpage{114}Some preliminaries, before defining $\phi_p$.
 The $k$-logarithm is defined for $|z|\leq1$ by
 $$
   \ell_k(z)
@@ -1472,5 +1474,141 @@ $$
 :::
 
 ::: {.rmenv #chunk-3.3 title="Remark 3.3" latex="{Remark 3.3}"}
-\oldpage{115}We
+\oldpage{115}We have described the $\ZZ/(N)(k)$-torsor $P_{\ZZ/(N)}$ as a sum of torsors indexed by the $N$-th roots of $1$.
+If $N$ is a power of a prime number $\ell$, say $N=\ell^n$, then we can again, thanks to (3.1.4), write it as a sum indexed by the set $\mu(N)^\times$ of primitive $N$-th roots of $1$.
+Indeed, we have isomorphisms
+$$
+  \begin{aligned}
+    P_{\ZZ/(N)}
+    &= \sum_{\alpha^N=1}\ldots
+  \\&= \sum_{a=1}^n \sum_{\mu(\ell^a)^\times} \ldots
+  \\&= \sum_{a=1}^n \sum_{\alpha\in\mu(\ell^a)^\times}\alpha^{\otimes(k-1)} \sum_{\beta^{\ell^{n-a}}=\alpha} T_N(\beta).
+  \end{aligned}
+$$
+In this sum, $\beta$ runs over, for each $a$, all the primitive $N$-th roots of $1$, whence
+$$
+  \begin{aligned}
+    P_{\ZZ/(N)}
+    &= \sum_{\beta\in\mu(N)^\times}\beta^{\otimes(k-1)}T_N(\beta) \cdot \sum_{a=1}^n\ell^{(n-a)(k-1)}
+  \\&= \frac{1}{1-\ell^{k-1}} \sum_{\beta\in\mu(N)^\times}\beta^{\otimes(k-1)}T_N(\beta).
+  \end{aligned}
+$$
+The cohomology class of $P_{\ZZ/(N)}$ (for $N=\ell^n$) in $\HH^1(\Spec(\QQ),\ZZ/(N)(k))$ thus admits the following description.
+Let $\QQ(\zeta)$ be the cyclotomic field generated by a primitive $N$-th root of $1$.
+In $\HH^1(\Spec(\QQ(\zeta)),\ZZ/N(1))$, let $\delta(1-\zeta)$ be the Kummer coboundary of $1-\zeta$.
+On $\Spec(\QQ(\zeta))$, $\zeta$ identifies the $\ZZ/N(a)$ with one another, and we can think of $\delta(1-\zeta)$ as a class with values in $\ZZ/N(k)$.
+More precisely, we consider $\zeta^{\otimes(k-1)}\cup\partial(1-\zeta)\in\HH^1(\Spec(\QQ(\zeta)),\ZZ/N(k))$.
+We have
+$$
+  \cl(P_{\ZZ/\ell^n})
+  = \frac{1}{1-\ell^{k-1}} \Tr_{\QQ(\zeta)/\QQ}(\zeta^{\otimes(k-1)}\cup\partial(1-\zeta))
+$$
+and the class of $P_\ell$ is the limit of these classes.
+:::
+
+::: {.rmenv #chunk-3.4 title="Remark 3.4" latex="{Remark 3.4}"}
+We denote by $\zeta^{(p)}(s)$ the $\zeta$ function with its Eulerian factor at $p$ removed:
+$$
+  \zeta^{(p)}(s)
+  \coloneqq \sum_{p\nmid n} 1/n^s.
+$$
+We know that the values of $\zeta^{(p)}(s)$ on the negative integers are rational and admit a $p$-adic interpolation.
+More precisely,
+
+a. Let $\CC_p$ be the completion of an algebraic closure of $\QQ_p$.
+  Then the characters $\chi\colon\ZZ_p^\times\to\CC_p^\times$ are the points of a rigid analytic space.
+
+b. \oldpage{116}There exists exactly one rigid analytic function $\zeta_p^{(p)}(\chi)$, with a simple pole at $\chi=(x\mapsto x^{-1})$, such that
+  $$
+    \zeta_p^{(p)}(x\mapsto x^{-1})
+    = \zeta^{(p)}(n)\in\QQ
+  $$
+  for every integer $n<0$.
+
+We set, for $n\in\ZZ$ with $n\neq1$,
+$$
+  \zeta_p^{(p)}(n)
+  \coloneqq \zeta_p^{(p)}(x\mapsto x^{-1}).
+$$
+This notation differs from that of [@C] or [@Ko]: our $\zeta_p^{(p)}$ is not a continuous $p$-adic function of the *integer* $n$.
+Instead, it is a continuous function of the *character* $x\mapsto x^n$, itself a continuous function of $n$ if and only if we restrict $n$ to an arithmetic progression of difference $p-1$.
+We have
+$$
+  \zeta_p^{(p)}(n)
+  = \lim_a \zeta^{(p)}(n-(p-1)p^a).
+$$
+The trivial zeros of $\zeta$ force $\zeta_p^{(p)}(n)=0$ for even $n$, i.e. for $x\mapsto x^{-n}$ an even character.
+More generally, $\zeta_p^{(p)}(\chi)=0$ for even $\chi$.
+
+With this notation, we have (cf. [@C; @Ko])
+$$
+  \vp \ell_k^{(p)}(1)
+  = \zeta_p^{(p)}(k)
+$$
+and (3.2.7) can be rewritten as
+$$
+  \phi_p^{-1}(0)
+  = (k-1)! p^k\zeta_p^{(p)}(k).
+\tag{3.4.1k}
+$$
+:::
+
+::: {.itenv #chunk-3.5 title="Proposition 3.5" latex="{Proposition 3.5}"}
+For $k$ even, the torsor $P_{1,k}$ is torsion, with order equal to the denominator of $\frac{1}{2}\zeta(1-k)$.
+:::
+
+::: {.rmenv #chunk-3.6 title="Paraphrasing 3.6" latex="{Paraphrasing 3.6}"}
+Let $P$ be a torsor for a realisation system $M$ with integer coefficients.
+The fact that $P$ is $n$-torsion means more than "every realisation is $n$-torsion".
+Let $\frac{1}{n}M$ be the realisation system $M\otimes\QQ$, endowed with the integer structure $\frac{1}{n}M_\BB$.
+It is isomorphic to $M$, by an isomorphism that sends $M\hookrightarrow\frac{1}{n}M$ by $n\colon M\to M$.
+The fact that $P$ is $n$-torsion thus implies that it becomes trivial under $M\to\frac{1}{2}M$.
+For $M$ of weight $\leq-1$, this implies:
+
+a. \oldpage{117}$P_\BB+\frac{1}{n}M_\BB\cap F^0 P_\DR\otimes\CC\neq\phi$ (the intersection in $P_\BB\otimes\CC\simto P_\DR\otimes\CC$).
+  The point of intersection $x$ is then unique, since $M_\BB\cap F^0(M_\DR)\otimes\CC=0$.
+b. $x\in F^0 P_{DR}$, i.e. is defined over $\QQ$ for the $\QQ$-structure $\DR$.
+c. The image of $x$ under $\comp_{\AAf,B}$ is fixed by Galois.
+d. The image of $x$ under $\comp_{\crisp,\DR}$ is fixed by $\phi_p$.
+
+Suppose that $F^0 M_\DR=0$.
+Then $P_\DR=M_\DR$, and we can identify $P_\BB$ with a lateral class of $M_\BB\subset M_\DR\otimes\CC$.
+Condition (a) then becomes $P_\BB\subset\frac{1}{n}M_\BB$.
+We have $x=0$, and (b) is automatic.
+We can write (d) as $\phi_p(0)=0$.
+Let $p\in P_\BB$.
+Denote by $p_M$ its image in $\frac{1}{n}M_\BB$, and set $p^\wedge=\comp_{\hZZ,\BB}(p)\in P_\hZZ$ and $(p_M)^\wedge=\comp_{\AAf,\BB}(p_M)\in M_\AAf$.
+Condition (c) can then be written as
+$$
+  \sigma p^\wedge - p^\wedge
+  = (\sigma-1)(p_M)^\wedge.
+\tag{3.6.1}
+$$
+
+Let $M=\ZZ(k)$ with $\k\geq1$.
+Let $\sigma\in\Gal(\bar{\QQ}/\QQ)$ with image $c$ in $\hZZ^\times$, i.e. $\sigma(\zeta)=\zeta^c$ for $\zeta$ a root of unity.
+Condition (3.6.1) can then be written as
+$$
+  \sigma p^\wedge - p^\wedge
+  = (c^k-1)(p_M)^\wedge.
+\tag{3.6.2}
+$$
+Modulo $N$, we obtain: let $c$ be an integer coprime to $Nn$, with $\sigma$ inducing $\zeta\mapsto\zeta^c$ on the $(Nn)$-th roots of unity.
+Then $(c^k-1)p_M\in M_\BB$, and
+$$
+  \comp_{\hZZ,\BB}((c^k-1)p_M)
+  \equiv \sigma p^\wedge - p^\wedge \mod{N}.
+\tag{3.6.3}
+$$
+
+In [(3.5)](#chunk-3.5), $k$ is even, and we can take $p=-(k-1)!\zeta(k)$, and (3.6.3) is a Galois formula for $-(c^k-1)(k-1)!\zeta(k)$ modulo $N(2\pi i)^k\ZZ$.
+We recover a known formula expressing $\zeta$ on the negative integers as an adelic integral.
+:::
+
+::: {.rmenv title="Remark" latex="{Remark}"}
+The above description shows that, if $P$ is of finite order, then its order can be read from its Hodge realisation.
+:::
+
+::: {.rmenv #chunk-3.7 title="3.7 (Proof of 3.5)" latex="{3.7 (Proof of 3.5)}"}
+Let
 :::
