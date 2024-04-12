@@ -25,7 +25,7 @@ shift $((OPTIND-1))
 # Where the local copy of the repo is
 TRANSLATIONS_DIR=~/translations
 # Where to "publish" files
-WEBSITE=/var/www/labs.thosgood.com/translations
+WEBSITE=/var/www/translations.thosgood.com/
 
 # Clean-up
 cd $TRANSLATIONS_DIR
