@@ -68,7 +68,6 @@ else
       cp $TRANSLATIONS_DIR/$FILE ./$BASE &&
       if [ -f "$TRANSLATIONS_DIR/${FILE%.*}.bib" ]; then
         cp "$TRANSLATIONS_DIR/${FILE%.*}.bib" .
-        biber $PREF
       fi
       # Automatic linking to the git commit
       sed -i 's/serverfalse/servertrue/g' ./$BASE &&
