@@ -61,9 +61,14 @@ else
     mkdir -p $TRANSLATIONS_DIR/builds
     cd $TRANSLATIONS_DIR/builds
     for FILE in $NEW_TEX; do
+      # TO-DO: put all latex ones inside their own directory and then just
+      #        copy the whole directory (so can e.g. include .bib and .bcf easy)
       BASE=${FILE##*/}
       PREF=${BASE%.*}
       cp $TRANSLATIONS_DIR/$FILE ./$BASE &&
+      if [ -f "$TRANSLATIONS_DIR/${FILE%.*}.bib" ]; then
+        cp "$TRANSLATIONS_DIR/${FILE%.*}.bib" .
+      fi
       # Automatic linking to the git commit
       sed -i 's/serverfalse/servertrue/g' ./$BASE &&
       sed -i "s/GitCommitHashVariable/$COMMIT/g" ./$BASE &&

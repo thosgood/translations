@@ -1,0 +1,342 @@
+\documentclass{article}
+
+\usepackage[margin=1.6in]{geometry}
+
+\title{Double categories and structured categories}
+\author{Charles Ehresmann}
+\date{}
+
+\newcommand{\origcit}{%
+  \textsc{Ehresmann, Charles.}
+  ``Catégories doubles et catégories structurées''.
+  \emph{Comptes rendus de l'Académie des Sciences} \textbf{256} (1963), 1198--1201.
+  Presented by Jean Leray.
+  4\textsuperscript{th} of February, 1963.
+}
+
+
+%% Standards %%
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+
+%% Typography %%
+
+\usepackage{fouriernc}
+\usepackage[cal=esstix,scr=rsfs]{mathalpha}
+
+
+%% Environments %%
+
+\usepackage{amsthm}
+
+\renewenvironment{abstract}{%
+  \quotation
+  \normalsize
+  \begin{center}\textbf{{\abstractname}}\end{center}
+  \par\smallskip\noindent
+}{\endquotation}
+
+\newenvironment{translator}[1]
+  {\phantomsection\par\medskip\noindent\small\textbf{#1.}\itshape}
+  {\par\medskip}
+
+\newenvironment{itenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
+  {\par\medskip}
+
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\par\medskip}
+
+
+%% Shortcuts %%
+
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+\newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
+\newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
+
+\newcommand{\CC}{\mathcal{C}}
+\DeclareMathOperator{\sq}{\square}
+\DeclareMathOperator{\vsq}{\raisebox{-.1em}{\rotatebox{90}{$\boxminus$}\,}}
+\DeclareMathOperator{\hsq}{\raisebox{-.05em}{$\boxminus$}}
+\newcommand{\vmult}{\mathbin{\raisebox{-.1em}{\rotatebox{90}{$\boxminus$}}}}
+\newcommand{\hmult}{\mathbin{\raisebox{-.05em}{$\boxminus$}}}
+\DeclareMathOperator{\FF}{\mathcal{F}}
+\DeclareMathOperator{\NN}{\mathfrak{N}}
+\newcommand{\MM}{\mathfrak{M}}
+\newcommand{\KK}{\mathcal{K}}
+\renewcommand{\SS}{\mathcal{S}}
+\newcommand{\TT}{\mathcal{T}}
+
+
+%% Bibliography %%
+
+\usepackage{biblatex}
+\addbibresource{double-categories-and-structured-categories.bib}
+\renewbibmacro{in:}{%
+  \ifboolexpr{%
+     test {\ifentrytype{article}}%
+  }{}{\printtext{\bibstring{in}\intitlepunct}}%
+}
+
+
+%% Document %%
+
+\begin{document}
+
+\maketitle
+
+\begin{translator}{Note from the translator}
+  This document is a translation from French of the article
+
+  \medskip
+  {\normalfont\origcit}
+
+  \medskip
+  {\noindent}produced with kind permission from Andrée Ehresmann and \emph{Comptes rendus de l'Académie des Sciences}.
+
+  This version has also incorporated comments and errata from \cite[Comments on Part III-1, p.~339]{coll}.
+  Some of these correct minor typos; some are supplementary comments by Andrée Ehresmann and have been included verbatim, preceded by \emph{[Comm.]} and their comment number (when relevant).
+  Since all the footnotes in the original were citations, we have moved these to the bibliography, which means that the footnote numbering no longer agrees with that of the original.
+  The works in the bibliography have been numbered according to their number in \cite{coll}.
+  The page numbers of the original article are included at the relevant locations in the margins of this version.
+  
+  \hfill--- Timothy Hosgood (translator)
+\end{translator}
+
+
+
+%% Content %%
+
+\begin{abstract}Definition of structured categories; the particular case of double categories, which admit a category of quadruplets as a quotient category.\end{abstract}
+
+\section{Double categories}
+\oldpage{1198}
+
+\emph{[Comm.] This note is developed in \cite{63}.}
+
+\begin{rmenv}{Definition}
+  We define a \emph{double category} to be a class $\CC$ endowed with two composition laws, denoted $\bullet$ and $\perp$, satisfying the following conditions:
+
+  \begin{enumerate}
+    \item $(\CC,\bullet)$ is a category, denoted $\CC^\bullet$;
+      the right and left units of $f\in\CC$ will be denoted by $\alpha^\bullet(f)$ and $\beta^\bullet(f)$ respectively, and the class of units by $\CC_0^\bullet$;
+    \item $(\CC,\perp)$ is a category, denoted $\CC^\perp$;
+      the units of $f\in\CC^\perp$ will be denoted by $\alpha^\perp(f)$ and $\beta^\perp(f)$ respectively, and the class of units by $\CC_0^\perp$;
+    \item The maps $\alpha^\bullet$ and $\beta^\bullet$ (resp. $\alpha^\perp$ and $\beta^\perp$) are functors from $\CC^\perp$ to $\CC^\perp$ (resp. from $\CC^\bullet$ to $\CC^\bullet$);
+    \item \emph{Axiom of permutability.}
+      If the composites $k\bullet h$, $g\bullet f$, $k\perp g$, and $h\perp f$ are defined, then
+      \[
+        (k\bullet h)\perp(g\bullet f)
+        = (k\perp g)\bullet(h\perp f).
+      \]
+  \end{enumerate}
+
+  Let $\CC$ be a class endowed with two composition laws $\bullet$ and $\perp$ satisfying axioms 1 and 2; consider the following axioms:
+
+  \begin{enumerate}
+    \item[3\textquotesingle.]
+      $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is stable with respect to $\perp$ (resp. to $\bullet$);
+    \item[4\textquotesingle.]
+      If the composites $k\bullet h$, $g\bullet f$, $k\perp g$, and $h\perp f$ are defined, then both $(k\bullet h)\perp(g\bullet f)$ and $(k\perp g)\bullet(h\perp f)$ are defined and are equal to one another.
+    \item[5.]
+      For all $f\in\CC$, we have
+      \[
+        \begin{aligned}
+          \alpha^\bullet(\alpha^\perp(f))
+          = \alpha^\perp(\alpha^\bullet(f)),
+          &\qquad
+          \beta^\bullet(\beta^\perp(f))
+          = \beta^\perp(\beta^\bullet(f));
+        \\\alpha^\bullet(\beta^\perp(f))
+          = \beta^\perp(\alpha^\bullet(f)),
+          &\qquad
+          \alpha^\perp(\beta^\bullet(f))
+          = \beta^\bullet(\alpha^\perp(f)).
+        \end{aligned}
+      \]
+  \end{enumerate}
+\end{rmenv}
+
+\begin{itenv}{Proposition}
+  For $(\CC,\bullet,\perp)$ to be a double category, it is necessary and sufficient that conditions 1, 2, 3\textquotesingle, 4\textquotesingle, and 5 be satisfied.
+  In this case, $\CC_0^\perp$ (resp. $\CC_0^\bullet$) is a subcategory of $\CC^\bullet$ (resp. $\CC^\perp$).
+\end{itenv}
+
+A \emph{double subcategory} of a double category $\CC$ is a subclass $\CC'$ of $\CC$ that is a subcategory of $\CC^\bullet$ and of $\CC^\perp$;
+then $\CC'$ is a double category for the composition laws induced by $\bullet$ and $\perp$.
+
+\begin{rmenv}{Definition}
+  Let $\CC$ be a double category;
+  we define a \emph{left ideal}\footnote{\emph{[Comm.~1.6] This definition does not agree with the usual one (\cite{73,122}) in which a left ideal (or \emph{sieve}) $J$ of $\CC$ is a subclass of $\CC$ such that $J\bullet C\subset J$.}} (resp. \emph{right ideal}) of $\CC^\perp$ to be a subcategory $I^\perp$ of $\CC^\perp$ such that $\CC\bullet I^\perp=I^\perp$ (resp. $I^\perp\bullet\CC=I^\perp$), where $\CC\bullet I^\perp$ (resp. $I^\perp\bullet\CC$) is the class of composites $f\bullet g$ (resp. $g\bullet f$) for $g\in I^\perp$ and $f\in\CC$.
+  We similarly define an \emph{ideal} of $\CC^\bullet$.
+\end{rmenv}
+
+\oldpage{1199}
+
+\begin{itenv}{Proposition}
+  Let $\CC$ be a double category;
+  a left ideal $I^\perp$ of $\CC^\perp$ is a species of structures\footnote{\emph{[Comm.~2.1] For the definition of species of structures and hypermorphism categories (introduced in \cite{47a}), cf. \cite[\S~I, 2--3]{63}; also ([Comm.~25.2]) the set-valued functor associated to $(\CC^\bullet,\beta,\alpha^{-1}(e))$ is the partial Hom functor $\operatorname{Hom}(e,-)\colon\CC\to\mathsf{Set}$}.} \cite{47b,55} over $\CC^\bullet$ for the composition law $(f,g)\mapsto f\bullet g$ if and only if $f\bullet g$ is defined, where $f\in\CC$ and $g\in I^\perp$.
+  The corresponding category $\mathscr{E}(I^\perp)$ of hypermorphisms \cite{47b,55} is a double category for the composition laws
+  \[
+    (f',g')\bullet(f,g)
+    = (f'\bullet f,g)
+  \]
+  if and only if $g'=f\bullet g$; further
+  \[
+    (f',g')\perp(f,g)
+    = (f'\perp f,g'\perp g)
+  \]
+  if and only if $f'\perp f$ and $g'\perp g$ are defined.
+\end{itenv}
+
+
+\section{Double categories of squares}
+
+Let $\CC_1$ and $\CC_2$ be two categories with the same class of units.
+Let $\sq(\CC_2,\CC_1)$ be the set of quadruples $(g_2,g_1,f_1,f_2)$, with $f_i,g_i\in\CC_i$ for $i=1,2$, such that
+\[
+  \begin{aligned}
+    \alpha(f_1)
+    = \alpha(f_2),
+    &\qquad
+    \alpha(g_1)
+    = \beta(f_2);
+  \\\beta(f_1)
+    = \alpha(g_2),
+    &\qquad
+    \beta(g_1)
+    = \beta(g_2).
+  \end{aligned}
+\]
+We define two composition laws on $\sq(\CC_2,\CC_1)$:
+\begin{itemize}
+  \item \emph{Longitudinal} multiplication
+    \[
+      (g'_2,g'_1,f'_1,f'_2)\vmult(g_2,g_1,f_1,f_2)
+      = (g'_2,g'_1g_1,f'_1f_1,f_2)
+    \]
+    if and only if $f'_2=g_2$;
+  \item \emph{Lateral} multiplication
+    \[
+      (g'_2,g'_1,f'_1,f'_2)\hmult(g_2,g_1,f_1,f_2)
+      = (g'_2g_2,g'_1,f_1,f'_2f_2)
+    \]
+    if and only if $f'_1=g_1$.
+\end{itemize}
+
+\begin{itenv}{Proposition}
+  $\sq(\CC_2,\CC_1)$ is a double category for longitudinal and lateral multiplication.
+\end{itenv}
+
+Suppose that $\CC=\CC_1=\CC_2$;
+recall \cite{47b,55} that a \emph{square} in $\CC$ is an element $(g_2,g_1,f_1,f_2)\in\sq(\CC,\CC)$ such that $g_1f_2=g_2f_1$.
+
+\begin{itenv}{Corollary}
+  The class $\sq\CC$ of squares in $\CC$ is a double subcategory of $\sq(\CC,\CC)$.
+\end{itenv}
+
+\begin{itenv}{Theorem}
+  Let $\CC$ be a double category;
+  then $\CC^\bullet$ admits a subcategory\footnote{\emph{[Comm.~2.2] cf. \cite[Theorem~6]{63}.}} of the longitudinal category $\vsq(\CC_0^\bullet,\CC_0^\perp)$ as a quotient category \cite{47b,55}, where $\CC_0^\bullet$ (resp. $\CC_0^\perp$) is endowed with its structure as a subcategory of $\CC^\perp$ (resp. of $\CC^\bullet$).
+\end{itenv}
+
+
+\section{Functors into a double category}
+
+Let $\Gamma$ be a category and $\CC$ a double category;
+let $\FF(\CC^\bullet,\Gamma)$ be the class of functors from $\Gamma$ to $\CC^\bullet$.
+
+\begin{itenv}{Proposition}
+  $\FF(\CC^\bullet,\Gamma)$ is a category for the composition law $(\Phi',\Phi)\mapsto\Phi'\perp\Phi$, where $(\Phi'\perp\Phi)(f)=\Phi'(f)\perp\Phi(f)$, if and only if $\Phi'(f)\perp\Phi(f)$ is defined for all $f\in\CC$.
+\end{itenv}
+
+\oldpage{1200}
+
+\begin{rmenv}{Definition}
+  Let $\CC$ and $\CC_1$ be two double categories;
+  we define a \emph{double functor} from $\CC$ to $\CC_1$ to be a map $\Phi$ from $\CC$ to $\CC_1$ such that $\Phi$ is a functor from $\CC^\bullet$ to $\CC_1^\bullet$ and a functor from $\CC^\perp$ to $\CC_1^\perp$.
+  The class of double functors from $\CC$ to $\CC_1$ is denoted $\FF(\CC_1,\CC)$.
+\end{rmenv}
+
+\emph{[Comm.~3.1\P] The following proposition is not correct: the class of double functors is not closed under source and target maps.}
+
+\begin{itenv}{Proposition}
+  $\FF(\CC_1,\CC)$ is a subcategory of $\FF(\CC_1^\bullet,\CC^\bullet)$ and of $\FF(\CC_1^\perp,\CC^\perp)$;
+  endowed with the two induced composition laws, $\FF(\CC_1,\CC)$ is a double category.
+\end{itenv}
+
+\begin{itenv}{Proposition}
+  Let $\CC$ and $\CC'$ be two categories;
+  the longitudinal category $\NN(\CC',\CC)$ of natural transformations \cite{52} between functors from $\CC$ to $\CC'$ can be identified with the category $\FF(\hsq\CC',\CC)$, by identifying the natural transformation $(\varphi',\tau,\phi)$ with the functor $\Phi$ such that
+  \[
+    \Phi(f)
+    = \big(\varphi'(f),\,\tau(\beta(f)),\,\tau(\alpha(f)),\,\varphi(f)\big)
+  \]
+  for all $f\in\CC$.
+\end{itenv}
+
+Consequently, if $(\CC^\bullet,\CC^\perp)$ is a double category, then a functor $\Phi$ from a category $\Gamma$ into $\CC^\bullet$ can be considered as a generalised natural transformation from $\alpha^\perp\Phi$ to $\beta^\perp\Phi$.
+We will see another generalisation of natural transformations (the double category of quintets) in a following publication.
+
+
+\section{Structured categories}
+
+Let $\MM_0$ be a class of classes such that if it contains $X$ then it also contains all the subsets of $X$, and if it contains $X$ and $X'$ then it also contains the product $X\times X'$;
+let $\MM$ be the category of all functions from $X$ to $Y$, where $X,Y\in\MM_0$.
+Let $(\MM,p,\KK,\SS)$ be a category of homomorphisms \cite{47b,55}, with $\SS$ containing the groupoid of invertible elements of $\KK$;
+let $\KK_0$ be the class of units of $\KK$;
+we identify $h\in\KK$ with $(\beta^\KK(h),p(h),\alpha^\KK(h))$.
+
+\begin{rmenv}{Definition}
+  We define a \emph{structured category in $\KK$} to be a pair $(\CC^\bullet,s)$, where $\CC^\bullet$ is the structure of a category on $\CC\in\MM_0$, and $s\in\KK_0$ with $p(s)=\CC$, satisfying the following conditions:\footnote{\emph{[Comm.~3.5+] Conditions 2 and 3 are not strict enough; they are modified in \cite{63} (and in subsequent papers), where $s'$ is required to be a substructure of the product $s\times s$ on $\KK$ (and this led to the formal definition of substructures in \cite{63}, refined in \cite{69,66}). Both notions coincide if there exists a substructure on $\KK$, i.e. if there exists a pullback of $(\alpha,\beta)$ in $\KK$. Cf. [Comm~55.2], where motivations are also given.}}
+  \begin{enumerate}
+    \item There exists $s_0\in\KK_0$ such that
+      \[
+        \begin{gathered}
+          p(s_0)
+          = \CC_0^\bullet
+        \\(s,i_{\CC_0^\bullet},s_0),\,\,
+          (s_0,\alpha,s),\,\,
+          (s_0,\beta,s)
+          \in\KK
+        \end{gathered}
+      \]
+      where $i_{\CC_0^\bullet}$ is the canonical injection from $\CC_0^\bullet$ into $\CC$, and $\alpha$ and $\beta$ are the source and target maps (respectively) in $\CC^\bullet$.
+    \item There exists a product $s\times s$ in $\KK$ such that $p(s\times s)=\CC\times\CC$;
+      if $K$ is the subclass of $\CC\times\CC$ consisting of composible pairs, then there exists $s'\in\KK_0$ such that
+      \[
+        \begin{gathered}
+          p(s')=K
+        \\(s\times s,i_K,s')\in\KK.
+        \end{gathered}
+      \]
+    \item writing $x$ to denote the map $(g,f)\mapsto g\bullet f$ from $K$ to $\CC$, the relation $(s\times s,i_K,s')\in\KK$ implies $(s,x,s')\in\KK$.
+  \end{enumerate}
+\end{rmenv}
+
+\begin{rmenv}{Example}
+  A structured category in $\widetilde{\TT}$, where $\widetilde{\TT}$ is the category of topologies, is a topological category \cite{50}.
+\end{rmenv}
+
+\oldpage{1201}
+
+\begin{itenv}{Theorem}
+  For $(\CC^\bullet,\CC^\perp)$ to be a double category, it is necessary and sufficient that $(\CC^\bullet,\CC^\perp)$ be a structured category in the category $\FF$ of functors from one category to another;
+  in this case, $(\CC^\perp,\CC^\bullet)$ is also a structured category in $\FF$ (the structure on $\CC^\bullet$ is $\CC^\perp$).
+\end{itenv}
+
+%% Bibliography %%
+
+\nocite{*}
+\printbibliography[heading=bibintoc,title=Bibliography]
+
+\end{document}
