@@ -76,10 +76,6 @@ else
       printf "Working on $BASE\n" &&
       # Build
       Rscript -e "tinytex::pdflatex('$BASE')" &&
-      if [ -f "./${FILE%.*}.bib" ]; then
-        biber $PREF
-      fi &&
-      Rscript -e "tinytex::pdflatex('$BASE')" &&
       # Deploy
       cp $PREF.pdf $WEBSITE
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
