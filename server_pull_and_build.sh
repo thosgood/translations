@@ -68,7 +68,6 @@ else
       cp $TRANSLATIONS_DIR/$FILE ./$BASE &&
       if [ -f "$TRANSLATIONS_DIR/${FILE%.*}.bib" ]; then
         cp "$TRANSLATIONS_DIR/${FILE%.*}.bib" .
-        biber $PREF
       fi
       # Automatic linking to the git commit
       sed -i 's/serverfalse/servertrue/g' ./$BASE &&
@@ -76,8 +75,11 @@ else
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $BASE\n" &&
       # Build
-      Rscript -e "tinytex::pdflatex('$BASE')"
-      shpdflatex.sh $BASE &&
+      Rscript -e "tinytex::pdflatex('$BASE')" &&
+      if [ -f "./${FILE%.*}.bib" ]; then
+        biber $PREF
+      fi &&
+      Rscript -e "tinytex::pdflatex('$BASE')" &&
       # Deploy
       cp $PREF.pdf $WEBSITE
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
