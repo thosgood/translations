@@ -75,6 +75,7 @@ else
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $BASE\n" &&
       # Build
+      Rscript -e "tinytex::pdflatex('$BASE')"
       shpdflatex.sh $BASE &&
       # Deploy
       cp $PREF.pdf $WEBSITE
