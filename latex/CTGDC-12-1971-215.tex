@@ -1,0 +1,142 @@
+\documentclass{article}
+
+\usepackage[margin=1.6in]{geometry}
+
+\title{$T$-categories\\(Categories in a triple)}
+\author{Albert Burroni}
+\date{}
+
+\newcommand{\origcit}{%
+  \textsc{Burroni, Albert.}
+  ``$T$-catégories (catégories dans un triple)''.
+  \emph{Cahiers de Topologie et Géométrie différentielle catègoriques} \textbf{12} (1971), 215--321.
+  {\url{http://www.numdam.org/item?id=CTGDC_1971__12_3_215_0}}
+}
+
+
+%% Standards %%
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+
+%% Typography %%
+
+\usepackage{fouriernc}
+\usepackage[cal=esstix,scr=rsfs]{mathalpha}
+
+
+%% Environments %%
+
+\usepackage{amsthm}
+
+\renewenvironment{abstract}{%
+  \quotation
+  \normalsize
+  \begin{center}\textbf{{\abstractname}}\end{center}
+  \par\smallskip\noindent
+}{\endquotation}
+
+\newenvironment{translator}[1]
+  {\phantomsection\par\medskip\noindent\small\textbf{#1.}\itshape}
+  {\par\medskip}
+
+\newenvironment{itenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\itshape}
+  {\par\medskip}
+
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\medskip\noindent\textbf{#1.}\rmfamily}
+  {\par\medskip}
+
+
+%% Shortcuts %%
+
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+\newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
+\newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
+
+\newcommand{\TT}{\mathbf{T}}
+\newcommand{\CC}{\mathcal{C}}
+
+
+%% Bibliography %%
+
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{\jobname.bib}
+\renewbibmacro{in:}{%
+  \ifboolexpr{%
+     test {\ifentrytype{article}}%
+  }{}{\printtext{\bibstring{in}\intitlepunct}}%
+}
+
+
+%% Git version %%
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\pagestyle{fancy}
+\fancypagestyle{plain}{}
+\fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}%
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+\newif\ifserver
+\serverfalse
+\lfoot{\footnotesize\ifserver{Git commit: \href{https://github.com/thosgood/translations/commit/GitCommitHashVariable}{GitCommitHashVariable}}\fi}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\maketitle
+
+\begin{translator}{Note from the translator}
+  This document is a translation from French of the article
+
+  \medskip
+  {\normalfont\origcit}
+
+  \medskip
+  {\noindent}produced with kind permission from Andrée Ehresmann and \todo{permissions}
+  
+  \hfill--- Timothy Hosgood (translator)
+\end{translator}
+
+
+%% Introduction %%
+
+\section*{Introduction}
+
+\hfill\emph{In friendly homage to José Luis Viviente.}
+
+\bigskip
+
+If $\TT$ is a triple on a category $\CC$, then $\TT$-categories are more general structures than $\TT$-algebras; they correspond
+
+
+%% Content %% 
+
+\tableofcontents
+
+\setcounter{section}{-1}
+
+\section{Terminology}
+
+
+
+
+%% Bibliography %%
+
+\nocite{*}
+\printbibliography[heading=bibintoc,title=Bibliography]
+
+\end{document}
