@@ -66,6 +66,10 @@
 \newcommand{\TT}{\mathbf{T}}
 \newcommand{\cat}[1]{\mathcal{#1}}
 \newcommand{\Cat}[1]{\mathsf{#1}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\set}[1]{|#1|}
+
+\DeclareMathOperator{\Hom}{Hom}
 
 
 %% Bibliography %%
@@ -181,7 +185,81 @@ The only goal of the reminders below is the allow us to make precise the termino
 
 \subsection{Categories}
 
-A \emph{category} is
+A \emph{category} is a quadruple $\cat{C}=(\set{\cat{C}}, \Hom_\cat{C}, \iota, \kappa)$ satisfying conditions~1 to 6 below:
+
+\begin{enumerate}
+  \item $\set{\cat{C}}$ is a set; its elements are called \emph{objects of $\cat{C}$}.
+
+  \item $\Hom_\cat{C}$ is a family of sets (that we suppose to be disjoint from one another, and disjoint from $\set{\cat{C}}$, to simplify constructions; but this is rarely the case in practice and, in theory, it is not indispensable).
+    This family is indexed by $\set{\cat{C}}^2$, and the relations
+    \[
+      e\in\set{\cat{C}},
+      e'\in\set{\cat{C}},
+      f\in\Hom_\cat{C}(e',e)
+    \]
+    are expressed by simply saying that $f\colon e\to e'$ is a \emph{morphism} (in $\set{\cat{C}}$);
+    we call $e$ the \emph{source of $f$} and $e'$ the \emph{target of $f$}.
+
+  \item $\iota$ is a family of maps of the form
+    \[
+      \iota(e)\colon \{\varnothing\}
+      \to \Hom_\cat{C}(e,e),
+    \]
+    where the index $e$ runs over the set $\set{\cat{C}}$.
+    We denote by $\id(e)$, $\id_e$, or even simply $e$, the morphism $\iota(e)(\varnothing)\colon e\to e$.
+    \oldpage{220}
+    (This is a sophisticated way of giving a family of morphisms $\id_e\colon e\to e$, where $e\in\set{\cat{C}}$).
+
+  \item $\kappa$ is a family of maps of the form
+    \[
+      \kappa(e'',e',e)\colon
+      \Hom_\cat{C}(e'',e')\times\Hom_\cat{C}(e',e)
+      \to \Hom_\cat{C}(e'',e),
+    \]
+    where the index $(e'',e',e)$ runs over the set $\set{\cat{C}}^3$.
+    We generally denote by $g\cdot f$ the composite, i.e. the image under such a map of a pair $(g,f)$.
+
+  \item If $f\colon e\to e'$ is a morphism in $\cat{C}$, then
+    \[
+      f\cdot\id_e
+      = f
+      = \id_{e'}\cdot f.
+    \]
+
+  \item If $f\colon e\to e'$, $g\colon e'\to e''$, and $h\colon e''\to e'''$ are ``consecutive'' morphisms in $\cat{C}$, then
+    \[
+      h\cdot(g\cdot f)
+      = (h\cdot g)\cdot f,
+    \]
+    which allows to us to denote this morphism by $h\cdot g\cdot f$.
+\end{enumerate}
+
+A pair $(\set{\cat{C}},\Hom_\cat{C})$ satisfying conditions~1 and 2 is called a \emph{graph}; a triple $(\set{\cat{C}},\Hom_\cat{C},\iota)$ satisfying conditions~1, 2, and 3 is called a \emph{pointed graph}; and in both cases we use the corresponding terminology of conditions~1, 2, and 3.
+
+We say that $F\colon\cat{C}\to\cat{C}'$ is a \emph{functor} if $\cat{C}$ and $\cat{C}'$ are categories and $F$ is a pair $(\set{F},F_1)$ such that
+
+\begin{enumerate}
+  \item[1\textquotesingle.] $\set{F}\colon\set{\cat{C}}\to\set{\cat{C}'}$ is a map.
+    We denote simply by $F(e)$ the object $\set{F}(e)$, for all $e\in\set{\cat{C}}$.
+
+  \item[2\textquotesingle.] $F_1$ is a family of maps of the form
+    \[
+      F_1(e',e)\colon
+      \Hom_\cat{C}(e',e)
+      \to \Hom_{\cat{C}'}(F(e'),F(e)),
+    \]
+    where the index $(e',e)$ runs over the set $\set{\cat{C}}^2$.
+    If $f\colon e\to e'$ is a morphism in $\cat{C}$, we denote simply by $F(f)$ the morphism $F_1(e',e)(f)$.
+
+  \item[3\textquotesingle.] $F(\id_e)=\id_{F(e)}$ for all $e\in\set{\cat{C}}$.
+
+  \item[4\textquotesingle.] $F(g\cdot f)=F(g)\cdot F(f)$, if $f\colon e\to e'$ and $g\colon e'\to e''$ are consecutive morphisms in $\cat{C}$.
+\end{enumerate}
+
+A \emph{natural transformation $I\colon F\to F'$}, where $F\colon\cat{C}\to\cat{C}'$ and $F'\colon\cat{C}\to\cat{C}'$ are functors with the same source and target, is given by a family of morphisms in $\cat{C}'$ of the form $I(e)\colon F(e)\to F'(e)$, where the index $e$ runs over the set $\set{\cat{C}}$, such that for every morphism $f\colon e\to e'$ in $\cat{C}$ we have the relation $I(e')\cdot F(f)=F'(f)\cdot I(e)$.
+\oldpage{221}
+We denote by $\cat{C}'^{\cat{C}}$ the usual category whose objects are the functors $F\colon\cat{C}\to\cat{C}'$ and whose morphisms are the natural transformations between these functors.
+The composition law in $\cat{C}'^{\cat{C}}$ will generally take
 
 
 
