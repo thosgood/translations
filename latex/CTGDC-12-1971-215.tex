@@ -24,6 +24,7 @@
 \hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
 \usepackage{enumerate}
 \usepackage{graphicx}
+\usepackage{tikz-cd}
 
 
 %% Typography %%
@@ -127,9 +128,9 @@
 \bigskip
 
 \oldpage{215}
-If $\TT$ is a triple on a category $\cat{E}$, then $\TT$-categories are more general structures than $\TT$-algebras; they correspond to the passage from ``everywhere-defined laws'' to ``partially defined laws'' (in a very broad sense, in fact) and thus also encompass structures as diverse as topologies and categories.
+If $\TT$ is a triple on a category $\cat{C}$, then $\TT$-categories are more general structures than $\TT$-algebras; they correspond to the passage from ``everywhere-defined laws'' to ``partially defined laws'' (in a very broad sense, in fact) and thus also encompass structures as diverse as topologies and categories.
 
-Manes showed, in \cite{Ma}, that the category of compact topological spaces is a category of $\TT$-algebras, where $\TT$ is the triple of ultrafilters on $\cat{E}=\Cat{Set}$.
+Manes showed, in \cite{Ma}, that the category of compact topological spaces is a category of $\TT$-algebras, where $\TT$ is the triple of ultrafilters on $\cat{C}=\Cat{Set}$.
 This led Barr, in \cite{Ba}, to define ``relational $\TT$-algebras'' so that the category of topological spaces is a category of ``relational $\TT$-algebras''.
 But Barr seemed disappointed in the fact that, apart from this particular case, and that of preorders relative to the identity triple, there were few examples.
 Independently, the new system of axioms for topologies that we had given in \cite{Bu} led us to a similar idea (unfortunately with the triple of filters\ldots but our goal was to situate topologies amongst quasi-topologies) that consisted in seeing topologies as a notion analogous to that of preorders (it is indicative, indeed, that the structure of a finite topology is equivalent to that of a finite preorder).
@@ -139,11 +140,11 @@ We show (\cref{proposition-i.2.4}) that the ``relational $\TT$-algebras'' are ob
 \oldpage{216}
 The general outline of this article is as follows.
 A Chapter~0 is dedicated to some details of terminology.
-Chapter~1 first gives a definition of $\TT$-categories that demonstrates their relation to categories: if $\cat{E}=\Cat{Set}$, then the morphisms of a $\TT$-category appear, not as arrows going from one object to another object, but as arrows going from one structure on the objects to an object.
+Chapter~1 first gives a definition of $\TT$-categories that demonstrates their relation to categories: if $\cat{C}=\Cat{Set}$, then the morphisms of a $\TT$-category appear, not as arrows going from one object to another object, but as arrows going from one structure on the objects to an object.
 In this way, a ``convergence'' in a topology can be represented as an arrow $F\to x$ going from a filter to a point.
 It is then easy to observe that these structures must be given by the endofunctor of a triple in order to be able to define the properties of reflexivity, transitivite, identity, and associativity of a $\TT$-category.
-Then we will expand on some general properties: those that can we obtain without placing any hypotheses on the triple $\TT$, essentially the existence of projective limits and the fibration of the forgetful functor to $\cat{E}$ (which will allow us, in passing, to resolve the problem that consists of universally embedding the forgetful functor of $\TT$-algebras into a fibrant functor).
-Other properties, such as the existence of inductive limits, the adjunction with the forgetful functor to $\TT$-graphs (the analogue of the Stone--Čech--Barr theorem), or the cofibration of the forgetful functor to $\cat{E}$ cannot be obtained unless we suppose the triple $\TT$ to be ``bounded''.
+Then we will expand on some general properties: those that can we obtain without placing any hypotheses on the triple $\TT$, essentially the existence of projective limits and the fibration of the forgetful functor to $\cat{C}$ (which will allow us, in passing, to resolve the problem that consists of universally embedding the forgetful functor of $\TT$-algebras into a fibrant functor).
+Other properties, such as the existence of inductive limits, the adjunction with the forgetful functor to $\TT$-graphs (the analogue of the Stone--Čech--Barr theorem), or the cofibration of the forgetful functor to $\cat{C}$ cannot be obtained unless we suppose the triple $\TT$ to be ``bounded''.
 
 Chapter~II is essentially dedicated to two interpretations of $\TT$-categories, on one hand as monads (or monoids, if one prefers) in the ``Kleisli pseudo-category'', and on the other as pseudo-algebras in the ``bicatgeory of spans''.
 
@@ -259,7 +260,66 @@ We say that $F\colon\cat{C}\to\cat{C}'$ is a \emph{functor} if $\cat{C}$ and $\c
 A \emph{natural transformation $I\colon F\to F'$}, where $F\colon\cat{C}\to\cat{C}'$ and $F'\colon\cat{C}\to\cat{C}'$ are functors with the same source and target, is given by a family of morphisms in $\cat{C}'$ of the form $I(e)\colon F(e)\to F'(e)$, where the index $e$ runs over the set $\set{\cat{C}}$, such that for every morphism $f\colon e\to e'$ in $\cat{C}$ we have the relation $I(e')\cdot F(f)=F'(f)\cdot I(e)$.
 \oldpage{221}
 We denote by $\cat{C}'^{\cat{C}}$ the usual category whose objects are the functors $F\colon\cat{C}\to\cat{C}'$ and whose morphisms are the natural transformations between these functors.
-The composition law in $\cat{C}'^{\cat{C}}$ will generally take
+The composition law in $\cat{C}'^{\cat{C}}$ will generally borrow the notation from that of $\cat{C}'$, which risks producing confusion.
+Indeed, if $F\colon\cat{C}\to\cat{C}'$ and $G\colon\cat{C}'\to\cat{C}''$ are consecutive functors, then we denote by $G\cdot F\colon\cat{C}\to\cat{C}''$ the usual composite.
+Such a composition extends to natural transformations: if $I\colon F\to F'$ is a morphism in $\cat{C}'^{\cat{C}}$ and $J\colon G\to G'$ a morphism in $\cat{C}''^{\cat{C}'}$, then we define a composite $J\cdot I\colon G\cdot F\to G'\cdot F'$ by the formula
+\[
+  (J\cdot I)(e)
+  = J(F'(e))\cdot G(I(e))
+  = G'(I(e))\cdot J(F(e)).
+\]
+But the notation of a dot for this composition risks being confused with the composition in $\cat{C}^\cat{C}$, when, for example, $\cat{C}=\cat{C}'=\cat{C}''$ and the composition in $\cat{C}$ is denoted by a dot.
+Also, even though we generally denote by a point the compositions of ``morphisms between structures'', we often denote by $JI$ the composite $J\cdot I$ above, so that, for example, we can write
+\[
+  JI
+  = JF'\cdot GI
+  = G'I\cdot JF.
+\]
+
+Similarly, we often write $Fe$, $Ff$, and $Ie$ instead of $F(e)$, $F(f)$, and $I(e)$, respectively; this convention is used most of all when the previous convention on the notation $JI$ instead of $J\cdot I$ is in force.
+
+As for \emph{limits}, we adopt the following notation: if $e\in\set{\cat{C}}$, and if $\phi\colon \cat{A}\to\cat{C}$ is a functor, then we say that $C\colon e\to\phi$ is a \emph{projective cone} if $C$ is a family of morphisms in $\cat{C}$, called the \emph{canonical projections of $C$}, of the form $C(n)\colon e\to\phi(n)$ for all $n\in\set{\cat{A}}$ such that, for every morphism $x\colon n\to n'$ in $\cat{A}$, we have that $\phi(x)\cdot C(n)=C(n')$.
+We say that the projective cone $C$ is a \emph{projective limit}, or simply that $e$ is the \emph{projective limit of $\phi$}, if, for every projective cone of the form $C'\colon e'\to\phi$, there exists exactly one morphism $f\colon e'\to e$ in $\cat{C}$ such that $C'(n)=C(n)\cdot f$ for all $n\in\set{\cat{A}}$.
+We call $f$ the \emph{\unsure{bracket} of $C'$ compared with} (or \emph{with respect to}) the limit $C$.
+This terminology is often modified for particular limits: products, fibre products, various diagrams.
+For example, we say that the following commutative diagram
+\oldpage{222}
+\[
+  \begin{tikzcd}[sep=huge]
+    e'' \ar[d,swap,"g"]
+  & \pi \ar[l,swap,"v_2"] \ar[d,"v_1"]
+  \\e
+  & e' \ar[l,"f"]
+  \end{tikzcd}
+\]
+is a \emph{cartesian square}, or a \emph{fibre product}\footnote{This terminology supposes that we consider the diagram as oriented within the plane.}, or we say that $(v_1,v_2)$, or simply $\pi$, is a \emph{fibre product} of $(f,g)$, if the relation $f\cdot f'=g\cdot g'$ in $\cat{C}$ implies the existence and universality of a \unsure{bracket} $h$ such that $f'=v_1\cdot h$ and $g'=v_2\cdot h$.
+We use analogous conventions for inductive limits, but the expression ``canonical projection''  should be replaced by \emph{canonical injection}.
+We say that $\cat{C}$ \emph{admits projective $\cat{A}$-limits}, for example, if, for every $\phi\in\set{\cat{C}^\cat{A}}$, there exists a projective limit $C\colon e\to\phi$;
+and if we have chosen such a limit for all $\phi$, we say that $\cat{C}$ is endowed with a \emph{canonical} (or \emph{official}) choice of projective $\cat{A}$-limits.
+We use analogous conventions for fibre products, inductive limits, etc. \ldots.
+Often such a choice is classical and is made tacitly.
+
+We will not cover the notion of a functor \emph{commuting with limits}, nor that of limits commuting with one another;
+these notions are clear enough.
+
+Recall that, if $C\colon\phi\to e$ is an inductive cone, where $\phi\colon\cat{A}\to\cat{C}$ is a functor, if $f\colon e'\to e$ is a morphism in $\cat{C}$, and if we can form, for all $n\in\set{\cat{A}}$, a fibre product
+\[
+  \begin{tikzcd}[sep=huge]
+    \phi(n) \ar[d,swap,"C(n)"]
+  & \phi'(n) \ar[l,swap,"t(n)"] \ar[d,"C'(n)"]
+  \\e
+  & e' \ar[l,"f"]
+  \end{tikzcd}
+\]
+then the family $\phi'(n)$ extends to a functor $\phi'\colon\cat{A}\to\cat{C}$ in a way entirely determined by the condition that $t\colon\phi'\to\phi$ be a natural transformation.
+We say that the cone $C'\colon\phi'\to e'$ is obtained by the \emph{change of base $f$}, and we sometimes denote it by $f^*C$.
+We say that, in $\cat{C}$, the \emph{inductive $\cat{A}$-limits are universal} if, whenever $C$ is an inductive $\cat{A}$-limit and $C'$ exists, then $C'$ is an inductive $\cat{A}$-limit.
+
+
+\subsection{Triples}
+
+\oldpage{223}
+Let
 
 
 
