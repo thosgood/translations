@@ -19,6 +19,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{hyperref}
+\usepackage{cleveref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
 \usepackage{enumerate}
@@ -136,7 +137,18 @@ The general outline of this article is as follows.
 A Chapter~0 is dedicated to some details of terminology.
 Chapter~1 first gives a definition of $\TT$-categories that demonstrates their relation to categories: if $\cat{E}=\Cat{Set}$, then the morphisms of a $\TT$-category appear, not as arrows going from one object to another object, but as arrows going from one structure on the objects to an object.
 In this way, a ``convergence'' in a topology can be represented as an arrow $F\to x$ going from a filter to a point.
-It is easy to observe that
+It is then easy to observe that these structures must be given by the endofunctor of a triple in order to be able to define the properties of reflexivity, transitivite, identity, and associativity of a $\TT$-category.
+Then we will expand on some general properties: those that can we obtain without placing any hypotheses on the triple $\TT$, essentially the existence of projective limits and the fibration of the forgetful functor to $\cat{E}$ (which will allow us, in passing, to resolve the problem that consists of universally embedding the forgetful functor of $\TT$-algebras into a fibrant functor).
+Other properties, such as the existence of inductive limits, the adjunction with the forgetful functor to $\TT$-graphs (the analogue of the Stone--Čech--Barr theorem), or the cofibration of the forgetful functor to $\cat{E}$ cannot be obtained unless we suppose the triple $\TT$ to be ``bounded''.
+
+Chapter~II is essentially dedicated to two interpretations of $\TT$-categories, on one hand as monads (or monoids, if one prefers) in the ``Kleisli pseudo-category'', and on the other as pseudo-algebras in the ``bicatgeory of spans''.
+
+Chapter~III gives various examples, of which the most detailed is that of multicategories (which generalise those defined by Lambek in \cite{La}).
+For this, we have been led to study in Sections~III.1 and III.2 the particular case where $\TT$ is a ``strongly cartesian'' triple, which not only allows for the construction of free $\TT$-categories over the usual model of free monoids (see the Appendix), but also gives a manageable description of this structure.
+\oldpage{217}
+We will thus quantitatively improve the examples given by Barr, and we will also later study other useful examples, but this problem appeared less important to us long as our definition seems more natural and
+
+
 
 
 %% Content %% 
