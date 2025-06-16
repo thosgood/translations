@@ -319,7 +319,19 @@ We say that, in $\cat{C}$, the \emph{inductive $\cat{A}$-limits are universal} i
 \subsection{Triples}
 
 \oldpage{223}
-Let
+Let $\cat{C}$ be a category.
+We say that $\TT=(T,I,K)$ is a \emph{triple} on $\cat{C}$ if $T\colon\cat{C}\to\cat{C}$ is a functor, and $I\colon\id_\cat{C}\to T$ and $K\colon TT\to T$ are natural transformations such that
+\[
+  \begin{gathered}
+    K\cdot TI
+    = T
+    = K\cdot IT
+  \\K\cdot TK
+    = K\cdot KT
+  \end{gathered}
+  \tag{1}
+\]
+We say that
 
 
 
