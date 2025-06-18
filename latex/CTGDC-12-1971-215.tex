@@ -64,12 +64,13 @@
 \newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
 \newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
 
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\TT}{\mathbf{T}}
+\newcommand{\textand}{\quad\text{and}\quad}
+
 \newcommand{\cat}[1]{\mathcal{#1}}
 \newcommand{\Cat}[1]{\mathsf{#1}}
 \newcommand{\set}[1]{|#1|}
-
-\newcommand{\id}{\mathrm{id}}
-\newcommand{\TT}{\mathbf{T}}
 
 \newcommand{\Alg}[1]{\Cat{Alg}(#1)}
 \newcommand{\Kl}[1]{\Cat{Kl}(#1)}
@@ -132,9 +133,9 @@
 \bigskip
 
 \oldpage{215}
-If $\TT$ is a triple on a category $\cat{C}$, then $\TT$-categories are more general structures than $\TT$-algebras; they correspond to the passage from ``everywhere-defined laws'' to ``partially defined laws'' (in a very broad sense, in fact) and thus also encompass structures as diverse as topologies and categories.
+If $\TT$ is a triple on a category $\cat{E}$, then $\TT$-categories are more general structures than $\TT$-algebras; they correspond to the passage from ``everywhere-defined laws'' to ``partially defined laws'' (in a very broad sense, in fact) and thus also encompass structures as diverse as topologies and categories.
 
-Manes showed, in \cite{Ma}, that the category of compact topological spaces is a category of $\TT$-algebras, where $\TT$ is the triple of ultrafilters on $\cat{C}=\Cat{Set}$.
+Manes showed, in \cite{Ma}, that the category of compact topological spaces is a category of $\TT$-algebras, where $\TT$ is the triple of ultrafilters on $\cat{E}=\Cat{Set}$.
 This led Barr, in \cite{Ba}, to define ``relational $\TT$-algebras'' so that the category of topological spaces is a category of ``relational $\TT$-algebras''.
 But Barr seemed disappointed in the fact that, apart from this particular case, and that of preorders relative to the identity triple, there were few examples.
 Independently, the new system of axioms for topologies that we had given in \cite{Bu} led us to a similar idea (unfortunately with the triple of filters\ldots but our goal was to situate topologies amongst quasi-topologies) that consisted in seeing topologies as a notion analogous to that of preorders (it is indicative, indeed, that the structure of a finite topology is equivalent to that of a finite preorder).
@@ -144,11 +145,11 @@ We show (\cref{proposition-i.2.4}) that the ``relational $\TT$-algebras'' are ob
 \oldpage{216}
 The general outline of this article is as follows.
 A Chapter~0 is dedicated to some details of terminology.
-Chapter~1 first gives a definition of $\TT$-categories that demonstrates their relation to categories: if $\cat{C}=\Cat{Set}$, then the morphisms of a $\TT$-category appear, not as arrows going from one object to another object, but as arrows going from one structure on the objects to an object.
+Chapter~1 first gives a definition of $\TT$-categories that demonstrates their relation to categories: if $\cat{E}=\Cat{Set}$, then the morphisms of a $\TT$-category appear, not as arrows going from one object to another object, but as arrows going from one structure on the objects to an object.
 In this way, a ``convergence'' in a topology can be represented as an arrow $F\to x$ going from a filter to a point.
 It is then easy to observe that these structures must be given by the endofunctor of a triple in order to be able to define the properties of reflexivity, transitivite, identity, and associativity of a $\TT$-category.
-Then we will expand on some general properties: those that can we obtain without placing any hypotheses on the triple $\TT$, essentially the existence of projective limits and the fibration of the forgetful functor to $\cat{C}$ (which will allow us, in passing, to resolve the problem that consists of universally embedding the forgetful functor of $\TT$-algebras into a fibrant functor).
-Other properties, such as the existence of inductive limits, the adjunction with the forgetful functor to $\TT$-graphs (the analogue of the Stone--Čech--Barr theorem), or the cofibration of the forgetful functor to $\cat{C}$ cannot be obtained unless we suppose the triple $\TT$ to be ``bounded''.
+Then we will expand on some general properties: those that can we obtain without placing any hypotheses on the triple $\TT$, essentially the existence of projective limits and the fibration of the forgetful functor to $\cat{E}$ (which will allow us, in passing, to resolve the problem that consists of universally embedding the forgetful functor of $\TT$-algebras into a fibrant functor).
+Other properties, such as the existence of inductive limits, the adjunction with the forgetful functor to $\TT$-graphs (the analogue of the Stone--Čech--Barr theorem), or the cofibration of the forgetful functor to $\cat{E}$ cannot be obtained unless we suppose the triple $\TT$ to be ``bounded''.
 
 Chapter~II is essentially dedicated to two interpretations of $\TT$-categories, on one hand as monads (or monoids, if one prefers) in the ``Kleisli pseudo-category'', and on the other as pseudo-algebras in the ``bicatgeory of spans''.
 
@@ -190,48 +191,48 @@ The only goal of the reminders below is the allow us to make precise the termino
 
 \subsection{Categories}
 
-A \emph{category} is a quadruple $\cat{C}=(\set{\cat{C}}, \Hom_\cat{C}, \iota, \kappa)$ satisfying conditions~1 to 6 below:
+A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, \iota, \kappa)$ satisfying conditions~1 to 6 below:
 
 \begin{enumerate}
-  \item $\set{\cat{C}}$ is a set; its elements are called \emph{objects of $\cat{C}$}.
+  \item $\set{\cat{E}}$ is a set; its elements are called \emph{objects of $\cat{E}$}.
 
-  \item $\Hom_\cat{C}$ is a family of sets (that we suppose to be disjoint from one another, and disjoint from $\set{\cat{C}}$, to simplify constructions; but this is rarely the case in practice and, in theory, it is not indispensable).
-    This family is indexed by $\set{\cat{C}}^2$, and the relations
+  \item $\Hom_\cat{E}$ is a family of sets (that we suppose to be disjoint from one another, and disjoint from $\set{\cat{E}}$, to simplify constructions; but this is rarely the case in practice and, in theory, it is not indispensable).
+    This family is indexed by $\set{\cat{E}}^2$, and the relations
     \[
-      e\in\set{\cat{C}},
-      e'\in\set{\cat{C}},
-      f\in\Hom_\cat{C}(e',e)
+      e\in\set{\cat{E}},
+      e'\in\set{\cat{E}},
+      f\in\Hom_\cat{E}(e',e)
     \]
-    are expressed by simply saying that $f\colon e\to e'$ is a \emph{morphism} (in $\set{\cat{C}}$);
+    are expressed by simply saying that $f\colon e\to e'$ is a \emph{morphism} (in $\set{\cat{E}}$);
     we call $e$ the \emph{source of $f$} and $e'$ the \emph{target of $f$}.
 
   \item $\iota$ is a family of maps of the form
     \[
       \iota(e)\colon \{\varnothing\}
-      \to \Hom_\cat{C}(e,e),
+      \to \Hom_\cat{E}(e,e),
     \]
-    where the index $e$ runs over the set $\set{\cat{C}}$.
+    where the index $e$ runs over the set $\set{\cat{E}}$.
     We denote by $\id(e)$, $\id_e$, or even simply $e$, the morphism $\iota(e)(\varnothing)\colon e\to e$.
     \oldpage{220}
-    (This is a sophisticated way of giving a family of morphisms $\id_e\colon e\to e$, where $e\in\set{\cat{C}}$).
+    (This is a sophisticated way of giving a family of morphisms $\id_e\colon e\to e$, where $e\in\set{\cat{E}}$).
 
   \item $\kappa$ is a family of maps of the form
     \[
       \kappa(e'',e',e)\colon
-      \Hom_\cat{C}(e'',e')\times\Hom_\cat{C}(e',e)
-      \to \Hom_\cat{C}(e'',e),
+      \Hom_\cat{E}(e'',e')\times\Hom_\cat{E}(e',e)
+      \to \Hom_\cat{E}(e'',e),
     \]
-    where the index $(e'',e',e)$ runs over the set $\set{\cat{C}}^3$.
+    where the index $(e'',e',e)$ runs over the set $\set{\cat{E}}^3$.
     We generally denote by $g\cdot f$ the composite, i.e. the image under such a map of a pair $(g,f)$.
 
-  \item If $f\colon e\to e'$ is a morphism in $\cat{C}$, then
+  \item If $f\colon e\to e'$ is a morphism in $\cat{E}$, then
     \[
       f\cdot\id_e
       = f
       = \id_{e'}\cdot f.
     \]
 
-  \item If $f\colon e\to e'$, $g\colon e'\to e''$, and $h\colon e''\to e'''$ are ``consecutive'' morphisms in $\cat{C}$, then
+  \item If $f\colon e\to e'$, $g\colon e'\to e''$, and $h\colon e''\to e'''$ are ``consecutive'' morphisms in $\cat{E}$, then
     \[
       h\cdot(g\cdot f)
       = (h\cdot g)\cdot f,
@@ -239,40 +240,40 @@ A \emph{category} is a quadruple $\cat{C}=(\set{\cat{C}}, \Hom_\cat{C}, \iota, \
     which allows to us to denote this morphism by $h\cdot g\cdot f$.
 \end{enumerate}
 
-A pair $(\set{\cat{C}},\Hom_\cat{C})$ satisfying conditions~1 and 2 is called a \emph{graph}; a triple $(\set{\cat{C}},\Hom_\cat{C},\iota)$ satisfying conditions~1, 2, and 3 is called a \emph{pointed graph}; and in both cases we use the corresponding terminology of conditions~1, 2, and 3.
+A pair $(\set{\cat{E}},\Hom_\cat{E})$ satisfying conditions~1 and 2 is called a \emph{graph}; a triple $(\set{\cat{E}},\Hom_\cat{E},\iota)$ satisfying conditions~1, 2, and 3 is called a \emph{pointed graph}; and in both cases we use the corresponding terminology of conditions~1, 2, and 3.
 
-We say that $F\colon\cat{C}\to\cat{C}'$ is a \emph{functor} if $\cat{C}$ and $\cat{C}'$ are categories and $F$ is a pair $(\set{F},F_1)$ such that
+We say that $F\colon\cat{E}\to\cat{E}'$ is a \emph{functor} if $\cat{E}$ and $\cat{E}'$ are categories and $F$ is a pair $(\set{F},F_1)$ such that
 
 \begin{enumerate}
-  \item[1\textquotesingle.] $\set{F}\colon\set{\cat{C}}\to\set{\cat{C}'}$ is a map.
-    We denote simply by $F(e)$ the object $\set{F}(e)$, for all $e\in\set{\cat{C}}$.
+  \item[1\textquotesingle.] $\set{F}\colon\set{\cat{E}}\to\set{\cat{E}'}$ is a map.
+    We denote simply by $F(e)$ the object $\set{F}(e)$, for all $e\in\set{\cat{E}}$.
 
   \item[2\textquotesingle.] $F_1$ is a family of maps of the form
     \[
       F_1(e',e)\colon
-      \Hom_\cat{C}(e',e)
-      \to \Hom_{\cat{C}'}(F(e'),F(e)),
+      \Hom_\cat{E}(e',e)
+      \to \Hom_{\cat{E}'}(F(e'),F(e)),
     \]
-    where the index $(e',e)$ runs over the set $\set{\cat{C}}^2$.
-    If $f\colon e\to e'$ is a morphism in $\cat{C}$, we denote simply by $F(f)$ the morphism $F_1(e',e)(f)$.
+    where the index $(e',e)$ runs over the set $\set{\cat{E}}^2$.
+    If $f\colon e\to e'$ is a morphism in $\cat{E}$, we denote simply by $F(f)$ the morphism $F_1(e',e)(f)$.
 
-  \item[3\textquotesingle.] $F(\id_e)=\id_{F(e)}$ for all $e\in\set{\cat{C}}$.
+  \item[3\textquotesingle.] $F(\id_e)=\id_{F(e)}$ for all $e\in\set{\cat{E}}$.
 
-  \item[4\textquotesingle.] $F(g\cdot f)=F(g)\cdot F(f)$, if $f\colon e\to e'$ and $g\colon e'\to e''$ are consecutive morphisms in $\cat{C}$.
+  \item[4\textquotesingle.] $F(g\cdot f)=F(g)\cdot F(f)$, if $f\colon e\to e'$ and $g\colon e'\to e''$ are consecutive morphisms in $\cat{E}$.
 \end{enumerate}
 
-A \emph{natural transformation $I\colon F\to F'$}, where $F\colon\cat{C}\to\cat{C}'$ and $F'\colon\cat{C}\to\cat{C}'$ are functors with the same source and target, is given by a family of morphisms in $\cat{C}'$ of the form $I(e)\colon F(e)\to F'(e)$, where the index $e$ runs over the set $\set{\cat{C}}$, such that for every morphism $f\colon e\to e'$ in $\cat{C}$ we have the relation $I(e')\cdot F(f)=F'(f)\cdot I(e)$.
+A \emph{natural transformation $I\colon F\to F'$}, where $F\colon\cat{E}\to\cat{E}'$ and $F'\colon\cat{E}\to\cat{E}'$ are functors with the same source and target, is given by a family of morphisms in $\cat{E}'$ of the form $I(e)\colon F(e)\to F'(e)$, where the index $e$ runs over the set $\set{\cat{E}}$, such that for every morphism $f\colon e\to e'$ in $\cat{E}$ we have the relation $I(e')\cdot F(f)=F'(f)\cdot I(e)$.
 \oldpage{221}
-We denote by $\cat{C}'^{\cat{C}}$ the usual category whose objects are the functors $F\colon\cat{C}\to\cat{C}'$ and whose morphisms are the natural transformations between these functors.
-The composition law in $\cat{C}'^{\cat{C}}$ will generally borrow the notation from that of $\cat{C}'$, which risks producing confusion.
-Indeed, if $F\colon\cat{C}\to\cat{C}'$ and $G\colon\cat{C}'\to\cat{C}''$ are consecutive functors, then we denote by $G\cdot F\colon\cat{C}\to\cat{C}''$ the usual composite.
-Such a composition extends to natural transformations: if $I\colon F\to F'$ is a morphism in $\cat{C}'^{\cat{C}}$ and $J\colon G\to G'$ a morphism in $\cat{C}''^{\cat{C}'}$, then we define a composite $J\cdot I\colon G\cdot F\to G'\cdot F'$ by the formula
+We denote by $\cat{E}'^{\cat{E}}$ the usual category whose objects are the functors $F\colon\cat{E}\to\cat{E}'$ and whose morphisms are the natural transformations between these functors.
+The composition law in $\cat{E}'^{\cat{E}}$ will generally borrow the notation from that of $\cat{E}'$, which risks producing confusion.
+Indeed, if $F\colon\cat{E}\to\cat{E}'$ and $G\colon\cat{E}'\to\cat{E}''$ are consecutive functors, then we denote by $G\cdot F\colon\cat{E}\to\cat{E}''$ the usual composite.
+Such a composition extends to natural transformations: if $I\colon F\to F'$ is a morphism in $\cat{E}'^{\cat{E}}$ and $J\colon G\to G'$ a morphism in $\cat{E}''^{\cat{E}'}$, then we define a composite $J\cdot I\colon G\cdot F\to G'\cdot F'$ by the formula
 \[
   (J\cdot I)(e)
   = J(F'(e))\cdot G(I(e))
   = G'(I(e))\cdot J(F(e)).
 \]
-But the notation of a dot for this composition risks being confused with the composition in $\cat{C}^\cat{C}$, when, for example, $\cat{C}=\cat{C}'=\cat{C}''$ and the composition in $\cat{C}$ is denoted by a dot.
+But the notation of a dot for this composition risks being confused with the composition in $\cat{E}^\cat{E}$, when, for example, $\cat{E}=\cat{E}'=\cat{E}''$ and the composition in $\cat{E}$ is denoted by a dot.
 Also, even though we generally denote by a point the compositions of ``morphisms between structures'', we often denote by $JI$ the composite $J\cdot I$ above, so that, for example, we can write
 \[
   JI
@@ -282,8 +283,8 @@ Also, even though we generally denote by a point the compositions of ``morphisms
 
 Similarly, we often write $Fe$, $Ff$, and $Ie$ instead of $F(e)$, $F(f)$, and $I(e)$, respectively; this convention is used most of all when the previous convention on the notation $JI$ instead of $J\cdot I$ is in force.
 
-As for \emph{limits}, we adopt the following notation: if $e\in\set{\cat{C}}$, and if $\phi\colon \cat{A}\to\cat{C}$ is a functor, then we say that $C\colon e\to\phi$ is a \emph{projective cone} if $C$ is a family of morphisms in $\cat{C}$, called the \emph{canonical projections of $C$}, of the form $C(n)\colon e\to\phi(n)$ for all $n\in\set{\cat{A}}$ such that, for every morphism $x\colon n\to n'$ in $\cat{A}$, we have that $\phi(x)\cdot C(n)=C(n')$.
-We say that the projective cone $C$ is a \emph{projective limit}, or simply that $e$ is the \emph{projective limit of $\phi$}, if, for every projective cone of the form $C'\colon e'\to\phi$, there exists exactly one morphism $f\colon e'\to e$ in $\cat{C}$ such that $C'(n)=C(n)\cdot f$ for all $n\in\set{\cat{A}}$.
+As for \emph{limits}, we adopt the following notation: if $e\in\set{\cat{E}}$, and if $\phi\colon \cat{A}\to\cat{E}$ is a functor, then we say that $C\colon e\to\phi$ is a \emph{projective cone} if $C$ is a family of morphisms in $\cat{E}$, called the \emph{canonical projections of $C$}, of the form $C(n)\colon e\to\phi(n)$ for all $n\in\set{\cat{A}}$ such that, for every morphism $x\colon n\to n'$ in $\cat{A}$, we have that $\phi(x)\cdot C(n)=C(n')$.
+We say that the projective cone $C$ is a \emph{projective limit}, or simply that $e$ is the \emph{projective limit of $\phi$}, if, for every projective cone of the form $C'\colon e'\to\phi$, there exists exactly one morphism $f\colon e'\to e$ in $\cat{E}$ such that $C'(n)=C(n)\cdot f$ for all $n\in\set{\cat{A}}$.
 We call $f$ the \emph{\unsure{bracket} of $C'$ compared with} (or \emph{with respect to}) the limit $C$.
 This terminology is often modified for particular limits: products, fibre products, various diagrams.
 For example, we say that the following commutative diagram
@@ -296,17 +297,17 @@ For example, we say that the following commutative diagram
   & e' \ar[l,"f"]
   \end{tikzcd}
 \]
-is a \emph{cartesian square}, or a \emph{fibre product}\footnote{This terminology supposes that we consider the diagram as oriented within the plane.}, or we say that $(v_1,v_2)$, or simply $\pi$, is a \emph{fibre product} of $(f,g)$, if the relation $f\cdot f'=g\cdot g'$ in $\cat{C}$ implies the existence and universality of a \unsure{bracket} $h$ such that $f'=v_1\cdot h$ and $g'=v_2\cdot h$.
+is a \emph{cartesian square}, or a \emph{fibre product}\footnote{This terminology supposes that we consider the diagram as oriented within the plane.}, or we say that $(v_1,v_2)$, or simply $\pi$, is a \emph{fibre product} of $(f,g)$, if the relation $f\cdot f'=g\cdot g'$ in $\cat{E}$ implies the existence and universality of a \unsure{bracket} $h$ such that $f'=v_1\cdot h$ and $g'=v_2\cdot h$.
 We use analogous conventions for inductive limits, but the expression ``canonical projection''  should be replaced by \emph{canonical injection}.
-We say that $\cat{C}$ \emph{admits projective $\cat{A}$-limits}, for example, if, for every $\phi\in\set{\cat{C}^\cat{A}}$, there exists a projective limit $C\colon e\to\phi$;
-and if we have chosen such a limit for all $\phi$, we say that $\cat{C}$ is endowed with a \emph{canonical} (or \emph{official}) choice of projective $\cat{A}$-limits.
+We say that $\cat{E}$ \emph{admits projective $\cat{A}$-limits}, for example, if, for every $\phi\in\set{\cat{E}^\cat{A}}$, there exists a projective limit $C\colon e\to\phi$;
+and if we have chosen such a limit for all $\phi$, we say that $\cat{E}$ is endowed with a \emph{canonical} (or \emph{official}) choice of projective $\cat{A}$-limits.
 We use analogous conventions for fibre products, inductive limits, etc. \ldots.
 Often such a choice is classical and is made tacitly.
 
 We will not cover the notion of a functor \emph{commuting with limits}, nor that of limits commuting with one another;
 these notions are clear enough.
 
-Recall that, if $C\colon\phi\to e$ is an inductive cone, where $\phi\colon\cat{A}\to\cat{C}$ is a functor, if $f\colon e'\to e$ is a morphism in $\cat{C}$, and if we can form, for all $n\in\set{\cat{A}}$, a fibre product
+Recall that, if $C\colon\phi\to e$ is an inductive cone, where $\phi\colon\cat{A}\to\cat{E}$ is a functor, if $f\colon e'\to e$ is a morphism in $\cat{E}$, and if we can form, for all $n\in\set{\cat{A}}$, a fibre product
 \[
   \begin{tikzcd}[sep=huge]
     \phi(n) \ar[d,swap,"C(n)"]
@@ -315,16 +316,16 @@ Recall that, if $C\colon\phi\to e$ is an inductive cone, where $\phi\colon\cat{A
   & e' \ar[l,"f"]
   \end{tikzcd}
 \]
-then the family $\phi'(n)$ extends to a functor $\phi'\colon\cat{A}\to\cat{C}$ in a way entirely determined by the condition that $t\colon\phi'\to\phi$ be a natural transformation.
+then the family $\phi'(n)$ extends to a functor $\phi'\colon\cat{A}\to\cat{E}$ in a way entirely determined by the condition that $t\colon\phi'\to\phi$ be a natural transformation.
 We say that the cone $C'\colon\phi'\to e'$ is obtained by the \emph{change of base $f$}, and we sometimes denote it by $f^*C$.
-We say that, in $\cat{C}$, the \emph{inductive $\cat{A}$-limits are universal} if, whenever $C$ is an inductive $\cat{A}$-limit and $C'$ exists, then $C'$ is an inductive $\cat{A}$-limit.
+We say that, in $\cat{E}$, the \emph{inductive $\cat{A}$-limits are universal} if, whenever $C$ is an inductive $\cat{A}$-limit and $C'$ exists, then $C'$ is an inductive $\cat{A}$-limit.
 
 
 \subsection{Triples}
 
 \oldpage{223}
-Let $\cat{C}$ be a category.
-We say that $\TT=(T,I,K)$ is a \emph{triple} on $\cat{C}$ if $T\colon\cat{C}\to\cat{C}$ is a functor, and $I\colon\id_\cat{C}\to T$ and $K\colon TT\to T$ are natural transformations such that
+Let $\cat{E}$ be a category.
+We say that $\TT=(T,I,K)$ is a \emph{triple} on $\cat{E}$ if $T\colon\cat{E}\to\cat{E}$ is a functor, and $I\colon\id_\cat{E}\to T$ and $K\colon TT\to T$ are natural transformations such that
 \[
   \begin{gathered}
     K\cdot TI
@@ -335,7 +336,7 @@ We say that $\TT=(T,I,K)$ is a \emph{triple} on $\cat{C}$ if $T\colon\cat{C}\to\
   \end{gathered}
   \tag{1}
 \]
-We say that $(M,m)\colon\TT\to\TT'$ is a \emph{morphism of triples} if $\TT=(T,I,K)$ is a triple on $\cat{C}$, $\TT'=(T',I',K')$ is a triple on another category $\cat{C}'$, $M\colon\cat{C}\to\cat{C}'$ is a functor, and $m\colon T'M\to MT$ is a natural transformation such that
+We say that $(M,m)\colon\TT\to\TT'$ is a \emph{morphism of triples} if $\TT=(T,I,K)$ is a triple on $\cat{E}$, $\TT'=(T',I',K')$ is a triple on another category $\cat{E}'$, $M\colon\cat{E}\to\cat{E}'$ is a functor, and $m\colon T'M\to MT$ is a natural transformation such that
 \[
   \begin{aligned}
     m\cdot I'M
@@ -347,7 +348,7 @@ We say that $(M,m)\colon\TT\to\TT'$ is a \emph{morphism of triples} if $\TT=(T,I
 \]
 In general, when there is no risk of confusion, we use the same notation $I$ and $K$ for all triples.
 
-We say that the functor $F\colon\cat{C}\to\overline{\cat{C}}$ is an \emph{adjoint functor} of the functor $U\colon\overline{\cat{C}}\to\cat{C}$ if there exist natural transformations $I\colon\id_\cat{C}\to UF$ and $\overline{I}\colon FU\to\id_{\overline{\cat{C}}}$ such that
+We say that the functor $F\colon\cat{E}\to\overline{\cat{E}}$ is an \emph{adjoint functor} of the functor $U\colon\overline{\cat{E}}\to\cat{E}$ if there exist natural transformations $I\colon\id_\cat{E}\to UF$ and $\overline{I}\colon FU\to\id_{\overline{\cat{E}}}$ such that
 \[
   \begin{aligned}
     U\overline{I}\cdot IU
@@ -357,11 +358,11 @@ We say that the functor $F\colon\cat{C}\to\overline{\cat{C}}$ is an \emph{adjoin
   \end{aligned}
   \tag{3}
 \]
-For all $e\in\set{\cat{C}}$, we call $Ie$ the \emph{adjunction morphism} associated to $e$; for all $\overline{e}\in\set{\overline{\cat{C}}}$, we call $\overline{I}\overline{e}$ the \emph{coadjunction morphism} associated to $\overline{e}$.
-We will show that $\TT=(UF,I,U\overline{I}F)$ is a triple on $\cat{C}$: we say that it is \emph{induced from the adjoint pair $(F,U)$};
+For all $e\in\set{\cat{E}}$, we call $Ie$ the \emph{adjunction morphism} associated to $e$; for all $\overline{e}\in\set{\overline{\cat{E}}}$, we call $\overline{I}\overline{e}$ the \emph{coadjunction morphism} associated to $\overline{e}$.
+We will show that $\TT=(UF,I,U\overline{I}F)$ is a triple on $\cat{E}$: we say that it is \emph{induced from the adjoint pair $(F,U)$};
 it depends on the choice (tacit, in general) of $I$ and $\overline{I}$.
 
-Recall that, if $\TT$ is a triple on $\cat{C}$, then we denote by $\Alg{\TT}$ the category of \emph{$\TT$-algebras}: a $\TT$-algebra on $e\in{\set{\cat{C}}}$ is a morphism in $\cat{C}$ of the form $b\colon Te\to e$ such that
+Recall that, if $\TT$ is a triple on $\cat{E}$, then we denote by $\Alg{\TT}$ the category of \emph{$\TT$-algebras}: a $\TT$-algebra on $e\in{\set{\cat{E}}}$ is a morphism in $\cat{E}$ of the form $b\colon Te\to e$ such that
 \[
   \begin{aligned}
     b\cdot Ie
@@ -371,38 +372,69 @@ Recall that, if $\TT$ is a triple on $\cat{C}$, then we denote by $\Alg{\TT}$ th
   \end{aligned}
   \tag{4}
 \]
-and a morphism $f\colon b\to b'$ in $\Alg{\TT}$ is defined by a morphism $f\colon e\to e'$ in $\cat{C}$ such that $b$ is an algebra on $e$, $b'$ is an algebra on $e'$, and
+and a morphism $f\colon b\to b'$ in $\Alg{\TT}$ is defined by a morphism $f\colon e\to e'$ in $\cat{E}$ such that $b$ is an algebra on $e$, $b'$ is an algebra on $e'$, and
 \[
   f\cdot b
   = b'\cdot Tf.
   \tag{5}
 \]
-We denote by $\Kl{\TT}$ the \emph{Kleisli category} of $\TT$: it has the same objects as $\cat{C}$, and a morphism $g\colon e\to e'$ in $\Kl{\TT}$ is a morphism $g\colon Te\to Te'$ in $\cat{C}$ such that $g\colon Ke\to Ke'$ is a morphism in $\Alg{\TT}$.
+We denote by $\Kl{\TT}$ the \emph{Kleisli category} of $\TT$: it has the same objects as $\cat{E}$, and a morphism $g\colon e\to e'$ in $\Kl{\TT}$ is a morphism $g\colon Te\to Te'$ in $\cat{E}$ such that $g\colon Ke\to Ke'$ is a morphism in $\Alg{\TT}$.
 \oldpage{224}
 Recall that such a morphism is equivalent to giving a morphism $h\colon e\to Te'$, and that the composite of $h$ with another morphism $h'\colon e'\to Te''$ in $\Kl{\TT}$ is equal to $Ke''\cdot Th'\cdot h\colon e\to Te''$.
-The forgetful functors $\Alg{\TT}\to\cat{C}$ and $\Kl{\TT}\to\cat{C}$ (with the latter sending the morphism $g\colon e\to e'$ in $\Kl{\TT}$ to the morphism $g\colon Te\to Te'$ in $\cat{C}$) admit adjoints, and $\TT$ is the triple induced form each of these adjoint pairs.
+The forgetful functors $\Alg{\TT}\to\cat{E}$ and $\Kl{\TT}\to\cat{E}$ (with the latter sending the morphism $g\colon e\to e'$ in $\Kl{\TT}$ to the morphism $g\colon Te\to Te'$ in $\cat{E}$) admit adjoints, and $\TT$ is the triple induced form each of these adjoint pairs.
 
 Recall, finally, that if $\TT$ is the triple induced by an adjoint pair $(F,U)$, then we have a commutative diagram
 \[
   \begin{tikzcd}
     \Kl{\TT} \ar[r] \ar[dr]
-  & \overline{\cat{C}} \ar[r] \ar[d]
+  & \overline{\cat{E}} \ar[r] \ar[d]
   & \Alg{\TT} \ar[dl]
   \\
-  & \cat{C}
+  & \cat{E}
   \end{tikzcd}
 \]
-with the horizontal arrows being furthermore unique whenever they make the diagram obtained by replacing the three functors to $\cat{C}$ with their adjoints commute.
-The functor $\overline{\cat{C}}\to\Alg{\TT}$ is called the \emph{Eilenberg--Moore functor} associated to $(F,U)$, or simply to $U$.
+with the horizontal arrows being furthermore unique whenever they make the diagram obtained by replacing the three functors to $\cat{E}$ with their adjoints commute.
+The functor $\overline{\cat{E}}\to\Alg{\TT}$ is called the \emph{Eilenberg--Moore functor} associated to $(F,U)$, or simply to $U$.
 When this functor is an isomorphism, we say that $U$ is \emph{tripleable}.
 For example, the Eilenberg--Moore functor $\Kl{\TT}\to\Alg{\TT}$ is fully faithful, but not always injective.
 
 
 
 
+\renewcommand{\thesection}{\Roman{section}}
 \section{General properties of $\TT$-categories}
 
-We are going to
+\oldpage{225}
+We are going to replace the morphism $b\colon Te\to e$ of a $\TT$-algebra, where $\TT$ is a triple on a category $\cat{E}$, by a span, i.e. by a pair of morphism in $\cat{E}$ with the same target
+\[
+  b\colon\pi\to e
+  \textand
+  a\colon\pi\to Te
+\]
+and define the notion of a $\TT$-category by adding data and conditions to this span, in a way that generalises the notion of a ``relational $\TT$-algebra'' of Barr \cite{Ba}.
+In Chapter~II, we will see that this generalisation is natural;
+below, we will draw inspiration from the ``global'' definition of a category in order to choose our axioms.
+
+
+\subsection{$\TT$-categories}
+
+In the rest of this chapter, $\cat{E}$ will be a category admitting finite fibre products, and $\TT=(T,I,K)$ a triple on $\cat{E}$.
+
+A \emph{$\TT$-graph} on an object $e\in\set{\cat{E}}$ is a pair $(b,a)$, where
+\[
+  b\colon\pi\to e
+  \textand
+  a\colon\pi\to Te
+\]
+are morphisms in $\cat{E}$.
+
+A \emph{pointed $\TT$-graph} is a triple $(b,a,i)$ such that $(b,a)$ is a $\TT$-graph on $e$, and $i\colon e\to\pi$ is a morphism in $\cat{E}$ such that
+\[
+  b\cdot i = \id_e
+  \textand
+  a\cdot i= Ie.
+  \tag{1}
+\]
 
 
 
