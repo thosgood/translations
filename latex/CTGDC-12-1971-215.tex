@@ -64,11 +64,15 @@
 \newcommand{\todo}{{\color{purple}\textbf{TO-DO }}}
 \newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
 
-\newcommand{\TT}{\mathbf{T}}
 \newcommand{\cat}[1]{\mathcal{#1}}
 \newcommand{\Cat}[1]{\mathsf{#1}}
-\newcommand{\id}{\mathrm{id}}
 \newcommand{\set}[1]{|#1|}
+
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\TT}{\mathbf{T}}
+
+\newcommand{\Alg}[1]{\Cat{Alg}(#1)}
+\newcommand{\Kl}[1]{\Cat{Kl}(#1)}
 
 \DeclareMathOperator{\Hom}{Hom}
 
@@ -331,7 +335,74 @@ We say that $\TT=(T,I,K)$ is a \emph{triple} on $\cat{C}$ if $T\colon\cat{C}\to\
   \end{gathered}
   \tag{1}
 \]
-We say that
+We say that $(M,m)\colon\TT\to\TT'$ is a \emph{morphism of triples} if $\TT=(T,I,K)$ is a triple on $\cat{C}$, $\TT'=(T',I',K')$ is a triple on another category $\cat{C}'$, $M\colon\cat{C}\to\cat{C}'$ is a functor, and $m\colon T'M\to MT$ is a natural transformation such that
+\[
+  \begin{aligned}
+    m\cdot I'M
+  & = MI
+  \\m\cdot K'M
+  & = MK\cdot mT\cdot T'm.
+  \end{aligned}
+  \tag{2}
+\]
+In general, when there is no risk of confusion, we use the same notation $I$ and $K$ for all triples.
+
+We say that the functor $F\colon\cat{C}\to\overline{\cat{C}}$ is an \emph{adjoint functor} of the functor $U\colon\overline{\cat{C}}\to\cat{C}$ if there exist natural transformations $I\colon\id_\cat{C}\to UF$ and $\overline{I}\colon FU\to\id_{\overline{\cat{C}}}$ such that
+\[
+  \begin{aligned}
+    U\overline{I}\cdot IU
+  & = U
+  \\\overline{I}F\cdot FI
+  & = F.
+  \end{aligned}
+  \tag{3}
+\]
+For all $e\in\set{\cat{C}}$, we call $Ie$ the \emph{adjunction morphism} associated to $e$; for all $\overline{e}\in\set{\overline{\cat{C}}}$, we call $\overline{I}\overline{e}$ the \emph{coadjunction morphism} associated to $\overline{e}$.
+We will show that $\TT=(UF,I,U\overline{I}F)$ is a triple on $\cat{C}$: we say that it is \emph{induced from the adjoint pair $(F,U)$};
+it depends on the choice (tacit, in general) of $I$ and $\overline{I}$.
+
+Recall that, if $\TT$ is a triple on $\cat{C}$, then we denote by $\Alg{\TT}$ the category of \emph{$\TT$-algebras}: a $\TT$-algebra on $e\in{\set{\cat{C}}}$ is a morphism in $\cat{C}$ of the form $b\colon Te\to e$ such that
+\[
+  \begin{aligned}
+    b\cdot Ie
+    &= e
+  \\b\cdot Ke
+    &= b\cdot Tb
+  \end{aligned}
+  \tag{4}
+\]
+and a morphism $f\colon b\to b'$ in $\Alg{\TT}$ is defined by a morphism $f\colon e\to e'$ in $\cat{C}$ such that $b$ is an algebra on $e$, $b'$ is an algebra on $e'$, and
+\[
+  f\cdot b
+  = b'\cdot Tf.
+  \tag{5}
+\]
+We denote by $\Kl{\TT}$ the \emph{Kleisli category} of $\TT$: it has the same objects as $\cat{C}$, and a morphism $g\colon e\to e'$ in $\Kl{\TT}$ is a morphism $g\colon Te\to Te'$ in $\cat{C}$ such that $g\colon Ke\to Ke'$ is a morphism in $\Alg{\TT}$.
+\oldpage{224}
+Recall that such a morphism is equivalent to giving a morphism $h\colon e\to Te'$, and that the composite of $h$ with another morphism $h'\colon e'\to Te''$ in $\Kl{\TT}$ is equal to $Ke''\cdot Th'\cdot h\colon e\to Te''$.
+The forgetful functors $\Alg{\TT}\to\cat{C}$ and $\Kl{\TT}\to\cat{C}$ (with the latter sending the morphism $g\colon e\to e'$ in $\Kl{\TT}$ to the morphism $g\colon Te\to Te'$ in $\cat{C}$) admit adjoints, and $\TT$ is the triple induced form each of these adjoint pairs.
+
+Recall, finally, that if $\TT$ is the triple induced by an adjoint pair $(F,U)$, then we have a commutative diagram
+\[
+  \begin{tikzcd}
+    \Kl{\TT} \ar[r] \ar[dr]
+  & \overline{\cat{C}} \ar[r] \ar[d]
+  & \Alg{\TT} \ar[dl]
+  \\
+  & \cat{C}
+  \end{tikzcd}
+\]
+with the horizontal arrows being furthermore unique whenever they make the diagram obtained by replacing the three functors to $\cat{C}$ with their adjoints commute.
+The functor $\overline{\cat{C}}\to\Alg{\TT}$ is called the \emph{Eilenberg--Moore functor} associated to $(F,U)$, or simply to $U$.
+When this functor is an isomorphism, we say that $U$ is \emph{tripleable}.
+For example, the Eilenberg--Moore functor $\Kl{\TT}\to\Alg{\TT}$ is fully faithful, but not always injective.
+
+
+
+
+\section{General properties of $\TT$-categories}
+
+We are going to
 
 
 
