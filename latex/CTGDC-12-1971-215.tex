@@ -32,8 +32,13 @@
 \usepackage{fouriernc}
 \usepackage[cal=esstix,scr=rsfs]{mathalpha}
 
+\usetikzlibrary{arrows,arrows.meta}
+\tikzcdset{arrow style=tikz, diagrams={>=latex}}
+
 
 %% Environments %%
+
+\usepackage[labelsep=period]{caption}
 
 \usepackage{amsthm}
 
@@ -194,9 +199,9 @@ The only goal of the reminders below is the allow us to make precise the termino
 A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, \iota, \kappa)$ satisfying conditions~1 to 6 below:
 
 \begin{enumerate}
-  \item $\set{\cat{E}}$ is a set; its elements are called \emph{objects of $\cat{E}$}.
+  \item[(1)] $\set{\cat{E}}$ is a set; its elements are called \emph{objects of $\cat{E}$}.
 
-  \item $\Hom_\cat{E}$ is a family of sets (that we suppose to be disjoint from one another, and disjoint from $\set{\cat{E}}$, to simplify constructions; but this is rarely the case in practice and, in theory, it is not indispensable).
+  \item[(2)] $\Hom_\cat{E}$ is a family of sets (that we suppose to be disjoint from one another, and disjoint from $\set{\cat{E}}$, to simplify constructions; but this is rarely the case in practice and, in theory, it is not indispensable).
     This family is indexed by $\set{\cat{E}}^2$, and the relations
     \[
       e\in\set{\cat{E}},
@@ -206,7 +211,7 @@ A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, \iota, \
     are expressed by simply saying that $f\colon e\to e'$ is a \emph{morphism} (in $\set{\cat{E}}$);
     we call $e$ the \emph{source of $f$} and $e'$ the \emph{target of $f$}.
 
-  \item $\iota$ is a family of maps of the form
+  \item[(3)] $\iota$ is a family of maps of the form
     \[
       \iota(e)\colon \{\varnothing\}
       \to \Hom_\cat{E}(e,e),
@@ -216,7 +221,7 @@ A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, \iota, \
     \oldpage{220}
     (This is a sophisticated way of giving a family of morphisms $\id_e\colon e\to e$, where $e\in\set{\cat{E}}$).
 
-  \item $\kappa$ is a family of maps of the form
+  \item[(4)] $\kappa$ is a family of maps of the form
     \[
       \kappa(e'',e',e)\colon
       \Hom_\cat{E}(e'',e')\times\Hom_\cat{E}(e',e)
@@ -225,14 +230,14 @@ A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, \iota, \
     where the index $(e'',e',e)$ runs over the set $\set{\cat{E}}^3$.
     We generally denote by $g\cdot f$ the composite, i.e. the image under such a map of a pair $(g,f)$.
 
-  \item If $f\colon e\to e'$ is a morphism in $\cat{E}$, then
+  \item[(5)] If $f\colon e\to e'$ is a morphism in $\cat{E}$, then
     \[
       f\cdot\id_e
       = f
       = \id_{e'}\cdot f.
     \]
 
-  \item If $f\colon e\to e'$, $g\colon e'\to e''$, and $h\colon e''\to e'''$ are ``consecutive'' morphisms in $\cat{E}$, then
+  \item[(6)] If $f\colon e\to e'$, $g\colon e'\to e''$, and $h\colon e''\to e'''$ are ``consecutive'' morphisms in $\cat{E}$, then
     \[
       h\cdot(g\cdot f)
       = (h\cdot g)\cdot f,
@@ -245,10 +250,10 @@ A pair $(\set{\cat{E}},\Hom_\cat{E})$ satisfying conditions~1 and 2 is called a 
 We say that $F\colon\cat{E}\to\cat{E}'$ is a \emph{functor} if $\cat{E}$ and $\cat{E}'$ are categories and $F$ is a pair $(\set{F},F_1)$ such that
 
 \begin{enumerate}
-  \item[1\textquotesingle.] $\set{F}\colon\set{\cat{E}}\to\set{\cat{E}'}$ is a map.
+  \item[(1')] $\set{F}\colon\set{\cat{E}}\to\set{\cat{E}'}$ is a map.
     We denote simply by $F(e)$ the object $\set{F}(e)$, for all $e\in\set{\cat{E}}$.
 
-  \item[2\textquotesingle.] $F_1$ is a family of maps of the form
+  \item[(2')] $F_1$ is a family of maps of the form
     \[
       F_1(e',e)\colon
       \Hom_\cat{E}(e',e)
@@ -257,12 +262,12 @@ We say that $F\colon\cat{E}\to\cat{E}'$ is a \emph{functor} if $\cat{E}$ and $\c
     where the index $(e',e)$ runs over the set $\set{\cat{E}}^2$.
     If $f\colon e\to e'$ is a morphism in $\cat{E}$, we denote simply by $F(f)$ the morphism $F_1(e',e)(f)$.
 
-  \item[3\textquotesingle.] $F(\id_e)=\id_{F(e)}$ for all $e\in\set{\cat{E}}$.
+  \item[(3')] $F(\id_e)=\id_{F(e)}$ for all $e\in\set{\cat{E}}$.
 
-  \item[4\textquotesingle.] $F(g\cdot f)=F(g)\cdot F(f)$, if $f\colon e\to e'$ and $g\colon e'\to e''$ are consecutive morphisms in $\cat{E}$.
+  \item[(4')] $F(g\cdot f)=F(g)\cdot F(f)$, if $f\colon e\to e'$ and $g\colon e'\to e''$ are consecutive morphisms in $\cat{E}$.
 \end{enumerate}
 
-A \emph{natural transformation $I\colon F\to F'$}, where $F\colon\cat{E}\to\cat{E}'$ and $F'\colon\cat{E}\to\cat{E}'$ are functors with the same source and target, is given by a family of morphisms in $\cat{E}'$ of the form $I(e)\colon F(e)\to F'(e)$, where the index $e$ runs over the set $\set{\cat{E}}$, such that for every morphism $f\colon e\to e'$ in $\cat{E}$ we have the relation $I(e')\cdot F(f)=F'(f)\cdot I(e)$.
+A \emph{natural transformation $I\colon F\to F'$}, where $F,F'\colon\cat{E}\to\cat{E}'$ are functors with the same source and target, is given by a family of morphisms in $\cat{E}'$ of the form $I(e)\colon F(e)\to F'(e)$, where the index $e$ runs over the set $\set{\cat{E}}$, such that for every morphism $f\colon e\to e'$ in $\cat{E}$ we have the relation $I(e')\cdot F(f)=F'(f)\cdot I(e)$.
 \oldpage{221}
 We denote by $\cat{E}'^{\cat{E}}$ the usual category whose objects are the functors $F\colon\cat{E}\to\cat{E}'$ and whose morphisms are the natural transformations between these functors.
 The composition law in $\cat{E}'^{\cat{E}}$ will generally borrow the notation from that of $\cat{E}'$, which risks producing confusion.
@@ -435,6 +440,180 @@ A \emph{pointed $\TT$-graph} is a triple $(b,a,i)$ such that $(b,a)$ is a $\TT$-
   a\cdot i= Ie.
   \tag{1}
 \]
+We then form a fibre product of $(a,Tb)$:
+\[
+  \begin{tikzcd}[sep=huge]
+    T\pi
+      \ar[d,swap,"Tb"]
+  & \pi_2
+      \ar[l,swap,"v_2"]
+      \ar[d,"v_1"]
+  \\Te
+  & \pi
+      \ar[l,"a"]
+  \end{tikzcd}
+\]
+The relations
+\[
+  \begin{gathered}
+    a\cdot\id_\pi
+    = a
+    = \id_{Te}\cdot a
+    = Tb\cdot(Ti\cdot a)
+  \\a\cdot(i\cdot b)
+    = Ie\cdot b
+    = Tb\cdot I\pi
+  \end{gathered}
+\]
+imply the existence of \unsure{brackets} $i_1,i_2\colon\pi\to\pi_2$ such that
+\[
+  v_1\cdot i_1
+  = \id_p
+  \qquad
+  v_2\cdot i_1
+  = Ti\cdot a
+  \tag{2}
+\]
+\[
+  v_1\cdot i_2
+  = i\cdot b
+  \qquad
+  v_2\cdot i_2
+  = I\pi.
+  \tag{3}
+\]
+\oldpage{226}
+We then form a fibre product $(w_1,w_2)$ of $(v_2,Tv_1)$.
+If $k\colon\pi_2\to\pi$ is a morphism that satisfies
+\[
+  \begin{aligned}
+    b\cdot k
+    &= b\cdot v_1
+  \\a\cdot k
+    &= Ke\cdot Ta\cdot v_2
+  \end{aligned}
+  \tag{4}
+\]
+then the relations
+\[
+  \begin{gathered}
+    a\cdot(k\cdot w_1)
+    = Ke\cdot Ta\cdot v_2\cdot w_1
+    = Ke\cdot TTb\cdot Tv_2\cdot w_2
+    = Tb\cdot(K\pi\cdot Tv_w\cdot w_2)
+  \\a\cdot(v_1\cdot w_1)
+    = Tb\cdot Tv_1\cdot w_2
+    = Tb\cdot (Tk\cdot w_2)
+  \end{gathered}
+\]
+imply the existence of \unsure{brackets} $k_1,k_2\colon\pi_3\to\pi_2$ such that
+\[
+  v_1\cdot k_1
+  = k\cdot w_1
+  \qquad
+  v_2\cdot k_1
+  = K\pi\cdot Tv_2\cdot w_2
+  \tag{5}
+\]
+\[
+  v_1\cdot k_2
+  = v_1\cdot w_1
+  \qquad
+  v_2\cdot k_2
+  = Tk\cdot w_2
+  \tag{6}
+\]
+
+\begin{figure}
+  \[
+    \begin{tikzcd}[sep=6em]
+      TTTe
+        \ar[d,swap,"KTe",bend right=20]
+        \ar[d,"TKe",bend left=20]
+    & TT\pi
+        \ar[l,swap,"TTa"]
+        \ar[d,"K\pi"]
+        \ar[dl,"TTb"]
+    & T\pi_2
+        \ar[l,swap,"Tv_2"]
+        \ar[dl,swap,near start,"Tv_1"]
+        \ar[dl,"Tk",bend left=20]
+    & \pi_3
+        \ar[l,swap,"w_2"]
+        \ar[dl,swap,"w_1"]
+        \ar[dl,swap,"k_2",bend left=30]
+        \ar[dl,"k_1",bend left=50]
+    \\TTe
+        \ar[d,swap,"Ke"]
+    & T\pi
+        \ar[l,swap,"Ta"]
+        \ar[dl,swap,"Tb"]
+    & \pi_2
+        \ar[l,swap,"v_2"]
+        \ar[u,swap,"I\pi_2"]
+        \ar[dl,swap,"v_1"]
+        \ar[dl,swap,"k",bend left=25]
+    \\Te
+        \ar[u,near end,"ITe",bend left=40]
+        \ar[u,swap,near end,"TIe",bend right=40]
+        \ar[ur,swap,"Ti",bend right=20]
+    & \pi
+        \ar[l,swap,"a"]
+        \ar[u,swap,"I\pi"]
+        \ar[ur,"i_1",bend right=55]
+        \ar[ur,swap,"i_2",bend right=70]
+        \ar[dl,swap,"b"]
+    \\e
+        \ar[u,"Ie"]
+        \ar[ur,swap,"i",bend right=25]
+    \end{tikzcd}
+  \]
+  \caption{~}
+\end{figure}
+
+A \emph{$\TT$-category}, then, is a quadruple $\theta=(b,a,i,k)$ such that $(b,a,i)$ is a pointed $\TT$-graph and further satisfying axioms~(4), (5), (6), and (7) and (8) below:
+\begin{enumerate}
+  \item[(7)] $k\cdot i_1 = \id_\pi = k\cdot i_2$ (``identity'')
+  \item[(8)] $k\cdot k_1 = k\cdot k_2$ (``associativity'').
+\end{enumerate}
+
+\begin{rmenv}{Remark}
+  \oldpage{227}
+  In reality, $\theta$ depends on the choice of the fibre products $(v_1,v_2)$ and $(w_1,w_2)$, and we call these pairs the fibre products \emph{associated} to the $\TT$-category $\theta$;
+  their data is implicit in the quadruple $(b,a,i,k)$.
+  We call $b$ and $a$ the \emph{target morphism} and \emph{source morphism} (respectively) in $\theta$;
+  the object $e$ is denoted $\set{\theta}$ and called the \emph{object of objects}, and the object $\pi$ is called the \emph{object of morphisms}.
+  More generally, $\pi_n$ for $n=0,1,2,3$, where $\pi_0=e$ and $\pi_1=\pi$, is called the \emph{object of paths of length $n$} in $\theta$.
+  (All this terminology can also be applied to a $\TT$-graph.)
+
+  When $\cat{E}$ is endowed with a canonical choice of fibre products, and $(v_1,v_2)$ and $(w_1,w_2)$ are canonically chosen, we say that $\theta$ is a \emph{canonical} (or \emph{official}) \emph{$\TT$-category}.
+  In the case where $\cat{E}$ is endowed with such a choice, it will be implicit that the $\TT$-category is canonical, and we will explicitly point out if this is not the case.
+  It is evident that to every non-canonical $\TT$-category there is an associated canonical $\TT$-category that has the same underlying $\TT$-graph, and that there is a unique isomorphism (see the definition of morphism that follows) between them.
+  Conversely, if $\theta$ is a canonical $\TT$-category, then every other choice of two fibre products above gives exactly one non-canonical $\TT$-category to which it is isomorphic.
+  This remark will be tacitly applied to other analogous structures.
+\end{rmenv}
+
+If $\theta=(b,a)$ and $\theta'=(b',a')$ are $\TT$-graphs, then a \emph{morphism} $f$ from $\theta$ to $\theta'$, also denoted $(f_0,f_1)\colon\theta\to\theta'$, is determined by a pair of morphisms $f_0\colon e\to e'$ and $f_1\colon\pi\to\pi'$ in $\cat{E}$ between the objects of objects and the objects of morphisms (respectively) that satisfies the following relations:
+\[
+  \begin{aligned}
+    b'\cdot f_1
+    &= f_0\cdot b
+  \\a'\cdot f_1
+    &= Tf_0\cdot a.
+  \end{aligned}
+  \tag{1'}
+\]
+We also denote $f_0$ by $\set{f}$ and call it the \emph{underlying morphism of $f$}.
+
+If $\theta=(b,a,i)$ and $\theta'=(b',a',i')$ are pointed $\TT$-graphs, then a morphism $(f_0,f_1)\colon\theta\to\theta'$ is defined by a morphism of the underlying $\TT$-graphs that further satisfies
+\[
+  i'\cdot f_0
+  = f_1\cdot i.
+  \tag{2'}
+\]
+
+\oldpage{228}
+Finally,
 
 
 
