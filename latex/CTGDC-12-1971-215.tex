@@ -124,7 +124,7 @@
 
   \medskip
   {\noindent}produced with kind permission from \todo{permissions}
-  
+
   \hfill--- Timothy Hosgood (translator)
 \end{translator}
 
@@ -173,7 +173,7 @@ I would like, in closing, to express my thanks to Madame Bastiani, who encourage
 
 
 
-%% Content %% 
+%% Content %%
 
 \clearpage
 \tableofcontents
@@ -613,7 +613,55 @@ If $\theta=(b,a,i)$ and $\theta'=(b',a',i')$ are pointed $\TT$-graphs, then a mo
 \]
 
 \oldpage{228}
-Finally,
+Finally, let $\theta=(b,a,i,k)$ and $\theta'=(b',a',i',k')$ be $\TT$-categories;
+if $(f_0,f_1)$ defines a morphism of the underlying pointed $\TT$-graphs, then there exist \unsure{brackets} $f_2\colon\pi_2\to\pi'_2$ and $f_3\colon\pi_3\to\pi'_3$ characterised by the relations
+\[
+  \begin{gathered}
+    v'_1\cdot f_2
+    = f_1\cdot v_1
+    \qquad
+    v'_2\cdot f_2
+    = Tf_1\cdot v_2
+  \\w'_1\cdot f_3
+    = f_2\cdot w_1
+    \qquad
+    w'_2\cdot f_3
+    = T f_2\cdot w_2
+  \end{gathered}
+\]
+where $(v_1,v_2)$ and $(w_1,w_2)$ are the fibre products associated to $\theta$, and $(v'_1,v'_2)$ and $(w'_1,w'_2)$ are the fibre products associated to $\theta'$.
+Then $(f_0,f_1)$ defines a \emph{morphism of $\TT$-categories}, or a \emph{$\TT$-functor}, $(f_0,f_1)\colon\theta\to\theta'$ if, further,
+\[
+  k'\cdot f_2
+  = f_1\cdot k.
+  \tag{3'}
+\]
+
+Let $\mathbf{2}$ be the category consisting of two objects, $0$ and $1$, and a single morphism $0\to1$ (apart from the two identity morphisms).
+An object of $\cat{E}^\mathbf{2}$ can be identified with a morphism in $\cat{E}$, and $(g,g')\colon f\to f'$ can be associated to a morphism in $\cat{E}^\mathbf{2}$ if $g,g',f,f'$ are morphisms in $\cat{E}$ such that $f'\cdot g'=g\cdot f$.
+If $\cat{E}$ admits fibre products, then so too does $\cat{E}^\mathbf{2}$, and, if $\TT=(T,I,K)$ is a triple on $\cat{E}$, then it induces a triple $\TT^\mathbf{2}$ on $\cat{E}^\mathbf{2}$, where $\TT^\mathbf{2}=(T^\mathbf{2},I^\mathbf{2},K^\mathbf{2})$, just as for any category of presheaves (i.e. of functors) with values in $\cat{E}$.
+If $f\colon e\to e'$ is a morphism in $\cat{E}$, and thus an object in $\cat{E}^\mathbf{2}$, then $T^\mathbf{2}f=Tf$, and $I^\mathbf{2}f$ and $K^\mathbf{2}f$ are the following morphisms:
+\[
+  \begin{aligned}
+    I^\mathbf{2}f
+    &= (Ie',Ie)
+    \colon f
+    \to Tf
+  \\K^\mathbf{2}f
+    &= (Ke', Ke)
+    \colon TTf
+    \to Tf.
+  \end{aligned}
+\]
+If $(g,g')\colon f\to f'$ is a morphism in $\cat{E}^\mathbf{2}$, then its image under $T^\mathbf{2}$ is, by definition, the morphism $(Tg,Tg')\colon Tf\to Tf'$ in $\cat{E}^\mathbf{2}$.
+
+\begin{itenv}{Proposition~1.1.1}
+  A $\TT^\mathbf{2}$-category is identifiable with a morphism of $\TT$-categories.
+\end{itenv}
+
+\begin{proof}
+  The
+\end{proof}
 
 
 
