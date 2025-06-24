@@ -2,7 +2,7 @@
 
 \usepackage[margin=1.6in]{geometry}
 
-\title{$T$-categories\\(Categories in a triple)}
+\title{$\TT$-categories\\(Categories in a triple)}
 \author{Albert Burroni}
 \date{}
 
@@ -582,7 +582,7 @@ A \emph{$\TT$-category}, then, is a quadruple $\theta=(b,a,i,k)$ such that $(b,a
   In reality, $\theta$ depends on the choice of the fibre products $(v_1,v_2)$ and $(w_1,w_2)$, and we call these pairs the fibre products \emph{associated} to the $\TT$-category $\theta$;
   their data is implicit in the quadruple $(b,a,i,k)$.
   We call $b$ and $a$ the \emph{target morphism} and \emph{source morphism} (respectively) in $\theta$;
-  the object $e$ is denoted $\set{\theta}$ and called the \emph{object of objects}, and the object $\pi$ is called the \emph{object of morphisms}.
+  the object $e$ is denoted $\set{\theta}$ and called the \emph{object of objects} (or simply the \emph{objects object}), and the object $\pi$ is called the \emph{object of morphisms} (or simply the \emph{morphisms object}).
   More generally, $\pi_n$ for $n=0,1,2,3$, where $\pi_0=e$ and $\pi_1=\pi$, is called the \emph{object of paths of length $n$} in $\theta$.
   (All this terminology can also be applied to a $\TT$-graph.)
 
@@ -593,7 +593,7 @@ A \emph{$\TT$-category}, then, is a quadruple $\theta=(b,a,i,k)$ such that $(b,a
   This remark will be tacitly applied to other analogous structures.
 \end{rmenv}
 
-If $\theta=(b,a)$ and $\theta'=(b',a')$ are $\TT$-graphs, then a \emph{morphism} $f$ from $\theta$ to $\theta'$, also denoted $(f_0,f_1)\colon\theta\to\theta'$, is determined by a pair of morphisms $f_0\colon e\to e'$ and $f_1\colon\pi\to\pi'$ in $\cat{E}$ between the objects of objects and the objects of morphisms (respectively) that satisfies the following relations:
+If $\theta=(b,a)$ and $\theta'=(b',a')$ are $\TT$-graphs, then a \emph{morphism} $f$ from $\theta$ to $\theta'$, also denoted $(f_0,f_1)\colon\theta\to\theta'$, is determined by a pair of morphisms $f_0\colon e\to e'$ and $f_1\colon\pi\to\pi'$ in $\cat{E}$ between the objects objects and the morphisms objects (respectively) that satisfies the following relations:
 \[
   \begin{aligned}
     b'\cdot f_1
@@ -660,8 +660,32 @@ If $(g,g')\colon f\to f'$ is a morphism in $\cat{E}^\mathbf{2}$, then its image 
 \end{itenv}
 
 \begin{proof}
-  The
+  The proof, which is elementary, is left to the reader;
+  we simply note that, if $(f_0,f_1)\colon\theta\to\theta'$ is a morphism of $\TT$-categories, then $f_0$ is the objects object, and $f_1$ the morphisms object, of the associated $\TT^\mathbf{2}$-category.
 \end{proof}
+
+We can make analogous remarks for $\TT$-graphs and pointed $\TT$-graphs.
+
+\oldpage{229}
+If $\cat{E}$ is endowed with official finite fibre products, then we denote by $\Cat{Gr}(\TT)$ and $\Cat{Cat}(\TT)$ the categories whose objects are the official $\TT$-graphs and the official $\TT$-categories (respectively).
+If $\cat{E}$ admits finite fibre products without us having made an official choice, then we sometimes denote by $\Cat{Gr}(\TT)$ and $\Cat{Cat}(\TT)$ the categories (which are equivalent to the above) whose objects are all $\TT$-graphs and all $\TT$-categories (respectively).
+The composition laws in these categories are evident.
+
+
+\subsection{$\TT$-preorders}
+
+A \emph{regular} $\TT$-graph is a $\TT$-graph $(b,a)$ such that the relations
+\[
+  b\cdot f = b\cdot f'
+  \textand
+  a\cdot f = a\cdot f'
+\]
+imply that $f=f'$.
+A \emph{$\TT$-preorder} is a $\TT$-category whose underlying graph is regular.
+
+\begin{itenv}{Proposition~1.2.2}
+  If
+\end{itenv}
 
 
 
