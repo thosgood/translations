@@ -149,7 +149,7 @@ This led Barr, in \cite{Ba}, to define ``relational $\TT$-algebras'' so that the
 But Barr seemed disappointed in the fact that, apart from this particular case, and that of preorders relative to the identity triple, there were few examples.
 Independently, the new system of axioms for topologies that we had given in \cite{Bu} led us to a similar idea (unfortunately with the triple of filters\ldots but our goal was to situate topologies amongst quasi-topologies) that consisted in seeing topologies as a notion analogous to that of preorders (it is indicative, indeed, that the structure of a finite topology is equivalent to that of a finite preorder).
 But this idea necessitated us to try passing from preorders to categories, and we found, in the definitions of Bénabou \cite{Be} of categories in terms of spans, what we needed in order to define $\TT$-categories.
-We show (\cref{proposition-i.2.4}) that the ``relational $\TT$-algebras'' are obtained as a particular case: that of $\TT$-preorders (which are to $\TT$-categories what preorders are to categories).
+We show (\hyperref[proposition:i.2.4]{Proposition~I.2.4}) that the ``relational $\TT$-algebras'' are obtained as a particular case: that of $\TT$-preorders (which are to $\TT$-categories what preorders are to categories).
 
 \oldpage{216}
 The general outline of this article is as follows.
@@ -160,16 +160,16 @@ It is then easy to observe that these structures must be given by the endofuncto
 Then we will expand on some general properties: those that can we obtain without placing any hypotheses on the triple $\TT$, essentially the existence of projective limits and the fibration of the forgetful functor to $\cat{E}$ (which will allow us, in passing, to resolve the problem that consists of universally embedding the forgetful functor of $\TT$-algebras into a fibrant functor).
 Other properties, such as the existence of inductive limits, the adjunction with the forgetful functor to $\TT$-graphs (the analogue of the Stone--Čech--Barr theorem), or the cofibration of the forgetful functor to $\cat{E}$ cannot be obtained unless we suppose the triple $\TT$ to be ``bounded''.
 
-\hyperref{sec:ii}{Chapter~II} is essentially dedicated to two interpretations of $\TT$-categories, on one hand as monads (or monoids, if one prefers) in the ``Kleisli pseudo-category'', and on the other as pseudo-algebras in the ``bicatgeory of spans''.
+\hyperref[sec:ii]{Chapter~II} is essentially dedicated to two interpretations of $\TT$-categories, on one hand as monads (or monoids, if one prefers) in the ``Kleisli pseudo-category'', and on the other as pseudo-algebras in the ``bicatgeory of spans''.
 
-\hyperref{sec:ii}{Chapter~III} gives various examples, of which the most detailed is that of multicategories (which generalise those defined by Lambek in \cite{La}).
-For this, we have been led to study in Sections~\hyperref{sec:iii.1}{III.1} and \hyperref{sec:iii.2}{III.2} the particular case where $\TT$ is a ``strongly cartesian'' triple, which not only allows for the construction of free $\TT$-categories over the usual model of free monoids (see the Appendix), but also gives a manageable description of this structure.
+\hyperref[sec:ii]{Chapter~III} gives various examples, of which the most detailed is that of multicategories (which generalise those defined by Lambek in \cite{La}).
+For this, we have been led to study in Sections~\hyperref[sec:iii.1]{III.1} and \hyperref[sec:iii.2]{III.2} the particular case where $\TT$ is a ``strongly cartesian'' triple, which not only allows for the construction of free $\TT$-categories over the usual model of free monoids (see the Appendix), but also gives a manageable description of this structure.
 \oldpage{217}
 We will thus quantitatively improve the examples given by Barr, and we will also later study other useful examples, but this problem appeared less important to us long as our definition seems more natural and has a more general reach.
 
-\hyperref{sec:iv}{Chapter~IV} is dedicated first of all to the description of various particular cases of $\TT$-functors, for example étale (or ``discrete fibration'') $\TT$-functors, and then a generalisation, of $\TT$-profunctors, that give an approach to $\TT$-natural transformations.
+\hyperref[sec:iv]{Chapter~IV} is dedicated first of all to the description of various particular cases of $\TT$-functors, for example étale (or ``discrete fibration'') $\TT$-functors, and then a generalisation, of $\TT$-profunctors, that give an approach to $\TT$-natural transformations.
 
-In a subsequent work, we will define tensor $\TT$-categories, that will give various ``coherence'' formulas, in particular those of the ``pseudo-categories'' introduced in \hyperref{sec:ii}{Chapter~II}.
+In a subsequent work, we will define tensor $\TT$-categories, that will give various ``coherence'' formulas, in particular those of the ``pseudo-categories'' introduced in \hyperref[sec:ii]{Chapter~II}.
 We equally hope to undertake a homological study of these structure.
 
 I would like, in closing, to express my thanks to Madame Bastiani, who encouraged me to work on this subject, and who reread the manuscript, which enabled me to correct numerous imperfections and sometimes errors.
@@ -801,6 +801,7 @@ We have just seen that $\Alg{\TT}$ can be identified with the usual category of 
 Furthermore, when $\cat{E}=\Cat{Set}$ is the category of sets associated to a universe, we have:
 
 \begin{itenv}{Proposition~1.2.4}
+\label{proposition:i.2.4}
   If $\cat{E}=\Cat{Set}$, then the category $\Ord{\TT}$ is equivalent to the category of ``relational $\TT$-algebras'' of Barr {\cite{Ba}}.
 \end{itenv}
 
@@ -821,7 +822,69 @@ Furthermore, when $\cat{E}=\Cat{Set}$ is the category of sets associated to a un
     \big\}
     \subset Te\times TTe.
   \]
+  We identify every map $f\colon e\to e'$ with a relation, and we denote by
+  \[
+    \tilde{f}
+    = \big\{
+      \big(f(x),x\big)
+      \mid x\in e
+    \big\}
+    \subset e'\times e
+  \]
+  its ``graph''.
+  We will show that $(b,a)$ is a $\TT$-preorder.
+
+  For each $x\in e$, set $i(x)=(x,Ie(x))$;
+  we have that $i(x)\in\pi$, since, by (1), $(x,x)\in\id_e$ implies that there exists $y\in Te$ such that
+  \[
+    (x,y)\in r
+    \textand
+    (y,x)\in Ie
+  \]
+  and, since $Ie$ is a map, we have that $y=Ie(x)$;
+  thus $i(x)\in\pi$, and $i\colon e\to\pi$ is a map such that
+  \[
+    b\cdot i = \id_e
+    \textand
+    a\cdot i = Ie.
+  \]
+
+  An element $((x,y),m)$ of the fibre product $\pi_2$ of $(a,Tb)$ is characterised by the relations $(x,y)\in\pi$, $m\in T\pi$, and $y=Tb(m)$.
+  Set
+  \[
+    k((x,y),m)
+    = (x,Ke\cdot Ta(m))
+  \]
+  which is an element of $\pi$.
+  Indeed, since $(Tb(m),Ta(m))\in\hat{\pi}$, condition~(2) implies that $(x,Ta(m))\in r\cdot Ke$, and so there exists $y\in Te$ such that $(x,y)\in\pi$ and $(y,Ta(m))\in Ke$.
+  \oldpage{232}
+  Since $Ke$ is an application, we deduce that $y=Ke\cdot Ta(m)$, which shows that $k((x,y),m)\in\pi$, and that the map $k\colon\pi_2\to\pi$ satisfies the conditions
+  \[
+    b\cdot k = b\cdot v_1
+    \textand
+    a\cdot k = Ke\cdot Ta\cdot v_2.
+  \]
+  This, by \unsure{which proposition number?} proves that $(b,a)$ is a $\TT$-preorder.
 \end{proof}
+
+
+\subsection{Properties (projective limits, fibrations, \ldots)}
+\label{sub:i.3}
+
+We have a sequence of forgetful functors
+\[
+  \Alg{\TT}
+  \to \Ord{\TT}
+  \to \Cat{Cat}(\TT)
+  \to \Gr{\TT}
+  \to \cat{E}.
+  \tag{$\ast$}
+\]
+The first two are full inclusions, the third is faithful and the fourth is (in general) not.
+
+\begin{itenv}{Proposition~I.3.5}
+  If $\cat{E}$ admits projective $\cat{A}$-limits, then so too do each of the categories appearing in the sequence ($\ast$), and the functors in this sequence commute with these limits.
+\end{itenv}
 
 
 
