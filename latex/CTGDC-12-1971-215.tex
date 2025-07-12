@@ -19,7 +19,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{hyperref}
-\usepackage{cleveref}
+\usepackage[nameinlink,noabbrev,capitalize]{cleveref}
 \usepackage{xcolor}
 \hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
 \usepackage{enumerate}
@@ -77,13 +77,17 @@
 \newcommand{\Cat}[1]{\mathsf{#1}}
 \newcommand{\set}[1]{|#1|}
 
+\newcommand{\Gr}[1]{\Cat{Gr}(#1)}
 \newcommand{\Alg}[1]{\Cat{Alg}(#1)}
+\newcommand{\Ord}[1]{\Cat{Ord}(#1)}
 \newcommand{\Kl}[1]{\Cat{Kl}(#1)}
 
 \DeclareMathOperator{\Hom}{Hom}
 
 
-%% Bibliography %%
+%% Links and references %%
+
+\crefname{section}{\S\!\!}{\S\S\!\!}
 
 \usepackage[backend=bibtex]{biblatex}
 \addbibresource{\jobname.bib}
@@ -149,23 +153,23 @@ We show (\cref{proposition-i.2.4}) that the ``relational $\TT$-algebras'' are ob
 
 \oldpage{216}
 The general outline of this article is as follows.
-A Chapter~0 is dedicated to some details of terminology.
-Chapter~1 first gives a definition of $\TT$-categories that demonstrates their relation to categories: if $\cat{E}=\Cat{Set}$, then the morphisms of a $\TT$-category appear, not as arrows going from one object to another object, but as arrows going from one structure on the objects to an object.
+\hyperref[sec:0]{Chapter~0} is dedicated to some details of terminology.
+\hyperref[sec:i]{Chapter~I} first gives a definition of $\TT$-categories that demonstrates their relation to categories: if $\cat{E}=\Cat{Set}$, then the morphisms of a $\TT$-category appear, not as arrows going from one object to another object, but as arrows going from one structure on the objects to an object.
 In this way, a ``convergence'' in a topology can be represented as an arrow $F\to x$ going from a filter to a point.
 It is then easy to observe that these structures must be given by the endofunctor of a triple in order to be able to define the properties of reflexivity, transitivite, identity, and associativity of a $\TT$-category.
 Then we will expand on some general properties: those that can we obtain without placing any hypotheses on the triple $\TT$, essentially the existence of projective limits and the fibration of the forgetful functor to $\cat{E}$ (which will allow us, in passing, to resolve the problem that consists of universally embedding the forgetful functor of $\TT$-algebras into a fibrant functor).
 Other properties, such as the existence of inductive limits, the adjunction with the forgetful functor to $\TT$-graphs (the analogue of the Stone--Čech--Barr theorem), or the cofibration of the forgetful functor to $\cat{E}$ cannot be obtained unless we suppose the triple $\TT$ to be ``bounded''.
 
-Chapter~II is essentially dedicated to two interpretations of $\TT$-categories, on one hand as monads (or monoids, if one prefers) in the ``Kleisli pseudo-category'', and on the other as pseudo-algebras in the ``bicatgeory of spans''.
+\hyperref{sec:ii}{Chapter~II} is essentially dedicated to two interpretations of $\TT$-categories, on one hand as monads (or monoids, if one prefers) in the ``Kleisli pseudo-category'', and on the other as pseudo-algebras in the ``bicatgeory of spans''.
 
-Chapter~III gives various examples, of which the most detailed is that of multicategories (which generalise those defined by Lambek in \cite{La}).
-For this, we have been led to study in Sections~III.1 and III.2 the particular case where $\TT$ is a ``strongly cartesian'' triple, which not only allows for the construction of free $\TT$-categories over the usual model of free monoids (see the Appendix), but also gives a manageable description of this structure.
+\hyperref{sec:ii}{Chapter~III} gives various examples, of which the most detailed is that of multicategories (which generalise those defined by Lambek in \cite{La}).
+For this, we have been led to study in Sections~\hyperref{sec:iii.1}{III.1} and \hyperref{sec:iii.2}{III.2} the particular case where $\TT$ is a ``strongly cartesian'' triple, which not only allows for the construction of free $\TT$-categories over the usual model of free monoids (see the Appendix), but also gives a manageable description of this structure.
 \oldpage{217}
 We will thus quantitatively improve the examples given by Barr, and we will also later study other useful examples, but this problem appeared less important to us long as our definition seems more natural and has a more general reach.
 
-Chapter~IV is dedicated first of all to the description of various particular cases of $\TT$-functors, for example étale (or ``discrete fibration'') $\TT$-functors, and then a generalisation, of $\TT$-profunctors, that give an approach to $\TT$-natural transformations.
+\hyperref{sec:iv}{Chapter~IV} is dedicated first of all to the description of various particular cases of $\TT$-functors, for example étale (or ``discrete fibration'') $\TT$-functors, and then a generalisation, of $\TT$-profunctors, that give an approach to $\TT$-natural transformations.
 
-In a subsequent work, we will define tensor $\TT$-categories, that will give various ``coherence'' formulas, in particular those of the ``pseudo-categories'' introduced in Chapter~II.
+In a subsequent work, we will define tensor $\TT$-categories, that will give various ``coherence'' formulas, in particular those of the ``pseudo-categories'' introduced in \hyperref{sec:ii}{Chapter~II}.
 We equally hope to undertake a homological study of these structure.
 
 I would like, in closing, to express my thanks to Madame Bastiani, who encouraged me to work on this subject, and who reread the manuscript, which enabled me to correct numerous imperfections and sometimes errors.
@@ -182,6 +186,7 @@ I would like, in closing, to express my thanks to Madame Bastiani, who encourage
 \clearpage
 \setcounter{section}{-1}
 \section{Terminology}
+\label{sec:0}
 
 \oldpage{219}
 
@@ -196,7 +201,7 @@ The only goal of the reminders below is the allow us to make precise the termino
 
 \subsection{Categories}
 
-A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, \iota, \kappa)$ satisfying conditions~1 to 6 below:
+A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, \iota, \kappa)$ satisfying conditions~(1) to (6) below:
 
 \begin{enumerate}
   \item[(1)] $\set{\cat{E}}$ is a set; its elements are called \emph{objects of $\cat{E}$}.
@@ -408,6 +413,7 @@ For example, the Eilenberg--Moore functor $\Kl{\TT}\to\Alg{\TT}$ is fully faithf
 
 \renewcommand{\thesection}{\Roman{section}}
 \section{General properties of $\TT$-categories}
+\label{sec:i}
 
 \oldpage{225}
 We are going to replace the morphism $b\colon Te\to e$ of a $\TT$-algebra, where $\TT$ is a triple on a category $\cat{E}$, by a span, i.e. by a pair of morphism in $\cat{E}$ with the same target
@@ -422,6 +428,7 @@ below, we will draw inspiration from the ``global'' definition of a category in 
 
 
 \subsection{$\TT$-categories}
+\label{sub:i.1}
 
 In the rest of this chapter, $\cat{E}$ will be a category admitting finite fibre products, and $\TT=(T,I,K)$ a triple on $\cat{E}$.
 
@@ -667,12 +674,13 @@ If $(g,g')\colon f\to f'$ is a morphism in $\cat{E}^\mathbf{2}$, then its image 
 We can make analogous remarks for $\TT$-graphs and pointed $\TT$-graphs.
 
 \oldpage{229}
-If $\cat{E}$ is endowed with official finite fibre products, then we denote by $\Cat{Gr}(\TT)$ and $\Cat{Cat}(\TT)$ the categories whose objects are the official $\TT$-graphs and the official $\TT$-categories (respectively).
-If $\cat{E}$ admits finite fibre products without us having made an official choice, then we sometimes denote by $\Cat{Gr}(\TT)$ and $\Cat{Cat}(\TT)$ the categories (which are equivalent to the above) whose objects are all $\TT$-graphs and all $\TT$-categories (respectively).
+If $\cat{E}$ is endowed with official finite fibre products, then we denote by $\Gr{\TT}$ and $\Cat{Cat}(\TT)$ the categories whose objects are the official $\TT$-graphs and the official $\TT$-categories (respectively).
+If $\cat{E}$ admits finite fibre products without us having made an official choice, then we sometimes denote by $\Gr{\TT}$ and $\Cat{Cat}(\TT)$ the categories (which are equivalent to the above) whose objects are all $\TT$-graphs and all $\TT$-categories (respectively).
 The composition laws in these categories are evident.
 
 
 \subsection{$\TT$-preorders}
+\label{sub:i.2}
 
 A \emph{regular} $\TT$-graph is a $\TT$-graph $(b,a)$ such that the relations
 \[
@@ -684,8 +692,136 @@ imply that $f=f'$.
 A \emph{$\TT$-preorder} is a $\TT$-category whose underlying graph is regular.
 
 \begin{itenv}{Proposition~1.2.2}
-  If
+  If $(b,a)$ is a regular $\TT$-graph, $e$ the objects object, $\pi$ the morphisms object, $\pi_2$ the source of a fibre product of $(a,Tb)$, and $i\colon e\to\pi$ and $k\colon\pi_2\to\pi$ morphisms in $\cat{E}$ satisfying only conditions~(1) to (4) of \cref{sub:i.1}, then $(b,a,i,k)$ is a $\TT$-preorder.
+  Furthermore, conditions~(2') and (3') are consequences of (1') for a morphism into a $\TT$-preorder.
 \end{itenv}
+
+\begin{proof}
+  We have to show that the axioms of identity and associativity, (7) and (8) of \cref{sub:i.1}, are automatically satisfied.
+  Since $(b,a)$ is regular, the relations
+  \[
+    \begin{gathered}
+      k\cdot i_1
+      = \pi
+      = k\cdot i_2
+    \\k\cdot k_1
+      = k\cdot k_2
+    \end{gathered}
+  \]
+  lead to the following equalities:
+  \begin{enumerate}
+    \item[($\alpha$)] $b\cdot k\cdot i_1=b=b\cdot k\cdot i_2$
+    \item[($\beta$)] $a\cdot k\cdot i_1=a=a\cdot k\cdot i_2$
+    \item[($\gamma$)] $b\cdot k\cdot k_1=b\cdot k\cdot k_2$
+    \item[($\delta$)] $a\cdot k\cdot k_1=a\cdot k\cdot k_2$.
+  \end{enumerate}
+  Indeed,
+  \oldpage{230}
+  \[
+    b\cdot k\cdot i_1
+    \underset{(4)}{=} b\cdot v_1\cdot i_1
+    \underset{(2)}{=} b
+  \]
+  and similarly
+  \[
+    b\cdot k\cdot i_2
+    = b\cdot v_1\cdot i_2
+    \underset{(3)}{=} b\cdot i\cdot b
+    \underset{(1)}{=} b
+  \]
+  which proves ($\alpha$).
+  Next,
+  \[
+    \begin{aligned}
+      a\cdot k\cdot i_1
+      &\underset{(4)}{=} Ke\cdot Ta\cdot v_2\cdot i_1
+      = Ke\cdot Ta\cdot Ti\cdot a
+    \\&= Ke\cdot T(a\cdot i)\cdot a
+      \underset{(1)}{=} Ke\cdot TIe\cdot a
+    \\&= a
+    \end{aligned}
+  \]
+  and
+  \[
+    \begin{aligned}
+      a\cdot k\cdot i_2
+      &= Ke\cdot Ta\cdot v_2\cdot i_2
+    \\&= Ke\cdot Ta\cdot I\pi
+      =Ke\cdot ITe\cdot a
+    \\&= a
+    \end{aligned}
+  \]
+  which proves ($\beta$).
+  Then
+  \[
+    \begin{aligned}
+      b\cdot k\cdot k_1
+      &= b\cdot v_1\cdot k_1
+      = b\cdot k\cdot w_1
+    \\&= b\cdot v_1\cdot w_1
+      = b\cdot v_1\cdot k_2
+    \\&= b\cdot k\cdot k_2
+    \end{aligned}
+  \]
+  whence ($\gamma$).
+  Finally,
+  \[
+    \begin{aligned}
+      a\cdot k\cdot k_1
+      &= Ke\cdot Ta\cdot v_2\cdot k_1
+      = Ke\cdot Ta\cdot K\pi\cdot Tv_2\cdot w_2
+    \\&= Ke\cdot KTe\cdot TTa\cdot Tv_2\cdot w_2
+      = Ke\cdot TKe\cdot TTa\cdot Tv_2\cdot w_2
+    \\&= Ke\cdot T(Ke\cdot Ta\cdot v_2)\cdot w_2
+      = Ke\cdot T(a\cdot k)\cdot w_2
+    \\&= Ke\cdot Ta\cdot Tk\cdot w_2
+      = Ke\cdot Ta\cdot v_2\cdot k_2
+    \\&= a\cdot k\cdot k_2
+    \end{aligned}
+  \]
+  which proves ($\delta$).
+  The verification of the last claim of the proposition is easy.
+\end{proof}
+
+This proposition allows us to identify a $\TT$-preorder with its underlying $\TT$-graph, and to sometimes write $(b,a)$ instead of $(b,a,i,k)$ for a $\TT$-preorder.
+Amongst all $\TT$-preorders, many interesting cases can be distinguished by properties of by $a$ and $b$ (see the examples in \cref{sec:iv}).
+We limit ourselves to noting the following fact:
+
+\begin{itenv}{Proposition~1.2.3}
+  A $\TT$-algebra $b$ over $e$ can be identified with a $\TT$-preorder $(b,a)$ such that $a=\id_{Te}$, and conversely.
+\end{itenv}
+
+\begin{proof}
+  This is completely evident, since the relation $a=\id_{Te}$ implies that $i=Ie$, $Ta=v_2=\id_{TTe}$, and $k=Ke$.
+\end{proof}
+
+\oldpage{231}
+We denote by $\Ord{\TT}$ and $\Alg{\TT}$ the full subcategories of the category $\Gr{\TT}$ whose objects are the $\TT$-preorders and the $\TT$-algebras (respectively).
+We have just seen that $\Alg{\TT}$ can be identified with the usual category of $\TT$-algebras.
+Furthermore, when $\cat{E}=\Cat{Set}$ is the category of sets associated to a universe, we have:
+
+\begin{itenv}{Proposition~1.2.4}
+  If $\cat{E}=\Cat{Set}$, then the category $\Ord{\TT}$ is equivalent to the category of ``relational $\TT$-algebras'' of Barr {\cite{Ba}}.
+\end{itenv}
+
+\begin{proof}
+  A ``relational $\TT$-prealgebra'' is a relation $r\colon Te\to e$.
+  It is defined by a subset $\pi$ of $e\times Te$, which defines a regular $\TT$-graph $(b,a)$ by taking $b$ and $a$ to be the composite of the inclusion $\pi\to e\times Te$ with the projections $e\times Te\to e$ and $e\times Te\to Te$ (respectively).
+  This is a ``relational $\TT$-algebra'' if it further satisfies the conditions:
+  \begin{enumerate}
+    \item[(1)] $\id_e\subset r\cdot Ie$
+    \item[(2)] $r\cdot\tilde{T}r\subset r\cdot Ke$
+  \end{enumerate}
+  where $\tilde{T}r\colon TTe\to Te$ is the relation defined by the set
+  \[
+    \hat{\pi}
+    = \big\{
+      \big(Tb(z), Ta(z)\big)
+      \mid z\in T\pi
+    \big\}
+    \subset Te\times TTe.
+  \]
+\end{proof}
 
 
 
