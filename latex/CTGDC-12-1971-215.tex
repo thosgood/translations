@@ -989,8 +989,38 @@ The first two are full inclusions, the third is faithful and the fourth is (in g
   It thus follows that $b\cdot k=b\cdot v_1$.
   It remains only to show that $(b,a,i,k)$ satisfies the axioms of identity and associativity, which we leave to the reader.
 
-  To see that
+  \oldpage{234}
+  To see that $(b,a,i,k)$ is indeed a projective limit, suppose that $(b',a',i',k')$ is a $\TT$-category, $(v'_1,v'_2)$ and $(w'_1,w'_2)$ the associated fibre products, and $e'$, $\pi'$, $\pi'_2$, $\pi'_3$ the objects of paths of length $n=0,1,2,3$ (respectively); consider a projective cone from this structure to the functor $\phi\colon\cat{A}\to\Cat{Cat}(\TT)$.
+  For each symbol of an object $x$ in \cref{fig:figure-1}, we denote by $q_n^x\colon x'\to\hat{x}(n)$ the $n$-th projection, and by $q^x$ the \unsure{bracket} characterised by $q_n^x=p_n^x\cdot q^x$ for all $n\in\set{\cat{A}}$.
+  By composing with the $p_n^{Te}$ on the left, we note that $m^{Te}\cdot Tq^e=q^{Te}$, and so
+  \[
+    \lim\hat{a}\cdot q^\pi
+    = q^{Te}\cdot a'
+    = m^{Te}\cdot Tq^e\cdot a'
+  \]
+  which implies the existence of a \unsure{bracket} $\overline{q}\colon\pi'\to\pi$ characterised by
+  \[
+    a\cdot\overline{q} = Tq^e\cdot a'
+    \textand
+    m^\pi\cdot\overline{q} = q^\pi.
+  \]
+  We then easily finish the proof by showing that $(q^e,\overline{q})$ defines a homomorphism of $\TT$-categories.
+
+  The construction of projective limits of $\TT$-graphs and of pointed $\TT$-graphs is, evidently, ``underlying'' to that which we have just done.
+  It is then immediate that the forgetful functor $\Cat{Cat}(\TT)\to\Gr(\TT)$ commutes with these limits.
+  Finally, if in the above construction of $\lim\phi$ the $\TT$-graphs $(b(n),a(n))$ were regular then so too would be $(b,a)$, which makes explicit the projective limits in $\Ord(\TT)$, and if the $a(n)$ were simply identities then so to would be $a$;
+  thus the ``full inclusion'' functor $\Alg(\TT)\to\Ord(\TT)$ commutes with these limits.
 \end{proof}
+
+\begin{corollary}
+  If $\TT$ commutes with projective $\cat{A}$-limits then the above construction simplifies, and $x=\lim\hat{x}$ for every symbol $x$.
+\end{corollary}
+
+\begin{proof}
+  This is completely immediate, since the projective $\cat{A}$-limits of fibre products are again fibre products (by the commutativity of projective limits with themselves).
+\end{proof}
+
+If
 
 
 
