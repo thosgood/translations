@@ -29,7 +29,8 @@
 
 %% Typography %%
 
-\usepackage{fouriernc}
+% \usepackage{fouriernc}
+\usepackage{mlmodern}
 \usepackage[cal=esstix,scr=rsfs]{mathalpha}
 
 \usetikzlibrary{arrows,arrows.meta}
@@ -201,7 +202,7 @@ The only goal of the reminders below is the allow us to make precise the termino
 
 \subsection{Categories}
 
-A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, \iota, \kappa)$ satisfying conditions~(1) to (6) below:
+A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, i, k)$ satisfying conditions~(1) to (6) below:
 
 \begin{enumerate}
   \item[(1)] $\set{\cat{E}}$ is a set; its elements are called \emph{objects of $\cat{E}$}.
@@ -216,19 +217,19 @@ A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, \iota, \
     are expressed by simply saying that $f\colon e\to e'$ is a \emph{morphism} (in $\set{\cat{E}}$);
     we call $e$ the \emph{source of $f$} and $e'$ the \emph{target of $f$}.
 
-  \item[(3)] $\iota$ is a family of maps of the form
+  \item[(3)] $i$ is a family of maps of the form
     \[
-      \iota(e)\colon \{\varnothing\}
+      i(e)\colon \{\varnothing\}
       \to \Hom_\cat{E}(e,e),
     \]
     where the index $e$ runs over the set $\set{\cat{E}}$.
-    We denote by $\id(e)$, $\id_e$, or even simply $e$, the morphism $\iota(e)(\varnothing)\colon e\to e$.
+    We denote by $\id(e)$, $\id_e$, or even simply $e$, the morphism $i(e)(\varnothing)\colon e\to e$.
     \oldpage{220}
     (This is a sophisticated way of giving a family of morphisms $\id_e\colon e\to e$, where $e\in\set{\cat{E}}$).
 
-  \item[(4)] $\kappa$ is a family of maps of the form
+  \item[(4)] $k$ is a family of maps of the form
     \[
-      \kappa(e'',e',e)\colon
+      k(e'',e',e)\colon
       \Hom_\cat{E}(e'',e')\times\Hom_\cat{E}(e',e)
       \to \Hom_\cat{E}(e'',e),
     \]
@@ -250,7 +251,7 @@ A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, \iota, \
     which allows to us to denote this morphism by $h\cdot g\cdot f$.
 \end{enumerate}
 
-A pair $(\set{\cat{E}},\Hom_\cat{E})$ satisfying conditions~1 and 2 is called a \emph{graph}; a triple $(\set{\cat{E}},\Hom_\cat{E},\iota)$ satisfying conditions~1, 2, and 3 is called a \emph{pointed graph}; and in both cases we use the corresponding terminology of conditions~1, 2, and 3.
+A pair $(\set{\cat{E}},\Hom_\cat{E})$ satisfying conditions~1 and 2 is called a \emph{graph}; a triple $(\set{\cat{E}},\Hom_\cat{E},i)$ satisfying conditions~1, 2, and 3 is called a \emph{pointed graph}; and in both cases we use the corresponding terminology of conditions~1, 2, and 3.
 
 We say that $F\colon\cat{E}\to\cat{E}'$ is a \emph{functor} if $\cat{E}$ and $\cat{E}'$ are categories and $F$ is a pair $(\set{F},F_1)$ such that
 
@@ -576,6 +577,7 @@ imply the existence of \unsure{brackets} $k_1,k_2\colon\pi_3\to\pi_2$ such that
     \end{tikzcd}
   \]
   \caption{~}
+  \label{fig:figure-1}
 \end{figure}
 
 A \emph{$\TT$-category}, then, is a quadruple $\theta=(b,a,i,k)$ such that $(b,a,i)$ is a pointed $\TT$-graph and further satisfying axioms~(4), (5), (6), and (7) and (8) below:
@@ -784,7 +786,7 @@ A \emph{$\TT$-preorder} is a $\TT$-category whose underlying graph is regular.
 \end{proof}
 
 This proposition allows us to identify a $\TT$-preorder with its underlying $\TT$-graph, and to sometimes write $(b,a)$ instead of $(b,a,i,k)$ for a $\TT$-preorder.
-Amongst all $\TT$-preorders, many interesting cases can be distinguished by properties of by $a$ and $b$ (see the examples in \cref{sec:iv}).
+Amongst all $\TT$-preorders, many interesting cases can be distinguished by properties of by $a$ and $b$ (see the examples in \unsure{\cref{sec:iv}}).
 We limit ourselves to noting the following fact:
 
 \begin{itenv}{Proposition~1.2.3}
@@ -885,6 +887,110 @@ The first two are full inclusions, the third is faithful and the fourth is (in g
 \begin{itenv}{Proposition~I.3.5}
   If $\cat{E}$ admits projective $\cat{A}$-limits, then so too do each of the categories appearing in the sequence ($\ast$), and the functors in this sequence commute with these limits.
 \end{itenv}
+
+\begin{proof}
+  We will first show how to construct a projective limit for a functor $\phi\colon\cat{A}\to\Cat{Cat}(\TT)$.
+  To each \emph{symbol} of an object $x$ in \cref{fig:figure-1} there corresponds an evident functor, which we denote by $U_x\colon\Cat{Cat}(\TT)\to\cat{E}$, that sends a $\TT$-category $\theta$ to the object denoted $x$ in \unsure{which figure?}.
+  Thus
+  \[
+    \begin{aligned}
+      U_e(\theta)
+      &= e
+    \\U_\pi(\theta)
+      &= \pi
+    \\U_Te(\theta)
+      &= Te
+    \end{aligned}
+  \]
+  etc., and to each \emph{symbol} of a morphism $\xi\colon x\to x'$ in \cref{fig:figure-1} associates a natural transformation $U_\xi\colon U_x\to U_{x'}$ such that $U_\xi(\theta)=\xi$.
+  We set
+  \[
+    \hat{x} = U_x\cdot\phi
+    \textand
+    \hat{\xi} = U_\xi\cdot\phi;
+  \]
+  then, for all $n\in\set{\cat{A}}$, we have that
+  \[
+    \phi(n)
+    = \big(
+      \hat{b}(n),
+      \hat{a}(n),
+      \hat{i}(n),
+      \hat{k}(n).
+    \big)
+  \]
+  If $\hat{x}\colon\cat{A}\to\cat{E}$ is a functor, then we denote by $p_n^x\colon\lim\hat{x}\to\hat{x}(n)$ the $n$-th canonical projection of this limit.
+  Similarly, if $\hat{\xi}\colon\hat{x}\to\hat{x}'$ is a natural transformation, then we denote by $\lim\hat{\xi}\colon\lim\hat{x}\to\lim\hat{x}'$ the unique morphism in $\cat{E}$ such that $\lim\hat{\xi}\cdot p_n^x=p_n^{x'}\cdot\hat{\xi}(n)$ for all $n\in\set{\cat{A}}$.\footnote{In a future work, we will consider \cref{fig:figure-1} as the ``sketch'' of $\TT$-categories, with the latter being exactly the ``realisations'' of this ``sketch'' endowed with ``typifications'' (see the terminology of \cite{Bu}, for example).}
+  We set $e=\lim\hat{e}$.
+
+  \oldpage{233}
+  Let $m^{Te}$ be the unique morphism (again called the \unsure{bracket}) that comes from the property of the projective limit $\lim\widehat{Te}$, such that $p_n^{Te}\cdot m^{Te}=Tp_n^e$ for all $n\in\set{\cat{A}}$.
+  We take a fibre product of $(\lim\hat{a},m^{Te})$:
+  \[
+    \begin{tikzcd}[sep=huge]
+      \lim\widehat{Te}
+    & Te
+        \ar[l,swap,"m^{Te}"]
+    \\\lim\hat{\pi}
+        \ar[u,"\lim\hat{a}"]
+    & \pi
+        \ar[l,"m^\pi"]
+        \ar[u,swap,"a"]
+    \end{tikzcd}
+  \]
+  We have that $m^{Te}\cdot Ie=\lim\widehat{Ie}$.
+  The $\TT$-graph $(b,a)$, where $b=\lim\hat{b}\cdot m^\pi$ and $a$ is the projection defined above, extends to a $\TT$-category.
+  Indeed, the relations
+  \[
+    \lim\hat{a}\cdot\lim\hat{i}
+    = \lim\widehat{Ie}
+    = m^{Te}\cdot Ie
+  \]
+  imply the existence of a bracket $i\colon e\to\pi$ characterised by the relations
+  \[
+    m^\pi\cdot i
+    = \lim\hat{i}
+    \textand
+    a\cdot i
+    = Ie
+  \]
+  and then $(b,a,i)$ is a pointed $\TT$-graph.
+
+  Let $m^{T\pi}\colon T\pi\to\lim\widehat{T\pi}$ be the \unsure{bracket} characterised by the relations $p_n^{T\pi}\cdot m^{T\pi}=Tp_n^\pi$;
+  we will show that $\lim\widehat{Tb}\cdot m^{T\pi}=m^{Te}\cdot Tb$ by obtaining equalities whenever we compose on the left by the $p_n^{Te}$.
+  It thus follows, since projective limits of fibre products are again fibre products, that there exists a \unsure{bracket} $m^{\pi_2}\colon\pi_2\to\lim\hat{\pi}_2$ such that
+  \[
+    \begin{aligned}
+      \lim\hat{v}_2\cdot m^{\pi_2}
+      &= m^{T\pi}\cdot v_2
+    \\\lim\hat{v}_1\cdot m^{\pi_2}
+      &= m^\pi\cdot v_1
+    \end{aligned}
+  \]
+  where $(v_1,v_2)$ is the fibre product of $(a,Tb)$.
+  The relations
+  \[
+    \begin{aligned}
+      \lim\hat{a}\cdot\lim\hat{k}\cdot m^{\pi_2}
+      &= \lim\widehat{Ke}\cdot(\lim\widehat{Ta}\cdot\lim\hat{v}_2\cdot m^\pi_2)
+    \\&= \lim\widehat{Ke}\cdot m^{TTe}\cdot Ta\cdot v_2
+    \\&= m^{Te}\cdot Ke\cdot Ta\cdot v_2
+    \end{aligned}
+  \]
+  imply the existence of $k\colon\pi_2\to\pi$ such that
+  \[
+    \begin{aligned}
+      a\cdot k
+      &= Ke\cdot Ta\cdot v_2
+    \\m^\pi\cdot k
+      &= \lim\hat{k}\cdot m^{\pi_2}.
+    \end{aligned}
+  \]
+  It thus follows that $b\cdot k=b\cdot v_1$.
+  It remains only to show that $(b,a,i,k)$ satisfies the axioms of identity and associativity, which we leave to the reader.
+
+  To see that
+\end{proof}
 
 
 
