@@ -74,6 +74,7 @@
 \newcommand{\TT}{\mathbf{T}}
 \newcommand{\MM}{\mathbf{M}}
 \newcommand{\textand}{\quad\text{and}\quad}
+\newcommand{\pr}{\mathrm{pr}}
 
 \newcommand{\cat}[1]{\mathcal{#1}}
 \newcommand{\Cat}[1]{\mathsf{#1}}
@@ -1422,7 +1423,7 @@ The objects of $\Equ{\TT}$ are called \emph{$\TT$-equivalences}.
   \]
   where the forgetful functor of $\TT$-algebras factors through a fibrant functor $X\colon\cat{X}\to\cat{E}$, there exists exactly one (up to equivalence) functor $\Equ{\TT}\to\cat{X}$ that satisfies the following properties:
   \begin{enumerate}
-    \item The following diagram commutes:
+    \item[(1)] The following diagram commutes:
       \[
         \begin{tikzcd}
           \Alg{\TT}
@@ -1437,7 +1438,7 @@ The objects of $\Equ{\TT}$ are called \emph{$\TT$-equivalences}.
         \end{tikzcd}
       \]
 
-    \item The functor sends every morphism that is cartesian with respect to $\Equ{\TT}\to\cat{E}$ to a morphism that is cartesian with respect to $U'\colon\cat{X}\to\cat{E}$.\footnote{When $U$ is fibrant, \unsure{we will refrain from assuming that $\Alg{\TT}\simeq\Equ{\TT}$} (for example, when $\TT$ is the identity triple).}
+    \item[(2)] The functor sends every morphism that is cartesian with respect to $\Equ{\TT}\to\cat{E}$ to a morphism that is cartesian with respect to $U'\colon\cat{X}\to\cat{E}$.\footnote{When $U$ is fibrant, \unsure{we will refrain from assuming that $\Alg{\TT}\simeq\Equ{\TT}$} (for example, when $\TT$ is the identity triple).}
   \end{enumerate}
 \end{itenv}
 
@@ -1485,7 +1486,75 @@ As for inductive limits, we content ourselves with the following result, whose e
 \label{sec:ii.1}
 \oldpage{243}
 
-This structure
+This structure slightly generalises that of a bicategory, defined by Bénabou in \cite{Be};
+indeed, in bicategories, the families $l$, $r$, and $s$ considered below reduce to the families of natural equivalences, which will not always be the case in our examples.
+(In \cref{sec:iii} we will see more general structures.)
+
+A \emph{pseudo-category} is a septuple
+\[
+  \cat{D}
+  = (\set{\cat{D}},\Hom_\cat{D},\iota,\kappa,l,r,s)
+\]
+such that conditions~(1) to (8) below are satisfied:
+\begin{enumerate}
+  \item[(1)]
+    $\set{\cat{D}}$ is a set; its elements are called \emph{objects of $\cat{D}$}.
+
+  \item[(2)]
+    $\Hom_\cat{D}$ is a family of categories indexed by $\set{\cat{D}}^2$.
+    Saying that $f\colon e\to e'$ is a \emph{morphism in $\cat{D}$} means that
+    \[
+      e,e'\in\set{\cat{D}}
+      \textand
+      f\in\set{\Hom_\cat{D}(e',e)}.
+    \]
+    Saying that $\alpha\colon f\to g\colon e\to e'$, or simply that $\alpha\colon f\to g$, is a \emph{2-morphism in $\cat{D}$} means that $f\colon e\to e'$ and $g\colon e\to e'$ are morphisms in $\cat{D}$ and $\alpha\colon f\to g$ is a morphism in $\Hom_\cat{D}(e',e)$.
+
+  \item[(3)]
+    $\iota$ is a family of functors indexed by $\set{\cat{D}}$, of the form $\iota(e)\colon\mathbf{1}\to\Hom_\cat{D}(e',e)$ for each $e\in\set{\cat{D}}$, where $\mathbf{1}$ is the category consisting of a single object $0$ and the single morphism $\id_0$.
+    We denote by $\id(e)$, or $\id_e$, or simply $e$, the morphism $\iota(e)(\id_0)\colon e\to e'$.
+
+  \item[(4)]
+    $\kappa$ is a family of functors indexed by $\set{\cat{D}}^3$, of the form
+    \[
+      \kappa(e'',e',e)\colon
+      \Hom_\cat{D}(e'',e')\times\Hom_\cat{D}(e',e)
+      \to \Hom_\cat{D}(e'',e)
+    \]
+    for each $(e'',e',e)\in\set{\cat{D}}^3$.
+    The image of a pair of morphisms or of $2$-morphisms under this functor is called a composition and is denoted by the same symbol, which will generally be the symbol $\circ$ in this paper.
+    This composition is called the \emph{first law of $\cat{D}$}, to distinguish it from the composition laws in the $\Hom_\cat{D}(e',e)$.
+    These latter laws will also be denoted by a unique symbol, called the symbol of the \emph{second law of $\cat{D}$}.
+
+  \item[(5)]
+    \oldpage{244}
+    $l$ and $r$ are two families of natural transformations, each indexed by $\set{\cat{D}}^2$, of the form
+    \[
+      \begin{aligned}
+        l(e',e)\colon \pr_2
+      & \to \kappa(e',e',e)\cdot\big(\iota(e')\times\id(\Hom_\cat{D}(e',e))\big)
+      \\r(e',e)\colon \pr_1
+      & \to \kappa(e',e,e)\cdot\big(\id(\Hom_\cat{D}(e',e))\times\iota(e)\big)
+      \end{aligned}
+    \]
+    where
+    \[
+      \begin{aligned}
+        \pr_2\colon \mathbf{1}\times\Hom_\cat{D}(e',e)
+      & \to \Hom_\cat{D}(e',e)
+      \\\pr_1\colon \Hom_\cat{D}(e',e)\times\mathbf{1}
+      & \to \Hom_\cat{D}(e',e)
+      \end{aligned}
+    \]
+    denote the canonical projections of the products.
+    In other words, for each morphism $f\colon e\to e'$ in $\cat{D}$, $r$ and $l$ give ``natural'' $2$-morphisms, denoted in shorthand by
+    \[
+      l(f)\colon f\to\id_{e'}\circ f
+      \textand
+      r(f)\colon f\to f\circ\id_{e'}
+    \]
+    where $\circ$ is the first law of $\cat{D}$.
+\end{enumerate}
 
 
 
