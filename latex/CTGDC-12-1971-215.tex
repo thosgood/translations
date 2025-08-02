@@ -1522,7 +1522,7 @@ such that conditions~(1) to (8) below are satisfied:
       \to \Hom_\cat{D}(e'',e)
     \]
     for each $(e'',e',e)\in\set{\cat{D}}^3$.
-    The image of a pair of morphisms or of $2$-morphisms under this functor is called a composition and is denoted by the same symbol, which will generally be the symbol $\circ$ in this paper.
+    The image of a pair of morphisms or of 2-morphisms under this functor is called a composition and is denoted by the same symbol, which will generally be the symbol $\circ$ in this paper.
     This composition is called the \emph{first law of $\cat{D}$}, to distinguish it from the composition laws in the $\Hom_\cat{D}(e',e)$.
     These latter laws will also be denoted by a unique symbol, called the symbol of the \emph{second law of $\cat{D}$}.
 
@@ -1547,7 +1547,7 @@ such that conditions~(1) to (8) below are satisfied:
       \end{aligned}
     \]
     denote the canonical projections of the products.
-    In other words, for each morphism $f\colon e\to e'$ in $\cat{D}$, $r$ and $l$ give ``natural'' $2$-morphisms, denoted in shorthand by
+    In other words, for each morphism $f\colon e\to e'$ in $\cat{D}$, $r$ and $l$ give ``natural'' 2-morphisms, denoted in shorthand by
     \[
       l(f)\colon f\to\id_{e'}\circ f
       \textand
@@ -1570,7 +1570,7 @@ such that conditions~(1) to (8) below are satisfied:
     \]
     for $1\leqslant i,j,k\leqslant 4$.
     Both these functors have source category $\cat{D}_{43}\times\cat{D}_{32}\times\cat{D}_{21}$ and target category $\cat{D}_{41}$.
-    In other words, if $f\colon e_1\to e_2$, $g\colon e_2\to e_3$, and $h\colon e_3\to e_4$ are morphisms in $\cat{D}$, then $s$ gives a ``natural'' $2$-morphism, denoted in shorthand by
+    In other words, if $f\colon e_1\to e_2$, $g\colon e_2\to e_3$, and $h\colon e_3\to e_4$ are morphisms in $\cat{D}$, then $s$ gives a ``natural'' 2-morphism, denoted in shorthand by
     \[
       s(h,g,f)\colon (h\circ g)\circ f
       \to h\circ(g\circ f).
@@ -1675,9 +1675,98 @@ such that conditions~(1) to (8) below are satisfied:
 
 \begin{rmenv}{Remark}
   \oldpage{246}
-  Axioms
+  Axioms~(7) and (8) are called the ``coherence axioms''.
+  If $r$, $l$, and $s$ are equivalences (resp. identities) then we recover the notion of bicategory from \cite{Be} (resp. of 2-category).
+  In \cref{sec:iii}, multicategories will give, as particular cases, both pseudo-categories and the double categories of Ehresmann.
 \end{rmenv}
 
+We say that $F\colon\cat{D}\to\cat{D}'$ is a \emph{pseudo-functor} if $\cat{D}$ and $\cat{D}'$ are pseudo-categories and $F$ is a quadruple $(\set{F},F_1,u,c)$ such that:
+\begin{enumerate}
+  \item[(1')]
+    $\set{F}\colon\set{\cat{D}}\to\set{\cat{D}'}$ is a function.
+
+  \item[(2')]
+    $F_1$ is a family of functors
+    \[
+      F_1(e',e)\colon
+      \Hom_\cat{D}(e',e)
+      \to \Hom_{\cat{D}'}(F(e'),F(e))
+    \]
+    for each $(e',e)\in\set{\cat{D}}^2$.
+    If $e\in\set{\cat{D}}$, we denote by $F(e)$ its image under $\set{F}$ whenever there is no risk of confusion.
+    Similarly, if $f$ is a morphism in $\cat{D}$ and $\alpha$ a 2-morphism in $\cat{D}$, we denote by $F(f)$ and $F(\alpha)$ their images under $F_1$ (respectively).
+
+  \item[(3')]
+    $u$ is a family of natural transformations indexed by $\set{\cat{D}}$, between functors whose source is $\mathbf{1}$;
+    in other words, $u$ can be considered as a family of morphisms in $\cat{D}$ of the form
+    \[
+      u(e)\colon
+      \id_{F(e)}
+      \to F(\id_e)
+    \]
+    for each $e\in\set{\cat{D}}$.
+
+  \item[(4')]
+    $c$ is a family of natural transformations indexed by $\set{\cat{D}}^3$, of the form
+    \[
+        c(e'',e',e)\colon
+        \kappa\big(F(e''),F(e'),F(e)\big) \cdot \big(F_1(e'',e')\times F_1(e',e)\big)
+        \to F_1(e'',e)\cdot\kappa(e'',e',e).
+    \]
+    In other words, for each pair of morphism $f\colon e\to e'$ and $g\colon e'\to e''$, we give a ``natural'' 2-morphism, denoted in shorthand by
+    \[
+      c(g,f)\colon F(g)\circ F(f)
+      \to F(g\circ f).
+    \]
+
+  \item[(5')]
+    For each $f\colon e\to e'$ we have two commutative diagrams:
+    \[
+      \begin{tikzcd}[sep=huge]
+        F(f)
+          \ar[r,"{F(r(f))}"]
+          \ar[d,swap,"{r(F(f))}"]
+      & F(f\circ\id_e)
+      \\F(f)\circ\id_{F(e)}
+          \ar[r,swap,"{F(f)\circ u(e)}"]
+      & F(f)\circ F(\id_e)
+          \ar[u,swap,"{c(f,\id_e)}"]
+      \end{tikzcd}
+      \qquad
+      \begin{tikzcd}[sep=huge]
+        F(\id_{e'}\circ f)
+      & F(f)
+          \ar[l,swap,"{F(l(f))}"]
+          \ar[d,"{l(F(f))}"]
+      \\F(\id_{e'})\circ F(f)
+          \ar[u,"{c(\id_{e'},f)}"]
+      & \id_{F(e')}\circ F(f)
+          \ar[l,"{u(e')\circ F(f)}"]
+      \end{tikzcd}
+    \]
+
+  \item[(6')]
+    \oldpage{247}
+    For any triple $f\colon e\to e'$, $g\colon e'\to e''$, and $h\colon e''\to e'''$ in $\cat{D}$, we have a commutative diagram
+    \[
+      \begin{tikzcd}[row sep=huge,column sep=7em]
+        F(h)\circ(F(g)\circ F(f))
+          \ar[d,swap,"{F(h)\circ c(g,f)}"]
+      & (F(h)\circ F(g))\circ F(f)
+          \ar[l,swap,"{s(F(h),F(g),F(f))}"]
+          \ar[d,"{c(h,g)\circ F(f)}"]
+      \\F(h)\circ F(g\circ f)
+          \ar[d,swap,"{c(h,g\circ f)}"]
+      & F(h\circ g)\circ F(f)
+          \ar[d,"{c(h\circ g,f)}"]
+      \\F(h\circ(g\circ f))
+      & F((h\circ g)\circ f)
+          \ar[l,"{F(s(h,g,f))}"]
+      \end{tikzcd}
+    \]
+\end{enumerate}
+
+All of these definitions
 
 
 %% Bibliography %%
