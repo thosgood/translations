@@ -1554,7 +1554,129 @@ such that conditions~(1) to (8) below are satisfied:
       r(f)\colon f\to f\circ\id_{e'}
     \]
     where $\circ$ is the first law of $\cat{D}$.
+
+  \item[(6)]
+    $s$ is a family of natural transformations, indexed by $\set{\cat{D}}^4$, of the form
+    \[
+      s(e_4,e_3,e_2,e_1)\colon
+      \kappa_{421}\cdot(\kappa_{432}\times\cat{D}_{21})
+      \to \kappa_{431}\cdot(\cat{D}_{43}\times\kappa_{321})
+    \]
+    for each $(e_4,e_3,e_2,e_1)\in\set{\cat{D}}^4$, where we set
+    \[
+      \kappa_{ijk} = \kappa(e_i,e_j,e_k)
+      \textand
+      \cat{D}_{ij} = \Hom_\cat{D}(e_i,e_j)
+    \]
+    for $1\leqslant i,j,k\leqslant 4$.
+    Both these functors have source category $\cat{D}_{43}\times\cat{D}_{32}\times\cat{D}_{21}$ and target category $\cat{D}_{41}$.
+    In other words, if $f\colon e_1\to e_2$, $g\colon e_2\to e_3$, and $h\colon e_3\to e_4$ are morphisms in $\cat{D}$, then $s$ gives a ``natural'' $2$-morphism, denoted in shorthand by
+    \[
+      s(h,g,f)\colon (h\circ g)\circ f
+      \to h\circ(g\circ f).
+    \]
+    We also say that $s$ \emph{shifts parentheses to the right}.
+
+  \item[(7)]
+    Let $\varepsilon\colon\cat{D}_{32}\times\cat{D}_{21}\to\cat{D}_{32}\times\cat{D}_{22}\times\cat{D}_{21}$ be the functor given by the composition of the trivial functor $\cat{D}_{32}\times\cat{D}_{21}\to\cat{D}_{32}\times\mathbf{1}\times\cat{D}_{21}$ and the functor $\cat{D}_{32}\times\iota_2\times\cat{D}_{21}$, using the above notation, as well as setting
+    \[
+      \begin{aligned}
+        \iota_i
+      & = \iota(e_i)
+      \\s_{ijkl}
+      & = s(e_i,e_j,e_k,e_l)
+      \\l_{ij}
+      & = l(e_i,e_j)
+      \\r_{ij}
+      & = r(e_i,e_j)
+      \end{aligned}
+    \]
+    where $e_i$, $e_j$, $e_k$, and $e_l$ are objects of $\cat{D}$.
+
+    For each $(e_1,e_2,e_3)\in\set{\cat{D}}^3$, the following diagram of natural transformations must commute:
+    \oldpage{245}
+    \[
+      \begin{tikzcd}
+        \kappa_{321}\cdot(\kappa_{332}\times\cat{D}_{21})\cdot\varepsilon
+          \ar[rr,"s_{3221}\cdot\varepsilon"]
+      &&\kappa_{321}\cdot(\cat{D}_{32}\times\kappa_{221})\cdot\varepsilon
+      \\&\kappa_{321}
+          \ar[ul,"\kappa_{321}\cdot(r_{32}\times\cat{D}_{21})"]
+          \ar[ur,swap,"\kappa_{321}\cdot(\cat{D}_{32}\times l_{21})"]
+      \end{tikzcd}
+    \]
+    In other words, applying this diagram to a pair of morphisms $f\colon e_1\to e_2$ and $g\colon e_2\to e_3$, we should obtain a commutative diagram in the category $\Hom_\cat{D}(e_3,e_1)$:
+    \[
+      \begin{tikzcd}
+        (g\circ\id_e)\circ f
+          \ar[rr,"{s(g,\id_e,f)}"]
+      &&g\circ(\id_e\circ f)
+      \\
+      & g\circ f
+          \ar[ul,"{r(g)\circ f}"]
+          \ar[ur,swap,"{g\circ l(f)}"]
+      \end{tikzcd}
+    \]
+    (where we set $e=e_2$).
+
+  \item[(8)]
+    For all $(e_1,e_2,e_3,e_4,e_5)\in\set{\cat{D}}^5$, we have a commutative diagram
+    \[
+      \begin{tikzcd}
+      & \bullet
+          \ar[dl,swap,"\kappa_{521}\cdot(s_{5432}\times\cat{D}_{21})"]
+          \ar[ddr,"s_{5321}\cdot(\kappa_{543}\times\cat{D}_{32}\times\cat{D}_{21})"]
+      \\\bullet
+          \ar[dd,swap,"s_{5421}\cdot(\cat{D}_{54}\times\kappa_{432}\times\cat{D}_{21})"]
+      \\
+      &&\bullet
+          \ar[ddl,"s_{5431}\cdot(\cat{D}_{54}\times\cat{D}_{43}\times\kappa_{321})"]
+      \\\bullet
+          \ar[dr,swap,"\kappa_{541}\cdot(\cat{D}_{54}\times s_{4321})"]
+      \\
+      & \bullet
+      \end{tikzcd}
+    \]
+    (where the notation of the objects is left to the reader) so that ``applying'' this diagram to morphisms in $\cat{D}$
+    \[
+      % e_1
+      % \xrightarrow{f} e_2
+      % \xrightarrow{g} e_3
+      % \xrightarrow{h} e_4
+      % \xrightarrow{k} e_5
+      \begin{aligned}
+        f\colon e_1
+      & \to e_2
+      \\g\colon e_2
+      & \to e_3
+      \\h\colon e_3
+      & \to e_4
+      \\k\colon e_4
+      & \to e_5
+      \end{aligned}
+    \]
+     we obtain a commutative diagram in $\Hom_\cat{D}(e_5,e_1)$:
+     \[
+       \begin{tikzcd}[row sep=huge]
+          (k\circ(h\circ g))\circ f
+            \ar[dd,swap,"{s(k,h\circ g,f)}"]
+        & ((k\circ h)\circ g)\circ f
+            \ar[l,swap,"{s(k,h,g)\circ f}"]
+            \ar[d,"{s(k\circ h,g,f)}"]
+        \\
+        & (k\circ h)\circ(g\circ f)
+            \ar[d,"{s(k,h,g\circ f)}"]
+        \\k\circ((h\circ g)\circ f)
+            \ar[r,swap,"{k\circ s(h,g,f)}"]
+        & k\circ(h\circ(g\circ f))
+       \end{tikzcd}
+     \]
 \end{enumerate}
+
+\begin{rmenv}{Remark}
+  \oldpage{246}
+  Axioms
+\end{rmenv}
 
 
 
