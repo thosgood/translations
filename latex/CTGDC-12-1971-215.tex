@@ -1185,8 +1185,78 @@ Set $\MM=(M,m)$.
 \end{itenv}
 
 \begin{proof}
-  Let
+  Let $\Theta=(b,a)$ be a $\TT$-graph, and consider the fibre product
+  \[
+    \begin{tikzcd}[sep=huge]
+      MTe
+    & T'Me
+        \ar[l,swap,"me"]
+    \\M\pi
+        \ar[u,"Ma"]
+    & \pi'
+        \ar[l,"m'"]
+        \ar[u,swap,"a'"]
+    \end{tikzcd}
+  \]
+  Then $\Theta'=(b',a')$, where $b'=Mb\cdot m'$, is a $\TT'$-graph.
+  This correspondence extends to a functor $\Gr{\MM}\colon\Gr{\TT}\to\Gr{\TT'}$.
+
+  Now, if $(b,a,i,k)$ is a $\TT$-category, then we have a \unsure{bracket} $i'\colon Me\to\pi'$ characterised by
+  \[
+    m'\cdot i' = Mi
+    \textand
+    a'\cdot i' = I'Me.
+  \]
+  Set $m''=m\pi\cdot T'm'$;
+  we will show that $MTb\cdot m''=me\cdot T'b'$, so that there exists a morphism $m'''\colon\pi'_2\to M\pi_2$ that makes the following diagram commute:
+  \[
+    \begin{tikzcd}[sep=huge]
+      MT\pi
+    & T'\pi'
+        \ar[l,swap,"m''"]
+    \\M\pi_2
+        \ar[u,"Mv_2"]
+        \ar[d,swap,"Mv_1"]
+    & \pi'_2
+        \ar[u,swap,"v'_2"]
+        \ar[l,swap,"m'''"]
+        \ar[d,"v'_1"]
+    \\M\pi
+    & \pi'
+        \ar[l,"m'"]
+    \end{tikzcd}
+  \]
+  (with the data of $\pi'_2$, $\pi'_3$, $v'_1$, etc. being defined as per usual from the $\TT'$-graph $(b',a')$).
+  The morphism $k'\colon\pi'_2\to\pi'$ is the \unsure{bracket} characterised by the relations
+  \[
+    \begin{aligned}
+      m'\cdot k'
+    & = Mk\cdot m'''
+    \\a'\cdot k'
+    & = K'Me\cdot T'a'\cdot v'_2.
+    \end{aligned}
+  \]
+  \oldpage{238}
+  We can easily show that $(b',a',i',k')$ is a $\TT'$-category, and that the correspondence thus defined extends to a functor
+  \[
+    \Cat{Cat}(\MM)\colon \Cat{Cat}(\TT)\to\Cat{Cat}(\TT').
+  \]
+
+  The rest of the proof is purely technical, although annoying.
 \end{proof}
+
+\begin{rmenv}{Remark}
+  As an exercise, it is interesting to examine the case where $M=\id_\cat{E}$, $m=I$, and $\TT=(\id_\cat{E},\id_\cat{E},\id_\cat{E})$: there is an $\cat{E}$-category underlying every $\TT$-category (in the terminology of \cref{sub:iii.2}).
+\end{rmenv}
+
+We will later study the question of whether or not all functors in the sequence ($\ast$) admit adjoints and coadjoints;
+we will limit ourselves below to only some of them.
+Recall that $\Alg{\TT}\to\cat{E}$ has an adjoint.
+Suppose that $\cat{E}$ admits finite projective limits.
+
+\begin{itenv}{Proposition~I.3.8}
+  The
+\end{itenv}
 
 
 
