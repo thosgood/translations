@@ -72,6 +72,7 @@
 
 \newcommand{\id}{\mathrm{id}}
 \newcommand{\TT}{\mathbf{T}}
+\newcommand{\MM}{\mathbf{M}}
 \newcommand{\textand}{\quad\text{and}\quad}
 
 \newcommand{\cat}[1]{\mathcal{#1}}
@@ -664,7 +665,7 @@ If $f\colon e\to e'$ is a morphism in $\cat{E}$, and thus an object in $\cat{E}^
 \]
 If $(g,g')\colon f\to f'$ is a morphism in $\cat{E}^\mathbf{2}$, then its image under $T^\mathbf{2}$ is, by definition, the morphism $(Tg,Tg')\colon Tf\to Tf'$ in $\cat{E}^\mathbf{2}$.
 
-\begin{itenv}{Proposition~1.1.1}
+\begin{itenv}{Proposition~I.1.1}
   A $\TT^\mathbf{2}$-category is identifiable with a morphism of $\TT$-categories.
 \end{itenv}
 
@@ -693,7 +694,7 @@ A \emph{regular} $\TT$-graph is a $\TT$-graph $(b,a)$ such that the relations
 imply that $f=f'$.
 A \emph{$\TT$-preorder} is a $\TT$-category whose underlying graph is regular.
 
-\begin{itenv}{Proposition~1.2.2}
+\begin{itenv}{Proposition~I.2.2}
   If $(b,a)$ is a regular $\TT$-graph, $e$ the objects object, $\pi$ the morphisms object, $\pi_2$ the source of a fibre product of $(a,Tb)$, and $i\colon e\to\pi$ and $k\colon\pi_2\to\pi$ morphisms in $\cat{E}$ satisfying only conditions~(1) to (4) of \cref{sub:i.1}, then $(b,a,i,k)$ is a $\TT$-preorder.
   Furthermore, conditions~(2') and (3') are consequences of (1') for a morphism into a $\TT$-preorder.
 \end{itenv}
@@ -789,7 +790,7 @@ This proposition allows us to identify a $\TT$-preorder with its underlying $\TT
 Amongst all $\TT$-preorders, many interesting cases can be distinguished by properties of by $a$ and $b$ (see the examples in \unsure{\cref{sec:iv}}).
 We limit ourselves to noting the following fact:
 
-\begin{itenv}{Proposition~1.2.3}
+\begin{itenv}{Proposition~I.2.3}
   A $\TT$-algebra $b$ over $e$ can be identified with a $\TT$-preorder $(b,a)$ such that $a=\id_{Te}$, and conversely.
 \end{itenv}
 
@@ -802,7 +803,7 @@ We denote by $\Ord{\TT}$ and $\Alg{\TT}$ the full subcategories of the category 
 We have just seen that $\Alg{\TT}$ can be identified with the usual category of $\TT$-algebras.
 Furthermore, when $\cat{E}=\Cat{Set}$ is the category of sets associated to a universe, we have:
 
-\begin{itenv}{Proposition~1.2.4}
+\begin{itenv}{Proposition~I.2.4}
 \label{proposition:i.2.4}
   If $\cat{E}=\Cat{Set}$, then the category $\Ord{\TT}$ is equivalent to the category of ``relational $\TT$-algebras'' of Barr {\cite{Ba}}.
 \end{itenv}
@@ -1020,7 +1021,172 @@ The first two are full inclusions, the third is faithful and the fourth is (in g
   This is completely immediate, since the projective $\cat{A}$-limits of fibre products are again fibre products (by the commutativity of projective limits with themselves).
 \end{proof}
 
-If
+If $U\colon\overline{\cat{E}}\to\cat{E}$ is a functor, we say that a morphism $\overline{f}\colon\overline{e}'\to\overline{e}$ in $\overline{\cat{E}}$ is \emph{$U$-cartesian} (or is a \emph{$U$-injection}, in the terminology of \cite{Eh}) if, for every morphism $\overline{g}\colon\overline{e}''\to\overline{e}$ in $\overline{\cat{E}}$ and every relation $U(\overline{g})=U(\overline{f})\cdot h$ in $\cat{E}$, there exists exactly one morphism $\overline{h}\colon\overline{e}''\to\overline{e}'$ in $\overline{\cat{E}}$ such that we have $h=U(\overline{h})$.
+We say that $U$ is \emph{fibrant} if, for all $\overline{e}\in\set{\overline{\cat{E}}}$ and every morphism $f\colon e'\to U(\overline{e})$ in $\cat{E}$, there exists a $U$-cartesian morphism $\overline{f}\colon\overline{e}'\to\overline{e}$ such that $f=U(\overline{f})$;
+we sometimes denote by $f^*\overline{e}$ the object $\overline{e}'$.
+\oldpage{235}
+If $U'\colon\overline{\cat{E}}'\to\cat{E}$ is another fibrant functor, we say that a functor $V\colon\overline{\cat{E}}\to\overline{\cat{E}}'$ is \emph{compatible with these fibrations} if it sends every $U$-cartesian morphism to a $U'$-cartesian morphism.
+With the above notation, we have an isomorphism $V(f^*\overline{e})\to f^*V(\overline{e})$.
+
+\begin{itenv}{Proposition~I.3.6}
+\label{proposition:i.3.6}
+  The functors $\cat{X}\to\cat{E}$ coming from all the composites of ($\ast$) (\cref{sub:i.3}) for $\cat{X}=\Ord{\TT}$, $\Cat{Cat}(\TT)$, and $\Gr{\TT}$ are fibrant, and these fibrations are respected by the functors from ($\ast$) between these categories.
+\end{itenv}
+
+\begin{proof}
+  Let $\theta=(b,a)$ be a $\TT$-graph, and $f_0\colon e'\to e$ a morphism in $\cat{E}$, where $e=\set{\Theta}$.
+  We take a projective limit of the diagram (the solid arrows)
+  \[
+    \begin{tikzcd}[sep=huge]
+      Te
+    & Te'
+        \ar[l,swap,"Tf_0"]
+    \\\pi
+        \ar[u,"a"]
+        \ar[d,swap,"b"]
+    & \pi'
+        \ar[u,dashed,swap,"a'"]
+        \ar[l,dashed,swap,"f_1"]
+        \ar[d,dashed,"b'"]
+    \\e
+    & e'
+        \ar[l,"f_0"]
+    \end{tikzcd}
+  \]
+  (the existence of such a limit follows from that of finite fibre products).
+  We obtain projections (the dashed arrows) $b'$, $f_1$, and $a'$.
+  We thus obtain a $\TT$-graph $\Theta'=(b',a')$ and a morphism
+  \[
+    (f_0,f_1)\colon\Theta'\to\Theta
+  \]
+  in $\Gr{\TT}$.
+  Let $(f'_0,f'_1)\colon\Theta''\to\Theta$ be another morphism, where $\Theta''=(b'',a'')$, and let $g_0\colon e''\to e'$ be such that $e''=\set{\Theta''}$ and $f'_0=f_0\cdot g_0$;
+  we will construct a morphism $(g_0,g_1)\colon\Theta''\to\Theta'$ such that $f'_1=f_1\cdot g_1$.
+  Consider the commutative diagram
+  \[
+    \begin{tikzcd}[sep=huge]
+      Te
+    & Te'
+        \ar[l,swap,"Tf'_0"]
+    \\\pi
+        \ar[u,"a"]
+        \ar[d,swap,"b"]
+    & \pi''
+        \ar[u,swap,"Tg_0\cdot a'"]
+        \ar[l,swap,"f'_1"]
+        \ar[d,"g_0\cdot b'"]
+    \\e
+    & e'
+        \ar[l,"f'_0"]
+    \end{tikzcd}
+  \]
+  \oldpage{236}
+  The comparison with the projective limit gives a \unsure{bracket} $g_1\colon\pi''\to\pi'$ such that
+  \[
+    \begin{aligned}
+      a'\cdot g_1
+    & = Tg_0\cdot a''
+    \\f_1\cdot g_1
+    & = f'_1
+    \\b'\cdot g_1
+    & = g_0\cdot b''.
+    \end{aligned}
+  \]
+  It thus follows that $(g_0,g_1)\colon\Theta''\to\Theta'$ is a morphism in $\Gr{\TT}$, and that $(f_0,f_1)\colon\Theta'\to\Theta$ is a $U$-cartesian morphism for the forgetful functor $U\colon\Gr{\TT}\to\cat{E}$.
+  We set $\Theta'=f_0^*\Theta$.
+  Note also that if $\Theta$ is regular then so too is $\Theta'$.
+
+  Now support that $\Theta=(b,a)$ underlies a $\TT$-category $\overline{\Theta}=(b,a,i,k)$;
+  we will construct a $\TT$-category $\overline{\Theta}'=(b',a',i',k')$ such that $f_0^*\Theta=(b',a')$.
+  Consider the commutative diagrams
+  \[
+    \begin{tikzcd}[sep=huge]
+      Te
+    & Te'
+        \ar[l,swap,"Tf_0"]
+    \\\pi
+        \ar[u,"a"]
+        \ar[d,swap,"b"]
+    & e'
+        \ar[u,swap,"Ie'"]
+        \ar[l,swap,"i\cdot f_0"]
+        \ar[d,"\id_{e'}"]
+    \\e
+    & e'
+        \ar[l,"f_0"]
+    \end{tikzcd}
+    \qquad\qquad
+    \begin{tikzcd}[sep=huge]
+      Te
+    & Te'
+        \ar[l,swap,"Tf_0"]
+    \\\pi
+        \ar[u,"a"]
+        \ar[d,swap,"b"]
+    & \pi'_2
+        \ar[u,swap,"Ke'\cdot Ta'\cdot v'_2"]
+        \ar[l,swap,"i\cdot f_0"]
+        \ar[d,"b'\cdot v'_1"]
+    \\e
+    & e'
+        \ar[l,"f_0"]
+    \end{tikzcd}
+  \]
+  where $f_2\colon\pi'_2\to\pi_2$ is defined above, from $(f_0,f_1)$;
+  these give two \unsure{brackets}
+  \[
+    i'\colon e'\to\pi'
+    \textand
+    k'\colon\pi'_2\to e'
+  \]
+  such that $(b',a',i',k')$ is the desired $\TT$-category, denoted $\overline{\Theta}'=f_0^*\overline{\Theta}$.
+  Furthermore, $(f_0,f_1)\colon\overline{\Theta}'\to\overline{\Theta}$ is a morphism in $\Cat{Cat}(\TT)$.
+  We can then show that, if the $\TT$-graph $\Theta''$ from the previous proof underlies a $\TT$-category $\overline{\Theta}''$, and if $(f'_0,f'_1)\colon\overline{\Theta}''\to\overline{\Theta}$ is a morphism in $\Cat{Cat}(\TT)$, then so too is $(g_0,g_1)\colon\overline{\Theta}''\to\overline{\Theta}'$.
+  Thus $(f_0,f_1)\colon\overline{\Theta}'\to\overline{\Theta}$ is cartesian.
+  Finally, if $\overline{\Theta}$ is a $\TT$-preorder, then so too is $\overline{\Theta}'$.
+\end{proof}
+
+Now let $\TT'=(T',I',K')$ be a triple on another category $\cat{E}'$ that admits finite fibre products.
+Let $(M,m)\colon\TT\to\TT'$ be a morphism of triples (see \cref{sub:i.3}), where $M\colon\cat{E}\to\cat{E}'$ is a functor that respects finite fibre products.
+Finally, suppose that $\cat{E}$ and $\cat{E}'$ admit projective $\cat{A}$-limits, and that $M$ respects these projective limits.
+Set $\MM=(M,m)$.
+
+\oldpage{237}
+\begin{itenv}{Proposition~I.3.7}
+  We can construct functors $\Alg{\MM}$, $\Ord{\MM}$, etc. such that the following diagram commutes:
+  \[
+    \begin{tikzcd}[sep=huge]
+      \Alg{\TT}
+        \ar[d,swap,"\Alg{\MM}"]
+        \ar[r]
+    & \Ord{\TT}
+        \ar[d,swap,"\Ord{\MM}"]
+        \ar[r]
+    & \Cat{Cat}(\TT)
+        \ar[d,swap,"\Cat{Cat}(\MM)"]
+        \ar[r]
+    & \Gr{\TT}
+        \ar[d,swap,"\Gr{\MM}"]
+        \ar[r]
+    & \cat{E}
+        \ar[d,"\MM"]
+    \\\Alg{\TT'}
+        \ar[r]
+    & \Ord{\TT'}
+        \ar[r]
+    & \Cat{Cat}(\TT')
+        \ar[r]
+    & \Gr{\TT'}
+        \ar[r]
+    & \cat{E'}
+    \end{tikzcd}
+  \]
+  These functors respect projective $\cat{A}$-limits and the fibrations defined in \cref{proposition:i.3.6}.
+\end{itenv}
+
+\begin{proof}
+  Let
+\end{proof}
 
 
 
