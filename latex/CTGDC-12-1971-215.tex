@@ -1766,7 +1766,35 @@ We say that $F\colon\cat{D}\to\cat{D}'$ is a \emph{pseudo-functor} if $\cat{D}$ 
     \]
 \end{enumerate}
 
-All of these definitions
+All of these definitions are based on those of bicategories of Bénabou \cite{Be} (we note that we have, however, reversed the direction of the arrows $r$ and $l$).
+We define the composition of pseudo-functors in a manner analogous to that of bifunctors \cite{Be}.
+We could define the notions of natural pseudo-transformation and even of morphisms between these.
+This would allow us to define the notation of ``pseudo-triple'' on a pseudo-category, which we will not do.
+We simply note that \unsure{Proposition~3??} later on would give $\TT$-categories a particularly agreeable \unsure{meaning}.
+
+\begin{rmenv}{Remarks}
+  ---
+  \begin{enumerate}
+    \item[(1)]
+      These definitions of pseudo-category and pseudo-functor should be taken mainly as provisionary.
+      Indeed, we have simply imitated the definition of bicategories of Bénabou \cite{Be}, which itself was inspired by the definition of monoidal categories of Mac~Lane;
+      but nothing tells us that there are no missing axioms that we would need in order to obtain the ``best'' possible structure, nor that the chosen direction for the coherence morphisms --- suggested by the example of $\TT$-spans that follows --- is the ``good'' one.
+      We hope to soon carry out a more serious study of this structure.
+
+    \item[(2)]
+      In practical examples, not only are the two morphisms $(f\circ g)\circ h$ and $f\circ(g\circ h)$ (where $f$, $g$, and $h$ are ``consecutive'' morphisms in $\cat{D}$) not equal, but they are related to a third morphism, denoted $f\circ g\circ h$, and, more generally, we have ``compositions'' of length $n>2$ that are different to the compositions obtained by the grouping of the factors.
+      \oldpage{248}
+      This is the case, for example, when we consider the category $\Cat{Set}$ of sets associated to a universe, endowed with the cartesian product as a first law.
+      We wait until the notion of multicategory defined later on (\cref{sec:iii.3}) allows us to unify these differing notions.
+  \end{enumerate}
+\end{rmenv}
+
+
+
+\subsection{The pseudo-category of $\TT$-spans}
+\label{sec:ii.2}
+
+Let
 
 
 %% Bibliography %%
