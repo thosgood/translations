@@ -1030,11 +1030,11 @@ With the above notation, we have an isomorphism $V(f^*\overline{e})\to f^*V(\ove
 
 \begin{itenv}{Proposition~I.3.6}
 \label{proposition:i.3.6}
-  The functors $\cat{X}\to\cat{E}$ coming from all the composites of ($\ast$) (\cref{sub:i.3}) for $\cat{X}=\Ord{\TT}$, $\Cat{Cat}(\TT)$, and $\Gr{\TT}$ are fibrant, and these fibrations are respected by the functors from ($\ast$) between these categories.
+  The functors $\cat{X}\to\cat{E}$ coming from all the composites of ($\ast$) for $\cat{X}=\Ord{\TT}$, $\Cat{Cat}(\TT)$, and $\Gr{\TT}$ are fibrant, and these fibrations are respected by the functors from ($\ast$) between these categories.
 \end{itenv}
 
 \begin{proof}
-  Let $\theta=(b,a)$ be a $\TT$-graph, and $f_0\colon e'\to e$ a morphism in $\cat{E}$, where $e=\set{\Theta}$.
+  Let $\theta=(b,a)$ be a $\TT$-graph, and $f_0\colon e'\to e$ a morphism in $\cat{E}$, where $e=\set{\theta}$.
   We take a projective limit of the diagram (the solid arrows)
   \[
     \begin{tikzcd}[sep=huge]
@@ -1055,13 +1055,13 @@ With the above notation, we have an isomorphism $V(f^*\overline{e})\to f^*V(\ove
   \]
   (the existence of such a limit follows from that of finite fibre products).
   We obtain projections (the dashed arrows) $b'$, $f_1$, and $a'$.
-  We thus obtain a $\TT$-graph $\Theta'=(b',a')$ and a morphism
+  We thus obtain a $\TT$-graph $\theta'=(b',a')$ and a morphism
   \[
-    (f_0,f_1)\colon\Theta'\to\Theta
+    (f_0,f_1)\colon\theta'\to\theta
   \]
   in $\Gr{\TT}$.
-  Let $(f'_0,f'_1)\colon\Theta''\to\Theta$ be another morphism, where $\Theta''=(b'',a'')$, and let $g_0\colon e''\to e'$ be such that $e''=\set{\Theta''}$ and $f'_0=f_0\cdot g_0$;
-  we will construct a morphism $(g_0,g_1)\colon\Theta''\to\Theta'$ such that $f'_1=f_1\cdot g_1$.
+  Let $(f'_0,f'_1)\colon\theta''\to\theta$ be another morphism, where $\theta''=(b'',a'')$, and let $g_0\colon e''\to e'$ be such that $e''=\set{\theta''}$ and $f'_0=f_0\cdot g_0$;
+  we will construct a morphism $(g_0,g_1)\colon\theta''\to\theta'$ such that $f'_1=f_1\cdot g_1$.
   Consider the commutative diagram
   \[
     \begin{tikzcd}[sep=huge]
@@ -1092,12 +1092,12 @@ With the above notation, we have an isomorphism $V(f^*\overline{e})\to f^*V(\ove
     & = g_0\cdot b''.
     \end{aligned}
   \]
-  It thus follows that $(g_0,g_1)\colon\Theta''\to\Theta'$ is a morphism in $\Gr{\TT}$, and that $(f_0,f_1)\colon\Theta'\to\Theta$ is a $U$-cartesian morphism for the forgetful functor $U\colon\Gr{\TT}\to\cat{E}$.
-  We set $\Theta'=f_0^*\Theta$.
-  Note also that if $\Theta$ is regular then so too is $\Theta'$.
+  It thus follows that $(g_0,g_1)\colon\theta''\to\theta'$ is a morphism in $\Gr{\TT}$, and that $(f_0,f_1)\colon\theta'\to\theta$ is a $U$-cartesian morphism for the forgetful functor $U\colon\Gr{\TT}\to\cat{E}$.
+  We set $\theta'=f_0^*\theta$.
+  Note also that if $\theta$ is regular then so too is $\theta'$.
 
-  Now support that $\Theta=(b,a)$ underlies a $\TT$-category $\overline{\Theta}=(b,a,i,k)$;
-  we will construct a $\TT$-category $\overline{\Theta}'=(b',a',i',k')$ such that $f_0^*\Theta=(b',a')$.
+  Now support that $\theta=(b,a)$ underlies a $\TT$-category $\overline{\theta}=(b,a,i,k)$;
+  we will construct a $\TT$-category $\overline{\theta}'=(b',a',i',k')$ such that $f_0^*\theta=(b',a')$.
   Consider the commutative diagrams
   \[
     \begin{tikzcd}[sep=huge]
@@ -1139,11 +1139,11 @@ With the above notation, we have an isomorphism $V(f^*\overline{e})\to f^*V(\ove
     \textand
     k'\colon\pi'_2\to e'
   \]
-  such that $(b',a',i',k')$ is the desired $\TT$-category, denoted $\overline{\Theta}'=f_0^*\overline{\Theta}$.
-  Furthermore, $(f_0,f_1)\colon\overline{\Theta}'\to\overline{\Theta}$ is a morphism in $\Cat{Cat}(\TT)$.
-  We can then show that, if the $\TT$-graph $\Theta''$ from the previous proof underlies a $\TT$-category $\overline{\Theta}''$, and if $(f'_0,f'_1)\colon\overline{\Theta}''\to\overline{\Theta}$ is a morphism in $\Cat{Cat}(\TT)$, then so too is $(g_0,g_1)\colon\overline{\Theta}''\to\overline{\Theta}'$.
-  Thus $(f_0,f_1)\colon\overline{\Theta}'\to\overline{\Theta}$ is cartesian.
-  Finally, if $\overline{\Theta}$ is a $\TT$-preorder, then so too is $\overline{\Theta}'$.
+  such that $(b',a',i',k')$ is the desired $\TT$-category, denoted $\overline{\theta}'=f_0^*\overline{\theta}$.
+  Furthermore, $(f_0,f_1)\colon\overline{\theta}'\to\overline{\theta}$ is a morphism in $\Cat{Cat}(\TT)$.
+  We can then show that, if the $\TT$-graph $\theta''$ from the previous proof underlies a $\TT$-category $\overline{\theta}''$, and if $(f'_0,f'_1)\colon\overline{\theta}''\to\overline{\theta}$ is a morphism in $\Cat{Cat}(\TT)$, then so too is $(g_0,g_1)\colon\overline{\theta}''\to\overline{\theta}'$.
+  Thus $(f_0,f_1)\colon\overline{\theta}'\to\overline{\theta}$ is cartesian.
+  Finally, if $\overline{\theta}$ is a $\TT$-preorder, then so too is $\overline{\theta}'$.
 \end{proof}
 
 Now let $\TT'=(T',I',K')$ be a triple on another category $\cat{E}'$ that admits finite fibre products.
@@ -1185,7 +1185,7 @@ Set $\MM=(M,m)$.
 \end{itenv}
 
 \begin{proof}
-  Let $\Theta=(b,a)$ be a $\TT$-graph, and consider the fibre product
+  Let $\theta=(b,a)$ be a $\TT$-graph, and consider the fibre product
   \[
     \begin{tikzcd}[sep=huge]
       MTe
@@ -1198,7 +1198,7 @@ Set $\MM=(M,m)$.
         \ar[u,swap,"a'"]
     \end{tikzcd}
   \]
-  Then $\Theta'=(b',a')$, where $b'=Mb\cdot m'$, is a $\TT'$-graph.
+  Then $\theta'=(b',a')$, where $b'=Mb\cdot m'$, is a $\TT'$-graph.
   This correspondence extends to a functor $\Gr{\MM}\colon\Gr{\TT}\to\Gr{\TT'}$.
 
   Now, if $(b,a,i,k)$ is a $\TT$-category, then we have a \unsure{bracket} $i'\colon Me\to\pi'$ characterised by
@@ -1255,8 +1255,97 @@ Recall that $\Alg{\TT}\to\cat{E}$ has an adjoint.
 Suppose that $\cat{E}$ admits finite projective limits.
 
 \begin{itenv}{Proposition~I.3.8}
-  The
+  The forgetful functors $\cat{X}\to\cat{E}$, for $\cat{X}=\Gr{\TT}$, $\Cat{Cat}(\TT)$, and $\Ord{\TT}$, admit adjoints and coadjoints which are further sections of these forgetful functors, and commute with the sequence of functors $\Ord{\TT}\to\Cat{Cat}(\TT)\to\Gr{\TT}$.
 \end{itenv}
+
+\begin{proof}
+  Let $e\in\set{\cat{E}}$.
+  Set
+  \[
+    D(e) = (\id_e,Ie)
+    \textand
+    G(e) = (p_1,p_2)
+  \]
+  with the latter being formed of the canonical projections of a product of $(e,Te)$.
+  Then $D(e)$ and $G(e)$ are $\TT$-graphs, which determine $\TT$-categories
+  \[
+    \overline{D}(e) = (\id_e,Ie,\id_e,\id_e)
+    \textand
+    \overline{G}(e) = (p_1,p_2,i_0,k_0)
+  \]
+  where $i_0$ and $k_0$ are the \unsure{brackets} characterised by the relations
+  \[
+    \begin{aligned}
+      p_1\cdot i_0
+    & = \id_e
+    \\p_2\cdot i_0
+    & = Ie
+    \\p_1\cdot k_0
+    & = p_1\cdot v_1
+    \\p_2\cdot k_0
+    & = Ke\cdot Tp_2\cdot v_2
+    \end{aligned}
+  \]
+  where $(v_1,v_2)$ is a fibre product of $(p_2,Tp_1)$.
+  Furthermore, we note that $\overline{D}(e)$ and $\overline{G}(e)$ are $\TT$-preorders.
+  It is easy to show that we can thus define an adjoint $D$ and a coadjoint $G$ to the functor $\Gr{\TT}\to\cat{E}$, and an adjoint $\overline{D}$ and a coadjoint $\overline{G}$ to the functor $\Cat{Cat}(\TT)\to\cat{E}$, which, by restriction, gives an adjoint and a coadjoint to the functor $\Ord{\TT}\to\cat{E}$.
+\end{proof}
+
+\oldpage{239}
+We call $\overline{D}(e)$ and $\overline{G}(e)$ the \emph{discrete $\TT$-category} and the \emph{coarse $\TT$-category} on $e$ (respectively).
+
+Finally, we examine the case of the inclusion $\Ord{\TT}\to\Cat{Cat}(\TT)$.
+
+Suppose that $\cat{E}$, as well as satisfying the existence of finite fibre products, also satisfies the following conditions:
+
+\begin{enumerate}
+  \item[(I)] Every morphism $f$ in $\cat{E}$ decomposes into a monomorphism $m$ and an epimorphism $p$, as $f=m\cdot p$.
+  \item[(II)] Every epimorphism $p$ of $\cat{E}$ is a retraction, i.e. there exists a morphism $s$ in $\cat{E}$ (called a \emph{section of $p$}) such that $p\cdot s=\id_e$, where $e$ is the target of $p$.
+\end{enumerate}
+
+By (II), the decomposition of $f$ in (I) is unique up to isomorphism;
+we call $(m,p)$ a \emph{canonical decomposition} of $f$.
+More generally, if $f=m'\cdot p'$, and if $m'$ is a monomorphism, then there exists exactly one morphism $g$ such that $m'\cdot g=m$ and $g\cdot p=p'$.
+
+\begin{itenv}{Proposition~I.3.9}
+  If $\cat{E}$ satisfies the above hypotheses, then the inclusion functor $\Ord{\TT}\to\Cat{Cat}(\TT)$ admits an adjoint that is compatible with the forgetful functors to $\cat{E}$.
+\end{itenv}
+
+\begin{proof}
+  To each $\TT$-graph $\theta=(b,a)$ on $e$, we associate, thanks to the canonical decomposition of the \unsure{bracket} $[\theta]\colon\pi\to e\times Te$, a regular $\TT$-graph $\langle\theta\rangle=(b',a')$ on $e$, and $(\id_e,p)\colon\theta\to\langle\theta\rangle$ is a morphism, where $p$ is the epimorphism in the canonical decomposition of $[\theta]$.
+
+  Now we will show that, if $\overline{\theta}=(b,a,i,k)$ is a $\TT$-category on $e$, then we can form a $\TT$-preorder $\langle\overline{\theta}\rangle$ over $\langle\theta\rangle$.
+  If $(v_1,v_2)$ is the fibre product of $(a,Tb)$ used in the construction of $\overline{\theta}$, and if $(v'_1,v'_2)$ is a fibre product of $(a',Tb')$, let $p'\colon\pi_2\to\pi'_2$ and $s'\colon\pi'_2\to\pi_2$ be the \unsure{brackets} characterised by the relations
+  \[
+    \begin{aligned}
+      v'_1\cdot p'
+    & = p\cdot v_1
+    \\v'_2\cdot p'
+    & = Tp\cdot v_2
+    \\v_1\cdot s'
+    & = s\cdot v'_1
+    \\v_2\cdot s'
+    & = Ts\cdot v'_2
+    \end{aligned}
+  \]
+  where $s$ is a section of $p$;
+  then $p'\cdot s'=\id_{\pi'_2}$.
+  Set
+  \[
+    i' = p\cdot i
+    \textand
+    k' = p\cdot k\cdot s;
+  \]
+  by composing on the left with $a'$ and $b'$, we see that $\langle\overline{\theta}\rangle=(b',a',i',k')$ is a $\TT$-preorder.
+  We can further show that $(\id_e,p)\colon\overline{\theta}\to\langle\overline{\theta}\rangle$ is a morphism that defines a natural transformation of an adjunction to the inclusion functor $\Ord{\TT}\to\Cat{Cat}(\TT)$.
+\end{proof}
+
+\[
+  \begin{tikzcd}[sep=huge]
+  &&T\pi
+  & \pi_2
+  \end{tikzcd}
+\]
 
 
 
