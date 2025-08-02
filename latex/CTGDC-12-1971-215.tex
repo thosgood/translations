@@ -1343,32 +1343,32 @@ More generally, if $f=m'\cdot p'$, and if $m'$ is a monomorphism, then there exi
 \[
   \begin{tikzcd}
   &&&T\pi
-      \ar[dlll,"Ta"description]
+      \ar[dlll,swap,"Ta"]
       \ar[dl,"Tp"description]
-      \ar[dddlll,"Tb"description]
+      \ar[dddlll,"Tb"]
   &&\pi_2
-      \ar[ll,"v_2"description]
+      \ar[ll,near end,swap,"v_2"]
       \ar[dl,"p'"description]
-      \ar[ddll,"v_1"description]
-  \\TTe
+      \ar[ddll,"v_1"]
+  \\[-1em]TTe
   && T\pi'
-      \ar[ur,bend left=50,"Ts"description]
-      \ar[ll,"Ta'"description]
-      \ar[ddll,"Tb'"description]
+      \ar[ur,bend left=50,near end,"Ts",crossing over]
+      \ar[ll,"Ta'"]
+      \ar[ddll,swap,"Tb'"]
   &&\pi'_2
-      \ar[ur,bend left=50,"s'"description]
-      \ar[ll,"v'_2"description]
-      \ar[ddll,"v'_1"description]
+      \ar[ur,bend left=50,near end,"s'",crossing over]
+      \ar[ll,near start,swap,"v'_2",crossing over]
   \\[2em]
   &&&\pi
-      \ar[dlll,"a"description]
+      \ar[dlll,swap,"a"]
       \ar[dl,"p"description]
-      \ar[dddlll,"b"description]
+      \ar[dddlll,"b"]
   \\[-1em]Te
   && \pi'
-      \ar[ur,bend left=50,"s"description]
-      \ar[ll,"a'"description]
-      \ar[ddll,"b'"description]
+      \ar[from=2-5,near start,swap,"v'_1",crossing over]
+      \ar[ll,"a'"]
+      \ar[ddll,swap,"b'"]
+      \ar[ur,bend left=50,"s",crossing over]
   \\{}
   \\[2em]e
   \end{tikzcd}
