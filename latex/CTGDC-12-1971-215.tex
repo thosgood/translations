@@ -83,6 +83,7 @@
 \newcommand{\Alg}[1]{\Cat{Alg}(#1)}
 \newcommand{\Ord}[1]{\Cat{Ord}(#1)}
 \newcommand{\Kl}[1]{\Cat{Kl}(#1)}
+\newcommand{\Equ}[1]{\Cat{Equ}(#1)}
 
 \DeclareMathOperator{\Hom}{Hom}
 
@@ -1337,6 +1338,7 @@ More generally, if $f=m'\cdot p'$, and if $m'$ is a monomorphism, then there exi
     k' = p\cdot k\cdot s;
   \]
   by composing on the left with $a'$ and $b'$, we see that $\langle\overline{\theta}\rangle=(b',a',i',k')$ is a $\TT$-preorder.
+  \oldpage{240}
   We can further show that $(\id_e,p)\colon\overline{\theta}\to\langle\overline{\theta}\rangle$ is a morphism that defines a natural transformation of an adjunction to the inclusion functor $\Ord{\TT}\to\Cat{Cat}(\TT)$.
 \end{proof}
 
@@ -1374,6 +1376,116 @@ More generally, if $f=m'\cdot p'$, and if $m'$ is a monomorphism, then there exi
   \end{tikzcd}
 \]
 
+In general, the forgetful functor $\Alg{\TT}\to\cat{E}$ is not fibrant.
+Later on, \unsure{Proposition~11} resolves the problem of ``making'' this functor fibrant by universally embedding $\Alg{\TT}$ into a full subcategory of $\Ord{\TT}$.
+For this, we will need to generalise \cite[Proposition~2.4]{Ba} by replacing the ``category of sets'' there with an arbitrary category $\cat{E}$, though one that satisfies the following axiom:
+\begin{enumerate}
+  \item[(U)] There exists a universe such that:
+    \begin{enumerate}
+      \item[(a)] $\Hom_\cat{E}$ takes values in this universe
+
+      \item[(b)] The set of isomorphism classes of subobjects of an arbitrary object $e$ of $\cat{E}$, and the set of isomorphism classes of quotient objects of $e$, are elements of this universe.
+
+      \item[(c)] $\cat{E}$ admits projective $\cat{A}$-limits for every category $\cat{A}$ associated to this universe (i.e. $\set{\cat{A}}$ is an element of this universe and $\Hom_\cat{A}$ takes values in this universe).
+    \end{enumerate}
+\end{enumerate}
+
+\oldpage{241}
+For example, the category $\Cat{Set}$ associated to an arbitrary universe $\set{\Cat{Set}}$ satisfies this axiom.
+
+\begin{itenv}{Proposition~I.3.10}
+  \emph{(Stone--Čech--Barr).}
+  The full inclusion functor $\Alg{\TT}\to\Ord{\TT}$ admits an adjoint.
+\end{itenv}
+
+\begin{proof}
+  Taking into account hypothesis~(b) concerning quotients, which allows us to form images of morphisms of $\TT$-algebras, the proof is the same as that by Barr, which relies on Freyd's criteria for existence of adjoints (in a form adapted to the terminology of universes, which does not pose any problem).
+  We refer the reader to \cite{Ba}.
+\end{proof}
+
+We denote by $m_\theta\colon\theta\to\hat{\theta}$ an \unsure{adjunction morphism} associated to a $\TT$-preorder $\theta$.
+Let $\Equ{\TT}$ be the full subcategory of $\Ord{\TT}$ whose objects are the $\TT$-preorders $\theta$ for which $m_\theta$ is a cartesian morphism (with respect to the forgetful functor to $\cat{E}$).
+The objects of $\Equ{\TT}$ are called \emph{$\TT$-equivalences}.
+
+\begin{itenv}{Proposition~I.3.11}
+  The forgetful functor $\Equ{\TT}\to\cat{E}$ is fibrant and compatible with the fibration $\Ord{\TT}\to\cat{E}$.
+  For every commutative diagram
+  \[
+    \begin{tikzcd}
+      \Alg{\TT}
+        \ar[rr,"X"]
+        \ar[dr,swap,"U"]
+    &&\cat{X}
+        \ar[dl,"U'"]
+    \\&\cat{E}
+    \end{tikzcd}
+  \]
+  where the forgetful functor of $\TT$-algebras factors through a fibrant functor $X\colon\cat{X}\to\cat{E}$, there exists exactly one (up to equivalence) functor $\Equ{\TT}\to\cat{X}$ that satisfies the following properties:
+  \begin{enumerate}
+    \item The following diagram commutes:
+      \[
+        \begin{tikzcd}
+          \Alg{\TT}
+            \ar[r]
+            \ar[dr,swap,"U"]
+        & \Equ{\TT}
+            \ar[r]
+            \ar[d]
+        & \cat{X}
+            \ar[dl,"U'"]
+        \\&\cat{E}
+        \end{tikzcd}
+      \]
+
+    \item The functor sends every morphism that is cartesian with respect to $\Equ{\TT}\to\cat{E}$ to a morphism that is cartesian with respect to $U'\colon\cat{X}\to\cat{E}$.\footnote{When $U$ is fibrant, \unsure{we will refrain from assuming that $\Alg{\TT}\simeq\Equ{\TT}$} (for example, when $\TT$ is the identity triple).}
+  \end{enumerate}
+\end{itenv}
+
+\begin{proof}
+  Let $\theta$ be an $\TT$-equivalence, and $f_1\colon e_1\to\set{\theta}$ be a morphism in $\cat{E}$.
+  If $f\colon f_1^*\theta\to\theta$ is the cartesian morphism such that $\set{f}=f_1$, we will show that $\theta_1=f_1^*\theta$ is a $\TT$-equivalence, i.e. that $m_{\theta_1}$ is cartesian.
+  \oldpage{242}
+  Let $g\colon\theta_2\to\hat{\theta}_1$ be a morphism in $\Ord{\TT}$, and $h_1\colon\set{\theta_2}\to e_1$ be such that $\set{m_{\theta_1}}\cdot h_1=\set{g}$;
+  we will show that there exists exactly one morphism $h\colon\theta_2\to\theta_1$ in $\Ord{\TT}$ such that
+  \[
+    m_{\theta_1}\cdot h = g
+    \textand
+    \set{h} = h_1.
+  \]
+  So let $h\colon\theta_2\to\theta_1$ be such that
+  \[
+    \set{h} = h_1
+    \textand
+    m_\theta\cdot f\cdot h = \hat{f}\cdot g
+  \]
+  (where $\hat{f}$ is the image of $f$ under the adjoint functor of \unsure{Proposition~I.5.10??});
+  $h$ exists, since $m_\theta$ and $f$ are cartesian, as is their composition.
+  The equality $m_{\theta_1}\cdot h=g$ is a consequence of the faithfulness of the functor $\Ord{\TT}\to\cat{E}$, as is the uniqueness of $h$.
+  This proves the first part.
+
+  Let $X\colon\Alg{\TT}\to\cat{X}$ and $U'\colon\cat{X}\to\cat{E}$ be functors such that $U=U'\cdot X$ is the forgetful functor of $\TT$-algebras and $U'$ is fibrant.
+  For all $\theta\in\set{\Equ{\TT}}$, let $\hat{X}(\theta)$ be the source (which we can also write as $\set{m_\theta}^*X(\hat{\theta})$) of a cartesian morphism $m$ in $\cat{X}$ with target $X(\hat{\theta})$, such that we have $U'(m)=\set{m_\theta}$.
+  It is clear that the family $\{\hat{X}(\theta)\mid\theta\in\set{\Equ{\TT}}\}$ can be extended in a unique way to a functor $\hat{X}\colon\Equ{\TT}\to\cat{X}$ that satisfies the required conditions.
+  The equivalence between this functor and every other functor that satisfies the same conditions follows from the fact that two cartesian arrows with the same target and same underlying morphism are related by an invertible.
+\end{proof}
+
+As for inductive limits, we content ourselves with the following result, whose elementary proof is left as an exercise.
+
+\begin{itenv}{Proposition~I.3.12}
+  If $\cat{E}$ admits inductive $\cat{A}$-limits (further to the hypothesis that $\cat{E}$ admits finite fibre products), if these limits commute with fibre products, and if $T$ commutes with these limits, then the categories appearing in ($\ast$) admit inductive $\cat{A}$-limits, and the functors therein commute with these inductive limits.
+\end{itenv}
+
+
+
+
+\section{Pseudo-algebras and monads}
+\label{sec:ii}
+
+\subsection{Pseudo-categories}
+\label{sec:ii.1}
+\oldpage{243}
+
+This structure
 
 
 
