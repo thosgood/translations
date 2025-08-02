@@ -1341,31 +1341,36 @@ More generally, if $f=m'\cdot p'$, and if $m'$ is a monomorphism, then there exi
 \end{proof}
 
 \[
-  \begin{tikzcd}[sep=huge]
+  \begin{tikzcd}
   &&&T\pi
       \ar[dlll,"Ta"description]
       \ar[dl,"Tp"description]
-      \ar[ddlll,"Tb"description]
+      \ar[dddlll,"Tb"description]
   &&\pi_2
       \ar[ll,"v_2"description]
       \ar[dl,"p'"description]
-      \ar[ddl,"v_1"description]
+      \ar[ddll,"v_1"description]
   \\TTe
   && T\pi'
       \ar[ur,bend left=50,"Ts"description]
       \ar[ll,"Ta'"description]
-      \ar[dll,"Tb'"description]
+      \ar[ddll,"Tb'"description]
   &&\pi'_2
       \ar[ur,bend left=50,"s'"description]
       \ar[ll,"v'_2"description]
-      \ar[dll,"v'_1"description]
-  \\Te
+      \ar[ddll,"v'_1"description]
+  \\[2em]
+  &&&\pi
+      \ar[dlll,"a"description]
+      \ar[dl,"p"description]
+      \ar[dddlll,"b"description]
+  \\[-1em]Te
   && \pi'
-      \ar[rr,bend left=50,"s"description]
+      \ar[ur,bend left=50,"s"description]
       \ar[ll,"a'"description]
-      \ar[dll,"b'"description]
-  && \pi
-  \\e
+      \ar[ddll,"b'"description]
+  \\{}
+  \\[2em]e
   \end{tikzcd}
 \]
 
