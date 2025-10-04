@@ -85,6 +85,7 @@
 \newcommand{\Ord}[1]{\Cat{Ord}(#1)}
 \newcommand{\Kl}[1]{\Cat{Kl}(#1)}
 \newcommand{\Equ}[1]{\Cat{Equ}(#1)}
+\newcommand{\Sp}[1]{\Cat{Sp}(#1)}
 
 \DeclareMathOperator{\Hom}{Hom}
 
@@ -1794,7 +1795,22 @@ We simply note that \unsure{Proposition~3??} later on would give $\TT$-categorie
 \subsection{The pseudo-category of $\TT$-spans}
 \label{sec:ii.2}
 
-Let
+Let $\cat{E}$ be a category endowed with a triple $\TT$, admitting finite fibre products and endowed with a canonical choice of these fibre products.
+We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the following way:
+
+\begin{enumerate}
+  \item[(1)]
+    $\set{\Sp{\TT}}=\set{\cat{E}}$
+
+  \item[(2)]
+    For every $e,e\in\set{\cat{E}}$, let $\Hom_{\Sp{\TT}}(e',e)$ be the category whose objects are the $\TT$-spans $\theta\colon e\to e'$, i.e. the pairs $(b,a)$, where
+    \[
+      b\colon\pi\to Te'
+      \textand
+      a\colon \pi\to e
+    \]
+    are morphisms in $\cat{E}$ with the same source.
+\end{enumerate}
 
 
 %% Bibliography %%
