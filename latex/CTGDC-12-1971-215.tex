@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[fleqn]{article}
 
 \usepackage[margin=1.6in]{geometry}
 
@@ -1810,7 +1810,162 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
       a\colon \pi\to e
     \]
     are morphisms in $\cat{E}$ with the same source.
+    If $\theta'\colon e\to e'$ is another $\TT$-span, where $\theta'=(b',a')$ with $b'\colon\pi'\to Te'$ and $a'\colon\pi'\to e$, then a morphism $m\colon\theta\to\theta'$ in $\Hom_{\Sp{\TT}}(e',e)$ (and thus a 2-morphism in $\Sp{\TT}$) is defined by a morphism $m\colon\pi\to\pi'$ in $\cat{E}$ satisfying the following conditions:
+    \[
+      b'\cdot m = b
+      \textand
+      a'\cdot m = a.
+    \]
+    \[
+      \begin{tikzcd}
+      & \pi
+          \ar[dl,swap,"b"]
+          \ar[dr,"a"]
+          \ar[dd,"m"]
+      \\Te'
+      &&e
+      \\&\pi'
+          \ar[ul,"b'"]
+          \ar[ur,swap,"a'"]
+      \end{tikzcd}
+    \]
+    The evident composition law on $\Hom_{\Sp{\TT}}(e',e)$ is denoted by $\cdot$ just as for $\cat{E}$.
+
+  \item[(3)]
+    For each $e\in\set{\cat{E}}$, we define a $\TT$-span $(Ie,\id_e)\colon e\to Te$, which we also denote by $\id_e$ if the context clearly specifies that it is a $\TT$-span.
+
+  \item[(4)]
+    If $\theta\colon e\to e'$ and $\theta'\colon e'\to e''$ are $\TT$-spans, we define the first composition law of $\Sp{\TT}$ by setting
+    \[
+      \theta'\circ\theta
+      = (Ke''\cdot Tb'\cdot v_1, a\cdot v_2)
+    \]
+    where $(v_1,v_2)$ is a canonical fibre product of $(Ta',b)$.
+    The composition of 2-morphisms is then obtained thanks to the property of fibre products.
+
+    \oldpage{31}
+    \todo{diagram}
 \end{enumerate}
+
+\begin{itenv}{Proposition~II.2.13}
+  If $\theta\colon e\to e'$, $\theta'\colon e'\to e''$, and $\theta''\colon e''\to e'''$ are $\TT$-spans, then we can construct 2-morphisms in $\Sp{\TT}$
+  \[
+    \begin{gathered}
+      \id_{e'}\circ\theta
+      \xleftarrow{l(\theta)} \theta
+      \xrightarrow{r\theta} \theta\circ\id_e
+    \\\theta''\circ(\theta'\circ\theta)
+      \xrightarrow{s(\theta'',\theta',\theta)} (\theta''\circ\theta')\circ\theta
+    \end{gathered}
+  \]
+   (where $r(\theta)$ is furthermore an isomorphism), which will finish the construction of $\Sp{\TT}$ as a pseudo-category.
+\end{itenv}
+
+\begin{proof}
+  Set $\theta=(b,a)$;
+  form the canonical fibre products $(\overline{v}'_1,\overline{v}'_2)$ of $(\id_{Te'},b)$ and $(\overline{v}_1,\overline{v}_2)$ of $(Ta,Ie)$.
+  Since $\id_{Te'}$ is an isomorphism, so too is $\overline{v}'_2$;
+  let ${\overline{v}'_2}^{-1}$ be its inverse.
+  The relations
+  \[
+    (Ke'\cdot TIe'\cdot\overline{v}'_1)\cdot{\overline{v}'_2}^{-1}
+    = \overline{v}'_1\cdot{\overline{v}'_2}^{-1}
+    = b
+  \]
+  (since $b\cdot\overline{v}'_2=\overline{v}'_1$) and
+  \[
+    (a\cdot\overline{v}'_2)\cdot{\overline{v}'_2}^{-1}
+    = a
+  \]
+  allow us to set
+  \[
+    l(\theta)
+    = {\overline{v}'_2}^{-1}
+    \colon\theta
+    \to \id_{e'}\circ\theta.
+  \]
+  The relation $Ta\cdot I\pi=Ie\cdot a$ gives a \unsure{bracket} $c\colon\pi\to\pi_2$ such that
+  \[
+    \overline{v}_1\cdot c = I\pi
+    \textand
+    \overline{v}_2\cdot c = a.
+  \]
+  The relations
+  \[
+    \begin{aligned}
+      (Ke'\cdot Tb\cdot\overline{v}_1)\cdot c
+      &= b
+    \\(\id_e\cdot\overline{v}_2)\cdot c
+      &= a
+    \end{aligned}
+  \]
+  allow us to set
+  \[
+    r(\theta)
+    = c
+    \colon\theta
+    \to\theta\circ\id_e.
+  \]
+
+  Set $\theta'=(b',a')$ and $\theta''=(b'',a'')$;
+  the construction of the composites $(\theta''\circ\theta')\circ\theta$ and $\theta''\circ(\theta'\circ\theta)$ leads to forming fibre products that we can follow, for notation, in the diagrams below.
+
+  \oldpage{32}
+  Firstly, $(\theta''\circ\theta')\circ\theta\colon e\to e'''$ is defined by the pair
+  \[
+    \big(
+      Ke'''\cdot T(Ke'''\cdot Tb''\cdot v'_1)\cdot w_1,
+      a\cdot v_2\cdot w_2
+    \big).
+  \]
+
+  \todo{diagram}
+
+  (Note that, if $(v_1,v_2)$ is the canonical fibre product of $(Ta',b)$, then $(w_1,w_2)$ is actually chosen so that $(w_1,v_2\cdot w_2)$ be the canonical fibre product of $(Tv'_2\cdot Ta',b)$, which is evidently possible.)
+
+  \todo{diagram}
+
+  \oldpage{33}
+  Secondly, $\theta''\circ(\theta'\circ\theta)\colon e\to e'''$ is defined by the pair
+  \[
+    (Ke'''\cdot Tb''\cdot W'_1,
+    a\cdot v_2\cdot w'_2).
+  \]
+  By comparing the relations
+  \[
+    (Ke''\cdot Tb'\cdot v_1)\cdot w_2
+    = Ke''\cdot TTa''\cdot Tv'_1\cdot w_1
+    = Ta''\cdot(K\pi''\cdot Tv'_1\cdot w_1)
+  \]
+  with the fibre product $(w'_1,w'_2)$ of $(Ke''\cdot Tb'\cdot v_1, Ta'')$, we obtain a \unsure{bracket} $s=s(\theta'',\theta',\theta)\colon\hat{\pi}\to\hat{\pi}'$ characterised by the relations
+  \[
+    \begin{aligned}
+      w'_2\cdot s
+      &= w_2
+    \\w'_1\cdot s
+      &= K\pi''\cdot Tv'_1\cdot w_1
+    \end{aligned}
+  \]
+  and so $s$ is the desired associativity morphism, since
+  \[
+    \begin{aligned}
+      Ke'''\cdot Tb''\cdot w'_1\cdot s
+      &= Ke'''\cdot Tb''\cdot K\pi''\cdot Tv'_1\cdot w_1
+    \\&=Ke'''\cdot KTe'''\cdot TTb''\cdot Tv'_1\cdot w_1
+    \\&= Ke'''\cdot TKe'''\cdot TTb''\cdot Tv'_1\cdot w_1
+    \end{aligned}
+  \]
+  and
+  \[
+    a\cdot v_w\cdot w'_2\cdot s
+    = a\cdot v_2\cdot w_2
+  \]
+  which shows that $s\colon(\theta''\circ\theta')\circ\theta\to\theta''\circ(\theta'\circ\theta)$ defines a morphism in $\Sp{\TT}$.
+
+  We now show the coherence axiom (8).
+  Let
+\end{proof}
+
 
 
 %% Bibliography %%
