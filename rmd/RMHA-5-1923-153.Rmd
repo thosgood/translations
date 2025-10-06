@@ -27,3 +27,16 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 <!-- Content -->
 
 The science of the continuous, _Analysis situs_, has a purely combinatorial part that can now, thanks most of all to the fundamental works of H. Poincaré^[_Analysis situs_, J. de l'École Politech, 1895. _Complément à l'Analysis situs_, Rend. Palermo, 1899. _Second complément à l'Analysis situs_, Proc. London Math. Soc., 1900. _Cinquième complément à l'Analysis situs_, Rend. Palermo, 1904.], be its own subject of study, and is amenable to a systemic and complete exposition.
+It was this subject that occupied me in the 1918 lectures at the Federal Institute of Technology (ETH) Zurich.
+Since then, works in the same vein have been published by O. Veblen^[The Cambridge Colloquium, 1916, part II. *Analysis situs*, American Math. Soc. New York, 1922.] and, limited to the 2-dimensional case, by Chuard^[Rend. Palermo, 1922.].
+Extremely appropriate as an introduction to this subject is the (1-dimensional) problem of the distribution of current in an arbitrarily complicated conductive network, since it highlights the importance of the fundamental concepts that can then be extended to the higher-dimensional case.
+
+The conductive network that we will consider consists of a finite number of homogeneous wires, which meet at a finite number of nodes.
+The geometric picture will be called the *complex of segments*, the nodes will be called the *points* of the complex, and the various bits of wires between nodes will be called the *segments*.
+
+More rigorously:
+
+> *A complex of segments* consists of a finite number of "points", or elements of dimension zero, and a number of "segments", or elements of dimension one.
+> Each segment connects two of the nodes, and this data constitutes the diagram of the complex.
+
+Instead of an equation:
