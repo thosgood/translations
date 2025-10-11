@@ -1843,7 +1843,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     where $(v_1,v_2)$ is a canonical fibre product of $(Ta',b)$.
     The composition of 2-morphisms is then obtained thanks to the property of fibre products.
 
-    \oldpage{31}
+    \oldpage{249}
     \todo{diagram}
 \end{enumerate}
 
@@ -1910,7 +1910,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
   Set $\theta'=(b',a')$ and $\theta''=(b'',a'')$;
   the construction of the composites $(\theta''\circ\theta')\circ\theta$ and $\theta''\circ(\theta'\circ\theta)$ leads to forming fibre products that we can follow, for notation, in the diagrams below.
 
-  \oldpage{32}
+  \oldpage{250}
   Firstly, $(\theta''\circ\theta')\circ\theta\colon e\to e'''$ is defined by the pair
   \[
     \big(
@@ -1925,7 +1925,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
 
   \todo{diagram}
 
-  \oldpage{33}
+  \oldpage{251}
   Secondly, $\theta''\circ(\theta'\circ\theta)\colon e\to e'''$ is defined by the pair
   \[
     (Ke'''\cdot Tb''\cdot W'_1,
@@ -1987,7 +1987,118 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \end{aligned}
   \]
   We need to show the relation $q'\cdot q=p''\cdot p'\cdot p$.
-  To simplify notation, we
+  To simplify notation, we will use the same notation for a morphism between $\TT$-spans (i.e. a 2-morphism in $\Sp{\TT}$) and the underlying morphism in $\cat{E}$ that defines it, as long as the context ensures that no confusion may arise.
+  Finally, we note that the fibre products are not always chosen so as to be canonical, but instead so as to make the other fibre products canonical.
+
+  \medskip
+
+  \emph{Construction of $((\theta_4\circ\theta_3)\circ\theta_2)\circ\theta_1$.}
+  Let $(u_i,u'_i)$ be the canonical fibre product of $(Ta_{i+1},b_i)$ for $1\leqslant i\leqslant3$, so that $\theta_{i+1}\circ\theta_i\colon e_i\to e_{i+2}$ is defined by $(Ke_{i+1}\cdot Tb_{i+1}\cdot u_i, a_i\cdot u'_i)$ (for $1\leqslant i\leqslant 3$).
+  \oldpage{252}
+  Let $(v_i,v'_i)$ be a fibre product of $(Tu'_{i+1},u_i)$ for $1\leqslant i\leqslant 2$, so that $(v_i,u'_i\cdot v'_i)$ is the fibre product of $(Ta_{i+1}\cdot Tu_{i+1},b_i)$ and $(\theta_{i+2}\circ\theta_{i+1})\circ\theta_i$ is defined by $(Ke_{i+3}\cdot T(Ke_{i+3}\cdot Tb_{i+2}\cdot u_{i+1})\cdot v_i,a_i\cdot u'_i\cdot v'_i)$ for $1\leqslant i\leqslant 2$.
+  Let $(w_1,w'_1)$ be the fibre product of $(Tv'_2,v_1)$, and $\pi_i$ and $\pi'_i$ the source of $a_i$ and $u_i$ (respectively).
+
+  \medskip
+
+  \emph{Construction of $\theta_4\circ(\theta_3\circ(\theta_2\circ\theta_1))$.}
+  Let $(m_1,m'_1)$ be the canonical fibre product of $(Ta_3,Ke_3\cdot Tb_2\cdot u_1)$, so that $\theta_3\circ(\theta_2\circ\theta_1)$ is defined by $(Ke_4\cdot Tb_3\cdot m_1,a_1\cdot u'_1\cdot m'_1)$.
+  Let $(o,o')$ be the canonical fibre product of $(Ta_4,Ke_4\cdot Tb_3\cdot m_1)$, so that $\theta_4\circ(\theta_3\circ(\theta_2\circ\theta_1))$ is defined by $(Ke_5\cdot Tb_4\cdot o,a_1\cdot u'_1\cdot m'_1\cdot o')$.
+
+  \medskip
+
+  \emph{Construction of $(\theta_4\circ\theta_3)\circ(\theta_2\circ\theta_1)$.}
+  Let $(r,r')$ be a fibre product of $(Tu'_3,m_1)$, so that $(\theta_4\circ\theta_3)\circ(\theta_2\circ\theta_1)$ is defined by
+  \[
+    (Ke_5\cdot T(Ke_5\cdot Tb_4\cdot u_3)\cdot r, a_1\cdot u'_1\cdot m'_1\cdot r').
+  \]
+
+  \medskip
+
+  \emph{Construction of $q$.}
+  The relation
+  \[
+    T(a_3\cdot u'_3)\cdot K\pi'_3\cdot Tv_2\cdot w_1
+    = (Ke_3\cdot Tb_2\cdot u_1)\cdot v'_1\cdot w'_1
+  \]
+  combined with the fibre product $(r,m'_1\cdot r')$ of $(T(a_3\cdot u'_3),Ke_3\cdot Tb_2\cdot u_1)$ gives a \unsure{crochet} $q$ (a morphism in $\cat{E}$) characterised by
+  \[
+    \begin{aligned}
+      r\cdot q
+      &= K\pi'_3\cdot Tv_2\cdot w_1
+    \\m'_1\cdot r'\cdot q
+      &= v'_1\cdot w'_1.
+    \end{aligned}
+    \tag{1}
+  \]
+  Then
+  \[
+    q\colon((\theta_4\circ\theta_3)\circ\theta_2)\theta_1
+    \to (\theta_4\circ\theta_3)\circ(\theta_2\circ\theta_1)
+  \]
+  is a morphism in $\Sp{\TT}$.
+  Indeed, by (1),
+  \[
+    \begin{aligned}
+      Ke_5\cdot T(Ke_5\cdot Tb_4\cdot u_3)\cdot r\cdot q
+      &= Ke_5\cdot TKe_5\cdot TTb_4\cdot Tu_3\cdot K\pi'_3\cdot Tv_2\cdot w_1
+    \\&= Ke_5\cdot TKe_5\cdot KTTe_5\cdot TTTb_4\cdot TTu_3\cdot Tv_2\cdot w_1
+    \\&= Ke_5\cdot T(Ke_5\cdot KTe_5\cdot TTb_4\cdot Tu_3\cdot v_2)\cdot w_1
+    \\&= Ke_5\cdot T(Ke_5\cdot T(Ke_5\cdot Tb_4\cdot u_3)\cdot v_2)\cdot w_1
+    \end{aligned}
+  \]
+  and
+  \[
+    a_1\cdot u'_1\cdot m'_1\cdot r'\cdot q
+    = a_1\cdot u'_1\cdot v'_1\cdot w'_1.
+  \]
+
+  \medskip
+
+  \emph{Construction of $q'$.}
+  The relations
+  \[
+    \begin{aligned}
+      Ta_4\cdot(K\pi_4\cdot Tu_3\cdot r)
+      &= Ke_4\cdot Tb_3\cdot Tu'_3\cdot r
+    \\&= (Ke_4\cdot Tb_3\cdot m_1)\cdot r'
+    \end{aligned}
+  \]
+  combined with the fibre product $(o,o')$ of $(Ta_4,Ke_4\cdot Tb_3\cdot m_1)$ give a \unsure{crochet} $q'$ (a morphism in $\cat{E}$) characterised by
+  \oldpage{253}
+  \[
+    \begin{aligned}
+      o\cdot q'
+      &= K\pi_4\cdot Tu_3\cdot r
+    \\o'\cdot q'
+      &= r'.
+    \end{aligned}
+    \tag{2}
+  \]
+  Then
+  \[
+    q'\colon(\theta_4\circ\theta_3)\circ(\theta_2\circ\theta_1)
+    \to \theta_4\circ(\theta_3\circ(\theta_2\circ\theta_1))
+  \]
+  is a morphism in $\Sp{\TT}$.
+  Indeed, by (2),
+  \[
+    \begin{aligned}
+      (Ke_5\cdot Tb_4\cdot o)\cdot q'
+      &= Ke_5\cdot Tb_4\cdot K\pi_4\cdot Tu_3\cdot r
+    \\&= Ke_5\cdot KTe_5\cdot TTb_4\cdot Tu_3\cdot r
+    \\&= Ke_5\cdot T(Ke_5\cdot Tb_4\cdot u_3)\cdot r
+    \end{aligned}
+  \]
+  and
+  \[
+    a_1\cdot u'_1\cdot m'_1\cdot o'\cdot q'
+    = a_1\cdot u'_1\cdot m'_1\cdot r'.
+  \]
+
+  \medskip
+
+  \emph{Construction of $(\theta_4\circ(\theta_3\circ\theta_2))\circ\theta_1$.}
+  Let
 \end{proof}
 
 
