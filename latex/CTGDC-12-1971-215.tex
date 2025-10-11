@@ -2157,7 +2157,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \begin{aligned}
       Ke_5\cdot T(Ke_5\cdot Tb_4\cdot m_2)\cdot t\cdot p
       &= Ke_5\cdot TKe_4\cdot TTb_4\cdot (Tm_2\cdot Td_2)\cdot w_1
-    \\&= Ke_5\cdot TKe_5\cdot TTb_4\cdot T(K\pi_4\cdot Tu_3\cdot v_2)\cdot w_1
+    \\&\underset{(3)}{=} Ke_5\cdot TKe_5\cdot TTb_4\cdot T(K\pi_4\cdot Tu_3\cdot v_2)\cdot w_1
     \\&= Ke_5\cdot TKe_5\cdot TKTe_5\cdot TTTb_4\cdot TTu_3\cdot Tv_2\cdot w_1
     \\&= Ke_5\cdot T(Ke_5\cdot KTe_5\cdot TTb_4\cdot Tu_3\cdot v_2)\cdot w_1
     \\&= Ke_5\cdot T(Ke_5\cdot T(Ke_5\cdot Tb_4\cdot u_3)\cdot v_2)\cdot w_1
@@ -2201,7 +2201,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
   \[
     \begin{aligned}
       Ke_5\cdot Tb_4\cdot n\cdot p'
-      &= Ke_5\cdot Tb_4\cdot K\pi_4\cdot Tm_2\cdot t
+      &\underset{(5)}{=} Ke_5\cdot Tb_4\cdot K\pi_4\cdot Tm_2\cdot t
     \\&= Ke_5\cdot KTe_5\cdot TTb_4\cdot Tm_2\cdot t
     \\&= Ke_5\cdot T(Ke_5\cdot Tb_4\cdot m_2)\cdot t
     \end{aligned}
@@ -2264,20 +2264,95 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
   \]
   and, by (6),
   \[
-    \[
-      \begin{aligned}
-        a_1\cdot u'_1\cdot m'_1\cdot o'\cdot p''
-        &= a_1\cdot u'_1\cdot m'_1\cdot d_1\cdot n'
-      \\&= a_1\cdot u'_1\cdot v'_1\cdot n'.
-      \end{aligned}
-    \]
+    \begin{aligned}
+      a_1\cdot u'_1\cdot m'_1\cdot o'\cdot p''
+      &= a_1\cdot u'_1\cdot m'_1\cdot d_1\cdot n'
+    \\&\underset{(6)}{=} a_1\cdot u'_1\cdot v'_1\cdot n'.
+    \end{aligned}
   \]
 
   \medskip
 
   \emph{Construction of the ``deus ex machina'' $x$.}
-  The
+  The relations
+  \[
+    \begin{aligned}
+      Ta_4\cdot (K\pi_4\cdot KT\pi_4\cdot TTu_3\cdot Tv_2\cdot w_1)
+      &= Ke_4\cdot KTe_4\cdot TTb_3\cdot Tu_2\cdot v_1\cdot w'_1
+    \\&= (Ke_4\cdot T(Ke_4\cdot Tb_3\cdot u_2)\cdot v_1)\cdot w'_1
+    \\&\underset{(6)}{=} (Ke_4\cdot Tb_3\cdot m_1)\cdot d_1\cdot w'_1
+    \end{aligned}
+  \]
+  combined with the fibre product $(o,o')$ give a \unsure{bracket} $x$ such that
+  \[
+    \begin{aligned}
+      o\cdot x
+      &= K\pi_4\cdot KT\pi_4\cdot TTu_3\cdot Tv_2\cdot w_1
+    \\o'\cdot x
+      &= d_1\cdot w'_1.
+    \end{aligned}
+    \tag{8}
+  \]
+  It is the uniqueness property of this \unsure{bracket} that will allow us to complete the proot;
+  indeed, it suffices to note that if in (8) we replace $x$ by $q'\cdot q$ or $p''\cdot p'\cdot p$ then these relations still hold true.
+  Indeed,
+  \[
+    \begin{aligned}
+      o\cdot q'\cdot q
+      &\underset{(2)}{=} K\pi_4\cdot Tu_3\cdot r\cdot q
+    \\&= K\pi_4\cdot Tu_3\cdot K\pi'_3\cdot Tv_2\cdot w_1
+    \\&= K\pi_4\cdot KT\pi_4\cdot TTu_3\cdot Tv_2\cdot w_1
+    \end{aligned}
+  \]
+  and
+  \[
+    o'\cdot q'\cdot q
+    \underset{(2)}{=} r'\cdot q
+    = d_1\cdot w'_1
+  \]
+  where the last equality is proven by using the universal property of the fibre product, since, by definition of the fibre product $(r,r')$, we have that
+  \[
+    \begin{aligned}
+      m_1\cdot r'\cdot q
+      &= Tu'_3\cdot r\cdot q
+    \\&\underset{(1)}{=} Tu'_3\cdot K\pi'_3\cdot Tv_2\cdot w_1
+    \\&= K\pi_3\cdot Tu_2\cdot v_1\cdot w'_1
+    \\&\underset{(6)}{=} m_1\cdot d_1\cdot w'_1
+    \end{aligned}
+  \]
+  \oldpage{256}
+  and
+  \[
+    m'\cdot r'\cdot q
+    \underset{(1)}{=} v'\cdot w'_1
+    \underset{(6)}{=} m'_1\cdot d_1\cdot w'_1.
+  \]
+  Now we replace $x$ by $p''\cdot p'\cdot p$ in (8), which gives
+  \[
+    \begin{aligned}
+      o\cdot p''\cdot p'\cdot p
+      &\underset{(7)}{=} n\cdot p'\cdot p
+    \\&\underset{(5)}{=} K\pi_4\cdot Tm_2\cdot t\cdot p
+    \\&\underset{(4)}{=} K\pi_4\cdot T(K\pi_4\cdot Tu_3\cdot v_2)\cdot w_1
+    \\&= K\pi_4\cdot KT\pi_4\cdot TTu_3\cdot Tv_2\cdot w_1
+    \end{aligned}
+  \]
+  and
+  \[
+    \begin{aligned}
+      o'\cdot p''\cdot p'\cdot p
+      &\underset{(7)}{=} d_1\cdot n'\cdot p'\cdot p
+    \\&\underset{(5)}{=} d_1\cdot t'_1\cdot p
+    \\&\underset{(4)}{=} d_1\cdot w'_1.
+    \end{aligned}
+  \]
+  This finishes the proof of the coherence axiom (8).
+  The proof of the coherence axiom (9) is based on the same method.
 \end{proof}
+
+\begin{rmenv}{Remark}
+  We
+\end{rmenv}
 
 
 
