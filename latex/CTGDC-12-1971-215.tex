@@ -2098,7 +2098,185 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
   \medskip
 
   \emph{Construction of $(\theta_4\circ(\theta_3\circ\theta_2))\circ\theta_1$.}
-  Let
+  Let $(m_2,m'_2)$ be the canonical fibre product of $(Ta_4,Ke_4\cdot Tb_3\cdot u_2)$, so that $\theta_4\circ(\theta_3\circ\theta_2)$ is defined by $(Ke_5\cdot Tb_4\cdot m_2,a_2\cdot u'_2\cdot m'_2)$, and let $(t,t')$ be a fibre product of $(Tm'_2,v_1)$, so that $(\theta_4\circ(\theta_3\circ\theta_2))\circ\theta_1$ is defined by
+  \[
+    (Ke_5\cdot T(Ke_5\cdot Tb_4\cdot m_2)\cdot t, a_1\cdot u'_1\cdot v'_1\cdot t')
+  \]
+  (in other words, $(t,u'_1\cdot v'_1\cdot t')$ is the canonical fibre product of $(Ta_2\cdot Tu'_2\cdot Tm'_2,b_1)$).
+
+  \medskip
+
+  \emph{Construction of $p$.}
+  The relations
+  \[
+    \begin{aligned}
+      Ta_4\cdot (K\pi_4\cdot Tu_3\cdot v_2)
+      &= Ke_4\cdot Tb_3\cdot Tu'_3\cdot v_2
+    \\&= (Ke_4\cdot Tb_3\cdot u_2)\cdot v'_2
+    \end{aligned}
+  \]
+  combined with the fibre product $(m_2,m'_2)$ of $(Ta_4,Ke_4\cdot Tb_3\cdot u_2)$ give a \unsure{bracket} $d_2$ characterised by
+  \[
+    \begin{aligned}
+      m_2\cdot d_2
+      &= K\pi_4\cdot Tu_3\cdot v_2
+    \\m'_2\cdot d_2
+      v'_2
+    \end{aligned}
+    \tag{3}
+  \]
+  (this is in fact the morphism in $\cat{E}$ that defines $s(\theta_4,\theta_3,\theta_2)$).
+  Now the relations
+  \[
+    \begin{aligned}
+      Tm'_2\cdot Td_2\cdot w_1
+      &= T(m'_2\cdot d_2)\cdot w_1
+    \\&= Tv'_2\cdot w_1
+    \\&= v_1\cdot w'_1
+    \end{aligned}
+  \]
+  combined with the fibre product $(t,t')$ give a \unsure{bracket} $p$ characterised by
+  \[
+    \begin{aligned}
+      t\cdot p
+      &= Td_2\cdot w_1
+    \\t'\cdot p
+      &= w'_1.
+    \end{aligned}
+    \tag{4}
+  \]
+  \oldpage{254}
+  Then
+  \[
+    p\colon((\theta_4\circ\theta_3)\circ\theta_2)\circ\theta_1
+    \to (\theta_4\circ(\theta_3\circ\theta_2))\circ\theta_1
+  \]
+  is a morphism in $\Sp{\TT}$.
+  Indeed, by (3),
+  \[
+    \begin{aligned}
+      Ke_5\cdot T(Ke_5\cdot Tb_4\cdot m_2)\cdot t\cdot p
+      &= Ke_5\cdot TKe_4\cdot TTb_4\cdot (Tm_2\cdot Td_2)\cdot w_1
+    \\&= Ke_5\cdot TKe_5\cdot TTb_4\cdot T(K\pi_4\cdot Tu_3\cdot v_2)\cdot w_1
+    \\&= Ke_5\cdot TKe_5\cdot TKTe_5\cdot TTTb_4\cdot TTu_3\cdot Tv_2\cdot w_1
+    \\&= Ke_5\cdot T(Ke_5\cdot KTe_5\cdot TTb_4\cdot Tu_3\cdot v_2)\cdot w_1
+    \\&= Ke_5\cdot T(Ke_5\cdot T(Ke_5\cdot Tb_4\cdot u_3)\cdot v_2)\cdot w_1
+    \end{aligned}
+  \]
+  and, by (4),
+  \[
+    a_1\cdot u'_1\cdot v'_1\cdot t'\cdot p
+    = a_1\cdot u'_1\cdot v'_1\cdot w'_1.
+  \]
+
+  \medskip
+
+  \emph{Construction of $p'$.}
+  The relations
+  \[
+    \begin{aligned}
+      Ta_4\cdot (K\pi_4\cdot Tm_2\cdot t)
+      &= Ke_4\cdot TTa_4\cdot Tm_2\cdot t
+    \\&=Ke_4\cdot T(Ke_4\cdot Tb_3\cdot u_2)\cdot Tm'_2\cdot t
+    \\&= (Ke_4\cdot T(Ke_4\cdot Tb_3\cdot u_2)\cdot v_1)\cdot t'
+    \end{aligned}
+  \]
+  combined with the fibre product $(n,n')$ of $(Ta_4,Ke_4\cdot T(Ke_4\cdot Tb_3\cdot u_2)\cdot v_1)$ give a \unsure{bracket} $p$ characterised by
+  \[
+    \begin{aligned}
+      n\cdot p'
+      &= K\pi_4\cdot Tm_2\cdot t
+    \\n'\cdot p'
+      &= t'.
+    \end{aligned}
+    \tag{5}
+  \]
+  Then
+  \[
+    p'\colon(\theta_4\circ(\theta_3\circ\theta_2))\circ\theta_1
+    \to \theta_4\circ((\theta_3\circ\theta_2)\circ\theta_1)
+  \]
+  is a morphism in $\Sp{\TT}$.
+  Indeed, by (5),
+  \[
+    \begin{aligned}
+      Ke_5\cdot Tb_4\cdot n\cdot p'
+      &= Ke_5\cdot Tb_4\cdot K\pi_4\cdot Tm_2\cdot t
+    \\&= Ke_5\cdot KTe_5\cdot TTb_4\cdot Tm_2\cdot t
+    \\&= Ke_5\cdot T(Ke_5\cdot Tb_4\cdot m_2)\cdot t
+    \end{aligned}
+  \]
+  and
+  \[
+    a_1\cdot u'_1\cdot v'_1\cdot n'\cdot p'
+    = a_1\cdot u'_1\cdot v'_1\cdot t'.
+  \]
+
+  \medskip
+
+  \emph{Construction of $p''$.}
+  The relation
+  \[
+    Ta_3\cdot K\pi_3\cdot Tu_2\cdot v_1
+    = Ke_3\cdot Tb_2\cdot u_1\cdot v'_1
+  \]
+  gives a \unsure{bracket} $d_1$ characterised by
+  \[
+    \begin{aligned}
+      m_1\cdot d_1
+      &= K\pi_3\cdot Tu_2\cdot v_1
+    \\m'_1\cdot d_1
+      &= v'_1
+    \end{aligned}
+    \tag{6}
+  \]
+  \oldpage{255}
+  (this is in fact the morphism in $\cat{E}$ that defines $s(\theta_3,\theta_2,\theta_1)$).
+
+  Now the relations
+  \[
+    \begin{aligned}
+      Ta_4\cdot n
+      &= Ke_4\cdot KTe_4\cdot TTb_3\cdot Tu_2\cdot v_1\cdot n'
+    \\&= Ke_4\cdot Tb_3\cdot K\pi_3\cdot Tu_2\cdot v_1\cdot n'
+    \\&= (Ke_4\cdot Tb_3\cdot m_1)\cdot d_1\cdot n'
+    \end{aligned}
+  \]
+  combined with the fibre product $(o,o')$ of $(Ta_4,Ke_4\cdot Tb_3\cdot m_1)$ give a \unsure{bracket} characterised by
+  \[
+    \begin{aligned}
+      o\cdot p''
+      &= n
+    \\o'\cdot p''
+      &= d_1\cdot n'.
+    \end{aligned}
+    \tag{7}
+  \]
+  Then
+  \[
+    p''\colon\theta_4\circ((\theta_3\circ\theta_2)\circ\theta_1)
+    \to \theta_4\circ(\theta_3\circ(\theta_1\circ\theta_1))
+  \]
+  is a morphism in $\Sp{\TT}$, since
+  \[
+    Ke_5\cdot Tb_4\cdot o\cdot p''
+    = Ke_5\cdot Tb_4\cdot n
+  \]
+  and, by (6),
+  \[
+    \[
+      \begin{aligned}
+        a_1\cdot u'_1\cdot m'_1\cdot o'\cdot p''
+        &= a_1\cdot u'_1\cdot m'_1\cdot d_1\cdot n'
+      \\&= a_1\cdot u'_1\cdot v'_1\cdot n'.
+      \end{aligned}
+    \]
+  \]
+
+  \medskip
+
+  \emph{Construction of the ``deus ex machina'' $x$.}
+  The
 \end{proof}
 
 
