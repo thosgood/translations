@@ -300,7 +300,7 @@ Similarly, we often write $Fe$, $Ff$, and $Ie$ instead of $F(e)$, $F(f)$, and $I
 
 As for \emph{limits}, we adopt the following notation: if $e\in\set{\cat{E}}$, and if $\phi\colon \cat{A}\to\cat{E}$ is a functor, then we say that $C\colon e\to\phi$ is a \emph{projective cone} if $C$ is a family of morphisms in $\cat{E}$, called the \emph{canonical projections of $C$}, of the form $C(n)\colon e\to\phi(n)$ for all $n\in\set{\cat{A}}$ such that, for every morphism $x\colon n\to n'$ in $\cat{A}$, we have that $\phi(x)\cdot C(n)=C(n')$.
 We say that the projective cone $C$ is a \emph{projective limit}, or simply that $e$ is the \emph{projective limit of $\phi$}, if, for every projective cone of the form $C'\colon e'\to\phi$, there exists exactly one morphism $f\colon e'\to e$ in $\cat{E}$ such that $C'(n)=C(n)\cdot f$ for all $n\in\set{\cat{A}}$.
-We call $f$ the \emph{\unsure{bracket} of $C'$ compared with} (or \emph{with respect to}) the limit $C$.
+We call $f$ the \emph{crochet}\footnote{\todo{translator footnote here}} of $C'$ with respect to the limit $C$.
 This terminology is often modified for particular limits: products, fibre products, various diagrams.
 For example, we say that the following commutative diagram
 \oldpage{222}
@@ -312,7 +312,7 @@ For example, we say that the following commutative diagram
   & e' \ar[l,"f"]
   \end{tikzcd}
 \]
-is a \emph{cartesian square}, or a \emph{fibre product}\footnote{This terminology supposes that we consider the diagram as oriented within the plane.}, or we say that $(v_1,v_2)$, or simply $\pi$, is a \emph{fibre product} of $(f,g)$, if the relation $f\cdot f'=g\cdot g'$ in $\cat{E}$ implies the existence and universality of a \unsure{bracket} $h$ such that $f'=v_1\cdot h$ and $g'=v_2\cdot h$.
+is a \emph{cartesian square}, or a \emph{fibre product}\footnote{This terminology supposes that we consider the diagram as oriented within the plane.}, or we say that $(v_1,v_2)$, or simply $\pi$, is a \emph{fibre product} of $(f,g)$, if the relation $f\cdot f'=g\cdot g'$ in $\cat{E}$ implies the existence and universality of a crochet $h$ such that $f'=v_1\cdot h$ and $g'=v_2\cdot h$.
 We use analogous conventions for inductive limits, but the expression ``canonical projection''  should be replaced by \emph{canonical injection}.
 We say that $\cat{E}$ \emph{admits projective $\cat{A}$-limits}, for example, if, for every $\phi\in\set{\cat{E}^\cat{A}}$, there exists a projective limit $C\colon e\to\phi$;
 and if we have chosen such a limit for all $\phi$, we say that $\cat{E}$ is endowed with a \emph{canonical} (or \emph{official}) choice of projective $\cat{A}$-limits.
@@ -928,7 +928,7 @@ The first two are full inclusions, the third is faithful and the fourth is (in g
   We set $e=\lim\hat{e}$.
 
   \oldpage{233}
-  Let $m^{Te}$ be the unique morphism (again called the \unsure{bracket}) that comes from the property of the projective limit $\lim\widehat{Te}$, such that $p_n^{Te}\cdot m^{Te}=Tp_n^e$ for all $n\in\set{\cat{A}}$.
+  Let $m^{Te}$ be the unique morphism (again called the crochet) that comes from the property of the projective limit $\lim\widehat{Te}$, such that $p_n^{Te}\cdot m^{Te}=Tp_n^e$ for all $n\in\set{\cat{A}}$.
   We take a fibre product of $(\lim\hat{a},m^{Te})$:
   \[
     \begin{tikzcd}[sep=huge]
@@ -960,9 +960,9 @@ The first two are full inclusions, the third is faithful and the fourth is (in g
   \]
   and then $(b,a,i)$ is a pointed $\TT$-graph.
 
-  Let $m^{T\pi}\colon T\pi\to\lim\widehat{T\pi}$ be the \unsure{bracket} characterised by the relations $p_n^{T\pi}\cdot m^{T\pi}=Tp_n^\pi$;
+  Let $m^{T\pi}\colon T\pi\to\lim\widehat{T\pi}$ be the crochet characterised by the relations $p_n^{T\pi}\cdot m^{T\pi}=Tp_n^\pi$;
   we will show that $\lim\widehat{Tb}\cdot m^{T\pi}=m^{Te}\cdot Tb$ by obtaining equalities whenever we compose on the left by the $p_n^{Te}$.
-  It thus follows, since projective limits of fibre products are again fibre products, that there exists a \unsure{bracket} $m^{\pi_2}\colon\pi_2\to\lim\hat{\pi}_2$ such that
+  It thus follows, since projective limits of fibre products are again fibre products, that there exists a crochet $m^{\pi_2}\colon\pi_2\to\lim\hat{\pi}_2$ such that
   \[
     \begin{aligned}
       \lim\hat{v}_2\cdot m^{\pi_2}
@@ -995,14 +995,14 @@ The first two are full inclusions, the third is faithful and the fourth is (in g
 
   \oldpage{234}
   To see that $(b,a,i,k)$ is indeed a projective limit, suppose that $(b',a',i',k')$ is a $\TT$-category, $(v'_1,v'_2)$ and $(w'_1,w'_2)$ the associated fibre products, and $e'$, $\pi'$, $\pi'_2$, $\pi'_3$ the objects of paths of length $n=0,1,2,3$ (respectively); consider a projective cone from this structure to the functor $\phi\colon\cat{A}\to\Cat{Cat}(\TT)$.
-  For each symbol of an object $x$ in \cref{fig:figure-1}, we denote by $q_n^x\colon x'\to\hat{x}(n)$ the $n$-th projection, and by $q^x$ the \unsure{bracket} characterised by $q_n^x=p_n^x\cdot q^x$ for all $n\in\set{\cat{A}}$.
+  For each symbol of an object $x$ in \cref{fig:figure-1}, we denote by $q_n^x\colon x'\to\hat{x}(n)$ the $n$-th projection, and by $q^x$ the crochet characterised by $q_n^x=p_n^x\cdot q^x$ for all $n\in\set{\cat{A}}$.
   By composing with the $p_n^{Te}$ on the left, we note that $m^{Te}\cdot Tq^e=q^{Te}$, and so
   \[
     \lim\hat{a}\cdot q^\pi
     = q^{Te}\cdot a'
     = m^{Te}\cdot Tq^e\cdot a'
   \]
-  which implies the existence of a \unsure{bracket} $\overline{q}\colon\pi'\to\pi$ characterised by
+  which implies the existence of a crochet $\overline{q}\colon\pi'\to\pi$ characterised by
   \[
     a\cdot\overline{q} = Tq^e\cdot a'
     \textand
@@ -1084,7 +1084,7 @@ With the above notation, we have an isomorphism $V(f^*\overline{e})\to f^*V(\ove
     \end{tikzcd}
   \]
   \oldpage{236}
-  The comparison with the projective limit gives a \unsure{bracket} $g_1\colon\pi''\to\pi'$ such that
+  The comparison with the projective limit gives a crochet $g_1\colon\pi''\to\pi'$ such that
   \[
     \begin{aligned}
       a'\cdot g_1
@@ -1204,7 +1204,7 @@ Set $\MM=(M,m)$.
   Then $\theta'=(b',a')$, where $b'=Mb\cdot m'$, is a $\TT'$-graph.
   This correspondence extends to a functor $\Gr{\MM}\colon\Gr{\TT}\to\Gr{\TT'}$.
 
-  Now, if $(b,a,i,k)$ is a $\TT$-category, then we have a \unsure{bracket} $i'\colon Me\to\pi'$ characterised by
+  Now, if $(b,a,i,k)$ is a $\TT$-category, then we have a crochet $i'\colon Me\to\pi'$ characterised by
   \[
     m'\cdot i' = Mi
     \textand
@@ -1230,7 +1230,7 @@ Set $\MM=(M,m)$.
     \end{tikzcd}
   \]
   (with the data of $\pi'_2$, $\pi'_3$, $v'_1$, etc. being defined as per usual from the $\TT'$-graph $(b',a')$).
-  The morphism $k'\colon\pi'_2\to\pi'$ is the \unsure{bracket} characterised by the relations
+  The morphism $k'\colon\pi'_2\to\pi'$ is the crochet characterised by the relations
   \[
     \begin{aligned}
       m'\cdot k'
@@ -1315,7 +1315,7 @@ More generally, if $f=m'\cdot p'$, and if $m'$ is a monomorphism, then there exi
 \end{itenv}
 
 \begin{proof}
-  To each $\TT$-graph $\theta=(b,a)$ on $e$, we associate, thanks to the canonical decomposition of the \unsure{bracket} $[\theta]\colon\pi\to e\times Te$, a regular $\TT$-graph $\langle\theta\rangle=(b',a')$ on $e$, and $(\id_e,p)\colon\theta\to\langle\theta\rangle$ is a morphism, where $p$ is the epimorphism in the canonical decomposition of $[\theta]$.
+  To each $\TT$-graph $\theta=(b,a)$ on $e$, we associate, thanks to the canonical decomposition of the crochet $[\theta]\colon\pi\to e\times Te$, a regular $\TT$-graph $\langle\theta\rangle=(b',a')$ on $e$, and $(\id_e,p)\colon\theta\to\langle\theta\rangle$ is a morphism, where $p$ is the epimorphism in the canonical decomposition of $[\theta]$.
 
   Now we will show that, if $\overline{\theta}=(b,a,i,k)$ is a $\TT$-category on $e$, then we can form a $\TT$-preorder $\langle\overline{\theta}\rangle$ over $\langle\theta\rangle$.
   If $(v_1,v_2)$ is the fibre product of $(a,Tb)$ used in the construction of $\overline{\theta}$, and if $(v'_1,v'_2)$ is a fibre product of $(a',Tb')$, let $p'\colon\pi_2\to\pi'_2$ and $s'\colon\pi'_2\to\pi_2$ be the \unsure{brackets} characterised by the relations
@@ -1884,7 +1884,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \colon\theta
     \to \id_{e'}\circ\theta.
   \]
-  The relation $Ta\cdot I\pi=Ie\cdot a$ gives a \unsure{bracket} $c\colon\pi\to\pi_2$ such that
+  The relation $Ta\cdot I\pi=Ie\cdot a$ gives a crochet $c\colon\pi\to\pi_2$ such that
   \[
     \overline{v}_1\cdot c = I\pi
     \textand
@@ -1937,7 +1937,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     = Ke''\cdot TTa''\cdot Tv'_1\cdot w_1
     = Ta''\cdot(K\pi''\cdot Tv'_1\cdot w_1)
   \]
-  with the fibre product $(w'_1,w'_2)$ of $(Ke''\cdot Tb'\cdot v_1, Ta'')$, we obtain a \unsure{bracket} $s=s(\theta'',\theta',\theta)\colon\hat{\pi}\to\hat{\pi}'$ characterised by the relations
+  with the fibre product $(w'_1,w'_2)$ of $(Ke''\cdot Tb'\cdot v_1, Ta'')$, we obtain a crochet $s=s(\theta'',\theta',\theta)\colon\hat{\pi}\to\hat{\pi}'$ characterised by the relations
   \[
     \begin{aligned}
       w'_2\cdot s
@@ -1962,7 +1962,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
   \]
   which shows that $s\colon(\theta''\circ\theta')\circ\theta\to\theta''\circ(\theta'\circ\theta)$ defines a morphism in $\Sp{\TT}$.
 
-  We now show the coherence axiom (8).
+  We now show the coherence axiom~(8).
   Let
   \[
     \theta_i
@@ -2115,7 +2115,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \\&= (Ke_4\cdot Tb_3\cdot u_2)\cdot v'_2
     \end{aligned}
   \]
-  combined with the fibre product $(m_2,m'_2)$ of $(Ta_4,Ke_4\cdot Tb_3\cdot u_2)$ give a \unsure{bracket} $d_2$ characterised by
+  combined with the fibre product $(m_2,m'_2)$ of $(Ta_4,Ke_4\cdot Tb_3\cdot u_2)$ give a crochet $d_2$ characterised by
   \[
     \begin{aligned}
       m_2\cdot d_2
@@ -2135,7 +2135,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \\&= v_1\cdot w'_1
     \end{aligned}
   \]
-  combined with the fibre product $(t,t')$ give a \unsure{bracket} $p$ characterised by
+  combined with the fibre product $(t,t')$ give a crochet $p$ characterised by
   \[
     \begin{aligned}
       t\cdot p
@@ -2181,7 +2181,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \\&= (Ke_4\cdot T(Ke_4\cdot Tb_3\cdot u_2)\cdot v_1)\cdot t'
     \end{aligned}
   \]
-  combined with the fibre product $(n,n')$ of $(Ta_4,Ke_4\cdot T(Ke_4\cdot Tb_3\cdot u_2)\cdot v_1)$ give a \unsure{bracket} $p$ characterised by
+  combined with the fibre product $(n,n')$ of $(Ta_4,Ke_4\cdot T(Ke_4\cdot Tb_3\cdot u_2)\cdot v_1)$ give a crochet $p$ characterised by
   \[
     \begin{aligned}
       n\cdot p'
@@ -2220,7 +2220,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     Ta_3\cdot K\pi_3\cdot Tu_2\cdot v_1
     = Ke_3\cdot Tb_2\cdot u_1\cdot v'_1
   \]
-  gives a \unsure{bracket} $d_1$ characterised by
+  gives a crochet $d_1$ characterised by
   \[
     \begin{aligned}
       m_1\cdot d_1
@@ -2242,7 +2242,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \\&= (Ke_4\cdot Tb_3\cdot m_1)\cdot d_1\cdot n'
     \end{aligned}
   \]
-  combined with the fibre product $(o,o')$ of $(Ta_4,Ke_4\cdot Tb_3\cdot m_1)$ give a \unsure{bracket} characterised by
+  combined with the fibre product $(o,o')$ of $(Ta_4,Ke_4\cdot Tb_3\cdot m_1)$ give a crochet characterised by
   \[
     \begin{aligned}
       o\cdot p''
@@ -2283,7 +2283,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \\&\underset{(6)}{=} (Ke_4\cdot Tb_3\cdot m_1)\cdot d_1\cdot w'_1
     \end{aligned}
   \]
-  combined with the fibre product $(o,o')$ give a \unsure{bracket} $x$ such that
+  combined with the fibre product $(o,o')$ give a crochet $x$ such that
   \[
     \begin{aligned}
       o\cdot x
@@ -2293,7 +2293,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \end{aligned}
     \tag{8}
   \]
-  It is the uniqueness property of this \unsure{bracket} that will allow us to complete the proot;
+  It is the uniqueness property of this crochet that will allow us to complete the proot;
   indeed, it suffices to note that if in (8) we replace $x$ by $q'\cdot q$ or $p''\cdot p'\cdot p$ then these relations still hold true.
   Indeed,
   \[
@@ -2346,13 +2346,53 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \\&\underset{(4)}{=} d_1\cdot w'_1.
     \end{aligned}
   \]
-  This finishes the proof of the coherence axiom (8).
-  The proof of the coherence axiom (9) is based on the same method.
+  This finishes the proof of the coherence axiom~(8).
+  The proof of the coherence axiom~(9) is based on the same method.
 \end{proof}
 
 \begin{rmenv}{Remark}
-  We
+  We could have proven a more general result, and more quickly, by systematically using pseudo-triples.
+  $\Sp{\TT}$ would then have appeared as the ``Kleisli'' pseudo-category of the pseudo-triple induced by $\TT$ on $\Sp{\cat{E}}$, where $\Sp{\cat{E}}=\Sp{(\id_\cat{E},\id_\cat{E},\id_\cat{E})}$.
+  We canonically obtain a pseudo-functor from the Kleisli category $\Kl{\TT}$ of the triple $\TT$ to the pseudo-category $\Sp{\TT}$ by sending a morphism $f\colon e\to e'$ in $\Kl{\TT}$ (i.e. $f\colon e\to Te$ in $\cat{E}$) to the $\TT$-span
+  \[
+    (f,\id_e)\colon e\to e'.
+  \]
 \end{rmenv}
+
+We say that a natural transformation $m\colon F\to F'$, where $F,F'\colon\cat{C}\to\cat{C}'$ are functors, is \emph{cartesian} if, for every morphism $f\colon e\to e'$ in $\cat{C}$, the pair $(F(f),m(e))$ is a fibre product of $(m(e'),F'(f))$.
+We say that $\TT=(T,I,K)$ is a \emph{cartesian triple} if the following two conditions are satisfied:
+\begin{enumerate}
+  \item[(a)]
+    $\Cat{E}$ admits finite fibre products, and $T$ commutes with them (which is the case as soon as $I$ or $K$ are cartesian).
+
+  \item[(b)]
+    $I$ and $K$ are cartesian natural transformations.
+\end{enumerate}
+
+We will see examples of cartesian triples in \cref{sec:iii};
+here is a useful characterisation:
+
+\begin{itenv}{Proposition~II.2.14}
+  For $\Sp{\TT}$ to be a bicategory (i.e. for $r$, $l$, and $s$ to define natural equivalences), it is necessary and sufficient that $\TT$ be cartesian.
+\end{itenv}
+
+\begin{proof}
+  \oldpage{257}
+  We use the notation of \unsure{Proposition~1}.
+  For the construction of $r(\theta)$, it is clear that condition~(c) implies that the crochet between two fibre products is invertible, and conversely if it is invertible then (c) is satisfied.
+  We already know that $l(\theta)$ is always invertible
+  For the construction of $s(\theta'',\theta',\theta)$, \unsure{Figure~1} clearly shows that if (a) and (b) are satisfied then $(K\pi''\cdot Tv_1\cdot w_1,w_2)$ is a fibre product of $(Ta'',Ke''\cdot Tb'\cdot v_1)$ and, since $s$ is the crochet arising from the canonical fibre product $(w_1,w_2)$, it is invertible.
+  The converse can be proven by considering degenerate cases of this situation.
+\end{proof}
+
+
+
+\subsection{Two interpretations of $\TT$-categories}
+\label{sec:ii.3}
+
+We
+
+
 
 
 
