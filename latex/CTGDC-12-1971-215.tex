@@ -433,7 +433,7 @@ below, we will draw inspiration from the ``global'' definition of a category in 
 
 
 \subsection{$\TT$-categories}
-\label{sub:i.1}
+\label{sec:i.1}
 
 In the rest of this chapter, $\cat{E}$ will be a category admitting finite fibre products, and $\TT=(T,I,K)$ a triple on $\cat{E}$.
 
@@ -584,7 +584,7 @@ imply the existence of \unsure{brackets} $k_1,k_2\colon\pi_3\to\pi_2$ such that
   \label{fig:figure-1}
 \end{figure}
 
-A \emph{$\TT$-category}, then, is a quadruple $\theta=(b,a,i,k)$ such that $(b,a,i)$ is a pointed $\TT$-graph and further satisfying axioms~(4), (5), (6), and (7) and (8) below:
+A \emph{$\TT$-category}, then, is a quadruple $\theta=(b,a,i,k)$ such that $(b,a,i)$ is a pointed $\TT$-graph and further satisfying axioms~(4), (5), (6), as well as (7) and (8) below:
 \begin{enumerate}
   \item[(7)] $k\cdot i_1 = \id_\pi = k\cdot i_2$ (``identity'')
   \item[(8)] $k\cdot k_1 = k\cdot k_2$ (``associativity'').
@@ -686,7 +686,7 @@ The composition laws in these categories are evident.
 
 
 \subsection{$\TT$-preorders}
-\label{sub:i.2}
+\label{sec:i.2}
 
 A \emph{regular} $\TT$-graph is a $\TT$-graph $(b,a)$ such that the relations
 \[
@@ -698,12 +698,12 @@ imply that $f=f'$.
 A \emph{$\TT$-preorder} is a $\TT$-category whose underlying graph is regular.
 
 \begin{itenv}{Proposition~I.2.2}
-  If $(b,a)$ is a regular $\TT$-graph, $e$ the objects object, $\pi$ the morphisms object, $\pi_2$ the source of a fibre product of $(a,Tb)$, and $i\colon e\to\pi$ and $k\colon\pi_2\to\pi$ morphisms in $\cat{E}$ satisfying only conditions~(1) to (4) of \cref{sub:i.1}, then $(b,a,i,k)$ is a $\TT$-preorder.
+  If $(b,a)$ is a regular $\TT$-graph, $e$ the objects object, $\pi$ the morphisms object, $\pi_2$ the source of a fibre product of $(a,Tb)$, and $i\colon e\to\pi$ and $k\colon\pi_2\to\pi$ morphisms in $\cat{E}$ satisfying only conditions~(1) to (4) of \cref{sec:i.1}, then $(b,a,i,k)$ is a $\TT$-preorder.
   Furthermore, conditions~(2') and (3') are consequences of (1') for a morphism into a $\TT$-preorder.
 \end{itenv}
 
 \begin{proof}
-  We have to show that the axioms of identity and associativity, (7) and (8) of \cref{sub:i.1}, are automatically satisfied.
+  We have to show that the axioms of identity and associativity, (7) and (8) of \cref{sec:i.1}, are automatically satisfied.
   Since $(b,a)$ is regular, the relations
   \[
     \begin{gathered}
@@ -875,7 +875,7 @@ Furthermore, when $\cat{E}=\Cat{Set}$ is the category of sets associated to a un
 
 
 \subsection{Properties (projective limits, fibrations, \ldots)}
-\label{sub:i.3}
+\label{sec:i.3}
 
 We have a sequence of forgetful functors
 \[
@@ -1150,7 +1150,7 @@ With the above notation, we have an isomorphism $V(f^*\overline{e})\to f^*V(\ove
 \end{proof}
 
 Now let $\TT'=(T',I',K')$ be a triple on another category $\cat{E}'$ that admits finite fibre products.
-Let $(M,m)\colon\TT\to\TT'$ be a morphism of triples (see \cref{sub:i.3}), where $M\colon\cat{E}\to\cat{E}'$ is a functor that respects finite fibre products.
+Let $(M,m)\colon\TT\to\TT'$ be a morphism of triples (see \cref{sec:i.3}), where $M\colon\cat{E}\to\cat{E}'$ is a functor that respects finite fibre products.
 Finally, suppose that $\cat{E}$ and $\cat{E}'$ admit projective $\cat{A}$-limits, and that $M$ respects these projective limits.
 Set $\MM=(M,m)$.
 
@@ -1249,7 +1249,7 @@ Set $\MM=(M,m)$.
 \end{proof}
 
 \begin{rmenv}{Remark}
-  As an exercise, it is interesting to examine the case where $M=\id_\cat{E}$, $m=I$, and $\TT=(\id_\cat{E},\id_\cat{E},\id_\cat{E})$: there is an $\cat{E}$-category underlying every $\TT$-category (in the terminology of \cref{sub:iii.2}).
+  As an exercise, it is interesting to examine the case where $M=\id_\cat{E}$, $m=I$, and $\TT=(\id_\cat{E},\id_\cat{E},\id_\cat{E})$: there is an $\cat{E}$-category underlying every $\TT$-category (in the terminology of \cref{sec:iii.2}).
 \end{rmenv}
 
 We will later study the question of whether or not all functors in the sequence ($\ast$) admit adjoints and coadjoints;
@@ -2390,7 +2390,222 @@ here is a useful characterisation:
 \subsection{Two interpretations of $\TT$-categories}
 \label{sec:ii.3}
 
-We
+We will give two interpretations, somehow dual to one another, of $\TT$-categories.
+
+A \emph{monad} (or \emph{monoid}) in a pseudo-category $\cat{D}$ is a pseudo-functor $\mu\colon\mathbf{1}\to\cat{D}$, where we denote by $\mathbf{1}$ the pseudo-category consisting of a single object $0$, a single morphism, and a single 2-morphism (this entirely determines the structure).
+We denote by $\circ$ the first law in $\cat{D}$ and by $\cdot$ the second.
+If $e=\mu(0)$ and $\theta=\mu(\id_0)$, then the data of $\mu$ is equivalent to that of two 2-morphisms in $\cat{D}$, namely
+\[
+  i\colon\id_e\to\theta
+  \textand
+  k\colon\theta\circ\theta\to\theta
+\]
+(which correspond to the families $u$ and $c$ in the definition of pseudo-functors) that make the following diagrams commute:
+\[
+  \begin{tikzcd}
+    \theta
+      \ar[r,"\id(\theta)"]
+      \ar[d,swap,"r(\theta)"]
+    & \theta
+  \\\theta\circ\id_e
+      \ar[r,swap,"\theta\circ i"]
+    & \theta\circ\theta
+      \ar[u,swap,"k"]
+  \end{tikzcd}
+  \qquad
+  \begin{tikzcd}
+    \theta
+    & \theta
+        \ar[l,swap,"\id(\theta)"]
+        \ar[d,"l(\theta)"]
+  \\\theta\circ\theta
+        \ar[u,"k"]
+    & \id_e\circ\theta
+        \ar[l,"i\circ\theta"]
+  \end{tikzcd}
+  \qquad
+  \begin{tikzcd}
+    \theta\circ(\theta\circ\theta)
+      \ar[d,swap,"\theta\circ k"]
+    & (\theta\circ\theta)\circ\theta
+      \ar[l,swap,"{s(\theta,\theta,\theta)}"]
+      \ar[d,"k\circ\theta"]
+  \\\theta\circ\theta
+      \ar[d,swap,"k"]
+    & \theta\circ\theta
+      \ar[d,"k"]
+  \\ \theta
+    & \theta
+      \ar[l,"\id(\theta)"]
+  \end{tikzcd}
+\]
+(which correspond to axioms~(5') and (6') of \cref{sec:ii.1}).
+
+\oldpage{258}
+Let $\cat{E}$ be a category endowed with a triple $\TT$, admitting finite fibre products and endowed with a canonical choice of these fibre products.
+
+\begin{itenv}{Proposition~II.3.15}
+  The data of a $\TT$-category is equivalent to that of a monad in the pseudo-category $\Sp{\TT}$ on the same object.
+\end{itenv}
+
+\begin{proof}
+  If $\mu\colon\mathbf{1}\to\Sp{\TT}$ is a monad, then the $\TT$-span $\theta\colon e\to e$ is defined by a pair $(a,b)$ of morphisms in $\cat{E}$ of the form
+  \[
+    a\colon\pi\to Te
+    \textand
+    b\colon\pi\to e.
+  \]
+  We will construct the 2-morphism
+  \[
+    s(\theta,\theta,\theta)\colon
+    (\theta\circ\theta)\circ\theta
+    \to \theta\circ(\theta\circ\theta)
+  \]
+  in $\Sp{\TT}$.
+  For this, let $(v_2,v_1)$ be the canonical fibre product of $(Tb,a)$, let $(w_2,w_1)$ be the fibre product of $(Tv_1,v_2)$ that makes the fibre product $(w_2,v_1\cdot w_1)$ of $(Tb\cdot Tv_1,a)$ canonical, and let $(w'_2,w'_1)$ be the canonical fibre product of $(Tb,Ke\cdot Ta\cdot v_2)$;
+  then $s(\theta,\theta,\theta)$ is defined by the morphism $s$ in $\cat{E}$ characterised by
+  \[
+    \begin{aligned}
+      w'_1\cdot s
+      &= w_1
+    \\w'_2\cdot s
+      &= K\pi\cdot Tv_2\cdot w_2
+    \end{aligned}
+    \tag{1}
+  \]
+  which follows from combining the relation
+  \[
+    Tb\cdot K\pi\cdot Tv_2\cdot w_2
+    = Ke\cdot Ta\cdot v_2\cdot w_1
+  \]
+  with the fibre product $(w'_2,w'_1)$.
+
+  We now construct the 2-morphisms
+  \[
+    l(\theta)\colon\theta\to\id_e\circ\theta
+    \textand
+    r(\theta)\colon\theta\to\theta\circ\id_e
+  \]
+  in $\Sp{\TT}$, defined by the morphisms $l$ and $r$ of $\cat{E}$ characterised by the relations
+  \[
+    \begin{aligned}
+      u'_2\cdot l
+      &= a
+    \\u'_1\cdot l
+      &= \id_\pi
+    \\u_2\cdot r
+      &= I\pi
+    \\u_1\cdot r
+      &= b
+    \end{aligned}
+    \tag{2}
+  \]
+  where $(u_2,u_1)$ is the canonical fibre product of $(Tb,Ie)$, and $(u'_2,u'_1)$ that of $(\id_{Te},a)$.
+  \oldpage{259}
+  In the rest of this proof, we denote by the same letter $x$ a 2-morphism $x\colon e\to e''$ in $\Sp{\TT}$ and the underlying morphism $x\colon e\to e'$ in $\cat{E}$; $i$ and $k$ have the same meaning as above (the families $u$ and $c$).
+  We will show that $\theta^*=(b,a,i,k)$ is a (non-canonical; see the definition in \cref{sec:ii.4}) $\TT$-category if and only if the data $(\theta,i,k)$ defines a monad $\mu$ in $\Sp{\TT}$.
+
+  In $\cat{E}$, we have the following characterising relations for $i\circ\theta$, $\theta\circ i$, $k\circ\theta$, and $\theta\circ k$:
+  \[
+    \begin{aligned}
+      v_2\cdot(i\circ\theta)
+      &= Ti\cdot u'_2
+    \\v_2\cdot(\theta\circ i)
+      &= u_2
+    \\v_2\cdot(k\circ\theta)
+      &= Tk\cdot w_2
+    \\v_2\cdot(\theta\circ k)
+      &= w'_2
+    \end{aligned}
+    \qquad
+    \begin{aligned}
+      v_1\cdot(i\circ\theta)
+      &= u'_1
+    \\v_1\cdot(\theta\circ i)
+      &= i\cdot u_1
+    \\v_1\cdot(k\circ\theta)
+      &= v_1\cdot w_1
+    \\v_1\cdot(\theta\circ k)
+      &= k\cdot w'_1.
+    \end{aligned}
+    \tag{3}
+  \]
+  Using (1), (2), and (3), we thus deduce the following relations in $\cat{E}$:
+  \[
+    \begin{aligned}
+      v_2\cdot(i\circ\theta)\cdot l
+      &= Ti\cdot a
+    \\v_2\cdot(\theta\circ i)
+      &= I\pi
+    \\v_2\cdot(k\circ\theta)
+      &= Tk\cdot w_2
+    \\v_2\cdot(\theta\circ k)\cdot s
+      &= K\pi\cdot Tv_2\cdot w_2
+    \end{aligned}
+    \qquad
+    \begin{aligned}
+      v_1\cdot(i\circ\theta)\cdot l
+      &= \id_\pi
+    \\v_1\cdot(\theta\circ i)\cdot r
+      &= i\cdot b
+    \\v_1\cdot(k\circ\theta)
+      &= v_1\cdot w_1
+    \\v_1\cdot(\theta\circ k)\cdot s
+      &= k\cdot w_1.
+    \end{aligned}
+  \]
+  If we combine these relations with the characterising relations~(2), (3), (4), (5), (6) from \cref{sec:i.1}, then we deduce the relations
+  \[
+    \begin{aligned}
+      i_1
+      &= (i\circ\theta)\cdot l
+    \\k_1
+      &= (\theta\circ k)\cdot s
+    \end{aligned}
+    \qquad
+    \begin{aligned}
+      i_2
+      &= (\theta\circ i)\cdot r
+    \\k_2
+      &= k\circ\theta.
+    \end{aligned}
+  \]
+  The ``identity'' and ``associativity'' conditions~(7) and (8) from \cref{sec:i.1} can then be written as
+  \[
+    \begin{gathered}
+      k\cdot(i\circ\theta)\cdot l
+      = \id_\pi
+      = k\cdot(\theta\circ i)\cdot r
+    \\k\cdot(\theta\circ k)\cdot s
+      = k\cdot(k\circ\theta)
+    \end{gathered}
+  \]
+  and express the commutativity of the diagrams defined, above, by $\mu$, which are extracts of the following diagram in $\Sp{\TT}$:
+  \[
+    \begin{tikzcd}
+      &&\theta\circ\id_e
+        \ar[dr,"\theta\circ i"]
+      &&(\theta\circ\theta)\circ\theta
+        \ar[dl,swap,"k\circ\theta"]
+        \ar[dd,"{s(\theta,\theta,\theta)}"]
+    \\\id_e
+        \ar[r,"i"]
+      & \theta
+        \ar[ur,"r(\theta)"]
+        \ar[dr,swap,"l(\theta)"]
+      && \theta\circ\theta
+        \ar[ll,swap,"k"]
+    \\&&\id_e\circ\theta
+        \ar[ur,swap,"i\circ\theta"]
+      &&\theta\circ(\theta\circ\theta)
+        \ar[ul,"\theta\circ k"]
+    \end{tikzcd}
+  \]
+  \oldpage{260}
+  which finishes the proof.
+\end{proof}
+
+If
 
 
 
