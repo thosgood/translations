@@ -2605,7 +2605,40 @@ Let $\cat{E}$ be a category endowed with a triple $\TT$, admitting finite fibre 
   which finishes the proof.
 \end{proof}
 
-If
+If $\cat{E}$ satisfies the same hypotheses, we denote by $\Sp{\cat{E}}$ the pseudo-category (which is really a bicategory) $\Sp{\id_\cat{E},\id_\cat{E},\id_\cat{E}}$;
+its morphisms are simply called \emph{spans in $\cat{E}$}.
+We denote by $\circ$ its first law, and by $\cdot$ its second, and we denote a morphism of spans and the underlying morphism in $\cat{E}$ by the same notation.
+We will now interpret a $\TT$-category in $\Sp{\cat{E}}$ instead of $\Sp{\TT}$.
+If we had defined the notion of a pseudo-triple on a pseudo-category (for example, we would see that $\TT$ induces a pseudo-triple on $\Sp{\cat{E}}$), then we could define the notion of pseudo-algebra in full generality.
+We will content ourselves with the following definition: we say that $(\theta,\tilde{i},\tilde{k})$ is a $\TT$-pseudo-algebra on $e$ if $\theta\colon Te\to e$ is a span in $\cat{E}$ (and thus defined by morphisms $b\colon\pi\to e$ and $a\colon\pi\to Te$ in $\cat{E}$), if
+\[
+  \begin{aligned}
+    \tilde{i}\colon \id_e
+    &\to \theta\circ Ie
+  \\\tilde{k}\colon \theta\circ T\theta
+    &\to \theta Ke
+  \end{aligned}
+\]
+are 2-morphisms in $\Sp{\cat{E}}$, where we set $T\theta=(Tb,Ta)$ and identify every morphism $x\colon e'\to e''$ with the span $(x,\id_{e'})\colon e'\to e''$, and finally if the following ``coherence axioms'' are satisfied:
+\[
+  (\tilde{k}\circ ITe)\cdot(\tilde{i}\circ\theta)
+  = \id_\theta
+  = (\tilde{k}\circ TIe)\cdot(\theta\circ T\tilde{i})
+  \tag{1}
+\]
+\[
+  (\tilde{k}\circ KTe)\cdot(\tilde{k}\circ TT\theta)
+  = (\tilde{k}\circ TKe)\cdot(\theta\circ T\tilde{k}).
+  \tag{2}
+\]
+
+\begin{itenv}{Proposition~II.3.16}
+  The data of a $\TT$-category on $e$ is equivalent to the data of a $\TT$-pseudo-algebra on $e$.
+\end{itenv}
+
+\begin{proof}
+  Let
+\end{proof}
 
 
 
