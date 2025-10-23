@@ -154,7 +154,7 @@ This led Barr, in \cite{Ba}, to define ``relational $\TT$-algebras'' so that the
 But Barr seemed disappointed in the fact that, apart from this particular case, and that of preorders relative to the identity triple, there were few examples.
 Independently, the new system of axioms for topologies that we had given in \cite{Bu} led us to a similar idea (unfortunately with the triple of filters\ldots but our goal was to situate topologies amongst quasi-topologies) that consisted in seeing topologies as a notion analogous to that of preorders (it is indicative, indeed, that the structure of a finite topology is equivalent to that of a finite preorder).
 But this idea necessitated us to try passing from preorders to categories, and we found, in the definitions of Bénabou \cite{Be} of categories in terms of spans, what we needed in order to define $\TT$-categories.
-We show (\hyperref[proposition:i.2.4]{Proposition~I.2.4}) that the ``relational $\TT$-algebras'' are obtained as a particular case: that of $\TT$-preorders (which are to $\TT$-categories what preorders are to categories).
+We show (\cref[proposition:i.2.4]{Proposition~I.2.4}) that the ``relational $\TT$-algebras'' are obtained as a particular case: that of $\TT$-preorders (which are to $\TT$-categories what preorders are to categories).
 
 \oldpage{216}
 The general outline of this article is as follows.
@@ -300,7 +300,7 @@ Similarly, we often write $Fe$, $Ff$, and $Ie$ instead of $F(e)$, $F(f)$, and $I
 
 As for \emph{limits}, we adopt the following notation: if $e\in\set{\cat{E}}$, and if $\phi\colon \cat{A}\to\cat{E}$ is a functor, then we say that $C\colon e\to\phi$ is a \emph{projective cone} if $C$ is a family of morphisms in $\cat{E}$, called the \emph{canonical projections of $C$}, of the form $C(n)\colon e\to\phi(n)$ for all $n\in\set{\cat{A}}$ such that, for every morphism $x\colon n\to n'$ in $\cat{A}$, we have that $\phi(x)\cdot C(n)=C(n')$.
 We say that the projective cone $C$ is a \emph{projective limit}, or simply that $e$ is the \emph{projective limit of $\phi$}, if, for every projective cone of the form $C'\colon e'\to\phi$, there exists exactly one morphism $f\colon e'\to e$ in $\cat{E}$ such that $C'(n)=C(n)\cdot f$ for all $n\in\set{\cat{A}}$.
-We call $f$ the \emph{crochet}\footnote{\todo{translator footnote here}} of $C'$ with respect to the limit $C$.
+We call $f$ the \emph{crochet}\todo{translator footnote here about ``crochet''} of $C'$ with respect to the limit $C$.
 This terminology is often modified for particular limits: products, fibre products, various diagrams.
 For example, we say that the following commutative diagram
 \oldpage{222}
@@ -477,7 +477,7 @@ The relations
     = Tb\cdot I\pi
   \end{gathered}
 \]
-imply the existence of \unsure{brackets} $i_1,i_2\colon\pi\to\pi_2$ such that
+imply the existence of crochets $i_1,i_2\colon\pi\to\pi_2$ such that
 \[
   v_1\cdot i_1
   = \id_p
@@ -518,7 +518,7 @@ then the relations
     = Tb\cdot (Tk\cdot w_2)
   \end{gathered}
 \]
-imply the existence of \unsure{brackets} $k_1,k_2\colon\pi_3\to\pi_2$ such that
+imply the existence of crochets $k_1,k_2\colon\pi_3\to\pi_2$ such that
 \[
   v_1\cdot k_1
   = k\cdot w_1
@@ -627,7 +627,7 @@ If $\theta=(b,a,i)$ and $\theta'=(b',a',i')$ are pointed $\TT$-graphs, then a mo
 
 \oldpage{228}
 Finally, let $\theta=(b,a,i,k)$ and $\theta'=(b',a',i',k')$ be $\TT$-categories;
-if $(f_0,f_1)$ defines a morphism of the underlying pointed $\TT$-graphs, then there exist \unsure{brackets} $f_2\colon\pi_2\to\pi'_2$ and $f_3\colon\pi_3\to\pi'_3$ characterised by the relations
+if $(f_0,f_1)$ defines a morphism of the underlying pointed $\TT$-graphs, then there exist crochets $f_2\colon\pi_2\to\pi'_2$ and $f_3\colon\pi_3\to\pi'_3$ characterised by the relations
 \[
   \begin{gathered}
     v'_1\cdot f_2
@@ -1136,7 +1136,7 @@ With the above notation, we have an isomorphism $V(f^*\overline{e})\to f^*V(\ove
     \end{tikzcd}
   \]
   where $f_2\colon\pi'_2\to\pi_2$ is defined above, from $(f_0,f_1)$;
-  these give two \unsure{brackets}
+  these give two crochets
   \[
     i'\colon e'\to\pi'
     \textand
@@ -1184,7 +1184,7 @@ Set $\MM=(M,m)$.
     & \cat{E'}
     \end{tikzcd}
   \]
-  These functors respect projective $\cat{A}$-limits and the fibrations defined in \cref{proposition:i.3.6}.
+  These functors respect projective $\cat{A}$-limits and the fibrations defined in \hyperref[proposition:i.3.6]{Proposition~I.3.6}.
 \end{itenv}
 
 \begin{proof}
@@ -1276,7 +1276,7 @@ Suppose that $\cat{E}$ admits finite projective limits.
     \textand
     \overline{G}(e) = (p_1,p_2,i_0,k_0)
   \]
-  where $i_0$ and $k_0$ are the \unsure{brackets} characterised by the relations
+  where $i_0$ and $k_0$ are the crochets characterised by the relations
   \[
     \begin{aligned}
       p_1\cdot i_0
@@ -1318,7 +1318,7 @@ More generally, if $f=m'\cdot p'$, and if $m'$ is a monomorphism, then there exi
   To each $\TT$-graph $\theta=(b,a)$ on $e$, we associate, thanks to the canonical decomposition of the crochet $[\theta]\colon\pi\to e\times Te$, a regular $\TT$-graph $\langle\theta\rangle=(b',a')$ on $e$, and $(\id_e,p)\colon\theta\to\langle\theta\rangle$ is a morphism, where $p$ is the epimorphism in the canonical decomposition of $[\theta]$.
 
   Now we will show that, if $\overline{\theta}=(b,a,i,k)$ is a $\TT$-category on $e$, then we can form a $\TT$-preorder $\langle\overline{\theta}\rangle$ over $\langle\theta\rangle$.
-  If $(v_1,v_2)$ is the fibre product of $(a,Tb)$ used in the construction of $\overline{\theta}$, and if $(v'_1,v'_2)$ is a fibre product of $(a',Tb')$, let $p'\colon\pi_2\to\pi'_2$ and $s'\colon\pi'_2\to\pi_2$ be the \unsure{brackets} characterised by the relations
+  If $(v_1,v_2)$ is the fibre product of $(a,Tb)$ used in the construction of $\overline{\theta}$, and if $(v'_1,v'_2)$ is a fibre product of $(a',Tb')$, let $p'\colon\pi_2\to\pi'_2$ and $s'\colon\pi'_2\to\pi_2$ be the crochets characterised by the relations
   \[
     \begin{aligned}
       v'_1\cdot p'
@@ -2637,8 +2637,78 @@ are 2-morphisms in $\Sp{\cat{E}}$, where we set $T\theta=(Tb,Ta)$ and identify e
 \end{itenv}
 
 \begin{proof}
-  Let
+  Let $\Theta\colon Te\to e$ be a span, with $\theta=(b,a)$;
+  let $(u''_1,u''_2)$ be the canonical fibre product of $(a,Ie)$;
+  then $\theta\circ Ie\colon e\to e$ is defined by the pair $(b\cdot u''_1,u''_2)$.
+  A morphism $i\colon\id_e\to\theta\circ Ie$ in $\Sp{\cat{E}}$ is defined by a morphism $\tilde{i}\colon e\to\pi'$ in $\cat{E}$ (see \unsure{Figure}) such that
+  \[
+    \begin{aligned}
+      b\cdot u''_1\cdot\tilde{i}
+      &= \id_e
+    \\u''_2\cdot\tilde{i}
+      &= \id_e.
+    \end{aligned}
+  \]
+  Set $i=u''_1\cdot\tilde{i}$;
+  we have that
+  \[
+    \begin{aligned}
+      b\cdot i
+      &= \id_e
+    \\a\cdot i
+      &= Ie\cdot u''_2\cdot\tilde{i}
+      = Ie
+    \end{aligned}
+  \]
+  and so $(b,a,i)$ is a pointed $\TT$-graph on $e$.
+  Conversely, this data determines a crochet $\tilde{i}\colon e\to\pi$ that defines the desired morphism $\tilde{i}$ of spans.
+
+  \todo{figure}
+
+  \oldpage{261}
+  Let $(v_1,v_2)$ and $(v'_1,v'_2)$ be the canonical fibre products of $(a,Tb)$ and $(a,Ke)$ respectively;
+  then $\theta\circ T\theta$ and $\theta\circ Ke\colon TTe\to e$ are defined by the pairs $(b\cdot v_1,Ta\cdot v_2)$ and $(b\cdot v'_1,v'_2)$ respectively.
+  A morphism of spans $\tilde{k}\colon\theta\circ T\theta\to\theta\circ Ke$ is defined by a morphism $\tilde{k}\colon\pi_2\to\pi''$ in $\cat{E}$ such that
+  \[
+    \begin{aligned}
+      b\cdot v'_1\cdot\tilde{k}
+      &= b\cdot v_1
+    \\v'_2\cdot\tilde{k}
+      &= Ta\cdot v_2.
+    \end{aligned}
+  \]
+  Set $k=v'_1\cdot\tilde{k}$;
+  we have that $b\cdot k=b\cdot v_1$, and
+  \[
+    \begin{aligned}
+      a\cdot k
+      &= a\cdot v'_1\cdot\tilde{k}
+    \\&= Ke\cdot v'_2\cdot\tilde{k}
+    \\&= Ke\cdot Ta\cdot v_2
+    \end{aligned}
+  \]
+  which expresses axiom~(4) of \cref{sec:i.1}.
+  Conversely, if $k$ satisfies (4) then it determines a crochet $\tilde{k}$ that defines a morphism of spans $\tilde{k}\colon\theta\circ T\theta\to\theta\circ Ke$.
+  Thus it remains only to show that $(b,a,i,k)$ is a $\TT$-category, i.e. that it satisfies axioms~(7) and (8) of \cref{sec:i.1}, if and only if the coherence axioms~(1) and (2) above are satisfied, which is a routine verification.
 \end{proof}
+
+\oldpage{262}
+
+\begin{rmenv}{Remark}
+  By applying the above to $\TT$-preorders, we reprove \hyperref[proposition:i.2.4]{Proposition~I.2.4}.
+\end{rmenv}
+
+
+
+\subsection{Pseudo-monoidal and fibration category of $\Gr{\TT}$}
+\label{sec:ii.4}
+
+\todo{think about section title translation}
+
+A \emph{pseudo-monoidal category} (or a \emph{pseudo-monoid}) is a pseudo-category $\overline{\cat{D}}$ with only one object, which we almost always denote by $1$.
+If $\cat{D}$ is the category $\Hom_{\overline{\cat{D}}}(1,1)$, then its composition law, which coincides with the ``second law'' of $\overline{\cat{D}}$ is denoted by $\cdot$ and the ``first law'' of $\cat{D}$ \unsure{typo? $\overline{\cat{D}}$} is generally denoted by the symbol $\circ$.
+We often write $\overline{\cat{D}}=(\cat{D},1,\circ)$, and the symbols $r$, $l$, and $s$ from axioms~(5) and (6) of \cref{sec:ii.1} are always used in the same way;
+this is why they are easily understood even when denoting $\overline{\cat{D}}$ as a triplet.
 
 
 
