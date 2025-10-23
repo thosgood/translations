@@ -2709,6 +2709,15 @@ A \emph{pseudo-monoidal category} (or a \emph{pseudo-monoid}) is a pseudo-catego
 If $\cat{D}$ is the category $\Hom_{\overline{\cat{D}}}(1,1)$, then its composition law, which coincides with the ``second law'' of $\overline{\cat{D}}$ is denoted by $\cdot$ and the ``first law'' of $\cat{D}$ \unsure{typo? $\overline{\cat{D}}$} is generally denoted by the symbol $\circ$.
 We often write $\overline{\cat{D}}=(\cat{D},1,\circ)$, and the symbols $r$, $l$, and $s$ from axioms~(5) and (6) of \cref{sec:ii.1} are always used in the same way;
 this is why they are easily understood even when denoting $\overline{\cat{D}}$ as a triplet.
+Similarly, a pseudo-functor $\overline{F}\colon\overline{\cat{D}}\to\overline{\cat{D}}'$ between pseudo-monoidal categories is determined by a functor $F\colon\cat{D}\to\cat{D}'$ between the underlying categories that ``commutes'' with the first laws, i.e. the morphisms $u$ and $c$ from axioms~(3') and (4') are always denoted in the same way: $u\colon1\to F1$ is a morphism in $\cat{D}'$, whereas $c\colon\bigcirc\cdot(F\times F)\to F\cdot\bigcirc$, where we denote by $\bigcirc\colon\cat{D}\times\cat{D}\to\cat{D}$ the ``first law'' functor:
+\[
+  \bigcirc(m',m)
+  = m'\circ m
+\]
+for every pair of morphisms in $\cat{D}$, for any pseudo-monoidal category $\overline{\cat{D}}$.
+All this data should satisfy ``the coherence axioms''~(7), (8), (5'), and (6') of \cref{sec:ii.1}.
+
+Let $\TT$ be a triple on a category $\cat{E}$ endowed with canonical fibre products.
 
 
 
