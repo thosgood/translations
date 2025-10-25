@@ -160,22 +160,22 @@ We show (\cref[proposition:i.2.4]{Proposition~I.2.4}) that the ``relational $\TT
 \oldpage{216}
 The general outline of this article is as follows.
 \hyperref[sec:0]{Chapter~0} is dedicated to some details of terminology.
-\hyperref[sec:i]{Chapter~I} first gives a definition of $\TT$-categories that demonstrates their relation to categories: if $\cat{E}=\Cat{Set}$, then the morphisms of a $\TT$-category appear, not as arrows going from one object to another object, but as arrows going from one structure on the objects to an object.
+\hyperref[sec:I]{Chapter~I} first gives a definition of $\TT$-categories that demonstrates their relation to categories: if $\cat{E}=\Cat{Set}$, then the morphisms of a $\TT$-category appear, not as arrows going from one object to another object, but as arrows going from one structure on the objects to an object.
 In this way, a ``convergence'' in a topology can be represented as an arrow $F\to x$ going from a filter to a point.
 It is then easy to observe that these structures must be given by the endofunctor of a triple in order to be able to define the properties of reflexivity, transitivite, identity, and associativity of a $\TT$-category.
 Then we will expand on some general properties: those that can we obtain without placing any hypotheses on the triple $\TT$, essentially the existence of projective limits and the fibration of the forgetful functor to $\cat{E}$ (which will allow us, in passing, to resolve the problem that consists of universally embedding the forgetful functor of $\TT$-algebras into a fibrant functor).
 Other properties, such as the existence of inductive limits, the adjunction with the forgetful functor to $\TT$-graphs (the analogue of the Stone--Čech--Barr theorem), or the cofibration of the forgetful functor to $\cat{E}$ cannot be obtained unless we suppose the triple $\TT$ to be ``bounded''.
 
-\hyperref[sec:ii]{Chapter~II} is essentially dedicated to two interpretations of $\TT$-categories, on one hand as monads (or monoids, if one prefers) in the ``Kleisli pseudo-category'', and on the other as pseudo-algebras in the ``bicatgeory of spans''.
+\hyperref[sec:II]{Chapter~II} is essentially dedicated to two interpretations of $\TT$-categories, on one hand as monads (or monoids, if one prefers) in the ``Kleisli pseudo-category'', and on the other as pseudo-algebras in the ``bicatgeory of spans''.
 
-\hyperref[sec:ii]{Chapter~III} gives various examples, of which the most detailed is that of multicategories (which generalise those defined by Lambek in \cite{La}).
-For this, we have been led to study in Sections~\hyperref[sec:iii.1]{III.1} and \hyperref[sec:iii.2]{III.2} the particular case where $\TT$ is a ``strongly cartesian'' triple, which not only allows for the construction of free $\TT$-categories over the usual model of free monoids (see the Appendix), but also gives a manageable description of this structure.
+\hyperref[sec:II]{Chapter~III} gives various examples, of which the most detailed is that of multicategories (which generalise those defined by Lambek in \cite{La}).
+For this, we have been led to study in Sections~\hyperref[sec:III.1]{III.1} and \hyperref[sec:III.2]{III.2} the particular case where $\TT$ is a ``strongly cartesian'' triple, which not only allows for the construction of free $\TT$-categories over the usual model of free monoids (see the Appendix), but also gives a manageable description of this structure.
 \oldpage{217}
 We will thus quantitatively improve the examples given by Barr, and we will also later study other useful examples, but this problem appeared less important to us long as our definition seems more natural and has a more general reach.
 
-\hyperref[sec:iv]{Chapter~IV} is dedicated first of all to the description of various particular cases of $\TT$-functors, for example étale (or ``discrete fibration'') $\TT$-functors, and then a generalisation, of $\TT$-profunctors, that give an approach to $\TT$-natural transformations.
+\hyperref[sec:IV]{Chapter~IV} is dedicated first of all to the description of various particular cases of $\TT$-functors, for example étale (or ``discrete fibration'') $\TT$-functors, and then a generalisation, of $\TT$-profunctors, that give an approach to $\TT$-natural transformations.
 
-In a subsequent work, we will define tensor $\TT$-categories, that will give various ``coherence'' formulas, in particular those of the ``pseudo-categories'' introduced in \hyperref[sec:ii]{Chapter~II}.
+In a subsequent work, we will define tensor $\TT$-categories, that will give various ``coherence'' formulas, in particular those of the ``pseudo-categories'' introduced in \hyperref[sec:II]{Chapter~II}.
 We equally hope to undertake a homological study of these structure.
 
 I would like, in closing, to express my thanks to Madame Bastiani, who encouraged me to work on this subject, and who reread the manuscript, which enabled me to correct numerous imperfections and sometimes errors.
@@ -206,6 +206,7 @@ The only goal of the reminders below is the allow us to make precise the termino
 
 
 \subsection{Categories}
+\label{sec:0.1}
 
 A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, i, k)$ satisfying conditions~(1) to (6) below:
 
@@ -338,6 +339,7 @@ We say that, in $\cat{E}$, the \emph{inductive $\cat{A}$-limits are universal} i
 
 
 \subsection{Triples}
+\label{sec:0.2}
 
 \oldpage{223}
 Let $\cat{E}$ be a category.
@@ -419,7 +421,7 @@ For example, the Eilenberg--Moore functor $\Kl{\TT}\to\Alg{\TT}$ is fully faithf
 
 \renewcommand{\thesection}{\Roman{section}}
 \section{General properties of $\TT$-categories}
-\label{sec:i}
+\label{sec:I}
 
 \oldpage{225}
 We are going to replace the morphism $b\colon Te\to e$ of a $\TT$-algebra, where $\TT$ is a triple on a category $\cat{E}$, by a span, i.e. by a pair of morphism in $\cat{E}$ with the same target
@@ -434,7 +436,7 @@ below, we will draw inspiration from the ``global'' definition of a category in 
 
 
 \subsection{$\TT$-categories}
-\label{sec:i.1}
+\label{sec:I.1}
 
 In the rest of this chapter, $\cat{E}$ will be a category admitting finite fibre products, and $\TT=(T,I,K)$ a triple on $\cat{E}$.
 
@@ -687,7 +689,7 @@ The composition laws in these categories are evident.
 
 
 \subsection{$\TT$-preorders}
-\label{sec:i.2}
+\label{sec:I.2}
 
 A \emph{regular} $\TT$-graph is a $\TT$-graph $(b,a)$ such that the relations
 \[
@@ -699,12 +701,12 @@ imply that $f=f'$.
 A \emph{$\TT$-preorder} is a $\TT$-category whose underlying graph is regular.
 
 \begin{itenv}{Proposition~I.2.2}
-  If $(b,a)$ is a regular $\TT$-graph, $e$ the objects object, $\pi$ the morphisms object, $\pi_2$ the source of a fibre product of $(a,Tb)$, and $i\colon e\to\pi$ and $k\colon\pi_2\to\pi$ morphisms in $\cat{E}$ satisfying only conditions~(1) to (4) of \cref{sec:i.1}, then $(b,a,i,k)$ is a $\TT$-preorder.
+  If $(b,a)$ is a regular $\TT$-graph, $e$ the objects object, $\pi$ the morphisms object, $\pi_2$ the source of a fibre product of $(a,Tb)$, and $i\colon e\to\pi$ and $k\colon\pi_2\to\pi$ morphisms in $\cat{E}$ satisfying only conditions~(1) to (4) of \cref{sec:I.1}, then $(b,a,i,k)$ is a $\TT$-preorder.
   Furthermore, conditions~(2') and (3') are consequences of (1') for a morphism into a $\TT$-preorder.
 \end{itenv}
 
 \begin{proof}
-  We have to show that the axioms of identity and associativity, (7) and (8) of \cref{sec:i.1}, are automatically satisfied.
+  We have to show that the axioms of identity and associativity, (7) and (8) of \cref{sec:I.1}, are automatically satisfied.
   Since $(b,a)$ is regular, the relations
   \[
     \begin{gathered}
@@ -791,7 +793,7 @@ A \emph{$\TT$-preorder} is a $\TT$-category whose underlying graph is regular.
 \end{proof}
 
 This proposition allows us to identify a $\TT$-preorder with its underlying $\TT$-graph, and to sometimes write $(b,a)$ instead of $(b,a,i,k)$ for a $\TT$-preorder.
-Amongst all $\TT$-preorders, many interesting cases can be distinguished by properties of by $a$ and $b$ (see the examples in \unsure{\cref{sec:iv}}).
+Amongst all $\TT$-preorders, many interesting cases can be distinguished by properties of by $a$ and $b$ (see the examples in \unsure{\cref{sec:IV}}).
 We limit ourselves to noting the following fact:
 
 \begin{itenv}{Proposition~I.2.3}
@@ -876,7 +878,7 @@ Furthermore, when $\cat{E}=\Cat{Set}$ is the category of sets associated to a un
 
 
 \subsection{Properties (projective limits, fibrations, \ldots)}
-\label{sec:i.3}
+\label{sec:I.3}
 
 We have a sequence of forgetful functors
 \[
@@ -1151,7 +1153,7 @@ With the above notation, we have an isomorphism $V(f^*\overline{e})\to f^*V(\ove
 \end{proof}
 
 Now let $\TT'=(T',I',K')$ be a triple on another category $\cat{E}'$ that admits finite fibre products.
-Let $(M,m)\colon\TT\to\TT'$ be a morphism of triples (see \cref{sec:i.3}), where $M\colon\cat{E}\to\cat{E}'$ is a functor that respects finite fibre products.
+Let $(M,m)\colon\TT\to\TT'$ be a morphism of triples (see \cref{sec:I.3}), where $M\colon\cat{E}\to\cat{E}'$ is a functor that respects finite fibre products.
 Finally, suppose that $\cat{E}$ and $\cat{E}'$ admit projective $\cat{A}$-limits, and that $M$ respects these projective limits.
 Set $\MM=(M,m)$.
 
@@ -1250,7 +1252,7 @@ Set $\MM=(M,m)$.
 \end{proof}
 
 \begin{rmenv}{Remark}
-  As an exercise, it is interesting to examine the case where $M=\id_\cat{E}$, $m=I$, and $\TT=(\id_\cat{E},\id_\cat{E},\id_\cat{E})$: there is an $\cat{E}$-category underlying every $\TT$-category (in the terminology of \cref{sec:iii.2}).
+  As an exercise, it is interesting to examine the case where $M=\id_\cat{E}$, $m=I$, and $\TT=(\id_\cat{E},\id_\cat{E},\id_\cat{E})$: there is an $\cat{E}$-category underlying every $\TT$-category (in the terminology of \cref{sec:III.2}).
 \end{rmenv}
 
 We will later study the question of whether or not all functors in the sequence ($\ast$) admit adjoints and coadjoints;
@@ -1482,15 +1484,15 @@ As for inductive limits, we content ourselves with the following result, whose e
 
 
 \section{Pseudo-algebras and monads}
-\label{sec:ii}
+\label{sec:II}
 
 \subsection{Pseudo-categories}
-\label{sec:ii.1}
+\label{sec:II.1}
 \oldpage{243}
 
 This structure slightly generalises that of a bicategory, defined by Bénabou in \cite{Be};
 indeed, in bicategories, the families $l$, $r$, and $s$ considered below reduce to the families of natural equivalences, which will not always be the case in our examples.
-(In \cref{sec:iii} we will see more general structures.)
+(In \cref{sec:III} we will see more general structures.)
 
 A \emph{pseudo-category} is a septuple
 \[
@@ -1679,7 +1681,7 @@ such that conditions~(1) to (8) below are satisfied:
   \oldpage{246}
   Axioms~(7) and (8) are called the ``coherence axioms''.
   If $r$, $l$, and $s$ are equivalences (resp. identities) then we recover the notion of bicategory from \cite{Be} (resp. of 2-category).
-  In \cref{sec:iii}, multicategories will give, as particular cases, both pseudo-categories and the double categories of Ehresmann.
+  In \cref{sec:III}, multicategories will give, as particular cases, both pseudo-categories and the double categories of Ehresmann.
 \end{rmenv}
 
 We say that $F\colon\cat{D}\to\cat{D}'$ is a \emph{pseudo-functor} if $\cat{D}$ and $\cat{D}'$ are pseudo-categories and $F$ is a quadruple $(\set{F},F_1,u,c)$ such that:
@@ -1787,14 +1789,14 @@ We simply note that \unsure{Proposition~3??} later on would give $\TT$-categorie
       In practical examples, not only are the two morphisms $(f\circ g)\circ h$ and $f\circ(g\circ h)$ (where $f$, $g$, and $h$ are ``consecutive'' morphisms in $\cat{D}$) not equal, but they are related to a third morphism, denoted $f\circ g\circ h$, and, more generally, we have ``compositions'' of length $n>2$ that are different to the compositions obtained by the grouping of the factors.
       \oldpage{248}
       This is the case, for example, when we consider the category $\Cat{Set}$ of sets associated to a universe, endowed with the cartesian product as a first law.
-      We wait until the notion of multicategory defined later on (\cref{sec:iii.3}) allows us to unify these differing notions.
+      We wait until the notion of multicategory defined later on (\cref{sec:III.3}) allows us to unify these differing notions.
   \end{enumerate}
 \end{rmenv}
 
 
 
 \subsection{The pseudo-category of $\TT$-spans}
-\label{sec:ii.2}
+\label{sec:II.2}
 
 Let $\cat{E}$ be a category endowed with a triple $\TT$, admitting finite fibre products and endowed with a canonical choice of these fibre products.
 We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the following way:
@@ -2370,7 +2372,7 @@ We say that $\TT=(T,I,K)$ is a \emph{cartesian triple} if the following two cond
     $I$ and $K$ are cartesian natural transformations.
 \end{enumerate}
 
-We will see examples of cartesian triples in \cref{sec:iii};
+We will see examples of cartesian triples in \cref{sec:III};
 here is a useful characterisation:
 
 \begin{itenv}{Proposition~II.2.14}
@@ -2389,7 +2391,7 @@ here is a useful characterisation:
 
 
 \subsection{Two interpretations of $\TT$-categories}
-\label{sec:ii.3}
+\label{sec:II.3}
 
 We will give two interpretations, somehow dual to one another, of $\TT$-categories.
 
@@ -2440,7 +2442,7 @@ If $e=\mu(0)$ and $\theta=\mu(\id_0)$, then the data of $\mu$ is equivalent to t
       \ar[l,"\id(\theta)"]
   \end{tikzcd}
 \]
-(which correspond to axioms~(5') and (6') of \cref{sec:ii.1}).
+(which correspond to axioms~(5') and (6') of \cref{sec:II.1}).
 
 \oldpage{258}
 Let $\cat{E}$ be a category endowed with a triple $\TT$, admitting finite fibre products and endowed with a canonical choice of these fibre products.
@@ -2504,7 +2506,7 @@ Let $\cat{E}$ be a category endowed with a triple $\TT$, admitting finite fibre 
   where $(u_2,u_1)$ is the canonical fibre product of $(Tb,Ie)$, and $(u'_2,u'_1)$ that of $(\id_{Te},a)$.
   \oldpage{259}
   In the rest of this proof, we denote by the same letter $x$ a 2-morphism $x\colon e\to e''$ in $\Sp{\TT}$ and the underlying morphism $x\colon e\to e'$ in $\cat{E}$; $i$ and $k$ have the same meaning as above (the families $u$ and $c$).
-  We will show that $\theta^*=(b,a,i,k)$ is a (non-canonical; see the definition in \cref{sec:ii.4}) $\TT$-category if and only if the data $(\theta,i,k)$ defines a monad $\mu$ in $\Sp{\TT}$.
+  We will show that $\theta^*=(b,a,i,k)$ is a (non-canonical; see the definition in \cref{sec:II.4}) $\TT$-category if and only if the data $(\theta,i,k)$ defines a monad $\mu$ in $\Sp{\TT}$.
 
   In $\cat{E}$, we have the following characterising relations for $i\circ\theta$, $\theta\circ i$, $k\circ\theta$, and $\theta\circ k$:
   \[
@@ -2555,7 +2557,7 @@ Let $\cat{E}$ be a category endowed with a triple $\TT$, admitting finite fibre 
       &= k\cdot w_1.
     \end{aligned}
   \]
-  If we combine these relations with the characterising relations~(2), (3), (4), (5), (6) from \cref{sec:i.1}, then we deduce the relations
+  If we combine these relations with the characterising relations~(2), (3), (4), (5), (6) from \cref{sec:I.1}, then we deduce the relations
   \[
     \begin{aligned}
       i_1
@@ -2571,7 +2573,7 @@ Let $\cat{E}$ be a category endowed with a triple $\TT$, admitting finite fibre 
       &= k\circ\theta.
     \end{aligned}
   \]
-  The ``identity'' and ``associativity'' conditions~(7) and (8) from \cref{sec:i.1} can then be written as
+  The ``identity'' and ``associativity'' conditions~(7) and (8) from \cref{sec:I.1} can then be written as
   \[
     \begin{gathered}
       k\cdot(i\circ\theta)\cdot l
@@ -2688,9 +2690,9 @@ are 2-morphisms in $\Sp{\cat{E}}$, where we set $T\theta=(Tb,Ta)$ and identify e
     \\&= Ke\cdot Ta\cdot v_2
     \end{aligned}
   \]
-  which expresses axiom~(4) of \cref{sec:i.1}.
+  which expresses axiom~(4) of \cref{sec:I.1}.
   Conversely, if $k$ satisfies (4) then it determines a crochet $\tilde{k}$ that defines a morphism of spans $\tilde{k}\colon\theta\circ T\theta\to\theta\circ Ke$.
-  Thus it remains only to show that $(b,a,i,k)$ is a $\TT$-category, i.e. that it satisfies axioms~(7) and (8) of \cref{sec:i.1}, if and only if the coherence axioms~(1) and (2) above are satisfied, which is a routine verification.
+  Thus it remains only to show that $(b,a,i,k)$ is a $\TT$-category, i.e. that it satisfies axioms~(7) and (8) of \cref{sec:I.1}, if and only if the coherence axioms~(1) and (2) above are satisfied, which is a routine verification.
 \end{proof}
 
 \oldpage{262}
@@ -2702,13 +2704,13 @@ are 2-morphisms in $\Sp{\cat{E}}$, where we set $T\theta=(Tb,Ta)$ and identify e
 
 
 \subsection{Pseudo-monoidal and fibration category of $\Gr{\TT}$}
-\label{sec:ii.4}
+\label{sec:II.4}
 
 \todo{think about section title translation}
 
 A \emph{pseudo-monoidal category} (or a \emph{pseudo-monoid}) is a pseudo-category $\overline{\cat{D}}$ with only one object, which we almost always denote by $1$.
 If $\cat{D}$ is the category $\Hom_{\overline{\cat{D}}}(1,1)$, then its composition law, which coincides with the ``second law'' of $\overline{\cat{D}}$ is denoted by $\cdot$ and the ``first law'' of $\cat{D}$ \unsure{typo? $\overline{\cat{D}}$} is generally denoted by the symbol $\circ$.
-We often write $\overline{\cat{D}}=(\cat{D},1,\circ)$, and the symbols $r$, $l$, and $s$ from axioms~(5) and (6) of \cref{sec:ii.1} are always used in the same way;
+We often write $\overline{\cat{D}}=(\cat{D},1,\circ)$, and the symbols $r$, $l$, and $s$ from axioms~(5) and (6) of \cref{sec:II.1} are always used in the same way;
 this is why they are easily understood even when denoting $\overline{\cat{D}}$ as a triplet.
 Similarly, a pseudo-functor $\overline{F}\colon\overline{\cat{D}}\to\overline{\cat{D}}'$ between pseudo-monoidal categories is determined by a functor $F\colon\cat{D}\to\cat{D}'$ between the underlying categories that ``commutes'' with the first laws, i.e. the morphisms $u$ and $c$ from axioms~(3') and (4') are always denoted in the same way: $u\colon1\to F1$ is a morphism in $\cat{D}'$, whereas $c\colon\bigcirc\cdot(F\times F)\to F\cdot\bigcirc$, where we denote by $\bigcirc\colon\cat{D}\times\cat{D}\to\cat{D}$ the ``first law'' functor:
 \[
@@ -2716,7 +2718,7 @@ Similarly, a pseudo-functor $\overline{F}\colon\overline{\cat{D}}\to\overline{\c
   = m'\circ m
 \]
 for every pair of morphisms in $\cat{D}$, for any pseudo-monoidal category $\overline{\cat{D}}$.
-All this data should satisfy ``the coherence axioms''~(7), (8), (5'), and (6') of \cref{sec:ii.1}.
+All this data should satisfy ``the coherence axioms''~(7), (8), (5'), and (6') of \cref{sec:II.1}.
 
 Let $\TT$ be a triple on a category $\cat{E}$ endowed with canonical fibre products.
 For every $e\in\set{\cat{E}}$, we denote by $\Gr{\TT}/e$ the category $\Hom_{\Sp{\TT}}(e,e)$;
@@ -3006,10 +3008,36 @@ We define a \emph{bifunctor} to be a pseudo-functor $(F,u,c)$ such that $u$ and 
 
 
 \section{Examples}
-\label{sec:iii}
+\label{sec:III}
 
 \oldpage{267}
-In
+In the first two examples that follow (\cref{sec:III.2} and \cref{sec:III.3}), the triple $\TT$ possesses properties that simply its study.
+These properties ensure not only that the functor $\Cat{Cat}(\TT)\to\Gr{\TT}$ is tripleable (\unsure{Proposition~II.1.19}), but also that they permit a simple construction of the adjoint (\unsure{scolium of Proposition~III.2.21}).
+
+
+
+\subsection{Free $\TT$-categories (particular case)}
+\label{sec:III.1}
+
+Let $\TT$ be a triple on a category $\cat{E}$ admitting finite fibre products and endowed with a canonical choice of these fibre products.
+Let $\cat{X}$ be one of the categories $\Alg{\TT}$, $\Ord{\TT}$, $\Cat{Cat}(\TT)$, or $\Gr{\TT}$, and $e\in\set{\cat{E}}$;
+we denote by $\cat{X}/e$ the subcategory of $\cat{X}$ whose objects are the objects $\overline{e}$ of $\cat{X}$ such that $U\overline{e}=e$, where $U\colon\cat{X}\to\cat{E}$ is the usual forgetful functor (see the sequence~($\ast$) at the start of \cref{sec:I.3}), and whose morphisms are the morphisms $\overline{f}\colon\overline{e}\to\overline{e}'$ in $\cat{X}$ such that $U\overline{f}=\id_e$.
+Note that $\Alg{\TT}/e$ is a discrete category and $\Ord{\TT}/e$ is a preorder.
+
+We say that $\TT=(T,I,K)$ is a \emph{strongly cartesian} triple if it is cartesian (\cref{sec:II.2}) and further satisfies the following conditions:
+
+\begin{enumerate}
+  \item[(c)] $\cat{E}$ admits finite and countable sums, and $T$ commutes with these sums.
+  \item[(d)] The sums in $\cat{E}$ are universal (\cref{sec:0.1}) and commute with fibre products.
+\end{enumerate}
+
+\begin{itenv}{Proposition~III.1.19}
+  If $\TT$ is a strongly cartesian triple, then the forgetful functor $\Cat{\TT}\to\Gr{\TT}$ is tripleable.
+\end{itenv}
+
+\begin{proof}
+  Let
+\end{proof}
 
 
 
