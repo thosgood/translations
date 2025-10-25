@@ -73,6 +73,7 @@
 \newcommand{\id}{\mathrm{id}}
 \newcommand{\TT}{\mathbf{T}}
 \newcommand{\MM}{\mathbf{M}}
+\newcommand{\NN}{\mathbf{N}}
 \newcommand{\textand}{\quad\text{and}\quad}
 \newcommand{\pr}{\mathrm{pr}}
 \newcommand{\op}{\mathrm{op}}
@@ -3040,7 +3041,7 @@ We say that $\TT=(T,I,K)$ is a \emph{strongly cartesian} triple if it is cartesi
 
 \begin{proof}
   Let $U\colon\Cat{Cat}(\TT)\to\Gr{\TT}$ be the usual forgetful functor;
-  we will define an adjoint functor $F\colon\Gr{\TT}\to\Cat{Cat}(\TT)$ by using \unsure{Proposition~A.1} from the Appendix.
+  we will define an adjoint functor $F\colon\Gr{\TT}\to\Cat{Cat}(\TT)$ by using \unsure{Proposition~A.1} in the appendix.
   For every $e\in\set{\cat{E}}$, by \cref{proposition:II.2.14} and the terminology of \cref{sec:II.4},
   \[
     \overline{\Gr{\TT}/e}
@@ -3101,8 +3102,163 @@ We say that an inductive cone in $\cat{E}^\mathbf{2}$ is cartesian if its canoni
 \end{itenv}
 
 \begin{proof}
-  The
+  The first part is an interesting exercise on the language of categories.
+  We then show, using condition~(e), that, if a sum in $\cat{E}^\mathbf{2}$ is a monomorphism (resp. an epimorphism) in $\cat{E}$, then each of its terms is a monomorphism (resp. an epimorphism) in $\cat{E}$.
+  We subsequently show that the ``codiagonal'' natural transformations are cartesian by using the universality of sums, and we finish the proof by using the last part of condition~(d).
 \end{proof}
+
+\begin{itenv}{Proposition~III.1.20}
+  If $\TT$ is a strongly cartesian triple, then so too is the triple induced by the tripleable functor $\Cat{Cat}(\TT)\to\Gr{\TT}$.
+\end{itenv}
+
+\begin{proof}
+  If $\TT'=(T',I',K')$ is the induced triple on $\Gr{\TT}$, then the proof of \unsure{Proposition~A.1} in the appendix shows that, for all $\theta\in\set{\Gr{\TT}}$, $T'\theta$ is a countable sum, $I'\theta$ is a canonical injection of this sum, and $K'\theta$ is a crochet of the sum $T'T'\theta$;
+  we thus immediately deduce that $\TT'$ is cartesian.
+  \oldpage{270}
+  The rest of the proposition is proven by using the commutativity of projective limits with themselves (fibre products) and the commutativity of inductive limits with themselves (sums).
+\end{proof}
+
+
+
+\subsection{$\cat{E}$-categories}
+\label{sec:III.2}
+
+Suppose that $\cat{E}$ is a category endowed with finite fibre products.
+Consider the identity triple $(\id_\cat{E},\id_\cat{E},\id_\cat{E})$ on $\cat{E}$, we denote it simply by $\cat{E}$ in this section.
+The category $\Cat{Cat}(\cat{E})$ of $\cat{E}$-categories is precisely what is usually referred to by that name in the literature (or ``$\cat{E}$-structured category'' in \cite{Eh}).
+The axioms given in \cref{sec:I.3} then become:
+
+\[
+  \left\{\begin{aligned}
+    b\cdot i
+    &= \id_e
+  \\a\cdot i
+    &= \id_e
+  \end{aligned}\right.
+  \tag{1}
+\]
+\[
+  \left\{\begin{aligned}
+    v_1\cdot i_1
+    &= \id_\pi
+  \\v_2\cdot i_1
+    &= i\cdot a
+  \end{aligned}\right.
+  \tag{2}
+\]
+\[
+  \left\{\begin{aligned}
+    v_1\cdot i_2
+    &= i\cdot b
+  \\v_2\cdot i_2
+    &= \id_\pi
+  \end{aligned}\right.
+  \tag{3}
+\]
+\[
+  \left\{\begin{aligned}
+    b\cdot k
+    &= b\cdot v_1
+  \\a\cdot k
+    &= a\cdot v_2
+  \end{aligned}\right.
+  \tag{4}
+\]
+\[
+  \left\{\begin{aligned}
+    v_1\cdot k_1
+    &= k\cdot w_1
+  \\v_2\cdot k_1
+    &= v_2\cdot w_2
+  \end{aligned}\right.
+  \tag{5}
+\]
+\[
+  \left\{\begin{aligned}
+    v_1\cdot k_2
+    &= v_1\cdot w_1
+  \\v_w\cdot k_2
+    &= k\cdot w_2
+  \end{aligned}\right.
+  \tag{6}
+\]
+\[
+  k\cdot i_1
+  = \id_\pi
+  = k\cdot i_2
+  \tag{7}
+\]
+\[
+  k\cdot k_1
+  = k\cdot k_2
+  \tag{8}
+\]
+where $(v_1,v_2)$ and $(w_1,w_2)$ are the fibre products of $(a,b)$ and $(v_2,v_1)$ respectively.
+Analogous remarks can be made for $\Gr{\cat{E}}$, $\Ord{\cat{E}}$, \ldots.
+The category $\Alg{\cat{E}}$ is isomorphic to $\cat{E}$, and the category $\Equ{\cat{E}}$ defined in \cref{sec:I.3} is precisely the category of equivalence $\cat{E}$-relations.
+
+The identity triple $\cat{E}$ satisfies, evidently, conditions~(a) and (b) of \cref{sec:II.2}; it it thus cartesian.
+For it to be strongly cartesian, it is necessary and sufficient that $\cat{E}$ satisfy conditions~(c), (d), and thus (e), of \cref{sec:II.1}.
+In this case, the forgetful functor $\Cat{Cat}(\cat{E})\to\Gr{\cat{E}}$ is tripleable, and the triple $\NN$ thus induced is strongly cartesian (\unsure{Proposition~20}).
+
+Let $\Cat{Set}$ be the category of sets associated to a universe (which is identical to $\set{\Cat{Set}}$).
+\oldpage{271}
+We denote, in principle, by $\Cat{Cat}$, $\Cat{Gr}$, \ldots, the categories of categories, of graphs, of \ldots (respectively), with these structures being defined in a ``local'' manner (\cref{sec:I.1}).
+We then have known injective functors $\Cat{Cat}(\Cat{Set})\to\Cat{Cat}$, $\Gr{\Cat{Set}}\to\Cat{Gr}$, \ldots, which are equivalences of categories.
+The disjunction convention made in axiom~(2) of \cref{sec:I.1} allows us to identify $\Cat{Cat}(\Cat{Set})$ with $\Cat{Cat}$, $\Gr{\Cat{Set}}$ with $\Cat{Gr}$, \ldots;
+but, although this will be useful, context will make precise whether the notation $\Cat{Cat}$, $\Cat{Gr}$, \ldots refer to the ``local'' or ``global'' definitions.
+Similarly, $\Cat{Ord}$ and $\Cat{Equ}$ denote the categories $\Ord{\Cat{Set}}$ and $\Equ{\Cat{Set}}$.
+Relative to another universe $\set{\widehat{\Cat{Set}}}$, we use the notation $\widehat{\Cat{Cat}}$, $\widehat{\Cat{Gr}}$, $\widehat{\Cat{Ord}}$, $\widehat{\Cat{Equ}}$, \ldots etc.
+
+We are going to give a description of a strongly cartesian triple, which we will denote by $\NN=(N,I,K)$, induced by the tripleable functor $\Cat{Cat}\to\Cat{Set}$;
+we will do so in ``local'' terminology, and, furthermore, in an intrinsic way (i.e. not relative to a universe).
+
+If $\cat{G}$ is a graph, then $N\cat{G}$ is the graph such that $\set{N\cat{G}}=\set{\cat{G}}$ and such that $F\colon e\to e'$ is a morphism in $N\cat{G}$ if it is a \emph{path in $\cat{G}$}, i.e. if there exists a sequence of objects $(e_n,\ldots,e_1,e_0)$ of $\cat{G}$, where $e_0=e$ and $e_n=e'$, and a sequence of morphism $(f_n,\ldots,f_1)$ in $\cat{G}$ such that
+\[
+  F = (f_n,\ldots,f_1)
+  \textand f_i\colon e_{i-1}\to e_i.
+\]
+Such a sequence is also called a sequence of ``consecutive'' morphisms.
+The integer $n$ is called the \emph{length} of the path, for simplicity, the path is denoted simply by $F$.
+Note that, if $n=0$, then this definition implies that $e=e'$ ($=e_0$) and $F=\varnothing$ is the empty sequence: we denote by $\id_e$ this path $\varnothing\colon e\to e$ of length zero.
+Next,
+\[
+  I\cat{G}\colon\cat{G}\to N\cat{G}
+  \textand
+  K\cat{G}\colon NN\cat{G}\to N\cat{G}
+\]
+are the morphisms of graphs such that
+\[
+  \set{I\cat{G}}
+  = \set{K\cat{G}}
+  = id_{\set{\cat{G}}}
+\]
+and defined on morphisms in the following way:
+$I\cat{G}$ associates, to each morphism $f\colon e\to e'$, the path $(f)\colon e\to e'$ of length 1, denoted sometimes simply by $f\colon e\to e'$;
+$K\cat{G}$ associates, to each path $\phi\colon e\to e'$ in $N\cat{G}$, the path $\phi\colon e\to e'$ in $\cat{G}$ given by ``erasing the parentheses'' of $\phi$ (or by ``juxtaposition'').
+\oldpage{272}
+In other words, if $\phi=(F_p,\ldots,F_1)$, where
+\[
+  F_i
+  = (f_{i,n_i}, \ldots, f_{i,1})
+\]
+for $1\leqslant i\leqslant p$, then
+\[
+  F
+  = (f_{p,n_p},\ldots,f_{p,1},f_{p-1,n_{p-1}},\ldots,f_{1,1}).
+\]
+The notation of this triple $\NN$ can be confused with that for the set of positive or zero integers;
+if such a confusion risks arising, then we can always identify this set with $N1$.
+
+We sometimes denote by the same symbol a $\TT$-category and its underlying $\TT$-graph;
+similarly, we also denote by $N\cat{G}$ the free category structure on the graph $N\cat{G}$ defined by the free $\NN$-algebra $K\cat{G}$;
+we call these the \emph{category} and \emph{graph of paths in $\cat{G}$} (respectively).
+We call $\NN$ the \emph{path triple}.
+
+\begin{itenv}{Proposition~III.2.21}
+  Let
+\end{itenv}
+
 
 
 
