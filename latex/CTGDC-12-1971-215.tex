@@ -2718,6 +2718,266 @@ for every pair of morphisms in $\cat{D}$, for any pseudo-monoidal category $\ove
 All this data should satisfy ``the coherence axioms''~(7), (8), (5'), and (6') of \cref{sec:ii.1}.
 
 Let $\TT$ be a triple on a category $\cat{E}$ endowed with canonical fibre products.
+For every $e\in\set{\cat{E}}$, we denote by $\Gr{\TT}/e$ the category $\Hom_{\Sp{\TT}}(e,e)$;
+this is a subcategory of $\Gr{\TT}$, and underlies a pseudo-monoidal category $\overline{\Gr{\TT}/e}=(\Gr{\TT}/e,1,\circ)$ which is obtained by ``restriction'' of the structure of $\Sp{\TT}$: it is actually the dual (for just the $\circ$ law) of a sub-pseudo-category of $\Sp{\TT}$.
+
+For every morphism $f\colon e\to e'$ in $\cat{E}$, we define a functor
+\[
+  \begin{aligned}
+    f^*\colon \Gr{\TT}/e'
+    &\to \Gr{\TT}/e
+  \\m
+    &\mapsto f^*m
+  \end{aligned}
+\]
+(see \unsure{Proposition~I.5.6}).
+
+\begin{itenv}{Proposition~II.4.16}
+  \oldpage{263}
+  $f^*$ is the underlying functor of a pseudo-functor, denoted by $\overline{f^*}\colon\overline{\Gr{\TT}/e'}\to\overline{\Gr{\TT}/e}$, for which the morphisms $u$ and $c$ are further uniquely determined \emph{(but are not necessarily isomorphisms, even if $\TT$ is cartesian)}.
+\end{itenv}
+
+\begin{proof}
+  If $\theta$ and $\theta'$ are $\TT$-graphs on $e$, then the construction of the morphism $f^*(\theta'\circ\theta)$ by projective limits (which reduces to official fibre products) implies the existence of a unique morphism
+  \[
+    c(\theta',\theta)\colon f^*\theta'\circ f^*\theta
+    \to f^*(\theta'\circ\theta)
+  \]
+  in $\Gr{\TT}/e$ determined by a crochet $c(\theta',\theta)\colon\pi''\to\pi'$ in $\cat{E}$, if $\pi''$ and $\pi'$ are the objects of morphisms of $\TT$-graphs
+  \[
+    f^*\theta'\circ f^*\theta
+    \textand
+    f^*(\theta'\circ\theta)
+  \]
+  respectively.
+  We determine a unique morphism $u\colon 1\to f^*1$ in an analogous way.
+  We will show that these morphisms satisfy the coherence axioms~(5') and (6').
+  In fact, we will limit ourselves to showing, for example, that the following diagram, for any $\TT$-graph $\theta=(b,a)$ over $e$, commutes:
+  \[
+    \begin{tikzcd}[sep=large]
+      f^*(1\circ\theta)
+    & f^*\theta
+        \ar[l,swap,"{f^*l\theta}"]
+        \ar[d,"{lf^*\theta}"]
+    \\f^*1\circ f^*\theta
+        \ar[u,"{c(1,\theta)}"]
+    & 1\circ f^*\theta
+        \ar[l,"{u\circ f^*\theta}"]
+    \end{tikzcd}
+  \]
+  which reduces to showing that we have a commutative diagram with the underlying morphisms in $\cat{E}$, by using the projective limit property of $f^*(1\circ\theta)$.
+  We denote by the same symbol a morphism in $\Gr{\TT}$ and the underlying morphism in $\cat{E}$ which it defines.
+
+  Let $(b',a')=f^*\theta$ and $(\overline{b},\overline{a})=f^*(1\circ\theta)$;
+  we have projective limits (where the canonical projections are represented by dashed arrows)
+  \[
+    \begin{tikzcd}
+      Te
+    & Te'
+        \ar[l,swap,"Tf"]
+    \\\pi
+        \ar[u,"a"]
+        \ar[d,swap,"b"]
+    & \pi'
+        \ar[u,swap,"a'"]
+        \ar[d,"b'"]
+        \ar[l,dashed,swap,"f'"]
+    \\e
+    & e'
+        \ar[l,"f"]
+    \end{tikzcd}
+    \qquad
+    \begin{tikzcd}
+      Te
+    & Te'
+        \ar[l,swap,"Tf"]
+    \\\pi_1
+        \ar[u,"Ke\cdot Ta\cdot v_2"]
+        \ar[d,swap,"v_1"]
+    & \pi
+        \ar[u,swap,"\overline{a}"]
+        \ar[d,"\overline{b}"]
+        \ar[l,dashed,swap,"\overline{f}"]
+    \\e
+    & e'
+        \ar[l,"f"]
+    \end{tikzcd}
+  \]
+  \oldpage{264}
+  and where $(v_1,v_2)$ is the fibre product of $(Ie,Tb)$ which is used to form the composite $1\circ\theta=(v_1,Ke\cdot Ta\cdot v_2)$.
+
+  We are thus led to prove the following equalities:
+  \begin{align}
+    \overline{a}\cdot f^*l\theta
+    &= \overline{a}\cdot c(1,\theta)\cdot (u\circ f^*\theta)\cdot lf^*\theta
+    \tag{1}
+  \\\overline{f}\cdot f^*l\theta
+    &= \overline{f}\cdot c(1,\theta)\cdot (u\circ f^*\theta)\cdot lf^*\theta
+    \tag{2}
+  \\\overline{b}\cdot f^*l\theta
+    &= \overline{b}\cdot c(1,\theta)\cdot (u\circ f^*\theta)\cdot lf^*\theta.
+    \tag{3}
+  \end{align}
+  We set $f^*1=(b_\circ,a_\circ)$ and let $f_\circ$ be the third canonical projection that defines $f^*1$:
+  \[
+    \begin{tikzcd}
+      Te
+    & Te'
+        \ar[l,swap,"Tf"]
+    \\e
+        \ar[u,"Ie"]
+        \ar[d,swap,"\id_e"]
+    & \pi_\circ
+        \ar[u,swap,"a_\circ"]
+        \ar[d,"b_\circ"]
+        \ar[l,swap,"f_\circ"]
+    \\e
+    & e'
+        \ar[l,"f"]
+    \end{tikzcd}
+  \]
+  We first obtain a morphism $g$ in $\cat{E}$ such that, denoting by $(v_{1\circ},v_{2\circ})$ the fibre product of $(a_\circ,Tb')$, we have
+  \[
+    f^*1\circ f^*\theta
+    = (b_\circ\cdot v_{1\circ}, Ke'\cdot Ta'\cdot v_{2\circ})
+  \]
+  and
+  \[
+    \begin{aligned}
+      v_1\cdot g
+      &= f_\circ\cdot v_{1\circ}
+    \\v_2\cdot g
+      &= Tf'\cdot v_{2\circ}.
+    \end{aligned}
+    \tag{4}
+  \]
+  The morphism $u$ in $\cat{E}$ is characterised by the relations
+  \[
+    \begin{aligned}
+      b_\circ\cdot u
+      &= \id_{e'}
+    \\f_\circ\cdot u
+      &= f
+    \\a_\circ\cdot u
+      &= Ie'
+    \end{aligned}
+    \tag{5}
+  \]
+  and so, if $(v'_1,v'_2)$ is the fibre product of $(Ie',Tb')$, we have
+  \[
+    1\circ f^*\theta
+    = (v'_1, Ke'\cdot Ta'\cdot v'_2)
+  \]
+  and
+  \[
+    \begin{aligned}
+      u\cdot v'_1
+      &= v_{1\circ}\cdot(u\circ f^*\theta)
+    \\v'_2
+      &= v_{2\circ}\cdot(u\circ f^*\theta).
+    \end{aligned}
+    \tag{6}
+  \]
+  By the definition of the morphism $l\theta$, we have
+  \[
+    \begin{aligned}
+      v_1\cdot l\theta
+      &= b
+    \\v_2\cdot l\theta
+      &= I\pi
+    \end{aligned}
+  \]
+  whence the relations
+  \[
+    \begin{aligned}
+      \overline{a}\cdot f^*l\theta
+      &= a'
+    \\\overline{f}\cdot f^*l\theta
+      &= l\theta\cdot f'
+    \\\overline{b}\cdot f^*l\theta
+      &= b'.
+    \end{aligned}
+    \tag{7}
+  \]
+  \oldpage{265}
+  Similarly, the morphism $lf^*\theta$ is characterised by
+  \[
+    \begin{aligned}
+      v'_1\cdot lf^*\theta
+      &= b'
+    \\v'_2\cdot lf^*\theta
+      &= I\pi'.
+    \end{aligned}
+    \tag{8}
+  \]
+  We also have that
+  \[
+    l\theta\cdot f'
+    = g\cdot(u\circ f^*\theta)\cdot lf^*\theta
+    \tag{9}
+  \]
+  (the ``naturality'' of $l$), since
+  \[
+    \begin{aligned}
+      v_1\cdot g\cdot(u\circ f^*\theta)
+      &\underset{(4)}{=} f_\circ\cdot v_{1\circ}\cdot(u\circ f^*\theta)
+    \\&\underset{(6)}{=} f_\circ\cdot u\cdot v'_1
+    \\&\underset{(5)}{=} f\cdot v'_1
+    \end{aligned}
+  \]
+  and
+  \[
+    v_2\cdot g\cdot(u\circ f^*\theta)
+    \underset{(4)}{=} Tf'\cdot v_{2\circ}\cdot(u\circ f^*\theta)
+    \underset{(6)}{=} Tf'\cdot v'_2.
+  \]
+  Finally, by the definition of $c(1,\theta)$, we have that
+  \[
+    \begin{aligned}
+      \overline{a}\cdot c(1,\theta)
+      &= Ke'\cdot Ta'\cdot v_{2\circ}
+    \\\overline{f}\cdot c(1,\theta)
+      &= g
+    \\\overline{b}\cdot c(1,\theta)
+      &= b_\circ\cdot v_{1\circ}.
+    \end{aligned}
+    \tag{10}
+  \]
+  We have that
+  \[
+    \begin{aligned}
+      \overline{a}\cdot f^*l\theta
+      &\underset{(7)}{=} a'
+    \\&= Ke'\cdot Ta'\cdot I\pi'
+    \\&\underset{(8)}{=} Ke'\cdot Ta'\cdot v'_2\cdot lf^*\theta
+    \\&\underset{(6)}{=} Ke'\cdot Ta'\cdot v_{2\circ}\cdot(u\circ f^*\theta)\cdot lf^*\theta
+    \\&\underset{(10)}{=} \overline{a}\cdot c(1,\theta)\cdot(u\circ f^*\theta)\cdot lf^*\theta
+    \end{aligned}
+  \]
+  which proves (1).
+  We have that
+  \[
+    \begin{aligned}
+      \overline{f}\cdot f^*l\theta
+      &\underset{(7)}{=} l\theta\cdot f'
+    \\&\underset{(9)}{=} g\cdot(u\circ f^*\theta)\cdot lf^*\theta
+    \\&\underset{(10)}{=} f\cdot c(1,\theta)\cdot(u\circ f^*\theta)\cdot lf^*\theta
+    \end{aligned}
+  \]
+  which proves (2).
+  Finally,
+  \[
+    \begin{aligned}
+      \overline{b}\cdot f^*l\theta
+      &\underset{(7)}{=} b'
+    \\&\underset{(8)}{=} v'_1\cdot lf^*\theta
+    \\&\underset{(5)}{=} b_\circ\cdot u\cdot v'_1\cdot lf^*\theta
+    \\&\underset{(6)}{=} b_\circ\cdot v_{1\circ}\cdot(u\circ f^*\theta)\cdot lf^*\theta
+    \\&\underset{(10)}{=} \overline{b}\cdot c(1,\theta)\cdot(u\circ f^*\theta)\cdot lf^*\theta
+    \end{aligned}
+  \]
+  which proves (3).
+\end{proof}
 
 
 
