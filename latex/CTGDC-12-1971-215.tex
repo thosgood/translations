@@ -75,6 +75,7 @@
 \newcommand{\MM}{\mathbf{M}}
 \newcommand{\textand}{\quad\text{and}\quad}
 \newcommand{\pr}{\mathrm{pr}}
+\newcommand{\op}{\mathrm{op}}
 
 \newcommand{\cat}[1]{\mathcal{#1}}
 \newcommand{\Cat}[1]{\mathsf{#1}}
@@ -2978,6 +2979,37 @@ For every morphism $f\colon e\to e'$ in $\cat{E}$, we define a functor
   \]
   which proves (3).
 \end{proof}
+
+Relative to a universe denoted by $\set{\Cat{Set}}$, we denote by $\Cat{Set}$, $\Cat{Cat}$, etc. the categories of sets, of categories, etc. (respectively).
+\oldpage{266}
+We denote by $\Cat{Cat}^\sharp$ the category whose objects are the pseudo-monoidal categories whose underlying category is in $\Cat{Cat}$ and whose morphisms are the pseudo-functors.
+Relative to a universe denoted by $\set{\widehat{\Cat{Set}}}$, we denote by $\widehat{\Cat{Set}}$, $\widehat{\Cat{Cat}}$, $\widehat{\Cat{Cat}}^\sharp$, etc. the analogous categories.
+If $\cat{E}$ is an element of $\set{\widehat{\Cat{Cat}}}$, then the previous Proposition shows us how, to a morphism $f\colon e\to e'$ in $\cat{E}$, we can associate a morphism
+\[
+  \overline{f^*}
+  \colon \overline{\Gr{\TT}/e'}
+  \to \overline{\Gr{\TT}/e}
+\]
+in $\widehat{\Cat{Cat}}^\sharp$.
+We define a \emph{bifunctor} to be a pseudo-functor $(F,u,c)$ such that $u$ and $c$ are natural equivalences (and not a pseudo-functor between bicategories, as in \cite{Be}).
+
+\begin{itenv}{Proposition~II.4.18}
+  The correspondence that associates to each morphism $f$ in $\cat{E}$ the pseudo-functor $\overline{f^*}$ defines a bifunctor $\cat{E}^\op\to\widehat{\Cat{Cat}}^\sharp$.
+\end{itenv}
+
+\begin{proof}
+  We leave this simple proof as an exercise;
+  it uses the fact that $u$ and $c$ are crochets of projective limits.
+\end{proof}
+
+
+
+
+\section{Examples}
+\label{sec:iii}
+
+\oldpage{267}
+In
 
 
 
