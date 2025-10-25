@@ -87,6 +87,7 @@
 \newcommand{\Kl}[1]{\Cat{Kl}(#1)}
 \newcommand{\Equ}[1]{\Cat{Equ}(#1)}
 \newcommand{\Sp}[1]{\Cat{Sp}(#1)}
+\newcommand{\Mon}[1]{\Cat{Mon}(#1)}
 
 \DeclareMathOperator{\Hom}{Hom}
 
@@ -155,7 +156,7 @@ This led Barr, in \cite{Ba}, to define ``relational $\TT$-algebras'' so that the
 But Barr seemed disappointed in the fact that, apart from this particular case, and that of preorders relative to the identity triple, there were few examples.
 Independently, the new system of axioms for topologies that we had given in \cite{Bu} led us to a similar idea (unfortunately with the triple of filters\ldots but our goal was to situate topologies amongst quasi-topologies) that consisted in seeing topologies as a notion analogous to that of preorders (it is indicative, indeed, that the structure of a finite topology is equivalent to that of a finite preorder).
 But this idea necessitated us to try passing from preorders to categories, and we found, in the definitions of Bénabou \cite{Be} of categories in terms of spans, what we needed in order to define $\TT$-categories.
-We show (\cref[proposition:i.2.4]{Proposition~I.2.4}) that the ``relational $\TT$-algebras'' are obtained as a particular case: that of $\TT$-preorders (which are to $\TT$-categories what preorders are to categories).
+We show (\cref[proposition:I.2.4]{Proposition~I.2.4}) that the ``relational $\TT$-algebras'' are obtained as a particular case: that of $\TT$-preorders (which are to $\TT$-categories what preorders are to categories).
 
 \oldpage{216}
 The general outline of this article is as follows.
@@ -810,7 +811,7 @@ We have just seen that $\Alg{\TT}$ can be identified with the usual category of 
 Furthermore, when $\cat{E}=\Cat{Set}$ is the category of sets associated to a universe, we have:
 
 \begin{itenv}{Proposition~I.2.4}
-\label{proposition:i.2.4}
+\label{proposition:I.2.4}
   If $\cat{E}=\Cat{Set}$, then the category $\Ord{\TT}$ is equivalent to the category of ``relational $\TT$-algebras'' of Barr {\cite{Ba}}.
 \end{itenv}
 
@@ -1035,7 +1036,7 @@ If $U'\colon\overline{\cat{E}}'\to\cat{E}$ is another fibrant functor, we say th
 With the above notation, we have an isomorphism $V(f^*\overline{e})\to f^*V(\overline{e})$.
 
 \begin{itenv}{Proposition~I.3.6}
-\label{proposition:i.3.6}
+\label{proposition:I.3.6}
   The functors $\cat{X}\to\cat{E}$ coming from all the composites of ($\ast$) for $\cat{X}=\Ord{\TT}$, $\Cat{Cat}(\TT)$, and $\Gr{\TT}$ are fibrant, and these fibrations are respected by the functors from ($\ast$) between these categories.
 \end{itenv}
 
@@ -1187,7 +1188,7 @@ Set $\MM=(M,m)$.
     & \cat{E'}
     \end{tikzcd}
   \]
-  These functors respect projective $\cat{A}$-limits and the fibrations defined in \hyperref[proposition:i.3.6]{Proposition~I.3.6}.
+  These functors respect projective $\cat{A}$-limits and the fibrations defined in \hyperref[proposition:I.3.6]{Proposition~I.3.6}.
 \end{itenv}
 
 \begin{proof}
@@ -2376,6 +2377,7 @@ We will see examples of cartesian triples in \cref{sec:III};
 here is a useful characterisation:
 
 \begin{itenv}{Proposition~II.2.14}
+\label{proposition:II.2.14}
   For $\Sp{\TT}$ to be a bicategory (i.e. for $r$, $l$, and $s$ to define natural equivalences), it is necessary and sufficient that $\TT$ be cartesian.
 \end{itenv}
 
@@ -2448,6 +2450,7 @@ If $e=\mu(0)$ and $\theta=\mu(\id_0)$, then the data of $\mu$ is equivalent to t
 Let $\cat{E}$ be a category endowed with a triple $\TT$, admitting finite fibre products and endowed with a canonical choice of these fibre products.
 
 \begin{itenv}{Proposition~II.3.15}
+\label{proposition:II.3.15}
   The data of a $\TT$-category is equivalent to that of a monad in the pseudo-category $\Sp{\TT}$ on the same object.
 \end{itenv}
 
@@ -2698,7 +2701,7 @@ are 2-morphisms in $\Sp{\cat{E}}$, where we set $T\theta=(Tb,Ta)$ and identify e
 \oldpage{262}
 
 \begin{rmenv}{Remark}
-  By applying the above to $\TT$-preorders, we reprove \hyperref[proposition:i.2.4]{Proposition~I.2.4}.
+  By applying the above to $\TT$-preorders, we reprove \hyperref[proposition:I.2.4]{Proposition~I.2.4}.
 \end{rmenv}
 
 
@@ -3036,7 +3039,69 @@ We say that $\TT=(T,I,K)$ is a \emph{strongly cartesian} triple if it is cartesi
 \end{itenv}
 
 \begin{proof}
-  Let
+  Let $U\colon\Cat{Cat}(\TT)\to\Gr{\TT}$ be the usual forgetful functor;
+  we will define an adjoint functor $F\colon\Gr{\TT}\to\Cat{Cat}(\TT)$ by using \unsure{Proposition~A.1} from the Appendix.
+  For every $e\in\set{\cat{E}}$, by \cref{proposition:II.2.14} and the terminology of \cref{sec:II.4},
+  \[
+    \overline{\Gr{\TT}/e}
+    = (\Gr{\TT}/e,1,\circ)
+  \]
+  \oldpage{268}
+  is a monoidal category, and, by \cref{proposition:II.3.15}, $\Cat{Cat}(\TT)/e$ is isomorphic to the category of monads $\Mon{\overline{\Gr{\TT}/e}}$ (see the Appendix) and its forgetful functor to $\Gr{\TT}/e$ agrees with a restriction of $U$.
+  To show that the functor $\Cat{Cat}(\TT)/e\to\Gr{\TT}/e$ admits an adjoint, it thus suffices to show that $\overline{\Gr{\TT}/e}$ is countably distributive (\unsure{Proposition~A.1}).
+  The existence of finite and countable sums follows from hypothesis~(c) and from the ``creativity'' of the functor $\Gr{\TT}/e\to\cat{E}$ that, to each $\TT$-graph $\theta$ over $e$, associates the object of the morphisms $\pi$ and $\theta$.
+  We show that $\overline{\Gr{\TT}/e}$ is countably distributive by using conditions~(c) and (d), along with the fact that, if we have an equality of the form $C'\cdot C=C''$ in $\cat{E}$ and if $C'$ and $C''$ are cartesian natural transformations (\cref{sec:II.2}), then $C$ is also cartesian.
+  The forgetful functor $U_e\colon\Cat{Cat}(\TT)/e\to\Gr{\TT}/e$ is thus tripleable;
+  we denote its adjoint by $F_e\colon\Gr{\TT}/e\to\Cat{Cat}(\TT)/e$.
+  We then define $\set{F}$ by the extension of the maps $\set{F_e}$, where $e$ runs over $\set{\cat{E}}$.
+
+  If $\TT$ is strongly cartesian, then so too is the triple $\TT^\mathbf{2}$ (\cref{sec:I.1}), and the forgetful functor $\hat{U}\colon\Cat{Cat}(\TT^\mathbf{2})\to\Gr{\TT^\mathbf{2}}$ can be identified with the functor
+  \[
+    U^\mathbf{2}\colon \Cat{Cat}(\TT^\mathbf{2})
+    \to \Gr{\TT^\mathbf{2}}.
+  \]
+  The way in which the adjoint of \unsure{Proposition~A.1} is constructed leads us to define $\set{F^\mathbf{2}}$ as the extension of the maps $\set{\hat{F}_f}$, where $f$ runs over $\set{\cat{E}^\mathbf{2}}$, and where we denote by $\hat{F}_f$ the adjoint of the forgetful functor
+  \[
+    \hat{U}_f\colon \Cat{Cat}(\TT^\mathbf{2})/f
+    \to \Gr{\TT^\mathbf{2}}/f.
+  \]
+  These conditions thus allow us to construct a functor
+  \[
+    F\colon\Gr{\TT}
+    \to \Cat{Cat}(\TT)
+  \]
+  and this functor is an adjoint of $U\colon\Cat{Cat}(\TT)\to\Gr{\TT}$;
+  indeed, it suffices to note that the same proof allows us to construct the natural transformations $I'$ and $K'$ of the desired triple, which we denote by
+  \[
+    \TT'=(T',I',K')
+  \]
+  where $T'=UF$.
+
+  It remains to show that the Eilenberg--Moore functor
+  \[
+    E\colon\Cat{Cat}(\TT)
+    \to \Alg{\TT'}
+  \]
+  is an isomorphism.
+  \oldpage{269}
+  The triple $\TT'_e$ induced by the adjoint pair $(F_e,U_e)$ can be obtained by restriction of the triple $\TT'$ to $\Gr{\TT}/e$, and, since the associated Eilenberg--Moore functor $E_e\colon\Cat{Cat}(\TT)/e\to\Alg{\TT'_e}$ is an isomorphism, we immediately deduce that $\set{E}$ is a bijection.
+  By an analogous reasoning, we can show that $\set{E^\mathbf{2}}$ is a bijection, since there is a bijection between ${\TT'}^\mathbf{2}$-algebras and morphisms between $\TT'$-algebras.
+  This proves that $E$ is an isomorphism.
+\end{proof}
+
+A morphism in $\cat{E}^\mathbf{2}$ is said to be \emph{cartesian} if it is cartesian in the sense of \cref{sec:II.2} (such a morphism being a natural transformation).
+We say that an inductive cone in $\cat{E}^\mathbf{2}$ is cartesian if its canonical injections are all cartesian.
+
+\begin{itenv}{Lemma}
+  If sums in $\cat{E}$ are universal, then $\cat{E}$ satisfies the following property:
+  \begin{enumerate}
+    \item[(e)] the canonical injections of sums in $\cat{E}$ are monomorphisms.
+  \end{enumerate}
+  If $\cat{E}$ satisfies (d) (and thus (e)), then every finite or countable sum in $\cat{E}^\mathbf{2}$ is a cartesian cone (if $\cat{E}$ admits a final object, then this is true for every sum), and every crochet of a sum formed from a cartesian cone in $\cat{E}^\mathbf{2}$ is cartesian.
+\end{itenv}
+
+\begin{proof}
+  The
 \end{proof}
 
 
