@@ -3256,8 +3256,37 @@ we call these the \emph{category} and \emph{graph of paths in $\cat{G}$} (respec
 We call $\NN$ the \emph{path triple}.
 
 \begin{itenv}{Proposition~III.2.21}
-  Let
+  Let $\TT=(T,I,K)$ be a cartesian triple on $\cat{E}$ and let $\theta=(b,a,i,k)$ be a $\TT$-category on $e\in\set{\cat{E}}$;
+  then
+  \[
+    (Tb, Ke\cdot Ta, Ti, Tk)
+  \]
+  is an $\cat{E}$-category on $Te$.
 \end{itenv}
+
+\begin{proof}
+  $(Tb,Ke\cdot Ta,Ti)$ is a pointed $\cat{E}$-graph, since
+  \[
+    Tb\cdot Ti = Te
+    \textand
+    Ke\cdot Ta\cdot Ti = Ke\cdot Ie = Te.
+  \]
+  Let $(v_1,v_2)$ and $(w_1,w_2)$ be the fibre products associated to $\theta$;
+  since the cartesian morphisms of $\cat{E}^\mathbf{2}$ are stable under composition, $(Tv_1,K\pi\cdot Tv_2)$ and $(Pw_1,K\pi_2\cdot Tw_2)$ are the fibre products of
+  \[
+    (Ke\cdot Ta, Tb)
+    \textand
+    (K\pi\cdot Tv_2, Tv_1)
+  \]
+  respectively.
+  If we replace $(b,a,i,k,i_1,i_2,k_1,k_2)$ by
+  \[
+    (Tb, Ke\cdot Ta, Ti, Tk, Ti_1, Ti_2, Tk_1, Tk_2)
+  \]
+  in equations~(1) to (8) above, then they remain true.
+\end{proof}
+
+This proposition allows us to
 
 
 
