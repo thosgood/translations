@@ -3419,8 +3419,139 @@ We say that $\MM$ is \emph{cartesian} if $\TT$ and $\TT'$ are cartesian and $m$ 
 
 (We will also refer to the ``local'' version of these as $\NN$-categories --- see further on.)
 
-The identity triple on $\Cat{Set}$
+The identity triple on $\Cat{Set}$ is strongly cartesian: thus, by \unsure{Proposition~III.1.20}, so too is the path triple $\NN$ (\cref{sec:III.2}).
+Furthermore, the forgetful functor $\Cat{Gr}\to\Cat{Set}$ defines a morphism of triples $\NN\to\Cat{Set}$ (writing $\Cat{Set}$ to also mean the identity triple on $\Cat{Set}$), whence, by \unsure{Proposition~I.5.7}, a commutative diagram
+\[
+  \begin{tikzcd}
+    \Cat{Cat}(\NN)
+      \rar \dar
+    & \Gr{\NN}
+      \rar \dar
+    & \Cat{Gr}
+      \dar
+  \\\Cat{Cat}
+      \rar
+    & \Cat{Gr}
+      \rar
+    & \Cat{Set}
+  \end{tikzcd}
+\]
+in which the horizontal functors are tripleable and the vertical functors commute with the adjoints and with the fibrations defined in \unsure{Proposition~I.5.6}.
+The adjoints (of the horizontal functors) also \unsure{satisfy the same phenomena as fibrations}.
+All of this will clearly appear in the construction of the \emph{tree triple}, denoted $\NN'=(N',I',K')$, which is the triple on $\Gr{\NN}$ induced by the tripleable functor $\Cat{Cat}(\NN)\to\Gr{N}$.
+We will use the scholium of \cref{sec:III.2} in this construction.
 
+Let $\cat{A^\op}=(b^\op,a^\op)$ be a graph.
+An $\NN$-graph $\cat{A}=(b,a)$ on $\cat{A}^\op$ is given by a diagram in $\Cat{Gr}$
+\oldpage{277}
+\[
+  \begin{tikzcd}
+    N\cat{A}^\op
+  \\&\pi
+      \ar[ul,swap,"a"]
+      \ar[dl,"b"]
+  \\\cat{A}^\op
+  \end{tikzcd}
+\]
+It projects, under the forgetful functor $\Cat{Gr}\to\Cat{Set}$, onto a graph that we will denote by $\cat{A}^\cdot=(b^\cdot,a^\cdot)$, by setting
+\[
+  \begin{gathered}
+    b^\cdot = \set{b}
+  \\a^\cdot = \set{a}
+  \\\set{\cat{A}} = \set{\cat{A}^\op} = \set{\cat{A}^\cdot}
+  \end{gathered}
+  \qquad\qquad
+  \begin{tikzcd}[column sep=huge]
+    {\set{\cat{A}}}
+    & {\set{\pi}}
+      \ar[l,bend left=20,"b^\cdot"]
+      \ar[l,bend right=20,swap,"a^\cdot"]
+  \end{tikzcd}
+\]
+and this set is called the \emph{set of objects of $\cat{A}$}.
+The morphisms from $\cat{A}^\cdot$ and from $\cat{A}^\op$ are called the \emph{morphisms} and \emph{tangles} (or arrows, or promorphisms) respectively.
+The objects of the graph $\pi=(b_\pi,a_\pi)$ are precisely the morphisms of $\cat{A}$, and its morphisms are called the \emph{branches} (or multimorphisms) of $\cat{A}$.
+We say that $\alpha\colon F\to G$ is a \emph{tree of height $q\geqslant1$} if
+\[
+  F = (f_1,\ldots,f_q)
+  \textand
+  G = (g_1,\ldots,g_q)
+\]
+are paths of length $q$ in $\cat{A}^\cdot$ and if $\alpha=(\beta,\gamma_2,\ldots,\gamma_q)$ is a sequence, where $\beta\colon f_1\to g_1$ is a branch in $\cat{A}$, that we call the \emph{trunk} of the tree $\alpha$, and where $\gamma_h\colon f_h\to g_h$, for all $2\leqslant h\leqslant q$, is a path in $\pi$, so that, for all $2\leqslant h\leqslant q-1$, we have
+\[
+  K\cat{A}^\op(Na(\gamma_h))
+  = Nb(\gamma_{h+1})
+\]
+and, furthermore,
+\[
+  \alpha(\beta)
+  = Nb(\gamma_1).
+\]
+We extend this definition, for $q=0$, in the following way: to every tangle $j\colon e\to e'$ of $\cat{A}$, we associated a tree of height zero, which we denote by $\id^j\colon\id_e\to\id_{e'}$, where $\id_e$ and $\id_{e'}$ are the paths of length zero.
+
+Trees thus form the morphisms of a graph $\hat{\pi}=(b_{\hat{\pi}},a_{\hat{\pi}})$, whose objects are the paths in $\cat{A}^\cdot$, and we have a morphism $I'\colon\pi\to\hat{\pi}$ in $\Cat{Gr}$, which is the identity on the objects and sends branches in $\cat{A}$ to trees that consist only of their trunk: we thus identity branches with particular trees.
+We thus have, in $\Cat{Gr}$, a commutative diagram
+\oldpage{278}
+\[
+  \begin{tikzcd}
+    N\cat{A}^\op
+  \\&\pi
+      \ar[r,"{I'}"]
+      \ar[ul,"a"]
+      \ar[dl,swap,"b"]
+    & \hat{\pi}
+      \ar[ull,bend right=20,swap,"\hat{a}"]
+      \ar[dll,bend left=20,"\hat{b}"]
+  \\\cat{A}^\op
+  \end{tikzcd}
+\]
+which projects in $\Cat{Set}$ to the diagram
+\[
+  \begin{tikzcd}[column sep=huge]
+    {\set{\cat{A}}}
+    & {\set{\pi}}
+      \ar[r,"{\set{I'}}"]
+      \ar[l,bend right=20,swap,near start,"a^\cdot"]
+      \ar[l,bend left=20,near start,"b^\cdot"]
+    & {\set{\hat{\pi}}}
+      \ar[ll,bend right=30,swap,"{\set{\hat{a}}}"]
+      \ar[ll,bend left=30,"{\set{\hat{b}}}"]
+  \end{tikzcd}
+\]
+which represents the adjunction morphism $I\cat{A}^\cdot\colon\cat{A}^\cdot\to N\cat{A}^\cdot$ in $\Cat{Gr}$.
+Denoting by $N'\cat{A}$ the $\NN$-graph $(\hat{b},\hat{a})$ thus obtained:
+
+\begin{quote}
+  \itshape
+  for every tree of height~$q\geqslant2$, denoted in brief by $(\beta,\gamma_2,\ldots,\gamma_2)$,
+  \[
+    \hat{b}(\beta,\gamma_2,\ldots,\gamma_q)
+    = b(\beta)
+    \textand
+    \hat{a}(\beta,\gamma_2,\ldots,\gamma_q)
+    = K\cat{A}^\op(Na(\gamma_q));
+  \]
+  for every tree of height~$1$,
+  \[
+    \hat{b}(\beta) = b(\beta)
+    \textand
+    \hat{a}(\beta) = a(\beta);
+  \]
+  finally, for every tangle $j$ of $\cat{A}$,
+  \[
+    \hat{b}(\id^j)
+    = j
+    = \hat{a}(\id^j).
+  \]
+\end{quote}
+
+We can recognise the construction of the underlying $\NN$-graph of the free $\NN$-category generated by the $\NN$-graph $\cat{A}$, by following the method of the scholium of \unsure{Proposition~III.2.21}.
+What we have called a ``tree'' does not even deserve this name, but rather ``a bundle of sticks'': it is the scholium that allows us to cut up into pieces the morphisms, rather complicated to describe, of the graph that is the object of the morphisms of the $\NN$-graph of paths of length~$q\geqslant0$ of $\cat{A}$ (see \cref{sec:III.2});
+such morphisms would be difficult to deal with, as we realise by trying to redo the below construction of the free $\NN$-category $(\hat{b},\hat{a},\hat{i},\hat{k})$ generated by $(b,a)$ by using a more direct definition of trees (for example: checking the associativity of composition of trees).
+
+For every tangle $j\colon e\to e'$ of $\cat{A}$ (the tangles of $\cat{A}$ are the same as those of $N'\cat{A}$), we have defined a tree of height zero $\id^j\colon\id_e\to\id_{e'}$;
+we define, by this correspondence, the morphism $\hat{i}\colon\cat{A}^\op\to\hat{\pi}$ in $\Cat{Gr}$.
+\oldpage{279}
 
 
 
