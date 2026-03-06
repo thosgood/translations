@@ -79,6 +79,12 @@
 \newcommand{\pr}{\mathrm{pr}}
 \newcommand{\op}{\mathrm{op}}
 
+\newcommand{\hsqbox}{{\boxminus}}
+\newcommand{\vsqbox}{{\rotatebox{90}{$\boxminus$}}}
+\DeclareMathOperator{\sq}{\square}
+\DeclareMathOperator{\hsq}{\raisebox{-.05em}{$\hsqbox$}}
+\DeclareMathOperator{\vsq}{\raisebox{-.1em}{$\vsqbox$}}
+
 \newcommand{\cat}[1]{\mathcal{#1}}
 \newcommand{\Cat}[1]{\mathsf{#1}}
 \newcommand{\set}[1]{|#1|}
@@ -3590,7 +3596,42 @@ A \emph{multicategory} is a quintuple $\cat{A}=(\cat{A}^\circ,\cat{A}^\cdot,\Hom
     is an \emph{envelope of $\cat{A}$} (or simply of $(\cat{A}^\circ,\cat{A}^\cdot)$) if $f\colon\overline{e}\to e$ and $f'\colon\overline{e}'\to e'$ are morphisms in $\cat{A}^\cdot$ and if $j_i\colon e_{i-1}\to e_i$, for $1\leqslant i\leqslant n$, are morphisms in $\cat{A}^\circ$ such that $e_0=e$ and $e_n=e'$.
     \oldpage{280}
     We also denote the above envelope by $(f',(j,(j_1,\ldots,j_n)),f)$.
-    We denote by
+    We denote by $\sq\cat{A}$ the set of envelopes of $\cat{A}$.
+    \[
+      \begin{tikzcd}
+        \overline{e}'
+          \ar[d]
+        & e_{n-1} \ldots e_1
+          \ar[l,dashed]
+        & \overline{e}
+          \ar[l,dashed]
+          \ar[d]
+      \\e'
+        && e
+          \ar[ll,dashed]
+      \end{tikzcd}
+    \]
+
+    We define an $\NN$-graph $(b,a)$ on $\cat{A}^\circ$, in the evident way, having $\sq\cat{A}$ as its morphism object, by associating to the above envelope $j$ and $(j_1,\ldots,j_n)$ as source and target (respectively).
+    We denote by $\hsq\cat{A}$ the morphism object of the free $\NN$-graph $N(b,a)$.
+    Then $\hsq\cat{A}$ is a graph;
+    its morphisms are the trees in $(b,a)$;
+    an $n$-envelope is a tree of height~$n$ in $(b,a)$.
+
+  \item
+    $\Hom_\cat{A}$ is a family of sets indexed by $\sq\cat{A}$.
+    The relation
+    \[
+      \alpha\in \Hom_\cat{A}\big( f',(j,(j_1,\ldots,j_n)),f \big)
+    \]
+    is also written as a multimorphism (or branch) $\alpha\colon(j_1,\ldots,j_n)\to j\colon f\mapsto f'$ of $\cat{A}$.
+
+  \item
+    $\iota$ is a family of maps, indexed by the set of morphisms of $\cat{A}^\circ$, of the form $\{\varnothing\}\to\Hom(\id^j)$ for every morphism $j\colon e\to e'$ of $\cat{A}^\circ$, where $\id^j$ is the envelope $(\id_{e'},(j,j),\id_e)$.
+    We also denote by $\id^j$, despite the risk of confusion, the image of $\varnothing$ under $\iota(j)$.
+
+  \item
+    $\kappa$ is
 \end{enumerate}
 
 
