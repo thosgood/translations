@@ -3631,8 +3631,55 @@ A \emph{multicategory} is a quintuple $\cat{A}=(\cat{A}^\circ,\cat{A}^\cdot,\Hom
     We also denote by $\id^j$, despite the risk of confusion, the image of $\varnothing$ under $\iota(j)$.
 
   \item
-    $\kappa$ is
+    $\kappa$ is a family of maps, indexed by the set of 2-envelopes of $\cat{A}$, of the form
+    \[
+      \Hom_\cat{A}(E)\times\Hom_\cat{A}(E_1,\ldots,E_n)
+      \to \Hom_\cat{A}(E,(E_1,\ldots,E_n))
+    \]
+    where $(E,(E_1,\ldots,E_n))$ is a 2-envelope of $\cat{A}$, and where we set
+    \[
+      \Hom_\cat{A}(E_1,\ldots,E_n)
+      = \Hom_\cat{A}(E_1)\times\ldots\times\Hom_\cat{A}(E_n).
+    \]
+    The image of an element $(\alpha,(\alpha_1,\ldots,\alpha_n))$ under this map is called the \emph{composite} of $(\alpha,(\alpha_1,\ldots,\alpha_n))$ in $\cat{A}$, and denoted by $\alpha\cdot(\alpha_1,\ldots,\alpha_n)$.
+
+  \item
+    (Identity).
+    For every morphism $\alpha\colon(j_1,\ldots,j_n)\to j\colon f\mapsto f'$ in $\cat{A}$, we have that
+    \[
+      \id^j\cdot\alpha
+      = \alpha
+      = \alpha\cdot(\id^{j_1},\ldots,\id^{j_n}).
+    \]
+
+  \item
+    (Associativity).
+    \oldpage{281}
+    Let
+    \[
+      (E,(E_1,\ldots,E_n))
+      \textand
+      (E_i,(E_{i1},\ldots,E_{ip_i}))
+    \]
+    (for $1\leqslant i\leqslant n$) be 2-envelopes of $\cat{A}$;
+    if
+    \[
+      \begin{aligned}
+        \alpha &\in\Hom_\cat{A}(E)
+      \\\beta_i &\in\Hom_\cat{A}(E_i)
+      \\\gamma_{ik} &\in\Hom_\cat{A}(E_{ik})
+      \end{aligned}
+    \]
+    for $1\leqslant i\leqslant n$ and $1\leqslant k\leqslant p_i$, then
+    \[
+      \begin{aligned}
+        &\alpha\cdot \big( \beta_1\cdot(\gamma_{11},\ldots,\gamma_{1p_1}), \ldots, \beta_n\cdot(\gamma_{n1},\ldots,\gamma_{np_n}) \big)
+      \\= \big( &\alpha\cdot(b_1,\ldots,\beta_n) \big)\cdot(\gamma_{11},\ldots,\gamma_{1p_1},\gamma_{21},\ldots,\gamma_{2p_2},\ldots,\gamma_{n1},\ldots,\gamma_{np_n}).
+      \end{aligned}
+    \]
 \end{enumerate}
+
+A triple $(\cat{A}^\circ,\cat{A}^\cdot,\Hom_\cat{A})$ that satisfies conditions~1 and 2 is called a \emph{multigraph}.
 
 
 
