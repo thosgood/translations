@@ -3692,8 +3692,163 @@ We define a \emph{Lambek multicategory} to be a quadruple $\cat{L}=(\cat{L}^\cir
     We denote by $\Delta_n\cat{L}$ the set of envelopes of length~$n$ of $\cat{L}$, and by $\Delta\cat{L}$ the set of all envelopes of $\cat{L}$.
 
   \item
-    $\Hom_\cat{L}$ is
+    $\Hom_\cat{L}$ is a family of sets, indexed by $\Delta\cat{L}$.
+    The relation $\alpha\in\Hom_\cat{L}(j,(j_1,\ldots,j_n))$ is also expressed by saying that $\alpha\colon(j_1,\ldots,j_n)\to j$ is a multimorphism in $\cat{L}$.
+
+  \item
+    $\id$ is a family that, to each morphism $j\colon e\to e'$ in $\cat{L}^\circ$, associates a multimorphism of the form $\id^j\colon j\to j$.
+
+  \item
+    $\perp=(\perp_n^i \mid 1\leqslant i, n\in\mathbb{N})$, where $\perp_n^i$ is a family of maps, indexed by the set of pairs of envelopes $(E,E')$, such that, if
+    \[
+      E = (j,(j_1,\ldots,j_n))
+      \textand
+      E' = (j',(j'_1,\ldots,j'_n))
+    \]
+    then $j_i=j'$ (and thus $n\geqslant 1$), with these maps being of the form
+    \[
+      \perp_n^i(E',E)
+      \colon \Hom_\cat{L}(E)\times\Hom_\cat{L}(E')
+      \to \Hom_\cat{L}(E\perp E')
+    \]
+    where we define
+    \[
+      E\perp E'
+      = (j,(j_1,\ldots,j_{i-1},j'_1,\ldots,j'_n,\ldots,j_{i+1},\ldots,j_n)).
+    \]
+
+    \oldpage{282}
+    We again note here that the ``local'' definition of a structure uses the prerequisite definition of a particular structure --- the $\perp$ law on envelopes --- which, in the work of Lambek, does not appear, thanks to a judicious abuse of language in which he denotes by the same symbol $\perp$ all the composition laws $\perp_n^i$, which we ourselves do when employing the notation $E\perp E'$, and which we will do in the rest of this text, even for $\cat{L}$.
+    Thus, we pose the abuse of notation $\perp=\perp_n^i(E,E')$.
+
+  \item
+    We have that
+    \[
+      \id^j\perp\alpha = \alpha = \alpha\perp\id^{j_i}
+    \]
+    for every multimorphism $\alpha\colon(j_1,\ldots,j_n)\to j$ and every integer $1\leqslant i\leqslant n$.
+
+  \item
+    We have that $\alpha\perp(\beta\perp\gamma)=(\alpha\perp\beta)\perp\gamma$ for every triple of multimorphisms $(\alpha,\beta,\gamma)$ of the form
+    \[
+      \begin{aligned}
+        \alpha\colon
+        &(j_1,\ldots,j_n)
+        \to j
+      \\\beta\colon
+        &(j'_1,\ldots,j'_{n'})
+        \to j_i
+        \quad\text{where }1\leqslant i\leqslant n-1
+      \\\gamma\colon
+        &(j''_1,\ldots,j''_{n''})
+        \to j'_{i'}
+        \quad\text{where }1\leqslant i'\leqslant n'-1.
+      \end{aligned}
+    \]
+
+  \item
+    We have that $(\alpha\perp\beta)\perp\beta'=(\alpha\perp\beta')\perp\beta$ for every triplet $(\alpha,\beta,\beta')$ of the form
+    \[
+      \begin{aligned}
+        \alpha\colon
+        &(j_1,\ldots,j_n)
+        \to j
+      \\\beta\colon
+        &(j'_1,\ldots,j'_{n'})
+        \to j_i
+        \quad\text{where }1\leqslant i\leqslant n-1
+      \\\beta'\colon
+        &(j''_1,\ldots,j''_{n''})
+        \to j_{i'}
+        \quad\text{where }1\leqslant i'\leqslant n'-1\text{ and }i<i'.
+      \end{aligned}
+    \]
 \end{enumerate}
+
+\begin{itenv}{Proposition~III.3.23}
+  The data of a Lambek multicategory is equivalent to that of a multicategory $\cat{A}$ such that $\cat{A}^\cdot$ is a discrete category.
+\end{itenv}
+
+\begin{proof}
+  Let $\cat{L}$ be a Lambek multicategory;
+  we associate to it a multicategory $\cat{A}$ defined in the following way: $\cat{A}^\circ=\cat{L}^\circ$, $\cat{A}^\cdot=\set{\cat{L}^\circ}$ (by identifying every set with a discrete category), $\Hom_\cat{A}=\Hom_\cat{L}$ (by identifying in the evident way the envelopes of $\cat{L}$ with the envelopes of $(\cat{A}^\circ,\cat{A}^\cdot)$).
+  If $(\alpha,(\beta_1,\ldots,\beta_n))$ is a tree of height~$2$ of the multigraph $(\cat{A}^\circ,\cat{A}^\cdot,\Hom_\cat{A})$ thus defined, we define the composition of $\cat{A}$ by
+  \[
+    \alpha\cdot(\beta_1,\ldots,\beta_n)
+    = \overline{\beta}_n
+    \quad\text{if }\overline{\beta}_0=\alpha
+  \]
+  and, by induction on $i$,
+  \oldpage{283}
+  \[
+    \overline{\beta}_{i+1}
+    = \overline{\beta}_i \perp \beta_i
+    \quad\text{for }0\leqslant i\leqslant n-1.
+  \]
+  Axiom~(5) is evidently a consequence of (5').
+  Axiom~(6) is a consequence of axioms~(6') and (7').
+  The formula of (6) is difficult to write, which is why we prove only the following particular case:
+  \[
+    \alpha\cdot\big( \beta\cdot(\gamma_1,\gamma_2), \beta'\cdot(\gamma'_1,\gamma'_2) \big)
+    = \big( \alpha\cdot(\beta,\beta')\big) \cdot (\gamma_1,\gamma_2,\gamma'_1,\gamma'_2)
+  \]
+  and the general formula and its proof only differ by the introduction of a certain quantity of dotted lines, which we indicate in the figure below.
+
+  \[
+    \begin{aligned}
+      \alpha\cdot \big( \beta\cdot(\gamma_1,\gamma_2), \beta'\cdot(\gamma'_1,\gamma'_2) \big)
+    &\overset{\text{defn.}}{=}
+      \Big(\alpha\perp\big( (\beta\perp\gamma_1)\perp\gamma_2 \big)\Big) \perp \big( (\beta'\perp\gamma'_1)\perp\gamma_2 \big)
+  \\&\overset{\text{(6')}}{=}
+      \Big( \big( \alpha\perp((\beta\perp\gamma_1)\perp\gamma_2) \big) \perp (\beta'\perp\gamma_1) \Big) \perp\gamma'_2
+  \\&\overset{\text{(6')}}{=}
+      \Big( \Big( \big(\alpha\perp((\beta\perp\gamma_1)\perp\gamma_2) \big) \perp \beta'\Big) \perp\gamma_1 \Big) \perp\gamma'_2
+  \\&\overset{\text{(7')}}{=}
+      \Big( \Big( (\alpha\perp\beta')\perp\big((\beta\perp\gamma_1)\perp\gamma_2\big) \Big)\perp\gamma'_1 \Big)\perp\gamma'_2
+  \\&\overset{\text{(6')}}{=}
+      \Big( \Big( \big( (\alpha\perp\beta')\perp(\beta\perp\gamma_1) \big) \perp\gamma_2 \Big) \perp\gamma'_1 \Big) \perp\gamma'_2
+  \\&\overset{\text{(6')}}{=}
+      \Big( \Big( \big(\big( (\alpha\perp\beta') \perp \beta \big) \perp\gamma_1 \big) \perp\gamma_2 \Big) \perp\gamma'_1 \Big) \perp\gamma'_2
+  \\&\overset{\text{(7')}}{=}
+      \Big( \Big( \big( \big( (\alpha\perp\beta) \perp\beta' \big) \perp\gamma_1 \big) \perp\gamma_2 \Big) \perp\gamma'_1 \Big) \perp\gamma'_2
+  \\&\overset{\text{defn.}}{=}
+      \big( \alpha\cdot(\beta,\beta')\big) \cdot (\gamma_1,\gamma_2,\gamma'_1,\gamma'_2).
+    \end{aligned}
+  \]
+  \todo{diagram}
+  We have thus defined a multicategory $\cat{A}$.
+
+  Conversely, let $\cat{A}$ be a multicategory such that $\cat{A}^\cdot$ is a discrete category;
+  we associate to it a Lambek multicategory in the following way: $\cat{L}^\circ=\cat{A}^\circ$, $\Hom_\cat{L}=\Hom_\cat{A}$, and we set
+  \[
+    \alpha \perp_n^i \beta
+    = \alpha\perp\beta
+    = \alpha\cdot(\id^{j_1},\ldots,\id^{j_{i-1}},\beta,\id^{j_{i+1}},\ldots,\id^{j_n})
+  \]
+  where
+  \[
+    \begin{aligned}
+      \alpha\colon
+      &(j_1,\ldots,j_n) \to \j \colon \id_e\to\id_e
+    \\\beta\colon
+      &(j'_1,\ldots,j'_n) \to j_i \colon \id_{\overline{e}} \to \id_{\overline{e}'}
+    \end{aligned}
+  \]
+  (where $1\leqslant i\leqslant n$) are multimorphisms in $\cat{A}$.
+  Axioms~(5'), (6'), and (7') are simple consequences of (5) and (6).
+  \oldpage{284}
+  We have thus defined the stated equivalence.
+\end{proof}
+
+The ``multicategories'' in \cite{La} are precisely, up to terminology, Lambek multicategories $\cat{L}$ (as above) such that $\set{\cat{L}}=1$.
+
+\begin{rmenv}{Examples}
+  \begin{enumerate}
+    \item
+      Categories are particular cases of Lambek multicategories.
+      If
+  \end{enumerate}
+\end{rmenv}
 
 
 
