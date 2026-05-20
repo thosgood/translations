@@ -96,8 +96,10 @@
 \newcommand{\Equ}[1]{\Cat{Equ}(#1)}
 \newcommand{\Sp}[1]{\Cat{Sp}(#1)}
 \newcommand{\Mon}[1]{\Cat{Mon}(#1)}
+\newcommand{\Op}[1]{\Cat{Op}(#1)}
 
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\hom}{hom}
 
 
 %% Links and references %%
@@ -3846,9 +3848,113 @@ The ``multicategories'' in \cite{La} are precisely, up to terminology, Lambek mu
   \begin{enumerate}
     \item
       Categories are particular cases of Lambek multicategories.
-      If
+      If $(j_1,\ldots,j_n)\colon e\to e'$ is a path in the category $\cat{C}$ and $j\colon e\to e'$ a morphism in $\cat{C}$, then $\Hom_\cat{C}(j,(j_1,\ldots,j_n))$ takes the value 1 or 0 depending on whether $j=j_1\cdot j_2\cdot\ldots\cdot j_n$ or not.
+
+    \item
+      The double categories of \cite{Eh} (which are, in the terminology of \cref{sec:III.2}, $\Cat{Cat}$-categories) are particular cases of multicategories: a multimorphism $\alpha\colon(j_1,\ldots,j_n)\to j\colon f\to f'$ consists of the data of a ``double morphism'' $\alpha$, of boundary given below:
+      \[
+        \begin{tikzcd}[sep=large]
+          \phantom{x}
+            \ar[d,swap,"f'"]
+        & \phantom{x}
+            \ar[l,swap,"j_1\cdot j_2\cdot\ldots\cdot j_n"]
+            \ar[d,"f"]
+            \ar[dl,phantom,"\alpha"description]
+        \\\phantom{x}
+        & \phantom{x}
+            \ar[l,"j"]
+        \end{tikzcd}
+      \]
+      which implies the conditions on the two types of morphisms featured, and who meaning is clear.
+
+    \item
+      Pseudo-categories are also particular cases of Lambek multicategories.
+      But we will limit ourselves here to a conjecture, since there is delicate work to be done on the ``coherences'', which would lead us to too much development: we will return to this in another work.
+
+    \item
+      Let $\cat{E}$ be a category.
+      We will define a \emph{multicategory of spans of $\cat{E}$} that, from the point of view of Example~3, generalises the pseudo-category of spans of $\cat{E}$ defined in \cref{sec:II.2}.
+      Let $\cat{L}^\circ$ be the graph whose objects are those of $\cat{E}$ and whose morphisms are the spans $(b,a)\colon e\to e'$ of $\cat{E}$, i.e. the pairs of morphisms of the form $b\colon\pi\to e'$ and $a\colon\pi\to e$ of $\cat{E}$.
+      Let
+      \[
+        \big((b_1,a_1),\ldots,(b_n,a_n)\big)
+        \colon e \to e'
+      \]
+      be a path in $\cat{L}^\circ$;
+      the data of a multimorphism then reduces to that of a commutative diagram of the form
+      \oldpage{285}
+      \todo{diagram}
+      The rest of the construction of the multicategory $\cat{L}$ is then evident.
+
+    \item
+      Functors and the ``profunctors'' of Bénabou (relative to a universe) form the morphisms of two different graphs on the same set of objects, $\set{\Cat{Cat}}$.
+      These are (respectively) the graph of morphisms and the graph of tangles (or promorphisms) of a multicategory;
+      the multimorphisms of this multicategory correspond precisely to those that we call, in these particular cases, the ``multimorphisms'';
+      this justifies, if justification were needed, the terminology introduced here.
   \end{enumerate}
 \end{rmenv}
+
+The first three examples suggest the following general definition:
+If $\TT$ is an arbitrary triple on a category $\cat{E}$ that admits fibre products, then we call $(b,a,i,k,t,d)$ a \emph{pre-tensorial $\TT$-category} if $(b,a,i,k)$ is a $\TT$-category on an object $e$ and, adopting the notation of \todo{Figure~1} from \cref{sec:I.3}, $t\colon Te\to\pi$ and $d\colon\pi\to\pi_2$ are morphisms in $\cat{E}$ that satisfy the following axioms:
+\begin{enumerate}
+  \item $a\cdot t = \id_{Te}$
+  \item $v_2\cdot d = I\pi\cdot t\cdot a$ and $k\cdot d = \id_\pi$.
+\end{enumerate}
+The first three examples are, in an evident way, pre-tensorial multicategories.
+We will return to the details later.
+Note that every $\cat{E}$-category is pre-tensorial in a trivial way.
+
+We will later show, thanks to the construction of ``models'', that the category $\Cat{Cat}(\NN)$ is ``cartesian closed'' (i.e. admits products that are tensor products).
+Is this result true for every cartesian triple?
+
+
+
+\subsection{Categories of operators}
+\label{sec:III.4}
+
+\oldpage{286}
+We define a \emph{category of operators}, or \emph{action of a category}, to be the data of a triple $\phi=(\cat{C},\hom_\phi,\kappa)$ satisfying the following conditions:
+\begin{enumerate}
+  \item
+    $\cat{C}$ is a category.
+  
+  \item
+    $\hom_\phi$ is a family of sets indexed by $\set{\Cat{C}}$.
+  
+  \item
+    $\kappa$ is a family of maps, indexed by $\set{\Cat{C}}^2$, of the form
+    \[
+      \kappa(e',e)\colon
+      \Hom_\cat{C}(e',e)\times\hom_\phi(e)
+      \to \hom_\phi(e').
+    \]
+    We denote by $f\cdot x$ the image under this map of a pair $(f,x)$, where $f\colon e\to e'$ is a morphism in $\cat{C}$ and $x\in\hom_\phi(e)$.
+    (We sometimes suppose that the family $\hom_\phi$ takes disjoint values between them, disjoint from the values taken by $\Hom_\cat{C}$ and disjoint from $\cat{C}$).
+
+  \item
+    If $e\in\set{\Cat{C}}$ and $x\in\hom_\phi(e)$, then $\id_e\cdot x=x$.
+
+  \item
+    If $f\colon e\to e'$, $g\colon e'\to e''$, and $x\in\hom_\phi(e)$, then $g\cdot(f\cdot x)=(g\cdot f)\cdot x$.
+\end{enumerate}
+This ``local'' definition is visibly equivalent to that of a presheaf of sets.
+
+If $\phi'=(\cat{C}',\hom_{\phi'},\kappa')$ is another category of operators, then a morphism $\varphi\colon\phi\to\phi'$ is defined by a functor $F\colon\cat{C}\to\cat{C}'$ and a family of maps $\hom_\varphi$, indexed by $\set{\cat{C}}$, of the form
+\[
+  \hom_\varphi(e)\colon
+  \hom_\phi(e)
+  \to \hom_{\phi'}(\varphi(e))
+\]
+and such that $\varphi(f\cdot x)=\varphi(f)\cdot\varphi(x)$, where we write $\varphi(e)$, $\varphi(f)$, and $\varphi(x)$ instead of $F(e)$, $F(f)$, and $\hom_\varphi(e)(x)$ (respectively).
+
+The ``global'' definition of a category of operators coincides with that of a \emph{coétale functor} (called a functor of hypermorphisms in the terminology of \cite{Eh} --- see, for example, the ``sketch'' of this structure in \cite{Bu}).
+We say that a functor $\overline{\phi}\colon\overline{\cat{C}}\to\cat{C}$ is coétale if, for every $\overline{e}\in\set{\overline{\cat{C}}}$ and every morphism in $\cat{C}$ of the form $f\colon\overline{\phi}(\overline{e})\to e'$, there exists a unique morphism in $\cat{C}$ of the form $\overline{f}\colon\overline{e}\to\overline{e}'$ such that $\overline{\phi}(\overline{f})=f$.
+More generally, suppose that $\cat{E}$ is a category that admits finite fibre products;
+then we say that an $\cat{E}$-functor $(f_0,f)\colon(\overline{b},\overline{a},\overline{i},\overline{k})\to(b,a,i,k)$ is \emph{coétale} if $(f,\overline{a})$ is a fibre product of $(a,f_0)$ (compare with the generalisations of this notion in \cref{sec:IV}).
+We denote by $\Op{\cat{E}}$ the full subcategory of $\Cat{Cat}(\cat{E})^\mathbf{2}$ whose objects are the coétale $\cat{E}$-functors.
+
+\oldpage{287}
+Suppose that
 
 
 
