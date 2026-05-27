@@ -3954,7 +3954,134 @@ then we say that an $\cat{E}$-functor $(f_0,f)\colon(\overline{b},\overline{a},\
 We denote by $\Op{\cat{E}}$ the full subcategory of $\Cat{Cat}(\cat{E})^\mathbf{2}$ whose objects are the coétale $\cat{E}$-functors.
 
 \oldpage{287}
-Suppose that
+Suppose that $\cat{E}$ admits finite projective limits and finite inductive limits, and is endowed with a canonical choice of these limits;
+in particular, we have an initial object and a terminal object, which we denote by $0$ and $1$ (respectively).
+We denote the finite sums in $\cat{E}$ additively.
+Then $(\cat{E},0,+)$ is a monoidal category in an evident way, in which we have the following monad:
+\[
+  0 \xrightarrow{\varepsilon}
+  I \xleftarrow{\delta}
+  I + 1
+\]
+where $\varepsilon$ is uniquely determined and $\delta$ is the ``codiagonal'' of the sum of $(1,1)$.
+This determines --- following a procedure that generalises to the data of an arbitrary monad --- a triple on $\cat{E}$, which we denote by
+\[
+  \TT_{+1}
+  = (T_{+1},I,K)
+\]
+where
+\[
+  \begin{aligned}
+    T_{+1}e
+    &= e+1
+  \\Ie
+    &= e+\varepsilon
+  \\Ke
+    &= e+\delta
+  \end{aligned}
+\]
+up to isomorphism, for all $e\in\set{\cat{E}}$.
+
+\begin{itenv}{Proposition~III.4.24}
+  If the finite sums in $\cat{E}$ are universal, then the categories $\Op{\cat{E}}$ and $\Cat{Cat}(\TT_{+1})$ are equivalent.
+\end{itenv}
+
+\begin{proof}
+  We define an \emph{$\cat{E}$-graph of operators} to be the data of a triple $(b,a,f_0)$, where $(b,a)$ is an $\cat{E}$-graph on $e$ and $f_0\colon\overline{e}\to e$ is a morphism in $\cat{E}$ with target $e$.
+  We will first show that the category $\Gr{\TT_{+1}}$ is equivalent to the category whose objects are the $\cat{E}$-graphs of operators and whose morphisms are determined by triples
+  \[
+    (m_0,m,\overline{m})
+    \colon (b,a,f_0)
+    \to (b',a',f'_0)
+  \]
+  such that
+  \[
+    \begin{aligned}
+      m_0\cdot a'
+      &= a\cdot m
+    \\m_0\cdot b'
+      &= b\cdot m
+    \\m_0\cdot f'_0
+      &= f_0\cdot\overline{m}.
+    \end{aligned}
+  \]
+
+  Consider a morphism in $\cat{E}$ of the form $a'\colon\pi'\to e+1$;
+  form the fibre products $(I',a)$ and $(j',c)$ of $(a',Ie)$ and $(a',j)$ (respectively), where $j\colon 1\to e+1$ and $Ie\colon e\to e+1$ are the canonical injections of the sum $e+1$.
+  By hypothesis, $j'\colon\overline{e}\to\pi'$ and $I'\colon\pi\to\pi'$ form a system of canonical injections of a (non-canonical) sum.
+  Conversely, the data of two morphisms of the form $a\colon\pi\to e$ and $c\colon\overline{e}\to1$ (the data of the latter being equivalent to that of $\overline{e}$) allows us to construct the sum morphism $a+c\colon\pi+\overline{e}\to e+1$, i.e. $a'$, up to isomorphism.
+  By hypothesis, the sums in $\cat{E}$ are cartesian (see the \unsure{lemma of Proposition~III.1.20}), which implies that the data of $a'$ is evidently equivalent to that of the pair $(a,c)$.
+
+  Now, if $(b',a')$ is a $\TT_{+1}$-graph, its data is equivalent to that of an $\cat{E}$-graph of operators $(b,a,f_0)$, where $b=b'\cdot I'$ and $f_0=b'\cdot j'$;
+  in other words, $b'$ is the crochet of $(b,f_0)$ \unsure{with} the sum $(I',j')$.
+  It thus follows that $\Gr{\TT_{+1}}$ is equivalent to the category of $\cat{E}$-graphs of operators defined above.
+
+  Let $(b',a')$ be a $\TT_{+1}$-graph on $e$;
+  we will construct the morphism $a$, $c$, $j$, $I'$, $j'$, $b$, and $f_0$ as above, and form the fibre products $(v'_1,v'_2)$, $(v_1,v_2)$, and $(f,\overline{a})$ of $(a',b'+1)$, $(a,b)$, and $(a,f_0)$ (respectively), with sources $\pi'_2$, $\pi_2$, and $\overline{\pi}$ (respectively).
+  There exist morphisms $I''\colon\pi_2\to\pi'_2$ and $\overline{I}\colon\overline{\pi}\to\pi'_2$ characterised by the relations
+  \[
+    \begin{aligned}
+      v'_1\cdot I''
+      &= I'\cdot v_1
+    \\v'_2\cdot I''
+      &= I\pi'\cdot I'\cdot v_2
+    \\v'_1\cdot\overline{I}
+      &= I'\cdot f
+    \\v'_2\cdot\overline{I}
+      &= I\pi'\cdot j'\cdot\overline{a}.
+    \end{aligned}
+  \]
+  Suppose that we are further given a ``multiplication'' on the $\TT_{+1}$-graph $(b',a')$, i.e. a morphism $k'\colon\pi'_2\to\pi'$ such that
+  \[
+    b'\cdot k' = b'\cdot v'_1
+    \textand
+    a'\cdot k' = Ke\cdot(a'+1)\cdot v'_2;
+  \]
+  from this we extract the data of a ``multiplication'' $k\colon\pi_2\to\pi'$ on the $\cat{E}$-graph $(b,a)$, i.e a morphism $k$ such that
+  \[
+    b\cdot k = b\cdot v_1
+    \textand
+    a\cdot k = a\cdot v_2
+  \]
+  along with the data of a morphism $\overline{b}\colon\overline{\pi}\to\overline{e}$ such that $f_0\cdot\overline{b}=b\cdot f$.
+  These two morphisms, $k$ and $\overline{b}$, arise as crochets of fibre products characterised by the relations
+  \[
+    \begin{aligned}
+      I'\cdot k
+      &= k'\cdot I''
+    \\a\cdot k
+      &= a\cdot v_2
+    \\j'\cdot\overline{b}
+      &= k'\cdot\overline{I}
+    \\c\cdot\overline{b}
+      &= c\cdot\overline{a}
+    \end{aligned}
+  \]
+  (with the last relation being trivial).
+  We note that the construction of $k$ allows us to describe a functor, of which $\Cat{Cat}(\II)$\footnote{See the definition of $\II$ on \unsure{some page number}} is a subfunctor, and that $(f_0,f)\colon(\overline{b},\overline{a})\to(b,a)$ is a morphism of $\cat{E}$-graphs.
+  Conversely, the data of $k$ and $\overline{b}$ satisfying the conditions above, i.e.
+  \[
+    \begin{aligned}
+      b\cdot k
+      &= b\cdot v_1
+    \\a\cdot k
+      &= a\cdot v_2
+    \\f_0\cdot\overline{b}
+      &= b\cdot f
+    \end{aligned}
+  \]
+  \oldpage{289}
+  allows us to construct a multiplication $k'$ on $(b',a')$ as a crochet in the following way:
+  Let $l\colon I\to\pi'+1$ be the canonical injection of the sum of $(\pi',1)$;
+  if $(j',c)$ and $(v'_1,v'_2)$ are fibre products of $(a',j)$ and $(a',b'+1)$ (respectively), then we deduce the data of a crochet $l\colon\overline{e}\to\pi'_2$ such that
+  \[
+    v'_1\cdot l' = j'
+    \textand
+    v'_2\cdot l' = l\cdot c
+  \]
+  \todo{big diagram}
+  and $(l',c)$ is a fibre product of $(v'_2,l)$.
+\end{proof}
 
 
 
