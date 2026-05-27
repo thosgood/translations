@@ -1,0 +1,78 @@
+/* Custom environments */
+
+#translators-note {
+  clear: both;
+  padding: 0 1.5em;
+  margin: 0 1.5em 1.5em 1.5em;
+  border-left: 1px dashed black;
+  border-bottom: 1px dashed black;
+}
+#translators-note p {
+  text-align: left;
+}
+
+.original-citation {
+  margin: 1em 1.5em;
+}
+.original-citation > :last-child {
+  margin-bottom: 0 !important;
+}
+
+.itenv,
+.rmenv {
+  margin: 1em 0;
+  text-align: justify;
+}
+
+.titenv,
+.trmenv {
+  margin: 0.5em 0;
+  text-align: justify;
+}
+
+.itenv,
+.titenv {
+  font-style: italic;
+}
+.itenv em,
+.titenv em {
+  font-style: normal !important;
+}
+
+.rmenv,
+.trmenv {
+  font-style: normal;
+}
+
+.itenv::before,
+.rmenv::before,
+.titenv::before,
+.trmenv::before {
+  content: attr(title)".";
+  font-style: normal;
+  font-weight: bold;
+  padding-right: 0.5em;
+  display: inline;
+}
+
+.itenv > p,
+.rmenv > p,
+.titenv > p,
+.trmenv > p {
+  margin-top: 0.85em !important;
+}
+
+.itenv > p:first-of-type,
+.rmenv > p:first-of-type,
+.titenv > p:first-of-type,
+.trmenv > p:first-of-type {
+  margin-top: 0 !important;
+  display: inline;
+}
+
+.itenv > :last-child,
+.rmenv > :last-child,
+.titenv > :last-child,
+.trmenv > :last-child {
+  margin-bottom: 0 !important;
+}

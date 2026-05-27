@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\usepackage[margin=1.6in]{geometry}
+
+\title{$title$$if(subtitle)$\\\emph{$subtitle$}$endif$}
+\author{$author$}
+\date{$date$}
+
+\usepackage{amssymb,amsmath,amscd}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+\usepackage{booktabs}
+\usepackage{mathtools}
+
+% for pandoc tables
+\usepackage{calc,array}
+\usepackage{longtable}
+%
+
+\usepackage{mathrsfs}
+\usepackage{fouriernc}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+%% Header and footer %%
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xstring}
+\pagestyle{fancy}
+\fancypagestyle{plain}{}
+\fancyhf{}
+\lhead{\footnotesize\nouppercase\leftmark}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+% Git commit hash for server builds
+\newif\ifserver
+\serverfalse
+\lfoot{\footnotesize\ifserver{Git commit: \href{https://github.com/thosgood/translations/commit/GitCommitHashVariable}{GitCommitHashVariable}}\fi}
+
+
+%% Theorem environments %%
+
+\usepackage{amsthm}
+
+\newenvironment{itenv}[1]
+  {\phantomsection\par\smallskip\noindent\textbf{#1.}\itshape}
+  {\par\smallskip}
+
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\smallskip\noindent\textbf{#1.}\rmfamily}
+  {\par\smallskip}
+
+\newenvironment{titenv}[1]
+  {\phantomsection\par\noindent\textbf{#1.}\itshape}
+  {\par}
+
+\newenvironment{trmenv}[1]
+  {\phantomsection\par\noindent\textbf{#1.}\rmfamily}
+  {\par}
+
+
+%% Shortcuts %%
+
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$$\Big\vert$$ \textit{p.~#1}}}
+
+
+%% Bibliography %%
+
+\usepackage[backend=biber,maxnames=99,maxalphanames=4]{biblatex}
+\addbibresource{$bibliography$}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\renewcommand{\abstractname}{Translator's note}
+
+\setcounter{footnote}{0}
+
+% N.B. the TOC is now found in _translator-note.Rmd
+% \tableofcontents
+
+
+%% Content %%
+
+$body$
+
+\nocite{*}
+\printbibliography[heading=bibintoc,title=Bibliography]
+
+\end{document}

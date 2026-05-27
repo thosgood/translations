@@ -1,0 +1,28 @@
+# Nice things to have
+repo-url: https://github.com/thosgood/translations
+favicon: "favicon.ico"
+
+# Page structure
+toc: true
+number-sections: true
+
+# Citations
+nocite: '@*'
+link-citations: true
+csl: maths-translations.csl
+reference-section-title: "Bibliography"
+
+format:
+  html:
+    html-math-method: katex
+    self-contained: true
+    css: style.css
+    date-format: "YYYY"
+    repo-url: https://github.com/thosgood/translations
+    repo-actions: [source]
+  pdf:
+    keep-tex: true
+    template: _template.latex
+    date-format: "YYYY"
+    cite-method: biblatex
+    biblatexoptions: [backend=biber]
