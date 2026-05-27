@@ -4071,7 +4071,7 @@ up to isomorphism, for all $e\in\set{\cat{E}}$.
     \end{aligned}
   \]
   \oldpage{289}
-  allows us to construct a multiplication $k'$ on $(b',a')$ as a crochet in the following way:
+  allows us to construct a multiplication $k'$ on $(b',a')$ as a sum crochet in the following way:
   Let $l\colon I\to\pi'+1$ be the canonical injection of the sum of $(\pi',1)$;
   if $(j',c)$ and $(v'_1,v'_2)$ are fibre products of $(a',j)$ and $(a',b'+1)$ (respectively), then we deduce the data of a crochet $l\colon\overline{e}\to\pi'_2$ such that
   \[
@@ -4081,7 +4081,57 @@ up to isomorphism, for all $e\in\set{\cat{E}}$.
   \]
   \todo{big diagram}
   and $(l',c)$ is a fibre product of $(v'_2,l)$.
+  We again note that $(\overline{I},\overline{a})$ and $(I'',v_2)$ are fibre products of $(v'_2,I\pi'\cdot j')$ and $(v'_2,I\pi'\cdot I')$ (respectively), so that, by universality of sums, the three morphisms $I''$, $\overline{I}$, and $l'$ form the system of canonical injections of a sum of $(\pi_2,\overline{\pi},\overline{e})$, and $k'$ is the sum crochet characterised by
+  \[
+    \begin{aligned}
+      k\cdot I''
+      &= I'\cdot k
+    \\k'\cdot\overline{I}
+      &= j'\cdot\overline{b}
+    \\k'\cdot l'
+      &= j'.
+    \end{aligned}
+  \]
+  \oldpage{290}
+  We can easily show that the data of the ``multiplication'' $k'$ is equivalent to that of the ``multiplication'' $k$ along with $\overline{b}$ such that
+  \[
+    (f_0,f)
+    \colon (\overline{b},\overline{a})
+    \to (b,a)
+  \]
+  is a morphism of $\cat{E}$-graphs.
+
+  The rest of the proof follows this model;
+  we limit ourselves to pointing out what else can be constructed from \unsure{just} the multiplication $k'$ on $(b',a')$.
+  Let $(\overline{v}_1,\overline{v}_2)$ be the canonical fibre product of $(\overline{b},\overline{a})$ of source $\overline{\pi}_2$;
+  we have a morphism $f_2$ characterised by
+  \[
+    v_1\cdot f_2 = f\cdot\overline{v}_1
+    \textand
+    v_2\cdot f_2 = f\cdot\overline{v}_2.
+  \]
+  The relations
+  \[
+    a\cdot k\cdot f_2
+    = a\cdot v_2\cdot f_2
+    = a\cdot f\cdot \overline{v}_2
+    = f_0\cdot\overline{a}\cdot\overline{v}_2
+  \]
+  imply the existence of a crochet $\overline{k}$ characterised by
+  \[
+    f\cdot\overline{k} = k\cdot f_2
+    \textand
+    \overline{a}\cdot\overline{k} = \overline{a}\cdot\overline{v}_2.
+    \qedhere
+  \]
 \end{proof}
+
+We remark that $\TT_{+1}$ is cartesian but not strongly cartesian.
+
+
+
+\subsection{Hypertopologies}
+\label{sec:III.5}
 
 
 
