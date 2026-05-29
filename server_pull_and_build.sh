@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # Using the following versions:
-# - bookdown 0.22.3
-# - pandoc 2.11.1.1
-# - pdfTeX 3.141592653-2.6-1.40.22
+# - quarto 1.9.38
 
 usage() { echo "Usage: $0 [-a <qmd|tex>]" 1>&2; exit 1; }
 
@@ -38,21 +36,21 @@ if [ "$ALL_TYPE" == "tex" ]; then
   NEW_TEX=$(find latex -name '*.tex')
 elif [ "$ALL_TYPE" == "qmd" ]; then
   # To rebuild all qmd files
-  NEW_RMD=$(find markdown -name '*.qmd')
+  NEW_QMD=$(find markdown -name '*.qmd')
 else
   # Only get changed files
   NEW_TEX=$(git diff --name-only main origin/main | grep -E '.tex$')
-  NEW_RMD=$(git diff --name-only main origin/main | grep -E '.qmd$')
+  NEW_QMD=$(git diff --name-only main origin/main | grep -E '.qmd$')
 fi
 
-if [ -z "$NEW_TEX" ] && [ -z "$NEW_RMD" ]; then
+if [ -z "$NEW_TEX" ] && [ -z "$NEW_QMD" ]; then
   printf "No changes to any .tex or .qmd files!\n"
 else
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   printf "Here are the .tex files that have changed:\n"
   printf "$NEW_TEX\n"
   printf "Here are the .qmd files that have changed:\n"
-  printf "$NEW_RMD\n"
+  printf "$NEW_QMD\n"
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   git pull
   # Get the git commit hash
@@ -81,12 +79,12 @@ else
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     done
   fi
-  if ! [ -z "$NEW_RMD" ]; then
+  if ! [ -z "$NEW_QMD" ]; then
     cd $TRANSLATIONS_DIR/markdown/
-    for FILE in $NEW_RMD; do
+    for FILE in $NEW_QMD; do
       BASE=${FILE##*/}
       PREF=${BASE%.*}
-      quarto render $FILE
+      quarto render $BASE
     done
     cp -r _output/* $WEBSITE
   fi
