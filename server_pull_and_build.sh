@@ -5,13 +5,13 @@
 # - pandoc 2.11.1.1
 # - pdfTeX 3.141592653-2.6-1.40.22
 
-usage() { echo "Usage: $0 [-a <qmd|tex>]" 1>&2; exit 1; }
+usage() { echo "Usage: $0 [-a <md|tex>]" 1>&2; exit 1; }
 
 while getopts ":a:" o; do
     case "${o}" in
         a)
             ALL_TYPE=${OPTARG}
-            if [[ "$ALL_TYPE" != "qmd" ]] && [[ "$ALL_TYPE" != "tex" ]]; then
+            if [[ "$ALL_TYPE" != "md" ]] && [[ "$ALL_TYPE" != "tex" ]]; then
               usage
             fi
             ;;
@@ -36,7 +36,7 @@ git fetch
 if [ "$ALL_TYPE" == "tex" ]; then
   # To rebuild all tex files
   NEW_TEX=$(find latex _in-progress -name '*.tex')
-elif [ "$ALL_TYPE" == "qmd" ]; then
+elif [ "$ALL_TYPE" == "md" ]; then
   # To rebuild all qmd files
   NEW_RMD=$(find md _in-progress -name '*.qmd')
 else
