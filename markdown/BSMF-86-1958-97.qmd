@@ -2,22 +2,11 @@
 title: "The Riemann--Roch theorem"
 author: "Armand Borel and Jean-Pierre Serre"
 date: "1958"
-original: 'Borel, A. and Serre, J-.P. "Le théorème de Riemann--Roch". _Bulletin de la Société Mathématique de France_ **86** (1958), 97--136. DOI: [`10.24033/bsmf.1500`](https://www.doi.org/10.24033/bsmf.1500).'
+original: 'Borel, A. and Serre, J-.P. "Le théorème de Riemann--Roch". _Bulletin de la Société Mathématique de France_ **86** (1958), 97--136. DOI: [10.24033/bsmf.1500](https://www.doi.org/10.24033/bsmf.1500).'
 bibliography: BSMF-86-1958-97.bib
-nocite: '@*'
-link-citations: true
-csl: maths-translations.csl
-reference-section-title: "Bibliography"
-github-repo: "thosgood/translations"
-favicon: "favicon.ico"
 ---
 
-```{js, echo = FALSE}
-$(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
-```
-
-```{r, child = '_translator-note.Rmd'}
-```
+{{< include _translator-note.qmd >}}
 
 *[Translator] In the original article, subsections were numbered e.g. 5.a, 5.b, ...; here they are numbered 5.1, 5.2, ...*
 
@@ -41,8 +30,6 @@ $(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
 \providecommand{\codim}{\operatorname{codim}}
 
 <!-- Content -->
-
-\tableofcontents
 
 # Introduction {-}
 

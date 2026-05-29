@@ -3,16 +3,9 @@ title: "A comment about the integral representation of the Riemann xi-function"
 author: "George Pólya"
 date: "1926"
 original: 'Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen $\xi$-Funktion". _Acta Math._ **48** (1926), 305--317. DOI: [10.1007/BF02565336](https://doi.org/10.1007/BF02565336).'
-github-repo: "thosgood/translations"
-favicon: "favicon.ico"
 ---
 
-```{js, echo = FALSE}
-$(document).ready(function(e) {gitbook.sidebar.toggle(false, false)});
-```
-
-```{r, child = '_translator-note.Rmd'}
-```
+{{< include _translator-note.qmd >}}
 
 \providecommand{\scr}[1]{{\mathscr{#1}}}
 \renewcommand{\cal}[1]{{\mathcal{#1}}}
@@ -463,7 +456,7 @@ In the curly brackets on the right-hand side of Equation (28), the $a^{-x}y^xe^{
 by Equation (29), we can exclude the possibility that
 $$
   \Im\log\GG(1+iy) \to +\infty
-  \qquad\mbox{as $y\to\infty$}.
+  \qquad\text{as }y\to\infty.
 $$
 Thus the $y_n$ exist for $n=0,1,2,3,\ldots$.
 

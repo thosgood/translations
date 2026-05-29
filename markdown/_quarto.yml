@@ -1,0 +1,41 @@
+project:
+  output-dir: _output
+
+# Nice things to have
+repo-url: https://github.com/thosgood/translations
+favicon: "_favicon.ico"
+
+# Page structure
+toc: true
+number-sections: true
+
+# Citations
+nocite: '@*'
+link-citations: true
+csl: _maths-translations.csl
+reference-section-title: "Bibliography"
+
+format:
+  html:
+    html-math-method: katex
+    self-contained: true
+    css: _style.css
+    date-format: "YYYY"
+    title-block-banner: true
+    # code-links: repo
+    other-links:
+      - text: Source files
+        href: https://github.com/thosgood/translations
+        icon: github
+      - text: More translations
+        href: https://thosgood.net/translations
+        icon: collection
+    # mainfont: 
+    theme:
+      light: flatly
+      dark: darkly
+  pdf:
+    template: _template.tex
+    date-format: "YYYY"
+    cite-method: biblatex
+    biblatexoptions: [backend=biber]
