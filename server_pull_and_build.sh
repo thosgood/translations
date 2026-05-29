@@ -35,10 +35,10 @@ git fetch
 
 if [ "$ALL_TYPE" == "tex" ]; then
   # To rebuild all tex files
-  NEW_TEX=$(find latex _in-progress -name '*.tex')
+  NEW_TEX=$(find latex -name '*.tex')
 elif [ "$ALL_TYPE" == "qmd" ]; then
   # To rebuild all qmd files
-  NEW_RMD=$(find qmd _in-progress -name '*.qmd')
+  NEW_RMD=$(find markdown -name '*.qmd')
 else
   # Only get changed files
   NEW_TEX=$(git diff --name-only main origin/main | grep -E '.tex$')
