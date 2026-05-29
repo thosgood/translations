@@ -16,8 +16,10 @@
 
 
 %Bibliography
+$if(bibliography)$
 \usepackage[backend=biber,maxnames=99,maxalphanames=4]{biblatex}
 \addbibresource{$bibliography$}
+$endif$
 
 
 % Colours
@@ -87,7 +89,9 @@ $body$
 
 
 % Bibliography
+$if(bibliography)$
 \nocite{*}
 \printbibliography[heading=bibintoc,title=Bibliography]
+$endif$
 
 \end{document}

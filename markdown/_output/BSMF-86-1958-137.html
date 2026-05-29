@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Michel Balazard, Eric Saias, and Marc Yor">
-<meta name="dcterms.date" content="1999-01-01">
+<meta name="author" content="A. Grothendieck">
+<meta name="dcterms.date" content="1958-01-01">
 
-<title>Notes on the Riemann zeta function, 2</title>
+<title>The theory of Chern classes</title>
 <style>
 
 code{white-space: pre-wrap;}
@@ -2324,7 +2324,7 @@ margin-bottom: 0 !important;
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Notes on the Riemann zeta function, 2</h1>
+      <h1 class="title">The theory of Chern classes</h1>
                       </div>
   </div>
     
@@ -2334,14 +2334,14 @@ margin-bottom: 0 !important;
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Michel Balazard, Eric Saias, and Marc Yor </p>
+               <p>A. Grothendieck </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">1999</p>
+        <p class="date">1958</p>
       </div>
     </div>
     
@@ -2355,13 +2355,15 @@ margin-bottom: 0 !important;
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#thanks" id="toc-thanks" class="nav-link" data-scroll-target="#thanks">Thanks</a></li>
-  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"><span class="header-section-number">1</span> Notation</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"><span class="header-section-number">2</span> The functor <span class="math inline">A(X)</span></a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"><span class="header-section-number">3</span> Definition and fundamental properties of Chern classes</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"><span class="header-section-number">4</span> Remarks and various addenda</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5"><span class="header-section-number">5</span> The zero cycles of a regular section of a vector bundle</a></li>
   <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="AIM-143-1999-284.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/thosgood/translations"><i class="bi bi-github"></i>Source file</a></li><li><a href="https://thosgood.net/translations"><i class="bi bi-collection"></i>More translations</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="BSMF-86-1958-137.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/thosgood/translations"><i class="bi bi-github"></i>Source file</a></li><li><a href="https://thosgood.net/translations"><i class="bi bi-collection"></i>More translations</a></li></ul></div></nav>
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -2373,7 +2375,7 @@ margin-bottom: 0 !important;
 <h4 class="unlisted unnumbered anchored" data-anchor-id="translators-note">Translator’s note</h4>
 <p><em>This document is a translation into English of the following:</em></p>
 <blockquote class="blockquote">
-<p>Balazard, M., Saias, E., and Yor, M. “Notes sur la fonction <span class="math inline">\zeta</span> de Riemann, 2”. <em>Advances in Mathematics</em> <strong>143</strong> (1999), 284–287.</p>
+<p>Grothendieck, A. “La théorie des classes de Chern”. <em>Bulletin de la Société Mathématique de France</em> <strong>86</strong> (1958), 137–154. DOI: <a href="https://www.doi.org/10.24033/bsmf.1501">10.24033/bsmf.1501</a>.</p>
 </blockquote>
 <p><em>The translator (<a href="https://thosgood.net">Tim Hosgood</a>) takes full responsibility for any errors introduced in this document, and claims no rights to any of the mathematical content.</em></p>
 <!-- Shortcuts -->
@@ -2381,89 +2383,387 @@ margin-bottom: 0 !important;
 </section>
 <section id="introduction" class="level1 unnumbered">
 <h1 class="unnumbered">Introduction</h1>
-<p>We denote by <span class="math inline">\sum_{\Re\rho&gt;1/2}</span> a sum over the possible zeros of <span class="math inline">\zeta(s)</span> with real part greater than <span class="math inline">\frac12</span>, where the zeros of multiplicity <span class="math inline">m</span> are counted <span class="math inline">m</span> times. The goal of this note is the proof of the following result.</p>
-<div class="itenv" title="Theorem">
-<p>We have <span class="math display">
-  \frac{1}{2\pi}\int_{\Re(s)=1/2} \frac{\log|\zeta(s)|}{|s|^2}|\operatorname{d}\!s|
-  = \sum_{\Re\rho&gt;1/2} \log\left|\frac{\rho}{1-\rho}\right|.
-\tag{1}
-</span> In particular, the Riemann hypothesis is true if and only if <span class="math display">
-  \int_{\Re(s)=1/2} \frac{\log|\zeta(s)|}{|s|^2}|\operatorname{d}\!s| = 0.
+<p>In this appendix, we will develop an axiomatic theory of Chern classes that will allow us, in particular, to define the Chern classes of an algebraic vector bundle <span class="math inline">E</span> on a non-singular quasi-projective algebraic variety <span class="math inline">X</span> as elements of the Chow ring <span class="math inline">A(X)</span> of <span class="math inline">X</span>, i.e. as classes of cycles under rational equivalence. This exposé is inspired one one hand by the book of Hirzebruch (where the essential <em>formal properties</em> characterising a theory of Chern classes were brought to light), and on the other hand by an idea of Chern <span class="citation" data-cites="2">[<a href="#ref-2" role="doc-biblioref">2</a>]</span> that consists of using the multiplicative structure of the ring of cycle classes on the bundle of projective spaces <span class="math inline">\mathbb{P}(E)</span> associated to <span class="math inline">E</span>, to give an effective <em>construction</em> of Chern classes. We note that the exposition given here also applies to other settings than algebraic geometry, and recovers, for example, an entirely elementary theory of Chern classes for complex vector bundles on topological manifolds (and, from this, on any space for which the classification theorem of principal bundles with a structure group via a “classifying space” holds true). Similarly, we will obtain, for a complex-analytic vector bundle <span class="math inline">E</span> on a (non-singular) complex-analytic manifold <span class="math inline">X</span>, Chern classes <span class="math display">
+  c_p(E) \in \operatorname{H}^p(X,\Omega_X^p),
+</span> where <span class="math inline">\Omega_X^p</span> is the sheaf of germs of holomorphic differential forms of degree <span class="math inline">p</span> on <span class="math inline">X</span>. [And it is certainly easy to prove that this definition agrees with the one given recently by Atiyah <span class="citation" data-cites="1">[<a href="#ref-1" role="doc-biblioref">1</a>]</span>, and that it is related to the topological definition of Chern classes via the spectral sequence relating <span class="math inline">\operatorname{H}^p(X,\Omega_X^q)</span> and <span class="math inline">\operatorname{H}^\bullet(X,\mathbb{C})</span>.] Similarly, the theory of Stiefel–Whitney classes in <span class="math inline">\mathbb{Z}/2\mathbb{Z}</span> cohomology fits into the framework that we will describe here.</p>
+<p>It appears that a satisfying theory of Chern classes in algebraic geometry was given, for the first time, by W.L. Chow (unpublished), using the Grassmannian. The main aim of the current paper has been to eliminate the Grassmannian from the theory. I have already shown <span class="citation" data-cites="4">[<a href="#ref-4" role="doc-biblioref">4</a>]</span> how the theory of Chern classes allows us to <em>recover</em> the structure of <span class="math inline">A(X)</span> when <span class="math inline">X</span> is a Grassmannian.</p>
+</section>
+<section id="section-1" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Notation</h1>
+<p>In order to not expose ourselves to the complications arising from intersection theory, we will limit ourselves in what follows to considering only <em>non-singular</em> topological spaces. We fix, once and for all, a base field <span class="math inline">k</span>. To better understand the ideas, the reader can assume that <span class="math inline">k</span> is algebraically closed. All the bundles, subvarieties, morphisms, etc. that we consider in what follows will be defined over <span class="math inline">k</span>.</p>
+<p>If <span class="math inline">X</span> is an algebraic space, and <span class="math inline">E</span> a vector bundle on <span class="math inline">X</span>, then we denote by <span class="math inline">\mathbb{P}(E)</span> the associated projective bundle. The fibre <span class="math inline">\mathbb{P}(E)_x</span> of <span class="math inline">\mathbb{P}(E)</span> at a point <span class="math inline">x\in X</span> is thus the projective space associated to the vector space <span class="math inline">E_x</span>, and so a point of <span class="math inline">\mathbb{P}(E)_x</span> over a point <span class="math inline">x\in X</span> is exactly a homogeneous line in <span class="math inline">E_x</span>. Let <span class="math inline">f\colon\mathbb{P}(E)\to X</span> be the projection of the bundle; we will consider the inverse image of <span class="math inline">E</span> under <span class="math inline">f</span>, which is the vector bundle <span class="math inline">f^{-1}(E)</span> on <span class="math inline">\mathbb{P}(E)</span>. There is a canonical rank-<span class="math inline">1</span> sub-bundle of <span class="math inline">f^{-1}(E)</span>, whose fibre at a point <span class="math inline">d</span> of <span class="math inline">\mathbb{P}(E)</span> (over a point <span class="math inline">x\in X</span>) is the line <span class="math inline">d</span> in <span class="math inline">E_x=f^{-1}(E)_d</span>. The dual bundle of this sub-bundle of <span class="math inline">f^{-1}(E)</span> is denoted by <span class="math inline">L_E</span>, and we thus have the inclusion <span class="math display">
+  \check{L}_E \subset f^{-1}(E).
+</span></p>
+<p>Let <span class="math inline">p</span> be the rank of <span class="math inline">E</span> (assumed to be constant, which is always the case if <span class="math inline">X</span> is connected). Then <span class="math inline">E^{(1)}=f^{-1}(E)/\check{L}_E</span> is a vector bundle of rank <span class="math inline">p-1</span> on <span class="math inline">X^{(1)}=\mathbb{P}(E)</span>, and we can thus construct <span class="math inline">X^{(2)}=\mathbb{P}(E^{(1)})</span> and the analogous bundle <span class="math inline">E^{(2)}=(E^{(1)})^{(1)}</span> of rank <span class="math inline">p-2</span> on <span class="math inline">X^{(2)}</span>. In this manner, we inductively construct manifolds <span class="math inline">X^{(i)}</span> and vector bundles <span class="math inline">E^{(i)}</span> of rank <span class="math inline">p-i</span> on <span class="math inline">X^{(i)}</span> (for <span class="math inline">1\leqslant i\leqslant p</span>), where <span class="math inline">X^{(i)}</span> is the bundle <span class="math inline">\mathbb{P}(E^{(i-1)})</span> on <span class="math inline">X^{(i-1)}</span>. We define a <em>flag of length <span class="math inline">i</span></em> in a vector space <span class="math inline">V</span> to be an increasing sequence <span class="math inline">(V_j)_{0\leqslant j\leqslant i}</span> of vector subspaces <span class="math inline">V_j</span>, with <span class="math inline">\dim V_j=j</span>. Then <span class="math inline">X^{(i)}</span> can also be understood as the <em>bundle on <span class="math inline">X</span> of flags of length <span class="math inline">i</span></em> in <span class="math inline">E</span>, and, if <span class="math inline">f^{(i)}</span> is the projection from <span class="math inline">X^{(i)}</span> to <span class="math inline">X</span>, then we directly define, as in the definition of <span class="math inline">L_E</span>, an increasing sequence of sub-bundles <span class="math inline">(V_j)_{0\leqslant j\leqslant i}</span> of <span class="math inline">E_i=(f^{(i)})^{(-1)}(E)</span>, with <span class="math inline">\operatorname{rank}(V_j)=j</span>, with the quotient of <span class="math inline">E_i</span> by <span class="math inline">V_i</span> being exactly the vector bundle <span class="math inline">E^{(i)}</span>. In particular, <span class="math inline">X^{(p)}</span> is the <em>flag manifold</em> <span class="math inline">D(E)</span> (of maximum length <span class="math inline">p</span>) of <span class="math inline">E</span>, which resembles a “multiple extension” of <span class="math inline">X</span> by fibrations in projective spaces associated to vector bundles; the inverse image <span class="math inline">E_p</span> of <span class="math inline">E</span> in <span class="math inline">X^{(p)}=D(E)</span> is further <em>completely split</em>. By this, we mean that this rank-<span class="math inline">p</span> vector bundle is endowed with a sequence <span class="math inline">(V_i)_{0\leqslant i\leqslant p}</span> of vector sub-bundles, with <span class="math inline">\operatorname{rank}(V_i)=i</span>. Then the <span class="math inline">V_i/V_{i-1}</span> (<span class="math inline">1\leqslant i\leqslant p</span>) are vector bundles of rank <span class="math inline">1</span>, and are called the <em>factors</em> of the given splitting.</p>
+<p>If <span class="math inline">X</span> is an algebraic space, then we denote by <span class="math inline">\mathbf{P}(X)</span> the group of isomorphism classes of rank-<span class="math inline">1</span> vector bundles on <span class="math inline">X</span> (the composition law of the group being given by the tensor product of bundles). If <span class="math inline">L</span> is such a rank-<span class="math inline">1</span> vector bundle, then we denote by <span class="math inline">\operatorname{cl}_X(L)</span> the element of <span class="math inline">\mathbf{P}(X)</span> that it defines. We thus have <span class="math display">
+  \begin{aligned}
+    \operatorname{cl}_X(L\otimes L&#39;) &amp;= \operatorname{cl}_X(L) + \operatorname{cl}_X(L&#39;)
+  \\\operatorname{cl}_X(\check{L}) &amp;= -\operatorname{cl}_X(L).
+  \end{aligned}
+</span></p>
+<p>If <span class="math inline">f\colon X\to Y</span> is a morphism, then the formula <span class="math display">
+  f^*(\operatorname{cl}_X(L)) = \operatorname{cl}_X(f^{-1}(L))
+</span> defines a homomorphism <span class="math inline">f^*</span> from <span class="math inline">\mathbf{P}(Y)</span> to <span class="math inline">\mathbf{P}(X)</span>. In this way, <span class="math inline">\mathbf{P}(X)</span> can be considered as a <em>contravariant functor</em> in <span class="math inline">X</span>.</p>
+<p>With <span class="math inline">f\colon X\to Y</span> still a morphism, let <span class="math inline">F</span> be a rank-<span class="math inline">p</span> vector bundle on <span class="math inline">Y</span>, and set <span class="math inline">E=f^{-1}(F)</span>. This is a rank-<span class="math inline">p</span> vector bundle on <span class="math inline">X</span>, and we have a canonical isomorphism <span class="math inline">\mathbb{P}(E)=f^{-1}(\mathbb{P}(F))</span>, whence a natural morphism <span class="math display">
+  \bar{f}\colon \mathbb{P}(E) \to \mathbb{P}(F).
+</span></p>
+<p>With this, we can immediately verify that <span class="math inline">L_E</span> is canonically isomorphic to the inverse image <span class="math inline">\bar{f}^{-1}(L_F)</span>_. We thus have the formula <span class="math display">
+  \operatorname{cl}(L_E) = \bar{f}^*(\operatorname{cl}(L_F)).
+</span></p>
+<p>Let <span class="math inline">E</span> be a rank-<span class="math inline">p</span> vector bundle on <span class="math inline">X</span>, and <span class="math inline">s</span> a regular section of <span class="math inline">E</span>. Then <span class="math inline">s</span> is a morphism from <span class="math inline">X</span> to <span class="math inline">E</span>, and even an isomorphism from <span class="math inline">X</span> to a closed subspace of codimension <span class="math inline">p</span> of <span class="math inline">E</span>. In particular, the image of <span class="math inline">X</span> under the zero section is a closed non-singular subspace <span class="math inline">X&#39;</span> of codimension <span class="math inline">p</span> of <span class="math inline">E</span>. Evidently, the inverse image <span class="math inline">s^{-1}(X&#39;)</span> is exactly the set of zeros of <span class="math inline">s</span>. For the <em>cycle</em> <span class="math inline">s^{-1}(X&#39;)</span> to be well defined, it is necessary and sufficient for the set of zeros of <span class="math inline">s</span> to be everywhere empty, or of codimension <span class="math inline">p</span> in <span class="math inline">X</span>. In this case, we can then speak of the <em>zero cycle</em> of the section <span class="math inline">s</span>. Recall also that the morphism <span class="math inline">s</span> is said to be <em>transversal</em> to the subvariety <span class="math inline">X&#39;</span> of <span class="math inline">X</span> if, at every point of the inverse image of <span class="math inline">X&#39;</span> under <span class="math inline">s</span>, the tangent map to <span class="math inline">s</span> is surjective modulo the tangent space to <span class="math inline">X&#39;</span>. In this case, <span class="math inline">s^{-1}(X&#39;)</span> is a non-singular algebraic subspace of <span class="math inline">X</span> that is everywhere of codimension <span class="math inline">p</span>, and all of its components are of multiplicity <span class="math inline">1</span> in the zero cycle of <span class="math inline">s</span>. We will then say, for brevity, that the section <span class="math inline">s</span> is <em>transversal to the zero section</em>. We can express this property by a calculation: since it is local on <span class="math inline">X</span>, we can assume that <span class="math inline">E</span> is the trivial bundle <span class="math inline">X\times k^p</span>, so that <span class="math inline">s</span> is defined by the data of <span class="math inline">p</span> regular functions <span class="math inline">(f_1,\ldots,f_p)</span> on <span class="math inline">X</span>; for <span class="math inline">s</span> to be transversal to the zero section, it is necessary and sufficient for the functions <span class="math inline">f_1,\ldots,f_p</span> to give a regular system of parameters of <span class="math inline">{\mathscr{O}}_x</span> at every point <span class="math inline">x</span>.</p>
+</section>
+<section id="section-2" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> The functor <span class="math inline">A(X)</span></h1>
+<p>In what follows, suppose that we have a category <span class="math inline">{\mathcal{V}}</span> of non-singular algebraic spaces (the morphisms in this category being the morphisms of algebraic spaces). The only condition that we impose on <span class="math inline">{\mathcal{V}}</span> is the following:</p>
+<div id="condition-V1" class="rmenv" title="V1">
+<p>If <span class="math inline">X\in{\mathcal{V}}</span>, and if <span class="math inline">E</span> is a vector bundle on <span class="math inline">X</span>, then <span class="math inline">\mathbb{P}(E)\in{\mathcal{V}}</span>.</p>
+</div>
+<p>Suppose further that we have the following data:</p>
+<div id="data-a" class="rmenv" title="a">
+<p>A contravariant functor <span class="math inline">X\mapsto A(X)</span> from <span class="math inline">{\mathcal{V}}</span> to the category of unital anticommutative graded rings.</p>
+</div>
+<div id="data-b" class="rmenv" title="b">
+<p>A homomorphism <span class="math inline">p_X\colon\mathbf{P}(X)\to A^2(X)</span> that is functorial in <span class="math inline">X\in{\mathcal{V}}</span>.</p>
+</div>
+<div id="data-c" class="rmenv" title="c">
+<p>For all <span class="math inline">X\in{\mathcal{V}}</span>, and for every closed algebraic subspace <span class="math inline">Y</span> of <span class="math inline">X</span>, of constant codimension <span class="math inline">p</span> in <span class="math inline">X</span>, with <span class="math inline">Y\in{\mathcal{V}}</span>, a group homomorphism <span class="math display">
+  i_*\colon A(Y)\to A(X)
+</span> (where <span class="math inline">i</span> denotes the injection <span class="math inline">Y\to X</span>) that raises the degree by <span class="math inline">2p</span>.</p>
+</div>
+<p>If <span class="math inline">f\colon X\to Y</span> is a morphism in <span class="math inline">{\mathcal{V}}</span>, then we denote the corresponding homomorphism from <span class="math inline">A(Y)</span> to <span class="math inline">A(X)</span> by <span class="math inline">f^*</span>. The unit element of <span class="math inline">A(X)</span> will be denoted by <span class="math inline">1_X</span>, and, if <span class="math inline">X\in{\mathcal{V}}</span>, and if <span class="math inline">Y</span> is a closed algebraic subspace of constant codimension <span class="math inline">p</span> of <span class="math inline">X</span>, with <span class="math inline">Y\in{\mathcal{V}}</span>, then we define <span class="math inline">p_X(Y)=i_*(1_Y)</span>, where <span class="math inline">i</span> is (again) the injection morphism from <span class="math inline">Y</span> into <span class="math inline">X</span>.</p>
+<p>With this, we suppose that the following conditions are satisfied:</p>
+<div id="axiom-A1" class="rmenv" title="A1">
+<p>Let <span class="math inline">X\in{\mathcal{V}}</span>, and let <span class="math inline">E</span> be a rank-<span class="math inline">p</span> vector bundle on <span class="math inline">X</span>, <span class="math inline">\mathbb{P}(E)</span> the associated projective bundle, and <span class="math inline">\xi_E</span> the element of <span class="math inline">A(\mathbb{P}(E))</span> defined by <span class="math display">
+  \xi_E = p(\operatorname{cl}(L_E)).
+</span> We can think of <span class="math inline">A(\mathbb{P}(E))</span> as a left <span class="math inline">A(X)</span>-module via the homomorphism <span class="math inline">f^*\colon A(X)\to A(\mathbb{P}(E))</span> associated to the projection <span class="math inline">f\colon\mathbb{P}(E)\to X</span>. Then the elements <span class="math display">
+  (\xi_E)^0, \ldots, (\xi_E)^{p-1}
+</span> form a basis of <span class="math inline">A(\mathbb{P}(E))</span> over <span class="math inline">A(X)</span>.</p>
+</div>
+<div id="axiom-A2" class="rmenv" title="A2">
+<p>Let <span class="math inline">X\in{\mathcal{V}}</span>, and let <span class="math inline">L</span> be a rank-<span class="math inline">1</span> vector bundle on <span class="math inline">X</span>, and <span class="math inline">s</span> a regular section of <span class="math inline">L</span> that is transversal to the zero section, and such that the space <span class="math inline">Y</span> of zeros of <span class="math inline">s</span> belongs to <span class="math inline">{\mathcal{V}}</span>. Then <span class="math display">
+  p_X(Y) = p_X(\operatorname{cl}_X(L)).
+</span></p>
+</div>
+<div id="axiom-A3" class="rmenv" title="A3">
+<p>Let <span class="math inline">X,Y,Z\in{\mathcal{V}}</span>, with <span class="math inline">Z\subset Y\subset X</span>, and let <span class="math inline">i\colon Z\to Y</span> and <span class="math inline">j\colon Y\to X</span> be the injection morphisms. Then <span class="math inline">(ji)_* = j_*i_*</span>.</p>
+</div>
+<div id="axiom-A4" class="rmenv" title="A4">
+<p>Let <span class="math inline">X,Y\in{\mathcal{V}}</span>, with <span class="math inline">Y\subset X</span>, and let <span class="math inline">i\colon Y\to X</span> be the injection morphism. Then <span class="math display">
+  i_*(bi^*(a)) = i_*(b)a
+</span> for all <span class="math inline">a\in A(X)</span> and all <span class="math inline">b\in A(Y)</span>,</p>
+</div>
+<p>From these axioms we will prove two lemmas that will be useful in the <a href="#section-3">next section</a>.</p>
+<div id="lemma-1" class="itenv" title="Lemma 1">
+<p>Let <span class="math inline">X\in{\mathcal{V}}</span>, and let <span class="math inline">E</span> be a rank-<span class="math inline">p</span> vector bundle on <span class="math inline">X</span>. Consider, for all <span class="math inline">1\leqslant i\leqslant p</span>, the bundle <span class="math inline">X^{(i)}</span> of flags of length <span class="math inline">i</span> in <span class="math inline">E</span>. Then <span class="math inline">X^{(i)}\in{\mathcal{V}}</span>, and the homomorphism <span class="math inline">A(X)\to A(X^{(i)})</span> induced by the projection <span class="math inline">X^{(i)}\to X</span> is .</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By <a href="#section-1">§1</a>, we can restrict, by induction on <span class="math inline">i</span>, to the case of the projective bundle <span class="math inline">X^{(1)}=\mathbb{P}(E)</span> associated to <span class="math inline">E</span>. Then our claims are an immediate consequence of <a href="#condition-V1">V1</a> and <a href="#A1">A1</a> [since the element <span class="math inline">1_{\mathbb{P}(E)}=(\xi_E)^0</span> is free over the ring <span class="math inline">A(X)</span>].</p>
+</div>
+<div id="lemma-2" class="itenv" title="Lemma 2">
+<p>Let <span class="math inline">X\in{\mathcal{V}}</span>, and let <span class="math inline">E</span> be a rank-<span class="math inline">p</span> vector bundle on <span class="math inline">X</span>, with <span class="math inline">s</span> a regular section of <span class="math inline">E</span>, and <span class="math inline">(E_i)_{0\leqslant i\leqslant p}</span> a decreasing sequence of vector sub-bundles of <span class="math inline">E</span>, with <span class="math inline">\operatorname{rank}E_i=p-i</span>. Define, for <span class="math inline">1\leqslant i\leqslant p</span>, <span class="math display">
+  \xi_i = p_X\operatorname{cl}_X(E_{i-1}/E_i)
+</span> For every <span class="math inline">1\leqslant i\leqslant p</span>, let <span class="math inline">Y_i</span> be the subset of <span class="math inline">X</span> consisting of those <span class="math inline">x\in X</span> such that <span class="math inline">s(x)\in E_i</span>. Suppose that, for all <span class="math inline">i</span>, <span class="math inline">Y_i</span> is a non-singular subvariety of <span class="math inline">X</span>, and that <span class="math inline">Y_i\in{\mathcal{V}}</span>. Let <span class="math inline">s_i</span> be the section of <span class="math inline">(E_i/E_{i+1})|Y_i</span> defined by <span class="math inline">s</span>, and suppose that, for <span class="math inline">1\leqslant i\leqslant p-1</span>, <span class="math inline">s_i</span> is transversal to the zero section. Then, under these conditions, <span class="math display">
+  p_X(Y_p) = \prod_{1\leqslant i\leqslant p}\xi_i.
 </span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>This proof consists of two steps.</p>
-<p><em>First step.</em> We start by stating some properties satisfied by a generic function <span class="math inline">f</span> in the Hardy space <span class="math inline">H^p(\mathbf{D})</span>, where <span class="math inline">\mathbf{D}=\{z\in\mathbb{C}:|z|&lt;1\}</span>, and <span class="math inline">p</span> is a positive real number. We denote by <span class="math inline">f^*</span> the function defined almost everywhere on the trigonometric circle <span class="math inline">\partial\mathbf{D}=\{z\in\mathbb{C}:|z|=1\}</span> by <span class="math inline">f^*(e^{i\theta})=\lim_{r\to1^-}f(re^{i\theta})</span>. We use the letter <span class="math inline">z</span> to denote an element of the trigonometric disc <span class="math inline">\mathbf{D}</span>, and write <span class="math display">
-  s = s(z) = \frac12+\frac{1+z}{2(1-z)} = \frac{1}{1-z}.
-</span> This formula defines a conformal representation of the disc <span class="math inline">\mathbf{D}</span> in the semi-plane <span class="math inline">\Re(s)&gt;1/2</span>.</p>
-<p>By Jensen’s formula (see, for example, <span class="citation" data-cites="4">[<a href="#ref-4" role="doc-biblioref">4</a>, Theorem 3.61]</span>), we have, for <span class="math inline">f(0)\neq0</span> and <span class="math inline">r&lt;1</span>, <span class="math display">
-  \frac{1}{2\pi}\int_{-\pi}^\pi \log|f(re^{i\theta})|\operatorname{d}\!\theta
-  = \log|f(0)| + \sum_{\substack{|\alpha|&lt;r\\f(\alpha)=0}} \log\frac{r}{|a|}
-\tag{2}
-</span> where, in the sum, the zeros of multiplicity <span class="math inline">m</span> are counted <span class="math inline">m</span> times. Denote by <span class="math display">
-  \exp\left\{
-    -\int_{-\pi}^\pi \frac{e^{i\theta}+z}{e^{i\theta}-z}\operatorname{d}\!\mu(\theta)
-  \right\}
-</span> the singular interior factor of <span class="math inline">f</span>. As <span class="math inline">r</span> tends to <span class="math inline">1</span>, Equation (2) becomes (cf. <span class="citation" data-cites="2">[<a href="#ref-2" role="doc-biblioref">2</a>]</span>) <span class="math display">
-  \frac{1}{2\pi}\int_{-\pi}^\pi \log|f(re^{i\theta})|\operatorname{d}\!\theta
-  = \log|f(0)| + \sum_{\substack{|\alpha|&lt;1\\f(\alpha)=0}} \log\frac{1}{|a|} + \int_{-\pi}^\pi\operatorname{d}\!\mu(\theta).
-\tag{3}
-</span> This formula is a consequence of the factorisation theorem for functions in <span class="math inline">H^p</span>; it is stated in <span class="citation" data-cites="2">[<a href="#ref-2" role="doc-biblioref">2</a>]</span> for <span class="math inline">p=1</span>, but also holds for all positive values of <span class="math inline">p</span>.</p>
-<p><em>Second step.</em> Now consider the function <span class="math display">
-  f(z) = (s-1)\zeta(s)
-</span> (where <span class="math inline">s=1/(1-z)</span>). The elementary properties of the Riemann <span class="math inline">\zeta</span> function (see, for example, <span class="citation" data-cites="5">[<a href="#ref-5" role="doc-biblioref">5</a>]</span>) allow us to show that, on one hand, <span class="math inline">f</span> belongs to the Hardy space <span class="math inline">H^{1/3}(\mathbf{D})</span>, and, on the other hand, that the measure <span class="math inline">\mu</span> associated to the singular interior factor of <span class="math inline">f</span> is zero (for this latter point, it suffices to reuse the argument developed by Bercovici and Foias for the interior factor of the functions <span class="math inline">(\theta-\theta^s)\zeta(s)(s+1/2)/s</span>, found in the proof of <span class="citation" data-cites="1">[<a href="#ref-1" role="doc-biblioref">1</a>, Proposition 2.1]</span>). We can equally show that <span class="math display">
-  \begin{aligned}
-    \int_{-\pi}^\pi \log|f^*(e^{i\theta})|\operatorname{d}\!\theta
-    &amp;= \int_{\Re(s)=1/2} \frac{\log|\zeta(s)|}{|s|^2}|\operatorname{d}\!s|,
-  \\\log|f(0)|
-    &amp;= 0,
-  \\\sum_{\substack{|\alpha|&lt;1\\f(\alpha)=0}} \log\frac{1}{|\alpha|}
-    &amp;= \sum_{\Re\rho&gt;1/2} \log\left|\frac{\rho}{1-\rho}\right|.
-  \end{aligned}
-</span> With all this information, our result follows from Equation (3).</p>
+<p><span class="proof-title"><em>Proof</em>. </span>We will prove, by induction on <span class="math inline">j</span> (where <span class="math inline">1\leqslant j\leqslant p</span>), that <span class="math display">
+  p_X(Y_j) = \prod_{1\leqslant i\leqslant j}\xi_i.
+\tag{$\star$}
+</span> For <span class="math inline">j=1</span>, this equation is exactly axiom <a href="#axiom-A2">A2</a>. Now suppose that the equation has been proven for some <span class="math inline">j&lt;p</span>; we will prove it for <span class="math inline">j+1</span>. Applying <a href="#axiom-A2">A2</a> to the section <span class="math inline">s_j</span> of <span class="math inline">(E_j/E_{j+1})|Y_j</span>, we see that <span class="math display">
+  p_{Y_j}(Y_{j+1}) = p_{Y_j}\operatorname{cl}_{Y_j}((E_j/E_{j+1})|Y_j).
+</span> Let <span class="math inline">u_j</span> be the injection morphism <span class="math inline">Y_j\to X</span>. From the functoriality of <span class="math inline">\operatorname{cl}</span> and <span class="math inline">p</span> we see that the right-hand side of the above equation is <span class="math inline">u_j^*(p_X\operatorname{cl}_X(E_j/E_{j+1}))</span>, whence <span class="math display">
+  p_{Y_j}(Y_{j+1}) = u_j^*(\xi_{j+1}).
+</span> Using axiom <a href="#axiom-A3">A3</a>, we thus conclude that <span class="math display">
+  p_X(Y_{j+1}) = (u_j)_*(u_j^*(\xi_{j+1})).
+</span> The right-hand side of this equation can also be written as <span class="math inline">(u_j)_*(1_{y_j}u_j^*(\xi_{j+1}))</span>, which is equal, by axiom <a href="#axiom-A4">A4</a>, to <span class="math inline">(u_j)_*(1_{Y_j})\xi_{j+1} = p_X(Y_j)\xi_{j+1}</span>. Using the induction hypothesis, we then indeed recover the analogous formula, with <span class="math inline">j+1</span> instead of <span class="math inline">j</span>.</p>
 </div>
-<p>We finish with some remarks. There are statements related to ours in the works <span class="citation" data-cites="7 6">[<a href="#ref-6" role="doc-biblioref">6</a>,<a href="#ref-7" role="doc-biblioref">7</a>]</span> of Wang and Volchkov. It is even possible that Jensen himself was aware of Equation (1) (the reader can consult the article <span class="citation" data-cites="3">[<a href="#ref-3" role="doc-biblioref">3</a>]</span> where Jensen informs Mittag–Leffler of his discovery of Equation (2)). It seem interesting, however, to present things as we have done here, and this is for the following three reasons:</p>
-<ol type="a">
-<li>Equation (1) is simpler than those that appear in <span class="citation" data-cites="7 6">[<a href="#ref-6" role="doc-biblioref">6</a>,<a href="#ref-7" role="doc-biblioref">7</a>]</span>;</li>
-<li>we show here that, to establish Equation (1), it is natural to place ourselves in the framework of Hardy spaces;</li>
-<li>the form of the integral in Equation (1) allows us to interpret this result via Brownian motion, as we show below.</li>
+<p>The following corollary will only be used in <a href="#section-3">§3</a>.</p>
+<div id="lemma-2-corollary" class="itenv" title="Corollary">
+<p>Under the conditions of <a href="#lemma-2">Lemma 2</a>, if, further, <span class="math inline">s</span> is non-zero at every point, then <span class="math inline">\prod_{1\leqslant i\leqslant p}\xi_i=0</span>.</p>
+</div>
+<div class="rmenv" title="Remark">
+<p>The introduction of the operation <span class="math inline">i</span> in <a href="#data-c">c.</a>, and the axioms <a href="#axiom-A2">A2</a>, <a href="#axiom-A3">A3</a>, and <a href="#axiom-A4">A4</a> concerning this operation, only serve to provide us with technical means of being able to prove <a href="#lemma-2-corollary">the corollary to Lemma 2</a>. (Axiom <a href="#axiom-A4">A4</a> would still have sufficed even if we had assumed that <span class="math inline">b=1_Y</span>.) For the theory of Chern classes in <a href="#section-3">the following section</a>, we will only need the data of <a href="#data-a">a.</a> and <a href="#data-b">b.</a>, axiom <a href="#axiom-A1">A2</a>, and <a href="#lemma-2-corollary">the corollary to Lemma 2</a>.</p>
+</div>
+<div class="rmenv" title="Particular cases">
+<p>We note, first of all, that condition <a href="#condition-V1">V1</a> is satisfied for all reasonable categories of algebraic spaces; it is satisfied, in particular, for the categories of arbitrary non-singular algebraic spaces, of non-singular quasi-projective algebraic spaces, and of non-singular projective algebraic spaces. The verification for the two latter cases presents no difficulty, and is left to the reader (the result being a particular case of a more general result concerning blown-up varieties).</p>
+<p>We now given some particular cases where the conditions in this section are satisfied.</p>
+<ol type="1">
+<li><p><span class="math inline">{\mathcal{V}}</span> is the category of non-singular quasi-projective algebraic spaces, and <span class="math inline">A(X)</span> is the ring of cycle classes on <span class="math inline">X</span> under <em>rational equivalence</em>, with the usual definition of <span class="math inline">f^*</span> and <span class="math inline">f_*</span>. Of course, we grade <span class="math inline">A(X)</span> by taking the class of a cycle on <span class="math inline">X</span> that is everywhere of codimension <span class="math inline">p</span> to be of degree <span class="math inline">2p</span> [so that <span class="math inline">A(X)</span> has only even degrees, as we would expect in a cohomological theory for a <em>commutative</em> graded ring]. The homomorphism <span class="math inline">\mathbf{P}(X)\to A^2(X)</span> is an isomorphism, given by sending any rank-<span class="math inline">1</span> vector bundle <span class="math inline">L</span> on <span class="math inline">X</span> to the set of divisors of rational sections of <span class="math inline">L</span> that are not zero on any component of <span class="math inline">X</span>. For the theory of linear equivalence, including the verification of <a href="#axiom-A1">A1</a> to <a href="#axiom-A4">A4</a> (with only <a href="#axiom-A1">A1</a> not being immediate), see the exposés by Chevalley and Grothendieck in <span class="citation" data-cites="4">[<a href="#ref-4" role="doc-biblioref">4</a>]</span>.</p>
+<p>The conditions that we demand are also satisfied if we take <span class="math inline">A(X)</span> to be the ring of cycle classes under <em>algebraic</em> equivalence, but, for a theory of Chern classes, we rather prefer to work with rational equivalence, which gives a finer theory.</p>
+<p>We cannot yet define a ring structure on the group <span class="math inline">A(X)</span> of cycle classes on an <em>arbitrary</em> (not necessarily quasi-projective) non-singular variety, nor, for a morphism <span class="math inline">f\colon X\to Y</span>, a morphism <span class="math inline">f^*\colon A(Y)\to A(X)</span> in such a way that the necessary conditions are satisfied. Further, it is not even certain that this might be possible. We can imagine replacing the ring of cycle classes (under rational equivalence) by the graded ring associated to the ring <span class="math inline">K(X)</span> of classes of coherent algebraic sheaves on <span class="math inline">X</span>, filtered in the natural way (by considering the dimension of the supports of the sheaves). Unfortunately, we would then have to prove that this filtration is compatible with the ring structure (and with the “inverse image” homomorphisms), which I only know how to do in the quasi-projective case, by using rational equivalence. However, it seems that these difficulties disappear when we tensor with the field of rationals <span class="math inline">\mathbb{Q}</span>, i.e. if we ignore the phenomenons of torsion.</p></li>
 </ol>
-<p>Denote by <span class="math inline">Z=X+iY</span> the planar Brownian motion from <span class="math inline">0</span> (or from <span class="math inline">1</span>), and by <span class="math inline">Z_{T_{1/2}}=\frac12+iY_{T_{1/2}}</span> its first point of impact on the critical line <span class="math inline">\Re s=1/2</span>, where <span class="math inline">T_{1/2}:=\inf\{t:X_t=1/2\}</span>. We know that <span class="math inline">Y_{T_{1/2}}</span> follows a Cauchy law with parameter <span class="math inline">1/2</span>. In other words, the law of <span class="math inline">Y_{T_{1/2}}</span> has density <span class="math inline">1/2\pi(1/4+t^2)</span>. Thus the second part of the theorem can be stated in the following manner: the Riemann hypothesis is true if and only if <span class="math display">
-  \mathbb{E}[\log\vert\zeta(Z_{T_{1/2}})] = 0.
-</span></p>
-<section id="thanks" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="thanks">Thanks</h2>
-<p>We thank Luis Báez-Duarte, Michel Delasneri, Catherine Donati, Laurent Habsieger, Aleksandar Ivić, and Alain Plagne for useful conversations.</p>
+<ol start="2" type="1">
+<li><p><span class="math inline">{\mathcal{V}}</span> is the category of all non-singular algebraic spaces. If <span class="math inline">X</span> is such a variety, then we denote by <span class="math inline">\Omega_X^\bullet</span> the sheaf of germs of regular differential forms on <span class="math inline">X</span>, and by <span class="math inline">A(X)</span> the cohomology group <span class="math inline">\operatorname{H}^\bullet(X,\Omega_X^\bullet)</span>. We grade this group by taking <span class="math inline">\operatorname{H}^p(X,\Omega_X^q)</span> to be of degree <span class="math inline">p+q</span>, and we make this an algebra by means of the cup product. We thus obtain an anticommutative graded algebra, which is clearly a contravariant functor with respect to <span class="math inline">X</span>. By following the formalism developed by Grothendieck in <span class="citation" data-cites="3">[<a href="#ref-3" role="doc-biblioref">3</a>]</span>, we define in a natural way the homomorphism <span class="math inline">i_*\colon A(Y)\to A(X)</span> associated to an injection <span class="math inline">i\colon Y\to X</span> (and it is probably possible to define <span class="math inline">i_*</span> for every <em>proper</em> morphism <span class="math inline">i\colon Y\to X</span>).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Finally, we define a morphism <span class="math inline">\mathbf{P}(X)\to\operatorname{H}^1(X,\Omega_X^1)\subset A^2(X)</span> in a classical way, by writing, for example, <span class="math inline">\mathbf{P}(X)=\operatorname{H}^1(X,{\mathscr{O}}_X^\times)</span> (where <span class="math inline">{\mathscr{O}}_X^\times</span> denotes the sheaf of germs of invertible regular functions on <span class="math inline">X</span>), and by considering the homomorphism <span class="math inline">f\mapsto\mathrm{d}f/f</span> from <span class="math inline">{\mathscr{O}}_X^\times</span> to <span class="math inline">\Omega_X^1</span>. We can again easily verify that conditions <a href="#axiom-A1">A1</a> to <a href="#axiom-A4">A4</a> are satisfied, with <a href="#axiom-A1">A1</a> being a consequence of the Leray spectral sequence of the continuous map <span class="math inline">\mathbb{P}(E)\to X</span> [the spectral sequence being trivial, as follows from considering from the class <span class="math inline">\xi_E</span> on <span class="math inline">\mathbb{P}(E)</span>.]</p></li>
+<li><p>The base field <span class="math inline">k</span> is the field of complex numbers, <span class="math inline">{\mathcal{V}}</span> is the category of non-singular algebraic spaces, and <span class="math inline">A(X)=\operatorname{H}^\bullet(X,\mathbb{Z})</span> (with <span class="math inline">X</span> being endowed with its “usual” topology). The definition of <a href="#data-b">b.</a> (either by Poincaré duality on divisor classes, or as an obstruction class in the classical exact sequence <span class="math inline">0\to\mathbb{Z}\to{\mathscr{O}}_X\to{\mathscr{O}}_X^\times\to0</span> of sheaves on <span class="math inline">X</span>, endowed with its usual topology) is well known. The definition of <a href="#data-c">c.</a> classically comes from Poincaré duality, and properties <a href="#axiom-A1">A1</a> to <a href="#axiom-A4">A4</a> are well known (with <a href="#axiom-A1">A1</a> again following from the Leray spectral sequence).</p></li>
+</ol>
+</div>
 </section>
+<section id="section-3" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Definition and fundamental properties of Chern classes</h1>
+<p>Let <span class="math inline">X\in{\mathcal{V}}</span>, and let <span class="math inline">E</span> be a rank-<span class="math inline">p</span> vector bundle on <span class="math inline">X</span>, and <span class="math inline">\xi_E=p_X(\operatorname{cl}(L_E))</span> the fundamental class in <span class="math inline">A^2(\mathbb{P}(E))</span>. By axiom <a href="#axiom-A1">A1</a> from the previous section, <span class="math inline">(\xi_E)^p</span> can be written as a unique linear combination of the <span class="math inline">(\xi_E)^i</span> (for <span class="math inline">0\leqslant i\leqslant p-1</span>) with coefficients in <span class="math inline">A(X)</span>. This means that we can find, in a unique way, elements <span class="math inline">c_i(E)\in A^{2i}(X)</span> (defined for every integer <span class="math inline">i\geqslant 0</span>) satisfying the conditions <span class="math display">
+  \begin{gathered}
+    \sum_{i=0}^p c_i(E)(\xi_E)^{p-i} = 0,
+  \\c_0(E)=1, \quad\text{and}\quad c_i(E)=0\text{ for }i&gt;p.
+  \end{gathered}
+\tag{1}
+</span></p>
+<p>The <span class="math inline">c_i(E)</span> are called the <em>Chern classes</em> of <span class="math inline">E</span>, with <span class="math inline">c_i(E)</span> being called the <span class="math inline">i</span>th Chern class. We define <span class="math display">
+  c(E) = \sum_i c_i(E)
+\tag{2}
+</span> and call <span class="math inline">c(E)</span> the <em>(total) Chern class</em> of <span class="math inline">E</span>; its data is equivalent to the data of all the <span class="math inline">c_i(E)</span>.</p>
+<div id="theorem-1" class="itenv" title="Theorem 1">
+<p>Suppose that we have the data of <a href="#data-a">a.</a>, <a href="#data-b">b.</a>, and <a href="#data-c">c.</a> from the previous section, satisfying axioms <a href="#axiom-A1">A1</a> to <a href="#axiom-A4">A4</a>. Then the Chern classes (defined by (1)) satisfy the following conditions:</p>
+<ol type="i">
+<li><p><em>Functoriality.</em> — Let <span class="math inline">f\colon X\to Y</span> be a morphism in <span class="math inline">{\mathcal{V}}</span>, and let <span class="math inline">E</span> be a vector bundle on <span class="math inline">Y</span>. Then <span class="math display">
+   c(f^{-1}(E)) = f^*(c(E))
+\tag{3}
+</span> [where <span class="math inline">f^{-1}(E)</span> denotes the vector bundle on <span class="math inline">X</span> given by the inverse image of <span class="math inline">E</span> under <span class="math inline">f</span>].</p></li>
+<li><p><em>Normalisation.</em> — If <span class="math inline">E</span> is a rank-<span class="math inline">1</span> vector bundle on <span class="math inline">X\in{\mathcal{V}}</span>, then <span class="math display">
+  c(E) = 1+p_X(\operatorname{cl}_X(E)).
+\tag{4}
+</span></p></li>
+<li><p><em>Additivity.</em> — Let <span class="math inline">X\in{\mathcal{V}}</span>, and let <span class="math inline">0\to E&#39;\to E\to E&#39;&#39;\to 0</span> be an exact sequence of vector bundles on <span class="math inline">X</span>. Then <span class="math display">
+c(E) = c(E&#39;)c(E&#39;&#39;).
+    \tag{5}
+    </span></p></li>
+</ol>
+<p>Furthermore, properties i., ii., and iii. entirely <em>characterise</em> Chern classes.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>We first prove the <em>uniqueness</em> of a theory of Chern classes satisfying properties i., ii., and iii. Let <span class="math inline">X\in{\mathcal{V}}</span>, and let <span class="math inline">E</span> be a rank-<span class="math inline">p</span> vector bundle on <span class="math inline">X</span>, and <span class="math inline">X&#39;</span> the flag variety associated to <span class="math inline">E</span>, with <span class="math inline">f&#39;\colon X\to X</span> the canonical projection. By <a href="#lemma-1">Lemma 1</a>, we know that <span class="math inline">X&#39;\in{\mathcal{V}}</span>, and that <span class="math inline">f^*\colon A(X)\to A(X&#39;)</span> is injective. So, if we know <span class="math inline">c(E)</span>, then we know <span class="math inline">f(c(E))</span>; the latter, by i., is equal to <span class="math inline">c(f^{-1}(E))</span>. But <span class="math inline">f^{-1}(E)</span> splits completely. We can thus reduce to determining <span class="math inline">c(E)</span> when <span class="math inline">E</span> is a rank-<span class="math inline">p</span> vector bundle that splits completely, and which is thus endowed with a composition series <span class="math inline">(E_i)_{0\leqslant i\leqslant p}</span>, with <span class="math inline">\operatorname{rank}E_i=p-i</span>, But then the additivity formula iii. proves (by induction on <span class="math inline">p</span>) that <span class="math inline">c(E)=\prod_{i=1}^p c(E_{i-1}/E_i)</span>. Finally, the normalisation formula ii. implies that <span class="math display">
+  c(E) = \prod_{i=1}^p (1+p_X\operatorname{cl}_X(E_{i-1}/E_i)).
+\tag{6}
+</span> We now show that the Chern classes defined by (1) do indeed satisfy i., ii., and iii.</p>
+<p><em>Proof of i.</em> — Let <span class="math inline">X,Y\in{\mathcal{V}}</span>, and let <span class="math inline">E</span> be a vector bundle on <span class="math inline">Y</span>, and <span class="math inline">F</span> its inverse image under <span class="math inline">f</span>. Then <span class="math inline">\mathbb{P}(F)</span> is the inverse image of <span class="math inline">\mathbb{P}(E)</span> under <span class="math inline">f</span>, and so we have a commutative diagram of morphisms <span class="math display">
+  \begin{CD}
+    \mathbb{P}(F) @&gt;\bar{f}&gt;&gt; \mathbb{P}(E)
+  \\@VpVV @VVqV
+  \\X @&gt;&gt;f&gt; Y
+  \end{CD}
+</span> We also know that <span class="math inline">L_F</span> is the inverse image of <span class="math inline">L_E</span> under <span class="math inline">\bar{f}</span>. It thus follows that <span class="math display">
+  \xi_F = \bar{f}^*(\xi_E).
+</span> Equation <a href="#theorem-1">(3)</a> is trivially satisfied in dimensions <span class="math inline">i=0</span> and <span class="math inline">i&gt;p</span>, so it suffices to verify it in dimensions <span class="math inline">1\leqslant i\leqslant p</span>. By definition, <span class="math display">
+  \sum_{i=0}^p q^*(c_i(E))(\xi_E)^{p-i} = 0
+</span> which implies — by applying the homomorphism <span class="math inline">\bar{f}^*</span> and noting that <span class="math display">
+  \begin{gathered}
+    \bar{f}^*q^* = (q\bar{f})^* = (fp)^* = p^*f^*
+  \\\text{and}\quad\bar{f}^*(\xi_E) = \xi_F
+  \end{gathered}
+</span> — the relation <span class="math display">
+  \sum_{i=0}^p p^*(f^*(c_i(E)))(\xi_F)^{p-i} = 0
+</span> which proves, by definition, that <span class="math display">
+  c_i(F) = f^*(c_i(E))
+</span> for <span class="math inline">1\leqslant i\leqslant p</span>.</p>
+<p><em>Proof of ii.</em> — Suppose that <span class="math inline">E</span> is of rank <span class="math inline">1</span>, so that <span class="math inline">\mathbb{P}(E)=X</span>, <span class="math inline">L_E=\check{E}</span>, and <span class="math inline">\xi_E = p_X\operatorname{cl}_X(\check{E}) = -p_X\operatorname{cl}_X(E)</span>. Equation (1) can then be written as <span class="math display">
+  \xi_E + c_1(E) = 0
+</span> whence <span class="math display">
+  c_1(E) = -\xi_E = p_X\operatorname{cl}_X(E).
+</span></p>
+<p><em>Proof of iii.</em> — With the set-up of i., let <span class="math inline">P</span> be the product bundle on <span class="math inline">X</span> of the flag variety of <span class="math inline">E&#39;</span> with the flag variety of <span class="math inline">E&#39;&#39;</span>. Then <span class="math inline">P</span> can also be identified with the flag variety of <span class="math inline">f^{-1}(E&#39;&#39;)</span>, where <span class="math inline">f\colon D(E&#39;)\to X</span> is the canonical projection to <span class="math inline">X</span> from the flag variety <span class="math inline">D(E&#39;)</span> of <span class="math inline">E&#39;</span>. Using <a href="#lemma-1">Lemma 1</a> twice, we find that <span class="math inline">P\in{\mathcal{V}}</span>, and that the homomorphism <span class="math inline">g^*\colon A(X)\to A(P)</span> associated to the projection <span class="math inline">g\colon P\to X</span> is injective. Then, to prove <a href="#theorem-1">(5)</a>, it suffices to prove the formula that follows from it by applying <span class="math inline">g^*</span> to both sides, which, by functoriality (<a href="#theorem-1">i.</a>), reduces to proving the multiplicativity formula for the inverse image of the exact sequence <span class="math inline">0\to E&#39;\to E\to E&#39;&#39;\to 0</span> under <span class="math inline">g</span>. But it is immediate that <span class="math inline">g^{-1}(E&#39;)</span> and <span class="math inline">g^{-1}(E&#39;&#39;)</span> split completely. We can thus reduce to proving the additivity formula in the case where the factors <span class="math inline">E&#39;</span> and <span class="math inline">E&#39;&#39;</span> split completely. But then the splittings of <span class="math inline">E&#39;</span> and <span class="math inline">E&#39;&#39;</span> define a splitting of <span class="math inline">E</span>, and it clearly suffices to prove (6) for each of the composition series of <span class="math inline">E&#39;</span>, <span class="math inline">E&#39;&#39;</span>, and <span class="math inline">E</span> thus obtained. This leads us to prove (6) for a completely split vector bundle.</p>
+<p>So let <span class="math inline">X&#39;=\mathbb{P}(E)</span>, with <span class="math inline">f&#39;</span> the projection from <span class="math inline">X&#39;</span> to <span class="math inline">X</span>, and define <span class="math display">
+  \begin{aligned}
+    E&#39; &amp;= f^{-1}(E),
+  \\E&#39;_i &amp;= f^{-1}(E_i),
+  \\L &amp;= L_E,
+  \\\xi_i &amp;= p_X\operatorname{cl}_X(E_{i-1}/E_i)\quad(1\leqslant i\leqslant p),
+  \\\xi&#39;_i &amp;= f^*(\xi_i) = p_X\operatorname{cl}_{X&#39;}(E&#39;_i/E&#39;_{i+1}).
+  \end{aligned}
+</span> The (rank-<span class="math inline">1</span>) bundle <span class="math inline">\check{L}</span> can be identified with a vector subbundle of <span class="math inline">E&#39;</span>, and the injection homomorphism <span class="math inline">\check{L}\to E&#39;</span> can be understood as a regular section <span class="math inline">s</span> of the bundle <span class="math inline">F&#39;=L\otimes E&#39;</span>. Since <span class="math inline">s</span> corresponds to an injection morphism, we immediately see that <span class="math inline">s</span> does not vanish. Letting <span class="math inline">F&#39;_i=L\otimes E&#39;_i</span>, we obtain a splitting of <span class="math inline">F&#39;</span>, whose factors are <span class="math inline">F&#39;_i/F&#39;_{i+1} = L\otimes(E&#39;_i/E&#39;_{i+1})</span>, whence <span class="math display">
+  p_X\operatorname{cl}_{X&#39;}(F&#39;_{i-1}/F&#39;_{i}) = \xi_E+\xi&#39;_i.
+</span></p>
+<p>Let <span class="math inline">Y_i</span> be the set of points <span class="math inline">x&#39;</span> of <span class="math inline">X&#39;</span> such that <span class="math inline">s(x&#39;)\in F&#39;_i</span>, which is also the set of points <span class="math inline">x&#39;</span> such that the fibre of <span class="math inline">\check{L}</span> at <span class="math inline">x&#39;</span> is contained in <span class="math inline">E&#39;_i</span>, and can thus be identified with <span class="math inline">\mathbb{P}(E_i)</span>. Then <span class="math inline">Y_i</span> is a non-singular closed subspace of <span class="math inline">X&#39;</span>, and <span class="math inline">Y&#39;\in{\mathcal{V}}</span>. Now let <span class="math inline">s_i</span> be the section of <span class="math inline">(F&#39;_{i-1}|F&#39;_i)|Y_{i-1}</span> induced by <span class="math inline">s|Y_{i-1}</span>, which I claim is transversal to the zero section. Since the question is local, we can assume that <span class="math inline">E=X\times k^n</span> and <span class="math inline">E_i=X\times k^{n-i}</span>, so then <span class="math inline">Y_i=X\times\mathbb{P}(k^{n-i})</span>, <span class="math inline">E_j|Y_i</span> is the constant bundle with fibre <span class="math inline">k^{n-j}</span> on <span class="math inline">Y_i</span>, and <span class="math inline">L|Y_i</span> is the subbundle (of the constant bundle with fibre <span class="math inline">k^{n-i}</span>) given by the inverse image, under the projection map from <span class="math inline">Y_i</span> to its factor <span class="math inline">\mathbb{P}(k^{n-i})</span>, of the well-known rank-<span class="math inline">1</span> subbundle <span class="math inline">l</span> of the constant bundle with fibre <span class="math inline">k^{n-i}</span>. Then the bundle <span class="math inline">(F&#39;_i|F&#39;_{i+1})|Y_i</span> on <span class="math inline">Y_i</span>, and its section <span class="math inline">s_{i+1}</span>, are the inverse images, under the projection map from <span class="math inline">Y_i</span> to its factor <span class="math inline">\mathbb{P}(k^{n-i})</span>, of a specific section <span class="math inline">\sigma</span> of <span class="math inline">l</span>. But it is well known (and immediately true) that every non-zero section of <span class="math inline">l</span> is transversal to the zero section (its zero cycle then being a linear hyperplane of the projective space). This proves our claim.</p>
+<p><em>Proof of <a href="#theorem-1">Theorem 1</a>.</em> — So we are under the conditions of <a href="#lemma-2-corollary">the corollary to Lemma 2</a>, which implies that <span class="math display">
+  \prod_{i=1}^p (\xi_E+\xi&#39;_i) = 0.
+</span> This proves, by the definition of the <span class="math inline">c_i(E)</span>, that the <span class="math inline">c_i(E)</span> are the elementary symmetric functions in the <span class="math inline">\xi_i</span>, which is exactly (6).</p>
+<p>This finishes the proof of <a href="#theorem-1">Theorem 1</a>.</p>
+</div>
+<div id="theorem-1-corollary" class="itenv" title="Corollary">
+<p>Let <span class="math inline">X\in{\mathcal{V}}</span>, and let <span class="math inline">E</span> and <span class="math inline">F</span> be vector bundles on <span class="math inline">X</span>. Then <span class="math display">
+  c_i(\check{E}) = (-1)^i c_i(E)
+\tag{7}
+</span> and, similarly, the Chern classes of the exterior powers <span class="math inline">\bigwedge E</span> (resp. of the tensor product <span class="math inline">E\otimes F</span>) can be expressed in terms of the Chern classes of <span class="math inline">E</span> and the rank of <span class="math inline">E</span> (resp. in terms of the Chern classes of <span class="math inline">E</span> and <span class="math inline">F</span> and the ranks of <span class="math inline">E</span> and <span class="math inline">F</span>) by the well-known calculation of elementary functions (see the book by Hirzebruch).</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Passing to a flag variety, as per usual, we can reduce to the case where <span class="math inline">E</span> and <span class="math inline">F</span> are completely split. In this case, the formulas follow immediately from (6).</p>
+</div>
+</section>
+<section id="section-4" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Remarks and various addenda</h1>
+<div id="remark-1" class="rmenv" title="Remark 1">
+<p>In all the above, we have only needed to work with elements of even degree in <span class="math inline">A(X)</span>, which implies, in particular, that all the calculations were essentially commutative. We note also that the axioms <a href="#axiom-A1">A1</a> to <a href="#axiom-A4">A4</a> remain satisfied if we replace each <span class="math inline">A(X)</span> with the direct sum of the <span class="math inline">A^{2i}(X)</span>. But then it seems sensible to divide all the degrees by <span class="math inline">2</span>, and thus to assume from the start that the <span class="math inline">A(X)</span> were commutative, and that the homomorphism <span class="math inline">p_X</span> from <span class="math inline">\mathbf{P}(X)</span> took its values, not in <span class="math inline">A^2(X)</span>, but in <span class="math inline">A^1(X)</span>. This is what we assume in the following remark.</p>
+</div>
+<div id="remark-2" class="rmenv" title="Remark 2">
+<p>Let <span class="math inline">A</span> be a commutative positively-graded ring with unit. Let <span class="math inline">\widehat{A}</span> be the ring given by the product of the <span class="math inline">A^i</span> (for <span class="math inline">i\geqslant 0</span>). Then the set of elements of <span class="math inline">\widehat{A}</span> of augmentation <span class="math inline">1</span> (i.e. whose degree-<span class="math inline">0</span> component is <span class="math inline">1</span>) is a group under multiplication, which we denote by <span class="math inline">1+\widehat{A}^+</span>. Consider the group given by the product <span class="math display">
+  \widetilde{A} = \mathbb{Z}\times(1+\widehat{A}^+)
+</span> whose composition is written additively; then <span class="math inline">(0,1+\widehat{A}^+)</span> is a subgroup of this group, isomorphic to the multiplicative group <span class="math inline">1+\widehat{A}^+</span>. With this in mind, we can define a (commutative unital) ring structure on <span class="math inline">\widetilde{A}</span>, compatible with the additive structure, whose unit is <span class="math inline">(1,1)</span>, and which is given, on the <span class="math inline">(0,1+\widehat{A}^+)</span> factor, by universal polynomial formulas (with integer coefficients). We will then have that <span class="math display">
+  (1,1+x_1)(1,1+y_1) = (1,1+(x_1+y_1))
+\tag{8}
+</span> for <span class="math inline">x_1,y_1\in A^1</span>, and these formulas indeed suffice to characterise the polynomials that define the composition law (taking into account the associativity of the composition law).</p>
+<p>We can also define (non-additive!) maps <span class="math display">
+  \lambda^i\colon \widetilde{A}\to\widetilde{A}
+  \quad(i\geqslant 0)
+</span> for <span class="math inline">i\geqslant 0</span> that make <span class="math inline">\widetilde{A}</span> a <span class="math inline">\lambda</span>-ring, by which we mean that the following conditions are satisfied: <span class="math display">
+  \begin{aligned}
+    \lambda^0(x) &amp;= 1,
+  \\\lambda^1(x) &amp;= x,
+  \\\lambda^n(x+y) &amp;= \sum_{i+j=n}\lambda^i(x)\lambda^j(y)\quad\text{for }n\geqslant 0
+  \end{aligned}
+\tag{9}
+</span> which also implies that the map <span class="math display">
+  \lambda\colon \widetilde{A} \to 1+\widetilde{A}[[t]]^+
+</span> defined by the formula <span class="math display">
+  \lambda(x) = \sum_{i\geqslant 0} \lambda^i(x)t^i
+\tag{10}
+</span> is an additive homomorphism from <span class="math inline">\widetilde{A}</span> to the multiplicative group of formal series of augmentation <span class="math inline">1</span>, and is a right inverse to the natural homomorphism <span class="math inline">(1+a_1t+\ldots)\mapsto a_1</span> from this latter group to <span class="math inline">\widetilde{A}</span>. The restrictions of the maps <span class="math inline">\lambda^i</span> to the factor <span class="math inline">(0,1+\widetilde{A}^+)</span> are defined by universal polynomial formulas (with integer coefficients), and <span class="math display">
+  \lambda^i(1,1+x_1) = 0
+  \quad\text{for }i&gt;1
+\tag{11}
+</span> if <span class="math inline">x_1\in A^1</span>, and this formula indeed suffices to characterise the polynomials defining the <span class="math inline">\lambda^i</span> [taking into account the formulas in (9)].</p>
+<p>In fact, the <span class="math inline">\lambda</span>-ring <span class="math inline">A</span> is a <em>special</em> <span class="math inline">\lambda</span>-ring, by which we mean that the <span class="math inline">\lambda^i(xy)</span> can be expressed in terms of universal polynomials (with integer coefficients) in the <span class="math inline">\lambda^j(x)</span> and <span class="math inline">\lambda^k(y)</span>, and that the <span class="math inline">\lambda^j(\lambda^i(x))</span> can be expressed in terms of universal polynomials (with integer coefficients) in the <span class="math inline">\lambda^k(x)</span>. We will not go into more details of the polynomials here, and we content ourselves with the following information. The fact that a <span class="math inline">\lambda</span>-ring <span class="math inline">K</span> is special also implies that the homomorphism <span class="math inline">\lambda\colon K\to 1+K[[t]]^+</span> is furthermore a homomorphism of <span class="math inline">\lambda</span>-rings, by which we mean that, for every commutative unital ring <span class="math inline">K</span>, we can define a canonical <span class="math inline">\lambda</span>-ring law on <span class="math inline">1+K[[t]]^+</span> (whose additive structure is the usual multiplication of formal series), whose composition laws are given by universal polynomial formulas (with integer coefficients). If the multiplication of this ring is denoted by <span class="math inline">f\circ g</span>, then <span class="math display">
+  (1+at)\circ(1+bt) = 1+abt
+\tag{12}
+</span> <span class="math display">
+  \lambda^i(1+at) = 1
+  \quad\text{if }i&gt;1
+\tag{13}
+</span> (where here <span class="math inline">1</span> is the zero element of <span class="math inline">1+K[[t]]^+</span>) [these formulas being the ``multiplicative’’ analogues to (8) and (11)]. These formulas suffice to characterise [taking into account (9) and the associativity of the multiplication] the polynomials that define <span class="math inline">f\circ g</span> and the <span class="math inline">\lambda^i(f)</span>.</p>
+<p>It is the detailed study of <span class="math inline">\lambda</span>-rings in general, and of certain specific <span class="math inline">\lambda</span>-rings (the ring of classes of vector bundles on an algebraic variety, and the ring of classes of representations of an algebraic group) that held the key to the first algebraic proof of the Riemann-Roch theorem, in the form given in the paper preceding this one.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> This proof is, for now, only valid in characteristic <span class="math inline">0</span>, but it gives, however, finer results than the second proof, which uses blow-up varieties. In any case, many <span class="math inline">\lambda</span>-rings exist in nature, the formalism to which they give rise is more amenable, and the author of these sentences cannot recommend enough that the reader makes use of them.</p>
+<p>That said, we now return to the commutative graded rings <span class="math inline">A(X)</span>. If <span class="math inline">E</span> is a rank-<span class="math inline">p</span> vector bundle on <span class="math inline">X</span>, then we denote by <span class="math inline">\widetilde{c}(E)</span> the <em>completed Chern class</em> of <span class="math inline">E</span>, which is the element of <span class="math inline">\widetilde{A(X)}</span> defined by <span class="math display">
+  \widetilde{c}(E) = (p,c(E))
+\tag{14}
+</span> where <span class="math inline">p=\operatorname{rank}(E)</span>. With this notation, the two formulas that were not explicitly given in <a href="#theorem-1-corollary">the corollary to Theorem 1</a> can be written simply as <span class="math display">
+  \begin{aligned}
+    \widetilde{c}\left(\wedge^i E\right) &amp;= \lambda^i(\widetilde{c}(E)),
+  \\\widetilde{c}(E\otimes F) &amp;= \widetilde{c}(E)\widetilde{c}(F),
+  \end{aligned}
+\tag{7 bis}
+</span> and the additivity formula can be written as <span class="math display">
+  \widetilde{c}(E) = \widetilde{c}(E&#39;) + \widetilde{c}(E&#39;&#39;).
+\tag{5 bis}
+</span></p>
+<p>We can thus also say that <em>the completed Chern class <span class="math inline">\widetilde{c}(E)</span> defines a homomorphism of <span class="math inline">\lambda</span>-rings from <span class="math inline">K(X)</span> to <span class="math inline">\widetilde{A(X)}</span></em>.</p>
+</div>
+<div id="remark-3" class="rmenv" title="Remark 3">
+<p><em>Application to the Chow ring.</em> — Let <span class="math inline">X</span> be a non-singular algebraic space. Recall that, if <span class="math inline">Y</span> is an irreducible cycle on <span class="math inline">X</span>, then we denote by <span class="math inline">\gamma(Y)</span> the element defined by <span class="math inline">{\mathscr{O}}_Y</span> in the group <span class="math inline">K(X)</span> of glasses of sheaves on <span class="math inline">X</span>, and we extend this definition by linearity to the case where <span class="math inline">Y</span> is an arbitrary cycle. Consider the decreasing <em>filtration</em> on <span class="math inline">K(X)</span> given by the <span class="math inline">K^i(X)</span>, where <span class="math inline">K^i(X)</span> denotes the subgroup of <span class="math inline">K(X)</span> generated by the classes of coherent sheaves on <span class="math inline">X</span> whose support is of codimension <span class="math inline">\geqslant i</span> [i.e. if <span class="math inline">X</span> is equidimensional of dimension <span class="math inline">n</span>, then this is the subgroup <span class="math inline">K_{n-i}(X)</span> of <span class="math inline">K(X)</span> generated by the classes of sheaves whose support is of dimension <span class="math inline">\leqslant n-i</span>]. We will show that <span class="math inline">K^i(X)</span> is the set of the <span class="math inline">\gamma(Z)</span> where <span class="math inline">Z</span> runs over the cycles of codimension <span class="math inline">\geqslant i</span> in <span class="math inline">X</span>. Now, let <span class="math inline">Z</span> and <span class="math inline">Z&#39;</span> be cycles of dimension <span class="math inline">p</span> and <span class="math inline">p&#39;</span> (respectively) such that the intersection cycle <span class="math inline">Z\cdot Z&#39;</span> is defined. It then follows from the definition of the ring structure of <span class="math inline">K(X)</span> (alternating sums of <span class="math inline">\mathrm{Tor}</span>) and from the cohomological definition of the intersection of cycles by Serre that <span class="math display">
+  \gamma(Z)\gamma(Z&#39;) \equiv \gamma(Z\cdot Z&#39;) \mod K^{p+p&#39;+1}(X).
+</span></p>
+<p>Using this, and Proposition 8 of the previous article by Borel–Serre<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, we find that <em>if <span class="math inline">X</span> is quasi-projective, then the filtration of <span class="math inline">K(X)</span> is compatible with its ring structure</em>; the homomorphism <span class="math inline">Z\mapsto\gamma(Z)</span> from the group <span class="math inline">A(X)</span> of cycle classes to <span class="math inline">K(X)</span> is compatible with the filtrations, and defines, by passing to the associated graded rings, <em>a homomorphism <span class="math inline">\varphi</span> of graded rings from the Chow ring <span class="math inline">A(X)</span> to the graded ring <span class="math inline">GK(X)</span> associated to <span class="math inline">K(X)</span></em>. We will show that <em>the kernel of this homomorphism is a torsion group</em>. For this, consider the homomorphism <span class="math inline">\widetilde{c}</span> from the <span class="math inline">\lambda</span>-ring <span class="math inline">K(X)</span> to <span class="math inline">\widetilde{A(X)}</span> described in <a href="#remark-2">Remark 2</a>. Since <span class="math inline">A^i(X)</span> does not change if we remove a closed subset of codimension <span class="math inline">&gt;i</span> from <span class="math inline">X</span>, we immediately see that <span class="math inline">\widetilde{c}</span> is compatible with the filtrations, and thus defines, by passing to the associated graded rings, <em>a homomorphism <span class="math inline">\psi</span> from <span class="math inline">GK(X)</span> to the graded ring <span class="math inline">A&#39;(X)</span> associated to the filtered ring <span class="math inline">\widetilde{A(X)}</span>, which can itself be identified (as a graded group) with <span class="math inline">A(X)</span></em>. [As for its multiplicative structure, we can formally verify that it is given by the product <span class="math inline">x_p\star y_q = -\frac{(p+q-1)!}{(p-1)!(q-1)!}x_p y_q</span> for <span class="math inline">x_p\in A^p(X)</span> and <span class="math inline">y_q\in A^q(X)</span>.] With this, we have the relations <span class="math display">
+  \begin{aligned}
+    \psi\varphi &amp;= (-1)^{i-1}(i-1)!\mathrm{id}_{A(X)}
+  \\\varphi\psi &amp;= (-1)^{i-1}(i-1)!\mathrm{id}_{GK(X)}
+  \end{aligned}
+\tag{15}
+</span> in degree <span class="math inline">i</span>. Since <span class="math inline">\varphi</span> is surjective, the second equation follows from the first, which, by what we have already said, is equivalent to the following statement:</p>
+<div id="equation-16" class="itenv" title="Claim">
+<p>If <span class="math inline">Y</span> is a non-singular closed subvariety of <span class="math inline">X</span>, of codimension <span class="math inline">i</span>, then <span class="math display">
+  \begin{cases}
+    c_j(\gamma(Y)) = 0 &amp;\text{for }j&lt;i,
+  \\c_i(\gamma(Y)) = (-1)^{i-1}(i-1)!\operatorname{cl}_X^i(Y) &amp;\text{otherwise}
+  \end{cases}
+\tag{16}
+</span> [where <span class="math inline">\operatorname{cl}_X^i(Y)</span> denotes the class of <span class="math inline">Y</span> in <span class="math inline">A^i(X)</span>].</p>
+</div>
+<p>[The first case in <a href="#equation-16">(16)</a> simply says that <span class="math inline">\widetilde{c}</span> is compatible with the filtrations, and has been written simply to remind us of this fact.] Equation <a href="#equation-16">(16)</a> is plausible <em>a priori</em> when we note that, since the restriction of <span class="math inline">c_i(\gamma(Y))</span> to <span class="math inline">X\setminus Y</span> is zero (by the functoriality of Chern classes), <span class="math inline">c_i(\gamma(Y))</span> must necessarily be proportional to <span class="math inline">\operatorname{cl}_X^i(Y)</span>; further, <span class="math inline">\psi\varphi</span> must be a ring homomorphism from <span class="math inline">A&#39;(X)=G(\widetilde{A(X)})</span> (whose multiplicative structure has been explained above) to <span class="math inline">A(X)</span>. We will not give here the full proof of <a href="#equation-16">(16)</a>, instead only noting that, if set aside the problem of torsion, this equation is a particular case of the Riemann-Roch theorem [applied to the injection of <span class="math inline">Y</span> into <span class="math inline">X</span>, and the unit element of <span class="math inline">K(Y)</span>.]</p>
+<p>The equations in (15) indeed show that <em><span class="math inline">\varphi</span> and <span class="math inline">\psi</span> are isomorphisms, up to a torsion group</em>. (I do not know if <span class="math inline">\varphi</span> is in fact an isomorphism; it is at least the case in degrees <span class="math inline">i=1</span> and <span class="math inline">i=2</span>.) It also follows that <em><span class="math inline">\widetilde{c}</span> is an isomorphism, up to torsion, from <span class="math inline">K(X)</span> to <span class="math inline">A(X)</span></em>.</p>
+<p>The above shows that, to prove intersection formulas in <span class="math inline">A(X)</span>, we can, if we ignore torsion, perform the calculations in <span class="math inline">GK(X)</span>, and thus, ultimately, in <span class="math inline">K(X)</span>, i.e. we can reduce to calculating alternating sums of <span class="math inline">\mathrm{Tor}</span> of sheaves: this is the “without moving cycles” method. It allows us, for example, to determine (up to torsion) the ring of cycle classes of a blow-up variety, by using part (c) of Lemma 19 of the paper of Borel–Serre<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, which gives (by passing to the associated graded objects) that <span class="math inline">f^*i_*(y) = j_*(g^*(y)c_{p-1}(F))</span>. We will return to this questions in a later article.</p>
+</div>
+</section>
+<section id="section-5" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> The zero cycles of a regular section of a vector bundle</h1>
+<p>In this section, we assume that the category <span class="math inline">{\mathcal{V}}</span> further satisfies the following condition:</p>
+<div id="condition-V2" class="rmenv" title="V2">
+<p>For all <span class="math inline">X\in{\mathcal{V}}</span> and every non-singular closed subspace <span class="math inline">Y</span> of <span class="math inline">X</span>, we have that <span class="math inline">Y\in{\mathcal{V}}</span>.</p>
+</div>
+<p>Furthermore, we assume that the following axiom is verified:</p>
+<div id="axiom-A5" class="rmenv" title="A5">
+<p>Let <span class="math inline">X,Y\in{\mathcal{V}}</span>, and let <span class="math inline">Y&#39;</span> be a non-singular closed subspace of <span class="math inline">Y</span>, <span class="math inline">f</span> a morphism from <span class="math inline">X</span> to <span class="math inline">Y</span> that is transversal to <span class="math inline">Y&#39;</span>, and <span class="math inline">X&#39;=f^{-1}(Y&#39;)</span> [so <span class="math inline">X&#39;</span> is a non-singular closed subspace of <span class="math inline">X</span>, thus <span class="math inline">X&#39;\in{\mathcal{V}}</span> and <span class="math inline">p_X(X&#39;)</span> is defined]. Under these conditions, <span class="math display">
+  p_X(X&#39;) = f^*(p_Y(Y&#39;)).
+</span></p>
+</div>
+<p>Let <span class="math inline">X\in V</span>, and let <span class="math inline">E</span> be a rank-<span class="math inline">p</span> vector bundle on <span class="math inline">X</span>. Denote by <span class="math inline">\mathbf{e}</span> the constant vector bundle <span class="math inline">X\times k</span> on <span class="math inline">X</span>, let <span class="math inline">\widetilde{E}=E+\mathbf{e}</span> be the vector bundle given by the direct sum of <span class="math inline">E</span> and <span class="math inline">\mathbf{e}</span>, and define <span class="math inline">\widehat{E}=\mathbb{P}(\widetilde{E})</span>. The injection <span class="math inline">E\to\widetilde{E}</span> defines an injection of bundles <span class="math inline">\mathbb{P}(E)\subset\mathbb{P}(\widetilde{E})=\widehat{E}</span>, and the complement <span class="math inline">\widehat{E}\setminus\mathbb{P}(E)</span> is canonically isomorphic to <span class="math inline">E</span>, since <span class="math inline">\widehat{E}</span> can be understood as the bundle induced by projectively completing all the fibres of <span class="math inline">E</span>. Let <span class="math inline">s</span> be a regular section of <span class="math inline">E</span>. Then <span class="math inline">s(X)</span> is a non-singular closed subspace of <span class="math inline">\widehat{E}</span>, and so <span class="math inline">s(X)\in{\mathcal{V}}</span>, and we propose to calculate <span class="math inline">p_{\widehat{E}}(s(X))</span>. We will prove:</p>
+<div id="lemma-3" class="itenv" title="Lemma 3">
+<p>With the above notation, if <span class="math inline">s_0</span> is the zero section of <span class="math inline">E</span>, then <span class="math display">
+  p_{\widehat{E}}(s_0(X)) = \sum_{i=0}^p c_i(E)(\xi_{\widetilde{E}})^{p-i}.
+\tag{17}
+</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">X&#39;</span> be the flag variety of <span class="math inline">E</span>, <span class="math inline">f</span> the projection from <span class="math inline">X&#39;</span> to <span class="math inline">X</span>, <span class="math inline">E&#39;</span> the vector bundle <span class="math inline">f^{-1}(E)</span> on <span class="math inline">X&#39;</span>, and <span class="math inline">s&#39;_0</span> the section of <span class="math inline">E&#39;</span> given by the inverse image of <span class="math inline">s_0</span> under <span class="math inline">f</span>. Then <span class="math inline">\widehat{E}&#39;</span> is the inverse image of <span class="math inline">\widehat{E}</span> under <span class="math inline">f</span>, so let <span class="math inline">\widehat{f}</span> be the natural morphism from <span class="math inline">\widehat{E}&#39;</span> to <span class="math inline">\widehat{E}</span>; we then have a commutative diagram of morphisms: <span class="math display">
+  \begin{CD}
+    X @&lt;f&lt;&lt; X&#39;
+  \\@Vs_0VV @VVs&#39;_0V
+  \\\widehat{E} @&lt;&lt;\widehat{f}&lt; \widehat{E}&#39;
+  \end{CD}
+</span></p>
+<p>Since <span class="math inline">\widehat{f}</span> is a fibrant morphism, it follows that it is transversal to every non-singular closed subspace of <span class="math inline">\widehat{E}</span>, and, in particular, to <span class="math inline">s_0(X)</span>. We also know that <span class="math inline">\widehat{f}^{-1}(s_0(X)) = s&#39;_0(X&#39;)</span>. Since <span class="math inline">\widehat{f}^*</span> is injective (<a href="#lemma-1">Lemma 1</a>), it suffices, in order to prove <a href="#lemma-3">(17)</a>, to prove the formula given by applying <span class="math inline">\widehat{f}^*</span> to both sides. Applying axiom <a href="#axiom-A5">A5</a>, the left-hand side is then <span class="math inline">p_{\widehat{E}}(s&#39;_0(X&#39;))</span>, and the right-hand side is <span class="math inline">c_i(E&#39;)(\xi_{\widetilde{E}&#39;})^{p-1}</span> [taking into account the functoriality of the <span class="math inline">c_i</span>, and the immediate formula <span class="math inline">\xi_{\widetilde{E}&#39;}=\widehat{f}^*(\xi_{\widetilde{E}})</span>]. This leads us to prove <a href="#lemma-3">(17)</a> in the case where the bundle <span class="math inline">E</span> admits a splitting <span class="math inline">(E_i)_{0\leqslant i\leqslant p}</span> (where <span class="math inline">\operatorname{rank}E_i=p-i</span>).</p>
+<p>So let <span class="math inline">f</span> be the projection from <span class="math inline">\widehat{E}=\mathbb{P}(\widetilde{E})</span> to <span class="math inline">X</span>, and consider the splitting <span class="math display">
+  \widetilde{E} = E_0+\mathbf{e} \supset E_1+\mathbf{e} \supset \ldots \supset E_p+\mathbf{e} = \mathbf{e} \supset 0
+</span> of <span class="math inline">\widetilde{E}</span>, and let <span class="math inline">E&#39;=f^{-1}(\widetilde{E})</span>. Then we also have a splitting on the bundle <span class="math inline">L_{\widetilde{E}}\otimes E&#39;</span>, and its factors are the <span class="math inline">L_{\widetilde{E}}\otimes f^{-1}(E_{i-1}/E_i)</span> (for <span class="math inline">1\leqslant i\leqslant p</span>), and <span class="math inline">L_E\otimes f^{-1}(\mathbf{e}) = L_E</span>; we also have a canonical section <span class="math inline">s</span>, and we have seen, in the proof of <a href="#theorem-1">Theorem 1</a>, that the conditions of <a href="#lemma-2">Lemma 2</a> are satisfied. Equation (<span class="math inline">\star</span>) in the proof of <a href="#lemma-2">Lemma 2</a> then gives <span class="math display">
+  p_{\widehat{E}}(Y_p) = \prod_{i=1}^p c_1(L_{\widetilde{E}}\otimes f^{-1}(E_{i-1}/E_i)),
+</span> where <span class="math inline">Y_p</span> denotes the set of points of <span class="math inline">\widehat{E}=\mathbb{P}(\widetilde{E})</span> consisting of lines of <span class="math inline">\widetilde{E}</span> that are contained in the subbundle <span class="math inline">\mathbf{e}</span>, i.e. the set <span class="math inline">s_0(X)</span>, where <span class="math inline">s_0</span> is the zero section of <span class="math inline">E</span> (with <span class="math inline">E</span> being identified with an open subset of <span class="math inline">\widehat{E}</span>). Since we have <span class="math display">
+  c_1(L_{\widetilde{E}}\otimes f^{-1}(E_{i-1}/E_i)) = \xi_{\widetilde{E}}+f^*(\xi_i),
+  \quad\text{where }\xi_i = c_1(E_{i-1}/E_i),
+</span> and <a href="#lemma-3">(17)</a> then follows.</p>
+</div>
+<p>From this, we will deduce</p>
+<div id="theorem-2" class="itenv" title="Theorem 2">
+<p>Let <span class="math inline">X\in{\mathcal{V}}</span>, and let <span class="math inline">E</span> be a rank-<span class="math inline">p</span> vector bundle on <span class="math inline">X</span>, <span class="math inline">s</span> a regular section of <span class="math inline">E</span> that is transversal to the zero section, and <span class="math inline">Y</span> the set of zeros of <span class="math inline">s</span> (which is thus a non-singular closed subspace of codimension <span class="math inline">p</span> of <span class="math inline">X</span>). Under these conditions, <span class="math display">
+  p_X(Y) = c_p(E).
+\tag{18}
+</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Consider <span class="math inline">s</span> as a morphism from <span class="math inline">X</span> to <span class="math inline">\widehat{E}</span>, so that <span class="math inline">s</span> is transversal to the non-singular closed subspace <span class="math inline">s_0(X)</span> of <span class="math inline">\widehat{E}</span> (where <span class="math inline">s_0</span> denotes the zero section), and so, by <a href="#axiom-A5">A5</a>, since <span class="math inline">Y=s^{-1}(s_0(X))</span>, <span class="math display">
+  p_X(Y) = s^*(p_{\widehat{E}}(s_0(X))).
+</span></p>
+<p>Equation <a href="#theorem-2">(18)</a> then follows from <a href="#lemma-3">(17)</a>, since <span class="math display">
+  s^*(c_i(E)) = c_i(E)
+  \quad\text{and}\quad
+  s^*(\xi_{\widetilde{E}}) = 0.
+</span> (This latter equation follows immediately from the fact that <span class="math inline">L_{\widetilde{E}}</span> induces a trivial bundle on <span class="math inline">E</span>, and so the inverse image of <span class="math inline">L_{\widetilde{E}}</span> under <span class="math inline">s</span> is the trivial bundle on <span class="math inline">X</span>.)</p>
+</div>
+<p>In fact, the above proof proves the following formula, which holds for <em>every</em> regular section <span class="math inline">s</span> of <span class="math inline">E</span>: <span class="math display">
+  s^*(p_{\widetilde{E}}(s_0(X))) = c_p(E)
+\tag{18 bis}
+</span> (where <span class="math inline">s_0</span> denotes the zero section of <span class="math inline">E</span>). From this we deduce, for example:</p>
+<div id="lemma-3-corollary" class="itenv" title="Corollary">
+<p>Suppose that we are in the setting of Chow theory (<span class="math inline">{\mathcal{V}}</span> being the category of non-singular quasi-projective algebraic spaces; <span class="math inline">A(X)</span> being the ring of cycle classes under rational equivalence). Let <span class="math inline">X\in{\mathcal{V}}</span>, and let <span class="math inline">E</span> be a rank-<span class="math inline">p</span> vector bundle on <span class="math inline">X</span>, and <span class="math inline">s</span> a regular section of <span class="math inline">E</span> such that the zero cycle <span class="math inline">Z</span> of <span class="math inline">s</span> exists. Then the class of <span class="math inline">Z</span> is <span class="math inline">c_p(E)</span>.</p>
+</div>
+<div class="rmenv" title="Remark">
+<p>Equation <a href="#lemma-3">(17)</a> holds true even if we replace the zero section <span class="math inline">s_0</span> by an arbitrary section of <span class="math inline">E</span>. We can see this by slightly modifying the proof of <a href="#lemma-3">Lemma 3</a>, but it is easy to deduce this formula from <a href="#theorem-2">Theorem 2</a>, noting that <span class="math inline">s(X)</span> is the set of zeros of a section (which is transversal to the zero section) of a suitable vector bundle on <span class="math inline">\mathbb{P}(\widetilde{E})</span>, i.e. the bundle <span class="math inline">L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)</span>, where <span class="math inline">S</span> is the (trivial) rank-<span class="math inline">1</span> subbundle of <span class="math inline">\widetilde{E}</span> defined by the section <span class="math inline">s</span>. The right-hand side of <a href="#lemma-3">(17)</a> is then exactly <span class="math display">
+  c_p(L_{\widetilde{E}}\otimes f^{-1}(\widetilde{E}/S)) = c_p(L_{\widetilde{E}}\otimes f^{-1}(E)),
+</span> as follows from the formulas of <a href="#section-3">§3</a>.</p>
+</div>
 </section>
 <section id="bibliography" class="level1 unnumbered">
 
 
 </section>
 
+
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliography</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-1" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">H. Bercovici, C. Foias. <span>“A real variable restatement of riemann’s hypothesis.”</span> <em>Israel J. Math</em>. <strong>48</strong> (1984), 57–68.</div>
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">M. Atiyah. <span>“Complex analytic connections in fibre bundles.”</span> <em>Trans. Amer. Math. Soc</em>. <strong>85</strong> (1957), 181–207.</div>
 </div>
 <div id="ref-2" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">K. Hoffman. <em>Banach spaces of analytic functions</em>. Dover, New York, 1988.</div>
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S.-S. Chern. <span>“On the characteristic classes of complex sphere bundles and algebraic varieties.”</span> <em>Amer. J. Math.</em> <strong>75</strong> (1953), 565–597.</div>
 </div>
 <div id="ref-3" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">J.L.W.V. Jensen. <span>“Sur un nouvel et important théorème de la théorie des fonctions.”</span> <em>Acta Math.</em> <strong>22</strong> (1898), 359–364.</div>
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">A. Grothendieck. <span>“Théorème de dualité four les faisceaux algébriques cohérents.”</span> <em>Séminaire Bourbaki</em>. <strong>9</strong> (1956--1957).</div>
 </div>
 <div id="ref-4" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[4] </div><div class="csl-right-inline">E.C. Titchmarsh. <em><span>The</span> <span>Theory</span> of <span>Functions</span></em>. Oxford Science Publications, 1939.</div>
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Séminaire Claude Chevalley. <span>“Classification des groupes de <span>Lie</span>.”</span> <strong>1</strong> (1956--1958).</div>
 </div>
-<div id="ref-5" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[5] </div><div class="csl-right-inline">E.C. Titchmarsh. <em>The <span>Theory</span> of the <span>Riemann</span> <span>Zeta</span>-<span>Function</span></em>. Clarendon, Oxford, 1986.</div>
-</div>
-<div id="ref-6" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[6] </div><div class="csl-right-inline">V.V. Volchkov. <span>“On an equality equivalent to the <span>Riemann</span> hypothesis.”</span> <em>Ukrainian Math. J.</em> <strong>47</strong> (1995), 491–493.</div>
-</div>
-<div id="ref-7" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[7] </div><div class="csl-right-inline">F.T. Wang. <span>“A note on the <span>Riemann</span> zeta-function.”</span> <em>Bull. Amer. Math. Soc.</em> <strong>52</strong> (1946), 319–321.</div>
-</div>
-</div></section></div></main>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>(Note added during editing). This homomorphism <span class="math inline">i_*</span> is now defined in full generality.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>[Trans.] This is referring to Borel, A; Serre, J.-P. “Le théorème de Riemann–Roch.” <em>Bull. Soc. Math. France</em> <strong>86</strong> (1958), 97–136.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>[Trans.] This is once again referring to paper by Borel and Serre mentioned in the previous translator footnote.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>[Trans.] This is once again referring to paper by Borel and Serre mentioned in the previous translator footnotes.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

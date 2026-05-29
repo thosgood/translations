@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Michel Balazard, Eric Saias, and Marc Yor">
-<meta name="dcterms.date" content="1999-01-01">
+<meta name="author" content="George Pólya">
+<meta name="dcterms.date" content="1926-01-01">
 
-<title>Notes on the Riemann zeta function, 2</title>
+<title>A comment about the integral representation of the Riemann xi-function</title>
 <style>
 
 code{white-space: pre-wrap;}
@@ -22,27 +22,7 @@ ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
 }
-
-div.csl-bib-body { }
-div.csl-entry {
-clear: both;
-margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-margin-left:2em;
-text-indent:-2em;
-}
-div.csl-left-margin {
-min-width:2em;
-float:left;
-}
-div.csl-right-inline {
-margin-left:2em;
-padding-left:1em;
-}
-div.csl-indent {
-margin-left: 2em;
-}</style>
+</style>
 
 
 <script>/*!
@@ -2324,7 +2304,7 @@ margin-bottom: 0 !important;
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Notes on the Riemann zeta function, 2</h1>
+      <h1 class="title">A comment about the integral representation of the Riemann xi-function</h1>
                       </div>
   </div>
     
@@ -2334,14 +2314,14 @@ margin-bottom: 0 !important;
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Michel Balazard, Eric Saias, and Marc Yor </p>
+               <p>George Pólya </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">1999</p>
+        <p class="date">1926</p>
       </div>
     </div>
     
@@ -2355,13 +2335,22 @@ margin-bottom: 0 !important;
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link active" data-scroll-target="#section-1">1</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2</a>
   <ul class="collapse">
-  <li><a href="#thanks" id="toc-thanks" class="nav-link" data-scroll-target="#thanks">Thanks</a></li>
+  <li><a href="#I" id="toc-I" class="nav-link" data-scroll-target="#I">I</a></li>
+  <li><a href="#II" id="toc-II" class="nav-link" data-scroll-target="#II">II</a></li>
+  <li><a href="#III" id="toc-III" class="nav-link" data-scroll-target="#III">III</a></li>
   </ul></li>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">3</a>
+  <ul class="collapse">
+  <li><a href="#IV" id="toc-IV" class="nav-link" data-scroll-target="#IV">IV</a></li>
+  <li><a href="#V" id="toc-V" class="nav-link" data-scroll-target="#V">V</a></li>
+  <li><a href="#VI" id="toc-VI" class="nav-link" data-scroll-target="#VI">VI</a></li>
+  </ul></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">4</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="AIM-143-1999-284.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/thosgood/translations"><i class="bi bi-github"></i>Source file</a></li><li><a href="https://thosgood.net/translations"><i class="bi bi-collection"></i>More translations</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="AM-48-1926-305.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/thosgood/translations"><i class="bi bi-github"></i>Source file</a></li><li><a href="https://thosgood.net/translations"><i class="bi bi-collection"></i>More translations</a></li></ul></div></nav>
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -2373,97 +2362,400 @@ margin-bottom: 0 !important;
 <h4 class="unlisted unnumbered anchored" data-anchor-id="translators-note">Translator’s note</h4>
 <p><em>This document is a translation into English of the following:</em></p>
 <blockquote class="blockquote">
-<p>Balazard, M., Saias, E., and Yor, M. “Notes sur la fonction <span class="math inline">\zeta</span> de Riemann, 2”. <em>Advances in Mathematics</em> <strong>143</strong> (1999), 284–287.</p>
+<p>Pólya, G. “Bemerkung Über die Integraldarstellung der Riemannschen <span class="math inline">\xi</span>-Funktion”. <em>Acta Math.</em> <strong>48</strong> (1926), 305–317. DOI: <a href="https://doi.org/10.1007/BF02565336">10.1007/BF02565336</a>.</p>
 </blockquote>
 <p><em>The translator (<a href="https://thosgood.net">Tim Hosgood</a>) takes full responsibility for any errors introduced in this document, and claims no rights to any of the mathematical content.</em></p>
 <!-- Shortcuts -->
 <!-- Content -->
-</section>
-<section id="introduction" class="level1 unnumbered">
-<h1 class="unnumbered">Introduction</h1>
-<p>We denote by <span class="math inline">\sum_{\Re\rho&gt;1/2}</span> a sum over the possible zeros of <span class="math inline">\zeta(s)</span> with real part greater than <span class="math inline">\frac12</span>, where the zeros of multiplicity <span class="math inline">m</span> are counted <span class="math inline">m</span> times. The goal of this note is the proof of the following result.</p>
-<div class="itenv" title="Theorem">
-<p>We have <span class="math display">
-  \frac{1}{2\pi}\int_{\Re(s)=1/2} \frac{\log|\zeta(s)|}{|s|^2}|\operatorname{d}\!s|
-  = \sum_{\Re\rho&gt;1/2} \log\left|\frac{\rho}{1-\rho}\right|.
+<p><em>[Translator.] The numbering of the footnotes in the original has not been replicated in this translation, since this would have resulted in multiple footnotes with the same number on one page. We also thank <a href="https://personal.us.es/arias/">Juan Arias de Reyna</a> for their Spanish translation of this paper, which helped greatly.</em></p>
+<hr>
+<p>The Riemann <span class="math inline">\xi</span>-function, defined by the formula <span class="math display">
+  \xi(iz)
+  =
+  \frac12 \left(
+    z^2 - \frac14
+  \right) \pi^{-\frac{z}{2}-\frac14} \Gamma \left(
+    \frac{z}{2} + \frac14
+  \right) \zeta \left(
+    \frac12 + z
+  \right),
 \tag{1}
-</span> In particular, the Riemann hypothesis is true if and only if <span class="math display">
-  \int_{\Re(s)=1/2} \frac{\log|\zeta(s)|}{|s|^2}|\operatorname{d}\!s| = 0.
+</span> was represented by Riemann himself by an infinite trigonometric integral, namely<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <span class="math display">
+  \xi(z) = 2\int_0^\infty \Phi(u)\cos(zu)\operatorname{d}\!u
+\tag{2}
+</span> <span class="math display">
+  \Phi(u) = 2\pi e^{\frac{5u}{2}} \sum_{n=1}^\infty (2\pi e^{2u}n^2 - 3) n^2 e^{-n^2\pi e^{2u}}.
+\tag{3}
+</span> It is evident that <span class="math display">
+  \Phi(u) \sim 4\pi^2 e^{\frac{9u}{2}-\pi e^{2u}}
+  \quad\text{as }u\to+\infty.
+\tag{4}
+</span> Furthermore (see <a href="#section-4">§4</a>), <span class="math inline">\Phi(u)</span> is an even function. Therefore <span class="math display">
+  \Phi(u) \sim 4\pi^2 \left(
+    e^{\frac{9u}{2}} + e^{-\frac{9u}{2}}
+  \right) e^{-\pi(e^{2u}+e^{-2u})}
+  \quad\text{as }u\to\pm\infty.
+\tag{5}
 </span></p>
+<p>With regards to the Riemann hypothesis, one could ask the following question<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>: does the function given by replacing <span class="math inline">\Phi(u)</span> in the right-hand side of Equation (2) with the right-hand side of Equation (4) have only real zeros?</p>
+<p>The answer is no (see <a href="#section-4">§4</a>): the resulting function has infinitely many imaginary zeros. If, however, the right-hand side of Equation (5) is used, instead of the right-hand side of Equation (4), then we obtain the function <span class="math display">
+  \xi^*(z) = 8\pi^2 \int_0^\infty \left(
+    e^{\frac{9u}{2}} + e^{-\frac{9u}{2}}
+  \right) e^{-\pi(e^{2u}+e^{-2u})} \cos(zu) \operatorname{d}\!u,
+\tag{6}
+</span> which one could call the “modified <span class="math inline">\xi</span>-function”, and <span class="math inline">\xi^*(z)</span> in fact <em>has only real zeros</em>. Incidentally, <span class="math display">
+  \xi(z) \sim \xi^*(z)
+</span> if <span class="math inline">z</span> tends towards <span class="math inline">\infty</span> in some closed ray based at the point <span class="math inline">0</span> and not containing the real axis. If we denote by <span class="math inline">N(r)</span> the number of zeros of <span class="math inline">\xi(z)</span> in the circular region <span class="math inline">|z|\leqslant r</span>, and by <span class="math inline">N^*(r)</span> the number of zeros of <span class="math inline">\xi^*(z)</span> in the same region, then <span class="math display">
+  N(r) \sim N^*(r)
+</span> and even <span class="math display">
+  N(r) - N^*(r) = O(\log r).
+</span></p>
+<p>In what follows, I provide a proof of the fact that all the zeros of <span class="math inline">\xi^*(z)</span> are real. The proof focuses on another entire function, namely the function <span class="math display">
+  {\mathfrak{G}}(z) = {\mathfrak{G}}(z;a) = \int_{-\infty}^{+\infty} e^{-a(e^u+e^{-u})+zu} \operatorname{d}\!u,
+\tag{7}
+</span> which has some nice, simple properties. The parameter <span class="math inline">a</span> is always a positive value. We can express <span class="math inline">\xi^*(z)</span> in terms of <span class="math inline">{\mathfrak{G}}(z)</span>. Indeed, <span class="math display">
+  \xi^*(z) = 2\pi^2 \left\{
+    {\mathfrak{G}}\left(
+      \frac{iz}{2} - \frac94; \pi
+    \right) +
+    {\mathfrak{G}}\left(
+      \frac{iz}{2} + \frac94; \pi
+    \right)
+  \right\}
+\tag{8}
+</span> as one can easily derive from Equations (6) and (7). I will show that <span class="math inline">{\mathfrak{G}}(iz)</span> <em>has only real zeros</em>. From this, the same property then easily follows for <span class="math inline">\xi^*(z)</span>.</p>
+</section>
+<section id="section-1" class="level1 unnumbered">
+<h1 class="unnumbered">1</h1>
+<p>The most important property of the entire function <span class="math inline">{\mathfrak{G}}(z)</span> is that is satisfies a simple difference equation; namely <span class="math display">
+  z{\mathfrak{G}}(z) = a({\mathfrak{G}}(z+1) - {\mathfrak{G}}(z-1))
+\tag{9}
+</span> as can easily be proven by partial integration. Note also that <span class="math inline">{\mathfrak{G}}(z)</span> is even: <span class="math display">
+  {\mathfrak{G}}(-z) = {\mathfrak{G}}(z).
+\tag{10}
+</span> Furthermore, if <span class="math inline">z</span> is not an integer, then <span class="math display">
+  \begin{aligned}
+    {\mathfrak{G}}(z)
+    &amp;= a^{-z}\Gamma(z) \left(
+      1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!(1-z)(2-z)\ldots(n-z)}
+    \right)
+  \\&amp;+ a^z\Gamma(-z) \left(
+      1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!(1+z)(2+z)\ldots(n+z)}
+    \right).
+  \end{aligned}
+\tag{11}
+</span></p>
+<p>The proof of Equation (11) goes as follows: write <span class="math display">
+  \Gamma(z)
+  = \int_0^a e^{-v} v^{z-1} \operatorname{d}\!v + \int_a^\infty e^{-v} v^{z-1} \operatorname{d}\!v
+  = P(z) + Q(z),
+\tag{12}
+</span> <span class="math display">
+  P(z) = P(z;a) = \sum_{n=0}^\infty \frac{(-1)^n a^{z+n}}{n!(z+n)},
+\tag{13}
+</span> <span class="math display">
+  Q(z) = Q(z;a) = a^z \int_0^\infty e^{-ae^u+uz} \operatorname{d}\!u.
+\tag{14}
+</span></p>
+<p>Now, <span class="math display">
+  \begin{aligned}
+    {\mathfrak{G}}(z)
+    &amp;= \int_0^\infty e^{-a(e^u+e^{-u})} (e^{uz}+e^{-uz}) \operatorname{d}\!u
+  \\&amp;= \int_0^\infty \sum_{n=0}^\infty e^{-ae^u} \frac{(-a)^n}{n!} (e^{(-n+z)u}+e^{(-n-z)u}) \operatorname{d}\!u.
+  \end{aligned}
+</span> From this it follows, by Equation (14), after exchanging the order of summation and integration (which can easily be justified by absolute convergence), that <span class="math display">
+  {\mathfrak{G}}(z)
+  = a^{-z}\sum_{n=0}^\infty \frac{(-1)^n a^{2n}}{n!} Q(-n+z)
+  + a^z\sum_{n=0}^\infty \frac{(-1)^n a^{2n}}{n!} Q(-n-z).
+\tag{15}
+</span> On the other hand, evidently <span class="math display">
+  \begin{aligned}
+    0
+    &amp;= \sum_{k=0}^\infty \sum_{l=0}^\infty \frac{(-1)^{k+l}a^{k+l}}{k!l!} \left(
+      \frac{1}{-k+z+l} + \frac{1}{k-z-l}
+    \right)
+  \\&amp;= a^{-z} \sum_{k=0}^\infty \frac{(-1)^ka^{2k}}{k!} \sum_{l=0}^\infty \frac{(-1)^la^{-k+z+l}}{l!(-k+z+l)}
+  \\&amp;+ a^z \sum_{l=0}^\infty \frac{(-1)^la^{2l}}{l!} \sum_{k=0}^\infty \frac{(-1)^ka^{-l-z+k}}{k!(-l-z+k)}
+  \end{aligned}
+</span> and so, by Equation (13), <span class="math display">
+  {\mathfrak{G}}(z)
+  = a^{-z} \sum_{k=0}^\infty \frac{(-1)^ka^{2k}}{k!} P(-k+z)
+  + a^z \sum_{l=0}^\infty \frac{(-1)^la^{2l}}{l!} P(-l-z).
+\tag{16}
+</span> It follows from Equations (12), (15), and (16) that <span class="math display">
+  {\mathfrak{G}}(z)
+  = a^{-z} \sum_{n=0}^\infty \frac{(-1)^na^{2n}}{n!} \Gamma(-n+z)
+  + a^z \sum_{n=0}^\infty \frac{(-1)^na^{2n}}{n!} \Gamma(-n-z),
+</span> which is equivalent to Equation (11).</p>
+<p>I will also state here, without proof, the two following representations, which will not be used in what follows: <span class="math display">
+  \begin{aligned}
+    {\mathfrak{G}}(z)
+    &amp;= \frac{1}{2\pi i} \int_{a-i\infty}^{a+i\infty} \Gamma\left(
+      s - \frac{z}{2}
+    \right) \Gamma \left(
+      s + \frac{z}{2}
+    \right) a^{-2s} \operatorname{d}\!s,
+  \\{\mathfrak{G}}(z)
+    &amp;= \frac{\pi}{\sin(\pi z)} e^{\frac{i\pi z}{2}} J_{-z}(2ia) - \frac{\pi}{\sin(\pi z)} e^{-\frac{i\pi z}{2}} J_z(2ia).
+  \end{aligned}
+</span> In the first one, <span class="math inline">2a&gt;|\Re z|</span>; in the second, both terms on the right-hand side satisfy the same difference equation, which is also satisfied by <span class="math inline">{\mathfrak{G}}(z)</span>, by Equation (9).</p>
+</section>
+<section id="section-2" class="level1 unnumbered">
+<h1 class="unnumbered">2</h1>
+<p>The asymptotic representation and the estimates of <span class="math inline">{\mathfrak{G}}(z)</span>, with which we now concern ourselves, can be obtained by expanding Equation (11).</p>
+<p>Different areas of the <span class="math inline">z</span>-plane have to be examined on a case-by-case basis. Fix <span class="math inline">z = x+iy + re^{i\varphi}</span>, where <span class="math inline">x</span>, <span class="math inline">y</span>, <span class="math inline">r</span>, and <span class="math inline">\varphi</span> are real; <span class="math inline">r\geqslant 0</span>; if <span class="math inline">y&gt;0</span>, then we assume that <span class="math inline">0&lt;\varphi&lt;\pi</span>; <span class="math inline">x-iy = \overline{z}</span>.</p>
+<section id="I" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="I">I</h2>
+<p><em>For <span class="math inline">|y|\geqslant 1</span> and <span class="math inline">a\leqslant A</span>,</em> <span class="math display">
+  {\mathfrak{G}}(z)
+  = a^{-z} \Gamma(z) \left(
+    1 + \frac{\chi(z)}{z}
+  \right) + a^z \Gamma(z) \left(
+    1 - \frac{\chi(-z)}{z}
+  \right)
+\tag{17}
+</span> <em>where the absolute value of the function <span class="math inline">\chi(z)=\chi(z;a)</span> is bounded above by a value depending only on <span class="math inline">A</span>.</em></p>
+<p>We know, by Equation (11), that <span class="math display">
+  \chi(z)
+  = \frac{za^2}{1-z} \left(
+    1 + \sum_{n=2}^\infty \frac{a^{2n-2}}{n!(2-z)(3-z)\ldots(n-z)}
+  \right)
+</span> whence, without further ado, the claim.</p>
+</section>
+<section id="II" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="II">II</h2>
+<p><em>Let <span class="math inline">\varepsilon</span> and <span class="math inline">A</span> be fixed positive numbers.</em> <em>Set</em> <span class="math display">
+  \frac{a^z{\mathfrak{G}}(z)}{\Gamma(z)} - 1
+  = \psi(z) = \psi(z;a).
+\tag{18}
+</span> <em>Then, in the half-plane <span class="math inline">x\geqslant\varepsilon</span>,</em> <span class="math display">
+  \lim_{|z|\to\infty} \psi(z) = 0,
+\tag{19}
+</span> <em>and, in fact, if <span class="math inline">a\leqslant A</span>, then this convergence is uniform in <span class="math inline">z</span> and <span class="math inline">a</span>.</em></p>
+<p>It follows, from Stirling’s formula, that there exists some constant <span class="math inline">C</span> such that, for <span class="math inline">y\geqslant 1</span>, <span class="math inline">x\geqslant\varepsilon</span>, and <span class="math inline">r\geqslant ae</span>, <span class="math display">
+  \left\vert
+    a^{2z} \frac{\Gamma(-z)}{\Gamma(z)}
+  \right\vert \leqslant a^{2x}Cr^{-2x}e^{-(\pi-2\varphi)y+2x}
+  \leqslant C\left(
+    \frac{ae}{r}
+  \right)^{2\varepsilon}.
+\tag{20}
+</span> In the part of the half-plane where <span class="math inline">x\geqslant\varepsilon</span>, where <span class="math inline">y\geqslant 1</span>, claim (II) follows directly from Equations (17), (18), and (20); it also follows, by symmetry, in the part where <span class="math inline">y\leqslant-1</span>. Then the only remaining part is the half-strip <span class="math display">
+  x\geqslant\varepsilon,
+  \quad -1\leqslant y\leqslant 1.
+</span> By the already-proven part of claim (II), Equation (18) tends to zero as <span class="math inline">z\to\infty</span>. Since Equation (18) is entire and of finite order, by well-known general theorems<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, it must tend uniformly to zero in the entire half-strip as <span class="math inline">z\to\infty</span>; this completes the proof of claim (II).</p>
+<p>Of course, instead of using general theorems, Equation (18) could also be used on suitable curves intersecting the half-strip, e.g. to estimate on the straight lines <span class="math inline">x=k+\frac12</span>, for <span class="math inline">k=0,1,2,3,\ldots</span>. In the case where <span class="math inline">k=0</span>, we investigate such an estimation for a different purpose, c.f. Equation (22).</p>
+</section>
+<section id="III" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="III">III</h2>
+<p><em>If <span class="math inline">a\leqslant\frac14</span>, then there are no zeros of <span class="math inline">{\mathfrak{G}}(z;a)</span> outside of the strip <span class="math inline">-\frac12&lt;x&lt;\frac12</span>.</em></p>
+<p>Since <span class="math inline">{\mathfrak{G}}(z)</span> is even, it suffices to consider the half-plane <span class="math inline">x\geqslant\frac12</span>. On the straight line <span class="math inline">x=\frac12</span>, <span class="math display">
+  z+\overline{z} = 1,
+  \quad \overline{z} = 1-z
+</span> and so, by the symmetry of the values with respect to the real axis, <span class="math display">
+  |\Gamma(1-z)| = |\Gamma(z)|,
+</span> whence <span class="math display">
+  \left\vert
+    \frac{\Gamma(-z)}{\Gamma(z)}
+  \right\vert = \left\vert
+    \frac{\Gamma(1-z)}{-z\Gamma(z)}
+  \right\vert = \frac{1}{|z|} \leqslant 2
+  \qquad\left(
+    x=\frac12
+  \right).
+\tag{21}
+</span> Using Equation (21), it follows from Equation (11) that, on the straight line <span class="math inline">x=\frac12</span>, <span class="math display">
+  \begin{aligned}
+    |\psi(z)|
+    &amp;= \left\vert
+      \frac{a^z{\mathfrak{G}}(z)}{\Gamma(z)} - 1
+    \right\vert
+  \\&amp;= \left\vert
+      \sum_{n=1}^\infty \frac{a^{2n}}{n!(1-z)\ldots(n-z)}
+      + \frac{a^{2z}\Gamma(-z)}{\Gamma(z)} \left(
+        1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!(1+z)\ldots(n+z)}
+      \right)
+    \right\vert
+  \\&amp;\leqslant\sum_{n=1}^\infty \frac{a^{2n}}{n!\frac12\cdot\frac32\cdot\ldots\cdot\frac{2n-1}{2}} + a\cdot2 \left(
+    1 + \sum_{n=1}^\infty \frac{a^{2n}}{n!\frac32\cdot\frac52\cdot\ldots\cdot\frac{2n+1}{2}}
+  \right)
+  \\&amp;= \sum_{n=1}^\infty \frac{(2a)^{2n}}{(2n)!} + \sum_{n=0}^\infty \frac{(2a)^{2n+1}}{(2n+1)!}
+  \\&amp;= e^{2a}-1.
+  \end{aligned}
+\tag{22}
+</span> It then follows from Equation (22) that <span class="math display">
+  |\psi(z)| = |\psi(z;a)| &lt; 1
+  \qquad\text{for }x=\frac12\text{ and }a\leqslant\frac14.
+\tag{23}
+</span> It follows from claim (II) that there exists some number <span class="math inline">R</span> such that <span class="math display">
+  |\psi(z)| = |\psi(z;a)| &lt;1
+  \qquad\text{for }x\geqslant\frac12\text{, }r\geqslant R\text{, and }a\leqslant\frac14.
+\tag{24}
+</span> Furthermore, <span class="math inline">|\psi(z)|&lt;1</span> is also satisfied in the circle segment <span class="math inline">\{x\geqslant\frac12,r\leqslant R\}</span>, since the inequality in question, by Equations (23) and (24), is satisfied on the boundary of the circle segment. Thus <span class="math inline">|\psi(z)|&lt;1</span> is satisfied in the whole half-plane <span class="math inline">x\geqslant\frac12</span>; thus <span class="math inline">{\mathfrak{G}}(z)</span>, cf. Equation (18), does not disappear in this half-plane.</p>
+<p>For what follows, it is useful to have in mind a certain partition of the plane (cf. the above figure): the strip <span class="math inline">-1\leqslant x\leqslant 1</span> is denoted by <span class="math inline">{\mathscr{S}}</span>; the part of the plane where both <span class="math inline">r\leqslant R</span> and <span class="math inline">|x|&gt;1</span> is denoted by <span class="math inline">{\mathscr{T}}</span>; the remaining part, which extends to infinity, is denoted by <span class="math inline">{\mathscr{U}}</span>. We pick the number <span class="math inline">R=R(A)</span> depending on a certain positive number <span class="math inline">A</span> such that, inside, and on the boundary of, <span class="math inline">{\mathscr{U}}</span>, the inequality <span class="math inline">|\psi(z)|&lt;1</span> is satisfied for <span class="math inline">a\leqslant A</span>. From Equation (18) it follows that <span class="math inline">{\mathfrak{G}}(z)</span> does not vanish inside, or on the boundary of, <span class="math inline">{\mathscr{U}}</span>.</p>
+</section>
+</section>
+<section id="section-3" class="level1 unnumbered">
+<h1 class="unnumbered">3</h1>
+<p>We will now study consequences of the difference equation in (9), and link them to those that we have just obtained from the representation in Equation (11).</p>
+<section id="IV" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="IV">IV</h2>
+<p><em><span class="math inline">{\mathfrak{G}}(z)</span> has no zeros on the straight lines <span class="math inline">x=1</span> or <span class="math inline">x=-1</span>, i.e. on the boundary of <span class="math inline">{\mathscr{S}}</span>.</em></p>
+<p>There are two things that we have to consider: firstly, the difference equation and the symmetry of <span class="math inline">{\mathfrak{G}}(z)</span>; secondly, the asymptotic properties of <span class="math inline">{\mathfrak{G}}(z)</span>.</p>
+<p>Firstly: the function <span class="math inline">{\mathfrak{G}}(z)</span> is even, and takes real values for all <span class="math inline">z</span>. From this it follows that, if <span class="math inline">y</span> is real, then <span class="math inline">{\mathfrak{G}}(iy)</span> is real, and the two values <span class="math inline">{\mathfrak{G}}(1+iy)</span> and <span class="math inline">{\mathfrak{G}}(-1+iy)</span> are complex conjugate. So Equation (9) implies, for <span class="math inline">z=iy</span>, that <span class="math display">
+  y{\mathfrak{G}}(iy) = 2a\Im{\mathfrak{G}}(1+iy).
+\tag{25}
+</span></p>
+<p>Secondly: it is not possible for <span class="math inline">{\mathfrak{G}}(z)</span> to vanish at two points simultaneously if the line connecting them is parallel to the real axis and is of length <span class="math inline">1</span>. This is since, if <span class="math inline">{\mathfrak{G}}(c)=0</span> and <span class="math inline">{\mathfrak{G}}(c-1)=0</span>, then Equation (9) would imply that <span class="math inline">{\mathfrak{G}}(c+1)=0</span> as well, and thus that <span class="math inline">{\mathfrak{G}}(c+2)=0</span>, <span class="math inline">{\mathfrak{G}}(c+3)=0</span>, <span class="math inline">\ldots</span>, and so <span class="math inline">{\mathfrak{G}}(z)</span> would have zeros in the region <span class="math inline">{\mathscr{U}}</span> (see the figure); but this would be a contradiction.</p>
+<p>For real <span class="math inline">z</span>, <span class="math inline">{\mathfrak{G}}(z)</span> is positive (cf. Equation (7)). On one hand, <span class="math inline">{\mathfrak{G}}(1+iy)=0</span> implies that <span class="math inline">y\neq0</span>, and, on the other hand, <span class="math inline">{\mathfrak{G}}(1+iy)=0</span> implies that <span class="math inline">\Im{\mathfrak{G}}(1+iy)=0</span>, and thus Equation (25) implies that <span class="math inline">{\mathfrak{G}}(iy)=0</span>. However, the simultaneous vanishing of <span class="math inline">{\mathfrak{G}}(1+iy)</span> and <span class="math inline">{\mathfrak{G}}(iy)</span> is impossible, and thus <span class="math inline">{\mathfrak{G}}(1+iy)\neq0</span>.</p>
+</section>
+<section id="V" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="V">V</h2>
+<p><em>There are no zeros of <span class="math inline">{\mathfrak{G}}(z)</span> outside of the strip <span class="math inline">{\mathscr{S}}</span>.</em></p>
+<p>This has already been proven for <span class="math inline">a\leqslant\frac14</span>, cf. <a href="#III">(III)</a>. Let <span class="math display">
+  \frac14 \leqslant a \leqslant A.
+\tag{26}
+</span> As we have already established, there are no zeros of <span class="math inline">{\mathfrak{G}}(z)</span> in the region <span class="math inline">{\mathscr{U}}</span> nor on its boundary. If we take <a href="#IV">(IV)</a> into account as well, we see that there are no zeros of <span class="math inline">{\mathfrak{G}}(z)</span> on the boundary of <span class="math inline">{\mathscr{T}}</span> either. If <span class="math inline">z</span> varies along the boundary of <span class="math inline">{\mathscr{T}}</span>, and <span class="math inline">a</span> in the closed interval Equation (26), then <span class="math inline">{\mathfrak{G}}(z;a)</span> is a continuous non-zero function of <span class="math inline">z</span> and <span class="math inline">a</span>. Thus the integral <span class="math display">
+  \frac{1}{2\pi i} \int \frac{{\mathfrak{G}}&#39;(z;a)\operatorname{d}\!z}{{\mathfrak{G}}(z;a)}
+\tag{27}
+</span> (along the boundary of <span class="math inline">{\mathscr{T}}</span> in the positive direction) is a continuous function of <span class="math inline">a</span>. The integral Equation (27) calculates an integer, namely the number of zeros of <span class="math inline">{\mathfrak{G}}(z;a)</span> that lie inside <span class="math inline">{\mathscr{T}}</span>. A continuous function that takes only integer values is constant. Thus the integral is always equal to <span class="math inline">0</span>, since it is equal to zero for <span class="math inline">a=\frac14</span>, cf. <a href="#III">(III)</a>.</p>
+</section>
+<section id="VI" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="VI">VI</h2>
+<p><em>All the zeros of <span class="math inline">{\mathfrak{G}}(z)</span> lying inside the strip <span class="math inline">{\mathscr{S}}</span> are simple and purely imaginary.</em> </p>
+<p>It follows from Equation (17) and from Stirling’s formula that, in the strip <span class="math inline">1\leqslant x\leqslant 1</span>, for <span class="math inline">y\to+\infty</span>, <span class="math display">
+  {\mathfrak{G}}(x+iy)
+  =
+  \frac{1}{\sqrt{2\pi y}} e^{-\frac\pi2 y+ i\frac\pi2 x}
+  \left\{
+    \left(\frac{y}{a}\right)^x e^{i\Phi} +
+    \left(\frac{y}{a}\right)^{-x} e^{-i\Phi}
+  \right\} + {\mathcal{O}}\left(
+    e^{-\frac\pi2 y} y^{|z| - \frac32}
+  \right)
+\tag{28}
+</span> uniformly in <span class="math inline">x</span>, where, for abbreviation, we set <span class="math display">
+  \Phi = y\log\frac{y}{a} - y - \frac\pi4.
+\tag{29}
+</span> A weakened form of <a href="#VI">claim (VI)</a>, in which we replace “<em>all</em> the zeros” with “<em>all but finitely many</em> zeros”, can be proved using only Equations (28) and (29); a proof of the full result needs more.</p>
+<p>Consider the branch of <span class="math inline">\log{\mathfrak{G}}(z)</span> that is real for <span class="math inline">z=1</span>; by <a href="#IV">(IV)</a>, it can be extended indefinitely along the straight line <span class="math inline">x=1</span>. Consider <span class="math inline">\Im\log{\mathfrak{G}}(1+iy)</span> as <span class="math inline">y</span> goes from <span class="math inline">0</span> to <span class="math inline">+\infty</span>, and denote the <em>smallest</em> positive value of <span class="math inline">y</span> for which <span class="math display">
+  \Im\log{\mathfrak{G}}(1+iy) = (2n+1)\frac\pi2
+</span> does <em>not</em> hold by <span class="math inline">y_n</span> (<span class="math inline">n=0,1,2,3,\ldots</span>). In the curly brackets on the right-hand side of Equation (28), the <span class="math inline">a^{-x}y^xe^{i\Phi}</span> term dominates when <span class="math inline">x=1</span>; by Equation (29), we can exclude the possibility that <span class="math display">
+  \Im\log{\mathfrak{G}}(1+iy) \to +\infty
+  \qquad\text{as }y\to\infty.
+</span> Thus the <span class="math inline">y_n</span> exist for <span class="math inline">n=0,1,2,3,\ldots</span>.</p>
+<p>Denote by <span class="math inline">R_n</span> the rectangle whose four corners are <span class="math display">
+  1+iy_n, \;\; -1+iy_n, \;\; -1-iy_n, \;\; 1-iy_n.
+</span> By <a href="#IV">(IV)</a>, there are no zeros of <span class="math inline">{\mathfrak{G}}(z)</span> on the vertical sides of <span class="math inline">R_n</span>; we will soon show that, for sufficiently large <span class="math inline">n</span>, there are also none on the horizontal sides. Let</p>
+<ul>
+<li><span class="math inline">H_n</span> denote the change in <span class="math inline">\Im\log{\mathfrak{G}}(z)</span> when <span class="math inline">z</span> moves in a straight line from <span class="math inline">1+iy_n</span> to <span class="math inline">-1+iy_n</span>;</li>
+<li><span class="math inline">N_n</span> denote the number of <em>purely imaginary</em> zeros of <span class="math inline">{\mathfrak{G}}(z)</span> lying inside <span class="math inline">R_n</span>, counted <em>without</em> multiplicity;</li>
+<li><span class="math inline">N_n+N_n^*</span> denote the number of <em>all</em> zeros of <span class="math inline">{\mathfrak{G}}(z)</span> lying inside <span class="math inline">R_n</span>, counted <em>with</em> multiplicity.</li>
+</ul>
+<p>So <span class="math inline">N_n^*</span> includes the number of any not purely imaginary zeros of <span class="math inline">{\mathfrak{G}}(z)</span> inside <span class="math inline">R_n</span>. Furthermore, every purely imaginary zero inside <span class="math inline">R_n</span> of multiplicity <span class="math inline">m</span> contributes <span class="math inline">m-1</span> to <span class="math inline">N_n^*</span>. Both <span class="math inline">N_n</span> and <span class="math inline">N_n^*</span> are non-decreasing as <span class="math inline">n</span> increases.</p>
+<p>The total change of <span class="math inline">\Im\log{\mathfrak{G}}(z)</span> as <span class="math inline">z</span> traces out the boundary of the rectangle <span class="math inline">R_n</span> one time in the positive direction is <span class="math display">
+  2\pi(N_n + N_n^*) = 2H_n + (2n+1)2\pi
+\tag{30}
+</span> as follows from the definitions of <span class="math inline">y_n</span> and <span class="math inline">H_n</span> and from symmetry.</p>
+<p>By definition, <span class="math inline">\Im\log{\mathfrak{G}}(1+iy)</span> takes the value <span class="math inline">(v-1/2)\pi</span> for <span class="math inline">y=y_{v-1}</span>, and the value <span class="math inline">(v+1/2)\pi</span> for <span class="math inline">y=y_v</span>; there thus exists at least one <span class="math inline">\eta</span> with <span class="math inline">y_{v-1}&lt;\eta&lt;y_v</span> such that <span class="math display">
+  \Im\log{\mathfrak{G}}(1+i\eta) = v\pi.
+</span> From this it follows that <span class="math display">
+  \Im{\mathfrak{G}}(1+i\eta) = 0
+</span> and, by Equation (25), that <span class="math display">
+  {\mathfrak{G}}(i\eta) = 0.
+</span></p>
+<p>Then <span class="math inline">-i\eta</span>, along with <span class="math inline">i\eta</span>, is also a zero of <span class="math inline">{\mathfrak{G}}(z)</span>, and so, for <span class="math inline">v=1,2,3,\ldots</span> and <span class="math inline">n</span> fixed, we have proven the existence of at least <span class="math inline">2n</span> purely imaginary zeros in the rectangle <span class="math inline">R_n</span>; i.e. we have <span class="math display">
+  N_n \geqslant 2n.
+\tag{31}
+</span> So Equations (30) and (31) give <span class="math display">
+  2\pi N_n^* \leqslant 2H_n + 2\pi.
+\tag{32}
+</span> Denote by <span class="math inline">\Phi_n</span> the value of Equation (29) at <span class="math inline">y=y_n</span>. Since, as mentioned above, the first term in the curly brackets of Equation (28) dominates when <span class="math inline">x=1</span>, we have that <span class="math display">
+  \Im\log{\mathfrak{G}}(1+iy_n)
+  = (2n+1)\frac\pi2
+  \equiv \Phi_n + \frac\pi2 + \varepsilon_n \mod2\pi,
+</span> where <span class="math display">
+  \lim_{n\to\infty}\varepsilon_n = 0.
+</span> Since <span class="math inline">\Phi_n=n\pi-\varepsilon_n</span>, for <span class="math inline">y=y_n</span> with <span class="math inline">n</span> large enough, the value of <span class="math inline">e^{i\Phi_n}</span> is almost <span class="math inline">(-1)^n</span>, and the term in the curly brackets in Equation (28) is almost real. Two things follow from this:</p>
+<ol type="1">
+<li>For <span class="math inline">y=y_n</span> in Equation (28), the leading term in Equation (28) dominates over the error term <span class="math inline">{\mathcal{O}}</span> in all of the segment <span class="math inline">-1\leqslant x\leqslant 1</span>, and so <span class="math inline">{\mathfrak{G}}(z)</span> has no zeros on the horizontal sides of <span class="math inline">R_n</span>, as we had previously claimed.</li>
+<li>Moving along an arc in this segment, the <span class="math inline">e^{i\pi x/2}</span> factor dominates in <span class="math inline">{\mathfrak{G}}(z)</span>, or, more precisely, for arbitrary <span class="math inline">\varepsilon</span> we have <span class="math display">
+   H_n &lt; -\pi + \varepsilon
+\tag{33}
+</span> for <span class="math inline">n</span> sufficiently large. Then Equations (32) and (33) give <span class="math display">
+   2\pi N_n^* &lt; 2\varepsilon.
+</span></li>
+</ol>
+<p>Thus <span class="math inline">N_n^*</span> is a non-negative integer, and equal to <span class="math inline">0</span> for sufficiently large <span class="math inline">n</span>, and thus always equal to <span class="math inline">0</span>, since <span class="math inline">N_n^*</span> is non-decreasing for increasing <span class="math inline">n</span>; so we have proven <a href="#VI">(VI)</a>.</p>
+<p>Now, <a href="#IV">(IV)</a>, <a href="#V">(V)</a>, and <a href="#VI">(VI)</a> form a complete partition of the plane, and show that <em>all the zeros of <span class="math inline">{\mathfrak{G}}(z)</span> are purely imaginary and simple</em>. The above observation also shows that the number of zeros with ordinate between <span class="math inline">0</span> and <span class="math inline">y</span> is <span class="math display">
+  \frac{y}{\pi}\log\frac{y}{a} - \frac{y}{\pi} + {\mathcal{O}}(1).
+</span></p>
+</section>
+</section>
+<section id="section-4" class="level1 unnumbered">
+<h1 class="unnumbered">4</h1>
+<p>In order to be able to prove all of the claims in the introduction, we will need two simple, general lemmas.</p>
+<div id="lemma-i" class="itenv" title="Lemma I">
+<p>Let <span class="math inline">F(u)</span> be analytic, and taking real values for any non-negative real <span class="math inline">u</span>. Further, let <span class="math display">
+  \lim_{u\to\infty} u^2 F^{(n)}(u) = 0
+\tag{34}
+</span> for <span class="math inline">n=0,1,2,\ldots</span> (with <span class="math inline">F^{(0)}(u)=F(u)</span>). If <span class="math inline">F(u)</span> is not an even function, then the function <span class="math display">
+  G(x) = \int_0^\infty F(u)\cos xu \operatorname{d}\!u
+\tag{35}
+</span> is non-zero for sufficiently large real <span class="math inline">x</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>This proof consists of two steps.</p>
-<p><em>First step.</em> We start by stating some properties satisfied by a generic function <span class="math inline">f</span> in the Hardy space <span class="math inline">H^p(\mathbf{D})</span>, where <span class="math inline">\mathbf{D}=\{z\in\mathbb{C}:|z|&lt;1\}</span>, and <span class="math inline">p</span> is a positive real number. We denote by <span class="math inline">f^*</span> the function defined almost everywhere on the trigonometric circle <span class="math inline">\partial\mathbf{D}=\{z\in\mathbb{C}:|z|=1\}</span> by <span class="math inline">f^*(e^{i\theta})=\lim_{r\to1^-}f(re^{i\theta})</span>. We use the letter <span class="math inline">z</span> to denote an element of the trigonometric disc <span class="math inline">\mathbf{D}</span>, and write <span class="math display">
-  s = s(z) = \frac12+\frac{1+z}{2(1-z)} = \frac{1}{1-z}.
-</span> This formula defines a conformal representation of the disc <span class="math inline">\mathbf{D}</span> in the semi-plane <span class="math inline">\Re(s)&gt;1/2</span>.</p>
-<p>By Jensen’s formula (see, for example, <span class="citation" data-cites="4">[<a href="#ref-4" role="doc-biblioref">4</a>, Theorem 3.61]</span>), we have, for <span class="math inline">f(0)\neq0</span> and <span class="math inline">r&lt;1</span>, <span class="math display">
-  \frac{1}{2\pi}\int_{-\pi}^\pi \log|f(re^{i\theta})|\operatorname{d}\!\theta
-  = \log|f(0)| + \sum_{\substack{|\alpha|&lt;r\\f(\alpha)=0}} \log\frac{r}{|a|}
-\tag{2}
-</span> where, in the sum, the zeros of multiplicity <span class="math inline">m</span> are counted <span class="math inline">m</span> times. Denote by <span class="math display">
-  \exp\left\{
-    -\int_{-\pi}^\pi \frac{e^{i\theta}+z}{e^{i\theta}-z}\operatorname{d}\!\mu(\theta)
-  \right\}
-</span> the singular interior factor of <span class="math inline">f</span>. As <span class="math inline">r</span> tends to <span class="math inline">1</span>, Equation (2) becomes (cf. <span class="citation" data-cites="2">[<a href="#ref-2" role="doc-biblioref">2</a>]</span>) <span class="math display">
-  \frac{1}{2\pi}\int_{-\pi}^\pi \log|f(re^{i\theta})|\operatorname{d}\!\theta
-  = \log|f(0)| + \sum_{\substack{|\alpha|&lt;1\\f(\alpha)=0}} \log\frac{1}{|a|} + \int_{-\pi}^\pi\operatorname{d}\!\mu(\theta).
-\tag{3}
-</span> This formula is a consequence of the factorisation theorem for functions in <span class="math inline">H^p</span>; it is stated in <span class="citation" data-cites="2">[<a href="#ref-2" role="doc-biblioref">2</a>]</span> for <span class="math inline">p=1</span>, but also holds for all positive values of <span class="math inline">p</span>.</p>
-<p><em>Second step.</em> Now consider the function <span class="math display">
-  f(z) = (s-1)\zeta(s)
-</span> (where <span class="math inline">s=1/(1-z)</span>). The elementary properties of the Riemann <span class="math inline">\zeta</span> function (see, for example, <span class="citation" data-cites="5">[<a href="#ref-5" role="doc-biblioref">5</a>]</span>) allow us to show that, on one hand, <span class="math inline">f</span> belongs to the Hardy space <span class="math inline">H^{1/3}(\mathbf{D})</span>, and, on the other hand, that the measure <span class="math inline">\mu</span> associated to the singular interior factor of <span class="math inline">f</span> is zero (for this latter point, it suffices to reuse the argument developed by Bercovici and Foias for the interior factor of the functions <span class="math inline">(\theta-\theta^s)\zeta(s)(s+1/2)/s</span>, found in the proof of <span class="citation" data-cites="1">[<a href="#ref-1" role="doc-biblioref">1</a>, Proposition 2.1]</span>). We can equally show that <span class="math display">
-  \begin{aligned}
-    \int_{-\pi}^\pi \log|f^*(e^{i\theta})|\operatorname{d}\!\theta
-    &amp;= \int_{\Re(s)=1/2} \frac{\log|\zeta(s)|}{|s|^2}|\operatorname{d}\!s|,
-  \\\log|f(0)|
-    &amp;= 0,
-  \\\sum_{\substack{|\alpha|&lt;1\\f(\alpha)=0}} \log\frac{1}{|\alpha|}
-    &amp;= \sum_{\Re\rho&gt;1/2} \log\left|\frac{\rho}{1-\rho}\right|.
-  \end{aligned}
-</span> With all this information, our result follows from Equation (3).</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">F(u)</span> is not even, there exists some integer <span class="math inline">q</span> such that <span class="math display">
+  F&#39;(0) = F&#39;&#39;&#39;(0) = \ldots = F^{(2q-3)}(0) = 0,
+  \qquad F^{(2q-1)}(0) \neq 0.
+</span> Taking Equation (34) into account, we obtain, by repeated partial integration, <span class="math display">
+  G(x) = (-1)^q \frac{F^{(2q-1)}(0)}{x^{2q}} + \frac{{(-1)^{q+1}}}{x^{2q+1}} \int_0^\infty F^{(2q+1)}(u)\sin xu \operatorname{d}\!u.
+</span> From this it follows, again using Equation (34), that <span class="math display">
+  \lim_{x\to\infty} x^{2q}G(x) = (-1)^q F^{(2q-1)}(0) \neq 0,
+</span> whence our claim.</p>
 </div>
-<p>We finish with some remarks. There are statements related to ours in the works <span class="citation" data-cites="7 6">[<a href="#ref-6" role="doc-biblioref">6</a>,<a href="#ref-7" role="doc-biblioref">7</a>]</span> of Wang and Volchkov. It is even possible that Jensen himself was aware of Equation (1) (the reader can consult the article <span class="citation" data-cites="3">[<a href="#ref-3" role="doc-biblioref">3</a>]</span> where Jensen informs Mittag–Leffler of his discovery of Equation (2)). It seem interesting, however, to present things as we have done here, and this is for the following three reasons:</p>
-<ol type="a">
-<li>Equation (1) is simpler than those that appear in <span class="citation" data-cites="7 6">[<a href="#ref-6" role="doc-biblioref">6</a>,<a href="#ref-7" role="doc-biblioref">7</a>]</span>;</li>
-<li>we show here that, to establish Equation (1), it is natural to place ourselves in the framework of Hardy spaces;</li>
-<li>the form of the integral in Equation (1) allows us to interpret this result via Brownian motion, as we show below.</li>
+<p>If we take <span class="math inline">F(u)</span> to be the right-hand side of Equation (4), or, more generally, take <span class="math inline">F(u)</span> in Equation (35) to be the sum of finitely many terms of the series in Equation (3), then we obtain an entire function <span class="math inline">G(x)</span> which, by the theory of Hadamard, can easily be proven to have infinitely many zeros. Of these zeros, by <a href="#lemma-i">Lemma I</a>, only finitely many are real, since the function <span class="math inline">F(u)</span> is clearly not even. The function <span class="math inline">\Phi(u)</span> in the integral representation Equation (2) of the <span class="math inline">\xi</span>-function must, by <a href="#lemma-i">Lemma I</a>, be even (which could also be shown directly).</p>
+<div id="lemma-ii" class="itenv" title="Lemma II">
+<p>Let <span class="math inline">a</span> be a positive constant, and <span class="math inline">G(z)</span> an entire function of genus <span class="math inline">0</span> or <span class="math inline">1</span>, that takes real values for real <span class="math inline">z</span>, with no complex zeros and at least one real zero. Then the function <span class="math display">
+  G(z-ia) + G(z+ia)
+\tag{36}
+</span> has only real zeros.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The hypotheses on <span class="math inline">G(z)</span> imply that <span class="math display">
+  G(z) = c z^q e^{\alpha z} \prod\left(1-\frac{z}{\alpha_n}\right)e^{z/\alpha_n},
+</span> where <span class="math inline">c,\alpha,\alpha_1,\alpha_2,\ldots</span> are real constants, with <span class="math inline">\alpha_n\neq0</span> for <span class="math inline">n=1,2,\ldots</span> such that <span class="math inline">\alpha_1^{-2}+\alpha_2^{-2}+\ldots</span> converges, and where <span class="math inline">q</span> is a non-negative integer. (If <span class="math inline">G(z)</span> has no zeros, i.e. when <span class="math inline">G(z)</span> reduces to <span class="math inline">ce^{\alpha z}</span>, then Equation (36) can be identically zero.) Let <span class="math inline">z=x+iy</span> be a zero of the function Equation (36), so that <span class="math display">
+  |G(z-ia)| = |G(z+ia)|
+</span> and thus <span class="math display">
+  1
+  =
+  \left\vert
+    \frac{G(z-ia)}{G(z+ia)}
+  \right\vert^2
+  =
+  \left(
+    \frac{x^2+(y-a)^2}{x^2+(y+a)^2}
+  \right)^q
+  \prod \frac{(x-\alpha_n)^2+(y-a)^2}{(x-\alpha_n)^2+(y+a)^2}.
+</span> If <span class="math inline">y&gt;0</span> then all the factors of the right-hand side are <span class="math inline">&lt;1</span>, and if <span class="math inline">y&lt;0</span> then all the factors of the right-hand side are <span class="math inline">&gt;1</span>. Thus, for there to be at least one factor, it must be the case that <span class="math inline">y=0</span>.</p>
+</div>
+<p>The fact that <span class="math inline">{\mathfrak{G}}(\frac12 iz)</span> has only real zeros has already been proven. That <span class="math inline">{\mathfrak{G}}(\frac12 iz)</span> also satisfies the genus hypothesis of <a href="#lemma-ii">Lemma II</a> follows easily from the theory of Hadamard. If we apply <a href="#lemma-ii">Lemma II</a> to <span class="math inline">G(z)={\mathfrak{G}}(\frac12 iz;\pi)</span> and <span class="math inline">a=9/2</span>, then, by Equation (8), we obtain that all the zeros of <span class="math inline">\xi^*(z)</span> are real.</p>
+<p>By Equations (8), (17), and (19), we also see that, in the half-plane <span class="math inline">y\geqslant\varepsilon</span> (for fixed <span class="math inline">\varepsilon&gt;0</span>), as <span class="math inline">z\to\infty</span>, <span class="math display">
+  \xi^*(iz) \sim \frac12 z^2 \pi^{-\frac{z}{2}-\frac14} \Gamma\left(\frac{z}{2}+\frac14\right).
+</span> This formula should be compared with Equation (1).<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>B. Riemann, Werke (1876), S. 138.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This was casually mentioned by Prof. Landau in a conversation in 1913.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>See G. Pólya and G. Szegö, Aufgaben und Lehrsätze aus der Analysis (Berlin 1925), Bd. 1, Aufgaben III 333, III 339.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>The corresponding result for polynomials is a special case of a theorem of Ch. Biehler. See e.g. G. Pólya and G. Szegö, op. cit., Aufgabe III 25.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p><em>Note added during editing (5th February, 1926).</em> By suitably extending <a href="#lemma-ii">Lemma II</a>, we can prove that the function <span class="math display">\xi^{**}(z) = 4\pi\int_0^\infty\left[2\pi\left(e^{\frac{9u}{2}} + e^{-\frac{9u}{2}}\right)-3\left(e^{\frac{5u}{2}} + e^{-\frac{5u}{2}}\right)\right]e^{-\pi(e^{2u}+e^{-2u})} \cos zu \operatorname{d}\!u,</span>which “better” approximates the true <span class="math inline">\xi</span>-function, also has only real zeros.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-<p>Denote by <span class="math inline">Z=X+iY</span> the planar Brownian motion from <span class="math inline">0</span> (or from <span class="math inline">1</span>), and by <span class="math inline">Z_{T_{1/2}}=\frac12+iY_{T_{1/2}}</span> its first point of impact on the critical line <span class="math inline">\Re s=1/2</span>, where <span class="math inline">T_{1/2}:=\inf\{t:X_t=1/2\}</span>. We know that <span class="math inline">Y_{T_{1/2}}</span> follows a Cauchy law with parameter <span class="math inline">1/2</span>. In other words, the law of <span class="math inline">Y_{T_{1/2}}</span> has density <span class="math inline">1/2\pi(1/4+t^2)</span>. Thus the second part of the theorem can be stated in the following manner: the Riemann hypothesis is true if and only if <span class="math display">
-  \mathbb{E}[\log\vert\zeta(Z_{T_{1/2}})] = 0.
-</span></p>
-<section id="thanks" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="thanks">Thanks</h2>
-<p>We thank Luis Báez-Duarte, Michel Delasneri, Catherine Donati, Laurent Habsieger, Aleksandar Ivić, and Alain Plagne for useful conversations.</p>
-</section>
-</section>
-<section id="bibliography" class="level1 unnumbered">
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliography</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-1" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">H. Bercovici, C. Foias. <span>“A real variable restatement of riemann’s hypothesis.”</span> <em>Israel J. Math</em>. <strong>48</strong> (1984), 57–68.</div>
-</div>
-<div id="ref-2" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">K. Hoffman. <em>Banach spaces of analytic functions</em>. Dover, New York, 1988.</div>
-</div>
-<div id="ref-3" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">J.L.W.V. Jensen. <span>“Sur un nouvel et important théorème de la théorie des fonctions.”</span> <em>Acta Math.</em> <strong>22</strong> (1898), 359–364.</div>
-</div>
-<div id="ref-4" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[4] </div><div class="csl-right-inline">E.C. Titchmarsh. <em><span>The</span> <span>Theory</span> of <span>Functions</span></em>. Oxford Science Publications, 1939.</div>
-</div>
-<div id="ref-5" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[5] </div><div class="csl-right-inline">E.C. Titchmarsh. <em>The <span>Theory</span> of the <span>Riemann</span> <span>Zeta</span>-<span>Function</span></em>. Clarendon, Oxford, 1986.</div>
-</div>
-<div id="ref-6" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[6] </div><div class="csl-right-inline">V.V. Volchkov. <span>“On an equality equivalent to the <span>Riemann</span> hypothesis.”</span> <em>Ukrainian Math. J.</em> <strong>47</strong> (1995), 491–493.</div>
-</div>
-<div id="ref-7" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[7] </div><div class="csl-right-inline">F.T. Wang. <span>“A note on the <span>Riemann</span> zeta-function.”</span> <em>Bull. Amer. Math. Soc.</em> <strong>52</strong> (1946), 319–321.</div>
-</div>
-</div></section></div></main>
+</section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
