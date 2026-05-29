@@ -1,3 +1,6 @@
+project:
+  output-dir: _output
+
 # Nice things to have
 repo-url: https://github.com/thosgood/translations
 favicon: "favicon.ico"
@@ -20,9 +23,9 @@ format:
     date-format: "YYYY"
     repo-url: https://github.com/thosgood/translations
     repo-actions: [source]
+    title-block-banner: true
   pdf:
-    keep-tex: true
-    template: _template.latex
+    template: _template.tex
     date-format: "YYYY"
     cite-method: biblatex
     biblatexoptions: [backend=biber]

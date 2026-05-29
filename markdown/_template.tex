@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[british]{article}
 
 \usepackage[margin=1.6in]{geometry}
 
@@ -6,73 +6,68 @@
 \author{$author$}
 \date{$date$}
 
+% Standard
 \usepackage{amssymb,amsmath,amscd}
-\usepackage{hyperref}
-\usepackage{xcolor}
-\hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
 \usepackage{enumerate}
 \usepackage{tikz-cd}
-\usepackage{booktabs}
 \usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{booktabs}
 
-% for pandoc tables
-\usepackage{calc,array}
-\usepackage{longtable}
-%
 
+%Bibliography
+\usepackage[backend=biber,maxnames=99,maxalphanames=4]{biblatex}
+\addbibresource{$bibliography$}
+
+
+% Colours
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={purple!50!black},citecolor={purple!50!black},urlcolor={purple!80!black}}
+
+
+% Fonts
 \usepackage{mathrsfs}
 \usepackage{fouriernc}
 
+
+% Things for Quarto/pandoc
+\definecolor{quarto-callout-color-frame}{HTML}{000000}
+\usepackage{calc,array}
+\usepackage{longtable}
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 
-%% Header and footer %%
-
+% Header and footer
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-\usepackage{xstring}
+\usepackage{datetime2}
 \pagestyle{fancy}
 \fancypagestyle{plain}{}
 \fancyhf{}
-\lhead{\footnotesize\nouppercase\leftmark}
+\renewcommand{\headrulewidth}{0pt}
 \cfoot{\small\thepage\ of \pageref*{LastPage}}
-% Git commit hash for server builds
-\newif\ifserver
-\serverfalse
-\lfoot{\footnotesize\ifserver{Git commit: \href{https://github.com/thosgood/translations/commit/GitCommitHashVariable}{GitCommitHashVariable}}\fi}
+\lfoot{\footnotesize Build date: \today}
 
 
-%% Theorem environments %%
-
+% Theorem environments
 \usepackage{amsthm}
-
 \newenvironment{itenv}[1]
   {\phantomsection\par\smallskip\noindent\textbf{#1.}\itshape}
   {\par\smallskip}
-
 \newenvironment{rmenv}[1]
   {\phantomsection\par\smallskip\noindent\textbf{#1.}\rmfamily}
   {\par\smallskip}
-
 \newenvironment{titenv}[1]
   {\phantomsection\par\noindent\textbf{#1.}\itshape}
   {\par}
-
 \newenvironment{trmenv}[1]
   {\phantomsection\par\noindent\textbf{#1.}\rmfamily}
   {\par}
 
 
-%% Shortcuts %%
-
+% Shortcuts
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$$\Big\vert$$ \textit{p.~#1}}}
-
-
-%% Bibliography %%
-
-\usepackage[backend=biber,maxnames=99,maxalphanames=4]{biblatex}
-\addbibresource{$bibliography$}
 
 
 %% Document %%
@@ -83,18 +78,15 @@
 \maketitle
 \thispagestyle{fancy}
 
-\renewcommand{\abstractname}{Translator's note}
-
 \setcounter{footnote}{0}
-
-% N.B. the TOC is now found in _translator-note.Rmd
-% \tableofcontents
 
 
 %% Content %%
 
 $body$
 
+
+% Bibliography
 \nocite{*}
 \printbibliography[heading=bibintoc,title=Bibliography]
 

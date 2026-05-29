@@ -1,31 +1,9 @@
-:::: {.abstract latex=""}
-```{r,echo=FALSE,results='asis'}
-if (knitr::is_html_output()) {
-  library(rmarkdown)
-  cat("#### Translator's note {.unlisted .unnumbered}")
-}
-```
+#### Translator's note {.unlisted .unnumbered}
 
-\noindent
-_This page is a translation into English of the following:_
+*This document is a translation into English of the following:*
 
-\medskip
+> {{<meta original>}}
 
-::: {.original-citation}
-```{r,echo=FALSE,results='asis'}
-library(rmarkdown)
-cat(metadata$original)
-```
-:::
+*The translator ([Tim Hosgood](https://thosgood.net)) takes full responsibility for any errors introduced in this document, and claims no rights to any of the mathematical content.*
 
-\medskip
-
-\noindent
-_The translator ([Tim Hosgood](https://thosgood.net)) takes full responsibility for any errors introduced, and claims no rights to any of the mathematical content herein._
-
-\medskip
-\noindent
-Version: [`GIT_COMMIT_HASH_VARIABLE`](https://github.com/thosgood/translations/commit/GIT_COMMIT_HASH_VARIABLE)
-
-\bigskip
-::::
+\tableofcontents
