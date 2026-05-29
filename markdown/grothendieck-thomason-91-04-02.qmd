@@ -1,0 +1,308 @@
+--- 
+title: "Alexander Grothendieck's letter to Thomason on Derivators"
+author: "A. Grothendieck"
+date: "02/04/1991"
+original: 'Grothendieck, A. "Lettre d’Alexander Grothendieck sur les Dérivateurs, 02.04.91". Edited by Matthias Künzer. [[PDF]](https://webusers.imj-prg.fr/~georges.maltsiniotis/groth/ps/lettreder.pdf)'
+bibliography: grothendieck-thomason-91-04-02.bib
+---
+
+{{< include _translator-note.qmd >}}
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\providecommand{\Cat}{\mathsf{Cat}}
+\providecommand{\CAT}{\mathsf{CAT}}
+\providecommand{\Set}{\mathsf{Set}}
+\providecommand{\Top}{\mathsf{Top}}
+\providecommand{\Topcat}{\mathsf{Topcat}}
+\providecommand{\Diag}{\mathsf{Diag}}
+\providecommand{\Mor}{\operatorname{Mor}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\DD}{\operatorname{D}}
+\providecommand{\HH}{\operatorname{H}}
+
+<!-- Content -->
+
+\oldpage{2}
+
+*Les Aumettes, 2nd of April 1991.*
+\medskip
+
+Dear Thomason,
+\medskip
+
+Thank you for your letter, and forgive me for having taken so much time to reply.
+One reason for this is that, since for the past maybe two months I have been busy thinking about something that started as a small diversion, which I thought I would be able to sort out in a few days (a familiar sentence...), and I delayed this letter week after week.
+This thought is not really about homotopical algebra per se, but more about the foundations of category theory, and I have done a lot more than what I need right now [@9, Chapter XVIII].
+But up until now, I have been convinced that a homotopical algebra (or, in a wider vision, a "topological algebra") such as I envisage cannot be developed with all the breadth that it has without the aforementioned categorical foundations.
+It concerns a theory of (large) categories that I have been calling "*accessible*", and accessible subsets of these, completely rewriting the provisional theory that I present in SGA 4, §I.9 [@2].
+I have woven a tapestry of nearly two hundred pages on this seemingly trivial theme, and it would please me to present to you the outlines, if that would be of interest to you.
+There are also some intriguing problems that remain, that I feel are difficult, maybe even deep, and that could maybe (who knows) inspire you, or somebody else interested in the foundations of the tool that is category theory.
+But all this seems to me part of the domain of the tool, and I would prefer, in this letter, to speak about more central things.
+The main ideas were, for the most part, born over 25 years ago, and I see the enduring seedlings of them in my solitary reflections from the years '56 and '57, when I first had the need of categories of "coefficients" that were less prohibitively large than the interminable complexes of chains or of cochains, and the idea (after long periods of perplexity) of constructing such categories via passing to a category of fractions (a notion that had to be invented by considering concrete elements) by "inverting" the quasi-isomorphisms.
+The principal conceptual work that remained to be done --- and that now seems to me as equally fascinating (as much as for its beauty as for its evident impact on the foundations of a cohomological algebra in the spirit of a theory of cohomological coefficients) as in the times of my first loves with cohomology --- was to clarify the intrinsic structure of these categories.
+The fact that this work, that I had confided to Verdier around 1960, and that was meant to be the subject of his thesis [@13], had still not yet been done, even in the case of ordinary and abelian derived categories, which nevertheless have ended up (by necessity) being used daily in both geometry and analysis, says a lot about the state of mentality in the mathematical community with regards to foundations.
+
+\oldpage{3}
+This mood of contempt for essential foundational work (and, more generally, for anything that does not follow the fashion of the moment), I mentioned in my last letter, and I also come back to it many times in the pages of *Récoltes et Semailles* [@8], and it is one thing (amongst many others) that quite is simply beyond me.
+Your response to my letter shows that you absolutely did not understand.
+It wasn't a letter to "complain" about this, or to say that it bothered me.
+But it was an impossible attempt to share a pain.
+I knew deep down that it was hopeless;
+for everybody shuns pain, that is, shuns knowledge (for there is no knowledge from the soul that is free from pain).
+A very rare attempt, possibly the only one in my life (at least, I can't remember another), and probably the last...
+
+There are two directions of ideas, intimately linked, that I want to talk to you about, and that I have been especially keen to develop since the end of October (when I resumed mathematical reflection [@9] for an indefinite period).
+They are already sketched out here and there (along with a number of other key ideas of topological algebra) in *Pursuing Stacks* [@6, Section 69].
+In this 1983 reflection, which has helped me a lot these days, I end up spreading myself rather thin by following lateral paths, rather than returning to the essential ideas of my initial point.
+As another useful source for anybody interested in these basic questions, I point to two or three letters to Larry Breen, which I thought that I would include in the published text of *Pursuing Stacks* [@7].
+On the one hand, I would like to talk to you about categories of models and the notion of "derivators" (replacing the defunct "derived categories" of Verdier, which are decidedly inadequate for our needs).
+On the other hand, I have a lot to say about $\Cat$ as a model category for all kinds of "homotopy types".
+But this will probably be for another time (assuming that your interest survives reading this letter).
+So today it will be the model category and the notion of a derivator.
+
+
+# The only essential structure of a model category is the data of the "localiser" $W\subset\Mor(\cal{M})$
+
+I also call a category $\cal{M}$ endowed with such a "localiser" (containing all isomorphisms, and containing the remaining arrow in the set $\{u,v,uv\}$ whenever it contains any two in that set) a "model category".
+The essential homotopical constructions are independent of all supplementary structures, such as a set $C$ of "cofibrations" or a set $F$ of "fibrations", or even both together.
+Such supplementary structures are useful insofar as they allow us to make essential constructions more explicit, as well as establishing their existence.
+But they are no more essential for the intrinsic meaning of the operations (which they have actually tended to obscure up until now) than the more of less arbitrary choice of a basis for a module in linear algebra.
+As terminology, I will speak of "categories with cofibrations" (or "with fibrations"), or of "Quillen categories" (or "Quillen triples"), etc. whenever such supplementary structures appear.
+
+By their richness of delicately intertwined structures, it is the *closed Quillen triples* $(W,C,F)$ that are, to me, the most beautiful structure discovered so far of the "enriched" model category.
+I had thought that I could do without them, but in the end I could not, and I believe that they will continue to be useful (if not absolutely essential).
+\oldpage{4}
+In the opposite direction, in terms of the economic use of means used to construct the essentials, it is the notion of a *category with cofibrations*, or *with fibrations*, by K.S. Brown [@3] (with the quite obvious generalisation given by Anderson [@1]) that appears the most beautiful to me.
+However, I did not manage to understand the justification for the system of axioms that you proposed to me in your first letter, which placed you somewhere halfway between Quillen [@10] and Brown [@3].
+Your axioms^[*[Editor] The letter from Thomason to Grothendieck on the 3rd of January, 1991 [@7]. See also [@14; @15].*] (seen as extending those of Quillen) seem to me to be prohibitively demanding, when compared to those of Brown--Anderson --- apart from the fact, only, that you do not seem to require for the sets $C$ and $F$ to be stable under composition; but I hardly know of an example where this axiom would cause a problem.
+Please enlighten me if there is something that I am missing.
+
+An example: if a structure of fibrations (in the sense of Brown--Anderson) satisfies the familiar condition of "properness" (which is the case for the structures considered first of all by Brown, where all the objects are fibrant over the final object), then we can replace this structure $(W,F)$ with another $(W,F_W)$ that is canonically associated with the localiser $W$, i.e. with the model category in question, by taking $F_W$ to be the set of arrows in $\cal{M}$ that are, what I call, *$W$-fibrations* $f\colon X\to Y$, i.e. those that are squarable and such that the change of base functor $Y'\mapsto X'=X\times_Y Y'$ from $\cal{M}/Y$ to $\cal{M}/X$ sends quasi-isomorphisms to quasi-isomorphisms.
+For every localiser, this gives a set of arrows that contains all isomorphisms, and that is stable under composition, change of base, and direct factors.
+Saying that $(W,F_W)$ is a Brown structure is equivalent to saying that there exist "enough $W$-fibrations", by which I mean that every arrow $u$ factors as $u=fi$, with $i\in W$ and $f\in F_W$.
+Dually, for categories with cofibrations $(W,C)$, we can (in the proper case) replace this with some structure $(W,C_W)$ canonically associated to the localiser, and by introducing the set of *$W$-cofibrations*.
+In this way, I tend to mostly think of a proper (and not "canonical") structure of fibrations $(W,F)$ as a recipe or criterion for characterising *certain* $W$-fibrations, with which it often suffices to work, since there are "enough"of them.
+And yet, I have found in the case of $\mathsf{Cat}$ that working with $W$-fibrations (which is much less restrictive than the Quillen "fibrations" that you introduced) has been essential.
+And I have been persuaded that it should also be very useful in a model category, such as $\Delta^\wedge$ (semi-simplicial sets), since, because everything is substantially less demanding than the notion of Kan fibrations, being a $W$-fibration already implies everything that I consider (whether right or wrong) as the essential cohomological and homotopical properties of Kan fibrations (which, to me, are *not* in the nature of extension-lifting properties of morphisms).
+This should allow us (by considering infinite "paths") to construct, in $\Delta^\wedge$, the analogue of the path spaces of Cartan--Serre, without having to replace the complex $K$ by a Kan envelop beforehand.
+This is what I have verified anyway in the case of $\mathsf{Cat}$ (without having to take a detour via $\Delta^\wedge$), which is a very close neighbour [@9, Chapter VII].
+This is part of what I wanted to talk to you about next.
+
+
+# Pre-derivators, derivators
+
+\oldpage{5}
+When I said that the essential homotopical structures are already contained in the localiser $W$, I was thinking most notably of the exact sequences of fibrations and of cofibrations, which is a decisive test.
+I remain astonished that Quillen does not even mention this subject in his brilliant (and beautiful) work [@10], and I presume that he succeeded (as many others did after him) in not seeing it.
+(To see it, he would have no doubt had to have not been blinded by the contempt *a priori* that he expresses for every research into foundations that went beyond what he had just done, with such success...)
+But the thing becomes evident in the derivators point of view.
+
+The main idea of derivators appeared to me during SGA 5 [@5], when it turned out (as discovered by Ferrand [@4], who was tasked with editing one of my exposés on traces in cohomology) that Verdier's notion of derived category did *not* lend itself to the formalism of traces: the trace is not additive for "exact triangles", since this notion of triangle (thought of as a diagram in the original category) is not fine enough.
+To make things work, one has to take the category of morphisms of complexes (for which we have a functorial construction of *mapping cones*), and passed to the derived category of this.
+This category maps to that Verdier's category of triangles by an essentially surjective functor, but which is not at all faithful, let alone fully faithful.
+This is the "*original sin*" in the first approach to derived categories attempted by Verdier [@12;@13] --- an approach which in any case, from lack of experience, we could not have done without.
+It was then that I was shocked by this fact, seemingly insignificant, that every time we construct a derived category of an abelian category with the help of a category of complexes, this derived category, in a sense, "never comes alone".
+Indeed, for every index category $I$ (and I was thinking mostly about the case where $I$ is finite), we have the abelian category $\cal{A}(I)$ of diagrams of type $I$ in $\cal{A}$, which also gives rise to a derived category, which we can denote by $\DD(I,\cal{A})$.
+The category of "true" triangles can be obtained by taking $I=\Delta^1$, and the derived categories of filtered complexes, introduced by Illusie to save the day at little cost, correspond to the case $I=\Delta^n$ (the simplex type of dimension $n$).
+The variances in Illusie's construction simply come from the fact that $\DD(I,\cal{A})$, for fixed $\cal{A}$, is contravariant in $I$, in a tautological way.
+The tempting idea then, and that I proposed in various places without it gaining much support, is that this structure of a functor, or, more precisely, of a *$2$-functor*
+$$
+  I \mapsto \DD(I,\cal{A})
+$$
+from the category $\Cat$, or from some sufficiently full category, such as that of finite categories or that of finite ordered sets, should suffice to give rise to all the essential structures of a "derived category" (still in limbo);
+even if, of course, one has to impose the necessary axioms (and that I ended clearing up last year) [@9, Chapter I].
+We recover the original derived category, "naked", by taking $I=e$ (the point category).
+But it would be improper, in full rigour, to consider the more complete structure (that I now call a "*derivator*") as a supplementary structure on this category --- which continues, however, in the formalism of derivators, to play an important role, under the name of "*base category*" of the derivator.
+\oldpage{6}
+The same idea had the appearance of working for the non-commutative variants of the notion of derived category, and the work of Quillen appeared to me as a strong incentive to develop this point of view.
+But it was only a few months ago that I permitted myself the leisure of verifying that my intuition was good and well justified.
+(Stewardship work, almost, as I have done hundreds and thousands of times!)
+
+With this point in mind, it is now very clear that the notion of derivator (even more than that of a model category, which is, in my eyes, a simple "non-intrinsic" intermediary to constructing derivators) is one of the four of five most fundamental notions in topological algebra, which for thirty years now has been waiting to be developed.
+As for notions of comparable scope, I can only think of that of *topos*, and those of *$n$-categories* and *$n$-stacks* on a topos (notions that still haven't been defined to this day, except for $n\leq2$).
+But for me, the "paradise lost" for topological algebra is by no means the eternal semi-simplicial category $\Delta^\wedge$, no matter how useful it might be, and even less so is it topological spaces (both of which live inside the $2$-category of toposes, which is like a common envelope), but instead the category $\Cat$ of small categories, thought of with a geometric eye by the set of intuitions, astonishingly rich, coming from toposes.
+Indeed, the toposes that have as sheaves of sets the $\cal{C}^\wedge$, with $\cal{C}$ in $\Cat$, are by far the simplest of the known toposes, and it is because I believe this that I stressed so much the examples of these ("categorical") toposes in SGA 4 IV [@2].
+
+I now come to the definition, as I understand it, of a "*prederivator*" $D$ --- it being understood that the more delicate notion of "derivator" is deduced from this by imposing some quite natural axioms, the list of which I will give to you if you ask me.
+To develop an algebra of derivators (and first of all, prederivators), we must first fix a common "*domain*" for those that we will consider, i.e. a full subcategory $\Diag$ of $\Cat$.
+The case which I prefer at the moment is that where $\Diag$ is all of $\Cat$, in which case I interpret a derivator as being a sort of "theory of coefficients" (homological or cohomological or homotopical, they are all the same) on $\Cat$, where this category is thought of as a category *of objects of a geometric and spatial nature*, like "spaces", strictly speaking, much more than of an algebraic nature;
+just as commutative rings (via their spectra) and the schemes that we construct with them are, for me, geometric-topological objects in essence, and by no means algebraic.
+(Algebra being only an intermediary to obtain the geometric vision, which is the fundamental one).
+A more or less diametrically opposite case is that where $\Diag$ is the category of finite ordered sets, or even, at a push, an even more restricted category.
+But to be fully comfortable, one has to suppose sooner or later that the category $\Diag$ ("category of indices" or "types of diagrams" for the derivators in question) is stable under the typical constructions on categories: finite products, subcategories, pushouts, even $\underline{\Hom}$;
+and also, of course, taking the opposite category, which happens particularly often when passing from a statement to its dual, in particular.
+When we only talk about prederivators, in the the cases that I know of we can take the domain to be all of $\Cat$.
+It is when we have to worry about satisfying the rather draconian axioms of derivators that we are forced to considerably restrict the domain, as I mentioned, or at least the arrows $u\colon X\to Y$ that we consider in $\Cat$, when we work with not only the corresponding inverse image functor $u^*$ but also with the direct images $u_!$ and $u_*$.
+But I am getting ahead of myself...
+
+On the subject of domain, I want to again add that, in my eyes, the domain $\Cat$ does not represent, in any way, the complete significance of a given derivator.
+This, and more generally a prederivator $D$, being defined as a $2$-functor between $2$-categories
+$$
+  D\colon\Diag^\circ\to\CAT
+$$
+(where $\CAT$ denotes the category of $\frak{U}$-categories contained ($\subset$) in the reference universe $\frak{U}$, always implicit, whilst $\Cat$ denotes the category of "small" categories, i.e. those that are elements of $\frak{U}$), it follows (in a not-at-all-tautological way) from the axioms of derivators (that I do not spell out here) that the category $D(X)$ (of "coefficients of type $D$ on $X$") associated to a small category $X$ *depends only, up to equivalence, on the topos defined by $X$*, and thus only on the category $X^\wedge=\underline{\Hom}(X^\circ,\Set)$ of presheaves of sets on $X$.
+More precisely, if $f\colon X\to Y$ is an arrow in $\Cat$, then the "inverse image" functor
+$$
+  f^*\colon D(Y)\to D(X)
+$$
+for coefficients of type $D$ is an equivalence of categories, provided that the similar functor $Y^\wedge\to X^\wedge$ (which corresponds to a particularly important derivator on $\Cat$...) is an equivalence of categories;
+i.e. provided that $f$ is fully faithful and that every object of $Y$ is a direct factor of an object of the form $f(x)$ (or provided that $f$ induces an equivalence between the "Karoubi envelopes" of $X$ and of $Y$).
+This also implies, when $\Diag$ is equal to the whole of $\Cat$, that we can regard $D$ as coming from a $2$-functor
+$$
+  \underline{\Topcat}^\circ\to\CAT
+$$
+going from the $2$-category of "categorical" toposes (i.e. those equivalent to a topos coming from some $X$ in $\Cat$) to the category $\CAT$.
+With this, we can hope to extend the derivator, i.e. the theory of coefficients in question, to the whole category $\underline{\Top}$ of toposes, i.e. to a functor (which we again denote by $D$)
+$$
+  D\colon\underline{\Top}^\circ\to\CAT.
+$$
+I believe that this is always possible, and in an essentially unique way.
+This is true in all the concrete cases that I have looked at.
+If, for example, $D$ is the (abelian) derivator defined by an abelian category via the category of complexes and the notion of quasi-isomorphism, we obtain, for every topos $\cal{X}$ (supposing that the category is that of $k$-modules, where $k$ is an arbitrary ring), the derived category $D(\cal{X},k)$ of $k$-modules on $\cal{X}$, and this $D(\cal{X},k)$ does indeed depend contravariantly on $\cal{X}$.
+It is true that, when trying to define the *covariant* laws $f_!$ and $f_*$, or, more precisely, when trying to establish their existence, we struggle with $f_!$, with this $f_!$ existing only by placing draconian hypotheses on $f$.
+\oldpage{8}
+(In any case, I am cheating a bit here, for lacking of having spelled out the restrictions on the degrees of the complexes, like $D^+(\cal{X},k)$ or $D^-(\cal{X},k)$. But here is not the place to enter into technicalities.)
+
+As for the axioms for derivators, the most essential of all is the existence, for every arrow $f\colon X\to Y$ in $\Diag$, of functors $f_!$ and $f_*$ from $D(X)$ to $D(Y)$, left and right adjoint (respectively) to $f^*$.
+To develop (in the base category, say) the theory of the *exact sequence of suspension*, it is the existence of $f_!$ that we need, and for this it suffices that $\Diag$ contain the finite ordered sets (and even strictly less, if we insist).
+But I point out that the canonical sequences that we thus construct with the help of a single functor $f_!$ and under the hypothesis that the derivator be "pointed" (i.e. the $D(X)$ are pointed and the functors $f^*$ are compatible with the zero objects) are only exact if we impose a suitable (left) "exactness axiom", as part of the handful of axioms of a derivator;
+and dually for the exact sequence of cosuspension.
+These constructions still work not only in every category $D(e)$, but also naturally in the $D(X)$, for $X$ in $\Diag$.
+(In fact, $D(X)$ can be considered as the base category of an "induced derivator" $D_X\colon Y\mapsto D(X\times Y)$, to which we can apply the general results. The axioms of derivators are such that they are stable under passing from a derivator to an induced derivator.)
+This suggests to disentangle the notions of "left derivator" (postulating the existence of homological direct images $f_!$, excluding the cohomological direct images $f_*$) and "right derivator", including the dual aspect of the homotopical formalism.^[*[Editor] In "Les Dérivateurs" [@9], Grothendieck makes the opposite choice concerning the terminology of left or right derivator, justified by the left or right exactness properties of the prederivator, implied by the existence of $f_*$ or $f_!$, respectively.*]
+But I point out right away that certain properties of derivators seem important to me, and even when their *statement* relies only on one of the two structures (left or right), they are proven using the existence of the two covariances simultaneously.
+
+To finish these generalities on the notion of derivators, I would like to stress that it is essential, in the notion of prederivator (which is the unique base data), that $D\colon\Diag\to\CAT$ is indeed a $2$-functor, and not just a functor;
+in other words, one has to give not only the $D(X)$ for $X\in\Diag$, and the $f^*=f_D^*=D(f)$ for the arrows $f\colon X\to Y$, but for an arrow $u\colon f\to f'$ between two arrows $f,f'\colon X\to Y$, one has to give a functorial homomorphism
+$$
+  u^*\colon {f'}^*\to f^*
+$$
+(with a subscript $D$ if there is any risk of confusion).
+It must be seen that, conceptually very simple and obvious (and probably for this very reason misunderstood by the "serious mathematician" as "*general nonsense*"), the data of a $2$-functor between $2$-categories is a very delicate type of structure, of an apparently new type in maths;
+and whether or not one wants, it is indeed *this*, and only this, type of structure that discerns the essential aspects, i.e. intrinsic (independent of the particular chosen model category, for computational purposes, to describe the derivator) to the homologico-homotopical formalism;
+\oldpage{9}
+which is in its ultimate essence (if I am not very wrong) a *formalism of variance of "coefficients"*.
+Just as classical Poincaré duality led me towards the formalism of six operations (or "variances") that holds in the context of topological spaces as well as that of schemes or analytic spaces (and indeed in others still, such as $\Cat$, as I am now persuaded), a formalism which, in my opinion (and if I am not mistaken) captures the ultimate and, in some way universal, essence, independent of any hypothesis of non-singularity, etc.
+
+To stimulate the usual intuition of familiar homological or cohomological contexts, I have found notations of the following type useful, for a given derivator $D$.
+If $X$ is in $\Diag$, and if $\xi$ is a $D$-coefficient on $X$, i.e. an object of $D(X)$, then I denote by
+$$
+  \HH_\bullet^D(\xi)
+  \qquad\text{and}\qquad
+  \HH_D^\bullet(\xi)
+$$
+("*objects of the homology and cohomology of $X$, with coefficients in $\xi$*") the objects $p_!(\xi)$ and $p_*(\xi)$ (respectively), which are objects in the base category $D(e)=\cal{A}_D$ of $D$, where $p\colon X\to e$ is the canonical structure arrow.
+More generally, if $f\colon X\to Y$ is an arrow in $\Diag$, then the images of $\xi$ under the two direct image functors can be written as
+$$
+  \HH_\bullet^D(f,\xi)
+  \quad\text{or}\quad
+  \HH_\bullet^D(X/Y,\xi)
+$$
+and
+$$
+  \HH_D^\bullet(f,\xi)
+  \quad\text{or}\quad
+  \HH_D^\bullet(X/Y,\xi)
+$$
+which are the *homology* and *cohomology* (respectively) *relative to $X$ over $Y$*, with coefficients in $\xi$.
+We can omit the subscript or superscript $D$ when there is no fear of confusion.
+Additionally, I have let myself be guided by the intuitions and reflexes acquired throughout the development of the SGA, to develop in the context of $\Cat$ (to start with) the collection of essential "cohomological" properties of a morphism $f\colon X\to Y$ in $\Cat$ with respect to a given derivator, i.e. to a given "theory of coefficients".
+But this is something else that I will speak to you about, concerning $\Cat$, another time, if you are interested.
+
+
+# The prederivator defined by a model category, and the problem of existence of $f_!$ and $f_*$
+
+The majority of derivators that I know are defined by means of a model category $(\cal{M},W)$.
+Such a category always defines a prederivator on all of $\Cat$, by setting
+$$
+  D_{(\cal{M},W)}(X) = \cal{M}(X)(W(X))^{-1}
+$$
+where I now denote by
+$$
+  \cal{M}(X) \coloneqq \underline{\Hom}(X^\circ,\cal{M})
+$$
+the category of presheaves on $X$ with values in $\cal{M}$ (and thus that of "diagrams of type $X^\circ$", and not of type $X$, in $\cal{M}$), and by $W(X)$ the set of arrows in this category, which "are in $W$ argument by argument".
+The way that $D(X)$ is a contravariant $2$-functor in $X$ is clear.
+When $W$ is the set of isomorphisms in $\cal{M}$, I also write $D_{\cal{M}}$ instead of $D_{(\cal{M},W)}$.
+It is a case that one might consider as "trivial", but which however does not lack interest.
+\oldpage{10}
+Then $D_{\cal{M}}$ is a derivator (satisfying *all* the axioms) provided only that $\cal{M}$ is stable under small inductive and projective limits (one ensures the existences of the $f_!$, the other that of the $f_*$).
+In the case where $\cal{M}=\Set$, we get $D(X)=X^\wedge$, which is an important derivator in my eyes (no matter how trivial), and the "cohomological" properties of the arrows in $\Cat$, with respect to this derivator, are by no means something trivial.
+In the case where $W$ is arbitrary, I also write $D_W$ instead of $D_{(\cal{M},W)}$, and it is rare that there is any fear of confusion.
+The main questions that I then pose is of course that of the existence of the functors $f_!$ and $f_*$.
+Unlike you, I have no qualms here in supposing the category $\cal{M}$ to be stable under all types of limits that we need, and thus (if we want to work with all of $\Cat$) stable under small inductive and projective limits.
+I would not be surprised if there were a theorem that says that every derivator on $\Cat$ can be described by such a model category (up to equivalence of derivators), or at least as the filtrant inductive limit of such derivators.
+In this outline, I foresee an "algebra of derivators" (consisting of a certain number of fundamental operations within the $2$-category of all derivators, on $\Cat$, say, as a domain), which would be the reflection of algebraic operations of a similar nature, which are carried out on the level of model categories.
+I have a feeling, from an allusion in your January letter, that you have some idea of intuition for this type of structure, and we can discuss it again.
+But I emphasise right away that, for me, the true purpose of operations on the level of model categories is to obtain operations on the associated derivators (or prederivators, to begin with).
+
+On this subject, a remark on the subject of the functoriality of the prederivator associated to a model category $(\cal{M},W)$.
+It is clear that we obtain a $2$-functor
+$$
+  \mathsf{MOD}\to\mathsf{PREDER}
+\tag{$*$}
+$$
+on the $2$-category of model categories (which is not a $\frak{U}$-category, if we do not make restrictions on the categories in question and on the admissible functors, as well as asking for compatibility with localisers).
+But if we have two model categories, then it is necessary to introduce in the category
+$$
+  \underline{\Hom}((\cal{M},W),(\cal{M}',W'))
+  \quad\text{or}\quad
+  \underline{\Hom}_{\mathrm{Loc}}(\cal{M},\cal{M}')
+$$
+(the latter notation if the localisers $W$ and $W'$ are implicit in the notation $\cal{W}$ and $\cal{W}'$) a natural localiser $W_{\cal{M},\cal{M}'}$ consisting of morphisms $u\colon F\to G$ between morphisms $F$ and $G$ of model categories such that $u(x)\colon F(x)\to G(x)$ is in $W'$ for all $x\in\cal{M}$.
+We call these the "*quasi-isomorphisms*" (*with respect to the localisers $W$ and $W'$*).
+It is clear that the quasi-isomorphisms are sent to isomorphisms by the above $2$-functor, and so, by passing to the category of fractions, we find a functor (induced from ($*$))
+$$
+  \cal{H}(\cal{M},\cal{M}')\to\underline{\Hom}(\DD_{\cal{M}},\DD_{\cal{M}'})
+\tag{$**$}
+$$
+where it is implicit in the notation that $\cal{M}$ and $\cal{M}'$ are endowed with their localisers $W$ and $W'$.
+In this way, model categories can now be regarded as the $0$-objects of a $2$-category, of which the arrow categories are the localised categories $\cal{H}(\cal{M},\cal{M}')$ above, and we obtain a canonical $2$-functor from this $2$-category, that I want to call the derived category (?) of the category of model categories, and which I denote by $\mathsf{DERMOD}$, to that of prederivators, from the functor ($**$):
+$$
+  \mathsf{DERMOD}\to\mathsf{PREDER}.
+\tag{$***$}
+$$
+\oldpage{11}
+The point at which I want to arrive is the following: if $\cal{M}$ and $\cal{M}'$ are model categories that are *equivalent* as $0$-objects of this $2$-category, then the associated prederivators are equivalent, and thus, for all practical purposes, can be identified (at least, when the initial equivalence is given).
+This (and of course numerous examples) illustrates the extent to which a model category is a "cumbersome" object (if I dare say so), encompassing inessential aspects, as opposed to the associated derivator, which, in my eyes, represents the quintessence from the "homotopical" or "cohomological" point of view.
+It is a bit like the data of a basis for a vector space, or of a system of generators and relations for a group, or a system of equations for a variety.^[One of the first comparisons that occurred to me (which was lost en route) seems more striking: the relation between a model category and its associated derivator resembles, to me, that between a complex in an abelian category and the corresponding object in the derived category. And the conceptual effort that I had to make to arrive at the notion of derived category is somewhat similar to that (more modest, in my opinion) which people will have to one day provide in order to access the notion of derivator an the "yoga of derivators" --- which can only be acquired by working with them!]
+There is no downside to working with these "super-structures", and quite often we cannot do without them.
+It is, however, important, for a deep understanding, to not lose sight of the essential geometric objects (vector spaces, groups, varieties, derivators) and their intrinsic character, or to let them become blurred.
+
+I do not know if it is reasonable to expect, for the $2$-functor above ($***$), faithfulness or essential surjectivity properties, by restricting, if necessary, to the model categories in question, so as to ensure, for example, that they give rise to *derivators*, not only prederivators.
+In any case, this is one of the questions that we should indeed consider on day (in this world, if there is time, and if not, in another...)^[*[Editor] This problem was studied by O. Renaudin [@11].*]
+
+But I have to return to the case where we are given a fixed model category $(\cal{M},W)$, and to the big question of the existence of the functors $f_!$ and $f_*$.
+Technically speaking, it is here, evidently, that we find one of the most crucial questions for the development of topological algebra, as I consider it.
+But for this fundamental question, I have only fragments of a good answer, and they are manifestly unsatisfying (and probably also insufficient in the long run).
+Taking the case where $\Diag$ is equal to $\Cat$: I admit (to my shame!) that I have not even constructed an example of a model category that is stable under small (inductive and projective) limits such that the functors $f_!$ and $f_*$ do not exist for every arrow $f$ in $\Cat$, for the associated prederivator.
+In fact, I don't even expect them to exist, even if we make hypotheses of the type "$W$ is stable under filtrant inductive limits, and the category $\cal{M}$ is accessible and $W$ is an accessible subset of $\Mor(\cal{M})$" (hypotheses which seem to me to be relatively trivial).
+\oldpage{12}
+On the other hand, I have not been able to prove the existence of these functors except for extremely particular cases, that I will avoid explaining in this letter (which is becoming prohibitively long).
+I do not know of a case where I know how to establish this, without at least supposing that the model category is associated to a closed Quillen triple (and even more)!
+This situation is however better if we are less demanding and take the domain $\Diag$ to be (say) the category of finite ordered sets.
+In this case, it suffices that $W$ be associated to a category of cofibrations (for $f_!$ to exist) or fibrations (for $f_*$ to exist), without further requiring (to indeed have a derivator) that these two dual structures be linked to one another other than by the common localiser $W$.
+
+It is the moment to say that the work of Anderson [@1] (of which you sent me a photocopy), where he claims to give a sketch of a very general theorem of this type (which would have indeed answered my wishes!) is completely a joke --- even in the case of a finite ordered set $I$, with structure morphism $I\to e$, i.e. for the existence of ordinary homotopy limits on $I$.
+His so-called proof idea doesn't work in in two places that seem essential to me, and I strongly doubt that it is fixable, even though I have no counter-example to the theorem that he states, and which he does not even deign to prove.
+Having looked at this work (if we can call it that) with attention, I am happy that it is not yours --- it made me gnash my teeth from start to finish, and more besides.
+I do not regret it, since if I learnt hardly any maths by reading it, I learnt something much less easy and less pleasing than maths, and more important.
+
+I am amazed that ten years have passed since this article without anybody apparently noticing that it does not hold water.
+Obviously, this theorem was like a piece in a museum, a feat for nothing --- nobody gave a damn.
+Even amongst those more "popular" than him, theorems are often no longer an open door to something that we had not seen before and which we see now, nor even a tool for forcing open doors that cannot be opened smoothly --- but a trophy.
+It then doesn't matter whether it is true or false --- it makes absolutely no difference any more...
+
+Unless you need clarifications, I think it is useless to enter into details --- you are very capable of finding where it screws up by yourself (around any "it is obvious that...").
+And also, it is time that I stop, even though I have not yet arrived at that which, technically, was planned to be the main substance of my letter: the "factorisation theorem", and its application to stability theorems for Quillen structures.
+This will probably be my next letter, if you are interested in continuing this correspondence.
+In which case I will be very happy to have you as an interlocutor of my cogitations!
+
+In the meantime, best wishes.
