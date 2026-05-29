@@ -17,12 +17,14 @@ reference-section-title: "Bibliography"
 
 format:
   html:
+    # General
     html-math-method: katex
     self-contained: true
-    css: _style.css
     date-format: "YYYY"
-    title-block-banner: true
-    # code-links: repo
+    css:
+      - _environments.css
+      - _custom.css
+    # ToC and links
     other-links:
       - text: Source files
         href: https://github.com/thosgood/translations
@@ -30,10 +32,14 @@ format:
       - text: More translations
         href: https://thosgood.net/translations
         icon: collection
-    # mainfont: 
+    # Visual things
+    title-block-banner: true
     theme:
-      light: flatly
+      light: journal
       dark: darkly
+    mainfont: Baskerville
+    fontsize: 15pt
+    classoption: fleqn
   pdf:
     template: _template.tex
     date-format: "YYYY"
