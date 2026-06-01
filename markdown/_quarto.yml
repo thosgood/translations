@@ -23,7 +23,6 @@ format:
     date-format: "YYYY"
     css:
       - _environments.css
-      - _custom.css
     # ToC and links
     other-links:
       - text: Source files
@@ -34,12 +33,10 @@ format:
         icon: collection
     # Visual things
     title-block-banner: true
-    theme:
-      light: journal
-      dark: darkly
-    mainfont: Baskerville
-    fontsize: 15pt
     classoption: fleqn
+    theme:
+      light: [journal, _custom.scss]
+      dark: [darkly, _custom.scss]
   pdf:
     template: _template.tex
     date-format: "YYYY"

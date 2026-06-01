@@ -1,0 +1,34 @@
+/*-- scss:functions --*/
+
+
+/*-- scss:defaults --*/
+$font-family-sans-serif: Baskerville;
+
+$font-size-root: 15pt;
+
+$h1-font-size: 1.65rem !default;
+$h2-font-size: 1.30rem !default;
+$h3-font-size: 1.15rem !default;
+
+
+/*-- scss:rules --*/
+
+.content {
+  text-align: justify;
+}
+
+h1 {
+  border-bottom: 1px solid hsl(0,0%,87%);
+  padding-bottom: .5rem;
+}
+
+h2, h3 {
+  border-bottom: none;
+  /*padding-bottom: .5rem;*/
+}
+
+/* KaTeX */
+
+.katex {
+  font-size: 0.95em !important;
+}
