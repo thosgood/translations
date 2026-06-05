@@ -2374,7 +2374,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
 \end{rmenv}
 
 We say that a natural transformation $m\colon F\to F'$, where $F,F'\colon\cat{C}\to\cat{C}'$ are functors, is \emph{cartesian} if, for every morphism $f\colon e\to e'$ in $\cat{C}$, the pair $(F(f),m(e))$ is a fibre product of $(m(e'),F'(f))$.
-We say that $\TT=(T,I,K)$ is a \emph{cartesian triple} if the following two conditions are satisfied:
+We say that $\TT=(T,I,K)$ is a \emph{cartesian triple} if the two following conditions are satisfied:
 \begin{enumerate}
   \item[(a)]
     $\Cat{E}$ admits finite fibre products, and $T$ commutes with them (which is the case as soon as $I$ or $K$ are cartesian).
@@ -3897,8 +3897,8 @@ The ``multicategories'' in \cite{La} are precisely, up to terminology, Lambek mu
 The first three examples suggest the following general definition:
 If $\TT$ is an arbitrary triple on a category $\cat{E}$ that admits fibre products, then we call $(b,a,i,k,t,d)$ a \emph{pre-tensorial $\TT$-category} if $(b,a,i,k)$ is a $\TT$-category on an object $e$ and, adopting the notation of \todo{Figure~1} from \cref{sec:I.3}, $t\colon Te\to\pi$ and $d\colon\pi\to\pi_2$ are morphisms in $\cat{E}$ that satisfy the following axioms:
 \begin{enumerate}
-  \item $a\cdot t = \id_{Te}$
-  \item $v_2\cdot d = I\pi\cdot t\cdot a$ and $k\cdot d = \id_\pi$.
+  \item[(1)] $a\cdot t = \id_{Te}$
+  \item[(2)] $v_2\cdot d = I\pi\cdot t\cdot a$ and $k\cdot d = \id_\pi$.
 \end{enumerate}
 The first three examples are, in an evident way, pre-tensorial multicategories.
 We will return to the details later.
@@ -4139,9 +4139,9 @@ For every set $E$, $\mathcal{U}E$ is the set of ultrafilters on $E$.
 The structure of a hypertopology seems completely unknown except for the two following examples:
 
 \begin{enumerate}
-  \item $\Ord{\TT_\mathcal{U}}$ is isomorphism to the category of topologies, by \cite{Ba} and \unsure{Proposition~I.4.4} (we have given another proof, inspired by the work of \cite{Bu} and edited by D.~Tanré).
+  \item[(1)] $\Ord{\TT_\mathcal{U}}$ is isomorphism to the category of topologies, by \cite{Ba} and \unsure{Proposition~I.4.4} (we have given another proof, inspired by the work of \cite{Bu} and edited by D.~Tanré).
 
-  \item Hypertopologies in finite sets are precisely those categories with a finite number of objects (which shows, in particular, that finite topologies are precisely finite preorders).
+  \item[(2)] Hypertopologies in finite sets are precisely those categories with a finite number of objects (which shows, in particular, that finite topologies are precisely finite preorders).
 \end{enumerate}
 
 We can deduce trivial new examples by taking, for example, the product in $\Cat{Cat}(\TT_\mathcal{U})$ of a monoid and a topology.
@@ -4171,7 +4171,125 @@ For example, the following triples on $\Cat{Set}$ are bounded triples:
 \label{sec:IV.1}
 
 \oldpage{292}
-Throughout
+Throughout this chapter, $\cat{E}$ denotes a category admitting finite fibre products and a terminal object.
+This implies that $\cat{E}$ admits finite projective limits;
+we suppose that $\cat{E}$ is endowed with a choice of finite projective limits.
+
+We say that $(b',F,f,b)$ is a \emph{square} in $\cat{E}$ if $(f,F)\colon b\to b'$ is a morphism in $\cat{E}^\mathbf{2}$, i.e. if $b'$, $F$, $f$, and $b$ are morphisms in $\cat{E}$ such that $b'\cdot F=f\cdot b$.
+Let $(v_1,v_2)$ be the canonical fibre product of $(b',f)$;
+we define the \unsure{\emph{indicator}} of $(b',F,f,b)$ to be the crochet $j$ that makes the following diagram commute:
+\[
+  \begin{tikzcd}
+    \bullet
+      \ar[dd,swap,"b'"]
+    &&& \bullet
+      \ar[lll,swap,"F"]
+      \ar[dl,swap,"j"]
+      \ar[dd,"b"]
+  \\&& \bullet
+      \ar[ull,near start,"v_1"]
+      \ar[dr,swap,near start,"v_2"]
+  \\\bullet
+    &&& \bullet
+      \ar[lll,"f"]
+  \end{tikzcd}
+\]
+
+Let $\cat{R}$ be a subcategory of $\cat{E}$;
+we say that $\cat{R}$ is \emph{stabilised} if it satisfies the three following conditions:
+\begin{enumerate}
+  \item[(i)] Every invertible morphism in $\cat{E}$ is a morphism in $\cat{R}$, which implies the relation $\set{\cat{R}}=\set{\cat{E}}$.
+
+  \item[(ii)] If $f$ and $f'$ are morphisms in $\cat{R}$, and if $f''$ is a morphism in $\cat{E}$ such that $f'\cdot f''=f$ in $\cat{E}$, then $f''$ is a morphism in $\cat{R}$.
+
+  \item[(iii)] If $(b',F,f,b)$ is a cartesian square in $\cat{E}$, and if $b'$ is a morphism in $\cat{R}$, then $b$ is also a morphism in $\cat{R}$.
+\end{enumerate}
+
+\begin{rmenv}{Examples}
+  \begin{enumerate}
+    \item[(1)] The morphisms of $\cat{R}$ are the invertible morphisms of $\cat{E}$.
+    \item[(2)] The morphisms of $\cat{R}$ are the monomorphisms of $\cat{E}$.
+    \item[(3)] The morphisms of $\cat{R}$ are the retractions of $\cat{E}$.
+    \item[(4)] $\cat{R}=\cat{E}$.
+  \end{enumerate}
+\end{rmenv}
+
+If $\cat{R}$ is a subcategory of $\cat{E}$ and $C=(b',F,f,b)$ is a square in $\cat{E}$, we say that $C$ is an \emph{$\cat{R}$-square} if $F$ and $f$ are morphisms in $\cat{R}$;
+\oldpage{293}
+we say that $C$ is a \emph{square-$\cat{R}$} is $b$ and $b'$ are morphisms in $\cat{R}$, and we say that $C$ is an \emph{$\cat{R}$-cartesian square} if its \unsure{indicator} is a morphism in $\cat{R}$.
+Both $\cat{R}$-squares and squares-$\cat{R}$ always define subcategories of $\cat{E}^\mathbf{2}$;
+the latter is a full subcategory.
+If $\cat{R}$ satisfies property~(iii), it is immediate that the $\cat{R}$-cartesian squares define a subcategory of $\cat{E}^\mathbf{2}$.
+
+\begin{itenv}{Lemma}
+  If $\cat{R}$ is a stabilised subcategory of $\cat{E}$, and if we have a commutative diagram of the form
+  \[
+    \begin{tikzcd}[sep=large]
+      \bullet
+        \ar[d,swap,"b''"]
+      &\bullet
+        \ar[l,swap,"F'"]
+        \ar[d,"b'"]
+      &\bullet
+        \ar[l,swap,"F"]
+        \ar[d,"b"]
+    \\\bullet
+        \ar[d,swap,"\overline{b}''"]
+      &\bullet
+        \ar[l,swap,"f'"]
+        \ar[d,"\overline{b}'"]
+      &\bullet
+        \ar[l,swap,"f"]
+        \ar[d,"\overline{b}"]
+    \\\bullet
+      &\bullet
+        \ar[l,swap,"\overline{f}'"]
+      &\bullet
+        \ar[l,swap,"\overline{f}"]
+    \end{tikzcd}
+  \]
+  such that the four following squares are $\cat{R}$-cartesian:
+  \begin{enumerate}
+    \item $(b'',F',f',b')$
+    \item $(\overline{b}'',f',\overline{f}',\overline{b}')$
+    \item $(\overline{b}',f,\overline{f},\overline{b})$
+    \item $(\overline{b}''\cdot b'',F'\cdot F,\overline{f}'\cdot\overline{f},\overline{b}\cdot b)$
+  \end{enumerate}
+  then the fifth square $(b',F,f,b)$ is also $\cat{R}$-cartesian.
+\end{itenv}
+
+\begin{proof}
+  First of all, note that properties~(ii) and (iii) imply the following property:
+  \begin{enumerate}
+    \item[(iv)] If $(C_1,C'_1,C_2,C'_2)$ is a cartesian square in $\cat{E}^\mathbf{2}$, and if $C_1$ and $C_2$ are squares-$\cat{R}$, then $C'_1$, $C'_2$, and $C_1\cdot C'_1$ are squares $\cat{R}$.
+  \end{enumerate}
+
+  This is an easy exercise on \unsure{indicators}.
+  The lemma is then proven by using the properties~(i), (ii), (iii), and (iv).
+\end{proof}
+
+Let $\Gamma$ be the category consisting of three objects, denoted $0$, $1$, and $1'$, and two morphisms, denoted
+\[
+  \beta\colon0\to1
+  \textand
+  \alpha\colon0\to1'.
+\]
+An object of $\cat{E}^\Gamma$ can be identified with a pair $(b,a)$ of morphisms in $\cat{E}$ with the same source, i.e. a span in $\cat{E}$.
+We define an \emph{indicator} of $(b,a)$ to be the crochet of the projective cone defined by $(b,a)$, i.e. the unique morphism $c$ such that
+\oldpage{294}
+\[
+  b_0\cdot c = b
+  \textand
+  a_0\cdot c = a
+\]
+where $(b_0,a_0)$ is the canonical product of $(e,\overline{e})$, if $b\colon\pi\to e$ and $a\colon\pi\to\overline{e}$.
+A morphism in $\cat{E}^\Gamma$ can be identified with a pair $(C,\overline{C})$ of squares in $\cat{E}$ such that, if
+\[
+  C = (b',F,f,b)
+  \textand
+  \overline{C} = (a',\overline{F},\overline{f},a),
+\]
+then $F=\overline{F}$.
 
 
 
