@@ -4290,6 +4290,34 @@ A morphism in $\cat{E}^\Gamma$ can be identified with a pair $(C,\overline{C})$ 
   \overline{C} = (a',\overline{F},\overline{f},a),
 \]
 then $F=\overline{F}$.
+We define the \emph{source \unsure{indicator}} and \emph{target \unsure{indicator}} of $(C,\overline{C})$ to be the \unsure{indicators} $\overline{j}$ and $j$, respectively, of the squares $\overline{C}$ and $C$.
+Let $(v_1,v_2)$ be the canonical fibre product of $(b',f)$, and $(\overline{v}_1,\overline{v}_2)$ the canonical fibre product of $(a',\overline{f})$;
+we define the \emph{central \unsure{indicator}} of $(C,\overline{C})$ to be the \unsure{indicator} of the square $(v_1,j,\overline{v}_1,\overline{j})$.
+If $(u_1,u_2)$ is the canonical fibre product of $(v_1,\overline{v}_1)$, and if $l$ is the central \unsure{indicator}, then the following diagram commutes:
+\todo{diagram}
+We say that $(C,\overline{C})$ is an \emph{$\cat{R}$-induced} morphism in $\cat{E}^\Gamma$ if $l$ is a morphism in $\cat{R}$.
+
+\begin{itenv}{Proposition~IV.1.25}
+  If $\cat{R}$ is a stabilised subcategory of $\cat{E}$, then the morphism in $\cat{E}^\Gamma$ whose target (resp. source, central) \unsure{indicator} is a morphism in $\cat{R}$ define a stabilised subcategory of $\cat{E
+  }^\Gamma$.
+\end{itenv}
+
+\begin{proof}
+  In the ``source'' and ``target'' cases, this is a consequence of the fact that the squares in $\cat{E}$ whose \unsure{indicator} is in $\cat{R}$ define a stabilised subcategory of $\cat{E}^\mathbf{2}$.
+  In the ``central'' case, this is an immediate consequence of the lemma, since every cartesian square is $\cat{R}$-cartesian, by~(i).
+\end{proof}
+
+\begin{rmenv}{Remark}
+  The morphisms in the category $\cat{E}^\Gamma$ can be identified with the morphisms in the pseudo-category $\Sp{\cat{E^\mathbf{2}}}$.
+  \oldpage{295}
+  The latter is, in reality, a ``double'' structure, which is a novel example of multicategory (\cref{sec:III.3}) which is not a Lambek multicategory.
+\end{rmenv}
+
+
+\subsection{$(\TT,\hat{\cat{S}})$-functors}
+\label{sec:IV.2}
+
+Suppose
 
 
 
