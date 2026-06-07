@@ -4380,8 +4380,31 @@ it commutes, however, with terminal objects.
 We say that a functor $T\colon\cat{E}\to\cat{E}$ is \emph{$\cat{R}$-cartesian} if it sends every $\cat{R}$-cartesian square to an $\cat{R}$-cartesian square, i.e. if it sends every cartesian square to an $\cat{R}$-cartesian morphism, and every morphism in $\cat{R}$ to a morphism in $\cat{R}$.
 
 \begin{itenv}{Proposition~IV.2.27}
-  If
+  If $T$ is $\cat{R}$-cartesian, then $\Gr{\TT}/\hat{\cat{S}}$, for $\hat{\cat{S}}=\hat{\cat{S}}_1$ and $\hat{\cat{S}}_2$, is a full subcategory of $\Gr{\TT}$, stable under finite projective limits;
+  for $\hat{\cat{S}}=\hat{\cat{S}}_3$, $\hat{\cat{S}}_4$, $\hat{\cat{S}}_5$, and $\hat{\cat{S}}_6$, it is a stabilised subcategory of $\Gr{\TT}$.
+  We have analogous results when replacing $\Gr{\TT}$ by $\Cat{Cat}(\TT)$.
 \end{itenv}
+
+\begin{proof}
+  Let $L$ be the injective functor $\Gr{\TT}\to\cat{E}^\Gamma$;
+  the construction of the projective limits in $\Gr{\TT}$ (\unsure{Proposition~I.5.5}) shows that a cartesian square $(C,D,C',D')$ in $\Gr{\TT}$ is sent by $L$ to a square that is $\hat{\cat{S}}$-cartesian, where $\hat{\cat{S}}=\hat{\cat{S}}_1$ or $\hat{\cat{S}}_2$ depending on whether $L(C)$ or $L(D)$ are morphisms in $\hat{\cat{S}}_1$ or $\hat{\cat{S}}_2$.
+  This proves the first part of the proposition.
+  If $L(C)$ is a morphism in $\hat{\cat{S}}$, where $\hat{\cat{S}}$ is one of the categories $\hat{\cat{S}}_3$, $\hat{\cat{S}}_4$, $\hat{\cat{S}}_5$, or $\hat{\cat{S}}_6$, then $L(D')$ is also a morphism in $\hat{\cat{S}}$, by \unsure{Proposition~IV.1.25}, and
+  \oldpage{297}
+  \[
+    \big( L(C), L(D), L(C'), L(D') \big)
+  \]
+  is an $\hat{\cat{S}}$-cartesian square, which proves (iii) for $\Gr{\TT}/\hat{\cat{S}}$.
+  The rest of the proposition is a direct consequence of \unsure{Proposition~IV.1.25}.
+\end{proof}
+
+Let $\hat{\cat{S}}_p$ and $\hat{\cat{S}}_q$ be subcategories of $\cat{E}^\Gamma$, where $1\leqslant p<q\leqslant 6$;
+we denote by $\hat{\cat{S}}_{pq}$ the subcategory of $\cat{E}^\Gamma$ whose set of objects is the set $\set{\hat{\cat{S}}_p}\cap\set{\hat{\cat{S}}_q}$, and whose morphisms are the morphisms common to both $\hat{\cat{S}}_p$ and $\hat{\cat{S}}_q$.
+We thus obtain categories $\Cat{Cat}(\TT)/\hat{\cat{S}}$ by taking $\hat{\cat{S}}=\hat{\cat{S}}_{pq}$.
+
+\begin{rmenv}{Examples}
+  Unless otherwise stated,
+\end{rmenv}
 
 
 
