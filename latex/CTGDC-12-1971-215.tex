@@ -3917,10 +3917,10 @@ We define a \emph{category of operators}, or \emph{action of a category}, to be 
 \begin{enumerate}
   \item
     $\cat{C}$ is a category.
-  
+
   \item
     $\hom_\phi$ is a family of sets indexed by $\set{\Cat{C}}$.
-  
+
   \item
     $\kappa$ is a family of maps, indexed by $\set{\Cat{C}}^2$, of the form
     \[
@@ -4317,7 +4317,73 @@ We say that $(C,\overline{C})$ is an \emph{$\cat{R}$-induced} morphism in $\cat{
 \subsection{$(\TT,\hat{\cat{S}})$-functors}
 \label{sec:IV.2}
 
-Suppose
+Suppose that the category $\cat{E}$ is endowed with a triple $\TT=(T,I,K)$;
+let $\hat{\cat{S}}$ be a subcategory of $\cat{E}^\Gamma$;
+we thus obtain a subcategory $\Gr{\TT}/\hat{\cat{S}}$ of $\Gr{\TT}$ and a subcategory $\Cat{Cat}(\TT)/\hat{\cat{S}}$ of $\Cat{Cat}(\TT)$ by taking the (not necessarily canonical) fibre products of functors:
+\[
+  \begin{tikzcd}
+    \Cat{Cat}(\TT)
+      \ar[d]
+  & \Cat{Cat}(\TT)/\hat{\cat{S}}
+      \ar[l]
+      \ar[d]
+  \\\Gr{\TT}
+      \ar[d]
+  & \Gr{\TT}/\hat{\cat{S}}
+      \ar[l]
+      \ar[d]
+  \\\cat{E}^\Gamma
+  & \hat{\cat{S}}
+      \ar[l]
+  \end{tikzcd}
+\]
+
+The study of subcategories of $\Cat{Cat}(\TT)$ thus leads us to describe various subcategory of $\cat{E}^\Gamma$.
+The nomenclature that follows is not at all systematic;
+it corresponds to various examples that we have seen.
+In the rest of this section, $\cat{R}$ denotes a stabilised subcategory of $\cat{E}$.
+
+\begin{itemize}
+  \item $\hat{\cat{S}}_1$ is the full subcategory of $\cat{E}^\Gamma$ whose objects are the spans $(b,a)$ whose \unsure{indicator} is in $\cat{R}$.
+  \item $\hat{\cat{S}}_2$ is the full subcategory of $\cat{E}^\Gamma$ whose objects are the spans $(b,a)$ such that $a$ is a morphism in $\cat{R}$.
+\end{itemize}
+
+\begin{itenv}{Proposition~IV.2.26}
+  $\hat{\cat{S}}_1$ and $\hat{\cat{S}}_2$ are full subcategories of $\cat{E}^\Gamma$, stable under finite projective limits.
+\end{itenv}
+
+\begin{proof}
+  $\cat{E}^\Gamma$ is a category of presheaves: its limits can be calculated term by term.
+  If $1$ is the canonical terminal object of $\cat{E}$, then $(\id_1,\id_1)$ is the terminal object of $\cat{E}^\Gamma$ and, by~(i), it belongs to both $\hat{\cat{S}}_1$ and $\hat{\cat{S}}_2$.
+  It thus suffices to prove that $\hat{\cat{S}}_1$ and $\hat{\cat{S}}_2$ are stable under finite fibre products.
+  In both cases, this reduces to showing that the full subcategory of squares-$\cat{R}$ is stable under finite fibre products (in the case of $\hat{\cat{S}}_2$, we use the fact that projective limits commute with themselves).
+\oldpage{296}
+  This is precisely property~(iv).
+\end{proof}
+
+It does not appear to be sufficient to suppose that $\cat{R}$ is stabilised in order to obtain stability under non-finite projective limits.
+
+\begin{itemize}
+  \item
+    $\hat{\cat{S}}_3$ is the subcategory of $\cat{E}^\Gamma$ defined by the morphisms consisting of a pair $(C,\overline{C})$, where $C$ is an $\cat{R}$-square.
+    This is evidently a stabilised subcategory of $\cat{E}^\Gamma$.
+
+  \item
+    $\hat{\cat{S}}_4$, $\hat{\cat{S}}_5$, and $\hat{\cat{S}}_6$ are the subcategories of $\cat{E}^\Gamma$ defined, respectively, by the morphisms whose central, target, or source \unsure{indicator} is a morphism in $\cat{R}$.
+    The morphisms of $\hat{\cat{S}}_5$ and $\hat{\cat{S}}_6$ are called \emph{$\cat{R}$-étale} and \emph{$\cat{R}$-coétale} (respectively).
+
+    We have already shown that $\hat{\cat{S}}_4$, $\hat{\cat{S}}_5$, and $\hat{\cat{S}}_6$ are stabilised subcategories of $\cat{E}^\Gamma$.
+\end{itemize}
+
+The functor $\Gr{\TT}\to\cat{E}^\Gamma$ is injective but, if $T$ is not cartesian, then it does not commute with fibre products;
+it commutes, however, with terminal objects.
+We say that a functor $T\colon\cat{E}\to\cat{E}$ is \emph{$\cat{R}$-cartesian} if it sends every $\cat{R}$-cartesian square to an $\cat{R}$-cartesian square, i.e. if it sends every cartesian square to an $\cat{R}$-cartesian morphism, and every morphism in $\cat{R}$ to a morphism in $\cat{R}$.
+
+\begin{itenv}{Proposition~IV.2.27}
+  If
+\end{itenv}
+
+
 
 
 
