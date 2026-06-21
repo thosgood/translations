@@ -4429,7 +4429,36 @@ We thus obtain categories $\Cat{Cat}(\TT)/\hat{\cat{S}}$ by taking $\hat{\cat{S}
 \label{sec:IV.3}
 
 \oldpage{298}
-In the previous
+In the previous sections, we have analysed various subcategories of $\Cat{Cat}(\TT)$;
+here, on the other hand, we will seek to ``enlarge'' $\Cat{Cat}(\TT)$.
+We suppose, however, that $\TT$ is a cartesian triple, i.e. that $\Sp{\TT}$ is a bicategory (\cref{sec:II.2}).
+We will first study some general facts about an arbitrary bicategory $\cat{D}$;
+the terminology that follows is inspired by the traditional monoidal category of abelian groups $(\Cat{Ab},\mathbb{Z},\otimes)$.
+To simplify notation, we will simply use the symbols $1$, $1'$, $\ldots$ to denote the objects of $\cat{D}$, and we will omit the symbols for the variables in the notation of the morphisms $r(\theta)$, $l(\theta)$, and $s(\theta'',\theta',\theta)$, which will thus simply be denoted by $r$, $l$, and $s$.
+
+Recall that a \emph{monad in $\Cat{D}$} is a triple $(\theta,i,k)$, where $\theta$ is a morphism in $\cat{D}$, and $i\colon\id_1\to\theta$ and $k\colon\theta\circ\theta\to\theta$ are 2-morphisms in $\cat{D}$ that make the following diagram commute:
+\[
+  \begin{tikzcd}[row sep=large]
+    (\theta\circ\theta)\circ\theta
+      \ar[rr,"s"]
+      \ar[d,swap,"k\circ\theta"]
+    & & \theta\circ(\theta\circ\theta)
+      \ar[d,"\theta\circ k"]
+  \\\theta\circ\theta
+      \ar[r,"k"]
+    & \theta
+    & \theta\circ\theta
+      \ar[l,swap,"k"]
+  \\1\circ\theta
+      \ar[u,"i\circ\theta"]
+    & \theta
+      \ar[u,"\id_\theta"]
+      \ar[l,swap,"l"]
+      \ar[r,"r"]
+    & \theta\circ 1
+      \ar[u,swap,"\theta\circ i"]
+  \end{tikzcd}
+\]
 
 
 
