@@ -4460,7 +4460,37 @@ Recall that a \emph{monad in $\Cat{D}$} is a triple $(\theta,i,k)$, where $\thet
   \end{tikzcd}
 \]
 
+We say that $(\mu,m)\colon(\theta,i,k)\to(\theta',i',k')$ is a \emph{morphism of monads in $\cat{D}$} if $(\theta,i,k)$ and $(\theta',i',k')$ are monads in $\cat{D}$, $\mu\colon1\to1'$ is a morphism in $\cat{D}$, and $\mu\colon\mu\circ\theta\to\theta'\circ\mu$ is a 2-morphism that makes the following diagram (where $s^{-1}$ is the inverse isomorphism of $s$) commute:
+\[
+  \begin{tikzcd}[row sep=large]
+    \theta'\circ(\theta'\circ\mu)
+      \ar[d,swap,"s^{-1}"]
+    & \theta'\circ(\mu\circ\theta)
+      \ar[l,swap,"\theta'\circ m"]
+    && (\theta'\circ\mu)\circ\theta
+      \ar[ll,swap,"s"]
+    & (\mu\circ\theta)\circ\theta
+      \ar[l,swap,"m\circ\theta"]
+      \ar[d,"s"]
+  \\(\theta'\circ\theta')\circ\mu
+      \ar[d,swap,"k'\circ\mu"]
+    &&&& \mu\circ(\theta\circ\theta)
+      \ar[d,"\mu\circ k"]
+  \\\theta'\circ\mu
+    &&&& \mu\circ\theta
+      \ar[llll,swap,"m"]
+  \\1'\circ\mu
+      \ar[u,"i'\circ\mu"]
+    && \mu
+      \ar[ll,"l"]
+      \ar[rr,swap,"r"]
+    && \mu\circ1
+      \ar[u,swap,"\mu\circ i"]
+  \end{tikzcd}
+\]
 
+\oldpage{299}
+We say that $(\sigma,h',h)\colon(\theta,i,k)\to(\theta',i',k')$ is a \emph{bimodule in $\cat{D}$} if
 
 
 
