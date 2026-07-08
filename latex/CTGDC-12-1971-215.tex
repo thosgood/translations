@@ -4490,7 +4490,93 @@ We say that $(\mu,m)\colon(\theta,i,k)\to(\theta',i',k')$ is a \emph{morphism of
 \]
 
 \oldpage{299}
-We say that $(\sigma,h',h)\colon(\theta,i,k)\to(\theta',i',k')$ is a \emph{bimodule in $\cat{D}$} if
+We say that $(\sigma,h',h)\colon(\theta,i,k)\to(\theta',i',k')$ is a \emph{bimodule in $\cat{D}$} if $(\theta,i,k)$ and $(\theta',i',k')$ are monads, $\sigma\colon1\to1'$ is a morphism in $\cat{D}$, and $h'\colon\theta'\circ\sigma\to\sigma$ and $h\colon\sigma\circ\theta\to\sigma$ are 2-morphisms that make the following diagrams commute:
+\todo{diagrams}
+
+\begin{itenv}{Proposition~IV.3.28}
+  To every morphism of monads
+  \[
+    (\mu,m)\colon
+    (\theta, i, k)
+    \to (\theta', i', k')
+  \]
+  we can associated a bimodule $(\sigma,h',h)\colon(\theta,i,k)\to(\theta',i',k')$, where
+  \[
+    \begin{aligned}
+      \sigma
+      &= \theta'\circ\mu
+    \\h'
+      &= (k'\circ\mu)\cdot s^{-1}
+    \\h
+      &= (k'\circ\mu)\cdot s^{-1}\cdot(\theta'\circ m)\cdot s.
+    \end{aligned}
+  \]
+\end{itenv}
+
+\begin{proof}
+  We need to verify the commutativity of three diagrams, which is easy.
+  For example, the commutativity of the diagram on the left below follows from that of the the diagram on the right:
+  \[
+    \begin{tikzcd}[sep=huge]
+      \theta'\circ(\theta'\circ(\theta'\circ\mu))
+        \ar[r,"{(\theta'\circ h')\cdot(\theta'\circ s^{-1})}"]
+    & \theta'\circ(\theta'\circ\mu)
+        \ar[dd,"{(k'\circ\mu)\cdot s^{-1}}"]
+    \\(\theta'\circ\theta')\circ(\theta'\circ\mu)
+        \ar[u,"s"]
+        \ar[d,swap,"{(k'\circ(\theta'\circ\mu))}"]
+    \\\theta'\circ(\theta'\circ\mu)
+        \ar[r,swap,"{(k'\circ\mu)\cdot s^{-1}}"]
+    & \theta'\circ\mu
+    \end{tikzcd}
+    \qquad
+    \begin{tikzcd}[sep=huge]
+      \theta'\circ(\theta'\circ\theta')
+        \ar[r,"{\theta'\circ k'}"]
+    & \theta'\circ\theta'
+        \ar[dd,"{k'}"]
+    \\(\theta'\circ\theta')\circ\theta'
+        \ar[u,"s"]
+        \ar[d,swap,"{k'\circ\theta'}"]
+    \\\theta'\circ\theta'
+        \ar[r,swap,"k'"]
+    & \theta'
+    \end{tikzcd}
+  \]
+\end{proof}
+
+\oldpage{300}
+If $(\sigma,h',h)$ and $(\overline{\sigma},\overline{h}',\overline{h})\colon(\theta,i,k)\to(\theta',i',k')$ are bimodules between the same monads, we say that $g\colon(\sigma,h',h)\to(\overline{\sigma},\overline{h}',\overline{h})$ is a \emph{linear map} if $g\colon\sigma\to\overline{\sigma}$ is a 2-morphism in $\cat{D}$ that makes the following diagram commute:
+\[
+  \begin{tikzcd}[sep=large]
+    \theta'\circ\sigma
+      \ar[r,"h'"]
+      \ar[d,swap,"\theta'\circ g"]
+  & \sigma
+      \ar[d,"g"]
+  & \sigma\circ\theta
+      \ar[l,swap,"h"]
+      \ar[d,"g\circ\theta"]
+  \\\theta'\circ\overline{\sigma}
+      \ar[r,swap,"\overline{h}'"]
+  & \overline{\sigma}
+  & \overline{\sigma}\circ\theta
+      \ar[l,"h"]
+  \end{tikzcd}
+\]
+
+\begin{rmenv}{Remarks}
+  \begin{enumerate}
+    \item
+      A monad, as we have already remarked, can be identified with a pseudo-functor of the form $\mathbf{1}\to\cat{D}$.
+      A bimodule can be identified with a pseudo-functor of the form $\mathbf{2}\to\cat{D}$, and we can define a \emph{semi-linear map} to be a ``natural pseudo-transformation'' between bimodules, which recovers the definition of linear map as a particular case.
+      A morphism of monads can be defined as a monad in the bicategory of ``squares'' of $\cat{D}$ (called ``squares'' in \cite{Be} and ``quintets'' in the terminology of \cite{Eh}).
+      A semi-linear map is then a bimodule in this category of ``squares'' (a remark which will allow us, later on, to associate a morphism of profunctors to each natural transformation, by applying \unsure{Proposition~IV.4.28}).
+
+    \item
+      We
+  \end{enumerate}
+\end{rmenv}
 
 
 
