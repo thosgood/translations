@@ -3831,7 +3831,7 @@ We define a \emph{Lambek multicategory} to be a quadruple $\cat{L}=(\cat{L}^\cir
   \[
     \begin{aligned}
       \alpha\colon
-      &(j_1,\ldots,j_n) \to \j \colon \id_e\to\id_e
+      &(j_1,\ldots,j_n) \to j \colon \id_e\to\id_e
     \\\beta\colon
       &(j'_1,\ldots,j'_n) \to j_i \colon \id_{\overline{e}} \to \id_{\overline{e}'}
     \end{aligned}
@@ -3947,11 +3947,11 @@ If $\phi'=(\cat{C}',\hom_{\phi'},\kappa')$ is another category of operators, the
 \]
 and such that $\varphi(f\cdot x)=\varphi(f)\cdot\varphi(x)$, where we write $\varphi(e)$, $\varphi(f)$, and $\varphi(x)$ instead of $F(e)$, $F(f)$, and $\hom_\varphi(e)(x)$ (respectively).
 
-The ``global'' definition of a category of operators coincides with that of a \emph{coétale functor} (called a functor of hypermorphisms in the terminology of \cite{Eh} --- see, for example, the ``sketch'' of this structure in \cite{Bu}).
-We say that a functor $\overline{\phi}\colon\overline{\cat{C}}\to\cat{C}$ is coétale if, for every $\overline{e}\in\set{\overline{\cat{C}}}$ and every morphism in $\cat{C}$ of the form $f\colon\overline{\phi}(\overline{e})\to e'$, there exists a unique morphism in $\cat{C}$ of the form $\overline{f}\colon\overline{e}\to\overline{e}'$ such that $\overline{\phi}(\overline{f})=f$.
+The ``global'' definition of a category of operators coincides with that of a \emph{co-étale functor} (called a functor of hypermorphisms in the terminology of \cite{Eh} --- see, for example, the ``sketch'' of this structure in \cite{Bu}).
+We say that a functor $\overline{\phi}\colon\overline{\cat{C}}\to\cat{C}$ is co-étale if, for every $\overline{e}\in\set{\overline{\cat{C}}}$ and every morphism in $\cat{C}$ of the form $f\colon\overline{\phi}(\overline{e})\to e'$, there exists a unique morphism in $\cat{C}$ of the form $\overline{f}\colon\overline{e}\to\overline{e}'$ such that $\overline{\phi}(\overline{f})=f$.
 More generally, suppose that $\cat{E}$ is a category that admits finite fibre products;
-then we say that an $\cat{E}$-functor $(f_0,f)\colon(\overline{b},\overline{a},\overline{i},\overline{k})\to(b,a,i,k)$ is \emph{coétale} if $(f,\overline{a})$ is a fibre product of $(a,f_0)$ (compare with the generalisations of this notion in \cref{sec:IV}).
-We denote by $\Op{\cat{E}}$ the full subcategory of $\Cat{Cat}(\cat{E})^\mathbf{2}$ whose objects are the coétale $\cat{E}$-functors.
+then we say that an $\cat{E}$-functor $(f_0,f)\colon(\overline{b},\overline{a},\overline{i},\overline{k})\to(b,a,i,k)$ is \emph{co-étale} if $(f,\overline{a})$ is a fibre product of $(a,f_0)$ (compare with the generalisations of this notion in \cref{sec:IV}).
+We denote by $\Op{\cat{E}}$ the full subcategory of $\Cat{Cat}(\cat{E})^\mathbf{2}$ whose objects are the co-étale $\cat{E}$-functors.
 
 \oldpage{287}
 Suppose that $\cat{E}$ admits finite projective limits and finite inductive limits, and is endowed with a canonical choice of these limits;
@@ -4371,7 +4371,7 @@ It does not appear to be sufficient to suppose that $\cat{R}$ is stabilised in o
 
   \item
     $\hat{\cat{S}}_4$, $\hat{\cat{S}}_5$, and $\hat{\cat{S}}_6$ are the subcategories of $\cat{E}^\Gamma$ defined, respectively, by the morphisms whose central, target, or source \unsure{indicator} is a morphism in $\cat{R}$.
-    The morphisms of $\hat{\cat{S}}_5$ and $\hat{\cat{S}}_6$ are called \emph{$\cat{R}$-étale} and \emph{$\cat{R}$-coétale} (respectively).
+    The morphisms of $\hat{\cat{S}}_5$ and $\hat{\cat{S}}_6$ are called \emph{$\cat{R}$-étale} and \emph{$\cat{R}$-co-étale} (respectively).
 
     We have already shown that $\hat{\cat{S}}_4$, $\hat{\cat{S}}_5$, and $\hat{\cat{S}}_6$ are stabilised subcategories of $\cat{E}^\Gamma$.
 \end{itemize}
@@ -4421,7 +4421,7 @@ We thus obtain categories $\Cat{Cat}(\TT)/\hat{\cat{S}}$ by taking $\hat{\cat{S}
 
   We say that a $\TT$-functor is \emph{open} (resp. \emph{proper}) if it is a morphism in $\Cat{Cat}(\TT)/\hat{\cat{S}}$ for $\hat{\cat{S}}=\hat{\cat{S}}_5$ (resp. $\hat{\cat{S}}=\hat{\cat{S}}_6$) and $\cat{R}$ is the subcategory of retractions in $\cat{E}$.
   If $\TT=\TT_\mathcal{U}$, then we recover the usual terminology for open or proper maps.
-  If $\cat{R}$ is the subcategory of invertible morphisms in $\cat{E}$, then a $\TT$-functor for $\hat{\cat{S}}=\hat{\cat{S}}_5$ or $\hat{\cat{S}}_6$ is called an \emph{étale} or \emph{coétale} functor (respectively).
+  If $\cat{R}$ is the subcategory of invertible morphisms in $\cat{E}$, then a $\TT$-functor for $\hat{\cat{S}}=\hat{\cat{S}}_5$ or $\hat{\cat{S}}_6$ is called an \emph{étale} or \emph{co-étale} functor (respectively).
 \end{rmenv}
 
 
@@ -4494,6 +4494,7 @@ We say that $(\sigma,h',h)\colon(\theta,i,k)\to(\theta',i',k')$ is a \emph{bimod
 \todo{diagrams}
 
 \begin{itenv}{Proposition~IV.3.28}
+\label{proposition:iv.3.28}
   To every morphism of monads
   \[
     (\mu,m)\colon
@@ -4589,9 +4590,147 @@ we denote them in the same way, and we will commit the abuse of language that co
 On morphisms between morphisms, we have the following partial result:
 
 \begin{itenv}{Proposition~IV.3.29}
-  Every
+\label{proposition:iv.3.29}
+  Every $\TT$-functor $(f,\overline{f})\colon(\theta,i,k)\to(\theta',i',k')$ determines a morphism between monads $(\mu,m)\colon(\theta,i,k)\to(\theta',i',k')$, where $\mu=(Ie'\cdot f,\id_e)$ and $m$ is the crochet characterised by the relations
+  \[
+    p_1\cdot m = f
+    \textand
+    p_2\cdot m = b
+  \]
+  where we write $\theta'=(a',b')$ and $\theta=(a,b)$, and $e$ and $e'$ are the targets of $b$ and $b'$ (respectively), and $(p_1,p_2)$ is the fibre product of $(b',f)$.
 \end{itenv}
 
+\begin{proof}
+  We can easily show that
+  \[
+    \theta'\circ\mu = (a'\cdot p_1, p_2)
+    \textand
+    \mu\circ\theta = (Tf\cdot a, b).
+  \]
+
+  To better display the essential ideas of the proof, we will suppose that $\Sp{\TT}$ is a 2-category, which is equivalent to supposing that all the fibre products in question are canonical;
+  the proof in the general case is not more difficult, apart from when it comes to notation.
+  We will first describe the elements of the following diagram in $\Sp{\TT}$:
+  \[
+    \begin{tikzcd}[row sep=huge]
+      \theta'\circ\theta'\circ\mu
+        \ar[d,swap,"{k'\circ\mu}"]
+    &  \theta'\circ\mu\circ\theta
+        \ar[l,swap,"{\theta'\circ m}"]
+    & \mu\circ\theta\circ\theta
+        \ar[l,swap,"{m\circ\theta}"]
+        \ar[d,"\mu\circ k"]
+    \\\theta'\circ\mu
+    &&\mu\circ\theta
+        \ar[ll,swap,"m"]
+    \\\mu
+        \ar[u,"{i'\circ\mu}"]
+    &&\mu
+        \ar[ll,swap,"\id_\mu"]
+        \ar[u,swap,"\mu\circ i"]
+    \end{tikzcd}
+  \]
+  \begin{itemize}
+    \item
+      $\mu\circ i$ is equal to $i\colon(Ie'\cdot f,\id_e)\to(Tf\cdot a,b)$.
+
+    \item
+      $i'\circ\mu$ is equal to $i''\colon(Ie'\cdot f,\id_e)\to(a'\cdot p_1,p_2)$, where $i''$ is the crochet characterised by the equations
+      \[
+        p_1\cdot i'' = i'\cdot f
+        \textand
+        p_2\cdot i'' = \id_e.
+      \]
+      and whose existence follows from the equality $b'\cdot i'\cdot f=f\cdot\id_e$.
+
+    \item
+      $m\colon(Tf\cdot a,b)\to(a'\cdot p_1,p_2)$ is a 2-morphism in $\Sp{\TT}$, and the commutativity of the lower part of the above diagram is expressed by the equation $m\cdot i=i''$, which follows from the equalities
+      \[
+        p_1\cdot m\cdot i = p_1\cdot i''
+        \textand
+        p_2\cdot m\cdot i = p_2\cdot i''.
+      \]
+
+    \item
+      \oldpage{302}
+      $\mu\circ k$ is equal to
+      \[
+        k\colon(Ke'\cdot TTf\cdot Ta\cdot v_2,b\cdot v_1)\to(Tf\cdot a,b)
+      \]
+      where $(v_1,v_2)$ is the fibre product of $(a,Tb)$.
+
+    \item
+      $k'\circ\mu$ is equal to
+      \[
+        k''\colon(Ke'\cdot Ta'\cdot v'_2\cdot q_1,p_2\cdot q_2)\to(a'\cdot p_1,p_2)
+      \]
+      where $(v'_1,v'_2)$ is the fibre product of $(a',Tb')$, and $(q_1,q_2)$ the fibre product of $(v'_1,p_1)$, and where $k''$ is the crochet characterised by
+      \[
+        p_1\cdot k'' = k'\cdot q_1
+        \textand
+        p_2\cdot k'' = p_2\cdot q_2
+      \]
+      and whose existence follows from the equality $b'\cdot k'\cdot q_1=f\cdot p_2\cdot q_2$.
+
+    \item
+      $\theta'\circ m$ is equal to
+      \[
+        m'\colon (Ke'\cdot Ta'\cdot Tp_1\cdot p'_1, b\cdot p'_2)
+        \to (Ke'\cdot Ta'\cdot v'_2\cdot q_1, p_2\cdot q_2)
+      \]
+      where $(p'_1,p'_2)$ is the fibre product of $(Tp_2,a)$, and where $m'$ is the crochet characterised by the equations
+      \[
+        v'_2\cdot q_1\cdot m' = Tp_1\cdot p'_1
+        \textand
+        q_2\cdot m' = m\cdot p'_2
+      \]
+      and whose existence follows from the equality $Tb'\cdot Tp_1\cdot p'_1=a'\cdot p_1\cdot m\cdot p'_2$.
+
+    \item
+      $m\circ\theta$ is equal to
+      \[
+        m''\colon (Ke'\cdot TTf\cdot Ta\cdot v_2, b\cdot v_1)
+        \to (Ke'\cdot Ta'\cdot Tp_1\cdot p'_1, b\cdot p'_2)
+      \]
+      where $m''$ is the crochet characterised by the equations
+      \[
+        p'_1\cdot m'' = Tm\cdot v_2
+        \textand
+        p'_2\cdot m'' = v_1
+      \]
+      and whose existence follows from the equality $Tp_2\cdot Tm\cdot v_2=a\cdot v_1$.
+  \end{itemize}
+
+  The commutativity of the upper part of the above diagram is expressed by the equation $m\cdot k=k''\cdot m'\cdot m''$, which follows from the equalities
+  \[
+    p_1\cdot m\cdot k = p_1\cdot k''\cdot m'\cdot m''
+    \textand
+    p_2\cdot m\cdot k = p_2\cdot k''\cdot m'\cdot m''.
+  \]
+\end{proof}
+
+The converse of this proposition is false.
+For example, if $\TT$ is the identity triple (\cref{sec:III.2}) on $\cat{E}$, then a morphism between monads in $\Sp{\cat{E}}$ coincides with a span of $\cat{E}$-functors $(F',F)$, where $F'$ is a co-étale functor (\cref{sec:IV.2}) (that that Lawvere called ``partial functors'' in a recent conference).
+
+The bimodules in $\Sp{\cat{E}}$ are precisely the Bénabou profunctors;
+we define $\TT$-profunctors as the bimodules in $\Sp{\TT}$.
+\oldpage{303}
+By \cref{proposition:iv.3.28} and \cref{proposition:iv.3.29}, a $\TT$-functor determines a $\TT$-functor (in the above sense), which suggests defining a \emph{$\TT$-natural transformation} to be a linear map between two $\TT$-profunctors associated in the aforementioned way to two $\TT$-functors.
+We can also easily show that a linear map in $\Sp{\cat{E}}$ between $\cat{E}
+$-functors is an $\cat{E}$-natural transformation (we can even more easily see this in the case where $\cat{E}=\Cat{Set}$).
+We will later search for a construction of a bicategory $\Cat{Procat}(\TT)=\Cat{Bim}(\Sp{\TT})$.
+
+\begin{rmenv}{Remarks}
+  \begin{enumerate}
+    \item
+      The hypothesis that $\TT$ be cartesian is not necessary in order to define $\TT$-profunctors, but it seems indispensable to apply \cref{proposition:iv.3.28} and \cref{proposition:iv.3.29}.
+      If $\cat{D}$ is only a pseudo-category, we cannot easily define a composition in the ``squares'' of $\cat{D}$, and even in particular examples, such as that where $\TT=\TT_\mathcal{U}$ (\cref{sec:III.5}), everything that mentions the notion of a $\TT$-natural transformation seems to be difficult.
+
+    \item
+      We can equally, starting from a $\TT$-functor, obtain a morphism in the opposite direction to that which we construct in \cref{proposition:iv.3.29};
+      it is likely that these two morphisms are ``adjoint'' to one another, as in the case of ordinary functors.
+  \end{enumerate}
+\end{rmenv}
 
 
 
