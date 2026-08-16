@@ -4889,6 +4889,7 @@ we set
 \end{itemize}
 
 \begin{itenv}{Lemma~3}
+\label{lemma:3}
   If $\overline{\cat{D}}$ is a countably distributive monoidal category, then we have the formula
   \[
     s_{u+v,w}\theta \cdot \big( (s_{u,v}\theta)\circ(\bigcirc^w\theta) \big)
@@ -4904,7 +4905,7 @@ we set
   \item $k_0 = i$
   \item $k_1 = \theta$
   \item $k_2 = k$
-  \item inductively, for $u\geqslant1$, $k_{u+1}\k\cdot(\theta\circ k_u)$.
+  \item inductively, for $u\geqslant1$, $k_{u+1} = k\cdot(\theta\circ k_u)$.
 \end{itemize}
 
 \begin{itenv}{Lemma~4}
@@ -4926,9 +4927,50 @@ we set
   \[
     \begin{aligned}
       k_{1+u+v}\cdot s_{1+u,v}\theta
-      =
+      &= k \cdot (\theta\circ k_{u+v}) \cdot (\theta\circ s_{u,v}\theta) \cdot  s(\theta,\bigcirc^u\theta,\bigcirc^v\theta)
+    \\&= k \cdot (\theta\circ k) \cdot \big(\theta\circ(k_u\circ k_v)\big) \cdot  s(\theta,\bigcirc^u\theta,\bigcirc^v\theta)
+    \\&= k \cdot (\theta\circ k) \cdot s(\theta,\theta,\theta) \cdot \big((\theta\circ k_u)\circ k_v\big)
+    \\&= k \cdot (k\circ\theta) \cdot \big((\theta\circ k_u)\circ k_v\big)
+    \\&= k\cdot (k_{u+1}\circ k_v).
     \end{aligned}
   \]
+
+  The formula is thus proven in the three cases $u\geqslant1$, $v\geqslant0$, and $u=1$ and $v=0$.
+  For $v=0$ and arbitrary $u\geqslant0$, we can reduce to proving that
+  \[
+    k_u = k\cdot (k_u\circ i) \cdot r(\bigcirc^u\theta).
+  \]
+  For $u=1$, this is true, by the definition of a monad.
+  Now we suppose that we have proven this for some $u\geqslant1$, and prove that it remains true for $u+1$.
+  We have that
+  \[
+    \begin{aligned}
+      k_{1+u}
+      &= k \cdot (\theta\circ k_u)
+    \\&= k \cdot (\theta\circ k) \cdot \big(\theta\circ(k_u\circ i)\big) \cdot \big(\theta\circ r(\bigcirc^u\theta)\big)
+    \\&= k \cdot (\theta\circ k) \cdot \big(\theta\circ(k_u\circ i)\big) \cdot s(\theta,\bigcirc^u\theta,1) \cdot r(\bigcirc^{1+u}\theta)
+    \\&= k \cdot (\theta\circ k) \cdot s(\theta,\theta,\theta) \cdot \big((\theta\circ k_u)\circ i\big) \cdot r(\bigcirc^{1+u}\theta)
+    \\&= k \cdot (k\circ\theta) \cdot \big((\theta\circ k_u)\circ i\big) \cdot r(\bigcirc^{1+u}\theta)
+    \\&= k \cdot (k_{1+u}\circ i) \cdot r(\bigcirc^{1+u}\theta).
+    \end{aligned}
+  \]
+
+  \oldpage{308}
+  Note that we have used the formula from \hyperref[lemma:3]{Lemma~3} in the particular case where $u=1$, $v=u$, and $w=0$ (using the notation from the lemma), which can be written as
+  \[
+    r(\bigcirc^{1+u}\theta)^{-1}
+    = \big(\theta\circ r(\bigcirc^u\theta)^{-1}\big) \cdot s(\theta,\bigcirc^u\theta,1).
+  \]
+  The formula is thus proven for $u\geqslant1$ and $v\geqslant0$.
+  The case $u=v=0$ is then easy to prove.
+\end{proof}
+
+\begin{itenv}{Proposition~A.1}
+  If $\overline{\cat{D}}$ is a countably distribute monoidal category, then the forgetful functor $\Mon{\overline{\cat{D}}}\to\cat{D}$ is tripleable.\footnote{This result also appears in the article ``Cohomology in tensored categories'' by M.~Barr, \emph{Proceedings of the Conference of Categorical Algebra, La Jolla}, Springer (1965).}
+\end{itenv}
+
+\begin{proof}
+  Let
 \end{proof}
 
 
