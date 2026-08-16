@@ -4869,6 +4869,67 @@ We say that $\overline{\cat{D}}$ is \emph{countably distributive} if it satisfie
 \end{proof}
 
 Let $\overline{\cat{D}}$ be a monoidal category.
+We will make full use of the results of ``coherence theory'', long since developed by Mac-Lane.
+In particular, $r(1)=s(1)$.
+The lemma below will not be proven.
+
+Let $\theta\in\set{\cat{D}}$;
+we set
+\begin{itemize}
+  \item
+    $\bigcirc^0\theta = 1$, $\bigcirc^1\theta=\theta$, and, inductively, $\bigcirc^{u+1}\theta=\theta\circ(\bigcirc^u\theta)$ for all $u\geqslant1$;
+  \item
+    $s_{u,0}\theta = r(\bigcirc^u\theta)^{-1}$ and $s_{0,v}\theta = l(\bigcirc^v\theta)^{-1}$ for all $u,v\geqslant0$; in particular $s_{0,0}=r(1)^{-1}=l(1)^{-1}$;
+  \item
+    $s_{1,v}\theta = \theta\circ(\bigcirc^v\theta)$ for $v\geqslant1$, and, inductively, for $u,v\geqslant1$,
+    \[
+      s_{u+1,v}\theta
+      = (\theta\circ s_{u,v}\theta) \cdot s(\theta, \bigcirc^u\theta, \bigcirc^v\theta).
+    \]
+\end{itemize}
+
+\begin{itenv}{Lemma~3}
+  If $\overline{\cat{D}}$ is a countably distributive monoidal category, then we have the formula
+  \[
+    s_{u+v,w}\theta \cdot \big( (s_{u,v}\theta)\circ(\bigcirc^w\theta) \big)
+    = s_{u,v+w}\theta \cdot \big( (\bigcirc^u\theta)\circ(s_{v,w}\theta) \big) \cdot s(\bigcirc^u\theta, \bigcirc^v\theta, \bigcirc^w\theta)
+  \]
+  for all $u,v,w\geqslant0$.
+\end{itenv}
+
+\oldpage{307}
+Let $(\theta,i,k)$ be a monad in $\overline{\cat{D}}$;
+we set
+\begin{itemize}
+  \item $k_0 = i$
+  \item $k_1 = \theta$
+  \item $k_2 = k$
+  \item inductively, for $u\geqslant1$, $k_{u+1}\k\cdot(\theta\circ k_u)$.
+\end{itemize}
+
+\begin{itenv}{Lemma~4}
+  For every pair of integers $u,v\geqslant0$, we have the relation
+  \[
+    k_{u+v}\cdot s_{u,v}\theta = k\cdot(k_u\circ k_v).
+  \]
+\end{itenv}
+
+\begin{proof}
+  A monad is a bifunctor of the form $\mathbf{1}\to\overline{\cat{D}}$;
+  the lemma is thus a result of the ``coherence theory'', but we will give a direct proof.
+
+  For $u=1$, this is the definition of $k_{1+v}$ as $k\cdot(\theta\circ k_v)$ for $v\geqslant1$, since $s_{1,v}\theta$ is an identity.
+  The equality remains true for $v=0$, since in this case it can be written as $r(\theta)^{-1}=k\cdot(\theta\circ i)$.
+
+  Now suppose that $v\geqslant1$ is fixed, and suppose that the formula has been proven for some integer $u\geqslant1$;
+  we will show that it is then true for the integer $u+1$.
+  \[
+    \begin{aligned}
+      k_{1+u+v}\cdot s_{1+u,v}\theta
+      =
+    \end{aligned}
+  \]
+\end{proof}
 
 
 %% Bibliography %%
