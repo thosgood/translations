@@ -97,6 +97,7 @@
 \newcommand{\Sp}[1]{\Cat{Sp}(#1)}
 \newcommand{\Mon}[1]{\Cat{Mon}(#1)}
 \newcommand{\Op}[1]{\Cat{Op}(#1)}
+\newcommand{\Mod}[1]{\Cat{Mod}(#1)}
 
 \DeclareMathOperator{\Hom}{Hom}
 \renewcommand{\hom}{\operatorname{hom}}
@@ -3051,7 +3052,7 @@ We say that $\TT=(T,I,K)$ is a \emph{strongly cartesian} triple if it is cartesi
 
 \begin{proof}
   Let $U\colon\Cat{Cat}(\TT)\to\Gr{\TT}$ be the usual forgetful functor;
-  we will define an adjoint functor $F\colon\Gr{\TT}\to\Cat{Cat}(\TT)$ by using \cref{proposition:a.1} in the appendix.
+  we will define an adjoint functor $F\colon\Gr{\TT}\to\Cat{Cat}(\TT)$ by using \hyperref[proposition:a.1]{Proposition~A.1} in the appendix.
   For every $e\in\set{\cat{E}}$, by \cref{proposition:II.2.14} and the terminology of \cref{sec:II.4},
   \[
     \overline{\Gr{\TT}/e}
@@ -3059,7 +3060,7 @@ We say that $\TT=(T,I,K)$ is a \emph{strongly cartesian} triple if it is cartesi
   \]
   \oldpage{268}
   is a monoidal category, and, by \cref{proposition:II.3.15}, $\Cat{Cat}(\TT)/e$ is isomorphic to the category of monads $\Mon{\overline{\Gr{\TT}/e}}$ (see the Appendix) and its forgetful functor to $\Gr{\TT}/e$ agrees with a restriction of $U$.
-  To show that the functor $\Cat{Cat}(\TT)/e\to\Gr{\TT}/e$ admits an adjoint, it thus suffices to show that $\overline{\Gr{\TT}/e}$ is countably distributive (\cref{proposition:a.1}).
+  To show that the functor $\Cat{Cat}(\TT)/e\to\Gr{\TT}/e$ admits an adjoint, it thus suffices to show that $\overline{\Gr{\TT}/e}$ is countably distributive (\hyperref[proposition:a.1]{Proposition~A.1}).
   The existence of finite and countable sums follows from hypothesis~(c) and from the ``creativity'' of the functor $\Gr{\TT}/e\to\cat{E}$ that, to each $\TT$-graph $\theta$ over $e$, associates the object of the morphisms $\pi$ and $\theta$.
   We show that $\overline{\Gr{\TT}/e}$ is countably distributive by using conditions~(c) and (d), along with the fact that, if we have an equality of the form $C'\cdot C=C''$ in $\cat{E}$ and if $C'$ and $C''$ are cartesian natural transformations (\cref{sec:II.2}), then $C$ is also cartesian.
   The forgetful functor $U_e\colon\Cat{Cat}(\TT)/e\to\Gr{\TT}/e$ is thus tripleable;
@@ -3071,7 +3072,7 @@ We say that $\TT=(T,I,K)$ is a \emph{strongly cartesian} triple if it is cartesi
     U^\mathbf{2}\colon \Cat{Cat}(\TT^\mathbf{2})
     \to \Gr{\TT^\mathbf{2}}.
   \]
-  The way in which the adjoint of \cref{proposition:a.1} is constructed leads us to define $\set{F^\mathbf{2}}$ as the extension of the maps $\set{\hat{F}_f}$, where $f$ runs over $\set{\cat{E}^\mathbf{2}}$, and where we denote by $\hat{F}_f$ the adjoint of the forgetful functor
+  The way in which the adjoint of \hyperref[proposition:a.1]{Proposition~A.1} is constructed leads us to define $\set{F^\mathbf{2}}$ as the extension of the maps $\set{\hat{F}_f}$, where $f$ runs over $\set{\cat{E}^\mathbf{2}}$, and where we denote by $\hat{F}_f$ the adjoint of the forgetful functor
   \[
     \hat{U}_f\colon \Cat{Cat}(\TT^\mathbf{2})/f
     \to \Gr{\TT^\mathbf{2}}/f.
@@ -3122,7 +3123,7 @@ We say that an inductive cone in $\cat{E}^\mathbf{2}$ is cartesian if its canoni
 \end{itenv}
 
 \begin{proof}
-  If $\TT'=(T',I',K')$ is the induced triple on $\Gr{\TT}$, then the proof of \cref{proposition:a.1} in the appendix shows that, for all $\theta\in\set{\Gr{\TT}}$, $T'\theta$ is a countable sum, $I'\theta$ is a canonical injection of this sum, and $K'\theta$ is a crochet of the sum $T'T'\theta$;
+  If $\TT'=(T',I',K')$ is the induced triple on $\Gr{\TT}$, then the proof of \hyperref[proposition:a.1]{Proposition~A.1} in the appendix shows that, for all $\theta\in\set{\Gr{\TT}}$, $T'\theta$ is a countable sum, $I'\theta$ is a canonical injection of this sum, and $K'\theta$ is a crochet of the sum $T'T'\theta$;
   we thus immediately deduce that $\TT'$ is cartesian.
   \oldpage{270}
   The rest of the proposition is proven by using the commutativity of projective limits with themselves (fibre products) and the commutativity of inductive limits with themselves (sums).
@@ -4743,7 +4744,7 @@ We will later search for a construction of a bicategory $\Cat{Procat}(\TT)=\Cat{
 \label{appendix}
 \addcontentsline{toc}{section}{\nameref{appendix}}
 
-The essential result of this appendix is \cref{proposition:a.2}, but the only result used in the article is \cref{proposition:a.1}, which is used in the Lemma of \cref{proposition:III.1.19}.
+The essential result of this appendix is \cref{proposition:a.2}, but the only result used in the article is \hyperref[proposition:a.1]{Proposition~A.1}, which is used in the Lemma of \cref{proposition:III.1.19}.
 
 \subsection{Free monads in countably distributive monoidal categories}
 
@@ -5100,8 +5101,8 @@ we set
       In a general way, $\overline{\cat{D}}$ is countably distributive monoidal whenever $\cat{D}$ admits finite and countable sums, and $\bigcirc\colon\cat{D}\times\cat{D}\to\cat{D}$ is a ``tensor product'' functor, i.e. an adjoint to an ``internal hom'' functor (if this tensor product is symmetric).
 
     \item
-      If $\overline{\cat{D}}$ is not countably distributive, then the forgetful functor $\Mon{\overline{\cat{D}}}\to\cat{D}$ can admit an adjoint that is not of the form obtained in \cref{proposition:a.1}.
-      For example, if we take $\overline{\cat{D}}=\Gr{\TT_0}/e$, where $\TT_0=(T_0,I_0,K_0)$ is the obvious triple on $\cat{E}$ such that, for all $e'\in\set{\cat{E}}$, $T_0e'$ is equal to a final object of $\cat{E}$, then the adjunction morphism in \cref{proposition:a.1} will be a canonical injection $j_1\colon\theta\to\theta+1$.
+      If $\overline{\cat{D}}$ is not countably distributive, then the forgetful functor $\Mon{\overline{\cat{D}}}\to\cat{D}$ can admit an adjoint that is not of the form obtained in \hyperref[proposition:a.1]{Proposition~A.1}.
+      For example, if we take $\overline{\cat{D}}=\Gr{\TT_0}/e$, where $\TT_0=(T_0,I_0,K_0)$ is the obvious triple on $\cat{E}$ such that, for all $e'\in\set{\cat{E}}$, $T_0e'$ is equal to a final object of $\cat{E}$, then the adjunction morphism in \hyperref[proposition:a.1]{Proposition~A.1} will be a canonical injection $j_1\colon\theta\to\theta+1$.
   \end{enumerate}
 \end{rmenv}
 
@@ -5109,7 +5110,36 @@ we set
 
 \subsection{Generalisation to certain algebraic structures}
 
-When
+When the monoidal category $\overline{\cat{D}}=(\cat{D},1,\times)$ is \emph{cartesian}, that is, when $\times\colon\cat{D}\times\cat{D}\to\cat{D}$ is the adjoint of the ``diagonal'' functor $\cat{D}\to\cat{D}\times\cat{D}$, the notion of monad in $\overline{\cat{D}}$ coincides with that of \emph{monoid} in $\cat{D}$, or a $\cat{D}$-monoid.
+Examples of monads that are not monoids are numerous (rings, triples, $\TT$-categories, \ldots).
+We can ask ourselves the following questions:
+
+\begin{enumerate}
+  \item
+    Which are the algebraic structures that, like that of monoids, can be defined more generally in non-cartesian monoidal categories (algebraic structures in the sense of Birkhoff--Lawvere)?
+  \item
+    \oldpage{311}
+    Is the result of \hyperref[proposition:a.1]{Proposition~A.1} still true for such structures?
+\end{enumerate}
+
+Note that we cannot hope for all algebraic structures to be an answer to question~1;
+for example, if we want to define ``commutative'' monads, then we have to do so in a ``commutative'' monoidal category.
+The definition below of ``monoidal theory'' answers this question when $\overline{\cat{D}}$ is monoidal and countably distributive.
+But, to simplify, we restrict ourselves to \emph{strict} monoidal categories, i.e. those such that the natural transformations $r$, $l$, and $s$ are identities.
+
+Let $\overline{\Delta}=(\Delta,0,+)$ be a strict monoidal category.
+We say that $\overline{\Delta}$ is a \emph{strict monoidal theory} if it satisfies the following condition, in which $\Delta_0$ denotes the set of morphisms with target equal to $1$.
+
+\begin{itenv}[(T)]
+  The set $\set{\Delta}$ endowed with the restriction of the first law $+\colon\Delta\times\Delta\to\Delta$ is identical (or isomorphic) to the set $\mathbb{N}$ of positive or zero integers with the usual addition.
+  Every morphism $\varepsilon\colon n\to n'$ in $\Delta$ can be uniquely written in the form
+  \[
+    \varepsilon = \varepsilon_1 + \varepsilon_2 + \ldots + \varepsilon_n
+  \]
+  where $(\varepsilon_1,\varepsilon_2,\ldots,\varepsilon_{n'})\in\Delta_0^{n'}$.
+\end{itenv}
+
+We further say that
 
 
 %% Bibliography %%
