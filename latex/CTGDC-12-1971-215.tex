@@ -3051,7 +3051,7 @@ We say that $\TT=(T,I,K)$ is a \emph{strongly cartesian} triple if it is cartesi
 
 \begin{proof}
   Let $U\colon\Cat{Cat}(\TT)\to\Gr{\TT}$ be the usual forgetful functor;
-  we will define an adjoint functor $F\colon\Gr{\TT}\to\Cat{Cat}(\TT)$ by using \unsure{Proposition~A.1} in the appendix.
+  we will define an adjoint functor $F\colon\Gr{\TT}\to\Cat{Cat}(\TT)$ by using \cref{proposition:a.1} in the appendix.
   For every $e\in\set{\cat{E}}$, by \cref{proposition:II.2.14} and the terminology of \cref{sec:II.4},
   \[
     \overline{\Gr{\TT}/e}
@@ -3059,7 +3059,7 @@ We say that $\TT=(T,I,K)$ is a \emph{strongly cartesian} triple if it is cartesi
   \]
   \oldpage{268}
   is a monoidal category, and, by \cref{proposition:II.3.15}, $\Cat{Cat}(\TT)/e$ is isomorphic to the category of monads $\Mon{\overline{\Gr{\TT}/e}}$ (see the Appendix) and its forgetful functor to $\Gr{\TT}/e$ agrees with a restriction of $U$.
-  To show that the functor $\Cat{Cat}(\TT)/e\to\Gr{\TT}/e$ admits an adjoint, it thus suffices to show that $\overline{\Gr{\TT}/e}$ is countably distributive (\unsure{Proposition~A.1}).
+  To show that the functor $\Cat{Cat}(\TT)/e\to\Gr{\TT}/e$ admits an adjoint, it thus suffices to show that $\overline{\Gr{\TT}/e}$ is countably distributive (\cref{proposition:a.1}).
   The existence of finite and countable sums follows from hypothesis~(c) and from the ``creativity'' of the functor $\Gr{\TT}/e\to\cat{E}$ that, to each $\TT$-graph $\theta$ over $e$, associates the object of the morphisms $\pi$ and $\theta$.
   We show that $\overline{\Gr{\TT}/e}$ is countably distributive by using conditions~(c) and (d), along with the fact that, if we have an equality of the form $C'\cdot C=C''$ in $\cat{E}$ and if $C'$ and $C''$ are cartesian natural transformations (\cref{sec:II.2}), then $C$ is also cartesian.
   The forgetful functor $U_e\colon\Cat{Cat}(\TT)/e\to\Gr{\TT}/e$ is thus tripleable;
@@ -3071,7 +3071,7 @@ We say that $\TT=(T,I,K)$ is a \emph{strongly cartesian} triple if it is cartesi
     U^\mathbf{2}\colon \Cat{Cat}(\TT^\mathbf{2})
     \to \Gr{\TT^\mathbf{2}}.
   \]
-  The way in which the adjoint of \unsure{Proposition~A.1} is constructed leads us to define $\set{F^\mathbf{2}}$ as the extension of the maps $\set{\hat{F}_f}$, where $f$ runs over $\set{\cat{E}^\mathbf{2}}$, and where we denote by $\hat{F}_f$ the adjoint of the forgetful functor
+  The way in which the adjoint of \cref{proposition:a.1} is constructed leads us to define $\set{F^\mathbf{2}}$ as the extension of the maps $\set{\hat{F}_f}$, where $f$ runs over $\set{\cat{E}^\mathbf{2}}$, and where we denote by $\hat{F}_f$ the adjoint of the forgetful functor
   \[
     \hat{U}_f\colon \Cat{Cat}(\TT^\mathbf{2})/f
     \to \Gr{\TT^\mathbf{2}}/f.
@@ -3122,7 +3122,7 @@ We say that an inductive cone in $\cat{E}^\mathbf{2}$ is cartesian if its canoni
 \end{itenv}
 
 \begin{proof}
-  If $\TT'=(T',I',K')$ is the induced triple on $\Gr{\TT}$, then the proof of \unsure{Proposition~A.1} in the appendix shows that, for all $\theta\in\set{\Gr{\TT}}$, $T'\theta$ is a countable sum, $I'\theta$ is a canonical injection of this sum, and $K'\theta$ is a crochet of the sum $T'T'\theta$;
+  If $\TT'=(T',I',K')$ is the induced triple on $\Gr{\TT}$, then the proof of \cref{proposition:a.1} in the appendix shows that, for all $\theta\in\set{\Gr{\TT}}$, $T'\theta$ is a countable sum, $I'\theta$ is a canonical injection of this sum, and $K'\theta$ is a crochet of the sum $T'T'\theta$;
   we thus immediately deduce that $\TT'$ is cartesian.
   \oldpage{270}
   The rest of the proposition is proven by using the commutativity of projective limits with themselves (fibre products) and the commutativity of inductive limits with themselves (sums).
@@ -4967,6 +4967,7 @@ we set
 \end{proof}
 
 \begin{itenv}{Proposition~A.1}
+\label{proposition:a.1}
   If $\overline{\cat{D}}$ is a countably distribute monoidal category, then the forgetful functor $\Mon{\overline{\cat{D}}}\to\cat{D}$ is tripleable.\footnote{This result also appears in the article ``Cohomology in tensored categories'' by M.~Barr, \emph{Proceedings of the Conference of Categorical Algebra, La Jolla}, Springer (1965).}
 \end{itenv}
 
@@ -5085,9 +5086,30 @@ we set
 \end{proof}
 
 \begin{rmenv}{Remarks}
-  The author of this work does not know if we can adapt such a construction to a countably distributive pseudo-monoidal category $\overline{\cat{D}}$.
-  However,
+  \begin{enumerate}
+    \item
+      The author of this work does not know if we can adapt such a construction to a countably distributive pseudo-monoidal category $\overline{\cat{D}}$.
+      \oldpage{310}
+      However, we can construct free ``non-unital monads'' (pairs $(\theta,k)$ where $k\colon\theta\circ\theta\to\theta$ satisfies the second relation in~(1)), by using Lemma~3 for $u,v,w\geqslant1$ and by replacing, in the proof, $\hat{\theta}$ by the sum of the $\bigcirc^n\theta$ for $n\geqslant1$.
+
+    \item
+      This result, used in \cref{sec:III.1}, shows in particular that \emph{the existence of a free $\cat{E}$-category generated by an $\cat{E}$-graph in a category $\cat{E}$ is ensured if $\cat{E}$ admits (finite) fibre products and countable sums, and if these sums are universal and commute with the fibre products.}
+      These conditions are evidently not necessary, but sufficient.
+      We can also apply this proposition to $\overline{\cat{D}}=(\Mod{A},A,\otimes_A)$, where $A$ is a commutative ring and $\Mod{A}$ is the category of $A$-modules;
+      we thus obtain the construction of ``tensor algebras''.
+      In a general way, $\overline{\cat{D}}$ is countably distributive monoidal whenever $\cat{D}$ admits finite and countable sums, and $\bigcirc\colon\cat{D}\times\cat{D}\to\cat{D}$ is a ``tensor product'' functor, i.e. an adjoint to an ``internal hom'' functor (if this tensor product is symmetric).
+
+    \item
+      If $\overline{\cat{D}}$ is not countably distributive, then the forgetful functor $\Mon{\overline{\cat{D}}}\to\cat{D}$ can admit an adjoint that is not of the form obtained in \cref{proposition:a.1}.
+      For example, if we take $\overline{\cat{D}}=\Gr{\TT_0}/e$, where $\TT_0=(T_0,I_0,K_0)$ is the obvious triple on $\cat{E}$ such that, for all $e'\in\set{\cat{E}}$, $T_0e'$ is equal to a final object of $\cat{E}$, then the adjunction morphism in \cref{proposition:a.1} will be a canonical injection $j_1\colon\theta\to\theta+1$.
+  \end{enumerate}
 \end{rmenv}
+
+
+
+\subsection{Generalisation to certain algebraic structures}
+
+When
 
 
 %% Bibliography %%
