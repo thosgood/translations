@@ -98,6 +98,7 @@
 \newcommand{\Mon}[1]{\Cat{Mon}(#1)}
 \newcommand{\Op}[1]{\Cat{Op}(#1)}
 \newcommand{\Mod}[1]{\Cat{Mod}(#1)}
+\newcommand{\Str}[2]{\Cat{Str}_{#1}(#2)}
 
 \DeclareMathOperator{\Hom}{Hom}
 \renewcommand{\hom}{\operatorname{hom}}
@@ -4746,7 +4747,9 @@ We will later search for a construction of a bicategory $\Cat{Procat}(\TT)=\Cat{
 
 The essential result of this appendix is \cref{proposition:a.2}, but the only result used in the article is \hyperref[proposition:a.1]{Proposition~A.1}, which is used in the Lemma of \cref{proposition:III.1.19}.
 
+
 \subsection{Free monads in countably distributive monoidal categories}
+\label{sec:a.1}
 
 As in \cref{sec:II.4}, we denote a pseudo-monoidal category as a triple $\overline{\cat{D}}=(\cat{D},1,\circ)$.
 Let $\Mon{\overline{\cat{D}}}$ be the category of monads in $\overline{\cat{D}}$ (\cref{sec:II.3}); its objects are triples $(\theta,i,k)$, where $i\colon1\to\theta$ and $k\colon\theta\circ\theta\to\theta$ are morphisms in $\cat{D}$ such that
@@ -4831,7 +4834,7 @@ We will assume a rather strong hypothesis~(D) on $\overline{\cat{D}}$ which will
 
 \begin{rmenv}{Remark}
   This lemma is a particular case of a more general fact that holds for all ``algebraic'' structures, under the condition of choosing good forgetful functors.
-  We will later see (\cref{proposition:a.2}) another application, in a slightly less particular case.
+  We will later see (\hyperref[proposition:a.2]{Proposition~A.2}) another application, in a slightly less particular case.
 \end{rmenv}
 
 For all $\theta\in\set{\cat{D}}$, we can define functors $Y_\theta$ and $Y'_\theta\colon\cat{D}\to\cat{D}$ which, to each morphism $m\colon\theta_1\to\theta_2$ in $\cat{D}$, associate (respectively) the morphisms
@@ -5109,6 +5112,7 @@ we set
 
 
 \subsection{Generalisation to certain algebraic structures}
+\label{sec:a.2}
 
 When the monoidal category $\overline{\cat{D}}=(\cat{D},1,\times)$ is \emph{cartesian}, that is, when $\times\colon\cat{D}\times\cat{D}\to\cat{D}$ is the adjoint of the ``diagonal'' functor $\cat{D}\to\cat{D}\times\cat{D}$, the notion of monad in $\overline{\cat{D}}$ coincides with that of \emph{monoid} in $\cat{D}$, or a $\cat{D}$-monoid.
 Examples of monads that are not monoids are numerous (rings, triples, $\TT$-categories, \ldots).
@@ -5130,7 +5134,7 @@ But, to simplify, we restrict ourselves to \emph{strict} monoidal categories, i.
 Let $\overline{\Delta}=(\Delta,0,+)$ be a strict monoidal category.
 We say that $\overline{\Delta}$ is a \emph{strict monoidal theory} if it satisfies the following condition, in which $\Delta_0$ denotes the set of morphisms with target equal to $1$.
 
-\begin{itenv}[(T)]
+\begin{itenv}{(T)}
   The set $\set{\Delta}$ endowed with the restriction of the first law $+\colon\Delta\times\Delta\to\Delta$ is identical (or isomorphic) to the set $\mathbb{N}$ of positive or zero integers with the usual addition.
   Every morphism $\varepsilon\colon n\to n'$ in $\Delta$ can be uniquely written in the form
   \[
@@ -5139,7 +5143,130 @@ We say that $\overline{\Delta}$ is a \emph{strict monoidal theory} if it satisfi
   where $(\varepsilon_1,\varepsilon_2,\ldots,\varepsilon_{n'})\in\Delta_0^{n'}$.
 \end{itenv}
 
-We further say that
+We further say that $\Delta$ is \emph{countable} if $\Delta_0$ is finite or countable (see \cref{sec:a.3} for an interpretation of theories in terms of multicategories).
+
+If $\overline{\cat{D}}=(\cat{D},1,\circ)$ and $\overline{\Delta}=(\Delta,0,+)$ are strict monoidal categories, we denote by $\Str{\overline{\Delta}}{\overline{\cat{D}}}$ the category whose objects are the functors $F\colon\Delta\to\cat{D}$ that commute with the first laws, or, equivalently, the bifunctors $\overline{\Delta}\to\overline{\cat{D}}$;
+we call such a functor a \emph{$\overline{\Delta}$-structure}.
+We say that $m\colon F\to F'$ is a \emph{morphism in $\Str{\overline{\Delta}}{\overline{\cat{D}}}$} if $F$ and $F'$ are $\overline{\Delta}$-structures and $m\colon F1\to F'1$ is a morphism in $\cat{D}$ such that
+\[
+  (\bigcirc^u m \mid u\in\mathbb{N})\colon F\to F'
+\]
+is a natural transformation.
+We have a forgetful functor $\Str{\overline{\Delta}}{\overline{\cat{D}}}\to\cat{D}$ that sends a $\overline{\Delta}$-structure $F$ to the object $F1$ of $\cat{D}$.
+
+\begin{itenv}{Proposition~A.2}
+\label{proposition:a.2}
+  If $\overline{\cat{D}}=(\cat{D},1,\circ)$ is a countably distributive strict monoidal category, and if $\overline{\Delta}=(\Delta,0,+)$ is a countable theory, then the forgetful functor $\Str{\overline{\Delta}}{\overline{\cat{D}}}\to\cat{D}$ is tripleable.
+\end{itenv}
+
+\begin{proof}
+  \oldpage{312}
+  We proceed step-by-step.
+
+  \begin{enumerate}
+      \item
+        \emph{The $\overline{\Delta}$-structure $F_\theta\colon\Delta\to\cat{D}$ associated to an object $\theta\in\set{\cat{D}}$.}
+
+        Let $\hat{\theta}$ be a sum in $\cat{D}$ of the family of objects $(\bigcirc^n\theta\mid\varepsilon\in\Delta_0)$, where $n$ denotes the source of $\varepsilon$ and $\Delta_0$ the set of morphisms in $\Delta$ with target $1$.
+        Let
+        \[
+          j_\varepsilon\colon
+          \bigcirc^n\theta \to \hat{\theta}
+          \qquad(\text{for }\varepsilon\in\Delta_0)
+        \]
+        be a canonical system of injections for this sum.
+        Let $F_\theta\varepsilon\colon\bigcirc^n\hat{\theta}\to\hat{\theta}$ be the (sum) crochet characterised by the relations
+        \[
+          F_\theta\varepsilon\cdot(j_{\nu_1}\circ\ldots\circ j_{\nu_n})
+          = j_{\varepsilon\cdot(\nu_1+\ldots+\nu_n)}
+          \tag{1}
+        \]
+        for all $(\nu_1,\ldots,\nu_n)\in\Delta_0^n$.
+        If $\varepsilon\colon n\to n'$ is an arbitrary morphism of $\Delta_0$, where now $n'$ can be different from $1$, then we have a unique decomposition $\varepsilon=\varepsilon_1+\ldots+\varepsilon_{n'}$, where $(\varepsilon_1,\ldots,\varepsilon_{n'})\in\Delta_0^{n'}$, which allows us to unambiguously define
+        \[
+          F_\theta\varepsilon
+          = F_\theta\varepsilon_1 \circ \ldots \circ F_\theta\varepsilon_{n'}.
+        \]
+        We then have the relation
+        \[
+          F_\theta(\varepsilon+\varepsilon')
+          = F_\theta\varepsilon \circ F_\theta\varepsilon'
+          \tag{2}
+        \]
+        for every pair $(\varepsilon,\varepsilon')$ of morphisms in $\Delta$.
+
+        Now we will show that, if $\varepsilon\colon n\to n'$ and $\tau\colon n'\to n''$ are ``consecutive'' morphisms in $\Delta$, then we have
+        \[
+          F_\theta(\tau\cdot\varepsilon)
+          = F_\theta\tau\cdot F_\theta\varepsilon.
+          \tag{3}
+        \]
+        We have decompositions
+        \[
+          \begin{aligned}
+            \varepsilon &= \varepsilon_1+\ldots+\varepsilon_{n'}
+          \\\tau &= \tau_1+\ldots+\tau_{n''}
+          \end{aligned}
+        \]
+        where
+        \[
+          \begin{aligned}
+            \varepsilon_i\colon
+            &p_i \to 1
+            \qquad(\text{for }1\leqslant i\leqslant n')
+          \\\tau_{i'}\colon
+            &p'_{i'} \to 1
+            \qquad(\text{for }1\leqslant i'\leqslant n'')
+          \end{aligned}
+        \]
+        and
+        \[
+          \begin{aligned}
+            p_1+\ldots+p_{n'} &= n
+          \\p'_1+\ldots+p'_{n''} &= n'.
+          \end{aligned}
+        \]
+        Since the latter of these two sums is ``finer'' than the former, we can group the terms of this second sum and write
+        \[
+          (p_1+\ldots+p_{p'_1}) + (p_{p'_1+1}+\ldots+p_{p'_1+p'_2}) + \ldots
+          = n.
+        \]
+        \oldpage{313}
+        We have
+        \[
+          \tau\cdot\varepsilon
+          = \tau_1\cdot\sigma_1 + \ldots + \tau_{n''}\cdot\sigma_{n''}
+        \]
+        where
+        \[
+          \begin{aligned}
+            \sigma_1
+            &= \varepsilon_1 + \ldots + \varepsilon_{p'_1}
+          \\\sigma_2
+            &= \varepsilon_{p'_1+1} + \ldots + \varepsilon_{p'_1+p'_2}
+          \\&\ldots.
+          \end{aligned}
+        \]
+        This formula gives the (unique) decomposition of $\tau\cdot\varepsilon$, thus
+        \[
+          F_\theta(\tau\cdot\varepsilon)
+          = F_\theta(\tau_1\cdot\sigma_1)\circ F_\theta(\tau_2\cdot\sigma_2) \circ\ldots\circ F_\theta(\tau_{n''}\cdot\sigma_{n''}).
+        \]
+        Suppose that we have proven~(3) in the case $n''=1$;
+        then
+        \[
+          \begin{aligned}
+            F_\theta(\tau\cdot\varepsilon)
+            &= (F_\theta\tau_1\cdot F_\theta\sigma_1)\circ\ldots\circ(F_\theta\tau_{n''}\cdot F_\theta\sigma_{n''})
+          \\&\overset{\circ\text{ functorial}}{=} (F_\theta\tau_1\circ\ldots\circ F_\theta\tau_{n''})\cdot(F_\theta\sigma_1\circ\ldots\circ F_\theta\sigma_{n''})
+          \\&\overset{\text{(2) iterated}}{=} F_\theta(\tau_1+\ldots+\tau_{n''})\cdot F_\theta(\sigma_1+\ldots+\sigma_{n''})
+          \\&= F_\theta\tau\cdot F_\theta\varepsilon
+          \end{aligned}
+        \]
+        since $\sigma_1+\ldots+\sigma_{n''}=\varepsilon$.
+        We
+    \end{enumerate}  
+\end{proof}
 
 
 %% Bibliography %%
