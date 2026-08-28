@@ -5315,7 +5315,106 @@ We have a forgetful functor $\Str{\overline{\Delta}}{\overline{\cat{D}}}\to\cat{
           \tag{4}
         \]
 
-        Let
+        Let $m\colon\hat{\theta}\to\theta'$ be the (sum) crochet characterised by the relations
+        \[
+          m\cdot j_\tau
+          = F'\tau\cdot(\bigcirc^n I')
+          \tag{5}
+        \]
+        for every morphism $\tau\colon n\to 1$.
+        We will show relation~(4).
+        We write
+        \[
+          \varepsilon
+          = \varepsilon_1 + \ldots + \varepsilon_{n'}
+        \]
+        where $\varepsilon_{i'}\colon p_{i'}\to 1$ (for $1\leqslant i'\leqslant n'$), and let
+        \[
+          (\nu_1,\ldots,\nu_n)
+          \in\Delta_0^n
+        \]
+        where $\nu_i\colon q_i\to 1$ (for $1\leqslant i\leqslant n$).
+        We have
+        \[
+          \begin{aligned}
+            (\bigcirc^{n'}m)\cdot F_\theta\varepsilon\cdot(j_{\nu_1}\circ\ldots\circ j_{\nu_n})
+            &\overset{\text{regrouping}}{=} (\bigcirc^{n'}m)\cdot \Big( \big(F_\theta\varepsilon_1\cdot(j_{\nu_1}\circ\ldots j_{\nu_{p_1}})\big) \circ \big(F_\theta\varepsilon_2\cdot(j_{\nu_{p_1+1}}\circ\ldots)\big) \circ\ldots \Big)
+          \\&= \big(m\cdot F_\theta\varepsilon_1\cdot(j_{\nu_1}\circ\ldots j_{\nu_{p_1}})\big) \circ \big(m\cdot F_\theta\varepsilon_2\cdot(j_{\nu_{p_1+1}}\circ\ldots)\big) \circ \ldots
+          \end{aligned}
+        \]
+        and, if we suppose~(4) to be true for $n'=1$, then this latter expression is equal to
+        \[
+          \begin{aligned}
+            \big( F'\varepsilon_1\cdot(\bigcirc^{p_1}m) \cdot (j_{\nu_1}\circ\ldots\circ j_{\nu_{p_1}}) \big) \circ \big( F'\varepsilon_2\cdot(\bigcirc^{p_2}m)\cdot(j_{\nu_{p_1+1}}\circ\ldots) \big) \circ\ldots
+            &= (F'\varepsilon_1\circ F'\varepsilon_2\circ\ldots)\cdot(\bigcirc^{p_1+\ldots+p_n}m)\cdot(j_{\nu_1}\circ j_{\nu_2}\circ\ldots)
+          \\&= F'\varepsilon\cdot(\bigcirc^n m)\cdot(j_{\nu_1}\circ\ldots\circ j_{\nu_n}).
+          \end{aligned}
+        \]
+        Then, simplifying by $j_{\nu_1}\circ\ldots\circ j_{\nu_n}$, we obtain~(4).
+        We now prove~(4) for $n'=1$.
+        We have
+        \[
+          m\cdot F_\theta\varepsilon\cdot(j_{\nu_1}\circ\ldots\circ j_{\nu_n})
+          &= m\cdot j_{\varepsilon\cdot(\nu_1+\ldots+\nu_n)}
+        \\&\overset{\text{(5)}}{=} F'\big(\varepsilon\cdot(\nu_1+\ldots+\nu_n)\big)\cdot(\bigcirc^{q_1+\ldots+q_n}I')
+        \\&= F'\varepsilon\cdot(F\nu_1\circ\ldots\circ F\nu_n)\cdot\big((\bigcirc^{q_1}I')\circ\ldots\circ(\bigcirc^{q_n}I')\big)
+        \\&= F'\varepsilon\Big( \big(F\nu_1\cdot(\bigcirc^{q_1}I')\big)\circ\ldots\circ\big(F\nu_n\cdot(\bigcirc^{q_n}I')\big) \Big)
+        \\&\overset{\text{(5)}}{=} F'\varepsilon\cdot\big( (m\cdot j_{\nu_1})\circ\ldots\circ(m\cdot j_{\nu_n}) \big)
+        \\&= F'\varepsilon\cdot(\bigcirc^n m)\cdot(j_{\nu_1}\circ\ldots\circ j_{\nu_n})
+        \]
+        \oldpage{315}
+        which, after simplifying by $j_{\nu_1}\circ\ldots j_{\nu_n}$, finishes the proof of the existence of the morphism $m\colon F_\theta\to F'$ in $\Str{\overline{\Delta}}{\overline{\cat{D}}}$, since for $\tau=1$ in~(5) we obtain that $m\cdot I=I'$.
+
+        This morphism is unique.
+        Indeed, let $m'\colon F_\theta\to F'$ be such that we have $m'\cdot I=I'$.
+        Applying~(1) in the particular case where $\nu_1=\nu_2=\ldots=\nu_n=1$, we obtain
+        \[
+          F_\theta\tau\cdot(\bigcirc^n I)
+          = j_{\tau\cdot n}
+          = j_\tau
+        \]
+        and thus
+        \[
+          \begin{aligned}
+            m'\cdot j_\tau
+            &= m'\cdot F_\theta\tau\cdot(\bigcirc^n I)
+          \\&\overset{\text{by definition of }m'}{=} F'\tau\cdot(\bigcirc^n m')\cdot(\bigcirc^n I)
+          \\&= F'\tau\cdot(\bigcirc^n I')
+          \\&\overset{\text{(5)}}{=} m\cdot j_\tau.
+          \end{aligned}
+        \]
+        Simplifying by $j_\tau$, we obtain that $m=m'$.
+
+      \item
+        Such a correspondence (which associates a $\overline{\Delta}$-structure $F_\theta$ to each object $\theta$) extends to an adjoint functor $\cat{D}\to\Str{\overline{\Delta}}{\overline{\cat{D}}}$ to the forgetful functor $\Str{\overline{\Delta}}{\overline{\cat{D}}}$.
+        From this adjoint pair, we obtain a triple that we denote by $\TT_{\overline{\Delta}}(\overline{\cat{D}})=(T,I,K)$.
+        The morphism that was denoted by $j_1$ will now be denoted by $I\theta$.
+        We will construct a functor
+        \[
+          E'\colon \Alg{\TT_{\overline{\Delta}}(\overline{\cat{D}})} \to \Str{\overline{\Delta}}(\overline{\cat{D}}).
+        \]
+        Let $b\colon T\theta\to\theta$ be a $\TT_{\overline{\Delta}}(\overline{\cat{D}})$-algebra and set, for all $\varepsilon\colon n\to n'$,
+        \[
+          F\varepsilon
+          = (\bigcirc^{n'} b)\cdot F_\theta\varepsilon\cdot(\bigcirc^n I\theta).
+        \]
+        We will show that this formula defines a $\overline{\Delta}$-structure $F$ on $\theta$.
+        Firstly, $F$ commutes with the first laws;
+        this is shown by demonstrating that, if $\varepsilon=\varepsilon_1+\ldots+\varepsilon_n$ is the unique decomposition of $\varepsilon$, then
+        \[
+          F\varepsilon
+          = F\varepsilon_1\circ F\varepsilon_2\circ\ldots\circ F\varepsilon_{n'}.
+        \]
+        We now show that $F\colon\Delta\to\cat{D}$ is a functor.
+        For any integer $n$, we have that $Fn=\bigcirc^n(F1)$.
+        If $\varepsilon\colon n\to n'$ and $\varepsilon'\colon n'\to n''$ are ``consecutive'' morphisms in $\Delta$, then
+        \oldpage{316}
+        \[
+          \begin{aligned}
+            F\varepsilon'\cdot F\varepsilon
+            &= 
+          \end{aligned}
+        \]
     \end{enumerate}  
 \end{proof}
 
