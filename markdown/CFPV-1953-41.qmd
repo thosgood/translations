@@ -22,7 +22,6 @@ bibliography: CFPV-1953-41.bib
 <!-- Content -->
 
 \oldpage{41}
-
 The global theory of ideals of analytic functions, due to K. Oka [@10] and H. Cartan [@2; @3; @4], holds not only for domains of holomorphy but also for a larger class of complex analytic manifolds introduced by K. Stein [@11], and which notably contains all the smooth analytic submanifolds, of arbitrary dimension $p$, of the complex space of arbitrary dimension $n>p$.
 
 The fundamental theorems of this theory are nicely expressed in the language of cohomology, which suggests generalisations and provides a useful tool when it comes to using the results.
@@ -33,7 +32,7 @@ other applications will be given in the conference by J.-P. Serre.
 
 # Sheaves on a topological space[^1] {#section-1}
 
-[^1]: The notion of *sheaf* was introduced by J. Leray in the study of homological properties of a continuous map. See J. Leray, *Journ. de Math. pures et appliquées* **29**, 1950, pp. 1--139; it is in this work that we find (at the bottom of page 75) a definition of cohomology with coefficients in a sheaf, limited, in truth, to the case of a locally compact space $X$ (and it deals with "compactly supported" cohomology). The definition of sheaves adopted here is a bit different; it is due to Lazard and was explained in my *Séminaire polycopié* at E.N.S. 1950--1951, where the theory of cohomology with coefficients in a sheaf was developed (exposés XIV to XX).
+[^1]: The notion of *sheaf* was introduced by J. Leray in the study of homological properties of a continuous map. See J. Leray, *Journ. de Math. pures et appliquées* **29**, 1950, pp. 1--139; it is in this work that we find (at the bottom of page 75) a definition of cohomology with coefficients in a sheaf, limited, in truth, to the case of a locally compact space $X$ (and it deals with "compactly supported" cohomology). The definition of sheaves adopted here is a bit different; it is due to Lazard and was explained in [@5], where the theory of cohomology with coefficients in a sheaf was developed (exposés XIV to XX).
 
 Let $X$ be a topological space.
 A *sheaf of abelian groups* on $X$, or simply a *sheaf*, is defined by the data:
@@ -77,4 +76,25 @@ If $U$ and $V$ are opens such that $V\subset U$, then every section over $U$ ind
 The group $\sh{F}_x$ is the inductive limit of the groups $\Gamma(U,\sh{F})$ taken over open neighbourhoods $U$ of $x$.
 
 \oldpage{43}
-In practice,
+In practice, a sheaf on $X$ is often defined in the following way: we give abelian groups $\sh{F}_U$ attached to certain opens $U\subset X$ that form a fundamental system of opens of the topology of $X$; and, for every pair $(U,V)$ such that $V\subset U$, we give a homomorphism $f_{VU}\colon\sh{F}_U\to\sh{F}_V$, such that, for $W\subset V\subset U$, we have that $f_{WU}=f_{WV}\circ f_{VU}$.
+We then take $\sh{F}_x$ to be the inductive limit of the $\sh{F}_U$ over the opens $U$ that contain $x$; and, on the union $\sh{F}$ of the $\sh{F}_x$, we define the topology $\scr{T}$ as follows: for every open $U$ and every $\alpha\in\sh{F}_U$, let $[\alpha]$ be the set of images of $\alpha$ in the $\sh{F}_x$ associated to the points $x\in U$; by definition, the subsets $[\alpha]$ of $\sh{F}$ constitute a fundamental system of opens of the topology $\scr{T}$.
+Axioms (F~I~) and (F~II~) are satisfied.
+We have an obvious homomorphism $\sh{F}_U\to\Gamma(U,\sh{F})$, but this is not necessarily an isomorphism
+Indeed, two different methods of definition can lead to defining the same sheaf.
+For the homomorphism $\sh{F}_U\to\Gamma(U,\sh{F})$ to be an *isomorphism*, it is necessary and sufficient that, for every system of opens $U_i$ with union $U$, and every system of elements $\alpha_i\in\sh{F}_{U_i}$ such that $\alpha_i$ and $\alpha_j$ have the same image in $\sh{F}_{U_i\cap U_j}$, there exist a unique $\alpha\in\sh{F}_U$ such that $F_{U_iU}(\alpha)=\alpha_i$ for all $i$.
+
+::: {.rmenv title="Example" latex="{Example}"}
+Let $\sh{F}_U$ be the additive group of real-valued (resp. complex-valued) functions defined and continuous on $U$.
+If $V\subset U$, then the homomorphism $\sh{F}_U\to\sh{F}_V$ will be that which sends a function defined on $U$ to its restriction to $V$.
+Then $\sh{F}_x$ is the additive group of *germs of continuous functions* at the point $x$;
+and $\sh{F}$ is called the sheaf of germs of real (resp. complex) continuous functions; $\sh{F}_U$ is isomorphism to the group of sections of $\sh{F}$ over $U$.
+:::
+
+::: {.rmenv title="Remark" latex="{Remark}"}
+We have defined sheaves of abelian groups, but it is clear that analogous definitions can be given for any algebraic structure.
+:::
+
+
+# Subsheaf, homomorphism, quotient sheaf {#section-2}
+
+Let $\sh{F}$ be a sheaf on $X$.
