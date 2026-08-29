@@ -68,7 +68,7 @@
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
 
 \newcommand{\todo}[1]{{\color{purple}\textbf{TO-DO: #1}}}
-\newcommand{\unsure}[1]{{\color{purple}\textbf{#1}}}
+\newcommand{\unsure}[1]{{\color{purple}\textbf{UNSURE: #1}}}
 
 \newcommand{\id}{\mathrm{id}}
 \newcommand{\TT}{\mathbf{T}}
@@ -186,7 +186,7 @@ For this, we have been led to study in Sections~\hyperref[sec:III.1]{III.1} and 
 \oldpage{217}
 We will thus quantitatively improve the examples given by Barr, and we will also later study other useful examples, but this problem appeared less important to us long as our definition seems more natural and has a more general reach.
 
-\hyperref[sec:IV]{Chapter~IV} is dedicated first of all to the description of various particular cases of $\TT$-functors, for example étale (or ``discrete fibration'') $\TT$-functors, and then a generalisation, of $\TT$-profunctors, that give an approach to $\TT$-natural transformations.
+\hyperref[sec:iv]{Chapter~IV} is dedicated first of all to the description of various particular cases of $\TT$-functors, for example étale (or ``discrete fibration'') $\TT$-functors, and then a generalisation, of $\TT$-profunctors, that give an approach to $\TT$-natural transformations.
 
 In a subsequent work, we will define tensor $\TT$-categories, that will give various ``coherence'' formulas, in particular those of the ``pseudo-categories'' introduced in \hyperref[sec:II]{Chapter~II}.
 We equally hope to undertake a homological study of these structure.
@@ -806,7 +806,7 @@ A \emph{$\TT$-preorder} is a $\TT$-category whose underlying graph is regular.
 \end{proof}
 
 This proposition allows us to identify a $\TT$-preorder with its underlying $\TT$-graph, and to sometimes write $(b,a)$ instead of $(b,a,i,k)$ for a $\TT$-preorder.
-Amongst all $\TT$-preorders, many interesting cases can be distinguished by properties of by $a$ and $b$ (see the examples in \unsure{\cref{sec:IV}}).
+Amongst all $\TT$-preorders, many interesting cases can be distinguished by properties of by $a$ and $b$ (see the examples in \cref{sec:iv}).
 We limit ourselves to noting the following fact:
 
 \begin{itenv}{Proposition~I.2.3}
@@ -1787,7 +1787,7 @@ All of these definitions are based on those of bicategories of Bénabou \cite{Be
 We define the composition of pseudo-functors in a manner analogous to that of bifunctors \cite{Be}.
 We could define the notions of natural pseudo-transformation and even of morphisms between these.
 This would allow us to define the notation of ``pseudo-triple'' on a pseudo-category, which we will not do.
-We simply note that \unsure{Proposition~3??} later on would give $\TT$-categories a particularly agreeable \unsure{meaning}.
+We simply note that \unsure{Proposition~3??} later on would give $\TT$-categories a particularly agreeable \unsure{interpretation}.
 
 \begin{rmenv}{Remarks}
   ---
@@ -2036,7 +2036,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     T(a_3\cdot u'_3)\cdot K\pi'_3\cdot Tv_2\cdot w_1
     = (Ke_3\cdot Tb_2\cdot u_1)\cdot v'_1\cdot w'_1
   \]
-  combined with the fibre product $(r,m'_1\cdot r')$ of $(T(a_3\cdot u'_3),Ke_3\cdot Tb_2\cdot u_1)$ gives a \unsure{crochet} $q$ (a morphism in $\cat{E}$) characterised by
+  combined with the fibre product $(r,m'_1\cdot r')$ of $(T(a_3\cdot u'_3),Ke_3\cdot Tb_2\cdot u_1)$ gives a crochet $q$ (a morphism in $\cat{E}$) characterised by
   \[
     \begin{aligned}
       r\cdot q
@@ -2079,7 +2079,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \\&= (Ke_4\cdot Tb_3\cdot m_1)\cdot r'
     \end{aligned}
   \]
-  combined with the fibre product $(o,o')$ of $(Ta_4,Ke_4\cdot Tb_3\cdot m_1)$ give a \unsure{crochet} $q'$ (a morphism in $\cat{E}$) characterised by
+  combined with the fibre product $(o,o')$ of $(Ta_4,Ke_4\cdot Tb_3\cdot m_1)$ give a crochet $q'$ (a morphism in $\cat{E}$) characterised by
   \oldpage{253}
   \[
     \begin{aligned}
@@ -3027,7 +3027,7 @@ We define a \emph{bifunctor} to be a pseudo-functor $(F,u,c)$ such that $u$ and 
 
 \oldpage{267}
 In the first two examples that follow (\cref{sec:III.2} and \cref{sec:III.3}), the triple $\TT$ possesses properties that simply its study.
-These properties ensure not only that the functor $\Cat{Cat}(\TT)\to\Gr{\TT}$ is tripleable (\unsure{Proposition~II.1.19}), but also that they permit a simple construction of the adjoint (\unsure{scolium of Proposition~III.2.21}).
+These properties ensure not only that the functor $\Cat{Cat}(\TT)\to\Gr{\TT}$ is tripleable (\unsure{Proposition~II.1.19}), but also that they permit a simple construction of the adjoint (scholium of \hyperref[proposition:iii.2.21]{Proposition~III.2.21}).
 
 
 
@@ -3120,6 +3120,7 @@ We say that an inductive cone in $\cat{E}^\mathbf{2}$ is cartesian if its canoni
 \end{proof}
 
 \begin{itenv}{Proposition~III.1.20}
+\label{proposition:iii.1.20}
   If $\TT$ is a strongly cartesian triple, then so too is the triple induced by the tripleable functor $\Cat{Cat}(\TT)\to\Gr{\TT}$.
 \end{itenv}
 
@@ -3268,6 +3269,7 @@ we call these the \emph{category} and \emph{graph of paths in $\cat{G}$} (respec
 We call $\NN$ the \emph{path triple}.
 
 \begin{itenv}{Proposition~III.2.21}
+\label{proposition:iii.2.21}
   Let $\TT=(T,I,K)$ be a cartesian triple on $\cat{E}$ and let $\theta=(b,a,i,k)$ be a $\TT$-category on $e\in\set{\cat{E}}$;
   then
   \[
@@ -3555,7 +3557,7 @@ Denoting by $N'\cat{A}$ the $\NN$-graph $(\hat{b},\hat{a})$ thus obtained:
   \]
 \end{quote}
 
-We can recognise the construction of the underlying $\NN$-graph of the free $\NN$-category generated by the $\NN$-graph $\cat{A}$, by following the method of the scholium of \unsure{Proposition~III.2.21}.
+We can recognise the construction of the underlying $\NN$-graph of the free $\NN$-category generated by the $\NN$-graph $\cat{A}$, by following the method of the scholium of \hyperref[proposition:iii.2.21]{Proposition~III.2.21}.
 What we have called a ``tree'' does not even deserve this name, but rather ``a bundle of sticks'': it is the scholium that allows us to cut up into pieces the morphisms, rather complicated to describe, of the graph that is the object of the morphisms of the $\NN$-graph of paths of length~$q\geqslant0$ of $\cat{A}$ (see \cref{sec:III.2});
 such morphisms would be difficult to deal with, as we realise by trying to redo the below construction of the free $\NN$-category $(\hat{b},\hat{a},\hat{i},\hat{k})$ generated by $(b,a)$ by using a more direct definition of trees (for example: checking the associativity of composition of trees).
 
@@ -3952,7 +3954,7 @@ and such that $\varphi(f\cdot x)=\varphi(f)\cdot\varphi(x)$, where we write $\va
 The ``global'' definition of a category of operators coincides with that of a \emph{co-étale functor} (called a functor of hypermorphisms in the terminology of \cite{Eh} --- see, for example, the ``sketch'' of this structure in \cite{Bu}).
 We say that a functor $\overline{\phi}\colon\overline{\cat{C}}\to\cat{C}$ is co-étale if, for every $\overline{e}\in\set{\overline{\cat{C}}}$ and every morphism in $\cat{C}$ of the form $f\colon\overline{\phi}(\overline{e})\to e'$, there exists a unique morphism in $\cat{C}$ of the form $\overline{f}\colon\overline{e}\to\overline{e}'$ such that $\overline{\phi}(\overline{f})=f$.
 More generally, suppose that $\cat{E}$ is a category that admits finite fibre products;
-then we say that an $\cat{E}$-functor $(f_0,f)\colon(\overline{b},\overline{a},\overline{i},\overline{k})\to(b,a,i,k)$ is \emph{co-étale} if $(f,\overline{a})$ is a fibre product of $(a,f_0)$ (compare with the generalisations of this notion in \cref{sec:IV}).
+then we say that an $\cat{E}$-functor $(f_0,f)\colon(\overline{b},\overline{a},\overline{i},\overline{k})\to(b,a,i,k)$ is \emph{co-étale} if $(f,\overline{a})$ is a fibre product of $(a,f_0)$ (compare with the generalisations of this notion in \cref{sec:iv}).
 We denote by $\Op{\cat{E}}$ the full subcategory of $\Cat{Cat}(\cat{E})^\mathbf{2}$ whose objects are the co-étale $\cat{E}$-functors.
 
 \oldpage{287}
@@ -4012,7 +4014,7 @@ up to isomorphism, for all $e\in\set{\cat{E}}$.
   form the fibre products $(I',a)$ and $(j',c)$ of $(a',Ie)$ and $(a',j)$ (respectively), where $j\colon 1\to e+1$ and $Ie\colon e\to e+1$ are the canonical injections of the sum $e+1$.
   By hypothesis, $j'\colon\overline{e}\to\pi'$ and $I'\colon\pi\to\pi'$ form a system of canonical injections of a (non-canonical) sum.
   Conversely, the data of two morphisms of the form $a\colon\pi\to e$ and $c\colon\overline{e}\to1$ (the data of the latter being equivalent to that of $\overline{e}$) allows us to construct the sum morphism $a+c\colon\pi+\overline{e}\to e+1$, i.e. $a'$, up to isomorphism.
-  By hypothesis, the sums in $\cat{E}$ are cartesian (see the \unsure{lemma of Proposition~III.1.20}), which implies that the data of $a'$ is evidently equivalent to that of the pair $(a,c)$.
+  By hypothesis, the sums in $\cat{E}$ are cartesian (see the lemma of \hyperref[proposition:iii.1.20]{Proposition~III.1.20}), which implies that the data of $a'$ is evidently equivalent to that of the pair $(a,c)$.
 
   \oldpage{288}
   Now, if $(b',a')$ is a $\TT_{+1}$-graph, its data is equivalent to that of an $\cat{E}$-graph of operators $(b,a,f_0)$, where $b=b'\cdot I'$ and $f_0=b'\cdot j'$;
@@ -4167,11 +4169,11 @@ For example, the following triples on $\Cat{Set}$ are bounded triples:
 
 
 \section{$\TT$-functors}
-\label{sec:IV}
+\label{sec:iv}
 
 
 \subsection{Terminology}
-\label{sec:IV.1}
+\label{sec:iv.1}
 
 \oldpage{292}
 Throughout this chapter, $\cat{E}$ denotes a category admitting finite fibre products and a terminal object.
@@ -4318,7 +4320,7 @@ We say that $(C,\overline{C})$ is an \emph{$\cat{R}$-induced} morphism in $\cat{
 
 
 \subsection{$(\TT,\hat{\cat{S}})$-functors}
-\label{sec:IV.2}
+\label{sec:iv.2}
 
 Suppose that the category $\cat{E}$ is endowed with a triple $\TT=(T,I,K)$;
 let $\hat{\cat{S}}$ be a subcategory of $\cat{E}^\Gamma$;
@@ -4428,7 +4430,7 @@ We thus obtain categories $\Cat{Cat}(\TT)/\hat{\cat{S}}$ by taking $\hat{\cat{S}
 
 
 \subsection{$\TT$-profunctors and natural $\TT$-transformations}
-\label{sec:IV.3}
+\label{sec:iv.3}
 
 \oldpage{298}
 In the previous sections, we have analysed various subcategories of $\Cat{Cat}(\TT)$;
@@ -4712,7 +4714,7 @@ On morphisms between morphisms, we have the following partial result:
 \end{proof}
 
 The converse of this proposition is false.
-For example, if $\TT$ is the identity triple (\cref{sec:III.2}) on $\cat{E}$, then a morphism between monads in $\Sp{\cat{E}}$ coincides with a span of $\cat{E}$-functors $(F',F)$, where $F'$ is a co-étale functor (\cref{sec:IV.2}) (that that Lawvere called ``partial functors'' in a recent conference).
+For example, if $\TT$ is the identity triple (\cref{sec:III.2}) on $\cat{E}$, then a morphism between monads in $\Sp{\cat{E}}$ coincides with a span of $\cat{E}$-functors $(F',F)$, where $F'$ is a co-étale functor (\cref{sec:iv.2}) (that that Lawvere called ``partial functors'' in a recent conference).
 
 The bimodules in $\Sp{\cat{E}}$ are precisely the Bénabou profunctors;
 we define $\TT$-profunctors as the bimodules in $\Sp{\TT}$.
@@ -5570,8 +5572,77 @@ We will show that there is an equivalence between the data of a strict monoidal 
 \end{itenv}
 
 \begin{proof}
-  $T$ commutes  
+  $T$ commutes with finite fibre products, and thus sends every $\cat{E}$-category to an $\cat{E}$-category, and it is evident that
+  \[
+    (Ke,K\pi)\colon
+    \big(TTb,T(Ke\cdot Ta),TTi,TTk\big)
+    \to (Tb,Ke\cdot Ta,Ti,Tk)
+  \]
+  is an $\cat{E}$-functor, and thus defines a $\Kl{\TT}$-category on $e\in\set{\Kl{\TT}}$.
+  Indeed,
+  \[
+    \begin{aligned}
+      Ke\cdot T(Ke\cdot Ta)
+      &= Ke\cdot TKe\cdot TTa
+    \\&= Ke\cdot KTe\cdot TTa
+    \\&= Ke\cdot Ta\cdot K\pi.
+      \qedhere
+    \end{aligned}
+  \]
 \end{proof}
+
+The interest of this proposition is to make precise certain aspects of the structure of a $\TT$-category for a cartesian triple.
+In particular, if $\TT$ is the path triple $\NN$ from \cref{sec:III.3}, then we will see that this corresponds to axiom~(T) from \hyperref[sec:a.2]{§A.2}.
+
+We have an evident isomorphism $\Cat{Set}\to\Cat{Gr}/1$ that, to each set $E$, associates the unique graph $\vec{E}$ on $1$ whose set of morphisms is $E$.
+$\vec{N1}$ endowed with its free monoid structure is isomorphic to the set of positive or zero integers endowed with ordinary addition;
+we can identify these two structures.
+Then $0$ denotes both the object of $\vec{N1}$ and the identity morphism $\id_0$, which recovers the usual convention.
+
+\begin{itenv}{Proposition~A.6}
+\label{proposition:a.6}
+  There is an equivalence between the data of a Lambek multicategory on $1$ and that of a strict monoidal theory.
+  The unique $\NN$-algebra on $1$ corresponds to the ``theory of monads'' (which is also the \unsure{basic/rough} multicategory on $1$!).
+\end{itenv}
+
+\begin{proof}
+  Let $\theta=(b,a,i,k)$ be a Lambek multicategory on $1$.
+  Let $\vec{\Delta}_0$ be the morphism object (which is a graph on $1$ with $\Delta_0$ as its set of morphisms) of this multicategory.
+  \hyperref[proposition:iii.2.21]{Proposition~III.2.21} shows us how to construct a $\Cat{Gr}/1$-category and thus, by the isomorphism $\Cat{Gr}/1\to\Cat{Set}$, a category whose objects are the positive or zero integers and whose morphisms are those of $N\vec{\Delta}_0$.
+  \oldpage{320}
+  \hyperref[proposition:a.5]{Proposition~A.5} shows us how we can complete this data to a monoidal category $\overline{\Delta}$, with the monoid structure on the objects and the arrows of $\Delta$ being, furthermore, free, which expresses axiom~(T).
+
+  Conversely, if $\overline{\Delta}=(\Delta_0,1,+)$ is a strict monoidal theory, then the construction of a multicategory in the sense of \cite{La} is immediate, and the correspondence thus obtained is a bijection.
+\end{proof}
+
+This result suggests that there are many theories, and can serve as a guide to their construction.
+We thus note that the notion of $\TT$-category is nothing more than one ``$\TT$-structure'' amongst the many.
+The structure of a $\TT$-graph is another example.
+
+\begin{rmenv}{Examples of strict monoidal theories}
+  (We leave to the reader the task of defining composition in each case).
+
+  \begin{enumerate}
+    \item \emph{Pointed object.}
+      $\Delta_0$ consists of two elements:
+      \[
+        \id_1\colon 1\to1
+        \textand
+        \iota\colon 0\to1.
+      \]
+
+    \item \emph{Non-unital monad.}
+      $\Delta_0$ consists of two elements:
+      \[
+        \id_1\colon 1\to1
+        \textand
+        \kappa\colon 2\to1.
+      \]
+
+    \item \emph{Modules.}
+      $\Delta_0$ is a set of morphisms of the form $\lambda\colon1\to1$ and this set is endowed with the structure of a monoid, with unit $\id_1\colon1\to1$.
+  \end{enumerate}
+\end{rmenv}
 
 
 
