@@ -340,4 +340,81 @@ c'. For every infinite sequence $S$ of points in $X$, not containing any adheren
 
 [^8]: Cf. [@6], and [@5, Exposé IX].
 
-[^9]: We have a more general result.
+[^9]: We have a more general result: if, from a Stein manifold, we extract a "divisor" $D$ (i.e. an analytic submanifold of $X$ that, on the neighbourhood of each point $x\in D$, can be defined by a single equation $g_x=0$, where $g_x$ is holomorphic at the point $x$ and not identically zero), then the *complement manifold $X\setminus D$ is a Stein manifold*.
+    Proving this reduces to proving the following: for all $x\in D$, there exists a function $f$ that is meromorphic on $X$ and holomorphic on $X\setminus D$, and such that $g_xf$ is holomorphic and non-zero at the point $x$.
+    The existence of such an $f$ follows from Theorem A ([§7](#section-7) below) applied to the subsheaf $\FF$ of the sheaf $\MM$ of germs of meromorphic functions, defined as follows: $\FF_x=\OO_x$ if $x\not\in D$; if $x\in D$, then $\FF_x$ consists of the $\varphi\in\MM_x$ such that $g_x\varphi$ is holomorphic.
+    This sheaf is coherent.
+    The proof that has just been sketched is due to J.-P. Serre.
+
+
+# Statement of the fundamental theorems {#section-7}
+
+\oldpage{51}
+
+::: {.itenv title="Theorem A" latex="{Theorem A}"}
+Let $X$ be a Stein manifold, and $\FF$ a coherent analytic sheaf on $X$.
+Then, for every point $x\in X$, the image of $\HH^0(X,\FF)$ in $\FF_x$ generates $\FF_x$ as an $\OO_x$-module.
+:::
+
+::: {.itenv title="Theorem B" latex="{Theorem B}"}
+Let $X$ be a Stein manifold, and $\FF$ a coherent analytic sheaf on $X$.
+Then, for every integer $q>0$, the cohomology groups $\HH^q(X,\FF)$ are zero.
+:::
+
+The proof is too long and delicate to be able to be given here.[^10]
+The proof of Theorem A, and that of Theorem B for the case $q=1$, in fact constituted the essential object of the thesis [@4], at least in the case where $X$ is a domain of holomorphy of finite type, and $\FF$ is a coherent subsheaf of $\OO^q(X)$.
+The arguments can easily be transported to the general case of a Stein manifold.
+The cohomological formulation of Theorem B, and the idea of studying not only the case $q=1$ but the case of arbitrary $q>0$, are due to J.-P. Serre.
+
+[^10]: A complete proof was given in [@5, Exposé XIX].
+
+
+# Applications {#section-8}
+
+::: {.itenv title="Theorem 1" latex="{Theorem 1}"}
+On a Stein manifold $X$, the additive Cousin problem is always solvable.[^11]
+:::
+
+[^11]: Proven for the first time by Oka [@9] in the case where $X$ is a univalent domain of holomorphy.
+
+::: {.proof}
+Indeed, by Theorem B, we have that $\HH^1(X,\OO)=0$.
+:::
+
+::: {.itenv title="Theorem 2" latex="{Theorem 2}"}
+Let $X$ be a Stein manifold, $V$ an analytic submanifold of $X$, and $\II$ the sheaf of ideals defined by $V$ ([§5](#section-5)).
+Then the holomorphic functions on $X$ that vanish at every point of $V$ generate, at each point $x\in X$, the ideal $\II_x$.
+:::
+
+::: {.proof}
+Indeed, $\II$ is a coherent sheaf, to which we apply Theorem A.
+:::
+
+::: {.itenv title="Corollary" latex="{Corollary}"}
+If $x\not\in V$, then there exists a function $f$ that is holomorphic on $X$, zero on $V$, and such that $f(x)\neq0$.
+In other words: the submanifold $V$ can be globally defined by equations (obtained by setting equal to $0$ some holomorphic functions on $X$).
+\oldpage{52}
+Furthermore: for every open $U$ of $X$ that is relatively compact, there exists a *finite* number of $f_i$ that are holomorphic on $X$, zero on $V$, and do not have, in $U$, any common zero apart from the points of $V\cap U$.
+:::
+
+::: {.itenv title="Theorem 3" latex="{Theorem 3}"}
+Let $X$ be a Stein manifold, and $V$ an analytic submanifold regularly embedded into $X$.
+Then every holomorphic function on the complex-analytic manifold $V$ is induced by a holomorphic function on $X$.
+:::
+
+::: {.proof}
+Indeed, let $\II$ be the sheaf of ideals defined by $V$.
+By Theorem B, we have that $\HH^1(X,\II)=0$, and so
+$$
+  \HH^(X,\OO)\to\HH^0(X,\OO/\II)
+\tag{1}
+$$
+is an *epimorphism*.
+But $\OO_x/\II_x$ is zero if $x\not\in V$;
+if $x\in X$, then $\OO_x/\II_x$ can be identified with the ring of germs of holomorphic functions on $V$ at the point $x$, since the point $x$ is regular for $V$.
+Thus $\HH^0(X,\OO/\II)$ can be identified with the ring of holomorphic functions on $V$, and (1) is the homomorphism that, to each holomorphic function on $X$, associates the function that it induces on $V$.
+Whence the theorem.
+:::
+
+Consider
+  
