@@ -62,7 +62,19 @@ Let $G$ be an abelian group.
 Let $\sh{F}$ be the product $G\times X$, endowed with the product topology (with $G$ being endowed with the discrete topology).
 The subset $\sh{F}_x$ of pairs $(g,x)$, where $g$ runs over $G$, is evidently endowed with the structure of an abelian group (isomorphic to $G$).
 We can immediately verify the axioms (F~I~) and (F~II~).
-This sheaf is called the "constant sheaf" defined by $G$, and is also denoted by $G$.
+This sheaf is called the *constant sheaf* defined by $G$, and is also denoted by $G$.
 :::
 
 Let $\sh{F}$ be an arbitrary sheaf on $X$.
+We define a *section* of $\sh{F}$ over an open $U\subset X$ to be a *continuous* map $s\colon U\to\sh{F}$ such that $p\circ s$ is the identity;
+$s$ is then a homeomorphism from $U$ to its image $s(U)$.
+Axiom (F~II~) implies the following: if two sections are equal at a point $x\in U$, then they are equal at all points in a neighbourhood of $x$.
+The map $s$ that, to each $x\in U$, associates the identity element $0_x\in\sh{F}_x$, is a section (by (F~I~));
+we call it the *zero section*.
+The set $\Gamma(U,\sh{F})$ of sections of $\sh{F}$ over $U$ is endowed with the structure of an abelian group, thanks to (F~I~), and the zero section is the identity element of this group.
+
+If $U$ and $V$ are opens such that $V\subset U$, then every section over $U$ induces a section over $V$.
+The group $\sh{F}_x$ is the inductive limit of the groups $\Gamma(U,\sh{F})$ taken over open neighbourhoods $U$ of $x$.
+
+\oldpage{43}
+In practice,
