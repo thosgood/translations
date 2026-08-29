@@ -416,5 +416,44 @@ Thus $\HH^0(X,\OO/\II)$ can be identified with the ring of holomorphic functions
 Whence the theorem.
 :::
 
-Consider
-  
+Consider the particular case where $V$ is an infinite discrete subset of $X$: if $X$ is a Stein manifold, then Theorem 3 shows that there exists an $f$ that is holomorphic on $X$ and *takes arbitrary given values on the points of $V$*.
+This property evidently strengthens conditions (a) and (c') of Stein manifolds.
+More generally:
+
+To each point $x$ of a discrete set $A$, associate an integer $r(x)$.
+For $x\in A$, let $\II_x$ be the ideal of $\OO_x$ consisting of germs whose Taylor expansion, at the point $x$, has no term of degree $\leqslant r(x)$;
+for $x\not\in A$, set $\II_x=\OO_x$.
+It is immediate that the sheaf $\II$ given by the $\II_x$ is coherent.
+If $x\not\in A$, an element of $\OO/\II_x$ is an "expansion of order $r(x)$".
+We can then state:
+
+::: {.itenv title="Theorem 4" latex="{Theorem 4}"}
+If $X$ is a Stein manifold, then there exists a function that is holomorphic on $X$ that admits, at each point $x\in A$, an arbitrary given expansion (of arbitrary order $r(x)$).
+:::
+
+::: {.proof}
+Indeed, to give such a system of expansions is to give an element of $\HH^0(X,\OO/\II)$.
+But the homomorphism
+$$
+  \HH^0(X,\OO) \to \HH^0(X,\OO/\II)
+$$
+is an epimorphism, since $\HH^1(X,\II)=0$ by virtue of Theorem B.
+:::
+
+Theorem 4, applied to the case where $A$ consists of a single point, strengthens property (b) of the definition of Stein manifolds.
+
+\oldpage{53}
+:::: {.rmenv title="Remark (due to J.-P. Serre)" latex="{Remark (due to J.-P. Serre)}"}
+For a complex-analytic manifold $X$ given by a countable union of compacts to be a Stein manifold, it is necessary and sufficient that $X$ satisfy the following condition:
+
+::: {.rmenv title="(S)" latex="{(S)}"}
+For every coherent sheaf of ideals $\II$, we have that $\HH^1(X,\II)=0$.
+:::
+
+The condition is necessary, by Theorem B.
+It is sufficient, since (S) implies the validity of the conclusion of Theorem 4, and this implies that $X$ satisfies conditions (a), (b), and (c').
+::::
+
+::: {.itenv title="Theorem 5" latex="{Theorem 5}"}
+Let
+:::
