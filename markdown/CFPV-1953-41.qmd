@@ -18,6 +18,7 @@ bibliography: CFPV-1953-41.bib
 <!-- Shortcuts -->
 
 \newcommand{\sh}[1]{\scr{#1}}
+\newcommand{\HH}{\mathrm{H}}
 
 <!-- Content -->
 
@@ -98,3 +99,94 @@ We have defined sheaves of abelian groups, but it is clear that analogous defini
 # Subsheaf, homomorphism, quotient sheaf {#section-2}
 
 Let $\sh{F}$ be a sheaf on $X$.
+Let $\sh{G}$ be a subset of $\sh{F}$ such that, for all $x\in X$, $G\cap\sh{F}_x=\sh{G}_x$ is a *subgroup* of $\sh{F}_x$.
+For $\sh{G}$, with the topology induced by that of $\sh{F}$, to be a sheaf, it is necessary and sufficient that $\sh{G}$ be *open* in $\sh{F}$ (see condition (F~II~)).
+We then say that $\sh{G}$ is a *subsheaf* of $\sh{F}$.
+
+Let $\sh{F}$ and $\sh{F}'$ be sheaves on the same space $X$.
+We define a homomorphism from $\sh{F}$ to $\sh{F}'$ to be a *continuous* map $f$ from $\sh{F}$ to $\sh{F}'$ such that the restriction $f_x$ of $f$ to $\sh{F}_x$ is a homomorphism from the group $\sh{F}_x$ to the group $\sh{F}'_x$.
+\oldpage{44}
+The inverse image of the zero section of $\sh{F}'$ (a section which is an open in $\sh{F}'$) is a subsheaf $\sh{G}$ of $\sh{F}$, called the *kernel* of the homomorphism $f$;
+for each $x\in X$, $\sh{G}_x$ is the kernel of $f_x$.
+Also, $f$ is an open map;
+thus the image of $\sh{F}$ in $\sh{F}'$ is a subsheaf $\sh{G}'$ of $\sh{F}'$, called the *image* of the homomorphism $f$;
+$\sh{G}'_x$ is the image of $f_x$.
+
+It is clear that every homomorphism $f\colon\sh{F}\to\sh{F}'$ defines, for each open $U\subset X$, a homomorphism of groups of sections $\Gamma(U,\sh{F})\to\Gamma(U,\sh{F}')$.
+
+Let $\sh{G}$ be a subsheaf of a sheaf $\sh{F}$.
+We define a *quotient sheaf* as follows: let $\sh{H}_x$ be the quotient group $\sh{F}_x/\sh{G}_x$.
+If $\sh{H}$ denotes the union of the $\sh{H}_x$, then the maps $\sh{F}_x\to\sh{H}_x$ define a map from $\sh{F}$ to $\sh{H}$, which identifies $\sh{H}$ with a quotient of $\sh{F}$.
+We endow $\sh{H}$ with the quotient topology, which defines $\sh{H}$ as a sheaf.
+This sheaf is denoted $\sh{F}/\sh{G}$.
+The map $\sh{F}\to\sh{F}/\sh{G}$ is a homomorphism, whose kernel is the sheaf $\sh{G}$.
+We can describe the sections of the quotient sheaf $\sh{F}/\sh{G}$ over $X$: if $s\in\Gamma(X,\sh{F}/\sh{G})$, then every point $x\in X$ admits an open neighbourhood $U$ such that the section induced by $s$ on $U$ is the image of an element of $\Gamma(U,\sh{F})$.
+Thus $X$ can be covered by opens $U_i$, and on each $U_i$ we have an element $s_i\in\Gamma(U_i,\sh{F})$ such that, on $U_i\cap U_j$, $s_i-s_j$ is a section of the subsheaf $\sh{G}$.
+In general, a section of $\sh{F}/\sh{G}$ over $X$ is not the image of any section of $\sh{F}$ over $X$.
+Thus, the sequence of groups and homomorphisms
+$$
+  0 \to \Gamma(X,\sh{G}) \to \Gamma(X,\sh{F}) \xrightarrow{\varphi} \Gamma(X,\sh{F}/\sh{G})
+$$
+is evidently an *exact sequence* (i.e. the image of each homomorphism is the kernel of the following homomorphism), but the homomorphism $\varphi$ is not an epimorphism[^2] in general.
+
+[^2]: A homomorphism $\varphi\colon A\to B$ of abelian groups (or, more generally, of modules) is called an *epimorphism* if $\varphi$ sends $A$ *onto* $B$. Recall also the definition of the *cokernel* of $\varphi$: it is the quotient of $B$ by the image $\varphi(A)$. There are analogous definitions for homomorphisms of sheaves.
+
+
+# Cohomology with coefficients in a sheaf {#section-3}
+
+Let $\sh{F}$ be a sheaf on a topological space $X$.
+We will define, for every integer $q\geqslant0$, a cohomology group $\HH^q(X,\sh{F})$.
+For every cover $\cal{R}$ of $X$ by opens $U_i$, consider the following:
+\oldpage{45}
+for every integer $q\geqslant0$, we set $p=q+1$, and we associate to each sequence $i_1,\ldots,i_p$ of $p$ indices an element $f_{i_1\ldots i_p}\in\Gamma(U_{i_1}\cap\ldots\cap U_{i_p},\sh{F})$, which is zero if $U_{i_1}\cap\ldots\cap U_{i_p}$ is empty;
+we suppose that $f_{i_1\ldots i_p}$ is an *alternating* function in its indices (in particular, it is zero if the indices are not all distinct).
+We thus obtain the additive group of *alternating cochains* of the cover $\cal{R}$, of degree $q=p-1$, with respect to the sheaf $\sh{F}$.
+We define a *cobordism* operator on this group in the usual way; it increases the degree by 1; whence a cohomology group $\HH^q(\cal{R},\sh{F})$.
+
+If a cover $\cal{R}'$ is finer than $\cal{R}$, then we have a natural, unique, homomorphism from $\HH^q(\cal{R},\sh{F})$ to $\HH^q(\cal{R}',\sh{F})$.
+We can thus consider the inductive limit of the $\HH^q(\cal{R},\sh{F})$ over all open covers $\cal{R}$;
+this is, by definition, the group $\HH^q(X,\sh{F})$.
+We note that $\HH^0(X,\sh{F})$ is canonically identified with the group of sections $\Gamma(X,\sh{F})$.
+
+Every homomorphism of sheaves $\sh{F}\to\sh{F}'$ evidently defines homomorphisms $\HH^q(X,\sh{F})\to\HH^q(X,\sh{F}')$.
+Furthermore, let $\sh{G}$ be a subsheaf of $\sh{F}$;
+we can define natural homomorphisms
+$$
+  \delta^q\colon \HH^q(X,\sh{F}/\sh{G}) \to \HH^{q+1}(X,\sh{G})
+$$
+at least whenever $X$ is paracompact.
+
+We give, for example, the definition of $\delta^0$: we have seen ([§2](#section-2)) that an element $\alpha\in\HH^0(X,\sh{F}/\sh{G})$ can be defined by sections $s_i\in\HH^0(U_i,\sh{F})$ over opens $U_i$ of a suitable cover $\cal{R}$ of $X$;
+and that $s_i-s_j\in\HH^0(U_i\cap U_j,\sh{G})$.
+So set $f_{ij}=s_i-s_j$.
+The elements $f_{ij}$ define an (alternating) cocycle of degree 1, and thus an element of $\HH^1(\cal{R},\sh{G})$, and thus an element $\beta\in\HH^1(X,\sh{G})$.
+We can easily show that this element $\beta$ is uniquely determined by $\alpha$, that is, that it is independent of the choice of cover $\cal{R}$ and of sections $s_i$.
+By definition, $\delta^0(\alpha)=\beta$.
+For $q>0$, the definition of $\delta^q$ is analogous, but a bit more complicated.
+
+The fundamental property of cohomology is the following[^3]: supposing the space $X$ to be paracompact, if $\sh{G}$ is a subsheaf of a sheaf $\sh{F}$, then *the unbounded sequence of abelian groups and homomorphisms*
+$$
+  \begin{aligned}
+    0
+    \xrightarrow{\phantom{\delta^0}} \,&\HH^0(X,\sh{G}) \to\HH^0(X,\sh{F}) \to\HH^0(X,\sh{F}/\sh{G})
+  \\\xrightarrow{\delta^0} \,&\HH^1(X,\sh{G}) \to \ldots
+  \\\xrightarrow{\delta^{q-1}} \,&\HH^q(X,\sh{G}) \to\HH^q(X,\sh{F}) \to\HH^q(X,\sh{F}/\sh{G})
+  \\\xrightarrow{\delta^q} \,&\HH^{q+1}(X,\sh{G}) \to \ldots
+  \end{aligned}
+$$
+*is an exact sequence*.
+
+[^3]: See [@5], where the property of "exact sequence" was posited as one of the axioms of an axiomatic theory of cohomology with coefficients in a sheaf.
+
+\oldpage{46}
+The start of this sequence coincides with the sequence
+$$
+  0 \to \Gamma(X,\sh{G}) \to \Gamma(X,\sh{F}) \to \Gamma(X,\sh{F}/\sh{G})
+$$
+considered at the end of [§2](#section-2).
+It thus follows that: for $\Gamma(X,\sh{F})\to\Gamma(X,\sh{F}/\sh{G})$ to be an epimorphism, it suffices that $\HH^1(X,\sh{G})=0$.
+
+
+# Complex analytic manifolds; additive Cousin problem {#section-4}
+
+The
