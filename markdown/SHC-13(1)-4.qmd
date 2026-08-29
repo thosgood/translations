@@ -1,9 +1,9 @@
 --- 
-title: "Families of complex spaces and the foundations of analytic geometry"
+title: "The primary obstruction to deformation"
 author: "Adrien Douady"
 date: "November 1960"
-original: 'Douady, A. _Séminaire Henri Cartan_ **13 (1)** (1960--61), Talks no. 2 ("Variétés et espaces mixtes"), 3 ("Déformations régulières"), and 4 ("Obstruction primaire à la déformation"). [numdam.org/item/SHC_1960-1961__13_1](http://www.numdam.org/item/SHC_1960-1961__13_1)'
-bibliography: SHC-13(1)-2+3+4.bib
+original: 'Douady, A. "Obstruction primaire à la déformation". _Séminaire Henri Cartan_ **13 (1)** (1960--61), Talk no. 4. [numdam.org/item/SHC_1960-1961__13_1_A3_0](http://www.numdam.org/item/SHC_1960-1961__13_1_A3_0)'
+bibliography: SHC-13(1)-4.bib
 ---
 
 {{< include _translator-note.qmd >}}
@@ -31,606 +31,7 @@ bibliography: SHC-13(1)-2+3+4.bib
 
 <!-- Content -->
 
-\tableofcontents
-
-*[Translator] According to [the complete list of talks](http://www.numdam.org/issue/toc/SHC_1960-1961__13_1.pdf), the notes from the first talk of the 1960/61 Séminaire Henri Cartan --- "Fibrés en tores complexes" (also given by Adrien Douady) --- were not copied, and thus seem to be lost to the past. What follows is a translation of the next three talks in this seminar series.*
-
----
-
-# 2. Mixed manifolds and mixed spaces {.unnumbered}
-
-## I. Category of models {.unnumbered #two-section-I}
-
-\oldpage{2-01}
-Let $B$ be a topological space.
-We define the category $\mathscr{S}_B^n$ in the following manner: the objects of $\mathscr{S}_B^n$ are the open subsets of $B\times\CC^n$, and a morphism $f\colon U\to U'$ from an open subset $U\subset B\times\CC^n$ to an open subset $U'\subset B\times\CC^n$ is a continuous map $f\colon U\to U'$ satisfying the following two conditions:
-
-1. the diagram
-    $$
-      \begin{CD}
-        U @>f>> U'
-      \\@V{\pi_1}VV @VV{\pi_1}V
-      \\B @= B
-      \end{CD}
-    $$
-    commutes, where $\pi_1$ denotes the projection of $B\times\CC^n$ to $B$; and
-2. for all $x\in B$, the map $f_x\colon U_x\to U'_x$ is holomorphic, where
-    $$
-      U_x = \{z\in\CC^n \mid (x,z)\in U\}
-    $$
-    (and similarly for $U'$).
-
-If $B$ is endowed with the structure of a $\mathscr{C}^\infty$ manifold (resp. an $\RR$-analytic manifold, resp. $\CC$-analytic manifold), then we obtain a category $\mathscr{C}^\infty\mathscr{S}_B$ (resp. $\RR\mathscr{S}_B$, resp. $\CC\mathscr{S}_B$) by requiring the morphisms to be $\mathscr{C}^\infty$ (resp. $\RR$-analytic, resp. $\CC$-analytic).
-
-More generally, if $f_1\colon B\to B'$ is a continuous map from one topological space to another, then a *morphism of $\mathscr{S}_{f_1}$* is a continuous map $f$ from an object $U$ of $\mathscr{S}_B$ to an object $U'$ of $\mathscr{S}_{B'}$ such that
-
-1. the diagram
-    $$
-      \begin{CD}
-        U @>f>> U'
-      \\@V{\pi_1}VV @VV{\pi_1}V
-      \\B @>>{f_1}> B'
-      \end{CD}
-    $$
-    commutes; and
-2. $f_x\colon U_x\to U'_{f_1(x)}$ is holomorphic for all $x\in B$.
-
-\oldpage{2-02}
-If $f_1$ is a $\mathscr{C}^\infty$ map from one $\mathscr{C}^\infty$ manifold to another, then $f$ will be a morphism of $\mathscr{C}^\infty\mathscr{S}_{f_1}$ if, further, it is a $\mathscr{C}^\infty$ map (resp. ...).
-We thus obtain, for every category of topological spaces, a fibred category $\mathscr{S}^n$ (resp. $\mathscr{C}^\infty\mathscr{S}^n$, resp. ...).
-
-
-## II. The definition of mixed spaces and mixed varieties {.unnumbered #two-section-II}
-
-### 1. First definition {.unnumbered #two-section-II.1}
-
-Let $B$ and $V$ be separated spaces, and let $\pi\colon V\to B$ be a continuous map.
-The structure of a *mixed space* over $B$ is defined on $V$ by a system of charts $\varphi_i\colon U_i\to V$, where the $(U_i)$ are objects of $\mathscr{S}_B^n$;
-for each $i$, $\varphi_i$ is a homeomorphism from $U_i$ to an open subset of $V$ such that the diagram
-$$
-  \begin{CD}
-    U_i @>{\varphi_i}>> V
-  \\@V{\pi_1}VV @VV{\pi}V
-  \\B @= B
-  \end{CD}
-$$
-commutes;
-finally, for all $i$ and all $j$, the "change of chart" $\varphi_j^{-1}\circ\varphi_i$ is an isomorphism of $\mathscr{S}_B$ from an open subset of $U_i$ to an open subset of $U_j$.
-
-The structure thus defined is that of a *$(\mathscr{C}^0,\CC)$-mixed space*.
-If $B$ is a $\CC$-analytic space, and if the change of chart maps are all $\CC$-analytic, then we have a *$\CC$-analytic mixed space*.
-In this case, $V$ itself is a $\CC$-analytic space, and the fibres $V_x=\pi^{-1}(x)$ are $\CC$-analytic sub-manifolds.
-
-If $B$ is a $\mathscr{C}^\infty$ manifold (resp. $\RR$-analytic, resp. $\CC$-analytic), and if the change of chart maps are all $\mathscr{C}^\infty$ (resp. ...), then we have a *$(\mathscr{C}^\infty,\CC)$-mixed manifold* (resp. $(\RR,\CC)$, resp. $(\CC,\CC)$).
-In this case, $V$ itself is a manifold.
-Note that the notion of a $(\CC,\CC)$-mixed manifold, or a $\CC$-analytic mixed manifold, reduces to simply having a $\CC$-analytic manifold $V$ endowed with a projection $\pi\colon V\to B$ onto another $\CC$-analytic manifold such that $\pi$ is of maximal rank at every point.^[*[Trans.] The more common modern nomenclature is to simply call such an object a family of complex manifolds.*]
-
-Let $\pi\colon V\to B$ and $\pi'\colon V'\to B'$ be mixed spaces, and let $f_1\colon B\to B'$ be a continuous (resp. ...) map.
-Then a *morphism from $V$ to $V'$ over $f_1$* is a continuous map $f\colon V\to V'$ such that the diagram
-$$
-  \begin{CD}
-    V @>f>> V'
-  \\@V{\pi}VV @VV{\pi'}V
-  \\B @>>{f_1}> B'
-  \end{CD}
-$$
-commutes, and such that, for any charts $\varphi_i\colon U_i\to V$ and $\varphi'_j\colon U'_j\to V'$, the map ${\varphi'_j}^{-1}\circ f\circ\varphi_i$ is a morphism of $\mathscr{S}_{f_1}$ (resp. ...) from an open subset of $U_i$ to $U_j$.
-\oldpage{2-03}
-
-
-### 2. An equivalent definition {.unnumbered #two-section-II.2}
-
-We now give another way of defining mixed spaces, equivalent to the above.
-
-Given separated spaces $B$ and $V$, along with a continuous map $\pi\colon V\to B$, the structure of a *pre-mixed space* consists of the structure of a $\CC$-analytic manifold on each fibre $V_x=\pi^{-1}(x)$.
-Given pre-mixed spaces $\pi\colon V\to B$ and $\pi'\colon V'\to B'$, along with a continuous map $f_1\colon B\to B'$, a *morphism of pre-mixed spaces over $f_1$* is a continuous map $f\colon V\to V'$ such that the diagram
-$$
-  \begin{CD}
-    V @>f>> V'
-  \\@V{\pi}VV @VV{\pi'}V
-  \\B @>>{f_1}> B'
-  \end{CD}
-$$
-commutes and induces a $\CC$-analytic map on each fibre.
-
-A *mixed space* is a pre-mixed space $\pi\colon V\to B$ such that every point $y\in V$ admits a neighbourhood $W$ in $V$ that is isomorphic as a pre-mixed space to an open subset of $B\times\CC^n$, via an isomorphism over the identity.
-The morphisms of mixed spaces are the same: mixed spaces form a *full subcategory*.
-
-
-### 3. Deformations {.unnumbered #two-section-II.3}
-
-A mixed space $\pi\colon V\to B$ is said to be *proper* if $B$ is locally compact and the map $\pi$ is proper (i.e. the inverse image of any compact subset is compact).
-If it is a mixed manifold, then we can show that it is a fibred manifold that is locally trivial with respect to the underlying $\mathscr{C}^\infty$ structure, but the previous talk shows that, in general, any two fibres are not isomorphic as $\CC$-analytic manifolds.
-
-::: {.rmenv title="Definition" latex="{Definition}"}
-Let $V_0$ be a compact $\CC$-analytic manifold, $B$ a locally compact space, and $b_0\in B$.
-\oldpage{2-04}
-Then a *$\CC$-analytic deformation of $V_0$ over $(B,b_0)$* consists of a proper $\CC$-analytic mixed space $\pi\colon V\to B$ along with an isomorphism of $\CC$-analytic manifolds $i\colon V_0\to\pi^{-1}(b_0)$.
-:::
-
-The goal of this seminar is the study, at least local, and an attempt at a classification of, $\CC$-analytic deformations of a given compact $\CC$-analytic manifold $V_0$.
-
-::: {.rmenv title="Definition" latex="{Definition}"}
-Let $V_0$ be a compact $\CC$-analytic manifold.
-A *$\CC$-analytic deformation $(\pi\colon V\to B,i\colon V_0\to V)$ of $V_0$* is said to be *locally complete* if, for any other deformation $(\pi'\colon V'\to B',i'\colon V_0\to V')$ of $V_0$, there exists a neighbourhood $B'_1$ of $b'_0$ in $B'$, an analytic map $f_1\colon B'_1\to B$ with $f_1(b'_0)\to b_0$, and a morphism of $\CC$-analytic mixed spaces $f\colon {\pi'}^{-1}(B'_1)\to V$ over $f_1$ such that $f\circ i'=i$.
-The deformation is said to be *locally universal* is furthermore the germ of $f_1$ at $b'_0$ is determined uniquely by this condition.
-:::
-
-It seems that every compact $\CC$-analytic manifold $V_0$ admits a locally complete $\CC$-analytic deformation, and a locally universal one if the group of automorphisms of $V_0$ is discrete.
-
-
-## III. Vector fields {.unnumbered #two-section-III}
-
-### 1. Study on models {.unnumbered #two-section-III.1}
-
-Let $B$ be a space, $U$ an object of $\mathscr{S}_B$ (i.e. an open subset of $B\times\CC^n$), $b_0$ a point of $B$, and set $U_0=\pi^{-1}(b_0)$.
-
-A holomorphic field of tangent vectors on $U_0$ (i.e. a holomorphic map from $U_0$ to $\CC^n$) is said to be a *vertical holomorphic field* on $U_0$.
-A *vertical holomorphic field on $U$* is a continuous (resp. ...) map $\theta\colon U\to\CC^n$ that induces a vertical holomorphic field on each fibre $U_x$.
-If $f\colon U\to U'$ is an isomorphism in $\mathscr{S}_B$, then the *transport $f_*\theta$ of $\theta$ by $f$* is defined by
-$$
-  f_*\theta(f(x,z)) = \DD_2 f_{x,z}\cdot\theta(x,z)
-$$
-where $\DD_2 f_{x,z}$ is the linear map from $\CC^n$ to itself that is tangent to $f_x$ at the point $z\in U_x$.
-This is again a vertical holomorphic field, since it follows from a Cauchy integral that the matrix $\DD f_{x,z}$ depends continuously on the pair $(x,z)$.
-
-Now suppose that $B$ is a $\mathscr{C}^\infty$ manifold, just for simplicity, and let $T_0$ be the tangent space to $B$ at $b_0$.
-\oldpage{2-05}
-A field of tangent vectors to $U$ defined on $U_0$, i.e. a map $\omega\colon U_0\to T_0\times\CC^n$, is said to be a *projectable holomorphic field* if $\omega(b_0,z)=(t_0,\theta(z))$ (where $t_0\in T_0$ is a vector that does not depend on $z$, called the *projection* of the field $\omega$) and $\theta(z)$ is a holomorphic vector field.
-If $B$ is a $\CC$-analytic space, possibly with a singularity at $b_0$, then we give the same definition, but with $T_0$ then being the *Zariski* tangent space to $B$ at $b_0$, i.e. the dual of $\mathfrak{m}/\mathfrak{m}^2$, where $\mathfrak{m}$ is the ideal of germs at $b_0$ of holomorphic functions on $B$ that vanish at $b_0$.
-
-If $f\colon U\to U'$ is an isomorphism of $\mathscr{C}^\infty\mathscr{S}_B$ (resp. ...), then then transport $f_*\omega$ is defined by
-$$
-  f_*\omega(f(b_0,z)) = \DD f_{b_0,z}\omega(b_0,z)
-$$
-where $\DD f_{b_0,z}\colon T_0\times\CC^n\to T_0\times\CC^n$ is now the linear map that is tangent to $f$ at the point $(b_0,z)$.
-This is a projectable holomorphic field.
-Indeed, the matrix $\DD f_{b_0,z}$ can be written as
-$$
-  \begin{pmatrix}
-    I & 0
-  \\\DD_1f & \DD_2f
-  \end{pmatrix}
-$$
-and
-$$
-  \begin{aligned}
-    \DD_1f\colon T &\to \CC^n
-  \\\DD_2f\colon \CC^n &\to \CC^n
-  \end{aligned}
-$$
-both depend holomorphically on $z$ (for $\DD_1f$, this follows from the fact that $f_x$ is holomorphic for every $x$).
-By setting $f_*\omega(b_0,z')=(t_0,\theta'(z'))$, we have
-$$
-  \begin{gathered}
-    \theta'(z') = \DD_1f_{b_0,z}(t_0) + \DD_2f_{b_0,z}(\omega(z))
-  \\\text{if }z'=f_{b_0}(z)
-  \end{gathered}
-$$
-which shows that $f_*\omega$ is indeed a projectable holomorphic field.
-
-A *projectable holomorphic field on $U$* is a $\mathscr{C}^\infty$ field of vectors tangent to $U$ that induces a projectable holomorphic field on each fibre.
-
-
-### 2. Vector fields on a mixed manifold {.unnumbered #two-section-III.2}
-
-Let $\pi\colon V\to B$ be a $(\mathscr{C}^\infty,\CC)$-mixed manifold (resp. ..., resp. a $\CC$-analytic mixed space).
-By transporting along the charts, we define the notions of
-
-- vertical holomorphic fields on an open subset of a fibre;
-- vertical holomorphic fields on a open subset of $V$;
-- projectable holomorphic fields on an open subset of a fibre; and
-- projectable holomorphic fields on an open subset of $V$.
-
-\oldpage{2-06}
-Let $\xi$ be a $\mathscr{C}^\infty$ vector field (resp. ...) on $V$.
-By integrating $\xi$, we obtain a $\mathscr{C}^\infty$ map, denoted by $e^\xi$, from an open subset $W\subset\RR\times V$ containing $\{0\}\times V$ (resp. $\CC$-analytic map from an open subset $W\subset\CC\times V$) to $V$, characterised by
-
-1. $e^\xi(t_1+t_2,y) = e^\xi(t_1,e^\xi(t_2,y))$, with the left-hand side being defined whenever the right-hand side is; and
-2. $\frac{\partial}{\partial t}e^\xi(t,y)|_{0,y} = \xi(y)$.
-
-Note that $W$ is a mixed manifold over $\RR\times B$ (resp. a mixed space over $\CC\times B$).
-
-::: {.itenv #two-proposition title="Proposition" latex="{Proposition}"}
-For $e^\xi\colon W\to V$ to be a morphism of mixed spaces over the projection $\RR\times B\to B$, it is necessary and sufficient for $\xi$ to be a vertical holomorphic field.
-For $e^\xi\colon W\to V$ to be a morphism of mixed spaces over a map from an open subset of $\RR\times B$ containing $\{0\}\times B$ to $B$, it is necessary and sufficient for $\xi$ to be a projectable holomorphic field.
-:::
-
-The proof is left to the reader.
-
-
-## IV. The Spencer--Kodaira map {.unnumbered #two-section-IV}
-
-Let $\pi\colon V\to B$ be a mixed manifold (resp. a $\CC$-analytic mixed space), $b\in B$, and $V_0=\pi^{-1}(b_0)$.
-Let $T_0$ be the tangent space to $B$ at $b_0$ (resp. the Zariski tangent space).
-We introduce the following sheaves on $V_0$:
-
-- $\Theta_0$: the sheaf of germs of vertical holomorphic fields on $V_0$ ;
-- $\Pi_0$: the sheaf of germs of locally projectable holomorphic fields on $V_0$ ; and
-- $\Lambda_0$: the sheaf $\pi^*T_0$, i.e. the sheaf of germs of locally constant maps from $V_0$ to $T_0$.
-
-We have an exact sequence of sheaves on $V_0$
-$$
-  0 \to \Theta_0 \to \Pi_0 \to \Lambda_0 \to 0
-$$
-that gives rise to the long exact sequence in cohomology
-$$
-  \ldots \to \HH^0(V_0;\Pi_0) \to \HH^0(V_0;\Lambda_0) \xrightarrow{\delta} \HH^1(V_0;\Theta_0) \to \ldots.
-$$
-We also have a canonical map
-\oldpage{2-07}
-$$
-  \iota\colon T_0 \to \HH^0(V_0;\Lambda_0)
-$$
-that is injective if $V_0$ is non-empty, and surjective if $V_0$ is connected.
-
-::: {.rmenv #two-definition title="Definition" latex="{Definition}"}
-The *Spencer--Kodaira map* is the composition
-$$
-  \rho_0 = \delta\circ\iota\colon T_0 \to \HH^1(V_0;\Theta_0).
-$$
-:::
-
-This map is an essential tool in the local study of deformations of $\CC$-analytic varieties.
-Note that $\Theta_0$ is exactly the sheaf of germs of holomorphic fields of tangent vectors to $V_0$, and thus depends only on $V_0$, while $T_0$ depends only on the base.
-Also, $\Theta_0$ is a coherent analytic sheaf on $V_0$, and, if $V_0$ is compact, then $\HH^1(V_0;\Theta_0)$ is a finite-dimensional vector space over $\CC$ [@2-1].
-We thus see that, in this case (which is the only case where we can say anything non-trivial), $\rho_0$ might be possible to calculate.
-
-It is clear that, if the given mixed manifold is trivial (i.e. if $V=B\times V_0$, with $\pi$ being the projection to $B$), then the map $\rho_0$ is zero.
-The next talk aims to show that, in a certain sense, $\rho$ indicates the non-triviality of $V$ in a neighbourhood of $V_0$.
-
-
-
-
----
-
-# 3. Regular deformations {.unnumbered}
-
-## I. The map $\widetilde{\rho}$ {.unnumbered #three-section-I}
-
-All throughout this talk, $B$ is a $\mathscr{C}^\infty$ manifold (resp. $\RR$-analytic, resp. $\CC$-analytic); $\pi\colon V\to B$ denotes a proper mixed manifold; $b_0$ is a point of $B$; and $V_0=\pi^{-1}(b_0)$ is thus a compact $\CC$-analytic manifold.
-\oldpage{3-01}
-
-Let $\widetilde{\Theta}$ (resp. $\widetilde{\Pi}$) be the sheaf of germs of vertical holomorphic (resp. locally projectable holomorphic) vector fields on $V$.
-The quotient sheaf $\widetilde{\Lambda}=\widetilde{\Pi}/\widetilde{\Theta}$ is exactly the inverse image under $\pi$ of the sheaf $\widetilde{T}$ of germs of $\mathscr{C}^\infty$ fields (resp. ...) of tangent vectors on $B$.
-
-For every open subset $U$ of $B$, set $V_U=\pi^{-1}(U)$.
-The exact sequence
-$$
-  0 \to \widetilde{\Theta} \to \widetilde{\Pi} \to \widetilde{\Lambda} \to 0
-$$
-of sheaves on $V_U$ gives rise to a homomorphism
-$$
-  \widetilde{\rho}_U\colon
-  \HH^0(U;\widetilde{T})
-  \xrightarrow{\pi_*} \HH^0(V_U;\widetilde{\Lambda})
-  \xrightarrow{\delta} \HH^1(V_U;\widetilde{\Theta}).
-$$
-Let $\mathrm{R}^1\pi_*\widetilde{\Theta}$ be the sheaf on $B$ defined by the presheaf $U\mapsto\HH^1(V_U;\widetilde{\Theta})$.
-Then $\widetilde{\rho}$ becomes a homomorphism of sheaves on $B$:
-$$
-  \widetilde{\rho}\colon \widetilde{T} \to \mathrm{R}^1\pi_*\widetilde{\Theta}.
-$$
-In particular, we have a homomorphism
-$$
-  \widetilde{\rho}_0\colon
-  \widetilde{T}_0
-  \to \mathrm{R}^1\pi_*\widetilde{\Theta}
-  = \HH^1(V_0;\widetilde{\Theta})
-$$
-where $\widetilde{T}_0$ is the vector space of germs at $b_0$ of fields of tangent vectors to $B$.
-\oldpage{3-02}
-Finally, we have a commutative diagram
-$$
-  \begin{CD}
-    \widetilde{T}_0 @>{\widetilde{\rho}_0}>> \HH^1(V_0;\widetilde{\Theta})
-  \\@V{\varepsilon}VV @VV{\varepsilon}V
-  \\T_0 @>>{\rho_0}> \HH^1(V_0;\Theta_0)
-  \end{CD}
-$$
-where $\rho_0$ is the Spencer--Kodaira map [@2].
-
-::: {.itenv #three-theorem-1 title="Theorem 1" latex="{Theorem 1}"}
-For the proper mixed manifold $\pi\colon V\to B$ to be locally trivial in a neighbourhood of the point $b_0\in B$, it is necessary and sufficient for the map $\widetilde{\rho}_0\colon\widetilde{T}_0\to\HH^1(V_0;\widetilde{\Theta})$ to be zero.
-:::
-
-::: {.proof}
-—
-
-a. *(Necessity).*
-    If $\pi\colon V\to B$ is locally trivial at $b_0$, then, for every open subset $U$ of $B$ over which $V$ is trivial, we have $\widetilde{\Pi}=\widetilde{\Lambda}\oplus\widetilde{\Theta}$ on $V_U$, and so $\delta\colon\HH^0(V_U;\widetilde{\Lambda})\to\HH^0(V_U;\widetilde{\Theta})$ is zero.
-
-b. *(Sufficiency).*
-    Let $(\eta_1,\ldots,\eta_p)$ be $\mathscr{C}^\infty$ vector fields (resp. ...) on a neighbourhood of $b_0$ in $B$, such that $(\eta_1(b_0),\ldots,\eta_p(b_0))$ forms a basis of the tangent space $T_0$ to $B$ at $b_0$.
-    It then follows from the hypothesis that the map
-    $$
-      \HH^0(V_0;\widetilde{\Pi}) \to \HH^0(V_0;\widetilde{\Lambda})
-    $$
-    is surjective.
-    So let $(\xi_1,\ldots,\xi_p)$ be projectable holomorphic vector fields on a neighbourhood of $V_0$ in $V$, that project to $(\eta_1,\ldots,\eta_p)$.
-    Let $f$ be the map defined on a neighbourhood of $\{0\}\times V_0$ in $\RR^p\times V_0$ (resp. $\CC^p\times V_0$) by
-    $$
-      f(t_1,\ldots,t_p,y) = e^{\xi_1}(t_1,e^{\xi_2}(\ldots,e^{\xi_p}(t_p,y)\ldots)).
-    $$
-    It follows from the proposition stated in [@3-1, Section III.2] that $f$ induces an isomorphism of mixed manifolds from $U\times V_0$ to $\pi^{-1}(f_1(U))$ over $f_1$, where $U$ is a sufficiently small cubical neighbourhood of $0$ in $\RR^p$, and $f_1$ is the map from $U$ to $B$ defined by
-    $$
-      f_1(t_1,\ldots,t_p) = e^{\eta_1}(t_1,e^{\eta_2}(\ldots,e^{\eta_p}(t_p,b_0)\ldots)),
-    $$
-    which proves the theorem.
-
-\oldpage{3-03}
-:::
-
-
-## II. The regular case {.unnumbered #three-section-II}
-
-For all $b\in B$, set $V_b=\pi^{-1}(b)$.
-Consider the family $\{\HH^1(V_b;\Theta_b)\}_{b\in B}$ of finite-dimensional $\CC$-vector spaces, and, for all $b\in B$,  the map
-$$
-  \varepsilon_b\colon \HH^1(V_b;\widetilde{\Theta}) \to \HH^1(V_b;\Theta_b).
-$$
-
-For every open subset $U\subset B$, we have a map
-$$
-  \widetilde{\varepsilon}_U\colon \HH^1(V_U;\widetilde{\Theta}) \to \prod_{b\in U}\HH^1(V_b;\Theta_B)
-$$
-that defines, by varying $U$, a homomorphism from the sheaf $\mathrm{R}^1\pi_*\widetilde{\Theta}$ to the sheaf $\Phi$ on $B$ defined by $\Phi(U)=\prod_{b\in U}\HH^1(V_b;\Theta_b)$.
-
-::: {.rmenv #three-definition title="Definition" latex="{Definition}"}
-We say that the proper mixed manifold $\pi\colon V\to B$ is *regular* if
-
-1. the dimension of $\HH^1(V_b;\Theta_b)$ does not depend on the point $b\in B$; and
-2. we can endow $E=\bigcup_{b\in B}\HH^1(V_b;\Theta_b)$ with the structure of a $\mathscr{C}^\infty$ vector bundle (resp. ...) such that $\widetilde{\varepsilon}$ is an isomorphism from the sheaf $\mathrm{R}^1\pi_*\widetilde{\Theta}$ to the sheaf of germs of $\mathscr{C}^\infty$ sections (resp. ...) of the bundle $E$.
-:::
-
-In fact, Kodaira and Spencer have shown [@3-2] that, by identifying the $\HH^1$ spaces with spaces of harmonic forms, condition (2) is a consequence of condition (1).
-
-Then [Theorem 1](#three-theorem-1) has the following corollary:
-
-::: {.itenv #three-proposition-1 title="Proposition 1" latex="{Proposition 1}"}
-For the proper mixed manifold $\pi\colon V\to B$ to be locally trivial, it is necessary and sufficient for it to be regular and, for all $b\in B$, for the Spencer--Kodaira map
-$$
-  \rho_b\colon T_b \to \HH^1(V_b;\Theta_b)
-$$
-to be zero.
-:::
-
-Indeed, since $\widetilde{\varepsilon}$ is injective, this condition implies that the map
-$$
-  \widetilde{\rho}_b\colon \widetilde{T}_b \to \HH^1(V_b;\widetilde{\Theta})
-$$
-is zero for all $b$.
-\oldpage{3-04}
-
-At the end of this talk, we will construct a counter-example which shows that it is necessary to assume that the mixed manifold is regular.
-
-
-## III. An example of non-regular deformation: Hopf manifolds {.unnumbered #three-section-III}
-
-### 1. Hopf manifolds {.unnumbered #three-section-III.1}
-
-Let $n\geq2$ be an integer, and let $b$ be an $(n\times n)$ matrix with coefficients in $\CC$, whose eigenvalues are all of modulus $>1$.
-The free group $L(b)$ generated by $b$ acts freely on $\widetilde{V}=\CC^n\setminus\{0\}$, and the quotient space $\widetilde{V}/L(b)$, which we call the *Hopf manifold defined by $b$*, is a compact $\CC$-analytic manifold that is homeomorphic to $S^{2n-1}\times S^1$.
-
-Note that $V_b$ and $V_{b'}$ are isomorphic if and only if there exists some $a$ such that $b'=aba^{-1}$ or $b'=ab^{-1}a^{-1}$ (cf. [Appendix](#three-appendix)).
-
-Let $\Theta$ be the sheaf of germs of holomorphic fields of tangent vectors on $V_b$.
-
-::: {.itenv #three-proposition-2 title="Proposition 2" latex="{Proposition 2}"}
-We can identify $\HH^0(V_b;\Theta)$ with the vector space of matrices that commute with $b$, and $\HH^1(V_b;\Theta)$ has the same dimension as this vector space.
-:::
-
-:::: {.proof}
-If $X$ is a vector field on an open subset $U\subset\widetilde{V}$, then $b_*(X)$ is the vector field on the open subset $b(U)$ given by transporting via $b$, i.e. $b_*X(u)=bX(b^{-1}u)$.
-Let $\mathscr{U}=\{U_i\}$ be a cover of $V$ by simply connected Stein open subsets;
-for all $i$, set $\widetilde{U}_i=\chi^{-1}\{U_i\}$, where $\chi$ is the canonical map from $\widetilde{V}$ to $V_b$.
-The cover $\widetilde{\mathscr{U}}=\{\widetilde{U}_i\}$ of $\widetilde{V}$ consists of Stein open subsets that are invariant under $b$ (not necessarily connected, but this doesn't matter).
-Then $b_*$ defines a map, again denoted by $b_*$, from the group of cochains $C^\bullet(\widetilde{V},\widetilde{U};\Theta)$ to itself.
-
-::: {.itenv #three-lemma-1 title="Lemma 1" latex="{Lemma 1}"}
-We have the exact sequence
-$$
-  0
-  \to C^\bullet(V_b,\mathscr{U};\Theta)
-  \xrightarrow{\chi^*} C^\bullet(\widetilde{V},\widetilde{U};\Theta)
-  \xrightarrow{1-b_*} C^\bullet(\widetilde{V},\widetilde{U};\Theta)
-  \to 0.
-$$
-:::
-
-::: {.proof}
-The only thing that we need to verify is that the map $1-b_*$ is surjective.
-For all $(i_0,\ldots,i_q)$, let $U'_{i_0,\ldots,i_q}$ be an open subset of $\widetilde{V}$ such that
-\oldpage{3-05}
-$$
-  \chi\colon U'_{i_0,\ldots,i_q} \to U_{i_0,\ldots,i_q}
-$$
-is a homeomorphism.
-The $\widetilde{U}_{i_0,\ldots,i_q}$ is a disjoint union of the $b_*^p U'_{i_0,\ldots,i_q}$, where $p\in\ZZ$, and every $\gamma\in C^q(\widetilde{V},\widetilde{U};\Theta)$ can be written in the form $\gamma=\gamma_1-\gamma_2$, with $\gamma_1=0$ on $b^p(U'_{i_0,\ldots,i_q})$ for $p<0$, and $\gamma_2=0$ for $p\geq0$.
-Set
-$$
-  \beta = \sum_{p\geq0} b_*^p\gamma_1 + \sum_{p<0} b_*^p\gamma_2
-$$
-(which is a locally finite sum).
-Then $\beta-b_*\beta=\gamma$, whence [Lemma 1](#three-lemma-1).
-:::
-
-Now, to finish the proof of [Proposition 2](#three-proposition-2).
-From [Lemma 1](#three-lemma-1), we have the following exact sequence:
-$$
-  0
-  \to \HH^0(V_b;\Theta)
-  \xrightarrow{\chi^*} \HH^0(\widetilde{V};\Theta)
-  \xrightarrow{1-b_*} \HH^0(\widetilde{V};\Theta)
-  \xrightarrow{\delta_*} \HH^1(V_b;\Theta)
-  \xrightarrow{\chi^*} \HH^1(\widetilde{V}y\Theta)
-  \xrightarrow{1-b_*} \HH^1(\widetilde{V};\Theta).
-$$
-We can show that
-$$
-  \chi^*\colon \HH^1(V_b;\Theta) \to \HH^1(\widetilde{V};\Theta)
-$$
-is zero:
-if $n>2$, it is evident, since $\HH^1(\widetilde{V};\Theta)=0$;
-if $n=2$, then a direct calculation on the cochains of a cover of $\widetilde{V}$ by two Stein open subsets shows that
-$$
-  1-b_*\colon \HH^1(\widetilde{V};\Theta) \to \HH^1(\widetilde{V};\Theta)
-$$
-is bijective.
-
-Now $\HH^0(\widetilde{V};\Theta)$ is the space of holomorphic vector fields on $\widetilde{V}$, but such a field extends to a holomorphic vector field on $\CC^n$, and $\HH^0(\widetilde{V},\Theta)=L\oplus M$, where $L$ is the space of fields of linear vectors, and $M$ is the space of fields of second-order vectors at $0$.
-The subspaces $L$ and $M$ are invariant under $b_*$, and $1-b_*\colon M\to M$ is an isomorphism.
-Then [Proposition 2](#three-proposition-2) follows from remarking that, if an element of $L$ is represented by a matrix $a$, then $b_*a=bab^{-1}$.
-::::
-
-
-### 2. Mixed manifolds whose fibres are Hopf manifolds {.unnumbered #three-section-III.2}
-
-Let $B$ be the set of all $(n\times n)$ matrices with coefficients in $\CC$ with eigenvalues all of modulus $>1$.
-\oldpage{3-06}
-This is an open subset of $\CC^{n^2}$.
-Let $\alpha$ be the transformation from $B\times\widetilde{V}$ to itself defined by $\alpha(b,x)=(b,b(x))$.
-The free group $L(\alpha)$ generated by $\alpha$ acts linearly on $B\times\widetilde{V}$, and the quotient $V=B\times\widetilde{V}/L(\alpha)$ is a $\CC$-analytic manifold.
-By endowing it with the projection $\pi\colon V\to B$ induced by the projection $\pi_1\colon B\times\widetilde{V}\to B$ after passing to the quotient, we obtain a $\CC$-analytic mixed manifold that is proper, but not regular.
-Indeed, condition 1 of the definition of regular mixed manifolds is not satisfied: for example, for $n=2$, the dimension of $\HH^1(V_b;\Theta)$ is $4$ if $b$ is a scalar matrix, but $2$ in all other cases.
-
-Note that the dimension of $\HH^1(V_b;\Theta_b)$ is an upper semi-continuous function of $b$, and that the set of $b$ such that $\dim\HH^1(V_b;\Theta_b)\geq k$ is a closed analytic subspace of $B$.
-This is a general result, that we hope to be able to prove in a later talk of this seminar.
-
-
-### 3. Calculation of $\rho$ {.unnumbered #three-section-III.3}
-
-We have $T_b=\Hom(\CC^n,\CC^n)=L\subset\HH^0(\widetilde{V};\Theta)$, and we defined, to prove [Proposition 2](#three-proposition-2), a surjective map $\delta_*\colon L\to\HH^1(V_b;\Theta)$.
-
-::: {.itenv #three-proposition-3 title="Proposition 3" latex="{Proposition 3}"}
-The Spencer--Kodaira map $\rho$ is given, for the mixed manifold studied in this section, by
-$$
-  \rho(a) = \delta_*(ab^{-1}).
-$$
-In particular, it is surjective, and its kernel is the space of matrices of the form $[\ell,b]$ for $\ell\in L$.
-:::
-
-::: {.proof}
-Let $a\in T_b=L$.
-Let $\{U_i\}$ be a cover of $V_b$ by simply connected Stein open subsets, and, for each $i$, let $U'_i$ be a connected component of $\widetilde{U}_i$.
-
-Let $\eta'_i$ be the projectable holomorphic field on $U'_i$ defined by $\eta'_i(x)=(a,0)$;
-let $\widetilde{\eta}_i$ be the projectable holomorphic field on $\widetilde{U}_i$ defined by $\widetilde{\eta}_i=\alpha_*^k\eta'_i$ on $b^k(U'_i)$;
-and let $\eta_i$ be the projectable holomorphic field on $U_i$ corresponding to $\widetilde{\eta}_i$.
-By definition, $\rho(a)$ is the cohomology class of the cochain $\{\theta_{ij}\}$, where $\theta_{ij}=\eta_j-\eta_i$ is a vertical holomorphic field on $U_{ij}$.
-\oldpage{3-07}
-
-Set $\widetilde{\eta}_i(x)=(a,\beta_i(x))$.
-Then $\beta\in C^0(\widetilde{V};\Theta)$, and we have $(1-b_*)\beta=ab^{-1}\in L\subset\HH^0(\widetilde{V};\Theta)$.
-Indeed, $\alpha_*\eta=\eta$, $\alpha_*\eta_i(b_{-1}x)=\eta_i(x)$, and
-$$
-  \alpha_*(a,\beta(b^{-1}x)) = (a,\beta(x)),
-$$
-whence
-$$
-  ab^{-1}x + b\cdot\beta(b^{-1}x) = \beta(x).
-$$
-We thus deduce that $\theta=\delta_*(ab^{-1})$, which proves [Proposition 3](#three-proposition-3).
-:::
-
-
-### 4. A counter-example {.unnumbered #three-section-III.4}
-
-Take $n=2$, and $\sigma\in\CC$ such that $|\sigma|>1$.
-Let $B'\subset B$ be the set of matrices of the form
-$$
-  \begin{pmatrix}
-    \sigma & t
-  \\0 & \sigma
-  \end{pmatrix}
-$$
-where $t\in\CC$, and let $V'=\pi^{-1}(B')$ be the mixed manifold induced by $V$ over $V'$;
-now $B'$ is a line, and its tangent space $T'_b$ at $b$ is generated, for all $b$, by $a=\begin{pmatrix}0&1\\0&0\end{pmatrix}$.
-It follows from [Proposition 3](#three-proposition-3) that the Spencer--Kodaira map
-$$
-  \rho'\colon T_b(B') \to \HH^1(V_b;\Theta)
-$$
-is zero if and only if
-$$
-  b \neq b_0 =
-  \begin{pmatrix}
-    \sigma & 0
-  \\0 & \sigma
-  \end{pmatrix}
-$$
-since, if $b\neq b_0$, then $a=[\ell,b]$, where $\ell=\begin{pmatrix}t^{-1}&0\\0&0\end{pmatrix}$; and if $b=b_0$, then $\rho'$ is injective.
-
-We can also see that $V'$ is trivial on $B'\setminus\{b_0\}$.
-
-Let $\varphi\colon\CC\to B'\subset B$ be the map defined by
-$$
-  \varphi(t) =
-  \begin{pmatrix}
-    \sigma & t^2
-  \\0 & \sigma
-  \end{pmatrix}
-$$
-and let $V^\varphi$ be the mixed manifold given by the inverse image of $V$ under $\varphi$.
-The Spencer--Kodaira map $\rho_t^\varphi$ from $\CC$ to $\HH^1(V_{\varphi(t)};\Theta)$ is the composition
-\oldpage{3-08}
-$$
-  \rho'_{\varphi(t)}\circ\DD\varphi\colon
-  \CC
-  \to T'_{\varphi(t)}
-  \to \HH^1(V_{\varphi(t)};\Theta),
-$$
-and this is zero for all $t$, since, if $t\neq0$, then $\rho'_{\varphi(t)}$ is zero; and, if $t=0$, then $\DD\varphi$ is zero.
-
-However, the mixed manifold $V^\varphi$ is not locally trivial, since $V_0^\varphi$ is not isomorphic to $V_t^\varphi$ for $t\neq0$.
-
-
-### 5. Question (K. Srinivasacharyulu) {.unnumbered #three-section-III.5}
-
-We know that the Hopf manifolds are non-K\"{a}hler, and thus non-algebraic.
-For $n=2$, the manifold $V_b$ admits non-constant meromorphic functions if and only if $b$ can be diagonalised with eigenvalues $\sigma_1$ and $\sigma_2$ satisfying $\sigma_1^p=\sigma_2^q$ for some integers $p$ and $q$ (and there is then the function $x_1^px_2^{-q}$).
-The set of $b$ satisfying this property is neither open nor closed, but it is a countable union of closed analytic subspaces.
-An analogous phenomenon arises for deformations of complex tori.
-Is this result general?
-
-
-## Appendix {.unnumbered #three-appendix}
-
-With the notation of [§III.1](#three-section-III.1), let $f\colon V_b\to V_{b'}$ be an isomorphism of $\CC$-analytic manifolds.
-This lifts to an isomorphism of universal coverings
-$$
-  \widetilde{f}\colon \CC^n\setminus\{0\} \to \CC^n\setminus\{0\}.
-$$
-By Hartog, $\widetilde{f}$ extends to an isomorphism $g\colon\CC^n\to\CC^n$.
-We necessarily have
-$$
-  g(bz) = (b')^kg(z)
-\tag{$*$}
-$$
-where $z\in\CC^n$, and $k$ is an integer;
-the same property, applied to the inverse map of $g$, shows that $k=\pm1$.
-Let $a$ be the linear map that is tangent to $g$ at the origin;
-the identity ($*$) then gives
-$$
-  \begin{aligned}
-    ab &= (b')^ka
-  \\k &= \pm1
-  \end{aligned}
-$$
-whence
-$$
-  b' = aba^{-1}
-  \quad\text{or}\quad
-  b'= ab^{-1}a^{-1}.
-$$
-
-
-
-
----
-
-# 4. The primary obstruction to deformation {.unnumbered}
-
-## Introduction {.unnumbered #four-introduction}
+# Introduction {.unnumbered #four-introduction}
 
 \oldpage{4-01}
 Let $V_0$ be a compact complex-analytic manifold, and let $\Theta$ be the sheaf of germs of holomorphic fields of tangent vectors.
@@ -641,7 +42,7 @@ this condition is written $[a\smile a]=0$.
 We will then give an example where this condition is not satisfied.
 
 
-## I. Exact sequences of sheaves of algebras {.unnumbered #four-section-I}
+# I. Exact sequences of sheaves of algebras {.unnumbered #four-section-I}
 
 Let $K$ be a commutative ring, and let $\Phi$, $\Phi_1$, and $\Phi_2$ be sheaves of $K$-modules on some space $X$, and suppose that we have some given homomorphism $\Phi_1\otimes\Phi_2\to\Phi$, written as a product.
 We define, for any cover $\scr{U}$ of $X$, the *cup product*
@@ -699,7 +100,7 @@ So the cocycle $\delta\eta\smile\beta$ is cohomologous to $0$ in $\HH^{p+q+1}(X;
 :::
 
 
-## II. The primary obstruction {.unnumbered #four-section-II}
+# II. The primary obstruction {.unnumbered #four-section-II}
 
 Let $V_0$ be a complex-analytic manifold, and $\Theta_0$ the sheaf of germs of holomorphic fields of tangent vectors.
 Then $\Theta_0$ is a sheaf of Lie algebras, and, if $a,b\in\HH^\bullet(V_0,\Theta_0)$, then we denote by $[a\smile b]$ the cup product defined by the bracket $[-,-]\colon\Theta_0\otimes\Theta_0\to\Theta_0$.
@@ -807,9 +208,9 @@ Kodaira, Spencer, and Nijenhuis [@4-4] have shown that, if $\HH^2(V_0,\Theta)=0$
 In this case, we even have a locally universal deformation whose base is a manifold, and $\rho$ is an isomorphism from the tangent space of this manifold to $\HH^1(V_0,\Theta)$
 
 
-## III. An example of obstruction {.unnumbered #four-section-III}
+# III. An example of obstruction {.unnumbered #four-section-III}
 
-### 1. The manifold $V_0$ {.unnumbered #four-section-III.1}
+## 1. The manifold $V_0$ {.unnumbered #four-section-III.1}
 
 Let $X=E/\Gamma$ be a $2$-dimensional complex torus, i.e. $E\cong\CC^2$ and $\Gamma\cong\ZZ^4$, and let $D$ the be projective line $\PP^1\CC$.
 Set $V_0=X\times D$.
@@ -865,7 +266,7 @@ $$
 $$
 
 
-### 2. The mixed space $V$ {.unnumbered #four-section-III.2}
+## 2. The mixed space $V$ {.unnumbered #four-section-III.2}
 
 In this example, every element of $\HH^1(V_0,\Theta_2)$ whose primary obstruction is zero is a deformation vector.
 More precisely:
@@ -915,7 +316,7 @@ $$
 $$
 
 
-### 3. Calculating $\rho_0$ {.unnumbered #four-section-III.3}
+## 3. Calculating $\rho_0$ {.unnumbered #four-section-III.3}
 
 Let $T$ be the Zariski tangent space of $B$ at $b_0$, i.e. the dual of $\frak{I}/\frak{I}^2$, where $\frak{I}$ is the ideal of germs at $b_0$ of analytic functions on $B$ that are zero at $b_0$.
 Then $T_0$ can be identified with $\Hom(\Gamma,a)/\Hom_{\CC}(E,a)$.
@@ -961,9 +362,9 @@ QED.
 
 # Appendix: Higher obstructions {.unnumbered #four-appendix}
 
-## I. Definition of obstructions {.unnumbered #four-appendix-I}
+# I. Definition of obstructions {.unnumbered #four-appendix-I}
 
-### 1. The sheaf of germs of vertical automorphisms {.unnumbered #four-appendix-I.1}
+## 1. The sheaf of germs of vertical automorphisms {.unnumbered #four-appendix-I.1}
 
 Let $V_0$ be a $\CC$-analytic manifold, which we assume to be compact, and $B$ a $\CC$-analytic space, and let $b_0\in B$.
 \oldpage{4-10}
@@ -996,7 +397,7 @@ commutes.
 
 ::: {.proof}
 *(Proof of [Proposition 1](#four-proposition-1)).*
-Let $(B',b_0,V,\pi,\iota)$ be a deformation of V_0$ over a neighbourhood $V'$ of $b_0$ in $B$.
+Let $(B',b_0,V,\pi,\iota)$ be a deformation of $V_0$ over a neighbourhood $V'$ of $b_0$ in $B$.
 Then we can find a cover $\{U_i\}$ of $V_0$ and a cover $\{W_i\}$ of a neighbourhood of $\iota(V_0)$ in $V$, along with isomorphisms $\{h_i\}$, where $h_i$ is an isomorphism from a neighbourhood of $\{b_0\}\times U_i$ in $B\times V_0$ to $W_i$ that agrees with $\iota$ on $\{b_0\}\times U_i$, and such that $\pi\circ h_i=\pi_1$.
 
 Set $\gamma_{ij}=h^{-1}_i\circ h_j$.
@@ -1023,7 +424,7 @@ Finally, we can show that all the above does indeed define a bijection between t
 :::
 
 
-### 2. Higher obstructions {.unnumbered #four-appendix-I.2}
+## 2. Higher obstructions {.unnumbered #four-appendix-I.2}
 
 \oldpage{4-12}
 For every open subset $U\subset V_0$, the group $\Gamma(U)$ is naturally filtered: denote by $\scr{F}_k(U)$ the group of vertical automorphisms that are tangent to the identity up to order $k-1$.
@@ -1079,9 +480,9 @@ Indeed, the element of $\HH^1(V_0;\Theta)$ that corresponds, under the identific
 
 
 
-## II. Calculation of obstructions {.unnumbered #four-appendix-II}
+# II. Calculation of obstructions {.unnumbered #four-appendix-II}
 
-### 1. Relation to the sheaf $\Omega$ {.unnumbered #four-appendix-II.1}
+## 1. Relation to the sheaf $\Omega$ {.unnumbered #four-appendix-II.1}
 
 From now on, we work in the case of deformations in one parameter, i.e. $B=\CC$ and $b_0=0$.
 
@@ -1125,7 +526,7 @@ $$
 in which $\HH^2(V_0;\Theta)$ is a vector subspace of $\HH^2(V_0;\Omega)$.
 
 
-### 2. Calculation of the primary obstruction {.unnumbered #four-appendix-II.2}
+## 2. Calculation of the primary obstruction {.unnumbered #four-appendix-II.2}
 
 Now let $a\in\HH^1(V_0;\Theta)$, and let $\alpha=(\alpha_{ij})$ be a cocycle of the class $a$ (the choice of the cocycle $\alpha$ does not matter, since every cocycle that is cohomologous to a deformation cocycle is itself a deformation cocycle).
 The corresponding multiplicative cocycle in $\Omega_1^\times$ is $(1+\alpha_{ij}t)$.
@@ -1154,7 +555,7 @@ and $\delta_1a=a\smile a=\frac12[a\smile a]$.
 We thus recover, up to a factor of $\frac12$, the obstruction defined earlier in this talk.
 
 
-### 3. Calculation of the secondary obstruction {.unnumbered #four-appendix-II.3}
+## 3. Calculation of the secondary obstruction {.unnumbered #four-appendix-II.3}
 
 Now suppose that $a\smile a=0$, so that we can find a cochain $\beta=(\beta_{ij})$ such that $\delta\beta+\alpha\smile\alpha=0$, i.e.
 $$
@@ -1190,7 +591,7 @@ $$
 $$
 
 
-### 4. Using spectral sequences {.unnumbered #four-appendix-II.4}
+## 4. Using spectral sequences {.unnumbered #four-appendix-II.4}
 
 \oldpage{4-17}
 
