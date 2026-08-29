@@ -20,6 +20,12 @@ bibliography: CFPV-1953-41.bib
 \newcommand{\sh}[1]{\scr{#1}}
 \newcommand{\HH}{\mathrm{H}}
 
+\newcommand{\FF}{\sh{F}}
+\newcommand{\GG}{\sh{G}}
+\newcommand{\OO}{\sh{O}}
+\newcommand{\MM}{\sh{M}}
+\newcommand{\II}{\sh{I}}
+
 <!-- Content -->
 
 \oldpage{41}
@@ -39,56 +45,56 @@ Let $X$ be a topological space.
 A *sheaf of abelian groups* on $X$, or simply a *sheaf*, is defined by the data:
 \oldpage{42}
 
-1. of a function $x\mapsto\sh{F}_x$ that, to each point $x\in X$, associates an abelian group $\sh{F}_x$ (which we denote additively);
-2. of a (not necessarily separated) topology on the union $\sh{F}$ of the sets $\sh{F}_x$.
+1. of a function $x\mapsto\FF_x$ that, to each point $x\in X$, associates an abelian group $\FF_x$ (which we denote additively);
+2. of a (not necessarily separated) topology on the union $\FF$ of the sets $\FF_x$.
 
-Before giving the axioms that these data must satisfy, we denote by $p$ the map from $\sh{F}$ to $X$ that, to each $\alpha\in\sh{F}$, associates the point $x$ such that $\alpha\in\sh{F}_x$.
+Before giving the axioms that these data must satisfy, we denote by $p$ the map from $\FF$ to $X$ that, to each $\alpha\in\FF$, associates the point $x$ such that $\alpha\in\FF_x$.
 We impose two axioms:
 
 ::: {.rmenv title="F₁" latex="{F\textsubscript{I}}"}
-The map $\alpha\mapsto-\alpha$ that, to each $\alpha\in\sh{F}$ associates the inverse of $\alpha$ in the group $\sh{F}_{p\alpha}$, is a continuous map from $\sh{F}$ to $\sh{F}$.
-The map $(\alpha,\beta)\mapsto\alpha+\beta$ defined on the set $\sh{G}$ of pairs $(\alpha,\beta)$ such that $p(\alpha)=p(\beta)$, and that sends such a pair to the sum $\alpha+\beta$ in the group $\sh{F}_{p(\alpha)}$, is a continuous map from the subset $\sh{G}$ of $\sh{F}\times\sh{F}$ to $\sh{F}$.
+The map $\alpha\mapsto-\alpha$ that, to each $\alpha\in\FF$ associates the inverse of $\alpha$ in the group $\FF_{p\alpha}$, is a continuous map from $\FF$ to $\FF$.
+The map $(\alpha,\beta)\mapsto\alpha+\beta$ defined on the set $\GG$ of pairs $(\alpha,\beta)$ such that $p(\alpha)=p(\beta)$, and that sends such a pair to the sum $\alpha+\beta$ in the group $\FF_{p(\alpha)}$, is a continuous map from the subset $\GG$ of $\FF\times\FF$ to $\FF$.
 :::
 
 ::: {.rmenv title="F₂" latex="{F\textsubscript{II}}"}
-The map $p$ is a *local homeomorphism*, i.e. every element $\alpha\in\sh{F}$ admits an open neighbourhood $V$ such that the restriction of $p$ to $V$ is a homeomorphism from $V$ to an open subset of $X$.
+The map $p$ is a *local homeomorphism*, i.e. every element $\alpha\in\FF$ admits an open neighbourhood $V$ such that the restriction of $p$ to $V$ is a homeomorphism from $V$ to an open subset of $X$.
 :::
 
-If $U$ is a subset of $X$, then the collection of the $\sh{F}_x$ for $x\in U$, endowed with the topology induced by that of $\sh{F}$, is evidently a sheaf on $U$;
-we denote it by $\sh{F}(U)$, and we call it the sheaf *induced* by $\sh{F}$ on $U$.
+If $U$ is a subset of $X$, then the collection of the $\FF_x$ for $x\in U$, endowed with the topology induced by that of $\FF$, is evidently a sheaf on $U$;
+we denote it by $\FF(U)$, and we call it the sheaf *induced* by $\FF$ on $U$.
 
 ::: {.itenv title="Example" latex="{Example}"}
 Let $G$ be an abelian group.
-Let $\sh{F}$ be the product $G\times X$, endowed with the product topology (with $G$ being endowed with the discrete topology).
-The subset $\sh{F}_x$ of pairs $(g,x)$, where $g$ runs over $G$, is evidently endowed with the structure of an abelian group (isomorphic to $G$).
+Let $\FF$ be the product $G\times X$, endowed with the product topology (with $G$ being endowed with the discrete topology).
+The subset $\FF_x$ of pairs $(g,x)$, where $g$ runs over $G$, is evidently endowed with the structure of an abelian group (isomorphic to $G$).
 We can immediately verify the axioms (F~I~) and (F~II~).
 This sheaf is called the *constant sheaf* defined by $G$, and is also denoted by $G$.
 :::
 
-Let $\sh{F}$ be an arbitrary sheaf on $X$.
-We define a *section* of $\sh{F}$ over an open $U\subset X$ to be a *continuous* map $s\colon U\to\sh{F}$ such that $p\circ s$ is the identity;
+Let $\FF$ be an arbitrary sheaf on $X$.
+We define a *section* of $\FF$ over an open $U\subset X$ to be a *continuous* map $s\colon U\to\FF$ such that $p\circ s$ is the identity;
 $s$ is then a homeomorphism from $U$ to its image $s(U)$.
 Axiom (F~II~) implies the following: if two sections are equal at a point $x\in U$, then they are equal at all points in a neighbourhood of $x$.
-The map $s$ that, to each $x\in U$, associates the identity element $0_x\in\sh{F}_x$, is a section (by (F~I~));
+The map $s$ that, to each $x\in U$, associates the identity element $0_x\in\FF_x$, is a section (by (F~I~));
 we call it the *zero section*.
-The set $\Gamma(U,\sh{F})$ of sections of $\sh{F}$ over $U$ is endowed with the structure of an abelian group, thanks to (F~I~), and the zero section is the identity element of this group.
+The set $\Gamma(U,\FF)$ of sections of $\FF$ over $U$ is endowed with the structure of an abelian group, thanks to (F~I~), and the zero section is the identity element of this group.
 
 If $U$ and $V$ are opens such that $V\subset U$, then every section over $U$ induces a section over $V$.
-The group $\sh{F}_x$ is the inductive limit of the groups $\Gamma(U,\sh{F})$ taken over open neighbourhoods $U$ of $x$.
+The group $\FF_x$ is the inductive limit of the groups $\Gamma(U,\FF)$ taken over open neighbourhoods $U$ of $x$.
 
 \oldpage{43}
-In practice, a sheaf on $X$ is often defined in the following way: we give abelian groups $\sh{F}_U$ attached to certain opens $U\subset X$ that form a fundamental system of opens of the topology of $X$; and, for every pair $(U,V)$ such that $V\subset U$, we give a homomorphism $f_{VU}\colon\sh{F}_U\to\sh{F}_V$, such that, for $W\subset V\subset U$, we have that $f_{WU}=f_{WV}\circ f_{VU}$.
-We then take $\sh{F}_x$ to be the inductive limit of the $\sh{F}_U$ over the opens $U$ that contain $x$; and, on the union $\sh{F}$ of the $\sh{F}_x$, we define the topology $\scr{T}$ as follows: for every open $U$ and every $\alpha\in\sh{F}_U$, let $[\alpha]$ be the set of images of $\alpha$ in the $\sh{F}_x$ associated to the points $x\in U$; by definition, the subsets $[\alpha]$ of $\sh{F}$ constitute a fundamental system of opens of the topology $\scr{T}$.
+In practice, a sheaf on $X$ is often defined in the following way: we give abelian groups $\FF_U$ attached to certain opens $U\subset X$ that form a fundamental system of opens of the topology of $X$; and, for every pair $(U,V)$ such that $V\subset U$, we give a homomorphism $f_{VU}\colon\FF_U\to\FF_V$, such that, for $W\subset V\subset U$, we have that $f_{WU}=f_{WV}\circ f_{VU}$.
+We then take $\FF_x$ to be the inductive limit of the $\FF_U$ over the opens $U$ that contain $x$; and, on the union $\FF$ of the $\FF_x$, we define the topology $\scr{T}$ as follows: for every open $U$ and every $\alpha\in\FF_U$, let $[\alpha]$ be the set of images of $\alpha$ in the $\FF_x$ associated to the points $x\in U$; by definition, the subsets $[\alpha]$ of $\FF$ constitute a fundamental system of opens of the topology $\scr{T}$.
 Axioms (F~I~) and (F~II~) are satisfied.
-We have an obvious homomorphism $\sh{F}_U\to\Gamma(U,\sh{F})$, but this is not necessarily an isomorphism
+We have an obvious homomorphism $\FF_U\to\Gamma(U,\FF)$, but this is not necessarily an isomorphism
 Indeed, two different methods of definition can lead to defining the same sheaf.
-For the homomorphism $\sh{F}_U\to\Gamma(U,\sh{F})$ to be an *isomorphism*, it is necessary and sufficient that, for every system of opens $U_i$ with union $U$, and every system of elements $\alpha_i\in\sh{F}_{U_i}$ such that $\alpha_i$ and $\alpha_j$ have the same image in $\sh{F}_{U_i\cap U_j}$, there exist a unique $\alpha\in\sh{F}_U$ such that $F_{U_iU}(\alpha)=\alpha_i$ for all $i$.
+For the homomorphism $\FF_U\to\Gamma(U,\FF)$ to be an *isomorphism*, it is necessary and sufficient that, for every system of opens $U_i$ with union $U$, and every system of elements $\alpha_i\in\FF_{U_i}$ such that $\alpha_i$ and $\alpha_j$ have the same image in $\FF_{U_i\cap U_j}$, there exist a unique $\alpha\in\FF_U$ such that $F_{U_iU}(\alpha)=\alpha_i$ for all $i$.
 
 ::: {.rmenv title="Example" latex="{Example}"}
-Let $\sh{F}_U$ be the additive group of real-valued (resp. complex-valued) functions defined and continuous on $U$.
-If $V\subset U$, then the homomorphism $\sh{F}_U\to\sh{F}_V$ will be that which sends a function defined on $U$ to its restriction to $V$.
-Then $\sh{F}_x$ is the additive group of *germs of continuous functions* at the point $x$;
-and $\sh{F}$ is called the sheaf of germs of real (resp. complex) continuous functions; $\sh{F}_U$ is isomorphism to the group of sections of $\sh{F}$ over $U$.
+Let $\FF_U$ be the additive group of real-valued (resp. complex-valued) functions defined and continuous on $U$.
+If $V\subset U$, then the homomorphism $\FF_U\to\FF_V$ will be that which sends a function defined on $U$ to its restriction to $V$.
+Then $\FF_x$ is the additive group of *germs of continuous functions* at the point $x$;
+and $\FF$ is called the sheaf of germs of real (resp. complex) continuous functions; $\FF_U$ is isomorphism to the group of sections of $\FF$ over $U$.
 :::
 
 ::: {.rmenv title="Remark" latex="{Remark}"}
@@ -98,34 +104,34 @@ We have defined sheaves of abelian groups, but it is clear that analogous defini
 
 # Subsheaf, homomorphism, quotient sheaf {#section-2}
 
-Let $\sh{F}$ be a sheaf on $X$.
-Let $\sh{G}$ be a subset of $\sh{F}$ such that, for all $x\in X$, $G\cap\sh{F}_x=\sh{G}_x$ is a *subgroup* of $\sh{F}_x$.
-For $\sh{G}$, with the topology induced by that of $\sh{F}$, to be a sheaf, it is necessary and sufficient that $\sh{G}$ be *open* in $\sh{F}$ (see condition (F~II~)).
-We then say that $\sh{G}$ is a *subsheaf* of $\sh{F}$.
+Let $\FF$ be a sheaf on $X$.
+Let $\GG$ be a subset of $\FF$ such that, for all $x\in X$, $G\cap\FF_x=\GG_x$ is a *subgroup* of $\FF_x$.
+For $\GG$, with the topology induced by that of $\FF$, to be a sheaf, it is necessary and sufficient that $\GG$ be *open* in $\FF$ (see condition (F~II~)).
+We then say that $\GG$ is a *subsheaf* of $\FF$.
 
-Let $\sh{F}$ and $\sh{F}'$ be sheaves on the same space $X$.
-We define a homomorphism from $\sh{F}$ to $\sh{F}'$ to be a *continuous* map $f$ from $\sh{F}$ to $\sh{F}'$ such that the restriction $f_x$ of $f$ to $\sh{F}_x$ is a homomorphism from the group $\sh{F}_x$ to the group $\sh{F}'_x$.
+Let $\FF$ and $\FF'$ be sheaves on the same space $X$.
+We define a homomorphism from $\FF$ to $\FF'$ to be a *continuous* map $f$ from $\FF$ to $\FF'$ such that the restriction $f_x$ of $f$ to $\FF_x$ is a homomorphism from the group $\FF_x$ to the group $\FF'_x$.
 \oldpage{44}
-The inverse image of the zero section of $\sh{F}'$ (a section which is an open in $\sh{F}'$) is a subsheaf $\sh{G}$ of $\sh{F}$, called the *kernel* of the homomorphism $f$;
-for each $x\in X$, $\sh{G}_x$ is the kernel of $f_x$.
+The inverse image of the zero section of $\FF'$ (a section which is an open in $\FF'$) is a subsheaf $\GG$ of $\FF$, called the *kernel* of the homomorphism $f$;
+for each $x\in X$, $\GG_x$ is the kernel of $f_x$.
 Also, $f$ is an open map;
-thus the image of $\sh{F}$ in $\sh{F}'$ is a subsheaf $\sh{G}'$ of $\sh{F}'$, called the *image* of the homomorphism $f$;
-$\sh{G}'_x$ is the image of $f_x$.
+thus the image of $\FF$ in $\FF'$ is a subsheaf $\GG'$ of $\FF'$, called the *image* of the homomorphism $f$;
+$\GG'_x$ is the image of $f_x$.
 
-It is clear that every homomorphism $f\colon\sh{F}\to\sh{F}'$ defines, for each open $U\subset X$, a homomorphism of groups of sections $\Gamma(U,\sh{F})\to\Gamma(U,\sh{F}')$.
+It is clear that every homomorphism $f\colon\FF\to\FF'$ defines, for each open $U\subset X$, a homomorphism of groups of sections $\Gamma(U,\FF)\to\Gamma(U,\FF')$.
 
-Let $\sh{G}$ be a subsheaf of a sheaf $\sh{F}$.
-We define a *quotient sheaf* as follows: let $\sh{H}_x$ be the quotient group $\sh{F}_x/\sh{G}_x$.
-If $\sh{H}$ denotes the union of the $\sh{H}_x$, then the maps $\sh{F}_x\to\sh{H}_x$ define a map from $\sh{F}$ to $\sh{H}$, which identifies $\sh{H}$ with a quotient of $\sh{F}$.
+Let $\GG$ be a subsheaf of a sheaf $\FF$.
+We define a *quotient sheaf* as follows: let $\sh{H}_x$ be the quotient group $\FF_x/\GG_x$.
+If $\sh{H}$ denotes the union of the $\sh{H}_x$, then the maps $\FF_x\to\sh{H}_x$ define a map from $\FF$ to $\sh{H}$, which identifies $\sh{H}$ with a quotient of $\FF$.
 We endow $\sh{H}$ with the quotient topology, which defines $\sh{H}$ as a sheaf.
-This sheaf is denoted $\sh{F}/\sh{G}$.
-The map $\sh{F}\to\sh{F}/\sh{G}$ is a homomorphism, whose kernel is the sheaf $\sh{G}$.
-We can describe the sections of the quotient sheaf $\sh{F}/\sh{G}$ over $X$: if $s\in\Gamma(X,\sh{F}/\sh{G})$, then every point $x\in X$ admits an open neighbourhood $U$ such that the section induced by $s$ on $U$ is the image of an element of $\Gamma(U,\sh{F})$.
-Thus $X$ can be covered by opens $U_i$, and on each $U_i$ we have an element $s_i\in\Gamma(U_i,\sh{F})$ such that, on $U_i\cap U_j$, $s_i-s_j$ is a section of the subsheaf $\sh{G}$.
-In general, a section of $\sh{F}/\sh{G}$ over $X$ is not the image of any section of $\sh{F}$ over $X$.
+This sheaf is denoted $\FF/\GG$.
+The map $\FF\to\FF/\GG$ is a homomorphism, whose kernel is the sheaf $\GG$.
+We can describe the sections of the quotient sheaf $\FF/\GG$ over $X$: if $s\in\Gamma(X,\FF/\GG)$, then every point $x\in X$ admits an open neighbourhood $U$ such that the section induced by $s$ on $U$ is the image of an element of $\Gamma(U,\FF)$.
+Thus $X$ can be covered by opens $U_i$, and on each $U_i$ we have an element $s_i\in\Gamma(U_i,\FF)$ such that, on $U_i\cap U_j$, $s_i-s_j$ is a section of the subsheaf $\GG$.
+In general, a section of $\FF/\GG$ over $X$ is not the image of any section of $\FF$ over $X$.
 Thus, the sequence of groups and homomorphisms
 $$
-  0 \to \Gamma(X,\sh{G}) \to \Gamma(X,\sh{F}) \xrightarrow{\varphi} \Gamma(X,\sh{F}/\sh{G})
+  0 \to \Gamma(X,\GG) \to \Gamma(X,\FF) \xrightarrow{\varphi} \Gamma(X,\FF/\GG)
 $$
 is evidently an *exact sequence* (i.e. the image of each homomorphism is the kernel of the following homomorphism), but the homomorphism $\varphi$ is not an epimorphism[^2] in general.
 
@@ -134,44 +140,44 @@ is evidently an *exact sequence* (i.e. the image of each homomorphism is the ker
 
 # Cohomology with coefficients in a sheaf {#section-3}
 
-Let $\sh{F}$ be a sheaf on a topological space $X$.
-We will define, for every integer $q\geqslant0$, a cohomology group $\HH^q(X,\sh{F})$.
+Let $\FF$ be a sheaf on a topological space $X$.
+We will define, for every integer $q\geqslant0$, a cohomology group $\HH^q(X,\FF)$.
 For every cover $\cal{R}$ of $X$ by opens $U_i$, consider the following:
 \oldpage{45}
-for every integer $q\geqslant0$, we set $p=q+1$, and we associate to each sequence $i_1,\ldots,i_p$ of $p$ indices an element $f_{i_1\ldots i_p}\in\Gamma(U_{i_1}\cap\ldots\cap U_{i_p},\sh{F})$, which is zero if $U_{i_1}\cap\ldots\cap U_{i_p}$ is empty;
+for every integer $q\geqslant0$, we set $p=q+1$, and we associate to each sequence $i_1,\ldots,i_p$ of $p$ indices an element $f_{i_1\ldots i_p}\in\Gamma(U_{i_1}\cap\ldots\cap U_{i_p},\FF)$, which is zero if $U_{i_1}\cap\ldots\cap U_{i_p}$ is empty;
 we suppose that $f_{i_1\ldots i_p}$ is an *alternating* function in its indices (in particular, it is zero if the indices are not all distinct).
-We thus obtain the additive group of *alternating cochains* of the cover $\cal{R}$, of degree $q=p-1$, with respect to the sheaf $\sh{F}$.
-We define a *cobordism* operator on this group in the usual way; it increases the degree by 1; whence a cohomology group $\HH^q(\cal{R},\sh{F})$.
+We thus obtain the additive group of *alternating cochains* of the cover $\cal{R}$, of degree $q=p-1$, with respect to the sheaf $\FF$.
+We define a *cobordism* operator on this group in the usual way; it increases the degree by 1; whence a cohomology group $\HH^q(\cal{R},\FF)$.
 
-If a cover $\cal{R}'$ is finer than $\cal{R}$, then we have a natural, unique, homomorphism from $\HH^q(\cal{R},\sh{F})$ to $\HH^q(\cal{R}',\sh{F})$.
-We can thus consider the inductive limit of the $\HH^q(\cal{R},\sh{F})$ over all open covers $\cal{R}$;
-this is, by definition, the group $\HH^q(X,\sh{F})$.
-We note that $\HH^0(X,\sh{F})$ is canonically identified with the group of sections $\Gamma(X,\sh{F})$.
+If a cover $\cal{R}'$ is finer than $\cal{R}$, then we have a natural, unique, homomorphism from $\HH^q(\cal{R},\FF)$ to $\HH^q(\cal{R}',\FF)$.
+We can thus consider the inductive limit of the $\HH^q(\cal{R},\FF)$ over all open covers $\cal{R}$;
+this is, by definition, the group $\HH^q(X,\FF)$.
+We note that $\HH^0(X,\FF)$ is canonically identified with the group of sections $\Gamma(X,\FF)$.
 
-Every homomorphism of sheaves $\sh{F}\to\sh{F}'$ evidently defines homomorphisms $\HH^q(X,\sh{F})\to\HH^q(X,\sh{F}')$.
-Furthermore, let $\sh{G}$ be a subsheaf of $\sh{F}$;
+Every homomorphism of sheaves $\FF\to\FF'$ evidently defines homomorphisms $\HH^q(X,\FF)\to\HH^q(X,\FF')$.
+Furthermore, let $\GG$ be a subsheaf of $\FF$;
 we can define natural homomorphisms
 $$
-  \delta^q\colon \HH^q(X,\sh{F}/\sh{G}) \to \HH^{q+1}(X,\sh{G})
+  \delta^q\colon \HH^q(X,\FF/\GG) \to \HH^{q+1}(X,\GG)
 $$
 at least whenever $X$ is paracompact.
 
-We give, for example, the definition of $\delta^0$: we have seen ([§2](#section-2)) that an element $\alpha\in\HH^0(X,\sh{F}/\sh{G})$ can be defined by sections $s_i\in\HH^0(U_i,\sh{F})$ over opens $U_i$ of a suitable cover $\cal{R}$ of $X$;
-and that $s_i-s_j\in\HH^0(U_i\cap U_j,\sh{G})$.
+We give, for example, the definition of $\delta^0$: we have seen ([§2](#section-2)) that an element $\alpha\in\HH^0(X,\FF/\GG)$ can be defined by sections $s_i\in\HH^0(U_i,\FF)$ over opens $U_i$ of a suitable cover $\cal{R}$ of $X$;
+and that $s_i-s_j\in\HH^0(U_i\cap U_j,\GG)$.
 So set $f_{ij}=s_i-s_j$.
-The elements $f_{ij}$ define an (alternating) cocycle of degree 1, and thus an element of $\HH^1(\cal{R},\sh{G})$, and thus an element $\beta\in\HH^1(X,\sh{G})$.
+The elements $f_{ij}$ define an (alternating) cocycle of degree 1, and thus an element of $\HH^1(\cal{R},\GG)$, and thus an element $\beta\in\HH^1(X,\GG)$.
 We can easily show that this element $\beta$ is uniquely determined by $\alpha$, that is, that it is independent of the choice of cover $\cal{R}$ and of sections $s_i$.
 By definition, $\delta^0(\alpha)=\beta$.
 For $q>0$, the definition of $\delta^q$ is analogous, but a bit more complicated.
 
-The fundamental property of cohomology is the following[^3]: supposing the space $X$ to be paracompact, if $\sh{G}$ is a subsheaf of a sheaf $\sh{F}$, then *the unbounded sequence of abelian groups and homomorphisms*
+The fundamental property of cohomology is the following[^3]: supposing the space $X$ to be paracompact, if $\GG$ is a subsheaf of a sheaf $\FF$, then *the unbounded sequence of abelian groups and homomorphisms*
 $$
   \begin{aligned}
     0
-    \xrightarrow{\phantom{\delta^0}} \,&\HH^0(X,\sh{G}) \to\HH^0(X,\sh{F}) \to\HH^0(X,\sh{F}/\sh{G})
-  \\\xrightarrow{\delta^0} \,&\HH^1(X,\sh{G}) \to \ldots
-  \\\xrightarrow{\delta^{q-1}} \,&\HH^q(X,\sh{G}) \to\HH^q(X,\sh{F}) \to\HH^q(X,\sh{F}/\sh{G})
-  \\\xrightarrow{\delta^q} \,&\HH^{q+1}(X,\sh{G}) \to \ldots
+    \xrightarrow{\phantom{\delta^0}} \,&\HH^0(X,\GG) \to\HH^0(X,\FF) \to\HH^0(X,\FF/\GG)
+  \\\xrightarrow{\delta^0} \,&\HH^1(X,\GG) \to \ldots
+  \\\xrightarrow{\delta^{q-1}} \,&\HH^q(X,\GG) \to\HH^q(X,\FF) \to\HH^q(X,\FF/\GG)
+  \\\xrightarrow{\delta^q} \,&\HH^{q+1}(X,\GG) \to \ldots
   \end{aligned}
 $$
 *is an exact sequence*.
@@ -181,12 +187,157 @@ $$
 \oldpage{46}
 The start of this sequence coincides with the sequence
 $$
-  0 \to \Gamma(X,\sh{G}) \to \Gamma(X,\sh{F}) \to \Gamma(X,\sh{F}/\sh{G})
+  0 \to \Gamma(X,\GG) \to \Gamma(X,\FF) \to \Gamma(X,\FF/\GG)
 $$
 considered at the end of [§2](#section-2).
-It thus follows that: for $\Gamma(X,\sh{F})\to\Gamma(X,\sh{F}/\sh{G})$ to be an epimorphism, it suffices that $\HH^1(X,\sh{G})=0$.
+It thus follows that: for $\Gamma(X,\FF)\to\Gamma(X,\FF/\GG)$ to be an epimorphism, it suffices that $\HH^1(X,\GG)=0$.
 
 
 # Complex analytic manifolds; additive Cousin problem {#section-4}
 
-The
+The well-known definition of a complex manifold of (complex) dimension $n$ (and thus of real dimension $2n$) can be formulated in terms of sheaves, as follows: on the space $X$, assumed to be separated, we give a subsheaf $\OO$ of the sheaf $\FF$ of germs of complex-valued continuous functions ([§1](#section-1)), and we impose on it the following axiom:
+
+::: {.rmenv title="VA" latex="{VA}"}
+For each point $x\in X$, there exists an open $U$ containing $x$ and $n$-many sections $f_i$ of $\OO$ over $U$, zero at the point $x$, such that
+
+1. the $f_i$ define a homeomorphism from $U$ to an open of the complex space $\mathbb{C}^n$ of (complex) dimension $n$;
+2. the elements of $\OO_x$ are exactly the composite functions $F(f_1,\ldots,f_n)$, where $F$ is holomorphic at the origin in $\mathbb{C}^n$.
+:::
+
+The systems of $n$-many sections $f_i$ appearing in these properties are called systems of *local coordinates* at the point $x$.
+The sheaf $\OO$ is called the sheaf of *germs of holomorphic functions*;
+the sections of $\OO$ over an open $U$ are the *holomorphic functions* on $U$.
+We denote by $\OO(U)$ the sheaf induced on an open $U$.
+We observe that $\OO_x$ is an integral ring.
+
+On a complex-analytic manifold $X$, we define the sheaf $\MM$ of *germs of meromorphic functions* as follows: $\MM_x$ is the field of fractions of the integral ring $\OO_x$; on the union $\MM$ of the $\MM_x$ we define the following topology: for every pair $(f,g)$ of holomorphic functions on an open $U$ such that $g$ does not take the value $0$ on any open non-empty subset of $U$, let $[f,g]$ be the set of $f_x/g_x\in\MM_x$ for $x\in U$ (denoting by $f_x$, resp. $g_x$, the image of $f$, resp. of $g$, in $\OO_x$);
+the sets $[f,g]$ constitute, by definition, a fundamental system of opens of the topology of $\MM$.
+A *meromorphic function* on an open $U$ is, by definition, a section of $\MM$ over $U$.
+
+It is clear that $\OO$ is a subsheaf of $\MM$.
+We interpret the quotient sheaf $\MM/\OO$ as follows: if $m\in\MM_x$, then the class of $m$ in $\MM_x/\OO_x$ is called the *principal part* of $m$.
+\oldpage{47}
+A section of $\MM/\OO$ is called a *system of principal parts*.
+Consider the homomorphism $\varphi\colon\Gamma(X,\MM)\to\Gamma(X,\MM/\OO)$;
+to each meromorphic function on $X$, $\varphi$ associates a system of principal parts.
+The classical *additive Cousin problem* (or *first Cousin problem*)[^4] consists of characterising, amongst the systems of principal parts on $X$, those that come from a meromorphic function on $X$;
+in other words, characterising the image of the homomorphism $\varphi$.
+To say that the Cousin problem is always solvable is to say that $\varphi$ is an epimorphism.
+
+[^4]: Cf. [@7]. The Cousin problems have given rise to an abundant literature; we restrict ourselves to referring to [@9].
+
+By the exact sequence of cohomology ([§3](#section-3)), the condition that $\HH^1(X,\OO)=0$ is *sufficient* for the additive Cousin problem to always be solvable.
+We will see that this is most notably the case whenever $X$ is a "Stein manifold" ([§7](#section-7), Theorem B).
+Before state the general theorems, implying that certain cohomology groups $\HH^q(X,\FF)$ are zero under certain conditions, we must define a new notion: that of "coherent analytic sheaf".
+
+
+# Coherent analytic sheaves {#section-5}
+
+Let $X$ be a complex-analytic manifold.
+An *analytic sheaf* is a sheaf $\FF$ such that, for each point $x$, $\FF_x$ is endowed with the structure of a *module* over the ring $\OO_x$ (the ring of germs of holomorphic functions at the point $x$), and such that the map $(f,\alpha)\mapsto f\alpha$, defined on the set $\GG$ of pairs $(f,\alpha)$ such that there exists $x\in X$ with $f\in\OO_x$ and $\alpha\in\FF_x$, is a *continuous* map from $\GG\subset\OO\times\FF$ to $\FF$.
+
+::: {.rmenv title="Example" latex="{Example}"}
+Let $\OO^p$ be the direct sum of $p$-many copies of the sheaf $\OO$;
+an element of $\OO_x^p$ is a sequence $(f_1,\ldots,f_p)$ of $p$-many germs of holomorphic functions at the point $x$.
+We define an action of $\OO_x$ on $\OO_x^p$ by the formula
+$$
+  f\cdot(f_1,\ldots,f_p) = (ff_1,\ldots,ff_p)
+$$
+and this defines $\OO^p$ as an analytic sheaf.
+:::
+
+::: {.rmenv title="Another example" latex="{Another example}"}
+Let $\II$ be a subsheaf of $\OO$ such that, for each point $x$, $\II_x$ is an *ideal* of the sheaf $\OO_x$;
+then $\II$ is an analytic sheaf.
+:::
+
+Let $\FF$ and $\FF'$ be analytic sheaves on $X$.
+A homomorphism of sheaves $f\colon\FF\to\FF'$ is said to be *analytic* if, for each point $x$, the homomorphism $f_x\colon\FF_x\to\FF'_x$ is compatible with the action of $\OO_x$.
+\oldpage{48}
+The kernel, the image, and the cokernel of $f$ are then analytic sheaves.
+
+::: {.rmenv title="Definition" latex="{Definition}"}
+We say that an analytic sheaf $\sh{F}$ on $X$ is *coherent*[^5] if each $x\in X$ admits an open neighbourhood $U$ such that the induced analytic sheaf $\FF(U)$ is isomorphic to the cokernel of an analytic homomorphism $f\colon\OO^p(U)\to\OO^q(U)$ for integers $p,q$.
+:::
+
+[^5]: This definition is more general than that given in [@3] and [@4]; in the more specific cases treated in [@3] and [@4], the definitions agree.
+
+In particular, we say that an analytic sheaf is *locally free* if each $x\in X$ admits an open neighbourhood $U$ such that the induced sheaf $\FF(U)$ is isomorphic to $\OO^q(U)$ for some suitable integer $q$.
+Then, every locally free sheaf is coherent.
+
+We can prove the following: *let $\FF$ and $\FF'$ be coherent analytic sheaves, and $f$ an analytic homomorphism from $\FF$ to $\FF'$; then the kernel, the image, and the cokernel of $f$ are coherent analytic sheaves*.
+The proof relies essentially on the theorem of Oka[^6], which states the following: for every analytic homomorphism $f\colon\OO^p(X)\to\OO^q(X)$, every point $x\in X$ admits an open neighbourhood $U$ such that the kernel of the induced homomorphism $\OO^p(U)\to\OO^q(U)$ is the image of an analytic homomorphism $\OO^r(U)\to\OO^p(U)$.
+
+[^6]: See [@10, pp. 18 and onwards]; see also [@4, p. 37, Theorem 1]; and [@5, Exposé XV, pp. 5--10].
+
+We note a necessary and sufficient condition for an analytic subsheaf $\GG$ of a coherent analytic sheaf $\FF$ to be coherent: for each $x\in X$, there exists an open neighbourhood $U$ of $x$ and a finite number of sections of $\FF$ on $U$ such that, for each $y\in U$, $\GG_y$ is the sub-$\OO_y$-module of $\FF_y$ generated by these sections.
+This criterium notably applies when $\FF=\OO^q$, and in particular when $\FF=\OO$;
+in this latter case, $\GG_x$ is an ideal of $\OO_x$, and we have a *coherent sheaf of ideals*.
+
+::: {.rmenv title="Example of a coherent sheaf of ideals" latex="{Example of a coherent sheaf of ideals}"}
+Let $X$ be a complex-analytic manifold.
+We defined an *analytic submanifold* of $X$ to be a closed subset $V$ of $X$ such that, for each $x\in V$, there exists an open neighbourhood $U$ of $x$ and a finite number of holomorphic functions $f_i$ on $U$, such that $y\in V\cap U$ is equivalent to "$y\in U$ and $f_i(y)=0$".
+A point $x\in V$ is said to be *regular* if there exists, in the neighbourhood of $x$ in the ambient manifold $X$, a system of local coordinates $x_1,\ldots,x_n$ that are zero at the point $x$ and such that $V$ is locally defined (on the neighbourhood of $x$) by the vanishing of some of these coordinates.
+\oldpage{49}
+When all the points of $V$ are regular, we say that $V$ is *regularly embedded* in $X$.
+With these definitions, let $V$ be an analytic submanifold of $X$;
+it defines a sheaf of ideals on $X$ as follows: at a point $x\in V$, we take the ideal $\II_x$ of $\II_x$ consisting of germs that vanish identically on $V$ on the neighbourhood of $x$, and at a point $x\not\in V$ we take $\II_x=\OO_x$.
+We can show[^7] that this sheaf $\II$ (called the sheaf of the submanifold $V$) is *coherent*;
+this is evident when $V$ is regularly embedded, but it is true in all cases.
+:::
+
+[^7]: See [@4, Theorem 2], and [@5, Exposé XVI].
+
+
+# Stein manifolds {#section-6}
+
+A Stein manifold is, basically, a complex analytic variety on which there are sufficiently many holomorphic functions.
+More precisely, it is a complex-analytic manifold (connected or not) that is the countable union of compacts, and that further satisfies the three following conditions:
+
+a. If $x,y\in X$ and $x\neq y$, then there exists a holomorphic function $f$ on $X$ such that $f(x)\neq f(y)$;
+
+b. For every $x\in X$, there exist $n$-many holomorphic functions on $X$ that induce, in the ring $\OO_x$, a system of local coordinates at the point $x$ (where $n$ is the complex dimension of $X$);
+
+c. The *envelope* (or *hull*) $\hat{K}$ of any compact $K\subset X$ is compact.
+
+Recall the definition of the envelope of a compact $K$: it is the set $\hat{K}$ of points $x\in X$ such that
+$$
+  |f(x)| \leqslant \sup_{y\in K}|f(y)|
+$$
+for all holomorphic $f$ on $X$.
+
+We can show (using the Baire theorem) that condition (c) is equivalent to the following:
+
+c'. For every infinite sequence $S$ of points in $X$, not containing any adherent point of $X$, there exists a holomorphic function on $X$ that is *unbounded* on $S$.
+
+::: {.rmenv title="Examples" latex="{Examples}"}
+1. Condition (a) shows that a *compact* manifold $X$ of dimension $n>0$ is never a Stein manifold.
+
+2. For $n=1$, every *non-compact* connected "Riemann surface" is a Stein manifold: this follows from a thesis of Behnke and Stein [@1].
+\oldpage{50}
+
+3. Let $X$ be an open of the complex space $\mathbb{C}^n$.
+    Conditions (a) and (b) are trivially satisfied; condition (c) expresses that $X$ is a *domain of holomorphy* (cf. [@6]).
+
+4. Let $X$ be an "étalé domain" in $\mathbb{C}^n$, i.e. a manifold endowed with a map $\varphi$ into $\mathbb{C}^n$, with $\varphi$ a local homeomorphism.
+    Condition (b) is trivially satisfied; conditions (a) and (c) imply that $X$ is a domain of holomorphy.
+    Conversely, is every domain of holomorphy (étalé in $\mathbb{C}^n$) a Stein manifold?
+    The answer is positive[^8] whenever $X$ is "of finite type" (i.e. if it is impossible to find, in $\mathbb{C}^n$, an open disc $A$ and, in $X$, an infinity of opens that $\varphi$ sends homeomorphically to $A$).
+    The question remains open in the general case.
+
+5. The product $X\times Y$ of two Stein manifolds is evidently a Stein manifold.
+
+6. Let $X$ be a Stein manifold, and $V$ an analytic submanifold regularly embedded into $X$ (cf. [§5](#section-5)).
+    Then $V$ is a Stein manifold: this follows immediately from the definitions.
+    Thus, every analytic submanifold regularly embedded into $\mathbb{C}^n$ is a Stein manifold;
+    in particular, every affine algebraic variety is a Stein manifold.
+
+7. Let $X$ be a Stein manifold, and $g$ a holomorphic function on $X$ that is not identically zero.
+    The set $Y$ of points $x\in X$ such that $g(x)\neq0$ is a Stein manifold: to show that $Y$ satisfies condition (c), we note that $1/g$ is holomorphic on $Y$.[^9]
+    For example, the variety of the complex linear group in $r$-many variables is a Stein manifold;
+    thus the variety of any closed subgroup of the complex linear group is a Stein manifold.
+:::
+
+[^8]: Cf. [@6], and [@5, Exposé IX].
+
+[^9]: We have a more general result.
