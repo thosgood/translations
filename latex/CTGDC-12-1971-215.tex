@@ -5144,7 +5144,7 @@ We say that $\overline{\Delta}$ is a \emph{strict monoidal theory} if it satisfi
   where $(\varepsilon_1,\varepsilon_2,\ldots,\varepsilon_{n'})\in\Delta_0^{n'}$.
 \end{itenv}
 
-We further say that $\Delta$ is \emph{countable} if $\Delta_0$ is finite or countable (see \cref{sec:a.3} for an interpretation of theories in terms of multicategories).
+We further say that $\Delta$ is \emph{countable} if $\Delta_0$ is finite or countable (see \hyperref[sec:a.3]{§A.3} for an interpretation of theories in terms of multicategories).
 
 If $\overline{\cat{D}}=(\cat{D},1,\circ)$ and $\overline{\Delta}=(\Delta,0,+)$ are strict monoidal categories, we denote by $\Str{\overline{\Delta}}{\overline{\cat{D}}}$ the category whose objects are the functors $F\colon\Delta\to\cat{D}$ that commute with the first laws, or, equivalently, the bifunctors $\overline{\Delta}\to\overline{\cat{D}}$;
 we call such a functor a \emph{$\overline{\Delta}$-structure}.
@@ -5496,7 +5496,7 @@ We have a forgetful functor $\Str{\overline{\Delta}}{\overline{\cat{D}}}\to\cat{
   We have that $d\cdot j_\varepsilon F=Fj_\varepsilon\cdot d_n$.
 
   We now show that $(F,d)\colon\TT_{\overline{\Delta}}(\overline{\cat{D}})\to\TT_{\overline{\Delta}}(\overline{\cat{D}}')$ is a morphism of triples.
-  We have that $d\theta\cdot IF\theta = FI\theta$ by taking $\varepsilon=1$ in~(6), hence the first of the relations~(2).
+  We have that $d\theta\cdot IF\theta = FI\theta$ by taking $\varepsilon=1$ in~(6), hence the first of the relations~(2) in \cref{sec:0.2}.
   For all
   \[
     (\varepsilon_1,\ldots,\varepsilon_n)\in\Delta_0^n
@@ -5526,6 +5526,55 @@ We have a forgetful functor $\Str{\overline{\Delta}}{\overline{\cat{D}}}\to\cat{
     \qedhere
   \]
 \end{proof}
+
+Here is a case where $\TT_{\overline{\Delta}}(\overline{\cat{D}})$ is strongly cartesian (see \cref{sec:III.1}).
+Suppose that $\overline{\cat{D}}$ is countably distributive and further satisfies the following conditions:
+\begin{itemize}
+  \item[(D')]
+    $\cat{D}$ admits (finite) fibre products;
+    the functors $Y_\theta$ and $Y'_\theta$ of axiom~(T) commute with the (finite) fibre products.
+
+  \item[(D'')]
+    The sums in $\cat{D}$ commute with the (finite) fibre products, and they are universal (and thus the canonical injections of sums are monomorphisms, by the lemma of \hyperref[proposition:iii.1.20]{Proposition~III.1.20}).
+\end{itemize}
+
+\begin{itenv}{Proposition~A.4}
+\label{proposition:a.4}
+  If these conditions are satisfied, then $\TT_{\overline{\Delta}}(\overline{\cat{D}})$ is strongly cartesian.
+\end{itenv}
+
+\begin{proof}
+  $T$ commutes with fibre products by~(D') and the fact that it commutes with sums \unsure{and fibre products}.
+  The last condition of~(D'') implies that, if a sum (in $\cat{D}^\mathbf{2}$) is an epimorphism (resp. a monomorphism) then each of its terms is an epimorphism (resp. a monomorphism);
+  since the sums are universal, we thus deduce that $I$ is cartesian (\cref{sec:II.2}).
+  We then show that $K$ is cartesian: more generally, every sum crochet in $\cat{D}^\mathbf{2}$ is cartesian;
+  we note this by first proving that every ``codiagonal'' crochet is cartesian (taking a fibre product with a codiagonal).
+\end{proof}
+
+We note in passing the following fact: if $\cat{D}$ is an arbitrary category, then the ``target'' of an inductive limit in $\cat{D}^\mathbf{2}$ is always an inductive limit;
+the ``source'' too, whenever $\cat{D}$ admits a final object.
+
+
+
+\subsection{Theories and multicategories}
+\label{sec:a.3}
+
+We will show that there is an equivalence between the data of a strict monoidal theory (\hyperref[sec:a.2]{§A.2}) and that of a multicategory in the sense of \cite{La}.
+\oldpage{319}
+\hyperref[proposition:iii.2.21]{Proposition~III.2.21} can be expanded ($\Kl{\TT}$ is defined in \cref{sec:0.2}):
+
+\begin{itenv}{Proposition~A.5}
+\label{proposition:a.5}
+  Let $\TT$ be a cartesian triple on the category $\cat{E}$, and let $\theta=(b,a,i,k)$ be a $\TT$-category on $e\in\set{\cat{E}}$;
+  we have a $\Kl{\TT}$-category on $e\in\set{\Kl{\TT}}$ that projects onto the $\cat{E}$-category $(Tb,Ke\cdot Ta,Ti,Tk)$ from \hyperref[proposition:iii.2.21]{Proposition~III.2.21} by the forgetful functor $\Kl{\TT}\to\cat{E}$.
+\end{itenv}
+
+\begin{proof}
+  $T$ commutes  
+\end{proof}
+
+
+
 
 
 %% Bibliography %%
