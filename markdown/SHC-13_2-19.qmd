@@ -1,8 +1,8 @@
 --- 
-title: "Families of complex spaces and the foundations of analytic geometry"
+title: "Local analytic geometry, II. Theory of finite morphisms"
 author: "Christian Houzel"
 date: "June 1961"
-original: 'Houzel, C. "Géométrie analytique locale, II. Théorie des morphismes finis". _Séminaire Henri Cartan_ **13 (2)** (1960--61), Talk no. 19. [numdam.org/item/SHC_1960-1961__13_2_A6_0/](https://www.numdam.org/item/SHC_1960-1961__13_2_A6_0/)'
+original: 'Houzel, C. "Géométrie analytique locale, II. Théorie des morphismes finis". _Séminaire Henri Cartan_ **13 (2)** (1960--61), Talk no. 19. [numdam.org/item/SHC_1960-1961__13_2_A6_0](https://www.numdam.org/item/SHC_1960-1961__13_2_A6_0)'
 bibliography: SHC-13_2-19.bib
 ---
 
@@ -16,8 +16,21 @@ bibliography: SHC-13_2-19.bib
 
 <!-- Shortcuts -->
 
-\newcommand{\sh}[1]{\scr{#1}}
-\newcommand{\OO}{\sh{O}}
+\providecommand{\Cat}[1]{\mathsf{#1}}
+
+\providecommand{\sh}[1]{\scr{#1}}
+\providecommand{\OO}{\sh{O}}
+\providecommand{\op}{\mathrm{op}}
+
+\providecommand{\AA}{\sh{A}}
+\providecommand{\BB}{\sh{B}}
+
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\shHom}{\underline{\Hom}}
+
+\providecommand{\Specan}[1]{\operatorname{Spec}_\mathrm{an}(#1)}
+\providecommand{\Alg}[1]{{#1}\text{-}\Cat{Alg}}
+\providecommand{\Mod}[1]{{#1}\text{-}\Cat{Mod}}
 
 <!-- Content -->
 
@@ -25,16 +38,87 @@ bibliography: SHC-13_2-19.bib
 
 \oldpage{19-01}
 
-::: {.rmenv title="Definition 1" latex="{Definition 1}"}
+::: {.rmenv #definition-1 title="Definition 1" latex="{Definition 1}"}
 Let $S$ be a ringed space.
-We say that an $\OO_S$-algebra $\cal{A}$ is of finite presentation if every $s\in S$ admits a neighbourhood $U$ such that $\cal{A}|U$ is isomorphic to a sheaf of the form
+We say that an $\OO_S$-algebra $\AA$ is of *finite presentation* if every $s\in S$ admits a neighbourhood $U$ such that $\AA|U$ is isomorphic to a sheaf of the form
 $$
   \frac{(\OO_S|U)[t_1,\ldots,t_n]}{(f_1,\ldots,f_m)}
 $$
 with $f_1,\ldots,f_m\in\Gamma(U,\OO_S[t_1,\ldots,t_n])$.
 :::
 
-That is, $\cal{A}$ is locally generated over $\OO_S$ by a finite number of sections subject to a finite number of relations.
+That is, $\AA$ is locally generated over $\OO_S$ by a finite number of sections subject to a finite number of relations.
 
 We are interested in the case where $S$ is an analytic space, over a complete valued non-discrete base field $k$.
-For every analytic space $T$ over $S$
+For every analytic space $T$ over $S$, consider the sheaf $\AA_T=\AA\times_S T$, the inverse image of $\AA$ on $T$, and the set $F_\AA(T)=\Hom_{\OO_T}(\AA_T,\OO_T)$ of algebra homomorphisms;
+we immediately see that $T\mapsto F_\AA(T)$ defines a contravariant functor $F_\AA\colon(\Cat{An})^\op/S\to\Cat{Set}$.
+
+::: {.itenv #proposition-1 title="Proposition 1" latex="{Proposition }"}
+Let $\AA$ be an algebra of finite presentation on an analytic space $S$;
+the functor $F_\AA$ is representable in the category $\Cat{An}/S$ by an analytic space separated over $S$.
+:::
+
+::: {.proof}
+We note first of all that the functor $F_\AA$ is of a local nature (cf. Exposé 11, Definition 5.4), since if $T$ is an analytic space over $S$, then the presheaf $U\mapsto F_\AA(U)$ (where $U$ runs over the opens of $T$) is precisely the sheaf of germs of algebra homomorphisms $\shHom_{\OO_T}(\AA_T,\OO_T)$.
+
+Thus, by Corollary 5.7 of Exposé 11, it suffices, to show that $F_\AA$ is representable, to find an open cover $(S_i)$ of $S$ such that, for each index $i$, the functor $F_\AA/S_i$ is representable in $\Cat{An}/S_i$.
+
+By [Definition 1](#definition-1), we thus see that it suffices to consider the case where $\AA$ is of the form $\OO_S[t_1,\ldots,t_n]/(f_1,\ldots,f_m)$.
+Then the exact sequence
+\oldpage{19-02}
+$$
+  0 \to \sh{I} \xrightarrow{i} \OO_S[t_1,\ldots,t_n] \to \AA \to 0
+$$
+(where $\sh{I}=(f_1,\ldots,f_m)$) gives, by base extension, an exact sequence
+$$
+  \sh{I}_T \xrightarrow{i_T} \OO_T[t_1,\ldots,t_n] \to \AA_T \to 0
+$$
+for every analytic space $T$ over $S$.
+This allows us to identify $F_\AA(T)=\Hom_{\OO_T}(\AA_T,\OO_T)$ with the set of homomorphisms from $\OO_T[t_1,\ldots,t_n]$ to $\OO_T$ that vanish on $i_T(\sh{I}_T)$.
+
+But the functor $F_{\OO_S[t_1,\ldots,t_n]}\colon T\mapsto\Hom_{\OO_T}(\OO_T[t_1,\ldots,t_n],\OO_T)$ is isomorphic to $T\mapsto(\Gamma(T,\OO_T))^n$;
+by Theorem 1.1 of Exposé 10 and Proposition 3.1 of Exposé 11, we see that $F_{\OO_S[t_1,\ldots,t_n]}$ is represented in $\Cat{An}/S$ by the pair $(S\times\sh{E}^n,\eta)$, where $\eta$ is the homomorphism of algebras $\eta\colon\OO_{S\times\sh{E}^n}[t_1,\ldots,t_n]\to\OO_{S\times\sh{E}^n}$ defined by $\eta(t_i)=q^*(z_i)$ (for $i=1,\ldots,n$) and denoting by $q$ the projection from $S\times\sh{E}^n$ onto $\sh{E}^n$.
+It immediately follows that the sub-functor $F_\AA$ is represented by the closed subspace $X\subset S\times\sh{E}^n$ defined by the ideal $\sh{I}=\eta\circ i_{S\times\sh{E}^n}(\sh{I}_{S\times\sh{E}^n})\subset\OO_{S\times\sh{E}^n}$ (cf. Exposé 11, Lemma 3.6).
+
+In the case in question, $X$ is evidently separated over $S$.
+Since the property of being separated over $S$, for an object of $\Cat{An}/S$, is local on $S$, the latter claim of the statement is also proven (cf. Expose 11, Proposition 5.6: we obtain the space that represents $F_\AA$ by gluing together those that represent the $F_{\AA/S_i}$).
+:::
+
+::: {.rmenv #definition-2 title="Definition 2" latex="{Definition 2}"}
+For every $\OO_S$-algebra $\AA$ of finite presentation, we define the *analytic spectrum* of $\AA$, denoted $\Specan{\AA}$, to be the object of $\Cat{An}/S$ (defined up to $S$-isomorphism) that represents the functor
+$$
+  F_\AA\colon T\longmapsto \Hom_{\OO_T}(\AA_T,\OO_T).
+$$
+\oldpage{19-3}
+$\Specan{\AA}$ is thus an analytic space separated over $S$.
+:::
+
+::: {.rmenv title="Example" latex="{Example}"}
+Consider an $\OO_S$-module $\sh{E}$ of finite presentation;
+its symmetric algebra $S(\sh{E})$ is an $\OO_S$-algebra of finite presentation, and $\Specan{S(\sh{E})}$ represents the functor
+$$
+  T\longmapsto
+  \Hom_{\Alg{\OO_T}}(S(\sh{E}_T),\OO_T)
+  \simeq \Hom_{\Mod{\OO_T}}(\sh{E}_T,\OO_T).
+$$
+This is the *vector bundle* defined by $\sh{E}$ (cf. Exposé 12, Section 1).
+:::
+
+::: {.itenv #proposition-2 title="Proposition 2" latex="{Proposition 2}"}
+i. $\AA\mapsto\Specan{\AA}$ defines a contravariant functor from the category of $\OO_S$-algebras of finite presentation to $\Cat{An}/S$.
+ii. For any $\OO_S$-algebras $\AA$ and $\BB$ of finite presentation, $\AA\otimes_{\OO_S}\BB$ is of finite presentation, and $\Specan{\AA\otimes_{\OO_S}\BB}\simeq\Specan{\AA}\times_S\Specan{\BB}$.
+iii. Let $h\colon\AA\to\BB$ be a surjective homomorphism of algebras of finite presentation. Then the corresponding morphism $\Specan{h}\colon\Specan{\BB}\to\Specan{\AA}$ is a closed immersion.
+iv. For every $\OO_S$-algebra $\AA$ of finite presentation, and for every analytic space $T$ over $S$, $\Specan{\AA}\times_S T\simeq\Specan{\AA_T}$ (compatibility with base change).
+:::
+
+::: {.proof}
+(i) is immediate, since $F_\AA(T)$ is a contravariant functor in $\AA$;
+(ii) follows from the formula
+$$
+  \Hom_{\OO_T}(\AA_T\otimes_{\OO_T}\BB_T,\OO_T)
+  \simeq \Hom_{\OO_T}(\AA_T,\OO_T)\times\Hom_{\OO_T}(\BB_T,\OO_T)
+$$
+(iii) follows easily from the proof of [Proposition 1](#proposition-1), and (iv) can be proven by Corollary 3.2 of Exposé 11.
+:::
+
+Consider
