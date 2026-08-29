@@ -1,0 +1,68 @@
+--- 
+title: "Complex analytic manifolds and cohomology"
+author: "H. Cartan"
+date: "1953"
+original: 'H. Cartan. "Variétés analytiques complexes et cohomologie".
+_Colloque sur les fonctions de plusieurs variables, Bruxelles_ (1953) pp. 41--53. [[PDF]](https://www.inp.nsk.su/~silagadz/Cartan.pdf)'
+bibliography: CFPV-1953-41.bib
+---
+
+{{< include _translator-note.qmd >}}
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\newcommand{\sh}[1]{\scr{#1}}
+
+<!-- Content -->
+
+\oldpage{41}
+
+The global theory of ideals of analytic functions, due to K. Oka [@10] and H. Cartan [@2; @3; @4], holds not only for domains of holomorphy but also for a larger class of complex analytic manifolds introduced by K. Stein [@11], and which notably contains all the smooth analytic submanifolds, of arbitrary dimension $p$, of the complex space of arbitrary dimension $n>p$.
+
+The fundamental theorems of this theory are nicely expressed in the language of cohomology, which suggests generalisations and provides a useful tool when it comes to using the results.
+In this conference, we will first give an exposition on the fundamental ideas: that of a *sheaf*, and that of *cohomology* with coefficients in a sheaf.
+We will then state the fundamental theorems.
+Finally, we will give some applications to global problems concerning Stein manifolds;
+other applications will be given in the conference by J.-P. Serre.
+
+# Sheaves on a topological space[^1] {#section-1}
+
+[^1]: The notion of *sheaf* was introduced by J. Leray in the study of homological properties of a continuous map. See J. Leray, *Journ. de Math. pures et appliquées* **29**, 1950, pp. 1--139; it is in this work that we find (at the bottom of page 75) a definition of cohomology with coefficients in a sheaf, limited, in truth, to the case of a locally compact space $X$ (and it deals with "compactly supported" cohomology). The definition of sheaves adopted here is a bit different; it is due to Lazard and was explained in my *Séminaire polycopié* at E.N.S. 1950--1951, where the theory of cohomology with coefficients in a sheaf was developed (exposés XIV to XX).
+
+Let $X$ be a topological space.
+A *sheaf of abelian groups* on $X$, or simply a *sheaf*, is defined by the data:
+\oldpage{42}
+
+1. of a function $x\mapsto\sh{F}_x$ that, to each point $x\in X$, associates an abelian group $\sh{F}_x$ (which we denote additively);
+2. of a (not necessarily separated) topology on the union $\sh{F}$ of the sets $\sh{F}_x$.
+
+Before giving the axioms that these data must satisfy, we denote by $p$ the map from $\sh{F}$ to $X$ that, to each $\alpha\in\sh{F}$, associates the point $x$ such that $\alpha\in\sh{F}_x$.
+We impose two axioms:
+
+::: {.rmenv title="F₁" latex="{F\textsubscript{I}}"}
+The map $\alpha\mapsto-\alpha$ that, to each $\alpha\in\sh{F}$ associates the inverse of $\alpha$ in the group $\sh{F}_{p\alpha}$, is a continuous map from $\sh{F}$ to $\sh{F}$.
+The map $(\alpha,\beta)\mapsto\alpha+\beta$ defined on the set $\sh{G}$ of pairs $(\alpha,\beta)$ such that $p(\alpha)=p(\beta)$, and that sends such a pair to the sum $\alpha+\beta$ in the group $\sh{F}_{p(\alpha)}$, is a continuous map from the subset $\sh{G}$ of $\sh{F}\times\sh{F}$ to $\sh{F}$.
+:::
+
+::: {.rmenv title="F₂" latex="{F\textsubscript{II}}"}
+The map $p$ is a *local homeomorphism*, i.e. every element $\alpha\in\sh{F}$ admits an open neighbourhood $V$ such that the restriction of $p$ to $V$ is a homeomorphism from $V$ to an open subset of $X$.
+:::
+
+If $U$ is a subset of $X$, then the collection of the $\sh{F}_x$ for $x\in U$, endowed with the topology induced by that of $\sh{F}$, is evidently a sheaf on $U$;
+we denote it by $\sh{F}(U)$, and we call it the sheaf *induced* by $\sh{F}$ on $U$.
+
+::: {.itenv title="Example" latex="{Example}"}
+Let $G$ be an abelian group.
+Let $\sh{F}$ be the product $G\times X$, endowed with the product topology (with $G$ being endowed with the discrete topology).
+The subset $\sh{F}_x$ of pairs $(g,x)$, where $g$ runs over $G$, is evidently endowed with the structure of an abelian group (isomorphic to $G$).
+We can immediately verify the axioms (F~I~) and (F~II~).
+This sheaf is called the "constant sheaf" defined by $G$, and is also denoted by $G$.
+:::
+
+Let $\sh{F}$ be an arbitrary sheaf on $X$.
