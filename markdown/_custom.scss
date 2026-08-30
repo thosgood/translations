@@ -2,16 +2,18 @@
 
 
 /*-- scss:defaults --*/
-$h1-font-size: 1.65rem !default;
-$h2-font-size: 1.30rem !default;
-$h3-font-size: 1.15rem !default;
+$h1-font-size: 1.65rem;
+$h2-font-size: 1.30rem;
+$h3-font-size: 1.15rem;
+
+// $font-family-sans-serif: serif;
 
 
 /*-- scss:rules --*/
 
 // Custom title banner
 
-.quarto-title-banner {
+#title-block-header {
   --s: 104px; /* control the size*/
   --c1: #f6edb3;
   --c2: #9cceb5;
@@ -29,9 +31,48 @@ $h3-font-size: 1.15rem !default;
   background-size: calc(0.866*var(--s)) var(--s);
 }
 
-.quarto-title h1 {
-  color: #222;
-  border-bottom: 1px solid #222;
+.quarto-title-banner {
+  background: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.quarto-title-meta {
+  .quarto-title-meta-heading {
+    margin-top: 0 !important;
+  }
+
+  .quarto-title-meta-contents {
+    font-size: $h3-font-size !important;
+  }
+}
+
+.quarto-light {
+  .quarto-title,
+  .quarto-title-meta
+   {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.5em 1em;
+  }
+
+  .quarto-title h1 {
+    color: #222;
+    border-bottom: none;
+  }
+}
+
+.quarto-dark {
+  .quarto-title,
+  .quarto-title-meta
+   {
+    background: rgba(000, 000, 000, 0.5);
+    padding: 0.5em 1em;
+  }
+
+  .quarto-title h1 {
+    color: #fff;
+    border-bottom: none;
+  }
 }
 
 // General things

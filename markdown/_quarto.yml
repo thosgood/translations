@@ -19,8 +19,9 @@ format:
   html:
     # General
     html-math-method: katex
-    self-contained: true
+    embed-resources: true
     date-format: "YYYY"
+    lang: en-GB
     css:
       - _environments.css
     # ToC and links
@@ -35,11 +36,11 @@ format:
     title-block-banner: true
     classoption: fleqn
     theme:
-      light: [lumen, _custom.scss]
+      light: [flatly, _custom.scss]
       dark: [darkly, _custom.scss]
   pdf:
     template: _template.tex
-    date-format: "YYYY"
+    pdf-engine: pdflatex
     cite-method: biblatex
     biblatexoptions: [backend=biber]
-    pdf-engine: pdflatex
+    date-format: "YYYY"
