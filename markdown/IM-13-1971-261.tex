@@ -1,0 +1,174 @@
+\documentclass[british]{article}
+
+\usepackage[margin=1.5in]{geometry}
+
+\title{Relative duality in complex analytic geometry}
+\author{J.P. Ramis, G. Ruget, J.L. Verdier}
+\date{1971}
+
+% Standard
+\usepackage{amssymb,amsmath,amscd}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+
+%Bibliography
+\usepackage[backend=biber,maxnames=99,maxalphanames=4]{biblatex}
+\addbibresource{IM-13-1971-261.bib}
+
+
+% Colours
+\usepackage{xcolor}
+\hypersetup{colorlinks,linkcolor={purple!50!black},citecolor={purple!50!black},urlcolor={purple!80!black}}
+
+
+% Fonts
+\usepackage{mathrsfs}
+\usepackage{fouriernc}
+
+
+% Things for Quarto/pandoc
+\definecolor{quarto-callout-color-frame}{HTML}{000000}
+\usepackage{calc,array}
+\usepackage{longtable}
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+
+
+% Header and footer
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{datetime2}
+\pagestyle{fancy}
+\fancypagestyle{plain}{}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+\lfoot{\footnotesize Build date: \today}
+
+
+% Theorem environments
+\usepackage{amsthm}
+\newenvironment{itenv}[1]
+  {\phantomsection\par\smallskip\noindent\textbf{#1.}\itshape}
+  {\par\smallskip}
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\smallskip\noindent\textbf{#1.}\rmfamily}
+  {\par\smallskip}
+
+
+% Shortcuts
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+%% Document %%
+
+\usepackage{embedall}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\setcounter{footnote}{0}
+
+
+%% Content %%
+
+\emph{This document is a translation into English of the following:}
+
+\begin{quote}
+Ramis, J.P., Ruget, G., and Verdier, J.L. ``Dualité relative en
+géométrie analytique complexe''. \emph{Inventiones Math.} \textbf{13}
+(1971), 261--283.
+\href{https://eudml.org/doc/142096}{eudml.org/doc/142096}
+\end{quote}
+
+\emph{The translator (\href{https://thosgood.net}{Tim Hosgood}) takes
+full responsibility for any errors introduced in this document, and
+claims no rights to any of the mathematical content.}
+
+\tableofcontents
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\providecommand{\sh}[1]{\scr{#1}}
+
+\providecommand{\OO}{\sh{O}}
+\providecommand{\HH}{\mathrm{H}}
+\providecommand{\cc}{\mathrm{c}}
+\providecommand{\coh}{\mathrm{coh}}
+\providecommand{\CC}{\mathrm{C}}
+\providecommand{\RR}{\mathrm{R}}
+\providecommand{\LL}{\mathrm{L}}
+\providecommand{\TT}{\mathbf{T}}
+\providecommand{\KK}{\mathbf{K}}
+\providecommand{\DD}{\mathrm{D}}
+
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\shExt}{\mathscr{E}\mathcal{xt}}
+\providecommand{\Supp}{\operatorname{Supp}}
+
+\section*{Introduction}\label{introduction}
+\addcontentsline{toc}{section}{Introduction}
+
+\oldpage{261}
+
+Given a \(\sigma\)-compact analytic space \(X\), of bounded dimension,
+we know how to construct \autocite{10} a bounded complex
+\(\mathbf{K}_X^\bullet\) of \({\mathscr{O}}_X\)-modules with coherent
+cohomology, and a (continuous linear) ``trace''
+\(\mathbf{T}_X\colon\mathrm{H}_\mathrm{c}^0(X;\mathbf{K}_X^\bullet)\to\mathbb{C}\)
+that can happily provide a duality between the \textbf{TODO:
+separations?} of the spaces \(\mathrm{H}_\mathrm{c}^p(X;{\mathscr{F}})\)
+and \(\operatorname{Ext}^{-p}(X;{\mathscr{F}},\mathbf{K}_X^\bullet)\),
+for every integer \(p\) and every coherent \({\mathscr{O}}_X\)-module
+\({\mathscr{F}}\), as long as we endow these space with suitable
+topologies; similarly, the trace induces a perfect pairing between
+\(\mathrm{H}^p(X;{\mathscr{F}})\) and
+\(\operatorname{Ext}_\mathrm{c}^{-p}(X;{\mathscr{F}},\mathbf{K}_X^\bullet)\),
+suitably topologised. The purpose of this article is the study of the
+compatibility of this duality with direct images: if \(f\colon X\to Y\)
+is a morphism of analytic spaces, then we have to construct a ``relative
+trace''
+\(\mathbf{T}_{X/Y}\in\operatorname{Ext}^0(Y;\mathrm{R}f_!\mathbf{K}_X^\bullet,\mathbf{K}_Y^\bullet)\)
+(where \(f_!\) denotes the direct image with proper support). We then
+have, for every complex \({\mathscr{F}}^\bullet\) of
+\({\mathscr{O}}_X\)-modules with coherent cohomology
+(\({\mathscr{F}}^\bullet\in\mathrm{D}_\mathrm{coh}(X)\)) and for every
+complex \({\mathscr{G}}^\bullet\) with bounded-below coherent cohomology
+(\({\mathscr{G}}^\bullet\in\mathrm{D}_\mathrm{coh}^+(Y)\)), a canonical
+morphism \[
+  \begin{aligned}
+    \mathrm{R}f_!{\mathscr{F}}\operatorname{Hom}\big(
+      X ; {\mathscr{F}}^\bullet,
+      \mathrm{R}\operatorname{Hom}(
+        \mathrm{L}f^*&\mathrm{R}\operatorname{Hom}(
+          Y;{\mathscr{G}}^\bullet,
+          \mathbf{K}_Y^\bullet
+        ),
+        \mathbf{K}_X^\bullet)
+    \big)
+  \\\to\, &\mathrm{R}\operatorname{Hom}(Y;\mathrm{R}f_*{\mathscr{F}}^\bullet,{\mathscr{G}}^\bullet)
+  \end{aligned}
+\tag{1}
+\] that is, in certain cases, an isomorphism (we obtain another formula
+by swapping \(\mathrm{R}f_!\) and \(\mathrm{R}f_*\), and more striking
+formulas by setting \({\mathscr{G}}^\bullet=\mathbf{K}_Y^\bullet\)).
+
+In general, direct images are not coherent, and
+
+
+% Bibliography
+\nocite{*}
+\printbibliography[heading=bibintoc,title=Bibliography]
+
+\end{document}

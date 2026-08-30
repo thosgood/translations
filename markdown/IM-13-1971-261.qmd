@@ -1,0 +1,87 @@
+--- 
+title: "Relative duality in complex analytic geometry"
+author: "J.P. Ramis, G. Ruget, J.L. Verdier"
+date: "1971"
+original: 'Ramis, J.P., Ruget, G., and Verdier, J.L.  "Dualité relative en géométrie analytique complexe". _Inventiones Math._ **13** (1971), 261--283. [eudml.org/doc/142096](https://eudml.org/doc/142096)'
+bibliography: IM-13-1971-261.bib
+---
+
+{{< include _translator-note.qmd >}}
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\providecommand{\sh}[1]{\scr{#1}}
+
+\providecommand{\OO}{\sh{O}}
+\providecommand{\HH}{\mathrm{H}}
+\providecommand{\cc}{\mathrm{c}}
+\providecommand{\coh}{\mathrm{coh}}
+\providecommand{\CC}{\mathrm{C}}
+\providecommand{\RR}{\mathrm{R}}
+\providecommand{\LL}{\mathrm{L}}
+\providecommand{\TT}{\mathbf{T}}
+\providecommand{\KK}{\mathbf{K}}
+\providecommand{\DD}{\mathrm{D}}
+
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\shExt}{\mathscr{E}\mathcal{xt}}
+\providecommand{\Supp}{\operatorname{Supp}}
+
+<!-- Content -->
+
+# Introduction {.unnumbered}
+
+\oldpage{261}
+Given a $\sigma$-compact analytic space $X$, of bounded dimension, we know how to construct [@10] a bounded complex $\KK_X^\bullet$ of $\OO_X$-modules with coherent cohomology, and a (continuous linear) "trace" $\TT_X\colon\HH_\cc^0(X;\KK_X^\bullet)\to\mathbb{C}$ that can happily provide a duality between the **TODO: separations?** of the spaces $\HH_\cc^p(X;\sh{F})$ and $\Ext^{-p}(X;\sh{F},\KK_X^\bullet)$, for every integer $p$ and every coherent $\OO_X$-module $\sh{F}$, as long as we endow these space with suitable topologies;
+similarly, the trace induces a perfect pairing between $\HH^p(X;\sh{F})$ and $\Ext_\cc^{-p}(X;\sh{F},\KK_X^\bullet)$, suitably topologised.
+The purpose of this article is the study of the compatibility of this duality with direct images: if $f\colon X\to Y$ is a morphism of analytic spaces, then we have to construct a "relative trace" $\TT_{X/Y}\in\Ext^0(Y;\RR f_!\KK_X^\bullet,\KK_Y^\bullet)$ (where $f_!$ denotes the direct image with proper support).
+We then have, for every complex $\sh{F}^\bullet$ of $\OO_X$-modules with coherent cohomology ($\sh{F}^\bullet\in\DD_\coh(X)$) and for every complex $\sh{G}^\bullet$ with bounded-below coherent cohomology ($\sh{G}^\bullet\in\DD_\coh^+(Y)$), a canonical morphism
+$$
+  \begin{aligned}
+    \RR f_!\sh{F}\Hom\big(
+      X ; \sh{F}^\bullet,
+      \RR\Hom(
+        \LL f^*&\RR\Hom(
+          Y;\sh{G}^\bullet,
+          \KK_Y^\bullet
+        ),
+        \KK_X^\bullet)
+    \big)
+  \\\to\, &\RR\Hom(Y;\RR f_*\sh{F}^\bullet,\sh{G}^\bullet)
+  \end{aligned}
+\tag{1}
+$$
+that is, in certain cases, an isomorphism (we obtain another formula by swapping $\RR f_!$ and $\RR f_*$, and more striking formulas by setting $\sh{G}^\bullet=\KK_Y^\bullet$).
+
+In general, direct images are not coherent, and, just like the absolute case, we can only hope to address these questions by defining a topological dualisation $\RR\Hom(Y;-,\KK_Y^\bullet)$ on $Y$ (the relative trace should live in a topological $\Ext^0$, and (1) only gives isomorphisms of suitable operations up to "separation").
+We restrict ourselves here to the case where $f$ is proper, and we use the Grauert direct image theorem.[^1]
+In this case, (1) is an isomorphism (the $\Hom$ being the usual functors), and we have an "algebraic" statement.
+\oldpage{262}
+The proof, however, uses topology: to establish the existence of the relative trace, and then to prove that (1) is an isomorphism;
+we invoke, in particular, the separation of certain cohomology spaces.
+
+[^1]: In another article, J.P. Ramis and G. Ruget hope to treat the general case, once there is a generalisation to the relative case of the theorems of Andreotti--Grauret on $p$-convex spaces. The above theorem would then follow from the conjunction of the general duality theorem and the Grauert direct image theorem.
+
+[Section 4](#section-4), which deals with questions of separation, is independent of the previous sections.
+There we show the two following theorems, conjectured by Malgrange, and which form an indispensable complement to the absolute duality theorems:
+
+::: {.itenv title="Theorem 4.1" latex="{Theorem 4.1}"}
+Given an analytic space $X$, a coherent sheaf $\sh{F}$, and an integer $p$, suppose that every compact $K\subset X$ has a compact "envelope" in $K'$ such that every element of $\HH_K^p(X;\sh{F})$ whose image in $\HH_\cc^p(X;\sh{F})$ is zero already has zero image in $\HH_{K'}^p(X;\sh{F})$.
+Then the space $\HH_\cc^p(X;\sh{F})$, endowed with the topology constructed in [@10] (the only quotient topology of the Fréchet--Schwartz dual compatible with the duality theorem), is separated.
+:::
+
+As for the statement of Theorem 4.9, we obtain this by replacing, in the lines above, $\HH_\bullet^p(X;\sh{F})$ with $\Ext_\bullet^p(X;\sh{F},\KK_X^\bullet)$.
+
+In an appendix, we will give another proof, using Theorem 4.9, of a theorem of Siu on the vanishing of certain cohomology groups.
+
+
+# Sketch of a proof {#section-1}
+
+We denote by $\iota$
