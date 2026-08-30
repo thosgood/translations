@@ -32,7 +32,6 @@
 
 % Things for Quarto/pandoc
 \definecolor{quarto-callout-color-frame}{HTML}{000000}
-\usepackage[most]{tcolorbox}
 \usepackage{calc,array}
 \usepackage{longtable}
 \providecommand{\tightlist}{%
@@ -230,7 +229,7 @@ functor \[
   \operatorname{Hom}_{{{\mathscr{O}}_T}\text{-}\mathsf{Alg}}(S({\mathscr{E}}_T),{\mathscr{O}}_T)
   \simeq \operatorname{Hom}_{{{\mathscr{O}}_T}\text{-}\mathsf{Mod}}({\mathscr{E}}_T,{\mathscr{O}}_T).
 \] This is the \emph{vector bundle} defined by \({\mathscr{E}}\)
-(cf.~Exposé~12, Section~1).
+(cf.~Exposé~12, §1).
 
 \end{rmenv}
 
@@ -349,9 +348,9 @@ base}\label{section-2}
 Consider an \({\mathscr{O}}_S\)-algebra \({\mathscr{A}}\) of finite
 presentation, and its analytic spectrum
 \(X=\operatorname{Spec}_\mathrm{an}({\mathscr{A}})\). If \(s\in S\),
-recall (Exposé~10, Section~2) that the \emph{fibre} of \(X\) at \(s\) is
-the fibre product \(X_s=X\times_S\{s\}\), where \(\{s\}\) is the
-analytic space consisting of the point \(s\), endowed with the field
+recall (Exposé~10, §2) that the \emph{fibre} of \(X\) at \(s\) is the
+fibre product \(X_s=X\times_S\{s\}\), where \(\{s\}\) is the analytic
+space consisting of the point \(s\), endowed with the field
 \({\mathscr{O}}_s/{\mathfrak{m}}_s{\mathscr{O}}_s=K(s)\simeq k\) (where
 \({\mathfrak{m}}_s\) denotes the maximal ideal of the local ring
 \({\mathscr{O}}_s\)). \oldpage{19-05} Then (by (iv) of
@@ -373,7 +372,42 @@ defined by the ``equations'' \[
   \qquad\text{for }i=1,2,\ldots,m.
 \]
 
-More precisely,
+More precisely, if the functor \(F_{\mathscr{A}}\) is represented in
+\(\mathsf{An}/S\) by the pair \((X,\xi)\), then the functor
+\(F_{{\mathscr{A}}(s)}=F_{{\mathscr{A}}/\{s\}}\) is represented in
+\(\mathsf{An}/\{s\}\) by the pair \((X_s,\xi_s)\), where \(X_s\) is the
+fibre of \(X\) at \(s\) and where
+\(\xi_s\colon{\mathscr{A}}_{X_s}\to{\mathscr{O}}_{X_s}\) is obtained
+from \(\xi\colon{\mathscr{A}}_X\to{\mathscr{O}}_X\) by reduction modulo
+\({\mathfrak{m}}_s\). In particular, the map from
+\(\operatorname{Hom}_{\{s\}}(\{s\},X_s)\) to
+\(\operatorname{Hom}_k({\mathscr{A}}(s),k)\) that sends a section \(f\)
+of \(X_s/\{s\}\) to the composite homomorphism \(f^*\circ\xi'_{s,f(s)}\)
+(where
+\(\xi'_{s,f(s)}\colon{\mathscr{A}}(s)\to{\mathscr{O}}_{X_{s,f(s)}}\) is
+induced by the germ of \(\xi_s\) at \(f(s)\)) is bijective. Since
+\(\operatorname{Hom}(\{s\},X_s)\) can be identified with the set of
+points of \(X_s\) by sending \(f\colon\{s\}\to X_s\) to the point
+\(f(s)=x\) (so that \(f^*=\epsilon_X\colon{\mathscr{O}}_{X_s,x}\to k\)
+is the augmentation homomorphism), we obtain a bijection between the set
+of points of \(X_s\) and the set of ideals of \({\mathscr{A}}(s)\) that
+give \(k\) as their quotient, by sending \(x\in X_s\) to the inverse
+image under \(\xi'_{s,x}\colon{\mathscr{A}}(s)\to{\mathscr{O}}_{X_s,x}\)
+of the maximal ideal of \({\mathscr{O}}_{X_s,x}\). But
+\({\mathscr{O}}_{X_s,x}={\mathscr{O}}_{X,x}/{\mathfrak{m}}_s{\mathscr{O}}_{X,x}\)
+(Exposé~10, §2),
+\({\mathscr{A}}(s)={\mathscr{A}}_s/{\mathfrak{m}}_s{\mathscr{A}}_s\),
+and \(\xi'_{s,x}\) is obtained by reduction modulo \({\mathfrak{m}}_s\)
+of \(\xi'_X\colon{\mathscr{A}}_s\to{\mathscr{O}}_{X,x}\) (induced by the
+germ of \(\xi\) at \(x\)). We can thus state:
+
+\oldpage{19-06}
+
+\protect\phantomsection\label{proposition-3}
+\begin{itenv}{Proposition 3}
+We
+
+\end{itenv}
 
 
 % Bibliography

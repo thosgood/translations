@@ -406,7 +406,7 @@ Then every holomorphic function on the complex-analytic manifold $V$ is induced 
 Indeed, let $\II$ be the sheaf of ideals defined by $V$.
 By Theorem B, we have that $\HH^1(X,\II)=0$, and so
 $$
-  \HH^(X,\OO)\to\HH^0(X,\OO/\II)
+  \HH^0(X,\OO)\to\HH^0(X,\OO/\II)
 \tag{1}
 $$
 is an *epimorphism*.
@@ -460,7 +460,7 @@ If there exist a finite number of sections $u_i\in\HH^0(X,\FF)$ such that, for a
 :::
 
 ::: {.proof}
-Let $p$ be the number of $u_i$y
+Let $p$ be the number of $u_i$;
 the $u_i$ define an analytic homomorphism of sheaves $\OO^p\to\FF$.
 By hypothesis, this is an epimorphism.
 But its kernel is a coherent sheaf;

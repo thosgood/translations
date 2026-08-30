@@ -103,7 +103,7 @@ $$
   \Hom_{\Alg{\OO_T}}(S(\sh{E}_T),\OO_T)
   \simeq \Hom_{\Mod{\OO_T}}(\sh{E}_T,\OO_T).
 $$
-This is the *vector bundle* defined by $\sh{E}$ (cf. Exposé 12, Section 1).
+This is the *vector bundle* defined by $\sh{E}$ (cf. Exposé 12, §1).
 :::
 
 ::: {.itenv #proposition-2 title="Proposition 2" latex="{Proposition 2}"}
@@ -175,7 +175,7 @@ We thus see that $\widetilde{\MM}_T=\hat{f}_T^*(\MM_T)$ can be identified with t
 # Fibre of the analytic spectrum over a point in the base {#section-2}
 
 Consider an $\OO_S$-algebra $\AA$ of finite presentation, and its analytic spectrum $X=\Specan{\AA}$.
-If $s\in S$, recall (Exposé 10, Section 2) that the *fibre* of $X$ at $s$ is the fibre product $X_s=X\times_S\{s\}$, where $\{s\}$ is the analytic space consisting of the point $s$, endowed with the field $\OO_s/\frak{m}_s\OO_s=K(s)\simeq k$ (where $\frak{m}_s$ denotes the maximal ideal of the local ring $\OO_s$).
+If $s\in S$, recall (Exposé 10, §2) that the *fibre* of $X$ at $s$ is the fibre product $X_s=X\times_S\{s\}$, where $\{s\}$ is the analytic space consisting of the point $s$, endowed with the field $\OO_s/\frak{m}_s\OO_s=K(s)\simeq k$ (where $\frak{m}_s$ denotes the maximal ideal of the local ring $\OO_s$).
 \oldpage{19-05}
 Then (by (iv) of [Proposition 2](#proposition-2))
 $$
@@ -199,4 +199,13 @@ $$
   \qquad\text{for }i=1,2,\ldots,m.
 $$
 
-More precisely,
+More precisely, if the functor $F_\AA$ is represented in $\Cat{An}/S$ by the pair $(X,\xi)$, then the functor $F_{\AA(s)}=F_{\AA/\{s\}}$ is represented in $\Cat{An}/\{s\}$ by the pair $(X_s,\xi_s)$, where $X_s$ is the fibre of $X$ at $s$ and where $\xi_s\colon\AA_{X_s}\to\OO_{X_s}$ is obtained from $\xi\colon\AA_X\to\OO_X$ by reduction modulo $\frak{m}_s$.
+In particular, the map from $\Hom_{\{s\}}(\{s\},X_s)$ to $\Hom_k(\AA(s),k)$ that sends a section $f$ of $X_s/\{s\}$ to the composite homomorphism $f^*\circ\xi'_{s,f(s)}$ (where $\xi'_{s,f(s)}\colon\AA(s)\to\OO_{X_{s,f(s)}}$ is induced by the germ of $\xi_s$ at $f(s)$) is bijective.
+Since $\Hom(\{s\},X_s)$ can be identified with the set of points of $X_s$ by sending $f\colon\{s\}\to X_s$ to the point $f(s)=x$ (so that $f^*=\epsilon_X\colon\OO_{X_s,x}\to k$ is the augmentation homomorphism), we obtain a bijection between the set of points of $X_s$ and the set of ideals of $\AA(s)$ that give $k$ as their quotient, by sending $x\in X_s$ to the inverse image under $\xi'_{s,x}\colon\AA(s)\to\OO_{X_s,x}$ of the maximal ideal of $\OO_{X_s,x}$.
+But $\OO_{X_s,x}=\OO_{X,x}/\frak{m}_s\OO_{X,x}$ (Exposé 10, §2), $\AA(s)=\AA_s/\frak{m}_s\AA_s$, and $\xi'_{s,x}$ is obtained by reduction modulo $\frak{m}_s$ of $\xi'_X\colon\AA_s\to\OO_{X,x}$ (induced by the germ of $\xi$ at $x$).
+We can thus state:
+
+\oldpage{19-06}
+::: {.itenv #proposition-3 title="Proposition 3" latex="{Proposition 3}"}
+We
+:::
