@@ -39,8 +39,8 @@ elif [ "$ALL_TYPE" == "qmd" ]; then
   NEW_QMD=$(find markdown -name '*.qmd')
 else
   # Only get changed files
-  NEW_TEX=$(git diff --name-only main origin/main | grep -E '.tex$')
-  NEW_QMD=$(git diff --name-only main origin/main | grep -E '.qmd$')
+  NEW_TEX=$(git diff --name-only main origin/main | grep -E '.tex$' | grep -vE '_template')
+  NEW_QMD=$(git diff --name-only main origin/main | grep -E '.qmd$' | grep -vE '_translator-note')
 fi
 
 if [ -z "$NEW_TEX" ] && [ -z "$NEW_QMD" ]; then
