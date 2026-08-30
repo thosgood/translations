@@ -24,6 +24,8 @@ bibliography: SHC-13_2-19.bib
 
 \providecommand{\AA}{\sh{A}}
 \providecommand{\BB}{\sh{B}}
+\providecommand{\MM}{\sh{M}}
+\providecommand{\NN}{\sh{N}}
 
 \providecommand{\Hom}{\operatorname{Hom}}
 \providecommand{\shHom}{\underline{\Hom}}
@@ -121,4 +123,80 @@ $$
 (iii) follows easily from the proof of [Proposition 1](#proposition-1), and (iv) can be proven by Corollary 3.2 of Exposé 11.
 :::
 
-Consider
+Consider the pair $(X,\xi)$ that represents the functor $F_\AA$ defined by an $\OO_S$-algebra $\AA$ of finite presentation.
+Then $X=\Specan{\AA}$ is an analytic space over $S$, with structure morphism $f\colon X\to S$, and $\xi\in F_\AA(X)=\Hom_{\OO_X}(\AA_X,\OO_X)$ is a homomorphism from $\AA_X=f^*(\AA)$ to $\OO_X$.
+In other words, $\xi$ defines a factorisation
+$$
+  X \xrightarrow{\hat{f}} (|S|,\AA) \to S
+$$
+of the structure morphism $f$ of $X$ through the ringed space $(|S|,\AA)$ (where $|S|$ denotes the underlying topological space of $S$) endowed with the canonical morphism $(|S|,\AA)\to S$ (consisting of the identity map on $|S|$ and the homomorphism $\OO_S\to\AA$).
+
+\oldpage{19-04}
+For any $\AA$-module $\MM$, set
+$$
+  \widetilde{\MM}
+  = \hat{f}^*(\MM)
+  = f^*(\MM)\otimes_{f^*(\AA)}\OO_X.
+$$
+We thus define a functor $\MM\mapsto\widetilde{\MM}$ from the category of $\AA$-modules to the category of $\OO_X$-modules (where $X=\Specan{\AA}$).
+If $\MM$ and $\NN$ are $\AA$-modules then
+$$
+  (\MM\otimes_\AA\NN)^\sim
+  = \widetilde{\MM}\otimes_{\OO_X}\widetilde{\NN}.
+$$
+
+Consider an analytic space $T$ over $S$, and the space
+$$
+  X_T
+  = \Specan{\AA_T}
+  = X\times_S T
+$$
+over $T$ ((iv) of [Proposition 2](#proposition-2));
+the structure morphism from $X_T$ to $T$ again factors as
+$$
+  X_T
+  \xrightarrow{\hat{f}_T}
+  (|T|,\AA_T)
+  \to T
+$$
+and we obtain a commutative diagram
+$$
+  \begin{CD}
+    X @<<< X_T
+  \\@V{\hat{f}}VV @VV{\hat{f}_T}V
+  \\(|S|,\AA) @<<< (|T|,\AA_T)
+  \end{CD}
+$$
+Let $\MM$ be an $\AA$-module;
+the inverse image $\MM_T=\MM\times_S T$ of $\MM$ over $T$ is an $\AA_T$-module.
+We thus see that $\widetilde{\MM}_T=\hat{f}_T^*(\MM_T)$ can be identified with the inverse image of $\widetilde{\MM}$ under the morphism $X_T\to X$ (compatibility of the functor $\MM\mapsto\widetilde{\MM}$ with base change).
+
+
+# Fibre of the analytic spectrum over a point in the base {#section-2}
+
+Consider an $\OO_S$-algebra $\AA$ of finite presentation, and its analytic spectrum $X=\Specan{\AA}$.
+If $s\in S$, recall (Exposé 10, Section 2) that the *fibre* of $X$ at $s$ is the fibre product $X_s=X\times_S\{s\}$, where $\{s\}$ is the analytic space consisting of the point $s$, endowed with the field $\OO_s/\frak{m}_s\OO_s=K(s)\simeq k$ (where $\frak{m}_s$ denotes the maximal ideal of the local ring $\OO_s$).
+\oldpage{19-05}
+Then (by (iv) of [Proposition 2](#proposition-2))
+$$
+  X_s
+  = X\times_S\{s\}
+  \simeq \Specan{\AA_{\{s\}}}
+  = \Specan{\AA(s)}
+$$
+where $\AA(s)=\AA_s/\frak{m}_s\AA_s=\AA_s\otimes_{\OO_s}k=\AA_{\{s\}}$;
+if on a neighbourhood $U$ of $s$ we have that
+$$
+  \AA|U \simeq \frac{\OO_U[t_1,\ldots,t_n]}{(f_1,\ldots,f_m)}
+$$
+then
+$$
+  \AA(s) \simeq \frac{k[t_1,\ldots,t_n]}{(f_1(s),\ldots,f_m(s))}.
+$$
+$X_s=\Specan{\AA(s)}$ is the closed subspace of $\{s\}\times\sh{E}^n\simeq\sh{E}^n$ defined by the "equations"
+$$
+  f_i(s)(z_1,\ldots,z_n) = 0
+  \qquad\text{for }i=1,2,\ldots,m.
+$$
+
+More precisely,

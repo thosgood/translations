@@ -2,16 +2,39 @@
 
 
 /*-- scss:defaults --*/
-$font-family-sans-serif: Baskerville;
-
-$font-size-root: 15pt;
-
 $h1-font-size: 1.65rem !default;
 $h2-font-size: 1.30rem !default;
 $h3-font-size: 1.15rem !default;
 
 
 /*-- scss:rules --*/
+
+// Custom title banner
+
+.quarto-title-banner {
+  --s: 104px; /* control the size*/
+  --c1: #f6edb3;
+  --c2: #9cceb5;
+  --c3: #53b6b2;
+
+  --_l:#0000 calc(25%/3),var(--c1) 0 25%,#0000 0;
+  --_g:conic-gradient(from 120deg at 50% 87.5%,var(--c1) 120deg,#0000 0);
+  background:
+    var(--_g),var(--_g) 0 calc(var(--s)/2),
+    conic-gradient(from 180deg at 75%,var(--c2) 60deg,#0000 0),
+    conic-gradient(from 60deg at 75% 75%,var(--c1) 0 60deg,#0000 0),
+    linear-gradient(150deg,var(--_l)) 0 calc(var(--s)/2),
+    conic-gradient(at 25% 25%,#0000 50%,var(--c2) 0 240deg,var(--c1) 0 300deg,var(--c2) 0),
+    linear-gradient(-150deg,var(--_l)) var(--c3);
+  background-size: calc(0.866*var(--s)) var(--s);
+}
+
+.quarto-title h1 {
+  color: #222;
+  border-bottom: 1px solid #222;
+}
+
+// General things
 
 .content {
   text-align: justify;
@@ -24,11 +47,11 @@ h1 {
 
 h2, h3 {
   border-bottom: none;
-  /*padding-bottom: .5rem;*/
 }
 
-/* KaTeX */
+
+// KaTeX
 
 .katex {
-  font-size: 0.95em !important;
+  // font-size: 0.95em !important;
 }
