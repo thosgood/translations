@@ -6,30 +6,19 @@
   text-align: justify;
 }
 
-.titenv,
-.trmenv {
-  margin: 0.5em 0;
-  text-align: justify;
-}
-
-.itenv,
-.titenv {
+.itenv {
   font-style: italic;
 }
-.itenv em,
-.titenv em {
+.itenv em {
   font-style: normal !important;
 }
 
-.rmenv,
-.trmenv {
+.rmenv {
   font-style: normal;
 }
 
 .itenv::before,
-.rmenv::before,
-.titenv::before,
-.trmenv::before {
+.rmenv::before {
   content: attr(title)".";
   font-style: normal;
   font-weight: bold;
@@ -38,23 +27,17 @@
 }
 
 .itenv > p,
-.rmenv > p,
-.titenv > p,
-.trmenv > p {
+.rmenv > p {
   margin-top: 0.85em !important;
 }
 
 .itenv > p:first-of-type,
-.rmenv > p:first-of-type,
-.titenv > p:first-of-type,
-.trmenv > p:first-of-type {
+.rmenv > p:first-of-type {
   margin-top: 0 !important;
   display: inline;
 }
 
 .itenv > :last-child,
-.rmenv > :last-child,
-.titenv > :last-child,
-.trmenv > :last-child {
+.rmenv > :last-child {
   margin-bottom: 0 !important;
 }

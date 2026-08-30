@@ -15,16 +15,21 @@ link-citations: true
 csl: _maths-translations.csl
 reference-section-title: "Bibliography"
 
+# Filters
+filters:
+  - _custom-callout.lua
+
+# Formats
 format:
   html:
-    # General
+    ## General
     html-math-method: katex
     embed-resources: true
     date-format: "YYYY"
     lang: en-GB
     css:
       - _environments.css
-    # ToC and links
+    ## ToC and links
     other-links:
       - text: Source files
         href: https://github.com/thosgood/translations
@@ -32,15 +37,17 @@ format:
       - text: More translations
         href: https://thosgood.net/translations
         icon: collection
-    # Visual things
+    ## Visual things
     title-block-banner: true
     classoption: fleqn
     theme:
       light: [flatly, _custom.scss]
       dark: [darkly, _custom.scss]
+    callout-appearance: simple
   pdf:
     template: _template.tex
     pdf-engine: pdflatex
     cite-method: biblatex
     biblatexoptions: [backend=biber]
     date-format: "YYYY"
+    keep-tex: true

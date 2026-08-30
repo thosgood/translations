@@ -1,6 +1,6 @@
 \documentclass[british]{article}
 
-\usepackage[margin=1.6in]{geometry}
+\usepackage[margin=1.5in]{geometry}
 
 \title{$title$$if(subtitle)$\\\emph{$subtitle$}$endif$}
 \author{$author$}
@@ -34,6 +34,7 @@ $endif$
 
 % Things for Quarto/pandoc
 \definecolor{quarto-callout-color-frame}{HTML}{000000}
+\usepackage[most]{tcolorbox}
 \usepackage{calc,array}
 \usepackage{longtable}
 \providecommand{\tightlist}{%
@@ -61,12 +62,6 @@ $endif$
 \newenvironment{rmenv}[1]
   {\phantomsection\par\smallskip\noindent\textbf{#1.}\rmfamily}
   {\par\smallskip}
-\newenvironment{titenv}[1]
-  {\phantomsection\par\noindent\textbf{#1.}\itshape}
-  {\par}
-\newenvironment{trmenv}[1]
-  {\phantomsection\par\noindent\textbf{#1.}\rmfamily}
-  {\par}
 
 
 % Shortcuts

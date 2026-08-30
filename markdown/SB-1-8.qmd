@@ -1,0 +1,355 @@
+--- 
+title: "The work of Koszul, II"
+author: "Henri Cartan"
+date: "March 1949"
+original: 'Cartan, H. "Les travaux de Koszul, II". _Séminaire Bourbaki_ **1** (1952), Talk no. 8, pp. 45--52 [numdam.org/book-part/SB_1948-1951__1__45_0](http://www.numdam.org/book-part/SB_1948-1951__1__45_0).'
+---
+
+{{< include _translator-note.qmd >}}
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\providecommand{\llp}{\mathbin{\llcorner}}
+\providecommand{\lrp}{\mathbin{\lrcorner}}
+\providecommand{\dd}{\mathrm{d}}
+\providecommand{\RR}{\mathbb{R}}
+\providecommand{\HH}{\operatorname{H}}
+\providecommand{\tr}{\operatorname{tr}}
+
+<!-- Content -->
+
+# Reminder of notation {#II.1}
+
+\oldpage{45}
+
+|  |  |  |
+|-:|:-|:-|
+| $\frak{a}$ | Lie algebra over a field $K$ | elements $x,y,\ldots$ |
+| $\frak{a}'$ | dual vector space of $\frak{a}$ | elements $x',y',\ldots$ |
+| $\Lambda(\frak{a})$ | exterior algebra of $\frak{a}$ | elements $\alpha,\beta,\ldots$ |
+| $\Lambda(\frak{a}')$ | exterior algebra of $\frak{a}'$ | elements $\alpha',\beta',\ldots$ |
+
+1. The operator $\theta(x)$ is the _infinitesimal transformation defined by $x\in\frak{a}$_ on $\Lambda(\frak{a})$;
+    from now on, we denote by $\theta^*(x)$ (instead of $\theta(x)$) the operator that is the transpose of $-\theta(x)$ acting on $\Lambda(\frak{a}')$.
+
+2. The operator $e(x)$ is the _(left) exterior product with $x\in\frak{a}$_ on $\Lambda(\frak{a})$;
+    the operator $i(x)$ is the _interior product with $x\in\frak{a}$_ on $\Lambda(\frak{a}')$;
+    $i(x)$ and $e(x)$ are the transpose of one another.
+
+3. The operator $\partial$ is the _boundary_ operator on $\Lambda(\frak{a})$;
+    the operator $\delta$ is the _coboundary_ operator on $\Lambda(\frak{a}')$;
+    $\delta$ is the transpose of $-\partial$.
+
+
+These operators satisfy the following relations:
+$$
+  \begin{aligned}
+    \partial\partial &= 0,
+  \\\delta\delta &= 0,
+  \\\theta(x) &= e(x)\partial+\partial e(x),
+  \\\theta^*(x) &= i(x)\delta+\delta i(x),
+  \\\partial\theta(x) &= \theta(x)\partial,
+  \\\delta\theta^*(x) &= \theta^*(x)\delta.
+  \end{aligned}
+\tag{1}
+$$
+
+The _homology vector space $\HH(\frak{a})$_ is defined by $\partial$ acting on $\Lambda(\frak{a})$;
+the _cohomology algebra $\HH(\frak{a}')$_ is defined by $\delta$ acting on $\Lambda(\frak{a'})$.
+There is a multiplicative structure on $\HH(\frak{a}')$ because $\delta$ is an _antiderivation_.
+The vector spaces $\HH(\frak{a})$ and $\HH(\frak{a}')$ are canonically in duality.
+
+
+# Direct sum of two Lie algebras {#II.2}
+
+We say that $\frak{a}$ is the _direct sum_ of two sub-algebras $\frak{b},\frak{c}\subseteq\frak{a}$, and we write $\frak{a}=\frak{b}\oplus\frak{c}$, if
+
+1. the vector space $\frak{a}$ is the direct sum of the subspaces $\frak{b}$ and $\frak{c}$ ; and
+2. $[x,y]=0$ for $x\in\frak{b}$ and $y\in\frak{c}$.
+
+If this is the case, then $\Gamma(\frak{a})$ is canonically isomorphic to the tensor product $\Gamma(\frak{b})\otimes\Gamma(\frak{c})$;
+\oldpage{46}
+if we transport the multiplicative structure of $\Gamma(\frak{a})$ to this tensor product, then we see that
+$$
+  (\beta_1\otimes\gamma_1)\cdot(\beta_2\otimes\gamma_2)
+  = (-1)^{pq}(\beta_1\wedge\beta_2)\otimes(\gamma_1\otimes\gamma_2)
+$$
+(where $p=\deg\beta_2$ and $q=\deg\gamma_1$), which describes the notion of the _tensor product of graded algebras_.
+Finally, the boundary operator $\partial$ on $\Gamma(\frak{b})\otimes\Gamma(\frak{c})$ satisfies
+$$
+  \partial(\beta\otimes\gamma)
+  = (\partial\beta)\otimes\gamma + \overline{\beta}\otimes(\partial\gamma)
+$$
+(where $\overline{\beta}=(-1)^p\beta$ for $\beta$ of degree $p$).
+It thus follows that the vector space $\HH(\frak{a})$ can be identified with the tensor product $\HH(\frak{b})\otimes\HH(\frak{c})$.
+
+Similarly, $\Gamma(\frak{a}')$ can be identified with the tensor product $\Gamma(\frak{b}')\otimes\Gamma(\frak{c}')$ of graded algebras.
+The duality between $\Gamma(\frak{b})\otimes\Gamma(\frak{c})$ and $\Gamma(\frak{b}')\otimes\Gamma(\frak{c}')$ is defined by
+$$
+  \langle\beta\otimes\gamma,\beta'\otimes\gamma'\rangle
+  = \langle\beta,\beta'\rangle \cdot \langle\gamma,\gamma'\rangle.
+$$
+The operator $\delta$ on $\Gamma(\frak{b}')\otimes\Gamma(\frak{c}')$ satisfies
+$$
+  \delta(\beta'\otimes\gamma')
+  = (\delta\beta')\otimes\gamma' + \overline{\beta'}\otimes(\delta\gamma'),
+$$
+and the cohomology algebra $\HH(\frak{a}')$ can be identified with the tensor product $\HH(\frak{b}')\otimes\HH(\frak{c}')$ of _graded algebras_.
+
+If $\frak{b}$ and $\frak{c}$ are the Lie algebras of _compact connected Lie groups_ $G_1$ and $G_2$ (respectively), then $\frak{a}=\frak{b}\oplus\frak{c}$ is the Lie algebra of the product group $G_1\times G_2$;
+we recover the following theorem:
+_the cohomology algebra (with real coefficients) of $G_1\times G_2$ is canonically identified with the tensor product of the cohomology algebras of $G_1$ and $G_2$_.
+
+
+# Semi-simple Lie algebras {#II.3}
+
+Every time that we speak of semi-simplicity, the field $K$ will be assumed to be of characteristic $0$.
+We have the following equivalent characterisations of semi-simple Lie algebras
+
+a. every square-zero ideal (i.e. giving rise to an invariant abelian subgroup) is the ideal $\{0\}$;
+
+b. the quadratic form $\tr(\theta(x)\theta(y))$ is regular;
+
+c. $\frak{a}$ is the direct sum of _simple_ algebras (i.e. algebras of dimension $>1$ with only trivial ideals, namely $\{0\}$ and the whole algebra itself);
+    such a decomposition is then unique.
+    (In principal, determining $\HH(\frak{a})$ and $\HH(\frak{a}')$ for semi-simple $\frak{a}$ thus reduces to determining the homology and cohomology of the simple algebras) ; and
+
+d. every _representation_ of $\frak{a}$ in the endomorphism algebra of a vector space $E$ (of finite dimension over $K$) is _completely reducible_ (i.e. every invariant subspace admits an invariant complement).
+
+\oldpage{47}
+
+Every quotient algebra of a semi-simple algebra is semi-simple.
+We thus deduce:
+if $\frak{a}$ is semi-simple, then $\frak{a}$ is identical to the "derived" algebra $\frak{a}^2$.
+In particular, a semi-simple algebra is _unimodular_ (cf. [§I](#I)).
+
+For every Lie algebra $\frak{a}$, the map $x\mapsto\theta(x)$ is a representation of $\frak{a}$ in the endomorphism algebra of the vector space $\Gamma(\frak{a})$;
+similarly, $x\mapsto\theta^*(\frak{a})$ is a representation in the endomorphism algebra of $\Gamma(\frak{a}')$.
+These representations vanish on the centre $\frak{c}$ of $\frak{a}$;
+we will be sure that they are completely reducible if the algebra $\frak{a}/\frak{c}$ is semi-simple, or, in other words, if $\frak{a}$ is the direct sum of a semi-simple algebra and an abelian algebra.
+Such a Lie algebra is said to be _reductive_;
+we are particularly interested in the homology and cohomology of reductive Lie algebras.
+The Lie algebra of a compact group is always reductive.
+
+
+# Homology of reductive Lie algebras {#II.4}
+
+In the representation $x\mapsto\theta(x)$ of $\frak{a}$ in the endomorphism algebra of $\Gamma(\frak{a})$, by (1), the $\theta(x)$ is a of a cycle is a boundary;
+similarly, the $\theta^*(x)$ of a cocycle is a coboundary.
+
+::: {.itenv #lemma-1 title="Lemma 1" latex="{Lemma 1}"}
+Let $x\mapsto\tau(x)$ be a completely reducible representation of a Lie algebra $\frak{a}$ in the endomorphism algebra of a finite-dimensional vector space $E$ endowed with an operator $d$ such that $dd=0$;
+suppose that $\tau(x)d=d\tau(x)$, and that $\tau(x)$ sends cycles to boundaries.
+Let $F$ be the subspace of "invariant" elements of $E$ (i.e. elements $\alpha$ such that $\tau(x)\cdot\alpha=0$ for all $x\in\frak{a}$).
+Then $F$ is stable under $d$, and the canonical homology from the homology group $\HH(F)$ to the homology group $\HH(E)$ is an _isomorphism_ from the former to the latter.
+:::
+
+We can apply this to the representation $x\mapsto\theta(x)$ (resp. $x\mapsto\theta^*(x)$) of a _reductive_ algebra $\frak{a}$;
+then $F$ becomes $\frak{J}$ (resp. $\frak{J}'$), the sub-algebra of _invariant_ chains (resp. _invariant_ cochains).
+But $\partial$ is zero for every element of $\frak{J}$, and $\delta$ is zero for every element of $\frak{J}'$, thanks to the formulas
+$$
+  \begin{aligned}
+    2\delta
+    &= \sum_k e(x'_k)\theta(x_k)
+  \\2\partial
+    &= \sum_k i(x'_k)^*\theta(x_k)
+  \end{aligned}
+$$
+(where $(x_k)$ and $(x'_k)$ are dual bases; see [§I](#I)).
+So $\HH(\frak{J})$ can be identified with $\frak{J}$,
+and $\HH(\frak{J}')$ with $\frak{J}'$, and the lemma shows that $\frak{J}\to\HH(\frak{a})$ and $\frak{J}'\to\HH(\frak{a})$ are _onto isomorphisms_ (i.e there is one and only one invariant chain in each homology class; id. for cochains and cohomology).
+\oldpage{48}
+Furthermore, $\frak{J}'\to\HH(\frak{a}')$ is an isomorphism for the _algebra_ structure;
+we can not say the same of $\frak{J}\to\HH(\frak{a})$, since $\HH(\frak{a})$ has no multiplicative structure, but the identification of $\HH(\frak{a})$ with $\frak{J}$, which does have an algebra structure, precisely defines a multiplicative structure on $\HH(\frak{a})$, and allows us to speak about the _homology algebra_ of a reductive Lie algebra.
+We will prove that, if $\frak{a}$ is the Lie algebra of a compact connected group, then the multiplicative structure of $\HH(\frak{a})$ is precisely that which is defined by the "Pontrjagin product".
+
+::: {.rmenv title="Remark" latex="{Remark}"}
+On any reductive $\frak{a}$, there exists at least one _regular_ invariant quadratic form;
+it defines an isomorphism from the algebra $\Gamma(\frak{a})$ to the algebra $\Gamma(\frak{a})$, and from $\frak{J}$ to $\frak{J}'$;
+thus $\HH(\frak{a})$ and $\HH(\frak{a}')$ are (non-canonically) _isomorphic algebras_.
+:::
+
+
+# The first three Betti numbers of a semi-simple Lie algebra {#II.5}
+
+A preliminary remark:
+for $\alpha'$ to be an _invariant_ cochain, it is necessary and sufficient that it be a cocycle, _and_ that the $i(x)\cdot\alpha'$ be cocycles for _all_ $x\in\frak{a}$ (by (1)).
+
+::: {.rmenv title="The first Betti number is zero" latex="{The first Betti number is zero}"}
+The equation
+$$
+  \langle x\wedge y,\delta x'\rangle
+  = -\langle[x,y],x'\rangle
+$$
+shows that, if $x'$ is a cocycle, then $x'$ is orthogonal to the derived algebra $\frak{a}^2$, and is thus zero if $\frak{a}$ is semi-simple.
+:::
+
+::: {.rmenv title="The second Betti number is zero" latex="{The second Betti number is zero}"}
+Every invariant cochain $\alpha'$ of degree $2$ is zero, since $i(x)\cdot\alpha'$ is a cocycle of degree $1$ for all $x$, and is thus zero.
+:::
+
+:::: {.rmenv title="The third Betti number is equal to the dimension of the vector space of invariant quadratic forms" latex="{The third Betti number is equal to the dimension of the vector space of invariant quadratic forms}"}
+In particular, it is always $\geq1$.
+An invariant quadratic form is a _symmetric_ bilinear form $f(x,y)$ such that $f(\theta(z)\cdot x,y)+f(x,\theta(z)\cdot y)=0$ for all $z\in\frak{a}$.
+We define, as follows, an isomorphism from the vector space $(\frak{J}')^{(3)}$ of invariant cochains of degree $3$ to the space of invariant quadratic forms:
+let $\alpha'$ be invariant and of degree $3$;
+for every $x\in\frak{a}$, we know that $i(x)\cdot\alpha'$ is a cocycle of degree $2$, and thus cohomologous to $0$;
+there thus exists a unique cochain $x'$ of degree $1$ such that $\delta x'=i(x)\cdot\alpha'$;
+the map $x\mapsto x'$ from $\frak{a}$ to $\frak{a}'$ defines a bilinear form $f(x,y)=\langle y,x'\rangle$.
+\oldpage{49}
+We have
+$$
+  f(x,[y,z])
+  = -\langle x\wedge y\wedge z,\alpha'\rangle,
+\tag{2}
+$$
+and $f$ is symmetric and invariant.
+Conversely, if $f$ is a symmetric invariant bilinear form, then there exists a unique cochain $\alpha'$ such that (2) holds, and this cochain is invariant.
+QED.
+::::
+
+
+::: {.rmenv title="Remark" latex="{Remark}"}
+This converse holds even without the semi-simplicity assumption.
+In particular, the invariant symmetric bilinear form $\tr\theta(x)\theta(y)$ defines an invariant cochain of degree $3$, called the _Cartan cochain_.
+:::
+
+::: {.itenv title="Corollary" latex="{Corollary}"}
+If $\frak{a}$ is a Lie algebra such that the _uniqueness_ (up to a scalar multiple) of an invariant quadratic form is assured, then the third Betti number of $\frak{a}$ is equal to $1$.
+This is notably the case for the algebra of a compact connected Lie group, or for a simple Lie algebra over an algebraically closed field.
+:::
+
+
+# Homomorphisms from one Lie algebra to another {#II.6}
+
+Let $\frak{b}$ and $\frak{a}$ be arbitrary Lie algebras (over the same field $K$), and let $\varphi$ be a homomorphism from $\frak{b}$ to $\frak{a}$;
+then $\varphi$ extends to a homomorphism, again denoted by $\varphi$, from the _algebra_ $\Gamma(\frak{b})$ to the _algebra_ $\Gamma(\frak{a})$.
+The transpose $\varphi^*$ (a homomorphism from $\frak{a}'$ to $\frak{b}'$) can be extended to a homomorphism, again denoted by $\varphi^*$, from the algebra $\Gamma(\frak{a}')$ to the algebra $\Gamma(\frak{b}')$;
+furthermore, the extensions of $\varphi$ and $\varphi^*$ are _transpose to one another_.
+We have $\partial\varphi=\varphi\partial$ and $\delta\varphi^*=\varphi^*\delta$, whence a homomorphism $\widetilde{\varphi}$ from $\HH(\frak{b})$ to $\HH(\frak{a})$, and a homomorphism $\widetilde{\varphi}^*$ from $\HH^(\frak{a}')$ to $\HH(\frak{b}')$, with $\widetilde{\varphi}^*$ being the transpose of $\widetilde{\varphi}$.
+The homomorphism $\widetilde{\varphi}^*$ is also a homomorphism for the multiplicative structures.
+
+::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
+If the algebras $\frak{a}$ and $\frak{b}$ are _reductive_, then $\widetilde{\varphi}$ is a homomorphism for the multiplicative structures of $\HH(\frak{b})$ and $\HH(\frak{a})$.
+:::
+
+This can be proved by using:
+
+::: {.itenv #lemma-2 title="Lemma 2" latex="{Lemma 2}"}
+Let $\frak{a}$ be an arbitrary Lie algebra;
+then, for any chains $\alpha$ and $\beta$ of $\Gamma(\frak{a})$, the chain
+$$
+  \partial(\alpha\wedge\beta) + (\partial\alpha)\wedge\beta - \overline{\alpha}\wedge(\partial\beta)
+$$
+is orthogonal to the invariant cochains.
+:::
+
+With this, we consider a reductive Lie algebra, and we will show that, if $\alpha$ and$\overline{\alpha}\wedge\partial\gamma$ are cycles, then $\overline{\alpha}\wedge\partial\gamma$ is a boundary:
+\oldpage{50}
+indeed, by [Lemma 2](#lemma-2),
+$\partial(\alpha\wedge\gamma)-\overline{\alpha}\wedge\partial\gamma$ is orthogonal to the invariant cochains, and, since it is a cycle, it is orthogonal to the coboundaries;
+it is thus orthogonal to all the cocycles, and thus is a boundary;
+so $\overline{\alpha}\wedge\partial\gamma$ is indeed a boundary.
+Now let $\alpha$ and $\beta$ be invariant cycles, and $\alpha_1$ and $\beta_1$ cycles that are homologous to $\alpha$ and $\beta$ (respectively);
+we will show that, if $\alpha_1\wedge\beta_1$ is a cycle, then this cycle is homologous to $\alpha\wedge\beta$:
+we have
+$$
+  \alpha\wedge\beta - \alpha_1\wedge\beta_1
+  = \alpha\wedge(\beta-\beta_1) + (\alpha-\alpha_1)\wedge\beta,
+$$
+and, by what we have just shown, both of the terms on the right-hand side are boundaries.
+
+From this it follows that, in a reductive Lie algebra, if $\alpha_1$ and $\alpha_2$ are cycles such that $\alpha_1\wedge\beta_1$ is a cycle, then the homology class of $\alpha_1\wedge\beta_1$ is the product of the homology classes of $\alpha_1$ and $\beta_1$.
+
+The proof of [Theorem 1](#theorem-1) goes as follows:
+$\beta_1$ and $\beta_2$ are _invariant_ chains of $\Gamma(\frak{b})$, and so $\varphi(\beta_1)$, $\varphi(\beta_2)$, and $\varphi(\beta_1\wedge\beta_2)$ are all cycles in $\Gamma(\frak{a})$, and so the class of $\varphi(\beta_1\wedge\beta_2)=\varphi(\beta_1)\wedge\varphi(\beta_2)$ is the product of the classes of $\varphi(\beta_1)$ and $\varphi(\beta_2)$.
+
+
+# The Hopf--Samelson theorem {#II.7}
+
+This theorem is proven for reductive Lie algebras, using [Theorem 1](#theorem-1) above.
+First, let $\frak{a}$ be an arbitrary Lie algebra, and $\varphi$ the "diagonal map" from $\frak{a}$ to $\frak{a}\oplus\frak{a}\subset\Gamma(\frak{a})\otimes\Gamma(\frak{a})$:
+$$
+  \varphi(x) = x\oplus x = x\otimes1 + 1\otimes x.
+$$
+From this, we obtain a homomorphism $\varphi$ from $\Gamma(\frak{a})$ to $\Gamma(\frak{a})\otimes\Gamma(\frak{a})$, such that
+$$
+  \varphi(\alpha) = \alpha\times1 + \ldots + 1\otimes\alpha.
+$$
+The transpose map $\varphi^*$ from $\Gamma(\frak{a}')\otimes\Gamma(\frak{a}')$ to $\Gamma(\frak{a}')$ is an _algebra_ homomorphism ([§II.6](#II.6));
+it easily follows that
+$$
+  \varphi^*(\alpha'\otimes\beta') = \alpha'\wedge\beta'.
+$$
+
+The homomorphism $\widetilde{\varphi}$ from $\HH(\frak{a})$ to $\HH(\frak{a})\otimes\HH(\frak{a})$ satisfies
+$$
+  \widetilde{\varphi}(\widetilde{\alpha})
+  = \widetilde{\alpha}\otimes1 + \ldots + 1\otimes\widetilde{\alpha}
+$$
+where $\widetilde{\alpha}$ denotes a homology class.
+The transpose homomorphism $\widetilde{\varphi}^*$ is an _algebra homomorphism_, and satisfies
+$$
+  \widetilde{\varphi}^*(\widetilde{\alpha}'\otimes\widetilde{\beta}')
+  = \widetilde{\alpha}'\cdot\widetilde{\beta}'
+$$
+(where the product $\cdot$ is in $\HH(\frak{a}')$).
+
+If $\frak{a}$ is now a _reductive_ algebra, then the homomorphism $\widetilde{\varphi}$ is also a homomorphism _for the multiplicative structures_ of $\HH(\frak{a})$ and $\HH(\frak{a})\otimes\HH(\frak{a})$.
+\oldpage{51}
+We thus find ourselves in the following algebraic situation:
+
+$K$ is a field of characteristic $0$;
+$A$ is a graded algebra of finite rank over $K$ whose multiplication law satisfies the usual commutativity and anticommutativity conditions for an exterior algebra;
+$A'$ is a graded algebra that is (non-canonically) isomorphic to $A$, in canonical duality with $A$;
+the degree $0$ elements of $A$ (resp. of $A'$) are given by multiples of the unit, and can be identified with the elements of $K$.
+The duality between $A\otimes A$ and $A'\otimes A'$ is defined by $\langle\alpha\otimes\beta,\alpha'\otimes\beta'\rangle = \langle\alpha,\alpha'\rangle\cdot\langle\beta,\beta'\rangle$, and the transpose of the canonical homomorphism $\widetilde{\varphi}^*$ from $A'\otimes A'$ to $A'$ (such that $\widetilde{\varphi}^*(\alpha'\otimes\beta')=\alpha'\cdot\beta'$) is $\widetilde{\varphi}$, which is a homomorphism from $A$ to $A\otimes A$ _that respects the multiplicative structures_.
+In such a situation, we say that the homogeneous elements of degree $\geq1$ of $A$ (resp. of $A'$) that are orthogonal to the products $\alpha'\cdot\beta'$ with $\alpha'$ and $\beta'$ of degree $\geq1$ (resp. to the products $\alpha\cdot\beta$ etc.) are _primitive_.
+We can then prove the following theorem of algebra:
+
+::: {.itenv #HS-theorem title="The Hopf--Samelson theorem" latex="{The Hopf--Samelson theorem}"}
+The _primitive_ elements of are _odd degree_;
+they generate a vector subspace $P$ of $A$ (resp. $P'$ of $A'$);
+the canonical map $P\to A$ (resp. $P'\to A'$) can be extended to give an _isomorphism from the exterior algebra $\Gamma(P)$ onto $A$_ (resp. an isomorphism from $\Gamma(P')$ onto $A'$);
+when restricted to $P$ and $P'$, the duality between $A$ and $A'$ defines a duality between $P$ and $P'$;
+this duality can be extended in the usual way to give a duality between $\Gamma(P)$ and $\Gamma(P')$ that, by identifying $\Gamma(P)$ with $A$, and $\Gamma(P')$ with $A'$, recovers the existing duality between $A$ and $A'$.
+:::
+
+The above statement thus applies if we take $A$ to be the homology algebra $\HH(\frak{a})$ of a reductive Lie algebra, and $A'$ to then be the cohomology algebra $\HH(\frak{a}')$.
+
+::: {.rmenv title="Remark" latex="{Remark}"}
+In the case where $\frak{a}$ is the Lie algebra of a compact connected group, the dimension of the space $P$ of primitive elements is equal to the _rank_ of the group, that is, to the maximal dimension of the abelian sub-algebras of $\frak{a}$.
+We still do not have an algebraic proof of this fact, which would prove this statement for a reductive Lie algebra.
+:::
+
+
+# Homomorphisms from a reductive algebra to a reductive algebra {#II.8}
+
+Let $\frak{a}$ and $\frak{b}$ be reductive algebras, and $\varphi$ a homomorphism from $\frak{b}$ to $\frak{a}$;
+we keep the notation form [§II.6](#II.6).
+Then every _primitive_ element of $\HH(\frak{b})$ is sent, by $\widetilde{\varphi}$, to a _primitive_ element of $\HH(\frak{a})$;
+every _primitive_ element of $\HH(\frak{a}')$ is sent, by $\widetilde{\varphi}^*$, to a _primitive_ element of $\HH(\frak{b}')$.
+Taking [Theorem 1](#theorem-1) into account (from [§II.6](#II.6)), we thus deduce:
+
+\oldpage{52}
+
+::: {.itenv #theorem-2 title="Theorem 2" latex="{Theorem 2}"}
+_(cf. Samelson)._
+The ideal of zeros of $\widetilde{\varphi}$ is the _ideal_ of $\HH(\frak{b})$ generated by the _primitive_ elements of $\HH(\frak{b})$ whose image under $\widetilde{\varphi}$ is zero;
+the sub-algebra given by the image of $\widetilde{\varphi}$ is the _sub-algebra_ of $\HH(\frak{a})$ generated by the unit and by the _primitive_ elements of $\HH(\frak{a})$ that belong to the image of $\widetilde{\varphi}$.
+The analogous properties hold for cohomology algebras.
+:::
+
+::: {.itenv title="Corollary" latex="{Corollary}"}
+Let $n$ denote the dimension of $\frak{b}$.
+For $\widetilde{\varphi}$ to be _bijective_, it suffices that $\widetilde{\varphi}(\omega)\neq0$, where $\omega$ is the generating element of $\HH_n(\frak{b})$.
+:::
+
+The next talk will be dedicated to the study of _relative_ homology and cohomology:
+given a sub-algebra $\frak{b}$ of $\frak{a}$, we define the homology (resp. cohomology) of the "homogeneous space" $\frak{a}/\frak{b}$, and we study the relations between the homology (resp. cohomology) of $\frak{a}$, of $\frak{b}$, and of $\frak{a}/\frak{b}$.

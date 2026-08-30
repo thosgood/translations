@@ -1,0 +1,297 @@
+--- 
+title: "The work of Koszul, I"
+author: "Henri Cartan"
+date: "December 1948"
+original: 'Cartan, H. "Les travaux de Koszul, I". _Séminaire Bourbaki_ **1** (1952), Talk no. 1, pp. 7--12. [numdam.org/book-part/SB_1948-1951__1__7_0](http://www.numdam.org/book-part/SB_1948-1951__1__7_0)'
+---
+
+{{< include _translator-note.qmd >}}
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\providecommand{\llp}{\mathbin{\llcorner}}
+\providecommand{\lrp}{\mathbin{\lrcorner}}
+\providecommand{\dd}{\mathrm{d}}
+\providecommand{\RR}{\mathbb{R}}
+\providecommand{\HH}{\operatorname{H}}
+\providecommand{\tr}{\operatorname{tr}}
+
+<!-- Content -->
+
+\oldpage{7}
+The homology and cohomology of a _compact_ Lie group can be directly studied via the Lie algebra of the group (cf. Chevalley and Eilenberg, "Cohomology theory of Lie groups and Lie algebras", _Trans. Amer. Math. Soc_ **63** (1948), 85--124).
+Proceeding like so, we can study Lie algebras over an arbitrary field (most often of characteristic zero);
+the compactness hypotheses are then replaced with _semi-simplicity_ hypotheses.
+The current conference aims to explain certain algebraic tools that are useful for this study, and to prove the first results obtained (notably the theorem on the third Betti number).
+In a later conference, we will introduce notions concerning a sub-algebra of a Lie algebra, and its corresponding "homogeneous space".
+
+# General notions {#I.1}
+
+Denoting an operator on a set $A$ (that is, a transformation from $A$ to $A$) by an arbitrary letter, such as $T$, we write $T\cdot x$ to mean the transformation of $x\in A$ under $T$, and $TU$ to mean the composition of operators $T$ and $U$, so that $TU\cdot x = T\cdot (U\cdot x)$.
+
+# Notions concerning the exterior algebra {#I.2}
+
+(cf. Bourbaki, _Algèbre_, Chap. III).
+
+Let $E$ be a vector space over a commutative field $K$ (or, equivalently, a unital module over a commutative ring).
+Let $\Lambda(E)$ be the exterior algebra of $E$, given by the direct sum of the $\Lambda^p(E)$ (with $\Lambda^0(E)=K$ and $\Lambda^1(E)=E$).
+We use lowercase _Latin_ letters to denote elements of $E$, and _Greek_ for those of $\Lambda(E)$.
+We write $a\wedge b$ for the product;
+in particular, for a product of elements of degree $1$, we write $x_1\wedge x_2\wedge\ldots\wedge x_p$.
+
+The bilinear form that defines the duality between $E$ and its _dual_ $E'$ is denoted by $\langle x,x'\rangle$.
+The _interior product_ of some $\alpha\in\Lambda^p(E)$ with some $x'\in E$ is an element of $\Lambda^{p-1}(E)$, denoted by $a\llp x'$, and defined by
+$$
+  (x_1\wedge x_2\wedge\ldots\wedge x_p) \llp x'
+  = \sum_{i=1}^p (-1)^{i+1} \langle x_i,x' \rangle x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p
+$$
+(where the hat $\;\widehat{\,}\;$ over $x_i$ indicates that the $x_i$ term should be omitted).
+The operator on $\Lambda(E)$ given by $\alpha\mapsto\alpha\llp x'$ is denoted by $i(x')$;
+we have $i(x')i(x')=0$.
+We define $i(\alpha')$ for $\alpha'\in\Lambda(E)'$ by
+$$
+  i(x'_1\wedge\ldots\wedge x'_p)
+  = i(x'_p)\ldots i(x'_1).
+$$
+\oldpage{8}
+We write $\alpha\llp\alpha'$ to mean $i(\alpha')\cdot\alpha$.
+We similarly define $i(\alpha)$, which acts on $\Lambda(E')$;
+we denote $i(\alpha)\cdot\alpha'$ by $\alpha\lrp\alpha'$.
+We have $i(\alpha\wedge\beta)=i(\beta)i(\alpha)$.
+The scalar components of $\alpha\llp\alpha'$ and of $\alpha\lrp\alpha'$ are equal;
+we denote this scalar component by $\langle\alpha,\alpha'\rangle$: this "scalar product" extends $\langle x,x'\rangle$ and defines the duality between $\Lambda(E)$ and $\Lambda(E')$.
+We have $\langle\alpha,\alpha'\rangle=0$ if $\alpha$ and $\alpha'$ are homogeneous of different degrees, and
+$$
+  \langle x_1\wedge\ldots\wedge x_p,x'_1\wedge\ldots\wedge x'_p\rangle = \det(\langle x_i,x'_j\rangle).
+$$
+
+Let $e(\beta)$ be the exterior multiplication $\alpha\mapsto\beta\wedge\alpha$, and $e(\beta')$ the exterior multiplication $\alpha'\mapsto\beta'\wedge\alpha'$.
+The equation
+$$
+  \langle \beta\wedge\alpha, \alpha' \rangle
+  = \langle \alpha, \beta\lrp\alpha' \rangle
+$$
+tells us that $e(\beta)$ and $i(\beta)$ are _transpose_ to one another (the former acts on $\Lambda(E)$, and the latter on $\Lambda(E')$).
+Similarly, $e(\beta')$ and $i(\beta')$ are transpose.
+
+
+# Notions concerning endomorphisms of algebras in general {#I.3}
+
+We now study a _graded_ algebra $\Lambda$.
+We denote by $\alpha\mapsto\overline{\alpha}$ the automorphism that sends a homogeneous element $\alpha$ of degree $n$ to the element $(-1)^n\alpha$.
+An endomorphism $\theta$ (of the vector structure) is said to be a _derivation_ if
+$$
+  \begin{aligned}
+    \theta\cdot\overline{\alpha}
+    &= \overline{\theta\cdot\alpha}
+  \\\theta\cdot(\alpha\beta)
+    &= (\theta\cdot\alpha)\beta + \alpha(\theta\cdot\beta),
+  \end{aligned}
+$$
+and an _antiderivation_ if
+$$
+  \begin{aligned}
+    \theta\cdot\overline{\alpha}
+    &= -\overline{\theta\cdot\alpha}
+  \\\theta\cdot(\alpha\beta)
+    &= (\theta\cdot\alpha)\beta + \overline{\alpha}(\theta\cdot\beta).
+  \end{aligned}
+$$
+
+If $\theta$ an antiderivation, then $\theta\theta$ is a derivation;
+if $\theta_1$ and $\theta_2$ are antiderivations, then  $\theta_1\theta_2+\theta_2\theta_1$ is a derivation.
+
+The "bracket" $[\theta_1,\theta_2]$ of two operators is, by definition, $\theta_1\theta_2-\theta_2\theta_1$.
+The bracket of two derivations is again a derivation;
+the bracket of a derivation and an antiderivation is an antiderivation.
+
+If $\Lambda$ is generated by its degree $0$ and degree $1$ elements, then every derivation (resp. antiderivation) that is zero on the degree $0$ and degree $1$ elements is identically zero.
+
+If $\Lambda$ is the exterior algebra $\Lambda(E)$ of a vector space $E$, then $i(x')$ (for $x'\in E'$) is an antiderivation.
+If $\theta$ is a derivation of $\Lambda(E)$, then $e(x)\theta$ is an antiderivation.
+
+
+# Notions concerning differentiable manifolds {#I.4}
+
+For simplicity, we will restrict our study to that of infinitely differentiable manifolds;
+all the "functions" that we consider will be infinitely differentiable.
+
+\oldpage{9}
+At each point $M$ of the manifold $V$, we have a duality between the space $E(m)$ of _tangent vectors_ (at $M$) and the space $E'(M)$ of differentials of real-valued functions (to $\RR$) at the point $M$.
+They are both $n$-dimensional vector spaces over the field $\RR$ of real numbers (where $n$ is the dimension of $V$).
+A _vector field_ $X$ is a function that, to each point $M$ of $V$, associates a tangent vector at $M$;
+vector fields form a module $E$ (over the ring of real-valued functions) whose dual $E'$ is the module of degree $1$ differential forms.
+We denote by $\langle X,\omega\rangle$ the bilinear form defining this duality.
+The differential $\dd f$ of a real-valued function is a differential form (an element of $E'$).
+The algebra of "exterior differential forms" can be identified with the exterior algebra $\Lambda(E')$ (where $E'$ is considered as a module over the ring of real-valued functions);
+the operator $\dd$ (_exterior differentiation_) is characterised by the following three properties:
+
+1. for a function $f$ (an element of $\Lambda^0(E')$), $\dd f$ is the differential of $f$ ;
+2. $\dd\dd=0$ ; and
+3. $\dd$ is an _antiderivation_.
+
+Every vector field $X$ defines an _infinitesimal_ transformation, which we denote by $\theta(X)$, and which acts on $\Lambda(E)$ and $\Lambda(E')$.
+We first define $\theta(X)$ on $\Lambda^0(E)=\Lambda^0(E')$ by setting $\theta(X)\cdot f=\langle X,\dd f\rangle$.
+There then exists a kernel of the automorphism group of $V$, depending on a real parameter $t$, say $M\mapsto\varphi(M,t)$, such that, for every function $f$,
+$$
+  \frac{\partial}{\partial t} f(\varphi(M,t))
+  = \theta(X)\cdot f(\varphi(M,t)).
+$$
+This group acts on $\Lambda(E)$ and $\Lambda(E')$, and, by differentiating with respect to $t$ at $t=0$, we recover the operator $\theta(X)$.
+It can be calculated using the following rules (which don't need explicit knowledge of the automorphism group):
+
+1. $\theta(X)$ _commutes_ with $\dd$ (on $\Lambda(E')$); to take $\theta(X)$ of a _product_ (either exterior, interior, or scalar), we apply the classical formula for taking the derivative of a product; and, in particular, on $\Lambda(E)$ and $\Lambda(E')$, $\theta(X)$ is a _derivation_.
+
+2. If we apply $\theta(X)$ to a vector field $Y$, then we obtain $\theta(X)\cdot Y$; we have the fundamental formula
+    $$
+      \theta(\theta(X)\cdot Y) = \theta(X)\theta(Y) - \theta(Y)\theta(X),
+    \tag{1}
+    $$
+    which leads us to denote by $[X,Y]$ the vector field $\theta(X)\cdot Y$, and (1) then gives the _Jacobi identity_
+
+3. \oldpage{10}Finally, we have the "fundamental formula of the calculation of variations":
+    on the space $\Lambda(E')$ of exterior differential forms,
+    $$
+      \theta(X) = i(X)\dd + \dd\cdot i(X),
+    \tag{2}
+    $$
+    where $i(X)$ denotes, as in [§I.2](#I.2), the interior product.
+    (Proof: both sides of the equation are derivations that commute with $\dd$ and that are equal on functions).
+
+
+# Lie groups {#I.5}
+
+Let $V$ denote the manifold of a Lie group $G$, and denote by $\frak{a}$ the subspace of $E$ given by vector fields that are _invariant under left-translations_ by $G$;
+we denote by $\frak{a}'$ the subspace of $E'$ given by _left-invariant_ differential forms (of degree $1$).
+Then $\frak{a}$ and $\frak{a}'$ are $n$-dimensional vector spaces over the field $\RR$ of reals, and are in duality.
+The exterior algebra $\Lambda(\frak{a}')$ can be identified with the sub-algebra of $\Lambda(E')$ given by _left-invariant_ exterior differential forms, and it is _stable_ under the operator $\dd$ of exterior differentiation.
+(In particular, $\Lambda^0(\frak{a}')$ is the field of constant functions, identified with $\RR$).
+
+If $X\in\frak{a}$, then the automorphism group of $V$ defined by $X$ (cf. [§I.4](#I.4)) is the group of _right_-translations by elements of the subgroup of $G$;
+the orbit of the identity element.
+Thus $\Lambda(\frak{a})$ and $\Lambda(\frak{a}')$ are _stable_ under $\theta(X)$ if $X\in\frak{a}$.
+In particular, if $X$ and $Y$ are in $\frak{a}$, then $[X,Y]$ is in $\frak{a}$.
+The elements upon which $\theta(X)$ acts as zero (for _all_ $X\in\frak{a}$) are those that are simultaneously invariant under left- and right-translations, and are simply called _invariant elements_.
+
+Since $\theta(X)$ is zero on the scalars (constant functions), we have:
+$$
+  \langle \theta(X)\cdot Y,\omega \rangle + \langle Y,\theta(X)\cdot\omega \rangle
+  = 0
+  \qquad\text{for }Y\in\frak{a}\text{ and }\omega\in\frak{a}'.
+\tag{3}
+$$
+In other words, $\theta(X)$ (acting on forms) is the _transpose_ of $-\theta(X)$ (acting on vector fields).
+
+The vector space $\frak{a}$, endowed with the structure defined by the map $(X,Y)\mapsto[X,Y]$ from $\frak{a}\times\frak{a}$ to $\frak{a}$, is the _Lie algebra_ of the group $G$.
+
+
+# Lie algebras {#I.6}
+
+We start with an abstract Lie algebra $\frak{a}$ (under the classical definition), taken over a field $K$ that is, for now, arbitrary.
+Let $n$ be the dimension of the vector space $\frak{a}$ over $K$.
+We will construct everything from the structure of $\frak{a}$, by taking the relations established above (in the case of the field $\RR$) as our definitions.
+
+\oldpage{11}
+Let $\frak{a}'$ be the dual vector space of $\frak{a}$.
+From now on, we denote elements of $\frak{a}$ by $x,y,\ldots$;
+the elements of $\frak{a}'$ by $x',y',\ldots$;
+the elements of $\Lambda(\frak{a})$ by $\alpha,\beta,\ldots$;
+and the elements of $\Lambda(\frak{a}')$ by $\alpha',\beta',\ldots$.
+We _define_ $\theta(x)$, for $x\in\frak{a}$, by
+$$
+  \begin{aligned}
+    \theta(x)\cdot y
+    &= [x,y];
+  \\\langle y,\theta(x)\cdot x'\rangle
+    &= -\langle[x,y],x'\rangle.
+  \end{aligned}
+$$
+With $\theta(x)$ defined on $\frak{a}$ and $\frak{a}'$, we extend it to $\Lambda(\frak{a})$ and $\Lambda(\frak{a}')$ by imposing the condition that $\theta(x)$ be a _derivation_.
+The $\theta(x)$ that acts on $\Lambda(\frak{a})$ is the _transpose_ of the $-\theta(x)$ that acts on $\Lambda(\frak{a}')$.
+The elements of $\Lambda(\frak{a})$ (resp. of $\Lambda(\frak{a}')$) for which $\theta(x)$ acts as zero (for _all_ $x\in\frak{a}$) are called _invariant_ (or _bi-invariant_) elements.
+The invariant elements of $\Lambda(\frak{a})$ form a _sub-algebra_ $\frak{J}$, and those of $\Lambda(\frak{a}')$ form a sub-algebra $\frak{J}'$.
+
+Equation (2) leads us to define an endomorphism $\delta$ of $\Lambda(\frak{a}')$ that is zero on the scalars, and such that
+$$
+  \theta(x) = i(x)\delta + \delta i(x).
+\tag{4}
+$$
+Furthermore, such an operator is unique, commutes with the $\theta(x)$, and satisfies $\delta\delta=0$;
+it is an _antiderivation_, characterised by
+$$
+  \langle x\wedge y,\delta x'\rangle
+  = -\langle[x,y],x'\rangle,
+$$
+and it maps $\Lambda^p(\frak{a}')$ to $\Lambda^{p+1}(\frak{a}')$.
+
+We define, on $\Lambda(\frak{a})$, the endomorphism $\partial$ that is the _transpose_ of $-\delta$ by
+$$
+  \langle\partial\alpha,\alpha'\rangle
+  = -\langle\alpha,\delta\alpha'\rangle.
+$$
+Then $\partial$ commutes with the $\theta(x)$, satisfies $\partial\partial=0$, maps $\Lambda^p(\frak{a})$ to $\Lambda^{p+1}(\frak{a})$, and is _zero on $\frak{a}$_;
+finally, we have that
+$$
+  \begin{aligned}
+    \partial(x\wedge y)
+    &= [x,y]
+  \\\theta(x)
+    &= e(x)\partial + \partial e(x),
+  \end{aligned}
+$$
+whence, by induction, we have the explicit formula
+$$
+  \partial(x_1\wedge x_2\wedge\ldots\wedge x_p)
+  = \sum_{i<j} (-1)^{i+j+1} [x_i,x_j] x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p.
+$$
+
+The operator $\delta$ on $\Lambda(\frak{a}')$ (the _algebra of cochains_) defines a _cohomology algebra_, denoted by $\HH(\frak{a}')$.
+The operator $\partial$ on $\Lambda(\frak{a})$ (the _algebra of chains_) defines a _homology group_, denoted by $\HH(\frak{a})$;
+there is not, in general, a multiplication in $\HH(\frak{a})$, since $\partial$ is _not_ an antiderivation.
+
+We have that $\HH(\frak{a})$ and $\HH(\frak{a}')$ are naturally in duality;
+for each degree $p$, $\HH^p(\frak{a})$ and $\HH^p(\frak{a}')$ are in duality, and thus of the same dimension.
+If $\frak{a}$ is the Lie algebra of a _compact connected group_, then $\HH(\frak{a}')$ can be identified with the cohomology algebra of the (topological) space of the group, by the de Rham theorem.
+\oldpage{12}
+This proves that any two compact connected groups that are locally isomorphic have the same Betti number.
+In all cases, the common dimension of $\HH^p(\frak{a})$ and $\HH^p(\frak{a}')$ is called the _$p$-th Betti number_ of the Lie algebra $\frak{a}$.
+
+::: {.rmenv #I-unimodularity title="Unimodularity" latex="{Unimodularity}"}
+We say that $\frak{a}$ is _unimodular_ if $\theta(x)$ (for _all_ $x\in\frak{a}$), considered as an endomorphism of $\frak{a}$ (the _adjoint_ representation) has _zero trace_;
+an equivalent condition is that the chain $\omega$ of degree $n$ is a _cycle_;
+another equivalent condition is that $\omega$ is _invariant_.
+
+If $\frak{a}$ is unimodular, then $\alpha\mapsto\omega\llp\alpha'$ defines an isomorphism from $\HH^p(\frak{a}')$ to $\HH^{n-p}(\frak{a})$;
+this corresponds to the "Poincaré duality theorem" for the Betti numbers of a manifold.
+:::
+
+::: {.rmenv #I-expansions title="Expansions in a basis" latex="{Expansions in a basis}"}
+We can express $\delta$ and $\partial$ in terms of a basis $(x_k)$ of $\frak{a}$ and the dual basis $(x'_k)$ of $\frak{a}'$ (when $K$ is of characteristic $\neq2$):
+$$
+  \begin{aligned}
+    2\delta
+    &= \sum_k e(x'_k)\theta(x_k)
+    \qquad\text{always,}
+  \\2\partial
+    &= \sum_k i(x'_k)\theta(x_k)
+    \qquad\text{if }\frak{a}\text{ is unimodular.}
+  \end{aligned}
+$$
+:::
+
+::: {.rmenv #I-semisimple title="Semi-simple Lie algebras" latex="{Semi-simple Lie algebras}"}
+We say that a Lie algebra is _semi-simple_ if it has no radical, or, equivalently (at least if $K$ is of characteristic $0$), if all its representations are completely reducible.
+If $\frak{a}/\frak{c}$ is semi-simple (where $\frak{c}$ is the centre of $\frak{a}$), then we have a canonical isomorphism from $\HH(\frak{a}')$ to $\frak{J}'$, and from $\HH(\frak{a})$ to $\frak{J}$ (and thus a multiplicative structure on $\HH(\frak{a})$ in this case).
+
+If $\frak{a}$ is semi-simple, then its centre is trivial, the Betti numbers in dimensions $1$ and $2$ are zero, and the Betti number in dimension $3$ is equal to the dimension of the vector space of _invariant quadratic forms_ (where an invariant quadratic form is a bilinear map $f(x,y)$ such that $f(y,x)=f(x,y)$ and $f(\theta(z)\cdot x,y)+f(x,\theta(z)\cdot y)=0$).
+:::
+
+::: {.rmenv title="Corollary" latex="{Corollary}"}
+If $K$ is maximal and quasi-real, and $\frak{a}$ is _simple_, then the third Betti number is equal to $1$.
+:::
