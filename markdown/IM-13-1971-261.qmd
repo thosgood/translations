@@ -84,4 +84,13 @@ In an appendix, we will give another proof, using Theorem 4.9, of a theorem of 
 
 # Sketch of a proof {#section-1}
 
-We denote by $\iota$
+We denote by $\iota$ the canonical isomorphism from $\HH_\cc^0(Y;\RR f_*\KK_X^\bullet)$ to $\HH_c^0(X;\KK_X^\bullet)$.
+The trace $\TT_Y$ induces a pairing between $\HH_\cc^0(Y;\RR f_*\KK_X^\bullet)$ and $\Ext^0(Y;\RR f_*\KK_X^\bullet,\KK_Y^\bullet)$, and we are looking for an element $\TT_{X/Y}$ in this latter space such that we have, for all $a\in\HH_\cc^0(Y;\RR f_*\KK_X^\bullet)$,
+$$
+  \TT_Y(a\cdot\TT_{X/Y})
+  = \TT_x\iota a.
+$$
+In other words, we are looking for a transpose ${}^t\iota$ of $\iota$ with respect to the pairings $\TT_Y$ and $\TT_X$ (with $\TT_{X/Y}$ as the image of ${}^t\iota$ under the function $1\in\HH^0(X;\OO_X)$).
+Since this problem is local on $Y$ (provided that we are guaranteed the local vanishing of $\Ext^i(Y;\RR f_*\KK_X^\bullet,\KK_Y^\bullet)$ for $i<0$), we can suppose that $Y$ is realisable as an analytic subset of an open polydisc $V$ of dimension $p$.
+If we still denote by $f$ the composite of $f$ and an embedding of $Y$ into $V$, it follows from the construction of $\KK_Y^\bullet$ that what we are looking for is an element of $\Ext^p(V;\RR f_*,\KK_X^\bullet,\Omega_V)$.
+We now want to proceed locally on $X$, supposing (being content to shrink $X$) that $X$ is the union of a finite number of opens $X_i$, each of which is embeddable into an open $U_i$ of $\mathbb{C}^n$: we can incorporate each $X_i$ into a commutative diagram
