@@ -17,7 +17,7 @@ reference-section-title: "Bibliography"
 
 # Filters
 filters:
-  - _custom-callout.lua
+  - _filters.lua
 
 # Formats
 format:
@@ -46,7 +46,7 @@ format:
     callout-appearance: simple
   pdf:
     template: _template.tex
-    pdf-engine: pdflatex
+    pdf-engine: latexmk
     cite-method: biblatex
     biblatexoptions: [backend=biber]
     date-format: "YYYY"

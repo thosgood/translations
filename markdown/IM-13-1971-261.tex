@@ -11,7 +11,6 @@
 \usepackage{enumerate}
 \usepackage{tikz-cd}
 \usepackage{mathtools}
-\usepackage{hyperref}
 \usepackage{booktabs}
 
 
@@ -22,7 +21,6 @@
 
 % Colours
 \usepackage{xcolor}
-\hypersetup{colorlinks,linkcolor={purple!50!black},citecolor={purple!50!black},urlcolor={purple!80!black}}
 
 
 % Fonts
@@ -31,12 +29,27 @@
 
 
 % Things for Quarto/pandoc
-\definecolor{quarto-callout-color-frame}{HTML}{000000}
 \usepackage{calc,array}
 \usepackage{longtable}
 \providecommand{\tightlist}{%
 \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \newcounter{none}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\usepackage{kvsetkeys}
 
 
 % Header and footer
@@ -67,7 +80,11 @@
 
 %% Document %%
 
-\usepackage{embedall}
+% hyperref last, as is "good practice"
+
+\usepackage{hyperref}
+\hypersetup{colorlinks,linkcolor={purple!50!black},citecolor={purple!50!black},urlcolor={purple!80!black}}
+
 \begin{document}
 
 \maketitle
@@ -211,7 +228,46 @@ theorem of Siu on the vanishing of certain cohomology groups.
 
 \section{Sketch of a proof}\label{section-1}
 
-We denote by \(\iota\) the canonical
+We denote by \(\iota\) the canonical isomorphism from
+\(\mathrm{H}_\mathrm{c}^0(Y;\mathrm{R}f_*\mathbf{K}_X^\bullet)\) to
+\(\mathrm{H}_c^0(X;\mathbf{K}_X^\bullet)\). The trace \(\mathbf{T}_Y\)
+induces a pairing between
+\(\mathrm{H}_\mathrm{c}^0(Y;\mathrm{R}f_*\mathbf{K}_X^\bullet)\) and
+\(\operatorname{Ext}^0(Y;\mathrm{R}f_*\mathbf{K}_X^\bullet,\mathbf{K}_Y^\bullet)\),
+and we are looking for an element \(\mathbf{T}_{X/Y}\) in this latter
+space such that we have, for all
+\(a\in\mathrm{H}_\mathrm{c}^0(Y;\mathrm{R}f_*\mathbf{K}_X^\bullet)\), \[
+  \mathbf{T}_Y(a\cdot\mathbf{T}_{X/Y})
+  = \mathbf{T}_x\iota a.
+\] In other words, we are looking for a transpose \({}^t\iota\) of
+\(\iota\) with respect to the pairings \(\mathbf{T}_Y\) and
+\(\mathbf{T}_X\) (with \(\mathbf{T}_{X/Y}\) as the image of
+\({}^t\iota\) under the function
+\(1\in\mathrm{H}^0(X;{\mathscr{O}}_X)\)). Since this problem is local on
+\(Y\) (provided that we are guaranteed the local vanishing of
+\(\operatorname{Ext}^i(Y;\mathrm{R}f_*\mathbf{K}_X^\bullet,\mathbf{K}_Y^\bullet)\)
+for \(i<0\)), we can suppose that \(Y\) is realisable as an analytic
+subset of an open polydisc \(V\) of dimension~\(p\). If we still denote
+by \(f\) the composite of \(f\) and an embedding of \(Y\) into \(V\), it
+follows from the construction of \(\mathbf{K}_Y^\bullet\) that what we
+are looking for is an element of
+\(\operatorname{Ext}^p(V;\mathrm{R}f_*,\mathbf{K}_X^\bullet,\Omega_V)\).
+We now want to proceed locally on \(X\), supposing (being content to
+shrink \(X\)) that \(X\) is the union of a finite number of opens
+\(X_i\), each of which is embeddable into an open \(U_i\) of
+\(\mathbb{C}^n\): we can incorporate each \(X_i\) into a commutative
+diagram
+
+\pandocbounded{\includegraphics[keepaspectratio]{IM-13-1971-261_files/mediabag/_svgs/1a05921ba0803713f5ce69d9b39322e4afcab572.pdf}}
+
+\oldpage{263}
+
+where \(I\) is an embedding, and where \(F\) denotes the second
+projection of \(U_i\times V\). We denote by \(f_{i_0i_1\ldots i_r}\) the
+direct image with proper support in
+\(X_{i_0}\cap X_{i_1}\cap\ldots X_{i_r}\) and we first search for a
+``trace'' \(\mathbf{T}_i\) in each
+\(\operatorname{Ext}^p(V;\mathrm{R}f_i\mathbf{K}_X^\bullet,\Omega_V)\).
 
 
 % Bibliography

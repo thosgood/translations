@@ -94,3 +94,21 @@ In other words, we are looking for a transpose ${}^t\iota$ of $\iota$ with respe
 Since this problem is local on $Y$ (provided that we are guaranteed the local vanishing of $\Ext^i(Y;\RR f_*\KK_X^\bullet,\KK_Y^\bullet)$ for $i<0$), we can suppose that $Y$ is realisable as an analytic subset of an open polydisc $V$ of dimension $p$.
 If we still denote by $f$ the composite of $f$ and an embedding of $Y$ into $V$, it follows from the construction of $\KK_Y^\bullet$ that what we are looking for is an element of $\Ext^p(V;\RR f_*,\KK_X^\bullet,\Omega_V)$.
 We now want to proceed locally on $X$, supposing (being content to shrink $X$) that $X$ is the union of a finite number of opens $X_i$, each of which is embeddable into an open $U_i$ of $\mathbb{C}^n$: we can incorporate each $X_i$ into a commutative diagram
+```tikz
+\begin{tikzcd}
+  X_i
+    \ar[r,hook,"I"]
+    \ar[dr,swap,"{f_{|X_i}}"]
+  & U_i\times V
+    \ar[d,"F"]
+\\& V
+\end{tikzcd}
+```
+\oldpage{263}
+where $I$ is an embedding, and where $F$ denotes the second projection of $U_i\times V$.
+We denote by $f_{i_0i_1\ldots i_r}$ the direct image with proper support in $X_{i_0}\cap X_{i_1}\cap\ldots X_{i_r}$ and we first search for a "trace" $\TT_i$ in each $\Ext^p(V;\RR f_i\KK_X^\bullet,\Omega_V)$.
+We know that $\KK_{X_i}^\bullet$ is precisely
+$$
+  \Hom_{\OO_{U_i\times V}}(\OO_X,\KK_{U_i\times V}^\bullet)
+$$
+where $\KK_{U_i\times V}^\bullet$

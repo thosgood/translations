@@ -11,7 +11,6 @@
 \usepackage{enumerate}
 \usepackage{tikz-cd}
 \usepackage{mathtools}
-\usepackage{hyperref}
 \usepackage{booktabs}
 
 
@@ -24,7 +23,6 @@ $endif$
 
 % Colours
 \usepackage{xcolor}
-\hypersetup{colorlinks,linkcolor={purple!50!black},citecolor={purple!50!black},urlcolor={purple!80!black}}
 
 
 % Fonts
@@ -33,12 +31,27 @@ $endif$
 
 
 % Things for Quarto/pandoc
-\definecolor{quarto-callout-color-frame}{HTML}{000000}
 \usepackage{calc,array}
 \usepackage{longtable}
 \providecommand{\tightlist}{%
 \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \newcounter{none}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\usepackage{kvsetkeys}
 
 
 % Header and footer
@@ -69,7 +82,11 @@ $endif$
 
 %% Document %%
 
-\usepackage{embedall}
+% hyperref last, as is "good practice"
+
+\usepackage{hyperref}
+\hypersetup{colorlinks,linkcolor={purple!50!black},citecolor={purple!50!black},urlcolor={purple!80!black}}
+
 \begin{document}
 
 \maketitle
