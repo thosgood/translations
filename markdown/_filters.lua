@@ -26,7 +26,7 @@ function make_templates(template_paths)
 end
 
 local tikz_template_paths = {
-  tikz = "_tikz.tex",
+  tikz = "_tikz_template.tex",
 }
 
 local tikz_templates = make_templates(tikz_template_paths)
