@@ -1,0 +1,78 @@
+--- 
+title: "The dualising complex and duality theorems in complex analytic geometry"
+author: "Jean-Pierre Ramis, Gabriel Ruget"
+date: "1970"
+original: "J.-P. Ramis, G. Ruget. \"Complexe dualisant et théorèmes de dualité en géométrie analytique complexe\". _Publications mathématiques de l'I.H.É.S._ (1970) pp. 77--91. [numdam.org/item?id=PMIHES_1970__38__77_0](http://www.numdam.org/item?id=PMIHES_1970__38__77_0)"
+bibliography: PMIHES-38-1970-77.bib
+---
+
+{{< include _translator-note.qmd >}}
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+<!-- Shortcuts -->
+
+\newcommand{\sh}[1]{\scr{#1}}
+\newcommand{\cat}[1]{\mathbf{#1}}
+
+\newcommand{\OO}{\sh{O}}
+
+\newcommand{\HH}{\mathrm{H}}
+\newcommand{\cc}{\mathrm{c}}
+\newcommand{\FS}{\mathbf{FS}}
+\newcommand{\DFS}{\mathbf{DFS}}
+\newcommand{\QFS}{\mathbf{QFS}}
+\newcommand{\QDFS}{\mathbf{QDFS}}
+
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\shHom}{\underline{\Hom}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\shExt}{\underline{\Ext}}
+\newcommand{\HyperExt}{\operatorname{HyperExt}}
+
+<!-- Content -->
+
+\oldpage{77}
+
+Let $X$ be a $\sigma$-compact complex analytic manifold of dimension $n$;
+we write $\OO$ to mean the sheaf of germs of holomorphic functions on $X$, and $\Omega$ to mean the sheaf of germs of holomorphic differential forms of degree $n$ on $X$.
+The correspondence that, to a locally free $\OO$-module $\sh{F}$, associates $\shHom(X;\sh{F},\Omega)$, is involutive.
+In [@11], Serre gives, for every integer $p$ and every locally free $\OO$-module $\sh{F}$, a (Fréchet quotient) topology on $\HH^p(X;\sh{F})$ along with a pairing
+$$
+  \HH^p(X;\sh{F}) \times \HH_\cc^{n-p}(X;\shHom(X;\sh{F},\Omega))
+  \to \mathbb{C}
+$$
+(where the subscript $\cc$ denotes the family of compacts of $X$) which, whenever the groups $\HH^p(X;\sh{F})$ and $\HH^{p+1}(X;\sh{F})$ are separated, makes the (non-topologised) vector space $\HH_\cc^{n-p}(X;\shHom(X;\sh{F},\Omega))$ the topological dual of $\HH^p(X;\sh{F})$.
+
+We could also mention the pairing
+$$
+  \HH_\cc^p(X;\sh{F}) \times \HH^{n-p}(X;\shHom(X;\sh{F},\Omega))
+  \to\mathbb{C}.
+$$
+
+Up to replacing $\HH_\cc^{n-p}(X;\shHom(X;\sh{F},\Omega))$ by $\Ext_\cc^{n-p}(X;\sh{F},\Omega)$, the proof by Serre extends [@10] to the case where $\sh{F}$ is an arbitrary coherent $\OO$-module, but by using difficult theorems (with the notation of Schwartz: $\sh{E}$ is a flat $\OO$-module, and, for every $x\in X$, $\sh{D}'_x$ is an injective $\OO_x$-module), due to coming from the division of distributions.
+We will show, following ideas of Grothendieck that were readopted by Malgrange, that the duality theorem for coherent sheaves on an analytic manifold is formally much more simple than this (see also [@14]), and that it can be generalised to analytic spaces, as long as we replace $\Omega$ by a suitable "dualising" complex, and the $\Ext$ by $\HyperExt$.
+As future work, probably very soon to appear, we note (not to mention an article in preparation with J.-L. Verdier on a relative duality theorem) that Malgrange expects to be able to use the dualising complex to give new proofs of results of Siu [@13] and Andreotti--Grauert [@1].
+
+
+# Some lemmas on certain complexes of topological vector spaces {#section-1}
+
+We first clarify a point of vocabulary for those readers not familiar with derived categories [@7]: let $\cat{A}$ be an abelian category, and $C(\cat{A})$ the category of bounded-below complexes of objects of $\cat{A}$ (with differentials of degree $+1$ and morphisms of degree $0$).
+\oldpage{78}
+We define $T$ to be the automorphism of $C(\cat{A})$ that translates complexes one notch to the left and changes the sign of all the differentials.
+An object of $C(\cat{A})$ is said to be *acyclic* if all its cohomology objects are zero.
+Let $u\colon X^\bullet\to Y^\bullet$ be a morphism in $C(\cat{A})$;
+we say that it is a *quasi-isomorphism* if it induces an isomorphism of cohomology objects of $X^\bullet$ to those of $Y^\bullet$;
+in this case, we also say that $\xrightarrow{u}Y^\bullet$ is a *resolution* of $X^\bullet$.
+We define the *cylinder* of $u$ to be the complex $T(X^\bullet)\oplus Y^\bullet$ endowed with the differential $\left(\begin{smallmatrix}T(d_X)&0\\T(u)&d_Y\end{smallmatrix}\right)$.
+Saying that $u$ is a quasi-isomorphism is equivalent to saying that its cylinder is zero.
+
+We denote by the acronym $\FS$ (resp. $\DFS$) Fréchet--Schwartz spaces (resp. the strong duals of Fréchet--Schwartz spaces [@6]), and by the acronym $\QFS$ (resp. $\QDFS$) the quotients of $\FS$ spaces (resp. of $\DFS$ spaces) (which are, as it were, non-separated $\FS$ or $\DFS$ spaces).
+
+::: {.itenv title="Lemma 1" latex="{Lemma 1}"}
+Let $X^\bullet$ and $Y^\bullet$
+:::
