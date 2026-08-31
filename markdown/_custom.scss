@@ -119,8 +119,8 @@ blockquote {
 }
 
 // Rendered TikZ images
-
-.tikz {
-  display: flex;
-  justify-content: center;
+.img-fluid {
+  zoom: 175%;
+  display: block;
+  margin: 0.5em auto;
 }
