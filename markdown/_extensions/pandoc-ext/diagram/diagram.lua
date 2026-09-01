@@ -641,7 +641,10 @@ local function code_to_figure (conf)
         dgr_opt.caption,
         dgr_opt['fig-attr']
       ) or
-      pandoc.Plain{image}
+      -- pandoc.Plain{image}
+      pandoc.Figure(
+        pandoc.Plain{image}
+      )
   end
 end
 

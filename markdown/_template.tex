@@ -1,4 +1,4 @@
-\documentclass[british,fleqn]{article}
+\documentclass[british]{article}
 
 \usepackage[margin=1.5in]{geometry}
 
@@ -36,6 +36,7 @@ $endif$
 \providecommand{\tightlist}{%
 \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \newcounter{none}
+\usepackage{float}
 \usepackage{graphicx}
 \makeatletter
 \newsavebox\pandoc@box
@@ -79,12 +80,12 @@ $endif$
 \newcommand{\oldpage}[1]{\marginpar{\footnotesize$$\Big\vert$$ \textit{p.~#1}}}
 
 
-%% Document %%
-
-% hyperref last, as is "good practice"
-
+% Hyperref
 \usepackage{hyperref}
 \hypersetup{colorlinks,linkcolor={purple!50!black},citecolor={purple!50!black},urlcolor={purple!80!black}}
+
+
+%% Document %%
 
 \begin{document}
 
