@@ -24,7 +24,7 @@
 \hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}}
 \usepackage{enumerate}
 \usepackage{graphicx}
-\usepackage{tikz-cd}
+\usepackage{quiver}
 
 
 %% Typography %%
@@ -1860,7 +1860,23 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     The composition of 2-morphisms is then obtained thanks to the property of fibre products.
 
     \oldpage{249}
-    \todo{diagram}
+    % https://q.uiver.app/#q=WzAsMTAsWzIsMCwiXFxwaV8yIl0sWzEsMSwiVFxccGknIl0sWzAsMiwiVFRlJyciXSxbMywyLCJcXHBpIl0sWzQsNCwiZSJdLFsyLDMsIlRlJyJdLFsxLDIsIlxccGknIl0sWzIsNCwiZSciXSxbMCw0LCJlJyciXSxbMCwzLCJUZScnIl0sWzAsMywidl8yIl0sWzMsNCwiYSJdLFsxLDUsIlRhJyJdLFswLDEsInZfMSIsMl0sWzMsNSwiYiJdLFsxLDIsIlRiJyIsMl0sWzYsNywiYSciLDJdLFsyLDksIktlJyciLDJdLFs2LDksImInIl1d
+    \[\begin{tikzcd}
+      && {\pi_2} && \\
+      & {T\pi'} \\
+      {TTe''} & {\pi'} && \pi \\
+      {Te''} && {Te'} \\
+      {e''} && {e'} && e
+      \arrow["{v_1}"', from=1-3, to=2-2]
+      \arrow["{v_2}", from=1-3, to=3-4]
+      \arrow["{Tb'}"', from=2-2, to=3-1]
+      \arrow["{Ta'}", from=2-2, to=4-3]
+      \arrow["{Ke''}"', from=3-1, to=4-1]
+      \arrow["{b'}", from=3-2, to=4-1]
+      \arrow["{a'}"', from=3-2, to=5-3]
+      \arrow["b", from=3-4, to=4-3]
+      \arrow["a", from=3-4, to=5-5]
+    \end{tikzcd}\]
 \end{enumerate}
 
 \begin{itenv}{Proposition~II.2.13}
@@ -1935,11 +1951,71 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \big).
   \]
 
-  \todo{diagram}
+  % https://q.uiver.app/#q=WzAsMjAsWzQsMiwiXFxwaV8yIl0sWzMsMywiVFxccGknIl0sWzIsNCwiVFRlJyciXSxbNSw0LCJcXHBpIl0sWzYsNiwiZSJdLFs0LDUsIlRlJyJdLFszLDQsIlxccGknIl0sWzQsNiwiZSciXSxbMiw2LCJlJyciXSxbMiw1LCJUZScnIl0sWzAsNiwiZScnJyJdLFswLDUsIlRlJycnIl0sWzAsNCwiVFRlJycnIl0sWzEsMywiVFxccGknJyJdLFswLDIsIlRUVGUnJyciXSxbMSwyLCJUVFxccGknJyJdLFsyLDEsIlRcXHBpJ18yIl0sWzMsMCwiXFxoYXRcXHBpIl0sWzIsMiwiXFxwaSdfMiJdLFsxLDQsIlxccGknJyJdLFswLDMsInZfMiJdLFszLDQsImEiXSxbMSw1LCJUYSciXSxbMCwxLCJ2XzEiLDJdLFszLDUsImIiXSxbMSwyLCJUYiciLDEseyJsYWJlbF9wb3NpdGlvbiI6NjB9XSxbNiw3LCJhJyIsMl0sWzIsOSwiS2UnJyIsMV0sWzYsOSwiYiciXSxbMTIsMTEsIktlJycnIiwyXSxbMTMsMTIsIlRiJyciLDFdLFsxMyw5LCJUYScnIiwxXSxbMTQsMTIsIktUZScnJyIsMix7ImN1cnZlIjoyfV0sWzE0LDEyLCJUS2UnJyciLDAseyJjdXJ2ZSI6LTJ9XSxbMTUsMTMsIktcXHBpJyciLDFdLFsxNSwxNCwiVFRiJyciLDJdLFsxNywwLCJ3XzIiXSxbMTcsMTYsInVfMSIsMl0sWzE2LDE1LCJUdidfMSIsMl0sWzE2LDEsIlR2J18yIl0sWzE4LDEzLCJ2J18xIiwxXSxbMTgsNiwididfMiIsMSx7ImxhYmVsX3Bvc2l0aW9uIjozMH1dLFsxNSwyLCJUVGEnJyIsMSx7ImxhYmVsX3Bvc2l0aW9uIjo2MH1dLFsxOSwxMSwiYicnIl0sWzE5LDgsImEnJyIsMl1d
+  \[\begin{tikzcd}[column sep=3em]
+    &&& {\hat\pi} &&& \\
+    && {T\pi'_2} \\
+    {TTTe'''} & {TT\pi''} & {\pi'_2} && {\pi_2} \\
+    & {T\pi''} && {T\pi'} \\
+    {TTe'''} & {\pi''} & {TTe''} & {\pi'} && \pi \\
+    {Te'''} && {Te''} && {Te'} \\
+    {e'''} && {e''} && {e'} && e
+    \arrow["{u_1}"', from=1-4, to=2-3]
+    \arrow["{w_2}", from=1-4, to=3-5]
+    \arrow["{Tv'_1}"', from=2-3, to=3-2]
+    \arrow["{Tv'_2}", from=2-3, to=4-4]
+    \arrow["{KTe'''}"', curve={height=12pt}, from=3-1, to=5-1]
+    \arrow["{TKe'''}", curve={height=-12pt}, from=3-1, to=5-1]
+    \arrow["{TTb''}"', from=3-2, to=3-1]
+    \arrow["{K\pi''}"{description}, from=3-2, to=4-2]
+    \arrow["{TTa''}"{description, pos=0.6}, from=3-2, to=5-3]
+    \arrow["{v'_1}"{description}, from=3-3, to=4-2]
+    \arrow["{v'_2}"{description, pos=0.3}, from=3-3, to=5-4]
+    \arrow["{v_1}"', from=3-5, to=4-4]
+    \arrow["{v_2}", from=3-5, to=5-6]
+    \arrow["{Tb''}"{description}, from=4-2, to=5-1]
+    \arrow["{Ta''}"{description}, from=4-2, to=6-3]
+    \arrow["{Tb'}"{description, pos=0.6}, from=4-4, to=5-3]
+    \arrow["{Ta'}", from=4-4, to=6-5]
+    \arrow["{Ke'''}"', from=5-1, to=6-1]
+    \arrow["{b''}", from=5-2, to=6-1]
+    \arrow["{a''}"', from=5-2, to=7-3]
+    \arrow["{Ke''}"{description}, from=5-3, to=6-3]
+    \arrow["{b'}", from=5-4, to=6-3]
+    \arrow["{a'}"', from=5-4, to=7-5]
+    \arrow["b", from=5-6, to=6-5]
+    \arrow["a", from=5-6, to=7-7]
+  \end{tikzcd}\]
 
   (Note that, if $(v_1,v_2)$ is the canonical fibre product of $(Ta',b)$, then $(w_1,w_2)$ is actually chosen so that $(w_1,v_2\cdot w_2)$ be the canonical fibre product of $(Tv'_2\cdot Ta',b)$, which is evidently possible.)
 
-  \todo{diagram}
+  % https://q.uiver.app/#q=WzAsMTYsWzQsMiwiXFxwaV8yIl0sWzMsMywiVFxccGknIl0sWzIsNCwiVFRlJyciXSxbNSw0LCJcXHBpIl0sWzYsNiwiZSJdLFs0LDUsIlRlJyJdLFszLDQsIlxccGknIl0sWzQsNiwiZSciXSxbMiw2LCJlJyciXSxbMiw1LCJUZScnIl0sWzAsNiwiZScnJyJdLFswLDUsIlRlJycnIl0sWzAsNCwiVFRlJycnIl0sWzEsMywiVFxccGknJyJdLFszLDAsIlxcaGF0XFxwaSciXSxbMSw0LCJcXHBpJyciXSxbMCwzLCJ2XzIiXSxbMyw0LCJhIl0sWzEsNSwiVGEnIl0sWzAsMSwidl8xIiwyXSxbMyw1LCJiIl0sWzEsMiwiVGInIiwyXSxbNiw3LCJhJyIsMl0sWzIsOSwiS2UnJyIsMV0sWzYsOSwiYiciXSxbMTIsMTEsIktlJycnIiwyXSxbMTMsMTIsIlRiJyciLDJdLFsxMyw5LCJUYScnIiwxXSxbMTQsMCwidydfMiJdLFsxNSwxMSwiYicnIl0sWzE1LDgsImEnJyIsMl0sWzE0LDEzLCJ3J18xIiwyXSxbMCw5LCJLZScnIFxcY2RvdCBUYicgXFxjZG90IHZfMSIsMSx7ImxhYmVsX3Bvc2l0aW9uIjo2MH1dXQ==
+  \[\begin{tikzcd}[sep=3em]
+    &&& {\hat\pi'} &&& \\
+    \\
+    &&&& {\pi_2} \\
+    & {T\pi''} && {T\pi'} \\
+    {TTe'''} & {\pi''} & {TTe''} & {\pi'} && \pi \\
+    {Te'''} && {Te''} && {Te'} \\
+    {e'''} && {e''} && {e'} && e
+    \arrow["{w'_2}", from=1-4, to=3-5]
+    \arrow["{w'_1}"', from=1-4, to=4-2]
+    \arrow["{v_1}"', from=3-5, to=4-4]
+    \arrow["{v_2}", from=3-5, to=5-6]
+    \arrow["{Ke'' \cdot Tb' \cdot v_1}"{description, pos=0.6}, from=3-5, to=6-3]
+    \arrow["{Tb''}"', from=4-2, to=5-1]
+    \arrow["{Ta''}"{description}, from=4-2, to=6-3]
+    \arrow["{Tb'}"', from=4-4, to=5-3]
+    \arrow["{Ta'}", from=4-4, to=6-5]
+    \arrow["{Ke'''}"', from=5-1, to=6-1]
+    \arrow["{b''}", from=5-2, to=6-1]
+    \arrow["{a''}"', from=5-2, to=7-3]
+    \arrow["{Ke''}"{description}, from=5-3, to=6-3]
+    \arrow["{b'}", from=5-4, to=6-3]
+    \arrow["{a'}"', from=5-4, to=7-5]
+    \arrow["b", from=5-6, to=6-5]
+    \arrow["a", from=5-6, to=7-7]
+  \end{tikzcd}\]
 
   \oldpage{251}
   Secondly, $\theta''\circ(\theta'\circ\theta)\colon e\to e'''$ is defined by the pair
@@ -2681,7 +2757,35 @@ are 2-morphisms in $\Sp{\cat{E}}$, where we set $T\theta=(Tb,Ta)$ and identify e
   and so $(b,a,i)$ is a pointed $\TT$-graph on $e$.
   Conversely, this data determines a crochet $\tilde{i}\colon e\to\pi$ that defines the desired morphism $\tilde{i}$ of spans.
 
-  \todo{figure}
+  \todo{The notation above is different from Burroni's notation, so the notation in the following diagram needs to be updated.}
+  \todo{Should this be a figure instead?}
+  % https://q.uiver.app/#q=WzAsOCxbMSwwLCJcXHBpJyciXSxbMiwxLCJUXFxwaSJdLFswLDEsIlRUZSJdLFs0LDEsIlxccGlfMiJdLFsyLDMsIlxccGkiXSxbMCwzLCJUZSJdLFswLDUsImUiXSxbMyw2LCJcXHBpJyJdLFszLDAsIlxcdGlsZGUgayIsMl0sWzAsMiwididfMiIsMl0sWzEsMiwiVGEiLDFdLFszLDEsInZfMiIsMV0sWzAsNCwididfMSIsMSx7ImxhYmVsX3Bvc2l0aW9uIjo4MH1dLFs0LDUsImEiLDFdLFsyLDUsIktlIiwyXSxbMSw1LCJUYiIsMV0sWzMsNCwidl8xIiwxLHsiY3VydmUiOjJ9XSxbMyw0LCJrIiwwLHsiY3VydmUiOi0yfV0sWzYsNSwiSWUiXSxbNCw2LCJiIiwyLHsiY3VydmUiOjF9XSxbNiw0LCJpIiwyLHsiY3VydmUiOjF9XSxbNyw0LCJ1JydfMSIsMl0sWzcsNiwidScnXzIiLDFdLFs3LDYsImIgXFxjZG90IHUnJ18xIiwyLHsiY3VydmUiOjJ9XSxbNiw3LCJcXHRpbGRlIGkiLDIseyJjdXJ2ZSI6Mn1dXQ==
+  \[\begin{tikzcd}
+    & {\pi''} &&& \\
+    TTe && {T\pi} && {\pi_2} \\
+    \\
+    Te && \pi \\
+    \\
+    e \\
+    &&& {\pi'}
+    \arrow["{v'_2}"', from=1-2, to=2-1]
+    \arrow["{v'_1}"{description, pos=0.8}, from=1-2, to=4-3]
+    \arrow["Ke"', from=2-1, to=4-1]
+    \arrow["Ta"{description}, from=2-3, to=2-1]
+    \arrow["Tb"{description}, from=2-3, to=4-1]
+    \arrow["{\tilde k}"', from=2-5, to=1-2]
+    \arrow["{v_2}"{description}, from=2-5, to=2-3]
+    \arrow["{v_1}"{description}, curve={height=12pt}, from=2-5, to=4-3]
+    \arrow["k", curve={height=-12pt}, from=2-5, to=4-3]
+    \arrow["a"{description}, from=4-3, to=4-1]
+    \arrow["b"', curve={height=6pt}, from=4-3, to=6-1]
+    \arrow["Ie", from=6-1, to=4-1]
+    \arrow["i"', curve={height=6pt}, from=6-1, to=4-3]
+    \arrow["{\tilde i}"', curve={height=12pt}, from=6-1, to=7-4]
+    \arrow["{u''_1}"', from=7-4, to=4-3]
+    \arrow["{u''_2}"{description}, from=7-4, to=6-1]
+    \arrow["{b \cdot u''_1}"', curve={height=12pt}, from=7-4, to=6-1]
+  \end{tikzcd}\]
 
   \oldpage{261}
   Let $(v_1,v_2)$ and $(v'_1,v'_2)$ be the canonical fibre products of $(a,Tb)$ and $(a,Ke)$ respectively;
@@ -3408,7 +3512,40 @@ We say that $\MM$ is \emph{cartesian} if $\TT$ and $\TT'$ are cartesian and $m$ 
   \oldpage{275}
   To show that $\theta'=(b,a',i,k)$, where $a'=me\cdot a$, is a $\TT'$-category, it remains to show that the morphisms $i_1$, $i_2$, $k_1$, $k_2$ characterised by the relations (2), (3), (5), and (6) from \cref{sec:I.3} satisfied by $\theta$ are also characterising for $\theta'$, which does not pose any difficulties.
 
-  \todo{diagram}
+  % https://q.uiver.app/#q=WzAsMTAsWzIsMCwiVGUiXSxbNiwwLCJUJ2UiXSxbMiwzLCJUZV8xIl0sWzYsMywiVCdlXzEiXSxbNCwyLCJlIl0sWzEsMSwiXFxwaSJdLFswLDEsIlxcaGF0XFxwaSJdLFs0LDYsImVfMSJdLFswLDQsIlxcaGF0XFxwaV8xIl0sWzIsNCwiXFxwaSdfMSJdLFswLDEsIm1lIl0sWzEsMywiVCdmXzAiXSxbNCwwLCJJZSIsMV0sWzQsMSwiSSdlIiwxXSxbMCwyLCJUZl8wIiwxLHsibGFiZWxfcG9zaXRpb24iOjcwfV0sWzYsNSwibSciLDFdLFs2LDAsIlxcaGF0IGEiXSxbMiwzLCJtZV8xIiwxLHsibGFiZWxfcG9zaXRpb24iOjcwfV0sWzQsNywiZl8wIiwxLHsibGFiZWxfcG9zaXRpb24iOjcwfV0sWzcsMywiSSdlXzEiLDJdLFs3LDIsIkllXzEiLDFdLFs4LDcsIlxcaGF0IGJfMSIsMl0sWzgsOSwibScnIiwxXSxbOSw3LCJiJ18xIiwxXSxbOSwzLCJhJ18xIiwxLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzgsMiwiXFxoYXQgYV8xIiwxXSxbNiw4LCJcXGhhdCBmIiwyXSxbNSw4LCJmIiwxXSxbNSw5LCJmJyIsMSx7ImxhYmVsX3Bvc2l0aW9uIjo0MH1dLFs1LDAsImEiLDFdLFs1LDEsImEnIiwxLHsibGFiZWxfcG9zaXRpb24iOjcwfV0sWzUsNCwiYiIsMSx7ImxhYmVsX3Bvc2l0aW9uIjo3MH1dLFs2LDQsIlxcaGF0IGIiLDIseyJsYWJlbF9wb3NpdGlvbiI6ODAsImN1cnZlIjoxfV0sWzUsNiwiaiIsMix7ImN1cnZlIjozfV1d
+  \[\begin{tikzcd}[column sep=3em]
+    && Te &&&& {T'e} \\
+    {\hat\pi} & \pi \\
+    &&&& e \\
+    && {Te_1} &&&& {T'e_1} \\
+    {\hat\pi_1} && {\pi'_1} \\
+    \\
+    &&&& {e_1}
+    \arrow["me", from=1-3, to=1-7]
+    \arrow["{Tf_0}"{description, pos=0.7}, from=1-3, to=4-3]
+    \arrow["{T'f_0}", from=1-7, to=4-7]
+    \arrow["{\hat a}", from=2-1, to=1-3]
+    \arrow["{m'}"{description}, from=2-1, to=2-2]
+    \arrow["{\hat b}"'{pos=0.8}, curve={height=6pt}, from=2-1, to=3-5]
+    \arrow["{\hat f}"', from=2-1, to=5-1]
+    \arrow["a"{description}, from=2-2, to=1-3]
+    \arrow["{a'}"{description, pos=0.7}, from=2-2, to=1-7]
+    \arrow["j"', curve={height=18pt}, from=2-2, to=2-1]
+    \arrow["b"{description, pos=0.7}, from=2-2, to=3-5]
+    \arrow["f"{description}, from=2-2, to=5-1]
+    \arrow["{f'}"{description, pos=0.4}, from=2-2, to=5-3]
+    \arrow["Ie"{description}, from=3-5, to=1-3]
+    \arrow["{I'e}"{description}, from=3-5, to=1-7]
+    \arrow["{f_0}"{description, pos=0.7}, from=3-5, to=7-5]
+    \arrow["{me_1}"{description, pos=0.7}, from=4-3, to=4-7]
+    \arrow["{\hat a_1}"{description}, from=5-1, to=4-3]
+    \arrow["{m''}"{description}, from=5-1, to=5-3]
+    \arrow["{\hat b_1}"', from=5-1, to=7-5]
+    \arrow["{a'_1}"{description, pos=0.3}, from=5-3, to=4-7]
+    \arrow["{b'_1}"{description}, from=5-3, to=7-5]
+    \arrow["{Ie_1}"{description}, from=7-5, to=4-3]
+    \arrow["{I'e_1}"', from=7-5, to=4-7]
+  \end{tikzcd}\]
 
   We can then note that, if $\hat{\theta}_1=(\hat{b}_1,\hat{a}_1,\hat{i}_1,\hat{k}_1)$ is a $\TT$-category given as the image under $\Cat{Cat}(\MM)$ of a $\TT'$-category $\theta'_1 = (b'_1,a'_1,i'_1,k'_1)$, and $(f_0,f)\colon\theta\to\hat{\theta}_1$ is a morphism of $\TT$-categories, then the above construction (whose notation we readopt) can be used to show that $\theta'$ is the desired free $\TT'$-category.
   It suffices to remark that $(f_0,f')\colon\theta'\to\theta'_1$ is a morphism of $\TT'$-categories, i.e. for example that $i'_1\cdot f_0=f'\cdot i$, which is a consequence of the equality $i_1\cdot f_0=f\cdot i$.
@@ -3821,7 +3958,35 @@ We define a \emph{Lambek multicategory} to be a quadruple $\cat{L}=(\cat{L}^\cir
       \big( \alpha\cdot(\beta,\beta')\big) \cdot (\gamma_1,\gamma_2,\gamma'_1,\gamma'_2).
     \end{aligned}
   \]
-  \todo{diagram}
+  % https://q.uiver.app/#q=WzAsOSxbMCwxLCJcXGNkb3RzIl0sWzMsMCwiXFxjZG90cyJdLFsyLDEsIlxcY2RvdHMiXSxbNCwyLCJcXGNkb3RzIl0sWzUsMCwiXFxjZG90cyJdLFs4LDEsIlxcY2RvdHMiXSxbNiwxLCJcXGNkb3RzIl0sWzEsM10sWzcsM10sWzAsNywiIiwwLHsiY3VydmUiOjF9XSxbMiwwLCIiLDAseyJjdXJ2ZSI6MX1dLFsyLDcsIiIsMix7ImN1cnZlIjoxfV0sWzEsMiwiIiwyLHsiY3VydmUiOjF9XSxbMywxLCIiLDIseyJjdXJ2ZSI6MX1dLFszLDIsIiIsMix7ImN1cnZlIjoxfV0sWzQsMywiIiwyLHsiY3VydmUiOjF9XSxbNiw0LCIiLDIseyJjdXJ2ZSI6MX1dLFs1LDYsIiIsMix7ImN1cnZlIjoxfV0sWzgsNSwiIiwyLHsiY3VydmUiOjF9XSxbOCw2LCIiLDIseyJjdXJ2ZSI6MX1dLFs2LDMsIiIsMix7ImN1cnZlIjoxfV0sWzgsMywiIiwxLHsiY3VydmUiOi0xfV0sWzMsNywiIiwxLHsiY3VydmUiOi0xfV0sWzgsNywiIiwxLHsiY3VydmUiOi0zfV0sWzAsMTEsIlxcZ2FtbWFfMSIsMSx7InNob3J0ZW4iOnsidGFyZ2V0IjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDE0LCJcXGdhbW1hXzIiLDEseyJzaG9ydGVuIjp7InRhcmdldCI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCwyMCwiXFxnYW1tYSdfMSIsMSx7InNob3J0ZW4iOnsidGFyZ2V0IjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDE5LCJcXGdhbW1hJ18yIiwxLHsic2hvcnRlbiI6eyJ0YXJnZXQiOjIwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMjIsIlxcYmV0YSIsMSx7InNob3J0ZW4iOnsidGFyZ2V0IjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs2LDIxLCJcXGJldGEnIiwxLHsic2hvcnRlbiI6eyJ0YXJnZXQiOjIwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsMjMsIlxcYWxwaGEiLDEseyJzaG9ydGVuIjp7InRhcmdldCI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+  \[\begin{tikzcd}
+    &&& \cdots && \cdots &&& \\
+    \cdots && \cdots &&&& \cdots && \cdots \\
+    &&&& \cdots \\
+    & {} &&&&&& {}
+    \arrow[curve={height=6pt}, from=1-4, to=2-3]
+    \arrow[curve={height=6pt}, from=1-6, to=3-5]
+    \arrow[curve={height=6pt}, from=2-1, to=4-2]
+    \arrow[curve={height=6pt}, from=2-3, to=2-1]
+    \arrow[""{name=0, anchor=center, inner sep=0}, curve={height=6pt}, from=2-3, to=4-2]
+    \arrow[curve={height=6pt}, from=2-7, to=1-6]
+    \arrow[""{name=1, anchor=center, inner sep=0}, curve={height=6pt}, from=2-7, to=3-5]
+    \arrow[curve={height=6pt}, from=2-9, to=2-7]
+    \arrow[curve={height=6pt}, from=3-5, to=1-4]
+    \arrow[""{name=2, anchor=center, inner sep=0}, curve={height=6pt}, from=3-5, to=2-3]
+    \arrow[""{name=3, anchor=center, inner sep=0}, curve={height=-6pt}, from=3-5, to=4-2]
+    \arrow[""{name=4, anchor=center, inner sep=0}, curve={height=6pt}, from=4-8, to=2-7]
+    \arrow[curve={height=6pt}, from=4-8, to=2-9]
+    \arrow[""{name=5, anchor=center, inner sep=0}, curve={height=-6pt}, from=4-8, to=3-5]
+    \arrow[""{name=6, anchor=center, inner sep=0}, curve={height=-18pt}, from=4-8, to=4-2]
+    \arrow["{\gamma_2}"{description}, draw=none, from=1-4, to=2]
+    \arrow["{\gamma'_1}"{description}, draw=none, from=1-6, to=1]
+    \arrow["{\gamma_1}"{description}, draw=none, from=2-1, to=0]
+    \arrow["\beta"{description}, draw=none, from=2-3, to=3]
+    \arrow["{\beta'}"{description}, draw=none, from=2-7, to=5]
+    \arrow["{\gamma'_2}"{description}, draw=none, from=2-9, to=4]
+    \arrow["\alpha"{description}, draw=none, from=3-5, to=6]
+  \end{tikzcd}\]
   We have thus defined a multicategory $\cat{A}$.
 
   Conversely, let $\cat{A}$ be a multicategory such that $\cat{A}^\cdot$ is a discrete category;
@@ -3887,7 +4052,20 @@ The ``multicategories'' in \cite{La} are precisely, up to terminology, Lambek mu
       be a path in $\cat{L}^\circ$;
       the data of a multimorphism then reduces to that of a commutative diagram of the form
       \oldpage{285}
-      \todo{diagram}
+      % https://q.uiver.app/#q=WzAsOCxbNCwwLCJcXHBpIl0sWzIsMSwiXFxwaV8xIl0sWzYsMSwiXFxwaV9uIl0sWzAsMiwiZSciXSxbMywyLCJcXGNkb3QiXSxbNCwyLCJcXGNkb3RzIl0sWzUsMiwiXFxjZG90Il0sWzgsMiwiZSJdLFsyLDYsImJfbiIsMl0sWzIsNywiYV9uIiwxXSxbMSwzLCJiXzEiLDFdLFsxLDQsImFfMSJdLFswLDEsImZfMSIsMV0sWzAsMiwiZl9uIiwxXSxbMCwzLCJiIiwyLHsiY3VydmUiOjV9XSxbMCw3LCJhIiwwLHsiY3VydmUiOi01fV1d
+      \[\begin{tikzcd}
+        &&&& \pi &&&& \\
+        && {\pi_1} &&&& {\pi_n} \\
+        {e'} &&& \cdot & \cdots & \cdot &&& e
+        \arrow["{f_1}"{description}, from=1-5, to=2-3]
+        \arrow["{f_n}"{description}, from=1-5, to=2-7]
+        \arrow["b"', curve={height=30pt}, from=1-5, to=3-1]
+        \arrow["a", curve={height=-30pt}, from=1-5, to=3-9]
+        \arrow["{b_1}"{description}, from=2-3, to=3-1]
+        \arrow["{a_1}", from=2-3, to=3-4]
+        \arrow["{b_n}"', from=2-7, to=3-6]
+        \arrow["{a_n}"{description}, from=2-7, to=3-9]
+      \end{tikzcd}\]
       The rest of the construction of the multicategory $\cat{L}$ is then evident.
 
     \item
@@ -4084,7 +4262,40 @@ up to isomorphism, for all $e\in\set{\cat{E}}$.
     \textand
     v'_2\cdot l' = l\cdot c
   \]
-  \todo{big diagram}
+  % https://q.uiver.app/#q=WzAsMTEsWzAsMCwiZSArIDEgKyAxIl0sWzAsMSwiZSArIDEiXSxbMCwyLCJlIl0sWzAsMywiMSJdLFsxLDEsIlxccGknIl0sWzEsMCwiXFxwaScgKyAxIl0sWzIsMCwiXFxwaSdfMiJdLFsyLDIsIlxccGlfMiJdLFsxLDMsIlxcb3ZlcmxpbmUgZSJdLFsyLDMsIlxcb3ZlcmxpbmUgXFxwaSJdLFsxLDIsIlxccGkiXSxbMiwxLCJJZSIsMV0sWzAsMSwiS2UiLDJdLFszLDEsImoiLDAseyJjdXJ2ZSI6LTN9XSxbNywxMCwiayIsMV0sWzcsMTAsInZfMiIsMSx7ImN1cnZlIjoyfV0sWzcsMTAsInZfMSIsMSx7ImN1cnZlIjotMn1dLFs5LDEwLCJmIiwxLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzcsNiwibCcnIiwxXSxbNSwwLCJhJyArIDEiLDJdLFs1LDEsImInKzEiLDFdLFs0LDEsImEnIiwxXSxbMTAsMiwiYSIsMSx7ImN1cnZlIjoxfV0sWzEwLDIsImIiLDEseyJjdXJ2ZSI6LTF9XSxbNCwyLCJiJyIsMSx7ImxhYmVsX3Bvc2l0aW9uIjo3MH1dLFs2LDQsInYnXzEiLDIseyJjdXJ2ZSI6MX1dLFs2LDQsImsnIiwwLHsiY3VydmUiOi0xfV0sWzYsNSwididfMiIsMl0sWzQsNSwiSVxccGknIiwxXSxbMTAsNCwiSSciLDFdLFs5LDYsIlxcb3ZlcmxpbmUgSSIsMix7ImN1cnZlIjozfV0sWzksOCwiXFxvdmVybGluZSBhIiwyLHsiY3VydmUiOjF9XSxbOSw4LCJcXG92ZXJsaW5lIGIiLDAseyJjdXJ2ZSI6LTF9XSxbOCwyLCJmXzAiLDFdLFs4LDMsImMiXSxbOCw0LCJqJyIsMSx7ImxhYmVsX3Bvc2l0aW9uIjoyMCwiY3VydmUiOi0yfV0sWzgsNiwibCciLDEseyJsYWJlbF9wb3NpdGlvbiI6NjB9XSxbMyw1LCJsIiwxLHsibGFiZWxfcG9zaXRpb24iOjgwfV1d
+  \[\begin{tikzcd}[sep=huge]
+    {e + 1 + 1} & {\pi' + 1} & {\pi'_2} \\
+    {e + 1} & {\pi'} \\
+    e & \pi & {\pi_2} \\
+    1 & {\overline e} & {\overline \pi}
+    \arrow["Ke"', from=1-1, to=2-1]
+    \arrow["{a' + 1}"', from=1-2, to=1-1]
+    \arrow["{b'+1}"{description}, from=1-2, to=2-1]
+    \arrow["{v'_2}"', from=1-3, to=1-2]
+    \arrow["{v'_1}"', curve={height=6pt}, from=1-3, to=2-2]
+    \arrow["{k'}", curve={height=-6pt}, from=1-3, to=2-2]
+    \arrow["{I\pi'}"{description}, from=2-2, to=1-2]
+    \arrow["{a'}"{description}, from=2-2, to=2-1]
+    \arrow["{b'}"{description, pos=0.7}, from=2-2, to=3-1]
+    \arrow["Ie"{description}, from=3-1, to=2-1]
+    \arrow["{I'}"{description}, from=3-2, to=2-2]
+    \arrow["a"{description}, curve={height=6pt}, from=3-2, to=3-1]
+    \arrow["b"{description}, curve={height=-6pt}, from=3-2, to=3-1]
+    \arrow["{l''}"{description}, from=3-3, to=1-3]
+    \arrow["k"{description}, from=3-3, to=3-2]
+    \arrow["{v_2}"{description}, curve={height=12pt}, from=3-3, to=3-2]
+    \arrow["{v_1}"{description}, curve={height=-12pt}, from=3-3, to=3-2]
+    \arrow["l"{description, pos=0.8}, from=4-1, to=1-2]
+    \arrow["j", curve={height=-18pt}, from=4-1, to=2-1]
+    \arrow["{l'}"{description, pos=0.6}, from=4-2, to=1-3]
+    \arrow["{j'}"{description, pos=0.2}, curve={height=-12pt}, from=4-2, to=2-2]
+    \arrow["{f_0}"{description}, from=4-2, to=3-1]
+    \arrow["c", from=4-2, to=4-1]
+    \arrow["{\overline I}"', curve={height=18pt}, from=4-3, to=1-3]
+    \arrow["f"{description, pos=0.3}, from=4-3, to=3-2]
+    \arrow["{\overline a}"', curve={height=6pt}, from=4-3, to=4-2]
+    \arrow["{\overline b}", curve={height=-6pt}, from=4-3, to=4-2]
+  \end{tikzcd}\]
   and $(l',c)$ is a fibre product of $(v'_2,l)$.
   We again note that $(\overline{I},\overline{a})$ and $(I'',v_2)$ are fibre products of $(v'_2,I\pi'\cdot j')$ and $(v'_2,I\pi'\cdot I')$ (respectively), so that, by universality of sums, the three morphisms $I''$, $\overline{I}$, and $l'$ form the system of canonical injections of a sum of $(\pi_2,\overline{\pi},\overline{e})$, and $k'$ is the sum crochet characterised by
   \[
@@ -4299,7 +4510,31 @@ We define the \emph{source \unsure{indicator}} and \emph{target \unsure{indicato
 Let $(v_1,v_2)$ be the canonical fibre product of $(b',f)$, and $(\overline{v}_1,\overline{v}_2)$ the canonical fibre product of $(a',\overline{f})$;
 we define the \emph{central \unsure{indicator}} of $(C,\overline{C})$ to be the \unsure{indicator} of the square $(v_1,j,\overline{v}_1,\overline{j})$.
 If $(u_1,u_2)$ is the canonical fibre product of $(v_1,\overline{v}_1)$, and if $l$ is the central \unsure{indicator}, then the following diagram commutes:
-\todo{diagram}
+% https://q.uiver.app/#q=WzAsOSxbMCwzLCJcXGJ1bGxldCJdLFswLDUsIlxcYnVsbGV0Il0sWzAsMCwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFszLDMsIlxcYnVsbGV0Il0sWzMsNSwiXFxidWxsZXQiXSxbMiwxLCJcXGJ1bGxldCJdLFsxLDQsIlxcYnVsbGV0Il0sWzIsMiwiXFxidWxsZXQiXSxbMCwxLCJiJyIsMl0sWzAsMiwiYSciXSxbMywyLCJcXG92ZXJsaW5lIGYiLDJdLFs0LDMsImEiLDJdLFs0LDUsImIiXSxbNSwxLCJmIl0sWzQsMCwiRiIsMSx7ImxhYmVsX3Bvc2l0aW9uIjo3MH1dLFs2LDMsIlxcb3ZlcmxpbmV7dl8yfSIsMV0sWzYsMCwiXFxvdmVybGluZXt2XzF9IiwxXSxbNywwLCJ2XzEiLDFdLFs3LDUsInZfMiIsMV0sWzQsNywiaiIsMV0sWzQsOCwibCIsMV0sWzgsNiwidV8yIiwxXSxbNCw2LCJcXG92ZXJsaW5lIGkiLDFdLFs4LDcsInVfMSIsMSx7ImxhYmVsX3Bvc2l0aW9uIjozMH1dXQ==
+\[\begin{tikzcd}[row sep=scriptsize]
+	\bullet &&& \bullet \\
+	&& \bullet \\
+	&& \bullet \\
+	\bullet &&& \bullet \\
+	& \bullet \\
+	\bullet &&& \bullet
+	\arrow["{\overline f}"', from=1-4, to=1-1]
+	\arrow["{\overline{v_2}}"{description}, from=2-3, to=1-4]
+	\arrow["{\overline{v_1}}"{description}, from=2-3, to=4-1]
+	\arrow["{u_2}"{description}, from=3-3, to=2-3]
+	\arrow["{u_1}"{description, pos=0.3}, from=3-3, to=5-2]
+	\arrow["{a'}", from=4-1, to=1-1]
+	\arrow["{b'}"', from=4-1, to=6-1]
+	\arrow["a"', from=4-4, to=1-4]
+	\arrow["{\overline i}"{description}, from=4-4, to=2-3]
+	\arrow["l"{description}, from=4-4, to=3-3]
+	\arrow["F"{description, pos=0.7}, from=4-4, to=4-1]
+	\arrow["j"{description}, from=4-4, to=5-2]
+	\arrow["b", from=4-4, to=6-4]
+	\arrow["{v_1}"{description}, from=5-2, to=4-1]
+	\arrow["{v_2}"{description}, from=5-2, to=6-4]
+	\arrow["f", from=6-4, to=6-1]
+\end{tikzcd}\]
 We say that $(C,\overline{C})$ is an \emph{$\cat{R}$-induced} morphism in $\cat{E}^\Gamma$ if $l$ is a morphism in $\cat{R}$.
 
 \begin{itenv}{Proposition~IV.1.25}
@@ -4495,7 +4730,49 @@ We say that $(\mu,m)\colon(\theta,i,k)\to(\theta',i',k')$ is a \emph{morphism of
 
 \oldpage{299}
 We say that $(\sigma,h',h)\colon(\theta,i,k)\to(\theta',i',k')$ is a \emph{bimodule in $\cat{D}$} if $(\theta,i,k)$ and $(\theta',i',k')$ are monads, $\sigma\colon1\to1'$ is a morphism in $\cat{D}$, and $h'\colon\theta'\circ\sigma\to\sigma$ and $h\colon\sigma\circ\theta\to\sigma$ are 2-morphisms that make the following diagrams commute:
-\todo{diagrams}
+\[
+% https://q.uiver.app/#q=WzAsNyxbMCwwLCJcXHRoZXRhJyBcXGNpcmMgKFxcdGhldGEnIFxcY2lyYyBcXHNpZ21hKSJdLFsxLDAsIlxcdGhldGEnIFxcY2lyYyBcXHNpZ21hIl0sWzEsMiwiXFxzaWdtYSJdLFsxLDMsIlxcc2lnbWEiXSxbMCwxLCIoXFx0aGV0YScgXFxjaXJjIFxcdGhldGEnKSBcXGNpcmMgXFxzaWdtYSJdLFswLDIsIlxcdGhldGEnIFxcY2lyYyBcXHNpZ21hIl0sWzAsMywiMScgXFxjaXJjIFxcc2lnbWEiXSxbMywyLCJcXGlkX1xcc2lnbWEiLDJdLFsxLDIsImgnIl0sWzAsMSwiXFx0aGV0YScgXFxjaXJjIGgnIl0sWzQsMCwicyJdLFs0LDUsImsnIFxcY2lyYyBcXHNpZ21hIiwyXSxbNSwyLCJoJyJdLFs2LDUsImknIFxcY2lyYyBcXHNpZ21hIl0sWzMsNiwibCJdXQ==
+\begin{tikzcd}
+	{\theta' \circ (\theta' \circ \sigma)} & {\theta' \circ \sigma} \\
+	{(\theta' \circ \theta') \circ \sigma} \\
+	{\theta' \circ \sigma} & \sigma \\
+	{1' \circ \sigma} & \sigma
+	\arrow["{\theta' \circ h'}", from=1-1, to=1-2]
+	\arrow["{h'}", from=1-2, to=3-2]
+	\arrow["s", from=2-1, to=1-1]
+	\arrow["{k' \circ \sigma}"', from=2-1, to=3-1]
+	\arrow["{h'}", from=3-1, to=3-2]
+	\arrow["{i' \circ \sigma}", from=4-1, to=3-1]
+	\arrow["{\id_\sigma}"', from=4-2, to=3-2]
+	\arrow["l", from=4-2, to=4-1]
+\end{tikzcd}
+\hspace{4em}
+% https://q.uiver.app/#q=WzAsNyxbMCwwLCIoXFxzaWdtYSBcXGNpcmMgXFx0aGV0YSkgXFxjaXJjIFxcdGhldGEiXSxbMSwwLCJcXHNpZ21hIFxcY2lyYyBcXHRoZXRhIl0sWzEsMiwiXFxzaWdtYSJdLFsxLDMsIlxcc2lnbWEiXSxbMCwxLCJcXHNpZ21hIFxcY2lyYyAoXFx0aGV0YSBcXGNpcmMgXFx0aGV0YSkiXSxbMCwyLCJcXHNpZ21hIFxcY2lyYyBcXHRoZXRhIl0sWzAsMywiXFxzaWdtYSBcXGNpcmMgMSJdLFszLDIsIlxcaWRfXFxzaWdtYSIsMl0sWzEsMiwiaCJdLFswLDEsImggXFxjaXJjIFxcdGhldGEiXSxbMCw0LCJzIiwyXSxbNCw1LCJcXHNpZ21hIFxcY2lyYyBrIiwyXSxbNSwyLCJoIl0sWzYsNSwiXFxzaWdtYSBcXGNpcmMgaSJdLFszLDYsInIiXV0=
+\begin{tikzcd}
+	{(\sigma \circ \theta) \circ \theta} & {\sigma \circ \theta} \\
+	{\sigma \circ (\theta \circ \theta)} \\
+	{\sigma \circ \theta} & \sigma \\
+	{\sigma \circ 1} & \sigma
+	\arrow["{h \circ \theta}", from=1-1, to=1-2]
+	\arrow["s"', from=1-1, to=2-1]
+	\arrow["h", from=1-2, to=3-2]
+	\arrow["{\sigma \circ k}"', from=2-1, to=3-1]
+	\arrow["h", from=3-1, to=3-2]
+	\arrow["{\sigma \circ i}", from=4-1, to=3-1]
+	\arrow["{\id_\sigma}"', from=4-2, to=3-2]
+	\arrow["r", from=4-2, to=4-1]
+\end{tikzcd}
+\]
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCIoXFx0aGV0YScgXFxjaXJjIFxcc2lnbWEpIFxcY2lyYyBcXHRoZXRhIl0sWzEsMCwiXFx0aGV0YScgXFxjaXJjIChcXHNpZ21hIFxcY2lyYyBcXHRoZXRhKSJdLFsyLDAsIlxcdGhldGEnIFxcY2lyYyBcXHNpZ21hIl0sWzIsMSwiXFxzaWdtYSJdLFswLDEsIlxcc2lnbWEgXFxjaXJjIFxcdGhldGEiXSxbNCwzLCJoIiwyXSxbMCw0LCJoJyBcXGNpcmMgXFx0aGV0YSIsMl0sWzIsMywiaCciXSxbMSwyLCJcXHRoZXRhJyBcXGNpcmMgaCJdLFswLDEsInMiXV0=
+\[\begin{tikzcd}
+	{(\theta' \circ \sigma) \circ \theta} & {\theta' \circ (\sigma \circ \theta)} & {\theta' \circ \sigma} \\
+	{\sigma \circ \theta} && \sigma
+	\arrow["s", from=1-1, to=1-2]
+	\arrow["{h' \circ \theta}"', from=1-1, to=2-1]
+	\arrow["{\theta' \circ h}", from=1-2, to=1-3]
+	\arrow["{h'}", from=1-3, to=2-3]
+	\arrow["h"', from=2-1, to=2-3]
+\end{tikzcd}\]
 
 \begin{itenv}{Proposition~IV.3.28}
 \label{proposition:iv.3.28}
