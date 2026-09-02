@@ -401,7 +401,7 @@ Recall that, if $\TT$ is a triple on $\cat{E}$, then we denote by $\Alg{\TT}$ th
   \end{aligned}
   \tag{4}
 \]
-and a morphism $f\colon b\to b'$ in $\Alg{\TT}$ is defined by a morphism $f\colon e\to e'$ in $\cat{E}$ such that $b$ is an algebra on $e$, $b'$ is an algebra on $e'$, and
+and a morphism $f\colon b\to b'$ in $\Alg{\TT}$ is defined by a morphism $f\colon e\to e'$ in $\cat{E}$ such that $b$ is a $\TT$-algebra on $e$, $b'$ is a $\TT$-algebra on $e'$, and
 \[
   f\cdot b
   = b'\cdot Tf.
@@ -422,7 +422,7 @@ Recall, finally, that if $\TT$ is the triple induced by an adjoint pair $(F,U)$,
   & \cat{E}
   \end{tikzcd}
 \]
-with the horizontal arrows being furthermore unique whenever they make the diagram obtained by replacing the three functors to $\cat{E}$ with their adjoints commute.
+with the horizontal arrows being furthermore unique whenever they make the diagram obtained by replacing the three forgetful functors to $\cat{E}$ with their adjoints commute.
 The functor $\overline{\cat{E}}\to\Alg{\TT}$ is called the \emph{Eilenberg--Moore functor} associated to $(F,U)$, or simply to $U$.
 When this functor is an isomorphism, we say that $U$ is \emph{tripleable}.
 For example, the Eilenberg--Moore functor $\Kl{\TT}\to\Alg{\TT}$ is fully faithful, but not always injective.
@@ -437,9 +437,9 @@ For example, the Eilenberg--Moore functor $\Kl{\TT}\to\Alg{\TT}$ is fully faithf
 \oldpage{225}
 We are going to replace the morphism $b\colon Te\to e$ of a $\TT$-algebra, where $\TT$ is a triple on a category $\cat{E}$, by a span, i.e.\ by a pair of morphism in $\cat{E}$ with the same target
 \[
-  b\colon\pi\to e
-  \textand
   a\colon\pi\to Te
+  \textand
+  b\colon\pi\to e
 \]
 and define the notion of a $\TT$-category by adding data and conditions to this span, in a way that generalises the notion of a ``relational $\TT$-algebra'' of Barr \cite{Ba}.
 In Chapter~II, we will see that this generalisation is natural;
@@ -453,20 +453,20 @@ In the rest of this chapter, $\cat{E}$ will be a category admitting finite fibre
 
 A \emph{$\TT$-graph} on an object $e\in\set{\cat{E}}$ is a pair $(b,a)$, where
 \[
-  b\colon\pi\to e
-  \textand
   a\colon\pi\to Te
+  \textand
+  b\colon\pi\to e
 \]
 are morphisms in $\cat{E}$.
 
 A \emph{pointed $\TT$-graph} is a triple $(b,a,i)$ such that $(b,a)$ is a $\TT$-graph on $e$, and $i\colon e\to\pi$ is a morphism in $\cat{E}$ such that
 \[
-  b\cdot i = \id_e
+  a\cdot i= Ie
   \textand
-  a\cdot i= Ie.
+  b\cdot i = \id_e.
   \tag{1}
 \]
-We then form a fibre product of $(a,Tb)$:
+We then form a fibre product $(v_1,v_2)$ of $(a,Tb)$:
 \[
   \begin{tikzcd}[sep=huge]
     T\pi
@@ -1551,10 +1551,10 @@ such that conditions~(1) to (8) below are satisfied:
     $l$ and $r$ are two families of natural transformations, each indexed by $\set{\cat{D}}^2$, of the form
     \[
       \begin{aligned}
-        l(e',e)\colon \pr_2
-      & \to \kappa(e,e',e')\cdot\big(\iota(e')\times\id(\Hom_\cat{D}(e,e'))\big)
-      \\r(e',e)\colon \pr_1
-      & \to \kappa(e,e,e')\cdot\big(\id(\Hom_\cat{D}(e,e'))\times\iota(e)\big)
+        l(e,e')\colon \pr_2
+      & \to \kappa(e,e',e')\cdot\big(\iota(e')\times\Hom_\cat{D}(e,e')\big)
+      \\r(e,e')\colon \pr_1
+      & \to \kappa(e,e,e')\cdot\big(\Hom_\cat{D}(e,e')\times\iota(e)\big)
       \end{aligned}
     \]
     where
@@ -1567,7 +1567,7 @@ such that conditions~(1) to (8) below are satisfied:
       \end{aligned}
     \]
     denote the canonical projections of the products.
-    In other words, for each morphism $f\colon e\to e'$ in $\cat{D}$, $r$ and $l$ give ``natural'' 2-morphisms, denoted in shorthand by
+    In other words, for each morphism $f\colon e\to e'$ in $\cat{D}$, $l$ and $r$ give ``natural'' 2-morphisms $l(e, e')(j, 0)$ and $r(e, e')(f, 0)$, denoted in shorthand by
     \[
       l(f)\colon f\to\id_{e'}\circ f
       \textand
@@ -1592,10 +1592,9 @@ such that conditions~(1) to (8) below are satisfied:
     Both these functors have source category $\cat{D}_{34}\times\cat{D}_{23}\times\cat{D}_{12}$ and target category $\cat{D}_{14}$.
     In other words, if $f\colon e_1\to e_2$, $g\colon e_2\to e_3$, and $h\colon e_3\to e_4$ are morphisms in $\cat{D}$, then $s$ gives a ``natural'' 2-morphism, denoted in shorthand by
     \[
-      s(f,g,h)\colon (h\circ g)\circ f
-      \to h\circ(g\circ f).
+      s(f,g,h)\colon h\circ(g\circ f) \to (h\circ g)\circ f.
     \]
-    We also say that $s$ \emph{shifts parentheses to the right}.
+    We also say that $s$ \emph{shifts parentheses to the left}.
 
   \item[(7)]
     Let $\varepsilon\colon\cat{D}_{23}\times\cat{D}_{12}\to\cat{D}_{23}\times\cat{D}_{22}\times\cat{D}_{12}$ be the functor given by the composition of the trivial functor $\cat{D}_{23}\times\cat{D}_{12}\to\cat{D}_{23}\times\mathbf{1}\times\cat{D}_{12}$ and the functor $\cat{D}_{23}\times\iota_2\times\cat{D}_{12}$, using the above notation, as well as setting
@@ -1814,7 +1813,7 @@ We simply note that \hyperref[proposition:ii.3.16]{Proposition~II.3.16} later on
 \subsection{The pseudo-category of \texorpdfstring{$\TT$}{T}-spans}
 \label{sec:II.2}
 
-Let $\cat{E}$ be a category endowed with a triple $\TT$, admitting finite fibre products and endowed with a canonical choice of these fibre products.
+Let $\cat{E}$ be a category endowed with a triple $\TT=(T,I,K)$, admitting finite fibre products and endowed with a canonical choice of these fibre products.
 We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the following way:
 
 \begin{enumerate}
@@ -1851,7 +1850,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     The evident composition law on $\Hom_{\Sp{\TT}}(e,e')$ is denoted by $\cdot$ just as for $\cat{E}$.
 
   \item[(3)]
-    For each $e\in\set{\cat{E}}$, we define a $\TT$-span $(Ie,\id_e)\colon e\to Te$, which we also denote by $\id_e$ if the context clearly specifies that it is a $\TT$-span.
+    For each $e\in\set{\cat{E}}$, we define a $\TT$-span $(Ie,\id_e)\colon e\to e$, which we also denote by $\id_e$ if the context clearly specifies that it is a $\TT$-span.
 
   \item[(4)]
     If $\theta\colon e\to e'$ and $\theta'\colon e'\to e''$ are $\TT$-spans, we define the first composition law of $\Sp{\TT}$ by setting
@@ -3415,7 +3414,7 @@ If $\theta=(b,a)$ is a $\TT$-graph on $e\in\set{\cat{E}}$, then we denote by $\b
 we denote by $\pi_n$ its morphism object.
 
 \begin{itenv}{Scholium}
-  If $\TT$ is a strongly cartesian triple, then the free $\TT$-category $\hat{\theta}=(\hat{b},\hat{a},\hat{i},\hat{k})$ generated by a $\TT$-graph $\theta=(b,a)$ on $e\in\set{\cat{E}}$ has the same object object $e$ as $\theta$.
+  If $\TT$ is a strongly cartesian triple, then the free $\TT$-category $\hat{\theta}=(\hat{b},\hat{a},\hat{i},\hat{k})$ generated by a $\TT$-graph $\theta=(b,a)$ on $e\in\set{\cat{E}}$ has the same objects object $e$ as $\theta$.
   The morphism object $\hat{\pi}$ of $\hat{\theta}$ is the sum of the morphism objects $\pi_n$ for $n\in\mathbb{N}$ that we define by induction: $\pi_0=e$, $\pi_1=\pi$, and $\pi_n$ for $n\geqslant2$ is the source of the fibre product
   \[
     \begin{tikzcd}
