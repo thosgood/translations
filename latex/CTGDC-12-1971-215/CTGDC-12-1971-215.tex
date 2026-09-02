@@ -316,7 +316,9 @@ Similarly, we often write $Fe$, $Ff$, and $Ie$ instead of $F(e)$, $F(f)$, and $I
 As for \emph{limits}, we adopt the following notation: if $e\in\set{\cat{E}}$, and if $\phi\colon \cat{A}\to\cat{E}$ is a functor, then we say that $C\colon e\to\phi$ is a \emph{projective cone} if $C$ is a family of morphisms in $\cat{E}$, called the \emph{canonical projections of $C$}, of the form $C(n)\colon e\to\phi(n)$ for all $n\in\set{\cat{A}}$ such that, for every morphism $x\colon n\to n'$ in $\cat{A}$, we have that $\phi(x)\cdot C(n)=C(n')$.
 We say that the projective cone $C$ is a \emph{projective limit}, or simply that $e$ is the \emph{projective limit of $\phi$}, if, for every projective cone of the form $C'\colon e'\to\phi$, there exists exactly one morphism $f\colon e'\to e$ in $\cat{E}$ such that $C'(n)=C(n)\cdot f$ for all $n\in\set{\cat{A}}$.
 We call $f$ the \emph{crochet}\todo{translator footnote here about ``crochet''} of $C'$ with respect to the limit $C$.
-This terminology is often modified for particular limits: products, fibre products, various diagrams.
+We say that $\cat{E}$ \emph{admits projective $\cat{A}$-limits}, for example, if, for every $\phi\in\set{\cat{E}^\cat{A}}$, there exists a projective limit $C\colon e\to\phi$;
+and if we have chosen such a limit for all $\phi$, we say that $\cat{E}$ is endowed with a \emph{canonical} (or \emph{official}) choice of projective $\cat{A}$-limits. Often such a choice is classical and is made tacitly.
+We use analogous conventions for products, fibre products, etc. \ldots.
 For example, we say that the following commutative diagram
 \oldpage{222}
 \[
@@ -328,11 +330,7 @@ For example, we say that the following commutative diagram
   \end{tikzcd}
 \]
 is a \emph{cartesian square}, or a \emph{fibre product}\footnote{This terminology supposes that we consider the diagram as oriented within the plane.}, or we say that $(v_1,v_2)$, or simply $\pi$, is a \emph{fibre product} of $(f,g)$, if the relation $f\cdot f'=g\cdot g'$ in $\cat{E}$ implies the existence and universality of a crochet $h$ such that $f'=v_1\cdot h$ and $g'=v_2\cdot h$.
-We use analogous conventions for inductive limits, but the expression ``canonical projection''  should be replaced by \emph{canonical injection}.
-We say that $\cat{E}$ \emph{admits projective $\cat{A}$-limits}, for example, if, for every $\phi\in\set{\cat{E}^\cat{A}}$, there exists a projective limit $C\colon e\to\phi$;
-and if we have chosen such a limit for all $\phi$, we say that $\cat{E}$ is endowed with a \emph{canonical} (or \emph{official}) choice of projective $\cat{A}$-limits.
-We use analogous conventions for fibre products, inductive limits, etc. \ldots.
-Often such a choice is classical and is made tacitly.
+We use analogous conventions for inductive limits, but the expression ``canonical projection'' should be replaced by \emph{canonical injection}.
 
 We will not cover the notion of a functor \emph{commuting with limits}, nor that of limits commuting with one another;
 these notions are clear enough.
