@@ -6,8 +6,6 @@ $h1-font-size: 1.65rem;
 $h2-font-size: 1.30rem;
 $h3-font-size: 1.15rem;
 
-// $font-family-sans-serif: serif;
-
 
 /*-- scss:rules --*/
 
@@ -91,6 +89,7 @@ $h3-font-size: 1.15rem;
   }
 }
 
+
 // General things
 
 .content {
@@ -112,13 +111,13 @@ blockquote {
 }
 
 
-// KaTeX
-
-// .katex {
-//   font-size: 0.95em !important;
-// }
-
 // Rendered TikZ images
-.img-fluid {
-  zoom: 175%;
+
+.tikz {
+  display: flex;
+  justify-content: center;
+
+  img {
+    zoom: 170%;
+  }
 }

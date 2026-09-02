@@ -17,17 +17,8 @@ reference-section-title: "Bibliography"
 
 # Filters
 filters:
-  - diagram
-  - _filters.lua
-
-diagram:
-  cache: true
-  cache-dir: ./tikz-cache
-  engine:
-    tikz:
-      execpath: lualatex
-      header-includes:
-        - '\usepackage{tikz-cd}'
+  - _callouts.lua
+  - _tikz.lua
 
 # Formats
 format:

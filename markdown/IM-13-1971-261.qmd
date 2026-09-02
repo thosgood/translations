@@ -94,7 +94,7 @@ In other words, we are looking for a transpose ${}^t\iota$ of $\iota$ with respe
 Since this problem is local on $Y$ (provided that we are guaranteed the local vanishing of $\Ext^i(Y;\RR f_*\KK_X^\bullet,\KK_Y^\bullet)$ for $i<0$), we can suppose that $Y$ is realisable as an analytic subset of an open polydisc $V$ of dimension $p$.
 If we still denote by $f$ the composite of $f$ and an embedding of $Y$ into $V$, it follows from the construction of $\KK_Y^\bullet$ that what we are looking for is an element of $\Ext^p(V;\RR f_*,\KK_X^\bullet,\Omega_V)$.
 We now want to proceed locally on $X$, supposing (being content to shrink $X$) that $X$ is the union of a finite number of opens $X_i$, each of which is embeddable into an open $U_i$ of $\mathbb{C}^n$: we can incorporate each $X_i$ into a commutative diagram
-```{.tikz}
+```tikz
 \begin{tikzcd}
   X_i
     \ar[r,hook,"I"]
