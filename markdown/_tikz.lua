@@ -19,9 +19,7 @@ function make_templates (template_paths)
     file:close ()
 
     local before_marker, after_marker = content:match "^(.*)@CONTENT(.*)$"
-    if
-      before_marker and after_marker
-    then
+    if before_marker and after_marker then
       templates[name] = {
         before_marker,
         after_marker
@@ -39,18 +37,18 @@ local tikz_template_paths = {
 local tikz_templates = make_templates (tikz_template_paths)
 
 local function meta_to_tex (value)
-  if value == nil then return "" end
+  if value == nil then
+    return ""
+  end
 
   local out = {}
   local value_type = pandoc.utils.type (value)
   if value_type == "Blocks" then
-    for _, block in ipairs(value) do
+    for _, block in ipairs (value) do
       if block.t == "RawBlock" then
         local format = block.format or (block.c and block.c[1])
         local text = block.text or (block.c and block.c[2])
-        if
-          format == "tex" and text ~= nil
-        then
+        if format == "tex" and text ~= nil then
           table.insert(out, text)
         end
       end
@@ -140,6 +138,7 @@ local tikz_user_preamble = ""
 local function handle_codeblock(el)
   -- For a PDF we just return the tikz code directly (inside display maths).
   if quarto.doc.isFormat("pdf") then
+    -- TODO: can we remove the blank line after the display maths environment closing tag?
     return pandoc.Math(
       pandoc.DisplayMath,
       el.text

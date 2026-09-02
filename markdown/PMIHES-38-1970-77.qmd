@@ -73,6 +73,27 @@ Saying that $u$ is a quasi-isomorphism is equivalent to saying that its cylinder
 
 We denote by the acronym $\FS$ (resp. $\DFS$) Fréchet--Schwartz spaces (resp. the strong duals of Fréchet--Schwartz spaces [@6]), and by the acronym $\QFS$ (resp. $\QDFS$) the quotients of $\FS$ spaces (resp. of $\DFS$ spaces) (which are, as it were, non-separated $\FS$ or $\DFS$ spaces).
 
-::: {.itenv title="Lemma 1" latex="{Lemma 1}"}
-Let $X^\bullet$ and $Y^\bullet$
+::: {.itenv #lemma-1 title="Lemma 1" latex="{Lemma 1}"}
+Let $X^\bullet$ and $Y^\bullet$ be complexes of Fréchet spaces (with continuous linear differentials) and $u\colon X^\bullet\to Y^\bullet$ a (continuos linear) morphism.
+If $u$ is a quasi-isomorphism (in the purely algebraic sense) then it is a topological quasi-isomorphism, i.e. it induces isomorphisms between the cohomology spaces of $X^\bullet$ and of $Y^\bullet$, where these spaces are endowed with their natural topologies (which are not necessarily separated).
+:::
+
+::: {.proof}
+If $H^i$ and $K^i$ denote the cohomology spaces of $X^\bullet$ and $Y^\bullet$ (respectively), then it suffices to show that $u$ sends the closure of $0$ in $H^i$ to the closure of $0$ in $K^i$.
+Let $M^i$ and $N^i$ be the spaces of cycles of degree $i$ of $X^\bullet$ and $Y^\bullet$ (respectively);
+these are Fréchet spaces;
+thus, the map $d_Y+u$ from $Y^{i-1}\oplus M^i$ to $N^i$, which is surjective, is a homomorphism.
+Since the closed $Y^{i-1}+\overline{d_X(X^{i-1})}$ is saturated with respect to the "projection" $d_Y+u$, its image is closed in $N^i$, and is thus $\overline{d_Y(Y^{i-1})}$, which implies the desired property when we pass to cohomology groups.
+:::
+
+::: {.itenv title="Lemma 1 bis" latex="{Lemma 1 bis}"}
+[Lemma 1](#lemma-1) remains true if we suppose that both $X^\bullet$ and $Y^\bullet$ are not Fréchet complexes, but complexes of $\DFS$ spaces.
+:::
+
+::: {.proof}
+This comes from "permanence" properties of $\DFS$ spaces, and the closed graph theorem for these spaces [@15].
+:::
+
+::: {.itenv #lemma-2 title="Lemma 2" latex="{Lemma 2}"}
+Let
 :::
