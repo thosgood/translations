@@ -29,6 +29,8 @@ bibliography: PMIHES-38-1970-77.bib
 \newcommand{\DFS}{\mathbf{DFS}}
 \newcommand{\QFS}{\mathbf{QFS}}
 \newcommand{\QDFS}{\mathbf{QDFS}}
+\newcommand{\KK}{\mathbf{K}}
+\newcommand{\TT}{\mathbf{T}}
 
 \newcommand{\Hom}{\operatorname{Hom}}
 \newcommand{\shHom}{\underline{\Hom}}
@@ -90,7 +92,7 @@ thus, the map $d_Y+u$ from $Y^{i-1}\oplus M^i$ to $N^i$, which is surjective, is
 Since the closed $Y^{i-1}+\overline{d_X(X^{i-1})}$ is saturated with respect to the "projection" $d_Y+u$, its image is closed in $N^i$, and is thus $\overline{d_Y(Y^{i-1})}$, which implies the desired property when we pass to cohomology groups.
 :::
 
-::: {.itenv title="Lemma 1 bis" latex="{Lemma 1 bis}"}
+::: {.itenv #lemma-1-bis title="Lemma 1 bis" latex="{Lemma 1 bis}"}
 [Lemma 1](#lemma-1) remains true if we suppose that both $X^\bullet$ and $Y^\bullet$ are not Fréchet complexes, but complexes of $\DFS$ spaces.
 :::
 
@@ -207,5 +209,39 @@ The lemma then follows from Theorem B (which implies in particular that all the
 :::
 
 ::: {.itenv #lemma-5-bis title="Lemma 5 bis" latex="{Lemma 5 bis}"}
-If
+If $X$ is a Stein manifold, then $\HH_\cc^i(X;\Omega)$ is zero for $i\neq n$;
+the pairing (3 bis) puts $\Gamma(X;\Omega)$ (endowed with its usual $\FS$ structure) and $\HH_\cc^n(X;\OO)$ (endowed with the $\DFS$ structure obtained by considering it as a quotient of ${\sh{E}'}^{0,n}(X)$) in duality.
 :::
+
+::: {.itenv #lemma-6 title="Lemma 6" latex="{Lemma 6}"}
+If $X$ is a Stein manifold, and if $\sh{F}$ is an $\OO$-module that admits a finite resolution by free $\OO$-modules of finite type, then the groups $\Ext_\cc^i(X;\sh{F},\Omega)$ are zero for $i\neq0$, $\Ext_\cc^n(X;\sh{F},\Omega)$ is endowed with a canonical $\DFS$ structure, and (3) puts it in duality with $\Gamma(X;\sh{F})$.
+:::
+
+::: {.proof}
+This follows from [Lemma 1 bis](#lemma-1-bis) and [Lemma 2](#lemma-2), by induction on the minimum length of the free resolution of $\sh{F}$.
+:::
+
+
+# The dualising complex: statement of the problem. A first duality theorem {#section-3}
+
+\oldpage{81}
+Given a $\sigma$-compact analytic space $X$, of bounded dimension, we want to construct a complex $\KK_X^\bullet$ of $\OO$-modules that is bounded and of coherent cohomology, along with a canonical linear form $\TT_X$ on $\HH_\cc^0(X;\KK_X^\bullet)$ such that the following is true:
+
+::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem }"}
+For every coherent $\OO_X$-module $\sh{F}$ and every integer $p$, there exists on $\HH^p(X;\sh{F})$ a unique $\QFS$ structure and on $\Ext_\cc^{-p}(X;\sh{F},\KK_X^\bullet)$ a unique $\QDFS$ structure such that the form $\TT_X$ induces a perfect pairing between the associated separated spaces.
+Furthermore, the separation of $\HH^p(X;\sh{F})$ is equivalent to that of $\Ext_\cc^{n-p}(X;\sh{F},\KK_X^\bullet)$.
+:::
+
+If $X$ is smooth and of dimension $n$, then $\KK_X^\bullet$ will be a resolution of $T^n\Omega$, and these topologies and this pairing will be exactly those mentioned in the introduction (modulo, obviously, the substitution of $\Ext_\cc^{-p}(X;\sh{F},T^n\Omega)$ for $\Ext_\cc^{n-p}(X;\sh{F},\Omega)$).
+
+In [§5](#section-5) we will construct:
+
+1. For every manifold $V$, a resolution $\KK_V^\bullet$ of $T^{\dim V}\Omega_V$ such that, for every integer $p$ and every $x\in V$, $\KK_{V,x}^p$ is an injective $\OO_{V,x}$-module.
+
+2. For every embedding $f$ of one manifold $V$ into another manifold $W$, a functorial isomorphism of complexes of $\OO_V$-modules
+    $$
+      \overline{f}\colon \KK_V^\bullet \xrightarrow{\approx} \shHom(W;f_*\OO_V,\KK_W^\bullet)
+    $$
+    that is compatible with the traces on $\HH_\cc^{\dim V}(V;\Omega_V)=\HH_\cc^0(V;\KK_V^\bullet)$ and on $\HH_\cc^0(W;\KK_W^\bullet)$.
+
+We will use these complexes $\KK_V^\bullet$ to
