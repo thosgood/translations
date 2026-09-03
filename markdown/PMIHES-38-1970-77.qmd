@@ -1,12 +1,11 @@
 --- 
 title: "The dualising complex and duality theorems in complex analytic geometry"
+subtitle: "Complexe dualisant et théorèmes de dualité en géométrie analytique complexe"
 author: "Jean-Pierre Ramis, Gabriel Ruget"
 date: "1970"
-original: "J.-P. Ramis, G. Ruget. \"Complexe dualisant et théorèmes de dualité en géométrie analytique complexe\". _Publications mathématiques de l'I.H.É.S._ (1970) pp. 77--91. [numdam.org/item?id=PMIHES_1970__38__77_0](http://www.numdam.org/item?id=PMIHES_1970__38__77_0)"
+original: "J.-P. Ramis, G. Ruget. \"Complexe dualisant et théorèmes de dualité en géométrie analytique complexe\". _Publications mathématiques de l'I.H.É.S._ (1970) pp. 77--91. [numdam.org/item?id=PMIHES_1970__38__77_0](http://www.numdam.org/item?id=PMIHES_1970__38__77_0)"
 bibliography: PMIHES-38-1970-77.bib
 ---
-
-{{< include _translator-note.qmd >}}
 
 \providecommand{\scr}[1]{{\mathscr{#1}}}
 \renewcommand{\cal}[1]{{\mathcal{#1}}}
@@ -33,6 +32,8 @@ bibliography: PMIHES-38-1970-77.bib
 \newcommand{\Ext}{\operatorname{Ext}}
 \newcommand{\shExt}{\underline{\Ext}}
 \newcommand{\HyperExt}{\operatorname{HyperExt}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\Ker}{\operatorname{Ker}}
 
 <!-- Content -->
 
@@ -95,5 +96,113 @@ This comes from "permanence" properties of $\DFS$ spaces, and the closed graph t
 :::
 
 ::: {.itenv #lemma-2 title="Lemma 2" latex="{Lemma 2}"}
-Let
+Let $E\xrightarrow{u}F\xrightarrow{v}G$ be a sequence of $\FS$ spaces and continuous linear maps, such that $v\circ u=0$;
+let $E'\xleftarrow{u'}F'\xleftarrow{v'}G'$ be the transpose sequence (with the duals being endowed with the strong topology).
+Then the pairing between $F$ and $F'$ induces a pairing between $\Ker{v}/\overline{\Im{u}}$ and $\Ker{u'}/\overline{\Im{v'}}$, which makes each of these spaces (endowed with their natural topology) the strong dual of one another.
+:::
+
+::: {.proof}
+The natural map from $\Ker{u'}/\overline{\Im{v'}}$ to $(\Ker{v}/\overline{\Im u})'$ is surjective by Hahn--Banach, injective thanks to the semi-reflexivity of $F$, and continuous since $a$ is hypocontinuous with respect to the bounded subsets of $\Ker{v}/\overline{\Im{u}}$ (to see this, it suffices to know how to lift a bounded, i.e. a relatively compact, of $\Ker{v}/\overline{\Im{u}}$ to a bounded of $\Ker{v}$);
+it is thus bicontinuous.
+\oldpage{79}
+Since $\Ker{v}/\overline{\Im{u}}$, being an $\FS$ space, is reflexive, we have thus proven the claim.
+:::
+
+::: {.itenv #lemma-3 title="Lemma 3" latex="{Lemma 3}"}
+Let $X^\bullet$ and $Y^\bullet$ be complexes of $\FS$ spaces (or even of $\DFS$ spaces), and $u\colon X^\bullet\to Y^\bullet$ a quasi-isomorphism.
+Then the transpose $u'$ of $u$ is a quasi-isomorphism.
+:::
+
+::: {.proof}
+The cylinder of $u$ is acyclic;
+it is thus a complex whose differentials are operators with closed image;
+the transpose complex, which is the cylinder of $u'$, also has differentials with closed image, and, by [Lemma 2](#lemma-2), is acyclic.
+:::
+
+Finally, we give a lemma that allows us to cheaply ensure that the topologies on pairs of spaces in duality coincide:
+
+::: {.itenv #lemma-4 title="Lemma 4" latex="{Lemma 4}"}
+Let $P$ and $Q$ be $\QFS$ spaces, and $R$ and $S$ be $\QDFS$ spaces;
+let $a$ be a pairing between $P$ and $R$ that puts the associated separated spaces in duality, and let $b$ be a pairing of the same sort between $Q$ and $S$;
+let $u\colon P\to Q$ and $v\colon S\to R$ be linear maps;
+all such that $u$ and $v$ are transpose to one another with respect to $a$ and $b$.
+Then $u$ and $v$ are continuous.
+:::
+
+::: {.proof}
+Since the closure of $\{0\}$ in $P$ (resp. in $S$) is orthogonal to $R$ (resp. to $Q$), we see that $u\overline{\{0_P\}}\subset\overline{\{0_Q\}}$ and $v\overline{\{0_S\}}\subset\overline{\{0_R\}}$.
+The maps $u$ and $v$ thus induce transpose maps $\hat{u}$ and $\hat{v}$ between the separated spaces associated to $P$, $Q$, $R$, and $S$.
+Since $\hat{u}$ is a transpose, it is weakly continuous, and so its graph is closed;
+it is thus strongly continuous, as is $\hat{v}$, and the continuity of $u$ and $v$ then follow.
+:::
+
+
+# Trace. Elementary duality theorem {#section-2}
+
+We use the notations $X$, $\OO$, and $\Omega$ from the introduction.
+As a topological manifold, $X$ is canonically oriented, and Poincaré duality gives us a canonical linear form on $\HH_\cc^{2n}(X;\mathbb{C})$.
+This form, pre-composed with the composition product of the $\Ext$ (thinking of the $\Ext$ as sheaves of $\mathbb{C}$-spaces), gives a pairing:
+$$
+  \HH_\cc^n(X;\Omega) \times \Ext_\cc^n(X;\Omega,\mathbb{C})
+\to \mathbb{C}.
+$$
+The complex structure of $X$ now gives us (thinking of the $\Ext$ in terms of their Yoneda interpretation) a remarkable $n$-extension of $\Omega$ by $\mathbb{C}$, namely:
+$$
+  0 \to \mathbb{C} \to \OO \xrightarrow{d'} \Omega^1 \xrightarrow{d'} \ldots \xrightarrow{d'} \Omega \to 0
+$$
+where $\Omega^i$ denotes the sheaf of holomorphic differential forms of degree $i$ on $X$.
+The linear form on $\HH_\cc^n(X;\Omega)$ associated to this extension is called the *trace*.
+The trace also arises in the following way: the complex
+$$
+  0 \to {\sh{D}'}^{n,0} \xrightarrow{d''} \ldots \xrightarrow{d''} {\sh{D}'}^{n,n} \to 0
+\tag{1}
+$$
+where ${\sh{D}'}^{i,j}$ denotes the sheaf of germs of differential forms on $X$ of type $(i,j)$ with distribution coefficients, is a fine resolution of $\Omega$.
+The group $\HH_\cc^n(X;\Omega)$ is thus the $(n+1)$-th cohomology group of the complex of $\DFS$ spaces
+\oldpage{80}
+$$
+  0 \to {\sh{E}'}^{n,0}(X) \xrightarrow{d''} \ldots \xrightarrow{d''} {\sh{E}'}^{n,n}(X) \to 0.
+\tag{2}
+$$
+It is thus naturally endowed with the structure of a $\QDFS$ space, and we see that integration on $X$ of forms of type $(n,n)$ with compact support induces a continuous linear form on $\HH_\cc^n(X,\Omega)$, and this form is precisely $(-1)^n$ times the trace.
+(Given a global section $s$ with compact support of ${\sh{D}'}^{n,n}$, we obtain [@4] an $n$-extension $\overline{s}$, in the sense of Yoneda, of $\mathbb{C}$ by $\Omega$. Pre-composed with the $d'$-cohomology complex, this complex gives the extension $(-1)^{n^2}\omega\times\overline{s}\in\Ext_{\cc,\mathbb{C}}^{2n}(X;\mathbb{C},\mathbb{C})$; but we note that this is also "equivalent" to the $2n$-extension of $\mathbb{C}$ by $\mathbb{C}$ associated to the de Rham complex $$0\to\mathbb{C}\to\sh{D}'_0\to\sh{D}'_1\to\ldots\to\sh{D}'_{2n}\to0$$ and to the global section $s$ of $\sh{D}'_{2n}={\sh{D}'}^{n,n}$. Since Poincaré duality is given by integration, our claim is proved.)
+
+Now let $\sh{F}$ be an arbitrary $\OO$-module.
+The composition product of the $\Ext$ (of $\OO$-modules), followed by the trace, gives us the pairings
+$$
+  \HH^p(X;\sh{F}) \times \Ext_\cc^{n-p}(X;\sh{F},\Omega)
+  \to \mathbb{C}
+\tag{3}
+$$
+and
+$$
+  \HH_\cc^p(X;\sh{F}) \times \Ext^{n-p}(X;\sh{F},\Omega)
+  \to \mathbb{C}.
+\tag{3~bis}
+$$
+
+::: {.itenv #lemma-5 title="Lemma 5" latex="{Lemma 5}"}
+If $X$ is a Stein manifold, then $\HH_\cc^i(X;\Omega)$ is zero for $i\neq n$;
+$\HH_\cc^n(X;\Omega)$ is separated, and the pairing (3) puts it in duality with $\Gamma(X;\OO)$ (endowed with its usual $\FS$ structure).
+:::
+
+::: {.proof}
+Denote by $\sh{E}^{i,j}$ the sheaf of germs of differential forms on $X$ of type $(i,j)$ with $C^\infty$ coefficients.
+The complex
+$$
+  0 \to \sh{E}^{0,0} \xrightarrow{d''} \ldots \xrightarrow{d''} \sh{E}^{0,n} \to 0
+\tag{1~bis}
+$$
+is a fine resolution of $\OO$;
+thus the groups $\HH^i(X;\OO)$ are the cohomology groups of the complex of $\FS$ spaces
+$$
+  0 \to \sh{E}^{0,0}(X) \xrightarrow{d''} \ldots \xrightarrow{d''} \sh{E}^{0,n}(X) \to 0
+\tag{2~bis}
+$$
+whereas the $\HH_\cc^i(X;\Omega)$ are the cohomology groups of the transpose complex (2).
+The lemma then follows from Theorem B (which implies in particular that all the differentials of (2) and (2 bis) have closed image) and from [Lemma 2](#lemma-2).
+:::
+
+::: {.itenv #lemma-5-bis title="Lemma 5 bis" latex="{Lemma 5 bis}"}
+If
 :::

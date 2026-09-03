@@ -3,7 +3,7 @@ project:
 
 # Nice things to have
 repo-url: https://github.com/thosgood/translations
-favicon: "_favicon.ico"
+favicon: "_quarto/favicon.ico"
 
 # Page structure
 toc: true
@@ -12,40 +12,42 @@ number-sections: true
 # Citations
 nocite: '@*'
 link-citations: true
-csl: _maths-translations.csl
+csl: _quarto/maths-translations.csl
 reference-section-title: "Bibliography"
 
 # Filters
 filters:
-  - _callouts.lua
-  - _tikz.lua
+  - _quarto/callouts.lua
+  - _quarto/tikz.lua
 
 # Formats
 format:
   html:
+    include-before-body: _quarto/translators-note.html
     ## General
     html-math-method: katex
     embed-resources: true
     date-format: "YYYY"
     lang: en-GB
     css:
-      - _environments.css
+      - _quarto/environments.css
     ## ToC and links
-    other-links:
+    code-links:
       - text: Source files
         href: https://github.com/thosgood/translations
         icon: github
+    other-links:
       - text: More translations
         href: https://thosgood.net/translations
         icon: collection
     ## Visual things
     title-block-banner: true
     theme:
-      light: [flatly, _custom.scss]
-      dark: [darkly, _custom.scss]
+      light: [flatly, _quarto/custom.scss]
+      dark: [darkly, _quarto/custom.scss]
     callout-appearance: simple
   pdf:
-    template: _template.tex
+    template: _quarto/template.tex
     pdf-engine: latexmk
     cite-method: biblatex
     biblatexoptions: [backend=biber]

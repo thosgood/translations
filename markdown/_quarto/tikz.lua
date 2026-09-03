@@ -5,7 +5,7 @@ local system = require 'pandoc.system'
 
 local rootdir = os.getenv "QUARTO_PROJECT_DIR"
 
-local thisfile = io.open(rootdir .. "/_tikz.lua")
+local thisfile = io.open(rootdir .. "/_quarto/tikz.lua")
 local thiscontent = thisfile:read "*all"
 thisfile:close ()
 
@@ -31,7 +31,7 @@ function make_templates (template_paths)
 end
 
 local tikz_template_paths = {
-  tikz = "_tikz_template.tex",
+  tikz = "_quarto/tikz_template.tex",
 }
 
 local tikz_templates = make_templates (tikz_template_paths)

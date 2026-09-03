@@ -48,6 +48,10 @@ $h3-font-size: 1.15rem;
     padding-top: 0.5em;
     border-bottom: none;
   }
+  p.subtitle {
+    font-style: italic;
+    margin-bottom: 0;
+  }
 }
 
 .quarto-title-meta {
@@ -55,7 +59,7 @@ $h3-font-size: 1.15rem;
     margin-top: 0 !important;
   }
   .quarto-title-meta-contents {
-    font-size: $h3-font-size !important;
+    font-size: 1em !important;
   }
 }
 
@@ -66,7 +70,8 @@ $h3-font-size: 1.15rem;
     background: rgba(255, 255, 255, 0.5);
   }
 
-  .quarto-title h1 {
+  .quarto-title h1,
+  .quarto-title p.subtitle {
     color: #222;
   }
 }
@@ -84,7 +89,8 @@ $h3-font-size: 1.15rem;
     background: rgba(000, 000, 000, 0.5);
   }
 
-  .quarto-title h1 {
+  .quarto-title h1,
+  .quarto-title p.subtitle {
     color: #fff;
   }
 }
@@ -111,6 +117,13 @@ blockquote {
 }
 
 
+// KaTeX
+
+.katex {
+  font-size: 1.1em !important;
+}
+
+
 // Rendered TikZ images
 
 .tikz {
@@ -120,4 +133,11 @@ blockquote {
   img {
     zoom: 170%;
   }
+}
+
+
+// Callouts (including Translator's note)
+
+.callout-body blockquote {
+  border-left: none;
 }
