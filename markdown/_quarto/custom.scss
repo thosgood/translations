@@ -9,7 +9,7 @@ $h3-font-size: 1.15rem;
 
 /*-- scss:rules --*/
 
-// Custom title banner
+// Title banner background
 
 #title-block-header {
   --s: 104px; /* control the size*/
@@ -29,6 +29,9 @@ $h3-font-size: 1.15rem;
   background-size: calc(0.866*var(--s)) var(--s);
 }
 
+
+// Title banner
+
 .quarto-title-banner {
   background: none;
   margin-bottom: 0;
@@ -36,14 +39,18 @@ $h3-font-size: 1.15rem;
 }
 
 .quarto-title {
-  padding: 0.5em 1em;
+  padding: 1.5em 1.5em 0 1.5em;
   border-top-left-radius: .375rem;
   border-top-right-radius: .375rem;
 
   h1 {
-    padding-top: 0.5em;
     border-bottom: none;
   }
+
+  hr {
+    opacity: 1;
+  }
+
   .subtitle {
     margin-bottom: 0;
 
@@ -53,9 +60,16 @@ $h3-font-size: 1.15rem;
   }
 }
 
+
+// Light mode / dark mode
+
+/// Light
 .quarto-light {
   .quarto-title {
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--bs-body-bg);
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 
     h1,
     .subtitle,
@@ -65,6 +79,7 @@ $h3-font-size: 1.15rem;
   }
 }
 
+/// Dark
 .quarto-dark {
   #title-block-header {
     --c3: #f6edb3;
@@ -73,18 +88,21 @@ $h3-font-size: 1.15rem;
   }
 
   .quarto-title {
-    background: rgba(000, 000, 000, 0.8);
-    
+    background: var(--bs-body-bg);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
     h1,
     .subtitle,
     .subtitle a {
-      color: #fff;
+      color: white;
     }
   }
 }
 
 
-// General things
+// General typography
 
 .content {
   text-align: justify;
