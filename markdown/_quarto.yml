@@ -23,7 +23,10 @@ filters:
 # Formats
 format:
   html:
+    ## Template content
     include-before-body: _quarto/translators-note.html
+    template-partials:
+      - _quarto/title-block.html
     ## General
     html-math-method: katex
     embed-resources: true

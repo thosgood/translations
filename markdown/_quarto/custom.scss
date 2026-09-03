@@ -35,12 +35,8 @@ $h3-font-size: 1.15rem;
   padding-bottom: 0;
 }
 
-.quarto-title,
-.quarto-title-meta {
-  padding: 0.5em 1em;
-}
-
 .quarto-title {
+  padding: 0.5em 1em;
   border-top-left-radius: .375rem;
   border-top-right-radius: .375rem;
 
@@ -48,31 +44,24 @@ $h3-font-size: 1.15rem;
     padding-top: 0.5em;
     border-bottom: none;
   }
-  p.subtitle {
-    font-style: italic;
+  .subtitle {
     margin-bottom: 0;
-  }
-}
 
-.quarto-title-meta {
-  .quarto-title-meta-heading {
-    margin-top: 0 !important;
-  }
-  .quarto-title-meta-contents {
-    font-size: 1em !important;
+    a {
+      text-decoration: underline !important;
+    }
   }
 }
 
 .quarto-light {
-  .quarto-title,
-  .quarto-title-meta
-   {
-    background: rgba(255, 255, 255, 0.5);
-  }
+  .quarto-title {
+    background: rgba(255, 255, 255, 0.8);
 
-  .quarto-title h1,
-  .quarto-title p.subtitle {
-    color: #222;
+    h1,
+    .subtitle,
+    .subtitle a {
+      color: #222;
+    }
   }
 }
 
@@ -83,15 +72,14 @@ $h3-font-size: 1.15rem;
     --c1: #53b6b2;
   }
 
-  .quarto-title,
-  .quarto-title-meta
-   {
-    background: rgba(000, 000, 000, 0.5);
-  }
-
-  .quarto-title h1,
-  .quarto-title p.subtitle {
-    color: #fff;
+  .quarto-title {
+    background: rgba(000, 000, 000, 0.8);
+    
+    h1,
+    .subtitle,
+    .subtitle a {
+      color: #fff;
+    }
   }
 }
 
@@ -136,8 +124,8 @@ blockquote {
 }
 
 
-// Callouts (including Translator's note)
+// Translator's note
 
-.callout-body blockquote {
-  border-left: none;
+#translators-note {
+  margin-top: 0;
 }
