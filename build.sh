@@ -141,12 +141,11 @@ else
   if ! [ -z "$QUARTO_FILES" ] ; then
     for FILE in $QUARTO_FILES ; do
       FILE_DIR=$(dirname $FILE)
-      FILE_BASE=$(basename $FILE)
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-      printf "Working on $FILE_BASE...\n"
+      printf "Working on $FILE_DIR...\n"
       if quarto render $FILE_DIR >/dev/null ; then
-        printf "\nMoving $FILE_BASE to $WEBSITE_DIR\n"
-        mv _output/$FILE_BASE $WEBSITE_DIR
+        printf "\nMoving $FILE_DIR to $WEBSITE_DIR\n"
+        mv _output/$FILE_DIR $WEBSITE_DIR
       else
         printf "Quarto encountered some sort of error\n"
       fi
