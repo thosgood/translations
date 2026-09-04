@@ -102,9 +102,9 @@ if [ "$ALL_TYPE" != "latex" ] && [ "$ALL_TYPE" != "all" ] ; then
 else
   cd $LATEX_DIR
   printf "Building all .tex files\n"
-  TEX_FILES=$(find $LATEX_DIR -name '*.tex')
-  if ! [ -z "$TEX_FILES" ] ; then
-    for FILE in $TEX_FILES ; do
+  LATEX_FILES=$(find $LATEX_DIR -name '*.tex')
+  if ! [ -z "$LATEX_FILES" ] ; then
+    for FILE in $LATEX_FILES ; do
       FILE_DIR=$(dirname $FILE)
       FILE_BASE=$(basename $FILE)
       FILE_PREFIX=${FILE_BASE%.*}
@@ -137,15 +137,19 @@ if [ "$ALL_TYPE" != "quarto" ] && [ "$ALL_TYPE" != "all" ] ; then
 else
   printf "Building all .qmd files\n"
   cd $QUARTO_DIR
-  # Building all the Quarto files is easy!
-  if quarto render >/dev/null ; then
-    printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-    printf "Finished building .qmd files!\n"
-    printf "Moving built files to $WEBSITE_DIR\n"
-    mv -r _output/* $WEBSITE_DIR
-  else
-    printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-    printf "Quarto encountered some sort of error\n"
-    exit 1
+  QUARTO_FILES=$(find $QUARTO_DIR -name '*.qmd')
+  if ! [ -z "$QUARTO_FILES" ] ; then
+    for FILE in $QUARTO_FILES ; do
+      FILE_DIR=$(dirname $FILE)
+      FILE_BASE=$(basename $FILE)
+      printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+      printf "Working on $FILE_BASE...\n"
+      if quarto render $FILE_DIR >/dev/null ; then
+        printf "\nMoving $FILE_BASE to $WEBSITE_DIR\n"
+        mv _output/$FILE_BASE $WEBSITE_DIR
+      else
+        printf "Quarto encountered some sort of error\n"
+      fi
+    done
   fi
 fi
