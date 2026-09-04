@@ -153,5 +153,5 @@ else
     done
   fi
   printf "Moving all built Quarto files to $WEBSITE_DIR"
-  mv _output/* $WEBSITE_DIR
+  mv $QUARTO_DIR/_output/* $WEBSITE_DIR
 fi
