@@ -30,12 +30,11 @@ shift $((OPTIND-1))
 WEBSITE_DIR=/var/www/translations.thosgood.net/
 
 # The local repository location.
-TRANSLATIONS_DIR=~/translations
+TRANSLATIONS_DIR=/home/tim/translations
 # The local directory for the LaTeX / Quarto files.
-LATEX_DIR_NAME=latex
-LATEX_DIR=$TRANSLATIONS_DIR/$LATEX_DIR_NAME
-QUARTO_DIR_NAME=markdown
-QUARTO_DIR=$TRANSLATIONS_DIR/$QUARTO_DIR_NAME
+LATEX_DIR=$TRANSLATIONS_DIR/latex
+QUARTO_DIR=$TRANSLATIONS_DIR/markdown
+QUARTO_OUTPUT_DIR=$QUARTO_DIR/_output
 
 
 ###############################################
@@ -126,7 +125,8 @@ else
     done
   fi
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-  printf "Finished building .tex files!\n"
+  printf "Finished building all .tex files!\n"
+  printf "All built PDF files moved to $WEBSITE_DIR!\n"
 fi
 
 
@@ -141,21 +141,18 @@ else
   printf "Building all .qmd files\n"
   cd $QUARTO_DIR
   quarto render
-  # QUARTO_FILES=$(find $QUARTO_DIR -name 'index.qmd')
-  # if ! [ -z "$QUARTO_FILES" ] ; then
-  #   for FILE in $QUARTO_FILES ; do
-  #     FILE_DIR=$(dirname $FILE)
-  #     printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-  #     printf "Working on $FILE_DIR...\n"
-  #     if quarto render $FILE_DIR >/dev/null ; then
-  #       printf "$FILE_DIR successfully built!\n"
-  #     else
-  #       printf "\nQuarto encountered some sort of error\n"
-  #     fi
-  #   done
-  # fi
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-  printf "Finished building .qmd files!\n"
+  printf "Finished building all .qmd files!\n"
+  printf "Renaming all PDF files...\n"
+  QUARTO_PDF_FILES=$(find $QUARTO_DIR/_output -name 'index.pdf')
+  if ! [ -z "$QUARTO_PDF_FILES" ] ; then
+    for PDF_FILE in $QUARTO_PDF_FILES ; do
+      PDF_DIR=$(dirname PDF_FILE)
+      CORRECT_NAME=$($PDF_DIR | sed "s/${QUARTO_OUTPUT_DIR//\//\\\/}\///g")
+      mv $PDF_FILE $PDF_DIR/$CORRECT_NAME.pdf
+    done
+  fi
+  printf "All PDF files renamed!"
   mv $QUARTO_DIR/_output/* $WEBSITE_DIR
-  printf "All built Quarto files moved to $WEBSITE_DIR\n"
+  printf "All built HTML and PDF files moved to $WEBSITE_DIR\n"
 fi
