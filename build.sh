@@ -140,19 +140,22 @@ if [ "$ALL_TYPE" != "quarto" ] && [ "$ALL_TYPE" != "all" ] ; then
 else
   printf "Building all .qmd files\n"
   cd $QUARTO_DIR
-  quarto render
-  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-  printf "Finished building all .qmd files!\n"
-  printf "Renaming all PDF files...\n"
-  QUARTO_PDF_FILES=$(find $QUARTO_DIR/_output -name 'index.pdf')
-  if ! [ -z "$QUARTO_PDF_FILES" ] ; then
-    for PDF_FILE in $QUARTO_PDF_FILES ; do
-      PDF_DIR=$(dirname PDF_FILE)
-      CORRECT_NAME=$($PDF_DIR | sed "s/${QUARTO_OUTPUT_DIR//\//\\\/}\///g")
-      mv $PDF_FILE $PDF_DIR/$CORRECT_NAME.pdf
-    done
+  if quarto render >/dev/null ; then
+    printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+    printf "Finished building all .qmd files!\n"
+    printf "Renaming all PDF files...\n"
+    QUARTO_PDF_FILES=$(find $QUARTO_DIR/_output -name 'index.pdf')
+    if ! [ -z "$QUARTO_PDF_FILES" ] ; then
+      for PDF_FILE in $QUARTO_PDF_FILES ; do
+        PDF_DIR=$(dirname PDF_FILE)
+        CORRECT_NAME=$($PDF_DIR | sed "s/${QUARTO_OUTPUT_DIR//\//\\\/}\///g")
+        mv $PDF_FILE $PDF_DIR/$CORRECT_NAME.pdf
+      done
+    fi
+    printf "All PDF files renamed!"
+    mv $QUARTO_DIR/_output/* $WEBSITE_DIR
+    printf "All built HTML and PDF files moved to $WEBSITE_DIR\n"
+  else
+    printf "\nQuarto encountered some sort of error\n"
   fi
-  printf "All PDF files renamed!"
-  mv $QUARTO_DIR/_output/* $WEBSITE_DIR
-  printf "All built HTML and PDF files moved to $WEBSITE_DIR\n"
 fi
