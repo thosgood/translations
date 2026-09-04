@@ -32,8 +32,10 @@ WEBSITE_DIR=/var/www/translations.thosgood.net/
 # The local repository location.
 TRANSLATIONS_DIR=~/translations
 # The local directory for the LaTeX / Quarto files.
-LATEX_DIR=$TRANSLATIONS_DIR/latex
-QUARTO_DIR=$TRANSLATIONS_DIR/markdown
+LATEX_DIR_NAME=latex
+LATEX_DIR=$TRANSLATIONS_DIR/$LATEX_DIR_NAME
+QUARTO_DIR_NAME=markdown
+QUARTO_DIR=$TRANSLATIONS_DIR/$QUARTO_DIR_NAME
 
 
 ###############################################
@@ -100,7 +102,6 @@ printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 if [ "$ALL_TYPE" != "latex" ] && [ "$ALL_TYPE" != "all" ] ; then
   printf "Skipping .tex files\n"
 else
-  cd $LATEX_DIR
   printf "Building all .tex files\n"
   LATEX_FILES=$(find $LATEX_DIR -name '*.tex')
   if ! [ -z "$LATEX_FILES" ] ; then
@@ -115,11 +116,13 @@ else
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $FILE_BASE...\n"
       if Rscript -e "tinytex::pdflatex('$FILE_BASE')" >/dev/null ; then
-        printf "\nMoving $FILE_PREFIX.pdf to $WEBSITE_DIR\n"
+        printf "$FILE_BASE successfully built!"
+        printf "Moving $FILE_PREFIX.pdf to $WEBSITE_DIR\n"
         mv $FILE_PREFIX.pdf $WEBSITE_DIR
       else
         printf "\nTinyTeX encountered some sort of error\n"
       fi
+      cd $TRANSLATIONS_DIR
     done
   fi
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
@@ -136,19 +139,19 @@ if [ "$ALL_TYPE" != "quarto" ] && [ "$ALL_TYPE" != "all" ] ; then
   printf "Skipping .qmd files\n"
 else
   printf "Building all .qmd files\n"
-  cd $QUARTO_DIR
-  QUARTO_FILES=$(find $QUARTO_DIR -name '*.qmd')
+  QUARTO_FILES=$(find $QUARTO_DIR -name 'index.qmd')
   if ! [ -z "$QUARTO_FILES" ] ; then
     for FILE in $QUARTO_FILES ; do
       FILE_DIR=$(dirname $FILE)
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $FILE_DIR...\n"
       if quarto render $FILE_DIR >/dev/null ; then
-        printf "\nMoving $FILE_DIR to $WEBSITE_DIR\n"
-        mv _output/$FILE_DIR $WEBSITE_DIR
+        printf "$FILE_DIR successfully built!\n"
       else
-        printf "Quarto encountered some sort of error\n"
+        printf "\nQuarto encountered some sort of error\n"
       fi
     done
   fi
+  printf "Moving all built Quarto files to $WEBSITE_DIR"
+  mv _output/* $WEBSITE_DIR
 fi
