@@ -20,11 +20,11 @@ QUARTO_OUTPUT_DIR=$QUARTO_DIR/_output
 # Clean-up local directory #
 ############################
 
-printf "Resetting local directory to clean slate...\n"
+printf "Resetting local directory to clean slate...\n\n"
 git reset --hard
 git clean -df
 if git fetch >/dev/null ; then
-  printf "Local directory reset to clean state\n"
+  printf "\nLocal directory reset to clean state\n"
 else
   print "git fetch failed\n"
 fi
@@ -106,7 +106,6 @@ fi
 
 
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-printf "Building .tex files\n"
 if ! [ -z "$LATEX_FILES" ] ; then
   printf "Building .tex files\n"
   for FILE in $LATEX_FILES ; do
@@ -153,6 +152,7 @@ if ! [ -z "$QUARTO_FILES" ] ; then
     if quarto render $FILE_BASE >/dev/null ; then
       printf "$FILE_BASE successfully built!\n"
       mv $QUARTO_OUTPUT_DIR/$FILE_PREFIX/$FILE_PREFIX.html $WEBSITE_DIR
+      printf "$FILE_PREFIX.html moved to $WEBSITE_DIR\n"
       mv $QUARTO_OUTPUT_DIR/$FILE_PREFIX/$FILE_PREFIX.pdf $WEBSITE_DIR
       printf "$FILE_PREFIX.pdf moved to $WEBSITE_DIR\n"
     else
@@ -163,3 +163,5 @@ if ! [ -z "$QUARTO_FILES" ] ; then
 else
   printf "Skipping all .qmd files\n"
 fi
+
+printf "\n\n Finished everything :-)\n"
