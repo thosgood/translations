@@ -65,8 +65,7 @@ fi
 # Clean-up local directory #
 ############################
 
-printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-printf "\nResetting local directory to clean slate...\n"
+printf "Resetting local directory to clean slate...\n"
 git reset --hard
 git clean -df
 if git fetch >/dev/null ; then
@@ -74,14 +73,12 @@ if git fetch >/dev/null ; then
 else
   print "\ngit fetch failed\n"
 fi
-printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 
 
 ############################
 # Pull from git repository #
 ############################
 
-printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 printf "\nUpdating from remote repository...\n"
 if git pull >/dev/null ; then
     printf "\nAll local files now up to date\n"
@@ -91,7 +88,6 @@ else
     printf "\ngit pull failed\n"
     exit 1
 fi
-printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 
 
 #####################
@@ -101,12 +97,10 @@ printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 if [ "$ALL_TYPE" != "latex" ] && [ "$ALL_TYPE" != "all" ] ; then
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   printf "\nSkipping .tex files\n"
-  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 else
   cd $LATEX_DIR
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   printf "\nBuilding all .tex files\n"
-  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   TEX_FILES=$(find $LATEX_DIR -name '*.tex')
   if ! [ -z "$TEX_FILES" ] ; then
     for FILE in $TEX_FILES ; do
@@ -117,7 +111,8 @@ else
       # Replace the placeholder string with the git commit. 
       sed -i 's/serverfalse/servertrue/g' ./$FILE_BASE &&
       sed -i "s/GitCommitHashVariable/$COMMIT_HASH/g" ./$FILE_BASE
-      printf "\nWorking on $FILE_BASE:\n"
+      printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+      printf "\nWorking on $FILE_BASE...\n"
       if Rscript -e "tinytex::pdflatex('$FILE_BASE')" >/dev/null ; then
         printf "\nMoving $FILE_PREFIX.pdf to $WEBSITE_DIR\n"
         mv $FILE_PREFIX.pdf $WEBSITE_DIR
@@ -128,7 +123,6 @@ else
   fi
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   printf "\nFinished building .tex files!\n"
-  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 fi
 
 
@@ -139,11 +133,9 @@ fi
 if [ "$ALL_TYPE" != "quarto" ] && [ "$ALL_TYPE" != "all" ] ; then
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   printf "\nSkipping .qmd files\n"
-  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 else
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   printf "\nBuilding all .qmd files\n"
-  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   cd $QUARTO_DIR
   # Building all the Quarto files is easy!
   if quarto render >/dev/null ; then
@@ -151,7 +143,6 @@ else
     printf "\nFinished building .qmd files!\n"
     printf "\nMoving built files to $WEBSITE_DIR\n"
     mv -r _output/* $WEBSITE_DIR
-    printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
   else
     printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     printf "\nQuarto encountered some sort of error\n"
