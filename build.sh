@@ -143,7 +143,6 @@ printf "All PDF files moved to $WEBSITE_DIR!\n"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 if ! [ -z "$QUARTO_FILES" ] ; then
   printf "Building .qmd files\n"
-  cd $QUARTO_DIR
   for FILE in $QUARTO_FILES ; do
     FILE_DIR=$(dirname $FILE)
     FILE_BASE=$(basename $FILE)
