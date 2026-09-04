@@ -16,6 +16,20 @@ QUARTO_DIR=$TRANSLATIONS_DIR/markdown
 QUARTO_OUTPUT_DIR=$QUARTO_DIR/_output
 
 
+############################
+# Clean-up local directory #
+############################
+
+printf "Resetting local directory to clean slate...\n"
+git reset --hard
+git clean -df
+if git fetch >/dev/null ; then
+  printf "Local directory reset to clean state\n"
+else
+  print "git fetch failed\n"
+fi
+
+
 ###################
 # Parse arguments #
 ###################
@@ -67,20 +81,6 @@ fi
 if [ ! -d "$QUARTO_DIR" ]; then
   prinf "$QUARTO_DIR does not exist\n" &&
   exit 1
-fi
-
-
-############################
-# Clean-up local directory #
-############################
-
-printf "Resetting local directory to clean slate...\n"
-git reset --hard
-git clean -df
-if git fetch >/dev/null ; then
-  printf "Local directory reset to clean state\n"
-else
-  print "git fetch failed\n"
 fi
 
 
