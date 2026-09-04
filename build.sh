@@ -41,7 +41,7 @@ QUARTO_DIR=$TRANSLATIONS_DIR/markdown
 ###############################################
 
 if [[ "$PWD" != "$TRANSLATIONS_DIR" ]] ; then
-  printf "\nThis is not a robustly written script: it needs to be run from $TRANSLATIONS_DIR\n"
+  printf "This is not a robustly written script: it needs to be run from $TRANSLATIONS_DIR\n"
   exit 1
 fi
 
@@ -51,12 +51,12 @@ fi
 ###########################################################
 
 if [ ! -d "$LATEX_DIR" ]; then
-  prinf "\n$LATEX_DIR does not exist\n" &&
+  prinf "$LATEX_DIR does not exist\n" &&
   exit 1
 fi
 
 if [ ! -d "$QUARTO_DIR" ]; then
-  prinf "\n$QUARTO_DIR does not exist\n" &&
+  prinf "$QUARTO_DIR does not exist\n" &&
   exit 1
 fi
 
@@ -69,9 +69,9 @@ printf "Resetting local directory to clean slate...\n"
 git reset --hard
 git clean -df
 if git fetch >/dev/null ; then
-  printf "\nLocal directory reset to clean state\n"
+  printf "Local directory reset to clean state\n"
 else
-  print "\ngit fetch failed\n"
+  print "git fetch failed\n"
 fi
 
 
@@ -79,13 +79,14 @@ fi
 # Pull from git repository #
 ############################
 
-printf "\nUpdating from remote repository...\n"
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+printf "Updating from remote repository...\n"
 if git pull >/dev/null ; then
-    printf "\nAll local files now up to date\n"
+    printf "All local files now up to date\n"
     # Get the git commit hash
     COMMIT_HASH=$(git rev-parse --short HEAD)
 else
-    printf "\ngit pull failed\n"
+    printf "git pull failed\n"
     exit 1
 fi
 
@@ -94,13 +95,13 @@ fi
 # Build LaTeX files #
 #####################
 
+
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 if [ "$ALL_TYPE" != "latex" ] && [ "$ALL_TYPE" != "all" ] ; then
-  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-  printf "\nSkipping .tex files\n"
+  printf "Skipping .tex files\n"
 else
   cd $LATEX_DIR
-  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-  printf "\nBuilding all .tex files\n"
+  printf "Building all .tex files\n"
   TEX_FILES=$(find $LATEX_DIR -name '*.tex')
   if ! [ -z "$TEX_FILES" ] ; then
     for FILE in $TEX_FILES ; do
@@ -112,7 +113,7 @@ else
       sed -i 's/serverfalse/servertrue/g' ./$FILE_BASE &&
       sed -i "s/GitCommitHashVariable/$COMMIT_HASH/g" ./$FILE_BASE
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-      printf "\nWorking on $FILE_BASE...\n"
+      printf "Working on $FILE_BASE...\n"
       if Rscript -e "tinytex::pdflatex('$FILE_BASE')" >/dev/null ; then
         printf "\nMoving $FILE_PREFIX.pdf to $WEBSITE_DIR\n"
         mv $FILE_PREFIX.pdf $WEBSITE_DIR
@@ -122,7 +123,7 @@ else
     done
   fi
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-  printf "\nFinished building .tex files!\n"
+  printf "Finished building .tex files!\n"
 fi
 
 
@@ -130,22 +131,21 @@ fi
 # Build Quarto files #
 ######################
 
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 if [ "$ALL_TYPE" != "quarto" ] && [ "$ALL_TYPE" != "all" ] ; then
-  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-  printf "\nSkipping .qmd files\n"
+  printf "Skipping .qmd files\n"
 else
-  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-  printf "\nBuilding all .qmd files\n"
+  printf "Building all .qmd files\n"
   cd $QUARTO_DIR
   # Building all the Quarto files is easy!
   if quarto render >/dev/null ; then
     printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-    printf "\nFinished building .qmd files!\n"
-    printf "\nMoving built files to $WEBSITE_DIR\n"
+    printf "Finished building .qmd files!\n"
+    printf "Moving built files to $WEBSITE_DIR\n"
     mv -r _output/* $WEBSITE_DIR
   else
     printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-    printf "\nQuarto encountered some sort of error\n"
+    printf "Quarto encountered some sort of error\n"
     exit 1
   fi
 fi
