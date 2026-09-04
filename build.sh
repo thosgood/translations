@@ -4,15 +4,18 @@
 # Parse arguments #
 ###################
 
-usage() { echo "Usage: $0 -a [<quarto|latex|all>]" 1>&2; exit 1; }
+usage() { echo "Usage: $0 \n\n-a [<quarto|latex|all>]\n-d" 1>&2; exit 1; }
 
 while getopts ":a:" o; do
   case "${o}" in
     a)
-      ALL_TYPE=${OPTARG}
-      if [[ "$ALL_TYPE" != "quarto" ]] && [[ "$ALL_TYPE" != "latex" ]] && [[ "$ALL_TYPE" != "all" ]] ; then
+      BUILD_TYPE=${OPTARG}
+      if [[ "$BUILD_TYPE" != "quarto" ]] && [[ "$BUILD_TYPE" != "latex" ]] && [[ "$BUILD_TYPE" != "all" ]] ; then
         usage
       fi
+      ;;
+    d)
+      BUILD_TYPE=diff
       ;;
     *)
       usage
@@ -77,6 +80,26 @@ fi
 
 
 ############################
+# Figure out what to build #
+############################
+
+if [ "$BUILD_TYPE" == "latex" ] ; then
+  LATEX_FILES=$(find $LATEX_DIR -name '*.tex')
+fi
+if [ "$BUILD_TYPE" == "quarto" ] ; then
+  QUARTO_FILES=$(find $QUARTO_DIR -name '*.qmd')
+fi
+if [ "$BUILD_TYPE" == "quarto" ] ; then
+  LATEX_FILES=$(find $LATEX_DIR -name '*.tex')
+  QUARTO_FILES=$(find $QUARTO_DIR -name '*.qmd')
+fi
+if [ "$BUILD_TYPE" == "diff" ] ; then
+  LATEX_FILES=$(git diff --name-only main origin/main | grep -E '.tex' | grep -vE '_template')
+  QUARTO_FILES=$(git diff --name-only main origin/main | grep -E '.qmd')
+fi
+
+
+############################
 # Pull from git repository #
 ############################
 
@@ -98,36 +121,34 @@ fi
 
 
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-if [ "$ALL_TYPE" != "latex" ] && [ "$ALL_TYPE" != "all" ] ; then
-  printf "Skipping .tex files\n"
+printf "Building .tex files\n"
+if ! [ -z "$LATEX_FILES" ] ; then
+  printf "Building .tex files\n"
+  for FILE in $LATEX_FILES ; do
+    FILE_DIR=$(dirname $FILE)
+    FILE_BASE=$(basename $FILE)
+    FILE_PREFIX=${FILE_BASE%.*}
+    # Replace the placeholder string with the git commit. 
+    sed -i 's/serverfalse/servertrue/g' $FILE &&
+    sed -i "s/GitCommitHashVariable/$COMMIT_HASH/g" $FILE
+    printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+    printf "Working on $FILE_BASE...\n"
+    cd $FILE_DIR
+    if Rscript -e "tinytex::pdflatex('$FILE_BASE')" >/dev/null ; then
+      printf "$FILE_BASE successfully built!\n"
+      mv $FILE_PREFIX.pdf $WEBSITE_DIR
+      printf "$FILE_PREFIX.pdf moved to $WEBSITE_DIR\n"
+    else
+      printf "\nTinyTeX encountered some sort of error building $FILE_BASE\n"
+    fi
+    cd $TRANSLATIONS_DIR
+  done
 else
-  printf "Building all .tex files\n"
-  LATEX_FILES=$(find $LATEX_DIR -name '*.tex')
-  if ! [ -z "$LATEX_FILES" ] ; then
-    for FILE in $LATEX_FILES ; do
-      FILE_DIR=$(dirname $FILE)
-      FILE_BASE=$(basename $FILE)
-      FILE_PREFIX=${FILE_BASE%.*}
-      cd $FILE_DIR
-      # Replace the placeholder string with the git commit. 
-      sed -i 's/serverfalse/servertrue/g' ./$FILE_BASE &&
-      sed -i "s/GitCommitHashVariable/$COMMIT_HASH/g" ./$FILE_BASE
-      printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-      printf "Working on $FILE_BASE...\n"
-      if Rscript -e "tinytex::pdflatex('$FILE_BASE')" >/dev/null ; then
-        printf "$FILE_BASE successfully built!\n"
-        mv $FILE_PREFIX.pdf $WEBSITE_DIR
-        printf "$FILE_PREFIX.pdf moved to $WEBSITE_DIR\n"
-      else
-        printf "\nTinyTeX encountered some sort of error\n"
-      fi
-      cd $TRANSLATIONS_DIR
-    done
-  fi
-  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-  printf "Finished building all LaTeX translations!\n"
-  printf "All PDF files moved to $WEBSITE_DIR!\n"
+  printf "Skipping all .tex files\n"
 fi
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+printf "Finished building all LaTeX translations!\n"
+printf "All PDF files moved to $WEBSITE_DIR!\n"
 
 
 ######################
@@ -135,18 +156,26 @@ fi
 ######################
 
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-if [ "$ALL_TYPE" != "quarto" ] && [ "$ALL_TYPE" != "all" ] ; then
-  printf "Skipping .qmd files\n"
-else
-  printf "Building all .qmd files\n"
+if ! [ -z "$QUARTO_FILES" ] ; then
+  printf "Building .qmd files\n"
   cd $QUARTO_DIR
-  if quarto render >/dev/null ; then
+  for FILE in $QUARTO_FILES ; do
+    FILE_DIR=$(dirname $FILE)
+    FILE_BASE=$(basename $FILE)
+    FILE_PREFIX=${FILE_BASE%.*}
     printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-    printf "Finished building all Quarto translations!\n"
-    find $QUARTO_OUTPUT_DIR -name '*.pdf' -exec mv {} $WEBSITE_DIR ';'
-    find $QUARTO_OUTPUT_DIR -name '*.html' -exec mv {} $WEBSITE_DIR ';'
-    printf "All HTML and PDF files moved to $WEBSITE_DIR\n"
-  else
-    printf "\nQuarto encountered some sort of error\n"
-  fi
+    printf "Working on $FILE_BASE...\n"
+    cd $FILE_DIR
+    if quarto render $FILE_BASE >/dev/null ; then
+      printf "$FILE_BASE successfully built!\n"
+      mv $QUARTO_OUTPUT_DIR/$FILE_PREFIX.html $WEBSITE_DIR
+      mv $QUARTO_OUTPUT_DIR/$FILE_PREFIX.pdf $WEBSITE_DIR
+      printf "$FILE_PREFIX.pdf moved to $WEBSITE_DIR\n"
+    else
+      printf "\nQuarto encountered some sort of error building $FILE_BASE\n"
+    fi
+    cd $TRANSLATIONS_DIR
+  done
+else
+  printf "Skipping all .qmd files\n"
 fi
