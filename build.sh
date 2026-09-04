@@ -126,14 +126,14 @@ if ! [ -z "$LATEX_FILES" ] ; then
     else
       printf "\nTinyTeX encountered some sort of error building $FILE_BASE\n"
     fi
+    printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+    printf "Finished building all LaTeX translations!\n"
+    printf "All PDF files moved to $WEBSITE_DIR!\n"
     cd $TRANSLATIONS_DIR
   done
 else
   printf "Skipping all .tex files\n"
 fi
-printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-printf "Finished building all LaTeX translations!\n"
-printf "All PDF files moved to $WEBSITE_DIR!\n"
 
 
 ######################
@@ -152,8 +152,8 @@ if ! [ -z "$QUARTO_FILES" ] ; then
     cd $FILE_DIR
     if quarto render $FILE_BASE >/dev/null ; then
       printf "$FILE_BASE successfully built!\n"
-      mv $QUARTO_OUTPUT_DIR/$FILE_PREFIX.html $WEBSITE_DIR
-      mv $QUARTO_OUTPUT_DIR/$FILE_PREFIX.pdf $WEBSITE_DIR
+      mv $QUARTO_OUTPUT_DIR/$FILE_PREFIX/$FILE_PREFIX.html $WEBSITE_DIR
+      mv $QUARTO_OUTPUT_DIR/$FILE_PREFIX/$FILE_PREFIX.pdf $WEBSITE_DIR
       printf "$FILE_PREFIX.pdf moved to $WEBSITE_DIR\n"
     else
       printf "\nQuarto encountered some sort of error building $FILE_BASE\n"
