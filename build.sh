@@ -116,9 +116,9 @@ else
       printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
       printf "Working on $FILE_BASE...\n"
       if Rscript -e "tinytex::pdflatex('$FILE_BASE')" >/dev/null ; then
-        printf "$FILE_BASE successfully built!"
-        printf "Moving $FILE_PREFIX.pdf to $WEBSITE_DIR\n"
+        printf "$FILE_BASE successfully built!\n"
         mv $FILE_PREFIX.pdf $WEBSITE_DIR
+        printf "$FILE_PREFIX.pdf moved to $WEBSITE_DIR\n"
       else
         printf "\nTinyTeX encountered some sort of error\n"
       fi
@@ -154,6 +154,8 @@ else
   #     fi
   #   done
   # fi
-  printf "\nMoving all built Quarto files to $WEBSITE_DIR"
+  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+  printf "Finished building .qmd files!\n"
   mv $QUARTO_DIR/_output/* $WEBSITE_DIR
+  printf "All built Quarto files moved to $WEBSITE_DIR\n"
 fi
