@@ -244,4 +244,23 @@ In [§5](#section-5) we will construct:
     $$
     that is compatible with the traces on $\HH_\cc^{\dim V}(V;\Omega_V)=\HH_\cc^0(V;\KK_V^\bullet)$ and on $\HH_\cc^0(W;\KK_W^\bullet)$.
 
-We will use these complexes $\KK_V^\bullet$ to
+We will use these complexes $\KK_V^\bullet$ to construct the "dualising complex" $\KK_X^\bullet$ of the analytic space $X$, as follows.
+Let $U$ be an open of $X$, realisable as an analytic subset of a Stein manifold, and let $\xrightarrow{\varphi}V$ be such a realisation.
+The complex $\KK_U^\bullet=\Hom(V;\varphi_*\OO_U,\KK_V^\bullet)$, considered as an $\OO_U$-module, does not depend on the realisation of $U$, as we can see by covering two realisations by a third and using the transitivity of the isomorphisms $\overline{f}$;
+it is clearly endowed with a trace $\TT_U\colon\HH_\cc^0(U;\KK_U^\bullet)\to\mathbb{C}$.
+We obtain $\KK_X^\bullet$ by gluing together the $\KK_U^\bullet$, and the trace $\TT_X$ similarly (any two traces $\TT_U$ and $\TT_{U'}$ do indeed glue together by Mayer--Vietoris and the vanishing of $\HH_\cc^1(U\cap U';\KK_{U\cap U'}^\bullet)$).
+
+::: {.itenv #lemma-7 title="Lemma 7" latex="{Lemma 7}"}
+Let $U$ be an open of $X$, and $\sh{F}$ an $\OO_U$-module.
+Suppose that $U$ admits a realisation $\xrightarrow{\varphi}V$ as an analytic subset of a Stein manifold, and that $\varphi_*\sh{F}$ admits a finite resolution by free $\OO_V$-modules of finite type.
+Then the groups $\Ext_\cc^i(U;\sh{F},\KK_U^\bullet)$ are zero for $i\neq0$, and $\Ext_\cc^0(U;\sh{F},\KK_U^\bullet)$ is endowed with a canonical $\DFS$ structure, and the pairing induced by $\TT_U$ puts it in duality with $\Gamma(U;\sh{F})$.
+:::
+
+::: {.proof}
+Algebraically, the canonical morphism from $\Ext_\cc^i(V;\varphi_*\sh{F},\KK_V^\bullet)$ to $\Ext_\cc^i(U;\sh{F},\KK_U^\bullet)$ is an isomorphism (we can reduce to the local $\shExt$ by a standard spectral sequence argument; the fibres of these $\shExt$ are equal, given the coherence of $\sh{F}$, to the $\Ext$ of the fibres; and there, the isomorphism is evident).
+As for $\Gamma(U;\sh{F})$ and $\Gamma(V;\varphi_*\sh{F})$, they are evidently topologically isomorphism.
+[Lemma 6](#lemma-6) then gives the topology on $\Ext_\cc^0(U;\sh{F},\KK_U^\bullet)$ and proves the desired duality.
+:::
+
+\oldpage{82}
+We can now prove [Theorem 1](#theorem-1).
