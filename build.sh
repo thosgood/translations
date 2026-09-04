@@ -1,29 +1,5 @@
 #!/bin/bash
 
-###################
-# Parse arguments #
-###################
-
-usage() { echo "Usage: $0 \n\n-a [<quarto|latex|all>]\n-d" 1>&2; exit 1; }
-
-while getopts ":a:" o; do
-  case "${o}" in
-    a)
-      BUILD_TYPE=${OPTARG}
-      if [[ "$BUILD_TYPE" != "quarto" ]] && [[ "$BUILD_TYPE" != "latex" ]] && [[ "$BUILD_TYPE" != "all" ]] ; then
-        usage
-      fi
-      ;;
-    d)
-      BUILD_TYPE=diff
-      ;;
-    *)
-      usage
-      ;;
-  esac
-done
-shift $((OPTIND-1))
-
 
 #############
 # Variables #
@@ -38,6 +14,35 @@ TRANSLATIONS_DIR=/home/tim/translations
 LATEX_DIR=$TRANSLATIONS_DIR/latex
 QUARTO_DIR=$TRANSLATIONS_DIR/markdown
 QUARTO_OUTPUT_DIR=$QUARTO_DIR/_output
+
+
+###################
+# Parse arguments #
+###################
+
+usage() { echo "Usage: $0 [-a (all) | -l (latex) | -q (quarto) | -d (diff) ]" 1>&2; exit 1; }
+
+while getopts "alqd" opt; do
+  case "$opt" in 
+    a)
+      LATEX_FILES=$(find $LATEX_DIR -name '*.tex')
+      QUARTO_FILES=$(find $QUARTO_DIR -name '*.qmd')
+      ;;
+    l)
+      LATEX_FILES=$(find $LATEX_DIR -name '*.tex')
+      ;;
+    q)
+      QUARTO_FILES=$(find $QUARTO_DIR -name '*.qmd')
+      ;;
+    d)
+      LATEX_FILES=$(git diff --name-only main origin/main | grep -E '.tex' | grep -vE '_template')
+      QUARTO_FILES=$(git diff --name-only main origin/main | grep -E '.qmd')
+      ;;
+    *)
+      usage
+      ;;
+  esac
+done
 
 
 ###############################################
@@ -76,26 +81,6 @@ if git fetch >/dev/null ; then
   printf "Local directory reset to clean state\n"
 else
   print "git fetch failed\n"
-fi
-
-
-############################
-# Figure out what to build #
-############################
-
-if [ "$BUILD_TYPE" == "latex" ] ; then
-  LATEX_FILES=$(find $LATEX_DIR -name '*.tex')
-fi
-if [ "$BUILD_TYPE" == "quarto" ] ; then
-  QUARTO_FILES=$(find $QUARTO_DIR -name '*.qmd')
-fi
-if [ "$BUILD_TYPE" == "quarto" ] ; then
-  LATEX_FILES=$(find $LATEX_DIR -name '*.tex')
-  QUARTO_FILES=$(find $QUARTO_DIR -name '*.qmd')
-fi
-if [ "$BUILD_TYPE" == "diff" ] ; then
-  LATEX_FILES=$(git diff --name-only main origin/main | grep -E '.tex' | grep -vE '_template')
-  QUARTO_FILES=$(git diff --name-only main origin/main | grep -E '.qmd')
 fi
 
 
