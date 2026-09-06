@@ -78,7 +78,7 @@ in this case, we also say that $\xrightarrow{u}Y^\bullet$ is a *resolution* of $
 We define the *cylinder* of $u$ to be the complex $T(X^\bullet)\oplus Y^\bullet$ endowed with the differential $\left(\begin{smallmatrix}T(d_X)&0\\T(u)&d_Y\end{smallmatrix}\right)$.
 Saying that $u$ is a quasi-isomorphism is equivalent to saying that its cylinder is zero.
 
-We denote by the acronym $\FS$ (resp. $\DFS$) Fréchet--Schwartz spaces (resp. the strong duals of Fréchet--Schwartz spaces [@6]), and by the acronym $\QFS$ (resp. $\QDFS$) the quotients of $\FS$ spaces (resp. of $\DFS$ spaces) (which are, as it were, non-separated $\FS$ or $\DFS$ spaces).
+We denote by the acronym $\FS$ (resp. $\DFS$) Fréchet--Schwartz spaces (resp. the strong duals of Fréchet--Schwartz spaces [@6]), and by the acronym $\QFS$ (resp. $\QDFS$) the quotients of $\FS$-spaces (resp. of $\DFS$-spaces) (which are, as it were, non-separated $\FS$- or $\DFS$-spaces).
 
 ::: {.itenv #lemma-1 title="Lemma 1" latex="{Lemma 1}"}
 Let $X^\bullet$ and $Y^\bullet$ be complexes of Fréchet spaces (with continuous linear differentials) and $u\colon X^\bullet\to Y^\bullet$ a (continuos linear) morphism.
@@ -94,15 +94,15 @@ Since the closed $Y^{i-1}+\overline{d_X(X^{i-1})}$ is saturated with respect to 
 :::
 
 ::: {.itenv #lemma-1-bis title="Lemma 1 bis" latex="{Lemma 1 bis}"}
-[Lemma 1](#lemma-1) remains true if we suppose that both $X^\bullet$ and $Y^\bullet$ are not Fréchet complexes, but complexes of $\DFS$ spaces.
+[Lemma 1](#lemma-1) remains true if we suppose that both $X^\bullet$ and $Y^\bullet$ are not Fréchet complexes, but complexes of $\DFS$-spaces.
 :::
 
 ::: {.proof}
-This comes from "permanence" properties of $\DFS$ spaces, and the closed graph theorem for these spaces [@15].
+This comes from "permanence" properties of $\DFS$-spaces, and the closed-graph theorem for these spaces [@15].
 :::
 
 ::: {.itenv #lemma-2 title="Lemma 2" latex="{Lemma 2}"}
-Let $E\xrightarrow{u}F\xrightarrow{v}G$ be a sequence of $\FS$ spaces and continuous linear maps, such that $v\circ u=0$;
+Let $E\xrightarrow{u}F\xrightarrow{v}G$ be a sequence of $\FS$-spaces and continuous linear maps, such that $v\circ u=0$;
 let $E'\xleftarrow{u'}F'\xleftarrow{v'}G'$ be the transpose sequence (with the duals being endowed with the strong topology).
 Then the pairing between $F$ and $F'$ induces a pairing between $\Ker{v}/\overline{\Im{u}}$ and $\Ker{u'}/\overline{\Im{v'}}$, which makes each of these spaces (endowed with their natural topology) the strong dual of one another.
 :::
@@ -111,11 +111,11 @@ Then the pairing between $F$ and $F'$ induces a pairing between $\Ker{v}/\overli
 The natural map from $\Ker{u'}/\overline{\Im{v'}}$ to $(\Ker{v}/\overline{\Im u})'$ is surjective by Hahn--Banach, injective thanks to the semi-reflexivity of $F$, and continuous since $a$ is hypocontinuous with respect to the bounded subsets of $\Ker{v}/\overline{\Im{u}}$ (to see this, it suffices to know how to lift a bounded, i.e. a relatively compact, of $\Ker{v}/\overline{\Im{u}}$ to a bounded of $\Ker{v}$);
 it is thus bicontinuous.
 \oldpage{79}
-Since $\Ker{v}/\overline{\Im{u}}$, being an $\FS$ space, is reflexive, we have thus proven the claim.
+Since $\Ker{v}/\overline{\Im{u}}$, being an $\FS$-space, is reflexive, we have thus proven the claim.
 :::
 
 ::: {.itenv #lemma-3 title="Lemma 3" latex="{Lemma 3}"}
-Let $X^\bullet$ and $Y^\bullet$ be complexes of $\FS$ spaces (or even of $\DFS$ spaces), and $u\colon X^\bullet\to Y^\bullet$ a quasi-isomorphism.
+Let $X^\bullet$ and $Y^\bullet$ be complexes of $\FS$-spaces (or even of $\DFS$-spaces), and $u\colon X^\bullet\to Y^\bullet$ a quasi-isomorphism.
 Then the transpose $u'$ of $u$ is a quasi-isomorphism.
 :::
 
@@ -128,7 +128,7 @@ the transpose complex, which is the cylinder of $u'$, also has differentials wit
 Finally, we give a lemma that allows us to cheaply ensure that the topologies on pairs of spaces in duality coincide:
 
 ::: {.itenv #lemma-4 title="Lemma 4" latex="{Lemma 4}"}
-Let $P$ and $Q$ be $\QFS$ spaces, and $R$ and $S$ be $\QDFS$ spaces;
+Let $P$ and $Q$ be $\QFS$-spaces, and $R$ and $S$ be $\QDFS$-spaces;
 let $a$ be a pairing between $P$ and $R$ that puts the associated separated spaces in duality, and let $b$ be a pairing of the same sort between $Q$ and $S$;
 let $u\colon P\to Q$ and $v\colon S\to R$ be linear maps;
 all such that $u$ and $v$ are transpose to one another with respect to $a$ and $b$.
@@ -164,13 +164,13 @@ $$
 \tag{1}
 $$
 where ${\sh{D}'}^{i,j}$ denotes the sheaf of germs of differential forms on $X$ of type $(i,j)$ with distribution coefficients, is a fine resolution of $\Omega$.
-The group $\HH_\cc^n(X;\Omega)$ is thus the $(n+1)$-th cohomology group of the complex of $\DFS$ spaces
+The group $\HH_\cc^n(X;\Omega)$ is thus the $(n+1)$-th cohomology group of the complex of $\DFS$-spaces
 \oldpage{80}
 $$
   0 \to {\sh{E}'}^{n,0}(X) \xrightarrow{d''} \ldots \xrightarrow{d''} {\sh{E}'}^{n,n}(X) \to 0.
 \tag{2}
 $$
-It is thus naturally endowed with the structure of a $\QDFS$ space, and we see that integration on $X$ of forms of type $(n,n)$ with compact support induces a continuous linear form on $\HH_\cc^n(X,\Omega)$, and this form is precisely $(-1)^n$ times the trace.
+It is thus naturally endowed with the structure of a $\QDFS$-space, and we see that integration on $X$ of forms of type $(n,n)$ with compact support induces a continuous linear form on $\HH_\cc^n(X,\Omega)$, and this form is precisely $(-1)^n$ times the trace.
 (Given a global section $s$ with compact support of ${\sh{D}'}^{n,n}$, we obtain [@4] an $n$-extension $\overline{s}$, in the sense of Yoneda, of $\mathbb{C}$ by $\Omega$. Pre-composed with the $d'$-cohomology complex, this complex gives the extension $(-1)^{n^2}\omega\times\overline{s}\in\Ext_{\cc,\mathbb{C}}^{2n}(X;\mathbb{C},\mathbb{C})$; but we note that this is also "equivalent" to the $2n$-extension of $\mathbb{C}$ by $\mathbb{C}$ associated to the de Rham complex $$0\to\mathbb{C}\to\sh{D}'_0\to\sh{D}'_1\to\ldots\to\sh{D}'_{2n}\to0$$ and to the global section $s$ of $\sh{D}'_{2n}={\sh{D}'}^{n,n}$. Since Poincaré duality is given by integration, our claim is proved.)
 
 Now let $\sh{F}$ be an arbitrary $\OO$-module.
@@ -200,7 +200,7 @@ $$
 \tag{1~bis}
 $$
 is a fine resolution of $\OO$;
-thus the groups $\HH^i(X;\OO)$ are the cohomology groups of the complex of $\FS$ spaces
+thus the groups $\HH^i(X;\OO)$ are the cohomology groups of the complex of $\FS$-spaces
 $$
   0 \to \sh{E}^{0,0}(X) \xrightarrow{d''} \ldots \xrightarrow{d''} \sh{E}^{0,n}(X) \to 0
 \tag{2~bis}
@@ -272,7 +272,7 @@ We can find a family of "charts" $\varphi_i\colon\Theta_i\to\mathbb{C}^{N_i}$ an
 2. The $U_i$ form a locally finite (Stein) open cover of $X$, which we denote by $\frak{U}$.
 
 We can then apply [Lemma 7](#lemma-7) not only to the $U_i$, but also to the finite intersections of the $U_i$.
-Leray's theorem, combined with Theorem B, tell us that the groups $\HH^i(X;\sh{F})$ are the cohomology groups of the complex of $\FS$ spaces
+Leray's theorem, combined with Theorem B, tell us that the groups $\HH^i(X;\sh{F})$ are the cohomology groups of the complex of $\FS$-spaces
 $$
   \CC^\bullet(\frak{U},\HH^0(\frak{U};\sh{F})).
 \tag{4}
@@ -312,5 +312,65 @@ Here too, by [Lemma 4](#lemma-4), the pair of topologies on $\HH_\cc^p(X;\sh{F}
 We start with a lemma analogous to [Lemma 5](#lemma-5).
 
 ::: {.itenv #lemma-8 title="Lemma 8" latex="{Lemma 8}"}
-Let
+Let $X$ be a Stein manifold of dimension $n$, and $K$ a Stein compact of $X$.
+Then the groups $\HH_K^i(X;\Omega)$ are zero for $i\neq n$ and $\HH_K^n(X;\Omega)$ is endowed with the structure of an $\FS$-space, $\OO(K)$ has the structure of a $\DFS$-space, and the trace induces a perfect pairing between these spaces (topologised as such).
 :::
+
+::: {.proof}
+Consider the case $n\geqslant2$;
+the vanishing of the $\HH^i(K;\OO)$ for $1\leqslant i\leqslant n$, combined with the exact sequence
+$$
+  \ldots
+  \leftarrow \HH_\cc^{n-p+1}(X\setminus K;\OO)
+  \leftarrow \HH^{n-1}(K;\OO)
+  \leftarrow \HH_\cc^{n-p}(X;\OO)
+  \leftarrow \HH_\cc^{n-p}(X\setminus K;\OO)
+  \leftarrow \ldots
+$$
+implies the vanishing of the $\HH_\cc^i(X\setminus K;\OO)$ for $2\leqslant i\leqslant n-1$, and we see that the natural morphisms from $\OO(K)$ to $\HH_\cc^1(X\setminus K;\OO)$ and from $\HH_\cc^n(X\setminus K;\OO)$ to $\HH_\cc^n(X;\OO)$ are (algebraic) isomorphisms.
+Since the latter morphism is continuous, with separated target, its source is also separated, and it is a topological isomorphism.
+Also, $\HH_\cc^1(X\setminus K;\OO)$ is separated (this comes from the principle of analytic continuation, which ensures the $(n-1)$-convexity of $X\setminus K$; this also corresponds to the vanishing [@9] of $\HH^n(X\setminus K;\Omega)$), and thus $\OO(K)$ finds itself endowed with a $\DFS$ topology[^1].
+Now consider the exact sequence
+$$
+  \ldots
+  \to \HH^{p-1}(X\setminus K;\Omega)
+  \to \HH_K^p(X;\Omega)
+  \to \HH^p(X;\Omega)
+  \to \HH^p(X\setminus K;\Omega)
+  \to \ldots
+$$
+By duality, we know that the natural map from $\Gamma(X;\Omega)$ to $\Gamma(X\setminus K;\Omega)$ is an isomorphism, whence the vanishing of $\HH_K^i(X;\Omega)$ for $i=0,1$;
+for $2\leqslant i\leqslant n-1$, we use the vanishing of $\HH^i(X\setminus K;\Omega)$ for $1\leqslant i\leqslant n-2$, which also comes from the duality ($\HH^1(X\setminus K;\Omega)$ is separated because $\HH_\cc^n(X\setminus K;\OO)$ is).
+Finally, $\HH^{n-1}(X\setminus K;\Omega)$, which is algebraically isomorphic to $\HH_K^n(X;\Omega)$, is separated and in duality with $\HH_\cc^1(X\setminus K;\OO)$.
+The case $n=1$ is completely the same.
+:::
+
+[^1]: By using the duality and the closed-graph theorem, we can show, if $U$ is a Stein neighbourhood of $K$, the continuity of the natural map from $\OO(U)$ to $\OO(K)$ thus topologised; we thus deduce that our $\DFS$ topology on $\OO(K)$ coincides with the usual $\scr{LF}$ topology.
+
+We state, without proof, the analogue of [Lemma 7](#lemma-7).
+
+::: {.itenv #lemma-9 title="Lemma 9" latex="{Lemma 9}"}
+Under the hypothesis of [Lemma 7](#lemma-7), let $L$ be a Stein compact of $V$, with inverse image $\varphi^{-1}(L)=K$.
+Then the groups $\Ext_K^i(X;\sh{F},\KK_X^\bullet)$ are zero for $i\neq0$ and $\Ext_K^0(X;\sh{F},\KK_X^\bullet)$ is endowed with the structure of an $\FS$-space, $\HH^0(K;\sh{F})$ has the structure of a $\DFS$-space, and the trace puts these two structures in duality.
+:::
+
+To prove [Theorem 2](#theorem-2), we take a "cover" of $X$ as we did for the proof of [Theorem 1](#theorem-1);
+\oldpage{84}
+we further take, in each $V_i$, a compact polydisc $L_i$ such that the compacts $K_i=\varphi_i^{-1}(L_i)$ form a locally finite cover $\frak{R}$ of $X$.
+Consider the two complexes that are in duality:
+$$
+  \CC_\cc^\bullet(\frak{R},\HH^0(\frak{R};\sh{F}))
+\tag{8}
+$$
+and
+$$
+  \CC_\bullet(\frak{R},\Ext_\frak{R}^0(X;\sh{F},\KK_X^\bullet))
+\tag{8~bis}
+$$
+where the former is a complex of $\DFS$-spaces and the latter of $\FS$-spaces.
+Since the cohomology groups of (8) are the $\HH_\cc^i(X;\sh{F})$, and those of (8 bis) are the $\Ext^{-i}(X;\sh{F},\KK_X^\bullet)$, [Lemma 2](#lemma-2) implies [Theorem 2](#theorem-2) (the last claim of the theorem can be proven in the same way as the analogous claim of [Theorem 1](#theorem-1)).
+
+
+# Construction of the dualising complex {#section-5}
+
+We
