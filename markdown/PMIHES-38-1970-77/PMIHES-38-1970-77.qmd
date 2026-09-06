@@ -301,5 +301,16 @@ The last claim of the theorem comes from the fact that, for the spaces in questi
 # A second duality theorem {#section-4}
 
 ::: {.itenv #theorem-2 title="Theorem 2" latex="{Theorem 2}"}
+Let $X$ be a $\sigma$-compact analytic space of bounded dimension, $\KK_X^\bullet$ its dualising complex, and $\sh{F}$ a coherent analytic sheaf on $X$.
+Then, for every integer $p$, the spaces $\HH_\cc^p(X;\sh{F})$ and $\Ext^{-p}(X;\sh{F},\KK_X^\bullet)$ are endowed with canonical topologies ($\QDFS$ and $\QFS$, respectively), and the trace $\TT_X$ induces a pairing between these spaces that makes the associated separated space of one the strong dual of the associated separated space of the other.
+\oldpage{83}
+Furthermore, the separation of $\HH_\cc^p(X;\sh{F})$ is equivalent to that of $\Ext^{1-p}(X;\sh{F},\KK_X^\bullet)$.
+:::
+
+Here too, by [Lemma 4](#lemma-4), the pair of topologies on $\HH_\cc^p(X;\sh{F})$ and $\Ext^{-p}(X;\sh{F},\KK_X^\bullet)$ is the only pair of $(\QDFS,\QFS)$ topologies such that that $\TT_X$ puts the associated separated spaces in duality.
+
+We start with a lemma analogous to [Lemma 5](#lemma-5).
+
+::: {.itenv #lemma-8 title="Lemma 8" latex="{Lemma 8}"}
 Let
 :::

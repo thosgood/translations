@@ -1,0 +1,653 @@
+\documentclass[british]{article}
+
+\usepackage[margin=1.5in]{geometry}
+
+\title{The dualising complex and duality theorems in complex analytic
+geometry}
+\author{Jean-Pierre Ramis, Gabriel Ruget}
+\date{1970}
+
+% Standard
+\usepackage{amssymb,amsmath,amscd}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\usepackage{booktabs}
+
+
+% Bibliography
+\usepackage[backend=biber,maxnames=99,maxalphanames=4]{biblatex}
+\addbibresource{PMIHES-38-1970-77.bib}
+
+
+% Colours
+\usepackage{xcolor}
+
+
+% Fonts
+\usepackage{mathrsfs}
+\usepackage{fouriernc}
+
+
+% Things for Quarto/pandoc
+\usepackage{calc,array}
+\usepackage{longtable}
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\usepackage{float}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+% Header and footer
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{datetime2}
+\pagestyle{fancy}
+\fancypagestyle{plain}{}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\small\thepage\ of \pageref*{LastPage}}
+\lfoot{\footnotesize Build date: \today}
+
+
+% Theorem environments
+\usepackage{amsthm}
+\newenvironment{itenv}[1]
+  {\phantomsection\par\smallskip\noindent\textbf{#1.}\itshape}
+  {\par\smallskip}
+\newenvironment{rmenv}[1]
+  {\phantomsection\par\smallskip\noindent\textbf{#1.}\rmfamily}
+  {\par\smallskip}
+
+
+% Shortcuts
+\newcommand{\oldpage}[1]{\marginpar{\footnotesize$\Big\vert$ \textit{p.~#1}}}
+
+
+% Hyperref
+\usepackage{hyperref}
+\hypersetup{colorlinks,linkcolor={purple!50!black},citecolor={purple!50!black},urlcolor={purple!80!black}}
+
+
+\renewcommand{\abstractname}{Translator's note}
+
+%% Document %%
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\setcounter{footnote}{0}
+
+\begin{abstract}
+  This document is a translation by \href{https://thosgood.net}{Tim Hosgood} of the following:
+  \begin{quote}
+    J.-P.~Ramis, G.~Ruget. ``Complexe dualisant et théorèmes de dualité
+    en géométrie analytique complexe''. \emph{Publications mathématiques
+    de l'I.H.É.S.} (1970) pp.~77--91.
+    \href{http://www.numdam.org/item?id=PMIHES_1970__38__77_0}{numdam.org/item?id=PMIHES\_1970\_\_38\_\_77\_0}
+  \end{quote}
+  For more information see \href{https://thosgood.net/translations}{thosgood.net/translations}.
+\end{abstract}
+
+\tableofcontents
+\bigskip
+
+%% Content %%
+
+\providecommand{\scr}[1]{{\mathscr{#1}}}
+\renewcommand{\cal}[1]{{\mathcal{#1}}}
+\renewcommand{\frak}[1]{{\mathfrak{#1}}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\newcommand{\sh}[1]{\scr{#1}}
+\newcommand{\cat}[1]{\mathbf{#1}}
+
+\newcommand{\OO}{\sh{O}}
+
+\newcommand{\CC}{\mathrm{C}}
+\newcommand{\HH}{\mathrm{H}}
+\newcommand{\cc}{\mathrm{c}}
+\newcommand{\FS}{\mathbf{FS}}
+\newcommand{\DFS}{\mathbf{DFS}}
+\newcommand{\QFS}{\mathbf{QFS}}
+\newcommand{\QDFS}{\mathbf{QDFS}}
+\newcommand{\KK}{\mathbf{K}}
+\newcommand{\TT}{\mathbf{T}}
+
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\shHom}{\underline{\Hom}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\shExt}{\underline{\Ext}}
+\newcommand{\HyperExt}{\operatorname{HyperExt}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\Ker}{\operatorname{Ker}}
+
+\oldpage{77}
+
+Let \(X\) be a \(\sigma\)-compact complex analytic manifold of
+dimension~\(n\); we write \({\mathscr{O}}\) to mean the sheaf of germs
+of holomorphic functions on \(X\), and \(\Omega\) to mean the sheaf of
+germs of holomorphic differential forms of degree~\(n\) on \(X\). The
+correspondence that, to a locally free \({\mathscr{O}}\)-module
+\({\mathscr{F}}\), associates
+\(\underline{\operatorname{Hom}}(X;{\mathscr{F}},\Omega)\), is
+involutive. In \autocite{11}, Serre gives, for every integer~\(p\) and
+every locally free \({\mathscr{O}}\)-module \({\mathscr{F}}\), a
+(Fréchet quotient) topology on \(\mathrm{H}^p(X;{\mathscr{F}})\) along
+with a pairing \[
+  \mathrm{H}^p(X;{\mathscr{F}}) \times \mathrm{H}_\mathrm{c}^{n-p}(X;\underline{\operatorname{Hom}}(X;{\mathscr{F}},\Omega))
+  \to \mathbb{C}
+\] (where the subscript \(\mathrm{c}\) denotes the family of compacts of
+\(X\)) which, whenever the groups \(\mathrm{H}^p(X;{\mathscr{F}})\) and
+\(\mathrm{H}^{p+1}(X;{\mathscr{F}})\) are separated, makes the
+(non-topologised) vector space
+\(\mathrm{H}_\mathrm{c}^{n-p}(X;\underline{\operatorname{Hom}}(X;{\mathscr{F}},\Omega))\)
+the topological dual of \(\mathrm{H}^p(X;{\mathscr{F}})\).
+
+We could also mention the pairing \[
+  \mathrm{H}_\mathrm{c}^p(X;{\mathscr{F}}) \times \mathrm{H}^{n-p}(X;\underline{\operatorname{Hom}}(X;{\mathscr{F}},\Omega))
+  \to\mathbb{C}.
+\]
+
+Up to replacing
+\(\mathrm{H}_\mathrm{c}^{n-p}(X;\underline{\operatorname{Hom}}(X;{\mathscr{F}},\Omega))\)
+by \(\operatorname{Ext}_\mathrm{c}^{n-p}(X;{\mathscr{F}},\Omega)\), the
+proof by Serre extends \autocite{10} to the case where \({\mathscr{F}}\)
+is an arbitrary coherent \({\mathscr{O}}\)-module, but by using
+difficult theorems (with the notation of Schwartz: \({\mathscr{E}}\) is
+a flat \({\mathscr{O}}\)-module, and, for every \(x\in X\),
+\({\mathscr{D}}'_x\) is an injective \({\mathscr{O}}_x\)-module), due to
+coming from the division of distributions. We will show, following ideas
+of Grothendieck that were readopted by Malgrange, that the duality
+theorem for coherent sheaves on an analytic manifold is formally much
+more simple than this (see also \autocite{14}), and that it can be
+generalised to analytic spaces, as long as we replace \(\Omega\) by a
+suitable ``dualising'' complex, and the \(\operatorname{Ext}\) by
+\(\operatorname{HyperExt}\). As future work, probably very soon to
+appear, we note (not to mention an article in preparation with
+J.-L.~Verdier on a relative duality theorem) that Malgrange expects to
+be able to use the dualising complex to give new proofs of results of
+Siu \autocite{13} and Andreotti--Grauert \autocite{1}.
+
+\section{Some lemmas on certain complexes of topological vector
+spaces}\label{section-1}
+
+We first clarify a point of vocabulary for those readers not familiar
+with derived categories \autocite{7}: let \(\mathbf{A}\) be an abelian
+category, and \(C(\mathbf{A})\) the category of bounded-below complexes
+of objects of \(\mathbf{A}\) (with differentials of degree~\(+1\) and
+morphisms of degree~\(0\)). \oldpage{78} We define \(T\) to be the
+automorphism of \(C(\mathbf{A})\) that translates complexes one notch to
+the left and changes the sign of all the differentials. An object of
+\(C(\mathbf{A})\) is said to be \emph{acyclic} if all its cohomology
+objects are zero. Let \(u\colon X^\bullet\to Y^\bullet\) be a morphism
+in \(C(\mathbf{A})\); we say that it is a \emph{quasi-isomorphism} if it
+induces an isomorphism of cohomology objects of \(X^\bullet\) to those
+of \(Y^\bullet\); in this case, we also say that
+\(\xrightarrow{u}Y^\bullet\) is a \emph{resolution} of \(X^\bullet\). We
+define the \emph{cylinder} of \(u\) to be the complex
+\(T(X^\bullet)\oplus Y^\bullet\) endowed with the differential
+\(\left(\begin{smallmatrix}T(d_X)&0\\T(u)&d_Y\end{smallmatrix}\right)\).
+Saying that \(u\) is a quasi-isomorphism is equivalent to saying that
+its cylinder is zero.
+
+We denote by the acronym \(\mathbf{FS}\) (resp. \(\mathbf{DFS}\))
+Fréchet--Schwartz spaces (resp. the strong duals of Fréchet--Schwartz
+spaces \autocite{6}), and by the acronym \(\mathbf{QFS}\) (resp.
+\(\mathbf{QDFS}\)) the quotients of \(\mathbf{FS}\) spaces (resp. of
+\(\mathbf{DFS}\) spaces) (which are, as it were, non-separated
+\(\mathbf{FS}\) or \(\mathbf{DFS}\) spaces).
+
+\protect\phantomsection\label{lemma-1}
+\begin{itenv}{Lemma 1}
+Let \(X^\bullet\) and \(Y^\bullet\) be complexes of Fréchet spaces (with
+continuous linear differentials) and \(u\colon X^\bullet\to Y^\bullet\)
+a (continuos linear) morphism. If \(u\) is a quasi-isomorphism (in the
+purely algebraic sense) then it is a topological quasi-isomorphism,
+i.e.~it induces isomorphisms between the cohomology spaces of
+\(X^\bullet\) and of \(Y^\bullet\), where these spaces are endowed with
+their natural topologies (which are not necessarily separated).
+
+\end{itenv}
+
+\begin{proof}
+If \(H^i\) and \(K^i\) denote the cohomology spaces of \(X^\bullet\) and
+\(Y^\bullet\) (respectively), then it suffices to show that \(u\) sends
+the closure of \(0\) in \(H^i\) to the closure of \(0\) in \(K^i\). Let
+\(M^i\) and \(N^i\) be the spaces of cycles of degree~\(i\) of
+\(X^\bullet\) and \(Y^\bullet\) (respectively); these are Fréchet
+spaces; thus, the map \(d_Y+u\) from \(Y^{i-1}\oplus M^i\) to \(N^i\),
+which is surjective, is a homomorphism. Since the closed
+\(Y^{i-1}+\overline{d_X(X^{i-1})}\) is saturated with respect to the
+``projection'' \(d_Y+u\), its image is closed in \(N^i\), and is thus
+\(\overline{d_Y(Y^{i-1})}\), which implies the desired property when we
+pass to cohomology groups.
+\end{proof}
+
+\protect\phantomsection\label{lemma-1-bis}
+\begin{itenv}{Lemma 1 bis}
+\hyperref[lemma-1]{Lemma~1} remains true if we suppose that both
+\(X^\bullet\) and \(Y^\bullet\) are not Fréchet complexes, but complexes
+of \(\mathbf{DFS}\) spaces.
+
+\end{itenv}
+
+\begin{proof}
+This comes from ``permanence'' properties of \(\mathbf{DFS}\) spaces,
+and the closed graph theorem for these spaces \autocite{15}.
+\end{proof}
+
+\protect\phantomsection\label{lemma-2}
+\begin{itenv}{Lemma 2}
+Let \(E\xrightarrow{u}F\xrightarrow{v}G\) be a sequence of
+\(\mathbf{FS}\) spaces and continuous linear maps, such that
+\(v\circ u=0\); let \(E'\xleftarrow{u'}F'\xleftarrow{v'}G'\) be the
+transpose sequence (with the duals being endowed with the strong
+topology). Then the pairing between \(F\) and \(F'\) induces a pairing
+between \(\operatorname{Ker}{v}/\overline{\operatorname{Im}{u}}\) and
+\(\operatorname{Ker}{u'}/\overline{\operatorname{Im}{v'}}\), which makes
+each of these spaces (endowed with their natural topology) the strong
+dual of one another.
+
+\end{itenv}
+
+\begin{proof}
+The natural map from
+\(\operatorname{Ker}{u'}/\overline{\operatorname{Im}{v'}}\) to
+\((\operatorname{Ker}{v}/\overline{\operatorname{Im}u})'\) is surjective
+by Hahn--Banach, injective thanks to the semi-reflexivity of \(F\), and
+continuous since \(a\) is hypocontinuous with respect to the bounded
+subsets of \(\operatorname{Ker}{v}/\overline{\operatorname{Im}{u}}\) (to
+see this, it suffices to know how to lift a bounded, i.e.~a relatively
+compact, of \(\operatorname{Ker}{v}/\overline{\operatorname{Im}{u}}\) to
+a bounded of \(\operatorname{Ker}{v}\)); it is thus bicontinuous.
+\oldpage{79} Since
+\(\operatorname{Ker}{v}/\overline{\operatorname{Im}{u}}\), being an
+\(\mathbf{FS}\) space, is reflexive, we have thus proven the claim.
+\end{proof}
+
+\protect\phantomsection\label{lemma-3}
+\begin{itenv}{Lemma 3}
+Let \(X^\bullet\) and \(Y^\bullet\) be complexes of \(\mathbf{FS}\)
+spaces (or even of \(\mathbf{DFS}\) spaces), and
+\(u\colon X^\bullet\to Y^\bullet\) a quasi-isomorphism. Then the
+transpose \(u'\) of \(u\) is a quasi-isomorphism.
+
+\end{itenv}
+
+\begin{proof}
+The cylinder of \(u\) is acyclic; it is thus a complex whose
+differentials are operators with closed image; the transpose complex,
+which is the cylinder of \(u'\), also has differentials with closed
+image, and, by \hyperref[lemma-2]{Lemma~2}, is acyclic.
+\end{proof}
+
+Finally, we give a lemma that allows us to cheaply ensure that the
+topologies on pairs of spaces in duality coincide:
+
+\protect\phantomsection\label{lemma-4}
+\begin{itenv}{Lemma 4}
+Let \(P\) and \(Q\) be \(\mathbf{QFS}\) spaces, and \(R\) and \(S\) be
+\(\mathbf{QDFS}\) spaces; let \(a\) be a pairing between \(P\) and \(R\)
+that puts the associated separated spaces in duality, and let \(b\) be a
+pairing of the same sort between \(Q\) and \(S\); let \(u\colon P\to Q\)
+and \(v\colon S\to R\) be linear maps; all such that \(u\) and \(v\) are
+transpose to one another with respect to \(a\) and \(b\). Then \(u\) and
+\(v\) are continuous.
+
+\end{itenv}
+
+\begin{proof}
+Since the closure of \(\{0\}\) in \(P\) (resp. in \(S\)) is orthogonal
+to \(R\) (resp. to \(Q\)), we see that
+\(u\overline{\{0_P\}}\subset\overline{\{0_Q\}}\) and
+\(v\overline{\{0_S\}}\subset\overline{\{0_R\}}\). The maps \(u\) and
+\(v\) thus induce transpose maps \(\hat{u}\) and \(\hat{v}\) between the
+separated spaces associated to \(P\), \(Q\), \(R\), and \(S\). Since
+\(\hat{u}\) is a transpose, it is weakly continuous, and so its graph is
+closed; it is thus strongly continuous, as is \(\hat{v}\), and the
+continuity of \(u\) and \(v\) then follow.
+\end{proof}
+
+\section{Trace. Elementary duality theorem}\label{section-2}
+
+We use the notations \(X\), \({\mathscr{O}}\), and \(\Omega\) from the
+introduction. As a topological manifold, \(X\) is canonically oriented,
+and Poincaré duality gives us a canonical linear form on
+\(\mathrm{H}_\mathrm{c}^{2n}(X;\mathbb{C})\). This form, pre-composed
+with the composition product of the \(\operatorname{Ext}\) (thinking of
+the \(\operatorname{Ext}\) as sheaves of \(\mathbb{C}\)-spaces), gives a
+pairing: \[
+  \mathrm{H}_\mathrm{c}^n(X;\Omega) \times \operatorname{Ext}_\mathrm{c}^n(X;\Omega,\mathbb{C})
+\to \mathbb{C}.
+\] The complex structure of \(X\) now gives us (thinking of the
+\(\operatorname{Ext}\) in terms of their Yoneda interpretation) a
+remarkable \(n\)-extension of \(\Omega\) by \(\mathbb{C}\), namely: \[
+  0 \to \mathbb{C} \to {\mathscr{O}}\xrightarrow{d'} \Omega^1 \xrightarrow{d'} \ldots \xrightarrow{d'} \Omega \to 0
+\] where \(\Omega^i\) denotes the sheaf of holomorphic differential
+forms of degree~\(i\) on \(X\). The linear form on
+\(\mathrm{H}_\mathrm{c}^n(X;\Omega)\) associated to this extension is
+called the \emph{trace}. The trace also arises in the following way: the
+complex \[
+  0 \to {{\mathscr{D}}'}^{n,0} \xrightarrow{d''} \ldots \xrightarrow{d''} {{\mathscr{D}}'}^{n,n} \to 0
+\tag{1}
+\] where \({{\mathscr{D}}'}^{i,j}\) denotes the sheaf of germs of
+differential forms on \(X\) of type~\((i,j)\) with distribution
+coefficients, is a fine resolution of \(\Omega\). The group
+\(\mathrm{H}_\mathrm{c}^n(X;\Omega)\) is thus the \((n+1)\)-th
+cohomology group of the complex of \(\mathbf{DFS}\) spaces \oldpage{80}
+\[
+  0 \to {{\mathscr{E}}'}^{n,0}(X) \xrightarrow{d''} \ldots \xrightarrow{d''} {{\mathscr{E}}'}^{n,n}(X) \to 0.
+\tag{2}
+\] It is thus naturally endowed with the structure of a
+\(\mathbf{QDFS}\) space, and we see that integration on \(X\) of forms
+of type~\((n,n)\) with compact support induces a continuous linear form
+on \(\mathrm{H}_\mathrm{c}^n(X,\Omega)\), and this form is precisely
+\((-1)^n\) times the trace. (Given a global section \(s\) with compact
+support of \({{\mathscr{D}}'}^{n,n}\), we obtain \autocite{4} an
+\(n\)-extension \(\overline{s}\), in the sense of Yoneda, of
+\(\mathbb{C}\) by \(\Omega\). Pre-composed with the \(d'\)-cohomology
+complex, this complex gives the extension
+\((-1)^{n^2}\omega\times\overline{s}\in\operatorname{Ext}_{\mathrm{c},\mathbb{C}}^{2n}(X;\mathbb{C},\mathbb{C})\);
+but we note that this is also ``equivalent'' to the \(2n\)-extension of
+\(\mathbb{C}\) by \(\mathbb{C}\) associated to the de Rham complex
+\[0\to\mathbb{C}\to{\mathscr{D}}'_0\to{\mathscr{D}}'_1\to\ldots\to{\mathscr{D}}'_{2n}\to0\]
+and to the global section \(s\) of
+\({\mathscr{D}}'_{2n}={{\mathscr{D}}'}^{n,n}\). Since Poincaré duality
+is given by integration, our claim is proved.)
+
+Now let \({\mathscr{F}}\) be an arbitrary \({\mathscr{O}}\)-module. The
+composition product of the \(\operatorname{Ext}\) (of
+\({\mathscr{O}}\)-modules), followed by the trace, gives us the pairings
+\[
+  \mathrm{H}^p(X;{\mathscr{F}}) \times \operatorname{Ext}_\mathrm{c}^{n-p}(X;{\mathscr{F}},\Omega)
+  \to \mathbb{C}
+\tag{3}
+\] and \[
+  \mathrm{H}_\mathrm{c}^p(X;{\mathscr{F}}) \times \operatorname{Ext}^{n-p}(X;{\mathscr{F}},\Omega)
+  \to \mathbb{C}.
+\tag{3~bis}
+\]
+
+\protect\phantomsection\label{lemma-5}
+\begin{itenv}{Lemma 5}
+If \(X\) is a Stein manifold, then \(\mathrm{H}_\mathrm{c}^i(X;\Omega)\)
+is zero for \(i\neq n\); \(\mathrm{H}_\mathrm{c}^n(X;\Omega)\) is
+separated, and the pairing~(3) puts it in duality with
+\(\Gamma(X;{\mathscr{O}})\) (endowed with its usual \(\mathbf{FS}\)
+structure).
+
+\end{itenv}
+
+\begin{proof}
+Denote by \({\mathscr{E}}^{i,j}\) the sheaf of germs of differential
+forms on \(X\) of type~\((i,j)\) with \(C^\infty\) coefficients. The
+complex \[
+  0 \to {\mathscr{E}}^{0,0} \xrightarrow{d''} \ldots \xrightarrow{d''} {\mathscr{E}}^{0,n} \to 0
+\tag{1~bis}
+\] is a fine resolution of \({\mathscr{O}}\); thus the groups
+\(\mathrm{H}^i(X;{\mathscr{O}})\) are the cohomology groups of the
+complex of \(\mathbf{FS}\) spaces \[
+  0 \to {\mathscr{E}}^{0,0}(X) \xrightarrow{d''} \ldots \xrightarrow{d''} {\mathscr{E}}^{0,n}(X) \to 0
+\tag{2~bis}
+\] whereas the \(\mathrm{H}_\mathrm{c}^i(X;\Omega)\) are the cohomology
+groups of the transpose complex~(2). The lemma then follows from
+Theorem~B (which implies in particular that all the differentials of~(2)
+and (2~bis) have closed image) and from \hyperref[lemma-2]{Lemma~2}.
+\end{proof}
+
+\protect\phantomsection\label{lemma-5-bis}
+\begin{itenv}{Lemma 5 bis}
+If \(X\) is a Stein manifold, then \(\mathrm{H}_\mathrm{c}^i(X;\Omega)\)
+is zero for \(i\neq n\); the pairing~(3~bis) puts \(\Gamma(X;\Omega)\)
+(endowed with its usual \(\mathbf{FS}\) structure) and
+\(\mathrm{H}_\mathrm{c}^n(X;{\mathscr{O}})\) (endowed with the
+\(\mathbf{DFS}\) structure obtained by considering it as a quotient of
+\({{\mathscr{E}}'}^{0,n}(X)\)) in duality.
+
+\end{itenv}
+
+\protect\phantomsection\label{lemma-6}
+\begin{itenv}{Lemma 6}
+If \(X\) is a Stein manifold, and if \({\mathscr{F}}\) is an
+\({\mathscr{O}}\)-module that admits a finite resolution by free
+\({\mathscr{O}}\)-modules of finite type, then the groups
+\(\operatorname{Ext}_\mathrm{c}^i(X;{\mathscr{F}},\Omega)\) are zero for
+\(i\neq0\), \(\operatorname{Ext}_\mathrm{c}^n(X;{\mathscr{F}},\Omega)\)
+is endowed with a canonical \(\mathbf{DFS}\) structure, and (3) puts it
+in duality with \(\Gamma(X;{\mathscr{F}})\).
+
+\end{itenv}
+
+\begin{proof}
+This follows from \hyperref[lemma-1-bis]{Lemma~1~bis} and
+\hyperref[lemma-2]{Lemma~2}, by induction on the minimum length of the
+free resolution of \({\mathscr{F}}\).
+\end{proof}
+
+\section{The dualising complex: statement of the problem. A first
+duality theorem}\label{section-3}
+
+\oldpage{81}
+
+Given a \(\sigma\)-compact analytic space \(X\), of bounded dimension,
+we want to construct a complex \(\mathbf{K}_X^\bullet\) of
+\({\mathscr{O}}\)-modules that is bounded and of coherent cohomology,
+along with a canonical linear form \(\mathbf{T}_X\) on
+\(\mathrm{H}_\mathrm{c}^0(X;\mathbf{K}_X^\bullet)\) such that the
+following is true:
+
+\protect\phantomsection\label{theorem-1}
+\begin{itenv}{Theorem }
+For every coherent \({\mathscr{O}}_X\)-module \({\mathscr{F}}\) and
+every integer \(p\), there exists on \(\mathrm{H}^p(X;{\mathscr{F}})\) a
+unique \(\mathbf{QFS}\) structure and on
+\(\operatorname{Ext}_\mathrm{c}^{-p}(X;{\mathscr{F}},\mathbf{K}_X^\bullet)\)
+a unique \(\mathbf{QDFS}\) structure such that the form \(\mathbf{T}_X\)
+induces a perfect pairing between the associated separated spaces.
+Furthermore, the separation of \(\mathrm{H}^p(X;{\mathscr{F}})\) is
+equivalent to that of
+\(\operatorname{Ext}_\mathrm{c}^{n-p}(X;{\mathscr{F}},\mathbf{K}_X^\bullet)\).
+
+\end{itenv}
+
+If \(X\) is smooth and of dimension~\(n\), then \(\mathbf{K}_X^\bullet\)
+will be a resolution of \(T^n\Omega\), and these topologies and this
+pairing will be exactly those mentioned in the introduction (modulo,
+obviously, the substitution of
+\(\operatorname{Ext}_\mathrm{c}^{-p}(X;{\mathscr{F}},T^n\Omega)\) for
+\(\operatorname{Ext}_\mathrm{c}^{n-p}(X;{\mathscr{F}},\Omega)\)).
+
+In \hyperref[section-5]{§5} we will construct:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  For every manifold \(V\), a resolution \(\mathbf{K}_V^\bullet\) of
+  \(T^{\dim V}\Omega_V\) such that, for every integer \(p\) and every
+  \(x\in V\), \(\mathbf{K}_{V,x}^p\) is an injective
+  \({\mathscr{O}}_{V,x}\)-module.
+\item
+  For every embedding \(f\) of one manifold \(V\) into another manifold
+  \(W\), a functorial isomorphism of complexes of
+  \({\mathscr{O}}_V\)-modules \[
+     \overline{f}\colon \mathbf{K}_V^\bullet \xrightarrow{\approx} \underline{\operatorname{Hom}}(W;f_*{\mathscr{O}}_V,\mathbf{K}_W^\bullet)
+   \] that is compatible with the traces on
+  \(\mathrm{H}_\mathrm{c}^{\dim V}(V;\Omega_V)=\mathrm{H}_\mathrm{c}^0(V;\mathbf{K}_V^\bullet)\)
+  and on \(\mathrm{H}_\mathrm{c}^0(W;\mathbf{K}_W^\bullet)\).
+\end{enumerate}
+
+We will use these complexes \(\mathbf{K}_V^\bullet\) to construct the
+``dualising complex'' \(\mathbf{K}_X^\bullet\) of the analytic space
+\(X\), as follows. Let \(U\) be an open of \(X\), realisable as an
+analytic subset of a Stein manifold, and let \(\xrightarrow{\varphi}V\)
+be such a realisation. The complex
+\(\mathbf{K}_U^\bullet=\operatorname{Hom}(V;\varphi_*{\mathscr{O}}_U,\mathbf{K}_V^\bullet)\),
+considered as an \({\mathscr{O}}_U\)-module, does not depend on the
+realisation of \(U\), as we can see by covering two realisations by a
+third and using the transitivity of the isomorphisms \(\overline{f}\);
+it is clearly endowed with a trace
+\(\mathbf{T}_U\colon\mathrm{H}_\mathrm{c}^0(U;\mathbf{K}_U^\bullet)\to\mathbb{C}\).
+We obtain \(\mathbf{K}_X^\bullet\) by gluing together the
+\(\mathbf{K}_U^\bullet\), and the trace \(\mathbf{T}_X\) similarly (any
+two traces \(\mathbf{T}_U\) and \(\mathbf{T}_{U'}\) do indeed glue
+together by Mayer--Vietoris and the vanishing of
+\(\mathrm{H}_\mathrm{c}^1(U\cap U';\mathbf{K}_{U\cap U'}^\bullet)\)).
+
+\protect\phantomsection\label{lemma-7}
+\begin{itenv}{Lemma 7}
+Let \(U\) be an open of \(X\), and \({\mathscr{F}}\) an
+\({\mathscr{O}}_U\)-module. Suppose that \(U\) admits a realisation
+\(\xrightarrow{\varphi}V\) as an analytic subset of a Stein manifold,
+and that \(\varphi_*{\mathscr{F}}\) admits a finite resolution by free
+\({\mathscr{O}}_V\)-modules of finite type. Then the groups
+\(\operatorname{Ext}_\mathrm{c}^i(U;{\mathscr{F}},\mathbf{K}_U^\bullet)\)
+are zero for \(i\neq0\), and
+\(\operatorname{Ext}_\mathrm{c}^0(U;{\mathscr{F}},\mathbf{K}_U^\bullet)\)
+is endowed with a canonical \(\mathbf{DFS}\) structure, and the pairing
+induced by \(\mathbf{T}_U\) puts it in duality with
+\(\Gamma(U;{\mathscr{F}})\).
+
+\end{itenv}
+
+\begin{proof}
+Algebraically, the canonical morphism from
+\(\operatorname{Ext}_\mathrm{c}^i(V;\varphi_*{\mathscr{F}},\mathbf{K}_V^\bullet)\)
+to
+\(\operatorname{Ext}_\mathrm{c}^i(U;{\mathscr{F}},\mathbf{K}_U^\bullet)\)
+is an isomorphism (we can reduce to the local
+\(\underline{\operatorname{Ext}}\) by a standard spectral sequence
+argument; the fibres of these \(\underline{\operatorname{Ext}}\) are
+equal, given the coherence of \({\mathscr{F}}\), to the
+\(\operatorname{Ext}\) of the fibres; and there, the isomorphism is
+evident). As for \(\Gamma(U;{\mathscr{F}})\) and
+\(\Gamma(V;\varphi_*{\mathscr{F}})\), they are evidently topologically
+isomorphism. \hyperref[lemma-6]{Lemma~6} then gives the topology on
+\(\operatorname{Ext}_\mathrm{c}^0(U;{\mathscr{F}},\mathbf{K}_U^\bullet)\)
+and proves the desired duality.
+\end{proof}
+
+\oldpage{82}
+
+We can now prove \hyperref[theorem-1]{Theorem~1}. Let \({\mathscr{F}}\)
+be a coherent \({\mathscr{O}}_X\)-module, and \(I\) a countable set of
+indices. We can find a family of ``charts''
+\(\varphi_i\colon\Theta_i\to\mathbb{C}^{N_i}\) and, in each
+\(\mathbb{C}^{N_i}\), an open polydisc \(V_i\) such that, if we set
+\(U_i=\varphi^{-1}(V_i)\), we have:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  For all \(i\), the system
+  \((U_i, {\mathscr{F}}|U_i, \varphi_i|U_i,V_i)\) satisfies the
+  hypotheses of \hyperref[lemma-7]{Lemma~7}.
+\item
+  The \(U_i\) form a locally finite (Stein) open cover of \(X\), which
+  we denote by \({\mathfrak{U}}\).
+\end{enumerate}
+
+We can then apply \hyperref[lemma-7]{Lemma~7} not only to the \(U_i\),
+but also to the finite intersections of the \(U_i\). Leray's~theorem,
+combined with Theorem~B, tell us that the groups
+\(\mathrm{H}^i(X;{\mathscr{F}})\) are the cohomology groups of the
+complex of \(\mathbf{FS}\) spaces \[
+  \mathrm{C}^\bullet({\mathfrak{U}},\mathrm{H}^0({\mathfrak{U}};{\mathscr{F}})).
+\tag{4}
+\] We have thus endowed the \(\mathrm{H}^i(X;{\mathscr{F}})\) with
+\(\mathbf{QFS}\) topologies that do not depend on the cover
+\({\mathfrak{U}}\), by \hyperref[lemma-1]{Lemma~1}. By
+\hyperref[lemma-7]{Lemma~7}, the trace \(\mathbf{T}_X\) puts in
+(topological) duality the complex of cochains in~(4) and the complex of
+finite chains \[
+  \mathrm{C}_\bullet^\mathrm{c}({\mathfrak{U}},\operatorname{Ext}_\mathrm{c}^0({\mathfrak{U}};{\mathscr{F}},\mathbf{K}_X^\bullet)),
+\tag{5}
+\] where the \(\operatorname{Ext}_\mathrm{c}\) are related to one
+another by the evident arrows in the direction of increasing size
+(extension by zero). To interpret the homology of~(5), we consider an
+injective resolution \(L^\bullet\) of \(\mathbf{K}_X^\bullet\), and the
+double complex \[
+  \mathrm{C}_i^\mathrm{c}({\mathfrak{U}},\operatorname{Hom}_\mathrm{c}({\mathfrak{U}};{\mathscr{F}},L^j)).
+\tag{6}
+\] If we calculate the hyperhomology of~(6) by first working in the
+\(j\)~direction, then we find the homology of~(5) (the spectral sequence
+is degenerate by \hyperref[lemma-7]{Lemma~7}). Now we work in the
+\(i\)~direction. Since \(L^j\) is injective, the sheaf
+\(\underline{\operatorname{Hom}}(X;{\mathscr{F}},L^j)\) is flasque, and
+thus \(\mathrm{c}\)-soft, and the second spectral sequence of~(6) is
+also degenerate \autocite{3}, and the hyperhomology of~(6) reduces to
+the homology of \(\operatorname{Hom}_cc(X;{\mathscr{F}},L^j)\), i.e.~to
+the
+\(\operatorname{Ext}_\mathrm{c}^j(X;{\mathscr{F}},\mathbf{K}_X^\bullet)\).
+By \hyperref[lemma-2]{Lemma~2}, we have thus obtained \(\mathbf{QDFS}\)
+topologies on the
+\(\operatorname{Ext}_\mathrm{c}^p(X;{\mathscr{F}},\mathbf{K}_X^\bullet)\),
+such that \(\mathbf{T}_X\) puts the associated separated spaces in
+duality with the separated spaces associated to the
+\(\mathrm{H}^{-p}(X;{\mathscr{F}})\) (the sign comes from the fact that
+the simple complex associated to~(6) is graded by \(j-i\)).
+\hyperref[lemma-4]{Lemma~4} ensures the uniqueness of these
+\(\mathbf{QDFS}\) topologies.
+
+The last claim of the theorem comes from the fact that, for the spaces
+in question, a map has closed image if and only if its transpose has
+closed image.
+
+\section{A second duality theorem}\label{section-4}
+
+\protect\phantomsection\label{theorem-2}
+\begin{itenv}{Theorem 2}
+Let \(X\) be a \(\sigma\)-compact analytic space of bounded dimension,
+\(\mathbf{K}_X^\bullet\) its dualising complex, and \({\mathscr{F}}\) a
+coherent analytic sheaf on \(X\). Then, for every integer~\(p\), the
+spaces \(\mathrm{H}_\mathrm{c}^p(X;{\mathscr{F}})\) and
+\(\operatorname{Ext}^{-p}(X;{\mathscr{F}},\mathbf{K}_X^\bullet)\) are
+endowed with canonical topologies (\(\mathbf{QDFS}\) and
+\(\mathbf{QFS}\), respectively), and the trace \(\mathbf{T}_X\) induces
+a pairing between these spaces that makes the associated separated space
+of one the strong dual of the associated separated space of the other.
+\oldpage{83} Furthermore, the separation of
+\(\mathrm{H}_\mathrm{c}^p(X;{\mathscr{F}})\) is equivalent to that of
+\(\operatorname{Ext}^{1-p}(X;{\mathscr{F}},\mathbf{K}_X^\bullet)\).
+
+\end{itenv}
+
+Here too, by \hyperref[lemma-4]{Lemma~4}, the pair of topologies on
+\(\mathrm{H}_\mathrm{c}^p(X;{\mathscr{F}})\) and
+\(\operatorname{Ext}^{-p}(X;{\mathscr{F}},\mathbf{K}_X^\bullet)\) is the
+only pair of \((\mathbf{QDFS},\mathbf{QFS})\) topologies such that that
+\(\mathbf{T}_X\) puts the associated separated spaces in duality.
+
+We start with a lemma analogous to \hyperref[lemma-5]{Lemma~5}.
+
+\protect\phantomsection\label{lemma-8}
+\begin{itenv}{Lemma 8}
+Let
+
+\end{itenv}
+
+
+% Bibliography
+\nocite{*}
+\printbibliography[heading=bibintoc,title=Bibliography]
+
+\end{document}
