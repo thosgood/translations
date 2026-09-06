@@ -40,11 +40,15 @@ bibliography: PMIHES-38-1970-77.bib
 \newcommand{\HyperExt}{\operatorname{HyperExt}}
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\dd}{\operatorname{d}}
 
 <!-- Content -->
 
-\oldpage{77}
+*[Trans.] The numbering of the footnotes in this translation (globally sequential, starting from 1) differs to that of the original (starting anew from 1 on each page)*.
+\bigskip
 
+\oldpage{77}
 Let $X$ be a $\sigma$-compact complex analytic manifold of dimension $n$;
 we write $\OO$ to mean the sheaf of germs of holomorphic functions on $X$, and $\Omega$ to mean the sheaf of germs of holomorphic differential forms of degree $n$ on $X$.
 The correspondence that, to a locally free $\OO$-module $\sh{F}$, associates $\shHom(X;\sh{F},\Omega)$, is involutive.
@@ -373,4 +377,127 @@ Since the cohomology groups of (8) are the $\HH_\cc^i(X;\sh{F})$, and those of�
 
 # Construction of the dualising complex {#section-5}
 
-We
+We will first construct, given a germ at a point $x$ of a complex analytic manifold $V$, what will become the fibre at $x$ of the complex $\KK_V^\bullet$.
+To each germ of the embedding $f$ of the germ $(V,x)$ into another germ $(W,y)$, we will associate an isomorphism $\overline{f_x}$ from $\KK_{V,x}^\bullet$ to $\Hom_{\OO_{W,y}}(\OO_{V,x},\KK_{W,y}^\bullet)$ (which, by the coherence of $f_*\OO_V$, will be precisely the fibre at $x$ of $\shHom(W;f_*\OO_V,\KK_W^\bullet)$), functorially with respect to the composition of embeddings.
+We will then point out which topology on $\bigcup_{x\in V}\KK_{V,x}^\bullet$ makes it into the complex of sheaves $\KK_V^\bullet$.
+We will leave to the reader the task of convincing themselves that, given an embedding $f$ of $V$ into $W$, the isomorphisms $\overline{f_x}$ glue together to give an isomorphism $\overline{f}$ from $\KK_V^\bullet$ to $\shHom(W;f_*\OO_V,\KK_W^\bullet)$.
+
+## A. The fibre of the dualising complex {#section-5.a .unnumbered}
+
+Given a germ $(V,x)$ of a manifold, we denote by $A$ the ring $\OO_{V,x}$;
+then $\Spec{A}$ denotes the prime spectrum of $A$, and $\widetilde{A}$ denotes the canonical sheaf on $\Spec{A}$.
+If $Z^p$ denotes the set of points of $\Spec{A}$ of codimension $\geqslant p$, then the Cousin complex of $\widetilde{A}$ with respect to the filtration $Z^p$ of $\Spec{A}$ is the complex
+$$
+  0
+  \to \sh{H}_{Z^0/Z^1}^0(\widetilde{A})
+  \to \sh{H}_{Z^1/Z^2}^1(\widetilde{A})
+  \to \ldots \to 0.
+$$
+
+The topological space $\Spec{A}$ is Noetherian;
+its closed irreducibles have a unique generic point;
+the $Z^p$ are stable under specialisation, and every point of $Z^p\setminus Z^{p+1}$ is maximal in $Z^p$.
+It thus follows that we have canonical functorial isomorphisms [@7, motif F, p. 225]
+$$
+  \sh{H}_{Z^p/Z^{p+1}}^q(\widetilde{A})
+  \xrightarrow{\approx} \coprod_{\alpha\in Z^p\setminus Z^{p+1}}i_\alpha(\HH_\alpha^q(\widetilde{A}))
+\tag{9}
+$$
+where $\HH_\alpha^q(\widetilde{A})$ is the fibre at $\alpha$ of $\sh{H}_{\{\overline{\alpha}\}}^q(\widetilde{A})$, and where $i_\alpha(G)$ denotes the sheaf that is constant and equal to $G$ along $\{\overline{\alpha}\}$ and zero elsewhere.
+
+The $\sh{H}_{Z^p/Z^{p+1}}^q(\widetilde{A})$ are zero for $q>p$ [@7, Lemma 2.4, p. 235], and also for $q<p$ (since the ring $A$ is regular, and thus Cohen--Macaulay).
+\oldpage{85}
+The natural map $\widetilde{A}\to\sh{H}_{Z^0/Z^1}^0(\widetilde{A})$ thus makes [@7, Chapter 4, (2.6)] the Cousin complex a flasque resolution of $\widetilde{A}$.
+It thus follows that the complex
+$$
+  0
+  \to \Gamma\sh{H}_{Z^0/Z^1}^0(\widetilde{A})
+  \to \Gamma\sh{H}_{Z^1/Z^2}^1(\widetilde{A})
+  \to \ldots
+$$
+is a resolution of $\Gamma\widetilde{A}=A$ (the $\HH^i(\Spec{A},\widetilde{A})$ are zero for $i>0$).
+We denote this complex by $L_{V,x}^\bullet$, and we can show that it is a complex of injective $A$-modules: by (9), and the fact that $A$ is Noetherian, it suffices to show that the $\HH_\alpha^p(\widetilde{A})$, for $\alpha\in Z^p\setminus Z^{p+1}$, are $A$-injective;
+but we know [@8, (4.13)] that $\HH_\alpha^p(\widetilde{A})$ is an injective envelope over $A_\alpha$ of the residue field $\kappa(\alpha)$.
+
+For example, if $V$ is a curve, then we obtain as a resolution of $\OO_x$ the complex $0\to\sh{M}_x\to\sh{M}_x/\OO_x\to0$, where $\sh{M}_x$ is the ring of germs of meromorphic functions at $x$.
+
+We set $\KK_{V,x}^\bullet=T^{\dim V}(L_{V,x}^\bullet\otimes_A\Omega_{V,x})$.
+
+When $f$ is a local isomorphism from one germ $(V,x)$ to another $(W,y)$, the isomorphism $\overline{f_x}$ goes without saying.
+We now consider the case where $(V,x)$ is a germ of a codimension 1 submanifold of $(W,y)$: set $A=\OO_{V,x}$ and $B=\OO_{W,y}$, and chose a regular function $z\in B$ that defines $V$.
+The sequence
+$$
+  0 \to B \xrightarrow{\mu_z} B \xrightarrow{\rho} A \to 0
+$$
+is exact, where $\mu_z$ denotes multiplication by $z$, and $\rho$ denotes restriction;
+then $\rho$ induces a map $r$ that witnesses $\Spec{A}$ as a subspace of $\Spec{B}$.
+The sequence
+$$
+  - \to \widetilde{B} \xrightarrow{\mu_z} \widetilde{B} \xrightarrow{\rho} r_*\widetilde{A} \to 0
+$$
+of sheaves on $\Spec{B}$ is exact.
+We denote by $Z^p$ (resp. by $T^p$) the set of points of $\Spec{A}$ (resp. of $\Spec{B}$) of codimension $\geqslant p$;
+the trace of $T^p$ on $\Spec{A}$ is equal to $Z^{p-1}$.
+We want to understand $\Hom_B(A,\Gamma\sh{H}_{T^p/T^{p+1}}^p(\widetilde{B}))-\coprod_{\beta\in T^p\setminus T^{p+1}}\Hom_B(A,\HH_\beta^p(\widetilde{B}))$.
+But $\Hom_B(A,\HH_\beta^p(\widetilde{B}))$ can be identified with the kernel of $\mu_z\colon\HH_\beta^p(\widetilde{B})\to\HH_\beta^p(\widetilde{B})$, which is a morphism that fits into the exact sequence
+$$
+  \HH_\beta^{p-1}(\widetilde{B})
+  \to \HH_\beta^{p-1}(r_*\widetilde{A})
+  \xrightarrow{\partial_z} \HH_\beta^p(\widetilde{B})
+  \xrightarrow{\mu_z} \HH_\beta^p(\widetilde{B})
+$$
+in which the first group is zero (since $B$ is regular, and thus Cohen--Macaulay).
+If $\beta\not\in\Spec{A}$, then $\Spec{B}\setminus\Spec{A}$ is a neighbourhood of $\beta$, on which the sheaf $r_*\widetilde{A}$ is zero;
+thus
+$$
+  \HH_\beta^{p-1}(r_*\widetilde{A})
+  = \Hom_B(A,\HH_\beta^p(\widetilde{B}))
+  = 0.
+$$
+If $\beta\in\Spec{A}$, then $\HH_\beta^{p-1}(\Spec{B};r_*\widetilde{A})$ can be identified with $\HH_\beta^{p-1}(\Spec{A};\widetilde{A})$, and so
+$$
+  \coprod_{\beta\in T^p\setminus T^{p+1}}\Hom_B(A,\HH_\beta^p(\widetilde{B}))
+$$
+can be identified with
+$$
+  \coprod_{\alpha\in Z^{p-1}\setminus Z^p} \HH_\alpha^{p-1}(\widetilde{A})
+  = \Gamma\sh{H}_{Z^{p-1}/Z^p}^{p-1}(\widetilde{A}).
+$$
+\oldpage{86}
+We have obtained an isomorphism $\Delta_z$ (depending on the chosen generator $z$ of the ideal of $V$)
+$$
+  \Delta_z\colon
+  L_{V,x}^{p-1}
+  \xrightarrow{\approx} \Hom_B(A,L_{W,y}^p).
+$$
+From this we will deduce an isomorphism
+$$
+  \overline{f}\colon
+  \KK_{V,x}^q
+  \xrightarrow{\approx} \Hom_B(A,\KK_{W,y}^q).
+$$
+For this, it suffices to note that there is a natural isomorphism
+$$
+  \omega_z\colon
+  \Omega_{V,x}\otimes_A\Hom_B(A,L_{W,y}^p)
+  \xrightarrow{\approx} \Hom_B(A,\Omega_{W,y}\otimes_B L_{W,y}^p)
+$$
+coming from the $\rho$-morphism from $\Omega_{W,y}$ to $\Omega_{V,x}$ that, to the holomorphic differential form $\psi\wedge\dd{z}$, associates the form $\psi|V$;
+finally, we can show that the isomorphism $\overline{f}$ thus described does not depend on $z$: if we replace $z$ by $z'$, then $\Delta$ is multiplied by $(z/z')|V$, and $\omega^{-1}$ is too (we could have recognised the formalism of the construction of a residue class)[^2].
+
+[^2]: After gluing the fibres, $\overline{f}$ induces the canonical isomorphism from $\Omega_V$ to $\shExt^{n-p}(W;\OO_V,\Omega_W)$, where $n$ denotes the dimension of $W$ and $p$ the dimension of $V$.
+    To show the compatibility of $\overline{f}$ with the traces, it is helpful to reinterpret this isomorphism: it comes from the morphisms
+    $$
+      {\sh{D}'}_V^{p,p-i}
+      \to \shHom(W;\OO_V,{\sh{D}'}_W^{n,n-i})
+    $$
+    which are themselves "*transposes*" of the natural morphisms
+    $$
+      \sh{E}_V^{0,i}
+      \leftarrow \sh{E}_W^{0,i}\otimes_{\OO_W}\OO_V.
+    $$
+
+
+## B. The gluing of fibres {#section-5.b .unnumbered}
+
+Given
