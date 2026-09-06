@@ -23,6 +23,7 @@ bibliography: PMIHES-38-1970-77.bib
 
 \newcommand{\OO}{\sh{O}}
 
+\newcommand{\CC}{\mathrm{C}}
 \newcommand{\HH}{\mathrm{H}}
 \newcommand{\cc}{\mathrm{c}}
 \newcommand{\FS}{\mathbf{FS}}
@@ -265,3 +266,40 @@ As for $\Gamma(U;\sh{F})$ and $\Gamma(V;\varphi_*\sh{F})$, they are evidently to
 \oldpage{82}
 We can now prove [Theorem 1](#theorem-1).
 Let $\sh{F}$ be a coherent $\OO_X$-module, and $I$ a countable set of indices.
+We can find a family of "charts" $\varphi_i\colon\Theta_i\to\mathbb{C}^{N_i}$ and, in each $\mathbb{C}^{N_i}$, an open polydisc $V_i$ such that, if we set $U_i=\varphi^{-1}(V_i)$, we have:
+
+1. For all $i$, the system $(U_i, \sh{F}|U_i, \varphi_i|U_i,V_i)$ satisfies the hypotheses of [Lemma 7](#lemma-7).
+2. The $U_i$ form a locally finite (Stein) open cover of $X$, which we denote by $\frak{U}$.
+
+We can then apply [Lemma 7](#lemma-7) not only to the $U_i$, but also to the finite intersections of the $U_i$.
+Leray's theorem, combined with Theorem B, tell us that the groups $\HH^i(X;\sh{F})$ are the cohomology groups of the complex of $\FS$ spaces
+$$
+  \CC^\bullet(\frak{U},\HH^0(\frak{U};\sh{F})).
+\tag{4}
+$$
+We have thus endowed the $\HH^i(X;\sh{F})$ with $\QFS$ topologies that do not depend on the cover $\frak{U}$, by [Lemma 1](#lemma-1).
+By [Lemma 7](#lemma-7), the trace $\TT_X$ puts in (topological) duality the complex of cochains in (4) and the complex of finite chains
+$$
+  \CC_\bullet^\cc(\frak{U},\Ext_\cc^0(\frak{U};\sh{F},\KK_X^\bullet)),
+\tag{5}
+$$
+where the $\Ext_\cc$ are related to one another by the evident arrows in the direction of increasing size (extension by zero).
+To interpret the homology of (5), we consider an injective resolution $L^\bullet$ of $\KK_X^\bullet$, and the double complex
+$$
+  \CC_i^\cc(\frak{U},\Hom_\cc(\frak{U};\sh{F},L^j)).
+\tag{6}
+$$
+If we calculate the hyperhomology of (6) by first working in the $j$ direction, then we find the homology of (5) (the spectral sequence is degenerate by [Lemma 7](#lemma-7)).
+Now we work in the $i$ direction.
+Since $L^j$ is injective, the sheaf $\shHom(X;\sh{F},L^j)$ is flasque, and thus $\cc$-soft, and the second spectral sequence of (6) is also degenerate [@3], and the hyperhomology of (6) reduces to the homology of $\Hom_cc(X;\sh{F},L^j)$, i.e. to the $\Ext_\cc^j(X;\sh{F},\KK_X^\bullet)$.
+By [Lemma 2](#lemma-2), we have thus obtained $\QDFS$ topologies on the $\Ext_\cc^p(X;\sh{F},\KK_X^\bullet)$, such that $\TT_X$ puts the associated separated spaces in duality with the separated spaces associated to the $\HH^{-p}(X;\sh{F})$ (the sign comes from the fact that the simple complex associated to (6) is graded by $j-i$).
+[Lemma 4](#lemma-4) ensures the uniqueness of these $\QDFS$ topologies.
+
+The last claim of the theorem comes from the fact that, for the spaces in question, a map has closed image if and only if its transpose has closed image.
+
+
+# A second duality theorem {#section-4}
+
+::: {.itenv #theorem-2 title="Theorem 2" latex="{Theorem 2}"}
+Let
+:::
