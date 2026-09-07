@@ -43,11 +43,11 @@ bibliography: IM-13-1971-261.bib
 \oldpage{261}
 Given a $\sigma$-compact analytic space $X$, of bounded dimension, we know how to construct [@10] a bounded complex $\KK_X^\bullet$ of $\OO_X$-modules with coherent cohomology, and a (continuous linear) "trace" $\TT_X\colon\HH_\cc^0(X;\KK_X^\bullet)\to\mathbb{C}$ that can happily provide a duality between the **TODO: separations?** of the spaces $\HH_\cc^p(X;\sh{F})$ and $\Ext^{-p}(X;\sh{F},\KK_X^\bullet)$, for every integer $p$ and every coherent $\OO_X$-module $\sh{F}$, as long as we endow these space with suitable topologies;
 similarly, the trace induces a perfect pairing between $\HH^p(X;\sh{F})$ and $\Ext_\cc^{-p}(X;\sh{F},\KK_X^\bullet)$, suitably topologised.
-The purpose of this article is the study of the compatibility of this duality with direct images: if $f\colon X\to Y$ is a morphism of analytic spaces, then we have to construct a "relative trace" $\TT_{X/Y}\in\Ext^0(Y;\RR f_!\KK_X^\bullet,\KK_Y^\bullet)$ (where $f_!$ denotes the direct image with proper support).
+The purpose of this article is the study of the compatibility of this duality with direct images: if $f\colon X\to Y$ is a morphism of analytic spaces, then we have to construct a "relative trace" $\TT_{X/Y}\in\Ext^0(Y;\RR{f_!}\KK_X^\bullet,\KK_Y^\bullet)$ (where $f_!$ denotes the direct image with proper support).
 We then have, for every complex $\sh{F}^\bullet$ of $\OO_X$-modules with coherent cohomology ($\sh{F}^\bullet\in\DD_\coh(X)$) and for every complex $\sh{G}^\bullet$ with bounded-below coherent cohomology ($\sh{G}^\bullet\in\DD_\coh^+(Y)$), a canonical morphism
 $$
   \begin{aligned}
-    \RR f_!\sh{F}\Hom\big(
+    \RR{f_!}\sh{F}\Hom\big(
       X ; \sh{F}^\bullet,
       \RR\Hom(
         \LL f^*&\RR\Hom(
@@ -56,11 +56,11 @@ $$
         ),
         \KK_X^\bullet)
     \big)
-  \\\to\, &\RR\Hom(Y;\RR f_*\sh{F}^\bullet,\sh{G}^\bullet)
+  \\\to\, &\RR\Hom(Y;\RR{f_*}\sh{F}^\bullet,\sh{G}^\bullet)
   \end{aligned}
 \tag{1}
 $$
-that is, in certain cases, an isomorphism (we obtain another formula by swapping $\RR f_!$ and $\RR f_*$, and more striking formulas by setting $\sh{G}^\bullet=\KK_Y^\bullet$).
+that is, in certain cases, an isomorphism (we obtain another formula by swapping $\RR{f_!}$ and $\RR{f_*}$, and more striking formulas by setting $\sh{G}^\bullet=\KK_Y^\bullet$).
 
 In general, direct images are not coherent, and, just like the absolute case, we can only hope to address these questions by defining a topological dualisation $\RR\Hom(Y;-,\KK_Y^\bullet)$ on $Y$ (the relative trace should live in a topological $\Ext^0$, and (1) only gives isomorphisms of suitable operations up to "separation").
 We restrict ourselves here to the case where $f$ is proper, and we use the Grauert direct image theorem.[^1]
@@ -86,15 +86,15 @@ In an appendix, we will give another proof, using Theorem 4.9, of a theorem of 
 
 # Sketch of a proof {#section-1}
 
-We denote by $\iota$ the canonical isomorphism from $\HH_\cc^0(Y;\RR f_*\KK_X^\bullet)$ to $\HH_c^0(X;\KK_X^\bullet)$.
-The trace $\TT_Y$ induces a pairing between $\HH_\cc^0(Y;\RR f_*\KK_X^\bullet)$ and $\Ext^0(Y;\RR f_*\KK_X^\bullet,\KK_Y^\bullet)$, and we are looking for an element $\TT_{X/Y}$ in this latter space such that we have, for all $a\in\HH_\cc^0(Y;\RR f_*\KK_X^\bullet)$,
+We denote by $\iota$ the canonical isomorphism from $\HH_\cc^0(Y;\RR{f_*}\KK_X^\bullet)$ to $\HH_c^0(X;\KK_X^\bullet)$.
+The trace $\TT_Y$ induces a pairing between $\HH_\cc^0(Y;\RR{f_*}\KK_X^\bullet)$ and $\Ext^0(Y;\RR{f_*}\KK_X^\bullet,\KK_Y^\bullet)$, and we are looking for an element $\TT_{X/Y}$ in this latter space such that we have, for all $a\in\HH_\cc^0(Y;\RR{f_*}\KK_X^\bullet)$,
 $$
   \TT_Y(a\cdot\TT_{X/Y})
   = \TT_x\iota a.
 $$
 In other words, we are looking for a transpose ${}^t\iota$ of $\iota$ with respect to the pairings $\TT_Y$ and $\TT_X$ (with $\TT_{X/Y}$ as the image of ${}^t\iota$ under the function $1\in\HH^0(X;\OO_X)$).
-Since this problem is local on $Y$ (provided that we are guaranteed the local vanishing of $\Ext^i(Y;\RR f_*\KK_X^\bullet,\KK_Y^\bullet)$ for $i<0$), we can suppose that $Y$ is realisable as an analytic subset of an open polydisc $V$ of dimension $p$.
-If we still denote by $f$ the composite of $f$ and an embedding of $Y$ into $V$, it follows from the construction of $\KK_Y^\bullet$ that what we are looking for is an element of $\Ext^p(V;\RR f_*,\KK_X^\bullet,\Omega_V)$.
+Since this problem is local on $Y$ (provided that we are guaranteed the local vanishing of $\Ext^i(Y;\RR{f_*}\KK_X^\bullet,\KK_Y^\bullet)$ for $i<0$), we can suppose that $Y$ is realisable as an analytic subset of an open polydisc $V$ of dimension $p$.
+If we still denote by $f$ the composite of $f$ and an embedding of $Y$ into $V$, it follows from the construction of $\KK_Y^\bullet$ that what we are looking for is an element of $\Ext^p(V;\RR{f_*},\KK_X^\bullet,\Omega_V)$.
 We now want to proceed locally on $X$, supposing (being content to shrink $X$) that $X$ is the union of a finite number of opens $X_i$, each of which is embeddable into an open $U_i$ of $\mathbb{C}^n$: we can incorporate each $X_i$ into a commutative diagram
 ```tikz
 \begin{tikzcd}
@@ -108,9 +108,12 @@ We now want to proceed locally on $X$, supposing (being content to shrink $X$) t
 ```
 where $I$ is an embedding, and where $F$ denotes the second projection of $U_i\times V$.
 \oldpage{263}
-We denote by $f_{i_0i_1\ldots i_r}$ the direct image with proper support in $X_{i_0}\cap X_{i_1}\cap\ldots X_{i_r}$ and we first search for a "trace" $\TT_i$ in each $\Ext^p(V;\RR f_i\KK_X^\bullet,\Omega_V)$.
+We denote by $f_{i_0i_1\ldots i_r}$ the direct image with proper support in $X_{i_0}\cap X_{i_1}\cap\ldots X_{i_r}$ and we first search for a "trace" $\TT_i$ in each $\Ext^p(V;\RR{f_i}\KK_X^\bullet,\Omega_V)$.
 We know that $\KK_{X_i}^\bullet$ is precisely
 $$
   \Hom_{\OO_{U_i\times V}}(\OO_X,\KK_{U_i\times V}^\bullet)
 $$
-where $\KK_{U_i\times V}^\bullet$
+where $\KK_{U_i\times V}^\bullet$ is (with a shift by $n_i+p$) a particularly beautiful resolution of the sheaf $\Omega_i$ of holomorphic differential forms of maximum degree on $U_i\times V$.
+The function $1$ on $X_i$ thus gives a morphism from $\KK_{X_i}^\bullet$ to $\KK_{U_i\times V}^\bullet$, whence a morphism to $\Ext^p(V;\RR{f_i}\KK_X^\bullet,\Omega_V)$ from $\Ext^n(V;\RR{f_!}\Omega_i,\Omega_V)$, and it is in this latter space that we will find an elementary trace $t_i$.
+
+The sheaf
