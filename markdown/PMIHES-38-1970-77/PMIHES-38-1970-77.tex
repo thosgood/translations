@@ -296,8 +296,8 @@ a bounded of \(\operatorname{Ker}{v}\)); it is thus bicontinuous.
 \protect\phantomsection\label{lemma-3}
 \begin{itenv}{Lemma 3}
 Let \(X^\bullet\) and \(Y^\bullet\) be complexes of
-\(\mathbf{FS}\)-spaces (or even of \(\mathbf{DFS}\)-spaces), and
-\(u\colon X^\bullet\to Y^\bullet\) a quasi-isomorphism. Then the
+\(\mathbf{FS}\)-spaces (or even of \(\mathbf{DFS}\)-spaces), and let
+\(u\colon X^\bullet\to Y^\bullet\) be a quasi-isomorphism. Then the
 transpose \(u'\) of \(u\) is a quasi-isomorphism.
 
 \end{itenv}
@@ -942,10 +942,8 @@ It will then be possible to say that a section over an open \(U\) of
 \(x\in U\)) is continuous if, locally, it is induced by an element of
 some \(L_K^\bullet\).
 
-\subsubsection*{(i) Germs in the neighbourhood of a
-polydisc}\label{section-5.b.i}
-\addcontentsline{toc}{subsubsection}{(i) Germs in the neighbourhood of a
-polydisc}
+\protect\phantomsection\label{section-5.b.i}
+\begin{rmenv}{(i) Germs in the neighbourhood of a polydisc}
 
 We define, as usual, the germs of analytic sets in the neighbourhood of
 a closed polydisc \(K\) in \(\mathbb{C}^n\). Let
@@ -1011,13 +1009,12 @@ maximal prime ideals of \({\mathscr{O}}_{K'}\) over \(z\). Thus, if
 ideals of \(\{(\varphi^\mathrm{a})^{-1}(x)\}\).
 \end{proof}
 
-\subsubsection*{\texorpdfstring{(ii) The morphism
-\(L_K^\bullet\to L_{K'}^\bullet\)}{(ii) The morphism L\_K\^{}\textbackslash bullet\textbackslash to L\_\{K\textquotesingle\}\^{}\textbackslash bullet}}\label{section-5.b.ii}
-\addcontentsline{toc}{subsubsection}{(ii) The morphism
-\(L_K^\bullet\to L_{K'}^\bullet\)}
+\end{rmenv}
 
+\protect\phantomsection\label{section-5.b.ii}
+\begin{rmenv}{(ii) The morphism $L_K^\bullet\to L_{K'}^\bullet$}
 Let \(\alpha\) be a point of \(\operatorname{Spec}{{\mathscr{O}}_K}\) of
-codimension~\(p\). We need to (following \hyperref[section-5.a]{§A},
+codimension~\(p\). We need to (following \hyperref[section-5.a]{§5.A},
 whose notation we use) construct a \(\rho_{KK'}\)-morphism \(\lambda\)
 from \(\mathrm{H}_\alpha^p(\widetilde{{\mathscr{O}}}_K)\) to
 \(\coprod_{\beta\in Z^p({\mathscr{O}}_{K'})\setminus K^{p+1}({\mathscr{O}}_{K'})} \mathrm{H}_\beta^p(\widetilde{{\mathscr{O}}}_{K'}).\)
@@ -1051,7 +1048,8 @@ from \(\operatorname{Spec}{{\mathscr{O}}_{K'}}\) to
 \(\rho_{KK'}^\mathrm{a}\) of an affine open is evidently again an affine
 open.
 
-We are now in a place where we can give the construction of \(\lambda\).
+We are now in such a place where we are able to give the construction of
+\(\lambda\).
 
 If there is not a prime ideal of \({\mathscr{O}}_{K'}\) over \(\alpha\),
 we set \(\lambda|\mathrm{H}_\alpha^p(\widetilde{{\mathscr{O}}}_K)=0\).
@@ -1087,12 +1085,52 @@ objects) thus obtained coincides with the canonical
 \(\operatorname{Spec}{{\mathscr{O}}_K}\) and
 \(\operatorname{Spec}{{\mathscr{O}}_{K'}}\)).
 
-\subsubsection*{\texorpdfstring{(iii) Surjectivity of
-\(\lim_{K\ni x}L_K^\bullet\to L_x^\bullet\)}{(iii) Surjectivity of \textbackslash lim\_\{K\textbackslash ni x\}L\_K\^{}\textbackslash bullet\textbackslash to L\_x\^{}\textbackslash bullet}}\label{section-5.b.iii}
-\addcontentsline{toc}{subsubsection}{(iii) Surjectivity of
-\(\lim_{K\ni x}L_K^\bullet\to L_x^\bullet\)}
+\end{rmenv}
 
-Let
+\protect\phantomsection\label{section-5.b.iii}
+\begin{rmenv}{(iii) Surjectivity of $\lim_{K\ni x}L_K^\bullet\to L_x^\bullet$}
+Let \(\beta\in Z^p\setminus Z^{p+1}\), and
+\(\gamma\in\mathrm{H}_\beta^p(\widetilde{{\mathscr{O}}}_x)\). There
+exists a polydisc \(K\) that is a neighbourhood of \(x\) such that
+\((\rho_{Kx}^\mathrm{a})^{-1}\rho_{Kx}^\mathrm{a}(\beta)\) is equal to
+\(\beta\) (which implies that
+\((\rho_{K'x}^\mathrm{a})^{-1}\rho_{K'x}^\mathrm{a}(\beta)=\beta\) for
+all \(K'\) such that \(x\in K'\subset K\), and in particular that the
+prime ideals \(\alpha_{K'}=\rho_{K'x}^\mathrm{a}(\beta)\) all have the
+same height~\(p\)). Choose generators \(\varphi_1,\ldots,\varphi_m\) of
+\(\alpha_K\), and let \(\psi\) be an element of
+\({\mathscr{O}}_x\setminus\beta\) (so that \(\psi\) determines an affine
+neighbourhood \(D_\psi\) of \(\beta\)). We still suppose that
+\(p\geqslant2\): \(\gamma\) is represented by a cocycle
+\(\gamma_{i_1\ldots i_p}\) (where
+\(\gamma_{i_1\ldots i_p}\in(\psi\rho_{Kx}(\varphi_{i_1})\ldots\rho_{Kx}(\varphi_{i_p}))^{-1}{\mathscr{O}}_x\)).
+Choose a polydisc \(L\subset K\) such that \(\psi\) lifts to
+\(\overline{\psi}\) in \({\mathscr{O}}_L\) and such that the
+\(\lambda_{i_1\ldots i_p}\) that lift to
+\(\overline{\lambda}_{i_1\ldots i_p}(\overline{\psi}\rho_{KL}(\varphi_{i_1})\ldots\rho_{KL}(\varphi_{i_p}))^{-1}{\mathscr{O}}_L\)
+form a cocycle. This cocycle induces an element \(\overline{\gamma}\) of
+\(\mathrm{H}_{\alpha_L}^p(\widetilde{{\mathscr{O}}}_L)\) such that
+\(\lambda(\overline{\gamma})=\gamma\).
+
+\end{rmenv}
+
+\protect\phantomsection\label{section-5.b.iv}
+\begin{rmenv}{(iv) Injectivity of $\lim_{K\ni x}L_K^\bullet\to L_x^\bullet$}
+
+\oldpage{89}
+
+We prove injectivity in an entirely similar way (noting that, if
+\(\beta_1\ldots,\beta_s\) belong to \(Z^p\setminus Z^{p+1}\), then we
+can find a closed polydisc \(K\) that is a neighbourhood of \(x\), as
+small as we like, such that the
+\((\rho_{Kx}^\mathrm{a})^{-1}\rho_{Kx}^\mathrm{a}(\beta_i)\) are equal
+to \(\beta_i\) for \(i=1,\ldots,s\)).
+
+\end{rmenv}
+
+Having described the dualising complex of a manifold, we can now be more
+precise about that of a space \(X\), as we constructed in
+\hyperref[section-3]{§3}.
 
 
 % Bibliography

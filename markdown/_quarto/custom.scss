@@ -2,6 +2,8 @@
 
 
 /*-- scss:defaults --*/
+$font-family-sans-serif: Inria Serif;
+$font-size-root: 1.1rem;
 $h1-font-size: 1.65rem;
 $h2-font-size: 1.30rem;
 $h3-font-size: 1.15rem;
@@ -45,6 +47,8 @@ $h3-font-size: 1.15rem;
 
   h1 {
     border-bottom: none;
+    font-feature-settings: 'ss01';
+    text-transform: capitalize;
   }
 
   hr {
@@ -104,9 +108,9 @@ $h3-font-size: 1.15rem;
 
 // General typography
 
-// .content {
-//   text-align: justify;
-// }
+body {
+  font-variant-ligatures: normal;
+}
 
 h1 {
   border-bottom: 1px solid hsl(0,0%,87%);
