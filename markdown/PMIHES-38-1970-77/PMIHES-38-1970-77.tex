@@ -133,9 +133,11 @@ geometry}
 \newcommand{\TT}{\mathbf{T}}
 \newcommand{\II}{\mathbf{I}}
 \renewcommand{\aa}{\mathrm{a}}
+\newcommand{\DD}{\mathbf{D}}
 
 \newcommand{\Hom}{\operatorname{Hom}}
 \newcommand{\shHom}{\underline{\Hom}}
+\newcommand{\RHom}{\operatorname{RHom}}
 \newcommand{\Ext}{\operatorname{Ext}}
 \newcommand{\shExt}{\underline{\Ext}}
 \newcommand{\HyperExt}{\operatorname{HyperExt}}
@@ -144,6 +146,7 @@ geometry}
 \newcommand{\Spec}{\operatorname{Spec}}
 \newcommand{\dd}{\operatorname{d}}
 \newcommand{\codim}{\operatorname{codim}}
+\newcommand{\Ob}{\operatorname{Ob}}
 
 \emph{{[}Trans.{]} The numbering of the footnotes in this translation
 (globally sequential, starting from 1) differs to that of the original
@@ -1116,21 +1119,248 @@ form a cocycle. This cocycle induces an element \(\overline{\gamma}\) of
 
 \protect\phantomsection\label{section-5.b.iv}
 \begin{rmenv}{(iv) Injectivity of $\lim_{K\ni x}L_K^\bullet\to L_x^\bullet$}
-
-\oldpage{89}
-
 We prove injectivity in an entirely similar way (noting that, if
 \(\beta_1\ldots,\beta_s\) belong to \(Z^p\setminus Z^{p+1}\), then we
 can find a closed polydisc \(K\) that is a neighbourhood of \(x\), as
 small as we like, such that the
 \((\rho_{Kx}^\mathrm{a})^{-1}\rho_{Kx}^\mathrm{a}(\beta_i)\) are equal
-to \(\beta_i\) for \(i=1,\ldots,s\)).
+to \(\beta_i\) for \(i=1,\ldots,s\)). \oldpage{89}
 
 \end{rmenv}
 
 Having described the dualising complex of a manifold, we can now be more
 precise about that of a space \(X\), as we constructed in
 \hyperref[section-3]{§3}.
+
+At a point \(x\) of \(X\), this complex appears, \emph{a priori}, to be
+able to be non-zero from degree~\(0\) to degree equal to the negative of
+the tangential dimension of \(X\) at \(x\). In fact, the interpretation
+given in \hyperref[section-5.b.ii]{§5.b~(ii)} of the dualising complex
+of a manifold shows that \(\mathbf{K}_X^\bullet\) is zero in degrees
+less than the negative of the dimension of \(X\) at \(x\) (this also
+implies, by duality, that the \(\mathrm{H}^I(X;{\mathscr{F}})\) are zero
+whenever \({\mathscr{F}}\) is coherent and \(i\) exceeds the dimension
+of \(X\)). It is also clear by construction that
+\(\mathbf{K}_X^\bullet\) is of coherent cohomology, and even of zero
+cohomology in degrees strictly greater than the negative of the depth of
+\(X\) (if \(X\) admits an embedding \(f\) into a manifold \(U\), then
+\(\mathrm{H}^i(\mathbf{K}_X^\bullet)=f^*\operatorname{Ext}^i(U;f_*{\mathscr{O}}_X,\mathbf{K}_U^\bullet)\)).
+
+Thus, in the case where \(X\) is a curve, \(\mathbf{K}_X^\bullet\) is a
+resolution of a coherent sheaf in degree~\(-1\), namely its \((-1)\)-st
+cohomology sheaf (a sheaf which we can interpret \autocite{11} by means
+of regular differential forms on the normalised curve of \(X\), and
+which is invertible if \(X\) is a complete intersection\footnote{We will
+  later see that this sheaf is invertible if and only if \(X\) is
+  ``Gorenstein''.}).
+
+\subsubsection*{Uniqueness of the dualising
+complex}\label{uniqueness-of-the-dualising-complex}
+\addcontentsline{toc}{subsubsection}{Uniqueness of the dualising
+complex}
+
+Let \(X\) be an analytic space and \({\mathscr{O}}\) its structure
+sheaf. We denote by \(\mathbf{D}(X)\) the derived category of the
+abelian category of \({\mathscr{O}}\)-modules, and by
+\(\mathbf{D}_\mathrm{c}(X)\) (resp. by \(\mathbf{D}_\mathrm{c}^+(X)\),
+resp. by \(\mathbf{D}_\mathrm{c}^-(X)\)) the full subcategory of
+\(\mathbf{D}(X)\) whose objects are complexes with coherent cohomology
+(resp. bounded-below complexes with coherent cohomology, resp.
+bounded-above complexes with coherent cohomology).
+
+Let \(\mathbf{R}^\bullet\in\operatorname{Ob}\mathbf{D}_\mathrm{c}^+(X)\)
+be a complex whose fibres of of finite injective dimension (that is,
+such that for all \(x\in X\) there exists \(n(x)\in\mathbb{Z}\) such
+that
+\(\operatorname{Ext}_{{\mathscr{O}}_x}^i(\mathbb{C},\mathbf{R}_x^\bullet)=0\)
+for \(i>n(x)\)). We associate to this complex the functor \[
+  \begin{aligned}
+    D\colon \mathbf{D}(X)
+    &\longrightarrow \mathbf{D}(X)
+  \\F^\bullet
+    &\longmapsto \operatorname{RHom}^\bullet(F^\bullet,\mathbf{R}^\bullet).
+  \end{aligned}
+\]
+
+\begin{rmenv}{Definition}
+A complex \(F^\bullet\in\operatorname{Ob}\mathbf{D}(X)\) is said to be
+\emph{reflexive} with respect to \(\mathbf{R}^\bullet\) if the natural
+map \(F^\bullet\to DD(F^\bullet)\) is an isomorphism.
+
+\end{rmenv}
+
+\begin{rmenv}{Definition}
+If every \(F^\bullet\in\operatorname{Ob}\mathbf{D}_\mathrm{c}(X)\) is
+reflexive with respect to \(\mathbf{R}^\bullet\), then
+\(\mathbf{R}^\bullet\) is said to be \emph{dualising}.
+
+\end{rmenv}
+
+\protect\phantomsection\label{proposition-1}
+\begin{itenv}{Proposition 1}
+
+For a complex
+\(\mathbf{R}^\bullet\in\operatorname{Ob}\mathbf{D}_\mathrm{c}^+(X)\)
+with fibres of finite injective dimension, the following conditions are
+equivalent: \oldpage{90}
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\tightlist
+\item
+  The complex \(\mathbf{R}^\bullet\) is dualising.
+\item
+  The structure sheaf \({\mathscr{O}}\) is reflexive with respect to
+  \(\mathbf{R}^\bullet\).
+\item
+  For all \(x\in X\), the complex (of \({\mathscr{O}}_x\)-modules)
+  \(\mathbf{R}_x^\bullet\) is dualising.
+\end{enumerate}
+
+\end{itenv}
+
+\begin{proof}
+The implication (i)\(\implies\)(ii) is clear; it remains to show
+(ii)\(\implies\)(iii) and (iii)\(\implies\)(i). The complex
+\(\mathbf{R}^\bullet\) is isomorphic (in \(\mathbf{D}^+(X)\)) to a
+complex \(I^\bullet\) of injective \({\mathscr{O}}\)-modules. The
+natural morphism \(F^\bullet\to DD(F^\bullet)\) (in \(\mathbf{D}(X)\))
+comes from a morphism of complexes \[
+  F^\bullet \to \operatorname{Hom}^\bullet(\operatorname{Hom}^\bullet(F^\bullet,I^\bullet),I^\bullet)
+\tag{1}
+\] (cf. \autocite[Chapter~V, (1.2)]{7}).
+
+If (ii) is satisfied, then the morphism~(1) associated to
+\(F^\bullet={\mathscr{O}}\) is a quasi-isomorphism, and thus induces a
+quasi-isomorphism on the fibres (by the coherence of the cohomology
+objects), and (iii) is satisfied \autocite[Chapter~V, (2.1), (iv)]{7}.
+Conversely, if (iii) is true, then the morphism~(1) induces the natural
+map \(F_x^\bullet\to D_xD_x(F_x^\bullet)\), which is an isomorphism, and
+so (1) is a quasi-isomorphism on the fibres and thus a
+quasi-isomorphism. Thus (1) induces an isomorphism
+\(F^\bullet\to DD(F^\bullet)\), and (i) is satisfied.
+\end{proof}
+
+\protect\phantomsection\label{theorem-3}
+\begin{itenv}{Theorem 3}
+Let \(X\) be a connected analytic space. Let \(\mathbf{R}^\bullet\) be a
+dualising complex on \(X\). If
+\({\mathbf{R}'}^\bullet\in\operatorname{Ob}\mathbf{D}(X)\), then it is
+dualising if and only if there exists an integer~\(n\) and an invertible
+sheaf \({\mathscr{L}}\) on \(X\) such that \[
+  {\mathbf{R}'}^\bullet \cong \mathbf{R}^\bullet\otimes_{{\mathscr{O}}}T^n{\mathscr{L}}
+\] (in \(\mathbf{D}(X)\)). Furthermore, if \({\mathbf{R}'}^\bullet\) is
+dualising, then \({\mathscr{L}}\) and \(n\) are uniquely determined.
+
+\end{itenv}
+
+\begin{proof}
+If
+\({\mathbf{R}'}^\bullet=\mathbf{R}^\bullet\otimes_{{\mathscr{O}}}T^n{\mathscr{L}}\),
+then it is clear that \({\mathbf{R}'}^\bullet\) is dualising.
+Conversely, if \(\mathbf{R}^\bullet\) and \({\mathbf{R}'}^\bullet\) are
+dualising, then denote by \(D\) and \(D'\) the dualising functors that
+are associated to them (respectively) and we ``reproduce''
+\autocite[Chapter~V, (3.1)]{7}. Setting \(L^\bullet=D'D({\mathscr{O}})\)
+and \({L'}^\bullet=DD'({\mathscr{O}})\), we can show that
+\(L^\bullet\otimes_{{\mathscr{O}}}{L'}^\bullet\cong{\mathscr{O}}\); we
+conclude by the analogue of \autocite[Chapter~V, (3.3)]{7}.
+\end{proof}
+
+If \(\mathbf{K}_X^\bullet\) is the complex associated to the analytic
+space \(X\), it is clear that it is dualising (which justifies our
+terminology!). The uniqueness theorem will allow us, in certain cases,
+to obtain some information about \(\mathbf{K}_X^\bullet\).
+
+\subsubsection*{Particular cases}\label{particular-cases}
+\addcontentsline{toc}{subsubsection}{Particular cases}
+
+\begin{rmenv}{Gorenstein analytic spaces}
+
+Let \(A\) be an integral Noetherian local ring. Recall that \(A\) is
+said to be \emph{Gorenstein} if the following equivalent conditions are
+satisfied (cf. \autocite{2,7}):
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\tightlist
+\item
+  \(A\) is a dualising complex (with respect to itself).
+\item
+  \(A\) admits a finite injective resolution.
+\item
+  There exists an integer \(d\) such that \[
+   \operatorname{Ext}_A^i(k,A) =
+   \begin{cases}
+     0 &\text{for }i\neq d
+   \\k &\text{for }i=d
+   \end{cases}
+      \] (where \(k\) denotes the residue field of \(A\)).
+\end{enumerate}
+
+A Gorenstein ring is Cohen--Macaulay; we thus deduce that the
+integer~\(d\) from (iii) is the Krull dimension of \(A\).
+
+\oldpage{91}
+
+If \(A\) is a Noetherian ring, we will say that it is Gorenstein if all
+its localisations are Gorenstein (i.e.~if the scheme
+\((\operatorname{Spec}{A},\widetilde{A})\) is a Gorenstein scheme!).
+
+\begin{rmenv}{Definition}
+We say that an analytic space \(X\) with structure sheaf
+\({\mathscr{O}}\) is \emph{Gorenstein} if, for all \(x\in X\), the ring
+\({\mathscr{O}}_x\) is Gorenstein.
+
+\end{rmenv}
+
+\protect\phantomsection\label{proposition-2}
+\begin{itenv}{Proposition 2}
+
+Let \(X\) be an analytic space of dimension~\(n\). The three following
+conditions are equivalent:
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\tightlist
+\item
+  \(X\) is an analytic Gorenstein space.
+\item
+  ``The'' dualising complex \(\mathbf{K}_X^\bullet\) is a resolution of
+  an invertible sheaf (placed in degree~\(-n\)).
+\item
+  The structure sheaf \({\mathscr{O}}\) is dualising.
+\end{enumerate}
+
+\end{itenv}
+
+\begin{proof}
+(i)\(\iff\)(iii) by \hyperref[proposition-1]{Proposition~1}, and
+(ii)\(\iff\)(iii) by \hyperref[theorem-3]{Theorem~3}.
+\end{proof}
+
+\end{rmenv}
+
+\begin{rmenv}{Complete intersections}
+Let \(X\subset U\subset\mathbb{C}^m\) be a complete intersection defined
+by \((m-n)\)-many scalar functions
+\(f_1,\ldots,f_{m-n}\in{\mathscr{O}}(U)\). It is easy to see that the
+analytic space \(X\), equal to the quotient of \({\mathscr{O}}(U)\) by
+the ideal generated by the \(f_i\), is Gorenstein (cf. \autocite{2}). We
+can thus ``replace'' \(\mathbf{K}_X^\bullet\) by an invertible sheaf
+\(\Omega\) that the Koszul complex
+\(K^{{\mathscr{O}}(U)}(f_1,\ldots,f_{m-n})\) allows us to ``calculate'':
+\[
+  \begin{aligned}
+    \Omega
+    = \mathrm{H}^{-n}(\mathbf{K}_X^\bullet)
+    &= \operatorname{Ext}_{{\mathscr{O}}(U)}^{m-n}({\mathscr{O}}(X),\Omega^m(U))
+  \\&= \mathrm{H}^{{\mathscr{O}}(U)}(f_1,\ldots,f_{m-n};\Omega^m(U))
+  \\&= {\mathscr{O}}(X)\otimes_{{\mathscr{O}}(U)}\Omega^M(U).
+  \end{aligned}
+\]
+
+\end{rmenv}
 
 
 % Bibliography
