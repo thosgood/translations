@@ -2,41 +2,43 @@ project:
   type: website
   output-dir: _output
 
-# Nice things to have
+# Nice things to have #
 repo-url: https://github.com/thosgood/translations
 favicon: "_quarto/favicon.ico"
 
-# Page structure
+# Page structure #
 toc: true
 number-sections: true
 
-# Citations
+# Citations #
 nocite: '@*'
 link-citations: true
 csl: _quarto/maths-translations.csl
 reference-section-title: "Bibliography"
 
-# Filters
+# Filters #
 filters:
   - _quarto/callouts.lua
   - _quarto/tikz.lua
 
-# Formats
+# Formats #
 format:
   html:
-    ## Template content
+    ## Template content ##
     include-before-body: _quarto/translators-note.html
     template-partials:
       - _quarto/title-block.html
-    ## General
+    ## General ##
     html-math-method: katex
+    # Embedding resources makes the files a bit bigger but means that we can just move them around on the server
+    embed-resources: true
     date-format: "YYYY"
     lang: en-GB
     css:
       - _quarto/environments.css
       - _quarto/InriaSans/fonts.css
       - _quarto/InriaSerif/fonts.css
-    ## ToC and links
+    ## ToC and links ##
     code-links:
       - text: Source files
         href: https://github.com/thosgood/translations
@@ -45,7 +47,7 @@ format:
       - text: More translations
         href: https://thosgood.net/translations
         icon: collection
-    ## Visual things
+    ## Visual things ##
     title-block-banner: true
     theme:
       light: [flatly, _quarto/custom.scss]
