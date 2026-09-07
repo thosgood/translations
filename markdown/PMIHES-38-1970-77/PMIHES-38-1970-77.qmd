@@ -575,10 +575,10 @@ If $D_{f_1},\ldots,D_{f_m}$ is an affine cover of $\Spec{\OO_K}\setminus\overlin
 Let $g_{j_1,\ldots,j_p}$ be a cocycle thus associated to an element $c\in\HH_\alpha^p(\widetilde{\OO}_K)$ (where $g_{j_1,\ldots,j_p}\in(gf_{j_1}\ldots f_{j_p})^{-1}\OO_K$).
 The restriction $\rho_{KK'}$ induces the map $\rho_{KK'}^\aa$ from $\Spec{\OO_{K'}}$ to $\Spec{\OO_K}$, since the inverse image under $\rho_{KK'}^\aa$ of an affine open is evidently again an affine open.
 
-We are now in a place where we can give the construction of $\lambda$.
+We are now in such a place where we are able to give the construction of $\lambda$.
 
 If there is not a prime ideal of $\OO_{K'}$ over $\alpha$, we set $\lambda|\HH_\alpha^p(\widetilde{\OO}_K)=0$.
-Otherwise, the maximal prime ideals over $\alpha$ are finite in number, and all of the same codimension as $\alpha$ (cf. [§5.B.i](#section-5.b.i));
+Otherwise, the maximal prime ideals over $\alpha$ are finite in number, and all of the same codimension as $\alpha$ (cf. [§5.B (i)](#section-5.b.i));
 we denote them by $\beta_1,\ldots,\beta_s$.
 The opens $D_{\rho_{KK'}}(f_i)$ form an affine cover of $(\rho_{KK'}^\aa)^{-1}(U)\setminus(\overline{\{\beta_1\}}\cup\ldots\cup\overline{\{\beta_s\}})$, and the $\rho_{KK'}(g_{j_1,\ldots,j_p})$ determine a cocycle of this cover, and thus an element $\gamma$ of $\HH^{p-1}((\rho_{KK'}^\aa)^{-1}(U)\setminus\bigcup_{i=1,\ldots,s}\overline{\{\beta_i\}};\widetilde{\OO}_{K'})$.
 We can find an affine neighbourhood $V$ of $\beta_k$ contained inside $(\rho_{KK'}^\aa)^{-1}(U)\setminus\bigcup_{i\neq k}\overline{\{\beta_i\}}$.
@@ -589,4 +589,9 @@ $$
   = \sum_{k=1,\ldots,s} \gamma_k.
 $$
 
-Using [Lemma 10](#lemma-10),
+Using [Lemma 10](#lemma-10), we can show (with no difficulty apart from writing the diagrams...) that the morphism (of graded objects) thus obtained coincides with the canonical $\rho_{KK'}$-morphism (of complexes) from $L_K^\bullet$ to $L_{K'}^\bullet$ (whose existence we prove by using the flatness of $\OO_{K'}$ over $\OO_K$ and the compatibility of $\rho_{KK'}$ with the canonical filtrations of $\Spec{\OO_K}$ and $\Spec{\OO_{K'}}$).
+
+
+### (iii) Surjectivity of $\lim_{K\ni x}L_K^\bullet\to L_x^\bullet$ {#section-5.b.iii .unnumbered}
+
+Let

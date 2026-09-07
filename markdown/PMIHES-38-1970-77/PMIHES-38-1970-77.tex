@@ -1019,9 +1019,8 @@ ideals of \(\{(\varphi^\mathrm{a})^{-1}(x)\}\).
 Let \(\alpha\) be a point of \(\operatorname{Spec}{{\mathscr{O}}_K}\) of
 codimension~\(p\). We need to (following \hyperref[section-5.a]{§A},
 whose notation we use) construct a \(\rho_{KK'}\)-morphism \(\lambda\)
-from \(\mathrm{H}_\alpha^p(\widetilde{{\mathscr{O}}}_K)\) to \[
-  \coprod_{\beta\in Z^p({\mathscr{O}}_{K'})\setminus K^{p+1}({\mathscr{O}}_{K'})} \mathrm{H}_\beta^p(\widetilde{{\mathscr{O}}}_{K'}).
-\]
+from \(\mathrm{H}_\alpha^p(\widetilde{{\mathscr{O}}}_K)\) to
+\(\coprod_{\beta\in Z^p({\mathscr{O}}_{K'})\setminus K^{p+1}({\mathscr{O}}_{K'})} \mathrm{H}_\beta^p(\widetilde{{\mathscr{O}}}_{K'}).\)
 
 We spell out the details for \(p\geqslant2\); for \(p=0,1\), the
 situation is the same. We first interpret
@@ -1058,13 +1057,42 @@ If there is not a prime ideal of \({\mathscr{O}}_{K'}\) over \(\alpha\),
 we set \(\lambda|\mathrm{H}_\alpha^p(\widetilde{{\mathscr{O}}}_K)=0\).
 Otherwise, the maximal prime ideals over \(\alpha\) are finite in
 number, and all of the same codimension as \(\alpha\)
-(cf.~\hyperref[section-5.b.i]{§5.B.i}); we denote them by
+(cf.~\hyperref[section-5.b.i]{§5.B (i)}); we denote them by
 \(\beta_1,\ldots,\beta_s\). The opens \(D_{\rho_{KK'}}(f_i)\) form an
 affine cover of
 \((\rho_{KK'}^\mathrm{a})^{-1}(U)\setminus(\overline{\{\beta_1\}}\cup\ldots\cup\overline{\{\beta_s\}})\),
 and the \(\rho_{KK'}(g_{j_1,\ldots,j_p})\) determine a cocycle of this
 cover, and thus an element \(\gamma\) of
 \(\mathrm{H}^{p-1}((\rho_{KK'}^\mathrm{a})^{-1}(U)\setminus\bigcup_{i=1,\ldots,s}\overline{\{\beta_i\}};\widetilde{{\mathscr{O}}}_{K'})\).
+We can find an affine neighbourhood \(V\) of \(\beta_k\) contained
+inside
+\((\rho_{KK'}^\mathrm{a})^{-1}(U)\setminus\bigcup_{i\neq k}\overline{\{\beta_i\}}\).
+The restriction of \(\gamma\) to
+\(\mathrm{H}^{p-1}(V\setminus\overline{\{\beta_k\}};\widetilde{{\mathscr{O}}}_{K'})\)
+induces an element of
+\(\mathrm{H}_{\overline{\{\beta_k\}}}^p(V;\widetilde{{\mathscr{O}}}_{K'})\),
+and thus an element \(\gamma_k\) of
+\(\mathrm{H}_{\beta_k}^p(\widetilde{{\mathscr{O}}}_{K'})\). We set \[
+  \lambda(c)
+  = \sum_{k=1,\ldots,s} \gamma_k.
+\]
+
+Using \hyperref[lemma-10]{Lemma~10}, we can show (with no difficulty
+apart from writing the diagrams\ldots) that the morphism (of graded
+objects) thus obtained coincides with the canonical
+\(\rho_{KK'}\)-morphism (of complexes) from \(L_K^\bullet\) to
+\(L_{K'}^\bullet\) (whose existence we prove by using the flatness of
+\({\mathscr{O}}_{K'}\) over \({\mathscr{O}}_K\) and the compatibility of
+\(\rho_{KK'}\) with the canonical filtrations of
+\(\operatorname{Spec}{{\mathscr{O}}_K}\) and
+\(\operatorname{Spec}{{\mathscr{O}}_{K'}}\)).
+
+\subsubsection*{\texorpdfstring{(iii) Surjectivity of
+\(\lim_{K\ni x}L_K^\bullet\to L_x^\bullet\)}{(iii) Surjectivity of \textbackslash lim\_\{K\textbackslash ni x\}L\_K\^{}\textbackslash bullet\textbackslash to L\_x\^{}\textbackslash bullet}}\label{section-5.b.iii}
+\addcontentsline{toc}{subsubsection}{(iii) Surjectivity of
+\(\lim_{K\ni x}L_K^\bullet\to L_x^\bullet\)}
+
+Let
 
 
 % Bibliography
