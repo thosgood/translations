@@ -29,22 +29,25 @@ bibliography: IM-13-1971-261.bib
 \providecommand{\LL}{\mathrm{L}}
 \providecommand{\TT}{\mathbf{T}}
 \providecommand{\KK}{\mathbf{K}}
-\providecommand{\DD}{\mathrm{D}}
+\providecommand{\DD}{\mathbf{D}}
 
 \providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\RHom}{\operatorname{RHom}}
 \providecommand{\Ext}{\operatorname{Ext}}
 \providecommand{\shExt}{\mathscr{E}\mathcal{xt}}
 \providecommand{\Supp}{\operatorname{Supp}}
+
+\providecommand{\DFS}{\mathbf{DFS}}
 
 <!-- Content -->
 
 # Introduction {.unnumbered}
 
 \oldpage{261}
-Given a $\sigma$-compact analytic space $X$, of bounded dimension, we know how to construct [@10] a bounded complex $\KK_X^\bullet$ of $\OO_X$-modules with coherent cohomology, and a (continuous linear) "trace" $\TT_X\colon\HH_\cc^0(X;\KK_X^\bullet)\to\mathbb{C}$ that can happily provide a duality between the **TODO: separations?** of the spaces $\HH_\cc^p(X;\sh{F})$ and $\Ext^{-p}(X;\sh{F},\KK_X^\bullet)$, for every integer $p$ and every coherent $\OO_X$-module $\sh{F}$, as long as we endow these space with suitable topologies;
+Given a $\sigma$-compact analytic space $X$, of bounded dimension, we know how to construct [@10] a bounded complex $\KK_X^\bullet$ of $\OO_X$-modules of coherent cohomology, and a (continuous linear) "trace" $\TT_X\colon\HH_\cc^0(X;\KK_X^\bullet)\to\mathbb{C}$ that can happily provide a duality between the separations of the spaces $\HH_\cc^p(X;\sh{F})$ and $\Ext^{-p}(X;\sh{F},\KK_X^\bullet)$, for every integer $p$ and every coherent $\OO_X$-module $\sh{F}$, as long as we endow these space with suitable topologies;
 similarly, the trace induces a perfect pairing between $\HH^p(X;\sh{F})$ and $\Ext_\cc^{-p}(X;\sh{F},\KK_X^\bullet)$, suitably topologised.
 The purpose of this article is the study of the compatibility of this duality with direct images: if $f\colon X\to Y$ is a morphism of analytic spaces, then we have to construct a "relative trace" $\TT_{X/Y}\in\Ext^0(Y;\RR{f_!}\KK_X^\bullet,\KK_Y^\bullet)$ (where $f_!$ denotes the direct image with proper support).
-We then have, for every complex $\sh{F}^\bullet$ of $\OO_X$-modules with coherent cohomology ($\sh{F}^\bullet\in\DD_\coh(X)$) and for every complex $\sh{G}^\bullet$ with bounded-below coherent cohomology ($\sh{G}^\bullet\in\DD_\coh^+(Y)$), a canonical morphism
+We then have, for every complex $\sh{F}^\bullet$ of $\OO_X$-modules of coherent cohomology ($\sh{F}^\bullet\in\DD_\coh(X)$) and for every complex $\sh{G}^\bullet$ of bounded-below coherent cohomology ($\sh{G}^\bullet\in\DD_\coh^+(Y)$), a canonical morphism
 $$
   \begin{aligned}
     \RR{f_!}\sh{F}\Hom\big(
@@ -84,7 +87,7 @@ As for the statement of Theorem 4.9, we obtain this by replacing, in the lines 
 In an appendix, we will give another proof, using Theorem 4.9, of a theorem of Siu on the vanishing of certain cohomology groups.
 
 
-# Sketch of a proof {#section-1}
+# Proof sketch {#section-1}
 
 We denote by $\iota$ the canonical isomorphism from $\HH_\cc^0(Y;\RR{f_*}\KK_X^\bullet)$ to $\HH_c^0(X;\KK_X^\bullet)$.
 The trace $\TT_Y$ induces a pairing between $\HH_\cc^0(Y;\RR{f_*}\KK_X^\bullet)$ and $\Ext^0(Y;\RR{f_*}\KK_X^\bullet,\KK_Y^\bullet)$, and we are looking for an element $\TT_{X/Y}$ in this latter space such that we have, for all $a\in\HH_\cc^0(Y;\RR{f_*}\KK_X^\bullet)$,
@@ -114,6 +117,106 @@ $$
   \Hom_{\OO_{U_i\times V}}(\OO_X,\KK_{U_i\times V}^\bullet)
 $$
 where $\KK_{U_i\times V}^\bullet$ is (with a shift by $n_i+p$) a particularly beautiful resolution of the sheaf $\Omega_i$ of holomorphic differential forms of maximum degree on $U_i\times V$.
-The function $1$ on $X_i$ thus gives a morphism from $\KK_{X_i}^\bullet$ to $\KK_{U_i\times V}^\bullet$, whence a morphism to $\Ext^p(V;\RR{f_i}\KK_X^\bullet,\Omega_V)$ from $\Ext^n(V;\RR{f_!}\Omega_i,\Omega_V)$, and it is in this latter space that we will find an elementary trace $t_i$.
+The function $1$ on $X_i$ thus gives a morphism from $\KK_{X_i}^\bullet$ to $\KK_{U_i\times V}^\bullet$, whence a morphism to $\Ext^p(V;\RR{f_i}\KK_X^\bullet,\Omega_V)$ from $\Ext^n(V;\RR{F_!}\Omega_i,\Omega_V)$, and it is in this latter space that we will find an elementary trace $t_i$.
 
-The sheaf
+The sheaf $\RR^q{F_!}\Omega_i$ is generated, by a Künneth formula, by the presheaf $v\mapsto\HH_\cc^{n_i}(U_i;\Omega_{U_i})\widehat{\otimes}\HH^{q-n}(v;\Omega_V)$ (since $\HH_\cc^\bullet(U_i;\Omega_{U_i})$ is zero in degrees not equal to $n_i$)[^2];
+it thus follows that the complex $\RR{F_!}\Omega_i$ is equivalent to the sheaf $\RR^{n_i}F_!\Omega_i$ in degree $n_i$, and that we are simply looking for a homomorphism from this sheaf to $\Omega_V$, which immediately gives the interpretation given above, and the absolute trace on $U_i$.
+
+[^2]: We only deal with nuclear spaces in these questions.
+
+To glue the $\TT_i$, we would like to be able to confirm the existence of a spectral sequence abutting to $\Ext^{r-q}(V;\RR{f}\KK_X^\bullet,\Omega_V)$ with page
+$$
+  E_1^{r,q}
+ \prod \Ext^{-q}(V;\RR{f_{i_0i_1\ldots i_r}}\KK_X^\bullet,\Omega_V)
+$$
+and then say that the $\TT_i$ give an element of $E_2^{0,-p}$, which would be equal to $\Ext^p(V;\RR{f_*}\KK_X^\bullet,\Omega_V)$ by the vanishing of $E_1^{r,q}$ for $q<-p$.
+All of this is sadly unlikely to be feasible, since the usual $\Ext$ groups are not well adapted to the study of complexes such as $\RR{f_i}\KK_X^\bullet$; why, for example, would $\Ext^j(V;\RR{F_!}\Omega_i,\Omega_i)$ be zero for $j\geqslant1$ when $\RR{F_!}\Omega_i$ is a sheaf of analytic functions on $V$ with values in a $\DFS$ space?
+Having still not established a direct solution to this (i.e. defined for certain complexes of $\OO_V$-modules of $\mathrm{Extop}^\bullet(V;-,\Omega_V)$ groups that should coincide with the "algebraic" $\Ext$ under the hypothesis of perfectness of the complexes), we note in [Section 2](#section-2) a more artificial method of construction for $\TT_{X/Y}$.
+
+Thanks to the relative trace, which is, up to homotopy, a morphism from $\RR_{f_*}\KK_X^\bullet$ to $\KK_Y^\bullet$, it is easy to construct the morphism (1): first, for any complex $\sh{F}^\bullet$ of $\OO_X$-modules of coherent cohomology, we denote by $D_X\sh{F}^\bullet$ the complex $\RHom(\sh{F}^\bullet,\KK_X^\bullet)$, which is also of coherent cohomology.
+\oldpage{264}
+We know [@10] that the canonical morphism from $\sh{F}^\bullet$ to $D_XD_X\sh{F}^\bullet$ is a quasi-isomorphism, and we will note that, if $\sh{G}^\bullet\in\DD_\coh^+(X)$, there is a canonical isomorphism from $\RHom(\sh{F}^\bullet,\sh{G}^\bullet)$ to $D_X(\sh{F}^\bullet\otimes^\LL D_X\sh{G}^\bullet)$ (where $X$ denotes an arbitrary analytic space, for example $Y$).
+Indeed,
+$$
+  \begin{aligned}
+    \RHom(\sh{F}^\bullet,\sh{G}^\bullet)
+    &= \RHom(\sh{F}^\bullet,D_XD_X\sh{G}^\bullet)
+  \\&= \RHom(\sh{F}^\bullet,\RHom(D_X\sh{G}^\bullet,\KK_X^\bullet))
+  \\&= \RHom(\sh{F}^\bullet\otimes^\LL D_X\sh{G}^\bullet,\KK_X^\bullet)
+  \\&= D_X(\sh{F}^\bullet\otimes^\LL D_X\sh{G}^\bullet).
+  \end{aligned}
+$$
+Finding the morphism (1) thus reduces to exhibiting a morphism
+$$
+  \tau\colon
+  \RR{f_*}D_X(\sh{F}^\bullet\otimes^\LL\LL{f^*}D_Y\sh{G}^\bullet)
+  \to D_Y(\RR{f_*}\sh{F}^\bullet\otimes^\LL D_Y\sh{G}^\bullet)
+$$
+and this comes from the canonical homomorphism from
+$$
+  \RR{f_*}\RHom(\sh{F}^\bullet\otimes^\LL\LL{f^*}D_Y\sh{G}^\bullet,\KK_X^\bullet)
+$$
+to
+$$
+  \RHom(\RR{f_*}(\sh{F}^\bullet\otimes^\LL\LL{f^*}D_Y\sh{G}^\bullet), \RR{f_*}\KK_X^\bullet)
+$$
+along with the isomorphism given by the projection formula
+$$
+  \RR{f_*}(\sh{F}^\bullet\otimes^\LL\LL{f^*}D_Y\sh{G}^\bullet)
+  \to \RR{f_*}\sh{F}^\bullet\otimes^\LL D_Y\sh{G}^\bullet
+$$
+and the trace $\TT_{X/Y}$.
+
+To prove that $\tau$ is an isomorphism, it suffices, by substituting $\sh{F}^\bullet\otimes^\LL\LL^{f^*}D_Y\sh{G}^\bullet$ for $\sh{F}^\bullet$, to consider the case where $\sh{G}^\bullet=\KK_Y^\bullet$, i.e. to prove that
+$$
+  \tau\colon
+  \RR{f_*}\RHom(\sh{F}^\bullet,\KK_X^\bullet)
+  \to \RHom(\RR{f_*}\sh{F}^\bullet,\KK_Y^\bullet)
+$$
+is a quasi-isomorphism;
+for this, we show that $\tau$ induces a quasi-isomorphism between the above complexes of sections of the above complexes over every sufficiently nice open of $Y$: in plain words, we show that, if $Y$ is a Stein space, then $\tau$ induces, for every $i$, an isomorphism from $\Ext^{-i}(X;\sh{F}^\bullet,\KK_X^\bullet)$ to $\Ext^{-i}(Y;\RR{f_*}\sh{F}^\bullet,\KK_Y^\bullet)$.
+By a lemma on $\partial$-functors [@3, I.7], it suffices to prove this in the case where $\sh{F}^\bullet$ consists of a single coherent sheaf $\sh{F}$;
+in this case, $\Ext^{-i}(X;\sh{F},\KK_X^\bullet)$ is in duality with $\HH_\cc^i(X;\sh{F})$, and we will show in [Section 3](#section-3) that $\Ext^{-i}(X;\RR{f_*}\sh{F},\KK_Y^\bullet)$ is in duality (in a topological sense) with $\HH_\cc^i(Y;\RR{f_*}\sh{F})$, and, by the same construction, the transpose of $\tau$ with respect to these pairings is the natural algebraic isomorphism from $\HH_\cc^i(Y;\RR{f_*}\sh{F})$ to $\HH_\cc^i(X;\sh{F})$.
+The fact that $\tau$ is an isomorphism then follows from the fact that the four spaces in question are separated, the proof of which is completed in [Section 4](#section-4).
+
+The vanishing of $\Ext^{-i}(Y;\RR{f_*}\KK_X^\bullet,\KK_X^\bullet)$ when $Y$ is a Stein space and $i>0$, to which we alluded in the start of this section, can be proved in the same way:
+\oldpage{265}
+this space is in duality with $\HH_\cc^i(Y;\RR{f_*}\KK_X^\bullet)$, which is algebraically isomorphic to $\HH_\cc^i(X;\KK_X^\bullet)=\Ext_\cc^i(X;\OO_X,\KK_X^\bullet)$, which is in duality with $\HH^{-i}(X;\OO_X)$, which is zero, even though all these spaces were a priori separated (the first two by construction of even their topologies --- cf. [Section 3](#section-3); as for $\Ext_\cc^i(X;\OO_X,\KK_X^\bullet)$, we know that its separation is equivalent to that of $\HH^{-i+1}(X;\OO_X)$).
+
+The argument above strongly encourages us to define the trace $\TT_{X/Y}$ as the image of the function $1\in\HH^0(X;\OO_X)$ under the transpose of the natural algebraic isomorphism $\iota$ from $\HH_\cc^0(Y;\RR{f_*}\KK_X^\bullet)$ to $\HH_\cc^0(X;\KK_X^\bullet)$;
+that is, we need to prove the continuity of $\iota$.
+We can even conclude, using the separation theorem [Theorem 4.2](#theorem-4.2) and [Lemma 3.5](#lemma-3.5), that $\HH_\cc^0(X;\KK_X^\bullet)$ is separated whenever $Y$ is a Stein space, which implies that, in this case, $\HH^1(X;\OO_X)$ is separated, and $\Ext^0(Y;\RR{f_*}\KK_X^\bullet,\KK_Y^\bullet)$ is isomorphic to $\HH^0(X;\OO_X)$.
+
+
+# The relative trace {#section-2}
+
+From now on, let $f\colon X\to Y$ be a proper morphism, where $Y$ is an open polydisc of $\mathbb{C}^p$.
+Let $Y'$ be an open sub-polydisc of $Y$, with $\overline{Y'}\subset Y$.
+We set $X'=f^{-1}(Y')$.
+
+We will define "in a natural way" a complex of $\DFS$ spaces whose cohomology will be the hypercohomology with compact support of $Y$ with values in $\RR{f_*}\KK_{X'}^\bullet$.
+Since $\RR{f_*}\KK_X^\bullet$ is bounded and of coherent cohomology, we can find [@4], in a neighbourhood of $Y'$, a representative $\sh{L}^\bullet$ that is perfect (i.e. bounded, and whose objects are free of finite type).
+Let $\frak{L}$ be a locally finite cover of $Y'$ by closed polydiscs.
+Since the groups $\HH_\cc^i(Y';\RR{f_*}\KK_{X'}^\bullet)$ are the cohomology groups of the total complex associated to the double complex $\CC^\bullet(\frak{L};\HH^0(\frak{L};\sh{L}^\bullet))$ of $\DFS$ spaces (when there is no ambiguity in the choice of cover, we denote this complex by $\CC_{Y'}^\bullet(\sh{L}^\bullet)$), which allows us to topologise them, in a way that is independent of the choice of resolution $\sh{L}^\bullet$, since if $\sh{L}_1^\bullet\to$ and $\sh{L}_2^\bullet\to$ are perfect resolutions of $\RR{f_*}\KK_{X'}^\bullet$ then there exists another perfect resolution $\sh{L}_3^\bullet$ that dominates them both:
+```tikz
+\begin{tikzcd}[row sep=tiny]
+  & \mathscr{L}_1^\bullet \ar[dr]
+\\\mathscr{L}_3^\bullet \ar[ur] \ar[dr]
+  && \mathrm{R}f_*\mathbf{K}_{X'}^\bullet
+\\& \mathscr{L}_2^\bullet \ar[ur]
+\end{tikzcd}
+```
+
+With the group $\HH_\cc^0(Y';\RR{f_*}\KK_{X'}^\bullet)$ being thus topologised[^3], we endow $\HH_\cc^0(X';\KK_{X'}^\bullet)$ with its usual $\DFS$ topology[^4], and we propose the following proposition.
+
+[^3]: We show that this topology also does not depend on the choice of $\sh{L}^\bullet$.
+
+[^4]: But not natural: when we know how to topologise the hypercohomology of a complex of coherent cohomology on a general space [@5], the lemma becomes evident.
+
+\oldpage{266}
+
+::: {.itenv #proposition-2.1 title="Proposition 2.1" latex="{Proposition 2.1}"}
+The natural algebraic isomorphism $\iota$ from $\HH_\cc^0(Y';\RR{f_*}\KK_{X'}^\bullet)$ to $\HH_\cc^0(X';\KK_{X'}^\bullet)$ is continuous.
+:::
+
+Before
