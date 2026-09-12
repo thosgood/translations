@@ -38,6 +38,8 @@ bibliography: IM-13-1971-261.bib
 \providecommand{\Supp}{\operatorname{Supp}}
 
 \providecommand{\DFS}{\mathbf{DFS}}
+\providecommand{\QDFS}{\mathbf{QDFS}}
+\providecommand{\QFS}{\mathbf{QFS}}
 
 <!-- Content -->
 
@@ -219,4 +221,12 @@ With the group $\HH_\cc^0(Y';\RR{f_*}\KK_{X'}^\bullet)$ being thus topologised[^
 The natural algebraic isomorphism $\iota$ from $\HH_\cc^0(Y';\RR{f_*}\KK_{X'}^\bullet)$ to $\HH_\cc^0(X';\KK_{X'}^\bullet)$ is continuous.
 :::
 
-Before
+Before proving this, we note that there exists on
+$$
+  \HH_\cc^i(Y';\RR{f_*}\KK_{X'}^\bullet)
+  = \HH_\cc^i(Y';\sh{L}^\bullet)
+$$
+a unique $\QDSF$ topology, and on $\Ext^{-i}(Y';\RR{f_*}\KK_{X'}^\bullet,\KK_{Y'}^\bullet)$ a unique $\QSF$ topology, such that the trace $\TT_{Y'}$ places in duality the separations of these spaces.
+Furthermore, these spaces are separated, and the topology on $\HH_\cc^i(Y';\RR{f_*}\KK_{X'}^\bullet)$ coincides with that described above (we proceed as in [@10, Theorem 2], by using the fact that $\sh{L}^\bullet$ is perfect, and thus has coherent objects, and, in parallel, we use [Proposition 3.2](#proposition-3.2); the topologies are the same by uniqueness, and thus separated).
+
+We recall that
