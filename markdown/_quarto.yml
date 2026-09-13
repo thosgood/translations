@@ -2,9 +2,14 @@ project:
   type: website
   output-dir: _output
 
-# Nice things to have #
-repo-url: https://github.com/thosgood/translations
-favicon: "_quarto/favicon.ico"
+website:
+  page-footer: "[thosgood.net/translations](https://thosgood.net/translations)"
+  favicon: "_quarto/favicon.ico"
+  # GitHub links in table of contents #
+  repo-url: https://github.com/thosgood/translations
+  repo-subdir: markdown
+  repo-actions: ["source", "issue"]
+
 
 # Page structure #
 toc: true
@@ -39,14 +44,10 @@ format:
       - _quarto/CrimsonPro/fonts.css
       - _quarto/InriaSerif/fonts.css
     ## ToC and links ##
-    code-links:
-      - text: Source files
-        href: https://github.com/thosgood/translations
-        icon: github
-    other-links:
-      - text: More translations
-        href: https://thosgood.net/translations
-        icon: collection
+    # other-links:
+    #   - text: More translations
+    #     href: https://thosgood.net/translations
+    #     icon: collection
     ## Visual things ##
     title-block-banner: true
     theme:

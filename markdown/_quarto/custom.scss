@@ -5,9 +5,9 @@
 $font-family-base: 'Crimson Pro';
 $font-size-root: 1.3rem;
 $headings-font-family: 'Inria Serif';
-$h1-font-size: 1.65rem;
-$h2-font-size: 1.30rem;
-$h3-font-size: 1.15rem;
+$h1-font-size: 1.4rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1rem;
 
 
 /*-- scss:rules --*/
@@ -50,6 +50,7 @@ $h3-font-size: 1.15rem;
     border-bottom: none;
     font-feature-settings: 'ss01';
     text-transform: capitalize;
+    font-size: 1.65rem;
   }
 
   hr {
