@@ -2,8 +2,9 @@
 
 
 /*-- scss:defaults --*/
-$font-family-sans-serif: Inria Serif;
-$font-size-root: 1.1rem;
+$font-family-base: 'Crimson Pro';
+$font-size-root: 1.3rem;
+$headings-font-family: 'Inria Serif';
 $h1-font-size: 1.65rem;
 $h2-font-size: 1.30rem;
 $h3-font-size: 1.15rem;
@@ -130,7 +131,7 @@ blockquote {
 // KaTeX
 
 .katex {
-  font-size: 1.1em !important;
+  font-size: 1em !important;
 }
 
 
