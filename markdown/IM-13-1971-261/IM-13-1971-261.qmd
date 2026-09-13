@@ -199,7 +199,7 @@ We set $X'=f^{-1}(Y')$.
 We will define "in a natural way" a complex of $\DFS$ spaces whose cohomology will be the hypercohomology with compact support of $Y$ with values in $\RR{f_*}\KK_{X'}^\bullet$.
 Since $\RR{f_*}\KK_X^\bullet$ is bounded and of coherent cohomology, we can find [@4], in a neighbourhood of $Y'$, a representative $\sh{L}^\bullet$ that is perfect (i.e. bounded, and whose objects are free of finite type).
 Let $\frak{L}$ be a locally finite cover of $Y'$ by closed polydiscs.
-Since the groups $\HH_\cc^i(Y';\RR{f_*}\KK_{X'}^\bullet)$ are the cohomology groups of the total complex associated to the double complex $\CC^\bullet(\frak{L};\HH^0(\frak{L};\sh{L}^\bullet))$ of $\DFS$ spaces (when there is no ambiguity in the choice of cover, we denote this complex by $\CC_{Y'}^\bullet(\sh{L}^\bullet)$), which allows us to topologise them, in a way that is independent of the choice of resolution $\sh{L}^\bullet$, since if $\sh{L}_1^\bullet\to$ and $\sh{L}_2^\bullet\to$ are perfect resolutions of $\RR{f_*}\KK_{X'}^\bullet$ then there exists another perfect resolution $\sh{L}_3^\bullet$ that dominates them both:
+Since the groups $\HH_\cc^i(Y';\RR{f_*}\KK_{X'}^\bullet)$ are the cohomology groups of the total complex of the double complex $\CC^\bullet(\frak{L};\HH^0(\frak{L};\sh{L}^\bullet))$ of $\DFS$ spaces (when there is no ambiguity in the choice of cover, we denote this complex by $\CC_{Y'}^\bullet(\sh{L}^\bullet)$), which allows us to topologise them, in a way that is independent of the choice of resolution $\sh{L}^\bullet$, since if $\sh{L}_1^\bullet\to$ and $\sh{L}_2^\bullet\to$ are perfect resolutions of $\RR{f_*}\KK_{X'}^\bullet$ then there exists another perfect resolution $\sh{L}_3^\bullet$ that dominates them both:
 ```tikz
 \begin{tikzcd}[row sep=tiny]
   & \mathscr{L}_1^\bullet \ar[dr]
@@ -211,7 +211,7 @@ Since the groups $\HH_\cc^i(Y';\RR{f_*}\KK_{X'}^\bullet)$ are the cohomology gro
 
 With the group $\HH_\cc^0(Y';\RR{f_*}\KK_{X'}^\bullet)$ being thus topologised[^3], we endow $\HH_\cc^0(X';\KK_{X'}^\bullet)$ with its usual $\DFS$ topology[^4], and we propose the following proposition.
 
-[^3]: We show that this topology also does not depend on the choice of $\sh{L}^\bullet$.
+[^3]: We can show that this topology also does not depend on the choice of $\sh{L}^\bullet$.
 
 [^4]: But not natural: when we know how to topologise the hypercohomology of a complex of coherent cohomology on a general space [@5], the lemma becomes evident.
 
@@ -226,7 +226,184 @@ $$
   \HH_\cc^i(Y';\RR{f_*}\KK_{X'}^\bullet)
   = \HH_\cc^i(Y';\sh{L}^\bullet)
 $$
-a unique $\QDSF$ topology, and on $\Ext^{-i}(Y';\RR{f_*}\KK_{X'}^\bullet,\KK_{Y'}^\bullet)$ a unique $\QSF$ topology, such that the trace $\TT_{Y'}$ places in duality the separations of these spaces.
+a unique $\QDFS$ topology, and on $\Ext^{-i}(Y';\RR{f_*}\KK_{X'}^\bullet,\KK_{Y'}^\bullet)$ a unique $\QFS$ topology, such that the trace $\TT_{Y'}$ places in duality the separations of these spaces.
 Furthermore, these spaces are separated, and the topology on $\HH_\cc^i(Y';\RR{f_*}\KK_{X'}^\bullet)$ coincides with that described above (we proceed as in [@10, Theorem 2], by using the fact that $\sh{L}^\bullet$ is perfect, and thus has coherent objects, and, in parallel, we use [Proposition 3.2](#proposition-3.2); the topologies are the same by uniqueness, and thus separated).
 
-We recall that
+We recall that [Proposition 2.1](#proposition-2.1) allows us to construct the relative trace $\TT_{X'/Y'}$;
+it is the image of the function $1\in\HH^0(X';\OO_{X'})$ under the transpose[^5] of $\iota$ (note that $\Ext^0(Y';\sh{L}^\bullet,\KK_{Y'}^\bullet)=\Ext^0(Y';\RR{f_*}\KK_{X'}^\bullet,\KK_{Y'}^\bullet)$).
+
+[^5]: $\HH^0(X';\OO_{X'})$ is in duality with the separation of $\HH_\cc^0(X';\KK_{X'}^\bullet)$ (in fact, we can prove that this space is separated).
+
+It remains to prove the proposition.
+For this, we introduce the diagram
+$$
+  \begin{CD}
+    \HH_\cc^0(Y';\RR{f_*}\KK_{X'}^\bullet) @>{\iota}>> \HH_\cc^0(X';\KK_{X'}^\bullet)
+  \\@V{\alpha}VV @AA{\gamma}A
+  \\\HH_\cc^0(Y';\RR{f_*}\LL{f^*}\RR{f_*}\KK_{X'}^\bullet) @>>{\beta}> \HH_\cc^0(X';\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)
+  \end{CD}
+$$
+where $\beta$ is the natural map, $\alpha$ is the morphism induced by the natural morphism
+$$
+  \rho\colon \sh{F}^\bullet \to \RR{f_*}\LL{f^*}\sh{F}^\bullet
+$$
+(cf. [@3, II, Proposition 5.10]), and where $\gamma$ is a map (that makes the diagram commute) that we will define later on.
+
+To show the continuity of $\iota$, we will topologise
+$$
+  \HH_\cc^0(Y';\RR{f_*}\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)
+  \quad\text{and}\quad
+  \HH_\cc^0(X';\LL{f^*}\RR{f_*}\KK_{X'}^\bullet).
+$$
+We then prove the continuity of the maps $\alpha$, $\beta$, and $\gamma$.
+
+::: {.itenv #lemma-2.2 title="Lemma 2.2" latex="{Lemma 2.2}"}
+Let $K$ be a Stein compact of $X'$, and $\sh{F}$ a coherent $\OO_{X'}$-module.
+Let $\sh{F}_K$ be the sheaf whose germs of sections at the points of $K$ are those of $\sh{F}$, and $0$ elsewhere.
+Then the sheaf $\sh{F}_K$ is $f_*$-acyclic, and the direct image $f_*\sh{F}_K$ is $\Gamma_\cc(Y';-)$-acyclic.
+:::
+
+If $f_!$ denotes the direct image with proper support functor, then $\RR{f_*}\sh{F}_K=\RR{f_!}\sh{F}_K$ and we are reduced to proving the $f_!$-acyclicity of $\sh{F}_K$.
+This simply follows from the fact that the intersection of a Stein open of $X'$ with the preimage of a Stein open of $Y'$ is a Stein open.
+
+\oldpage{267}
+To establish the $\Gamma_\cc(Y';-)$-acyclicity of $f_*\sh{F}_K=f_!\sh{F}_K$, we note that $\Gamma_\cc(X';-)=\Gamma_\cc(Y';-)f_!$, and we use the spectral sequence for composite functors, which gives $\HH_cc^p(Y';\RR^qf_!\sh{F}_K)\Rightarrow\HH_\cc^{p+q}(X';\sh{F}_K)$.
+
+Let $\frak{M}$ be a finite cover of $\overline{X'}$ by Stein compacts.
+The intersection of the compacts of $\frak{M}$ with the preimages of compacts of $\frak{L}$ are Stein compacts, and form a locally finite cover $\frak{R}$ of $X'$.
+
+Let $\sh{L}^i$ be the $i$-th component of the complex $\sh{L}^i$.
+If $L$ is a compact of $Y'$, we denote by $\sh{L}_L^i$ the sheaf that is equal to $\sh{L}^i$ on $L$ and zero elsewhere;
+$\sh{L}^i$ is a free $\OO_{Y'}$-module, and so $\sh{L}_L^i$ is an $\OO_{Y'}$-module with projective fibres, and thus $f^*$-acyclic.
+We evidently have $f^*\sh{L}_L^i=(f^*\sh{L}^i)_{f^{-1}(L)}$, and $f^*\sh{L}^i$ is a free $\OO_{X'}$-module of finite type.
+Thus $f^*\CC_{Y'}^\bullet(\sh{L}^\bullet)$ is a representative of $\LL{f^*}\RR{f_*}\KK_{X'}^\bullet$.
+We denote by $\CC_{X'}^\bullet(f^*\CC_{Y'}^\bullet(\sh{L}^\bullet))$ the total complex of the double complex
+$$
+  \CC^\bullet\big(\frak{R};\HH^0(\frak{R};f^*\CC_{Y'}^\bullet(\sh{L}^\bullet))\big).
+$$
+We evidently have a morphism
+$$
+  f^*\CC_{Y'}^\bullet(\sh{L}^\bullet)
+  \to \CC_{X'}^\bullet(f^*\CC_{Y'}^\bullet(\sh{L}^\bullet)),
+$$
+and $\CC_{X'}^\bullet(f^*\CC_{Y'}^\bullet(\sh{L}^\bullet))$ is a representative of $\LL{f^*}\RR{f_*}\KK_{X'}^\bullet$.
+If $K_{k_0\ldots k_n}$ is an $n$-simplex of $\frak{R}$, and $L_{l_0\ldots l_m}$ an $m$-simplex of $\frak{L}$, it is clear that the sheaf $(f^*\sh{L}_{L_{l_0\ldots l_m}}^i)_{K_{k_0\ldots k_n}}$ is $f^*$-acyclic and that its direct image is $\Gamma_\cc(Y';-)$-acyclic ([Lemma 2.2](#lemma-2.2)).
+Thus $f_*\CC_{X'}^\bullet(f^*\CC_{Y'}^\bullet(\sh{L}^\bullet))$ is a representative of $\RR{f_*}\LL{f^*}\RR{f_*}\KK_{X'}^\bullet$.
+Finally, the natural morphism from $\CC_{Y'}^\bullet(\sh{L}^\bullet)$ to $f_*\CC_{X'}^\bullet(f^*\CC_{Y'}^\bullet(\sh{L}^\bullet))$ is a representative of the morphism $\rho\colon\RR{f_*}\KK_{X'}^\bullet\to\RR{f_*}\LL{f^*}\RR{f_*}\KK_{X'}^\bullet$.
+
+We will now clearly see how to topologise our spaces, and how to prove the continuity of $\alpha$ and $\beta$, since, if $\frak{R}'$ denotes the Stein cover of $Y'$ consisting of the $K'=f(K)$, where $K$ runs over $\frak{R}$, then $\HH_\cc^0(Y';\RR{f_*}\KK_{X'}^\bullet)$ is the $0$-th cohomology group of the complex of $\DFS$ spaces given by the total complex of $\CC^\bullet(\frak{L};\HH^0(\frak{L};\sh{L}^\bullet))$, or even of $\CC^\bullet(\frak{R}';\HH^0(\frak{R}';\sh{L}^\bullet))$;
+$\HH_\cc^0(Y';\RR{f_*}\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)$ is the $0$-th cohomology group of the complex of $\DFS$ spaces given by the total complex of $\CC^\bullet(\frak{R}';\HH^0(\frak{R};f^*\CC_{Y'}^\bullet(\sh{L}^\bullet)))$;
+and $\HH_\cc^0(X';\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)$ similarly comes from $\CC^\bullet(\frak{R};\HH^0(\frak{R};f^*\CC_{Y'}^\bullet(\sh{L}^\bullet)))$.
+
+It remains to construct a suitable morphism $\gamma$.
+
+For this, we introduce the morphisms
+```tikz
+\begin{tikzcd}
+  \operatorname{RHom}^\bullet(Y';\mathrm{R}{f_*}\mathbf{K}_{X'}^\bullet, \mathrm{R}{f_*}\mathbf{K}_{X'}^\bullet)
+  & \mathrm{R}{f_*}\operatorname{RHom}^\bullet(X';\mathbf{K}_{X'}^\bullet,\mathbf{K}_{X'}^\bullet)
+    \ar[l,swap,"l"]
+\\\operatorname{RHom}^\bullet(Y';\mathrm{R}{f_*}\mathrm{L}{f^*}\mathrm{R}{f_*}\mathbf{K}_{X'}^\bullet, \mathrm{R}{f_*}\mathbf{K}_{X'}^\bullet)
+    \ar[u,"m"]
+  & \mathrm{R}{f_*}\operatorname{RHom}^\bullet(X';\mathrm{L}{f^*}\mathrm{R}{f_*}\mathbf{K}_{X'}^\bullet,\mathbf{K}_{X'}^\bullet)
+    \ar[l,"n"] \ar[ul,swap,"mn"]
+\end{tikzcd}
+```
+where $l$ and $n$ are the natural morphisms, and where $m$ in induced by $\rho$; by [@3, Chapter II, Proposition 5.10], $mn$ is an isomorphism.
+
+\oldpage{268}
+We thus obtain the diagram (where $\tau=\mu\nu)$
+```tikz
+\begin{tikzcd}
+  \operatorname{Ext}^0(Y';\mathrm{R}{f_*}\mathbf{K}_{X'}^\bullet, \mathrm{R}{f_*}\mathbf{K}_{X'}^\bullet)
+  & \operatorname{Ext}^0(X';\mathbf{K}_{X'}^\bullet,\mathbf{K}_{X'}^\bullet)
+    \ar[l,swap,"\lambda"]
+\\\operatorname{Ext}^0(Y';\mathrm{R}{f_*}\mathrm{L}{f^*}\mathrm{R}{f_*}\mathbf{K}_{X'}^\bullet, \mathrm{R}{f_*}\mathbf{K}_{X'}^\bullet)
+    \ar[u,"\mu"]
+  & \operatorname{Ext}^0(X';\mathrm{L}{f^*}\mathrm{R}{f_*}\mathbf{K}_{X'}^\bullet,\mathbf{K}_{X'}^\bullet)
+    \ar[l,"\tau"] \ar[ul,swap,"\nu"]
+\end{tikzcd}
+```
+The identity morphism $\RR{f_*}\KK_{X'}^\bullet\to\RR{f_*}\KK_{X'}^\bullet$ induces an element of $\Ext^0(Y';\RR{f_*}\KK_{X'}^\bullet,\RR{f_*}\KK_{X'}^\bullet)$, which comes, by $\tau$, from an element $e$ of $\Ext^0(X';\LL{f^*}\RR{f_*}\KK_{X'}^\bullet,\KK_{X'}^\bullet)$;
+we set $\nu(e)=\varepsilon$.
+
+The composition product of the $\Ext$ gives
+$$
+  \HH_\cc^0(Y';\RR{f_*}\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)
+  \times \Ext^0(Y';\RR{f_*}\LL{f^*}\RR{f_*}\KK_{X'}^\bullet, \mathrm{R}{f_*}\KK_{X'}^\bullet)
+  \longrightarrow \HH_\cc^0(Y';\RR{f_*}\KK_{X'}^\bullet)
+$$
+and
+$$
+  \HH_\cc^0(X';\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)
+  \times \Ext^0(X';\LL{f^*}\RR{f_*}\KK_{X'}^\bullet,\KK_{X'}^\bullet)
+  \longrightarrow \HH_\cc^0(X';\KK_{X'}^\bullet).
+$$
+We can thus build, corresponding to $\varepsilon$, a linear map
+$$
+  \delta\colon
+  \HH_\cc^0(Y';\RR{f_*}\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)
+  \longrightarrow \HH_\cc^0(Y';\RR{f_*}\KK_{X'}^\bullet)
+$$
+and, to $e$, a linear map
+$$
+  \gamma\colon
+  \HH_\cc^0(X';\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)
+  \longrightarrow \HH_\cc^0(X';\KK_{X'}^\bullet).
+$$
+
+By construction, $\delta\alpha$ is equal to the identity.
+The commutativity of diagram (2) then follows.
+
+The trace $\TT_{X'}$ puts into duality (the separation of) $\HH_\cc^0(X;\KK_{X'}^\bullet)$ and $\Gamma(X';\OO_{X'})$.
+We can easily show (as in [@10]) that there exists on $\HH_\cc^i(X';\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)=\HH_\cc^i(X';\LL{f^*}\sh{L}^\bullet)$ a unique $\QDFS$ structure, and on $\Ext^{-i}(X';\LL{f^*}\RR{f_*}\KK_{X'}^\bullet,\KK_{X'}^\bullet)=\Ext^{-i}(X';\LL{f^*}\sh{L}^\bullet,\KK_{X'}^\bullet)$ a unique $\QFS$ structure, such that the trace $\TT_{X'}$ puts the separations[^6] of these two spaces into duality (since $\LL{f^*}\sh{L}^\bullet$ is a perfect complex of $\OO_{X'}$-modules; the $\QDFS$ structure thus obtained on $\HH_\cc^0(X';\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)$ coincides with that with which we have already endowed this space).
+
+[^6] We can in fact show that these spaces are separated.
+
+Denote by $\theta$ the morphism given by the composite of the natural map $\Gamma(X';\OO_{X'})\to\Ext^0(X';\KK_{X'}^\bullet,\KK_{X'}^\bullet)$ and $\tau^{-1}\lambda$.
+We have that $\theta(1)=e$.
+It thus follows that the map $\beta$ admits $\theta$ as transpose, and is thus continuous.
+The proof of [Proposition 2.1](#proposition-2.1) is thus complete.
+
+
+# Complexes of coherent cohomology on a Stein space {#section-3}
+
+All throughout this section, $Y$ denotes a Stein space, and $\sh{F}^\bullet$ a complex of $\OO_Y$-modules of coherent cohomology.
+Before endowing the spaces $\HH^i(Y;\sh{F}^\bullet)$ with (Fréchet–Schwartz) topologies, recall the following lemma.
+\oldpage{269}
+
+::: {.itenv #lemma-3.0 title="Lemma 3.0" latex="{Lemma 3.0}"}
+Let $A$ and $B$ be abelian categories, with $A$ having enough injectives, and let $F$ be an additive functor from $A$ to $B$, left exact and of finite cohomological dimension.
+Let $I^\bullet$ be a complex in $A$ whose objects, as well as its cohomology objects, are $F$-acyclic.
+Then we have, for all $i$,
+$$
+  \HH^i F(I^\bullet)
+  = F(\HH^i I^\bullet).
+$$
+:::
+
+::: {.proof}
+This is particularly evident when $I^\bullet$ has bounded-below cohomology: we can show, by induction from the left, that all the boundary and cycle objects of $I^\bullet$ are $F$-acyclic, by cutting $I^\bullet$ into short exact sequences to which we then apply $F$.
+In the general case, one should use a Cartan–Eilenberg resolution of $I^\bullet$.
+:::
+
+We apply this lemma to the category $A$ of $\OO_Y$-modules, and to the global sections functor, taking $I^\bullet$ to be an injective resolution of the complex $\sh{F}^\bullet$ of coherent cohomology.
+By Cartan's Theorem B, all the hypotheses are satisfied, and we have, for all $i$,
+$$
+  \HH^i(Y;\sh{F}^\bullet)
+  = \Gamma(Y;\HH^i\sh{F}^\bullet)
+$$
+which allows us to topologise the left-hand side.
+
+We can now prove a first duality theorem for complexes of coherent cohomology on Stein spaces:
+
+::: {.itenv #proposition-3.1 title="Proposition 3.1" latex="{Proposition 3.1}"}
+For all $i$, the trace $\TT_Y$ gives a pairing
+$$
+  \tau\colon
+  \HH^i(Y;\sh{F}^\bullet)
+  \times \Ext_\cc^{-i}(Y;\sh{F}^\bullet,\KK_Y^\bullet)
+  \to \mathbb{C}.
+$$
+There exists a (unique) pair of ($\FS$ and $\DFS$, respectively) topologies on these spaces such that $\tau$ makes each one the strong dual of the other.
+:::
