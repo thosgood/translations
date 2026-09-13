@@ -456,5 +456,15 @@ The result can then be found in [@2], since we know that the "Fréchet limit" to
 Under the hypotheses of [Lemma 3.4](#lemma-3.4), we can finally prove the following:
 
 ::: {.itenv #lemma-3.5 title="Lemma 3.5" latex="{Lemma 3.5}"}
-The
+The natural map from $\HH_L^i(Y;\sh{F}^\bullet)$ to $\HH_\cc^i(Y;\sh{F}^\bullet)$ is injective.
 :::
+
+::: {.proof}
+By duality, it suffices to show that the natural map from $\Ext^{-i}(Y;\sh{F}^\bullet,\KK_Y^\bullet)$ to $\Ext^{-i}(L;\sh{F}^\bullet,\KK_Y^\bullet)$ has dense image, but, by the definition of the topologies in question, this map is the restriction from $Y$ to $L$ of the sections of the coherent sheaf $\shExt^{-i}(\sh{F}^\bullet,\KK_Y^\bullet)$, and this restriction does indeed have dense image, since $L$ is holomorphically convex.
+:::
+
+
+# Separation criteria {#section-4}
+
+\oldpage{271}
+Below, we give two separation criteria (one concerning the $\HH_\cc^p(X;\sh{F})$, and the other the $\Ext_\cc^p(X;\sh{F}^,\KK_X^\bullet)$).
