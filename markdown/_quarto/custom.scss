@@ -8,6 +8,7 @@ $headings-font-family: 'Inria Serif';
 $h1-font-size: 1.4rem;
 $h2-font-size: 1.25rem;
 $h3-font-size: 1rem;
+$link-color: #53b6b2;
 
 
 /*-- scss:rules --*/
@@ -46,11 +47,15 @@ $h3-font-size: 1rem;
   border-top-left-radius: .375rem;
   border-top-right-radius: .375rem;
 
-  h1 {
+  .title {
     border-bottom: none;
     font-feature-settings: 'ss01';
     text-transform: capitalize;
     font-size: 1.65rem;
+  }
+
+  .author {
+    margin: 0;
   }
 
   hr {
@@ -59,6 +64,10 @@ $h3-font-size: 1rem;
 
   .subtitle {
     margin-bottom: 0;
+
+    p {
+      margin-bottom: 0;
+    }
 
     a {
       text-decoration: underline !important;
@@ -77,7 +86,8 @@ $h3-font-size: 1rem;
     border-left: 1px solid black;
     border-right: 1px solid black;
 
-    h1,
+    .title,
+    .author,
     .subtitle,
     .subtitle a {
       color: #222;
@@ -99,10 +109,14 @@ $h3-font-size: 1rem;
     border-left: 1px solid white;
     border-right: 1px solid white;
 
-    h1,
+    .title {
+      color: white;
+    }
+
+    .author,
     .subtitle,
     .subtitle a {
-      color: white;
+      color: #eee;
     }
   }
 }
@@ -150,6 +164,10 @@ h1 {
 
 h2, h3 {
   border-bottom: none;
+}
+
+strong {
+  font-weight: 550;
 }
 
 blockquote {
