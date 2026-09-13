@@ -133,7 +133,7 @@ $$
  \prod \Ext^{-q}(V;\RR{f_{i_0i_1\ldots i_r}}\KK_X^\bullet,\Omega_V)
 $$
 and then say that the $\TT_i$ give an element of $E_2^{0,-p}$, which would be equal to $\Ext^p(V;\RR{f_*}\KK_X^\bullet,\Omega_V)$ by the vanishing of $E_1^{r,q}$ for $q<-p$.
-All of this is sadly unlikely to be feasible, since the usual $\Ext$ groups are not well adapted to the study of complexes such as $\RR{f_i}\KK_X^\bullet$; why, for example, would $\Ext^j(V;\RR{F_!}\Omega_i,\Omega_i)$ be zero for $j\geqslant1$ when $\RR{F_!}\Omega_i$ is a sheaf of analytic functions on $V$ with values in a $\DFS$ space?
+All of this is sadly unlikely to be feasible, since the usual $\Ext$ groups are not well adapted to the study of complexes such as $\RR{f_i}\KK_X^\bullet$; why, for example, would $\Ext^j(V;\RR{F_!}\Omega_i,\Omega_i)$ be zero for $j\geqslant1$ when $\RR{F_!}\Omega_i$ is a sheaf of analytic functions on $V$ with values in a $\DFS$-space?
 Having still not established a direct solution to this (i.e. defined for certain complexes of $\OO_V$-modules of $\mathrm{Extop}^\bullet(V;-,\Omega_V)$ groups that should coincide with the "algebraic" $\Ext$ under the hypothesis of perfectness of the complexes), we note in [Section 2](#section-2) a more artificial method of construction for $\TT_{X/Y}$.
 
 Thanks to the relative trace, which is, up to homotopy, a morphism from $\RR_{f_*}\KK_X^\bullet$ to $\KK_Y^\bullet$, it is easy to construct the morphism (1): first, for any complex $\sh{F}^\bullet$ of $\OO_X$-modules of coherent cohomology, we denote by $D_X\sh{F}^\bullet$ the complex $\RHom(\sh{F}^\bullet,\KK_X^\bullet)$, which is also of coherent cohomology.
@@ -197,10 +197,10 @@ From now on, let $f\colon X\to Y$ be a proper morphism, where $Y$ is an open pol
 Let $Y'$ be an open sub-polydisc of $Y$, with $\overline{Y'}\subset Y$.
 We set $X'=f^{-1}(Y')$.
 
-We will define "in a natural way" a complex of $\DFS$ spaces whose cohomology will be the hypercohomology with compact support of $Y$ with values in $\RR{f_*}\KK_{X'}^\bullet$.
+We will define "in a natural way" a complex of $\DFS$-spaces whose cohomology will be the hypercohomology with compact support of $Y$ with values in $\RR{f_*}\KK_{X'}^\bullet$.
 Since $\RR{f_*}\KK_X^\bullet$ is bounded and of coherent cohomology, we can find [@4], in a neighbourhood of $Y'$, a representative $\sh{L}^\bullet$ that is perfect (i.e. bounded, and whose objects are free of finite type).
 Let $\frak{L}$ be a locally finite cover of $Y'$ by closed polydiscs.
-Since the groups $\HH_\cc^i(Y';\RR{f_*}\KK_{X'}^\bullet)$ are the cohomology groups of the total complex of the double complex $\CC^\bullet(\frak{L};\HH^0(\frak{L};\sh{L}^\bullet))$ of $\DFS$ spaces (when there is no ambiguity in the choice of cover, we denote this complex by $\CC_{Y'}^\bullet(\sh{L}^\bullet)$), which allows us to topologise them, in a way that is independent of the choice of resolution $\sh{L}^\bullet$, since if $\sh{L}_1^\bullet\to$ and $\sh{L}_2^\bullet\to$ are perfect resolutions of $\RR{f_*}\KK_{X'}^\bullet$ then there exists another perfect resolution $\sh{L}_3^\bullet$ that dominates them both:
+Since the groups $\HH_\cc^i(Y';\RR{f_*}\KK_{X'}^\bullet)$ are the cohomology groups of the total complex of the double complex $\CC^\bullet(\frak{L};\HH^0(\frak{L};\sh{L}^\bullet))$ of $\DFS$-spaces (when there is no ambiguity in the choice of cover, we denote this complex by $\CC_{Y'}^\bullet(\sh{L}^\bullet)$), which allows us to topologise them, in a way that is independent of the choice of resolution $\sh{L}^\bullet$, since if $\sh{L}_1^\bullet\to$ and $\sh{L}_2^\bullet\to$ are perfect resolutions of $\RR{f_*}\KK_{X'}^\bullet$ then there exists another perfect resolution $\sh{L}_3^\bullet$ that dominates them both:
 ```tikz
 \begin{tikzcd}[row sep=tiny]
   & \mathscr{L}_1^\bullet \ar[dr]
@@ -292,8 +292,8 @@ If $K_{k_0\ldots k_n}$ is an $n$-simplex of $\frak{R}$, and $L_{l_0\ldots l_m}$ 
 Thus $f_*\CC_{X'}^\bullet(f^*\CC_{Y'}^\bullet(\sh{L}^\bullet))$ is a representative of $\RR{f_*}\LL{f^*}\RR{f_*}\KK_{X'}^\bullet$.
 Finally, the natural morphism from $\CC_{Y'}^\bullet(\sh{L}^\bullet)$ to $f_*\CC_{X'}^\bullet(f^*\CC_{Y'}^\bullet(\sh{L}^\bullet))$ is a representative of the morphism $\rho\colon\RR{f_*}\KK_{X'}^\bullet\to\RR{f_*}\LL{f^*}\RR{f_*}\KK_{X'}^\bullet$.
 
-We will now clearly see how to topologise our spaces, and how to prove the continuity of $\alpha$ and $\beta$, since, if $\frak{R}'$ denotes the Stein cover of $Y'$ consisting of the $K'=f(K)$, where $K$ runs over $\frak{R}$, then $\HH_\cc^0(Y';\RR{f_*}\KK_{X'}^\bullet)$ is the $0$-th cohomology group of the complex of $\DFS$ spaces given by the total complex of $\CC^\bullet(\frak{L};\HH^0(\frak{L};\sh{L}^\bullet))$, or even of $\CC^\bullet(\frak{R}';\HH^0(\frak{R}';\sh{L}^\bullet))$;
-$\HH_\cc^0(Y';\RR{f_*}\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)$ is the $0$-th cohomology group of the complex of $\DFS$ spaces given by the total complex of $\CC^\bullet(\frak{R}';\HH^0(\frak{R};f^*\CC_{Y'}^\bullet(\sh{L}^\bullet)))$;
+We will now clearly see how to topologise our spaces, and how to prove the continuity of $\alpha$ and $\beta$, since, if $\frak{R}'$ denotes the Stein cover of $Y'$ consisting of the $K'=f(K)$, where $K$ runs over $\frak{R}$, then $\HH_\cc^0(Y';\RR{f_*}\KK_{X'}^\bullet)$ is the $0$-th cohomology group of the complex of $\DFS$-spaces given by the total complex of $\CC^\bullet(\frak{L};\HH^0(\frak{L};\sh{L}^\bullet))$, or even of $\CC^\bullet(\frak{R}';\HH^0(\frak{R}';\sh{L}^\bullet))$;
+$\HH_\cc^0(Y';\RR{f_*}\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)$ is the $0$-th cohomology group of the complex of $\DFS$-spaces given by the total complex of $\CC^\bullet(\frak{R}';\HH^0(\frak{R};f^*\CC_{Y'}^\bullet(\sh{L}^\bullet)))$;
 and $\HH_\cc^0(X';\LL{f^*}\RR{f_*}\KK_{X'}^\bullet)$ similarly comes from $\CC^\bullet(\frak{R};\HH^0(\frak{R};f^*\CC_{Y'}^\bullet(\sh{L}^\bullet)))$.
 
 It remains to construct a suitable morphism $\gamma$.
@@ -388,7 +388,7 @@ This is particularly evident when $I^\bullet$ has bounded-below cohomology: we c
 In the general case, one should use a Cartan–Eilenberg resolution of $I^\bullet$.
 :::
 
-We apply this lemma to the category $A$ of $\OO_Y$-modules, and to the global sections functor, taking $I^\bullet$ to be an injective resolution of the complex $\sh{F}^\bullet$ of coherent cohomology.
+We apply this lemma to the category $A$ of $\OO_Y$-modules, and to the functor $F$ of global sections $\Gamma$, taking $I^\bullet$ to be an injective resolution of the complex $\sh{F}^\bullet$ of coherent cohomology.
 By Cartan's Theorem B, all the hypotheses are satisfied, and we have, for all $i$,
 $$
   \HH^i(Y;\sh{F}^\bullet)
@@ -407,4 +407,54 @@ $$
   \to \mathbb{C}.
 $$
 There exists a (unique) pair of ($\FS$ and $\DFS$, respectively) topologies on these spaces such that $\tau$ makes each one the strong dual of the other.
+:::
+
+Having already endowed $\HH^i(Y;\sh{F}^\bullet)$ with a topology, we can consider the functor that associates to the complex $\sh{F}^\bullet$ the collection of topological duals of $\HH^i(Y;\sh{F}^\bullet)$.
+Putting together everything that we have said, this is a $\partial$-functor, since the transpose of an exact complex of $\FS$-spaces is an exact complex.
+It remains to compare this $\partial$-functor with the $\partial$-functor $\Ext_\cc^{-i}(Y;-,\KK_Y^\bullet)$, knowing, by the first absolute duality theorem, that these functors agree whenever they are applied to a coherent sheaf.
+By a known lemma, it suffices to show that there exists a morphism from the second functor the the first, i.e. that the pairing $\tau$ is continuous with respect to the first variable.
+
+So let $e\in\Ext_\cc^{-i}(Y;\sh{F}^\bullet,\KK_Y^\bullet)$, actually coming from $\Ext_L^{-i}(Y;\sh{F}^\bullet,\KK_Y^\bullet)$ where $L$ is a compact of $Y$, and let $U$ be an open neighbourhood of $L$ over which the sheaf $\HH^i\mathscr{F}^\bullet$ can be written as the quotient of a free sheaf $\sh{L}$ of finite type.
+\oldpage{270}
+We can factor the linear for $-\cup e$ on $\HH^i(Y;\sh{F}^\bullet)$ as follows:
+```tikz
+\begin{tikzcd}
+  \mathrm{H}^i(Y;\mathscr{F}^\bullet)
+    \ar[r,equal]
+  & \Gamma(Y;\mathrm{H}^i\mathscr{F}^\bullet)
+    \ar[d]
+\\\Gamma(U;\mathscr{L})
+    \ar[r]
+    \ar[dr,swap,"\beta"]
+  & \Gamma(U;\mathrm{H}^i\mathscr{F}^\bullet)
+    \ar[r]
+    \ar[d,"\alpha"]
+  & 0
+\\\mathrm{H}_\mathrm{c}^0(U;\mathbf{K}_U^\bullet)
+    \ar[d]
+\\\mathbb{C}
+\end{tikzcd}
+```
+The only thing that poses a problem is the continuity of $\alpha$, but the topology of its source is the quotient of the evident topology on $\Gamma(U;\sh{L})$, and, by freeness, $\alpha$ can be lifted to an $\OO(U)$-linear map $\beta$, which is necessary continuous by finiteness.
+
+Applying this first duality theorem to $D_Y\sh{F}^\bullet$, we see the following:
+
+::: {.itenv #proposition-3.2 title="Proposition 3.2" latex="{Proposition 3.2}"}
+There exists a $\DFS$ topology on $\HH_\cc^i(Y;\sh{F}^\bullet)$, and an $\FS$ topology on $\Ext^{-i}(Y;\sh{F}^\bullet,\KK_Y^\bullet)$, such that $\TT_Y$ puts these spaces in duality with one another.
+:::
+
+Adding to the diagram an analytic polyhedron $L$ of $Y$, we can also prove:
+
+::: {.itenv #lemma-3.4 title="Lemma 3.4" latex="{Lemma 3.4}"}
+There exists an $\FS$ topology on $\HH_L^i(Y;\sh{F}^\bullet)$, and a $\DFS$ topology on $\Ext^{-i}(L;\sh{F}^\bullet,\KK_Y^\bullet)$, such that $\TT_Y$ puts these spaces in duality with one another.
+:::
+
+It is this time that we have a natural topology on $\Ext^{-i}(L;\sh{F}^\bullet,\KK_Y^\bullet)$, since this space is isomorphic to $\Gamma(L;\Ext^{-i}(\sh{F}^\bullet,\KK_Y^\bullet))$.
+As in the first proposition, we can reduce to the case where $\sh{F}^\bullet$ consists of a single coherent sheaf $\sh{F}$, and then, by embedding, to the case where $Y$ is a polydisc of $\mathbb{C}^n$.
+The result can then be found in [@2], since we know that the "Fréchet limit" topology on the sections of a coherent sheaf in the neighbourhood of a compact is in fact a $\DFS$ topology.
+
+Under the hypotheses of [Lemma 3.4](#lemma-3.4), we can finally prove the following:
+
+::: {.itenv #lemma-3.5 title="Lemma 3.5" latex="{Lemma 3.5}"}
+The
 :::
