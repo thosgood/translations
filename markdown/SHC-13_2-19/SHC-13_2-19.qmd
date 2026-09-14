@@ -391,5 +391,152 @@ by [Proposition 2, (ii)](#proposition-2), we see that it suffices to prove thi
 For $\Specan{\OO_S[t]/(F)}\subset S\times\EE$, the result comes from the following:
 
 ::: {.itenv #lemma-2 title="Lemma 2 (continuity of roots)" latex="{Lemma 2 (continuity of roots)}"}
-Let
+Let $(F_p)$ be a sequence of unitary polynomials of the same degree $d>1$, with coefficients in $k$;
+suppose that the coefficients of $F_p$ converge respectively (as $p$ tends to infinity) to those of a polynomial $F\in k[t]$.
+If, for all $p$, $x_p\in k$ is a root of $F_p$, then there exists a subsequence of the sequence $(x_p)$ that converges (and its limit is then a root of $F$).
+:::
+
+::: {.proof}
+Since $k$ is complete, this implies that $(x_p)$ contains a Cauchy subsequence.
+Suppose the contrary;
+we can then find $\varepsilon>0$ such that, for every integer $N$, there exists indices $p_1,\ldots,p_{d+1}\geqslant N$ satisfying the following property: if $i\neq j$ (for $1\leqslant i,j\leqslant d+1$), then $|x_{p_i}-x_{p_j}|>\varepsilon$.
+
+By the Langrange interpolation formula
+$$
+  F(x)
+  = \sum_{i=1}^{d+1} \big( (x-x_{p_1})\ldots\widehat{(x-x_{p_i})}\ldots(x-x_{p_{d+1}}) / (x_{p_i}-x_{p_1})\ldots(x_{p_i}-x_{p_{d+1}}) \big) F(x_{p_i})
+$$
+for all $x\in k$, where the $x_{p_i}$ are chosen as just described, with $p_i\geqslant N$ large enough integers for $q\geqslant N$ to imply that $|F(x)-F_q(x)|\leqslant\eta$ (for fixed arbitrary $\eta>0$) for any $x$ in a ball that contains all the roots of the polynomials $F_p$.
+Such a ball indeed exists, since the polynomials in question are unitary, and an upper bound on their coefficients implies an upper bound on their roots.
+
+If $x$ belongs to the ball $\vert x\vert\leqslant\rho$ that was used to determine $N$, then
+$$
+  |F(x)|
+  \leqslant (2\rho/\varepsilon)^d \sum|F(x_{p_i})|
+  \leqslant (d+1)(2\rho/\varepsilon)^d\eta
+$$
+\oldpage{19-11}
+since
+$$
+  |F(x_{p_i})|
+  = |F(x_{p_i})-F_{p_i}(x_{p_i})|
+  \leqslant \eta.
+$$
+Since $\eta$ is arbitrary, it thus follows that $F(x)=0$ for all $x$ such that $|x|\leqslant\rho$, and thus that $F=0$ (since $k$ is not discrete), which is a contradiction.
+:::
+
+::: {.itenv title="Corollary" latex="{Corollary}"}
+$f\colon\Specan{\AA}\to S$ is a proper map.
+:::
+
+::: {.proof}
+This is since $f$ is closed and its fibres are finite, and thus quasi-compact (cf. [@1, Chapter 1, \S10, Theorem 1]).
+:::
+
+::: {.itenv #proposition-8 title="Proposition 8" latex="{Proposition 8}"}
+Let $\AA$ be a finite $\OO_S$-algebra with trivial residue extensions.
+For every $\AA$-module $\MM$, the canonical homomorphism $\MM\to f_*(\widetilde{\MM})$ is an isomorphism.
+In particular, $\AA\xrightarrow{\sim}f_*(\OO_X)$ (where $X=\Specan{\AA}$).
+:::
+
+::: {.proof}
+The hypothesis on $\AA$ (trivial residue extensions) implies that, for all $s\in S$ and for all maximal ideals $\frak{n}$ of $\AA_s$, $\AA_s/\frak{n}\simeq k$;
+it is automatically true if $k$ is algebraically closed.
+
+By definition
+$$
+  f_*(\widetilde{\MM})_s
+  = \varinjlim_{U\ni s} (f^{-1}(U),\widetilde{M})
+$$
+and since $f$ is closed, the $f^{-1}(U)$ form a fundamental system of neighbourhoods of the fibre $X_s$;
+thus, since $f$ is separated, for small enough $U$ we have that $f^{-1}(U)\simeq\coprod_{x_i\in S_x}V_i$ (disjoint union), and the $V_i$ run over a fundamental system of neighbourhoods of $x_i$.
+Then
+$$
+  \Gamma(f^{-1}(U),\widetilde{\MM})
+  \simeq \prod \Gamma(V_i,\widetilde{\MM})
+$$
+whence, in the limit,
+$$
+  \begin{aligned}
+    f_*(\widetilde{\MM})_s
+    &\simeq \prod_{x_i\in X_s} \widetilde{\MM}_{x_i}
+  \\&\simeq \prod \widetilde{\MM}_s\otimes_{\AA_s}\OO_{X,x_i}
+  \\&\simeq \MM_s\otimes_{\AA_s}\prod(\AA_s)_{\frak{n}_i}
+    \simeq \MM_s
+  \end{aligned}
+$$
+since $\AA_s$ is isomorphic to $\prod(\AA_s)_{\frak{n}_i}$ (the Henselian property of $\OO_{S,s}$, cf. [Corollary 2 of Proposition 6](#corollary-2-proposition-6), combined with the fact that all the maximal ideals of $\AA_s$ appear amongst the $\frak{n}_i$, by the hypothesis of trivial residue extensions).
+:::
+
+\oldpage{19-12}
+
+::: {.itenv #proposition-9 title="Proposition 9" latex="{Proposition 9}"}
+Let $\AA$ be a finite $\OO_S$-algebra with trivial residue extensions.
+Set $X=\Specan{\AA}$.
+For every $\OO_X$-module $\sh{F}$, the canonical homomorphism $\widetilde{f_*(\sh{F})}\to\sh{F}$ is an isomorphism.
+:::
+
+::: {.proof}
+For all $s\in S$, we have, as in the previous proof, that
+$$
+  f_*(\sh{F})_s
+  = \prod_{x_i\in X_s}\sh{F}_{x_i}
+$$
+whence
+$$
+  \begin{aligned}
+    \widetilde{f_*(\sh{F})_{x_i}}
+    &\simeq f_*(\sh{F})_s\otimes_{\AA_s}\OO_{X,x_i}
+  \\&\simeq \prod_{x_j\in X_s}(\sh{F}_{x_j}\otimes_{\AA_s}(\AA_s)_{\frak{n}_i}).
+  \end{aligned}
+$$
+But
+$$
+  \sh{F}_{x_j}\otimes_{\AA_s}(\AA_s)_{\frak{n}_i}
+  \simeq \sh{F}_{x_j} \otimes_{(\AA_s)_{\frak{n}_j}} \big( (\AA_s)_{\frak{n}_j}\otimes_{\AA_s}(\AA_s)\frak{n}_i \big)
+  \simeq
+  \begin{cases}
+    0 &\text{if }i\neq j
+  \\\sh{F}_{x_i} &\text{if }i=j
+  \end{cases}
+$$
+(we immediately see this by using that $\AA_s\simeq\prod(\AA_s)_{\frak{n}_i}$).
+Thus
+$$
+  \widetilde{f_*(\sh{F})_{x_i}}
+  \simeq \sh{F}_{x_i}
+$$
+which proves the proposition, since this isomorphism is indeed induced by the canonical homomorphism
+$$
+  \widetilde{f_*(\sh{F})} \to \sh{F}.
+$$
+:::
+
+::: {.itenv #corollary-1-proposition-9 title="Corollary 1" latex="{Corollary 1}"}
+Under the hypotheses of [Proposition 9](#proposition-9), the additive covariant functors $\widehat{f}^*\colon\MM\mapsto\widehat{\MM}$ (from the category of $\AA$-modules to the category of $\OO_X$-modules) and $f_*\colon\sh{F}\mapsto f_*(\sh{F})$ (from the category of $\OO_X$-modules to the category of $\AA$-modules) are quasi-inverse to one another;
+\oldpage{19-13}
+they thus define an equivalence between the two categories in question.
+:::
+
+::: {.itenv #corollary-2-proposition-9 title="Corollary 2" latex="{Corollary 2}"}
+For every coherent $\OO_X$-module $\sh{F}$, $f_*(\sh{F})$ is a coherent $\OO_S$-module.
+:::
+
+::: {.proof}
+Since it is coherent, $\sh{F}$ admits a finite presentation
+$$
+  \OO_X^p
+  \to \OO_X^q
+  \to \sh{F}
+  \to 0.
+$$
+Since, by [Corollary 1](#corollary-1-proposition-9), the direct image functor $f_*$ is exact, it sends this exact sequence to an exact sequence:
+$$
+  \AA^p
+  \to \AA^q
+  \to f_*(\sh{F})
+  \to 0
+$$
+which shows that $f_*(\sh{F})$ is an $\AA$-module of finite presentation;
+since $\AA$ is a coherent $\OO_S$-module, it thus follows that $f_*(\sh{F})$ is also a coherent $\OO_S$-module.
 :::
