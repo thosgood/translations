@@ -231,7 +231,7 @@ A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, i, k)$ s
     \[
       e\in\set{\cat{E}},
       e'\in\set{\cat{E}},
-      f\in\Hom_\cat{E}(e',e)
+      f\in\Hom_\cat{E}(e,e')
     \]
     are expressed by simply saying that $f\colon e\to e'$ is a \emph{morphism} (in $\set{\cat{E}}$);
     we call $e$ the \emph{source of $f$} and $e'$ the \emph{target of $f$}.
@@ -248,11 +248,11 @@ A \emph{category} is a quadruple $\cat{E}=(\set{\cat{E}}, \Hom_\cat{E}, i, k)$ s
 
   \item[(4)] $k$ is a family of maps of the form
     \[
-      k(e'',e',e)\colon
-      \Hom_\cat{E}(e'',e')\times\Hom_\cat{E}(e',e)
-      \to \Hom_\cat{E}(e'',e),
+      k(e,e',e'')\colon
+      \Hom_\cat{E}(e',e'')\times\Hom_\cat{E}(e,e')
+      \to \Hom_\cat{E}(e,e'),
     \]
-    where the index $(e'',e',e)$ runs over the set $\set{\cat{E}}^3$.
+    where the index $(e,e',e'')$ runs over the set $\set{\cat{E}}^3$.
     We generally denote by $g\cdot f$ the composite, i.e.\ the image under such a map of a pair $(g,f)$.
 
   \item[(5)] If $f\colon e\to e'$ is a morphism in $\cat{E}$, then
@@ -280,12 +280,12 @@ We say that $F\colon\cat{E}\to\cat{E}'$ is a \emph{functor} if $\cat{E}$ and $\c
 
   \item[(2')] $F_1$ is a family of maps of the form
     \[
-      F_1(e',e)\colon
-      \Hom_\cat{E}(e',e)
-      \to \Hom_{\cat{E}'}(F(e'),F(e)),
+      F_1(e,e')\colon
+      \Hom_\cat{E}(e,e')
+      \to \Hom_{\cat{E}'}(F(e),F(e')),
     \]
-    where the index $(e',e)$ runs over the set $\set{\cat{E}}^2$.
-    If $f\colon e\to e'$ is a morphism in $\cat{E}$, we denote simply by $F(f)$ the morphism $F_1(e',e)(f)$.
+    where the index $(e,e')$ runs over the set $\set{\cat{E}}^2$.
+    If $f\colon e\to e'$ is a morphism in $\cat{E}$, we denote simply by $F(f)$ the morphism $F_1(e,e')(f)$.
 
   \item[(3')] $F(\id_e)=\id_{F(e)}$ for all $e\in\set{\cat{E}}$.
 
@@ -316,7 +316,9 @@ Similarly, we often write $Fe$, $Ff$, and $Ie$ instead of $F(e)$, $F(f)$, and $I
 As for \emph{limits}, we adopt the following notation: if $e\in\set{\cat{E}}$, and if $\phi\colon \cat{A}\to\cat{E}$ is a functor, then we say that $C\colon e\to\phi$ is a \emph{projective cone} if $C$ is a family of morphisms in $\cat{E}$, called the \emph{canonical projections of $C$}, of the form $C(n)\colon e\to\phi(n)$ for all $n\in\set{\cat{A}}$ such that, for every morphism $x\colon n\to n'$ in $\cat{A}$, we have that $\phi(x)\cdot C(n)=C(n')$.
 We say that the projective cone $C$ is a \emph{projective limit}, or simply that $e$ is the \emph{projective limit of $\phi$}, if, for every projective cone of the form $C'\colon e'\to\phi$, there exists exactly one morphism $f\colon e'\to e$ in $\cat{E}$ such that $C'(n)=C(n)\cdot f$ for all $n\in\set{\cat{A}}$.
 We call $f$ the \emph{crochet}\todo{translator footnote here about ``crochet''} of $C'$ with respect to the limit $C$.
-This terminology is often modified for particular limits: products, fibre products, various diagrams.
+We say that $\cat{E}$ \emph{admits projective $\cat{A}$-limits}, for example, if, for every $\phi\in\set{\cat{E}^\cat{A}}$, there exists a projective limit $C\colon e\to\phi$;
+and if we have chosen such a limit for all $\phi$, we say that $\cat{E}$ is endowed with a \emph{canonical} (or \emph{official}) choice of projective $\cat{A}$-limits. Often such a choice is classical and is made tacitly.
+We use analogous conventions for products, fibre products, etc. \ldots.
 For example, we say that the following commutative diagram
 \oldpage{222}
 \[
@@ -328,11 +330,7 @@ For example, we say that the following commutative diagram
   \end{tikzcd}
 \]
 is a \emph{cartesian square}, or a \emph{fibre product}\footnote{This terminology supposes that we consider the diagram as oriented within the plane.}, or we say that $(v_1,v_2)$, or simply $\pi$, is a \emph{fibre product} of $(f,g)$, if the relation $f\cdot f'=g\cdot g'$ in $\cat{E}$ implies the existence and universality of a crochet $h$ such that $f'=v_1\cdot h$ and $g'=v_2\cdot h$.
-We use analogous conventions for inductive limits, but the expression ``canonical projection''  should be replaced by \emph{canonical injection}.
-We say that $\cat{E}$ \emph{admits projective $\cat{A}$-limits}, for example, if, for every $\phi\in\set{\cat{E}^\cat{A}}$, there exists a projective limit $C\colon e\to\phi$;
-and if we have chosen such a limit for all $\phi$, we say that $\cat{E}$ is endowed with a \emph{canonical} (or \emph{official}) choice of projective $\cat{A}$-limits.
-We use analogous conventions for fibre products, inductive limits, etc. \ldots.
-Often such a choice is classical and is made tacitly.
+We use analogous conventions for inductive limits, but the expression ``canonical projection'' should be replaced by \emph{canonical injection}.
 
 We will not cover the notion of a functor \emph{commuting with limits}, nor that of limits commuting with one another;
 these notions are clear enough.
@@ -403,7 +401,7 @@ Recall that, if $\TT$ is a triple on $\cat{E}$, then we denote by $\Alg{\TT}$ th
   \end{aligned}
   \tag{4}
 \]
-and a morphism $f\colon b\to b'$ in $\Alg{\TT}$ is defined by a morphism $f\colon e\to e'$ in $\cat{E}$ such that $b$ is an algebra on $e$, $b'$ is an algebra on $e'$, and
+and a morphism $f\colon b\to b'$ in $\Alg{\TT}$ is defined by a morphism $f\colon e\to e'$ in $\cat{E}$ such that $b$ is a $\TT$-algebra on $e$, $b'$ is a $\TT$-algebra on $e'$, and
 \[
   f\cdot b
   = b'\cdot Tf.
@@ -424,7 +422,7 @@ Recall, finally, that if $\TT$ is the triple induced by an adjoint pair $(F,U)$,
   & \cat{E}
   \end{tikzcd}
 \]
-with the horizontal arrows being furthermore unique whenever they make the diagram obtained by replacing the three functors to $\cat{E}$ with their adjoints commute.
+with the horizontal arrows being furthermore unique whenever they make the diagram obtained by replacing the three forgetful functors to $\cat{E}$ with their adjoints commute.
 The functor $\overline{\cat{E}}\to\Alg{\TT}$ is called the \emph{Eilenberg--Moore functor} associated to $(F,U)$, or simply to $U$.
 When this functor is an isomorphism, we say that $U$ is \emph{tripleable}.
 For example, the Eilenberg--Moore functor $\Kl{\TT}\to\Alg{\TT}$ is fully faithful, but not always injective.
@@ -439,9 +437,9 @@ For example, the Eilenberg--Moore functor $\Kl{\TT}\to\Alg{\TT}$ is fully faithf
 \oldpage{225}
 We are going to replace the morphism $b\colon Te\to e$ of a $\TT$-algebra, where $\TT$ is a triple on a category $\cat{E}$, by a span, i.e.\ by a pair of morphism in $\cat{E}$ with the same target
 \[
-  b\colon\pi\to e
-  \textand
   a\colon\pi\to Te
+  \textand
+  b\colon\pi\to e
 \]
 and define the notion of a $\TT$-category by adding data and conditions to this span, in a way that generalises the notion of a ``relational $\TT$-algebra'' of Barr \cite{Ba}.
 In Chapter~II, we will see that this generalisation is natural;
@@ -455,20 +453,20 @@ In the rest of this chapter, $\cat{E}$ will be a category admitting finite fibre
 
 A \emph{$\TT$-graph} on an object $e\in\set{\cat{E}}$ is a pair $(b,a)$, where
 \[
-  b\colon\pi\to e
-  \textand
   a\colon\pi\to Te
+  \textand
+  b\colon\pi\to e
 \]
 are morphisms in $\cat{E}$.
 
 A \emph{pointed $\TT$-graph} is a triple $(b,a,i)$ such that $(b,a)$ is a $\TT$-graph on $e$, and $i\colon e\to\pi$ is a morphism in $\cat{E}$ such that
 \[
-  b\cdot i = \id_e
+  a\cdot i= Ie
   \textand
-  a\cdot i= Ie.
+  b\cdot i = \id_e.
   \tag{1}
 \]
-We then form a fibre product of $(a,Tb)$:
+We then form a fibre product $(v_1,v_2)$ of $(a,Tb)$:
 \[
   \begin{tikzcd}[sep=huge]
     T\pi
@@ -1528,24 +1526,24 @@ such that conditions~(1) to (8) below are satisfied:
     \[
       e,e'\in\set{\cat{D}}
       \textand
-      f\in\set{\Hom_\cat{D}(e',e)}.
+      f\in\set{\Hom_\cat{D}(e,e')}.
     \]
-    Saying that $\alpha\colon f\to g\colon e\to e'$, or simply that $\alpha\colon f\to g$, is a \emph{2-morphism in $\cat{D}$} means that $f\colon e\to e'$ and $g\colon e\to e'$ are morphisms in $\cat{D}$ and $\alpha\colon f\to g$ is a morphism in $\Hom_\cat{D}(e',e)$.
+    Saying that $\alpha\colon f\to g\colon e\to e'$, or simply that $\alpha\colon f\to g$, is a \emph{2-morphism in $\cat{D}$} means that $f\colon e\to e'$ and $g\colon e\to e'$ are morphisms in $\cat{D}$ and $\alpha\colon f\to g$ is a morphism in $\Hom_\cat{D}(e,e')$.
 
   \item[(3)]
-    $\iota$ is a family of functors indexed by $\set{\cat{D}}$, of the form $\iota(e)\colon\mathbf{1}\to\Hom_\cat{D}(e',e)$ for each $e\in\set{\cat{D}}$, where $\mathbf{1}$ is the category consisting of a single object $0$ and the single morphism $\id_0$.
+    $\iota$ is a family of functors indexed by $\set{\cat{D}}$, of the form $\iota(e)\colon\mathbf{1}\to\Hom_\cat{D}(e,e')$ for each $e\in\set{\cat{D}}$, where $\mathbf{1}$ is the category consisting of a single object $0$ and the single morphism $\id_0$.
     We denote by $\id(e)$, or $\id_e$, or simply $e$, the morphism $\iota(e)(\id_0)\colon e\to e'$.
 
   \item[(4)]
     $\kappa$ is a family of functors indexed by $\set{\cat{D}}^3$, of the form
     \[
-      \kappa(e'',e',e)\colon
-      \Hom_\cat{D}(e'',e')\times\Hom_\cat{D}(e',e)
-      \to \Hom_\cat{D}(e'',e)
+      \kappa(e,e',e'')\colon
+      \Hom_\cat{D}(e',e'')\times\Hom_\cat{D}(e,e')
+      \to \Hom_\cat{D}(e,e'')
     \]
-    for each $(e'',e',e)\in\set{\cat{D}}^3$.
+    for each $(e,e',e'')\in\set{\cat{D}}^3$.
     The image of a pair of morphisms or of 2-morphisms under this functor is called a composition and is denoted by the same symbol, which will generally be the symbol $\circ$ in this paper.
-    This composition is called the \emph{first law of $\cat{D}$}, to distinguish it from the composition laws in the $\Hom_\cat{D}(e',e)$.
+    This composition is called the \emph{first law of $\cat{D}$}, to distinguish it from the composition laws in the $\Hom_\cat{D}(e,e')$.
     These latter laws will also be denoted by a unique symbol, called the symbol of the \emph{second law of $\cat{D}$}.
 
   \item[(5)]
@@ -1553,23 +1551,23 @@ such that conditions~(1) to (8) below are satisfied:
     $l$ and $r$ are two families of natural transformations, each indexed by $\set{\cat{D}}^2$, of the form
     \[
       \begin{aligned}
-        l(e',e)\colon \pr_2
-      & \to \kappa(e',e',e)\cdot\big(\iota(e')\times\id(\Hom_\cat{D}(e',e))\big)
-      \\r(e',e)\colon \pr_1
-      & \to \kappa(e',e,e)\cdot\big(\id(\Hom_\cat{D}(e',e))\times\iota(e)\big)
+        l(e,e')\colon \pr_2
+      & \to \kappa(e,e',e')\cdot\big(\iota(e')\times\Hom_\cat{D}(e,e')\big)
+      \\r(e,e')\colon \pr_1
+      & \to \kappa(e,e,e')\cdot\big(\Hom_\cat{D}(e,e')\times\iota(e)\big)
       \end{aligned}
     \]
     where
     \[
       \begin{aligned}
-        \pr_2\colon \mathbf{1}\times\Hom_\cat{D}(e',e)
-      & \to \Hom_\cat{D}(e',e)
-      \\\pr_1\colon \Hom_\cat{D}(e',e)\times\mathbf{1}
-      & \to \Hom_\cat{D}(e',e)
+        \pr_2\colon \mathbf{1}\times\Hom_\cat{D}(e,e')
+      & \to \Hom_\cat{D}(e,e')
+      \\\pr_1\colon \Hom_\cat{D}(e,e')\times\mathbf{1}
+      & \to \Hom_\cat{D}(e,e')
       \end{aligned}
     \]
     denote the canonical projections of the products.
-    In other words, for each morphism $f\colon e\to e'$ in $\cat{D}$, $r$ and $l$ give ``natural'' 2-morphisms, denoted in shorthand by
+    In other words, for each morphism $f\colon e\to e'$ in $\cat{D}$, $l$ and $r$ give ``natural'' 2-morphisms $l(e, e')(j, 0)$ and $r(e, e')(f, 0)$, denoted in shorthand by
     \[
       l(f)\colon f\to\id_{e'}\circ f
       \textand
@@ -1580,27 +1578,26 @@ such that conditions~(1) to (8) below are satisfied:
   \item[(6)]
     $s$ is a family of natural transformations, indexed by $\set{\cat{D}}^4$, of the form
     \[
-      s(e_4,e_3,e_2,e_1)\colon
-      \kappa_{421}\cdot(\kappa_{432}\times\cat{D}_{21})
-      \to \kappa_{431}\cdot(\cat{D}_{43}\times\kappa_{321})
+      s(e_1,e_2,e_3,e_4)\colon
+      \kappa_{124}\cdot(\kappa_{234}\times\cat{D}_{12})
+      \to \kappa_{134}\cdot(\cat{D}_{34}\times\kappa_{123})
     \]
-    for each $(e_4,e_3,e_2,e_1)\in\set{\cat{D}}^4$, where we set
+    for each $(e_1,e_2,e_3,e_4)\in\set{\cat{D}}^4$, where we set
     \[
       \kappa_{ijk} = \kappa(e_i,e_j,e_k)
       \textand
       \cat{D}_{ij} = \Hom_\cat{D}(e_i,e_j)
     \]
     for $1\leqslant i,j,k\leqslant 4$.
-    Both these functors have source category $\cat{D}_{43}\times\cat{D}_{32}\times\cat{D}_{21}$ and target category $\cat{D}_{41}$.
+    Both these functors have source category $\cat{D}_{34}\times\cat{D}_{23}\times\cat{D}_{12}$ and target category $\cat{D}_{14}$.
     In other words, if $f\colon e_1\to e_2$, $g\colon e_2\to e_3$, and $h\colon e_3\to e_4$ are morphisms in $\cat{D}$, then $s$ gives a ``natural'' 2-morphism, denoted in shorthand by
     \[
-      s(h,g,f)\colon (h\circ g)\circ f
-      \to h\circ(g\circ f).
+      s(f,g,h)\colon h\circ(g\circ f) \to (h\circ g)\circ f.
     \]
-    We also say that $s$ \emph{shifts parentheses to the right}.
+    We also say that $s$ \emph{shifts parentheses to the left}.
 
   \item[(7)]
-    Let $\varepsilon\colon\cat{D}_{32}\times\cat{D}_{21}\to\cat{D}_{32}\times\cat{D}_{22}\times\cat{D}_{21}$ be the functor given by the composition of the trivial functor $\cat{D}_{32}\times\cat{D}_{21}\to\cat{D}_{32}\times\mathbf{1}\times\cat{D}_{21}$ and the functor $\cat{D}_{32}\times\iota_2\times\cat{D}_{21}$, using the above notation, as well as setting
+    Let $\varepsilon\colon\cat{D}_{23}\times\cat{D}_{12}\to\cat{D}_{23}\times\cat{D}_{22}\times\cat{D}_{12}$ be the functor given by the composition of the trivial functor $\cat{D}_{23}\times\cat{D}_{12}\to\cat{D}_{23}\times\mathbf{1}\times\cat{D}_{12}$ and the functor $\cat{D}_{23}\times\iota_2\times\cat{D}_{12}$, using the above notation, as well as setting
     \[
       \begin{aligned}
         \iota_i
@@ -1619,19 +1616,19 @@ such that conditions~(1) to (8) below are satisfied:
     \oldpage{245}
     \[
       \begin{tikzcd}
-        \kappa_{321}\cdot(\kappa_{332}\times\cat{D}_{21})\cdot\varepsilon
-          \ar[rr,"s_{3221}\cdot\varepsilon"]
-      &&\kappa_{321}\cdot(\cat{D}_{32}\times\kappa_{221})\cdot\varepsilon
-      \\&\kappa_{321}
-          \ar[ul,"\kappa_{321}\cdot(r_{32}\times\cat{D}_{21})"]
-          \ar[ur,swap,"\kappa_{321}\cdot(\cat{D}_{32}\times l_{21})"]
+        \kappa_{123}\cdot(\kappa_{233}\times\cat{D}_{12})\cdot\varepsilon
+          \ar[rr,"s_{1223}\cdot\varepsilon"]
+      &&\kappa_{123}\cdot(\cat{D}_{23}\times\kappa_{122})\cdot\varepsilon
+      \\&\kappa_{123}
+          \ar[ul,"\kappa_{123}\cdot(r_{23}\times\cat{D}_{12})"]
+          \ar[ur,swap,"\kappa_{123}\cdot(\cat{D}_{23}\times l_{12})"]
       \end{tikzcd}
     \]
-    In other words, applying this diagram to a pair of morphisms $f\colon e_1\to e_2$ and $g\colon e_2\to e_3$, we should obtain a commutative diagram in the category $\Hom_\cat{D}(e_3,e_1)$:
+    In other words, applying this diagram to a pair of morphisms $f\colon e_1\to e_2$ and $g\colon e_2\to e_3$, we should obtain a commutative diagram in the category $\Hom_\cat{D}(e_1,e_3)$:
     \[
       \begin{tikzcd}
         (g\circ\id_e)\circ f
-          \ar[rr,"{s(g,\id_e,f)}"]
+          \ar[rr,"{s(f,\id_e,g)}"]
       &&g\circ(\id_e\circ f)
       \\
       & g\circ f
@@ -1646,15 +1643,15 @@ such that conditions~(1) to (8) below are satisfied:
     \[
       \begin{tikzcd}
       & \bullet
-          \ar[dl,swap,"\kappa_{521}\cdot(s_{5432}\times\cat{D}_{21})"]
-          \ar[ddr,"s_{5321}\cdot(\kappa_{543}\times\cat{D}_{32}\times\cat{D}_{21})"]
+          \ar[dl,swap,"\kappa_{125}\cdot(s_{2345}\times\cat{D}_{12})"]
+          \ar[ddr,"s_{1235}\cdot(\kappa_{345}\times\cat{D}_{23}\times\cat{D}_{12})"]
       \\\bullet
-          \ar[dd,swap,"s_{5421}\cdot(\cat{D}_{54}\times\kappa_{432}\times\cat{D}_{21})"]
+          \ar[dd,swap,"s_{1245}\cdot(\cat{D}_{45}\times\kappa_{234}\times\cat{D}_{12})"]
       \\
       &&\bullet
-          \ar[ddl,"s_{5431}\cdot(\cat{D}_{54}\times\cat{D}_{43}\times\kappa_{321})"]
+          \ar[ddl,"s_{1345}\cdot(\cat{D}_{45}\times\cat{D}_{34}\times\kappa_{123})"]
       \\\bullet
-          \ar[dr,swap,"\kappa_{541}\cdot(\cat{D}_{54}\times s_{4321})"]
+          \ar[dr,swap,"\kappa_{145}\cdot(\cat{D}_{45}\times s_{1234})"]
       \\
       & \bullet
       \end{tikzcd}
@@ -1677,19 +1674,19 @@ such that conditions~(1) to (8) below are satisfied:
       & \to e_5
       \end{aligned}
     \]
-     we obtain a commutative diagram in $\Hom_\cat{D}(e_5,e_1)$:
+     we obtain a commutative diagram in $\Hom_\cat{D}(e_1,e_5)$:
      \[
        \begin{tikzcd}[column sep=huge, row sep=huge]
           (k\circ(h\circ g))\circ f
-            \ar[dd,swap,"{s(k,h\circ g,f)}"]
+            \ar[dd,swap,"{s(f,h\circ g,k)}"]
         & ((k\circ h)\circ g)\circ f
-            \ar[l,swap,"{s(k,h,g)\circ f}"]
-            \ar[d,"{s(k\circ h,g,f)}"]
+            \ar[l,swap,"{s(g,h,k)\circ f}"]
+            \ar[d,"{s(f,gk\circ h)}"]
         \\
         & (k\circ h)\circ(g\circ f)
-            \ar[d,"{s(k,h,g\circ f)}"]
+            \ar[d,"{s(g\circ f,h,k)}"]
         \\k\circ((h\circ g)\circ f)
-            \ar[r,swap,"{k\circ s(h,g,f)}"]
+            \ar[r,swap,"{k\circ s(f,g,h)}"]
         & k\circ(h\circ(g\circ f))
        \end{tikzcd}
      \]
@@ -1710,9 +1707,9 @@ We say that $F\colon\cat{D}\to\cat{D}'$ is a \emph{pseudo-functor} if $\cat{D}$ 
   \item[(2')]
     $F_1$ is a family of functors
     \[
-      F_1(e',e)\colon
-      \Hom_\cat{D}(e',e)
-      \to \Hom_{\cat{D}'}(F(e'),F(e))
+      F_1(e,e')\colon
+      \Hom_\cat{D}(e,e')
+      \to \Hom_{\cat{D}'}(F(e),F(e'))
     \]
     for each $(e',e)\in\set{\cat{D}}^2$.
     If $e\in\set{\cat{D}}$, we denote by $F(e)$ its image under $\set{F}$ whenever there is no risk of confusion.
@@ -1731,13 +1728,13 @@ We say that $F\colon\cat{D}\to\cat{D}'$ is a \emph{pseudo-functor} if $\cat{D}$ 
   \item[(4')]
     $c$ is a family of natural transformations indexed by $\set{\cat{D}}^3$, of the form
     \[
-        c(e'',e',e)\colon
-        \kappa\big(F(e''),F(e'),F(e)\big) \cdot \big(F_1(e'',e')\times F_1(e',e)\big)
-        \to F_1(e'',e)\cdot\kappa(e'',e',e).
+        c(e,e',e'')\colon
+        \kappa\big(F(e),F(e'),F(e'')\big) \cdot \big(F_1(e',e'')\times F_1(e,e')\big)
+        \to F_1(e,e'')\cdot\kappa(e,e',e'').
     \]
     In other words, for each pair of morphism $f\colon e\to e'$ and $g\colon e'\to e''$, we give a ``natural'' 2-morphism, denoted in shorthand by
     \[
-      c(g,f)\colon F(g)\circ F(f)
+      c(f,g)\colon F(g)\circ F(f)
       \to F(g\circ f).
     \]
 
@@ -1752,7 +1749,7 @@ We say that $F\colon\cat{D}\to\cat{D}'$ is a \emph{pseudo-functor} if $\cat{D}$ 
       \\F(f)\circ\id_{F(e)}
           \ar[r,swap,"{F(f)\circ u(e)}"]
       & F(f)\circ F(\id_e)
-          \ar[u,swap,"{c(f,\id_e)}"]
+          \ar[u,swap,"{c(\id_e,f)}"]
       \end{tikzcd}
       \qquad
       \begin{tikzcd}[sep=huge]
@@ -1761,7 +1758,7 @@ We say that $F\colon\cat{D}\to\cat{D}'$ is a \emph{pseudo-functor} if $\cat{D}$ 
           \ar[l,swap,"{F(l(f))}"]
           \ar[d,"{l(F(f))}"]
       \\F(\id_{e'})\circ F(f)
-          \ar[u,"{c(\id_{e'},f)}"]
+          \ar[u,"{c(f,\id_{e'})}"]
       & \id_{F(e')}\circ F(f)
           \ar[l,"{u(e')\circ F(f)}"]
       \end{tikzcd}
@@ -1771,19 +1768,19 @@ We say that $F\colon\cat{D}\to\cat{D}'$ is a \emph{pseudo-functor} if $\cat{D}$ 
     \oldpage{247}
     For any triple $f\colon e\to e'$, $g\colon e'\to e''$, and $h\colon e''\to e'''$ in $\cat{D}$, we have a commutative diagram
     \[
-      \begin{tikzcd}[row sep=huge,column sep=7em]
+      \begin{tikzcd}[row sep=huge,column sep=8em]
         F(h)\circ(F(g)\circ F(f))
-          \ar[d,swap,"{F(h)\circ c(g,f)}"]
+          \ar[d,swap,"{F(h)\circ c(f,g)}"]
       & (F(h)\circ F(g))\circ F(f)
-          \ar[l,swap,"{s(F(h),F(g),F(f))}"]
-          \ar[d,"{c(h,g)\circ F(f)}"]
+          \ar[l,swap,"{s(F(f),F(g),F(h))}"]
+          \ar[d,"{c(g,h)\circ F(f)}"]
       \\F(h)\circ F(g\circ f)
-          \ar[d,swap,"{c(h,g\circ f)}"]
+          \ar[d,swap,"{c(g\circ f,h)}"]
       & F(h\circ g)\circ F(f)
-          \ar[d,"{c(h\circ g,f)}"]
+          \ar[d,"{c(f,h\circ g)}"]
       \\F(h\circ(g\circ f))
       & F((h\circ g)\circ f)
-          \ar[l,"{F(s(h,g,f))}"]
+          \ar[l,"{F(s(f,g,h))}"]
       \end{tikzcd}
     \]
 \end{enumerate}
@@ -1816,7 +1813,7 @@ We simply note that \hyperref[proposition:ii.3.16]{Proposition~II.3.16} later on
 \subsection{The pseudo-category of \texorpdfstring{$\TT$}{T}-spans}
 \label{sec:II.2}
 
-Let $\cat{E}$ be a category endowed with a triple $\TT$, admitting finite fibre products and endowed with a canonical choice of these fibre products.
+Let $\cat{E}$ be a category endowed with a triple $\TT=(T,I,K)$, admitting finite fibre products and endowed with a canonical choice of these fibre products.
 We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the following way:
 
 \begin{enumerate}
@@ -1824,14 +1821,14 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     $\set{\Sp{\TT}}=\set{\cat{E}}$
 
   \item[(2)]
-    For every $e,e\in\set{\cat{E}}$, let $\Hom_{\Sp{\TT}}(e',e)$ be the category whose objects are the $\TT$-spans $\theta\colon e\to e'$, i.e.\ the pairs $(b,a)$, where
+    For every $e,e'\in\set{\cat{E}}$, let $\Hom_{\Sp{\TT}}(e,e')$ be the category whose objects are the $\TT$-spans $\theta\colon e\to e'$, i.e.\ the pairs $(b,a)$, where
     \[
       b\colon\pi\to Te'
       \textand
       a\colon \pi\to e
     \]
     are morphisms in $\cat{E}$ with the same source.
-    If $\theta'\colon e\to e'$ is another $\TT$-span, where $\theta'=(b',a')$ with $b'\colon\pi'\to Te'$ and $a'\colon\pi'\to e$, then a morphism $m\colon\theta\to\theta'$ in $\Hom_{\Sp{\TT}}(e',e)$ (and thus a 2-morphism in $\Sp{\TT}$) is defined by a morphism $m\colon\pi\to\pi'$ in $\cat{E}$ satisfying the following conditions:
+    If $\theta'\colon e\to e'$ is another $\TT$-span, where $\theta'=(b',a')$ with $b'\colon\pi'\to Te'$ and $a'\colon\pi'\to e$, then a morphism $m\colon\theta\to\theta'$ in $\Hom_{\Sp{\TT}}(e,e')$ (and thus a 2-morphism in $\Sp{\TT}$) is defined by a morphism $m\colon\pi\to\pi'$ in $\cat{E}$ satisfying the following conditions:
     \[
       b'\cdot m = b
       \textand
@@ -1850,10 +1847,10 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
           \ar[ur,swap,"a'"]
       \end{tikzcd}
     \]
-    The evident composition law on $\Hom_{\Sp{\TT}}(e',e)$ is denoted by $\cdot$ just as for $\cat{E}$.
+    The evident composition law on $\Hom_{\Sp{\TT}}(e,e')$ is denoted by $\cdot$ just as for $\cat{E}$.
 
   \item[(3)]
-    For each $e\in\set{\cat{E}}$, we define a $\TT$-span $(Ie,\id_e)\colon e\to Te$, which we also denote by $\id_e$ if the context clearly specifies that it is a $\TT$-span.
+    For each $e\in\set{\cat{E}}$, we define a $\TT$-span $(Ie,\id_e)\colon e\to e$, which we also denote by $\id_e$ if the context clearly specifies that it is a $\TT$-span.
 
   \item[(4)]
     If $\theta\colon e\to e'$ and $\theta'\colon e'\to e''$ are $\TT$-spans, we define the first composition law of $\Sp{\TT}$ by setting
@@ -1893,7 +1890,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
       \xleftarrow{l(\theta)} \theta
       \xrightarrow{r\theta} \theta\circ\id_e
     \\\theta''\circ(\theta'\circ\theta)
-      \xrightarrow{s(\theta'',\theta',\theta)} (\theta''\circ\theta')\circ\theta
+      \xrightarrow{s(\theta,\theta',\theta')} (\theta''\circ\theta')\circ\theta
     \end{gathered}
   \]
    (where $r(\theta)$ is furthermore an isomorphism), which will finish the construction of $\Sp{\TT}$ as a pseudo-category.
@@ -2035,7 +2032,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     = Ke''\cdot TTa''\cdot Tv'_1\cdot w_1
     = Ta''\cdot(K\pi''\cdot Tv'_1\cdot w_1)
   \]
-  with the fibre product $(w'_1,w'_2)$ of $(Ke''\cdot Tb'\cdot v_1, Ta'')$, we obtain a crochet $s=s(\theta'',\theta',\theta)\colon\hat{\pi}\to\hat{\pi}'$ characterised by the relations
+  with the fibre product $(w'_1,w'_2)$ of $(Ke''\cdot Tb'\cdot v_1, Ta'')$, we obtain a crochet $s=s(\theta,\theta',\theta')\colon\hat{\pi}\to\hat{\pi}'$ characterised by the relations
   \[
     \begin{aligned}
       w'_2\cdot s
@@ -2073,15 +2070,15 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
   \[
     \begin{aligned}
       p
-      &= s(\theta_4,\theta_3,\theta_2)\circ\theta_1
+      &= s(\theta_2,\theta_3,\theta_4)\circ\theta_1
     \\p'
-      &= s(\theta_4,\theta_3\circ\theta_2,\theta_1)
+      &= s(\theta_1,\theta_2\circ\theta_3,\theta_4)
     \\p''
-      &= \theta_4\circ s(\theta_3,\theta_2,\theta_1)
+      &= \theta_4\circ s(\theta_1,\theta_2,\theta_3)
     \\q
-      &= s(\theta_4\circ\theta_3,\theta_2,\theta_1)
+      &= s(\theta_1,\theta_2,\theta_4\circ\theta_3)
     \\q'
-      &= s(\theta_4,\theta_3,\theta_2\circ\theta_1).
+      &= s(\theta_2\circ\theta_1,\theta_3,\theta_4).
     \end{aligned}
   \]
   We need to show the relation $q'\cdot q=p''\cdot p'\cdot p$.
@@ -2223,7 +2220,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \end{aligned}
     \tag{3}
   \]
-  (this is in fact the morphism in $\cat{E}$ that defines $s(\theta_4,\theta_3,\theta_2)$).
+  (this is in fact the morphism in $\cat{E}$ that defines $s(\theta_2,\theta_3,\theta_4)$).
   Now the relations
   \[
     \begin{aligned}
@@ -2329,7 +2326,7 @@ We will associate to this data a pseudo-category $\Sp{\TT}$ constructed in the f
     \tag{6}
   \]
   \oldpage{255}
-  (this is in fact the morphism in $\cat{E}$ that defines $s(\theta_3,\theta_2,\theta_1)$).
+  (this is in fact the morphism in $\cat{E}$ that defines $s(\theta_1,\theta_2,\theta_3)$).
 
   Now the relations
   \[
@@ -2480,7 +2477,7 @@ here is a useful characterisation:
   We use the notation of \hyperref[proposition:ii.2.13]{Proposition~II.2.13}.
   For the construction of $r(\theta)$, it is clear that condition~(c) implies that the crochet between two fibre products is invertible, and conversely if it is invertible then (c) is satisfied.
   We already know that $l(\theta)$ is always invertible
-  For the construction of $s(\theta'',\theta',\theta)$, \unsure{Figure~1} clearly shows that if (a) and (b) are satisfied then $(K\pi''\cdot Tv_1\cdot w_1,w_2)$ is a fibre product of $(Ta'',Ke''\cdot Tb'\cdot v_1)$ and, since $s$ is the crochet arising from the canonical fibre product $(w_1,w_2)$, it is invertible.
+  For the construction of $s(\theta,\theta',\theta'')$, \unsure{Figure~1} clearly shows that if (a) and (b) are satisfied then $(K\pi''\cdot Tv_1\cdot w_1,w_2)$ is a fibre product of $(Ta'',Ke''\cdot Tb'\cdot v_1)$ and, since $s$ is the crochet arising from the canonical fibre product $(w_1,w_2)$, it is invertible.
   The converse can be proven by considering degenerate cases of this situation.
 \end{proof}
 
@@ -2840,7 +2837,7 @@ We often write $\overline{\cat{D}}=(\cat{D},1,\circ)$, and the symbols $r$, $l$,
 this is why they are easily understood even when denoting $\overline{\cat{D}}$ as a triplet.
 Similarly, a pseudo-functor $\overline{F}\colon\overline{\cat{D}}\to\overline{\cat{D}}'$ between pseudo-monoidal categories is determined by a functor $F\colon\cat{D}\to\cat{D}'$ between the underlying categories that ``commutes'' with the first laws, i.e.\ the morphisms $u$ and $c$ from axioms~(3') and (4') are always denoted in the same way: $u\colon1\to F1$ is a morphism in $\cat{D}'$, whereas $c\colon\bigcirc\cdot(F\times F)\to F\cdot\bigcirc$, where we denote by $\bigcirc\colon\cat{D}\times\cat{D}\to\cat{D}$ the ``first law'' functor:
 \[
-  \bigcirc(m',m)
+  \bigcirc(m,m')
   = m'\circ m
 \]
 for every pair of morphisms in $\cat{D}$, for any pseudo-monoidal category $\overline{\cat{D}}$.
@@ -2869,10 +2866,10 @@ For every morphism $f\colon e\to e'$ in $\cat{E}$, we define a functor
 \begin{proof}
   If $\theta$ and $\theta'$ are $\TT$-graphs on $e$, then the construction of the morphism $f^*(\theta'\circ\theta)$ by projective limits (which reduces to official fibre products) implies the existence of a unique morphism
   \[
-    c(\theta',\theta)\colon f^*\theta'\circ f^*\theta
+    c(\theta,\theta')\colon f^*\theta'\circ f^*\theta
     \to f^*(\theta'\circ\theta)
   \]
-  in $\Gr{\TT}/e$ determined by a crochet $c(\theta',\theta)\colon\pi''\to\pi'$ in $\cat{E}$, if $\pi''$ and $\pi'$ are the objects of morphisms of $\TT$-graphs
+  in $\Gr{\TT}/e$ determined by a crochet $c(\theta,\theta')\colon\pi''\to\pi'$ in $\cat{E}$, if $\pi''$ and $\pi'$ are the objects of morphisms of $\TT$-graphs
   \[
     f^*\theta'\circ f^*\theta
     \textand
@@ -2889,7 +2886,7 @@ For every morphism $f\colon e\to e'$ in $\cat{E}$, we define a functor
         \ar[l,swap,"{f^*l\theta}"]
         \ar[d,"{lf^*\theta}"]
     \\f^*1\circ f^*\theta
-        \ar[u,"{c(1,\theta)}"]
+        \ar[u,"{c(\theta,1)}"]
     & 1\circ f^*\theta
         \ar[l,"{u\circ f^*\theta}"]
     \end{tikzcd}
@@ -2938,13 +2935,13 @@ For every morphism $f\colon e\to e'$ in $\cat{E}$, we define a functor
   We are thus led to prove the following equalities:
   \begin{align}
     \overline{a}\cdot f^*l\theta
-    &= \overline{a}\cdot c(1,\theta)\cdot (u\circ f^*\theta)\cdot lf^*\theta
+    &= \overline{a}\cdot c(\theta,1)\cdot (u\circ f^*\theta)\cdot lf^*\theta
     \tag{1}
   \\\overline{f}\cdot f^*l\theta
-    &= \overline{f}\cdot c(1,\theta)\cdot (u\circ f^*\theta)\cdot lf^*\theta
+    &= \overline{f}\cdot c(\theta,1)\cdot (u\circ f^*\theta)\cdot lf^*\theta
     \tag{2}
   \\\overline{b}\cdot f^*l\theta
-    &= \overline{b}\cdot c(1,\theta)\cdot (u\circ f^*\theta)\cdot lf^*\theta.
+    &= \overline{b}\cdot c(\theta,1)\cdot (u\circ f^*\theta)\cdot lf^*\theta.
     \tag{3}
   \end{align}
   We set $f^*1=(b_\circ,a_\circ)$ and let $f_\circ$ be the third canonical projection that defines $f^*1$:
@@ -3060,14 +3057,14 @@ For every morphism $f\colon e\to e'$ in $\cat{E}$, we define a functor
     \underset{(4)}{=} Tf'\cdot v_{2\circ}\cdot(u\circ f^*\theta)
     \underset{(6)}{=} Tf'\cdot v'_2.
   \]
-  Finally, by the definition of $c(1,\theta)$, we have that
+  Finally, by the definition of $c(\theta,1)$, we have that
   \[
     \begin{aligned}
-      \overline{a}\cdot c(1,\theta)
+      \overline{a}\cdot c(\theta,1)
       &= Ke'\cdot Ta'\cdot v_{2\circ}
-    \\\overline{f}\cdot c(1,\theta)
+    \\\overline{f}\cdot c(\theta,1)
       &= g
-    \\\overline{b}\cdot c(1,\theta)
+    \\\overline{b}\cdot c(\theta,1)
       &= b_\circ\cdot v_{1\circ}.
     \end{aligned}
     \tag{10}
@@ -3080,7 +3077,7 @@ For every morphism $f\colon e\to e'$ in $\cat{E}$, we define a functor
     \\&= Ke'\cdot Ta'\cdot I\pi'
     \\&\underset{(8)}{=} Ke'\cdot Ta'\cdot v'_2\cdot lf^*\theta
     \\&\underset{(6)}{=} Ke'\cdot Ta'\cdot v_{2\circ}\cdot(u\circ f^*\theta)\cdot lf^*\theta
-    \\&\underset{(10)}{=} \overline{a}\cdot c(1,\theta)\cdot(u\circ f^*\theta)\cdot lf^*\theta
+    \\&\underset{(10)}{=} \overline{a}\cdot c(\theta,1)\cdot(u\circ f^*\theta)\cdot lf^*\theta
     \end{aligned}
   \]
   which proves (1).
@@ -3090,7 +3087,7 @@ For every morphism $f\colon e\to e'$ in $\cat{E}$, we define a functor
       \overline{f}\cdot f^*l\theta
       &\underset{(7)}{=} l\theta\cdot f'
     \\&\underset{(9)}{=} g\cdot(u\circ f^*\theta)\cdot lf^*\theta
-    \\&\underset{(10)}{=} f\cdot c(1,\theta)\cdot(u\circ f^*\theta)\cdot lf^*\theta
+    \\&\underset{(10)}{=} f\cdot c(\theta,1)\cdot(u\circ f^*\theta)\cdot lf^*\theta
     \end{aligned}
   \]
   which proves (2).
@@ -3102,7 +3099,7 @@ For every morphism $f\colon e\to e'$ in $\cat{E}$, we define a functor
     \\&\underset{(8)}{=} v'_1\cdot lf^*\theta
     \\&\underset{(5)}{=} b_\circ\cdot u\cdot v'_1\cdot lf^*\theta
     \\&\underset{(6)}{=} b_\circ\cdot v_{1\circ}\cdot(u\circ f^*\theta)\cdot lf^*\theta
-    \\&\underset{(10)}{=} \overline{b}\cdot c(1,\theta)\cdot(u\circ f^*\theta)\cdot lf^*\theta
+    \\&\underset{(10)}{=} \overline{b}\cdot c(\theta,1)\cdot(u\circ f^*\theta)\cdot lf^*\theta
     \end{aligned}
   \]
   which proves (3).
@@ -3417,7 +3414,7 @@ If $\theta=(b,a)$ is a $\TT$-graph on $e\in\set{\cat{E}}$, then we denote by $\b
 we denote by $\pi_n$ its morphism object.
 
 \begin{itenv}{Scholium}
-  If $\TT$ is a strongly cartesian triple, then the free $\TT$-category $\hat{\theta}=(\hat{b},\hat{a},\hat{i},\hat{k})$ generated by a $\TT$-graph $\theta=(b,a)$ on $e\in\set{\cat{E}}$ has the same object object $e$ as $\theta$.
+  If $\TT$ is a strongly cartesian triple, then the free $\TT$-category $\hat{\theta}=(\hat{b},\hat{a},\hat{i},\hat{k})$ generated by a $\TT$-graph $\theta=(b,a)$ on $e\in\set{\cat{E}}$ has the same objects object $e$ as $\theta$.
   The morphism object $\hat{\pi}$ of $\hat{\theta}$ is the sum of the morphism objects $\pi_n$ for $n\in\mathbb{N}$ that we define by induction: $\pi_0=e$, $\pi_1=\pi$, and $\pi_n$ for $n\geqslant2$ is the source of the fibre product
   \[
     \begin{tikzcd}
@@ -3740,12 +3737,12 @@ A \emph{multicategory} is a quintuple $\cat{A}=(\cat{A}^\circ,\cat{A}^\cdot,\Hom
     $\cat{A}^\circ$ and $\cat{A}^\cdot$ are graphs such that $\set{\cat{A}^\circ}=\set{\cat{A}^\cdot}$ (we suppose, to simplify notation, that they do not have any morphisms in common).
     We say that
     \[
-      (j,(j_1,\ldots,j_n))
+      ((j_1,\ldots,j_n),j)
       \colon f\to f'
     \]
     is an \emph{envelope of $\cat{A}$} (or simply of $(\cat{A}^\circ,\cat{A}^\cdot)$) if $f\colon\overline{e}\to e$ and $f'\colon\overline{e}'\to e'$ are morphisms in $\cat{A}^\cdot$ and if $j_i\colon e_{i-1}\to e_i$, for $1\leqslant i\leqslant n$, are morphisms in $\cat{A}^\circ$ such that $e_0=e$ and $e_n=e'$.
     \oldpage{280}
-    We also denote the above envelope by $(f',(j,(j_1,\ldots,j_n)),f)$.
+    We also denote the above envelope by $(f,((j_1,\ldots,j_n),j),f')$.
     We denote by $\sq\cat{A}$ the set of envelopes of $\cat{A}$.
     \[
       \begin{tikzcd}
@@ -3772,7 +3769,7 @@ A \emph{multicategory} is a quintuple $\cat{A}=(\cat{A}^\circ,\cat{A}^\cdot,\Hom
     $\Hom_\cat{A}$ is a family of sets indexed by $\sq\cat{A}$.
     The relation
     \[
-      \alpha\in \Hom_\cat{A}\big( f',(j,(j_1,\ldots,j_n)),f \big)
+      \alpha\in \Hom_\cat{A}\big( f,((j_1,\ldots,j_n),j),f' \big)
     \]
     is also written as a multimorphism (or branch) $\alpha\colon(j_1,\ldots,j_n)\to j\colon f\mapsto f'$ of $\cat{A}$.
 
@@ -3837,13 +3834,13 @@ We define a \emph{Lambek multicategory} to be a quadruple $\cat{L}=(\cat{L}^\cir
 \begin{enumerate}
   \item
     $\cat{L}^\circ$ is a graph.
-    We say that $(j,(j_1,\ldots,j_n))\colon e\to e'$ is an \emph{envelope of $\cat{L}$} if $j\colon e\to e'$ is a morphism in $\cat{L}^\circ$ whenever $(j_1,\ldots,j_n)\colon e\to e'$ is a path in $\cat{L}^\circ$;
+    We say that $((j_1,\ldots,j_n),j)\colon e\to e'$ is an \emph{envelope of $\cat{L}$} if $j\colon e\to e'$ is a morphism in $\cat{L}^\circ$ whenever $(j_1,\ldots,j_n)\colon e\to e'$ is a path in $\cat{L}^\circ$;
     the integer $n\in\mathbb{N}$ is called the \emph{length} of the envelope.
     We denote by $\Delta_n\cat{L}$ the set of envelopes of length~$n$ of $\cat{L}$, and by $\Delta\cat{L}$ the set of all envelopes of $\cat{L}$.
 
   \item
     $\Hom_\cat{L}$ is a family of sets, indexed by $\Delta\cat{L}$.
-    The relation $\alpha\in\Hom_\cat{L}(j,(j_1,\ldots,j_n))$ is also expressed by saying that $\alpha\colon(j_1,\ldots,j_n)\to j$ is a multimorphism in $\cat{L}$.
+    The relation $\alpha\in\Hom_\cat{L}((j_1,\ldots,j_n),j)$ is also expressed by saying that $\alpha\colon(j_1,\ldots,j_n)\to j$ is a multimorphism in $\cat{L}$.
 
   \item
     $\id$ is a family that, to each morphism $j\colon e\to e'$ in $\cat{L}^\circ$, associates a multimorphism of the form $\id^j\colon j\to j$.
@@ -3851,9 +3848,9 @@ We define a \emph{Lambek multicategory} to be a quadruple $\cat{L}=(\cat{L}^\cir
   \item
     $\perp=(\perp_n^i \mid 1\leqslant i, n\in\mathbb{N})$, where $\perp_n^i$ is a family of maps, indexed by the set of pairs of envelopes $(E,E')$, such that, if
     \[
-      E = (j,(j_1,\ldots,j_n))
+      E = ((j_1,\ldots,j_n),j)
       \textand
-      E' = (j',(j'_1,\ldots,j'_n))
+      E' = ((j'_1,\ldots,j'_n),j')
     \]
     then $j_i=j'$ (and thus $n\geqslant 1$), with these maps being of the form
     \[
@@ -3864,7 +3861,7 @@ We define a \emph{Lambek multicategory} to be a quadruple $\cat{L}=(\cat{L}^\cir
     where we define
     \[
       E\perp E'
-      = (j,(j_1,\ldots,j_{i-1},j'_1,\ldots,j'_n,\ldots,j_{i+1},\ldots,j_n)).
+      = ((j_1,\ldots,j_{i-1},j'_1,\ldots,j'_n,\ldots,j_{i+1},\ldots,j_n),j).
     \]
 
     \oldpage{282}
@@ -4024,12 +4021,12 @@ The ``multicategories'' in \cite{La} are precisely, up to terminology, Lambek mu
   \begin{enumerate}
     \item
       Categories are particular cases of Lambek multicategories.
-      If $(j_1,\ldots,j_n)\colon e\to e'$ is a path in the category $\cat{C}$ and $j\colon e\to e'$ a morphism in $\cat{C}$, then $\Hom_\cat{C}(j,(j_1,\ldots,j_n))$ takes the value 1 or 0 depending on whether $j=j_1\cdot j_2\cdot\ldots\cdot j_n$ or not.
+      If $(j_1,\ldots,j_n)\colon e\to e'$ is a path in the category $\cat{C}$ and $j\colon e\to e'$ a morphism in $\cat{C}$, then $\Hom_\cat{C}((j_1,\ldots,j_n),j)$ takes the value 1 or 0 depending on whether $j=j_1\cdot j_2\cdot\ldots\cdot j_n$ or not.
 
     \item
       The double categories of \cite{Eh} (which are, in the terminology of \cref{sec:III.2}, $\Cat{Cat}$-categories) are particular cases of multicategories: a multimorphism $\alpha\colon(j_1,\ldots,j_n)\to j\colon f\to f'$ consists of the data of a ``double morphism'' $\alpha$, of boundary given below:
       \[
-        \begin{tikzcd}[sep=huge]
+        \begin{tikzcd}[column sep=6em, row sep=large]
           \phantom{x}
             \ar[d,swap,"f'"]
         & \phantom{x}
@@ -4113,8 +4110,8 @@ We define a \emph{category of operators}, or \emph{action of a category}, to be 
   \item
     $\kappa$ is a family of maps, indexed by $\set{\Cat{C}}^2$, of the form
     \[
-      \kappa(e',e)\colon
-      \Hom_\cat{C}(e',e)\times\hom_\phi(e)
+      \kappa(e,e')\colon
+      \Hom_\cat{C}(e,e')\times\hom_\phi(e)
       \to \hom_\phi(e').
     \]
     We denote by $f\cdot x$ the image under this map of a pair $(f,x)$, where $f\colon e\to e'$ is a morphism in $\cat{C}$ and $x\in\hom_\phi(e)$.
@@ -4680,7 +4677,7 @@ here, on the other hand, we will seek to ``enlarge'' $\Cat{Cat}(\TT)$.
 We suppose, however, that $\TT$ is a cartesian triple, i.e.\ that $\Sp{\TT}$ is a bicategory (\cref{sec:II.2}).
 We will first study some general facts about an arbitrary bicategory $\cat{D}$;
 the terminology that follows is inspired by the traditional monoidal category of abelian groups $(\Cat{Ab},\mathbb{Z},\otimes)$.
-To simplify notation, we will simply use the symbols $1$, $1'$, $\ldots$ to denote the objects of $\cat{D}$, and we will omit the symbols for the variables in the notation of the morphisms $r(\theta)$, $l(\theta)$, and $s(\theta'',\theta',\theta)$, which will thus simply be denoted by $r$, $l$, and $s$.
+To simplify notation, we will simply use the symbols $1$, $1'$, $\ldots$ to denote the objects of $\cat{D}$, and we will omit the symbols for the variables in the notation of the morphisms $r(\theta)$, $l(\theta)$, and $s(\theta,\theta',\theta'')$, which will thus simply be denoted by $r$, $l$, and $s$.
 
 Recall that a \emph{monad in $\Cat{D}$} is a triple $(\theta,i,k)$, where $\theta$ is a morphism in $\cat{D}$, and $i\colon\id_1\to\theta$ and $k\colon\theta\circ\theta\to\theta$ are 2-morphisms in $\cat{D}$ that make the following diagram commute:
 \[
@@ -4865,7 +4862,7 @@ If $(\sigma,h',h)$ and $(\overline{\sigma},\overline{h}',\overline{h})\colon(\th
     \item
       We can define a \emph{bimorphism} to be a pseudo-functor of the form $\mathbf{3}\to\cat{D}$, and define the tensor product of two bimodules as a ``universal'' bimorphism, as we do classically in $(\Cat{Ab},\mathbb{Z},\otimes)$;
       we could also define a bicategory $\Cat{Bim}(\cat{D})$ as having the monads in $\cat{D}$ as its objects, and bimodules as its morphisms with composition given by the tensor product defined above.
-      The existence of this product is linked to the existence of cokernels in the categories $\Hom_\cat{D}(1',1)$ and the commutativity of the functors $\kappa(e'',e',e)$ with the cokernels.
+      The existence of this product is linked to the existence of cokernels in the categories $\Hom_\cat{D}(1,1')$ and the commutativity of the functors $\kappa(e,e',e'')$ with the cokernels.
       We could finally extend $\Cat{Bim}(\cat{D})$ to a multicategory, but we save these questions for a future work.
   \end{enumerate}
 \end{rmenv}
@@ -5177,7 +5174,7 @@ we set
     $s_{1,v}\theta = \theta\circ(\bigcirc^v\theta)$ for $v\geqslant1$, and, inductively, for $u,v\geqslant1$,
     \[
       s_{u+1,v}\theta
-      = (\theta\circ s_{u,v}\theta) \cdot s(\theta, \bigcirc^u\theta, \bigcirc^v\theta).
+      = (\theta\circ s_{u,v}\theta) \cdot s(\bigcirc^v\theta, \bigcirc^u\theta, \theta).
     \]
 \end{itemize}
 
@@ -5186,7 +5183,7 @@ we set
   If $\overline{\cat{D}}$ is a countably distributive monoidal category, then we have the formula
   \[
     s_{u+v,w}\theta \cdot \big( (s_{u,v}\theta)\circ(\bigcirc^w\theta) \big)
-    = s_{u,v+w}\theta \cdot \big( (\bigcirc^u\theta)\circ(s_{v,w}\theta) \big) \cdot s(\bigcirc^u\theta, \bigcirc^v\theta, \bigcirc^w\theta)
+    = s_{u,v+w}\theta \cdot \big( (\bigcirc^u\theta)\circ(s_{v,w}\theta) \big) \cdot s(\bigcirc^w\theta, \bigcirc^v\theta, \bigcirc^u\theta)
   \]
   for all $u,v,w\geqslant0$.
 \end{itenv}
@@ -5221,8 +5218,8 @@ we set
   \[
     \begin{aligned}
       k_{1+u+v}\cdot s_{1+u,v}\theta
-      &= k \cdot (\theta\circ k_{u+v}) \cdot (\theta\circ s_{u,v}\theta) \cdot  s(\theta,\bigcirc^u\theta,\bigcirc^v\theta)
-    \\&= k \cdot (\theta\circ k) \cdot \big(\theta\circ(k_u\circ k_v)\big) \cdot  s(\theta,\bigcirc^u\theta,\bigcirc^v\theta)
+      &= k \cdot (\theta\circ k_{u+v}) \cdot (\theta\circ s_{u,v}\theta) \cdot s(\bigcirc^v\theta,\bigcirc^u\theta,\theta)
+    \\&= k \cdot (\theta\circ k) \cdot \big(\theta\circ(k_u\circ k_v)\big) \cdot s(\bigcirc^v\theta,\bigcirc^u\theta,\theta)
     \\&= k \cdot (\theta\circ k) \cdot s(\theta,\theta,\theta) \cdot \big((\theta\circ k_u)\circ k_v\big)
     \\&= k \cdot (k\circ\theta) \cdot \big((\theta\circ k_u)\circ k_v\big)
     \\&= k\cdot (k_{u+1}\circ k_v).
@@ -5242,7 +5239,7 @@ we set
       k_{1+u}
       &= k \cdot (\theta\circ k_u)
     \\&= k \cdot (\theta\circ k) \cdot \big(\theta\circ(k_u\circ i)\big) \cdot \big(\theta\circ r(\bigcirc^u\theta)\big)
-    \\&= k \cdot (\theta\circ k) \cdot \big(\theta\circ(k_u\circ i)\big) \cdot s(\theta,\bigcirc^u\theta,1) \cdot r(\bigcirc^{1+u}\theta)
+    \\&= k \cdot (\theta\circ k) \cdot \big(\theta\circ(k_u\circ i)\big) \cdot s(1,\bigcirc^u\theta,\theta) \cdot r(\bigcirc^{1+u}\theta)
     \\&= k \cdot (\theta\circ k) \cdot s(\theta,\theta,\theta) \cdot \big((\theta\circ k_u)\circ i\big) \cdot r(\bigcirc^{1+u}\theta)
     \\&= k \cdot (k\circ\theta) \cdot \big((\theta\circ k_u)\circ i\big) \cdot r(\bigcirc^{1+u}\theta)
     \\&= k \cdot (k_{1+u}\circ i) \cdot r(\bigcirc^{1+u}\theta).
@@ -5253,7 +5250,7 @@ we set
   Note that we have used the formula from \hyperref[lemma:3]{Lemma~3} in the particular case where $u=1$, $v=u$, and $w=0$ (using the notation from the lemma), which can be written as
   \[
     r(\bigcirc^{1+u}\theta)^{-1}
-    = \big(\theta\circ r(\bigcirc^u\theta)^{-1}\big) \cdot s(\theta,\bigcirc^u\theta,1).
+    = \big(\theta\circ r(\bigcirc^u\theta)^{-1}\big) \cdot s(1,\bigcirc^u\theta,\theta).
   \]
   The formula is thus proven for $u\geqslant1$ and $v\geqslant0$.
   The case $u=v=0$ is then easy to prove.
@@ -5280,7 +5277,7 @@ we set
       \hat{k} \cdot (\hat{k}\circ\hat{\theta}) \cdot \big( (j_u\circ j_v)\circ j_w \big)
       &\overset{\text{(3)}}{=} \hat{k} \cdot (j_{u+v}\circ j_w) \cdot \big( s_{u,v}\theta\circ(\bigcirc^w\theta) \big)
     \\&= j_{u+v+w} \cdot s_{u+v,w}\theta \cdot \big( s_{u,v}\theta\circ(\bigcirc^w\theta) \big)
-    \\&\overset{\text{(Lemma~3)}}{=} j_{u+v+w} \cdot s_{u,v+w}\theta \cdot \big( (\bigcirc^u\theta)\circ s_{v,w}\theta \big) \cdot s(\bigcirc^u\theta, \bigcirc^v\theta, \bigcirc^w\theta)
+    \\&\overset{\text{(Lemma~3)}}{=} j_{u+v+w} \cdot s_{u,v+w}\theta \cdot \big( (\bigcirc^u\theta)\circ s_{v,w}\theta \big) \cdot s(\bigcirc^w\theta,\bigcirc^v\theta,\bigcirc^u\theta)
     \\&= \hat{k} \cdot (\hat{\theta}\circ\hat{k}) \cdot s(\hat{\theta},\hat{\theta},\hat{\theta}) \cdot \big( (j_u\circ j_v)\circ j_w \big).
     \end{aligned}
   \]
