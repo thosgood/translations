@@ -11,7 +11,7 @@ do
   cd $LOCAL_DIR/$i
   git reset --hard
   git clean -df
-  git checkout -b build
+  git switch build
   git pull
 
   if [ -d $PUBLIC_DIR/$i ]; then rm -r $PUBLIC_DIR/$i; fi
