@@ -1,2 +1,16 @@
 /.quarto/
-**/*.quarto_ipynb
+
+_output
+**/*.tex
+**/*.html
+_svgs
+_svgs/*
+tikz-cache
+tikz-cache/*
+site_libs
+site_libs/*
+
+**/index_files*
+
+*.pdf
+*.DS_Store
