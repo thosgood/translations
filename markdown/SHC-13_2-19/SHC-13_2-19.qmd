@@ -35,6 +35,7 @@ bibliography: SHC-13_2-19.bib
 
 \providecommand{\Hom}{\operatorname{Hom}}
 \providecommand{\shHom}{\underline{\Hom}}
+\providecommand{\Supp}{\operatorname{Supp}}
 
 \providecommand{\Specan}[1]{\operatorname{Specan}(#1)}
 \providecommand{\Alg}[1]{{#1}\text{-}\Cat{Alg}}
@@ -48,7 +49,7 @@ bibliography: SHC-13_2-19.bib
 
 ::: {.rmenv #definition-1 title="Definition 1" latex="{Definition 1}"}
 Let $S$ be a ringed space.
-We say that an $\OO_S$-algebra $\AA$ is of *finite presentation* if every $s\in S$ admits a neighbourhood $U$ such that $\AA|U$ is isomorphic to a sheaf of the form
+We say that an $\OO_S$-algebra $\AA$ is of **finite presentation** if every $s\in S$ admits a neighbourhood $U$ such that $\AA|U$ is isomorphic to a sheaf of the form
 $$
   \frac{(\OO_S|U)[t_1,\ldots,t_n]}{(f_1,\ldots,f_m)}
 $$
@@ -93,7 +94,7 @@ Since the property of being separated over $S$, for an object of $\Cat{An}/S$, i
 :::
 
 ::: {.rmenv #definition-2 title="Definition 2" latex="{Definition 2}"}
-For every $\OO_S$-algebra $\AA$ of finite presentation, we define the *analytic spectrum* of $\AA$, denoted $\Specan{\AA}$, to be the object of $\Cat{An}/S$ (defined up to $S$-isomorphism) that represents the functor
+For every $\OO_S$-algebra $\AA$ of finite presentation, we define the ***analytic spectrum*** of $\AA$, denoted $\Specan{\AA}$, to be the object of $\Cat{An}/S$ (defined up to $S$-isomorphism) that represents the functor
 $$
   F_\AA\colon T\longmapsto \Hom_{\OO_T}(\AA_T,\OO_T).
 $$
@@ -109,7 +110,7 @@ $$
   \Hom_{\Alg{\OO_T}}(S(\EE_T),\OO_T)
   \simeq \Hom_{\Mod{\OO_T}}(\EE_T,\OO_T).
 $$
-This is the *vector bundle* defined by $\EE$ (cf. Exposé 12, §1).
+This is the ***vector bundle*** defined by $\EE$ (cf. Exposé 12, §1).
 :::
 
 ::: {.itenv #proposition-2 title="Proposition 2" latex="{Proposition 2}"}
@@ -181,7 +182,7 @@ We thus see that $\widetilde{\MM}_T=\hat{f}_T^*(\MM_T)$ can be identified with t
 # Fibre of the analytic spectrum over a point in the base {#section-2}
 
 Consider an $\OO_S$-algebra $\AA$ of finite presentation, and its analytic spectrum $X=\Specan{\AA}$.
-If $s\in S$, recall (Exposé 10, §2) that the *fibre* of $X$ at $s$ is the fibre product $X_s=X\times_S\{s\}$, where $\{s\}$ is the analytic space consisting of the point $s$, endowed with the field $\OO_s/\frak{m}_s\OO_s=K(s)\simeq k$ (where $\frak{m}_s$ denotes the maximal ideal of the local ring $\OO_s$).
+If $s\in S$, recall (Exposé 10, §2) that the **fibre** of $X$ at $s$ is the fibre product $X_s=X\times_S\{s\}$, where $\{s\}$ is the analytic space consisting of the point $s$, endowed with the field $\OO_s/\frak{m}_s\OO_s=K(s)\simeq k$ (where $\frak{m}_s$ denotes the maximal ideal of the local ring $\OO_s$).
 \oldpage{19-05}
 Then (by (iv) of [Proposition 2](#proposition-2))
 $$
@@ -540,3 +541,133 @@ $$
 which shows that $f_*(\sh{F})$ is an $\AA$-module of finite presentation;
 since $\AA$ is a coherent $\OO_S$-module, it thus follows that $f_*(\sh{F})$ is also a coherent $\OO_S$-module.
 :::
+
+::: {.itenv #proposition-10 title="Proposition 10" latex="{Proposition 10}"}
+Let $\AA$ and $\BB$ be $\OO_S$-algebras of finite presentation.
+Set $X=\Specan{\AA}$ and $Y=\Specan{\BB}$.
+If $\AA$ is finite with trivial residue extensions, then there is a canonical bijection $\Hom_{\OO_S}(\BB,\AA)\xrightarrow{\sim}\Hom_S(X,Y)$.
+:::
+
+::: {.proof}
+The canonical map $\Hom(\BB,\AA)\to\Hom(X,Y)$ given by [Proposition 2 (i)](#proposition-2) (the functorial nature of the analytic spectrum) factors as
+$$
+  \Hom_{\OO_S}(\BB,\AA)
+  \to \Hom_{\OO_S}(B,f_*(\OO_X))
+  \to \Hom_{\OO_X}(\BB_X,\OO_X)
+  \to \Hom_S(X,Y)
+$$
+(where $f$ is the structure morphism of $X$, and $\BB_X=f^*(\BB)$).
+The first arrow is bijective by the hypothesis on $\AA$ and [Proposition 8](#proposition-8), the second by the definition of $\BB_X$, and the third by the definition of $Y=\Specan{\BB}$.
+:::
+
+::: {.itenv title="Corollary" latex="{Corollary}"}
+The contravariant functor $\AA\mapsto\Specan{\AA}$ from the category of finite $\OO_S$-algebras with trivial residue extensions to the category of analytic spaces over $S$ is fully faithful.
+:::
+
+
+# Case where the base field $k$ is algebraically closed (analytic Nullstellensatz) {#section-4}
+
+We will need some preliminaries on germs.
+Alongside analytic germs (cf. Exposé 13), we introduce, analogously, the category of germs of topological spaces, or topological germs.
+If $(X,x)$ is an analytic germ, then the topological germ $(|X|,x)$, where $|X|$ denotes the underlying topological space of $X$, is said to underlie $(X,x)$;
+we thus have an "underlying topological germ" functor from the category of analytic germs to the category of topological germs.
+
+Let $(X,x)$ be an analytic germ.
+If $Y$ is an analytic subspace of $X$ that contains $x$, we say that the germ $(Y,x)$, endowed with the inclusion morphism $(Y,x)\to(X,x)$, is an analytic subgerm of $(X,x)$.
+We analogously define the notion of a topological subgerm.
+If $(X,x)$ is an analytic germ, we say that a subgerm of $(|X|,x)$ is a germ of an analytic subset if it underlies an analytic subgerm of $(X,x)$, i.e. if it is of the form $(|Y|,x)$ where $Y$ is an analytic subspace of $X$ that contains $x$.
+
+In what follows, we will constantly make the abuse of language of identifying any isomorphic analytic subgerms of $(X,x)$ with one another;
+similarly for subgerms of a topological germ.
+We say, for example, that two subgerms are distinct, instead of saying that they are not isomorphic, and when we speak of the set of subgerms, we mean the set of isomorphism classes of subgerms.
+Then the map that, to an analytic subgerm $(Y,x)$ of $(X,x)$, associates the kernel of the homomorphism $\OO_{X,x}\to\OO_{Y,x}$ is a decreasing bijection $J$ from the set of analytic subgerms of $(X,x)$ to the set of ideals of $\OO_{X,x}$;
+if $\frak{a}$ is an ideal of $\OO_{X,x}$, then the inverse bijection of $J$ sends it to $(Y,x)$, where $Y$ is the analytic subspace of an open neighbourhood $U$ of $x$ defined by an $\OO_U$-ideal $\II$ such that $\II_x=\frak{a}$.
+In this bijective correspondence, the prime ideals of $\OO_{X,x}$ correspond to the integral subgerms of $(X,x)$ (a germ is said to be integral if its local ring is).
+For every ideal $\frak{a}$ of $\OO_{X,x}$, we denote by $W(\frak{a})$ the underlying topological germ of the analytic subgerm of $(X,x)$ that corresponds to $\frak{a}$.
+With the above notation,
+$$
+  W(\frak{a})
+  = (\Supp(\OO_U/\II), x).
+$$
+Furthermore, $W$ is a surjective decreasing map from the set of ideals of $\OO_{X,x}$ to the set of germs of analytic subsets of $(X,x)$.
+
+\oldpage{19-15}
+The set of analytic subgerms of $(X,x)$ is a lattice.
+If $(Y,x)$ and $(Z,x)$ are analytic subgerms, then their lower bound, also called their intersection, is the subgerm $(Y,x)\cap(Z,x)$ defined by the ideal $J(Y,x)+J(Z,x)$;
+similarly, their upper bound, or union, $(Y,x)\cup(Z,x)$ is defined by the ideal $J(Y,x)\cap J(Z,x)$;
+we clearly have
+$$
+  \begin{aligned}
+    (Y,x)\cap(Z,x) &= (Y\cap Z,x)
+  \\(Y,x)\cup(Z,c) &= (Y\cup Z,x).
+  \end{aligned}
+$$
+We will use the same union and intersection notation for the subgerms of a topological germ, which also form a lattice.
+If $(Y,x)$ and $(Z,x)$ are analytic subgerms of an analytic germ $(X,x)$, then the germ of an analytic subset underlying $(Y,x)\cap(Z,x)$ (resp. $(Y,x)\cup(Z,x)$) is
+$$
+  (|Y\cap Z|,x)
+  = (|Y|\cap|Z|,x)
+  = (|Y|,x)\cap(|Z|,x)
+$$
+(resp. $(|Y|,x)\cup(|Z|,x)$).
+We say that a germ of an analytic subset of $(X,x)$ is **irreducible** if it is not the union of two distinct germs of analytic subsets of itself.
+
+::: {.itenv #theorem-1 title="Theorem 1" latex="{Theorem 1}"}
+Suppose that the base field $k$ is algebraically closed.
+Let $(X,x)$ be an integral analytic germ.
+For a subgerm $(Y,x)$ to be distinct from $(X,x)$, it is necessary and sufficient that the underlying topological germ $(|Y|,x)$ be distinct from $(|X|,x)$.
+In other words, if the analytic space $X$ is integral at a point $x$, and if an analytic subspace $Y$ is a neighbourhood of $x$, then it is locally isomorphic to $X$ at $x$.
+:::
+
+:::: {.proof}
+The condition is clearly sufficient.
+To prove that it is necessary, consider a subgerm $(Y,x)\neq(X,x)$.
+The ideal $J(Y,x)$ is not zero.
+Let $f$ be a non-zero element of $J(Y,x)$.
+Denote by $(Y',x)$ the analytic subgerm of $(X,x)$ with local ring $\OO_{X,x}/(f)$;
+we have
+$$
+  (Y,x) \subset (Y',x)
+$$
+and so it suffices to show that
+$$
+  (|Y'|,x) \neq (|X|,x).
+$$
+\oldpage{19-16}
+We thus replace $(Y,x)$ by $(Y',x)$, which reduces us to the case where $J(Y,x)=(f)$ is a principal ideal.
+
+Since $f\neq0$, and since $\OO_{X,x}$ is integral,
+$$
+  \dim(\OO_{X,x}/(f))
+  = \dim\OO_{X,x} - 1.
+$$
+Let $(\bar{f}_1,\ldots,\bar{f}_{n-1})$ be a system of parameters of $\OO_{X,x}/(f)$, that we lift to $(f_1,\ldots,f_{n-1})$ in $\OO_{X,x}$;
+then $(f_1,\ldots,f_{n-1},f)$ is a system of parameters of $\OO_{X,x}$.
+Let $\varphi$ (resp. $\psi$) be the morphism from $(X,x)$ to $(\EE^n,0)$ (resp. from $(Y,x)$ to $(\EE^{n-1},0)$) defined by $(f_1,\ldots,f_{n-1},f)$ (resp. by $(f_1,\ldots,f_{n-1})$);
+we will prove the theorem by showing that $\varphi$ is *surjective* (in the sense germs of topological spaces);
+indeed, the diagram
+```tikz
+\begin{tikzcd}
+    (Y,x)
+      \ar[r,hook]
+      \ar[d,swap,"\psi"]
+    & (X,x)
+      \ar[d,"\varphi"]
+  \\(\EE^{n-1},0)
+      \ar[r,hook]
+    & (\EE^n,0)
+\end{tikzcd}
+```
+is commutative, and
+$$
+  (|\EE^{n-1}|,0)
+  \neq (|\EE^n|,0).
+$$
+
+By [Corollary 1 to Proposition 6](#corollary-1-proposition-6), we can suppose that $X=\Specan{\AA}$, where $\AA$ is a finite algebra over a neighbourhood $U$ of $0$ in $\EE^n$: $\AA\simeq\OO_{X,x}$, and the homomorphism $k\{t_1,\ldots,t_n\}=\OO_{\EE^n,0}\to\AA_0$ is injective since $\OO_{X,x}$ is of dimension $n$ (Corollary 3 (b) of Theorem 1, Exposé 18).
+
+::: {.itenv title="Lemma 1" latex="{Lemma 1}"}
+Let
+:::
+
+::::

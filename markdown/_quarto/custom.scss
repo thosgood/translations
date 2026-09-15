@@ -123,31 +123,34 @@ $link-color: #53b6b2;
 }
 
 /// Light/dark toggle button
-.quarto-color-scheme-toggle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: .375rem;
-  padding: 0.5rem;
-  text-decoration: none;
-}
-.quarto-color-scheme-toggle:after {
-  content: 'light / dark';
-  font-size: 0.825rem;
-}
-
-.quarto-light {
+@media (min-width: 992px){
   .quarto-color-scheme-toggle {
-    background: white;
-    border: 1px solid black;
-    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .375rem;
+    padding: 0.5rem;
+    text-decoration: none;
   }
-}
-.quarto-dark {
-  .quarto-color-scheme-toggle {
-    background: black;
-    border: 1px solid white;
-    color: white;
+
+  .quarto-color-scheme-toggle:after {
+    content: 'light / dark';
+    font-size: 0.825rem;
+  }
+
+  .quarto-light {
+    .quarto-color-scheme-toggle {
+      background: white;
+      border: 1px solid black;
+      color: black;
+    }
+  }
+  .quarto-dark {
+    .quarto-color-scheme-toggle {
+      background: black;
+      border: 1px solid white;
+      color: white;
+    }
   }
 }
 

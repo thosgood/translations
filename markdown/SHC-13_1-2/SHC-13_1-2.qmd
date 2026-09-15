@@ -57,7 +57,7 @@ We define the category $\mathscr{S}_B^n$ in the following manner: the objects of
 
 If $B$ is endowed with the structure of a $\mathscr{C}^\infty$ manifold (resp. an $\RR$-analytic manifold, resp. $\CC$-analytic manifold), then we obtain a category $\mathscr{C}^\infty\mathscr{S}_B$ (resp. $\RR\mathscr{S}_B$, resp. $\CC\mathscr{S}_B$) by requiring the morphisms to be $\mathscr{C}^\infty$ (resp. $\RR$-analytic, resp. $\CC$-analytic).
 
-More generally, if $f_1\colon B\to B'$ is a continuous map from one topological space to another, then a *morphism of $\mathscr{S}_{f_1}$* is a continuous map $f$ from an object $U$ of $\mathscr{S}_B$ to an object $U'$ of $\mathscr{S}_{B'}$ such that
+More generally, if $f_1\colon B\to B'$ is a continuous map from one topological space to another, then a **morphism of $\mathscr{S}_{f_1}$** is a continuous map $f$ from an object $U$ of $\mathscr{S}_B$ to an object $U'$ of $\mathscr{S}_{B'}$ such that
 
 1. the diagram
     $$
@@ -80,7 +80,7 @@ We thus obtain, for every category of topological spaces, a fibred category $\ma
 ## 1. First definition {.unnumbered #two-section-II.1}
 
 Let $B$ and $V$ be separated spaces, and let $\pi\colon V\to B$ be a continuous map.
-The structure of a *mixed space* over $B$ is defined on $V$ by a system of charts $\varphi_i\colon U_i\to V$, where the $(U_i)$ are objects of $\mathscr{S}_B^n$;
+The structure of a **mixed space** over $B$ is defined on $V$ by a system of charts $\varphi_i\colon U_i\to V$, where the $(U_i)$ are objects of $\mathscr{S}_B^n$;
 for each $i$, $\varphi_i$ is a homeomorphism from $U_i$ to an open subset of $V$ such that the diagram
 $$
   \begin{CD}
@@ -92,16 +92,16 @@ $$
 commutes;
 finally, for all $i$ and all $j$, the "change of chart" $\varphi_j^{-1}\circ\varphi_i$ is an isomorphism of $\mathscr{S}_B$ from an open subset of $U_i$ to an open subset of $U_j$.
 
-The structure thus defined is that of a *$(\mathscr{C}^0,\CC)$-mixed space*.
-If $B$ is a $\CC$-analytic space, and if the change of chart maps are all $\CC$-analytic, then we have a *$\CC$-analytic mixed space*.
+The structure thus defined is that of a **$(\mathscr{C}^0,\CC)$-mixed space**.
+If $B$ is a $\CC$-analytic space, and if the change of chart maps are all $\CC$-analytic, then we have a **$\CC$-analytic mixed space**.
 In this case, $V$ itself is a $\CC$-analytic space, and the fibres $V_x=\pi^{-1}(x)$ are $\CC$-analytic sub-manifolds.
 
-If $B$ is a $\mathscr{C}^\infty$ manifold (resp. $\RR$-analytic, resp. $\CC$-analytic), and if the change of chart maps are all $\mathscr{C}^\infty$ (resp. ...), then we have a *$(\mathscr{C}^\infty,\CC)$-mixed manifold* (resp. $(\RR,\CC)$, resp. $(\CC,\CC)$).
+If $B$ is a $\mathscr{C}^\infty$ manifold (resp. $\RR$-analytic, resp. $\CC$-analytic), and if the change of chart maps are all $\mathscr{C}^\infty$ (resp. ...), then we have a **$(\mathscr{C}^\infty,\CC)$-mixed manifold** (resp. $(\RR,\CC)$, resp. $(\CC,\CC)$).
 In this case, $V$ itself is a manifold.
 Note that the notion of a $(\CC,\CC)$-mixed manifold, or a $\CC$-analytic mixed manifold, reduces to simply having a $\CC$-analytic manifold $V$ endowed with a projection $\pi\colon V\to B$ onto another $\CC$-analytic manifold such that $\pi$ is of maximal rank at every point.^[*[Trans.] The more common modern nomenclature is to simply call such an object a family of complex manifolds.*]
 
 Let $\pi\colon V\to B$ and $\pi'\colon V'\to B'$ be mixed spaces, and let $f_1\colon B\to B'$ be a continuous (resp. ...) map.
-Then a *morphism from $V$ to $V'$ over $f_1$* is a continuous map $f\colon V\to V'$ such that the diagram
+Then a **morphism from $V$ to $V'$ over $f_1$** is a continuous map $f\colon V\to V'$ such that the diagram
 $$
   \begin{CD}
     V @>f>> V'
@@ -117,8 +117,8 @@ commutes, and such that, for any charts $\varphi_i\colon U_i\to V$ and $\varphi'
 
 We now give another way of defining mixed spaces, equivalent to the above.
 
-Given separated spaces $B$ and $V$, along with a continuous map $\pi\colon V\to B$, the structure of a *pre-mixed space* consists of the structure of a $\CC$-analytic manifold on each fibre $V_x=\pi^{-1}(x)$.
-Given pre-mixed spaces $\pi\colon V\to B$ and $\pi'\colon V'\to B'$, along with a continuous map $f_1\colon B\to B'$, a *morphism of pre-mixed spaces over $f_1$* is a continuous map $f\colon V\to V'$ such that the diagram
+Given separated spaces $B$ and $V$, along with a continuous map $\pi\colon V\to B$, the structure of a **pre-mixed space** consists of the structure of a $\CC$-analytic manifold on each fibre $V_x=\pi^{-1}(x)$.
+Given pre-mixed spaces $\pi\colon V\to B$ and $\pi'\colon V'\to B'$, along with a continuous map $f_1\colon B\to B'$, a **morphism of pre-mixed spaces over $f_1$** is a continuous map $f\colon V\to V'$ such that the diagram
 $$
   \begin{CD}
     V @>f>> V'
@@ -128,27 +128,27 @@ $$
 $$
 commutes and induces a $\CC$-analytic map on each fibre.
 
-A *mixed space* is a pre-mixed space $\pi\colon V\to B$ such that every point $y\in V$ admits a neighbourhood $W$ in $V$ that is isomorphic as a pre-mixed space to an open subset of $B\times\CC^n$, via an isomorphism over the identity.
+A **mixed space** is a pre-mixed space $\pi\colon V\to B$ such that every point $y\in V$ admits a neighbourhood $W$ in $V$ that is isomorphic as a pre-mixed space to an open subset of $B\times\CC^n$, via an isomorphism over the identity.
 The morphisms of mixed spaces are the same: mixed spaces form a *full subcategory*.
 
 
 ## 3. Deformations {.unnumbered #two-section-II.3}
 
-A mixed space $\pi\colon V\to B$ is said to be *proper* if $B$ is locally compact and the map $\pi$ is proper (i.e. the inverse image of any compact subset is compact).
+A mixed space $\pi\colon V\to B$ is said to be **proper** if $B$ is locally compact and the map $\pi$ is proper (i.e. the inverse image of any compact subset is compact).
 If it is a mixed manifold, then we can show that it is a fibred manifold that is locally trivial with respect to the underlying $\mathscr{C}^\infty$ structure, but the previous talk shows that, in general, any two fibres are not isomorphic as $\CC$-analytic manifolds.
 
 ::: {.rmenv title="Definition" latex="{Definition}"}
 Let $V_0$ be a compact $\CC$-analytic manifold, $B$ a locally compact space, and $b_0\in B$.
 \oldpage{2-04}
-Then a *$\CC$-analytic deformation of $V_0$ over $(B,b_0)$* consists of a proper $\CC$-analytic mixed space $\pi\colon V\to B$ along with an isomorphism of $\CC$-analytic manifolds $i\colon V_0\to\pi^{-1}(b_0)$.
+Then a **$\CC$-analytic deformation of $V_0$ over $(B,b_0)$** consists of a proper $\CC$-analytic mixed space $\pi\colon V\to B$ along with an isomorphism of $\CC$-analytic manifolds $i\colon V_0\to\pi^{-1}(b_0)$.
 :::
 
 The goal of this seminar is the study, at least local, and an attempt at a classification of, $\CC$-analytic deformations of a given compact $\CC$-analytic manifold $V_0$.
 
 ::: {.rmenv title="Definition" latex="{Definition}"}
 Let $V_0$ be a compact $\CC$-analytic manifold.
-A *$\CC$-analytic deformation $(\pi\colon V\to B,i\colon V_0\to V)$ of $V_0$* is said to be *locally complete* if, for any other deformation $(\pi'\colon V'\to B',i'\colon V_0\to V')$ of $V_0$, there exists a neighbourhood $B'_1$ of $b'_0$ in $B'$, an analytic map $f_1\colon B'_1\to B$ with $f_1(b'_0)\to b_0$, and a morphism of $\CC$-analytic mixed spaces $f\colon {\pi'}^{-1}(B'_1)\to V$ over $f_1$ such that $f\circ i'=i$.
-The deformation is said to be *locally universal* is furthermore the germ of $f_1$ at $b'_0$ is determined uniquely by this condition.
+A $\CC$-analytic deformation $(\pi\colon V\to B,i\colon V_0\to V)$ of $V_0$ is said to be **locally complete** if, for any other deformation $(\pi'\colon V'\to B',i'\colon V_0\to V')$ of $V_0$, there exists a neighbourhood $B'_1$ of $b'_0$ in $B'$, an analytic map $f_1\colon B'_1\to B$ with $f_1(b'_0)\to b_0$, and a morphism of $\CC$-analytic mixed spaces $f\colon {\pi'}^{-1}(B'_1)\to V$ over $f_1$ such that $f\circ i'=i$.
+The deformation is said to be **locally universal** is furthermore the germ of $f_1$ at $b'_0$ is determined uniquely by this condition.
 :::
 
 It seems that every compact $\CC$-analytic manifold $V_0$ admits a locally complete $\CC$-analytic deformation, and a locally universal one if the group of automorphisms of $V_0$ is discrete.
@@ -160,9 +160,9 @@ It seems that every compact $\CC$-analytic manifold $V_0$ admits a locally compl
 
 Let $B$ be a space, $U$ an object of $\mathscr{S}_B$ (i.e. an open subset of $B\times\CC^n$), $b_0$ a point of $B$, and set $U_0=\pi^{-1}(b_0)$.
 
-A holomorphic field of tangent vectors on $U_0$ (i.e. a holomorphic map from $U_0$ to $\CC^n$) is said to be a *vertical holomorphic field* on $U_0$.
-A *vertical holomorphic field on $U$* is a continuous (resp. ...) map $\theta\colon U\to\CC^n$ that induces a vertical holomorphic field on each fibre $U_x$.
-If $f\colon U\to U'$ is an isomorphism in $\mathscr{S}_B$, then the *transport $f_*\theta$ of $\theta$ by $f$* is defined by
+A holomorphic field of tangent vectors on $U_0$ (i.e. a holomorphic map from $U_0$ to $\CC^n$) is said to be a **vertical holomorphic field** on $U_0$.
+A **vertical holomorphic field on $U$** is a continuous (resp. ...) map $\theta\colon U\to\CC^n$ that induces a vertical holomorphic field on each fibre $U_x$.
+If $f\colon U\to U'$ is an isomorphism in $\mathscr{S}_B$, then the **transport $f_*\theta$ of $\theta$ by $f$** is defined by
 $$
   f_*\theta(f(x,z)) = \DD_2 f_{x,z}\cdot\theta(x,z)
 $$
@@ -171,7 +171,7 @@ This is again a vertical holomorphic field, since it follows from a Cauchy integ
 
 Now suppose that $B$ is a $\mathscr{C}^\infty$ manifold, just for simplicity, and let $T_0$ be the tangent space to $B$ at $b_0$.
 \oldpage{2-05}
-A field of tangent vectors to $U$ defined on $U_0$, i.e. a map $\omega\colon U_0\to T_0\times\CC^n$, is said to be a *projectable holomorphic field* if $\omega(b_0,z)=(t_0,\theta(z))$ (where $t_0\in T_0$ is a vector that does not depend on $z$, called the *projection* of the field $\omega$) and $\theta(z)$ is a holomorphic vector field.
+A field of tangent vectors to $U$ defined on $U_0$, i.e. a map $\omega\colon U_0\to T_0\times\CC^n$, is said to be a **projectable holomorphic field** if $\omega(b_0,z)=(t_0,\theta(z))$ (where $t_0\in T_0$ is a vector that does not depend on $z$, called the **projection** of the field $\omega$) and $\theta(z)$ is a holomorphic vector field.
 If $B$ is a $\CC$-analytic space, possibly with a singularity at $b_0$, then we give the same definition, but with $T_0$ then being the *Zariski* tangent space to $B$ at $b_0$, i.e. the dual of $\mathfrak{m}/\mathfrak{m}^2$, where $\mathfrak{m}$ is the ideal of germs at $b_0$ of holomorphic functions on $B$ that vanish at $b_0$.
 
 If $f\colon U\to U'$ is an isomorphism of $\mathscr{C}^\infty\mathscr{S}_B$ (resp. ...), then then transport $f_*\omega$ is defined by
@@ -204,7 +204,7 @@ $$
 $$
 which shows that $f_*\omega$ is indeed a projectable holomorphic field.
 
-A *projectable holomorphic field on $U$* is a $\mathscr{C}^\infty$ field of vectors tangent to $U$ that induces a projectable holomorphic field on each fibre.
+A **projectable holomorphic field on $U$** is a $\mathscr{C}^\infty$ field of vectors tangent to $U$ that induces a projectable holomorphic field on each fibre.
 
 
 ## 2. Vector fields on a mixed manifold {.unnumbered #two-section-III.2}
@@ -260,7 +260,7 @@ $$
 that is injective if $V_0$ is non-empty, and surjective if $V_0$ is connected.
 
 ::: {.rmenv #two-definition title="Definition" latex="{Definition}"}
-The *Spencer--Kodaira map* is the composition
+The **Spencer--Kodaira map** is the composition
 $$
   \rho_0 = \delta\circ\iota\colon T_0 \to \HH^1(V_0;\Theta_0).
 $$
