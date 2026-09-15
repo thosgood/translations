@@ -1,0 +1,49 @@
+---
+title: "Hodge Theory I"
+year: 1970
+---
+
+We intend to give a heuristic dictionary between statements in $\ell$-adic cohomology and statements in Hodge theory.
+This dictionary has as its most notable sources [@S1960] and the conjectural theory of Grothendieck motives [@D1969].
+Up until this point, it has mainly served to formulate conjectures in Hodge theory, and it has sometimes even suggested a proof.
+
+## 1
+
+::: {.rmenv #hodge-theory-i-definition-1.1 title="Definition 1.1" latex="{Definition 1.1}"}
+A **mixed Hodge structure** $H$ consists of
+
+a. a $\ZZ$-module $H_\ZZ$ of finite type (the "**integer lattice**");
+b. a finite increasing filtration $W$ of $H_\QQ=H_\ZZ\otimes\QQ$ (the "**weight filtration**");
+c. a finite decreasing filtration $F$ of $H_\CC=H_\ZZ\otimes\CC$ (the "**Hodge filtration**").
+
+This data is subject to the following condition:
+there exists a (unique) bigradation of $\Gr_W(H_\CC)$ by subspaces $H^{p,q}$ such that
+
+i. $\Gr_W^n(H_\CC)=\bigoplus_{p+q=n}H^{p,q}$
+ii. the filtration $F$ induces on $\Gr_W(H_\CC)$ the filtration
+    $$
+      \Gr_W(F)^p
+      = \bigoplus_{p'\geq p} H^{p',q'}
+    $$
+iii. $\overline{H^{pq}}=H^{qp}$.
+:::
+
+A **morphism** $f\colon H\to H'$ is a homomorphism $f_\ZZ\colon H_\ZZ\to H'_\ZZ$ such that $f_\QQ\colon H_\QQ\to H'_\QQ$ and $f_\CC\colon H_\CC\to H'_\CC$ are compatible with the filtrations $W$ and $F$ (respectively).
+
+The **Hodge numbers** of $H$ are the integers
+$$
+  h^{pq} = \dim H^{pq} = h^{qp}.
+\tag{1.2}
+$${#eq-hodge-theory-i-equation-2.1}
+
+We say that $H$ is pure **of weight $n$** if $h^{pq}=0$ for $p+q\neq n$ (i.e. if $\Gr_W^i(H)=0$ for $i\neq n$).
+We also say that $H$ is a **Hodge structure of weight $n}**.
+
+The **Tate Hodge structure** $\ZZ(1)$ is the Hodge structure of weight $-2$, of pure degree $(-1,-1)$, for which $\ZZ(1)_\CC=\CC$ and $\ZZ(1)_\ZZ = 2\pi i\ZZ = \Ker(\exp\colon\CC\to\CC^*)\subset\CC$.
+We set $\ZZ(n)=\ZZ(1)^{\otimes n}$.
+
+We can show that mixed Hodge structures form an abelian category.
+If $f\colon H\to H'$ is a morphism, then $f_\QQ$ and $f_\CC$ are strictly compatible with the filtrations $W$ and $F$ (cf. [[Hodge Theory II, 2.3.5]](hodge-theory-ii/2.3.5)).
+
+
+## 2

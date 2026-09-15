@@ -1,0 +1,73 @@
+project:
+  type: website
+  output-dir: _output
+
+website:
+  title: "Deligne's \"Hodge Theory I, II, and III\""
+  page-navigation: true
+  sidebar:
+      contents:
+        - hodge-theory-i/index.qmd
+        - text: "---"
+        - hodge-theory-ii/index.qmd
+        - section: "1. Filtrations"
+          contents:
+          - hodge-theory-ii/section-1.qmd
+          - hodge-theory-ii/section-2.qmd
+        - section: "2. Hodge structures"
+          contents:
+          - hodge-theory-ii/section-1.qmd
+          - hodge-theory-ii/section-2.qmd
+        - section: "3.Hodge theory of non-singular algebraic varieties"
+          contents:
+          - hodge-theory-ii/section-1.qmd
+          - hodge-theory-ii/section-2.qmd
+        - section: "4. Applications and supplements"
+          contents:
+          - hodge-theory-ii/section-1.qmd
+          - hodge-theory-ii/section-2.qmd
+        - text: "---"
+        - hodge-theory-iii/index.qmd
+        - section: "5. Cohomological descent"
+          contents:
+          - hodge-theory-iii/section-1.qmd
+          - hodge-theory-iii/section-2.qmd
+        - section: "6. Examples of simplicial topological spaces"
+          contents:
+          - hodge-theory-iii/section-1.qmd
+          - hodge-theory-iii/section-2.qmd
+        - section: "7. Supplements to §1"
+          contents:
+          - hodge-theory-iii/section-1.qmd
+          - hodge-theory-iii/section-2.qmd
+        - section: "8. Hodge theory of algebraic spaces"
+          contents:
+          - hodge-theory-iii/section-1.qmd
+          - hodge-theory-iii/section-2.qmd
+        - section: "9. Examples and applications"
+          contents:
+          - hodge-theory-iii/section-1.qmd
+          - hodge-theory-iii/section-2.qmd
+        - section: "10. Hodge theory in level ≤1"
+          contents:
+          - hodge-theory-iii/section-1.qmd
+          - hodge-theory-iii/section-2.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+    css: styles.css
+    # Page structure #
+    toc: true
+    toc-title: "Table of contents"
+    number-sections: false
+    # Rendering and assets/resources #
+    html-math-method: katex
+    embed-resources: true
+    # Citations #
+    link-citations: true
+    reference-section-title: "Bibliography"
+
+# Citations #
+bibliography: hodge-theory.bib
