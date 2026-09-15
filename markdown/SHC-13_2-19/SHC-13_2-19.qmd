@@ -690,13 +690,14 @@ These two lemmas finish the proof.
 Let $(X,x)$ be an analytic germ (over an algebraically closed field $k$).
 
 a. If $\frak{a}$ and $\frak{b}$ are ideals of $\OO_{X,x}$, then the following conditions are equivalent:
-
-  i. $W(\frak{a})\subset W(\frak{b})$;
-  ii. $\frak{b}\subset\frak{r}(\frak{a})$ (where $\frak{r}(\frak{a})$ is the radical of $\frak{a}$);
-  iii. $\frak{r}(\frak{b})\subset\frak{r}(\frak{a})$;
-  iv. there exists an integer $n\geqslant1$ such that $\frak{b}^n\subset\frak{a}$.
-
+    i. $W(\frak{a})\subset W(\frak{b})$;
+    ii. $\frak{b}\subset\frak{r}(\frak{a})$ (where $\frak{r}(\frak{a})$ is the radical of $\frak{a}$);
+    iii. $\frak{r}(\frak{b})\subset\frak{r}(\frak{a})$;
+    iv. there exists an integer $n\geqslant1$ such that $\frak{b}^n\subset\frak{a}$.
 b. For $W(\frak{a})=W(\frak{b})$ to hold, it is necessary and sufficient that $\frak{r}(\frak{a})=\frak{r}(\frak{b})$.
+c. $W$ induces an bijection $\frak{p}\mapsto W(\frak{p})$ from $\Spec(\OO_{X,x})$ to the set of germs of irreducible analytic subsets of $(X,x)$.
+:::
 
-c
+::: {.proof}
+Claims
 :::
