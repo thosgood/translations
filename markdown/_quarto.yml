@@ -10,12 +10,6 @@ website:
   repo-subdir: markdown
   repo-actions: ["source", "issue"]
 
-
-# Page structure #
-toc: true
-toc-title: "Table of contents"
-number-sections: true
-
 # Citations #
 nocite: '@*'
 link-citations: true
@@ -35,6 +29,7 @@ format:
     template-partials:
       - _quarto/title-block.html
     ## General ##
+    number-sections: true
     html-math-method: katex
     # Embedding resources makes the files a bit bigger but means that we can just move them around on the server
     embed-resources: true
@@ -44,11 +39,9 @@ format:
       - _quarto/environments.css
       - _quarto/CrimsonPro/fonts.css
       - _quarto/InriaSerif/fonts.css
-    ## ToC and links ##
-    # other-links:
-    #   - text: More translations
-    #     href: https://thosgood.net/translations
-    #     icon: collection
+    ## ToC ##
+    toc: true
+    toc-title: "Table of contents"
     ## Visual things ##
     title-block-banner: true
     theme:
