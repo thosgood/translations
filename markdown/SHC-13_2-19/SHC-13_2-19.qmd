@@ -653,9 +653,9 @@ indeed, the diagram
       \ar[d,swap,"\psi"]
     & (X,x)
       \ar[d,"\varphi"]
-  \\(\EE^{n-1},0)
+  \\(\mathscr{E}^{n-1},0)
       \ar[r,hook]
-    & (\EE^n,0)
+    & (\mathscr{E}^n,0)
 \end{tikzcd}
 ```
 is commutative, and
@@ -667,7 +667,36 @@ $$
 By [Corollary 1 to Proposition 6](#corollary-1-proposition-6), we can suppose that $X=\Specan{\AA}$, where $\AA$ is a finite algebra over a neighbourhood $U$ of $0$ in $\EE^n$: $\AA\simeq\OO_{X,x}$, and the homomorphism $k\{t_1,\ldots,t_n\}=\OO_{\EE^n,0}\to\AA_0$ is injective since $\OO_{X,x}$ is of dimension $n$ (Corollary 3 (b) of Theorem 1, Exposé 18).
 
 ::: {.itenv title="Lemma 1" latex="{Lemma 1}"}
-Let
+Let $S$ be an analytic space over the algebraically closed field $k$, and let $\AA$ be a finite $\OO_S$-algebra.
+The image of $X=\Specan{\AA}$ under its structure morphism $X\to S$ is the support of the sheaf $\AA$.
 :::
 
+Indeed, the fibre $X_s$ of $X$ at the point $s\in S$ is in bijective correspondence with the set of maximal ideals of $\AA_s$, since $k$ is algebraically closed, and so $\AA_s/\frak{n}\simeq k$ for every maximal ideal $\frak{n}$ ([Proposition 6](#proposition-6)).
+For $s$ to belong to $\varphi(X)$, it is necessary and sufficient that $\AA_s$ have at least one maximal ideal, i.e. that $\AA_s\neq0$.
+\oldpage{19-17}
+
+
+::: {.itenv title="Lemma 2" latex="{Lemma 2}"}
+Let $\AA$ be a finite algebra over an analytic space $S$, and let $s\in S$;
+if the homomorphism $\OO_{S,s}\to\AA_s$ is injective, then $\Supp(\AA)$ is a neighbourhood of $s$.
+:::
+
+Indeed, the kernel of $\OO_S\to\AA$ is zero at $s$, and thus zero on a neighbourhood of $s$, since it is a coherent sheaf.
+
+These two lemmas finish the proof.
 ::::
+
+::: {.itenv #corollary-1-theorem-1 title="Corollary 1" latex="{Corollary 1}"}
+Let $(X,x)$ be an analytic germ (over an algebraically closed field $k$).
+
+a. If $\frak{a}$ and $\frak{b}$ are ideals of $\OO_{X,x}$, then the following conditions are equivalent:
+
+  i. $W(\frak{a})\subset W(\frak{b})$;
+  ii. $\frak{b}\subset\frak{r}(\frak{a})$ (where $\frak{r}(\frak{a})$ is the radical of $\frak{a}$);
+  iii. $\frak{r}(\frak{b})\subset\frak{r}(\frak{a})$;
+  iv. there exists an integer $n\geqslant1$ such that $\frak{b}^n\subset\frak{a}$.
+
+b. For $W(\frak{a})=W(\frak{b})$ to hold, it is necessary and sufficient that $\frak{r}(\frak{a})=\frak{r}(\frak{b})$.
+
+c
+:::
