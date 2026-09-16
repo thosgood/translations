@@ -431,9 +431,9 @@ We can factor the linear for $-\cup e$ on $\HH^i(Y;\sh{F}^\bullet)$ as follows:
     \ar[r]
     \ar[d,"\alpha"]
   & 0
-\\\mathrm{H}_\mathrm{c}^0(U;\mathbf{K}_U^\bullet)
+\\&\mathrm{H}_\mathrm{c}^0(U;\mathbf{K}_U^\bullet)
     \ar[d]
-\\\mathbb{C}
+\\&\mathbb{C}
 \end{tikzcd}
 ```
 The only thing that poses a problem is the continuity of $\alpha$, but the topology of its source is the quotient of the evident topology on $\Gamma(U;\sh{L})$, and, by freeness, $\alpha$ can be lifted to an $\OO(U)$-linear map $\beta$, which is necessary continuous by finiteness.
