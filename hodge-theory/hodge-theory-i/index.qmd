@@ -1,12 +1,6 @@
 ---
 title: "Hodge Theory I"
 year: 1970
-original: |
-  Deligne, P. "Théorie de Hodge I".
-
-  *Actes du Congrès International des Mathématiciens* **1** (1970) pp. 425--430.
-
-  [publications.ias.edu/node/359](https://publications.ias.edu/node/359)
 ---
 
 {{< include ../macros.qmd >}}
@@ -19,11 +13,12 @@ Deligne, P. "Théorie de Hodge I".
 [publications.ias.edu/node/359](https://publications.ias.edu/node/359)
 :::
 
-We intend to give a heuristic dictionary between statements in $\ell$-adic cohomology and statements in Hodge theory.
+We intend to give a heuristic dictionary between statements in $l$-adic cohomology and statements in Hodge theory.
 This dictionary has as its most notable sources [@S1960] and the conjectural theory of Grothendieck motives [@D1969].
 Up until this point, it has mainly served to formulate conjectures in Hodge theory, and it has sometimes even suggested a proof.
 
-### 1
+
+### 1 {#i-section-1}
 
 ::: {.rmenv #i-definition-1.1 title="Definition 1.1" latex="{Definition 1.1}"}
 A **mixed Hodge structure** $H$ consists of
@@ -62,6 +57,128 @@ We can show that mixed Hodge structures form an abelian category.
 If $f\colon H\to H'$ is a morphism, then $f_\QQ$ and $f_\CC$ are strictly compatible with the filtrations $W$ and $F$ (cf. [[Hodge Theory II, Theorem 2.3.5]](hodge-theory-ii/2.3-mixed-structures#ii-theorem-2.3.5)).
 
 
-### 2
+### 2 {#i-section-2}
 
-Let $A$ be
+Let $A$ be a normal integral ring of finite type over $\ZZ$, with field of fractions $K$, and $\overline{K}$ an algebraic closure of $K$.
+Let $K_\mathrm{nr}$ be the largest sub-extension of $\overline{K}$ that is unramified at each prime ideal of $A$.
+We know that, or we set,
+$$
+  \pi_1(\Spec(A),\overline{K})
+  = \Gal(K_\mathrm{nr}/K).
+$$
+
+For every closed point $x$ of $\Spec(A)$, defined by some maximal ideal $m_x$ of $A$, the residue field $k_x=A/m_x$ is finite;
+the point $x$ defines a conjugation class of "Frobenius substitutions" $\varphi_x\in\pi_1(\Spec(A),\overline{K})$.
+We set $q_x=\#k_x$ and $F_x=\varphi_x^{-1}$.
+
+Let $K$ be a field of finite type over the prime field of characteristic $p$, let $\overline{K}$ be an algebraic closure of $K}, let $l$ be a prime number $\neq p$, and let $H$ be a $\ZZ_l$-module (or a $\QQ_l$-module) of finite type endowed with a continuous action $\rho$ of $\Gal(\overline{K}/K)$.
+We will still suppose in what follows that there exists an $A$ as above, with $l$ invertible in $A$, and such that $\rho$ factors through $\pi_1(\Spec(A),\overline{K}) = \Gal(K_\mathrm{nr}/K)$.
+We say that $H$ is **pure of weight $n$** if, for every closed point $x$ of an non-empty open subset of $\Spec(A)$, the eigenvalues $\alpha$ of $F_x$ acting on $H$ are algebraic integers whose complex conjugates are all of absolute value $|\alpha|=q_x^{n/2}$.
+
+::: {.rmenv #i-principle-2.1 title="Principle 2.1" latex="{Principle 2.1}"}
+If the Galois module $H$ "comes from algebraic geometry", then there exists a (unique) increasing filtration $W$ on $H_{\QQ_l}=H\otimes_{\ZZ_l}\QQ_l$ (the "**weight filtration**") that is Galois invariant and such that $\Gr_n^W(H)$ is pure of weight $n$.
+:::
+
+We can also further suppose that $\Gr_n^W(H)$ is semi-simple.
+
+When we have a resolution of singularities we can often give a conjectural definition of $W}, whose validity follows from the Weil conjectures [@W1949] (cf. [§6](#i-section-6)).
+
+Let $\mu$ be the subgroup of $\overline{K}^*$ given by the roots of unity.
+The **Tate module** $\ZZ_l(1)$, defined by
+$$
+  \ZZ_l(1)
+  = \Hom(\QQ_l/\ZZ_l,\mu)
+$$
+is pure of weight $-2$.
+We set $\ZZ_l(n)=\ZZ_l(1)^\otimes n$.
+
+It is trivial that every morphism $f\colon H\to H'$ is strictly compatible with the weight filtration.
+
+[Principle 2.1](#i-principle-2.1) agrees with the fact that every extension of $\mathbb{G}_m$ ("weight $-2$") by an abelian variety ("weight $-1>-2$") is trivial.
+
+
+### 3 {#i-section-3}
+
+The Galois modules that appear in $l$-adic cohomology have, as analogues, over $\CC$, mixed Hodge structures.
+We further have the dictionary:
+
+| | |
+| :- | :- |
+| pure module of weight $n$ | Hodge structure of weight $n$ |
+| weight filtration | weight filtration |
+| Galois-compatible homomorphism | morphism |
+| Tate module $\ZZ_l(1)$ |Tate Hodge structure $\ZZ(1)$ |
+
+
+### 4 {#i-section-4}
+
+Let $X$ be a complex algebraic variety (i.e. a scheme of finite type over $\CC} that we assume to be separated).
+Then there exists a subfield $K$ of $\CC$, of finite type over $\QQ$, such that $X$ can be defined over $K$ (i.e. it comes from an extension of scalars of $K$ to $\CC$ applied to a $K$-scheme $X'$).
+Let $\overline{K}$ be the algebraic closure of $K$ in $\CC$.
+The Galois group $\Gal(\overline{K}/K)$ then acts on the $l$-adic cohomology groups $\HH^\bullet(X,\ZZ_l)$;
+we have
+$$
+  \HH^\bullet(X(\CC),\ZZ)\otimes\ZZ_l
+  = \HH^\bullet(X,\ZZ_l)
+  = \HH^\bullet(X'_{\overline{K}},\ZZ_l).
+$$
+
+\oldpage{427}
+By [§3](#i-section-3), we should expect for the cohomology groups $\HH^n(X(\CC),\ZZ)$ to carry natural mixed Hodge structures.
+This is what we can prove (see [[Hodge Theory II, Theorem 2.3.5]](hodge-theory-ii/2.3-mixed-structures#ii-theorem-2.3.5) in the case where $X$ is smooth; the proof is algebraic, using classical Hodge theory [[W1958]](W1958)).
+For $X$ projective and smooth, the Weil conjectures imply that $\HH^n(X,\ZZ_l)$ is pure of weight $n$, while classical Hodge theory endows $\HH^n(X,\ZZ)$ with a Hodge structure of weight $n$.
+For every morphism $f\colon X\to Y$, and for $K$ large enough, $f^\bullet\colon \HH^\bullet(Y,\ZZ_l)\to \HH^\bullet(X,\ZZ_l)$ Galois-commutes (by structure transport);
+similarly, $f^\bullet\colon \HH^\bullet(Y,\ZZ)\to H^\bullet(X,\ZZ)$ is a morphism of mixed Hodge structures.
+For $X$ smooth, the cohomology class $Z$ in $\HH^{2n}(X,\ZZ_l(n))$ of an algebraic cycle of codimension $n$ defined over $K$ is Galois invariant, i.e. it defines
+$$
+  c(Z) \in \Hom_{\Gal}(\ZZ_l(-n),\HH^{2n}(X,\ZZ_l)).
+$$
+Similarly, the cohomology class $c(Z)\in \HH^{2n}(X(\CC),\ZZ)$ is of pure degree $(n,n)$, i.e. it corresponds to
+$$
+  c(Z) \in \Hom_{\mathrm{H.M.}}(\ZZ(-n),\HH^{2n}(X(\CC),\ZZ)).
+$$
+
+
+### 5 {#i-section-5}
+
+If $f\colon H\to H'$ is a Galois-compatible morphism between $\QQ_l$-vector spaces of different weights, then $f=0$.
+Similarly, if $f\colon H\to H'$ is a morphism of pure mixed Hodge structures of different weights, then $f$ is torsion.
+A more useful remark is
+
+::: {.itenv #i-scholium title="Scholium" latex="{Scholium}"}
+Let $H$ and $H'$ be Hodge structures of weight $n$ and $n'$ (respectively), with $n>n'$.
+Let $f\colon H_\QQ\to H'_\QQ$ be a homomorphism such that $f\colon H_\CC\to H'_\CC$ respects $F$.
+Then $f=0$.
+:::
+
+
+### 6 {#i-section-6}
+
+
+Let $X$ be a smooth projective variety over $\CC$, let $D=\sum_1^n D_i$ be a normal crossing divisor in $X$, with $D_i$ all smooth divisors, and let $j$ be the inclusion of $U=X\setminus D$ into $X$.
+For $Q\subset[1,n]$, we set $D_q=\bigcap_{i\in Q}D_i$.
+
+In $l$-adic cohomology, we canonically have
+$$
+  R^q j_* \ZZ_l
+  = \bigoplus_{\#Q=q} \ZZ_l(-q)_{D_Q}
+\tag{6.1}
+$$
+and the Leray spectral sequence for $j$ is of the form
+$$
+  E_2^{pq}
+  = \bigoplus_{\#Q=q} \HH^p(D_Q,\QQ_l)\otimes\ZZ_l(-q)
+  \To \HH^{p+q}(U,\QQ_l).
+\tag{6.2}
+$$
+
+*By the Weil conjectures* [@W1949], $\HH^p(D_Q,\QQ_l)$ is pure of weight $p$, so that $E_2^{pq}$ is pure of weight $p+2q$.
+As a quotient of a sub-object of $E_2^{pq}$, $E_r^{pq}$ is also pure of weight $p+2q$.
+By [§5](#i-section-5), $d_r=0$ for $r\geq3$, since the weights $p+2q$ and $p+2q-r+2$ of $E_r^{pq}$ and $E_r^{p+q,q-r+1}$ (respectively) are different.
+Thus $E_3^{pq}=E_\infty^{pq}$.
+Up to renumbering, the weight filtration of $\HH^\bullet(U,\QQ_l)$ is the abutment of (6.2):
+$$
+  \Gr_n^W(\HH^k(U,\QQ_l))
+  = E_3^{2k-n,n-k}.
+\tag{6.3}
+$$
