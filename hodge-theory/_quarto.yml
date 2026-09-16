@@ -3,64 +3,58 @@ project:
   output-dir: _output
 
 website:
-  title: "Deligne's \"Hodge Theory I, II, and III\""
+  title: "Deligne's Hodge Theory I, II, and III"
+  page-footer: "[thosgood.net/translations](https://thosgood.net/translations) ![](_quarto/favicon.ico)"
+  favicon: "_quarto/favicon.ico"
+  # GitHub links in table of contents #
+  repo-url: https://github.com/thosgood/translations
+  repo-subdir: hodge-theory
+  repo-actions: ["source", "issue"]
   page-navigation: true
   sidebar:
+      search: false
+      collapse-level: 1
       contents:
+        - text: "*About this translation*"
+          href: index.qmd
+        - text: "---"
         - hodge-theory-i/index.qmd
         - text: "---"
         - hodge-theory-ii/index.qmd
         - section: "1. Filtrations"
           contents:
-          - hodge-theory-ii/section-1.qmd
-          - hodge-theory-ii/section-2.qmd
+          - hodge-theory-ii/1.1-filtered-objects.qmd
+          - hodge-theory-ii/1.2-opposite-filtrations.qmd
         - section: "2. Hodge structures"
-          contents:
-          - hodge-theory-ii/section-1.qmd
-          - hodge-theory-ii/section-2.qmd
         - section: "3.Hodge theory of non-singular algebraic varieties"
-          contents:
-          - hodge-theory-ii/section-1.qmd
-          - hodge-theory-ii/section-2.qmd
         - section: "4. Applications and supplements"
-          contents:
-          - hodge-theory-ii/section-1.qmd
-          - hodge-theory-ii/section-2.qmd
         - text: "---"
         - hodge-theory-iii/index.qmd
         - section: "5. Cohomological descent"
           contents:
-          - hodge-theory-iii/section-1.qmd
-          - hodge-theory-iii/section-2.qmd
+          - hodge-theory-iii/5.1-simplicial-topological-spaces.qmd
+          - hodge-theory-iii/5.2-cohomology-of-simplicial-topological-spaces.qmd
         - section: "6. Examples of simplicial topological spaces"
-          contents:
-          - hodge-theory-iii/section-1.qmd
-          - hodge-theory-iii/section-2.qmd
         - section: "7. Supplements to §1"
-          contents:
-          - hodge-theory-iii/section-1.qmd
-          - hodge-theory-iii/section-2.qmd
         - section: "8. Hodge theory of algebraic spaces"
-          contents:
-          - hodge-theory-iii/section-1.qmd
-          - hodge-theory-iii/section-2.qmd
         - section: "9. Examples and applications"
-          contents:
-          - hodge-theory-iii/section-1.qmd
-          - hodge-theory-iii/section-2.qmd
         - section: "10. Hodge theory in level ≤1"
-          contents:
-          - hodge-theory-iii/section-1.qmd
-          - hodge-theory-iii/section-2.qmd
 
 format:
   html:
+    lang: en-GB
+    date-format: "YYYY"
+    # Style #
     theme:
-      - cosmo
-    css: styles.css
+      light: [flatly, _quarto/custom.scss]
+      dark: [darkly, _quarto/custom.scss]
+    css:
+      - _quarto/CrimsonPro/fonts.css
+      - _quarto/environments.css
+    callout-appearance: simple
+    anchor-sections: false
     # Page structure #
     toc: true
-    toc-title: "Table of contents"
     number-sections: false
     # Rendering and assets/resources #
     html-math-method: katex
@@ -68,6 +62,9 @@ format:
     # Citations #
     link-citations: true
     reference-section-title: "Bibliography"
+    bibliography: hodge-theory.bib
 
-# Citations #
-bibliography: hodge-theory.bib
+# Filters #
+filters:
+  - _quarto/callouts.lua
+  - _quarto/tikz.lua

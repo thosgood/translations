@@ -1,0 +1,80 @@
+/*-- scss:functions --*/
+
+
+/*-- scss:defaults --*/
+$font-family-base: 'Crimson Pro';
+$font-size-root: 1.3rem;
+$h1-font-size: 1.4rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1rem;
+$link-color: #53b6b2;
+
+
+/*-- scss:rules --*/
+
+// General typography
+
+body {
+  font-variant-ligatures: normal;
+}
+
+h1 {
+  border-bottom: 1px solid hsl(0,0%,87%);
+  padding-bottom: .5rem;
+}
+
+h2, h3 {
+  border-bottom: none;
+}
+
+h1, h2, h3,
+strong {
+  font-weight: 550;
+}
+
+
+// All things in the actual translation body
+
+main.content{
+  // "French paragraphs"
+  h3 {
+    float: left;
+
+    &:before {
+      content: "(";
+    }
+    &:after {
+      content: ")";
+    }
+  }
+
+
+  // KaTeX
+
+  .katex {
+    font-size: 1em !important;
+  }
+
+
+  // Rendered TikZ images
+
+  .tikz {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    img {
+      zoom: 170%;
+    }
+  }
+
+
+  // Callouts
+
+  .callout.original {
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
