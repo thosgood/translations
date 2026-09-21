@@ -6,9 +6,9 @@ title: 1.2 Opposite filtrations
 
 ::: {.rmenv #env-ii-1.2.1 title="1.2.1" latex="{1.2.1}"}
 Let $A$ be an object of $\mathscr{A}$ endowed with filtrations $F$ and $G$.
-By definition, $\Gr_F^n(A)$ is a quotient of a sub-object of $A$ and, as such, is endowed with a filtration induced by $G$ [(1.1.10)](1.1-filtered-objects.html#env-ii-1.1.10).
+By definition, $\Gr_F^n(A)$ is a quotient of a sub-object of $A$ and, as such, is endowed with a filtration induced by $G$ @env-ii.1.1.10.
 Passing to the associated graded defines a bigraded object $(\Gr_G^n\Gr_F^m(A))_{n,m\in\ZZ}$.
-By a lemma of Zassenhaus, $\Gr_G^n\Gr_F^m(A)$ and $\Gr_F^m\Gr_G^n(A)$ are canonically isomorphic: if we define the induced filtrations [(1.1.10)](1.1-filtered-objects.html#env-ii-1.1.10) as quotient filtrations of the induced filtrations on a sub-object, then we have
+By a lemma of Zassenhaus, $\Gr_G^n\Gr_F^m(A)$ and $\Gr_F^m\Gr_G^n(A)$ are canonically isomorphic: if we define the induced filtrations @env-ii.1.1.10 as quotient filtrations of the induced filtrations on a sub-object, then we have
 $$
   \begin{aligned}
     \Gr_G^n\Gr_F^m(A)
@@ -275,7 +275,7 @@ $$
 $$
 :::
 
-This finishes the proof of [(1.2.8)](#env-ii-1.2.8), noting that [(1.2.8)](#env-ii-1.2.8) is equivalent to ($*_k$) for large $k$.
+This finishes the proof of @env-ii-1.2.8, noting that @env-ii-1.2.8 is equivalent to ($*_k$) for large $k$.
 
 ::: {.itenv #env-ii-1.2.10 title="Theorem 1.2.10" latex="{Theorem 1.2.10}"}
 Let $\mathscr{A}$ be an abelian category, and provisionally denote by $\mathscr{A}'$ the category of objects of $\mathscr{A}$ endowed with three opposite filtrations $W$, $F$, and $\overline{F}$.
@@ -312,7 +312,7 @@ $$
 &= (p,q), (p,q), (p-1,q), (p-2,q), (p-3,q), \ldots
 \end{aligned}
 $$
-and, with the notation of [(1.2.8)](#env-ii-1.2.8), set
+and, with the notation of @env-ii-1.2.8, set
 $$
 A_i^{p,q}
 = A_{\sigma_i(p,q)}
@@ -351,9 +351,9 @@ $$
 
 ::: {.proof}
 By symmetry, it suffices to prove the claims concerning $i=0$.
-Set $A_0=\bigoplus A_0^{p,q}$ and define filtrations $W$ and $F$ on $A_0$ by the equations of [(1.2.11)](#env-ii-1.2.11).
+Set $A_0=\bigoplus A_0^{p,q}$ and define filtrations $W$ and $F$ on $A_0$ by the equations of @env-ii-1.2.11.
 The canonical map $i$ from $A_0$ to $A$ is compatible with the filtrations $W$ and $F$.
-Furthermore, by [(1.2.8)](#env-ii-1.2.8), $\Gr_W(i)$ is an isomorphism, and induces isomorphisms of graded objects
+Furthermore, by @env-ii-1.2.8, $\Gr_W(i)$ is an isomorphism, and induces isomorphisms of graded objects
 $$
   \sum_{p+q=n} A_0^{p,q}
   \simto \Gr_W^{-n}(A)
@@ -368,7 +368,7 @@ Equation (1.2.11.2) then follows.
 :::
 
 ::: {.rmenv #env-ii-1.2.12 title="1.2.12" latex="{1.2.12}"}
-We now prove [Theorem 1.2.10](#env-ii-1.2.10).
+We now prove @env-ii-1.2.10.
 Let $f\colon A\to B$ in $\mathscr{A}'$ and endow $K=\Ker(f)$ with the filtrations induced by those of $A$.
 By @ii-1.2.11, $\Gr_W(K)\hookrightarrow\Gr_W(A)$;
 furthermore, the filtration $F$ (resp. $\overline{F}$) on $K$ induces on $\Gr_W(K)$ the inverse image filtration of the filtration $F$ on $\Gr_W(A)$.

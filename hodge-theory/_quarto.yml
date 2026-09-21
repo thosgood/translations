@@ -13,6 +13,7 @@ book:
   repo-subdir: hodge-theory
   repo-actions: ["source", "issue"]
   page-navigation: true
+  # search: false
   chapters:
     - text: "*About this translation*"
       href: index.qmd
@@ -64,6 +65,8 @@ book:
 #         - section: "10. Hodge theory in level ≤1"
 
 format:
+  latex:
+    documentclass: report
   html:
     lang: en-GB
     date-format: "YYYY"
@@ -99,3 +102,4 @@ filters:
 #       reference-prefix: ""
 #       key: env
 #       caption-location: top
+#       latex-env: env
