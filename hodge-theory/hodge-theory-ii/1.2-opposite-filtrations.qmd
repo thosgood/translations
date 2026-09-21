@@ -78,14 +78,14 @@ ii. If $F$ and $\overline{F}$ are $n$-opposite, and if we set
         &\text{for }p+q=n
       \end{cases}
     $$
-    then $A$ is the direct sum of the $A^{p,q}$, and $F$ and $\overline{F}$ come from the bigrading $A^{p,q}$ of $A$ by the procedure of @ref-ii-1.2.4.
+    then $A$ is the direct sum of the $A^{p,q}$, and $F$ and $\overline{F}$ come from the bigrading $A^{p,q}$ of $A$ by the procedure of @env-ii-1.2.4.
 :::
 
 ::: {.proof}
 i. The condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q>n$ implies that $F^p\cap\overline{F}^q=(F^{p+1}\cap\overline{F}^q)+(F^p\cap\overline{F}^{q+1})$ for $p+q>n$.
     By hypothesis, $F^p\cap\overline{F}^q$ is zero for large enough $p+q$;
     by decreasing induction, we thus deduce that the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q>n$ is equivalent to the condition $F^p(A)\cap\overline{F}^q(A)=0$ for $p+q>n$.
-    Dually (@ref-ii-1.1.6, @ref-ii-1.1.7, @ref-ii-1.1.10), the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q<n$ is equivalent to the condition $A=F^p(A)+\overline{F}^q(A)} for $(1-p)+(1-q)>-n$, i.e. for $p+q\leqslant n+1$, and the claim then follows.
+    Dually (@env-ii-1.1.6, @env-ii-1.1.7, @env-ii-1.1.10), the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q<n$ is equivalent to the condition $A=F^p(A)+\overline{F}^q(A)} for $(1-p)+(1-q)>-n$, i.e. for $p+q\leqslant n+1$, and the claim then follows.
 
 ii. If $F$ and $\overline{F}$ are $n$-opposite, then we can prove by decreasing induction on $p$ that
     $$
@@ -107,7 +107,7 @@ ii. If $F$ and $\overline{F}$ are $n$-opposite, then we can prove by decreasing 
 :::
 
 ::: {.rmenv #env-ii-1.2.6 title="1.2.6" latex="{1.2.6}"}
-The constructions @ef-ii-1.2.4 and @ref-ii-1.2.5 establish equivalences of categories that are quasi-inverse to one another between objects of $\mathscr{A}$ endowed with two finite $n$-opposite filtrations and bigraded objects of $\mathscr{A}$ of the type considered in @ref-ii-1.2.4.
+The constructions @env-ii-1.2.4 and @env-ii-1.2.5 establish equivalences of categories that are quasi-inverse to one another between objects of $\mathscr{A}$ endowed with two finite $n$-opposite filtrations and bigraded objects of $\mathscr{A}$ of the type considered in @env-ii-1.2.4.
 :::
 
 ::: {.rmenv #env-ii-1.2.7 title="1.2.7" latex="{1.2.7}"}
@@ -126,7 +126,7 @@ $$
   A^{p,q}
   = \Gr_F^p\Gr_{\overline{F}}^q\Gr_F^{-p-q}(A)
 $$
-whence decompositions @ref-ii-1.2.4, @ref-ii-1.2.5
+whence decompositions @env-ii-1.2.4, @env-ii-1.2.5
 $$
   W^n(A)/W^{n+1}(A)
   = \bigoplus_{p+q=-n} A^{p,q}
@@ -174,7 +174,7 @@ to $A^{p,q}\subset\Gr_W^n(A)$.
 
 For $k=1$, this is exactly the definition of $A^{p,q}$.
 
-By (i) of @ref-ii-1.2.5 we have
+By (i) of @env-ii-1.2.5 we have
 $$
   F^{p_k}(\Gr_W^{n+k}(A)) \oplus \overline{F}^{q_k}(\Gr_W^{n+k}(A))
   \simto \Gr_W^{n+k}(A).
@@ -200,7 +200,6 @@ $$
   \\B'\cap C' &= E.
   \end{aligned}
 $$
-}
 We also have, since $p_k\leqslant p_i$ (for $i\leqslant k$),
 $$
   B\cap D
@@ -383,25 +382,20 @@ $$
 \Gr_F^p\Gr_{\overline{F}}^q\Gr_W^n(K)
 \hookrightarrow \Gr_F^p\Gr_{\overline{F}}^q\Gr_W^n(A);
 $$
-}
 \oldpage{14}
 the filtrations of $W$, $F$, and $\overline{F}$ on $K$ are thus opposite, and $K$ is a kernel of $f$ in $\mathscr{A}'$.
 This, combined with the dual result, proves (ii).
-}
 
 If $f$ is an arrow of $\mathscr{A}'$, then the canonical morphism from $\Coim(f)$ to $\Im(f)$ is an isomorphism in $\mathscr{A}$;
 by (iii), it is also an isomorphism in $\mathscr{A}'$, which is thus abelian.
-}
 
 The "forget the filtrations" functor is exact by (ii).
-The exactness of the other functors in (iv) follows immediately from (ii), (iii), and (i) or (ii) of \ref{hodge-theory-ii-1.1.11}.
+The exactness of the other functors in (iv) follows immediately from (ii), (iii), and (i) or (ii) of @env-ii.1.1.11.
 :::
 
-\subtree[hodge-theory-ii-1.2.13]{
-\number{1.2.13}
-
-Let $A$ be an object of $\mathscr{A}$ endowed with a finite \em{increasing} filtration $W_\bullet$, and two finite decreasing filtrations $F$ and $\overline{F}$.
-The construction \ref{hodge-theory-ii-1.1.3} associates to $W_\bullet$ a decreasing filtration $W^\bullet$.
+::: {.rmenv #env-ii-1.2.13 title="1.2.13" latex="{1.2.13}"}
+Let $A$ be an object of $\mathscr{A}$ endowed with a finite *increasing* filtration $W_\bullet$, and two finite decreasing filtrations $F$ and $\overline{F}$.
+The construction @env-ii-1.1.3 associates to $W_\bullet$ a decreasing filtration $W^\bullet$.
 We say that the filtrations $W_\bullet$, $F$, and $\overline{F}$ are \em{opposite} if the filtrations $W^\bullet$, $F$, and $\overline{F}$ are, i.e. if, for all $n$, the filtrations induced by $F$ and $\overline{F}$ on
 $$
 \Gr_n^W(A)
@@ -409,6 +403,6 @@ $$
 $$
 }
 are $n$-opposite.
-}
 
-\ref{hodge-theory-ii-1.2.10} translates trivially to this variation.
+@env-ii-1.2.10 translates trivially to this variation.
+:::
