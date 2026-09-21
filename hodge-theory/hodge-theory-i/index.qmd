@@ -182,3 +182,139 @@ $$
   = E_3^{2k-n,n-k}.
 \tag{6.3}
 $$
+
+
+### 7 {#i-section-7}
+
+In integer cohomology, for the usual topology, the Leray spectral sequence for $j$ is of the form
+$$
+  {'E_2}^{pq}
+  = \bigoplus_{\#Q=q} \HH^p(D_Q,\ZZ)
+  \To H^{p+q}(U,\ZZ).
+\tag{7.1}
+$$
+
+\oldpage{428}
+Since each $D_Q$ is a non-singular projective variety, ${'E_2}^{pq}$ is endowed with a Hodge structure of weight $p$.
+We set $E_2^{pq}={'E_2}^{pq}\otimes\ZZ(-q)$ (a Hodge structure of weight $p+2q$).
+As an abelian group, $E_2^{pq}={'E_2}^{pq}$;
+it is interesting to consider (7.1) as a spectral sequence with initial page $E_2^{pq}$.
+By [§3](#i-section-3), we should expect for $d_2\colon E_2^{pq}\to E_2^{p+2,q-1}$ to be a morphism of Hodge structures.
+We prove this by thinking of $d_2$ as a Gysin morphism.
+Then $E_3^{pq}$ is endowed with a Hodge structure of weight $p+2q$.
+By [§3](#i-section-3), we expect, *modulo torsion*, for the spectral sequence (6.2)^[*Trans.* The original refers to (6.4) instead of (6.2), but this seems to be a typo.] to degenerate at the $E_3$ page (i.e. $E_3=E_\infty$), and for the vanishing of the $d_r$ (for $r\geq3$) to be an application of [§5](#i-section-5).
+This programme was successfully completed in [[Hodge Theory II, §3.2]](hodge-theory-ii/3.2-mixed-hodge-theory).
+There, we *define* the weight filtration of $\HH^\bullet(U,\QQ)$ as the abutment of (7.1), up to renumbering (6.3).
+
+In fact, to endow the cohomology groups $\HH^\bullet$ with a mixed Hodge structure, the key point has always been, up until now, to find a spectral sequence $E$ abutting to $H^\bullet$ such that the $l$-adic analogue of $E_2^{pq}$ be conjecturally pure (of weight $p+2q$);
+$E_2^{pq}$ should then carry a natural Hodge structure (of weight $p+2q$), and the filtration $W$ is then the abutment of $E$.
+
+
+### 8 {#i-section-8}
+
+Let $\Spec(V)$ be the spectrum of a Henselian discrete valuation ring (a *Henselian trait*) with field of fractions $K$, and residue field $k$ that is of finite type over the prime field of characteristic $p$.
+Let $\overline{K}$ be an algebraic closure of $K$, and let $H$ be a vector space of finite dimension over $\QQ_l$ (for $l\neq p$) on which $\Gal(\overline{K}/K)$ acts continuously.
+By Grothendieck, we know ([@ST1968, Appendix]) that a subgroup of finite index of the inertia group $I$ acts unipotently.
+By replacing $V$ with a finite extension, we arrive to the case where the action of all of $I$ is unipotent (the *semi-stable* case);
+it then factors as the largest pro-$l$-group $I_l$ that is a quotient of $I$, and canonically isomorphic to $\ZZ_l(1)$.
+
+::: {.rmenv #i-principle-8.1 title="Principle 8.1" latex="{Principle 8.1}"}
+In the semi-stable case, if the Galois module $H$ "comes from algebraic geometry", then there exists a (unique) increasing filtration $W$ of $H$ (the "*weight filtration*") such that $I$ acts trivially on $\Gr_n^W(H)$, and such that $\Gr_n^W(H)$, as a Galois module under $\Gal(\overline{k}/k)\simeq\Gal(\overline{K}/K)/I$, is pure of weight $n$.
+:::
+
+We can compare this with [Principle 2.1](#i-principle-2.1) and with the appendix of [@ST1968].
+
+If we have a resolution of singularities, then we can sometimes give a conjectural definition of $W$ whose validity follows from the Weil conjectures.
+With the help of the resolution and of Weil, it is sometimes easy to show that, in any case, $H$ splits into pure Galois modules (under $\Gal(\overline{k}/k)$).
+
+Suppose that $H$ is semi-stable.
+For $T\in I_t$, we define $\log T$ by the *finite* sum $-\sum_{n>0}(\Id -T)^n/n$.
+The map $(T,x)\mapsto\log T(x)$ can be identified with a homomorphism
+$$
+  M\colon \ZZ_l(1)\otimes H \to H.
+\tag{8.2}
+$$
+Since $\ZZ_l(1)$ is of weight $-2$, we necessarily have (cf. [§5](#i-section-5) )
+$$
+  M(\ZZ_l(1)\otimes W_n(H)) \subset W_{n-2}(H),
+\tag{8.3}
+$$
+and $M$ induces
+$$
+  \Gr(M)\colon \ZZ_l(1)\otimes\Gr_n^W(H) \to \Gr_{n-2}^W(H).
+\tag{8.4}
+$$
+
+::: {.rmenv #i-subsection-8.5 title="8.5" latex="{8.5}"}
+If $X$ is a non-singular projective variety over an algebraically closed field $k_0$, then we define
+$$
+  L\colon \ZZ_l(-1)\otimes \HH^\bullet(X,\ZZ_l)
+  \to \HH^\bullet(X,\ZZ_l)
+$$
+as being the cup product with the cohomology class of a hyperplane section.
+We note that there is a formal analogy between $L$ and $M$;
+in the same way that $M$ is defined by an action of $\ZZ_l(1)$, we can think of $L$ as being defined by an action of $\ZZ_l(-1)$;
+$L$ increases the degree by $2$, and $\Gr M$ (8.4) decreases it by $2$.
+:::
+
+
+### 9 {#i-section-9}
+
+Let $D$ be the unit disc, $D^*=D\setminus\{0\}$, and $X$
+$$
+  \begin{CD}
+    X @>>> \PP^r(\CC)\times D
+  \\@VfVV @VV\mathrm{pr}_2V
+  \\D @= D
+  \end{CD}
+$$
+a family of projective varieties parameterised by $D$, with $f$ proper, and $f|D^*$ smooth.
+
+Keeping the notation of [§8](#i-section-8), and recalling that, in the analogy between Henselian traits and small neighbourhoods of $0$ in the complex line, we have the following dictionary (note that the spectrum of the ring of germs at $0$ of holomorphic functions is a Henselian trait):
+
+::: {.rmenv #i-dictionary-9.1 title="Dictionary 9.1" latex="{Dictionary 9.1}"}
+| | |
+| :- | :- |
+| $D$ | $\Spec(V)$ |
+| $D^*$ | $\Spec(K)$ |
+| a universal covering $\widetilde{D^*}$ of $D^*$ | $\Spec(\overline{K})$ |
+| the fundamental group $\pi_1(D^*)$ | the inertia group $I$ |
+| (with $\pi_1(D^*)=\ZZ\simeq\ZZ(1)_\ZZ$) | (with $I_l=\ZZ_l(1)$) |
+| $X$ | a projective scheme $X$ over $\Spec(V)$ |
+| $X^*=f^{-1}(D^*)$ | $X_K$ |
+| $\widetilde{X}=X\times_D\widetilde{D^*}$ | $X_{\overline{K}}$ |
+| the local system $R^if_*\ZZ|D^*$ | the Galois module $\HH^i(X_{\overline{K}},\ZZ_l)$ |
+| $\HH^i(\widetilde{X},\ZZ)$ | $\HH^i(X_{\overline{K}},\ZZ_l)$ |
+:::
+
+Note that $\widetilde{X}$ is homotopically equivalent to each of the fibres $X_t=f^{-1}(t)$ (for $t\in D^*$): $\HH^i(X_{\overline{K}},\ZZ_l)$ is again analogous to $\HH^i(X_t,\ZZ)$, and the transformation of the monodromy $T$ corresponds to the action of $I$.
+
+Here, again, we know that a subgroup of finite index of $\pi_1(D^*)$ acts unipotently on $\HH^i(\widetilde{X},\QQ)=\HH^i(X_t,\QQ)$.
+We place ourselves in the semi-stable case, where all of $\pi_1(D^*)$ acts unipotently (this reduces to replacing $D$ by a finite covering), and let $T$ be the action of the canonical generator of $\pi_1(D^*)$.
+
+By [§3](#i-section-3) and [§8](#i-section-8), we expect for $\HH^i(\widetilde{X},\QQ)\simeq \HH^i(X_t,\QQ)$ to be endowed with an increasing filtration $W$, for $\Gr_n^W(\HH^i(\widetilde{X},\QQ))$ to be endowed with a Hodge structure of weight $n$, for $\log T(W_n)\subset W_{n-2}$, and for $\log T$ to induce a morphism of Hodge structures
+$$
+  M_n\colon \ZZ(-1)\otimes\Gr_n^W(\HH^i)
+  \to \Gr_{n-2}^W(\HH^i).
+$$
+We would further like for (8.2), and not just (8.3) and (8.4), to have an analogue.
+
+We have in fact managed to define, for each vector $u$ of the tangent space to $D$ at $\{0\}$, a mixed Hodge structure $\mathscr{H}_u$ on $\HH^i(\widetilde{X},\ZZ)$.
+The filtration $W$ and the Hodge structures on the $\Gr_n^W(\HH^i)$ are independent of $u$, and the dependence on $u$ of $\mathscr{H}_u$ can be expressed simply in terms of $T$.
+\oldpage{430}
+Analogously to (8.2), we find that, for any $u$, $\log T$ induces a homomorphism of mixed Hodge structures
+$$
+  M\colon \ZZ(1)\otimes \HH^i(\widetilde{X},\ZZ)
+  \to \HH^i(\widetilde{X},\ZZ).
+$$
+
+Finally, the analogy in [(8.5)](#i-subsection-8.5) is not misleading (but here, the fact that $f|D^*$ is assumed to be proper and smooth is probably essential).
+We can prove that
+$$
+  (\log T)^k\colon \Gr_{n+k}^W(\HH^n(\widetilde{X},\QQ))
+  \to \Gr_{n-k}^W(\HH^n(\widetilde{X},\QQ))
+$$
+is an isomorphism for all $k$ (cf. [@W1958, IV 6, Corollary to Theorem 5]).
+This characterises the filtration $W$.
+Until now, we have only had an analogue of the positivity theorem of Hodge (cf. [@W1958, IV 7, Corollary to Theorem 7]) in very particular cases.
+We hope that the mixed structures $\mathscr{H}_u$ determine the asymptotic behaviour, for $t\to0$, of the family of pure structures $\HH^i(X,\ZZ)$ (for $t\in D^*$).
