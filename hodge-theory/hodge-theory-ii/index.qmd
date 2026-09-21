@@ -12,3 +12,33 @@ Deligne, P. "Théorie de Hodge II".
 
 [publications.ias.edu/node/361](https://publications.ias.edu/node/361)
 :::
+
+# Introduction {-}
+
+\oldpage{5}
+*Work presented as a doctoral thesis at l'Université d'Orsay.*
+
+By Hodge, the cohomology space $\HH^n(X,\CC)$ of a compact Kähler variety $X$ is endowed with a "Hodge structure" of weight $n$, i.e. a natural bigrading
+$$
+  \HH^n(X,\CC)
+  = \bigoplus_{p+q=n} \HH^{p,q}
+$$
+which satisfies $\overline{\HH^{p,q}}=\HH^{q,p}$.
+We will show here that the complex cohomology of a non-singular, not necessarily compact, algebraic variety is endowed with a structure of a slightly more general type, which presents $\HH^n(X,\CC)$ as a "successive extension" of Hodge structures of decreasing weights, contained between $2n$ and $n$, whose Hodge numbers $h^{p,q}=\dim\HH^{p,q}$, are zero for both $p>n$ and $q>n$.
+
+The reader will find an explanation in [Hodge Theory I](hodge-theory-i) of the yoga that underlies this construction.
+
+\oldpage{6}
+The proof, which is essentially algebraic, relies on one hand on Hodge theory, and on the other on Hironaka's resolution of singularities, which allows us, via a spectral sequence, to "express" the cohomology of a non-singular quasi-projective algebraic variety in terms of the cohomology of non-singular projective varieties.
+
+§1 contains, apart from reminders on filtrations gathered together for the ease of the reader, two key results:
+
+a. [Theorem 1.2.10](1.2-opposite-filtrations.html#ii-1.2.10), which will only be used via its corollary, [Theorem 2.3.5](2.3-mixed-structures.html#ii-2.3.5), which gives the fundamental properties of "mixed Hodge structures".
+b. The "two filtrations lemma", [Theorem 1.3.16](1.3-the-two-filtrations-lemma.html#ii-1.3.16).
+
+§2 recalls Hodge theory and introduces mixed Hodge structures.
+
+The heart of this work is [§3.2](3.2-mixed-hodge-theory), which defines the mixed Hodge structure on $\HH^n(X,\CC)$, and establishes some degenerations of spectral sequences.
+
+§4 gives diverse applications, all following from [Theorem 4.1.1](4.1-the-fixed-set-theorem.html#ii-4.1.1) and the theory of the $(K/k)$-trace, for the resulting Hodge structures ([Corollary 4.1.2](4.1-the-fixed-set-theorem.html#ii-4.1.2)).
+The principal ones are [Theorem 4.2.6](4.2-the-semi-simplicity-theorem.html#ii-4.2.6) and [Corollary 4.4.15](4.2-homomorphisms-of-abelian-schemes.html#ii-4.4.15).

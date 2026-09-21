@@ -7,7 +7,7 @@ $font-size-root: 1.3rem;
 $h1-font-size: 1.4rem;
 $h2-font-size: 1.25rem;
 $h3-font-size: 1rem;
-$link-color: #53b6b2;
+$link-color: #398683;
 
 
 /*-- scss:rules --*/
@@ -36,21 +36,9 @@ strong {
 // All things in the actual translation body
 
 main.content{
-  // "French paragraphs"
-  h3 {
-    float: left;
-    margin-top: 0.2em;
-    margin-right: 0.75em;
-    font-weight: 600;
-
-    &:before {
-      content: "(";
-    }
-    &:after {
-      content: ")";
-    }
+  a {
+    text-decoration: none;
   }
-
 
   // KaTeX
 

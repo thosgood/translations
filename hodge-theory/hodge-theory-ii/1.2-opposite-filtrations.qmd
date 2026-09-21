@@ -1,1 +1,414 @@
-section-2
+---
+title: 1.2 Opposite filtrations
+---
+
+{{< include ../macros.qmd >}}
+
+::: {.rmenv #env-ii-1.2.1 title="1.2.1" latex="{1.2.1}"}
+Let $A$ be an object of $\mathscr{A}$ endowed with filtrations $F$ and $G$.
+By definition, $\Gr_F^n(A)$ is a quotient of a sub-object of $A$ and, as such, is endowed with a filtration induced by $G$ [(1.1.10)](1.1-filtered-objects.html#env-ii-1.1.10).
+Passing to the associated graded defines a bigraded object $(\Gr_G^n\Gr_F^m(A))_{n,m\in\ZZ}$.
+By a lemma of Zassenhaus, $\Gr_G^n\Gr_F^m(A)$ and $\Gr_F^m\Gr_G^n(A)$ are canonically isomorphic: if we define the induced filtrations [(1.1.10)](1.1-filtered-objects.html#env-ii-1.1.10) as quotient filtrations of the induced filtrations on a sub-object, then we have
+$$
+  \begin{aligned}
+    \Gr_G^n\Gr_F^m(A)
+    \cong (F^m(A)\cap G^n(A)) &/ ((F^{m+1}(A)\cap G^n(A)) + (F^m(A)\cap G^{n+1}(A)))
+  \\&=
+  \\\Gr_F^m\Gr_G^n(A)
+    \cong (G^n(A)\cap F^m(A)) &/ ((G^{n+1}(A)\cap F^m(A)) + (G^n(A)\cap F^{m+1}(A)))
+  \end{aligned}
+$$
+:::
+
+::: {.rmenv #env-ii-1.2.2 title="1.2.2" latex="{1.2.2}"}
+Let $H$ be a third filtration of $A.
+It induces a filtration on $\Gr_F(A)$, and thus on $\Gr_G\Gr_F(A)$.
+It also induces a filtration on $\Gr_F\Gr_G(A)$.
+We note that these filtrations do not in general correspond to one another under the isomorphism @ii-1.2.1.
+In the expression $\Gr_H\Gr_G\Gr_F(A)$, $G$ and $H$ thus play a symmetric role, but not $F$ and $G$.
+:::
+
+::: {.rmenv #env-ii-1.2.3 title="Definition 1.2.3" latex="{Definition 1.2.3}"}
+Two **finite** filtrations $F$ and $\overline{F}$ on $A$ are said to be **$n$-opposite** if $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q\neq n$.
+:::
+
+::: {.rmenv #env-ii-1.2.4 title="1.2.4" latex="{1.2.4}"}
+If $A^{p,q}$ is a bigraded object of $\mathscr{A}$ such that
+
+a. $A^{p,q}=0$ except for a finite number of pairs $(p,q)$, and
+b. $A^{p,q}=0$ for $p+q\neq n$
+
+\oldpage{10}
+then we define two $n$-opposite filtrations of $A=\sum_{p,q}A^{p,q}$ by setting
+$$
+  F^p(A)
+  = \sum_{p'\geqslant p} A^{p',q'}
+\tag{1.2.4.1}
+$$
+$$
+  \overline{F}^q(A)
+  = \sum_{q'\geqslant q} A^{p',q'}.
+\tag{1.2.4.2}
+$$
+
+We have
+$$
+  \Gr_F^p\Gr_{\overline{F}}^q(A)
+  = A^{p,q}.
+\tag{1.2.4.3}
+$$
+:::
+
+Conversely:
+
+::: {.itenv #env-ii-1.2.5 title="Proposition 1.2.5" latex="{Proposition 1.2.5}"}
+i. Let $F$ and $\overline{F}$ be finite filtrations on $A$.
+    For $F$ and $\overline{F}$ to be $n$-opposite, it is necessary and sufficient that, for all $p,q$,
+    $$
+      [p+q=n+1]
+      \implies [F^p(A)\oplus\overline{F}^q(A) \simto A].
+    $$
+
+ii. If $F$ and $\overline{F}$ are $n$-opposite, and if we set
+    $$
+      \begin{cases}
+        A^{p,q} = 0
+        &\text{for }p+q\neq n
+      \\A^{p,q} = F^p(A)\cap\overline{F}^q(A)
+        &\text{for }p+q=n
+      \end{cases}
+    $$
+    then $A$ is the direct sum of the $A^{p,q}$, and $F$ and $\overline{F}$ come from the bigrading $A^{p,q}$ of $A$ by the procedure of @ref-ii-1.2.4.
+:::
+
+::: {.proof}
+i. The condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q>n$ implies that $F^p\cap\overline{F}^q=(F^{p+1}\cap\overline{F}^q)+(F^p\cap\overline{F}^{q+1})$ for $p+q>n$.
+    By hypothesis, $F^p\cap\overline{F}^q$ is zero for large enough $p+q$;
+    by decreasing induction, we thus deduce that the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q>n$ is equivalent to the condition $F^p(A)\cap\overline{F}^q(A)=0$ for $p+q>n$.
+    Dually (@ref-ii-1.1.6, @ref-ii-1.1.7, @ref-ii-1.1.10), the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q<n$ is equivalent to the condition $A=F^p(A)+\overline{F}^q(A)} for $(1-p)+(1-q)>-n$, i.e. for $p+q\leqslant n+1$, and the claim then follows.
+
+ii. If $F$ and $\overline{F}$ are $n$-opposite, then we can prove by decreasing induction on $p$ that
+    $$
+      \bigoplus_{p'\geqslant p} A^{p',q'}
+      \simto F^p(A).
+    \tag{1.2.5.1}
+    $$
+    a. For $F^p(A)=0$, the claim is evident.
+    b. The decomposition $A=F^{p+1}(A)\oplus\overline{F}^{n-p}(A)$ induces on $F^p(A)\supset F^{p+1}(A)$ a decomposition
+        $$
+          F^p(A)
+          = F^{p+1}(A)\oplus(F^p(A)\cap\overline{F}^{n-p}(A))
+        $$
+        and we conclude by induction.
+
+    For $p$ small enough, we have $F^p(A)=A$.
+    By (1.2.5.1), the $A^{p,q}$ thus form a bigrading of $A$, and $F$ satisfies (1.2.4.1).
+    The fact that $\overline{F}$ satisfies (1.2.4.2) then follows by symmetry.
+:::
+
+::: {.rmenv #env-ii-1.2.6 title="1.2.6" latex="{1.2.6}"}
+The constructions @ef-ii-1.2.4 and @ref-ii-1.2.5 establish equivalences of categories that are quasi-inverse to one another between objects of $\mathscr{A}$ endowed with two finite $n$-opposite filtrations and bigraded objects of $\mathscr{A}$ of the type considered in @ref-ii-1.2.4.
+:::
+
+::: {.rmenv #env-ii-1.2.7 title="1.2.7" latex="{1.2.7}"}
+\oldpage{11}
+Three *finite* filtrations $W$, $F$, and $\overline{F}$ on $A$ are said to be **opposite** if
+$$
+  \Gr_F^p\Gr_{\overline{F}}^q\Gr_W^n(A)
+  = 0
+$$
+for $p+q+n\neq0$.
+
+This condition is symmetric in $F$ and $\overline{F}$.
+It implies that $F$ and $\overline{F}$ induce on $W^n(A)/W^{n+1}(A)$ two $(-n)$-opposite filtrations.
+We set
+$$
+  A^{p,q}
+  = \Gr_F^p\Gr_{\overline{F}}^q\Gr_F^{-p-q}(A)
+$$
+whence decompositions @ref-ii-1.2.4, @ref-ii-1.2.5
+$$
+  W^n(A)/W^{n+1}(A)
+  = \bigoplus_{p+q=-n} A^{p,q}
+\tag{1.2.7.1}
+$$
+which make $\Gr_W(A)$ into a bigraded object.
+:::
+
+::: {.itenv #env-ii-1.2.8 title="Lemma 1.2.8" latex="{Lemma 1.2.8}"}
+Let $W$, $F$, and $\overline{F}$ be three finite opposite filtrations, and $\sigma$ a sequence $(p_i,q_i)_{i\geqslant0}$ pairs of integers satisfying
+
+a. $p_i\leqslant p_j$ and $q_i\leqslant q_j$ for $i\geqslant j$, and
+b. $p_i+q_i=p_0+q_0-i+1$ for $i>0$.
+
+Set $p=p_0$, $q=q_0$, $n=-p-q$, and
+$$
+  A_\sigma
+  = \left( \sum_{0\leqslant i}(W^{n+i}(A)\cap F^{p_i}(A)) \right)
+  \cap \left( \sum_{0\leqslant i}(W^{n+i}(A)\cap\overline{F}^{q_i}(A)) \right).
+$$
+Then the projection from $W^n(A)$ to $\Gr_W^n(A)$ induces an isomorphism
+$$
+  A_\sigma
+  \simto A^{p,q} \subset \Gr_W^n(A).
+$$
+:::
+
+:::: {.proof}
+We will prove by induction on $k$ the following claim:
+
+::: {.itenv title="Claim" latex="{Claim}"}
+The projection from $W^n(A)/W^{n+k}$ to $\Gr_W^n(A)$ induces an isomorphism from
+$$
+  \begin{aligned}
+    \Bigg[
+    &\left( \sum_{i<k} (W^{n+i}(A)\cap F^{p_i}(A)) + W^{n+k}(A) \right)
+  \\\cap
+    &\left( \sum_{i<k} (W^{n+i}(A)\cap\overline{F}^{q_i}(A)) + W^{n+k}(A) \right)
+    \Bigg] / W^{n+k}(A)
+  \end{aligned}
+  \tag{$*_k$}
+$$
+to $A^{p,q}\subset\Gr_W^n(A)$.
+:::
+
+For $k=1$, this is exactly the definition of $A^{p,q}$.
+
+By (i) of @ref-ii-1.2.5 we have
+$$
+  F^{p_k}(\Gr_W^{n+k}(A)) \oplus \overline{F}^{q_k}(\Gr_W^{n+k}(A))
+  \simto \Gr_W^{n+k}(A).
+\tag{1.2.8.1}
+$$
+Set
+$$
+  \begin{aligned}
+    B &= \sum_{i<k} (W^{n+i}(A)\cap F^{p_i}(A))
+  \\C &= \sum_{i<k} (W^{n+i}(A)\cap\overline{F}^{q_i}(A))
+  \\B' &= (W^{n+k}(A)\cap F^{p_k}(A)) + W^{n+k+1}(A)
+  \\C' &= (W^{n+k}(A)\cap\overline{F}^{q_k}(A)) + W^{n+k+1}(A)
+  \\D &= W^{n+k}(A)
+  \\E &= W^{n+k+1}(A).
+  \end{aligned}
+$$
+
+\oldpage{12}
+Equation (1.2.8.1) can then be written as
+$$
+  \begin{aligned}
+    B'+C' &= D
+  \\B'\cap C' &= E.
+  \end{aligned}
+$$
+}
+We also have, since $p_k\leqslant p_i$ (for $i\leqslant k$),
+$$
+  B\cap D
+  \subset F^{p_k}(A) \cap W^{n+k}(A)
+  \subset B'
+$$
+and, since $q_k\leqslant q_i$ (for $i\leqslant k$),
+$$
+  C\cap D
+  \subset \overline{F}^{q_k}(A)\cap W^{n+k}(A)
+  \subset C'.
+$$
+
+The claim ($*_{k+1}$) then follows from ($*_k$) and the following lemma.
+::::
+
+::: {.itenv #env-ii-1.2.9 title="Lemma 1.2.9" latex="{Lemma 1.2.9}"}
+Let $B$, $C$, $B'$, $C'$, $D$, and $E$ be sub-objects of $A$.
+Suppose that
+$$
+  \begin{gathered}
+    B'+C' = D
+    \qquad B'\cap C' = E
+  \\B\cap D \subset B'
+    \qquad C\cap D \subset C'.
+  \end{gathered}
+$$
+Then
+$$
+  ((B+B')\cap(C+C'))/E
+  \simto ((B+D)\cap(C+D))/D.
+$$
+:::
+
+::: {.proof}
+To prove surjectivity, we write
+$$
+  \begin{aligned}
+    ((B+B')\cap(C+C'))+D
+    &= (((B+B')\cap(C+C'))+B')+C'
+  \\&= ((B+B')\cap(C+C'+B'))+C'
+  \\&= (B+B'+C')\cap(C+C'+B')
+  \\&= (B+D)\cap(C+D).
+  \end{aligned}
+$$
+
+To prove injectivity, we write
+$$
+  (B+B')\cap(C+C')\cap D
+  = ((B+B')\cap D)\cap((C+C')\cap D).
+$$
+Since $B'\subset D$, we have
+$$
+  \begin{aligned}
+    (B+B')\cap D
+    &= (B\cap D)+B'
+  \\&= B'
+  \end{aligned}
+$$
+and similarly
+$$
+  (C+C')\cap D
+  = C'
+$$
+and
+$$
+  \begin{aligned}
+    (B+B')\cap(C+C')\cap D
+    &= B'\cap C'
+  \\&= E.
+  \end{aligned}
+$$
+:::
+
+This finishes the proof of [(1.2.8)](#env-ii-1.2.8), noting that [(1.2.8)](#env-ii-1.2.8) is equivalent to ($*_k$) for large $k$.
+
+::: {.itenv #env-ii-1.2.10 title="Theorem 1.2.10" latex="{Theorem 1.2.10}"}
+Let $\mathscr{A}$ be an abelian category, and provisionally denote by $\mathscr{A}'$ the category of objects of $\mathscr{A}$ endowed with three opposite filtrations $W$, $F$, and $\overline{F}$.
+The morphisms in $\mathscr{A}'$ are the morphisms of $\mathscr{A}$ that are compatible with the three filtrations.
+
+i. $\mathscr{A}'$ is an abelian category.
+
+ii. The kernel (resp. cokernel) of an arrow $f\colon A\to B$ in $\mathscr{A}'$ is the kernel (resp. cokernel) of $f$ in $\mathscr{A}$, endowed with the filtrations induced by those of $A$ (resp. the quotients of those of $B$).
+
+iii. Every morphism $f\colon A\to B$ in $\mathscr{A}'$ is strictly compatible with the filtrations $W$, $F$, and $\overline{F}$;
+    the morphism $\Gr_W(f)$ is compatible with the bigradings of $\Gr_W(A)$ and $\Gr_W(B)$;
+    the morphisms $\Gr_F(f)$ and $\Gr_{\overline{F}}(f)$ are strictly compatible with the filtration induced by $W$.
+
+iv. The "forget the filtrations" functors, $\Gr_W$, $\Gr_F$, and $\Gr_{\overline{F}}$, and
+    $$
+      \begin{gathered}
+        \Gr_W\Gr_F
+        \simeq \Gr_F\Gr_W
+      \\\simeq \Gr_{\overline{F}}\Gr_F\Gr_W
+      \\\simeq \Gr_{\overline{F}}\Gr_W
+        \simeq \Gr_W\Gr_{\overline{F}}
+      \end{gathered}
+    $$
+    from $\mathscr{A}'$ to $\mathscr{A}$ are exact.
+:::
+
+\oldpage{13}
+Denote by $\sigma_0(p,q)$ and $\sigma_1(p,q)$ the sequences
+$$
+\begin{aligned}
+\sigma_0(p,q)
+&= (p,q), (p,q), (p,q-1), (p,q-2), (p,q-3), \ldots
+\\\sigma_0(p,q)
+&= (p,q), (p,q), (p-1,q), (p-2,q), (p-3,q), \ldots
+\end{aligned}
+$$
+and, with the notation of [(1.2.8)](#env-ii-1.2.8), set
+$$
+A_i^{p,q}
+= A_{\sigma_i(p,q)}
+\qquad\text{for } i=0,1.
+$$
+
+If $f\colon A\to B$ is compatible with $W$, $F$, and $\overline{F}$, then we have
+$$
+  f(A_i^{p,q})
+  \subset B_i^{p,q}
+  \qquad\text{for }i=0,1.
+\tag{1.2.10.1}
+$$
+Claim (iii) then follows from the following lemma:
+
+::: {.itenv #env-ii-1.2.11 title="Lemma 1.2.11" latex="{Lemma 1.2.11}"}
+The $A_i^{p,q}$ give a bigrading of $A$.
+We have
+$$
+  W^n(A)
+  = \sum_{n+p+q\leqslant 0} A_i^{p,q}
+  \qquad\text{for }i=0,1
+\tag{1.2.11.1}
+$$
+$$
+  F^p(A)
+  = \sum_{p'\geqslant p} A_0^{p',q'}
+\tag{1.2.11.2}
+$$
+$$
+  \overline{F}^q(A)
+  = \sum_{q'\geqslant q} A_1^{p',q'}.
+\tag{1.2.11.3}
+$$
+:::
+
+::: {.proof}
+By symmetry, it suffices to prove the claims concerning $i=0$.
+Set $A_0=\bigoplus A_0^{p,q}$ and define filtrations $W$ and $F$ on $A_0$ by the equations of [(1.2.11)](#env-ii-1.2.11).
+The canonical map $i$ from $A_0$ to $A$ is compatible with the filtrations $W$ and $F$.
+Furthermore, by [(1.2.8)](#env-ii-1.2.8), $\Gr_W(i)$ is an isomorphism, and induces isomorphisms of graded objects
+$$
+  \sum_{p+q=n} A_0^{p,q}
+  \simto \Gr_W^{-n}(A)
+  = \sum_{p+q=n} A^{p,q}.
+\tag{1.2.11.4}
+$$
+The morphism $i$ is thus an isomorphism, and the $A_0^{p,q}$ give a bigrading of $A$.
+
+Equation (1.2.11.1) then says that $\Gr_W(i)$ is an isomorphism.
+By (1.2.11.4), $\Gr_F\Gr_W(i)$ is an isomorphism, and thus so too are $\Gr_W\Gr_F(i)$ and $\Gr_F(i)$.
+Equation (1.2.11.2) then follows.
+:::
+
+::: {.rmenv #env-ii-1.2.12 title="1.2.12" latex="{1.2.12}"}
+We now prove [Theorem 1.2.10](#env-ii-1.2.10).
+Let $f\colon A\to B$ in $\mathscr{A}'$ and endow $K=\Ker(f)$ with the filtrations induced by those of $A$.
+By @ii-1.2.11, $\Gr_W(K)\hookrightarrow\Gr_W(A)$;
+furthermore, the filtration $F$ (resp. $\overline{F}$) on $K$ induces on $\Gr_W(K)$ the inverse image filtration of the filtration $F$ on $\Gr_W(A)$.
+The sub-object $\Gr_W(K)$ of $\Gr_W(A)$ is then compatible with the bigrading of $\Gr_W(A)$:
+$$
+\Gr_W(K)
+= \bigoplus_{p,q}(\Gr_W(K)\cap A^{p,q}).
+$$
+
+We thus deduce that
+$$
+\Gr_F^p\Gr_{\overline{F}}^q\Gr_W^n(K)
+\hookrightarrow \Gr_F^p\Gr_{\overline{F}}^q\Gr_W^n(A);
+$$
+}
+\oldpage{14}
+the filtrations of $W$, $F$, and $\overline{F}$ on $K$ are thus opposite, and $K$ is a kernel of $f$ in $\mathscr{A}'$.
+This, combined with the dual result, proves (ii).
+}
+
+If $f$ is an arrow of $\mathscr{A}'$, then the canonical morphism from $\Coim(f)$ to $\Im(f)$ is an isomorphism in $\mathscr{A}$;
+by (iii), it is also an isomorphism in $\mathscr{A}'$, which is thus abelian.
+}
+
+The "forget the filtrations" functor is exact by (ii).
+The exactness of the other functors in (iv) follows immediately from (ii), (iii), and (i) or (ii) of \ref{hodge-theory-ii-1.1.11}.
+:::
+
+\subtree[hodge-theory-ii-1.2.13]{
+\number{1.2.13}
+
+Let $A$ be an object of $\mathscr{A}$ endowed with a finite \em{increasing} filtration $W_\bullet$, and two finite decreasing filtrations $F$ and $\overline{F}$.
+The construction \ref{hodge-theory-ii-1.1.3} associates to $W_\bullet$ a decreasing filtration $W^\bullet$.
+We say that the filtrations $W_\bullet$, $F$, and $\overline{F}$ are \em{opposite} if the filtrations $W^\bullet$, $F$, and $\overline{F}$ are, i.e. if, for all $n$, the filtrations induced by $F$ and $\overline{F}$ on
+$$
+\Gr_n^W(A)
+= W_n(A)/W_{n-1}(A)
+$$
+}
+are $n$-opposite.
+}
+
+\ref{hodge-theory-ii-1.2.10} translates trivially to this variation.
