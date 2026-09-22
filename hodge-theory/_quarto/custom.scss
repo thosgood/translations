@@ -46,6 +46,13 @@ main.content{
     font-size: 0.95em !important;
   }
 
+  .katex-display {
+    margin: 0.75em 0 0.5em 2em;
+    .katex {
+      text-align: left
+    }
+  }
+
 
   // Rendered TikZ images
 
@@ -70,7 +77,7 @@ main.content{
   }
 
 
-  // Custom rmenv and itenv environments
+  // Custom mathematical environments
 
   .itenv {
     font-style: italic;
@@ -78,31 +85,27 @@ main.content{
       font-style: normal !important;
     }
   }
+
   .rmenv {
     font-style: normal;
   }
 
+  .proof {}
+
   .itenv,
   .rmenv {
-    // Spacing
-    margin: 1em 0;
     & > p:first-of-type {
       margin-top: 0 !important;
     }
     & > :last-child {
       margin-bottom: 0 !important;
     }
-
-    // For numbers and taxa
-    & > :first-child {
-      display: inline;
-    }
   }
 
   // Numbers and taxa
   .itenv::before,
   .rmenv::before {
-    display: inline;
+    float: left;
     padding-right: 0.5em;
     font-style: normal;
     font-weight: 550;
@@ -135,6 +138,6 @@ main.content{
   .itenv:hover,
   .rmenv:hover,
   .proof:hover {
-    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-color: rgba(0, 0, 0, 0.05) !important;
   }
 }
