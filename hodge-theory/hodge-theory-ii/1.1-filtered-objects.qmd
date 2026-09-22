@@ -4,13 +4,13 @@ title: 1.1 Filtered objects
 
 {{< include ../macros.qmd >}}
 
-::: {.rmenv #env-ii-1.1.1 title="1.1.1" latex="{1.1.1}"}
+::: {.rmenv #ii-1.1.1 number="1.1.1"}
 Let $\mathscr{A}$ be an abelian category.
 
 We will be considering $\ZZ$-filtrations, finite, in general, on the objects of $\mathscr{A}$:
 :::
 
-::: {.rmenv #env-ii-1.1.2 title="Definition 1.1.2" latex="{Definition 1.1.2}"}
+::: {.rmenv #ii-1.1.2 number="1.1.2" taxon="Definition"}
 A **decreasing** (resp. **increasing**) **filtration** $F$ of an object $A$ of $\mathscr{A}$ is a family $(F^n(A))_{n\in\ZZ}$ (resp. $(F_n(A))_{n\in\ZZ}$) of sub-objects of $A$ satisfying
 $$
   \forall n,m
@@ -31,26 +31,26 @@ $$
 for $n\in\ZZ$.
 :::
 
-::: {.rmenv #env-ii-1.1.3 title="1.1.3" latex="{1.1.3}"}
+::: {.rmenv #ii-1.1.3 number="1.1.3"}
 If $R$ is a decreasing (resp. increasing) filtration of $A$, then the $F_n(A)=F^{-n}(A)$ (resp the $F^n(A)=F_{-n}(A)$) form an increasing (resp. decreasing) filtration of $A$.
 \oldpage{7}
 This allows us in principal to consider only decreasing filtrations;
 *unless otherwise explicitly mentioned, when we say "filtration" we always mean "decreasing filtration"*.
 :::
 
-::: {.rmenv #env-ii-1.1.4 title="1.1.4" latex="{1.1.4}"}
+::: {.rmenv #ii-1.1.4 number="1.1.4"}
 A filtration $F$ of $A$ is said to be **finite** if there exist $n$ and $m$ such that $F^n(A)=A$ and $F^m(A)=0$.
 :::
 
-::: {.rmenv #env-ii-1.1.5 title="1.1.5" latex="{1.1.5}"}
+::: {.rmenv #ii-1.1.5 number="1.1.5"}
 A **morphism** from a filtered object $(A,F)$ to a filtered object $(B,F)$ is a morphism $f$ from $A$ to $B$ that satisfies $f(F^n(A))\subset F^n(B)$ for all $n\in\ZZ$.
 
 Filtered objects (resp. finite filtered objects) of $\mathscr{A}$ form an additive category in which inductive limits and finite projective limits exist (and thus kernels, cokernels, images, and coimages of a morphism).
 
-A morphism $f\colon(A,F)\to(B,F)$ is said to be **strict**, or **strictly compatible with the filtrations**, if the canonical arrows from $\Coim(f)$ to $\Im(f)$ is an isomorphism of filtered objects (cf. @env-ii-1.1.11).
+A morphism $f\colon(A,F)\to(B,F)$ is said to be **strict**, or **strictly compatible with the filtrations**, if the canonical arrows from $\Coim(f)$ to $\Im(f)$ is an isomorphism of filtered objects (cf. [(1.1.11)](#ii-1.1.11)).
 :::
 
-::: {.rmenv #env-ii-1.1.6 title="1.1.6" latex="{1.1.6}"}
+::: {.rmenv #ii-1.1.6 number="1.1.6"}
 Let $(-)^\op$ be the contravariant identity functor from $\mathscr{A}$ to the dual category $\mathscr{A}^\op$.
 If $(A,F)$ is a filtered object of $\mathscr{A}$, then the $(A/F^n(A))^\op$ can be identified with sub-objects of $A^\op$.
 The **dual** filtration on $A^\op$ is defined by
@@ -63,13 +63,13 @@ The double dual of $(A,F)$ can be identified with $(A,F)$.
 This construction identifies the dual of the category of filtered objects of $\mathscr{A}$ with the category of filtered objects of $\mathscr{A}^\op$.
 :::
 
-::: {.rmenv #env-ii-1.1.7 title="1.1.7" latex="{1.1.7}"}
+::: {.rmenv #ii-1.1.7 number="1.1.7"}
 If $(A,F)$ is a filtered object of $\mathscr{A}$, then its **associated graded** is the object of $\mathscr{A}^\ZZ$ defined by
 $$
   \Gr^n(A)
   = F^n(A)/F^{n+1}(A).
 $$
-The convention @env-ii-1.1.6 is justified by the simple formula
+The convention [(1.1.6)](#ii-1.1.6) is justified by the simple formula
 $$
   \Gr^n(A^\op)
   = \Gr^{-n}(A)^\op
@@ -97,7 +97,7 @@ which follows from the self-dual diagram
 :::
 
 
-::: {.rmenv #env-ii-1.1.8 title="1.1.8" latex="{1.1.8}"}
+::: {.rmenv #ii-1.1.8 number="1.1.8"}
 Let $(A,F)$ be a filtered object, and $j\colon X\hookrightarrow A$ a sub-object of $A$.
 The **filtration induced by $F$** (or simply the **induced filtration**) on $X$ is the unique filtration on $X$ such that $j$ is strictly compatible with the filtrations;
 we have
@@ -116,7 +116,7 @@ $$
 $$
 :::
 
-::: {.itenv #env-ii-1.1.9 title="Lemma 1.1.9" latex="{Lemma 1.1.9}"}
+::: {.itenv #ii-1.1.9 number="1.1.9" taxon="Lemma"}
 \oldpage{8}
 If $X$ and $Y$ are sub-objects of $A$, with $X\subset Y$, then on $Y/X\simto\Ker(A/X\to A/Y)$ the quotient filtration of $Y$ agrees with that induced by that of $A/X$.
 In the diagram
@@ -137,16 +137,16 @@ In the diagram
 ```
 :::
 
-::: {.rmenv #env-ii-1.1.10 title="1.1.10" latex="{1.1.10}"}
-We call the filtration @env-ii-1.1.9 on $Y/X$ the **filtration induced by that of $A$** (or simply the **induced filtration**).
-By @env-ii-1.1.9, its definition is self-dual.
+::: {.rmenv #ii-1.1.10 number="1.1.10"}
+We call the filtration [(1.1.9)](#ii-1.1.9) on $Y/X$ the **filtration induced by that of $A$** (or simply the **induced filtration**).
+By [(1.1.9)](#ii-1.1.9), its definition is self-dual.
 
 In particular, if $\Sigma\colon A\xrightarrow{f}B\xrightarrow{G}C$ is a $0$-sequence, and if $B$ is filtered, then $\HH(\Sigma)=\Ker(g)/\Im(f)=\Ker(\Coker(f)\to\Coim(g))$ is endowed with a canonical induced filtration.
 :::
 
 The reader can show that:
 
-::: {.itenv #env-ii-1.1.11 title="Proposition 1.1.11" latex="{Proposition 1.1.11}"}
+::: {.itenv #ii-1.1.11 number="1.1.11" taxon="Proposition"}
 i. Let $f\colon(A,F)\to(B,F)$ be a morphism of filtered objects with finite filtrations.
   For $f$ to be strict, it is necessary and sufficient that the sequence
   $$
@@ -175,7 +175,7 @@ f(F^n(A))
 = f(A)\cap F^n(B).
 $$
 
-::: {.rmenv #env-ii-1.1.12 title="1.1.12" latex="{1.1.12}"}
+::: {.rmenv #ii-1.1.12 number="1.1.12"}
 If $\otimes\colon\mathscr{A}_1\times\ldots\times\mathscr{A}_n\to\mathscr{B}$ is a multiadditive right-exact functor, and if $A_i$ is an object of finite filtration of $\mathscr{A}_i$ (for $1\leqslant i\leqslant n$), then we define a filtration on $\bigotimes_{i=1}^n A_i$ by
 $$
   F^k(\bigotimes_{i=1}^n A_i)
@@ -192,7 +192,7 @@ $$
 \oldpage{9}
 If $H$ is exact, then the two definitions are equivalent.
 
-We extend these definitions to contravariant functors in certain variables by @env-ii-1.1.6.
+We extend these definitions to contravariant functors in certain variables by [(1.1.6)](#ii-1.1.6).
 In particular, for the left-exact functor $\Hom$, we set
 $$
   F^k(\Hom(A,B))

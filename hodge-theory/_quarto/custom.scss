@@ -43,7 +43,7 @@ main.content{
   // KaTeX
 
   .katex {
-    font-size: 1em !important;
+    font-size: 0.95em !important;
   }
 
 
@@ -67,5 +67,74 @@ main.content{
       margin: 0;
       padding: 0;
     }
+  }
+
+
+  // Custom rmenv and itenv environments
+
+  .itenv {
+    font-style: italic;
+    em {
+      font-style: normal !important;
+    }
+  }
+  .rmenv {
+    font-style: normal;
+  }
+
+  .itenv,
+  .rmenv {
+    // Spacing
+    margin: 1em 0;
+    & > p:first-of-type {
+      margin-top: 0 !important;
+    }
+    & > :last-child {
+      margin-bottom: 0 !important;
+    }
+
+    // For numbers and taxa
+    & > :first-child {
+      display: inline;
+    }
+  }
+
+  // Numbers and taxa
+  .itenv::before,
+  .rmenv::before {
+    display: inline;
+    padding-right: 0.5em;
+    font-style: normal;
+    font-weight: 550;
+  }
+  .itenv[data-number],
+  .rmenv[data-number] {
+    &::before {
+      content: "("attr(data-number)")";
+    }
+  }
+  .itenv[data-taxon],
+  .rmenv[data-taxon] {
+    &::before {
+      content: attr(data-taxon)".";
+    }
+  }
+  .itenv[data-number][data-taxon],
+  .rmenv[data-number][data-taxon] {
+    &::before {
+      content: "("attr(data-number)") "attr(data-taxon)".";
+    }
+  }
+
+  // Hover behaviour
+  .itenv,
+  .rmenv,
+  .proof {
+    padding: 0.5em;
+  }
+  .itenv:hover,
+  .rmenv:hover,
+  .proof:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
   }
 }

@@ -3,3 +3,445 @@ title: 1.3 The two filtrations lemma
 ---
 
 {{< include ../macros.qmd >}}
+
+::: {.rmenv #env-ii-1.3.1 number="1.3.1"}
+Let $K$ be a differential complex of objects of $\mathscr{A}$, endowed with a filtration $F$.
+The filtration is said to be **biregular** if it induces a finite filtration on each component of $K$.
+
+We recall the definition of the terms $E_r^{pq}(K,F)$, or simply $E_r^{pq}$, of the spectral sequence defined by $F$.
+We set
+$$
+  Z_r^{pq}
+  = \Ker(d\colon F^p(K^{p+q})\to F^{p+q+1}/F^{p+r}(K^{p+q+1}))
+$$
+and dually we define $B_r^{pq}$ by the formula
+$$
+  K^{p+q}/B_r^{pq}
+  = \Coker(d\colon F^{p-r+1}(K^{p+q+1})\to K^{p+q}/F^{p+1}(K^{p+q})).
+$$
+These formulas still make sense for $r=\infty$.
+
+We note that the use here of the notation $B_r^{pq}$ is different to that of Godement [@G1958].
+
+We have, by definition:
+$$
+  E_r^{pq}
+  = \Im(Z_r^{pq}\to K^{p+q}/B_r^{pq})
+\tag{1.3.1.1}
+$$
+$$
+  = Z_r^{pq}/(B_r^{pq}\cap Z_r^{pq})
+\tag{1.3.1.2}
+$$
+$$
+  = \Ker(K^{p+q}/B_r^{pq}\to K^{p+q}/(Z_r^{pq}+B_r^{pq})).
+\tag{1.3.1.3}
+$$
+We can thus write
+$$
+  \begin{aligned}
+    B_r^{p\bullet}\cap Z_r^{p\bullet}
+    &\coloneqq (dF^{p-r+1}+F^{p+1}) \cap (d^{-1}F^{p+r}\cap F^p)
+  \\&= (dF^{p-r+1}\cap F^p) + (F^{p+1}\cap d^{-1}F^{p+r})
+  \end{aligned}
+\tag{1.3.1.4}
+$$
+since $dF^{p-r+1}\subset d^{-1}F^{p+r}$ and $F^{p+1}\subset F^p$.
+
+\oldpage{15}
+For $r<\infty$, the $E_r$ form a complex graded by the degree $p-r(p+q)$, and $E_{r+1}$ can be expressed as the cohomology of this complex:
+
+$$
+  E_{r+1}^{pq}
+  = \HH(E_r^{p-r,q+r-1} \xrightarrow{d_r} E_r^{pq} \xrightarrow{d_r} E_r^{p+r,q-r+1}).
+\tag{1.3.1.5}
+$$
+
+For $r=0$, we have
+$$
+  E_0^{\bullet\bullet}
+  = \Gr_F^\bullet(K^\bullet).
+\tag{1.3.1.6}
+$$
+:::
+
+::: {.itenv #env-ii-1.3.2 number="1.3.2" taxon="Proposition"}
+Let $K$ be a complex endowed with a biregular filtration $F$.
+The following conditions are equivalent:
+
+i. The spectral sequence defined by $F$ degenerates ($E_1=E_\infty$).
+ii. The morphisms $d\colon K^i\to K^{i+1}$ are strictly compatible with the filtrations.
+:::
+
+::: {.proof}
+We will prove this in the case where $\mathscr{A}$ is a category of modules.
+For fixed $p$ and $q$, the hypothesis that the arrows $d_r$ with domains $E_r^{pq}$ be zero for $r\geqslant1$ implies that, if $x\in F^p(K^{p+q})$ satisfies $dx\in F^{p+1}(K^{p+q+1})$, then there exists $y\in K^{p+q}$ such that $dy=0$ and such that $x$ and $y$ have the same image in $E_1^{pq}$.
+Modifying $y$ by a boundary, and setting $z=x-y$, we then have
+$$
+  \forall x\in F^p(K^{p+q})
+  \left[
+    dx\in F^{p+1}(K^{p+q+1})
+    \implies \exists z\text{ s.t. } z\in F^{p+1}(K^{p+q}) \text{ and } dz=dx
+  \right]
+$$
+or, in other words,
+$$
+  F^{p+1}(K^{p+q+1}) \cap dF^p(K^{p+q})
+  = dF^{p+1}(K^{p+q}).
+\tag{1}
+$$
+
+If this condition is satisfied for arbitrary $p$ and $q$, then by induction on $r$ we have
+$$
+  F^{p+r} \cap dF^p
+  = dF^{p+r}
+$$
+which, for large $p+r$, can be written as
+$$
+  F^p \cap dK
+  = dF^p.
+\tag{2}
+$$
+
+Claim (2) trivially implies (1), and is equivalent to (ii), which proves the proposition.
+:::
+
+::: {.rmenv #env-ii-1.3.3 number="1.3.3"}
+If $(K,F)$ is a filtered complex, we denote by $\Dec(K)$ the complex $K$ endowed with the **shifted filtration**
+$$
+  \Dec(F)^p K^n
+  = Z_1^{p+n,-p}.
+$$
+
+This filtration is compatible with the differentials:
+$$
+  \begin{aligned}
+    dZ_1^{p+n,-p}
+    &\subset F^{p+n+1}(K^{n+1}) \cap \Ker(d)
+  \\&\subset Z_\infty^{p+n+1,-p}
+  \\&\subset Z_1^{p+n+1,-p}.
+  \end{aligned}
+$$
+
+Since
+$$
+  \begin{aligned}
+    Z_1^{p+1+n,-p-1}
+    &\subset F^{p+1+n}(K^n)
+  \\&\subset B_1^{p+n,-p}
+  \\&\subset Z_1^{p+n,-p}
+  \end{aligned}
+\tag{1.3.3.1}
+$$
+the evident arrow from $Z_1^{p+n,-p}/Z_1^{p+1+n,-p-1}$ to $Z_1^{p+n,-p}/B_1^{p+n,-p}$ is a morphism
+$$
+  u\colon E_0^{p,n-p}(\Dec(K)) \to E_1^{p+n,-p}(K).
+\tag{1.3.3.2}
+$$
+:::
+
+::: {.itenv #env-ii-1.3.4 number="1.3.4" taxon="Proposition"}
+i. The morphisms in (1.3.3.2) form a morphism of graded complexes from $E_0(\Dec(K))$ to $E_1(K)$.
+ii. This morphism induces an isomorphism on cohomology.
+iii. This morphism induces step-by-step (via (1.3.1.5)) isomorphisms of graded complexes $E_r(\Dec(K))\simto E_{r+1}(K)$ (for $r\geqslant1$).
+:::
+
+::: {.proof}
+\oldpage{16}
+Let $F'$ be the filtration on $K$ defined by
+$$
+  {F'}^p(K^n)
+  = \Dec(F)^{p-n}(K^n)
+  = Z_1^{p,n-p}.
+$$
+We trivially have isomorphisms
+$$
+  E_r^{p,n-p}(\Dec(K))
+  = E_{r+1}^{p+n,-p}(K,F')
+\tag{1.3.4.1}
+$$
+that are compatible with the $d_r$ and with (1.3.1.5).
+The map $u$ comes from (1.3.4.1) and from the identity map
+$$
+  (K,F') \to (K,F).
+$$
+This proves (i), and it remains to show that, for $r\geqslant2$,
+$$
+  E_r^{pq}(K,F')
+  \simto E_r^{pq}(K,F).
+$$
+We have
+$$
+  \begin{aligned}
+    Z_r^{pq}(K,F')
+    &= Z_r^{pq}(K,F)
+    \qquad\text{for }r\geqslant1
+  \\Z_r^{pq}(K,F') \cap B_r^{pq}(K,F')
+    &= Z_r^{pq}(K,F) \cap B_r^{pq}(K,F)
+    \qquad\text{for }r\geqslant2
+  \end{aligned}
+$$
+and we can then apply (1.3.1.2).
+:::
+
+::: {.rmenv #env-ii-1.3.5 number="1.3.5"}
+The construction in [(1.3.3)](#ii-1.3.3) is not self-dual.
+The dual construction consists of defining
+$$
+  \Dec^\bullet(F)^pK^n
+  = B_1^{p+n-1,-p+1}.
+$$
+We then have morphisms
+$$
+  E_0^{p,n-p}(\Dec(K))
+  \to E_1^{p+n,p}(K)
+  \to E_0^{p,n-p}(\Dec^\bullet(K))
+$$
+and, for $r\geqslant1$, isomorphisms
+$$
+  E_r^{p,n-p}(\Dec(K))
+  \simto E_{r+1}^{p+n,p}(K)
+  \simto E_{r}^{p,n-p}(\Dec^\bullet(K)).
+$$
+:::
+
+Recall that a morphism of complexes is said to be a **quasi-isomorphism** if it induces an isomorphism on cohomology.
+
+::: {.rmenv #env-ii-1.3.6 number="1.3.6" taxon="Definition"}
+i. A morphism $f\colon(K,F)\to(K',F')$ of filtered complexes with biregular filtrations is a **filtered quasi-isomorphism** if $\Gr_F(f)$ is a quasi-isomorphism, i.e. if the $E_1^{pq}(f)$ are isomorphisms.
+ii. A morphism $f\colon(K,F,W)\to(K,F',W')$ of biregular bifiltered complexes is a **bifiltered quasi-isomorphism** if $\Gr_F\Gr_W(f)$ is a quasi-isomorphism.
+:::
+
+::: {.rmenv #env-ii-1.3.7 number="1.3.7"}
+Let $K$ be a differential complex of objects of $\mathscr{A}$, endowed with two filtrations $F$ and $W$.
+Let $E_r^{pq}$ be the spectral sequence defined by $W$.
+The filtration $F$ induces on $E_r^{pq}$ various filtrations, which we will compare.
+:::
+
+::: {.rmenv #env-ii-1.3.8 number="1.3.8"}
+Equation (1.3.1.2) identifies $E_r^{pq}$ with a quotient of a sub-object of $K^{p+q}$.
+The $E_r^{pq}$ term is thusly given by endowing with a filtration $F_d$ induced by $F$, called the **first direct filtration**.
+:::
+
+::: {.rmenv #env-ii-1.3.9 number="1.3.9"}
+Dually, (1.3.1.3) identifies $E_r^{pq}$ with a sub-object of a quotient of $K^{p+q}$, whence a new filtration $F_{d^*}$ induced by $F$, called the **second direct filtration**.
+:::
+
+
+::: {.itenv #env-ii-1.3.10 number="1.3.10" taxon="Lemma"}
+\oldpage{17}
+On $E_0$ and $E_1$, we have $F_d=F_{d^*}$.
+:::
+
+::: {.proof}
+For $r=0,1$, we have $B_r^{pq}\subset Z_r^{pq}$, and we apply [(1.1.9)](1.1-filtered-objects.html#ii-1.1.9).
+:::
+
+::: {.rmenv #env-ii-1.3.11 number="1.3.11"}
+Equation (1.3.1.5) identifies $E_{r+1}^{pq}$ with a quotient of a sub-object of $E_r^{pq}$.
+We define the **recurrent filtration** $F_r$ on the $E_r^{pq}$ by the conditions
+
+i. On $E_0^{pq}$, $F_r=F_d=F_{d^*}$.
+ii. On $E_{r+1}^{pq}$, the recurrent filtration is that induced by the recurrent filtration of $E_r^{pq}$.
+:::
+
+::: {.rmenv #env-ii-1.3.12 number="1.3.12"}
+Definitions [(1.3.8)](#ii-1.3.8) and [(1.3.9)](#ii-1.3.9) still make sense for $r=\infty$.
+If the filtration on $K$ is biregular, then the direct filtrations on $E_\infty^{pq}$ coincide with those on $E_r^{pq}=E_\infty^{pq}$ for large enough $r$, and we define the recurrent filtration on $E_\infty^{pq}$ as agreeing with that on $E_r^{pq}$ for large enough $r$.
+
+The filtrations $F$ and $W$ each induce a filtration on $H^\bullet(K)$, and $E_\infty^{\bullet\bullet}=\Gr_W^\bullet(\HH^\bullet(K))$.
+The filtration $F$ on $\HH^\bullet(K)$ then induces on $E_\infty^{pq}$ a new filtration.
+:::
+
+\subtree[hodge-theory-ii-1.3.13]{
+\taxon{proposition}
+\number{1.3.13}
+
+\olc{
+\lic{(i)}{
+  For the first direct filtration, the morphisms $d_r$ are compatible with the filtrations.
+  If $E_{r+1}^{pq}$ is considered as a quotient of a sub-object of $E_r^{pq}$, then the first direct filtration on $E_{r+1}^{pq}$ is finer than the filtration $F'$ induced by the first direct filtration on $E_r^{pq}$Y we have $F_d(E_{r+1}^{pq})\subset F'(E_{r+1}^{pq})$.
+}
+
+\lic{(ii)}{
+  Dually, the morphisms $d_r$ are compatible with the second direct filtration, and the second direct filtration on $E_{r+1}^{pq}$ is less fine than the filtration induced by that of $E_r^{pq}$.
+}
+
+\lic{(iii)}{
+  $F_d(E_r^{pq})\subset F_r(E_r^{pq})\subset F_{d^*}(E_r^{pq})$.
+}
+
+\lic{(iv)}{
+  On $E_\infty^{pq}$, the filtration induced by the filtration $F$ of $\HH^\bullet(K)$ \ref{hodge-theory-ii-1.3.12} is finer than the first direct filtration and less fine than the second.
+}
+}
+
+\proof{
+  Claim (i) is evident, (ii) is its dual, and (iii) follows by induction.
+  The first claim of (iv) is easy to verify, and the second is its dual.
+}
+}
+}
+
+\subtree[hodge-theory-ii-1.3.14]{
+\number{1.3.14}
+
+We denote by $\Dec(K)$ (resp. $\Dec^\bullet(K)$) the complex $K$ endowed with the filtrations $\Dec(W)$ and $F$ (resp. $\Dec^\bullet(W)$ and $F$).
+}
+
+It is clear by \ref{hodge-theory-ii-1.3.4.1} that the isomorphism in \ref{hodge-theory-ii-1.3.4} sends the first direct filtration on $E_r(\Dec(K))$ to the second direct filtration on $E_{r+1}(K)$ (for $r\geqslant1$).
+The dual isomorphism \ref{hodge-theory-ii-1.3.5} sends the second direct filtration on $E_r(\Dec^\bullet(K))$ to the second direct filtration on $E_{r+1}(K)$.
+}
+}
+
+\subtree[hodge-theory-ii-1.3.15]{
+\taxon{lemma}
+\number{1.3.15}
+
+If the filtration $F$ is biregular, and if, on the $\Gr_W^p(K)$, the morphisms $d$ are strictly compatible with the filtration induced by $F$, then
+
+\olc{
+  \lic{(i)}{
+    The morphism \ref{hodge-theory-ii-1.3.3.2} of graded complexes filtered by $F$
+    $$
+      u\colon \Gr_{\Dec(W)}(K)
+      \to E_1(K,W)
+    }
+    is a filtered quasi-isomorphism.
+  }
+
+  \lic{(ii)}{
+    Dually, the morphism in \ref{hodge-theory-ii-1.3.5}
+    $$
+      u\colon E_1(K,W)
+      \to \Gr_{\Dec^\bullet(W)}(K)
+    }
+    is a filtered quasi-isomorphism.
+  }
+}
+}
+
+\proof{
+  It suffices, by duality, to prove (i).
+}
+
+  \oldpage{18}
+  By \ref{hodge-theory-ii-1.3.3} and \ref{hodge-theory-ii-1.3.4}, the complex $E_1(K,W)$ filtered by $F$ is a quotient of the filtered complex $\Gr_{\Dec(W)}(K)$.
+  Let $U$ be the filtered complex given by the kernel, which is acyclic by (ii) of \ref{hodge-theory-ii-1.3.4}.
+  The long exact sequence in cohomology associated to the exact sequence of complexes
+  $$
+    0
+    \to \Gr_F(U)
+    \to \Gr_F(\Gr_{\Dec(W)}(K))
+    \to \Gr_F(E_1(K,W))
+    \to 0
+  }
+  shows that $u$ is a filtered quasi-isomorphism if and only if $\Gr_F(U)$ is an acyclic complex.
+  By \ref{hodge-theory-ii-1.3.2}, and since $U$ is acyclic, this reduces to asking that the differentials of $U$ be strictly compatible with the filtration $F$.
+  From \ref{hodge-theory-ii-1.3.3.1} we obtain that $U$ is the sum over $p$ of the complexes
+  $$
+    (U^p)^n
+    = B_1^{p+n,-p}/Z_1^{p+1+n,-p-1}
+  }
+  endowed with the filtration induced by $F$.
+}
+
+  Each differential $d$ of each of the complexes $U^p$ fits into a commutative diagram of filtered objects of the following type, where, for simplicity, we have omitted the total or complementary degree:
+
+  \tikzcd{
+    B^p/Z^{p+1}
+      \ar[rrr,"d"]
+      \ar[dr]
+    &&& B^{p+1}/Z^{p+1}
+      \ar[dd]
+  \\& \Coim(d)
+      \ar[r,"(5)"]
+    & \Im(d)
+      \ar[ur] \ar[dr]
+  \\W^{p+1}/Z^{p+1}
+      \ar[uu]
+      \ar[ur]
+      \ar[rrr,near start,swap,"(3)"]
+    &&& B^{p+1}/W^{p+2}
+      \ar[d]
+  \\W^{p+1}/W^{p+2}
+      \ar[u]
+      \ar[rrr,near start,swap,"(1)"]
+      \ar[urrr,phantom,"(2)"description]
+      \ar[uuurrr,phantom,"(4)"description]
+    &&& W^{p+1}/W^{p+2}
+  }
+
+  By hypothesis, the morphism $(1)$ is strict.
+  Since the square $(2)$ is exactly the canonical decomposition of $(1)$, the arrow $(3)$ is a filtered isomorphism.
+  The arrows of the trapezium $(4)$ are isomorphisms;
+  they are thus filtered isomorphisms, since $(3)$ is a filtered isomorphism.
+  The fact that $(5)$ is a filtered isomorphism implies that $d$ is strict.
+  This proves the lemma.
+}
+}
+}
+
+\subtree[hodge-theory-ii-1.3.16]{
+\taxon{theorem}
+\number{1.3.16}
+
+Let $K$ be a complex endowed with two filtrations, $W$ and $F$, with the filtration $F$ biregular.
+Let $r_0\geqslant0$ be an integer, and suppose that, for $0\leqslant r<r_0$, the differentials of the graded complex $E_r(K,W)$ are strictly compatible with the filtration $F$.
+Then, for $r\leqslant r_0+1$, $F_d=F_r=F_{d^*}$ on $E_r^{pq}$.
+}
+
+\proof{
+  We will prove the theorem by induction on $r_0$.
+  For $r_0=0$, the hypothesis is empty, and we apply \ref{hodge-theory-ii-1.3.10} and (iii) of \ref{hodge-theory-ii-1.3.13}.
+  For $r_0\geqslant1$, by the inductive hypothesis, we have $F_d=F_r=F_{d^*}$ on $E_r^{pq}$ for $r\leqslant r_0$.
+}
+
+  \oldpage{19}
+  By \ref{hodge-theory-ii-1.3.15}, the morphism $u\colon E_0(\Dec(K))\to E_1(K)$ is a filtered quasi-isomorphism.
+  It thus induces a filtered isomorphism from $\HH^\bullet(\Dec(K))$ to $\HH^\bullet(E_1(K))$:
+  $$
+    u\colon (E_1(\Dec(K)),F_r)
+    \simto (E_2(K),F_r).
+  }
+  Step-by-step, we thus deduce that the canonical isomorphism from $E_s(\Dec(K))$ to $E_{s+1}$ (for $s\geqslant1$) is a filtered isomorphism for the recurrent filtration.
+}
+
+  On $E_1(\Dec(K))$, $F_r=F_d$ (\ref{hodge-theory-ii-1.3.10}), and we already know (\ref{hodge-theory-ii-1.3.14}) that $u'$ is a filtered isomorphism
+  $$
+    u'\colon (E_1(\Dec(K)),F_d)
+    \simto (E_2(K),F_d).
+  }
+}
+
+  On $E_2(K)$, we thus have $F_d=F_r$.
+  This, combined with the dual result, proves the theorem for $r_0=1$.
+}
+
+  Suppose that $r_0\geqslant2$.
+  Then the arrows $d_1$ of $E_1(K)$ are strictly compatible with the filtrations, and thus so too are the arrows $d_0$ of $E_0(\Dec(K))$ (indeed, $u$ induces an isomorphism of spectral sequences, and we apply the criterion from \ref{hodge-theory-ii-1.3.2}).
+}
+
+  For $0<s<r_0-1$, the isomorphism $(E_s(\Dec(K)),F_r)\cong(E_{s+1}(K),F_r)$ shows that the $d_s$ are strictly compatible with the recurrent filtrations.
+}
+
+  By the induction hypothesis, we thus have $F_d=F_r$ on $E_s(\Dec(K))$ for $s\leqslant s_0$.
+  The isomorphism $(E_s(\Dec(K)),F_d)\cong(E_{s+1}(K),F_d)$ (\ref{hodge-theory-ii-1.3.13}) then shows that $F_d=F_r$ on $E_r(K)$ for $r\leqslant r_0+1$.
+  This, combined with the dual result, proves the theorem.
+}
+}
+}
+
+\subtree[hodge-theory-ii-1.3.17]{
+\taxon{corollary}
+\number{1.3.17}
+
+Under the general hypotheses of \ref{hodge-theory-ii-1.3.16}, suppose that, for all $r$, the differentials $d_r$ are strictly compatible with the recurrent filtrations on the $E_r$.
+Then, on $E_\infty$, the filtrations $F_d$, $F_r$, and $F_{d^*}$ agree, and coincide with the filtration induced by the filtration $F$ of $\HH^\bullet(K)$.
+}
+
+\proof{
+  This follows immediately from \ref{hodge-theory-ii-1.3.16} and (iv) of \ref{hodge-theory-ii-1.3.13}.
+}
+}
+}

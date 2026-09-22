@@ -20,7 +20,7 @@ Up until this point, it has mainly served to formulate conjectures in Hodge theo
 
 ### 1 {#i-section-1}
 
-::: {.rmenv #i-definition-1.1 title="Definition 1.1" latex="{Definition 1.1}"}
+::: {.rmenv #i-definition-1.1 number="1.1" taxon="Definition"}
 A **mixed Hodge structure** $H$ consists of
 
 a. a $\ZZ$-module $H_\ZZ$ of finite type (the "**integer lattice**");
@@ -75,7 +75,7 @@ Let $K$ be a field of finite type over the prime field of characteristic $p$, le
 We will still suppose in what follows that there exists an $A$ as above, with $l$ invertible in $A$, and such that $\rho$ factors through $\pi_1(\Spec(A),\overline{K}) = \Gal(K_\mathrm{nr}/K)$.
 We say that $H$ is **pure of weight $n$** if, for every closed point $x$ of an non-empty open subset of $\Spec(A)$, the eigenvalues $\alpha$ of $F_x$ acting on $H$ are algebraic integers whose complex conjugates are all of absolute value $|\alpha|=q_x^{n/2}$.
 
-::: {.rmenv #i-principle-2.1 title="Principle 2.1" latex="{Principle 2.1}"}
+::: {.rmenv #i-principle-2.1 number="2.1" taxon="Principle"}
 If the Galois module $H$ "comes from algebraic geometry", then there exists a (unique) increasing filtration $W$ on $H_{\QQ_l}=H\otimes_{\ZZ_l}\QQ_l$ (the "**weight filtration**") that is Galois invariant and such that $\Gr_n^W(H)$ is pure of weight $n$.
 :::
 
@@ -145,7 +145,7 @@ If $f\colon H\to H'$ is a Galois-compatible morphism between $\QQ_l$-vector spac
 Similarly, if $f\colon H\to H'$ is a morphism of pure mixed Hodge structures of different weights, then $f$ is torsion.
 A more useful remark is
 
-::: {.itenv #i-scholium title="Scholium" latex="{Scholium}"}
+::: {.itenv #i-scholium taxon="Scholium"}
 Let $H$ and $H'$ be Hodge structures of weight $n$ and $n'$ (respectively), with $n>n'$.
 Let $f\colon H_\QQ\to H'_\QQ$ be a homomorphism such that $f\colon H_\CC\to H'_\CC$ respects $F$.
 Then $f=0$.
@@ -218,7 +218,7 @@ By Grothendieck, we know ([@ST1968, Appendix]) that a subgroup of finite index o
 By replacing $V$ with a finite extension, we arrive to the case where the action of all of $I$ is unipotent (the *semi-stable* case);
 it then factors as the largest pro-$l$-group $I_l$ that is a quotient of $I$, and canonically isomorphic to $\ZZ_l(1)$.
 
-::: {.rmenv #i-principle-8.1 title="Principle 8.1" latex="{Principle 8.1}"}
+::: {.rmenv #i-principle-8.1 number="8.1" taxon="Principle"}
 In the semi-stable case, if the Galois module $H$ "comes from algebraic geometry", then there exists a (unique) increasing filtration $W$ of $H$ (the "*weight filtration*") such that $I$ acts trivially on $\Gr_n^W(H)$, and such that $\Gr_n^W(H)$, as a Galois module under $\Gal(\overline{k}/k)\simeq\Gal(\overline{K}/K)/I$, is pure of weight $n$.
 :::
 
@@ -245,7 +245,7 @@ $$
 \tag{8.4}
 $$
 
-::: {.rmenv #i-subsection-8.5 title="8.5" latex="{8.5}"}
+::: {.rmenv #i-subsection-8.5 number="8.5"}
 If $X$ is a non-singular projective variety over an algebraically closed field $k_0$, then we define
 $$
   L\colon \ZZ_l(-1)\otimes \HH^\bullet(X,\ZZ_l)
@@ -272,7 +272,7 @@ a family of projective varieties parameterised by $D$, with $f$ proper, and $f|D
 
 Keeping the notation of [§8](#i-section-8), and recalling that, in the analogy between Henselian traits and small neighbourhoods of $0$ in the complex line, we have the following dictionary (note that the spectrum of the ring of germs at $0$ of holomorphic functions is a Henselian trait):
 
-::: {.rmenv #i-dictionary-9.1 title="Dictionary 9.1" latex="{Dictionary 9.1}"}
+::: {.rmenv #i-dictionary-9.1 number="9.1" taxon="Dictionary"}
 | | |
 | :- | :- |
 | $D$ | $\Spec(V)$ |

@@ -13,7 +13,9 @@ book:
   repo-subdir: hodge-theory
   repo-actions: ["source", "issue"]
   page-navigation: true
-  # search: false
+  search: true
+  sidebar:
+    style: docked
   chapters:
     - text: "*About this translation*"
       href: index.qmd
@@ -26,44 +28,20 @@ book:
         - hodge-theory-ii/1.1-filtered-objects.qmd
         - hodge-theory-ii/1.2-opposite-filtrations.qmd
         - hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd
-
-# website:
-#   title: "Deligne's Hodge Theory I, II, and III"
-#   page-footer: "[thosgood.net/translations](https://thosgood.net/translations) ![](_quarto/favicon.ico)"
-#   favicon: "_quarto/favicon.ico"
-#   # GitHub links in table of contents #
-#   repo-url: https://github.com/thosgood/translations
-#   repo-subdir: hodge-theory
-#   repo-actions: ["source", "issue"]
-#   page-navigation: true
-#   sidebar:
-#       search: false
-#       collapse-level: 1
-#       contents:
-#         - text: "*About this translation*"
-#           href: index.qmd
-#         - text: "---"
-#         - hodge-theory-i/index.qmd
-#         - text: "---"
-#         - hodge-theory-ii/index.qmd
-#         - section: "1. Filtrations"
-#           contents:
-#           - hodge-theory-ii/1.1-filtered-objects.qmd
-#           - hodge-theory-ii/1.2-opposite-filtrations.qmd
-#         - section: "2. Hodge structures"
-#         - section: "3.Hodge theory of non-singular algebraic varieties"
-#         - section: "4. Applications and supplements"
-#         - text: "---"
-#         - hodge-theory-iii/index.qmd
-#         - section: "5. Cohomological descent"
-#           contents:
-#           - hodge-theory-iii/5.1-simplicial-topological-spaces.qmd
-#           - hodge-theory-iii/5.2-cohomology-of-simplicial-topological-spaces.qmd
-#         - section: "6. Examples of simplicial topological spaces"
-#         - section: "7. Supplements to §1"
-#         - section: "8. Hodge theory of algebraic spaces"
-#         - section: "9. Examples and applications"
-#         - section: "10. Hodge theory in level ≤1"
+    - part: "2. Hodge structures"
+    - part: "3.Hodge theory of non-singular algebraic varieties"
+    - part: "4. Applications and supplements"
+    - text: "---"
+    - hodge-theory-iii/index.qmd
+    - part: "5. Cohomological descent"
+      chapters:
+      - hodge-theory-iii/5.1-simplicial-topological-spaces.qmd
+      - hodge-theory-iii/5.2-cohomology-of-simplicial-topological-spaces.qmd
+    - part: "6. Examples of simplicial topological spaces"
+    - part: "7. Supplements to §1"
+    - part: "8. Hodge theory of algebraic spaces"
+    - part: "9. Examples and applications"
+    - part: "10. Hodge theory in level ≤1"
 
 format:
   # latex:
@@ -77,10 +55,12 @@ format:
       dark: [darkly, _quarto/custom.scss]
     css:
       - _quarto/CrimsonPro/fonts.css
-      - _quarto/environments.css
     callout-appearance: simple
     anchor-sections: false
-    # Page structure #
+    classoption: fleqn
+    # Page layout and structure #
+    grid:
+      sidebar-width: 350px
     toc: false
     number-sections: false
     # Rendering and assets/resources #
@@ -95,12 +75,3 @@ format:
 filters:
   - _quarto/callouts.lua
   - _quarto/tikz.lua
-
-# # Crossrefs #
-# crossref:
-#   custom:
-#     - kind: float
-#       reference-prefix: ""
-#       key: env
-#       caption-location: top
-#       latex-env: env
