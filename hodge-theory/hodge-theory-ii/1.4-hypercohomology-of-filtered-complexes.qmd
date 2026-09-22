@@ -4,4 +4,361 @@ title: 1.4 Hypercohomology of filtered complexes
 
 {{< include ../macros.qmd >}}
 
+In this section, we recall some standard constructions in hypercohomology.
+We do not use the language of derived categories, which would be more natural here.
 
+*Throughout this entire section, by "complex" we mean "bounded-below complex".*
+
+::: {.rmenv #env-ii-1.4.1 number="1.4.1"}
+Let $T$ be a left-exact functor from an abelian category $\mathscr{A}$ to an abelian category $\mathscr{B}$.
+Suppose that every object of $\mathscr{A}$ injects into an injective object;
+the derived functors $\Rd^iT\colon\mathscr{A}\to\mathscr{B}$ are then defined.
+An object $A$ of $\mathscr{A}$ is said to be **acyclic** for $T$ if $\Rd^iT(A)=0$ for $i>0$.
+:::
+
+::: {.rmenv #env-ii-1.4.2 number="1.4.2"}
+Let $(A,F)$ be a filtered object with finite filtration, and $TF$ the filtration of $TA$ by its sub-objects $TF^p(A)$ (these are sub-objects since $T$ is left exact).
+If $\Gr_F(A)$ is $T$-acyclic, then the $F^p(A)$ are $T$-acyclic as successive extensions of $T$-acyclic objects.
+The image under $T$ of the sequence
+$$
+  0
+  \to F^{p+1}(A)
+  \to F^p(A)
+  \to \Gr^p(A)
+  \to 0
+$$
+\oldpage{20}
+is thus exact, and
+$$
+  \Gr_{FT}TA \simto T\Gr_FA.
+\tag{1.4.2.1}
+$$
+:::
+
+::: {.rmenv #env-ii-1.4.3 number="1.4.3"}
+Let $A$ be an object endowed with finite filtrations $F$ and $W$ such that $\Gr_F\Gr_W A$ are $T$-acyclic.
+The objects $\Gr_FA$ and $\Gr_WA$ are then $T$-acyclic, as well as the $F^q(A)\cap W^p(A)$.
+The sequences
+$$
+  0
+  \to T(F^q\cap W^{p+1})
+  \to T(F^q\cap W^p)
+  \to T((F^q\cap W^p)/(F^q\cap W^{p+1}))
+  \to 0
+$$
+are thus exact, and $T(F^q(\Gr_W^p(A)))$ is the image in $T(\Gr_W^p(A))$ of $T(F^p\cap W^q)$.
+The diagram
+$$
+  \begin{CD}
+    T(F^q\cap W^p) @>>> T(F^q\Gr_W^pA) @>>> T\Gr_W^pA
+  \\@V{\cong}VV @. @VV{\cong}V
+  \\TF^q\cap TW^p @= TF^q\cap TW^p @>>> \Gr_{TW}^pTA
+  \end{CD}
+$$
+then shows that the isomorphism in (1.4.2.1) relative to $W$ sends the filtration $\Gr_{TW}(TF)$ to the filtration $T(\Gr_W(F))$.
+:::
+
+::: {.rmenv #env-ii-1.4.4 number="1.4.4"}
+Let $K$ be a complex of objects of $\mathscr{A}$.
+The **hypercohomology objects** $\Rd^iT(K)$ are calculated as follows:
+
+a. We choose a quasi-isomorphism $i\colon K\to K$ such that the components of $K'$ are acyclic for $T$.
+    For example, we can take $K'$ to be the simple complex associated to an injective Cartan–Eilenberg resolution of $K$.
+b. We set
+    $$
+      \Rd^iT(K)
+      = \HH^i(T(K')).
+    $$
+
+We can show that $\Rd^iT(K)$ does not depend on the choice of $K'$, but depends functorially on $K$, and that a quasi-isomorphism $f\colon K_1\to K_2$ induces *isomorphisms*
+$$
+  \Rd^iT(f)\colon
+  \Rd^iT(K_1)
+  \to \Rd^iT(K_2).
+$$
+:::
+
+::: {.rmenv #env-ii-1.4.5 number="1.4.5"}
+Let $F$ be a biregular filtration of $K$.
+A \em{$T$-acyclic filtered resolution} of $K$ is a filtered quasi-isomorphism $i\colon K\to K'$ from $K$ to a filtered biregular complex such that the $\Gr^p({K'}^n)$ are acyclic for $T$.
+If $K'$ is such a resolution, then the ${K'}^n$ are acyclic for $T$, and the filtered complex (cf. [(1.4.2)](#ii-1.4.2)) $T(K')$ defines a spectral sequence
+$$
+  E_1^{pq}
+  = \Rd^{p+q}T(\Gr^p(K))
+  \To \Rd^{p+q}T(K).
+$$
+This is independent of the choice of $K'$.
+We call this the **hypercohomology spectral sequence of the filtered complex $K$**.
+It depends functorially on $K$, and a filtered quasi-isomorphism induces an isomorphism of spectral sequences.
+
+\oldpage{21}
+The differentials $d_1$ of this spectral sequence are the connection morphisms defined by the short exact sequences
+$$
+  0
+  \to \Gr^{p+1}K
+  \to F^pK/F^{p+2}K
+  \to \Gr^pK
+  \to 0.
+$$
+:::
+
+::: {.rmenv #env-ii-1.4.6 number="1.4.6"}
+Let $K$ be a complex.
+We denote by $\tau_{\leqslant p}(K)$ the following subcomplex:
+$$
+  \tau_{\leqslant p}(K)^n
+  = \begin{cases}
+    K^n
+    &\text{for }n<p
+  \\\Ker(d)
+    &\text{for }n=p
+  \\0
+    &\text{for }n>p.
+  \end{cases}
+$$
+
+The **filtration**, said to be **canonical**, of $K$ by the $\tau_{\leqslant p}(K)$ is induced by shifting the trivial filtration $G$ for which $G^0(K)=K$ and $G^1(K)=0$.
+We have, for the canonical filtration,
+$$
+  \begin{aligned}
+    E_1^{pq} = 0
+    &\qquad\text{if }p+q\neq-p
+  \\\\H^{-p}
+    &\qquad\text{if }p+q=-p.
+  \end{aligned}
+$$
+A quasi-isomorphism $f\colon K\to K'$ is automatically a filtered quasi-isomorphism for the canonical filtrations.
+:::
+
+::: {.rmenv #env-ii-1.4.7 number="1.4.7"}
+The subcomplexes $\sigma_{\geqslant p}(K)$ of $K$
+$$
+  \sigma_{\geqslant p}(K)^n
+  = \begin{cases}
+    0
+    &\text{if }n<p
+  \\K^n
+    &\text{if }n\geqslant p
+  \end{cases}
+$$
+define a biregular filtration, called the **stupid filtration** of $K$.
+
+The hypercohomology spectral sequences attached to the stupid or canonical filtrations of $K$ are the two **hypercohomology spectral sequences** of $K$.
+:::
+
+::: {.rmenv #env-ii-1.4.8 number="1.4.8" taxon="Example"}
+Let $f\colon X\to Y$ be a continuous map between topological spaces, and let $\mathscr{F}$ be an abelian sheaf on $X$.
+Let $\mathscr{F}^\bullet$ be a resolution of $\mathscr{F}$ by $f_*$-acyclic sheaves.
+We have $\Rd^i f_*\mathscr{F}\simeq\sHH^i(f_*\mathscr{F}^\bullet)$.
+We take the functor $T$ to be the functor $\Gamma(Y,-)$.
+The hypercohomology spectral sequence of the complex $f_*\mathscr{F}^\bullet$ endowed with its canonical filtration [(1.4.6)](#ii-1.4.6)
+$$
+  E_1^{pq}
+  = \HH^{2p+q}(Y,\Rd^{-p}f_*\mathscr{F})
+  \To \HH^{p+q}(X,\mathscr{F})
+$$
+is exactly, up to the renumbering $E_r^{pq}\mapsto E_{r+1}^{2p+q,-p}$, the **Leray spectral sequence** for $f$ and $\mathscr{F}$.
+:::
+
+::: {.rmenv #env-ii-1.4.9 number="1.4.9"}
+Let $(K,W,F)$ be a biregular bifiltered complex.
+To this complex, we associate:
+
+a. A spectral sequence
+    $$
+      {}_W E_1^{p,n-p}
+      = \HH^n(\Gr_W^p(K)) \To \HH^n(K)
+    $$
+    with differentials ${}_W d_1$ being the connecting morphisms induced by the short exact sequences
+    $$
+      0
+      \to \Gr_W^{p+1}(K)
+      \to W^p(K)/W^{p+2}(K)
+      \to \Gr_W^p(K)
+      \to 0;
+    $$
+b. An analogous spectral sequence for the filtration $F$;
+    \oldpage{22}
+c. Exact squares
+  ```tikz
+  \newcommand{\Gr}{\operatorname{Gr}}
+  \begin{tikzcd}
+    & 0 \dar
+    & 0 \dar
+    & 0 \dar
+  \\0 \rar
+    & \Gr_F^{p+1}\Gr_W^{q+1}K \rar \dar
+    & F^p/F^{p+2}(\Gr_W^{q+1}K) \rar \dar
+    & \Gr_F^p\Gr_W^{q+1}K \rar \dar
+    & 0
+  \\0 \rar
+    & \Gr_F^{p+1}(W^q/W^{q+2}(K)) \rar \dar
+    & F^p/F^{p+2}(W^q/W^{q+2}(K)) \rar \dar
+    & \Gr_F^p(W^q/W^{q+2}(K)) \rar \dar
+    & 0
+  \\0 \rar
+    & \Gr_F^{p+1}\Gr_W^q K \rar \dar
+    & F^p/F^{p+2}\Gr_W^q K \rar \dar
+    & \Gr_F^p\Gr_W^q K \rar \dar
+    & 0
+  \\& 0
+    & 0
+    & 0
+  \end{tikzcd}
+  ```
+
+The exterior rows and columns of this square define connection morphisms
+$$
+  \begin{aligned}
+    {}_{F,W}d_1\colon \HH^n\Gr_F^p\Gr_W^q K
+    &\to \HH^{n+1}\Gr_F^{p+1}\Gr_W^q K
+  \\{}_{W,F}d_1\colon \HH^n\Gr_F^p\Gr_W^q K
+    &\to \HH^{n+1}\Gr_F^p\Gr_W^{q+1} K.
+  \end{aligned}
+$$
+These morphisms satisfy
+$$
+  \begin{gathered}
+    {}_{FW}d_1 \circ {}_{WF}d_1 + {}_{WF}d_1 \circ {}_{FW}d_1
+    = 0
+  \\ {}_{FW}d_1^2
+    = 0
+  \\ {}_{WF}d_1^2
+    = 0
+  \end{gathered}
+$$
+
+The morphisms ${}_{FW}d_1$ are the morphisms $d_1$ of the spectral sequences $E^{(q)}$, with the $E_1^{(q)p,n-p}$ term equal to
+$$
+  E_1^{p,q,n-p-q}
+  \coloneqq \HH^n(\Gr_F^p\Gr_W^q K)
+  \To \HH^n(\Gr_W^q K)
+  = {}_WE_1^{q,n-q}
+\tag{1.4.9.1}
+$$
+defined by the filtered complex $\Gr_W^q(K)$.
+This spectral sequence abuts to the filtration induced by $F$ on $\HH^\bullet\Gr_W^q K$.
+Similarly, the ${}_{WF}d_1$ are the $d_1$ of spectral sequences with the same initial terms
+$$
+  E_1^{p,q,n-p-q}
+  \coloneqq \HH^n(\Gr_F^p\Gr_W^q K)
+  \To \HH^n(\Gr_F^p K).
+\tag{1.4.9.1}
+$$
+```tikz
+\newcommand{\HH}{\operatorname{H}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\begin{tikzcd}
+  & \HH^n\Gr_W^q K
+    \ar[Rightarrow,dr,"{}_Wd_1"]
+\\\HH^n\Gr_F^p\Gr_W^q K
+    \ar[Rightarrow,ur,"{}_{F,W}d_1"]
+    \ar[Rightarrow,dr,swap,"{}_{W,F}d_1"]
+  && \HH^n K
+\\& \HH^n\Gr_F^p K
+    \ar[Rightarrow,ur,swap,"{}_Fd_1"]
+\end{tikzcd}
+```
+
+\oldpage{23}
+These constructions are symmetric in $F$ and $W$ via the isomorphism
+$$
+  \Gr_F^p\Gr_W^q
+  \sim \Gr_W^q\Gr_F^p.
+$$
+:::
+
+::: {.rmenv #env-ii-1.4.10 number="1.4.10"}
+We can also interpret the ${}_{W,F}d_1$ are the initial morphisms of a morphism of spectral sequences (1.4.9.2), abutting to ${}_Wd_1$.
+
+Indeed, let $C^q$ be the cone of the morphism
+$$
+  W^q(K)/W^{q+2}(K) \to \Gr_W^q(K).
+$$
+In the diagram
+$$
+  \Sigma\colon \Gr_W^{q+1}(K)[1]
+  \xrightarrow{u} C^q
+  \xleftarrow{i} \Gr_W^q(K)
+$$
+the morphism $u$ is a quasi-isomorphism, and we have
+$$
+  {}_Wd_1
+  = \HH(u)^{-1}\circ\HH(i).
+$$
+
+In fact, $u$ is even a filtered (for $F$) quasi-isomorphism, and the above construction defines a morphism from the spectral sequence defined by $(\Gr_W^q(K),F)$ to that defined by $(\Gr_W^{q+1}(K)[1],F)$, and it abuts to ${}_Wd_1$.
+The initial term of this morphism, induced by $\Gr_F(\Sigma)$ is exactly ${}_{W,F}d_1$.
+:::
+
+::: {.rmenv #env-ii-1.4.11 number="1.4.11"}
+These constructions pass as they are to hypercohomology.
+Let $K$ be a complex endowed with two biregular filtrations $F$ and $W$.
+
+A **bifiltered $T$-acyclic resolution** of $K$ is a bifiltered quasi-isomorphism $i\colon K\to K'$ such that the $\Gr_F^p\Gr_W^n({K'}^m)$ are $T$-acyclic.
+Such a morphism always exists.
+In the particular case where $\mathscr{A}$ is the category of sheaves of $A$-modules on a topological space $X$, and where $T$ is the functor $\Gamma$ from $\mathscr{A}$ to the category of $A$-modules, then an example of a bifiltered $T$-acyclic resolution of $K$ is the simple complex associated to the double complex given by the Godement resolution $\mathscr{C}^\bullet(K)$ of $K$, filtered by the $\mathscr{C}^\bullet(F^p(K))$ and the $\mathscr{C}^\bullet(W^n(K))$.
+Since $\mathscr{C}^\bullet$ is exact, we have
+$$
+  \Gr_F\Gr_W(\mathscr{C}^\bullet(K))
+  \simeq \mathscr{C}^\bullet(\Gr_F\Gr_W(K)).
+$$
+We will not have need here of any other case.
+
+If $K'$ is a bifiltered $T$-acyclic resolution of $K$, then the complex $TK'$ is filtered by the $TF^pK'$ and the $TW^qK'$ ([(1.4.3)](#ii-1.4.3)).
+Furthermore, $\Gr_W^n(K')$ is a $T$-acyclic filtered (for $F$) resolution of $\Gr_F^n(K)$, and $\Gr_F^n\Gr_W^m(K')$ is a $T$-acyclic resolution of $\Gr_F^n\Gr_W^m(K)$, and
+$$
+  \begin{gathered}
+    T\Gr_F K'
+    \approx \Gr_F TK'
+    \qquad\text{as }W\text{-filtered complexes}
+  \\T\Gr_W K'
+    \approx \Gr_W TK'
+    \qquad\text{as }F\text{-filtered complexes}
+  \\T\Gr_F\Gr_W K'
+    \approx \Gr_F\Gr_W TK'.
+  \end{gathered}
+$$
+:::
+
+::: {.itenv #env-ii-1.4.12 number="1.4.12" taxon="Lemma"}
+Under the hypotheses of [(1.4.11)](#ii-1.4.11):
+
+i. The initial terms of the hypercohomology spectral sequences
+    $$
+      {}_WE_1^{q,n-q}
+      = \Rd^nT(\Gr_W^qK)
+      \To \Rd^nT(K)
+    \tag{1}
+    $$
+    $$
+      {}_FE_1^{p,n-p}
+      = \Rd^nT(\Gr_F^pK)
+      \To \Rd^nT(K)
+    \tag{2}
+    $$
+    \oldpage{24}
+    are abutments of the hypercohomology spectral sequences of the filtered complexes $\Gr_W^qK$ and $\Gr_F^pK$, with $E_1$ pages given by
+    $$
+      E_1^{p,q,n-p-q}
+      \coloneqq \Rd^nT(\Gr_F^p\Gr_W^qK)
+      \To {}_WE_1^{q,n-q}
+      \qquad\text{for fixed }q
+    \tag{3}
+    $$
+    $$
+      E_1^{p,q,n-p-q}
+      \coloneqq \Rd^nT(\Gr_F^p\Gr_W^qK)
+      \To {}_FE_1^{p,n-p}
+      \qquad\text{for fixed }p
+    \tag{4}
+    $$
+ii. The filtration of ${}_WE_1^{p,n-p}$, abutting to the spectral sequence $(3)$, is the filtration of ${}_WE_1^{p,n-p}(TK')$ induced by the filtration $F$ of $TK'$.
+iii. For the differentials of the complexes $\Gr_W^n(T(K'))$ to be strictly compatible with the filtration $F$, it is necessary and sufficient that the hypercohomology spectral sequences $(3)$ degenerate on the $E_1$ page.
+iv. The morphisms $d_1$ of the spectral sequence $(4)$ are the initial terms of the degree-1 morphisms of the spectral sequences $(3)$ that abut to the morphisms $d_1$ of the spectral sequence $(1)$.
+:::
+
+::: {.proof}
+Claims (i) and (iv) follow from [(1.4.9)](#ii-1.4.9) and [(1.4.10)](#ii-1.4.10) applied to $TK'$ via the isomorphisms [(1.4.11)](#ii-1.4.11).
+Claim (ii) is then trivial by the definition of the recurrent filtration $F$ (identical to the discrete filtrations by [(1.3.10)](#ii-1.3.10) and (iii) of [(1.3.13)](#ii-1.3.13), and claim (iii) follows from [(1.3.2)](#ii-1.3.2).
+:::

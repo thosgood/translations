@@ -14,8 +14,8 @@ book:
   repo-actions: ["source", "issue"]
   page-navigation: true
   search: true
-  sidebar:
-    style: docked
+  # sidebar:
+  #   style: docked
   chapters:
     - text: "*About this translation*"
       href: index.qmd
@@ -30,6 +30,8 @@ book:
         - hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd
         - hodge-theory-ii/1.4-hypercohomology-of-filtered-complexes.qmd
     - part: "2. Hodge structures"
+      chapters:
+        - hodge-theory-ii/2.1-pure-structures.qmd
     - part: "3.Hodge theory of non-singular algebraic varieties"
     - part: "4. Applications and supplements"
     - text: "---"
