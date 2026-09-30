@@ -72,20 +72,15 @@ $$
 $$
 :::
 
-\subtree[hodge-theory-iii-5.1.2]{
-\number{5.1.2}
-
+::: {.rmenv #env-iii-5.1.2 number="5.1.2"}
 If $X_\bullet\colon(\Delta)^0\to\cat{C}$ is a simplicial object of $\cat{C}$, then we set
 
-\ul{
-  \li{
-    $X_n = X_\bullet(\Delta_n)$
-  - $\delta_i = X_\bullet(\delta_i\colon\Delta_n\to\Delta_{n+1})\colon X_{n+1}\to X_n$
-  - $s_i = X_\bullet(s_i\colon\Delta_{n+1}\to\Delta_n)\colon X_n\to X_{n+1}$.
-  }
-}
+- $X_n = X_\bullet(\Delta_n)$
+- $\delta_i = X_\bullet(\delta_i\colon\Delta_n\to\Delta_{n+1})\colon X_{n+1}\to X_n$
+- $s_i = X_\bullet(s_i\colon\Delta_{n+1}\to\Delta_n)\colon X_n\to X_{n+1}$.
 
-\tikzcd{
+```tikz
+\begin{tikzcd}
   X_\bullet = \Big(\ldots\quad
   X_2
     \ar[r,"\delta_1" description]
@@ -98,274 +93,176 @@ If $X_\bullet\colon(\Delta)^0\to\cat{C}$ is a simplicial object of $\cat{C}$, th
     \ar[l,shift left=3,"s_1" description]
   & X_0\Big)
     \ar[l,"s_0" description]
-}
-}
-}
+\end{tikzcd}
+```
 
-\subtree[hodge-theory-iii-5.1.3]{
-\number{5.1.3}
-
+::: {.rmenv #env-iii-5.1.3 number="5.1.3"}
 Let $S\in\Ob\cat{C}$.
-The \em{constant simplicial object} $S_\bullet$ is the simplicial object for which $S_n=S$ and $\delta_i=s_i=\Id_S$.
-A simplicial (resp. $k$-truncated simplicial) object of $\cat{C}$ \em{augmented over $S$} is a morphism $a\colon X_\bullet\to S_\bullet$ (resp. $a\colon X_\bullet\to\sq_k(S_\bullet)$).
+The **constant simplicial object** $S_\bullet$ is the simplicial object for which $S_n=S$ and $\delta_i=s_i=\Id_S$.
+A simplicial (resp. $k$-truncated simplicial) object of $\cat{C}$ **augmented over $S$** is a morphism $a\colon X_\bullet\to S_\bullet$ (resp. $a\colon X_\bullet\to\sq_k(S_\bullet)$).
 We identify such a simplicial object (resp. $k$-truncated simplicial object) augmented over $S$ with the object $X_\bullet^+$ of $\iHom((\Delta^+)^0,\cat{C})$ (resp. of $\iHom((\Delta^+)_k^0,\cat{C})$) such that $X_\bullet^+(\Delta_{-1})=S$.
 We have that $a_n=X_\bullet^+(\varepsilon\colon\Delta_{-1}\to\Delta_n)$.
 These objects will be denoted by notation of the form $a\colon X_\bullet\to S$.
 The relative coskeletons will be mostly used in this setting, and denoted $\cosq_k^S$ or simply $\cosq_k$.
-}
-}
+:::
 
-\subtree[hodge-theory-iii-5.1.4]{
-\number{5.1.4}
-
+::: {.rmenv #env-iii-5.1.4 number="5.1.4"}
 The coskeleton of the augmented $0$-truncated simplicial object $a_0\colon X\to S$ is the simplicial object augmented over $S$ whose components are the cartesian powers of $X$ in $\cat{C}/S$, i.e.
 $$
   \cosq_0(X\to S)
   = \big( ((X/S)^{\Delta_n})_{n\geqslant0} \to S \big).
 $$
-}
-}
+:::
 
-\subtree[hodge-theory-iii-5.1.5]{
-\number{5.1.5}
-
+::: {.rmenv #env-iii-5.1.5 number="5.1.5"}
 Let $u\colon X\to Y$ be a continuous map between topological spaces, and $F$ a sheaf on $X$ and $G$ a sheaf on $Y$.
 The set $\Hom_u(G,F)$ of \em{$u$-morphisms} from $G$ to $F$ is the set $\Hom(u^*G,F)\cong\Hom(G,u_*F)$.
-}
 
 \oldpage{10}
 The data of a $u$-morphism $f$ from $G$ to $F$ consists of the data of, for each pair of opens $(U\subset X,V\subset Y)$ such that $u(U)\subset V$, a map $f_{UV}\colon G(V)\to F(U)$;
 these maps must satisfy the condition
 
-\subtree[hodge-theory-iii-5.1.5.star]{
-  \taxon{condition}
-  \number{*}
+::: {.rmenv #env-iii-5.1.5-star number="\*" taxon="Condition"}
+For $U'\subset U\subset X$ and $V'\subset V\subset Y$ such that $u(U)\subset V$ and $u(U')\subset V'$, the diagram
+```tikz
+\begin{tikzcd}
+  G(V)
+    \ar[r]
+    \ar[d]
+  & G(V')
+    \ar[d]
+\\F(U)
+    \ar[r]
+  & F(U')
+\end{tikzcd}
+```
+commutes.
+:::
 
-      For $U'\subset U\subset X$ and $V'\subset V\subset Y$ such that $u(U)\subset V$ and $u(U')\subset V'$, the diagram
-    \tikzcd{
-      G(V)
-        \ar[r]
-        \ar[d]
-      & G(V')
-        \ar[d]
-    \\F(U)
-        \ar[r]
-      & F(U')
-    }
-    commutes.
-  }
-}
-}
-}
-
-\subtree[hodge-theory-iii-5.1.6]{
-\number{5.1.6}
-
-A \em{simplicial topological space} is a simplicial object of the category whose objects are topological spaces and whose morphisms are continuous maps.
+::: {.rmenv #env-iii-5.1.6 number="5.1.6"}
+A **simplicial topological space** is a simplicial object of the category whose objects are topological spaces and whose morphisms are continuous maps.
 }
 
-A \em{sheaf} $F^\bullet$ on a simplicial topological space $X_\bullet$ consists of
+A **sheaf** $F^\bullet$ on a simplicial topological space $X_\bullet$ consists of
 
-\olc{
-  \lic{(a)}{
-    a family of sheaves $F^n$ on the $X_n$;
-  }
-  \lic{(b)}{
-    for all $f\colon\Delta_n\to\Delta_m$, an $X_\bullet(f)$-morphism $F^\bullet(f)$ from $F^n$ to $F^m$.
-  }
-}
-}
+a. a family of sheaves $F^n$ on the $X_n$;
+b. for all $f\colon\Delta_n\to\Delta_m$, an $X_\bullet(f)$-morphism $F^\bullet(f)$ from $F^n$ to $F^m$.
 
 We further require that $F^\bullet(f\circ g)=F^\bullet(f)\circ F^\bullet(g)$.
-}
 
 A morphism $u$ from $F^\bullet$ to $G^\bullet$ is a family of morphisms $u^n\colon F^n\to G^n$ such that, for all $f\in\Hom_{(\Delta)}(\Delta_n,\Delta_m)$, we have that $u^m\circ F^\bullet(f)=G^\bullet(f)\circ u^n$.
-}
-}
+:::
 
-\subtree[hodge-theory-iii-5.1.7]{
-\number{5.1.7}
-
+::: {.rmenv #env-iii-5.1.7 number="5.1.7"}
 For an open $U$ of $X_n$, let $F^\bullet(U)=F^n(U)$.
 For $f\colon\Delta_n\to\Delta_m$, $U\subset X_n$, and $V\subset X_m$ such that $X_\bullet(f)(V)\subset(U)$, let $F^\bullet(f,V,U)\colon F^\bullet(U)\to F^\bullet(V)$ be the map induced by $F^\bullet(f)$.
-We immediately see that the system of sets $F^\bullet(U)$ (indexed by $n\geqslant0$ and $U\subset X_n$) and of maps $F^\bullet(f,V,U)$ uniquely determines $F^\bullet$ (cf. \ref{hodge-theory-iii-5.1.5}).
+We immediately see that the system of sets $F^\bullet(U)$ (indexed by $n\geqslant0$ and $U\subset X_n$) and of maps $F^\bullet(f,V,U)$ uniquely determines $F^\bullet$ (cf. [(5.1.5)](#iii-5.1.5)).
 For such a system to come from a sheaf on $X_\bullet$, it is necessary and sufficient that:
 
-\olc{
-  \lic{(a)}{
-    $F^\bullet(fg,U,W)=F^\bullet(f,U,V)F^\bullet(g,V,W)$ whenever this makes sense;
-  }
-  \lic{(b)}{
-    for any $n$, the $F^\bullet(U)$ for $U\subset X_n$ form a sheaf on $X_n$.
-  }
-}
-}
-}
+a. $F^\bullet(fg,U,W)=F^\bullet(f,U,V)F^\bullet(g,V,W)$ whenever this makes sense;
+b. for any $n$, the $F^\bullet(U)$ for $U\subset X_n$ form a sheaf on $X_n$.
+:::
 
-\subtree[hodge-theory-iii-5.1.8]{
-\number{5.1.8}
-
+::: {.rmenv #env-iii-5.1.8 number="5.1.8"}
 This shows that sheaves on $X_\bullet$ can be interpreted as sheaves on a suitable site, and, in particular, form a topos $(X_\bullet)^\sim$.
 We freely use, for sheaves on $X_\bullet$, the modern terminology for sheaves on a site.
 With this in mind, a sheaf $F^\bullet$ of abelian groups (resp. of rings, ...) is a system of sheaves $F^n$ of abelian groups (resp. of rings, ...) on the $X_n$ along with the morphisms $F^\bullet(f)$.
-}
-}
+:::
 
-\subtree[hodge-theory-iii-5.1.9]{
-\taxon{examples}
-\number{5.1.9}
+::: {.rmenv #env-iii-5.1.9 number="5.1.9" taxon="Examples"}
+—
 
-\olc{
-\lic{(I)}{
-  Let $X_\bullet$ be a simplicial analytic space.
-  The structure sheaves $\OO_{X_n}$ form a sheaf of rings on $X_\bullet$.
-}
+i. Let $X_\bullet$ be a simplicial analytic space.
+    The structure sheaves $\OO_{X_n}$ form a sheaf of rings on $X_\bullet$.
 
-\lic{(II)}{
-  Let $X_\bullet$ be a simplicial analytic space augmented over $S$.
-  The sheaves $\Omega_{X_n/S}^1$ form a sheaf of $\OO$-modules on $X_\bullet$.
-  Its $i$-th exterior power is the sheaf of $\OO$-modules $(\Omega_{X_n/S}^i)_{n\geqslant0}$ denoted $\Omega_{X_\bullet{/}S}^i$.
-  \oldpage{11}
-  The de Rham complexes $(\Omega_{X_n/S}^\bullet)_{n\geqslant0}$ form a complex of sheaves on $X_\bullet$.
-}
+ii. Let $X_\bullet$ be a simplicial analytic space augmented over $S$.
+    The sheaves $\Omega_{X_n/S}^1$ form a sheaf of $\OO$-modules on $X_\bullet$.
+    Its $i$-th exterior power is the sheaf of $\OO$-modules $(\Omega_{X_n/S}^i)_{n\geqslant0}$ denoted $\Omega_{X_\bullet{/}S}^i$.
+    \oldpage{11}
+    The de Rham complexes $(\Omega_{X_n/S}^\bullet)_{n\geqslant0}$ form a complex of sheaves on $X_\bullet$.
 
-\lic{(III)}{
-  Let $F^\bullet$ be a sheaf of abelian groups on $X_\bullet$.
-  The canonical flasque Godement resolutions $\mathscr{C}^\bullet(F^n)$ form a complex of sheaves on $X_\bullet$ that is a resolution of $F^\bullet$.
-}
+iii. Let $F^\bullet$ be a sheaf of abelian groups on $X_\bullet$.
+    The canonical flasque Godement resolutions $\mathscr{C}^\bullet(F^n)$ form a complex of sheaves on $X_\bullet$ that is a resolution of $F^\bullet$.
 
-\lic{(IV)}{
-  Let $S$ be a topological space.
-  Sheaves $F^\bullet$ on the constant simplicial space $S_\bullet$ can be identified with cosimplicial sheaves on $S^\bullet$.
-  In particular, an abelian sheaf $F^\bullet$ on $S_\bullet$ defines a chain complex $(F^n,d=\sum_i(-1)^i\delta_i)$.
-  A complex $K$ of abelian sheaves on $S_\bullet$ defines a double complex $(K^{n,m})$ that we again denote by $K$ (here $m$ is the cosimplicial degree) and whose associated simple complex $\simp{K}$ is
-
-  \subtree[hodge-theory-iii-5.1.9.1]{
-    \taxon{equation}
-    \number{5.1.9.1}
+iv. Let $S$ be a topological space.
+    Sheaves $F^\bullet$ on the constant simplicial space $S_\bullet$ can be identified with cosimplicial sheaves on $S^\bullet$.
+    In particular, an abelian sheaf $F^\bullet$ on $S_\bullet$ defines a chain complex $(F^n,d=\sum_i(-1)^i\delta_i)$.
+    A complex $K$ of abelian sheaves on $S_\bullet$ defines a double complex $(K^{n,m})$ that we again denote by $K$ (here $m$ is the cosimplicial degree) and whose associated simple complex $\simp{K}$ is
     $$
       (\simp{K})^n
       = \bigoplus_{p+q=n} K^{pq}
-    \startverb\tag{5.1.9.1}\stopverb
+    \tag{5.1.9.1}
     $$
-  }
-
-  with differential given by
-
-  \subtree[hodge-theory-iii-5.1.9.2]{
-    \taxon{equation}
-    \number{5.1.9.2}
+    with differential given by
     $$
       \dd(x^{pq})
       = \dd_K(x^{pq}) + (-1)^p\sum_i(-1)^i\delta_i x^{pq}.
-    \startverb\tag{5.1.9.2}\stopverb
+    \tag{5.1.9.2}
     $$
-  }
-
-  We denote by $L$ the second filtration of $\simp{K}$, i.e.
-
-  \subtree[hodge-theory-iii-5.1.9.3]{
-    \taxon{equation}
-    \number{5.1.9.3}
+    We denote by $L$ the second filtration of $\simp{K}$, i.e.
     $$
       L^r(\simp{K})
       = \bigoplus_{q\geqslant r} K^{pq}.
-    \startverb\tag{5.1.9.3}\stopverb
+    \tag{5.1.9.3}
     $$
-  }
-}
-}
-}
+:::
 
-\subtree[hodge-theory-iii-5.1.10]{
-\number{5.1.10}
-
+::: {.rmenv #env-iii-5.1.10 number="5.1.10"}
 Let $u\colon X_\bullet\to Y_\bullet$ be a morphism of simplicial topological spaces, with components $u_n\colon X_n\to Y_n$.
 If $G$ (resp. $F$) is a sheaf on $Y_\bullet$ (resp. on $X_\bullet$), then $(u_n^*G^n)_{n\geqslant0}$ (resp. $({u_n}_*F^n)_{n\geqslant0}$) is a sheaf on $X_\bullet$ (resp. on $Y_\bullet$);
 we denote it by $u^*G$ (resp. by $u_*F$).
 The functors $u^*$ and $u_*$ are adjoint to one another;
 they are the inverse image and direct image morphisms of topos morphism $u\colon(X_\bullet)^\sim\to(Y_\bullet)^\sim$.
-}
-}
+:::
 
-\subtree[hodge-theory-iii-5.1.11]{
-\number{5.1.11}
-
+::: {.rmenv #env-iii-5.1.11 number="5.1.11"}
 Let $a\colon X_\bullet\to S$ be an augmented simplicial topological space.
 If $F$ is a sheaf on $S$, then $a^*F=(a_n^*F)_{n\geqslant0}$ "is" a sheaf on $X_\bullet$.
 The functor $a^*$ has a right adjoint
-
-\subtree[hodge-theory-iii-5.1.11.1]{
-  \taxon{equation}
-  \number{5.1.11.1}
-  $$
-    a_*\colon F^\bullet
-    \mapsto \Ker\big(
-      {a_0}_* F^0
-      \ourrar{\delta_0^*}{\delta_1^*}
-      {a_1}_* F^1
-    \big).
-  \startverb\tag{5.1.11.1}\stopverb
-  $$
-}
-
+$$
+  a_*\colon F^\bullet
+  \mapsto \Ker\big(
+    {a_0}_* F^0
+    \ourrar{\delta_0^*}{\delta_1^*}
+    {a_1}_* F^1
+  \big).
+\tag{5.1.11.1}
+$$
 The functors $a^*$ and $a_*$ are the inverse image and direct image morphisms of topos morphism $a\colon(X_\bullet)^\sim\to(S)^\sim$.
-}
-}
+:::
 
-\subtree[hodge-theory-iii-5.1.12]{
-\number{5.1.12}
-
+::: {.rmenv #env-iii-5.1.12 number="5.1.12"}
 Let $S_\bullet$ be the constant simplicial space associated to $S$, and $a_\bullet\colon X_\bullet\to S_\bullet$ the morphism defined by $a$.
-For an abelian sheaf $F^\bullet$ on $X_\bullet$, we can identify ${a_\bullet}_*F^\bullet$ with a cosimplicial sheaf on $S$ ((IV) of \ref{hodge-theory-iii-5.1.9}).
+For an abelian sheaf $F^\bullet$ on $X_\bullet$, we can identify ${a_\bullet}_*F^\bullet$ with a cosimplicial sheaf on $S$ ((iv) of [(5.1.9)](#iii-5.1.9)).
 For a complex $K$ of abelian sheaves on $X_\bullet$, if $K^{pq}$ is the degree $p$ component of the restriction of $K$ to $X_q$, then the components of the simple complex associated to the double complex defined by ${a_\bullet}_*K$ are
-
-\subtree[hodge-theory-iii-5.1.12.1]{
-  \taxon{equation}
-  \number{5.1.12.1}
-  $$
-    (\simp{a_\bullet}_*K)^n
-    = \bigoplus_{p+q=n} {a_q}_* K^{pq}.
-  \startverb\tag{5.1.12.1}\stopverb
-  $$
-}
+$$
+  (\simp{a_\bullet}_*K)^n
+  = \bigoplus_{p+q=n} {a_q}_* K^{pq}.
+\tag{5.1.12.1}
+$$
 
 \oldpage{12}
-The spectral sequence defined by the filtration $L$ (\ref{hodge-theory-iii-5.1.9.3}) of $\simp{a_\bullet}_*K$ can be written as
+The spectral sequence defined by the filtration $L$ [(5.1.9.3)](#ii-5.1.9) of $\simp{a_\bullet}_*K$ can be written as
+$$
+  E_1^{pq}
+  = \HH^q({a_p}_*(K|X^p))
+  \To \HH^{p+q}(\simp{a_\bullet}_*K).
+\tag{5.1.12.2}
+$$
+:::
 
-\subtree[hodge-theory-iii-5.1.12.2]{
-  \taxon{equation}
-  \number{5.1.12.2}
-  $$
-    E_1^{pq}
-    = \HH^q({a_p}_*(K|X^p))
-    \To \HH^{p+q}(\simp{a_\bullet}_*K).
-  \startverb\tag{5.1.12.2}\stopverb
-  $$
-}
-}
-}
-
-\subtree[hodge-theory-iii-5.1.13]{
-\number{5.1.13}
-
+::: {.rmenv #env-iii-5.1.13 number="5.1.13"}
 Let $S=P^t$ (the topological space consisting of a single point).
 We see that, for a sheaf $F^\bullet$ on $X_\bullet$, the $\Gamma(X_n,F^n)$ are the components of a cosimplicial set $\Gamma^\bullet(X_\bullet,F^\bullet)$.
 The functor $\Gamma$ (of global sections) is the functor
-
-\subtree[hodge-theory-iii-5.1.13.1]{
-  \taxon{equation}
-  \number{5.1.13.1}
-  $$
-    \Gamma\colon F^\bullet
-    \mapsto \Ker\big(
-      \Gamma(X_0,F^0)
-      \rightrightarrows \Gamma(X_1,F^1)
-    \big).
-  \startverb\tag{5.1.13.1}\stopverb
-  $$
-}
+$$
+  \Gamma\colon F^\bullet
+  \mapsto \Ker\big(
+    \Gamma(X_0,F^0)
+    \rightrightarrows \Gamma(X_1,F^1)
+  \big).
+\tag{5.1.13.1}
+$$
 
 If $K$ is a complex of abelian sheaves, we denote by $\Gamma^\bullet(X_\bullet,K)$ the chain complex whose components are the cosimplicial abelian groups $\Gamma^\bullet(X_\bullet,K^n)$, and by $\simp \Gamma^\bullet(X_\bullet,K)$ the associated simple complex.
-}
-}
+:::

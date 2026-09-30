@@ -54,7 +54,7 @@ book:
     - part: "5. Cohomological descent"
       chapters:
         - hodge-theory-iii/5.1-simplicial-topological-spaces.qmd
-    #     - hodge-theory-iii/5.2-cohomology-of-simplicial-topological-spaces.qmd
+        - hodge-theory-iii/5.2-cohomology-of-simplicial-topological-spaces.qmd
     #     - hodge-theory-iii/5.3-cohomological-descent.qmd
     # - part: "6. Examples of simplicial topological spaces"
     #   chapters:
@@ -109,6 +109,13 @@ format:
     link-citations: true
     reference-section-title: "Bibliography"
     bibliography: hodge-theory.bib
+  # pdf:
+  #   template: _quarto/template.tex
+  #   pdf-engine: latexmk
+  #   cite-method: biblatex
+  #   biblatexoptions: [backend=biber]
+  #   date-format: "YYYY"
+  #   keep-tex: true
 
 # Filters #
 filters:
