@@ -25,6 +25,7 @@ book:
       href: hodge-theory-i/index.qmd
     - text: "**Hodge Theory II**"
       href: hodge-theory-ii/index.qmd
+    - hodge-theory-ii/introduction.qmd
     - part: "1. Filtrations"
       chapters:
         - hodge-theory-ii/1.1-filtered-objects.qmd
@@ -46,11 +47,13 @@ book:
         - hodge-theory-ii/4.2-the-semi-simplicity-theorem.qmd
         - hodge-theory-ii/4.3-supplement-to-D1968.qmd
         - hodge-theory-ii/4.4-homomorphisms-of-abelian-schemes.qmd
-    # - text: "**Hodge Theory III**"
-    #   href: hodge-theory-iii/index.qmd
-    # - part: "5. Cohomological descent"
-    #   chapters:
-    #     - hodge-theory-iii/5.1-simplicial-topological-spaces.qmd
+    - text: "**Hodge Theory III**"
+      href: hodge-theory-iii/index.qmd
+    - hodge-theory-iii/introduction.qmd
+    - hodge-theory-iii/terminology-and-notation.qmd
+    - part: "5. Cohomological descent"
+      chapters:
+        - hodge-theory-iii/5.1-simplicial-topological-spaces.qmd
     #     - hodge-theory-iii/5.2-cohomology-of-simplicial-topological-spaces.qmd
     #     - hodge-theory-iii/5.3-cohomological-descent.qmd
     # - part: "6. Examples of simplicial topological spaces"
@@ -102,7 +105,6 @@ format:
     number-sections: false
     # Rendering and assets/resources #
     html-math-method: katex
-    embed-resources: true
     # Citations #
     link-citations: true
     reference-section-title: "Bibliography"
