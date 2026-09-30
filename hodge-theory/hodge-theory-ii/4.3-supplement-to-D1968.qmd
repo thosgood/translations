@@ -1,0 +1,82 @@
+---
+title: 4.3 Supplement to [D1968]
+---
+
+{{< include ../macros.qmd >}}
+
+In the footnote to (5.4) in [@D1968], I claim without proof that:
+
+::: {.itenv #env-ii-4.3.1 number="4.3.1" taxon="Proposition"}
+Let $X$ be a smooth proper scheme over $\CC$.
+If a $C^\infty$ form $\alpha$ on $X$ satisfies $\dd'\alpha=\dd''\alpha=0$ and is cohomologous to zero, then there exists $\beta$ such that $\alpha=\dd'\dd''\beta$.
+:::
+
+::: {.proof}
+Here is the proof.
+\oldpage{50}
+As in *loc. cit.*, we can reduce to the case where $\alpha$ is bihomogeneous, with bidegree $(p,q)$.
+Since the spectral sequence of the double complex $\HH^0(X,\Omega^{pq})$ degenerates, the exterior differential $d$ is strictly compatible with the filtration by the first degree $p$ [(1.3.2)](#ii-1.3.2).
+If $a\sim0$, then there thus exists a form $\beta_1$ such that $\dd\beta_1=\alpha$ and such that the components $\beta_1^{p'q'}$ of $\beta_1$ are zero for $p'<p$.
+
+By complex conjugation, there similarly exists $\beta_2$ such that $\dd\beta_2=\alpha$ and such that the components $\beta_2^{p'q'}$ of $\beta_2$ are zero for $q'<q$.
+We have $\dd(\beta_1-\beta_2)=0$.
+
+Let $\gamma$ be a form satisfying $\dd'\gamma=\dd''\gamma=0$ in the cohomology class of $\beta_1-\beta_2$ (*loc. cit.*).
+Let $\gamma_1$ (resp. $\gamma_2$) be the sum of the components of $\gamma$ of degree $(p',q')$ for $p'\geqslant p$ (resp. $q'\geqslant q$).
+If we set $\beta'_1=\beta_1-\gamma_1$ and $\beta'_2=\beta_2+\gamma_2$, then we still have that $\dd\beta'_1=\dd\beta'_2=\alpha$;
+furthermore, $\beta'_1-\beta'_2=\beta_1-\beta_2-\gamma$ is cohomologous to zero: there exists $\delta$ such that
+$$
+  \dd\delta
+  = \beta'_1 - \beta'_2.
+$$
+Let $\delta_1$ (resp. $\delta_2$) be the sum of the components of $\delta$ of degree $(p',q')$ for $p'<p-1$ (resp. $q'>q-1$);
+let $\beta$ be the component of $\delta$ of degree $(p-1,q-1)$.
+
+```tikz
+\begin{tikzpicture}[point/.style={circle, fill=black, inner sep=0pt, minimum size=2.5pt}]
+% p- and q-axes
+\draw[->] (0,0) to (2,0) node[label={below:$p$}]{};
+\draw[->] (0,0) to (0,2) node[label={left:$q$}]{};
+% unbounded points
+\node[point, label={below:$\beta$}] at (1.5,1.5) {};
+\node[point, label={right:$(p,q)$}] at (3,2.5) {};
+% delta_1
+\begin{scope}[shift={(2.5,0.5)}, rotate=-45]
+  \node[point, label={[rotate=-45]right:$\delta_1$}] at (0,0) {};
+  \draw (1.5,0.5) arc [start angle=90, end angle=270, x radius=2cm, y radius=0.5cm];
+\end{scope}
+% delta_2
+\begin{scope}[shift={(0.5,2.5)}, rotate=135]
+  \node[point, label={[rotate=-45]left:$\delta_2$}] at (0,0) {};
+  \draw (1.5,0.5) arc [start angle=90, end angle=270, x radius=2cm, y radius=0.5cm];
+\end{scope}
+% beta_1, gamma_1, beta'_1
+\begin{scope}[shift={(4,1)}, rotate=-45]
+  \node[point, label={[rotate=-45]right:$\beta_1,\gamma_1,\beta'_1$}] at (0,0) {};
+  \node[point] at (1.75,0) {};
+  \draw (1.5,0.5) arc [start angle=90, end angle=270, x radius=2cm, y radius=0.5cm];
+\end{scope}
+% beta_2, gamma_2, beta'_2
+\begin{scope}[shift={(2,3)}, rotate=135]
+  \node[point, label={[rotate=-45]left:$\beta_2,\gamma_2,\beta'_2$}] at (0,0) {};
+  \node[point] at (01.75,0) {};
+  \draw (1.5,0.5) arc [start angle=90, end angle=270, x radius=2cm, y radius=0.5cm];
+\end{scope}
+\end{tikzpicture}
+```
+
+We have that
+$$
+  \beta'_2
+  =\dd\delta_2 + \dd''\beta
+$$
+and
+$$
+  \begin{aligned}
+    \alpha
+    = \dd\beta'_2
+    &= \dd\dd\delta_2 + \dd\dd''\beta
+  \\&= \dd'\dd''\beta.
+  \end{aligned}
+$$
+:::

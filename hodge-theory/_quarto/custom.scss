@@ -1,0 +1,153 @@
+/*-- scss:functions --*/
+
+
+/*-- scss:defaults --*/
+$font-family-base: 'Crimson Pro';
+$font-size-root: 1.3rem;
+$h1-font-size: 1.4rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1rem;
+$link-color: #398683;
+
+
+/*-- scss:rules --*/
+
+// General typography
+
+body {
+  font-variant-ligatures: normal;
+
+  .quarto-light {
+    background-color: rgba(57, 134, 131, 0.05) !important;
+  }
+}
+
+h1 {
+  border-bottom: 1px solid hsl(0,0%,87%);
+  padding-bottom: .5rem;
+}
+
+h2, h3 {
+  border-bottom: none;
+}
+
+h1, h2, h3,
+strong {
+  font-weight: 575;
+}
+
+
+// All things in the actual translation body
+
+main.content{
+  a {
+    text-decoration: none;
+  }
+
+  // KaTeX
+
+  .katex {
+    font-size: 0.95em !important;
+  }
+
+  .katex-display {
+    margin: 0.75em 0 0.5em 2em;
+    .katex {
+      text-align: left
+    }
+  }
+
+
+  // Rendered TikZ images
+
+  .tikz {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    img {
+      zoom: 170%;
+    }
+  }
+
+
+  // Callouts
+
+  .callout.original {
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+
+  // Custom mathematical environments
+
+  .itenv {
+    font-style: italic;
+    em {
+      font-style: normal !important;
+    }
+  }
+
+  .rmenv {
+    font-style: normal;
+  }
+
+  .proof {}
+
+  .itenv,
+  .rmenv {
+    & > p:first-of-type {
+      margin-top: 0 !important;
+    }
+    & > :last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  // Numbers and taxa
+  .itenv::before,
+  .rmenv::before {
+    float: left;
+    padding-right: 0.5em;
+    font-style: normal;
+    font-weight: 575;
+  }
+  .itenv[data-number],
+  .rmenv[data-number] {
+    &::before {
+      content: "("attr(data-number)")";
+    }
+  }
+  .itenv[data-taxon],
+  .rmenv[data-taxon] {
+    &::before {
+      content: attr(data-taxon)".";
+    }
+  }
+  .itenv[data-number][data-taxon],
+  .rmenv[data-number][data-taxon] {
+    &::before {
+      content: attr(data-taxon)" ("attr(data-number)")";
+    }
+  }
+
+  .proof > *:last-child:after {
+    font-style: normal;
+    content: "\25a2";
+    float: right;
+  }
+
+  // Hover behaviour
+  .itenv,
+  .rmenv,
+  .proof {
+    padding: 0.5em;
+  }
+  .itenv:hover,
+  .rmenv:hover,
+  .proof:hover {
+    background-color: rgba(57, 134, 131, 0.05) !important;
+  }
+}

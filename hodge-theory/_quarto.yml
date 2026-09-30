@@ -1,0 +1,114 @@
+project:
+  type: book
+  output-dir: _output
+  preview:
+    port: 4242
+    browser: false
+
+book:
+  title: "Deligne's Hodge Theory I, II, and III"
+  page-footer: "[thosgood.net/translations](https://thosgood.net/translations)"
+  # GitHub links in table of contents #
+  repo-url: https://github.com/thosgood/translations
+  repo-subdir: hodge-theory
+  repo-actions: ["source", "issue"]
+  page-navigation: true
+  search: true
+  sidebar:
+    style: docked
+    collapse-level: 1
+  chapters:
+    - text: "*About this translation*"
+      href: index.qmd
+    - text: "---"
+    - text: "**Hodge Theory I**"
+      href: hodge-theory-i/index.qmd
+    - text: "**Hodge Theory II**"
+      href: hodge-theory-ii/index.qmd
+    - part: "1. Filtrations"
+      chapters:
+        - hodge-theory-ii/1.1-filtered-objects.qmd
+        - hodge-theory-ii/1.2-opposite-filtrations.qmd
+        - hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd
+        - hodge-theory-ii/1.4-hypercohomology-of-filtered-complexes.qmd
+    - part: "2. Hodge structures"
+      chapters:
+        - hodge-theory-ii/2.1-pure-structures.qmd
+        - hodge-theory-ii/2.2-hodge-theory.qmd
+        - hodge-theory-ii/2.3-mixed-structures.qmd
+    - part: "3.Hodge theory of non-singular algebraic varieties"
+      chapters:
+        - hodge-theory-ii/3.1-logarithmic-poles-and-residues.qmd
+        - hodge-theory-ii/3.2-mixed-hodge-theory.qmd
+    - part: "4. Applications and supplements"
+      chapters:
+        - hodge-theory-ii/4.1-the-fixed-set-theorem.qmd
+        - hodge-theory-ii/4.2-the-semi-simplicity-theorem.qmd
+        - hodge-theory-ii/4.3-supplement-to-D1968.qmd
+        - hodge-theory-ii/4.4-homomorphisms-of-abelian-schemes.qmd
+    # - text: "**Hodge Theory III**"
+    #   href: hodge-theory-iii/index.qmd
+    # - part: "5. Cohomological descent"
+    #   chapters:
+    #     - hodge-theory-iii/5.1-simplicial-topological-spaces.qmd
+    #     - hodge-theory-iii/5.2-cohomology-of-simplicial-topological-spaces.qmd
+    #     - hodge-theory-iii/5.3-cohomological-descent.qmd
+    # - part: "6. Examples of simplicial topological spaces"
+    #   chapters:
+    #     - hodge-theory-iii/6.1-classifying-spaces.qmd
+    #     - hodge-theory-iii/6.2-construction-of-hypercovers.qmd
+    #     - hodge-theory-iii/6.3-relative-cohomology.qmd
+    #     - hodge-theory-iii/6.4-multi-simplicial-spaces.qmd
+    # - part: "7. Supplements to §1"
+    #   chapters:
+    #     - hodge-theory-iii/7.1-supplements-to-S1.qmd
+    #     - hodge-theory-iii/7.2-supplements-to-the-two-filtrations-lemma.qmd
+    # - part: "8. Hodge theory of algebraic spaces"
+    #   chapters:
+    #     - hodge-theory-iii/8.1-hodge-complexes.qmd
+    #     - hodge-theory-iii/8.2-separated-algebraic-spaces.qmd
+    #     - hodge-theory-iii/8.3-hodge-theory-of-simplicial-schemes.qmd
+    # - part: "9. Examples and applications"
+    #   chapters:
+    #     - hodge-theory-iii/9.1-cohomology-of-groups-and-of-classifying-spaces.qmd
+    #     - hodge-theory-iii/9.2-hodge-theory-of-smooth-hypersurfaces-following-Griffiths.qmd
+    #     - hodge-theory-iii/9.3-construction-of-complexes-of-first-order-differential-operators.qmd
+    # - part: "10. Hodge theory in level ≤1"
+    #   chapters:
+    #     - hodge-theory-iii/10.1-1-motives.qmd
+    #     - hodge-theory-iii/10.2-1-motives-and-bi-extensions.qmd
+    #     - hodge-theory-iii/10.3-algebraic-interpretation-of-the-mixed-H1-the-case-of-curves.qmd
+    #     - hodge-theory-iii/10.4-translations-of-a-theorem-of-Picard.qmd
+
+format:
+  # latex:
+  #   documentclass: report
+  html:
+    lang: en-GB
+    date-format: "YYYY"
+    # Style #
+    theme:
+      light: [flatly, _quarto/custom.scss]
+      dark: [darkly, _quarto/custom.scss]
+    css:
+      - _quarto/CrimsonPro/fonts.css
+    callout-appearance: simple
+    anchor-sections: false
+    # Page layout and structure #
+    grid:
+      sidebar-width: 350px
+      body-width: 725px
+    toc: false
+    number-sections: false
+    # Rendering and assets/resources #
+    html-math-method: katex
+    embed-resources: true
+    # Citations #
+    link-citations: true
+    reference-section-title: "Bibliography"
+    bibliography: hodge-theory.bib
+
+# Filters #
+filters:
+  - _quarto/callouts.lua
+  - _quarto/tikz.lua

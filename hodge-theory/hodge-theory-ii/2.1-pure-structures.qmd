@@ -1,0 +1,231 @@
+---
+title: 2.1 Pure structures
+---
+
+{{< include ../macros.qmd >}}
+
+
+::: {.rmenv #env-ii-2.1.1 number="2.1.1"}
+In all the following, we denote by $\CC$ an algebraic closure of $\RR$, and we do not suppose to have chosen a root $i$ of the equation $x^2+1=0$.
+The theory will be invariant under complex conjugation (cf. [(2.1.14)](#ii-2.1.14)).
+:::
+
+::: {.rmenv #env-ii-2.1.2 number="2.1.2"}
+We denote by $S$ the real algebraic group $\CC^*$, given by restriction of scalars à la Weil from $\CC$ to $\RR$ of the group $\Gm$:
+$$
+  \begin{aligned}
+    S
+    &= \prod_{\CC/\RR}\Gm
+  \\S(\RR)
+    &= \CC^*.
+  \end{aligned}
+$$
+
+
+The group $S$ is a torus, i.e. it is connected and of multiplicative type.
+It is thus described by the free abelian group of finite type
+$$
+  X(S)
+  = \Hom(S_\CC,\Gm)
+  = \iHom(S,\Gm)(\CC)
+$$
+of its complex characters, endowed with the action of $\Gal(\CC/\RR)=\ZZ/(2)$.
+
+The group $X(S)$ has generators $z$ and $\overline{z}$, which induce (respectively) the identity and complex conjugation:
+$$
+  \CC^*
+  = S(\RR)
+  \to S(\CC)
+  \to \Gm(\CC)
+  = \CC^*.
+$$
+Complex conjugation exchanges $z$ and $\overline{z}$.
+:::
+
+::: {.rmenv #env-ii-2.1.3 number="2.1.3"}
+We have a canonical map
+$$
+  w\colon \Gm\to S
+\tag{2.1.3.1}
+$$
+\oldpage{25}
+that, on the real points, induces the inclusion of $\RR^*$ into $\CC^*$.
+We have
+$$
+  zw
+  = \overline{z}w
+  = \Id.
+\tag{2.1.3.2}
+$$
+
+We also have a map
+$$
+  N\colon S\to\Gm
+\tag{2.1.3.3}
+$$
+that on the real points can be identified with the norm $N_{\CC/\RR}\colon\CC^*\to\RR^*$.
+We have
+$$
+  N = z\overline{z}
+\tag{2.1.3.4}
+$$
+$$
+  N\circ w
+  = (x\mapsto x^2).
+\tag{2.1.3.5}
+$$
+:::
+
+::: {.rmenv #env-ii-2.1.4 number="2.1.4" taxon="Definition"}
+A **real Hodge structure** is a real vector space $V$ of finite dimension endowed with an action of the real algebraic group $S$.
+:::
+
+:::: {.rmenv #env-ii-2.1.5 number="2.1.5"}
+By the general theory of groups of multiplicative type, giving a real Hodge structure on $V$ is equivalent to giving a bigrading $V^{p,q}$ of $V_\CC=\CC\otimes_\RR V$ that satisfies $\overline{V^{pq}}=V^{qp}$.
+The action of $S$ and the bigrading are mutually determined via the condition:
+
+::: {.itenv #env-ii-2.1.5.1 number="2.1.5.1"}
+On $V^{pq}$, $S$ acts by multiplication by $z^p\overline{z}^q$.
+:::
+::::
+
+::: {.rmenv #env-ii-2.1.6 number="2.1.6"}
+Let $(\CC,\times)$ be the multiplicative monoid, and let
+$$
+  \overline{S}
+  = \prod_{\CC/\RR} (\CC,\times).
+$$
+If $V$ is a real vector space, then we can show that it is equivalent to either give an action of $\overline{S}$ on $V$ or to give a bigrading $V^{pq}$ on $V$ such that $\overline{V^{pq}}=V^{qp}$ and $V^{pq}=0$ for $p<0$ or $q<0$.
+:::
+
+::: {.rmenv #env-ii-2.1.7 number="2.1.7"}
+Let $V$ be a real Hodge structure, defined by a representation $\sigma$ of $S$ and a bigrading $V^{pq}$.
+The grading of $V_\CC$ by the $V_\CC^n=\sum_{p+q=n}V^{pq}$ is then defined over $\RR$.
+We call this the **weight grading**.
+On $V^n=V\cap V_\CC^n$, the representation $\sigma w$ of $\Gm$ is multiplication by $x^n$.
+
+We say that $V$ is **of weight $n$** if $V^{pq}=0$ for $p+q\neq n$, i.e. if $\sigma w$ is multiplication by $x^n$.
+:::
+
+::: {.rmenv #env-ii-2.1.8 number="2.1.8"}
+Let $V$ be a real Hodge structure.
+The **Hodge filtration** on $V_\CC$ is defined by
+$$
+  F^p(V_\CC)
+  = \sum_{p'\geqslant p} V^{p'q'}.
+$$
+:::
+
+By [(1.2.6)](1.1-filtered-objects.html), we have:
+
+::: {.itenv #env-ii-2.1.9 number="2.1.9" taxon="Proposition"}
+Let $n$ be an integer.
+Construction [(2.1.8)](#ii-2.1.8) establishes an equivalence of categories between:
+
+a. the category of real Hodge structures of weight $n$;
+b. the category of pairs consisting of a real vector space $V$ of finite dimension and of a filtration $F$ on $V_\CC=\CC\otimes_\RR V$ that is $n$-opposite to its complex conjugate $\overline{F}$.
+:::
+
+::: {.rmenv #env-ii-2.1.10 number="2.1.10" taxon="Definition"}
+A **Hodge structure** $H$ of weight $n$ consists of
+\oldpage{26}
+
+a. a $\ZZ$-module $H_\ZZ$ of finite type (the "**integral lattice**");
+b. a real Hodge structure of weight $n$ on $H_\RR=\RR\otimes_\ZZ H_\ZZ$.
+:::
+
+:::: {.rmenv #env-ii-2.1.11 number="2.1.11"}
+A morphism $f\colon H\to H'$ is a homomorphism $f\colon H_\ZZ\to H'_\ZZ$ such that $f_\RR\colon H_\RR\to H'_\RR$ is compatible with the action of $S$ (i.e. such that $f_\CC$ is compatible with the bigrading, or with the Hodge filtration).
+
+Hodge structures of weight $n$ form an abelian category.
+If $H$ is of weight $n$, and $H'$ is of weight $n'$, then we define a Hodge structure $H\otimes H'$ of weight $n+n'$ by the equations:
+
+a. $(H\otimes H')_\ZZ=H_\ZZ\otimes H'_\ZZ$;
+b. the action of $S$ on $(H\otimes H')_\RR=H_\RR\otimes H'_\RR$ is the tensor product of the actions of $S$ on $H_\RR$ and on $H'_\RR$.
+
+The bigrading (resp. Hodge filtration) of $(H\otimes H')_\CC=H_\CC\otimes H'_\CC$ is the tensor product of the bigradings (resp. Hodge filtrations (cf. [(1.1.12)](1.1-filtered-objects.html))) of $H_\CC$ and of $H'_\CC$.
+
+We define in an analogous manner the Hodge structure $\iHom(H,H')$ (of weight $n'-n$), the Hodge structures $\wedge^p H$ (of weight $pn$), and the dual Hodge structure $H^*$.
+
+The **internal hom** $\iHom$ above and the homomorphism group are related by:
+
+::: {.rmenv #env-ii-2.1.11.1 number="2.1.11.1" taxon="Remark"}
+$\Hom(H,H')$ is the subgroup of
+$$
+  \iHom(H,H')_\ZZ
+  = \Hom_\ZZ(H_\ZZ,H'_\ZZ)
+$$
+consisting of elements of degree $(0,0)$.
+:::
+
+The actions of $S$ on $H_\RR$, $H'_\RR$, and $\iHom(H,H')_\RR=\Hom(H_\RR,H'_\RR)$ are related by
+$$
+  s(f(x))
+  = s(f)(s(x)).
+$$
+This means that if $f$ is of degree $(0,0)$, i.e. invariant under $S$, then it commutes with the action of $S$.
+::::
+
+::: {.rmenv #env-ii-2.1.12 number="2.1.12"}
+If $A$ is a Noetherian subring of $\RR$, then we define a **Hodge $A$-structure of weight $n$** to consist of an $A$-module $H_A$ of finite type along with a real Hodge structure of weight $n$ on $H_\RR=H_A\otimes_A\RR$.
+This definition is mostly used for $A=\QQ$.
+A Hodge $A$-structure consists of an $A$-module $H_A$ of finite type along with a real Hodge structure on $H_\RR=H_A\otimes_A\RR$ such that the weight grading is defined over the field of fractions of $A$.
+:::
+
+::: {.rmenv #env-ii-2.1.13 number="2.1.13" taxon="Definition"}
+The **Tate Hodge structure $\ZZ(1)$** is the Hodge structure of weight $-2$, of rank $1$, of pure bidegree $(-1,-1)$, with integral lattice $2\pi i\ZZ\subset\CC$.
+
+The action of $S$ is thus given by multiplication with the inverse of the norm [(2.1.3.3)](#ii-2.1.3).
+
+For $n\in\ZZ$, we define $\ZZ(n)$ as the $n$-th tensor power of $\ZZ(1)$, so $\ZZ(n)$ is the Hodge structure of weight $-2n$, of rank $1$, of pure bidegree $(-n,-n)$, with integral lattice $(2\pi i)^n\ZZ\subset\CC$.
+The action of $S$ is multiplication by $N(x)^{-n}$.
+:::
+
+::: {.rmenv #env-ii-2.1.14 number="2.1.14"}
+\oldpage{27}
+The choice in $\CC$ of a solution $i$ of the equation $x^2+1=0$ determines, on each complex variety $X$ of pure dimension $n$, an orientation $\or_i(X)$.
+Replace $i$ by $-i$ gives
+$$
+  \or_{-i}(X)
+  = (-1)^n\or_i(X).
+$$
+
+The choice of $i$ also defines an element $C$ of order 4 in $S(\RR)$, given by the image of $i$ under the isomorphism $S(\RR)\simeq\CC^*$.
+
+Finally, it also defines an isomorphism between $\ZZ$ and the integral lattice of $\ZZ(n)$, given by multiplication by $(2\pi i)^n$.
+
+When $i$, an orientation of $X$, $C$, or an identification $\ZZ\sim\ZZ(n)_\ZZ$ appear in an equation, it is implicitly understood that they all follow from a single choice of the same $i$, and that by replacing $i$ with $-i$ we obtain an equivalent equation.
+:::
+
+::: {.rmenv #env-ii-2.1.15 number="2.1.15" taxon="Definition"}
+A **polarisation** of a Hodge structure $H$ of weight $n$ is a homomorphism
+$$
+  (x,y)\colon H\otimes H \to \ZZ(-n)
+$$
+such that the real bilinear form $(2\pi i)^n(x,Cy)$ on $H_\RR$ is symmetric and positive definite.
+:::
+
+::: {.rmenv #env-ii-2.1.16 number="2.1.16"}
+The **real Tate Hodge structure** is the real Hodge structure $\RR(1)$ underlying $\ZZ(1)$.
+We similarly define $\RR(n)$ as underlying $\ZZ(1)$.
+A polarisation of a **real** Hodge structure of weight $n$ is a homomorphism
+$$
+  (x,y)\colon H\otimes H\to \RR(-n)
+$$
+such that the real bilinear form $(2\pi i)^n(x,Cy)$ on $H_\RR$ is symmetric and positive definite.
+A polarisation is entirely defined by the positive definite quadratic form $(2\pi i)^n(x,Cy)$ on $H_\RR$, imposed with only the condition of being invariant under the compact sub-torus of $S$ given by the kernel of $N$.
+
+
+We have
+$$
+  (x,y)
+  = (Cx,Cy)
+  = (y,C^2x)
+  = (-1)^n(y,x).
+$$
+The form $(x,y)$ is thus symmetric or alternating, depending on the parity of $n$.
+:::
+
+::: {.rmenv #env-ii-2.1.17 number="2.1.17"}
+The reader can generalise these definitions to Hodge $A$-structures of weight $n$ ([(2.1.12)](#ii-2.1.12)).
+:::

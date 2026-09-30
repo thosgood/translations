@@ -1,0 +1,244 @@
+\title{Cohomology of simplicial topological spaces}
+\parent{hodge-theory-iii-5}
+\number{5.2}
+
+\import{macros}
+
+\put\transclude/numbered{false}
+
+\subtree[hodge-theory-iii-5.2.1]{
+  \number{5.2.1}
+
+  \p{
+    To each simplicial topological space #{X_\bullet} is associated a usual topological space #{|X_\bullet|}, called its geometric realisation (see below).
+    In the particular case where the #{X_n} are discrete, we recover the usual notion of geometric realisation of a simplicial set.
+  }
+
+  \p{
+    In [[S1968](S1968)], G. Segal defined the cohomology of #{X_\bullet} with values in an abelian group #{A} as #{\HH^\bullet(|X_\bullet|,A)}.
+    Under suitable hypotheses, the filtration of #{|X_\bullet|} by successive skeletons gives a spectral sequence
+
+    \subtree[hodge-theory-iii-5.2.1.1]{
+      \taxon{equation}
+      \number{5.2.1.1}
+      ##{
+        E_1^{pq}
+        = \HH^q(X_p,A)
+        \To \HH^{p+q}(X_\bullet,A).
+      \startverb\tag{5.2.1.1}\stopverb
+      }
+    }
+  }
+
+  \p{
+    One of the interests in using this definition is that it also applies, for example, to the definition of the groups #{K(X_\bullet)}.
+    We will adopt another definition, which is better adapted to sheaf-theoretic techniques.
+  }
+
+  \subtree[hodge-theory-iii-5.2.1-geometric-realisation]{
+    \title{Geometric realisation}
+    
+    \p{
+      For an integer #{n\geqslant0}, we denote by #{|\Delta_n|} the simple in #{\RR^{\Delta_n}} whose vertices are the set of basis vectors.
+      We identify #{\Delta_n} with the set of vertices of #{|\Delta_n|}.
+      Every function #{f\colon\Delta_n\to\Delta_m} extends by linearity to #{|f|\colon|\Delta_n|\to|\Delta_m|}.
+    }
+
+    \p{
+      Let #{X_\bullet} be a simplicial topological space.
+      Let
+      ##{
+        Y=\coprod_{n\geqslant0}(X_n\times|\Delta_n|).
+      }
+      Let #{R} be the finest equivalence relation on #{Y} for which, for any #{f\colon\Delta_n\to\Delta_m} in #{(\Delta)}, any #{x_m\in X_m}, and any #{a\in|\Delta_n|}, we have
+      ##{
+        (x_m,|f|(a))
+        \equiv (f(x_m),a)
+        \mod R.
+      }
+      The \em{geometric realisation} of #{X_\bullet} is by definition
+      ##{
+        |X_\bullet|
+        = Y/R.
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-5.2.2]{
+  \taxon{definition}
+  \number{5.2.2}
+
+  \p{
+    Let #{X_\bullet} be a simplicial topological space.
+    The functors #{\HH^i(X_\bullet,F^\bullet)} of \em{cohomology with coefficients in the abelian sheaf #{F^\bullet} on #{X_\bullet}} are the derived functors of the functor #{\Gamma} (\ref{hodge-theory-iii-5.1.13.1}).
+  }
+}
+
+\p{
+  This definition is equivalent to the following, sometimes more convenient.
+}
+
+\subtree[hodge-theory-iii-5.2.3]{
+  \number{5.2.3}
+
+  \p{
+    \oldpage{13}
+    Let #{F^\bullet} be an abelian sheaf on #{X_\bullet}.
+    We can show (by example, using (III) of \ref{hodge-theory-iii-5.1.9}) that #{F^\bullet} always admits resolutions #{K} on the right such that
+    ##{
+      \HH^r(X_q,K^{p,q})
+      =0
+      \quad\text{for } p,q\geqslant0 \text{ and } r>0.
+    }
+    If #{K} is such a resolution, then we canonically have that
+
+    \subtree[hodge-theory-iii-5.2.3.1]{
+      \taxon{equation}
+      \number{5.2.3.1}
+      ##{
+        \HH^n(X_\bullet,F^\bullet)
+        \simeq \HH^n(\simp\Gamma^\bullet(X_\bullet,K)).
+      \startverb\tag{5.2.3.1}\stopverb
+      }
+    }
+
+    It is easy to show directly that the right-hand side is independent (up to unique isomorphism) of the choice of #{K};
+    for what follows, we are free to \em{define} #{\HH^\bullet(X_\bullet,F^\bullet)} by \ref{hodge-theory-iii-5.2.3.1}.
+    We can further show that the spectral sequence of the complex #{\simp\Gamma^\bullet(X_\bullet,K)}, filtered by #{L} (\ref{hodge-theory-iii-5.1.9.3} and \ref{hodge-theory-iii-5.1.12.2} for #{S=P^t})
+
+    \subtree[hodge-theory-iii-5.2.3.2]{
+      \taxon{equation}
+      \number{5.2.3.2}
+      ##{
+        E_1^{pq}
+        = \HH^q(X_p,F^p)
+        \To \HH^{p+q}(X_\bullet,F^\bullet)
+      \startverb\tag{5.2.3.2}\stopverb
+      }
+    }
+
+    is independent (up to unique isomorphism) of the choice of #{K} (cf. \ref{hodge-theory-iii-5.2.1.1}).
+  }
+}
+
+\subtree[hodge-theory-iii-5.2.4]{
+  \number{5.2.4}
+
+  \p{
+    We will need to make precise the above construction when passing to derived categories, and to give a relative variant of it.
+  }
+
+  \p{
+    Let #{a\colon X_\bullet\to S}, let #{S_\bullet} be the constant simplicial space defined by #{S} with augmentation map #{\varepsilon\colon S_\bullet\to S}, and let #{a_\bullet\colon X_\bullet\to S_\bullet} be the map induced by #{a}.
+    Then
+
+    \subtree[hodge-theory-iii-5.2.4.1]{
+      \taxon{equation}
+      \number{5.2.4.1}
+      ##{
+        a_*
+        = \varepsilon_* {a_\bullet}_*\colon
+        (X_\bullet)^\sim
+        \to (S)^\sim.
+      \startverb\tag{5.2.4.1}\stopverb
+      }
+    }
+  }
+
+  \p{
+    The derived version of this equation is
+
+    \subtree[hodge-theory-iii-5.2.4.2]{
+      \taxon{equation}
+      \number{5.2.4.2}
+      ##{
+        \Rd a_*
+        = \Rd\varepsilon_* \Rd{a_\bullet}_*\colon
+        \DD^+(X_\bullet)
+        \to \DD^+(S)
+        \to (S)^\sim.
+      \startverb\tag{5.2.4.2}\stopverb
+      }
+    }
+
+    where #{\DD^+(X_\bullet)} is the bounded-below derived category of the category of abelian sheaves on #{X_\bullet}.
+    We will calculate #{\Rd{a_\bullet}_*} and #{\Rd\varepsilon_*}.
+  }
+}
+
+\subtree[hodge-theory-iii-5.2.5]{
+  \number{5.2.5}
+
+  \p{
+    Let #{u\colon X_\bullet\to Y_\bullet} be a morphism of simplicial topological spaces.
+    The functor #{\Rd u_*\colon\DD^+(X_\bullet)\to\DD^+(Y_\bullet)} can be calculated "component by component": if #{K} is a complex of abelian sheaves on #{X_\bullet}, then to calculate #{\Rd u_*K} we take a resolution #{K\simto K'} such that the components #{F} of #{K'} satisfy #{\Rd^i {u_p}_*(F^p)=0} for #{i>0}, #{p\geqslant0} (cf. (III) of \ref{hodge-theory-iii-5.1.9});
+    then #{\Rd u_*K\approx u_*K'}.
+  }
+}
+
+\subtree[hodge-theory-iii-5.2.6]{
+  \number{5.2.6}
+
+  \p{
+    The functor #{\simp\colon\operatorname{C}^+(S_\bullet)\to\operatorname{C}^+(S)} sends acyclic complexes to acyclic complexes.
+    It thus trivially derives to
+    ##{
+      \simp\colon \DD^+(S_\bullet)
+      \to \DD^+(S).
+    }
+  }
+
+  \p{
+    If #{F} is an injective sheaf on #{S_\bullet}, then the chain complex #{\simp F} is a resolution of #{\varepsilon_*F}.
+    We thus obtain an isomorphism #{\Rd\varepsilon_*\simto\simp}, and \ref{hodge-theory-iii-5.2.4.2} becomes
+
+    \subtree[hodge-theory-iii-5.2.6.1]{
+      \taxon{equation}
+      \number{5.2.6.1}
+      ##{
+        \Rd a_*
+        = \simp\Rd{a_\bullet}_*
+      \startverb\tag{5.2.6.1}\stopverb
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-5.2.7]{
+  \number{5.2.7}
+
+  \p{
+    \oldpage{14}
+    Combined with \ref{hodge-theory-iii-5.2.5} and specialised to the case where #{S=P^t}, this equation proves \ref{hodge-theory-iii-5.2.3.1}.
+    In concrete terms, this implies that, to calculate #{\Rd a_*K}, we can proceed in two steps:
+
+    \olc{
+      \lic{(a)}{
+        We take a resolution #{K\simto K'} such that the components #{F} of #{K'} satisfy #{\Rd^i {a_p}_*(F^p)=0} for #{i>0}.
+        The complex #{{a_\bullet}_*K'\in\DD^+(S_\bullet)} (the derived category of the category of cosimplicial abelian sheaves on #{S}) can be identified with #{\Rd{a_\bullet}_*K}.
+      }
+
+      \lic{(b)}{
+        #{\Rd a_*K} is the simple complex #{\simp{a_\bullet}_*K'} associated to the double complex #{{a_\bullet}_*K'}.
+      }
+    }
+  }
+
+  \p{
+    The spectral sequence \ref{hodge-theory-iii-5.2.3.2} generalises to a spectral sequence
+
+    \subtree[hodge-theory-iii-5.2.7.1]{
+      \taxon{equation}
+      \number{5.2.7.1}
+      ##{
+        E_1^{pq}
+        = \Rd^q{a_p}_*(K|X_p)
+        \To \Rd^{p+q}a_*K
+      \startverb\tag{5.2.7.1}\stopverb
+      }
+    }
+
+    induced by \ref{hodge-theory-iii-5.1.12.2}.
+  }
+}

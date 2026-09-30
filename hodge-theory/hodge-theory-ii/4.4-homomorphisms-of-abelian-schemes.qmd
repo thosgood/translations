@@ -1,0 +1,461 @@
+---
+title: 4.4 Homomorphisms of abelian schemes
+---
+
+{{< include ../macros.qmd >}}
+
+We intend to show how, in some cases, we can remove from [(4.1.3.2)](#ii-4.1.3) the assumption of algebraicity at a point.
+
+::: {.rmenv #env-ii-4.4.1 number="4.4.1"}
+Let $f\colon X\to S$ be a smooth proper morphism;
+we denote by $\Rd_i f_*\ZZ$ the local system on $S^\an$ whose homology is the fibres of $f$.
+At each point $s\in S$, $(\Rd_i f_*\ZZ)_s\simeq\HH_i(X_s,\ZZ)$ is endowed with a Hodge structure of weight $-i$, dual to the Hodge structure on $\HH^i(X_s,\ZZ)$.
+This structure varies continuously with $s\in S$.
+:::
+
+::: {.rmenv #env-ii-4.4.2 number="4.4.2"}
+If $f\colon X\to S$ is an abelian scheme, then the exponential defines an exact sequence
+$$
+  0
+  \to \Rd_1f_*\ZZ
+  \to \Lie(X)
+  \to X
+  \to 0
+$$
+of sheaves on $S^\an$, and the Hodge filtration is the short exact sequence
+$$
+  0
+  \to \Ker(\alpha)
+  \to \Rd_1f_*\ZZ\otimes\OO
+  \xrightarrow{\alpha} \Lie(X)
+  \to 0.
+$$
+:::
+
+It is known that:
+\oldpage{51}
+
+::: {.rmenv #env-ii-4.4.3 number="4.4.3" taxon="Reminder"}
+Let $S$ be a smooth scheme of finite type over $\CC$.
+The construction of [(4.4.2)](#ii-4.4.2) establishes an equivalence of categories between
+
+a. the category of abelian schemes over $S$; and
+b. the category of polarisable continuous families of Hodge structures $H$ of type $(-1,0)+(0,-1)$ on $S$ such that $H_\ZZ$ is torsion free and the Hodge filtration varies holomorphically on $S$.
+:::
+
+::: {.proof}
+The essential surjectivity of the functor that goes from (a) to (b) follows from Borel (*unpublished*);
+the full faithfulness follows from the fact that, for two abelian schemes $X_1$ and $X_2$ over $S$, the $S$-scheme $\iHom_S(X_1,X_2)$ is unramified over $S$, and thus has the same algebraic and holomorphic sections.
+:::
+
+::: {.rmenv #env-ii-4.4.4 number="4.4.4"}
+Let $Z$ be a commutative field, $H$ a simple central algebra over $Z$, and $*$ a $Z$-linear anti-automorphism of $H$.
+After extension of scalars, we have $H\simeq\End(V)$ for some vector space $V$ over $Z$, and $*$ is then the transposition with respect to a bilinear form $\Phi$ on $V$, unique up to a factor.
+Suppose that $*$ is involutive;
+the forms $\Phi(X,Y)$ and $\Phi(Y,X)$ are then proportional, i.e. $\Phi(X,Y)=\lambda\Phi(Y,X)$ for some $\lambda^2=1$.
+*We set $\varepsilon_*=\lambda$.*
+If $[H:Z]=d^2$, then
+$$
+  \Tr(*\colon H\to H)
+  = \varepsilon_*\cdot d.
+$$
+
+Every $Z$-linear automorphism $C$ of $H$ is interior: $Cx=cxc^{-1}$.
+If $C$ is involutive and commutes with $*$, then the elements $c^2$ and $cc^*$ are central, so that $c^*=\lambda c$ with $\lambda$ central.
+Since $c^{**}=c$, we have that $\lambda^2=1$.
+*We set $\varepsilon_C=\lambda$.*
+
+We easily see that the involution $C\circ *$ satisfies
+$$
+  \varepsilon_{C\circ *}
+  = \varepsilon_C\cdot\varepsilon_*.
+$$
+:::
+
+::: {.rmenv #env-ii-4.4.5 number="4.4.5" taxon="Reminder"}
+Let $X$ be a simple abelian variety over a field $K$, and let $H$ be the field $\End_K(X)\otimes\QQ$.
+Every polarisation of $X$ defines a positive involution $*$ of $H$, i.e.
+$$
+  \Tr(hh^*) > 0
+  \quad\text{if }h\neq0.
+$$
+If $Z_0$ is the $*$-invariant subfield of the centre $Z$ of $H$, then $Z_0$ is completely real and we are in one of the following cases:
+
+a. $Z=Z_0$ and, for every real place $\rho$ of $Z$, $H\otimes_\rho\RR$ is an algebra of matrices over $\RR$, and $\varepsilon_*=1$.
+b. $Z=Z_0$ and, for every real place $\rho$ of $Z$, $H\otimes_\rho\RR$ is an algebra of matrices over $\mathbb{H}$, and $\varepsilon_*=-1$.
+c. $Z$ is a completely imaginary quadratic extension of $Z_0$.
+:::
+
+::: {.rmenv #env-ii-4.4.6 number="4.4.6"}
+Let $f_i\colon X_i\to S$ (for $i=1,2$) be an abelian scheme over a smooth scheme $S$.
+The free abelian group
+$$
+  \Hom(\Rd_1{f_1}_*\ZZ,\Rd_1{f_2}_*\ZZ)
+  \simeq \Gamma(S,\iHom(\Rd_1{f_1}_*\ZZ,\Rd_1{f_2}_*\ZZ))
+$$
+\oldpage{52}
+is then endowed with a Hodge structure of weight $0$ [(4.2.8)](4.2-the-semi-simplicity-theorem.html#ii-4.2.8).
+Further, by [(2.1.11.1)](2.1-pure-structures.html#ii-2.1.11.1) and [(4.4.3)](#ii-4.4.3), the group $\Hom_S(X_1,X_2)$ is the degree $(0,0)$ component of this group.
+:::
+
+::: {.rmenv #env-ii-4.4.7 number="4.4.7"}
+Let $S$ be a non-empty, connected, smooth scheme, with generic point $\eta$, and let $f\colon X\to S$ be an abelian scheme over $S$.
+The centre $Z$ of $H=\End(\Rd_1f_*\ZZ)$ is then of degree $(0,0)$ [(4.2.8)](#ii-4.2.8), and thus contained in $\End_S(X)\simeq\End_{k(\eta)}(X_\eta)$.
+
+A polarisation of $X$ defines an involution $*$ of $H$.
+The restriction of this to $\End_S(X)$ is positive, so that $Z$ is the product of completely real fields or quadratic imaginary extensions of completely real fields.
+
+Denote by $C$ the actions of $i\in S(\RR)$ on $H_\RR=H\otimes\RR$ and on the $(\Rd_1f_*\RR)_s$ for $s\in S$.
+On $H_\RR$, $C^2=1$, and $C$ commutes with $*$;
+on $(\Rd_1f_*\RR)_s$, $C^2=-1$.
+If $\psi$ is the alternating form on $\Rd_1f_*\ZZ$ with integer values induced by the polarisation of $X$, then
+$$
+  \psi(hx,Cy)
+  = \psi(x,h^*Cy)
+  = \psi(x,C\cdot C(h^*)\cdot y).
+$$
+We thus deduce that
+$$
+  \Tr(h\cdot C(h^*)) > 0
+  \quad\text{for }h\neq0.
+\tag{4.4.7.1}
+$$
+:::
+
+::: {.rmenv #env-ii-4.4.8 number="4.4.8"}
+Now suppose that $X_\eta$ is simple, so that $Z$ is a field.
+Let $\rho\colon Z\to\CC$ be a complex embedding.
+Then the algebra
+$$
+  H_\rho
+  = H\otimes_{Z,\rho}\CC
+$$
+is an algebra of matrices and a bigraded direct factor of $H_\CC=H\otimes_\QQ\CC$.
+Pick an isomorphism
+$$
+  H_\rho
+  \simeq \End(V_\rho).
+\tag{4.4.8.1}
+$$
+
+From the fact that the infinitesimal generators of $S$ act on $H_\rho$, by derivations, which are necessarily interior, we deduce that $V_\rho$ admits a bigrading, unique up to translation, such that [(4.4.8.1)](#ii-4.4.8) is a bigraded isomorphism.
+Let $(\Rd_1f_*\CC)_\rho$ be the bigraded local system
+$$
+  (\Rd_1f_*\CC)\otimes_{Z\otimes\CC,\rho}\CC
+$$
+which is a direct factor of $\Rd_1f_*\CC$.
+Denote by $T_\rho$ the local system
+$$
+  T_\rho
+  = \Hom_{H_\rho}(V_\rho,(\Rd_1f_*\CC)_\rho).
+$$
+
+We have the bigraded isomorphism
+$$
+  V_\rho\otimes_\CC T_\rho
+  \simto (\Rd_1f_*\CC)_\rho.
+\tag{4.4.8.2}
+$$
+
+Since $(\Rd_1f_*\CC)_\rho$ is of degree $(-1,0)+(0,-1)$, one of the following conditions is satisfied:
+
+a. $V_\rho$ is bihomogeneous;
+b. $T_\rho$ is bihomogeneous.
+
+It is clear that condition (a) (resp. (b)) is simultaneously satisfied by $\rho$ and $\overline{\rho}$.
+If condition (a) is satisfied at each place, then $H$ is of degree $(0,0)$.
+If condition (b) is satisfied at each place, then the Hodge structure on $\Rd_1f_*\QQ$ is locally constant.
+:::
+
+::: {.rmenv #env-ii-4.4.9 number="4.4.9"}
+Now suppose that $Z$ is completely real.
+\oldpage{53}
+For each real embedding $\varphi$ of $Z$, we set $\varepsilon_{H,\varphi}=+1$ if $H\otimes_{Z,\varphi}\RR$ is an algebra of matrices; we set $\varepsilon_{H,\varphi}=-1$ otherwise.
+If a complex embedding $\rho$ induces a real embedding $\varphi$, then we set $\varepsilon_{H\rho}=\varepsilon_{H\varphi}$.
+
+Let $\rho\colon Z\to\CC$ factor through $\varphi\colon Z\to\RR$.
+Complex conjugation on $H_\rho$ is induced by an antilinear automorphism $\sigma_1$ of $V_\rho$, unique up to real scalar, with scalar square.
+Since $\sigma_1$ commutes with $\sigma_1^2$, $\sigma_1^2$ is real and, by normalising $\sigma_1$, we can assume that $\sigma_1^2=\pm1$.
+We then have that
+$$
+  \sigma_1^2
+  = \varepsilon_{H\rho}.
+\tag{4.4.9.1}
+$$
+
+The complex conjugation automorphism on
+$$
+  (\Rd_1f_*\CC)_\rho
+  =((\Rd_1f_*\QQ)\otimes_{Z,\varphi}\RR)\otimes_\RR\CC
+$$
+is "compatible" with [(4.4.8.2)](#ii-4.4.8) and can be written as
+$$
+  \sigma
+  = \sigma_1\otimes\sigma_2.
+$$
+Since $\sigma^2=1$, we have, by [(4.4.9.1)](#ii-4.4.9), that
+$$
+  \sigma_1^2
+  = \sigma_2^2
+  = \varepsilon_{H\rho}.
+\tag{4.4.9.2}
+$$
+
+Let $\Phi$ be a polarisation form on $\Rd_1f_*\ZZ$.
+This form is necessarily of the form
+$$
+  \Phi
+  = \Tr_{Z/\QQ}(\psi)
+$$
+where $\psi$ is an alternating $Z$-bilinear form on $\Rd_1f_*\QQ$.
+
+Let $\psi_\rho$ be the form induced on $V_\rho\otimes_\CC T_\rho$.
+The alternating form $\psi_\rho$ is invariant under $\pi_1(S,s)$.
+Since $T_\rho$ is irreducible, we can write $\psi_\rho$ as
+$$
+  \psi_\rho
+  = A_\rho\otimes B_\rho
+\tag{4.4.9.3}
+$$
+with $A_\rho$ on $V_\rho$, and $B_\rho$ on $T_\rho$ invariant under $\pi_1(S,s)$.
+
+Since $T_\rho$ is irreducible, $B_\rho$ is either symmetric or alternating.
+Since $\psi_\rho$ is alternating, $A_\rho$ is either symmetric or alternating.
+Since the $T_\rho$ are conjugate to one another, whether we are in one case or the other does not depend on $\rho$.
+We set
+$$
+  A_\rho(X,Y)
+  = \varepsilon_V A_\rho(Y,X)
+\tag{4.4.9.4}
+$$
+$$
+  B_\rho(X,Y)
+  = \varepsilon_T B_\rho(Y,X).
+\tag{4.4.9.5}
+$$
+We thus have
+$$
+  \varepsilon_V\varepsilon_T
+  = -1
+\tag{4.4.9.6}
+$$
+and it is clear by [(4.4.4)](#ii-4.4.4) that if $*$ is the involution of $H$ induced by $\psi$, then
+$$
+  \varepsilon_*
+  = \varepsilon_V.
+\tag{4.4.9.7}
+$$
+
+In case (a) (resp. (b)) of [(4.4.8)](#ii-4.4.8), we normalise the bigradings so that $V_\rho$ (resp. $T_\rho$) is of bidegree $(0,0)$.
+We then have, for non-zero $x\in V_\rho$ and non-zero $y\in T_\rho$, the two cases:
+
+a. $A_\rho(x,\sigma_1 x)B_\rho(y,C\sigma_2 y) > 0$;
+b. $A_\rho(x,C\sigma_1 x)B_\rho(y,\sigma_2 y) > 0$.
+
+\oldpage{54}
+By normalising $A_\rho$ and $B_\rho$ (of which only their tensor product is given), we can suppose, in each respective case, that
+
+a. $A_\rho(x,\sigma_1x)>0$ and $B_\rho(y,C\sigma_2y)>0$;
+b. $A_\rho(x,C\sigma_1x)>0$ and $B_\rho(y,\sigma_2y)$.
+
+Furthermore, $A_\rho$ and $B_\rho$, just like $\Phi$, are invariant under the compact sub-torus $\Ker(N)$ of $S$, and in particular under $C$.
+In case (a), we have that
+$$
+  0
+  < A_\rho(\sigma_1x,\sigma_1\sigma_1x)
+  = \varepsilon_V\cdot\varepsilon_{H,\rho}A_\rho(x,\sigma_1x)
+$$
+whence $\varepsilon_V\cdot\varepsilon_{H\rho}=1$.
+Similarly, in case (b), we see that $\varepsilon_T\cdot\varepsilon_{H\rho}=1$.
+:::
+
+::: {.itenv #env-ii-4.4.10 number="4.4.10" taxon="Lemma"}
+For $\varepsilon_T=\varepsilon_{H\rho}$, we are in case (b);
+for $\varepsilon_T=-\varepsilon_{H\rho}$, we are in case (a).
+:::
+
+::: {.itenv #env-ii-4.4.11 number="4.4.11" taxon="Proposition"}
+Let $S$ be a non-empty, connected, smooth scheme, with generic point $\eta$, and let $f\colon X\to S$ be an abelian scheme over $S$.
+Let $H=\End(\RR_1f_*\QQ)$, and let $Z$ be the centre of $H$.
+Suppose that
+
+a. $X_\eta$ is simple over $k(\eta)$.
+b. $X$ does not become constant on any finite covering of $S$.
+c. One of the following conditions is satisfied (cf. [(4.4.5)](#ii-4.4.5)):
+    1. $Z$ is imaginary *quadratic*;
+    2. $Z$ is completely real, and for each real embedding $\varphi\colon Z\to\RR$, $H\otimes_{Z,\varphi}\RR$ is an algebra of matrices over $\RR$;
+    3. $Z$ is completely real, and for each real embedding $\varphi\colon Z\to\RR$, $H\otimes_{Z,\varphi}\RR$ is an algebra of matrices over $\mathbb{H}$.
+
+Then
+$$
+  \End(X)
+  \simto \End(\Rd_1f_*\ZZ).
+$$
+:::
+
+::: {.proof}
+We will show that we are either in case (a) or case (b) of [(4.4.8)](#ii-4.4.8), for every place of $Z$ simultaneously.
+[(4.4.8)](#ii-4.4.8) is evident under the hypothesis (c.1), and follows from [(4.4.10)](#ii-4.4.10) under the hypotheses (c.2) or (c.3), since not only $\varepsilon_T$, but also $\varepsilon_{H\rho}$, is then independent of $\rho$.
+
+Condition (b) of [(4.4.8)](#ii-4.4.8) cannot be satisfied at every place of $Z$, since the Hodge structure would then be locally constant, which (by [(4.1.3.3)](4.1-the-fixed-set-theorem.html#ii-4.1.3) and [(4.4.3)](#ii-4.4.3)) contradicts (b).
+Condition (a) is thus satisfied at each place of $Z$, and so $H$ is of degree $(0,0)$ ([(4.4.8)](#ii-4.4.8)).
+Taking [(4.4.3)](#ii-4.4.3) into account, this finishes the proof.
+:::
+
+::: {.itenv #env-ii-4.4.12 number="4.4.12" taxon="Proposition"}
+Let $f\colon X\to S$ be an abelian scheme over a smooth scheme $S$.
+Then the following conditions are equivalent:
+
+i. For every abelian scheme $Y\to S$, we have
+    $$
+      \Hom_S(X,Y)
+      \simto \Hom_S(\Rd_1f_*\ZZ,\Rd_1g_*\ZZ).
+    $$
+ii. Condition (i) is satisfied for $X=Y$, and the centre $Z$ of $\End_S(X)\otimes\QQ$ does not admit any complex place $\rho\colon Z\to\CC$ such that the direct factor $\Rd_1f_*\QQ\otimes_{Z,\rho}\CC$ of $\Rd_1f_*\CC$ is of pure Hodge degree $(-1,0)$.
+:::
+
+::: {.proof}
+We can reduce to the case where $S$ is non-empty and connected, with generic point $\eta$, and where $X_\eta$ is a simple abelian variety over $k(\eta)$.
+\oldpage{55}
+If (i) or (ii) is satisfied, then $D=\End(X_\eta)\otimes\QQ$ is a field, and, for $s\in S$, $(\Rd_1f_*\QQ)_s$ is an irreducible representation of $\pi_1(S,s)$.
+}
+
+To prove that (ii) $\implies$ (i), we can suppose $Y_\eta$ to be simple, and $(\Rd_1g_*\QQ)_s$ to be isotypic of type $(\Rd_1f_*\QQ)_s$.
+We then have an isomorphism of continuous families of Hodge $\QQ$-structures (with $D$ of degree $(0,0)$)
+$$
+  \Rd_1g_*\QQ
+  \approx \Rd_1f_*\QQ\otimes_D\Hom(\Rd_1f_*\QQ,\Rd_1g_*\QQ).
+$$
+
+We have that $D\otimes\CC\simeq\MM_n(Z\otimes\CC)$.
+If $e\in D\otimes\CC$ is sent by such an isomorphism to the idempotent $e_{11}$, then we again have an isomorphism of bigraded vector spaces
+$$
+  (\Rd_1g_*\CC)_s
+  \approx (\Rd_1f_*\CC)_s\otimes_{Z\otimes\CC}e(\Hom(\Rd_1f_*\CC,\Rd_1g_*\CC)).
+$$
+
+If condition (ii) is satisfied, and if $e(\Hom(\Rd_1f_*\CC,\Rd_1g_*\CC))$ is not of pure degree $(0,0)$, then $(\Rd_1g_*\CC)_s$ cannot be of pure degree $(-1,0)+(0,-1)$, which is a contradiction.
+We thus deduce that $\Hom(\Rd_1f_*\ZZ,\Rd_1g_*\ZZ)$ is of pure degree $(0,0)$, and (i) then follows by [(4.4.3)](#ii-4.4.3) and [(2.1.11.1)](2.1-pure-structures.html#ii-2.1.11).
+
+Let $Z$ be a completely imaginary quadratic extension of a completely real number field $Z^0$.
+If $Z\otimes\RR\approx\CC\oplus\ldots\oplus\CC$, then we define an action by homotheties of $S$ on $Z\otimes\RR$ by sending $s\in S(\RR)\simeq\CC^*$ to $(s^2\cdot N(s)^{-1},1,\ldots,1)$.
+The pair consisting of $Z$ and this action of $S$ on $Z\otimes\RR$ is a polarisable Hodge structure $Z_\rho$ of degree $(-1,1)+(0,0)+(1,-1)$ that depends on $Z$ and the chose place $\rho\colon Z\to\CC$.
+
+Let $X$ be an abelian scheme over $S$ such that $X_\eta$ is simple.
+If the centre $Z$ of $\End(\Rd_1f_*\QQ)$ is not completely real, then it is a completely imaginary quadratic extension of a completely real number field.
+If the second hypothesis of (ii) is not satisfied, then the direct factor $\Rd_1f_*\QQ\otimes_Z Z_\rho$ of the continuous family of polarisable Hodge structures $\Rd_1f_*\QQ\otimes_\QQ Z_\rho$ is of pure degree $(-1,0)+(0,-1)$.
+
+By [(4.4.3)](#ii-4.4.3), the choice of an integer lattice in $\Rd_1f_*\QQ\otimes_Z Z_\rho$ defines an abelian scheme $g\colon Y\to S$, and $\Hom(\Rd_1f_*\QQ,\Rd_1g_*\QQ)$ is not of pure degree $(0,0)$, which contradicts (i).
+:::
+
+::: {.itenv #env-ii-4.4.13 number="4.4.13" taxon="Corollary"}
+Let $S$ be a smooth connected scheme with generic point $\eta$, and let $f\colon X\to S$ be an abelian scheme over $S$ of relative dimension $g\leqslant3$.
+Suppose that, on any finite étale covering of $S$, $X$ does not admit a constant abelian subscheme.
+Then, for every abelian scheme $g\colon Y\to S$, we have
+$$
+  \begin{aligned}
+    \Hom(X,Y)
+    &\simto \Hom(\Rd_1f_*\ZZ,\Rd_1g_*\ZZ)
+  \\\Hom(Y,X)
+    &\simto \Hom(\Rd_1g_*\ZZ,\Rd_1f_*\ZZ).
+  \end{aligned}
+$$
+:::
+
+::: {.proof}
+By duality, it suffices to prove the first claim.
+We can also suppose $X_\eta$ to be simple.
+We will show that $X$ satisfies one of the conditions of (c) in [(4.4.11)](#ii-4.4.11).
+
+Set $H=\MM_c(D)$, with $D$ a skew field of rank $b^2$ over its centre $Z$, which we know to be either completely real or completely imaginary.
+If we set $a=[Z:\QQ]$, then we have
+$$
+  ab^2c \mathbin{\vert} 2g \leqslant 6.
+\tag{4.4.13.1}
+$$
+
+1. If $Z$ is completely imaginary, and not imaginary quadratic, then we must have $a=2g=4$.
+    \oldpage{56}
+    For $s\in S$, the centraliser of $Z$ acting on $(\Rd_1f_*\QQ)_s$ is thus commutative, and so the action of $\pi_1(S,s)$ is abelian, and thus factors through a finite group ((iii.b) of [(4.2.8)](4.2-the-semi-simplicity-theorem.html#ii-4.2.8) or [(4.2.9)](4.2-the-semi-simplicity-theorem.html#ii-4.2.9)).
+    This is a contradiction ([(4.1.3.3)](4.1-the-fixed-set-theorem#ii-4.1.3) and [(4.4.3)](#ii-4.4.3)).
+
+    With the notation of [(4.4.8)](#ii-4.4.8), we can also note that the $T_\rho$ are then of rank $1$, and so condition (b) of [(4.4.8)](#ii-4.4.8) is satisfied at each place, and the Hodge structure is locally constant.
+
+2. If $Z$ is completely real, and if conditions (c.1) and (c.2) are not satisfied, then $a\geqslant2$ and $b\geqslant2$, which is a contradiction.
+
+We will show that $X$ satisfies the conditions of [(4.4.12)](#ii-4.4.12).
+If $Z$ is imaginary quadratic, and if there exists $\rho\colon Z\to\CC$ such that $\Rd_1f_*\QQ\otimes_{Z,\rho}\CC$ is of pure Hodge type $(-1,0)$, then the Hodge structure on $\Rd_1f_*\QQ$ is locally constant, which is a contradiction.
+This proves [(4.4.13)](#ii-4.4.13).
+:::
+
+:::: {.rmenv #env-ii-4.4.14 number="4.4.14"}
+Let $f\colon X\to S$ be a polarised abelian scheme of dimension $g$ over a smooth connected base $S$.
+For $s\in S$, the fundamental group $\pi_1(S,s)$ acts on the fibre $\HH^1(X_s,\ZZ)$ of $\Rd_1f_*\ZZ$ over $s$.
+The polarisation of $X$ defines an alternating form on $\HH^1(X_s,\ZZ)$, with values in $\ZZ(-1)$, that is non-degenerate over $\QQ$, and the action of $\pi_1(S,s)$ respects this form.
+Consider the hypothesis:
+
+::: {.itenv #env-ii-4.4.14.1 number="4.4.14.1" taxon="Hypothesis"}
+The morphism defined by $X$ from $S$ to one of the irreducible components of the corresponding scheme of modules of polarised abelian varieties is a dominant morphism.
+:::
+
+The following result was suggested to me by J.-P. Serre.
+:::
+
+::: {.itenv #env-ii-4.4.15 number="4.4.15" taxon="Corollary"}
+Let $S$ be a smooth connected scheme, and $f\colon X\to S$ a polarised abelian scheme over $S$ that satisfies [(4.4.14.1)](#ii-4.4.14).
+Then, for every abelian scheme $g\colon Y\to S$, we have
+$$
+  \Hom(X,Y)
+  \simto \Hom(\Rd_1f_*\ZZ,\Rd_1g_*\ZZ).
+$$
+:::
+
+::: {.proof}
+Let $s\in S$.
+By [(4.4.11)](#ii-4.4.11) and [(4.4.12)](#ii-4.4.12), it suffices to show that the representation of $\pi_1(S,s)$ on $(\Rd_1f_*\QQ)_s$ is absolutely irreducible, so that $H=\QQ$.
+This follows from the following lemma.
+:::
+
+::: {.itenv #env-ii-4.4.16 number="4.4.16" taxon="Lemma"}
+If $X$ satisfies [(4.4.14.1)](#ii-4.4.14), then the image of $\pi_1(S,s)$ in the group of symplectic automorphisms of $\HH^1(X_s,\ZZ)$ is of finite index.
+:::
+
+::: {.proof}
+Let $n$ be an integer.
+Replacing $S$ by a surjective étale covering, defined by a finite-index subgroup of $\pi_1(S,s)$, if necessary, we can assume that the local system ${}_nX=\Ker(n\cdot\Id\colon X\to X)$ is trivial on $S$.
+Replacing $X$ by an isogenous abelian scheme, we can then assume that $X$ is polarised in the principal series.
+Suppose that $n\geqslant 3$.
+
+The abelian scheme $X$ then defines a dominant morphism $x$ from the $S$ to the scheme of "Jacobi" modules $M_n$ of polarised abelian schemes in the principal series endowed with a symplectic isomorphism between ${}_nX$ and $(\ZZ/n)^{2g}$;
+furthermore, $X$ is an inverse image under $x$ of the universal abelian scheme on $M_n$.
+\oldpage{57}
+We know that $\pi_1(M_n,x(s))$ is sent isomorphically to the subgroup of $\Sp(\HH^1(X_s,\ZZ))$ given by the kernel of the reduction $\operatorname{mod}{n}$ map.
+It thus remains to show the following lemma.
+:::
+
+::: {.itenv #env-ii-4.4.17 number="4.4.17" taxon="Lemma"}
+Let $p\colon S\to M$ be a dominant morphism of smooth connected schemes.
+The subgroup $p(\pi_1(S,s))$ of $\pi_1(M,p(s))$ is then of finite index.
+:::
+
+::: {.proof}
+Let $t$ be a closed point of the generic fibre of $p$, and let $T'$ be its closure in $S$.
+There exists a dense Zariski open $U$ of $M$ such that $T=p^{-1}(U)\cap T'$ is an étale covering of $U$.
+
+We lose no generality by assuming that $s\in T$.
+In the diagram
+```tikz
+\begin{tikzcd}
+  \pi_1(T,s)
+    \ar[r]
+    \ar[d,swap,"a"]
+  & \pi_1(S,s)
+    \ar[d,"c"]
+\\\pi_1(U,p(s))
+  \ar[r,swap,"b"]
+  & \pi_1(M,p(s))
+\end{tikzcd}
+```
+the image of the arrow $a$ is of finite index, since $T$ is a finite étale covering, and the arrow $b$ is surjective, since $M\setminus U$ is of real codimension $\geqslant2$.
+The image of the arrow $c$ is thus of finite index.
+:::

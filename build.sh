@@ -6,7 +6,7 @@
 #############
 
 # The local website directory where we will "deploy" files.
-WEBSITE_DIR=/var/www/translations.thosgood.net/
+WEBSITE_DIR=/var/www/translations.thosgood.net
 
 # The local repository location.
 TRANSLATIONS_DIR=/home/tim/translations
@@ -14,6 +14,10 @@ TRANSLATIONS_DIR=/home/tim/translations
 LATEX_DIR=$TRANSLATIONS_DIR/latex
 QUARTO_DIR=$TRANSLATIONS_DIR/markdown
 QUARTO_OUTPUT_DIR=$QUARTO_DIR/_output
+# The local directory for the Quarto files for individual projects
+## Hodge Theory
+HODGE_DIR=$TRANSLATIONS_DIR/hodge-theory
+HODGE_WEBSITE_DIR=$WEBSITE_DIR/hodge-theory
 
 
 ############################
@@ -34,19 +38,23 @@ fi
 # Parse arguments #
 ###################
 
-usage() { echo "Usage: $0 [-a (all) | -l (latex) | -q (quarto) | -d (diff) ]" 1>&2; exit 1; }
+usage() { echo "Usage: $0 [-a (all) | -l (latex) | -q (quarto) | -h (hodge-theory) | -d (diff) ]" 1>&2; exit 1; }
 
 while getopts "alqd" opt; do
   case "$opt" in 
     a)
       LATEX_FILES=$(find $LATEX_DIR -name '*.tex')
       QUARTO_FILES=$(find $QUARTO_DIR -name '*.qmd')
+      PROJECT_DIR=$HODGE_DIR
       ;;
     l)
       LATEX_FILES=$(find $LATEX_DIR -name '*.tex')
       ;;
     q)
       QUARTO_FILES=$(find $QUARTO_DIR -name '*.qmd')
+      ;;
+    h)
+      PROJECT_DIR=$HODGE_DIR
       ;;
     d)
       LATEX_FILES=$(git diff --name-only main origin/main | grep -E '.tex' | grep -vE '_template')
@@ -162,6 +170,26 @@ if ! [ -z "$QUARTO_FILES" ] ; then
   done
 else
   printf "Skipping all .qmd files\n"
+fi
+
+
+#########################
+# Build Quarto projects #
+#########################
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+if ! [ -z "$PROJECT_DIR" ] ; then
+  printf "Building projects\n"
+  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+  printf "Working on $PROJECT_DIR...\n"
+  cd $PROJECT_DIR
+  if quarto render >/dev/null ; then
+    printf "$PROJECT_DIR successfully built!\n"
+    mv $PROJECT_DIR/_output $HODGE_WEBSITE_DIR
+    printf "$PROJECT_DIR moved to $HODGE_WEBSITE_DIR\n"
+  else
+    printf "\nQuarto encountered some sort of error building $PROJECT_DIR\n"
+  fi
+  printf "Finished building all projects!\n"
 fi
 
 printf "\n\n Finished everything :-)\n"

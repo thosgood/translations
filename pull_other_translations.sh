@@ -3,7 +3,7 @@
 LOCAL_DIR=~/other_translations
 PUBLIC_DIR=/var/www/translations.thosgood.net
 
-declare -a dirs=("sga" "fga" "hodge-theory" "minus-three-points")
+declare -a dirs=("sga" "fga" "minus-three-points")
 
 for i in "${dirs[@]}"
 do

@@ -1,0 +1,532 @@
+\title{Algebraic interpretation of the mixed #{\HH^1}: the case of curves}
+\parent{hodge-theory-iii-10}
+\number{10.3}
+
+\import{macros}
+
+\put\transclude/numbered{false}
+
+\subtree[hodge-theory-iii-10.3.1]{
+  \number{10.3.1}
+
+  \p{
+    Let #{X_0} be an algebraic curve over an algebraically closed field #{k}.
+    Let #{p\colon X'\to X_0} be the normalisation of #{X_0}, and let #{\overline{X}'} be the non-singular projective curve in which #{X'} is a dense open.
+    We denote by #{X} (resp. by #{\overline{X}}) the curve induced from #{X'} (resp. from #{\overline{X}'}) by contracting each of the finite sets #{p^{-1}(s)} (for #{s\in X_0}) to a point.
+
+    \tikzcd{
+      X'
+        \ar[r,hook,"j'"]
+        \ar[d,swap,"r"]
+    & \overline{X'}
+        \ar[d,"\overline{r}"]
+    \\X
+        \ar[r,hook,swap,"j"]
+        \ar[d,swap,"p_0"]
+    & \overline{X}
+    \\X_0
+    }
+  }
+
+  \p{
+    We can characterise #{X} and #{\overline{X}} by the following properties.
+
+    \olc{
+      \lic{(a)}{
+        #{p_0} if finite and radicial, and thus induces isomorphisms
+        ##{
+          \HH^\bullet(X_0,\ZZ_\ell)
+          \to \HH^\bullet(X,\ZZ_\ell)
+        }
+        (with #{\ell} coprime to the characteristic).
+      }
+      \lic{(b)}{
+        The singularities of #{X} are analytically isomorphic to those presented by a union of coordinate axes in affine space.
+      }
+      \lic{(c)}{
+        #{\overline{X}} is projective and #{\overline{X}\setminus{X}} is a finite set of points where #{\overline{X}} is smooth.
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.2]{
+  \number{10.3.2}
+
+  \p{
+    The Picard group #{\Pic(\overline{X})} \todo{unfolds?} as follows.
+
+    \olc{
+      \lic{(a)}{
+        Let #{I} be the set of irreducible components of #{\overline{X}} (which is equal to the set of irreducible components of #{X_0}).
+        For each irreducible component #{Y} of #{\overline{X}}, the degree of the restriction to #{Y} of an invertible sheaf is a homomorphism
+        ##{
+          \begin{aligned}
+            \deg_Y\colon \Pic(\overline{X})
+          & \to \ZZ
+          \\\sh{L}
+          & \mapsto \deg_Y(\sh{L}).
+          \end{aligned}
+        }
+        We thus obtain
+        ##{
+          \deg\colon\Pic(\overline{X})\to\ZZ^I.
+        }
+        This homomorphism is surjective, with kernel #{\Pic^0(\overline{X})}.
+      }
+
+      \lic{(b)}{
+        The morphism from #{\Pic^0(\overline{X})} to the abelian variety #{\Pic^0(\overline{X}')} is surjective, and its kernel is a torus.
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.3]{
+  \number{10.3.3}
+
+  \p{
+    \oldpage{70}
+    Let #{S} be the finite set #{\overline{X}\setminus X}, and #{\alpha_0\colon S\to I} be the map that sends #{s\in S} to the unique irreducible component of #{\overline{X}} such that #{s\in\alpha(s)}; let #{\alpha\colon\ZZ^S\to\ZZ^I} be induced by #{\alpha_0}.
+  }
+
+  \p{
+    Each #{s\in S} defines an invertible sheaf #{\OO(s)}, which defines #{u_0\colon\ZZ^S\to\Pic(\overline{X})}.
+    We have that #{\deg u_0=\alpha}.
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.4]{
+  \taxon{definition}
+  \number{10.3.4}
+
+  \p{
+    The \em{motivic #{\HH^1} of #{X_0}}, denoted #{\HH_\mm^1(X_0)(1)}, is the 1-motive
+    ##{
+      \Ker(\alpha)
+      \to \Pic^0(\overline{X}).
+    }
+  }
+
+  \p{
+    By definition, we thus have that #{\HH_\mm^1(X_0)(1)=\HH_\mm^1(X)(1)}.
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.5]{
+  \taxon{remarks}
+  \number{10.3.5}
+
+  \olc{
+    \lic{(i)}{
+      We have that
+      ##{
+        \begin{aligned}
+          \Gr_0^W(\HH_\mm^1(X)(1))
+          &= \Ker(\alpha\colon\ZZ^S\to\ZZ^I)
+        \\\Gr_{-1}^W(\HH_\mm^1(X)(1))
+          &= \Pic^0(\overline{X}').
+        \end{aligned}
+      }
+    }
+
+    \lic{(ii)}{
+      The cokernel of #{\alpha} is torsion free: it can be identified with the free #{\ZZ}-module with basis #{I\setminus\alpha_0(S)}.
+      We thus have a short exact sequence of complexes and a quasi-isomorphism
+      \tikzcd{
+        0
+          \ar[r]
+      & {[\Ker(\alpha)\to\Pic^0(\overline{X}_0)]}
+          \ar[r]
+      & {[\ZZ^S\to\Pic(\overline{X}_0)]}
+          \ar[r]
+      & {[\Im(\alpha)\to\ZZ^I]}
+          \ar[r]
+          \ar[d,"\simeq"]
+      & 0
+      \\&&&{[0\to\Coker(\alpha)]}
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.6]{
+  \taxon{construction}
+  \number{10.3.6}
+
+  \p{
+    For #{n>0} integer and coprime to the characteristic of #{k}, we will construct an isomorphism
+    ##{
+      \HH^1(X,\ZZ{/}n\ZZ)(1)
+      = \HH^1(X,\mu_n)
+      \cong T_{\ZZ{/}n\ZZ}(\HH_\mm^1(X)(1)).
+    }
+  }
+
+  \p{
+    We know that #{\HH^1(X,\mu_n)} can be identified with the isomorphism classes of invertible sheaves #{\sh{L}} on #{X}, endowed with an isomorphism #{\sh{L}^{\otimes n}\cong\OO}.
+    Since #{p_0\colon X_0\to X} is finite and radicial, we have that #{\HH^1(X,\ZZ{/}n\ZZ)\simto\HH^1(X_0,\ZZ{/}n\ZZ)}, and #{\HH^1(X,\mu_n)} is again the set of isomorphism classes of pairs #{(\sh{L},\alpha)} with #{\sh{L}} an invertible sheaf on #{X_0} and #{\alpha} an isomorphism #{\alpha\colon\sh{L}^{\otimes{n}}\simto\OO}.
+  }
+
+  \p{
+    Now consider such a pair #{(\sh{L},\alpha)}.
+    The invertible sheaf #{\sh{L}} extends to #{\overline{\sh{L}}} on #{\overline{X}}, and there exists a divisor #{D} of support #{S} such that #{\alpha} extends to #{\overline{\alpha}\colon\overline{\sh{L}}^{\otimes n}\simto\OO(D)}.
+    If there exists an isomorphism #{\beta} from #{\overline{\sh{L}}^{\otimes n}} to #{\OO(E)}, then it is uniquely determined up to multiplication by an element of the divisible group #{\HH^0(\overline{X},\OO^*)}.
+    We thus deduce that #{(\overline{\sh{L}},D)} determines #{(\sh{L},\alpha)} up to isomorphism.
+    For a pair #{(\overline{\sh{L}},D)} to come from a suitable pair #{(\sh{L},\alpha)}, it is necessary and sufficient that #{n[\sh{L}]=[\OO(D)]} in #{\Pic(\overline{X})}; it comes from #{(\OO_{X_0},0)} if and only if it is of the form #{(\OO_{X_0}(D),nD)}.
+  }
+
+  \p{
+    \oldpage{71}
+    This identifies #{\HH^1(X,\mu_n)} with the #{\HH^0} of the tensor product of #{[\ZZ^S\to\Pic(\overline{X})]} (concentrated in degrees #{0} and #{1}) with #{[\ZZ\xrightarrow{n}\ZZ]} (concentrated in degrees #{-1} and #{0}):
+    ##{
+      \begin{CD}
+        \ZZ^S @>{u_0}>> \Pic(\overline{X})
+      \\@A{n}AA @AA{-n}A
+      \\\ZZ^S @>>{u_0}> \Pic(\overline{X})
+      \end{CD}
+    }
+    ##{
+      \HH^1(X,\mu_n)
+      \cong \HH^0\big(
+        [\ZZ^S\to\Pic(\overline{X})] \Lotimes \ZZ{/}n\ZZ.
+      \big)
+    }
+    Since #{\Coker(\alpha)} is torsion free, we read from (ii) of \ref{hodge-theory-iii-10.3.5} that
+    ##{
+      \begin{aligned}
+        \HH^1(X,\mu_n)
+        &\cong \HH^0\big(
+          [\ZZ^S\to\Pic(\overline{X})] \Lotimes \ZZ{/}n\ZZ.
+        \big)
+      \\&\simfrom \HH^0\big(
+          \HH_\mm^1(X) \Lotimes \ZZ{/}n\ZZ
+        \big)
+      \\&\cong T_{\ZZ{/}n\ZZ}(\HH_\mm^1(X)(1)).
+      \end{aligned}
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.7]{
+  \taxon{variant}
+  \number{10.3.7}
+
+  \p{
+    For #{\ell} coprime to the characteristic of #{k}, we have that
+    ##{
+      \HH^1(X_0,\ZZ_\ell(1))
+      \simeq T_\ell(\HH_\mm^1(X_0)(1)).
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.8]{
+  \taxon{construction}
+  \number{10.3.8}
+
+  \p{
+    Let #{X_0} be a curve on #{\CC}.
+    We will construct an isomorphism of mixed Hodge structures
+    ##{
+      \HH^1(X_0)(1)
+      \simeq T(\HH_\mm^1(X_0)(1)).
+    }
+  }
+
+  \proof{
+    We can and will suppose that #{X=X_0}; see \ref{hodge-theory-iii-10.3.12}.
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.9]{
+  \taxon{construction}
+  \number{10.3.9}
+
+  \olc{
+    \lic{(i)}{
+      Let #{j_*^\mm\OO_X^*} be the subsheaf of meromorphic functions in #{j_*\OO_X^*}.
+      We have that
+      ##{
+        \HH^1(X,\ZZ(1))
+        = \bHH^1(\overline{X},[\OO_{\overline{X}}\xrightarrow{\exp}j_*^\mm\OO_X^*]).
+      }
+    }
+
+    \lic{(ii)}{
+      We have that
+      ##{
+        \HH^1(X,\CC)
+        = \bHH^1(\overline{X},[\OO_{\overline{X}}\xrightarrow{\dd}r_*\Omega_{\overline{X}'}^1(\log S)]).
+      }
+    }
+
+    \lic{(iii)}{
+      The inclusion of #{\HH^1(X,\ZZ)} into #{\HH^1(X,\CC)} is defined by the morphism of complexes
+      ##{
+        \begin{CD}
+          \OO_{\overline{X}} @>{\exp}>> j_*^\mm\OO_X^*
+        \\@V{\simeq}VV @VV{\dd f/f}V
+        \\\OO_{\overline{X}} @>>> r_*\Omega_{\overline{X}'}^1(\log S)
+        \end{CD}
+      }
+    }
+  }
+
+  \proof{
+    \p{
+      Consider the commutative diagram
+      \talltikzcd{
+        \HH^1(X,\ZZ(1))
+          \ar[r,"\sim"]
+          \ar[d]
+          \ar[dr,phantom,"\text{(1)}"]
+      & \bHH^1(X, [\OO_X\xrightarrow{\exp}\OO_X^*])
+          \ar[d]
+          \ar[dr,phantom,"\text{(2)}"]
+      & \bHH^1(\overline{X}, [j_*\OO_X\xrightarrow{\exp}j_*\OO_X^*])
+          \ar[l,swap,"\sim"]
+          \ar[d]
+          \ar[dr,phantom,"\text{(3)}"]
+      & \bHH^1(\overline{X}, [\OO_{\overline{X}}\xrightarrow{\exp}j_*^\mm\OO_X^*])
+          \ar[l,swap,"\sim"]
+          \ar[d]
+      \\\HH^1(X,\CC)
+          \ar[r]
+      & \bHH^1(X, [\OO_X\xrightarrow{\dd}r_*\Omega_{\overline{X}'}^1])
+      & \bHH^1(\overline{X}, [j_*\OO_X\to j_*r_*\Omega_{X'}^1])
+          \ar[l]
+      & \bHH^1(\overline{X}, [\OO_{\overline{X}}\to r_*\Omega_{\overline{X}'}^1(\log S)])
+          \ar[l,swap,"\sim"]
+      }
+    }
+
+    \p{
+      \oldpage{72}
+      The horizontal arrows in the square labelled (1) are isomorphisms, since the sequences
+      ##{
+        \begin{gathered}
+          0 \to \ZZ(1) \to \OO_X \xrightarrow{\exp} \OO_X^* \to 0
+        \\0 \to \CC \to \OO_X \xrightarrow{\dd} r_*\Omega_{X'}^1 \to 0
+        \end{gathered}
+      }
+      are exact.
+      Those in (2) are isomorphisms since #{\Rd^1j_*\OO_X=0}.
+      Those in (3) are isomorphisms since the morphisms of the complexes that define them are quasi-isomorphisms.
+      This diagram defines the desired construction.
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.10]{
+  \number{10.3.10}
+
+  \p{
+    Recall that if #{d\colon F\to G} is a morphism of abelian sheaves on a space #{Z}, then #{\bHH^1(Z,[F\to G])} can be identified with the set of isomorphism classes of pairs #{(P,\alpha)}, where #{P} is an #{F}-torsor (i.e. a principal homogeneous space under #{F}) and #{\alpha} is a trivialisation of the #{G}-torsor #{dP}.
+  }
+
+  \p{
+    In particular:
+
+    \olc{
+      \lic{(a)}{
+        \p{
+          #{\bHH^1(\overline{X}, [\OO_{\overline{X}}^*\to r_*\Omega_{\overline{X}'}^1(\log S)])} can be identified with the set of isomorphism classes of pairs #{(\sh{L},\alpha)}, where #{\sh{L}} is an invertible sheaf on #{\overline{X}} and #{\alpha} is a connection on #{\overline{r}^*\sh{L}} that is holomorphic on #{X'} and can present a simple pole at the points of #{S}.
+          Let #{a} be the projection from #{\overline{X}} to #{\Spec(\CC)} (i.e. a point).
+          In the fppf topology, the sheaf #{\Rd^1a_*([\sh{O}_{\overline{X}}^*\to r_*\Omega_{\overline{X}'}^1(\log S)])} is representable by a group scheme #{\Pic^\natural(X)}, of which #{\bHH^1(\overline{X},[\sh{O}_{\overline{X}}^*\to r_*\Omega_{\overline{X}'}^1(\log S)])} is the set of points.
+          #{\Pic^\natural(X)} is an extension of a subgroup of #{\Pic(\overline{X})}, containing #{\Pic^0(\overline{X})}, by #{\HH^0(\overline{X}',\Omega_{\overline{X}'}^1(\log S))}.
+        }
+
+        \p{
+          We define a map
+
+          \subtree[hodge-theory-iii-10.3.10.1]{
+            \taxon{equation}
+            \number{10.3.10.1}
+            ##{
+              \ZZ^S
+              \to \Pic^\natural(X)
+            \startverb\tag{10.3.10.1}\stopverb
+            }
+          }
+
+          by sending each divisor #{D} of #{\overline{X}}, concentrated in #{S}, to the invertible sheaf #{\OO(D)}.
+        }
+      }
+
+      \lic{(b)}{
+        #{\HH^1(X,\CC)=\bHH^1(\overline{X}, [\OO_{\overline{X}}\to r_*\Omega_{\overline{X}'}^1(\log S)])} is the Lie algebra of #{\Pic^\natural(X)}.
+        It is the set of isomorphism classes of pairs #{(P,\alpha)}, where #{P} is an #{\OO_{\overline{X}}}-torsor and #{\alpha} is a connection on #{P} as in (a).
+      }
+
+      \lic{(c)}{
+        \p{
+          #{\HH^1(X,\ZZ(1))=\bHH^1(\overline{X}, [\OO_{\overline{X}}\to j_*^\mm\OO_{\overline{X}}^*])} is the set of isomorphism classes of pairs #{(P,\alpha)}, where #{P} is an #{\OO_{\overline{X}}}-torsor and #{\alpha} is an isomorphism from the invertible sheaf #{\exp(P)} to an invertible sheaf #{\OO_X(D)} for some #{D} concentrated in #{S}.
+          The map
+          ##{
+            \Aut(P)
+            = \CC
+            \to \Aut(\exp(P))
+            = \CC^*
+          }
+          is surjective.
+          This allows us to also identify #{\HH^1(X,\ZZ(1))} with the set of pairs #{(p,d)}, where #{p} is an isomorphism class of #{\OO_{\overline{X}}}-torsors (i.e. an element of #{\Lie(\Pic\overline{X})}) and #{d\in\Ker(\alpha)}, defining a divisor concentrated in #{S} with whose image in #{\Pic^0(\overline{X})} is #{\exp(p)}.
+          In other words, we have defined an isomorphism
+
+          \subtree[hodge-theory-iii-10.3.10.2]{
+            \taxon{equation}
+            \number{10.3.10.2}
+            ##{
+              \HH^1(X,\ZZ(1))
+              \simto T_\ZZ(\HH_\mm^1(X)(1)).
+            \startverb\tag{10.3.10.2}\stopverb
+            }
+          }
+        }
+
+        \p{
+          From part (i) of \ref{hodge-theory-iii-10.3.11}, we deduce that this isomorphism is compatible with the weight filtration.
+        }
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.11]{
+  \taxon{lemma}
+  \number{10.3.11}
+
+  \olc{
+    \lic{(i)}{
+      \oldpage{73}
+      We have that
+      ##{
+        \begin{aligned}
+          W^1(\HH^1(X,\ZZ))
+          &= \Im\big( \HH^1(\overline{X},\ZZ)\to\HH^1(X,\ZZ) \big)
+        \\W^0(\HH^1(X,\ZZ))
+          &= \Ker\big( \HH^1(\overline{X},\ZZ)\to\HH^1(\overline{X}',\ZZ) \big).
+        \end{aligned}
+      }
+    }
+
+    \lic{(ii)}{
+      The spectral sequence defined by the stupid filtration of #{[\OO_{\overline{X}}\to\overline{r}_*\Omega_{\overline{X}'}^1(\log S)]} degenerates and abuts to the Hodge filtration of #{\HH^*(X,\CC)}.
+    }
+  }
+
+  \proof{
+    \p{
+      We first prove (i).
+      It suffices to prove the first claim: the second follows from \ref{hodge-theory-iii-8.2.5}.
+      We have a comparison of exact sequences
+      ##{
+        \begin{CD}
+          \HH^1(\overline{X},\,\ZZ) @>>> \HH^1(X,\,\ZZ) @>{\partial}>> \HH^2(\overline{X}\,\mod\, X,\,\ZZ)
+        \\@VVV @VVV @VV{\simeq}V
+        \\\HH^1(\overline{X}',\,\ZZ) @>>> \HH^1(X',\,\ZZ) @>{\partial}>> \HH^2(\overline{X}'\,\mod\, X',\,\ZZ) @>>> \HH^2(\overline{X}',\,\ZZ)
+        \end{CD}
+      }
+      It follows from \ref{hodge-theory-iii-8.3.7} and \ref{hodge-theory-ii-3.2.17} that #{\HH^2(\overline{X}'\mod X,\ZZ)}, and thus #{\HH^2(\overline{X}\mod X,\ZZ)}, is pure of weight 2.
+      Taking \ref{hodge-theory-iii-8.2.4}, this proves (i).
+    }
+
+    \p{
+      To prove (ii), we have to return to \ref{hodge-theory-iii-8.2.1} and use the fact that the simplicial scheme #{((X'/X)^{\Delta_n})_{n\geqslant0}} is smooth (the #{(n+1)}-tuple #{(X'/X)^{\Delta_n}} given by the iterated fibre product is the disjoint sum of #{X'}, the diagonal, and a finite number of points) and that it admits #{((\overline{X}'/\overline{X})^{\Delta_n})_{n\geqslant0}} as a smooth compactification.
+      Let #{\varepsilon\colon((\overline{X}'/\overline{X})^{\Delta_n})_{n\geqslant0}\to\overline{X}} the augmentation morphism.
+      Let #{(K,F)} be the complex #{\OO\to\Omega^1(\log S)} on #{((\overline{X}'/\overline{X})^{\Delta_n})_{n\geqslant0}} endowed with the stupid filtration.
+      We have an augmentation morphism
+      ##{
+        \alpha\colon
+        [\OO_{\overline{X}}\to\overline{r}_*\Omega_{\overline{X}'}^1(\log S)]
+        \to \simp{\varepsilon_\bullet}_*K.
+      }
+      The diagram
+      \tikzcd{
+        \HH^1(X,\CC)
+          \ar[r,equals]
+          \ar[d,equals]
+      & \bHH^1\big( ((\overline{X}'/\overline{X})^{\Delta_n})_\bullet, K \big)
+      & \bHH^1(\overline{X},\simp{\varepsilon_\bullet}_*K)
+          \ar[l,swap,"\text{(1)}"]
+      \\\HH^1(X,\CC)
+          \ar[rr,equals]
+      &&\bHH^1\big( \overline{X}, [\OO_{\overline{X}}\to\overline{r}_*\Omega_{\overline{X}'}^1*\log S] \big)
+          \ar[u]
+      }
+      commutes, and the arrow labelled (1) is an isomorphism since the #{\varepsilon_n} are finite, so #{\Rd^i{\varepsilon_n}_*=0} for #{i>0}.
+      The claim then follows from the fact that #{\alpha} is a filtered quasi-isomorphism.
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.12]{
+  \number{10.3.12}
+
+  \p{
+    \oldpage{74}
+    We now realise \ref{hodge-theory-iii-10.3.8}.
+    The diagram
+    ##{
+      \begin{CD}
+        \HH^1(X,\ZZ(1)) @>{\simeq}>> T_\ZZ(\HH_\mm^1(X)(1)) @>>> \Lie\Pic(\overline{X}) = \HH^1(\overline{X},\OO_{\overline{X}})
+      \\ @| @. @|
+      \\\HH^1(X,\CC) @>{\simeq}>> \Lie\Pic^\natural(X) @>>> \Lie\Pic(\overline{X}) = \HH^1(\overline{X},\OO_{\overline{X}})
+      \end{CD}
+    }
+    commutes.
+    By (ii) of \ref{hodge-theory-iii-10.3.11} and the definition of Hodge filtrations, \ref{hodge-theory-iii-10.3.10.2} is compatible with the Hodge filtration.
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.13]{
+  \taxon{corollary}
+  \number{10.3.13}
+
+  \p{
+    #{\HH_\mm^1(X)(1)^\natural} is the extension
+    ##{
+      \Ker(\alpha)
+      \to \Pic^\natural(X)^0
+    }
+    of #{\HH_\mm^1(X)(1)} induced by \ref{hodge-theory-iii-10.3.10.1}.
+  }
+
+  \proof{
+    Indeed, we have a commutative diagram
+    ##{
+      \begin{CD}
+        \Ker(\alpha) @>>> \Pic^\natural(X)^0 @>>> \Pic^0(\overline{X})
+      \\@AAA @AAA @AAA
+      \\\HH^1(X,\ZZ) @>>> \Lie\Pic^\natural(X) @>>> \Lie\Pic(\overline{X})
+      \end{CD}
+    }
+    and we then apply \ref{hodge-theory-iii-10.1.9}.
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.14]{
+  \taxon{exercise}
+  \number{10.3.14}
+
+  \p{
+    Show that the diagram
+    ##{
+      \begin{CD}
+        \HH^1(X,\ZZ(1)) @= T_\ZZ(\HH_\mm^1(X)(1))
+      \\@VVV @VVV
+      \\\HH^1(X,\mu_n) @= T_{\ZZ{/}n\ZZ}(\HH_\mm^1(X)(1))
+      \end{CD}
+    }
+    commutes.
+  }
+}
+
+\subtree[hodge-theory-iii-10.3.15]{
+  \taxon{remark}
+  \number{10.3.15}
+
+  \p{
+    The isomorphism induced by \ref{hodge-theory-iii-10.3.8} and (ii) of \ref{hodge-theory-iii-10.3.9}, between #{\bHH(\overline{X},\OO_{\overline{X}}\to r_*\Omega_{\overline{X}'}^1(\log S))} (which we may call #{\HH_\DR^1(X)}) and #{T_\DR(\HH_\mm^1(X)(1))}, equal to #{\Lie\Pic^\natural(X)} by \ref{hodge-theory-iii-10.3.13}, has been defined in a purely algebraic manner.
+  }
+}

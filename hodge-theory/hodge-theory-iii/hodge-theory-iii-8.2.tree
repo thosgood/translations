@@ -1,0 +1,380 @@
+\title{Separated algebraic spaces}
+\parent{hodge-theory-iii-8}
+\number{8.2}
+
+\import{macros}
+
+\put\transclude/numbered{false}
+
+\subtree[hodge-theory-iii-8.2.1]{
+  \number{8.2.1}
+
+  \p{
+    Let #{X} be a scheme (or an algebraic space) of finite type over #{\CC}, and assume it to be separated.
+    Then there exists a diagram
+
+    \subtree[hodge-theory-iii-8.2.1.1]{
+      \taxon{equation}
+      \number{8.2.1.1}
+      ##{
+        X
+        \xleftarrow{\alpha} Y_\bullet
+        \hookrightarrow \overline{Y}_\bullet
+      \startverb\tag{8.2.1.1}\stopverb
+      }
+    }
+
+    in which #{Y_\bullet} is the complement of a normal crossing divisor in a smooth and proper simplicial scheme #{\overline{Y}_\bullet}, and is a proper hypercover of #{X}.
+    We have ((II) of \ref{hodge-theory-iii-5.3.5})
+
+    \subtree[hodge-theory-iii-8.2.1.2]{
+      \taxon{equation}
+      \number{8.2.1.2}
+      ##{
+        \HH^\bullet(X)
+        \simto \HH^\bullet(Y_\bullet).
+      \startverb\tag{8.2.1.2}\stopverb
+      }
+    }
+  }
+
+  \p{
+    In \ref{hodge-theory-iii-8.1.19}, we endow #{\HH^\bullet(Y_\bullet)} with a mixed Hodge structure.
+    Let #{\sHH(\alpha)} be the mixed Hodge structure on #{\HH^\bullet(X)} induced by \ref{hodge-theory-iii-8.2.1.2}.
+  }
+}
+
+\subtree[hodge-theory-iii-8.2.2]{
+  \taxon{proposition}
+  \number{8.2.2}
+
+  \p{
+    With the above notation, the mixed Hodge structure #{\sHH(\alpha)} on #{\HH^\bullet(X)} is independent of the choice of #{\alpha}.
+    We call it the \em{mixed Hodge structure of #{\HH^\bullet(X,\ZZ)}}.
+    For every morphism #{f\colon X_1\to X_2} of schemes, #{f^*\colon\HH^\bullet(X_2)\to\HH^\bullet(X_1)} is a morphism of mixed Hodge structures.
+  }
+
+  \proof{
+    \p{
+      The proof uses \ref{hodge-theory-iii-6.2.8}, and is parallel to that of (C) of \ref{hodge-theory-ii-3.2.11} (cf. also \ref{hodge-theory-iii-8.3.3}).
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-8.2.3]{
+  \number{8.2.3}
+
+  \p{
+    For smooth #{X}, we can show, by taking #{\overline{Y}_\bullet} to be a constant simplicial scheme, that the mixed Hodge structure in \ref{hodge-theory-iii-8.2.2} coincides with that defined in \ref{hodge-theory-ii-3.2.12}.
+  }
+}
+
+\subtree[hodge-theory-iii-8.2.4]{
+  \taxon{theorem}
+  \number{8.2.4}
+
+  \p{
+    The pairs #{(p,q)} such that the Hodge number #{h^{pq}} of #{\HH^n(X)} are non-zero satisfy the following conditions:
+
+    \olc{
+      \lic{(i)}{
+        #{(p,q)\in[0,n]\times[0,n]}.
+      }
+
+      \lic{(ii)}{
+        If #{\dim X=N}, and #{n\geqslant N}, then
+        ##{
+          (p,q)\in[n-N,N]\times[n-N,N].
+        }
+      }
+
+      \lic{(iii)}{
+        If #{X} is proper, then #{p+q\leqslant n}.
+      }
+
+      \lic{(iv)}{
+        If #{X} is smooth, then #{p+q\geqslant n}.
+        The same conclusion holds if #{X} is an equidimensional "rational homology manifold" of dimension #{N}, i.e. if, for all #{x\in X},
+        ##{
+          \HH^i_{(x)}(X,\QQ)
+          =
+          \begin{cases}
+            0 &\text{if }i\neq 2N
+          \\\QQ &\text{if }i=2N.
+          \end{cases}
+        }
+      }
+    }
+  }
+
+  \p{
+    \oldpage{39}
+    \tikzpicture{
+      \begin{scope}
+        % p- and q-axes
+        \draw[->] (0,0) to (3,0) node[label={below:$p$}]{};
+        \draw[->] (0,0) to (0,3) node[label={left:$q$}]{};
+        \node[below] at (2,0) {\scriptsize$N$};
+        \node[left] at (0,2) {\scriptsize$N$};
+        \node[below] at (1.3,0) {\scriptsize$n$};
+        \node[left] at (0,1.3) {\scriptsize$n$};
+        % dashed partitions
+        \draw[dashed] (2,0) to (2,2.7);
+        \draw[dashed] (0,2) to (2.7,2);
+        % solid partitions
+        \draw (0,1.3) to (1.3,1.3) to (1.3,0) to cycle;
+        % labels
+        \node at (0.5,0.2) {\scriptsize proper};
+        \node at (0.8,1.1) {\scriptsize smooth};
+      \end{scope}
+      \begin{scope}[shift={(4,0)}]
+        % p- and q-axes
+        \draw[->] (0,0) to (4,0) node[label={below:$p$}]{};
+        \draw[->] (0,0) to (0,3) node[label={left:$q$}]{};
+        \node[below] at (2.35,0) {\scriptsize$N\qquad n$};
+        \node[left] at (0,2) {\scriptsize$N$};
+        \node[left] at (0,2.7) {\scriptsize$n$};
+        % dashed partitions
+        \draw[dashed] (2,0) to (2,2.7);
+        \draw[dashed] (0,2) to (2.7,2);
+        \draw[dashed] (2.7,0) to (0,2.7);
+        % solid partitions
+        \draw (0.7,2) to (2,2) to (2,0.7) to (0.7,0.7) to cycle;
+        \draw (0.7,2) to (2,0.7);
+        % labels
+        \node at (1.2,0.9) {\scriptsize proper};
+        \node at (1.5,1.8) {\scriptsize smooth};
+      \end{scope}
+    }
+  }
+
+  \proof{
+    \p{
+      Claim (ii) will be proven in \ref{hodge-theory-iii-8.3.10}.
+      Claim (i) follows from (iii) of \ref{hodge-theory-iii-8.1.20}.
+      For proper #{X}, we can find a diagram as in \ref{hodge-theory-iii-8.2.1.1} in which #{Y_\bullet=\overline{Y}_\bullet}, and (iii) then follows from (iv) of \ref{hodge-theory-iii-8.1.20}.
+      For smooth #{X}, (iv) follows from \ref{hodge-theory-iii-8.2.3} and \ref{hodge-theory-ii-3.2.15}.
+      The general case then follows: if #{p\colon\widetilde{X}\to X} is a resolution of singularities of #{X}, then #{p^*\colon\HH^\bullet(X,\QQ)\to\HH^\bullet(\widetilde{X},\QQ)} is injective, since the Poincaré dual transpose #{p_!} of #{p^*\colon\HH^\bullet_\cc(X,\QQ)\to\HH^\bullet_\cc(\widetilde{X},\QQ)} is a retraction for it.
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-8.2.5]{
+  \taxon{proposition}
+  \number{8.2.5}
+
+  \p{
+    Suppose that #{X} is proper.
+    If #{u\colon Y\to X} is a surjective proper morphism, with #{Y} smooth, then the weight-#{n} quotient of #{\HH^n(X,\QQ)} is the image of #{\HH^n(X,\QQ)} in #{\HH^n(Y,\QQ)}.
+    The sequence
+
+    \subtree[hodge-theory-iii-8.2.5.1]{
+      \taxon{equation}
+      \number{8.2.5.1}
+      ##{
+        \HH^n(X,\QQ)
+        \to \HH^n(Y,\QQ)
+        \xrightarrow{\pr_1^*-\pr_2^*} \HH^n(Y\times_X Y,\QQ)
+      \startverb\tag{8.2.5.1}\stopverb
+      }
+    }
+
+    is exact.
+  }
+
+  \proof{
+    \p{
+      Let #{Y_\bullet} be as in \ref{hodge-theory-iii-8.2.1.1}, with #{Y_0=Y} and #{Y_\bullet=\overline{Y}_\bullet}.
+      By (ii) of \ref{hodge-theory-iii-8.1.20}, we have an exact sequence
+
+      \subtree[hodge-theory-iii-8.2.5.2]{
+        \taxon{equation}
+        \number{8.2.5.2}
+        ##{
+          0
+          \to \HH^n(X,\QQ)/W^{n-1}\HH^n(X,\QQ)
+          \to \HH^n(Y_0,\QQ)
+          \underset{\delta_1}{\overset{\delta_0}{\rightrightarrows}} \HH^n(Y_1,\QQ)
+        \startverb\tag{8.2.5.2}\stopverb
+        }
+      }
+
+      which implies \ref{hodge-theory-iii-8.2.5} (conversely, this exact sequence can easily be deduced from \ref{hodge-theory-iii-8.2.5} and \ref{hodge-theory-iii-8.2.7} below).
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-8.2.6]{
+  \taxon{proposition}
+  \number{8.2.6}
+
+  \p{
+    Let
+    ##{
+      Y
+      \xrightarrow{f} X
+      \overset{j}{\hookrightarrow} \overline{X}
+    }
+    be morphisms of schemes.
+    Suppose that #{Y} is proper and #{X} is smooth, and that #{\overline{X}} is a smooth compactification of #{X}.
+    Then #{\HH^\bullet(\widetilde{X},\QQ)} and #{\HH^\bullet(X,\QQ)} have the same image in #{\HH^\bullet(Y,\QQ)}.
+  }
+
+  \proof{
+    \p{
+      The proof is parallel to that of \ref{hodge-theory-ii-3.2.18}.
+      It suffices to prove, for any #{i} and any #{n}, that #{\Gr_i^W(f^*)} and #{\Gr_i^W((jf)^*)} have the same image in #{\Gr_i^W\HH^n(Y,\QQ)}.
+
+      \olc{
+        \lic{(a)}{
+          For #{i>n}, these images are both zero since #{\Gr_i^W\HH^n(Y,\QQ)=0} ((iii) of \ref{hodge-theory-iii-8.2.4}).
+        }
+        \lic{(b)}{
+          For #{i<n}, these images are both zero since #{\Gr_i^W\HH^n(X,\QQ)=0} ((iv) of \ref{hodge-theory-iii-8.2.4}).
+        }
+        \lic{(c)}{
+          For #{i=n}, these images are equal since #{\Gr_n^W(j^*)} is surjective (\ref{hodge-theory-ii-3.2.17}).
+        }
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-8.2.7]{
+  \taxon{proposition}
+  \number{8.2.7}
+
+  \p{
+    \oldpage{40}
+    Let
+    ##{
+      \widetilde{X}
+      \xrightarrow{\pi} X
+      \xrightarrow{f} Y
+    }
+    be morphisms of schemes.
+    Suppose that #{Y} is smooth, #{X} is proper, #{\widetilde{X}} is smooth and proper, and that #{\pi} is surjective.
+    Then the kernels of #{f^*} and #{(f\pi)^*} in #{\HH^\bullet(Y,\QQ)} are equal.
+  }
+
+  \proof{
+    \p{
+      We will prove that #{\Ker(\Gr_i^W(f^*))=\Ker(\Gr_i^W((f\pi)^*))} in #{\Gr_i^W\HH^n(Y,\QQ)}.
+
+      \olc{
+        \lic{(a)}{
+          For #{i<n}, these kernels are both zero since #{\Gr_i^W\HH^n(Y,\QQ)=0} ((iv) of \ref{hodge-theory-iii-8.2.4}).
+        }
+        \lic{(b)}{
+          For #{i>n}, these kernels are both all of #{\Gr_i^W\HH^n(Y,\QQ)} since #{\Gr_i^W\HH^n(X,\QQ)=0} ((iii) of \ref{hodge-theory-iii-8.2.4}).
+        }
+        \lic{(a)}{
+          For #{i=n}, these kernels are equal since #{\Gr_n^W(\pi^*)} is injective (\ref{hodge-theory-iii-8.2.5.2}).
+        }
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-8.2.8]{
+  \taxon{corollary}
+  \number{8.2.8}
+
+  \p{
+    Let
+    ##{
+      \widetilde{X}
+      \xrightarrow{\pi} X
+      \overset{f}{\hookrightarrow} Y
+    }
+    be morphisms of schemes.
+    Suppose that #{Y} is smooth and proper, that #{X} is a closed subscheme of #{Y}, and that #{\widetilde{X}} is a resolution of singularities of #{X}.
+    Let #{q=f\pi} and #{U=Y\setminus X}.
+    Then the sequence
+
+    \subtree[hodge-theory-iii-8.2.8.1]{
+      \taxon{equation}
+      \number{8.2.8.1}
+      ##{
+        \HH^\bullet(\widetilde{X},\QQ)
+        \xrightarrow{q_!} \HH^\bullet(Y,\QQ)
+        \to \HH^\bullet(U,\QQ)
+      \startverb\tag{8.2.8.1}\stopverb
+      }
+    }
+
+    is exact.
+  }
+
+  \proof{
+    \p{
+      By \ref{hodge-theory-iii-8.2.7}, we have that
+      ##{
+        \Ker(f^*\colon\HH^\bullet(Y,\QQ)\to\HH^\bullet(X,\QQ))
+        = \Ker(q^*\colon\HH^\bullet(Y,\QQ)\to\HH^\bullet(\widetilde{X},\QQ)).
+      }
+      The long exact sequence in cohomology of the pair #{Y,X} thus gives an exact sequence
+
+      \subtree[hodge-theory-iii-8.2.8.2]{
+        \taxon{equation}
+        \number{8.2.8.2}
+        ##{
+          \HH_c^\bullet(U,\QQ)
+          \to \HH^\bullet(Y,\QQ)
+          \to \HH^\bullet(\widetilde{X},\QQ)
+        \startverb\tag{8.2.8.2}\stopverb
+        }
+      }
+
+      and \ref{hodge-theory-iii-8.2.8.1} is the transpose sequence of \ref{hodge-theory-iii-8.2.8.2} under Poincaré duality.
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-8.2.9]{
+  \taxon{remark}
+  \number{8.2.9}
+
+  \p{
+    \ref{hodge-theory-iii-8.2.8} is used under more general hypotheses in [[G1968](G1968), (9.7), p. 161].
+    As Lieberman remarked, the justification given loc. cit. is insufficient.
+  }
+}
+
+\p{
+  From \ref{hodge-theory-iii-8.1.25} we deduce the following:
+}
+
+\subtree[hodge-theory-iii-8.2.10]{
+  \taxon{proposition}
+  \number{8.2.10}
+
+  \p{
+    The Künneth isomorphisms
+    ##{
+      \HH^\bullet(X\times Y,\QQ)
+      \simeq \HH^\bullet(X,\QQ)\otimes\HH^\bullet(Y,\QQ)
+    }
+    are isomorphisms of mixed Hodge structures.
+  }
+}
+
+\subtree[hodge-theory-iii-8.2.11]{
+  \taxon{corollary}
+  \number{8.2.11}
+
+  \p{
+    The cup product
+    ##{
+      \HH^\bullet(X)\otimes\HH^\bullet(X)
+      \to \HH^\bullet(X)
+    }
+    is a morphism of mixed Hodge structures.
+  }
+
+  \proof{
+    \p{
+      This follows from \ref{hodge-theory-iii-8.2.10} and from \ref{hodge-theory-iii-8.2.2} applied to the diagonal morphism #{\Delta\colon X\to X\times X}.
+    }
+  }
+}

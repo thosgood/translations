@@ -1,0 +1,169 @@
+---
+title: 2.2 Hodge theory
+---
+
+{{< include ../macros.qmd >}}
+
+::: {.rmenv #env-ii-2.2.1 number="2.2.1"}
+Let $X$ be a compact Kähler variety (for example, smooth and projective).
+By the holomorphic Poincaré lemma, the de Rham complex $\Omega_X^\bullet$ is a resolution of the constant sheaf $\CC$.
+We thus have an isomorphism [(1.4.2)](1.4-hypercohomology-of-filtered-complexes.html#ii-1.4.2)
+$$
+  \HH^\bullet(X,\CC)
+  \sim \bHH^\bullet(X,\Omega_X^\bullet)
+$$
+and the stupid filtration on $\Omega_X^\bullet$ [(1.4.5)](1.4-hypercohomology-of-filtered-complexes.html#ii-1.4.5) defines the hypercohomology spectral sequence
+$$
+  E_1^{pq}
+  = \HH^q(X,\Omega_X^q)
+  \To \HH^{p+q}(X,\CC)
+\tag{2.2.1.1}
+$$
+which abuts to the **Hodge filtration** of $\HH^\bullet(X,\CC)$.
+
+By Hodge theory [@H1952; @W1958], we have:
+
+a. The spectral sequence [(2.2.1.1)](#ii-2.2.1) degenerates: $E_1=E_\infty$.
+b. The Hodge filtration of $\HH^n(X,\CC)$ is $n$-opposite to the complex conjugate filtration.
+:::
+
+::: {.rmenv #env-ii-2.2.2 number="2.2.2"}
+Let $V$ be a local system of real vector spaces over $X$, i.e. a sheaf of $\RR$-vector spaces that is locally isomorphic to a constant sheaf $\RR^n$.
+Suppose that there exists on $V$ a bilinear form
+$$
+  Q\colon V\otimes V\to\RR
+$$
+that is locally constant and *defined*.
+If $X$ is connected, this is the case if $V$ is defined by a representation of a finite quotient of the fundamental group of $X$.
+
+Statements (a) and (b) in [(2.2.1)](#ii-2.2.1) remain true as they are, without needing to change the proofs, for cohomology with coefficients in $V_\CC=V\otimes_\RR\CC$, since the spectral sequence
+$$
+  E_1^{pq}
+  = \HH^q(X,\Omega_X^p(V))
+  \To \HH^{p+q}(X,V_\CC)
+$$
+induced by the de Rham resolution of $V_\CC$ by $\Omega_X^\bullet(V_\CC)$ degenerates, and abuts to a filtration on $\HH^n(X,V_\CC)$ that is $n$-opposite to the complex conjugate filtration.
+
+The vector space $\HH^n(X,V)$ is thus endowed with a canonical real Hodge structure of weight $n$.
+:::
+
+::: {.rmenv #env-ii-2.2.3 number="2.2.3"}
+We show in [@D1968] that the statements in [(2.2.1)](#ii-2.2.1) remain true when $X$ is a non-singular complete algebraic, not necessarily Kähler, variety.
+The proof from *loc. cit.*, based on a reduction to the projective case by Chow's lemma and resolution of singularities, extends to the case of [(2.2.2)](#ii-2.2.2).
+:::
+
+:::: {.rmenv #env-ii-2.2.4 number="2.2.4"}
+Let $\mathcal{L}$ be an invertible sheaf.
+Here are two ways of defining the class $c_1(\mathcal{L})$.
+
+::: {.rmenv #env-ii-2.2.4.1 number="2.2.4.1"}
+The sheaf $\mathcal{L}$ defines an element $c$ in $\HH^1(X,\OO^*)$.
+Its image under $\dd f/f\colon\OO^*\to\Omega^1$ lies in $\HH^1(X,\Omega^1)$.
+More precisely, $\dd f/f$ defines a morphism of complexes
+$$
+  \dd\log\colon
+  \OO^*[-1]
+  \to (0\to\Omega_X^1\to\Omega_X^2\to\ldots)
+  = \sigma_{\geqslant1}(\Omega_X^\bullet).
+$$
+This complex maps to $\Omega_X^\bullet$, whence
+$$
+  \dd\log\colon \OO^*[-1]\to\Omega_X^\bullet
+$$
+and the image of $c$ under $\dd\log$ is in $\bHH^2(\Omega_X^\bullet)$.
+This construction still makes sense for an algebraic variety over an arbitrary field $k$.
+For $k=\CC$, we further have
+$$
+  \HH^2(X,\CC)
+  \simto \bHH^2(X,\Omega_X^\bullet)
+$$
+whence a class
+$$
+  c'_1(\mathcal{L}) \in \HH^2(X,\CC).
+$$
+:::
+
+::: {.rmenv #env-ii-2.2.4.2 number="2.2.4.2"}
+The exponential exact sequence
+$$
+  0
+  \to \ZZ(1)
+  \to \OO
+  \to \OO^*
+  \to 0
+$$
+\oldpage{29}
+defines a homomorphism
+$$
+  \partial\colon \HH^1(X,\OO^*)\to\HH^2(X,\ZZ(1))
+$$
+whence a class
+$$
+  \partial c
+  = c''_1(\mathcal{L}) \in \HH^2(X,\ZZ(1)).
+$$
+
+If we have a choice of $i$, then this class is identified with
+$$
+  c'''_1(\mathcal{L}) \in \HH^2(X,\ZZ)
+$$
+and for $\mathcal{L}=\OO(D)$, this $c'''_1(\mathcal{L})$ is exactly the integer cohomology class defined by $D$ (with the orientations being defined by $i$).
+:::
+::::
+
+:::: {.rmenv #env-ii-2.2.5 number="2.2.5"}
+We can prove:
+
+::: {.itenv #env-ii-2.2.5.1 number="2.2.5.1"}
+For $\alpha$ the natural injection of $\ZZ(1)$ into $\CC$, we have
+$$
+  -\alpha c''_1(\mathcal{L})
+  = c'_1(\mathcal{L}).
+$$
+:::
+
+::: {.itenv #env-ii-2.2.5.2 number="2.2.5.2"}
+For $\beta$ the natural injection of $\ZZ$ into $\CC$, we have
+$$
+  -\beta c'''_1(\mathcal{L})
+  = \frac{1}{2\pi i}c'_1(\mathcal{L}).
+$$
+:::
+
+We prove this by considering the following diagram of complexes, in which $\approx$ denotes a quasi-isomorphism, and whose upper triangle anti-commutes up to homotopy:
+$$
+  \begin{CD}
+    \CC @>\approx>> \Omega_X^\bullet @<<< \sigma_{\geqslant1}(\Omega_X^\bullet)
+  \\@| @. @|
+  \\\CC @<<< (\CC\to\OO) @>\approx>\dd> \sigma_{\geqslant1}(\Omega_X^\bullet)
+  \\@AAA @AAA @AA{\dd\log}A
+  \\\ZZ(1) @<<< (\ZZ(1)\to\OO) @>\approx>\exp> \OO^*[-1]
+  \end{CD}
+$$
+::::
+
+::: {.rmenv #env-ii-2.2.6 number="2.2.6"}
+Let $X$ be a non-singular projective variety of pure dimension $n$.
+A choice of $i$ defines an orientation of $X$ and an isomorphism $\ZZ(1)\simeq\ZZ$.
+The corresponding trace morphism
+$$
+  \HH^{2n}(X,\ZZ(n)) \to \ZZ
+$$
+that is induced does not depend on the choice of $i$.
+
+By Hodge, for $i\leqslant n$, the morphism
+$$
+  L^{n-i}
+  = -\wedge c''_1(\OO(1))^{n-i}\colon
+  \HH^i(X,\ZZ) \to \HH^{2n-i}(X,\ZZ(n-i))
+$$
+is an isomorphism, and, combined with Poincaré duality
+$$
+  \HH^i(X,\ZZ)\otimes\HH^{2n-i}(X,\ZZ(n-i))
+  \to \HH^{2n}(X,\ZZ(n-i))
+  \to \ZZ(-i)
+$$
+gives a polarisation on the **primitive part** $\Ker(L^{n-i+1})$ of $\HH^i(X,\ZZ)$.
+
+We thus deduce that the rational Hodge structures $\HH^i(X,\QQ)$ are polarisable.
+:::

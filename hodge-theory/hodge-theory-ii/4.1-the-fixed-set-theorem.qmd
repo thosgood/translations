@@ -1,0 +1,194 @@
+---
+title: 4.1 The fixed set theorem
+---
+
+{{< include ../macros.qmd >}}
+
+::: {.itenv #env-ii-4.1.1 number="4.1.1" taxon="Theorem"}
+Let $S$ be a smooth separated scheme, and $f\colon X\to S$ a smooth proper morphism.
+
+i. In rational cohomology, the Leray spectral sequence
+    $$
+      E_2^{pq}
+      = \HH^p(S,\Rd^qf_*\QQ)
+      \To \HH^{p+q}(X,\QQ)
+    $$
+    degenerates ($E_2=E_\infty$).
+ii. If $\overline{X}$ is a non-singular compactification of $X$, then the canonical morphism
+    $$
+      \HH^n(\overline{X},\QQ)
+      \to \HH^0(S,\Rd^nf_*\QQ)
+    $$
+    is surjective.
+:::
+
+::: {.proof}
+For $f$ smooth and projective, claim (i) is proven in [@D1968]; the proof is rewritten in a more readable manner in [@G1970];
+it does not use the smoothness of $S$.
+
+Let us fix $f$, and prove that (i)$\implies$(ii).
+We can reduce to the case where $S$ is non-empty and connected.
+If $s\in S$ is a point, then the local system $\Rd^nf_*\QQ$ is entirely described by its fibre $(\Rd^nf_*\QQ)_s$ at $s$ and the action of the fundamental group $\pi=\pi_1(S,s)$ on this fibre.
+We have
+$$
+  \HH^0(S,\Rd^n f_*\QQ)
+  \simto [(\Rd^n f_*\QQ)_s]^\pi.
+$$
+If $X_s=f^{-1}(s)$, then the composite arrow
+$$
+  \HH^0(S,\Rd^n f_*\QQ)
+  \to (\Rd^n f_*\QQ)
+  \approx \HH^n(X_s,\QQ)
+$$
+is thus injective.
+Consider the arrows
+$$
+  \HH^n(\overline{X},\QQ)
+  \xrightarrow{a} \HH^n(X,\QQ)
+  \xrightarrow{b} \HH^0(S,\Rd^n f_*\QQ)
+  \xhookrightarrow{c} \HH^n(X_s,\QQ).
+$$
+The arrows $cb$ and $cba$ have the same image, by [(3.2.18)](3.2-mixed-hodge-theory.html#ii-3.2.18).
+The arrow $b$ is an "edge homomorphism" of the Leray spectral sequence, and is thus surjective by hypothesis.
+Since $c$ is injective, $b$ and $ba$ have the same image, and $ba$ is surjective.
+
+This proves (ii) for $f$ projective.
+From this we will deduce the general case.
+We can again reduce to the case where $S$ is non-empty and connected.
+
+By Chow's lemma and the resolution of singularities, there exists a quasi-projective smooth scheme $X'$ and a projective birational morphism $p\colon X'\to X$.
+\oldpage{41}
+There thus exists (by Bertini, or Sard) a non-empty Zariski open $S_1$ of $S$ such that $X'_1=(fp)^{-1}(S_1)$ is smooth over $S_1$.
+Finally, let $X_1=f^{-1}(S_1)$, let $\overline{X}$ be a smooth compactification of $X$, and let $\overline{X}'_1$ be a smooth compactification of $X'_1$ that dominates $\overline{X}$.
+```tikz
+\begin{tikzcd}
+  \overline{X}
+  && \overline{X}'_1
+    \ar[ll,swap,"\overline{p}"]
+\\X
+    \ar[u,hook]
+    \ar[d,swap,"f"]
+  & X_1
+    \ar[l,hook']
+    \ar[d,swap,"f_1"]
+  & X'_1
+    \ar[u,hook]
+    \ar[l,swap,"p"]
+    \ar[d,swap,"f'_1"]
+\\S
+  & S_1
+    \ar[l,hook',"i"]
+  & S_1
+    \ar[l,equals]
+\end{tikzcd}
+```
+If $s\in S_1$, then the morphism $i_*\colon\pi_1(S_1,s)\to\pi_1(S,s)$ is surjective, since the topological codimension of $S\setminus S_1$ is $\geqslant2$.
+We thus have
+$$
+  \HH^0(S,\Rd^n f_*\QQ)
+  \simto \HH^0(S_1,\Rd^n {f_1}_*\QQ)
+$$
+and it suffices to prove that
+$$
+  \HH^n(\overline{X},\QQ)
+  \to \HH^0(S_1,\Rd^n {f_1}_*\QQ)
+$$
+is surjective.
+
+The vertical arrows in the diagram
+$$
+  \begin{CD}
+    \HH^n(\overline{X},\QQ) @>>> \HH^n(X_1,\QQ) @>>> \HH^0(S_1,\Rd^n{f_1}_*\QQ)
+  \\@VV{\overline{p}^*}V @VV{p^*}V @VV{p^*}V
+  \\\HH^n(\overline{X}'_1,\QQ) @>>> \HH^n(X'_1,\QQ) @>>> \HH^0(S_1,\Rd{f'_1}_*\QQ)
+  \end{CD}
+$$
+admit left inverses given by the **Gysin morphisms** $\overline{p}_!$, $p_!$, and $p_!$ (respectively), defined by Poincaré duality as the transposes of the arrows analogous to the above but in cohomology with proper support.
+Furthermore, the diagram
+$$
+  \begin{CD}
+    \HH^n(\overline{X},\QQ) @>{u}>> \HH^0(S_1,\Rd^n{f_1}_*\QQ)
+  \\@A{\overline{p}_!}AA @AA{p_!}A
+  \\\HH^n(\overline{X}',\QQ) @>>{v}> \HH^0(S_1,\Rd^n{f'_1}_*\QQ)
+  \end{CD}
+$$
+commutes.
+The arrow $u$ is thus a direct factor of the arrow $v$.
+Since $v$ is surjective (because $f'_1$ is projective), so too is $u$.
+
+\oldpage{42}
+We now prove (i) in the general case.
+We can reduce to the case where $f$ is of pure relative dimension $n$.
+Let $f\times f$ be the projection of $X\times_S X$ to $S$.
+
+Let $\delta$ be the image of the cohomology class of the diagonal of $X\times_S X$ in $\HH^0(S,\Rd^n(f\times f)_*,\QQ)$.
+We have, by Künneth,
+$$
+  \Rd^n(f\times f)_*\QQ
+  = \sum_{p+q=n} (\Rd^p f_*\QQ\otimes\Rd^q f_*\QQ).
+$$
+We denote by $\delta'_{pq}$ (for $p+q=n$) the components of $\delta$ in this decomposition, and by $\delta_{pq}$ the classes in $\HH^n(X\times_S X)$ given by the images of the $\delta'_{pq}$.
+
+The $\delta_{pq}$ define, in the derived category $\DD^+(S)$, homomorphisms
+$$
+  \delta_p\colon
+  \Rd f_*\QQ
+  \to \Rd f_*\QQ
+$$
+such that $\sHH^q(\delta_p)$ is zero for $p\neq q$, and is the identity for $p=q$.
+By [@D1968], we thus have
+$$
+  \Rd f_*\QQ
+  \approx \sum_p \Rd^p f_*\QQ[-p]
+\tag{4.1.1.1}
+$$
+in $\DD^+(S)$, and the Leray spectral sequence degenerates.
+:::
+
+::: {.itenv #env-ii-4.1.2 number="4.1.2" taxon="Corollary"}
+Let $f\colon X\to S$ be a proper smooth morphism, with $S$ reduced, connected, and separated.
+Let $(\Rd^n f_*\QQ)_0$ be the largest constant local system on $\Rd^n f_*\QQ$, with fibre $\HH^0(S,\Rd^n f_*\QQ)$.
+Then, for each $s\in S$, $(\Rd^n f_*\QQ)_s^0$ is a Hodge sub-structure of $(\Rd^n f_*\QQ)\simeq\HH^n(X_s,\QQ)$, and the induced Hodge structure on $\HH^0(S,\Rd^n f_*\QQ)$ is independent of $s$.
+:::
+
+::: {.proof}
+Let $s\in S$, and let $X_s=f^{-1}(s)$.
+If $S$ is smooth, and if $\overline{X}$ is a smooth compactification of $X$, then, by [(4.1.1)](#ii-4.1.1), the subspace $(\Rd^n f_*\QQ)_s^0$ of $(\Rd^n f_*\QQ)_s$ is the image of $\HH^n(\overline{X},\QQ)$.
+Since the restriction map
+$$
+  \HH^n(\overline{X},\QQ) \to \HH^n(X_s,\QQ)
+$$
+is a morphism of Hodge structures, its image is a Hodge sub-structure, and the induced Hodge structure on $\HH^0(S,\Rd^n f_*\QQ)$, given by the quotient of that on $\HH^n(\overline{X},\QQ)$, is independent of $s$.
+:::
+
+In the general case, [(4.1.2)](#ii-4.1.2) also implies that, if $a$ is a global section of $\Rd^n f_*\CC$, then its components $a^{p,q}$ of degree $(p,q)$, which are a priori only continuous sections of the complex bundle defined by $\Rd^n f_*\CC$, are in fact locally constant, i.e. are sections of $\Rd^n f_*\CC$.
+This is the case because $a^{p,q}$ is continuous, and further locally constant on the (dense) open subset of smooth points of $S$, by the above.
+
+:::: {.rmenv #env-ii-4.1.3 number="4.1.3"}
+In the case where $S$ is compact, a generalisation of [(4.1.2)](#ii-4.1.2) is proven by analytic methods in [@G1970].
+
+As a corollary to [(4.1.2)](#ii-4.1.2), we note:
+
+::: {.itenv #env-ii-4.1.3.1 number="4.1.3.1"}
+(cf. [@G1970).
+Let $f\colon X\to S$ be a proper smooth morphism, as in [(4.1.2)](#ii-4.1.2).
+If a global section $a$ of $\Rd^n f_*\CC$ is of Hodge degree $(p,q)$ at a point, then $a$ is everywhere of degree $(p,q)$.
+In particular, if $n=2$ and if $a$ is, at some point $s$, the cohomology class of a divisor of $X_s$, then $a$ is everywhere the cohomology class of a divisor, and, if $S$ is smooth, is even defined by a divisor $D$ on $X$.
+:::
+
+::: {.itenv #env-ii-4.1.3.2 number="4.1.3.2"}
+(cf. [@G1966]).
+Let $S$ be a reduced connected scheme of finite type over $\CC$, and let $f_1\colon X_1\to S$ and $f_2\colon X_2\to S$ be abelian schemes over $S$.
+If a morphism $u\colon\Rd^1{f_2}_*\ZZ\to\Rd^1{f_1}_*\ZZ$ comes from a morphism $\widetilde{u}_s\colon(X_1)_s\to(X_2)_s$ of abelian varieties at some point $s\in S$, then $u$ comes from a (unique) morphism of abelian schemes $\widetilde{u}\colon X_1\to X_2$.
+:::
+
+::: {.itenv #env-ii-4.1.3.3 number="4.1.3.3"}
+(cf. [@K1971]).
+Let $S$ be a smooth connected scheme, $s\in S$ a point, $f\colon X\to S$ a proper smooth morphism, and $P$ a direct factor of the local system $\Rd^i f_*\QQ$, which is pointwise a Hodge sub-structure.
+Then the following conditions are equivalent:
+
+a. The Hodge structure of $P$ is locally constant.
+b. The representation $P_s$ of $\pi_1(S,s)$ factors through a finite quotient of $\pi_1(S,s)$.
+c. There exists a finite non-empty étale covering $u\colon S'\to S$ such that $u^*P$ is a constant family of Hodge structures.
+:::
+::::

@@ -1,0 +1,393 @@
+---
+title: 4.2 The semi-simplicity theorem
+---
+
+{{< include ../macros.qmd >}}
+
+::: {.rmenv #env-ii-4.2.1 number="4.2.1"}
+Let $S$ be a topological space.
+A **continuous family of Hodge structures** on $S$ consists of:
+
+a. A local system $H_\ZZ$ on $S$ of $\ZZ$-modules of finite type.
+b. For every point $s\in S$, a Hodge structure on the fibre $(H_\ZZ)$ that varies continuously in $s$.
+
+A continuous family $H$ of Hodge structures on $S$ is said to be **of weight $n$** if the fibres $H_s$ (for $s\in S$) are all of weight $n$.
+
+We similarly define a **continuous family of Hodge $\QQ$-structures** as a local system of $\QQ$-vector spaces, endowed at each point with a Hodge $\QQ$-structure, varying continuously.
+}
+
+A **polarisation** of a continuous family $H$ of Hodge $\QQ$-structures of weight $n$ is a morphism of local systems from $H_\QQ\otimes H_\QQ$ to the constant local system $\QQ(-n)_\QQ$, which defines at each point $s\in S$ a polarisation of $H_s$.
+:::
+
+:::: {.rmenv #env-ii-4.2.2 number="4.2.2"}
+Suppose that $S$ is connected, and let $\mathcal{C}$ be a strictly full subcategory of the category of continuous families of Hodge $\QQ$-structures on $S$.
+We will have need of the following conditions:
+
+::: {.rmenv #env-ii-4.2.2.1 number="4.2.2.1" taxon="Condition"}
+$\mathcal{C}$ is stable under direct factors, direct sums, and tensor products;
+the Tate constant families $\QQ(n)$ (for $n\in\ZZ$) are in $\mathcal{C}$.
+:::
+
+::: {.rmenv #env-ii-4.2.2.2 number="4.2.2.2" taxon="Condition"}
+Every homogeneous (of some weight $n$) Hodge structure in $\mathcal{C}$ is polarisable.
+:::
+
+::: {.rmenv #env-ii-4.2.2.3 number="4.2.2.3" taxon="Condition"}
+For every $H\in\Ob\mathcal{C}$, there exists a local system $H'_\ZZ$ on $S$ of free $\ZZ$-modules such that $H'_\ZZ\otimes\QQ\approx H_\QQ$.
+:::
+
+::: {.rmenv #env-ii-4.2.2.4 number="4.2.2.4" taxon="Condition"}
+\oldpage{44}
+For every $H\in\Ob\mathcal{C}$, the largest constant local system $H^f$ of $H$ is a constant family of Hodge sub-structures of $H$.
+:::
+::::
+
+::: {.itenv #env-ii-4.2.3 number="4.2.3" taxon="Lemma"}
+If $\mathcal{C}$ satisfies [(4.2.2.1)](#ii-4.2.2) and [(4.2.2.2)](#ii-4.2.2), then:
+
+i. $\mathcal{C}$ is a semi-simple abelian subcategory of the abelian subcategory of continuous families of Hodge $\QQ$-structures on $S$.
+ii. If $H\in\Ob\mathcal{C}$, then its dual $H^*$ and the $\wedge^p H$ are also in $\mathcal{C}$; if $H_1,H_2\in\Ob\mathcal{C}$, then $\Hom(H_1,H_2)\in\Ob\mathcal{C}$.
+:::
+
+::: {.proof}
+Let $H\in\Ob\mathcal{C}$, and let $H_1$ be a sub-object of $H$, in the category of continuous families of Hodge $\QQ$-structures.
+We will show that $H_1$ is a direct factor of $H$ in this category.
+We can suppose $H$ to be homogeneous.
+If $\psi$ is a polarisation form for $H$, then the orthogonal of $H_1$ with respect to $\psi$ is indeed a sub-object of $H$ that is a supplement to $H_1$.
+This proves (i)
+
+If $H\in\Ob\mathcal{C}$ is of weight $n$, then a polarisation of $H$ defines an isomorphism between $H^*$ and $H\otimes\QQ(n)$.
+By [(4.2.2.1)](#ii-4.2.2), we thus have that $H^*\in\Ob\mathcal{C}$.
+For arbitrary $H\in\Ob\mathcal{C}$, if we decompose $H$ into its homogeneous components, then $H^*=\bigoplus_n(H^n)^*$, whence again $H^*\in\Ob\mathcal{C}$.
+Finally, $\wedge^p H$ is a direct factor of $\bigotimes^p H$, and $\Hom(H_1,H_2)\simeq H_1^*\otimes H_2$.
+:::
+
+Let $f\colon X\to S$ be a smooth proper morphism of reduced schemes.
+The sheaf $\Rd^i f_*\QQ$ is then a local system, and, for $s\in S$, $(\Rd^i f_*\QQ)_s\simeq\HH^i(X_s,\QQ)$ is endowed with a Hodge $\QQ$-structure, which varies continuously in $s$.
+
+::: {.rmenv #env-ii-4.2.4 number="4.2.4" taxon="Definition"}
+Let $S$ be a smooth connected scheme.
+A continuous family $H$ of Hodge $\QQ$-structures on $S^\an$ is said to be **algebraic** if there exists a non-empty Zariski open $U$ of $S$, an integer $k$, and a smooth projective morphism $f\colon X\to U$ such that $H|U$ is a direct factor of $\Rd f_*\QQ\otimes\QQ(k)$.
+:::
+
+::: {.itenv #env-ii-4.2.5 number="4.2.5" taxon="Proposition"}
+—
+
+i. The category of algebraic continuous families of Hodge $\QQ$-structures on $S$ satisfies the conditions of [(4.2.2)](#ii-4.2.2).
+ii. If a continuous family $H$ of Hodge structures on $S$ is such that its restriction to a dense Zariski open $U$ of $S$ is algebraic, then $H$ is algebraic.
+iii. If $f\colon X\to S$ is smooth and proper, then $\Rd f_*\QQ$ is algebraic.
+:::
+
+::: {.proof}
+Claim (ii) is evident.
+We will prove (i).
+Let $\mathcal{C}_0$ be the set of continuous families of Hodge structures on $S$ that are of the form $\Rd f_*\QQ$ (with $f$ smooth and projective).
+Then:
+
+a. By the Künneth formula
+    $$
+      \Rd(f\times g)_*\QQ
+      \simeq \Rd f_*\QQ\otimes\Rd g_*\QQ,
+    $$
+    $\mathcal{C}_0$ is stable under tensor products.
+b. Since
+    $$
+      \Rd(f\sqcup g)_*\QQ
+      \simeq \Rd f_*\QQ\oplus\Rd g_*\QQ,
+    $$
+    $\mathcal{C}_0$ is stable under direct sums.
+c. The homogeneous components of each $H\in\Ob\mathcal{C}_0$ are polarisable (cf. [(2.2.6)](2.2-hodge-theory.html#ii-2.2.6)).
+    \oldpage{45}
+d. The objects $H\in\Ob\mathcal{C}_0$ satisfy [(4.2.2.3)](#ii-4.2.2), since
+    $$
+      \Rd f_*\QQ
+      \simeq \Rd f_*\ZZ\otimes\QQ.
+    $$
+e. The objects $H\in\Ob\mathcal{C}_0$ satisfy [(4.2.2.4)](#ii-4.2.2), by [(4.1.2)](4.1-the-fixed-set-theorem.html#ii-4.1.2).
+
+Let $\mathcal{C}_1$ be the set of direct factors of objects of $\mathcal{C}_0$.
+Then $\mathcal{C}_1$ is stable under tensor products, direct sums, and direct factors, and satisfies [(4.2.2.2)](#ii-4.2.2), [(4.2.2.3)](#ii-4.2.2), and [(4.2.2.4)](#ii-4.2.2).
+Furthermore, $\QQ(-1)$ is in $\mathcal{C}_1$, in the form of $\Rd^2 f_*\QQ$ for $f\colon\PP_S^1\to S$ the projective bundle.
+The category $\mathcal{C}_2$ consisting of the $H\otimes\QQ(k)$ (for $k\in\NN$) thus satisfy all the conditions of [(4.2.2)](#ii-4.2.2).
+
+To thus deduce (i), it suffices to note that, if $H$ is a continuous family of Hodge structures, and $U$ a dense Zariski open of $S$, then a sub-object of, a polarisation on, or an integer lattice of $H|U$ uniquely extend to $H$.
+
+We now prove (iii).
+If $f\colon X\to S$ is smooth and projective, then there exists a dense Zariski open subset $U$ of $S$ along with a commutative diagram
+
+```tikz
+\begin{tikzcd}
+  X' \ar[rr,"p"] \ar[dr,swap,"f'"]
+  && X|U \ar[dl,"f|U"]
+\\& U
+\end{tikzcd}
+```
+with $f'$ smooth and projective, and $p$ birational and surjective (by applying Chow's lemma and the resolution of singularities to the generic fibre of $f$).
+The restriction map
+$$
+  p^*\colon (\Rd f_*\QQ)|U \to \Rd f'_*\QQ
+$$
+is thus a direct injection of continuous families of Hodge structures, with left inverse given by the Gysin morphism $p_!$, whence the algebraicity of $\Rd f_*\QQ$.
+:::
+
+::: {.itenv #env-ii-4.2.6 number="4.2.6" taxon="Theorem"}
+Let $S$ be a connected topological space that is locally connected and locally simply connected, endowed with a basepoint $s$.
+Let $\mathcal{C}$ be a category of continuous Hodge structures on $S$ that satisfy the conditions of [(4.2.2)](#ii-4.2.2).
+Then, if $H\in\Ob\mathcal{C}$, the representation of $\pi_1(S,s)$ on the fibre $(H_\QQ)_s$ is semi-simple.
+:::
+
+::: {.rmenv #env-ii-4.2.6p number="4.2.6'"}
+*(Adding during editing).*
+Let $S$ be a smooth connected scheme.
+A **family of Hodge structures** on $S$ is a continuous family $H$ of Hodge structures on $S$ that satisfies the following conditions:
+
+a. The Hodge filtration on $(H_\CC)_s$ varies holomorphically with $s$, i.e. it corresponds to a filtration $F$ of $H_\OO=H_\ZZ\otimes\OO$.
+b. The covariant derivative $\nabla$ satisfies $\nabla F^p\subset\Omega_S^1\otimes F^{p-1}$.
+
+Let $\mathcal{C}$ be the category of such continuous families of Hodge $\QQ$-structures on $S$ that underlie a family of Hodge structures and whose homogeneous direct factors are polarisable.
+It is clear that $\mathcal{C}$ satisfies [(4.2.2.1)](#ii-4.2.2), [(4.2.2.2)](#ii-4.2.2), and [(4.2.2.3)](#ii-4.2.2).
+We can deduce from results of W. Schmid (August 1970, unpublished) and P.A. Griffiths [@G1970] that $\mathcal{C}$ satisfies [(4.2.2.4)](#ii-4.2.2).
+This theorem, of which [(4.1.2)](4.1-the-fixed-set-theorem.html#ii-4.1.2) is a corollary, allows us to apply [(4.2.6)](#ii-4.2.6) and its corollaries to the objects of $\mathcal{C}$.
+:::
+
+\oldpage{46}
+Let $H\in\Ob\mathcal{C}$.
+The local system $H_\QQ$ defines a complex local system $H_\CC=H_\QQ\otimes\CC$.
+For every complex local system $V$ on $S$, we denote by $V^\cc$ the complex vector bundle that it defines, identified with the sheaf of its continuous sections.
+}
+
+By definition, the group $S$ (from [(2.1.2)](2.1-pure-structures.htlm#ii-2.1.2)) acts on $H_\CC^\cc$.
+A sub-bundle of $H_\CC^\cc$ is said to be **horizontal**, or **locally constant**, if it is defined by a local subsystem of $H_\CC$.
+}
+
+::: {.itenv #env-ii-4.2.7 number="4.2.7" taxon="Lemma"}
+Let $V$ be a rank-1 local subsystem of $H_\CC$.
+Suppose that the $n$-th tensor power $V^{\otimes n}$ (for some $n\geqslant1$) of $V$ is a trivial local system, i.e. that $\pi_1(S,s)$ acts on $V_s$ via a finite (necessarily cyclic) group.
+Then, for all $t\in S$, $tV^\cc$ is again locally constant.
+:::
+
+::: {.proof}
+In order for $tV^\cc$ to be locally constant, it suffices for $(tV^\cc)^{\otimes n}={tV^{c}}^{\otimes n}\subset\bigotimes^n H_\CC$ to be locally constant.
+But $V^{\otimes n}$ is generated by a horizontal global section $v$, and, by hypothesis, $tv$ is again horizontal [(4.2.2.4)](#ii-4.2.2).
+
+We proceed by induction on $\dim(H_\QQ)_s$.
+We can suppose $H$ to be homogeneous and non-zero.
+Let $d$ be the minimal dimension of the non-zero complex local subsystems of $H_\CC$.
+The sum $W$ of all the local subsystems of $H_\CC$ of dimension $d$ (which are automatically simple) is "defined over $\QQ$", i.e. is of the form $W_\QQ\otimes\CC$ for $W_\QQ$ a local subsystem of $H_\QQ$.
+By construction, $W_s$ is a semi-simple complex $\pi_1(S,s)$-module, so $(W_\QQ)$s} is a semi-simple $\pi_1(S,s)$-module over $\QQ$.
+
+Let $H_\ZZ$ be a local system of free $\ZZ$-modules such that $H_\ZZ\otimes\QQ\simeq H_\QQ$, and let $W_\ZZ=H_\ZZ\cap W_\QQ$.
+If $W$ is of dimension $e$, then the local system $(\wedge^e W)^{\otimes2}$ is trivial.
+Indeed:
+$$
+  \bigwedge^e W
+  \simeq \bigwedge^e W_\ZZ\otimes\CC
+$$
+and $\pi_1(S,s)$ can only act on $(\wedge^e W_\ZZ)$ by $\pm1$.
+
+Let $V$ be a complex local subsystem of dimension $d$ of $H_\CC$, and let $V'$ be a complement of $V$ inside $W$ (by the semi-simplicity of $W$).
+We have
+$$
+  \bigwedge^e W
+  \simeq \bigwedge^d V\otimes\bigwedge^{e-d}V'.
+$$
+Applying [(4.2.7)](#ii-4.2.7) to the local subsystem $\wedge^d V\otimes\wedge^{e-d}V'$ of $\wedge^d H_\CC\otimes\wedge^{e-d}H_\CC$, we see that, for $t\in S$,
+$$
+  t\left(\bigwedge^d V\otimes\bigwedge^{e-d}V'\right)^\cc
+  = \bigwedge^d tV^\cc\otimes\bigwedge^{e-d}t{V'}^\cc
+  \subset \bigwedge^d H_\CC\otimes\bigwedge^{e-d}H_\CC
+$$
+is locally constant.
+From this, $\wedge^d tV^\cc\subset\wedge^d H_\CC$ and $tV^\cc\subset H_\CC$ are locally constant.
+
+By the definition of $W$, we have $tV^\cc\subset W^\cc$, since $W^\cc$ is stable under $S$, and $W_\QQ$ is a Hodge sub-structure of $H$.
+If $\psi$ is a polarisation of $H$, then $H$ is thus the direct sum of $W$ and its orthogonal, which are both in $\mathcal{C}$, and we conclude by induction.
+:::
+
+::: {.itenv #env-ii-4.2.8 number="4.2.8" taxon="Corollary"}
+Under the hypotheses of [(4.2.6)](#ii-4.2.6):
+
+i. The algebra $A$ of endomorphisms of the local system $H_\QQ$ is semi-simple.
+    It admits exactly one Hodge $\QQ$-structure such that, at each point $s$, the map $A\otimes H_s\to H_s$ is a morphism of Hodge structures.
+ii. The centre of $A$ is of degree $(0,0)$, and the composition law $\cdot\colon A\otimes A\to A$ is a morphism of Hodge structures.
+    \oldpage{47}
+iii. Let $W$ be a complex local subsystem of dimension $d$ of $H_\CC$.
+    Then:
+      a. For $t\in S$, $tW^\cc\subset H_\CC$ is locally constant, and defines a local subsystem $tW$ which is isomorphic to $W$.
+      b. Some power $(\wedge^d W)^{\otimes n}$ (for some $n\geqslant1$) of the local system $\wedge^d W$ is a trivial local system.
+:::
+
+::: {.proof}
+The algebra $A$ is the commutator of $\pi_1(S,s)$ in $(H_\QQ)$s}.
+Its semi-simplicity thus follows from [(4.2.6)](#ii-4.2.6) and from Bourbaki, *Algèbre commutative*, Chapter 8, §5.2, Proposition 4.
+The algebra $A$ is also the fibre of the largest constant local subsystem of $\iHom(H_\QQ,H_\QQ)$.
+Since $\iHom(H,H)\in\CC$ (by (ii) of [(4.2.3)](#ii-4.2.3)), the existence of the Hodge structure in (i) follows from the hypotheses [(4.2.2.4)](#ii-4.2.2).
+It is clear that the composition law is a morphism of Hodge structures.
+It thus follows that the centre $Z$ of $A$ is a Hodge substructure: $Z_\CC$ is bigraded, as the intersection of kernels of bihomogeneous morphisms $[x,-]$, for $x$ bihomogeneous.
+Finally, $Z$, and thus $Z_\CC$, is semi-simple, and, for $(p,q)neq(0,0)$, $Z^{pq}$ is zero and thus nilpotent.
+
+A complex local subsystem $W$ of $H_\CC$ is defined by a projector $e$ of $A_\CC$.
+For $t\in S$, $tW^\cc$ is defined by the projector $t\cdot e$, and is thus locally constant.
+Since the group $S$ is connected, to show that $tW$ is isomorphic to $W$, it suffices to show that, for $t$ in a small enough neighbourhood of $1$, the $\CC[\pi_1(S,s)]$ module $tW_s$ is isomorphic to $W_s$.
+Let $H_i$ be the isotypic components of the $\CC[\pi_1(S,s)]$-module $(H_\CC)_s$.
+We have
+$$
+  \begin{aligned}
+    W_s
+    &= \bigoplus_i(W_s\cap H_i)
+  \\tW_s
+    &= \bigoplus_i(tW_s\cap H_i).
+  \end{aligned}
+$$
+
+Furthermore, for $t$ close enough to $1$, $tW_s$ is close to $W_s$ in the Grassmannian, and thus
+$$
+  \dim(tW_s\cap H_i)
+  \leqslant \dim(W_s\cap H_i).
+\tag{4.2.8.1}
+$$
+
+In fact, since $\dim(tW_s)=\dim(W_s)$, we have equality in [(4.2.8.1)](#ii-4.2.8).
+The various isotypic components of $W_s$ and $tW_s$ thus have, respectively, the same length, and $W_s$ is isomorphic to $tW_s$.
+}
+
+We now prove (iii.b).
+It suffices to consider the case where $H$ is homogeneous and $W_s$ is a simple $\CC[\pi_1(S,s)]$-module.
+Let $H_1$ be the isotypic component of $(H_\CC)$s} that contains $W_s$.
+By (a), $H_1$ is stable under $S$.
+If $W_s$ is of dimension $d$, and $H_1$ of length $k$, then
+$$
+  \bigwedge^{kd}H_1
+  \approx \left(\bigwedge^d W_s\right)^{\otimes k}
+$$
+as $\CC[\pi_1(S,s)]$-modules.
+If $\chi$ is the character of $\pi_1(S,s)$ defined by $\wedge^d W$, then the character $\chi_1$ defined by $\wedge^{kd}H_1$ is thus $\chi^k$.
+Let $H_2=H_1+\overline{H}_1$.
+Since $H_1$ is stable under $S$, $H_2$ is defined by a real Hodge substructure of $(H_\RR)_s$.
+Every polarisation form on $H$ thus induces on $H_2$ a non-degenerate bilinear form that is $\pi_1(S,s)$-invariant.
+\oldpage{48}
+If $\dim(H_2)=e$, then the representation $(\wedge^e H_2)^{\otimes2}$ of $\pi_1(S,s)$ is thus trivial.
+From this:
+
+a. For real $H_1$, $\chi^{2k}$ is trivial.
+b. For non-real $H_1$ (so $H_1\neq\overline{H}_1$), $\chi^{2k}\cdot\overline{\chi}^{2k}$ is trivial.
+
+In both cases, $|\chi|=1$.
+
+The representation of $\pi_1(S,s)$ on $(H_\CC)_s$ comes from extension of scalars of a representation defined over $\QQ$ (namely $(H_\QQ)_s$).
+The conjugate representations of $W$ thus appear in $(H_\CC)_s$;
+there are at most $N=\dim(H)$ of them, and for every automorphism $\sigma$ of $\CC$ we have
+$$
+  |\sigma(\chi)|
+  = 1.
+$$
+
+For $\gamma\in\pi_1(S,s)$, $\chi(\gamma)$ is an algebraic integer with at most $N$ complex conjugates, and these are all of absolute value $1$;
+thus $\chi(\gamma)$ is a $k$-th root of unity, with $k\leqslant N$.
+Thus $\chi^{N!}=1$, which proves (b).
+:::
+
+::: {.itenv #env-ii-4.2.9 number="4.2.9" taxon="Corollary"}
+Let $S$ be a smooth, connected, separated scheme, endowed with a base point $s\in S$.
+Let $f\colon X\to S$ be a morphism of schemes such that $\Rd^nf_*\QQ$ is a local system on $S$.
+Let $G$ be the Zariski closure of the image of $\pi_1(S,s)$ in $\Aut_\CC((\Rd^nf_*\CC)_s)$, and $G^0$ the identity component of $G$.
+Then:
+
+a. If $f$ is smooth and proper, then $G^0$ is semi-simple.
+b. In general, $G^0$ does not admit any quotient of multiplicative type (i.e. the radical of $G^0$ is unipotent).
+:::
+
+::: {.proof}
+We first prove (a).
+By replacing $S$ by a finite étale cover, if necessary, we can reduce to the case where $G=G^0$.
+By (iii) of [(4.2.5)](#ii-4.2.5), the local system $\Rd^nf_*\QQ$ underlies an algebraic family $H$ of Hodge structures, and so we can apply [(4.2.8)](#ii-4.2.8) (by (i) of [(4.2.5)](#ii-4.2.5)).
+The group $G$ is reductive, since it admits a faithful semi-simple representation (namely $(\Rd^nf_*\CC)_s$).
+If $G$ (which we assume to be connected) were not semi-simple, then it would admit a non-trivial complex representation $\rho$ of rank $1$;
+since $H_s$ is faithful, $\rho$ would then be a direct factor of $((H+H^*)_\CC^{\otimes m})_s$ for some $m$.
+But this would contradict (iii.b) of [(4.2.8)](#ii-4.2.8), since $(H+H^*)^{\otimes m}$ is algebraic, and no tensor power of $\rho$ is trivial.
+:::
+
+Let $\pi$ be a group, and consider the following property of a representation $\rho$ of $\pi$ in a complex vector space $V$ of finite dimension:
+
+::: {.rmenv #env-ii-4.2.star number="\*"}
+The identity component $G^0$ of the Zariski closure $G$ of $\rho(\pi)$ in $\Aut(V)$ does not admit any quotient of multiplicative type.
+:::
+
+::: {.itenv #env-ii-4.2.10 number="4.2.10" taxon="Lemma"}
+Let $0\to V'\to V\to V''\to0$ be an exact sequence of representations of the above type.
+Then $V$ satisfies [(\*)](#env-ii-4.2.star) if (and only if) $V'$ and $V''$ satisfy [(\*)](#env-ii-4.2.star).
+:::
+
+::: {.proof}
+Let $G$, $G'$, and $G''$ be the groups defined by $V$, $V'$, and $V''$, respectively.
+Then $V'$ is stable under $G$, just as it is under $\pi$, whence a morphism
+$$
+  u
+  = (u',u'')\colon G\to G'\times G''
+$$
+with unipotent kernel, and such that $u'$ and $u''$ are surjective.
+Let $N$ be the identity component of the kernel of $u''$.
+Since $u'$ is surjective, $u'(N)$ is distinguished in $G'$, and thus does not admit any quotient of multiplicative type.
+\oldpage{49}
+If $\chi$ is a character of $G^0$, then $\chi$ factors through $u(G^0)$ and vanishes on $N$;
+then a power of $\chi$ factors through ${G''}^0$, and so $\chi$ is trivial.
+:::
+
+We now prove part (b) of [(4.2.9)](#ii-4.2.9) by dévissage, and by induction on the relative dimension of $f$.
+We can suppose $X$ to be reduced.
+
+Suppose first of all that $X$ is quasi-projective.
+Then there exists a non-empty open $U$ of $S$, a dense open $X'$ of $X_U=f^{-1}(U)$ that is smooth over $U$, and a compactification $\overline{X}'$ of $X'$ that is smooth and proper over $U$.
+We can choose $\overline{X}'$ to be such that some open $X''$ of $\overline{X}'$ contains $X'$ and is proper over $X_U$.
+
+```tikz
+\begin{tikzcd}
+  X_U
+    \ar[ddr,swap,"f_U"]
+  && X''
+    \ar[r,hook,"k"]
+    \ar[ll,swap,"p"]
+    \ar[ddl,"f''"]
+  & \overline{X}'
+    \ar[ddll,"\overline{f}'"]
+\\&X'
+    \ar[ul,hook',swap,"i"]
+    \ar[ur,hook,"j"]
+    \ar[d,"f'"]
+\\&U
+\end{tikzcd}
+```
+
+We have long exact sequences of sheaves
+$$
+  \begin{gathered}
+    \ldots
+    \to \Rd^i{f_U}_*(i_!\QQ)
+    \to \Rd^i{f_U}_*\QQ
+    \to \Rd^i{f_U}_*(\QQ/i_!\QQ)
+    \to \ldots
+  \\\ldots
+    \to \Rd^i{f''_U}_*(j_!\QQ)
+    \to \Rd^i{f''_U}_*\QQ
+    \to \Rd^i{f''_U}_*(\QQ/j_!\QQ)
+    \to \ldots
+  \\\ldots
+    \to \Rd^i f''_!\QQ
+    \to \Rd^i\overline{f}'_*\QQ
+    \to \Rd^i\overline{f}'_*(\QQ/k_!\QQ)
+    \to \ldots
+  \end{gathered}
+$$
+
+For small enough $U$, these sheaves are local systems, and the induction hypothesis applies to $\Rd^\bullet{f_U}_*(\QQ/i_!\QQ)$, to $\Rd^\bullet{f''}_*(\QQ/j_!\QQ)$, and to $\Rd^\bullet\overline{f}'_*(\QQ/k_!\QQ)$.
+By (a) of [(4.2.9)](#ii-4.2.9), [(\*)](#env-ii-4.2.star) is satisfied by $\Rd^\bullet\overline{f}'_*\QQ$.
+By [(4.2.10)](#ii-4.2.10), [(\*)](#env-ii-4.2.star) is then also satisfied by $\Rd^\bullet{f''}_!\QQ$, and by the dual local system $\Rd^\bullet\overline{f}'_*\QQ$ (Poincaré duality).
+By [(4.2.10)](#ii-4.2.10), [(\*)](#env-ii-4.2.star) is satisfied by $\Rd^\bullet{f''}_*(j_!\QQ)$, which is isomorphic to $\Rd^\bullet{f_U}_*(i_!\QQ)$, since $p$ is proper, as well as by $\Rd^\bullet{f_U}_*\QQ$.
+Since the morphism $\pi_1(U)\to\pi_1(S)$ is surjective, $\Rd^if_*\QQ$ satisfies (b) of [(4.2.9)](#ii-4.2.9).
+
+To pass from the case where $f$ is quasi-projective to the general case, it suffices to use the Leray spectral sequence for a cover $(U_i)$ of $X$ by quasi-projective opens:
+$$
+  \Rd^\bullet f_*\left(\bigcap_i U_i,\QQ\right)
+  \To \Rd^\bullet f_*\QQ
+$$
+along with [(4.2.10)](#ii-4.2.10).

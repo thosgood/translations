@@ -1,0 +1,89 @@
+---
+title: 2.3 Mixed structures
+---
+
+{{< include ../macros.qmd >}}
+
+::: {.rmenv #env-ii-2.3.1 number="2.3.1" taxon="Definition"}
+A **mixed Hodge structure** $H$ consists of
+\oldpage{30}
+
+a. A $\ZZ$-module $H_\ZZ$ of finite type, called the "**integral lattice**";
+b. A finite increasing filtration $W_n$ on $H_\QQ=\QQ\otimes_\ZZ H_\ZZ$, called the **weight filtration**;
+c. A finite filtration $F^p$ on $H_\CC=\CC\otimes_\ZZ H_\ZZ$, called the **Hodge filtration**.
+
+We demand that, on $H_\CC$, the filtration $W_\CC$ induced by extension of scalars of $W$, the filtration $F$, and the complex conjugate $\overline{F}$ form a system $(W_\CC,F,\overline{F})$ of three opposite filtrations ([(1.2.7)](1.2-opposite-filtrations.html#ii-1.2.7) and [(1.2.13)](1.2-opposite-filtrations.html#ii-1.2.13)).
+:::
+
+::: {.rmenv #env-ii-2.3.2 number="2.3.2"}
+We also denote by $W$ the filtration of $H_\ZZ$ given by the inverse image of the filtration $W$ on $H_\QQ$.
+The axiom of mixed Hodge structures implies that, for each $n$, the filtration $F$ induces on $\CC\otimes_\ZZ\Gr_n^W(H_\ZZ)$ a filtration that is $n$-opposite to its complex conjugate.
+By [(2.1.9)](2.1-pure-structures.html#ii-2.1.9), $\Gr_n^W(H_\ZZ)$ is endowed with a Hodge structure of weight $n$, with Hodge filtration induced by $F$.
+:::
+
+::: {.rmenv #env-ii-2.3.3 number="2.3.3" taxon="Example"}
+If $H$ is a Hodge structure of weight $n$, then we define a mixed Hodge structure with the same integral lattice and the same Hodge filtration by setting
+$$
+  W_i(H_\QQ) =
+  \begin{cases}
+    0 &\text{for } i<n
+\\H_\QQ &\text{for } i\geqslant n.
+  \end{cases}
+$$
+:::
+
+::: {.rmenv #env-ii-2.3.4 number="2.3.4"}
+A **morphism** $f\colon H\to H'$ of Hodge structures is a homomorphism $f\colon H_\ZZ\to H'_\ZZ$ that is compatible with the filtrations $W$ and $F$ (and thus compatible with $\overline{F}$).
+We immediately deduce from [(1.2.10)](1.2-opposite-filtrations.html#ii-1.2.10) the following theorem.
+:::
+
+::: {.itenv #env-ii-2.3.5 number="2.3.5" taxon="Theorem"}
+—
+
+i. The category of mixed Hodge structures is abelian.
+ii. The integral lattice of the kernel (resp. cokernel) of a morphism $f\colon H\to H'$ is the kernel (resp. cokernel) $K$ of $f\colon H_\ZZ\to H'_\ZZ$, with $K\otimes\QQ$ and $K\otimes\CC$ being endowed with the induced filtrations (resp. quotient filtrations) of the filtrations $W$ and $F$ of $H_\QQ$ and $H_\CC$ (resp. of $H'_\QQ$ and $H'_\CC$).
+iii. Every morphism $f\colon H\to H'$ is strictly compatible with the filtration $W$ of $H_\QQ$ and $H'_\QQ$ and with the filtration $F$ of $H_\CC$ and $H'_\CC$.
+  It induces morphisms of Hodge $\QQ$-structures
+  $$
+    \Gr_n^w(f)\colon
+    \Gr_n^W(H_\QQ)
+    \to \Gr_n^W(H'_\QQ).
+  $$
+  It also induces morphisms
+  $$
+    \Gr_F^p(F)\colon
+    \Gr_F^p(H_\CC)
+    \to \Gr_F^p(H'_\CC)
+  $$
+  that are strictly compatible with the filtration induced by $W_\CC$.
+iv. The functor $\Gr_n^W$ is an exact functor from the category of mixed Hodge structures to the category of Hodge $\QQ$-structures of weight $n$.
+v. The functor $\Gr_F^p$ is an exact functor.
+:::
+
+::: {.rmenv #env-ii-2.3.6 number="2.3.6"}
+Let $H$ be a mixed Hodge structure.
+The $W_n(H_\ZZ)$, endowed with the filtrations induced by $W$ and $F$, then form mixed Hodge substructures $W_n(H)$ of $H$.
+The quotient $W_n(H)/W_{n-1}(H)$ can be identified with $\Gr_n^W(H_\ZZ)$ endowed with its mixed Hodge structure ([(2.3.2)](#ii-2.3.2) and [(2.3.3)](#ii-2.3.3)).
+We denote this Hodge structure by $\Gr_n^W(H)$.
+:::
+
+::: {.rmenv #env-ii-2.3.7 number="2.3.7"}
+We set
+\oldpage{31}
+$$
+  H^{p,q}
+  = \Gr_F^p\Gr_{\overline{F}}^q\Gr_{p+q}^W(H_\CC)
+  = (\Gr_{p+q}^W(H))^{p,q}.
+$$
+The **Hodge numbers** of $H$ are the integers
+$$
+  h^{p,q}
+  = \dim_\CC H^{p,q}.
+$$
+The Hodge number $h^{pq}$ of $H$ is thus the Hodge number $h^{pq}$ of the Hodge structure $\Gr_{p+q}^W(H)$
+:::
+
+::: {.rmenv #env-ii-2.3.8 number="2.3.8"}
+We define a **mixed Hodge $\QQ$-structure** $H$ to consist of a vector space $H_\QQ$ of finite dimension over $\QQ$, a finite increasing filtration $W$ on $H_\QQ$, and a finite decreasing filtration $F$ on $H_\CC$, with the filtrations $W_\CC$, $F$, and $\overline{F}$ being opposite.
+[(2.3.5)](#ii-2.3.5) generalises trivially to this variation.
+:::
