@@ -4,3 +4,116 @@ title: 6.4 Multi-simplicial spaces
 
 {{< include ../macros.qmd >}}
 
+
+\subtree[hodge-theory-iii-6.4.1]{
+\number{6.4.1}
+
+Let #{r\geqslant0} be an integer.
+An \em{#{r}-simplicial object} #{Z_\bullet} in a category #{\cat{C}} is a contravariant functor from the #{r}-fold product #{(\Delta)^r} to #{\cat{C}}.
+The \em{diagonal} simplicial object #{\delta Z_\bullet} is the composite functor #{(\Delta)\to(\Delta)^r\to\cat{C}}.
+}
+}
+
+\subtree[hodge-theory-iii-6.4.2]{
+\number{6.4.2}
+
+As in \ref{hodge-theory-iii-5.1.6}, we define the topos of \em{sheaves} on an #{r}-simplicial topological space.
+Let #{\Gamma^\bullet} be the functor
+##{
+  F
+  \mapsto (\Gamma(X_{n_1\ldots n_r},F^{n_1\ldots n_r}))
+}
+from sheaves on #{X_\bullet} to #{r}-cosimplicial sets.
+For small #{r}, we often prefer to write #{\Gamma^{\bullet\ldots\bullet}} (with #{r}-many copies of #{\bullet}).
+We have a co-augmentation #{\Gamma(X_\bullet,F^\bullet)\to\Gamma^\bullet(X_\bullet,F^\bullet)}.
+The functors of \em{cohomology with values in an abelian sheaf #{F}} are the derived functors of the "global sections" functor #{\Gamma}.
+They can be calculated by a procedure parallel to that of \ref{hodge-theory-iii-5.2.3}, i.e.
+
+\subtree[hodge-theory-iii-6.4.2.1]{
+  \taxon{equation}
+  \number{6.4.2.1}
+  ##{
+    \Rd\Gamma
+    =\simp\Rd\Gamma^\bullet
+    \colon \DD^+(X_\bullet)
+    \to\DD^+((\Cat{Ab})).
+  \startverb\tag{6.4.2.1}\stopverb
+  }
+}
+}
+
+A sheaf #{F} on an #{r}-simplicial topological space #{X_\bullet} induces a sheaf #{\delta F} on the diagonal simplicial space #{\delta X_\bullet}.
+It follows from the Cartier–Eilenberg–Zilber theorem that
+
+\subtree[hodge-theory-iii-6.4.2.2]{
+  \taxon{equation}
+  \number{6.4.2.2}
+  ##{
+    \Rd\Gamma(X_\bullet,K)
+    \simto \Rd\Gamma(\delta X_\bullet,\delta K).
+  \startverb\tag{6.4.2.2}\stopverb
+  }
+}
+}
+}
+
+\subtree[hodge-theory-iii-6.4.3]{
+\number{6.4.3}
+
+We restrict to the case #{r=2}.
+A \em{bisimplicial object 1-augmented over a simplicial object #{S_\bullet}} is a contravariant functor from #{(\Delta^+)\times(\Delta)} to #{\cat{C}} such that #{S_\bullet} is the composite functor
+##{
+  (\Delta)
+  \xrightarrow{(\Delta_{-1},\bullet)} (\Delta^+)\times(\Delta)
+  \to \cat{C}.
+}
+To denote a bisimplicial object 1-augmented over #{S_\bullet}, with underlying bisimplicial object #{X_{\bullet\bullet}}, we will use notation of the form
+##{
+  a\colon X_{\bullet\bullet}
+  \to S_\bullet.
+}
+\oldpage{23}
+For #{n\geqslant0}, #{a\colon(X_{\bullet n})\to S_n} is a simplicial object augmented over #{S_n}.
+If #{F} is a sheaf on #{X_{\bullet\bullet}}, then the #{(a_*(F|X_{\bullet n})\text{ on }S_n)_{n\geqslant0}} form a sheaf on #{S_\bullet};
+we thus define a topos morphism
+##{
+  a
+  \colon X_{\bullet\bullet}^\sim
+  \to S_\bullet^\sim.
+}
+}
+
+We explain in [[SD](SD)] that #{\Rd a_*} can be calculated "component by component", i.e.
+##{
+  \Rd a_*K|S_n
+  = \Rd a_*(K|X_{\bullet n}).
+}
+It thus follows that if, for each #{n}, the morphism #{a\colon(X_{\bullet n})\to S_n} is of cohomological descent, then #{a\colon X_{\bullet\bullet}\to S_\bullet} is of cohomological descent: for every complex #{K\in\DD^+(S_\bullet)} of abelian sheaves, we have
+##{
+  K
+  \xrightarrow{\approx} \Rd a_*a^*K.
+}
+}
+}
+
+\subtree[hodge-theory-iii-6.4.4]{
+\number{6.4.4}
+
+In [[SD](SD)], we show that, for every separated simplicial scheme #{S_\bullet}, there exists a bisimplicial scheme #{X_{\bullet\bullet}} that is 1-augmented over #{S_\bullet}, along with #{i\colon X_{\bullet\bullet}\hookrightarrow\overline{X}_{\bullet\bullet}} such that:
+
+\olc{
+  \lic{(a)}{
+    The #{\overline{X}_{nm}} are smooth and projective;
+    #{X_{nm}} is the complement of a normal crossing divisor #{D_{nm}} in #{\overline{X}_{nm}}, and we can suppose the #{D_{nm}} to be a union of smooth divisors.
+  }
+
+  \lic{(b)}{
+    For #{n\geqslant0}, #{X_{\bullet n}} is a proper hypercover of #{S_n}, and we can take it to be #{s}-split.
+  }
+}
+}
+
+The construction proceeds as in \ref{hodge-theory-iii-6.2}, but the induction is more complicated.
+The claims of uniqueness (\ref{hodge-theory-iii-6.2.8}) remain true, mutatis mutandis.
+}
+}
