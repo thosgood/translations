@@ -7,9 +7,9 @@ page-layout: article
 
 ::: {.rmenv #ii-1.2.1 number="1.2.1"}
 Let $A$ be an object of $\mathscr{A}$ endowed with filtrations $F$ and $G$.
-By definition, $\Gr_F^n(A)$ is a quotient of a sub-object of $A$ and, as such, is endowed with a filtration induced by $G$ [(1.1.10)](1.1-filtered-objects.html#ii-1.1.10).
+By definition, $\Gr_F^n(A)$ is a quotient of a sub-object of $A$ and, as such, is endowed with a filtration induced by $G$ [(1.1.10)](1.1-filtered-objects.qmd#ii-1.1.10).
 Passing to the associated graded defines a bigraded object $(\Gr_G^n\Gr_F^m(A))_{n,m\in\ZZ}$.
-By a lemma of Zassenhaus, $\Gr_G^n\Gr_F^m(A)$ and $\Gr_F^m\Gr_G^n(A)$ are canonically isomorphic: if we define the induced filtrations [(1.1.10)](1.1-filtered-objects.html#ii-1.1.10) as quotient filtrations of the induced filtrations on a sub-object, then we have
+By a lemma of Zassenhaus, $\Gr_G^n\Gr_F^m(A)$ and $\Gr_F^m\Gr_G^n(A)$ are canonically isomorphic: if we define the induced filtrations [(1.1.10)](1.1-filtered-objects.qmd#ii-1.1.10) as quotient filtrations of the induced filtrations on a sub-object, then we have
 $$
   \begin{aligned}
     \Gr_G^n\Gr_F^m(A)
@@ -88,7 +88,7 @@ ii. If $F$ and $\overline{F}$ are $n$-opposite, and if we set
 i. The condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q>n$ implies that $F^p\cap\overline{F}^q=(F^{p+1}\cap\overline{F}^q)+(F^p\cap\overline{F}^{q+1})$ for $p+q>n$.
     By hypothesis, $F^p\cap\overline{F}^q$ is zero for large enough $p+q$;
     by decreasing induction, we thus deduce that the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q>n$ is equivalent to the condition $F^p(A)\cap\overline{F}^q(A)=0$ for $p+q>n$.
-    Dually ([(1.1.6)](1.1-filtered-objects.html#ii-1.1.6), [(1.1.7)](1.1-filtered-objects.html#ii-1.1.7), [(1.1.10)](1.1-filtered-objects.html#ii-1.1.10)), the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q<n$ is equivalent to the condition $A=F^p(A)+\overline{F}^q(A)} for $(1-p)+(1-q)>-n$, i.e. for $p+q\leqslant n+1$, and the claim then follows.
+    Dually ([(1.1.6)](1.1-filtered-objects.qmd#ii-1.1.6), [(1.1.7)](1.1-filtered-objects.qmd#ii-1.1.7), [(1.1.10)](1.1-filtered-objects.qmd#ii-1.1.10)), the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q<n$ is equivalent to the condition $A=F^p(A)+\overline{F}^q(A)} for $(1-p)+(1-q)>-n$, i.e. for $p+q\leqslant n+1$, and the claim then follows.
 
 ii. If $F$ and $\overline{F}$ are $n$-opposite, then we can prove by decreasing induction on $p$ that
     $$
@@ -393,12 +393,12 @@ If $f$ is an arrow of $\mathscr{A}'$, then the canonical morphism from $\Coim(f)
 by (iii), it is also an isomorphism in $\mathscr{A}'$, which is thus abelian.
 
 The "forget the filtrations" functor is exact by (ii).
-The exactness of the other functors in (iv) follows immediately from (ii), (iii), and (i) or (ii) of [(1.1.11)](1.1-filtered-objects.html#ii-1.1.11).
+The exactness of the other functors in (iv) follows immediately from (ii), (iii), and (i) or (ii) of [(1.1.11)](1.1-filtered-objects.qmd#ii-1.1.11).
 :::
 
 ::: {.rmenv #ii-1.2.13 number="1.2.13"}
 Let $A$ be an object of $\mathscr{A}$ endowed with a finite *increasing* filtration $W_\bullet$, and two finite decreasing filtrations $F$ and $\overline{F}$.
-The construction [(1.1.3)](1.1-filtered-objects.html#ii-1.1.3) associates to $W_\bullet$ a decreasing filtration $W^\bullet$.
+The construction [(1.1.3)](1.1-filtered-objects.qmd#ii-1.1.3) associates to $W_\bullet$ a decreasing filtration $W^\bullet$.
 We say that the filtrations $W_\bullet$, $F$, and $\overline{F}$ are \em{opposite} if the filtrations $W^\bullet$, $F$, and $\overline{F}$ are, i.e. if, for all $n$, the filtrations induced by $F$ and $\overline{F}$ on
 $$
 \Gr_n^W(A)

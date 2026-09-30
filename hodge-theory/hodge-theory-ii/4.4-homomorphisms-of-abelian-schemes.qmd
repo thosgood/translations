@@ -94,8 +94,8 @@ $$
   \simeq \Gamma(S,\iHom(\Rd_1{f_1}_*\ZZ,\Rd_1{f_2}_*\ZZ))
 $$
 \oldpage{52}
-is then endowed with a Hodge structure of weight $0$ [(4.2.8)](4.2-the-semi-simplicity-theorem.html#ii-4.2.8).
-Further, by [(2.1.11.1)](2.1-pure-structures.html#ii-2.1.11.1) and [(4.4.3)](#ii-4.4.3), the group $\Hom_S(X_1,X_2)$ is the degree $(0,0)$ component of this group.
+is then endowed with a Hodge structure of weight $0$ [(4.2.8)](4.2-the-semi-simplicity-theorem.qmd#ii-4.2.8).
+Further, by [(2.1.11.1)](2.1-pure-structures.qmd#ii-2.1.11.1) and [(4.4.3)](#ii-4.4.3), the group $\Hom_S(X_1,X_2)$ is the degree $(0,0)$ component of this group.
 :::
 
 ::: {.rmenv #env-ii-4.4.7 number="4.4.7"}
@@ -297,7 +297,7 @@ $$
 We will show that we are either in case (a) or case (b) of [(4.4.8)](#ii-4.4.8), for every place of $Z$ simultaneously.
 [(4.4.8)](#ii-4.4.8) is evident under the hypothesis (c.1), and follows from [(4.4.10)](#ii-4.4.10) under the hypotheses (c.2) or (c.3), since not only $\varepsilon_T$, but also $\varepsilon_{H\rho}$, is then independent of $\rho$.
 
-Condition (b) of [(4.4.8)](#ii-4.4.8) cannot be satisfied at every place of $Z$, since the Hodge structure would then be locally constant, which (by [(4.1.3.3)](4.1-the-fixed-set-theorem.html#ii-4.1.3) and [(4.4.3)](#ii-4.4.3)) contradicts (b).
+Condition (b) of [(4.4.8)](#ii-4.4.8) cannot be satisfied at every place of $Z$, since the Hodge structure would then be locally constant, which (by [(4.1.3.3)](4.1-the-fixed-set-theorem.qmd#ii-4.1.3) and [(4.4.3)](#ii-4.4.3)) contradicts (b).
 Condition (a) is thus satisfied at each place of $Z$, and so $H$ is of degree $(0,0)$ ([(4.4.8)](#ii-4.4.8)).
 Taking [(4.4.3)](#ii-4.4.3) into account, this finishes the proof.
 :::
@@ -335,7 +335,7 @@ $$
 $$
 
 If condition (ii) is satisfied, and if $e(\Hom(\Rd_1f_*\CC,\Rd_1g_*\CC))$ is not of pure degree $(0,0)$, then $(\Rd_1g_*\CC)_s$ cannot be of pure degree $(-1,0)+(0,-1)$, which is a contradiction.
-We thus deduce that $\Hom(\Rd_1f_*\ZZ,\Rd_1g_*\ZZ)$ is of pure degree $(0,0)$, and (i) then follows by [(4.4.3)](#ii-4.4.3) and [(2.1.11.1)](2.1-pure-structures.html#ii-2.1.11).
+We thus deduce that $\Hom(\Rd_1f_*\ZZ,\Rd_1g_*\ZZ)$ is of pure degree $(0,0)$, and (i) then follows by [(4.4.3)](#ii-4.4.3) and [(2.1.11.1)](2.1-pure-structures.qmd#ii-2.1.11).
 
 Let $Z$ be a completely imaginary quadratic extension of a completely real number field $Z^0$.
 If $Z\otimes\RR\approx\CC\oplus\ldots\oplus\CC$, then we define an action by homotheties of $S$ on $Z\otimes\RR$ by sending $s\in S(\RR)\simeq\CC^*$ to $(s^2\cdot N(s)^{-1},1,\ldots,1)$.
@@ -376,7 +376,7 @@ $$
 
 1. If $Z$ is completely imaginary, and not imaginary quadratic, then we must have $a=2g=4$.
     \oldpage{56}
-    For $s\in S$, the centraliser of $Z$ acting on $(\Rd_1f_*\QQ)_s$ is thus commutative, and so the action of $\pi_1(S,s)$ is abelian, and thus factors through a finite group ((iii.b) of [(4.2.8)](4.2-the-semi-simplicity-theorem.html#ii-4.2.8) or [(4.2.9)](4.2-the-semi-simplicity-theorem.html#ii-4.2.9)).
+    For $s\in S$, the centraliser of $Z$ acting on $(\Rd_1f_*\QQ)_s$ is thus commutative, and so the action of $\pi_1(S,s)$ is abelian, and thus factors through a finite group ((iii.b) of [(4.2.8)](4.2-the-semi-simplicity-theorem.qmd#ii-4.2.8) or [(4.2.9)](4.2-the-semi-simplicity-theorem.qmd#ii-4.2.9)).
     This is a contradiction ([(4.1.3.3)](4.1-the-fixed-set-theorem#ii-4.1.3) and [(4.4.3)](#ii-4.4.3)).
 
     With the notation of [(4.4.8)](#ii-4.4.8), we can also note that the $T_\rho$ are then of rank $1$, and so condition (b) of [(4.4.8)](#ii-4.4.8) is satisfied at each place, and the Hodge structure is locally constant.

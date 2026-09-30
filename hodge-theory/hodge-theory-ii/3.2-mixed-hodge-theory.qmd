@@ -14,17 +14,17 @@ By Hironaka [@H1964], we can take $\overline{X}$ to be smooth and such that $Y=\
 The reader who wishes to avoid the reference to Nagata can suppose $X$ to be quasi-projective.
 \oldpage{35}
 The smooth completion $\overline{X}$ can then be chosen to be projective and such that $Y$ is the union of smooth divisors.
-If we limit ourselves to such compactifications, then we only need Hodge theory in its standard form ([(2.2.1)](2.2-hodge-theory.html#ii-2.2.1)).
+If we limit ourselves to such compactifications, then we only need Hodge theory in its standard form ([(2.2.1)](2.2-hodge-theory.qmd#ii-2.2.1)).
 :::
 
 ::: {.rmenv #env-ii-3.2.2 number="3.2.2"}
-By [(3.1.7)](3.1-logarithmic-poles-and-residues.html#ii-3.1.7) and [(3.1.8)](3.1-logarithmic-poles-and-residues.html#ii-3.1.8), we have
+By [(3.1.7)](3.1-logarithmic-poles-and-residues.qmd#ii-3.1.7) and [(3.1.8)](3.1-logarithmic-poles-and-residues.qmd#ii-3.1.8), we have
 $$
   \HH^\bullet(X,\CC)
   \simeq \bHH^\bullet(\overline{X},\Omega_{\overline{X}}^\bullet\langle Y\rangle).
 $$
-We define the **Hodge filtration** $F$ on the complex $\Omega_{\overline{X}}^\bullet\langle Y\rangle$ as the filtration $F^p=\sigma_{\geqslant p}$ given by the stupid truncations [(1.4.5)](1.4-hypercohomology-of-filtered-complexes.html#ii-1.4.5).
-On $\Omega_{\overline{X}}^\bullet\langle Y\rangle$, we thus have two filtrations: $F$ and $W$ [(3.1.5)](3.1-logarithmic-poles-and-residues.html#ii-3.1.5).
+We define the **Hodge filtration** $F$ on the complex $\Omega_{\overline{X}}^\bullet\langle Y\rangle$ as the filtration $F^p=\sigma_{\geqslant p}$ given by the stupid truncations [(1.4.5)](1.4-hypercohomology-of-filtered-complexes.qmd#ii-1.4.5).
+On $\Omega_{\overline{X}}^\bullet\langle Y\rangle$, we thus have two filtrations: $F$ and $W$ [(3.1.5)](3.1-logarithmic-poles-and-residues.qmd#ii-3.1.5).
 :::
 
 ::: {.rmenv #env-ii-3.2.3 number="3.2.3"}
@@ -50,7 +50,7 @@ b. We can take $K^\bullet$ to be the $\dd''$-resolution of $\Omega_{\overline{X}
 ::: {.rmenv #env-ii-3.2.4 number="3.2.4"}
 With the notation of [(3.2.3)](#ii-3.2.3), the complex cohomology of $X$ appears as the cohomology of the bifiltered complex $\Gamma(\overline{X},K^\bullet)$.
 We thus have two spectral sequences abutting to $\HH^\bullet(X,\CC)$.
-They can be written, with the notation of [(3.1.4)](3.1-logarithmic-poles-and-residues.html#ii-3.1.4), as:
+They can be written, with the notation of [(3.1.4)](3.1-logarithmic-poles-and-residues.qmd#ii-3.1.4), as:
 $$
   {}_WE_1^{pq}
   = \bHH^{p+q}(\overline{X},\varepsilon_{\overline{X}}^{-p}[p])
@@ -73,38 +73,38 @@ The first of these, up to the renumbering ${}_WE_1^{pq}\mapsto E_2^{2p+q,-p}$, i
 i. On the pages ${}_WE_r^{pq}$ of the spectral sequence [(3.2.4.1)](#ii-3.2.4), the first direct filtration, the second direct filtration, and the recurrent filtration defined by $F$ all coincide.
 ii. The filtration on $\HH^n(X,\CC)$ that is the abutment of the spectral sequence ${}_WE$ comes from a filtration $W$ of $\HH^n(X,\QQ)$.
   Neither it, nor the filtration $F$ that is the abutment of the spectral sequence ${}_FE$, depend on the choice of compactification $\overline{X}$ of $X$ or on the choice of $K^\bullet$.
-iii. The filtrations $W[n]$ [(1.1.2)](1.1-filtered-objects.html#ii-1.1.2) and $F$ define on $\HH^n(X,\ZZ)$ a mixed Hodge structure, functorially in $X$.
+iii. The filtrations $W[n]$ [(1.1.2)](1.1-filtered-objects.qmd#ii-1.1.2) and $F$ define on $\HH^n(X,\ZZ)$ a mixed Hodge structure, functorially in $X$.
 :::
 
 \oldpage{36}
 By \ref{hodge-theory-ii-3.1.7}, the spectral sequence ${}_WE$ is the Leray spectral sequence for $j_*$ (up to renumbering).
 It is thus induced by tensoring a $\QQ$-vectorial spectral sequence with $\CC$, and so the first claim of (ii) is true.
 Complex conjugation acts on the ${}_WE$;
-it can be calculated via [(3.1.10)](3.1-logarithmic-poles-and-residues.html#ii-3.1.10).
+it can be calculated via [(3.1.10)](3.1-logarithmic-poles-and-residues.qmd#ii-3.1.10).
 
 ::: {.itenv #env-ii-3.2.6 number="3.2.6" taxon="Lemma"}
 The hypercohomology spectral sequences of the filtered complexes $\Gr_n^W(\Omega_{\overline{X}}^\bullet\langle Y\rangle)$, endowed with the filtration induced by the Hodge filtration, degenerate at the $E_1$ page.
 :::
 
 ::: {.proof}
-Define the $Y^n$ and the $\widetilde{Y}^n$ as in [(3.1.4)](3.1-logarithmic-poles-and-residues.html#ii-3.1.4), and let $i_n\colon\widetilde{Y}^n\to X$.
+Define the $Y^n$ and the $\widetilde{Y}^n$ as in [(3.1.4)](3.1-logarithmic-poles-and-residues.qmd#ii-3.1.4), and let $i_n\colon\widetilde{Y}^n\to X$.
 By [(3.1.5.2)](#ii-3.1.5), we have
 $$
   \Gr_n^W(\Omega_{\overline{X}}^\bullet\langle Y\rangle)
   \sim (i_n)_*\Omega_{\widetilde{Y}^n}^\bullet(\varepsilon^n)[-n].
 $$
-Furthermore, the Hodge filtration induces the stupid filtration [(1.4.5)](1.4-hypercohomology-of-filtered-complexes.html#ii-1.4.5), and so the spectral sequence in [(3.2.6)](#ii-3.2.6) is given by translations of the degrees of the classical spectral sequence
+Furthermore, the Hodge filtration induces the stupid filtration [(1.4.5)](1.4-hypercohomology-of-filtered-complexes.qmd#ii-1.4.5), and so the spectral sequence in [(3.2.6)](#ii-3.2.6) is given by translations of the degrees of the classical spectral sequence
 $$
   E_1^{pq}
   = \HH^q(\widetilde{Y}^n,\Omega_{\widetilde{Y}^n}^p(\varepsilon^n))
   \To \HH^{p+q}(\widetilde{Y}^n,\varepsilon^n).
 $$
 
-If $\overline{X}$ is projective and $Y$ the union of smooth divisors, then $\widetilde{Y}^n$ is projective, $\varepsilon^n$ is a trivial local system, and classical Hodge theory [(2.2.1)](2.2-hodge-theory.html#ii-2.2.1) gives the degeneration claimed in [(3.2.6)](#ii-3.2.6).
-For the general case, refer to [@D1968] (see also [(2.2.2)](2.2-hodge-theory.html#ii-2.2.2)  and [(2.2.3)](2.2-hodge-theory.html#ii-2.2.3)).
+If $\overline{X}$ is projective and $Y$ the union of smooth divisors, then $\widetilde{Y}^n$ is projective, $\varepsilon^n$ is a trivial local system, and classical Hodge theory [(2.2.1)](2.2-hodge-theory.qmd#ii-2.2.1) gives the degeneration claimed in [(3.2.6)](#ii-3.2.6).
+For the general case, refer to [@D1968] (see also [(2.2.2)](2.2-hodge-theory.qmd#ii-2.2.2)  and [(2.2.3)](2.2-hodge-theory.qmd#ii-2.2.3)).
 :::
 
-Hodge theory also tells us that the Hodge filtration on $\HH^k(\widetilde{Y}^n,\varepsilon^n)$ is $k$-opposite to its complex conjugate (the complex conjugate being defined in terms of $\varepsilon_\ZZ^n$ [(3.1.4)](3.1-logarithmic-poles-and-residues.html#ii-3.1.4).
+Hodge theory also tells us that the Hodge filtration on $\HH^k(\widetilde{Y}^n,\varepsilon^n)$ is $k$-opposite to its complex conjugate (the complex conjugate being defined in terms of $\varepsilon_\ZZ^n$ [(3.1.4)](3.1-logarithmic-poles-and-residues.qmd#ii-3.1.4).
 We have, taking into account the translations of the degrees:
 
 ::: {.itenv #env-ii-3.2.7 number="3.2.7" taxon="Lemma"}
@@ -122,8 +122,8 @@ The differentials $d_1$ of the spectral sequence ${}_WE$ are strictly compatible
 :::
 
 ::: {.proof}
-On the $E_1$ pages, there is only the filtration induced by $F$ to consider ([(1.3.10)](1.3-the-two-filtrations-lemma.html#ii-1.3.10) and (iii) of [(1.3.13)](1.3-the-two-filtrations-lemma.html#ii-1.3.13)), and $d_1$ is compatible with this filtration ((i) of [(1.3.13)](1.3-the-two-filtrations-lemma.html#ii-1.3.13)).
-This filtration is the abutment of the spectral sequence in [(3.2.6)](#ii-3.2.6) ((ii) of [(1.4.8)](1.4-hypercohomology-of-filtered-complexes.html#ii-1.4.8)).
+On the $E_1$ pages, there is only the filtration induced by $F$ to consider ([(1.3.10)](1.3-the-two-filtrations-lemma.qmd#ii-1.3.10) and (iii) of [(1.3.13)](1.3-the-two-filtrations-lemma.qmd#ii-1.3.13)), and $d_1$ is compatible with this filtration ((i) of [(1.3.13)](1.3-the-two-filtrations-lemma.qmd#ii-1.3.13)).
+This filtration is the abutment of the spectral sequence in [(3.2.6)](#ii-3.2.6) ((ii) of [(1.4.8)](1.4-hypercohomology-of-filtered-complexes.qmd#ii-1.4.8)).
 By [(3.2.7)](#ii-3.2.7), the arrow
 $$
   d_1\colon
@@ -155,11 +155,11 @@ For $r\geqslant2$, they are zero.
 :::
 
 ::: {.proof}
-For $r=0$ (resp. $r=1$) we apply [(3.2.6)](#ii-3.2.6) and (iii) of [(1.4.8)](1.4-hypocohomology-of-filtered-complexes.html#ii-1.4.8) (resp. [(3.2.8)](#ii-3.2.8)).
+For $r=0$ (resp. $r=1$) we apply [(3.2.6)](#ii-3.2.6) and (iii) of [(1.4.8)](1.4-hypocohomology-of-filtered-complexes.qmd#ii-1.4.8) (resp. [(3.2.8)](#ii-3.2.8)).
 \oldpage{37}
 For $r\geqslant2$, it suffices to prove that $d_r=0$.
-By induction, and following [(1.3.16)](1.3-the-two-filtrations-lemma.html#ii-1.3.16), we can assume that, on the pages ${}_WE^s$ (for $s\geqslant r+1$), we have $F_d=F_r=F_{d^*}$, and that ${}_WE_r={}_WE_2$.
-By (i) of [(1.3.13)](1.3-the-two-filtrations-lemma.html#ii-1.3.13)), $d_r$ is thus compatible with the filtration $F_r$.
+By induction, and following [(1.3.16)](1.3-the-two-filtrations-lemma.qmd#ii-1.3.16), we can assume that, on the pages ${}_WE^s$ (for $s\geqslant r+1$), we have $F_d=F_r=F_{d^*}$, and that ${}_WE_r={}_WE_2$.
+By (i) of [(1.3.13)](1.3-the-two-filtrations-lemma.qmd#ii-1.3.13)), $d_r$ is thus compatible with the filtration $F_r$.
 
 On ${}_WE_r^{pq}={}_WE_2^{pq}$, the filtration $F_r$ is $q$-opposite to its complex conjugate.
 The morphism
@@ -186,9 +186,9 @@ $$
 This proves [(3.2.10)](#ii-3.2.10).
 :::
 
-[(3.2.10)](#ii-3.2.10), using [(1.3.16)](1.3-the-two-filtrations-lemma.html#ii-1.3.16)), proves (i) of [(3.2.5)](#ii-3.2.5).
+[(3.2.10)](#ii-3.2.10), using [(1.3.16)](1.3-the-two-filtrations-lemma.qmd#ii-1.3.16)), proves (i) of [(3.2.5)](#ii-3.2.5).
 
-By [(1.3.17)](1.3-the-two-filtrations-lemma.html#ii-1.3.17)), the filtration on ${}_WE_\infty^{pq}$ induced by the filtration $F$ of $\HH^{p+q}(X,\CC)$ is $q$-opposite to its complex conjugate.
+By [(1.3.17)](1.3-the-two-filtrations-lemma.qmd#ii-1.3.17)), the filtration on ${}_WE_\infty^{pq}$ induced by the filtration $F$ of $\HH^{p+q}(X,\CC)$ is $q$-opposite to its complex conjugate.
 Since $q=-p+(p+q)$, this proves the first part of (iii) of [(3.2.5)](#ii-3.2.5).
 
 ::: {.rmenv #env-ii-3.2.11 number="3.2.11"}
@@ -212,12 +212,12 @@ b. *Functoriality.*
     \tag{3.2.11.1}
     $$
     with the $Y_i=\overline{X}_i\setminus X_i$ normal crossing divisors.
-    The canonical morphism (cf. [(3.1.3)](3.1-logarithmic-poles-and-residues.html#ii-3.1.3)) from $\overline{f}^*\Omega_{\overline{X}_2}^\bullet\langle Y_2\rangle$ to $\Omega_{\overline{X}_1}^\bullet\langle Y_1\rangle$ is then a morphism of bifiltered complexes;
+    The canonical morphism (cf. [(3.1.3)](3.1-logarithmic-poles-and-residues.qmd#ii-3.1.3)) from $\overline{f}^*\Omega_{\overline{X}_2}^\bullet\langle Y_2\rangle$ to $\Omega_{\overline{X}_1}^\bullet\langle Y_1\rangle$ is then a morphism of bifiltered complexes;
     on hypercohomology, it induces a morphism compatible with $F$ and $W$, and thus $f^*\colon\HH^n(X_2,\ZZ)\to\HH^n(X_1,\ZZ)$ is a morphism of mixed Hodge structures, for the structures defined by the compactifications $\overline{X}_i$.
 
 c. *Independence from the choice of compactification.*
     
-    With the notation of (b), if $f$ is an isomorphism, then $f^*$ is a bijective morphism of mixed Hodge structures, and thus an isomorphism [(2.3.5)](2.3-mixed-structures.html#ii-2.3.5).
+    With the notation of (b), if $f$ is an isomorphism, then $f^*$ is a bijective morphism of mixed Hodge structures, and thus an isomorphism [(2.3.5)](2.3-mixed-structures.qmd#ii-2.3.5).
 
     If $\overline{X}_1$ and $\overline{X}_2$ are two smooth compactifications of $X$, with $Y_i=\overline{X}_i\setminus X$ smooth crossing divisors, then there exists a third smooth compactification $\overline{X}$, with $Y=\overline{X}\setminus X$ a smooth crossing divisor, that fits into a commutative diagram
     \oldpage{38}
@@ -267,15 +267,15 @@ iii. The spectral sequence defined by the sheaf $\Omega_X^p\langle Y\rangle$, en
 ::: {.proof}
 Claim (i) is proven in [(3.2.10)](#ii-3.2.10).
 
-Consider the four spectral sequences in [(1.4.2)](1.4-hypercohomology-of-filtered-complexes.html#ii-1.4.2), with respect to the bifiltered complex $\Omega_{\overline{X}}^\bullet\langle Y\rangle$.
+Consider the four spectral sequences in [(1.4.2)](1.4-hypercohomology-of-filtered-complexes.qmd#ii-1.4.2), with respect to the bifiltered complex $\Omega_{\overline{X}}^\bullet\langle Y\rangle$.
 By (i), we have
 $$
   \sum_n \dim\HH^n(X,\CC)
   = \sum_{p,q} \dim {}_WE_2^{p,q}.
 $$
-The ${}_WE_1^{n,k-n}$ pages are, for fixed $n$, the abutments of a spectral sequence *that degenerates at $E_1$* [(3.2.6)](#ii-3.2.6) with initial pages $E_1^{p,n,k-p-n}$ (with the notation of [(1.4.12)](1.4-hypercohomology-of-filtered-complexes.html#ii-1.4.12)) the initial pages of the spectral sequence in (iii).
+The ${}_WE_1^{n,k-n}$ pages are, for fixed $n$, the abutments of a spectral sequence *that degenerates at $E_1$* [(3.2.6)](#ii-3.2.6) with initial pages $E_1^{p,n,k-p-n}$ (with the notation of [(1.4.12)](1.4-hypercohomology-of-filtered-complexes.qmd#ii-1.4.12)) the initial pages of the spectral sequence in (iii).
 \oldpage{39}
-Since ${}_Wd_1$ is strictly compatible with the filtration $F$ which is the abutment of this spectral sequence [(3.2.7)](#ii-3.2.7), and is [(1.4.12)](1.4-hypercohomology-of-filtered-complexes.html#ii-1.4.12) the abutment of a morphism between these spectral sequences, which starts with the differentials from (iii), we have
+Since ${}_Wd_1$ is strictly compatible with the filtration $F$ which is the abutment of this spectral sequence [(3.2.7)](#ii-3.2.7), and is [(1.4.12)](1.4-hypercohomology-of-filtered-complexes.qmd#ii-1.4.12) the abutment of a morphism between these spectral sequences, which starts with the differentials from (iii), we have
 $$
   \Gr_F^p({}_WE_2^{n,k-n})
   \approx \HH^\bullet(E_1^{p,n-1,k-n-p} \to E_1^{p,n,k-n-p} \to E_1^{p,n+1,k-n-p})
@@ -351,5 +351,5 @@ By [(3.2.17)](#ii-3.2.17) and [(3.2.15)](#ii-3.2.15), $\Gr_n^W(j^*)$ is an isomo
 :::
 
 ::: {.rmenv #env-ii-3.2.19 number="3.2.19" taxon="Remark"}
-By [(3.1.11)](3.1-logarithmic-poles-and-residues.html#ii-3.1.11) and [(1.4.5)](1.4-hypercohomology-of-filtered-complexes.html#ii-1.4.5), under the hypotheses of [(3.2.5)](#ii-3.2.5), the Hodge filtration on $\HH^n(X,\CC)$ is the abutment of the hypercohomology spectral sequence of the complex $j_*^m\Omega_{X^*}^\bullet$ endowed with the filtration given by the pole-order filtration [(3.1.10)](3.1-logarithmic-poles-and-residues.html#ii-3.1.10): this spectral sequence coincides with [(3.2.4.2)](#ii-3.2.4).
+By [(3.1.11)](3.1-logarithmic-poles-and-residues.qmd#ii-3.1.11) and [(1.4.5)](1.4-hypercohomology-of-filtered-complexes.qmd#ii-1.4.5), under the hypotheses of [(3.2.5)](#ii-3.2.5), the Hodge filtration on $\HH^n(X,\CC)$ is the abutment of the hypercohomology spectral sequence of the complex $j_*^m\Omega_{X^*}^\bullet$ endowed with the filtration given by the pole-order filtration [(3.1.10)](3.1-logarithmic-poles-and-residues.qmd#ii-3.1.10): this spectral sequence coincides with [(3.2.4.2)](#ii-3.2.4).
 :::

@@ -12,13 +12,13 @@ a. A $\ZZ$-module $H_\ZZ$ of finite type, called the "**integral lattice**";
 b. A finite increasing filtration $W_n$ on $H_\QQ=\QQ\otimes_\ZZ H_\ZZ$, called the **weight filtration**;
 c. A finite filtration $F^p$ on $H_\CC=\CC\otimes_\ZZ H_\ZZ$, called the **Hodge filtration**.
 
-We demand that, on $H_\CC$, the filtration $W_\CC$ induced by extension of scalars of $W$, the filtration $F$, and the complex conjugate $\overline{F}$ form a system $(W_\CC,F,\overline{F})$ of three opposite filtrations ([(1.2.7)](1.2-opposite-filtrations.html#ii-1.2.7) and [(1.2.13)](1.2-opposite-filtrations.html#ii-1.2.13)).
+We demand that, on $H_\CC$, the filtration $W_\CC$ induced by extension of scalars of $W$, the filtration $F$, and the complex conjugate $\overline{F}$ form a system $(W_\CC,F,\overline{F})$ of three opposite filtrations ([(1.2.7)](1.2-opposite-filtrations.qmd#ii-1.2.7) and [(1.2.13)](1.2-opposite-filtrations.qmd#ii-1.2.13)).
 :::
 
 ::: {.rmenv #env-ii-2.3.2 number="2.3.2"}
 We also denote by $W$ the filtration of $H_\ZZ$ given by the inverse image of the filtration $W$ on $H_\QQ$.
 The axiom of mixed Hodge structures implies that, for each $n$, the filtration $F$ induces on $\CC\otimes_\ZZ\Gr_n^W(H_\ZZ)$ a filtration that is $n$-opposite to its complex conjugate.
-By [(2.1.9)](2.1-pure-structures.html#ii-2.1.9), $\Gr_n^W(H_\ZZ)$ is endowed with a Hodge structure of weight $n$, with Hodge filtration induced by $F$.
+By [(2.1.9)](2.1-pure-structures.qmd#ii-2.1.9), $\Gr_n^W(H_\ZZ)$ is endowed with a Hodge structure of weight $n$, with Hodge filtration induced by $F$.
 :::
 
 ::: {.rmenv #env-ii-2.3.3 number="2.3.3" taxon="Example"}
@@ -34,7 +34,7 @@ $$
 
 ::: {.rmenv #env-ii-2.3.4 number="2.3.4"}
 A **morphism** $f\colon H\to H'$ of Hodge structures is a homomorphism $f\colon H_\ZZ\to H'_\ZZ$ that is compatible with the filtrations $W$ and $F$ (and thus compatible with $\overline{F}$).
-We immediately deduce from [(1.2.10)](1.2-opposite-filtrations.html#ii-1.2.10) the following theorem.
+We immediately deduce from [(1.2.10)](1.2-opposite-filtrations.qmd#ii-1.2.10) the following theorem.
 :::
 
 ::: {.itenv #env-ii-2.3.5 number="2.3.5" taxon="Theorem"}

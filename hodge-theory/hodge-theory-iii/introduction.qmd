@@ -6,7 +6,7 @@ title: Introduction
 
 \oldpage{6}
 This article follows [Hodge Theory I](../hodge-theory-i) and [Hodge Theory II](../hodge-theory-ii);
-the numbering of the sections here follows that of [Hodge Theory II](../hodge-theory-ii) (which contains [§1](../hodge-theory-ii/1.1-filtered-objects.html) to [§4](../hodge-theory-ii/4.1-the-fixed-set-theorem.html)).
+the numbering of the sections here follows that of [Hodge Theory II](../hodge-theory-ii) (which contains [§1](../hodge-theory-ii/1.1-filtered-objects.qmd) to [§4](../hodge-theory-ii/4.1-the-fixed-set-theorem.qmd)).
 
 In [Hodge Theory II](../hodge-theory-ii), we gave an introduction to the yoga that underlies [Hodge Theory II](../hodge-theory-ii) and the present article.
 However, [Hodge Theory II](../hodge-theory-ii) and Hodge Theory III are logically independent of [Hodge Theory I](../hodge-theory-i);
@@ -14,7 +14,7 @@ they also do not contain all the results that were stated in [Hodge Theory I](.
 
 In [Hodge Theory II](../hodge-theory-ii), we introduced the Hodge theory of non-singular (not necessarily complete) algebraic varieties.
 Here we treat the case of arbitrary singularities.
-From [§7](7.1-supplements-to-S1.html) onwards, we will make essential use of results from [§1](../hodge-theory-ii/1.1-filtered-objects.html) to [§3](../hodge-theory-ii/3.1-logarithmic-poles-and-residues.html).
+From [§7](7.1-filtered-derived-category.qmd) onwards, we will make essential use of results from [§1](../hodge-theory-ii/1.1-filtered-objects.qmd) to [§3](../hodge-theory-ii/3.1-logarithmic-poles-and-residues.qmd).
 
 In the case of a *complete* singular algebraic variety $X$, the fundamental idea is to use the resolution of singularities to replace $X$ by a simplicial system of smooth projective schemes
 ```tikz
@@ -34,7 +34,7 @@ In the case of a *complete* singular algebraic variety $X$, the fundamental idea
 \end{tikzcd}
 ```
 (or, as we will say, by a smooth projective simplicial scheme).
-The results of [§5](5.1-simplicial-topological-spaces.html) and [§6](6.1-classifying-spaces.html) allow us to find such simplicial schemes $X_\bullet$ that have, in a suitable sense, the same cohomology as $X$.
+The results of [§5](5.1-simplicial-topological-spaces.qmd) and [§6](6.1-classifying-spaces.qmd) allow us to find such simplicial schemes $X_\bullet$ that have, in a suitable sense, the same cohomology as $X$.
 We can then "express", via a spectral sequence, the cohomology of $X$ in terms of the cohomology of the $X_n$.
 Following the general principles of [Hodge Theory I](../hodge-theory-i), we can then, on each $X_n$, use classical Hodge theory, and obtain an induced mixed Hodge structure on the cohomology of $X$.
 
@@ -42,17 +42,17 @@ In the case of an arbitrary algebraic variety $X$, we "replace" $X$ by a smooth 
 We can further arrange things so that $\overline{X}_n\setminus X_n$ is a normal crossing divisor, given by a union of smooth divisors $D_{n,i}$.
 We thus "express", via a spectral sequence, the cohomology of $X$ in terms of the cohomology of the $p$-fold intersections of the $D_{n,i}$ (for $n,p\geqslant0$), and we obtain an induced mixed Hodge structure on $H^\bullet(X)$.
 
-[§5](5.1-simplicial-topological-spaces.html) and [§6](6.1-classifying-spaces.html) constitute a summary (without proofs) of the theory of "cohomological descent".
+[§5](5.1-simplicial-topological-spaces.qmd) and [§6](6.1-classifying-spaces.qmd) constitute a summary (without proofs) of the theory of "cohomological descent".
 This theory, in the more general framework of a topos, is laid out in [@SD].
 
-In [§7.1](7.1-supplements-to-S1.html), we restate certain results obtained previously, but in the language of filtered derived categories;
-[§7.2](7.2-supplements-to-the-two-filtrations-lemma.html) contains a simpler proof of the two-filtrations lemma than that of [§1.3](../hodge-theory-ii/1.3-the-two-filtrations-lemma.html).
+In [§7.1](7.1-filtered-derived-category.qmd), we restate certain results obtained previously, but in the language of filtered derived categories;
+[§7.2](7.2-supplements-to-the-two-filtrations-lemma.qmd) contains a simpler proof of the two-filtrations lemma than that of [§1.3](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd).
 
-The unappealing [§8.1](8.1-hodge-complexes.html) is the heart of this work.
-The essential result is [(8.1.15)](8.1-hodge-complexes.html#iii-8.1.15).
+The unappealing [§8.1](8.1-hodge-complexes.qmd) is the heart of this work.
+The essential result is [(8.1.15)](8.1-hodge-complexes.qmd#iii-8.1.15).
 \oldpage{7}
-In its proof, to be able to apply the two-filtrations lemma, we use the fact that every morphism of mixed Hodge structures is *strictly* compatible with the filtrations $W$ and $W$ [(2.3.5)](../hodge-theory-ii/2.3-mixed-structures.html#ii-2.3.5).
-In [§8.2](8.2-separated-algebraic-spaces.html), we define the mixed Hodge structure of $\HH^n(X,\ZZ)$ (for $X$ a separated scheme).
+In its proof, to be able to apply the two-filtrations lemma, we use the fact that every morphism of mixed Hodge structures is *strictly* compatible with the filtrations $W$ and $W$ [(2.3.5)](../hodge-theory-ii/2.3-mixed-structures.qmd#ii-2.3.5).
+In [§8.2](8.2-separated-algebraic-spaces.qmd), we define the mixed Hodge structure of $\HH^n(X,\ZZ)$ (for $X$ a separated scheme).
 We show that the Hodge numbers $h^{pq}$ of $\HH^n(X,\ZZ)$ can only be non-zero for $(p,q)\in[0,n]\times[0,n]$.
 For $n>\dim X$, we have a more precise result [(8.2.4)](8.2-separated-algebraic-spaces.hmtl#iii-8.2.4).
 If $X$ is smooth (resp. complete), they can only be non-zero if, further, $p+q\geqslant n$ (resp. $p+q\leqslant n$).
@@ -68,14 +68,14 @@ $$
 
 From the functorial properties of the theory thus constructed, we obtain the useful corollaries [(8.2.5)](8.2-separated-algebraic-spaces.hmtl#iii-8.2.5) to [(8.2.8)](8.2-separated-algebraic-spaces.hmtl#iii-8.2.8), which we state in terms independent of any Hodge theory.
 
-In [§8.3](8.3-hodge-theory-of-simplicial-schemes.html), we endow the cohomology of any simplicial scheme $X_\bullet$ with a mixed Hodge structure.
+In [§8.3](8.3-hodge-theory-of-simplicial-schemes.qmd), we endow the cohomology of any simplicial scheme $X_\bullet$ with a mixed Hodge structure.
 This generality is not illusory.
 
 a. We can interpret relative cohomology spaces as being the cohomology of suitable simplicial schemes.
 b. Let $B_G$ be the classifying space of the underlying Lie group of an algebraic group $G$.
     We can interpret the cohomology of $B_G$ as being the cohomology of a suitable simplicial scheme.
 
-In [§9.1](9.1-cohomology-of-groups-and-of-classifying-spaces.html), after having calculated the mixed Hodge structure on the cohomology of $B_G$ (for $G$ linear), we thus obtain that of $G$.
+In [§9.1](9.1-cohomology-of-groups-and-of-classifying-spaces.qmd), after having calculated the mixed Hodge structure on the cohomology of $B_G$ (for $G$ linear), we thus obtain that of $G$.
 As a corollary, we find that, if a linear group $G$ acts on a non-singular complete variety $X$, then the map
 $$
   \HH^\bullet(X,\QQ)
@@ -83,7 +83,7 @@ $$
 $$
 factors through $\HH^\bullet(X,\QQ)\otimes\HH^0(G,\QQ)\subset\HH^\bullet(X,\QQ)\otimes\HH^\bullet(G,\QQ)$.
 
-In [§10](10.1-1-motives.html), we interpret in terms of abelian schemes the mixed Hodge structures of pure degree $\{(-1,-1),(-1,0),(0,-1),(0,0)\}$ (see [(0.5)](terminology-and-notation.html#iii-0.5)), and we consider in detail the $\HH^1$ of curves.
+In [§10](10.1-1-motives.qmd), we interpret in terms of abelian schemes the mixed Hodge structures of pure degree $\{(-1,-1),(-1,0),(0,-1),(0,0)\}$ (see [(0.5)](terminology-and-notation.qmd#iii-0.5)), and we consider in detail the $\HH^1$ of curves.
 
 The theory developed up until here is an absolute theory (we do not study the functors $\Rd f_*$), and deals only with constant coefficients.
 I conjecture that, if $\mathscr{H}$ is a variation of polarisable Hodge structures (in the sense of Griffiths [@G1970a]) on a scheme $X$, then the cohomology of $X$ with coefficients in the local system $\mathscr{H}$ is endowed with a natural mixed Hodge structure.

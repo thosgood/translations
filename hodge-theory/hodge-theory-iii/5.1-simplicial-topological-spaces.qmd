@@ -95,6 +95,7 @@ If $X_\bullet\colon(\Delta)^0\to\cat{C}$ is a simplicial object of $\cat{C}$, th
     \ar[l,"s_0" description]
 \end{tikzcd}
 ```
+:::
 
 ::: {.rmenv #env-iii-5.1.3 number="5.1.3"}
 Let $S\in\Ob\cat{C}$.
@@ -114,7 +115,7 @@ $$
 $$
 :::
 
-::: {.rmenv #env-iii-5.1.5 number="5.1.5"}
+:::: {.rmenv #env-iii-5.1.5 number="5.1.5"}
 Let $u\colon X\to Y$ be a continuous map between topological spaces, and $F$ a sheaf on $X$ and $G$ a sheaf on $Y$.
 The set $\Hom_u(G,F)$ of \em{$u$-morphisms} from $G$ to $F$ is the set $\Hom(u^*G,F)\cong\Hom(G,u_*F)$.
 
@@ -138,6 +139,7 @@ For $U'\subset U\subset X$ and $V'\subset V\subset Y$ such that $u(U)\subset V$ 
 ```
 commutes.
 :::
+::::
 
 ::: {.rmenv #env-iii-5.1.6 number="5.1.6"}
 A **simplicial topological space** is a simplicial object of the category whose objects are topological spaces and whose morphisms are continuous maps.
