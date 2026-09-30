@@ -102,146 +102,94 @@ $$
 We will see below that, in good cases, $\HH^\bullet(B_{\bullet G})=\HH^\bullet(B_G)$, and that the image of $[P]$ consists of the **characteristic classes** of $P$.
 :::
 
-\subtree[hodge-theory-iii-6.1.4]{
-\number{6.1.4}
-
+::: {.rmenv #env-iii-6.1.4 number="6.1.4"}
 Let $G$ be a Lie group, $B_G$ a classifying space for $G$, and $a\colon U_G\to B_G$ the universal principal homogeneous $G$-space.
 Let $X$ be a $G$-space;
 then $X\times U_G$ is a principal homogeneous $G$-space over $X\times U_G/G$ such that, for every equivariant sheaf $F$ on $X$, $\pr_1^*F$ is the inverse image of a sheaf $F^G$ on $X\times U_G/G$.
-Since $U_G$ is contractible, and by \ref{hodge-theory-iii-6.1.2.2}, we have
-
-\subtree[hodge-theory-iii-6.1.4.1]{
-  \taxon{equation}
-  \number{6.1.4.1}
-  $$
-    \HH^\bullet(X,G;F)
-    \simto \HH^\bullet(X\times U_G,G;\pr_1^*F)
-    \simfrom \HH^\bullet(X\times U_G/G,F^G).
-  \tag{6.1.4.1}
-  $$
-}
-}
+Since $U_G$ is contractible, and by [(6.1.2.2)](#iii-6.1.2), we have
+$$
+  \HH^\bullet(X,G;F)
+  \simto \HH^\bullet(X\times U_G,G;\pr_1^*F)
+  \simfrom \HH^\bullet(X\times U_G/G,F^G).
+\tag{6.1.4.1}
+$$
 
 In particular, for $X=P^t$,
-
-\subtree[hodge-theory-iii-6.1.4.2]{
-  \taxon{equation}
-  \number{6.1.4.2}
-  $$
-    \HH^\bullet(B_{\bullet G})
-    = \HH^\bullet(B_G).
-  \tag{6.1.4.2}
-  $$
-}
-}
+$$
+  \HH^\bullet(B_{\bullet G})
+  = \HH^\bullet(B_G).
+\tag{6.1.4.2}
+$$
 
 \oldpage{18}
-We can see that the isomorphism in \ref{hodge-theory-iii-6.1.4.2} is a particular case of \ref{hodge-theory-iii-6.1.3.1} where $S=B_G$ and $P=U_G$.
-}
-}
+We can see that the isomorphism in [(6.1.4.2)](#iii-6.1.4) is a particular case of [(6.1.3.1)](#iii-6.1.3) where $S=B_G$ and $P=U_G$.
+:::
 
-\subtree[hodge-theory-iii-6.1.5]{
-\number{6.1.5}
-
-The spectral sequence in \ref{hodge-theory-iii-5.2.3.2} for $B_{\bullet G}$
+::: {.rmenv #env-iii-6.1.5 number="6.1.5"}
+The spectral sequence in [(5.2.3.2)](5.2-cohomology-of-simplicial-topological-spaces.qmd#iii-5.2.3) for $B_{\bullet G}$
 $$
   E_1^{pq}
   = \HH^q(G^{\Delta_p}/G)
   \To \HH^{p+q}(B_{\bullet G})
   =\HH^{p+q}(B_G)
 $$
-is essentially the \em{Eilenberg–Moore spectral sequence}.
+is essentially the **Eilenberg–Moore spectral sequence**.
 We briefly recall how it allows us to relate the rational cohomologies of $G$ and of $B_G$, for connected $G$.
-}
 
-\olc{
-\lic{(a)}{
-  The algebra $\HH^\bullet(G,\QQ)$ is a connected graded Hopf algebra of finite dimension over $\QQ$.
-  If $P^\bullet(G)$ is the graded module of its primitive elements, then we have
-  $$
-    H^\bullet(G,\QQ)
-    = \bigwedge P^\bullet(G)
-  $$
-  and the generators of $P^\bullet(G)$ are of odd degree.
-}
+a. The algebra $\HH^\bullet(G,\QQ)$ is a connected graded Hopf algebra of finite dimension over $\QQ$.
+    If $P^\bullet(G)$ is the graded module of its primitive elements, then we have
+    $$
+      H^\bullet(G,\QQ)
+      = \bigwedge P^\bullet(G)
+    $$
+    and the generators of $P^\bullet(G)$ are of odd degree.
+b. The simplicial algebra $(E_1^{p\bullet})_{p\geqslant0}$ is
+    $$
+      E_1^{p\bullet}
+      = \bigwedge\big(P^\bullet(G)^{\Delta_p}/P^\bullet(G)\big)
+    $$
+    which is the exterior algebra of the suspension of the constant cosimplicial module $P^\bullet(G)$;
+    we thus have (by Quillen [@Q1968]) that $E_2^{p\bullet}=\Sym^p(P^\bullet(G))$.
+    The pages $E_2^{pq}$ are only zero for $p+q$ even;
+    we thus have that $E_2^{pq}=E_\infty^{pq}$, and, for a suitable filtration, we canonically have that
+    $$
+      \Gr\HH^\bullet(B_G,\QQ)
+      \simeq \Sym^\bullet(P^\bullet(G)[-1])
+    $$
+    and non-canonically that
+    $$
+      \HH^\bullet(B_G,\QQ)
+      \simeq \Sym^\bullet(P^\bullet(G)[-1]).
+    $$
+:::
 
-\lic{(b)}{
-  The simplicial algebra $(E_1^{p\bullet})_{p\geqslant0}$ is
-  $$
-    E_1^{p\bullet}
-    = \bigwedge\big(P^\bullet(G)^{\Delta_p}/P^\bullet(G)\big)
-  $$
-  which is the exterior algebra of the suspension of the constant cosimplicial module $P^\bullet(G)$;
-  we thus have (by Quillen [[Q1968](Q1968)]) that $E_2^{p\bullet}=\Sym^p(P^\bullet(G))$.
-  The pages $E_2^{pq}$ are only zero for $p+q$ even;
-  we thus have that $E_2^{pq}=E_\infty^{pq}$, and, for a suitable filtration, we canonically have that
-  $$
-    \Gr\HH^\bullet(B_G,\QQ)
-    \simeq \Sym^\bullet(P^\bullet(G)[-1])
-  $$
-  and non-canonically that
-  $$
-    \HH^\bullet(B_G,\QQ)
-    \simeq \Sym^\bullet(P^\bullet(G)[-1]).
-  $$
-}
-}
-}
-
-\subtree[hodge-theory-iii-6.1.6]{
-\number{6.1.6}
-
+::: {.rmenv #env-iii-6.1.6 number="6.1.6"}
 Let $G$ be a (complex) linear algebraic group.
-}
 
-\olc{
-\lic{(a)}{
-  If $T$ is a maximal torus of $G$, with Weyl group $W$, then
-
-  \subtree[hodge-theory-iii-6.1.6.1]{
-    \taxon{equation}
-    \number{6.1.6.1}
+a. If $T$ is a maximal torus of $G$, with Weyl group $W$, then
     $$
       \HH^\bullet(B_G,\QQ)
       \simto \HH^\bullet(B_T,\QQ)^W.
     \tag{6.1.6.1}
     $$
-  }
-}
-
-\lic{(b)}{
-  If $T$ is a torus with character group $X(T)$, then
-
-  \subtree[hodge-theory-iii-6.1.6.2]{
-    \taxon{equation}
-    \number{6.1.6.2}
+b. If $T$ is a torus with character group $X(T)$, then
     $$
       \HH^\bullet(T,\ZZ)
       \simeq \bigwedge^\bullet X(T)
     \tag{6.1.6.2}
     $$
-  }
+    (an isomorphism of graded Hopf algebras).
 
-  (an isomorphism of graded Hopf algebras).
-}
-}
 
 We will only use (a) in the following weaker form:
 
-\olc{
-  \lic{(a')}{
-    \em{(The splitting principle).}
+a'. *(The splitting principle).*
     The map $\HH^\bullet(B_G,\QQ)\to\HH^\bullet(B_T,\QQ)$ is injective.
-  }
-}
-}
 
 For completion, we recall a proof of (a').
-}
 
 If $B$ is a Borel subgroup of $G$, then the bundle $U_G/B$ on $B_G$ is a fibre in flag spaces.
-By [2.1 and 2.6.3, [D1968](D1968)], which is better explained in [Proposition 3.1, [G1970](G1970)], or by [[B1956](B1956)], the Leray spectral sequence of $U_G/B\to B_G$ degenerates to rational cohomology.
+By [@D1968, 2.1 and 2.6.3], which is better explained in [@G1970, Proposition 3.1], or by [@B1956], the Leray spectral sequence of $U_G/B\to B_G$ degenerates to rational cohomology.
 We thus have that $\HH^\bullet(B_G,\QQ)\hookrightarrow\HH^\bullet(U_G/B,\QQ)$.
 We conclude by noting that $U_G/B\sim B_B\sim B_T$.
-}
-}
+:::
