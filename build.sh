@@ -176,6 +176,7 @@ fi
 #########################
 # Build Quarto projects #
 #########################
+
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 if ! [ -z "$PROJECT_DIR" ] ; then
   printf "Building projects\n"
