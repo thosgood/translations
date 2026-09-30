@@ -40,7 +40,7 @@ fi
 
 usage() { echo "Usage: $0 [-a (all) | -l (latex) | -q (quarto) | -h (hodge-theory) | -d (diff) ]" 1>&2; exit 1; }
 
-while getopts "alqd" opt; do
+while getopts "alqhd" opt; do
   case "$opt" in 
     a)
       LATEX_FILES=$(find $LATEX_DIR -name '*.tex')
