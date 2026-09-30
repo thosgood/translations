@@ -185,8 +185,8 @@ if ! [ -z "$PROJECT_DIR" ] ; then
   cd $PROJECT_DIR
   if quarto render >/dev/null ; then
     printf "$PROJECT_DIR successfully built!\n"
-    mv $PROJECT_DIR/_output $HODGE_WEBSITE_DIR
-    printf "$PROJECT_DIR moved to $HODGE_WEBSITE_DIR\n"
+    mv $PROJECT_DIR/_output/* $HODGE_WEBSITE_DIR
+    printf "$PROJECT_DIR/_output moved to $HODGE_WEBSITE_DIR\n"
   else
     printf "\nQuarto encountered some sort of error building $PROJECT_DIR\n"
   fi
