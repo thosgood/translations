@@ -4,3 +4,879 @@ title: 8.1 Hodge complexes
 
 {{< include ../macros.qmd >}}
 
+
+:::: {.rmenv #env-iii-8.1.1 number="8.1.1"}
+Let $A$ be as in [§0.3](terminology-and-notation.qmd#env-iii-0.3).
+Then a **Hodge $A$-complex** $K$ of weight $n$ consists of
+
+a. a complex $K_A\in\Ob\DD^+(A)$ such that $\HH^k(K_A)$ is an $A$-module of finite type for all $k$;
+b. a filtration $F$ on $K_A\otimes\CC$, i.e. a filtered complex $(K_\CC,F)\in\Ob\DD^+F(\CC)$, and an isomorphism $\alpha\colon K_\CC\simeq K_A\otimes\CC$ in $\DD^+(\CC)$.
+
+The following axioms have to be satisfied:
+
+::: {.rmenv #env-iii-8.1.1-ch1 number="CH 1"}
+The differential $d$ of $K_\CC$ is strictly compatible with the filtration $F$;
+in other words, the spectral sequence defined by $(K_\CC,F)$ degenerates at $E_1$ (i.e. $E_1=E_\infty$) [(1.3.2)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#ii-1.3.2).
+:::
+
+::: {.rmenv #env-iii-8.1.1-ch2 number="CH 2"}
+For all $k$, the filtration $F$ on $\HH^k(K_\CC)\simeq\HH^k(K_A)\otimes\CC$ defines a Hodge $A$-structure of weight $n+k$ on $\HH^k(K_A)$, i.e. the filtration $F$ is $(n+k)$-opposite to its complex conjugate (which makes sense, since $A\subset\RR$).
+:::
+::::
+
+\subtree[hodge-theory-iii-8.1.2]{
+\number{8.1.2}
+
+Let $X$ be a topological space.
+Then a **cohomological Hodge $A$-complex $K$ of weight $n$** on $X$ consists of:
+
+\olc{
+  \lic{(𝛼)}{
+    a complex $K_A\in\Ob\DD^+(X,A)$,
+  }
+  \lic{(𝛽)}{
+    a filtered complex $(K_\CC,F)\in\Ob\DD^+F(X,\CC)$,
+  }
+  \lic{(𝛾)}{
+    an isomorphism $\alpha\colon K_\CC\simeq K_A\otimes\CC$ in $\DD^+(X,\CC)$.
+  }
+}
+}
+
+The following axiom has to be satisfied:
+
+\subtree[hodge-theory-iii-8.1.2-chc]{
+  \taxon{axiom}
+  \number{CHC}
+      The triple $(\Rd\Gamma(K_A),\Rd\Gamma((K_\CC,F)),\Rd\Gamma(\alpha))$ is a Hodge complex of weight $n$.
+  }
+}
+}
+
+\oldpage{29}
+When $A=\ZZ$, we simply speak of Hodge complexes and cohomological Hodge complexes.
+}
+}
+
+The following statement reformulates a part of classical Hodge theory (cf. \ref{hodge-theory-ii-2.2.1}).
+}
+
+\subtree[hodge-theory-iii-8.1.3]{
+\taxon{scholium}
+\number{8.1.3}
+
+Let $X$ be a complex Kähler variety.
+Let $K_\ZZ$ be the complex $\ZZ[0]$ consisting of the constant sheaf $\ZZ$ in degree $0$, and let $K_\CC$ be the holomorphic de Rham complex $\Omega_X^\bullet$, with $F$ its stupid filtration.
+We have $\alpha\colon K_\ZZ\otimes\CC\simeq\CC[0]\xrightarrow{\approx}\Omega_X^\bullet$ (the Poincaré lemma), and $(K_\ZZ,(K_\CC,F),\alpha)$ is a cohomological Hodge complex of weight $0$.
+}
+}
+
+\subtree[hodge-theory-iii-8.1.4]{
+\taxon{remark}
+\number{8.1.4}
+
+If $K$ is a Hodge complex (resp. cohomological Hodge complex) of weight $n$, then $K[m]$ is a Hodge complex (resp. cohomological Hodge complex) of weight $n+m$.
+}
+}
+
+\subtree[hodge-theory-iii-8.1.5]{
+\number{8.1.5}
+
+A **mixed Hodge $A$-complex** $K$ consists of:
+
+\olc{
+  \lic{(𝛼)}{
+    a complex $K_A\in\Ob\DD^+(A)$ such that $\HH^k(K_A)$ is an $A$-module of finite type for all $k$;
+  }
+
+  \lic{(𝛽)}{
+    a filtered complex $(K_{A\otimes\QQ},W)\in\Ob\DD^+F(A\otimes\QQ)$ (for an *increasing* filtration $W$) and an isomorphism $K_{A\otimes\QQ}\simeq K_A\otimes\QQ$ in $\DD^+(A\otimes\QQ)$;
+  }
+
+  \lic{(𝛾)}{
+    a bifiltered complex $(K_\CC,W,F)\in\Ob\DD^+F_w(\CC)$ (for an *increasing* filtration $W$ and a *decreasing* filtration $F$) and an isomorphism $\alpha\colon(K_\CC,W)\simeq(K_{A\otimes\QQ},W)\otimes\CC$ in $\DD^+F(\CC)$.
+  }
+}
+}
+
+The following axiom must be satisfied:
+
+\subtree[hodge-theory-iii-8.1.5-chm]{
+  \taxon{axiom}
+  \number{CHM}
+      For all $n$, the system consisting of the complex $\Gr_n^W(K_{A\otimes\QQ})\in\Ob\DD^+(A\otimes\QQ)$, the complex $\Gr_n^W(K_\CC)\in\Ob\DD^+F(\CC)$ filtered by $F$, and the isomorphism
+    $$
+      \Gr_n^W(\alpha)\colon
+      \Gr_n^W(K_{A\otimes\QQ})\otimes\CC
+      \simeq \Gr_n^W(K_\CC),
+    $$
+    is a Hodge $(A\otimes\QQ)$-complex of weight $n$.
+  }
+}
+}
+}
+
+\subtree[hodge-theory-iii-8.1.6]{
+\number{8.1.6}
+
+A **cohomological mixed Hodge $A$-complex** $K$ on a topological space $X$ consists of:
+
+\olc{
+  \lic{(𝛼)}{
+    a complex $K_A\in\Ob\DD^+(X,A)$ such that $\bHH^k(X,K_A)$ is an $A$-module of finite type for all $k$, and such that $\bHH(X,K_A)\otimes\QQ\simto\bHH(X,K_A\otimes\QQ)$;
+  }
+
+  \lic{(𝛽)}{
+    a filtered complex $(K_{A\otimes\QQ},W)\in\Ob\DD^+F(X,A\otimes\QQ)$ (for an *increasing* filtration $W$) and an isomorphism $K_{A\otimes\QQ}\simeq K_A\otimes\QQ$ in $\DD^+(X,A\otimes\QQ)$;
+  }
+
+  \lic{(𝛾)}{
+    a bifiltered complex $(K_\CC,W,F)\in\Ob\DD^+F_w(X,\CC)$ (for an *increasing* filtration $W$ and a *decreasing* filtration $F$) and an isomorphism $\alpha\colon(K_\CC,W)\simeq(K_{A\otimes\QQ},W)\otimes\CC$ in $\DD^+F(X,\CC)$.
+  }
+}
+}
+
+The following axiom must be satisfied:
+
+\subtree[hodge-theory-iii-8.1.6-chmc]{
+  \taxon{axiom}
+  \number{CHMC}
+      For all $n$, the system consisting of the complex $\Gr_n^W(K_{A\otimes\QQ})\in\Ob\DD^+(X,A\otimes\QQ)$, the complex $\Gr_n^W(K_\CC)\in\Ob\DD^+F(X,\CC)$ filtered by $F$, and the isomorphism
+    $$
+      \Gr_n^W(\alpha)\colon
+      \Gr_n^W(K_{A\otimes\QQ})\otimes\CC
+      \simeq \Gr_n^W(K_\CC),
+    $$
+    is a cohomological Hodge $(A\otimes\QQ)$-complex of weight $n$.
+  }
+}
+}
+}
+
+\oldpage{30}
+We can trivially show:
+}
+
+\subtree[hodge-theory-iii-8.1.7]{
+\taxon{proposition}
+\number{8.1.7}
+
+If $K=(K_A,(K_{A\otimes\QQ},W),(K_\CC,W,F))$ is a cohomological mixed Hodge $A$-complex, then $\Rd\Gamma K=(\Rd\Gamma K_A,\Rd\Gamma(K_{A\otimes\QQ},W),\Rd\Gamma(K_\CC,W,F))$ is a mixed Hodge $A$-complex.
+}
+}
+
+\subtree[hodge-theory-iii-8.1.8]{
+\taxon{scholium}
+\number{8.1.8}
+
+Let $U$ be the complement in a smooth proper scheme $X$, of a normal crossing divisor $D$, with $j\colon U\hookrightarrow X$ the inclusion morphism.
+Let $W$ be the canonical filtration on $\Rd j_*\QQ=\Rd j_*\ZZ\otimes\QQ\colon W_n(\Rd j_*\QQ)=\tau_{\leqslant n}(\Rd j_*\QQ)$.
+We have (\ref{hodge-theory-ii-3.1.8})
+$$
+  (\Rd j_*\QQ)\otimes\CC
+  \xrightarrow{\approx} \Rd j_*\CC
+  \xrightarrow{\approx} j_*\Omega_U^\bullet
+  \xleftarrow{\approx} \Omega_X^\bullet(\log D).
+$$
+Let $W$ be the weight filtration of $\Omega_+X^\bullet(\log D)$, and $F$ its Hodge filtration (by the $\sigma_{\geqslant p}$).
+Then \ref{hodge-theory-ii-3.1.8} gives an isomorphism $(\Rd j_*\QQ,W)\otimes\CC\simeq(\Omega_X^\bullet(\log D),W)$ in $\DD^+F(X,\CC)$, and, by \ref{hodge-theory-ii-3.1.5} and \ref{hodge-theory-ii-3.1.9},
+$$
+  (\Rd j_*\ZZ,(\Rd j_*\QQ,W),(\Omega_X^\bullet(\log D), W, F))
+$$
+is a cohomological mixed Hodge complex on $X$.
+}
+}
+
+The following result is an "abstract" version of \ref{hodge-theory-ii-3.2}.
+}
+
+\subtree[hodge-theory-iii-8.1.9]{
+\taxon{scholium}
+\number{8.1.9}
+
+Let $K$ be a mixed Hodge $A$-complex.
+}
+
+\olc{
+\lic{(i)}{
+  On the pages ${}_WE_r^{pq}$ of the spectral sequence of $(K_\CC,W)$, the recurrent filtration and the two direct filtrations defined by $F$ all coincide.
+}
+
+\lic{(ii)}{
+  The filtration $W[n]$ (\ref{hodge-theory-ii-1.1.2}) on $\HH^n(K_{A\otimes\QQ})\simeq\HH^n(K_A)\otimes\QQ$ and the filtration $F$ on $\HH^n(K_\CC)\simeq\HH^n(K_A)\otimes_A\CC$ define a mixed Hodge $A$-structure on $\HH^n(K_A)$ (\ref{hodge-theory-ii-2.3.1} along with \ref{hodge-theory-iii-0.4}).
+}
+
+\lic{(iii)}{
+  The morphisms ${}_Wd_1\colon{}_WE_1^{pq}\to{}_WE_1^{p+1,q}$ are compatible with the Hodge bigrading;
+  in particular, they are strictly compatible with the Hodge filtration.
+}
+
+\lic{(iv)}{
+  The spectral sequence of $(K_{A\otimes\QQ},W)$ degenerates at $E_2$ (i.e. ${}_WE_2={}_WE_\infty$).
+}
+
+\lic{(v)}{
+  The spectral sequence of $(K_\CC,F)$ degenerates at $E_1$ (i.e. ${}_FE_2={}_FE_\infty$).
+}
+
+\lic{(vi)}{
+  The spectral sequence of the complex $\Gr_F^p(K_\CC)$, endowed with the filtration induced by $W$, degenerates at $E_2$.
+}
+}
+
+\proof{
+  The proof of (i), (ii), (iii), (iv) is parallel to that of \ref{hodge-theory-ii-3.2.5}.
+  The analogy of \ref{hodge-theory-ii-3.2.6} and \ref{hodge-theory-ii-3.2.7} has been taken as an axiom (\ref{hodge-theory-iii-8.1.1-ch1} and \ref{hodge-theory-iii-8.1.1-ch2}).
+  The proofs of \ref{hodge-theory-ii-3.2.8}, \ref{hodge-theory-ii-3.2.9}, and \ref{hodge-theory-ii-3.2.10} can be carried over as they are, and, as in \ref{hodge-theory-ii-3.2.10}, we thus deduce (i), (ii), (iii), and (iv).
+  Claims (v) and (vi) then follow from \ref{hodge-theory-iii-7.2.8}.
+}
+}
+}
+
+\subtree[hodge-theory-iii-8.1.10]{
+\number{8.1.10}
+
+We abbreviate "differential graded" to DG, and "bounded-below differential graded" to DG+.
+A DG complex of $A$-modules can be seen as a double complex of $A$-modules;
+the *first* degree is that of the complex, and the *second* degree is the one defined by the grading of DG modules.
+\oldpage{31}
+We denote by $\DD^+(\dgmodpluscat{A})$ the derived category of the category of bounded-below complexes of DG $A$-modules, with degrees uniformly bounded below.
+}
+
+A **DG mixed Hodge $A$-complex** $K$ consists of:
+
+\olc{
+  \lic{(a)}{
+    a complex $K_A\in\Ob\DD^+(\dgmodpluscat{A})$;
+  }
+  \lic{(b)}{
+    a filtered complex $(K_{A\otimes\QQ},W)\in\Ob\DD^+F(\dgmodpluscat{(A\otimes\QQ)})$, and is isomorphism $K_A\otimes\QQ\simeq K_{A\otimes\QQ}$ in $\DD^+$;
+  }
+  \lic{(c)}{
+    a bifiltered complex $(K_\CC,F,W)\in\Ob\DD^+F_2(\dgmodpluscat{\CC})$, and an isomorphism $K_{A\otimes\QQ}\otimes\CC\simeq K_\CC$ in $\DD^+F$.
+  }
+}
+}
+
+We require that, for each $n$, the component $(K^{\bullet n},F,W)$ of $K$ whose second degree is $n$ be a mixed Hodge $A$-complex.
+}
+
+We denote by $L$ the filtration by the second degree of $\simp K$.
+We denote by $\Dec_1W$ the filtration of $K_{A\otimes\QQ}$ induced by shifting (\ref{hodge-theory-ii-1.3.3}) $W$.
+We will not confuse the filtration that this induces on $\simp K_{A\otimes\QQ}$ (also denoted by $\Dec_1W$) with the shifted filtration of the filtration induced on $\simp K_{A\otimes\QQ}$ by $W$.
+}
+
+\subtree[hodge-theory-iii-8.1.10.1]{
+\taxon{variant}
+\number{8.1.10.1}
+
+  We similarly define **cosimplicial** (resp. **$r$-cosimplicial**) **mixed Hodge $A$-complexes** by replacing "DG" with "cosimplicial" (resp. $r$-cosimplicial) everywhere in the definition.
+  The functor from cosimplicial $A$-modules to DG $A$-modules sends cosimplicial mixed Hodge $A$-complexes to DG mixed Hodge $A$-complexes (and similarly for $r$-cosimplicial).
+}
+}
+}
+
+\subtree[hodge-theory-iii-8.1.11]{
+\number{8.1.11}
+
+Let $X_\bullet$ be a simplicial topological space.
+A **cohomological mixed Hodge $A$-complex** $K$ on $X_\bullet$ consists of:
+
+\olc{
+  \lic{(𝛼)}{
+    a complex $K_A\in\Ob\DD^+(X_\bullet,A)$;
+  }
+
+  \lic{(𝛽)}{
+    a filtered complex $(K_{A\otimes\QQ},W)\in\Ob\DD^+F(X_\bullet,A\otimes\QQ)$, and an isomorphism $K_{A\otimes\QQ}\simeq K_A\otimes\QQ$ in $\DD^+(X_\bullet,A\otimes\QQ)$;
+  }
+
+  \lic{(𝛾)}{
+    a bifiltered complex $(K_\CC,W,F)\in\Ob\DD^+F_2(X_\bullet,\CC)$, and an isomorphism $(K_\CC,W)\simeq(K_{A\otimes\QQ},W)\otimes\CC$ in $\DD^+F(X_\bullet,\CC)$.
+  }
+}
+}
+
+The following axiom has to be satisfied:
+
+\subtree[hodge-theory-iii-8.1.11-chmbullet]{
+  \taxon{axiom}
+  \number{CHM●}
+      The restriction of $K$ to each of the $X_n$ is a cohomological mixed Hodge $A$-complex.
+  }
+}
+}
+
+For $A=\ZZ$, we simply speak of a cohomological mixed Hodge complex.
+}
+}
+
+\subtree[hodge-theory-iii-8.1.12]{
+\taxon{example}
+\number{8.1.12}
+
+Let $X_\bullet$ be a smooth proper scheme (over $\CC$), and let $Y_\bullet$ be a normal crossing divisor in $X_\bullet$.
+We set $U_\bullet=X_\bullet\setminus Y_\bullet$, and we denote by $j$ the inclusion of $U_\bullet$ into $X_\bullet$.
+The constructions in \ref{hodge-theory-iii-8.1.8} can be performed "uniformly in $X_n$", as \ref{hodge-theory-iii-5.2.5} and \ref{hodge-theory-iii-6.2.7} show.
+\oldpage{32}
+They thus give a cohomological mixed Hodge complex
+$$
+  \big(\Rd j_*\ZZ, (\Rd j_*\QQ,\tau_{\leqslant}), (\Omega_{X_\bullet}^\bullet(\log Y_\bullet),W,F)\big)
+$$
+on $X_\bullet$.
+}
+}
+
+\subtree[hodge-theory-iii-8.1.13]{
+\number{8.1.13}
+
+Let $K$ be a cohomological mixed Hodge $A$-complex on $X_\bullet$.
+Write $\cosimpmodcat{A}$ to mean the category of cosimplicial $A$-modules.
+If we apply the functor $\Rd\Gamma^\bullet$ to $K$, then we obtain
+
+\olc{
+  \lic{(a)}{
+    a cosimplicial complex $\Rd\Gamma^\bullet K_A\in\Ob\DD^+(\cosimpmodcat{A})$;
+  }
+
+  \lic{(b)}{
+    a cosimplicial filtered complex $\Rd\Gamma^\bullet(K_{A\otimes\QQ},W)\in\Ob\DD^+F(\cosimpmodcat{A\otimes\QQ})$;
+  }
+
+  \lic{(c)}{
+    a cosimplicial bifiltered complex $\Rd\Gamma^\bullet(K_\CC,W,F)\in\Ob\DD^+F_2(\cosimpmodcat{\CC})$;
+  }
+
+  \lic{(d)}{
+    isomorphisms as in (b) and (c) of \ref{hodge-theory-iii-8.1.10} between these objects.
+  }
+}
+}
+
+It is clear that the $\Rd\Gamma^\bullet(K,W,F)$ described above is a cosimplicial mixed Hodge $A$-module.
+It defines a DG mixed Hodge $A$-complex (\ref{hodge-theory-iii-8.1.10.1}).
+}
+}
+
+\subtree[hodge-theory-iii-8.1.14]{
+\number{8.1.14}
+
+Let $K$ be a DG mixed Hodge $A$-complex, and consider the spectral sequence abutting to the cohomology of $\simp K$, which is defined by the filtration $L$.
+By hypothesis, the $E_1$ pages of this spectral sequence are endowed with mixed Hodge $A$-structures.
+The content of \ref{hodge-theory-iii-8.1.15} is that every spectral sequence, including its abutment, is endowed with a mixed Hodge $A$-structure.
+In other words, $c'$ is a spectral sequence in the abelian category of mixed Hodge $A$-structures.
+The structure on the abutment corresponds to a natural mixed Hodge $A$-complex "structure" on $\simp K$.
+}
+}
+
+\subtree[hodge-theory-iii-8.1.15]{
+\taxon{theorem}
+\number{8.1.15}
+
+Let $K$ be a DG mixed Hodge $A$-complex.
+
+\olc{
+  \lic{(i)}{
+    With the notation of \ref{hodge-theory-iii-8.1.10}, \ref{hodge-theory-iii-8.1.10.1}, and \ref{hodge-theory-iii-7.1.6}, $(\simp K,\delta(W,L),F)$ is a mixed Hodge $A$-complex.
+  }
+
+  \lic{(ii)}{
+    We have
+
+    \subtree[hodge-theory-iii-8.1.15.1]{
+      \taxon{equation}
+      \number{8.1.15.1}
+      $$
+        {}_{\delta(W,L)}E_1^{ab}(\simp K\otimes\QQ)
+        = \sum_{\substack{\alpha=\gamma-\beta\\b=\alpha+\beta}} \HH^\alpha(\Gr_\beta^W K^{\bullet\gamma})
+      \tag{8.1.15.1}
+      $$
+    }
+
+    where the complex $({}_{\delta(W,L)}E_1^{\bullet b},d_1)$ is the simple complex associated to the double complex of Hodge $A\otimes\QQ$-structures of weight $b$ given by
+
+    \subtree[hodge-theory-iii-8.1.15.2]{
+      \taxon{equation}
+      \number{8.1.15.2}
+      $$
+        \small
+        \begin{CD}
+          \HH^{b-(\beta+1)}(\Gr_{\beta+1}^W K^{\bullet,\gamma+1}) @>{\partial}>> \HH^{b-\beta}(\Gr_\beta^W K^{\bullet,\gamma+1}) @>{\partial}>> \HH^{b-(\beta-1)}(\Gr_{\beta-1}^W K^{\bullet,\gamma+1})
+        \\@. @A{d''}AA @AA{d''}A
+        \\@. \HH^{b-\beta}(\Gr_\beta^W K^{\bullet,\gamma}) @>>{\partial}> \HH^{b-(\beta-1)}(\Gr_{\beta-1}^W K^{\bullet,\gamma})
+        \end{CD}
+      \tag{8.1.15.2}
+      $$
+    }
+  }
+
+  \lic{(iii)}{
+    \oldpage{33}
+    On the ${}_LE_r$ pages of the spectral sequence defined by $(\simp K_{A\otimes\QQ},L)$, the recurrent filtration and the two direct filtrations defined by $\Dec_1(W)$ agree;
+    similarly, on the ${}_LE_r(\simp K_\CC)$, the recurrent filtration and the two direct filtrations induced by $F$ agree.
+    We denoted these filtrations again by $W$ and $F$ (respectively).
+  }
+
+  \lic{(iv)}{
+    For $r\geqslant1$, $({}_LE_r,W,F)$ is a mixed Hodge $A$-structure (\ref{hodge-theory-iii-0.4}).
+    The differentials $d_r$ are morphisms of mixed Hodge $A$-structures.
+  }
+
+  \lic{(v)}{
+    The filtration $L$ on $\HH^\bullet(\simp K)$ is a filtration in the category of mixed Hodge structures, and
+
+    \subtree[hodge-theory-iii-8.1.15.3]{
+      \taxon{equation}
+      \number{8.1.15.3}
+      $$
+        \Gr_L^p\big( \HH^{p+q}(\simp K), \delta(W,L)[p+q], F \big)
+        = ({}_LE_\infty^{pq},W,F).
+      \tag{8.1.15.3}
+      $$
+    }
+  }
+}
+}
+}
+
+\subtree[hodge-theory-iii-8.1.16]{
+\taxon{remark}
+\number{8.1.16}
+
+In \ref{hodge-theory-iii-8.1.15}, the filtration $\Dec_1(W)$ (\ref{hodge-theory-iii-8.1.10}) plays a more important role than $W$.
+We have
+
+\subtree[hodge-theory-iii-8.1.16.1]{
+  \taxon{equation}
+  \number{8.1.16.1}
+  $$
+    \Dec(\delta(W,L))
+    = \Dec_1(W)
+    \qquad\text{on }\simp K
+  \tag{8.1.16.1}
+  $$
+}
+
+and \ref{hodge-theory-iii-8.1.15.3} can be rewritten as
+
+\subtree[hodge-theory-iii-8.1.16.2]{
+  \taxon{equation}
+  \number{8.1.16.2}
+  $$
+    \Gr_L(\HH(K),\Dec_1(W,F))
+    = ({}_LE_\infty,W,F).
+  \tag{8.1.16.2}
+  $$
+}
+
+In the same spirit, we note that, with the notation of \ref{hodge-theory-iii-8.1.8},
+$$
+  \Rd\Gamma\big( \Rd j_*\ZZ, (\Rd j_*\QQ,\Dec W), (\Omega_X^\bullet(\log D),\Dec W,F) \big)
+$$
+depends only on $U$, and not on the choice of compactification $X$.
+}
+}
+
+\subtree[hodge-theory-iii-8.1.17]{
+\number{8.1.17}
+
+We now prove \ref{hodge-theory-iii-8.1.15}.
+Claims (i) and (ii) follow from the fact that
+$$
+  \begin{aligned}
+    \Gr_n^{\delta(W,L)}(\simp K\otimes\QQ)
+    &= \sum_{p-q=n} \Gr_p^W\Gr_L^q(\simp K\otimes\QQ)
+  \\&= \sum_{p-q=n} (\Gr_p^W K^{\bullet q})[-q]
+  \end{aligned}
+$$
+(this isomorphism is compatible with $F$, and we apply \ref{hodge-theory-iii-8.1.4}).
+The proof of \ref{hodge-theory-iii-8.1.15.2} is left to the reader.
+}
+
+Consider the claims:
+
+\olc{
+  \lic{(aᵣ)}{
+    The morphisms $d_r$ of ${}_LE_r(\simp K_{A\otimes\QQ})$ are strictly compatible with the recurrent filtration defined by $\Dec_1(W)$.
+  }
+
+  \lic{(bᵣ)}{
+    The morphisms $d_r$ of ${}_LE_r(\simp K_\CC)$ are strictly compatible with the recurrent filtration defined by $F$.
+  }
+
+  \lic{(cᵣ)}{
+    ${}_LE_r$, endowed with the filtrations considered in (a) and (b) is a mixed Hodge $A$-structure.
+  }
+
+  \lic{(dᵣ)}{
+    The $d_r$ are morphisms of mixed Hodge $A$-structures.
+  }
+}
+}
+
+We will prove (a${}_r$) and (b${}_r$) for $r\geqslant0$, and (c${}_r$) and (d${}_r$) for $r\geqslant1$, by simultaneous induction.
+
+\olc{
+  \lic{(A)}{
+    *Proof of (a${}_0$).*
+    We have
+    $$
+      \big( {}_LE_0^{p\bullet}(\simp K_{A\otimes\QQ}), \Dec_1 W \big)
+      = (K_{A\otimes\QQ}^{\bullet p}, \Dec W).
+    $$
+    By (iv) of \ref{hodge-theory-iii-8.1.9}, the spectral sequence of $(K_{A\otimes\QQ}^{\bullet p},W)$ degenerates at $E_2$.
+    By \ref{hodge-theory-ii-1.3.4}, the spectral sequence of $(K_{A\otimes\QQ}^{\bullet p},\Dec W)$ degenerates at $E_1$, and this proves (a${}_0$) (\ref{hodge-theory-ii-1.3.2}).
+  }
+
+  \lic{(B)}{
+    \oldpage{34}
+    *Proof of (b${}_0$).*
+    We have
+    $$
+      \big( {}_LE_0^{p\bullet}(\simp K_\CC),F \big)
+      = (K_\CC^{\bullet p}, F).
+    $$
+    We apply (v) of \ref{hodge-theory-iii-8.1.9} and \ref{hodge-theory-ii-1.3.2}.
+  }
+
+  \lic{(C)}{
+    *Proof of (c${}_1$).*
+    We have to show that $\HH^n(K_A^{\bullet p})$, endowed with the filtrations induced by $\Dec W$ on $\HH^n(K_{A\otimes\QQ}^{\bullet p})=\HH^n(K_A^{\bullet p})\otimes\QQ$ and by $F$ on $\HH^n(K_\CC^{\bullet p})=\HH^n(K_A^{\bullet p})\otimes_A\CC$, is a mixed Hodge $A$-structure.
+    But $\Dec W$ induces on $\HH^n(K_{A\otimes\QQ}^{\bullet p})$ the same filtration as $W[n]$, and so we conclude by (ii) of \ref{hodge-theory-iii-8.1.9}.
+  }
+
+  \lic{(D)}{
+    *Proof of (c${}_r$)+(d${}_r$)$\implies$(a${}_r$)+(b${}_r$)+(c${}_{r+1}$).*
+    This is the key point of the proof, and is a simple application of \ref{hodge-theory-ii-2.3.5} (along with \ref{hodge-theory-iii-0.4}).
+  }
+
+  \lic{(E)}{
+    *Proof of (a${}_r$)${}_{r\leqslant r_0-2}$+(b${}_r$)${}_{r\leqslant r_0-2}$+(c${}_{r_0}$)$\implies$(d${}_{r_0}$).*
+    By \ref{hodge-theory-ii-1.3.16}, the recurrent filtration and the direct filtrations induced by $\Dec_1W$ (resp. $F$) on ${}_LE_r$ agree for $r\leqslant r_0$, and we apply (i) of \ref{hodge-theory-ii-1.3.13}.
+  }
+}
+}
+
+This finishes the proof by induction of (a), (b), (c), and (d).
+}
+
+Claim (iii) was proven in part (E) of the proof by induction, and the claims of (iv) are (c${}_r$) and (d${}_r$).
+We will prove \ref{hodge-theory-iii-8.1.15.3} in the form of \ref{hodge-theory-iii-8.1.16.2}.
+}
+
+The fact that
+$$
+  \Gr_L(\HH(\simp K_{A\otimes\QQ}),\Dec_1W)
+  = ({}_LE_\infty(\simp K_{A\otimes\QQ}),W)
+$$
+follows from (a${}_r$) and \ref{hodge-theory-ii-1.3.17}.
+The fact that
+$$
+  \Gr_L(\HH(\simp K_\CC),F)
+  = ({}_LE_\infty(\simp K_\CC),F)
+$$
+follows from (b${}_r$) and \ref{hodge-theory-ii-1.3.17}.
+}
+
+We conclude by the following lemma, whose proof is left to the reader:
+}
+}
+
+\subtree[hodge-theory-iii-8.1.18]{
+\taxon{lemma}
+\number{8.1.18}
+
+Let $H=(H_A,W,F)$ be a mixed Hodge $A$-structure.
+For a filtration $L$ of $H_A$ to come from a filtration of $H$, in the abelian category of mixed Hodge $A$-structures, it is necessary and sufficient that, for all $n$, $(\Gr_L^n(H_A),\Gr_L^n(W),\Gr_L^n(F))$ be a mixed Hodge $A$-structure.
+}
+}
+
+\subtree[hodge-theory-iii-8.1.19]{
+\number{8.1.19}
+
+We now apply \ref{hodge-theory-iii-8.1.13} and \ref{hodge-theory-iii-8.1.15} to \ref{hodge-theory-iii-8.1.12}.
+}
+
+We obtain a mixed Hodge complex consisting of (a), (b), and (c) below.
+}
+
+\olc{
+\lic{(a)}{
+  The complex $\Rd\Gamma\Rd j_*\ZZ\simeq\Rd\Gamma(U_\bullet,\ZZ)$, whose cohomology groups are the $\HH^n(U_\bullet,\ZZ)$.
+}
+
+\lic{(b)}{
+  The filtration $\delta(W,L)$ of $\Rd\Gamma\Rd j_*\QQ\simeq\Rd\Gamma(U_\bullet,\QQ)$.
+  With the notation of \ref{hodge-theory-ii-3.1.4}, we have
+  $$
+    \begin{aligned}
+      \Gr_n^{\delta(W,L)}\Rd\Gamma(U_\bullet,\QQ)
+      &\underset{(7.1.6.5)}{\simeq} \bigoplus_m \Gr_{n+m}^W \Rd\Gamma(U_m,\QQ)[-m]
+    \\&\simeq \bigoplus_m \Rd\Gamma(\widetilde{Y}_m^{n+m},\varepsilon_\QQ^{n+m}[-n-m])[-m]
+    \\&= \bigoplus_m \Rd\Gamma(\widetilde{Y}_m^{n+m},\varepsilon_\QQ^{n+m})[-n-2m].
+    \end{aligned}
+  $$
+  \oldpage{35}
+  The $E_1$ page of the corresponding spectral sequence is the sum of the groups of form $\HH^p(\widetilde{Y}_q^r,\varepsilon_\QQ^r)$;
+  this contributes to the $\HH^{p+q+r}(U_\bullet)$;
+  it corresponds to $\Gr_a^{\delta(W,F)}$ for $p+2r=(p+q+r)+a$:
+
+  \subtree[hodge-theory-iii-8.1.19.1]{
+    \taxon{equation}
+    \number{8.1.19.1}
+    $$
+      {}_{\delta(W,L)}E_1^{-a,b}
+      = \bigoplus_{\substack{p+2r=b\\q-r=-a}} \HH^p(\widetilde{Y}_q^r,\varepsilon_\QQ^r)
+      \To \HH^{-a+b}(U_\bullet,\QQ).
+    \tag{8.1.19.1}
+    $$
+  }
+}
+
+\lic{(c)}{
+  The bifiltration $(\delta(W,L),F)$ of $\Rd\Gamma\Rd j_*\CC\simeq\simp\Rd\Gamma^\bullet\Omega_X^\bullet(\log D)$.
+}
+}
+
+The filtration $F$ endows ${}_{\delta(W,L)}E_1^{-a,b}$ with a Hodge structure of weight $b$, and the differentials $d_1$ of ${}_{\delta(W,L)}E$ are the morphisms of the Hodge $\QQ$-structures.
+The complex ${}_{\delta(W,L)}E_q^{\bullet b}$ is the simple complex associated the double complex of Hodge structures of weight $b$ given by:
+$$
+  \small
+  \begin{CD}
+    \HH^{b-2(r+2)}(\widetilde{Y}_{q+1}^{r+1},\varepsilon_\QQ^{r+1})[-r-1] @>{\mathrm{Gysin}}>> \HH^{b-2r}(\widetilde{Y}_{q+1}^{r},\varepsilon_\QQ^{r})[-r] @>{\mathrm{Gysin}}>> \HH^{b-2(r-2)}(\widetilde{Y}_{q+1}^{r-1},\varepsilon_\QQ^{r-1})[-r+1]
+  \\ @. @A{\sum_i(-1)^i\delta_i}AA @AA{\sum_i(-1)^i\delta_i}A
+  \\ @. \HH^{b-2r}(\widetilde{Y}_q^r,\varepsilon_\QQ^r)[-r] @>>{\mathrm{Gysin}}> \HH^{b-2(r-2)}(\widetilde{Y}_q^{r-1},\varepsilon_\QQ^{r-1})[-r+1]
+  \end{CD}
+$$
+The indices in the terms in $E_1^{ab}$ satisfy $-a=q-r$.
+}
+
+In particular, the $\HH^n(U_\bullet,\ZZ)$ are endowed with mixed Hodge structures (\ref{hodge-theory-iii-8.1.9}).
+}
+}
+
+\subtree[hodge-theory-iii-8.1.20]{
+\taxon{proposition}
+\number{8.1.20}
+
+Under the above hypotheses:
+
+\olc{
+  \lic{(i)}{
+    The mixed Hodge structure of $\HH^n(U_\bullet,\ZZ)$ is functorial in the pair $(U_\bullet,X_\bullet)$.
+  }
+
+  \lic{(ii)}{
+    In rational cohomology, the spectral sequence \ref{hodge-theory-iii-8.1.19.1} degenerates at $E_2$ (i.e. $E_2=E_\infty$) and abuts to the weight filtration of $\HH^n(U_\bullet,\QQ)$.
+    The Hodge structure of $E_2$ induced by that of $E_1$ is also that of $\Gr_W\HH^n(U_\bullet,\QQ)$.
+  }
+
+  \lic{(iii)}{
+    The Hodge numbers of $\HH^n(U_\bullet,\ZZ)$ satisfy
+    $$
+      h^{pq}\neq0
+      \implies
+      0\leqslant p,q\leqslant n.
+    $$
+  }
+
+  \lic{(iv)}{
+    For $Y_\bullet=\varnothing$, the Hodge numbers of $\HH^n(X_\bullet,\ZZ)$ satisfy
+    $$
+      h^{pq}\neq0
+      \implies
+      [0\leqslant p,q\leqslant n
+      \quad\text{and}\quad p+q\leqslant n].
+    $$
+  }
+}
+
+\proof{
+      Both (i) and (ii) follow from the general theory (\ref{hodge-theory-iii-8.1.9}).
+    To prove (iii), we contemplate \ref{hodge-theory-iii-8.1.19} and note that the Hodge structures $\HH^p(\widetilde{Y}_q^r,\varepsilon_\QQ^r)[-r]$ (for $p+q+r=n$) satisfy (iii).
+    To prove (iv), we note that the Hodge structures $\HH^p(X_q)$ (for $p+q=n$) satisfy (iv).
+  }
+}
+}
+}
+
+\subtree[hodge-theory-iii-8.1.21]{
+\number{8.1.21}
+
+We define a **cohomological mixed Hodge $A$-complex on an $r$-simplicial topological space** by transposing \ref{hodge-theory-iii-8.1.11}.
+If $K$ is such a complex, then we see, as in \ref{hodge-theory-iii-8.1.13}, that $\Rd\Gamma^\bullet K$ is an $r$-cosimplicial mixed Hodge $A$-complex (\ref{hodge-theory-iii-8.1.10.1}).
+}
+
+\oldpage{36}
+Let $X_\bullet$ be a smooth and proper $r$-simplicial scheme.
+A normal crossing divisor $D_\bullet$ on $X_\bullet$ is a system of normal crossing divisors on the $X_n$ such that $X_\bullet\setminus D_\bullet=U_\bullet$ is an $r$-simplicial subscheme of $X_\bullet$.
+Let $j\colon U_\bullet\hookrightarrow X_\bullet$.
+We define, as in \ref{hodge-theory-iii-8.1.12}, a cohomological mixed Hodge complex $\Rd j_*\ZZ$ on $X_\bullet$.
+}
+
+We can, as in \ref{hodge-theory-iii-8.1.20}, thus deduce a mixed Hodge structure on $\HH^\bullet(U_\bullet,\ZZ)$, but, since
+$$
+  \HH^\bullet(U_\bullet,\ZZ)
+  = \HH^\bullet(\delta U_\bullet,\ZZ),
+$$
+this does not teach us anything new (the above equality would be an identity between mixed Hodge structures).
+}
+}
+
+\subtree[hodge-theory-iii-8.1.22]{
+\number{8.1.22}
+
+Set $r=2$.
+For every bounded-below bicosimplicial complex $K=(K^{pn_1n_2})$ (where $p$ is the differential degree, and $n_i$ is the $i$-th simplicial degree), we denote by $\simp_1K$ the cosimplicial complex of simplicial degree $n_2$ given by
+$$
+  (\simp_1K)^{\bullet n_2}
+  = \simp K^{\bullet\bullet n_2}.
+$$
+We denote by $L_1$ the filtration on $\simp_1K$ that, on each $\simp K^{\bullet\bullet n_2}$, induces the filtration by the simplicial degree $n_1$.
+}
+
+Let $K$ be a bicosimplicial mixed Hodge $A$-complex.
+It follows from \ref{hodge-theory-iii-8.1.15} that $(\simp_1K,\delta(W,L_1),F)$ is a cosimplicial mixed Hodge complex.
+Let $L_2$ be the filtration of $\simp K=\simp\simp_1K$ by the simplicial degree $n_2$.
+By \ref{hodge-theory-iii-8.1.14} and \ref{hodge-theory-iii-8.1.15}, the spectral sequence defined by $L_2$ comes from a spectral sequence in the abelian category of mixed Hodge $A$-structures
+
+\subtree[hodge-theory-iii-8.1.22.1]{
+  \taxon{equation}
+  \number{8.1.22.1}
+  $$
+    {}_{L_2}E_1^{pq}
+    = \HH^q(\simp K^{\bullet\bullet p})
+    \To \HH^{p+q}(\simp K).
+  \tag{8.1.22.1}
+  $$
+}
+}
+
+In this spectral sequence, the mixed Hodge $A$-structure on $E_1^{pq}$ is the mixed Hodge $A$-structure ((ii) of \ref{hodge-theory-iii-8.1.9}) of the cohomology of the mixed Hodge $A$-complex $(\simp K^{\bullet\bullet p},\delta(W,L_1),F)$.
+The mixed Hodge $A$-structure of the abutment is the mixed Hodge $A$-structure of the cohomology of the mixed Hodge $A$-complex $(\simp K,\delta(\delta(W,L_1),L_2),F)$.
+The filtration $\delta(\delta(W,L_1),L_2)\eqqcolon\delta(W,L_1,L_2)$ is given by
+$$
+  \delta(W,L_1,L_2)_k(K^{pn_1n_2})
+  = W_{k+n_1+n_2}K^{pn_1n_2}.
+$$
+}
+}
+
+\subtree[hodge-theory-iii-8.1.23]{
+\number{8.1.23}
+
+In particular, a cohomological mixed Hodge $A$-complex on a bisimplicial topological space $X_{\bullet\bullet}$ defines a spectral sequence of mixed Hodge $A$-structures
+
+\subtree[hodge-theory-iii-8.1.23.1]{
+  \taxon{equation}
+  \number{8.1.23.1}
+  $$
+    E_1^{pq}
+    = \HH^q(X_{\bullet p},K)
+    \To \HH^{p+q}(X_{\bullet\bullet},K).
+  \tag{8.1.23.1}
+  $$
+}
+}
+
+In the particular case considered in \ref{hodge-theory-iii-8.1.21}, for $r=2$, we have $A=\ZZ$, and \ref{hodge-theory-iii-8.1.23.1} can be written as
+
+\subtree[hodge-theory-iii-8.1.23.2]{
+  \taxon{equation}
+  \number{8.1.23.2}
+  $$
+    E_1^{pq}
+    = \HH^q(U_{\bullet p},\ZZ)
+    \To \HH^{p+q}(U_{\bullet\bullet},\ZZ).
+  \tag{8.1.23.2}
+  $$
+}
+}
+}
+
+\subtree[hodge-theory-iii-8.1.24]{
+\number{8.1.24}
+
+\oldpage{37}
+If $K'$ and $K''$ are mixed Hodge $A$-complexes, then then their product $K'\otimes K''$, defined by
+$$
+  \begin{aligned}
+    (K'\otimes K'')_A
+    &= K'_A\Lotimes K''_A
+  \\((K'\otimes K'')_{A\otimes\QQ},W)
+    &= (K'_{A\otimes\QQ},W')\otimes(K''_{A\otimes\QQ},W'')
+  \\((K'\otimes K'')_\CC,W,F)
+    &= (K'_\CC,W',F')\otimes(K''_\CC,W'',F'')
+  \end{aligned}
+$$
+is again a mixed Hodge $A$-complex.
+}
+
+Let $U'$ (resp. $U''$) be the complement of a normal crossing divisor $Y'$ (resp. $Y''$) in a smooth and proper scheme $X'$ (resp. $X''$).
+Then $U=U'\times U''$ is the complement of a normal crossing divisor $Y$ in $X=X'\times X''$.
+Let $j$ (resp. $j'$, $j''$) be the inclusion of $U$ (resp. $U'$, $U''$) into $X$ (resp. $X'$, $X''$).
+}
+
+We have a quasi-isomorphism
+$$
+  \Rd j'_*\ZZ\Lboxtimes \Rd j''_*\ZZ
+  \coloneqq \pr_1^*\Rd j'_*\ZZ\Lotimes\pr_2^*\Rd j''_*\ZZ
+  \simto \Rd j_*\ZZ,
+$$
+a filtered quasi-isomorphism
+$$
+  (\Rd j'_*\QQ,\tau_\leqslant)\Lboxtimes(\Rd j''_*\QQ,\tau_\leqslant)
+  \simto (\Rd j_*\QQ,\tau_\leqslant),
+$$
+and a bifiltered morphism
+$$
+  (\Omega_{X'}^\bullet(\log Y'),W,F)\boxtimes(\Omega_{X''}(\log Y''),W,F)
+  \to (\Omega_X^\bullet(\log Y),W,F).
+$$
+}
+
+Applying the functor $\Rd\Gamma$ gives us, by the Künneth formula, and by its analogue for cohomology of coherent analytic sheaves, an isomorphism of mixed Hodge complexes
+$$
+  \Rd\Gamma(U',\ZZ)\Lotimes\Rd\Gamma(U'',\ZZ)
+  \simto \Rd\Gamma(U,\ZZ)
+$$
+whence an isomorphism of mixed Hodge $\QQ$-structures
+$$
+  \HH^\bullet(U',\QQ)\otimes\HH^\bullet(U'',\QQ)
+  \simto \HH^\bullet(U,\QQ).
+$$
+}
+}
+
+\subtree[hodge-theory-iii-8.1.25]{
+\number{8.1.25}
+
+Standard arguments, based on the Cartier–Eilenberg–Zilber theorem, give us the following simplicial variant of \ref{hodge-theory-iii-8.1.24}.
+}
+
+Let $U'_\bullet$ (resp. $U''_\bullet$) be the complement of a normal crossing divisor in a smooth and proper simplicial scheme $X'_\bullet$ (resp. $X''_\bullet$).
+Let $U_\bullet=U'_\bullet\times U''_\bullet$ and $X_\bullet=X'_\bullet\times X''_\bullet$.
+}
+
+We have an isomorphism of mixed Hodge complexes
+$$
+  \Rd\Gamma(U'_\bullet,\ZZ)\Lotimes\Rd\Gamma(U''_\bullet,\ZZ)
+  \simto \Rd\Gamma(U_\bullet,\ZZ)
+$$
+and, in particular, an isomorphism of mixed Hodge $\QQ$-structures
+$$
+  \HH^\bullet(U'_\bullet,\QQ)\otimes\HH^\bullet(U''_\bullet,\QQ)
+  \simto \HH^\bullet(U_\bullet,\QQ).
+$$
+}
+}
+
+\subtree[hodge-theory-iii-8.1.26]{
+\number{8.1.26}
+
+Let $U'_{\bullet\bullet}$ (resp. $U''_{\bullet\bullet}$) be the complement of a normal crossing divisor in a smooth and proper bisimplicial scheme $X'_{\bullet\bullet}$ (resp. $X''_{\bullet\bullet}$).
+Let $U_{\bullet\bullet}=U'_{\bullet\bullet}\times U''_{\bullet\bullet}$ and $X_{\bullet\bullet}=X'_{\bullet\bullet}\times X''_{\bullet\bullet}$.
+\oldpage{38}
+Standard arguments show that, in rational cohomology, the spectral sequence \ref{hodge-theory-iii-8.1.23.2} for $U_{\bullet\bullet}$ is the tensor product of the spectral sequences \ref{hodge-theory-iii-8.1.23.2} for $U'_{\bullet\bullet}$ and $U''_{\bullet\bullet}$.
+}
+}

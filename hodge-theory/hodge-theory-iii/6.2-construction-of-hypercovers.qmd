@@ -136,17 +136,9 @@ We denote the complex $(\Omega_{X_n}^\bullet(\log D_n))_{n\geqslant0}$ by $\Omeg
 Using [(6.2.5)](#iii-6.2.5), we can show that, for every separated scheme $S$ over $\CC$, there exists:
 \oldpage{21}
 
-::: {.rmenv #env-iii-6.2.8-alpha number="𝛼"}
-a simplicial scheme $X_\bullet$ over $\CC$, smooth and proper, that we can take to be $s$-split;
-:::
-
-::: {.rmenv #env-iii-6.2.8-beta number="𝛽"}
-a normal crossing divisor $D_\bullet$ of $X_\bullet$; we set $U_\bullet=X_\bullet\setminus D_\bullet$;
-:::
-
-::: {.rmenv #env-iii-6.2.8-gamma number="𝛾"}
-an augmentation $a\colon U_\bullet\to S$ that realises $U_\bullet^\an$ as a proper hypercover of $S^\an$.
-:::
+a. a simplicial scheme $X_\bullet$ over $\CC$, smooth and proper, that we can take to be $s$-split;
+b. a normal crossing divisor $D_\bullet$ of $X_\bullet$; we set $U_\bullet=X_\bullet\setminus D_\bullet$;
+c. an augmentation $a\colon U_\bullet\to S$ that realises $U_\bullet^\an$ as a proper hypercover of $S^\an$.
 
 Furthermore, any two such systems are covered by a third, and a morphism $u\colon S\to T$ can be covered by a morphism
 ```tikz
