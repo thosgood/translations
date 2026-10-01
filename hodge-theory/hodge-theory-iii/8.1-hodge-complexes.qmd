@@ -121,170 +121,99 @@ is a cohomological mixed Hodge complex on $X$.
 
 The following result is an "abstract" version of [§3.2](../hodge-theory-ii/3.2-mixed-hodge-theory).
 
-::: {.rmenv #env-iii-8.1.9 number="8.1.9"}
-\taxon{scholium}
-
+::: {.rmenv #env-iii-8.1.9 number="8.1.9" taxon="Scholium"}
 Let $K$ be a mixed Hodge $A$-complex.
-}
 
-\olc{
-\lic{(i)}{
-  On the pages ${}_WE_r^{pq}$ of the spectral sequence of $(K_\CC,W)$, the recurrent filtration and the two direct filtrations defined by $F$ all coincide.
-}
+i. On the pages ${}_WE_r^{pq}$ of the spectral sequence of $(K_\CC,W)$, the recurrent filtration and the two direct filtrations defined by $F$ all coincide.
+ii. The filtration $W[n]$ (\ref{hodge-theory-ii-1.1.2}) on $\HH^n(K_{A\otimes\QQ})\simeq\HH^n(K_A)\otimes\QQ$ and the filtration $F$ on $\HH^n(K_\CC)\simeq\HH^n(K_A)\otimes_A\CC$ define a mixed Hodge $A$-structure on $\HH^n(K_A)$ ([(2.3.1)](../hodge-theory-ii/2.3-mixed-structures.qmd#ii-2.3.1) along with [(0.4)](terminology-and-notation.qmd#iii-0.4)).
+iii. The morphisms ${}_Wd_1\colon{}_WE_1^{pq}\to{}_WE_1^{p+1,q}$ are compatible with the Hodge bigrading;
+    in particular, they are strictly compatible with the Hodge filtration.
+iv. The spectral sequence of $(K_{A\otimes\QQ},W)$ degenerates at $E_2$ (i.e. ${}_WE_2={}_WE_\infty$).
+v. The spectral sequence of $(K_\CC,F)$ degenerates at $E_1$ (i.e. ${}_FE_2={}_FE_\infty$).
+v. The spectral sequence of the complex $\Gr_F^p(K_\CC)$, endowed with the filtration induced by $W$, degenerates at $E_2$.
+:::
 
-\lic{(ii)}{
-  The filtration $W[n]$ (\ref{hodge-theory-ii-1.1.2}) on $\HH^n(K_{A\otimes\QQ})\simeq\HH^n(K_A)\otimes\QQ$ and the filtration $F$ on $\HH^n(K_\CC)\simeq\HH^n(K_A)\otimes_A\CC$ define a mixed Hodge $A$-structure on $\HH^n(K_A)$ (\ref{hodge-theory-ii-2.3.1} along with \ref{hodge-theory-iii-0.4}).
-}
-
-\lic{(iii)}{
-  The morphisms ${}_Wd_1\colon{}_WE_1^{pq}\to{}_WE_1^{p+1,q}$ are compatible with the Hodge bigrading;
-  in particular, they are strictly compatible with the Hodge filtration.
-}
-
-\lic{(iv)}{
-  The spectral sequence of $(K_{A\otimes\QQ},W)$ degenerates at $E_2$ (i.e. ${}_WE_2={}_WE_\infty$).
-}
-
-\lic{(v)}{
-  The spectral sequence of $(K_\CC,F)$ degenerates at $E_1$ (i.e. ${}_FE_2={}_FE_\infty$).
-}
-
-\lic{(vi)}{
-  The spectral sequence of the complex $\Gr_F^p(K_\CC)$, endowed with the filtration induced by $W$, degenerates at $E_2$.
-}
-}
-
-\proof{
-  The proof of (i), (ii), (iii), (iv) is parallel to that of \ref{hodge-theory-ii-3.2.5}.
-  The analogy of \ref{hodge-theory-ii-3.2.6} and \ref{hodge-theory-ii-3.2.7} has been taken as an axiom (\ref{hodge-theory-iii-8.1.1-ch1} and \ref{hodge-theory-iii-8.1.1-ch2}).
-  The proofs of \ref{hodge-theory-ii-3.2.8}, \ref{hodge-theory-ii-3.2.9}, and \ref{hodge-theory-ii-3.2.10} can be carried over as they are, and, as in \ref{hodge-theory-ii-3.2.10}, we thus deduce (i), (ii), (iii), and (iv).
-  Claims (v) and (vi) then follow from \ref{hodge-theory-iii-7.2.8}.
-}
-}
-}
+::: {.proof}
+The proof of (i), (ii), (iii), (iv) is parallel to that of [(3.2.5)](../hodge-theory-ii/3.2-mixed-hodge-theory.qmd#iii-3.2.5).
+The analogy of [(3.2.6)](../hodge-theory-ii/3.2-mixed-hodge-theory.qmd#iii-3.2.6) and [(3.2.7)](../hodge-theory-ii/3.2-mixed-hodge-theory.qmd#iii-3.2.7) has been taken as an axiom ([(CH 1)](#iii-8.1.1-ch1) and [(CH 2)](#iii-8.1.1-ch2)).
+The proofs of [(3.2.8)](../hodge-theory-ii/3.2-mixed-hodge-theory.qmd#iii-3.2.8), [(3.2.9)](../hodge-theory-ii/3.2-mixed-hodge-theory.qmd#iii-3.2.9), and [(3.2.10)](../hodge-theory-ii/3.2-mixed-hodge-theory.qmd#iii-3.2.10) can be carried over as they are, and, as in [(3.2.10)](../hodge-theory-ii/3.2-mixed-hodge-theory.qmd#iii-3.2.10), we thus deduce (i), (ii), (iii), and (iv).
+Claims (v) and (vi) then follow from [(7.2.8)](7.2-supplements-to-the-two-filtrations-lemma#iii-7.2.8).
+:::
 
 ::: {.rmenv #env-iii-8.1.10 number="8.1.10"}
-
 We abbreviate "differential graded" to DG, and "bounded-below differential graded" to DG+.
 A DG complex of $A$-modules can be seen as a double complex of $A$-modules;
 the *first* degree is that of the complex, and the *second* degree is the one defined by the grading of DG modules.
 \oldpage{31}
 We denote by $\DD^+(\dgmodpluscat{A})$ the derived category of the category of bounded-below complexes of DG $A$-modules, with degrees uniformly bounded below.
-}
 
 A **DG mixed Hodge $A$-complex** $K$ consists of:
 
-\olc{
-  \lic{(a)}{
-    a complex $K_A\in\Ob\DD^+(\dgmodpluscat{A})$;
-  }
-  \lic{(b)}{
-    a filtered complex $(K_{A\otimes\QQ},W)\in\Ob\DD^+F(\dgmodpluscat{(A\otimes\QQ)})$, and is isomorphism $K_A\otimes\QQ\simeq K_{A\otimes\QQ}$ in $\DD^+$;
-  }
-  \lic{(c)}{
-    a bifiltered complex $(K_\CC,F,W)\in\Ob\DD^+F_2(\dgmodpluscat{\CC})$, and an isomorphism $K_{A\otimes\QQ}\otimes\CC\simeq K_\CC$ in $\DD^+F$.
-  }
-}
-}
+a. a complex $K_A\in\Ob\DD^+(\dgmodpluscat{A})$;
+b. a filtered complex $(K_{A\otimes\QQ},W)\in\Ob\DD^+F(\dgmodpluscat{(A\otimes\QQ)})$, and is isomorphism $K_A\otimes\QQ\simeq K_{A\otimes\QQ}$ in $\DD^+$;
+c. a bifiltered complex $(K_\CC,F,W)\in\Ob\DD^+F_2(\dgmodpluscat{\CC})$, and an isomorphism $K_{A\otimes\QQ}\otimes\CC\simeq K_\CC$ in $\DD^+F$.
 
 We require that, for each $n$, the component $(K^{\bullet n},F,W)$ of $K$ whose second degree is $n$ be a mixed Hodge $A$-complex.
-}
 
 We denote by $L$ the filtration by the second degree of $\simp K$.
-We denote by $\Dec_1W$ the filtration of $K_{A\otimes\QQ}$ induced by shifting (\ref{hodge-theory-ii-1.3.3}) $W$.
+We denote by $\Dec_1W$ the filtration of $K_{A\otimes\QQ}$ induced by shifting ([(1.3.3)](../hodge-theory-ii/1.3-the-two-filtrations-lemma#iii-1.3.3)) $W$.
 We will not confuse the filtration that this induces on $\simp K_{A\otimes\QQ}$ (also denoted by $\Dec_1W$) with the shifted filtration of the filtration induced on $\simp K_{A\otimes\QQ}$ by $W$.
-}
+:::
 
-::: {.rmenv #env-iii-8.1.10 number="8.1.10"}
-\taxon{variant}
+::: {.rmenv #env-iii-8.1.10 number="8.1.10" taxon="Variant"}
+We similarly define **cosimplicial** (resp. **$r$-cosimplicial**) **mixed Hodge $A$-complexes** by replacing "DG" with "cosimplicial" (resp. $r$-cosimplicial) everywhere in the definition.
+The functor from cosimplicial $A$-modules to DG $A$-modules sends cosimplicial mixed Hodge $A$-complexes to DG mixed Hodge $A$-complexes (and similarly for $r$-cosimplicial).
+:::
 
-  We similarly define **cosimplicial** (resp. **$r$-cosimplicial**) **mixed Hodge $A$-complexes** by replacing "DG" with "cosimplicial" (resp. $r$-cosimplicial) everywhere in the definition.
-  The functor from cosimplicial $A$-modules to DG $A$-modules sends cosimplicial mixed Hodge $A$-complexes to DG mixed Hodge $A$-complexes (and similarly for $r$-cosimplicial).
-}
-}
-}
-
-::: {.rmenv #env-iii-8.1.11 number="8.1.11"}
-
+:::: {.rmenv #env-iii-8.1.11 number="8.1.11"}
 Let $X_\bullet$ be a simplicial topological space.
 A **cohomological mixed Hodge $A$-complex** $K$ on $X_\bullet$ consists of:
 
-\olc{
-  \lic{(𝛼)}{
-    a complex $K_A\in\Ob\DD^+(X_\bullet,A)$;
-  }
-
-  \lic{(𝛽)}{
-    a filtered complex $(K_{A\otimes\QQ},W)\in\Ob\DD^+F(X_\bullet,A\otimes\QQ)$, and an isomorphism $K_{A\otimes\QQ}\simeq K_A\otimes\QQ$ in $\DD^+(X_\bullet,A\otimes\QQ)$;
-  }
-
-  \lic{(𝛾)}{
-    a bifiltered complex $(K_\CC,W,F)\in\Ob\DD^+F_2(X_\bullet,\CC)$, and an isomorphism $(K_\CC,W)\simeq(K_{A\otimes\QQ},W)\otimes\CC$ in $\DD^+F(X_\bullet,\CC)$.
-  }
-}
-}
+a. a complex $K_A\in\Ob\DD^+(X_\bullet,A)$;
+b. a filtered complex $(K_{A\otimes\QQ},W)\in\Ob\DD^+F(X_\bullet,A\otimes\QQ)$, and an isomorphism $K_{A\otimes\QQ}\simeq K_A\otimes\QQ$ in $\DD^+(X_\bullet,A\otimes\QQ)$;
+c. a bifiltered complex $(K_\CC,W,F)\in\Ob\DD^+F_2(X_\bullet,\CC)$, and an isomorphism $(K_\CC,W)\simeq(K_{A\otimes\QQ},W)\otimes\CC$ in $\DD^+F(X_\bullet,\CC)$.
 
 The following axiom has to be satisfied:
 
-::: {.rmenv #env-iii-8.1.11 number="8.1.11"}
-  \taxon{axiom}
-
-      The restriction of $K$ to each of the $X_n$ is a cohomological mixed Hodge $A$-complex.
-  }
-}
-}
+::: {.rmenv #env-iii-8.1.11-chmbullet number="CHM•"}
+The restriction of $K$ to each of the $X_n$ is a cohomological mixed Hodge $A$-complex.
+:::
 
 For $A=\ZZ$, we simply speak of a cohomological mixed Hodge complex.
-}
-}
+::::
 
-::: {.rmenv #env-iii-8.1.12 number="8.1.12"}
-\taxon{example}
-
+::: {.rmenv #env-iii-8.1.12 number="8.1.12" taxon="Example"}
 Let $X_\bullet$ be a smooth proper scheme (over $\CC$), and let $Y_\bullet$ be a normal crossing divisor in $X_\bullet$.
 We set $U_\bullet=X_\bullet\setminus Y_\bullet$, and we denote by $j$ the inclusion of $U_\bullet$ into $X_\bullet$.
-The constructions in \ref{hodge-theory-iii-8.1.8} can be performed "uniformly in $X_n$", as \ref{hodge-theory-iii-5.2.5} and \ref{hodge-theory-iii-6.2.7} show.
+The constructions in [(8.1.8)](#iii-8.1.8) can be performed "uniformly in $X_n$", as [(5.2.5)](5.2-cohomology-of-simplicial-topological-spaces.qmd#iii-5.2.5) and [(6.2.7)](6.2-construction-of-hypercovers.qmd#iii-6.2.7) show.
 \oldpage{32}
 They thus give a cohomological mixed Hodge complex
 $$
   \big(\Rd j_*\ZZ, (\Rd j_*\QQ,\tau_{\leqslant}), (\Omega_{X_\bullet}^\bullet(\log Y_\bullet),W,F)\big)
 $$
 on $X_\bullet$.
-}
-}
+:::
 
 ::: {.rmenv #env-iii-8.1.13 number="8.1.13"}
-
 Let $K$ be a cohomological mixed Hodge $A$-complex on $X_\bullet$.
 Write $\cosimpmodcat{A}$ to mean the category of cosimplicial $A$-modules.
 If we apply the functor $\Rd\Gamma^\bullet$ to $K$, then we obtain
 
-\olc{
-  \lic{(a)}{
-    a cosimplicial complex $\Rd\Gamma^\bullet K_A\in\Ob\DD^+(\cosimpmodcat{A})$;
-  }
-
-  \lic{(b)}{
-    a cosimplicial filtered complex $\Rd\Gamma^\bullet(K_{A\otimes\QQ},W)\in\Ob\DD^+F(\cosimpmodcat{A\otimes\QQ})$;
-  }
-
-  \lic{(c)}{
-    a cosimplicial bifiltered complex $\Rd\Gamma^\bullet(K_\CC,W,F)\in\Ob\DD^+F_2(\cosimpmodcat{\CC})$;
-  }
-
-  \lic{(d)}{
-    isomorphisms as in (b) and (c) of \ref{hodge-theory-iii-8.1.10} between these objects.
-  }
-}
-}
+a. a cosimplicial complex $\Rd\Gamma^\bullet K_A\in\Ob\DD^+(\cosimpmodcat{A})$;
+b. a cosimplicial filtered complex $\Rd\Gamma^\bullet(K_{A\otimes\QQ},W)\in\Ob\DD^+F(\cosimpmodcat{A\otimes\QQ})$;
+c. a cosimplicial bifiltered complex $\Rd\Gamma^\bullet(K_\CC,W,F)\in\Ob\DD^+F_2(\cosimpmodcat{\CC})$;
+d. isomorphisms as in (b) and (c) of [(8.1.10)](#iii-8.1.10) between these objects.
 
 It is clear that the $\Rd\Gamma^\bullet(K,W,F)$ described above is a cosimplicial mixed Hodge $A$-module.
-It defines a DG mixed Hodge $A$-complex (\ref{hodge-theory-iii-8.1.10.1}).
-}
-}
+It defines a DG mixed Hodge $A$-complex [(8.1.10.1)](#iii-8.1.10).
+:::
+
+
+
+
+
 
 ::: {.rmenv #env-iii-8.1.14 number="8.1.14"}
-
 Let $K$ be a DG mixed Hodge $A$-complex, and consider the spectral sequence abutting to the cohomology of $\simp K$, which is defined by the filtration $L$.
 By hypothesis, the $E_1$ pages of this spectral sequence are endowed with mixed Hodge $A$-structures.
 The content of \ref{hodge-theory-iii-8.1.15} is that every spectral sequence, including its abutment, is endowed with a mixed Hodge $A$-structure.

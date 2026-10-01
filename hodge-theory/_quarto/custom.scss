@@ -106,12 +106,6 @@ main.content{
     }
   }
 
-  p + .itenv,
-  p + .rmenv {
-    padding-top: 0;
-    margin-top: -0.5rem;
-  }
-
   // Numbers and taxa
   .itenv::before,
   .rmenv::before {
@@ -155,5 +149,16 @@ main.content{
   .rmenv:hover,
   .proof:hover {
     background-color: rgba(57, 134, 131, 0.05) !important;
+  }
+
+
+  // Paragraph spacing
+
+  p + .itenv,
+  p + .rmenv,
+  p + ul,
+  p + ol {
+    padding-top: 0;
+    margin-top: -0.5rem;
   }
 }
