@@ -4,3 +4,158 @@ title: 6.2 Construction of hypercovers
 
 {{< include ../macros.qmd >}}
 
+::: {.rmenv #env-iii-6.2.1 number="6.2.1"}
+Let $X_\bullet$ be a simplicial set.
+\oldpage{19}
+Denote by $D(\Delta_n,\Delta_M)$ the set of increasing surjective maps from $\Delta_n$ to $\Delta_m$ (degeneracy operators), and set
+$$
+  N(X_n)
+  = X_n\setminus\bigcup_{{s\in D(\Delta_n,\Delta_{n-1})}}s(X_{n-1}).
+\tag{6.2.1.1}
+$$
+
+Recall that, for all $n$, the map
+$$
+  \coprod s
+  \colon \coprod_{\mathclap{\substack{m\leqslant n,\\s\in D(\Delta_n,\Delta_m)}}} N(X_m)
+  \to X_n
+\tag{6.2.1.2}
+$$
+is bijective.
+:::
+
+::: {.rmenv #env-iii-6.2.2 number="6.2.2" taxon="Definition"}
+We say that a simplicial topological space is **$s$-split** if the maps in [(6.2.1.2)](#iii-6.2.1) are homeomorphisms.
+
+Let $X_\bullet$ be a $k$-truncated simplicial set.
+For $n\leqslant k$, we again define $N(X_n)$ by [(6.2.1.1)](#iii-6.2.1), and then [(6.2.1.2)](#iii-6.2.1) is a bijection.
+We say that a $k$-truncated simplicial topological space is **$s$-split** if [(6.2.1.2)](#iii-6.2.1) is a homeomorphism for $n\leqslant k$.
+:::
+
+:::: {.rmenv #env-iii-6.2.3 number="6.2.3"}
+For an $s$-split $(n+1)$-truncated topological simplicial space $X$ augmented over $S$, let $\alpha(X)$ be the triple consisting of $\sq_n(X)$, $NX_{n+1}$, and the evident map from $NX_{n+1}$ to $(\cosq\sq_n X)${n+1}}.
+
+This triple $\alpha(X)=(Y,N,\beta)$ satisfies the following:
+
+::: {.rmenv #env-iii-6.2-star number="\*"}
+$(*)$ $Y$ is an $s$-split $n$-truncated simplicial topological space augmented over $S$, and $\beta$ is a continuous map from $N$ to $(\cosq Y)${n+1}}.
+:::
+::::
+
+::: {.itenv #env-iii-6.2.4 number="6.2.4" taxon="Proposition"}
+*(SGA 4, V bis, (5.1.3)).*
+Let $(Y,N,\beta)$ satisfy [(\*)](#env-iii-6.2-star) above.
+
+i. Up to unique isomorphism, there exists exactly one $s$-split $(n+1)$-truncated topological space $X$ augmented over $S$ such that $\alpha(X)\simeq(Y,N,\beta)$.
+ii. It is equivalent to give either $f\colon X\to Z$ or:
+    
+    a. a morphism $f'\colon Y\to\sq_n(Z)$; and
+    b. a morphism $f''\colon N\to Z_{n+1}$, such that the diagram
+        $$
+          \begin{CD}
+            N @>\beta>> (\cosq Y)_{n+1}
+          \\@V{f''}VV @VV{f'}V
+          \\Z_{n+1} @>>> (\cosq\sq_n Z)_{n+1}
+          \end{CD}
+        $$
+        commutes.
+:::
+
+::: {.proof}
+[@SD, 5.1.3].
+:::
+
+This proposition also applies to simplicial objects in other categories $\cat{C}$ apart from that of topological spaces; it suffices that $\cat{C}$ satisfy the following:
+
+::: {.rmenv #env-iii-6.2.4.1 number="6.2.4.1"}
+\oldpage{20}
+Finite projective limits exist in $\CC$.
+Finite projective sums exist in $\CC$, and they are disjoint and universal.
+:::
+
+::: {.rmenv #env-iii-6.2.5 number="6.2.5"}
+[(6.2.4)](#iii-6.2.4) allows us to construct, by induction, proper hypercovers of $S$.
+
+($n=0$). We take $f_0\colon X_0\to S$, proper and surjective.
+    Then $\{X_0\}$ is a $0$-truncated proper hypercover of $S$ [(5.3.8)](5.3-cohomological-descent.qmd#iii-5.3.8), and it is $s$-split.
+
+($n=1$). We take $f_1\colon N_1\to\cosq(\{X_0\})_1$, i.e. $f_1\colon N_1\to X_0\times_S X_0$.
+    Applying [(6.2.4)](#iii-6.2.4), we associate to $f_1$ the $s$-split 1-truncated augmented simplicial topological space
+    $$
+      {}_1X_\bullet
+      = \left(
+      N_1{\textstyle\coprod} X_0
+      \xleftarrow[\to]{\to} X_0
+      \to S
+      \right).
+    $$
+    Suppose $f_1$ to be chosen such that
+    $$
+      f'_1
+      \colon N_1{\textstyle\coprod} X_0\to X_0\times_S X_0
+    $$
+    is proper and surjective (for example, if $f_1$ is proper and surjective).
+    Then ${}_1X_\bullet$ is an $s$-split 1-truncated proper hypercover of $S$.
+
+...
+
+($n=k+1$). Assume that we have already constructed an $s$-split $k$-truncated proper hypercover ${}_kX_\bullet\to S$.
+  We take $f_{k+1}\colon N_{k+1}\to(\cosq({}_kX_\bullet))_{k+1}$ and, applying [(6.2.4)](#iii-6.2.4), we associate to $f_{k+1}$ an $s$-split $(k+1)$-truncated augmented semi-simplicial space ${}_{k+1}X_\bullet$.
+  Suppose that $f_{k+1}$ is such that
+  $$
+    f'_{k+1}
+    \colon {}_{k+1}X_{k+1}
+    \to \cosq({}_kX_\bullet)_{k+1}
+  $$
+  is proper and surjective (for example, if $f_{k+1}$ is proper and surjective).
+  Then ${}_{k+1}X_\bullet$ is an $s$-split $(k+1)$-truncated proper hypercover of $S$.
+
+...
+
+($n=\infty$). The ${}_kX_\bullet$ thus constructed are the successive skeletons of an $s$-split proper hypercover of $S$.
+:::
+
+::: {.rmenv #env-iii-6.2.6 number="6.2.6"}
+We say that a simplicial scheme $X_\bullet$ over $\CC$ is **smooth** if the $X_n$ are smooth;
+it is said to be **proper** if the $X_n$ are compact.
+A **normal crossing divisor** $D_\bullet$ of $X_\bullet$, assumed to be smooth, is a family $D_n\subset X_n$ of normal crossing divisors [(3.1.2)](../hodge-theory-ii/3.1-logarithmic-poles-and-residues.qmd#ii-3.1.2) such that the $U_n=X_n\setminus D_n$ form a simplicial subscheme $U_\bullet$ of $X_\bullet$.
+This definition is justified by the following lemma.
+:::
+
+::: {.itenv #env-iii-6.2.7 number="6.2.7" taxon="Lemma"}
+If $D_\bullet$ is a normal crossing divisor of $X_\bullet$, then the logarithmic de Rham complexes $(\Omega_{X_n}^\bullet(\log D_n))_{n\geqslant0}$, endowed with the weight filtration [(3.1.5)](../hodge-theory-ii/3.1-logarithmic-poles-and-residues.qmd#iii-3.1.5), form a filtered complex on $X_\bullet$.
+:::
+
+::: {.proof}
+This follows from (ii) of [(3.1.3)](../hodge-theory-ii/3.1-logarithmic-poles-and-residues.qmd#iii-3.1.3).
+:::
+
+We denote the complex $(\Omega_{X_n}^\bullet(\log D_n))_{n\geqslant0}$ by $\Omega_{X_\bullet}^\bullet(\log D_\bullet)$.
+
+::: {.rmenv #env-iii-6.2.8 number="6.2.8"}
+Using [(6.2.5)](#iii-6.2.5), we can show that, for every separated scheme $S$ over $\CC$, there exists:
+\oldpage{21}
+
+a. a simplicial scheme $X_\bullet$ over $\CC$, smooth and proper, that we can take to be $s$-split;
+b. a normal crossing divisor $D_\bullet$ of $X_\bullet$; we set $U_\bullet=X_\bullet\setminus D_\bullet$;
+c. an augmentation $a\colon U_\bullet\to S$ that realises $U_\bullet^\an$ as a proper hypercover of $S^\an$.
+
+Furthermore, any two such systems are covered by a third, and a morphism $u\colon S\to T$ can be covered by a morphism
+```tikz
+\begin{tikzcd}
+  X_\bullet
+    \ar[r]
+  & Y_\bullet
+\\U_\bullet
+    \ar[r]
+    \ar[u,hook]
+    \ar[d,swap,"a"]
+  & V_\bullet
+    \ar[u,hook]
+    \ar[d,"b"]
+\\S \ar[r,swap,"u"]
+  & T
+\end{tikzcd}
+```
+of such systems (see [@SD]).
+:::

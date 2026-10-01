@@ -4,3 +4,232 @@ title: 7.2 Supplements to the two-filtrations lemma
 
 {{< include ../macros.qmd >}}
 
+
+In this section, we give a new proof of the two filtrations lemma [(1.3.16)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#ii-1.3.16) and some supplements.
+
+::: {.rmenv #env-iii-7.2.1 number="7.2.1"}
+Let $(K,F,W)$ be a bounded-below bifiltered complex with objects in an abelian category $\cat{A}$, with $F$ assumed to be biregular.
+
+We say that $(K,F,W)$ is **$F$-splitable** if the filtered complex $(K,W)$ can be written as a sum of filtered complexes
+$$
+  (K,W)
+  = \bigoplus_{n\in\mathbb{Z}} (K_n,W_n)
+$$
+with
+$$
+  F^nK
+  = \bigoplus_{n'\geqslant n} K_{n'}.
+$$
+:::
+
+\oldpage{26}
+Let $r_0\geqslant0$ be an integer or $+\infty$.
+The following condition was considered in [(1.3.16)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#ii-1.3.16) and [(1.3.17)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#ii-1.3.17):
+
+
+::: {.rmenv #env-iii-7.2.2 number="7.2.2" taxon="Condition"}
+For every non-negative integer $r<r_0$, the differentials $d_r$ of the graded complex $E_r(K,W)$ are strictly compatible with the recurrent filtration defined by $F$.
+:::
+
+::: {.rmenv #env-iii-7.2.3 number="7.2.3"}
+It is clear that, if $(K,F,W)$ is $F$-splitable, then [(7.2.2)](#iii-7.2.2) is satisfied for $r_0=\infty$.
+Conversely, it seems that if [(7.2.2)](#iii-7.2.2) is satisfied for $r_0=\infty$, then everything is as if the functor $\Gr_F$ were exact.
+For example, we will show that the $\Gr_F$ of the spectral sequence $E(K,W)$ can then be identified with the spectral sequence $E(\Gr_FK,W)$, and that the spectral sequence $E(K,F)$ degenerates ($E_1=E_\infty$).
+:::
+
+::: {.rmenv #env-iii-7.2.4 number="7.2.4"}
+We immediately deduce from the definition [(1.3.8)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#ii-1.3.8) that the first direct filtration of $E_r(K,W)$ is the filtration $F_d$ of $E_r(K,W)$ by the images
+$$
+  F_d^p(E_r(K,W))
+  = \Im \big(E_r(F^pK,W) \to E_r(K,W)\big).
+$$
+Dually, the second direct filtration [(1.3.9)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#ii-1.3.9) of $E_r(K,W)$ is the filtration $F_{d^*}$ of $E_r(K,W)$ by the kernels
+$$
+  F_{d^*}^p(E_r(K,W))
+  = \Ker \big(E_r(K,W) \to E_r(K/F^pK,W)\big).
+$$
+The recurrent filtration $F_{\mathrm{rec}}$ of $E_r(K,W)$ is intermediary between these two filtrations ((iii) of [(1.3.13)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#ii-1.3.13)).
+:::
+
+::: {.itenv #env-iii-7.2.5 number="7.2.5" taxon="Proposition"}
+Suppose that $(K,F,W)$ satisfies [(7.2.2)](#iii-7.2.2) for some $r_0\geqslant0$.
+Then
+
+i. $(F^aK/F^bK,F,W)$ also satisfies [(7.2.2)](#iii-7.2.2) for $r_0$.
+ii. For $r\leqslant r_0$, the sequence
+    $$
+      0
+      \to E_r(F^pK,W)
+      \to E_r(K,W)
+      \to E_r(K/F^pK,W)
+      \to 0
+    $$
+    is exact;
+    for $r=r_0+1$, the sequence
+    $$
+      E_r(F^pK,W)
+      \to E_r(K,W)
+      \to E_r(K/F^pK,W)
+    $$
+    is exact.
+    In particular, for $r\leqslant r_0+1$, the two direct filtrations and the recurrent filtration of $E_r(K,W)$ agree.
+:::
+
+::: {.proof}
+Fix an integer $p$.
+We will prove the claim
+
+::: {.itenv #env-iii-7.2.5-inductive-claim}
+$(*)_r$ If $r\leqslant r_0$, then $E_r(F^pK,W)$ injects into $E_r(K,W)$;
+if $r\leqslant r_0+1$, its image is $F_\rec(E_r(K,W))$.
+:::
+
+by induction on $r$.
+
+The claim $(*)_0$ is always true.
+Assume $(*)_r$, and let us prove $(*)_{r+1}$.
+We can suppose that $0\leqslant r\leqslant r_0$.
+We have a diagram
+```tikz
+\begin{tikzcd}
+  E_r(K,W)
+    \ar[r,"d_r"]
+  & E_r(K,W)
+    \ar[r,"d_r"]
+  & E_r(K,W)
+\\E_r(F^pK,W)
+    \ar[r]
+    \ar[u,hook]
+  & E_r(F^pK,W)
+    \ar[r]
+    \ar[u,hook]
+  & E_r(F^pK,W)
+    \ar[u,hook,swap,"i"]
+\end{tikzcd}
+```
+and the image of the vertical inclusions is $F_\rec^p(E_r(K,W))$.
+\oldpage{27}
+Since $i$ is injective,
+$$
+  \begin{aligned}
+    F_\rec^p(E_{r+1}(K,W))
+    &= \Im\Big( \Ker \big(F_\rec^pE_r(K,W)\xrightarrow{d_r}E_r(K,W) \big) \to E_{r+1}(K,W) \Big)
+  \\&= \Im\Big( \Ker\big( E_r(F^pK,W)\xrightarrow{d_r}E_r(F^pK,W) \big) \to E_{r+1}(K,W) \Big)
+  \\&= \Im\big( E_{r+1}(F^pK,W) \to E_{r+1}(K,W) \big).
+  \end{aligned}
+$$
+If $r<r_0$, then $d_r$ is strictly compatible with $F_\rec$, whence
+$$
+  d_rE_r(K,W)\cap E_r(F^pK,W)
+  = d_rE_r(F^pK,W)
+$$
+and $E_{r+1}(F^pK,W)$ thus injects into $E_{r+1}(K,W)$.
+This proves $(*)_{r+1}$.
+
+The statements $(*)_r$, combined with the dual statements, implies (ii).
+
+It follows from (ii) that, for $r<r_0$ and $a\leqslant b$, $E_r(F^bK,W)$ injects into $E_r(F^aK,W)$, and that the differential $d_r$ of $E_r(F^aK,W)$ is strictly compatible with the first direct filtration of $E_r(F^aK,W)$.
+We thus deduce, by induction on $r<r_0$, that the first direct filtration of $E_r(F^aK,W)$ coincides with the recurrent filtration, and (i) then follows.
+:::
+
+::: {.rmenv #env-iii-7.2.6 number="7.2.6"}
+If [(7.2.2)](#iii-7.2.2) is satisfied for $r_0$, and $r\leqslant r_0+1$, then we denote by $F$ the filtration $F_d=F_{d^*}=F_\rec$ of $E_r(W,K)$.
+The exact sequences from (ii) of [(7.2.5)](#iii-7.2.5)
+```tikz
+\begin{tikzcd}
+  0
+  & E_r(K/F^pK,W)
+    \ar[l]
+  && E_r(K/F^{p+1}K,W)
+    \ar[ll]
+  && 0
+\\&& E_r(K,W)
+    \ar[ul]
+    \ar[ur]
+  && E_r(\operatorname{Gr}_F^pK,W)
+    \ar[ul]
+    \ar[ur]
+\\0
+    \ar[r]
+  & E_r(F^{p+1}K,W)
+    \ar[rr]
+    \ar[ur]
+  && E_r(F^pK,W)
+    \ar[ul]
+    \ar[ur]
+  && 0
+    \ar[ul]
+\end{tikzcd}
+```
+define, for $r\leqslant r_0$, an (autodual) isomorphism that is compatible with the differentials $d_r$, namely
+$$
+  \Gr_F^p(E_r(K,W))
+  \simeq E_r(\Gr_F^pK,W)
+  \qquad\text{for }r\leqslant r_0.
+\tag{7.2.6.1}
+$$
+:::
+
+:::: {.rmenv #env-iii-7.2.7 number="7.2.7"}
+If [(7.2.2)](#iii-7.2.2) is satisfied for $r_0=\infty$, then the sequences
+$$
+  0
+  \to E_r(F^pK,W)
+  \to E_r(K,W)
+  \to E_r(K/F^pK,W)
+  \to 0
+$$
+are exact for all $r$.
+If the filtration $W$ is biregular, then the sequence
+$$
+  0
+  \to E_\infty(F^pK,W)
+  \to E_\infty(K,W)
+  \to E_\infty(K/F^pK,W)
+  \to 0
+$$
+is thus exact.
+We can rewrite this sequence as
+$$
+  0
+  \to \Gr_W(\HH(F^pK))
+  \to \Gr_W(\HH(K))
+  \to \Gr_W(\HH(K/F^pK))
+  \to 0.
+$$
+
+::: {.itenv #env-iii-7.2.7.1 number="7.2.7.1" taxon="Lemma"}
+Let $L$ be a complex endowed with a biregular filtration $G$.
+For $\Gr_G(L)$ to be acyclic, it is necessary and sufficient that $L$ be acyclic and that the differentials of $L$ be strictly compatible with the filtration $G$.
+:::
+
+::: {.proof}
+This is a particular case of [(1.3.2)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#iii-1.3.2).
+:::
+
+\oldpage{28}
+Applying [(7.2.7.1)](#iii-7.2.7), taking $L$ to be the complex
+$$
+  0
+  \to \HH(F^pK)
+  \to \HH(K)
+  \to \HH(K/F^pK)
+  \to 0,
+$$
+we see that:
+
+a. This sequence is exact, i.e. the differentials of $K$ are strictly compatible with the filtration $F$;
+b. the filtration of $\HH(F^pK)$ induced by the filtration $W$ of $F^pK$ coincides with the filtration induced by the filtration $W$ of $\HH(K)$;
+c. an analogous statement holds for $K/F^pK$.
+::::
+
+In conclusion:
+
+::: {.itenv #env-iii-7.2.8 number="7.2.8" taxon="Proposition"}
+If $(K,F,W)$ satisfies [(7.2.2)](#iii-7.2.2) for $r_0=\infty$, then the spectral sequence $E(K,F)$ degenerates ($E_1=E_\infty$).
+Furthermore, we have an isomorphism of spectral sequences
+$$
+  \Gr_F^p(E_\bullet(K,W))
+  \simeq E_\bullet(\Gr_F^pK,W).
+$$
+:::

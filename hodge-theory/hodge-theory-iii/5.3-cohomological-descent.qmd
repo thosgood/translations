@@ -4,3 +4,144 @@ title: 5.3 Cohomological descent
 
 {{< include ../macros.qmd >}}
 
+::: {.rmenv #env-iii-5.3.1 number="5.3.1"}
+Let $a\colon X_\bullet\to S$ be an augmented simplicial topological space.
+For every sheaf $F$ on $S$, we have a morphism
+$$
+  \varphi\colon F
+  \to a_*a^*F
+$$
+from the adjunction $a^*\dashv a_*$.
+This morphism derives to a morphism of functors from $\DD^+(S)$ to $\DD^+(S)$, namely
+$$
+  \varphi\colon\Id
+  \to \Rd a_*a^*.
+\tag{5.3.1.1}
+$$
+:::
+
+::: {.rmenv #env-iii-5.3.2 number="5.3.2" taxon="Definition"}
+We say that $a$ is of **cohomological descent** if, for every abelian sheaf $F$ on $S$, we have
+$$
+  F\simto\Ker({a_0}_*{a_0}^*F\to{a_1}_*{a_1}^*F)
+$$
+and
+$$
+  \Rd^i a_*a^*F
+  = 0
+  \quad\text{for }i>0.
+$$
+This is equivalent to asking that [(5.3.1.1)](#iii-5.3.1) be an isomorphism.
+:::
+
+::: {.rmenv #env-iii-5.3.3 number="5.3.3"}
+If $a$ is of cohomological descent, then, for $K\in\Ob\DD^+(S)$, the canonical map
+$$
+  \Rd\Gamma(S,K)
+  \to \Rd\Gamma(S,\Rd a_*a^*K)
+  \simeq \Rd\Gamma(X_\bullet,a^*K)
+\tag{5.3.3.1}
+$$
+is an isomorphism.
+In particular, for $F$ an abelian sheaf on $S$, we have a spectral sequence [(5.2.3.2)](5.2-cohomology-of-simplicial-topological-spaces.qmd#iii-5.2.3))
+$$
+  E_1^{pq}
+  = \HH^q(X_p,a_p^*F)
+  \To \HH^{p+q}(S,F).
+\tag{5.3.3.2}
+$$
+
+For a complex, we again have, in hypercohomology, a spectral sequence
+$$
+  E_1^{pq}
+  = \bHH^q(X_p,a_p^*K)
+  \To \bHH^{p+q}(S,K).
+\tag{5.3.3.3}
+$$
+
+In both cases, the $E_1^{\bullet q}$ (for fixed $q$) form a simplicial group, and
+$$
+  d_1
+  = \sum_i (-1)^i\delta_i
+  \colon E_1^{p,q}
+  \to E_1^{p+1,q}.
+$$
+:::
+
+::: {.rmenv #env-iii-5.3.4 number="5.3.4" taxon="Definition"}
+A continuous map $a\colon X\to S$ is of **cohomological descent** if the augmentation morphism of $\cosq(X\to S)$, namely
+\oldpage{15}
+$$
+  \big((X/S)^{\Delta_n}\big)_{n\geqslant0}
+  \to S,
+$$
+is of cohomological descent.
+We say that $a$ is of **universal cohomological descent** if, for every $u\colon S'\to S$, the continuous map $a'\colon X\times_S S'\to S'$ is of cohomological descent.
+:::
+
+::: {.rmenv #env-iii-5.3.5 number="5.3.5"}
+The fundamental results, proven in [@SD], are the following.
+
+i. The continuous maps of universal cohomological descent form a Grothendieck topology on the category of topological spaces, which we call the **universal cohomological descent topology**.
+ii. A proper [(0.1)](terminology-and-notation.qmd#iii-0.1) surjective map is of universal cohomological descent.
+iii. A map $a\colon X\to S$ that admits sections locally on $S$ is of universal cohomological descent.
+iv. Let $a\colon X_\bullet\to S$ be a $k$-truncated augmented simplicial space (with $-1\leqslant k\leqslant\infty$).
+    For $k\geqslant n\geqslant-1$, let $\varphi_n\colon\cosq X_\bullet\to\cosq\sq_n X_\bullet$ be the evident map.
+    We say that $X_\bullet$ is a **$k$-truncated hypercover of $S$**, **for the universal cohomological descent topology**, if the maps
+    $$
+      (\varphi_n)_{n+1}
+      \colon X_{n+1}
+      \to (\cosq\sq_n X_\bullet)_{n+1}
+    \tag{5.3.5.1}
+    $$
+    (for $-1\leqslant n\leqslant k-1$) are of universal cohomological descent.
+    If $X_\bullet$ is such a hypercover, then the simplicial space $\cosq(X_\bullet)$ augmented over $S$ is of cohomological descent.
+v. Let $a$ be a morphism of simplicial topological spaces augmented over $S$.
+    $$
+      \begin{CD}
+        X_\bullet @>a>> Y_\bullet
+      \\@VxVV @VVyV
+      \\S @= S
+      \end{CD}
+    $$
+    We say that $a$ is a **hypercover** for the universal cohomological descent topology if the evident maps $X_n\to(\cosq_{n-1}^{Y_\bullet}\sq_{n-1}X_\bullet)_n$ are of universal cohomological descent.
+    If $a$ is such a hypercover then, for every $K\in\Ob\DD^+(S)$,
+    $$
+      a^*\colon
+      \Rd y_*y^*K
+      \simto \Rd x_*x^*K.
+    $$
+:::
+
+::: {.rmenv #env-iii-5.3.6 number="5.3.6"}
+For $k=\infty$, (iv) of [(5.3.5)](#iii-5.3.5) implies that the $a\colon X_\bullet\to S$ are of cohomological descent if the $(\varphi_n)${n+1}} are of universal cohomological descent.
+For $n=-1,0$, these maps are
+$$
+  (\varphi_n)_{n+1}
+  =
+  \begin{cases}
+    X_0\xrightarrow{a}S
+    &\text{if }n=-1
+  \\X_1\xrightarrow{(\delta_0,\delta_1)}X_0\times_S X_0
+    &\text{if }n=0.
+  \end{cases}
+$$
+\oldpage{16}
+For $n=1$, $(\cosq\sq_1(X_\bullet))_1$ is the subspace of $X_1\times_S X_1\times_S X_1$ consisting of the triples $(x,y,z)$ such that $\delta_0x=\delta_0y$, $\delta_1x=\delta_0z$, and $\delta_1y=\delta_1z$.
+The map $(\varphi_1)_2$ is $x\mapsto(\delta_0x,\delta_1x,\delta_2x)$.
+
+For $k=0$, (iv) of [(5.3.5)](#iii-5.3.5) is [(5.3.4)](#iii-5.3.4).
+:::
+
+::: {.rmenv #env-iii-5.3.7 number="5.3.7" taxon="Example"}
+Let $\mathscr{U}=(U_i)_{i\in I}$ be an open cover, or a finite locally closed cover, of $S$.
+Let $X=\coprod_{i\in I}U_i$.
+Then $a\colon X\to S$ is of cohomological descent.
+The spectral sequence in [(5.3.3.2)](#iii-5.3.3) for $X_\bullet=\cosq(X\to S)$ is then exactly the Leray spectral sequence of the cover $\mathscr{U}$.
+:::
+
+::: {.rmenv #env-iii-5.3.8 number="5.3.8"}
+Let $a\colon X_\bullet\to S$ be as in (iv) of [(5.3.5)](#iii-5.3.5).
+We say that $X_\bullet$ is a **proper $k$-truncated hypercover** of $S$ if the arrows in [(5.3.5.1)](#iii-5.3.5) are proper and surjective.
+For $k=\infty$, we simply say "proper hypercover".
+:::

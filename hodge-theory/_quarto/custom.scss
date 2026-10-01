@@ -150,4 +150,15 @@ main.content{
   .proof:hover {
     background-color: rgba(57, 134, 131, 0.05) !important;
   }
+
+
+  // Paragraph spacing
+
+  p + .itenv,
+  p + .rmenv,
+  p + ul,
+  p + ol {
+    padding-top: 0;
+    margin-top: -0.5rem;
+  }
 }
