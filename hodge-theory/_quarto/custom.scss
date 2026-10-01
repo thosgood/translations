@@ -106,6 +106,12 @@ main.content{
     }
   }
 
+  p + .itenv,
+  p + .rmenv {
+    padding-top: 0;
+    margin-top: -0.5rem;
+  }
+
   // Numbers and taxa
   .itenv::before,
   .rmenv::before {
