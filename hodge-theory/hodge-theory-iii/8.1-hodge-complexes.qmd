@@ -24,154 +24,87 @@ For all $k$, the filtration $F$ on $\HH^k(K_\CC)\simeq\HH^k(K_A)\otimes\CC$ defi
 :::
 ::::
 
-\subtree[hodge-theory-iii-8.1.2]{
-\number{8.1.2}
-
+:::: {.rmenv #env-iii-8.1.2 number="8.1.2"}
 Let $X$ be a topological space.
 Then a **cohomological Hodge $A$-complex $K$ of weight $n$** on $X$ consists of:
 
-\olc{
-  \lic{(𝛼)}{
-    a complex $K_A\in\Ob\DD^+(X,A)$,
-  }
-  \lic{(𝛽)}{
-    a filtered complex $(K_\CC,F)\in\Ob\DD^+F(X,\CC)$,
-  }
-  \lic{(𝛾)}{
-    an isomorphism $\alpha\colon K_\CC\simeq K_A\otimes\CC$ in $\DD^+(X,\CC)$.
-  }
-}
-}
+a. a complex $K_A\in\Ob\DD^+(X,A)$,
+b. a filtered complex $(K_\CC,F)\in\Ob\DD^+F(X,\CC)$,
+c. an isomorphism $\alpha\colon K_\CC\simeq K_A\otimes\CC$ in $\DD^+(X,\CC)$.
 
 The following axiom has to be satisfied:
 
-\subtree[hodge-theory-iii-8.1.2-chc]{
-  \taxon{axiom}
-  \number{CHC}
-      The triple $(\Rd\Gamma(K_A),\Rd\Gamma((K_\CC,F)),\Rd\Gamma(\alpha))$ is a Hodge complex of weight $n$.
-  }
-}
-}
+::: {.rmenv #env-iii-8.1.2-chc number="CHC"}
+The triple $(\Rd\Gamma(K_A),\Rd\Gamma((K_\CC,F)),\Rd\Gamma(\alpha))$ is a Hodge complex of weight $n$.
+:::
 
 \oldpage{29}
 When $A=\ZZ$, we simply speak of Hodge complexes and cohomological Hodge complexes.
-}
-}
+::::
 
-The following statement reformulates a part of classical Hodge theory (cf. \ref{hodge-theory-ii-2.2.1}).
-}
+The following statement reformulates a part of classical Hodge theory (cf. [(2.2.1)](../hodge-theory-ii/2.2-hodge-theory.qmd#ii-2.2.1)).
 
-\subtree[hodge-theory-iii-8.1.3]{
-\taxon{scholium}
-\number{8.1.3}
-
+::: {.rmenv #env-iii-8.1.3 number="8.1.3" taxon="Scholium"}
 Let $X$ be a complex Kähler variety.
 Let $K_\ZZ$ be the complex $\ZZ[0]$ consisting of the constant sheaf $\ZZ$ in degree $0$, and let $K_\CC$ be the holomorphic de Rham complex $\Omega_X^\bullet$, with $F$ its stupid filtration.
 We have $\alpha\colon K_\ZZ\otimes\CC\simeq\CC[0]\xrightarrow{\approx}\Omega_X^\bullet$ (the Poincaré lemma), and $(K_\ZZ,(K_\CC,F),\alpha)$ is a cohomological Hodge complex of weight $0$.
-}
-}
+:::
 
-\subtree[hodge-theory-iii-8.1.4]{
-\taxon{remark}
-\number{8.1.4}
-
+::: {.rmenv #env-iii-8.1.4 number="8.1.4" taxon="Remark"}
 If $K$ is a Hodge complex (resp. cohomological Hodge complex) of weight $n$, then $K[m]$ is a Hodge complex (resp. cohomological Hodge complex) of weight $n+m$.
-}
-}
+:::
 
-\subtree[hodge-theory-iii-8.1.5]{
-\number{8.1.5}
-
+:::: {.rmenv #env-iii-8.1.5 number="8.1.5"}
 A **mixed Hodge $A$-complex** $K$ consists of:
 
-\olc{
-  \lic{(𝛼)}{
-    a complex $K_A\in\Ob\DD^+(A)$ such that $\HH^k(K_A)$ is an $A$-module of finite type for all $k$;
-  }
-
-  \lic{(𝛽)}{
-    a filtered complex $(K_{A\otimes\QQ},W)\in\Ob\DD^+F(A\otimes\QQ)$ (for an *increasing* filtration $W$) and an isomorphism $K_{A\otimes\QQ}\simeq K_A\otimes\QQ$ in $\DD^+(A\otimes\QQ)$;
-  }
-
-  \lic{(𝛾)}{
-    a bifiltered complex $(K_\CC,W,F)\in\Ob\DD^+F_w(\CC)$ (for an *increasing* filtration $W$ and a *decreasing* filtration $F$) and an isomorphism $\alpha\colon(K_\CC,W)\simeq(K_{A\otimes\QQ},W)\otimes\CC$ in $\DD^+F(\CC)$.
-  }
-}
-}
+a. a complex $K_A\in\Ob\DD^+(A)$ such that $\HH^k(K_A)$ is an $A$-module of finite type for all $k$;
+b. a filtered complex $(K_{A\otimes\QQ},W)\in\Ob\DD^+F(A\otimes\QQ)$ (for an *increasing* filtration $W$) and an isomorphism $K_{A\otimes\QQ}\simeq K_A\otimes\QQ$ in $\DD^+(A\otimes\QQ)$;
+c. a bifiltered complex $(K_\CC,W,F)\in\Ob\DD^+F_w(\CC)$ (for an *increasing* filtration $W$ and a *decreasing* filtration $F$) and an isomorphism $\alpha\colon(K_\CC,W)\simeq(K_{A\otimes\QQ},W)\otimes\CC$ in $\DD^+F(\CC)$.
 
 The following axiom must be satisfied:
 
-\subtree[hodge-theory-iii-8.1.5-chm]{
-  \taxon{axiom}
-  \number{CHM}
-      For all $n$, the system consisting of the complex $\Gr_n^W(K_{A\otimes\QQ})\in\Ob\DD^+(A\otimes\QQ)$, the complex $\Gr_n^W(K_\CC)\in\Ob\DD^+F(\CC)$ filtered by $F$, and the isomorphism
-    $$
-      \Gr_n^W(\alpha)\colon
-      \Gr_n^W(K_{A\otimes\QQ})\otimes\CC
-      \simeq \Gr_n^W(K_\CC),
-    $$
-    is a Hodge $(A\otimes\QQ)$-complex of weight $n$.
-  }
-}
-}
-}
+::: {.rmenv #env-iii-8.1.5-chm number="CHM"}
+For all $n$, the system consisting of the complex $\Gr_n^W(K_{A\otimes\QQ})\in\Ob\DD^+(A\otimes\QQ)$, the complex $\Gr_n^W(K_\CC)\in\Ob\DD^+F(\CC)$ filtered by $F$, and the isomorphism
+$$
+  \Gr_n^W(\alpha)\colon
+  \Gr_n^W(K_{A\otimes\QQ})\otimes\CC
+  \simeq \Gr_n^W(K_\CC),
+$$
+is a Hodge $(A\otimes\QQ)$-complex of weight $n$.
+:::
+::::
 
-\subtree[hodge-theory-iii-8.1.6]{
-\number{8.1.6}
-
+:::: {.rmenv #env-iii-8.1.6 number="8.1.6"}
 A **cohomological mixed Hodge $A$-complex** $K$ on a topological space $X$ consists of:
 
-\olc{
-  \lic{(𝛼)}{
-    a complex $K_A\in\Ob\DD^+(X,A)$ such that $\bHH^k(X,K_A)$ is an $A$-module of finite type for all $k$, and such that $\bHH(X,K_A)\otimes\QQ\simto\bHH(X,K_A\otimes\QQ)$;
-  }
-
-  \lic{(𝛽)}{
-    a filtered complex $(K_{A\otimes\QQ},W)\in\Ob\DD^+F(X,A\otimes\QQ)$ (for an *increasing* filtration $W$) and an isomorphism $K_{A\otimes\QQ}\simeq K_A\otimes\QQ$ in $\DD^+(X,A\otimes\QQ)$;
-  }
-
-  \lic{(𝛾)}{
-    a bifiltered complex $(K_\CC,W,F)\in\Ob\DD^+F_w(X,\CC)$ (for an *increasing* filtration $W$ and a *decreasing* filtration $F$) and an isomorphism $\alpha\colon(K_\CC,W)\simeq(K_{A\otimes\QQ},W)\otimes\CC$ in $\DD^+F(X,\CC)$.
-  }
-}
-}
+a. a complex $K_A\in\Ob\DD^+(X,A)$ such that $\bHH^k(X,K_A)$ is an $A$-module of finite type for all $k$, and such that $\bHH(X,K_A)\otimes\QQ\simto\bHH(X,K_A\otimes\QQ)$;
+b. a filtered complex $(K_{A\otimes\QQ},W)\in\Ob\DD^+F(X,A\otimes\QQ)$ (for an *increasing* filtration $W$) and an isomorphism $K_{A\otimes\QQ}\simeq K_A\otimes\QQ$ in $\DD^+(X,A\otimes\QQ)$;
+c. a bifiltered complex $(K_\CC,W,F)\in\Ob\DD^+F_w(X,\CC)$ (for an *increasing* filtration $W$ and a *decreasing* filtration $F$) and an isomorphism $\alpha\colon(K_\CC,W)\simeq(K_{A\otimes\QQ},W)\otimes\CC$ in $\DD^+F(X,\CC)$.
 
 The following axiom must be satisfied:
 
-\subtree[hodge-theory-iii-8.1.6-chmc]{
-  \taxon{axiom}
-  \number{CHMC}
-      For all $n$, the system consisting of the complex $\Gr_n^W(K_{A\otimes\QQ})\in\Ob\DD^+(X,A\otimes\QQ)$, the complex $\Gr_n^W(K_\CC)\in\Ob\DD^+F(X,\CC)$ filtered by $F$, and the isomorphism
-    $$
-      \Gr_n^W(\alpha)\colon
-      \Gr_n^W(K_{A\otimes\QQ})\otimes\CC
-      \simeq \Gr_n^W(K_\CC),
-    $$
-    is a cohomological Hodge $(A\otimes\QQ)$-complex of weight $n$.
-  }
-}
-}
-}
+::: {.rmenv #env-iii-8.1.6-chmc number="CHMC"}
+For all $n$, the system consisting of the complex $\Gr_n^W(K_{A\otimes\QQ})\in\Ob\DD^+(X,A\otimes\QQ)$, the complex $\Gr_n^W(K_\CC)\in\Ob\DD^+F(X,\CC)$ filtered by $F$, and the isomorphism
+$$
+  \Gr_n^W(\alpha)\colon
+  \Gr_n^W(K_{A\otimes\QQ})\otimes\CC
+  \simeq \Gr_n^W(K_\CC),
+$$
+is a cohomological Hodge $(A\otimes\QQ)$-complex of weight $n$.
+:::
+::::
 
 \oldpage{30}
 We can trivially show:
-}
 
-\subtree[hodge-theory-iii-8.1.7]{
-\taxon{proposition}
-\number{8.1.7}
-
+::: {.itenv #env-iii-8.1.7 number="8.1.7" taxon="Proposition"}
 If $K=(K_A,(K_{A\otimes\QQ},W),(K_\CC,W,F))$ is a cohomological mixed Hodge $A$-complex, then $\Rd\Gamma K=(\Rd\Gamma K_A,\Rd\Gamma(K_{A\otimes\QQ},W),\Rd\Gamma(K_\CC,W,F))$ is a mixed Hodge $A$-complex.
-}
-}
+:::
 
-\subtree[hodge-theory-iii-8.1.8]{
-\taxon{scholium}
-\number{8.1.8}
-
+::: {.rmenv #env-iii-8.1.8 number="8.1.8" taxon="Scholium"}
 Let $U$ be the complement in a smooth proper scheme $X$, of a normal crossing divisor $D$, with $j\colon U\hookrightarrow X$ the inclusion morphism.
 Let $W$ be the canonical filtration on $\Rd j_*\QQ=\Rd j_*\ZZ\otimes\QQ\colon W_n(\Rd j_*\QQ)=\tau_{\leqslant n}(\Rd j_*\QQ)$.
-We have (\ref{hodge-theory-ii-3.1.8})
+We have [(3.1.8)](../hodge-theory-ii/3.1-logarithmic-poles-and-residues.qmd#ii-3.1.8)
 $$
   (\Rd j_*\QQ)\otimes\CC
   \xrightarrow{\approx} \Rd j_*\CC
@@ -179,20 +112,17 @@ $$
   \xleftarrow{\approx} \Omega_X^\bullet(\log D).
 $$
 Let $W$ be the weight filtration of $\Omega_+X^\bullet(\log D)$, and $F$ its Hodge filtration (by the $\sigma_{\geqslant p}$).
-Then \ref{hodge-theory-ii-3.1.8} gives an isomorphism $(\Rd j_*\QQ,W)\otimes\CC\simeq(\Omega_X^\bullet(\log D),W)$ in $\DD^+F(X,\CC)$, and, by \ref{hodge-theory-ii-3.1.5} and \ref{hodge-theory-ii-3.1.9},
+Then [(3.1.8)](../hodge-theory-ii/3.1-logarithmic-poles-and-residues.qmd#ii-3.1.8) gives an isomorphism $(\Rd j_*\QQ,W)\otimes\CC\simeq(\Omega_X^\bullet(\log D),W)$ in $\DD^+F(X,\CC)$, and, by [(3.1.5)](../hodge-theory-ii/3.1-logarithmic-poles-and-residues.qmd#ii-3.1.5) and [(3.1.9)](../hodge-theory-ii/3.1-logarithmic-poles-and-residues.qmd#ii-3.1.9),
 $$
   (\Rd j_*\ZZ,(\Rd j_*\QQ,W),(\Omega_X^\bullet(\log D), W, F))
 $$
 is a cohomological mixed Hodge complex on $X$.
-}
-}
+:::
 
-The following result is an "abstract" version of \ref{hodge-theory-ii-3.2}.
-}
+The following result is an "abstract" version of [§3.2](../hodge-theory-ii/3.2-mixed-hodge-theory).
 
-\subtree[hodge-theory-iii-8.1.9]{
+::: {.rmenv #env-iii-8.1.9 number="8.1.9"}
 \taxon{scholium}
-\number{8.1.9}
 
 Let $K$ be a mixed Hodge $A$-complex.
 }
@@ -233,8 +163,7 @@ Let $K$ be a mixed Hodge $A$-complex.
 }
 }
 
-\subtree[hodge-theory-iii-8.1.10]{
-\number{8.1.10}
+::: {.rmenv #env-iii-8.1.10 number="8.1.10"}
 
 We abbreviate "differential graded" to DG, and "bounded-below differential graded" to DG+.
 A DG complex of $A$-modules can be seen as a double complex of $A$-modules;
@@ -266,9 +195,8 @@ We denote by $\Dec_1W$ the filtration of $K_{A\otimes\QQ}$ induced by shifting (
 We will not confuse the filtration that this induces on $\simp K_{A\otimes\QQ}$ (also denoted by $\Dec_1W$) with the shifted filtration of the filtration induced on $\simp K_{A\otimes\QQ}$ by $W$.
 }
 
-\subtree[hodge-theory-iii-8.1.10.1]{
+::: {.rmenv #env-iii-8.1.10 number="8.1.10"}
 \taxon{variant}
-\number{8.1.10.1}
 
   We similarly define **cosimplicial** (resp. **$r$-cosimplicial**) **mixed Hodge $A$-complexes** by replacing "DG" with "cosimplicial" (resp. $r$-cosimplicial) everywhere in the definition.
   The functor from cosimplicial $A$-modules to DG $A$-modules sends cosimplicial mixed Hodge $A$-complexes to DG mixed Hodge $A$-complexes (and similarly for $r$-cosimplicial).
@@ -276,8 +204,7 @@ We will not confuse the filtration that this induces on $\simp K_{A\otimes\QQ}$ 
 }
 }
 
-\subtree[hodge-theory-iii-8.1.11]{
-\number{8.1.11}
+::: {.rmenv #env-iii-8.1.11 number="8.1.11"}
 
 Let $X_\bullet$ be a simplicial topological space.
 A **cohomological mixed Hodge $A$-complex** $K$ on $X_\bullet$ consists of:
@@ -299,9 +226,9 @@ A **cohomological mixed Hodge $A$-complex** $K$ on $X_\bullet$ consists of:
 
 The following axiom has to be satisfied:
 
-\subtree[hodge-theory-iii-8.1.11-chmbullet]{
+::: {.rmenv #env-iii-8.1.11 number="8.1.11"}
   \taxon{axiom}
-  \number{CHM●}
+
       The restriction of $K$ to each of the $X_n$ is a cohomological mixed Hodge $A$-complex.
   }
 }
@@ -311,9 +238,8 @@ For $A=\ZZ$, we simply speak of a cohomological mixed Hodge complex.
 }
 }
 
-\subtree[hodge-theory-iii-8.1.12]{
+::: {.rmenv #env-iii-8.1.12 number="8.1.12"}
 \taxon{example}
-\number{8.1.12}
 
 Let $X_\bullet$ be a smooth proper scheme (over $\CC$), and let $Y_\bullet$ be a normal crossing divisor in $X_\bullet$.
 We set $U_\bullet=X_\bullet\setminus Y_\bullet$, and we denote by $j$ the inclusion of $U_\bullet$ into $X_\bullet$.
@@ -327,8 +253,7 @@ on $X_\bullet$.
 }
 }
 
-\subtree[hodge-theory-iii-8.1.13]{
-\number{8.1.13}
+::: {.rmenv #env-iii-8.1.13 number="8.1.13"}
 
 Let $K$ be a cohomological mixed Hodge $A$-complex on $X_\bullet$.
 Write $\cosimpmodcat{A}$ to mean the category of cosimplicial $A$-modules.
@@ -358,8 +283,7 @@ It defines a DG mixed Hodge $A$-complex (\ref{hodge-theory-iii-8.1.10.1}).
 }
 }
 
-\subtree[hodge-theory-iii-8.1.14]{
-\number{8.1.14}
+::: {.rmenv #env-iii-8.1.14 number="8.1.14"}
 
 Let $K$ be a DG mixed Hodge $A$-complex, and consider the spectral sequence abutting to the cohomology of $\simp K$, which is defined by the filtration $L$.
 By hypothesis, the $E_1$ pages of this spectral sequence are endowed with mixed Hodge $A$-structures.
@@ -369,9 +293,8 @@ The structure on the abutment corresponds to a natural mixed Hodge $A$-complex "
 }
 }
 
-\subtree[hodge-theory-iii-8.1.15]{
+::: {.rmenv #env-iii-8.1.15 number="8.1.15"}
 \taxon{theorem}
-\number{8.1.15}
 
 Let $K$ be a DG mixed Hodge $A$-complex.
 
@@ -383,9 +306,9 @@ Let $K$ be a DG mixed Hodge $A$-complex.
   \lic{(ii)}{
     We have
 
-    \subtree[hodge-theory-iii-8.1.15.1]{
+    ::: {.rmenv #env-iii-8.1.15 number="8.1.15"}
       \taxon{equation}
-      \number{8.1.15.1}
+    
       $$
         {}_{\delta(W,L)}E_1^{ab}(\simp K\otimes\QQ)
         = \sum_{\substack{\alpha=\gamma-\beta\\b=\alpha+\beta}} \HH^\alpha(\Gr_\beta^W K^{\bullet\gamma})
@@ -395,9 +318,9 @@ Let $K$ be a DG mixed Hodge $A$-complex.
 
     where the complex $({}_{\delta(W,L)}E_1^{\bullet b},d_1)$ is the simple complex associated to the double complex of Hodge $A\otimes\QQ$-structures of weight $b$ given by
 
-    \subtree[hodge-theory-iii-8.1.15.2]{
+    ::: {.rmenv #env-iii-8.1.15 number="8.1.15"}
       \taxon{equation}
-      \number{8.1.15.2}
+    
       $$
         \small
         \begin{CD}
@@ -425,9 +348,9 @@ Let $K$ be a DG mixed Hodge $A$-complex.
   \lic{(v)}{
     The filtration $L$ on $\HH^\bullet(\simp K)$ is a filtration in the category of mixed Hodge structures, and
 
-    \subtree[hodge-theory-iii-8.1.15.3]{
+    ::: {.rmenv #env-iii-8.1.15 number="8.1.15"}
       \taxon{equation}
-      \number{8.1.15.3}
+    
       $$
         \Gr_L^p\big( \HH^{p+q}(\simp K), \delta(W,L)[p+q], F \big)
         = ({}_LE_\infty^{pq},W,F).
@@ -439,16 +362,15 @@ Let $K$ be a DG mixed Hodge $A$-complex.
 }
 }
 
-\subtree[hodge-theory-iii-8.1.16]{
+::: {.rmenv #env-iii-8.1.16 number="8.1.16"}
 \taxon{remark}
-\number{8.1.16}
 
 In \ref{hodge-theory-iii-8.1.15}, the filtration $\Dec_1(W)$ (\ref{hodge-theory-iii-8.1.10}) plays a more important role than $W$.
 We have
 
-\subtree[hodge-theory-iii-8.1.16.1]{
+::: {.rmenv #env-iii-8.1.16 number="8.1.16"}
   \taxon{equation}
-  \number{8.1.16.1}
+
   $$
     \Dec(\delta(W,L))
     = \Dec_1(W)
@@ -459,9 +381,9 @@ We have
 
 and \ref{hodge-theory-iii-8.1.15.3} can be rewritten as
 
-\subtree[hodge-theory-iii-8.1.16.2]{
+::: {.rmenv #env-iii-8.1.16 number="8.1.16"}
   \taxon{equation}
-  \number{8.1.16.2}
+
   $$
     \Gr_L(\HH(K),\Dec_1(W,F))
     = ({}_LE_\infty,W,F).
@@ -477,8 +399,7 @@ depends only on $U$, and not on the choice of compactification $X$.
 }
 }
 
-\subtree[hodge-theory-iii-8.1.17]{
-\number{8.1.17}
+::: {.rmenv #env-iii-8.1.17 number="8.1.17"}
 
 We now prove \ref{hodge-theory-iii-8.1.15}.
 Claims (i) and (ii) follow from the fact that
@@ -582,17 +503,15 @@ We conclude by the following lemma, whose proof is left to the reader:
 }
 }
 
-\subtree[hodge-theory-iii-8.1.18]{
+::: {.rmenv #env-iii-8.1.18 number="8.1.18"}
 \taxon{lemma}
-\number{8.1.18}
 
 Let $H=(H_A,W,F)$ be a mixed Hodge $A$-structure.
 For a filtration $L$ of $H_A$ to come from a filtration of $H$, in the abelian category of mixed Hodge $A$-structures, it is necessary and sufficient that, for all $n$, $(\Gr_L^n(H_A),\Gr_L^n(W),\Gr_L^n(F))$ be a mixed Hodge $A$-structure.
 }
 }
 
-\subtree[hodge-theory-iii-8.1.19]{
-\number{8.1.19}
+::: {.rmenv #env-iii-8.1.19 number="8.1.19"}
 
 We now apply \ref{hodge-theory-iii-8.1.13} and \ref{hodge-theory-iii-8.1.15} to \ref{hodge-theory-iii-8.1.12}.
 }
@@ -621,9 +540,9 @@ We obtain a mixed Hodge complex consisting of (a), (b), and (c) below.
   this contributes to the $\HH^{p+q+r}(U_\bullet)$;
   it corresponds to $\Gr_a^{\delta(W,F)}$ for $p+2r=(p+q+r)+a$:
 
-  \subtree[hodge-theory-iii-8.1.19.1]{
+  ::: {.rmenv #env-iii-8.1.19 number="8.1.19"}
     \taxon{equation}
-    \number{8.1.19.1}
+  
     $$
       {}_{\delta(W,L)}E_1^{-a,b}
       = \bigoplus_{\substack{p+2r=b\\q-r=-a}} \HH^p(\widetilde{Y}_q^r,\varepsilon_\QQ^r)
@@ -655,9 +574,8 @@ In particular, the $\HH^n(U_\bullet,\ZZ)$ are endowed with mixed Hodge structure
 }
 }
 
-\subtree[hodge-theory-iii-8.1.20]{
+::: {.rmenv #env-iii-8.1.20 number="8.1.20"}
 \taxon{proposition}
-\number{8.1.20}
 
 Under the above hypotheses:
 
@@ -700,8 +618,7 @@ Under the above hypotheses:
 }
 }
 
-\subtree[hodge-theory-iii-8.1.21]{
-\number{8.1.21}
+::: {.rmenv #env-iii-8.1.21 number="8.1.21"}
 
 We define a **cohomological mixed Hodge $A$-complex on an $r$-simplicial topological space** by transposing \ref{hodge-theory-iii-8.1.11}.
 If $K$ is such a complex, then we see, as in \ref{hodge-theory-iii-8.1.13}, that $\Rd\Gamma^\bullet K$ is an $r$-cosimplicial mixed Hodge $A$-complex (\ref{hodge-theory-iii-8.1.10.1}).
@@ -723,8 +640,7 @@ this does not teach us anything new (the above equality would be an identity bet
 }
 }
 
-\subtree[hodge-theory-iii-8.1.22]{
-\number{8.1.22}
+::: {.rmenv #env-iii-8.1.22 number="8.1.22"}
 
 Set $r=2$.
 For every bounded-below bicosimplicial complex $K=(K^{pn_1n_2})$ (where $p$ is the differential degree, and $n_i$ is the $i$-th simplicial degree), we denote by $\simp_1K$ the cosimplicial complex of simplicial degree $n_2$ given by
@@ -740,9 +656,9 @@ It follows from \ref{hodge-theory-iii-8.1.15} that $(\simp_1K,\delta(W,L_1),F)$ 
 Let $L_2$ be the filtration of $\simp K=\simp\simp_1K$ by the simplicial degree $n_2$.
 By \ref{hodge-theory-iii-8.1.14} and \ref{hodge-theory-iii-8.1.15}, the spectral sequence defined by $L_2$ comes from a spectral sequence in the abelian category of mixed Hodge $A$-structures
 
-\subtree[hodge-theory-iii-8.1.22.1]{
+::: {.rmenv #env-iii-8.1.22 number="8.1.22"}
   \taxon{equation}
-  \number{8.1.22.1}
+
   $$
     {}_{L_2}E_1^{pq}
     = \HH^q(\simp K^{\bullet\bullet p})
@@ -762,14 +678,13 @@ $$
 }
 }
 
-\subtree[hodge-theory-iii-8.1.23]{
-\number{8.1.23}
+::: {.rmenv #env-iii-8.1.23 number="8.1.23"}
 
 In particular, a cohomological mixed Hodge $A$-complex on a bisimplicial topological space $X_{\bullet\bullet}$ defines a spectral sequence of mixed Hodge $A$-structures
 
-\subtree[hodge-theory-iii-8.1.23.1]{
+::: {.rmenv #env-iii-8.1.23 number="8.1.23"}
   \taxon{equation}
-  \number{8.1.23.1}
+
   $$
     E_1^{pq}
     = \HH^q(X_{\bullet p},K)
@@ -781,9 +696,9 @@ In particular, a cohomological mixed Hodge $A$-complex on a bisimplicial topolog
 
 In the particular case considered in \ref{hodge-theory-iii-8.1.21}, for $r=2$, we have $A=\ZZ$, and \ref{hodge-theory-iii-8.1.23.1} can be written as
 
-\subtree[hodge-theory-iii-8.1.23.2]{
+::: {.rmenv #env-iii-8.1.23 number="8.1.23"}
   \taxon{equation}
-  \number{8.1.23.2}
+
   $$
     E_1^{pq}
     = \HH^q(U_{\bullet p},\ZZ)
@@ -794,8 +709,7 @@ In the particular case considered in \ref{hodge-theory-iii-8.1.21}, for $r=2$, w
 }
 }
 
-\subtree[hodge-theory-iii-8.1.24]{
-\number{8.1.24}
+::: {.rmenv #env-iii-8.1.24 number="8.1.24"}
 
 \oldpage{37}
 If $K'$ and $K''$ are mixed Hodge $A$-complexes, then then their product $K'\otimes K''$, defined by
@@ -848,8 +762,7 @@ $$
 }
 }
 
-\subtree[hodge-theory-iii-8.1.25]{
-\number{8.1.25}
+::: {.rmenv #env-iii-8.1.25 number="8.1.25"}
 
 Standard arguments, based on the Cartier–Eilenberg–Zilber theorem, give us the following simplicial variant of \ref{hodge-theory-iii-8.1.24}.
 }
@@ -871,8 +784,7 @@ $$
 }
 }
 
-\subtree[hodge-theory-iii-8.1.26]{
-\number{8.1.26}
+::: {.rmenv #env-iii-8.1.26 number="8.1.26"}
 
 Let $U'_{\bullet\bullet}$ (resp. $U''_{\bullet\bullet}$) be the complement of a normal crossing divisor in a smooth and proper bisimplicial scheme $X'_{\bullet\bullet}$ (resp. $X''_{\bullet\bullet}$).
 Let $U_{\bullet\bullet}=U'_{\bullet\bullet}\times U''_{\bullet\bullet}$ and $X_{\bullet\bullet}=X'_{\bullet\bullet}\times X''_{\bullet\bullet}$.
