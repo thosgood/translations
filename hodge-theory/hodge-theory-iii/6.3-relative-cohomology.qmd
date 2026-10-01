@@ -4,99 +4,59 @@ title: 6.3 Relative cohomology
 
 {{< include ../macros.qmd >}}
 
-
-\subtree[hodge-theory-iii-6.3.1]{
-\number{6.3.1}
-
-The \em{mapping cone} construction for morphisms of simplicial sets works in the same way for simplicial objects in any category #{\cat{C}} that has a final object #{e} and finite sums.
-For #{u\colon Y_\bullet\to X_\bullet}, the cone #{C(u)} satisfies
-##{
+::: {.rmenv #env-iii-6.3.1 number="6.3.1"}
+The **mapping cone** construction for morphisms of simplicial sets works in the same way for simplicial objects in any category $\cat{C}$ that has a final object $e$ and finite sums.
+For $u\colon Y_\bullet\to X_\bullet$, the cone $C(u)$ satisfies
+$$
   C(u)_n
   = X_n{\,\textstyle\coprod\,}\coprod_{i<n} Y_i{\,\textstyle\coprod\,}e.
-}
-}
+$$
+We take $\cat{C}$ to be:
+a. the category of topological spaces and continuous maps, with final object $e=P^t$;
+b. the category of pairs $(X,F)$ where $X$ is a topological space and $F$ is an abelian sheaf on $X$, with an arrow $(u,f)\colon(Y,F)\to(X,G)$ consisting of a continuous map $u\colon Y\to X$ and a $u$-morphism [(5.1.5)](5.1-simplicial-topological-spaces.qmd#iii-5.1.5) $f\colon G\to F$, with final object $e=(P^t,0)$.
+:::
 
-We take #{\cat{C}} to be:
-
-\olc{
-  \lic{(a)}{
-    the category of topological spaces and continuous maps, with final object #{e=P^t};
-  }
-  \lic{(b)}{
-    the category of pairs #{(X,F)} where #{X} is a topological space and #{F} is an abelian sheaf on #{X}, with an arrow #{(u,f)\colon(Y,F)\to(X,G)} consisting of a continuous map #{u\colon Y\to X} and a #{u}-morphism (\ref{hodge-theory-iii-5.1.5}) #{f\colon G\to F}, with final object #{e=(P^t,0)}.
-  }
-}
-}
-}
-
-\subtree[hodge-theory-iii-6.3.2]{
-\number{6.3.2}
-
-Let #{u\colon Y_\bullet\to X_\bullet} be a morphism of topological simplicial spaces, with cone #{C(u)}.
-Let #{F} be an abelian sheaf on #{X_\bullet} and #{G} an abelian sheaf on #{Y_\bullet}, and let #{f\colon G\to F} be a #{u}-morphism.
-The cone #{C(f)} of #{f} is an abelian sheaf on #{C(u)}, and we set
-
-\subtree[hodge-theory-iii-6.3.2.1]{
-  \taxon{equation}
-  \number{6.3.2.1}
-  ##{
-    \HH^n(C(u),C(f))
-    = \HH^n(X_\bullet\mod Y_\bullet, F\mod G).
-  \startverb\tag{6.3.2.1}\stopverb
-  }
-}
-
-These are the \em{relative cohomology groups}.
+::: {.rmenv #env-iii-6.3.2 number="6.3.2"}
+Let $u\colon Y_\bullet\to X_\bullet$ be a morphism of topological simplicial spaces, with cone $C(u)$.
+Let $F$ be an abelian sheaf on $X_\bullet$ and $G$ an abelian sheaf on $Y_\bullet$, and let $f\colon G\to F$ be a $u$-morphism.
+The cone $C(f)$ of $f$ is an abelian sheaf on $C(u)$, and we set
+$$
+  \HH^n(C(u),C(f))
+  = \HH^n(X_\bullet\mod Y_\bullet, F\mod G).
+\tag{6.3.2.1}
+$$
+These are the **relative cohomology groups**.
 We can easily show that they fit into a long exact sequence
+$$
+  \ldots
+  \to \HH^i(X_\bullet\mod Y_\bullet, F\mod G)
+  \to \HH^i(X_\bullet,F)
+  \to \HH^i(Y_\bullet,G)
+  \to \ldots.
+\tag{6.3.2.2}
+$$
+:::
 
-\subtree[hodge-theory-iii-6.3.2.2]{
-  \taxon{equation}
-  \number{6.3.2.2}
-  ##{
-    \ldots
-    \to \HH^i(X_\bullet\mod Y_\bullet, F\mod G)
-    \to \HH^i(X_\bullet,F)
-    \to \HH^i(Y_\bullet,G)
-    \to \ldots.
-  \startverb\tag{6.3.2.2}\stopverb
-  }
-}
-}
-}
-
-\subtree[hodge-theory-iii-6.3.3]{
-\number{6.3.3}
-
-More generally, let #{L} and #{K} be bounded-below complexes of abelian sheaves on #{Y_\bullet} and #{X_\bullet} (respectively), and let #{f\colon K\to L} be a #{u}-morphism.
-We thus obtain a complex #{C(f)} on #{C(u)}.
+::: {.rmenv #env-iii-6.3.3 number="6.3.3"}
+More generally, let $L$ and $K$ be bounded-below complexes of abelian sheaves on $Y_\bullet$ and $X_\bullet$ (respectively), and let $f\colon K\to L$ be a $u$-morphism.
+We thus obtain a complex $C(f)$ on $C(u)$.
 We again define the hypercohomology
-##{
+$$
   \bHH^n(C(u),C(f))
   = \bHH^n(X_\bullet\mod Y_\bullet, K\mod L).
-}
+$$
 \oldpage{22}
-These groups appear in an exact sequence analogous to that of \ref{hodge-theory-iii-6.3.2.2}, coming, in the suitable derived category, from a distinguished triangle
+These groups appear in an exact sequence analogous to that of [(6.3.2.2)](#iii-6.3.2), coming, in the suitable derived category, from a distinguished triangle
+$$
+  \Rd\Gamma(C(u),C(f))
+  \to \Rd\Gamma(X_\bullet,L)
+  \to \Rd\Gamma(Y_\bullet,K)
+  \xrightarrow{\partial} \Rd\Gamma(C(u),C(f))[+1]
+\tag{6.3.3.1}
+$$
+:::
 
-\subtree[hodge-theory-iii-6.3.3.1]{
-  \taxon{equation}
-  \number{6.3.3.1}
-  \tikzcd{
-    & \Rd\Gamma(Y_\bullet,K)
-      \ar[dl,swap,"\partial"]
-  \\\Rd\Gamma(C(u),C(f))
-      \ar[rr]
-    && \Rd\Gamma(X_\bullet,L)
-      \ar[ul]
-    & (6.3.3.1)
-  }
-}
-}
-}
-
-\subtree[hodge-theory-iii-6.3.4]{
-\number{6.3.4}
-
+::: {.rmenv #env-iii-6.3.4 number="6.3.4"}
 The construction presented above is not the only one possible.
-It has the inconvenience that, even if we start with true topological spaces #{X} and #{Y} (i.e. constant simplicial spaces), we are led to consider non-constant simplicial spaces.
-}
-}
+It has the inconvenience that, even if we start with true topological spaces $X$ and $Y$ (i.e. constant simplicial spaces), we are led to consider non-constant simplicial spaces.
+:::

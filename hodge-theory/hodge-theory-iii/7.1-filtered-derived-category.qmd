@@ -4,3 +4,293 @@ title: 7.1 Filtered derived category
 
 {{< include ../macros.qmd >}}
 
+
+\p{
+  This section completes \ref{hodge-theory-ii-1.4}.
+}
+
+\subtree[hodge-theory-iii-7.1.1]{
+  \number{7.1.1}
+
+  \p{
+    Let #{\cat{A}} be an abelian category.
+    We set:
+
+    \ul{
+      \li{
+        #{\FF\cat{A}} (resp. #{\FF_2\cat{A}})
+        = the category of filtered (resp. bifiltered) objects with finite filtration(s) of #{\cat{A}}.
+      }
+      \li{
+        #{\KK^+\FF\cat{A}} (resp. #{\KK^+\FF_2\cat{A}})
+        = the category of filtered (resp. bifiltered) bounded-below complexes of objects of #{\cat{A}}, up to homotopy that respects the filtration(s).
+      }
+      \li{
+        #{\DD^+\FF\cat{A}} (resp. #{\DD^+\FF_2\cat{A}})
+        = the triangulated category induced from #{\KK^+\FF\cat{A}} (resp. from #{\KK^+\FF_2\cat{A}}) by inverting the filtered (resp. bifiltered) quasi-isomorphisms (\ref{hodge-theory-ii-1.3.6});
+        this is the \em{derived filtered category} (resp. \em{derived bifiltered category}).
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-7.1.2]{
+  \number{7.1.2}
+
+  \p{
+    A filtered quasi-isomorphism #{u\colon(K,F)\to(K',F')} induces an isomorphism of spectral sequences #{u\colon E_\bullet^{\bullet\bullet}(K,F)\to E_\bullet^{\bullet\bullet}(K',F')}.
+    An object #{K} of #{\DD^+\FF\cat{A}} thus defines a spectral sequence #{E_\bullet^{\bullet\bullet}(K)}.
+    \oldpage{24}
+    Similarly, an object #{L} of #{\DD^+\FF_2\cat{A}} defines an accumulation of spectral sequences of the type considered in \ref{hodge-theory-ii-1.4.9}.
+  }
+}
+
+\subtree[hodge-theory-iii-7.1.3]{
+  \number{7.1.3}
+
+  \p{
+    Let #{T} be a left exact functor from #{\cat{A}} to an abelian category #{\cat{B}}.
+    Suppose that every object of #{\cat{A}} injects into an injective object.
+    The functor #{T} can then be "derived" to give the functors
+
+    \subtree[hodge-theory-iii-7.1.3.1]{
+      \taxon{equation}
+      \number{7.1.3.1}
+      ##{
+        \Rd\colon
+        \DD^+(\cat{A})
+        \to \DD^+(\cat{B})
+      \startverb\tag{7.1.3.1}\stopverb
+      }
+    }
+
+    \subtree[hodge-theory-iii-7.1.3.2]{
+      \taxon{equation}
+      \number{7.1.3.2}
+      ##{
+        \Rd\colon
+        \DD^+\FF(\cat{A})
+        \to \DD^+\FF(\cat{B})
+      \startverb\tag{7.1.3.2}\stopverb
+      }
+    }
+
+    \subtree[hodge-theory-iii-7.1.3.3]{
+      \taxon{equation}
+      \number{7.1.3.3}
+      ##{
+        \Rd\colon
+        \DD^+\FF_2(\cat{A})
+        \to \DD^+\FF_2(\cat{B}).
+      \startverb\tag{7.1.3.3}\stopverb
+      }
+    }
+
+    They can be calculated as follows: if #{K'} is a #{T}-acyclic resolution (resp. a filtered resolution, resp. a bifiltered resolution) of #{K} (\ref{hodge-theory-ii-1.4.5} and \ref{hodge-theory-ii-1.4.11}), then #{\Rd T(K)=T(K')}.
+  }
+
+  \p{
+    The hypercohomology spectral sequence (for #{T}) of #{K\in\Ob\DD^+\FF(\cat{A})} is the spectral sequence of #{\Rd TK\in\Ob\DD^+\FF(\cat{B})} (cf. \ref{hodge-theory-ii-1.4.5}).
+  }
+}
+
+\subtree[hodge-theory-iii-7.1.4]{
+  \number{7.1.4}
+
+  \p{
+    We will need more precise results for the functors #{\Rd a_*}, where #{a\colon X_\bullet\to S} is an augmentation of a simplicial topological space.
+    The case #{S=P^t}, where #{\Rd a_*=\Rd\Gamma} will suffice.
+  }
+
+  \p{
+    We reuse the notation of \ref{hodge-theory-iii-5.1.12}, and recall \ref{hodge-theory-iii-5.2.6.1}:
+    ##{
+      \Rd a_*
+      = \simp\Rd {a_\bullet}_*.
+    }
+    For every complex #{K\in\Ob\mathrm{C}^+(S_\bullet)}, the simple complex #{\simp K} is endowed with a natural filtration #{L} (\ref{hodge-theory-iii-5.1.9.3}).
+    A quasi-isomorphism #{u\colon K'\simto K''} induces a filtered quasi-isomorphism #{u\colon(\simp K',L)\simto(\simp K'',L)}.
+    Then #{\simp} factors as
+    ##{
+      \simp\colon \DD^+(S_\bullet)
+      \to \DD^+\FF(S)
+    }
+    and #{\Rd a_*} factors as
+    ##{
+      \Rd a_*\colon \DD^+(X_\bullet)
+      \to \DD^+\FF(S).
+    }
+    The spectral sequence of the filtered complex #{(\Rd a_* K,L)\in\DD^+\FF(S)} is exactly \ref{hodge-theory-iii-5.2.7.1}.
+  }
+}
+
+\subtree[hodge-theory-iii-7.1.5]{
+  \number{7.1.5}
+
+  \p{
+    If #{K} is filtered (resp. bifiltered), then #{\Rd{a_\bullet}_*K} is filtered (resp. bifiltered): we have
+
+    \subtree[hodge-theory-iii-7.1.5.1]{
+      \taxon{equation}
+      \number{7.1.5.1}
+      ##{
+        \Rd{a_\bullet}_*
+        \colon \DD^+\FF(X_\bullet)
+        \to \DD^+\FF(S_\bullet)
+      \startverb\tag{7.1.5.1}\stopverb
+      }
+    }
+
+    \subtree[hodge-theory-iii-7.1.5.2]{
+      \taxon{equation}
+      \number{7.1.5.2}
+      ##{
+        \Rd{a_\bullet}_*
+        \colon \DD^+\FF_2(X_\bullet)
+        \to \DD^+\FF_2(S_\bullet).
+      \startverb\tag{7.1.5.2}\stopverb
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-7.1.6]{
+  \number{7.1.6}
+
+  \p{
+    Let #{K} be a complex of cosimplicial sheaves on #{S}, endowed with an increasing filtration #{W}.
+    We define the \em{diagonal filtration} #{\delta(W,L)} of #{W} and #{L} to be the increasing filtration of #{\simp K} given by
+
+    \subtree[hodge-theory-iii-7.1.6.1]{
+      \taxon{equation}
+      \number{7.1.6.1}
+      ##{
+        \begin{aligned}
+          \delta(W,L)_n(\simp K)
+          &= \bigoplus_{p,q} W_{n+p}(K^{p,q})
+        \\&= \sum_p \simp(W_{n+p}(K)) \cap L^p(\simp K).
+        \end{aligned}
+      \startverb\tag{7.1.6.1}\stopverb
+      }
+    }
+  }
+
+  \p{
+    \oldpage{25}
+    We have
+
+    \subtree[hodge-theory-iii-7.1.6.2]{
+      \taxon{equation}
+      \number{7.1.6.2}
+      ##{
+        \Gr_n^{\delta(W,L)}(\simp K)
+        \simeq \bigoplus_p \Gr_{n+p}^W(K^{\bullet p})[-p].
+      \startverb\tag{7.1.6.2}\stopverb
+      }
+    }
+  }
+
+  \p{
+    The functor #{(K,W)\mapsto(\simp K,\delta(W,L))} sends filtered quasi-isomorphisms to filtered quasi-isomorphisms, and defines
+
+    \subtree[hodge-theory-iii-7.1.6.3]{
+      \taxon{equation}
+      \number{7.1.6.3}
+      ##{
+        \begin{aligned}
+          (s,\delta)
+          \colon \DD^+\FF(S_\bullet)
+          &\to \DD^+\FF(S)
+        \\(K,W)
+          &\mapsto (\simp K,\delta(W,L))
+        \end{aligned}
+      \startverb\tag{7.1.6.3}\stopverb
+      }
+    }
+
+    whence, by composition with \ref{hodge-theory-iii-7.1.5.1},
+
+    \subtree[hodge-theory-iii-7.1.6.4]{
+      \taxon{equation}
+      \number{7.1.6.4}
+      ##{
+        \begin{aligned}
+          (\Rd\Gamma,\delta(-,L))
+          \colon \DD^+\FF(X_\bullet)
+          &\to \DD^+\FF(S)
+        \\(K,W)
+          &\mapsto (\Rd\Gamma K,\delta(W,L)).
+        \end{aligned}
+      \startverb\tag{7.1.6.4}\stopverb
+      }
+    }
+
+    From \ref{hodge-theory-iii-7.1.6.2}, we see that
+
+    \subtree[hodge-theory-iii-7.1.6.5]{
+      \taxon{equation}
+      \number{7.1.6.5}
+      ##{
+        \Gr_n^{\delta(W,L)}
+        = \bigoplus_p \Rd{a_p}_*(\Gr_{n+p}^W K)[-p].
+      \startverb\tag{7.1.6.5}\stopverb
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-7.1.7]{
+  \number{7.1.7}
+
+  \p{
+    If #{(K,W,F)} is a bifiltered complex of cosimplicial sheaves, then #{\simp K} is endowed with the three filtrations #{W}, #{F}, and #{L}, and defines different bifiltered complexes.
+  }
+
+  \p{
+    For example, for increasing #{W}, the functor #{(K,W,F)\mapsto(K,\delta(W,L),F)} sends bifiltered quasi-isomorphisms to bifiltered quasi-isomorphisms, and thus defines
+
+    \subtree[hodge-theory-iii-7.1.7.1]{
+      \taxon{equation}
+      \number{7.1.7.1}
+      ##{
+        \begin{aligned}
+          \DD^+\FF_2(S_\bullet)
+          &\to \DD^+\FF_2(S)
+        \\(K,W,F)
+          &\mapsto (K,\delta(W,L),F).
+        \end{aligned}
+      \startverb\tag{7.1.7.1}\stopverb
+      }
+    }
+
+    By composition with \ref{hodge-theory-iii-7.1.5.2}, we thus obtain
+
+    \subtree[hodge-theory-iii-7.1.7.2]{
+      \taxon{equation}
+      \number{7.1.7.2}
+      ##{
+        \begin{aligned}
+          \DD^+\FF_2(X_\bullet)
+          &\to \DD^+\FF_2(S)
+        \\(K,W,F)
+          &\mapsto (\Rd\Gamma K,\delta(W,L),F).
+        \end{aligned}
+      \startverb\tag{7.1.7.2}\stopverb
+      }
+    }
+
+    and we have that
+
+    \subtree[hodge-theory-iii-7.1.7.3]{
+      \taxon{equation}
+      \number{7.1.7.3}
+      ##{
+        \Gr_n^{\delta(W,L)}(\Rd\Gamma K,F)
+        = \bigoplus_p \Rd{a_p}_*(\Gr_{n+p}^W K,F)[-p]
+      \startverb\tag{7.1.7.3}\stopverb
+      }
+    }
+
+    in #{\DD^+\FF(S)}.
+  }
+}
