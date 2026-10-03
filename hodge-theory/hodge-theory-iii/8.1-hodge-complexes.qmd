@@ -208,129 +208,72 @@ It is clear that the $\Rd\Gamma^\bullet(K,W,F)$ described above is a cosimplicia
 It defines a DG mixed Hodge $A$-complex [(8.1.10.1)](#iii-8.1.10).
 :::
 
-
-
-
-
-
 ::: {.rmenv #env-iii-8.1.14 number="8.1.14"}
 Let $K$ be a DG mixed Hodge $A$-complex, and consider the spectral sequence abutting to the cohomology of $\simp K$, which is defined by the filtration $L$.
 By hypothesis, the $E_1$ pages of this spectral sequence are endowed with mixed Hodge $A$-structures.
-The content of \ref{hodge-theory-iii-8.1.15} is that every spectral sequence, including its abutment, is endowed with a mixed Hodge $A$-structure.
+The content of [(8.1.15)](#iii-8.1.15) is that every spectral sequence, including its abutment, is endowed with a mixed Hodge $A$-structure.
 In other words, $c'$ is a spectral sequence in the abelian category of mixed Hodge $A$-structures.
 The structure on the abutment corresponds to a natural mixed Hodge $A$-complex "structure" on $\simp K$.
-}
-}
+:::
 
-::: {.rmenv #env-iii-8.1.15 number="8.1.15"}
-\taxon{theorem}
-
+::: {.rmenv #env-iii-8.1.15 number="8.1.15" taxon="Theorem"}
 Let $K$ be a DG mixed Hodge $A$-complex.
 
-\olc{
-  \lic{(i)}{
-    With the notation of \ref{hodge-theory-iii-8.1.10}, \ref{hodge-theory-iii-8.1.10.1}, and \ref{hodge-theory-iii-7.1.6}, $(\simp K,\delta(W,L),F)$ is a mixed Hodge $A$-complex.
-  }
-
-  \lic{(ii)}{
-    We have
-
-    ::: {.rmenv #env-iii-8.1.15 number="8.1.15"}
-      \taxon{equation}
-    
-      $$
-        {}_{\delta(W,L)}E_1^{ab}(\simp K\otimes\QQ)
-        = \sum_{\substack{\alpha=\gamma-\beta\\b=\alpha+\beta}} \HH^\alpha(\Gr_\beta^W K^{\bullet\gamma})
-      \tag{8.1.15.1}
-      $$
-    }
-
+i. With the notation of [(8.1.10)](#iii-8.1.10), [(8.1.10.1)](#iii-8.1.10), and [(7.1.6)](7.1-filtered-derived-category.qmd#iii-7.1.6), $(\simp K,\delta(W,L),F)$ is a mixed Hodge $A$-complex.
+ii. We have
+    $$
+      {}_{\delta(W,L)}E_1^{ab}(\simp K\otimes\QQ)
+      = \sum_{\substack{\alpha=\gamma-\beta\\b=\alpha+\beta}} \HH^\alpha(\Gr_\beta^W K^{\bullet\gamma})
+    \tag{8.1.15.1}
+    $$
     where the complex $({}_{\delta(W,L)}E_1^{\bullet b},d_1)$ is the simple complex associated to the double complex of Hodge $A\otimes\QQ$-structures of weight $b$ given by
-
-    ::: {.rmenv #env-iii-8.1.15 number="8.1.15"}
-      \taxon{equation}
-    
-      $$
-        \small
-        \begin{CD}
-          \HH^{b-(\beta+1)}(\Gr_{\beta+1}^W K^{\bullet,\gamma+1}) @>{\partial}>> \HH^{b-\beta}(\Gr_\beta^W K^{\bullet,\gamma+1}) @>{\partial}>> \HH^{b-(\beta-1)}(\Gr_{\beta-1}^W K^{\bullet,\gamma+1})
-        \\@. @A{d''}AA @AA{d''}A
-        \\@. \HH^{b-\beta}(\Gr_\beta^W K^{\bullet,\gamma}) @>>{\partial}> \HH^{b-(\beta-1)}(\Gr_{\beta-1}^W K^{\bullet,\gamma})
-        \end{CD}
-      \tag{8.1.15.2}
-      $$
-    }
-  }
-
-  \lic{(iii)}{
+    $$
+      \small
+      \begin{CD}
+        \HH^{b-(\beta+1)}(\Gr_{\beta+1}^W K^{\bullet,\gamma+1}) @>{\partial}>> \HH^{b-\beta}(\Gr_\beta^W K^{\bullet,\gamma+1}) @>{\partial}>> \HH^{b-(\beta-1)}(\Gr_{\beta-1}^W K^{\bullet,\gamma+1})
+      \\@. @A{d''}AA @AA{d''}A
+      \\@. \HH^{b-\beta}(\Gr_\beta^W K^{\bullet,\gamma}) @>>{\partial}> \HH^{b-(\beta-1)}(\Gr_{\beta-1}^W K^{\bullet,\gamma})
+      \end{CD}
+    \tag{8.1.15.2}
+    $$
+iii. On the ${}_LE_r$ pages of the spectral sequence defined by $(\simp K_{A\otimes\QQ},L)$, the recurrent filtration and the two direct filtrations defined by $\Dec_1(W)$ agree;
     \oldpage{33}
-    On the ${}_LE_r$ pages of the spectral sequence defined by $(\simp K_{A\otimes\QQ},L)$, the recurrent filtration and the two direct filtrations defined by $\Dec_1(W)$ agree;
     similarly, on the ${}_LE_r(\simp K_\CC)$, the recurrent filtration and the two direct filtrations induced by $F$ agree.
     We denoted these filtrations again by $W$ and $F$ (respectively).
-  }
-
-  \lic{(iv)}{
-    For $r\geqslant1$, $({}_LE_r,W,F)$ is a mixed Hodge $A$-structure (\ref{hodge-theory-iii-0.4}).
+iv. For $r\geqslant1$, $({}_LE_r,W,F)$ is a mixed Hodge $A$-structure [(0.4)](terminology-and-notation#iii-0.4).
     The differentials $d_r$ are morphisms of mixed Hodge $A$-structures.
-  }
+v. The filtration $L$ on $\HH^\bullet(\simp K)$ is a filtration in the category of mixed Hodge structures, and
+    $$
+      \Gr_L^p\big( \HH^{p+q}(\simp K), \delta(W,L)[p+q], F \big)
+      = ({}_LE_\infty^{pq},W,F).
+    \tag{8.1.15.3}
+    $$
+:::
 
-  \lic{(v)}{
-    The filtration $L$ on $\HH^\bullet(\simp K)$ is a filtration in the category of mixed Hodge structures, and
-
-    ::: {.rmenv #env-iii-8.1.15 number="8.1.15"}
-      \taxon{equation}
-    
-      $$
-        \Gr_L^p\big( \HH^{p+q}(\simp K), \delta(W,L)[p+q], F \big)
-        = ({}_LE_\infty^{pq},W,F).
-      \tag{8.1.15.3}
-      $$
-    }
-  }
-}
-}
-}
-
-::: {.rmenv #env-iii-8.1.16 number="8.1.16"}
-\taxon{remark}
-
-In \ref{hodge-theory-iii-8.1.15}, the filtration $\Dec_1(W)$ (\ref{hodge-theory-iii-8.1.10}) plays a more important role than $W$.
+::: {.rmenv #env-iii-8.1.16 number="8.1.16" taxon="Remark"}
+In [(8.1.15)](#iii-8.1.15), the filtration $\Dec_1(W)$ [(8.1.10)](#iii-8.1.10) plays a more important role than $W$.
 We have
-
-::: {.rmenv #env-iii-8.1.16 number="8.1.16"}
-  \taxon{equation}
-
-  $$
-    \Dec(\delta(W,L))
-    = \Dec_1(W)
-    \qquad\text{on }\simp K
-  \tag{8.1.16.1}
-  $$
-}
-
-and \ref{hodge-theory-iii-8.1.15.3} can be rewritten as
-
-::: {.rmenv #env-iii-8.1.16 number="8.1.16"}
-  \taxon{equation}
-
-  $$
-    \Gr_L(\HH(K),\Dec_1(W,F))
-    = ({}_LE_\infty,W,F).
-  \tag{8.1.16.2}
-  $$
-}
-
-In the same spirit, we note that, with the notation of \ref{hodge-theory-iii-8.1.8},
+$$
+  \Dec(\delta(W,L))
+  = \Dec_1(W)
+  \qquad\text{on }\simp K
+\tag{8.1.16.1}
+$$
+and [(8.1.15.3)](#iii-8.1.15) can be rewritten as
+$$
+  \Gr_L(\HH(K),\Dec_1(W,F))
+  = ({}_LE_\infty,W,F).
+\tag{8.1.16.2}
+$$
+In the same spirit, we note that, with the notation of [(8.1.8)](#iii-8.1.8),
 $$
   \Rd\Gamma\big( \Rd j_*\ZZ, (\Rd j_*\QQ,\Dec W), (\Omega_X^\bullet(\log D),\Dec W,F) \big)
 $$
 depends only on $U$, and not on the choice of compactification $X$.
-}
-}
+:::
 
 ::: {.rmenv #env-iii-8.1.17 number="8.1.17"}
-
-We now prove \ref{hodge-theory-iii-8.1.15}.
+We now prove [(8.1.15)](#iii-8.1.15).
 Claims (i) and (ii) follow from the fact that
 $$
   \begin{aligned}
@@ -339,106 +282,81 @@ $$
   \\&= \sum_{p-q=n} (\Gr_p^W K^{\bullet q})[-q]
   \end{aligned}
 $$
-(this isomorphism is compatible with $F$, and we apply \ref{hodge-theory-iii-8.1.4}).
-The proof of \ref{hodge-theory-iii-8.1.15.2} is left to the reader.
-}
+(this isomorphism is compatible with $F$, and we apply [(8.1.4)](#iii-8.1.4)).
+The proof of [(8.1.15.2)](#iii-8.1.15) is left to the reader.
 
 Consider the claims:
 
-\olc{
-  \lic{(aᵣ)}{
+- (a${}_r$)
     The morphisms $d_r$ of ${}_LE_r(\simp K_{A\otimes\QQ})$ are strictly compatible with the recurrent filtration defined by $\Dec_1(W)$.
-  }
-
-  \lic{(bᵣ)}{
+- (b${}_r$)
     The morphisms $d_r$ of ${}_LE_r(\simp K_\CC)$ are strictly compatible with the recurrent filtration defined by $F$.
-  }
-
-  \lic{(cᵣ)}{
+- (c${}_r$)
     ${}_LE_r$, endowed with the filtrations considered in (a) and (b) is a mixed Hodge $A$-structure.
-  }
-
-  \lic{(dᵣ)}{
+- (d${}_r$)
     The $d_r$ are morphisms of mixed Hodge $A$-structures.
-  }
-}
-}
 
 We will prove (a${}_r$) and (b${}_r$) for $r\geqslant0$, and (c${}_r$) and (d${}_r$) for $r\geqslant1$, by simultaneous induction.
 
-\olc{
-  \lic{(A)}{
-    *Proof of (a${}_0$).*
+A. *Proof of (a${}_0$).*
     We have
     $$
       \big( {}_LE_0^{p\bullet}(\simp K_{A\otimes\QQ}), \Dec_1 W \big)
       = (K_{A\otimes\QQ}^{\bullet p}, \Dec W).
     $$
-    By (iv) of \ref{hodge-theory-iii-8.1.9}, the spectral sequence of $(K_{A\otimes\QQ}^{\bullet p},W)$ degenerates at $E_2$.
-    By \ref{hodge-theory-ii-1.3.4}, the spectral sequence of $(K_{A\otimes\QQ}^{\bullet p},\Dec W)$ degenerates at $E_1$, and this proves (a${}_0$) (\ref{hodge-theory-ii-1.3.2}).
-  }
+    By (iv) of [(8.1.9)](#iii-8.1.9), the spectral sequence of $(K_{A\otimes\QQ}^{\bullet p},W)$ degenerates at $E_2$.
+    By [(1.3.4)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#iii-1.3.4), the spectral sequence of $(K_{A\otimes\QQ}^{\bullet p},\Dec W)$ degenerates at $E_1$, and this proves (a${}_0$) [(1.3.2)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#iii-1.3.2).
 
-  \lic{(B)}{
+B. *Proof of (b${}_0$).*
     \oldpage{34}
-    *Proof of (b${}_0$).*
     We have
     $$
       \big( {}_LE_0^{p\bullet}(\simp K_\CC),F \big)
       = (K_\CC^{\bullet p}, F).
     $$
-    We apply (v) of \ref{hodge-theory-iii-8.1.9} and \ref{hodge-theory-ii-1.3.2}.
-  }
+    We apply (v) of [(8.1.9)](#iii-8.1.9) and [(1.3.2)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#iii-1.3.2).
 
-  \lic{(C)}{
-    *Proof of (c${}_1$).*
+C. *Proof of (c${}_1$).*
     We have to show that $\HH^n(K_A^{\bullet p})$, endowed with the filtrations induced by $\Dec W$ on $\HH^n(K_{A\otimes\QQ}^{\bullet p})=\HH^n(K_A^{\bullet p})\otimes\QQ$ and by $F$ on $\HH^n(K_\CC^{\bullet p})=\HH^n(K_A^{\bullet p})\otimes_A\CC$, is a mixed Hodge $A$-structure.
     But $\Dec W$ induces on $\HH^n(K_{A\otimes\QQ}^{\bullet p})$ the same filtration as $W[n]$, and so we conclude by (ii) of \ref{hodge-theory-iii-8.1.9}.
-  }
 
-  \lic{(D)}{
-    *Proof of (c${}_r$)+(d${}_r$)$\implies$(a${}_r$)+(b${}_r$)+(c${}_{r+1}$).*
-    This is the key point of the proof, and is a simple application of \ref{hodge-theory-ii-2.3.5} (along with \ref{hodge-theory-iii-0.4}).
-  }
+D. *Proof of (c${}_r$)+(d${}_r$)$\implies$(a${}_r$)+(b${}_r$)+(c${}_{r+1}$).*
+    This is the key point of the proof, and is a simple application of [(2.3.5)](../hodge-theory-ii/2.3-mixed-structures.qmd#iii-2.3.5) (along with [(0.4)](terminology-and-notation#iii-0.4)).
 
-  \lic{(E)}{
-    *Proof of (a${}_r$)${}_{r\leqslant r_0-2}$+(b${}_r$)${}_{r\leqslant r_0-2}$+(c${}_{r_0}$)$\implies$(d${}_{r_0}$).*
-    By \ref{hodge-theory-ii-1.3.16}, the recurrent filtration and the direct filtrations induced by $\Dec_1W$ (resp. $F$) on ${}_LE_r$ agree for $r\leqslant r_0$, and we apply (i) of \ref{hodge-theory-ii-1.3.13}.
-  }
-}
-}
+E. *Proof of (a${}_r$)${}_{r\leqslant r_0-2}$+(b${}_r$)${}_{r\leqslant r_0-2}$+(c${}_{r_0}$)$\implies$(d${}_{r_0}$).*
+    By [(1.3.16)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#iii-1.3.16), the recurrent filtration and the direct filtrations induced by $\Dec_1W$ (resp. $F$) on ${}_LE_r$ agree for $r\leqslant r_0$, and we apply (i) of [(1.3.13)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#iii-1.3.13).
 
 This finishes the proof by induction of (a), (b), (c), and (d).
-}
 
 Claim (iii) was proven in part (E) of the proof by induction, and the claims of (iv) are (c${}_r$) and (d${}_r$).
-We will prove \ref{hodge-theory-iii-8.1.15.3} in the form of \ref{hodge-theory-iii-8.1.16.2}.
-}
+We will prove [(8.1.15.3)](#iii-8.1.15) in the form of [(8.1.16.2)](#iii-8.1.16.2).
 
 The fact that
 $$
   \Gr_L(\HH(\simp K_{A\otimes\QQ}),\Dec_1W)
   = ({}_LE_\infty(\simp K_{A\otimes\QQ}),W)
 $$
-follows from (a${}_r$) and \ref{hodge-theory-ii-1.3.17}.
+follows from (a${}_r$) and [(1.3.17)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#iii-1.3.17).
 The fact that
 $$
   \Gr_L(\HH(\simp K_\CC),F)
   = ({}_LE_\infty(\simp K_\CC),F)
 $$
-follows from (b${}_r$) and \ref{hodge-theory-ii-1.3.17}.
-}
+follows from (b${}_r$) and [(1.3.17)](../hodge-theory-ii/1.3-the-two-filtrations-lemma.qmd#iii-1.3.17).
 
-We conclude by the following lemma, whose proof is left to the reader:
-}
-}
+We conclude by the following lemma, whose proof is left to the reader
+:::
 
-::: {.rmenv #env-iii-8.1.18 number="8.1.18"}
-\taxon{lemma}
-
+::: {.rmenv #env-iii-8.1.18 number="8.1.18" taxon="Lemma"}
 Let $H=(H_A,W,F)$ be a mixed Hodge $A$-structure.
 For a filtration $L$ of $H_A$ to come from a filtration of $H$, in the abelian category of mixed Hodge $A$-structures, it is necessary and sufficient that, for all $n$, $(\Gr_L^n(H_A),\Gr_L^n(W),\Gr_L^n(F))$ be a mixed Hodge $A$-structure.
-}
-}
+:::
+
+
+
+
+
+
 
 ::: {.rmenv #env-iii-8.1.19 number="8.1.19"}
 
