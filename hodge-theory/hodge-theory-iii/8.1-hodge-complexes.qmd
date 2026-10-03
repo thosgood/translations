@@ -7,7 +7,7 @@ title: 8.1 Hodge complexes
 
 :::: {.rmenv #env-iii-8.1.1 number="8.1.1"}
 Let $A$ be as in [§0.3](terminology-and-notation.qmd#env-iii-0.3).
-Then a **Hodge $A$-complex** $K$ of weight $n$ consists of
+Then a **Hodge $A$-complex** $K$ of weight $n$ consists of
 
 a. a complex $K_A\in\Ob\DD^+(A)$ such that $\HH^k(K_A)$ is an $A$-module of finite type for all $k$;
 b. a filtration $F$ on $K_A\otimes\CC$, i.e. a filtered complex $(K_\CC,F)\in\Ob\DD^+F(\CC)$, and an isomorphism $\alpha\colon K_\CC\simeq K_A\otimes\CC$ in $\DD^+(\CC)$.
@@ -20,13 +20,13 @@ in other words, the spectral sequence defined by $(K_\CC,F)$ degenerates at $E_1
 :::
 
 ::: {.rmenv #env-iii-8.1.1-ch2 number="CH 2"}
-For all $k$, the filtration $F$ on $\HH^k(K_\CC)\simeq\HH^k(K_A)\otimes\CC$ defines a Hodge $A$-structure of weight $n+k$ on $\HH^k(K_A)$, i.e. the filtration $F$ is $(n+k)$-opposite to its complex conjugate (which makes sense, since $A\subset\RR$).
+For all $k$, the filtration $F$ on $\HH^k(K_\CC)\simeq\HH^k(K_A)\otimes\CC$ defines a Hodge $A$-structure of weight $n+k$ on $\HH^k(K_A)$, i.e. the filtration $F$ is $(n+k)$-opposite to its complex conjugate (which makes sense, since $A\subset\RR$).
 :::
 ::::
 
 :::: {.rmenv #env-iii-8.1.2 number="8.1.2"}
 Let $X$ be a topological space.
-Then a **cohomological Hodge $A$-complex $K$ of weight $n$** on $X$ consists of:
+Then a **cohomological Hodge $A$-complex $K$ of weight $n$** on $X$ consists of:
 
 a. a complex $K_A\in\Ob\DD^+(X,A)$,
 b. a filtered complex $(K_\CC,F)\in\Ob\DD^+F(X,\CC)$,
@@ -35,7 +35,7 @@ c. an isomorphism $\alpha\colon K_\CC\simeq K_A\otimes\CC$ in $\DD^+(X,\CC)$.
 The following axiom has to be satisfied:
 
 ::: {.rmenv #env-iii-8.1.2-chc number="CHC"}
-The triple $(\Rd\Gamma(K_A),\Rd\Gamma((K_\CC,F)),\Rd\Gamma(\alpha))$ is a Hodge complex of weight $n$.
+The triple $(\Rd\Gamma(K_A),\Rd\Gamma((K_\CC,F)),\Rd\Gamma(\alpha))$ is a Hodge complex of weight $n$.
 :::
 
 \oldpage{29}
@@ -47,11 +47,11 @@ The following statement reformulates a part of classical Hodge theory (cf. [(2.2
 ::: {.rmenv #env-iii-8.1.3 number="8.1.3" taxon="Scholium"}
 Let $X$ be a complex Kähler variety.
 Let $K_\ZZ$ be the complex $\ZZ[0]$ consisting of the constant sheaf $\ZZ$ in degree $0$, and let $K_\CC$ be the holomorphic de Rham complex $\Omega_X^\bullet$, with $F$ its stupid filtration.
-We have $\alpha\colon K_\ZZ\otimes\CC\simeq\CC[0]\xrightarrow{\approx}\Omega_X^\bullet$ (the Poincaré lemma), and $(K_\ZZ,(K_\CC,F),\alpha)$ is a cohomological Hodge complex of weight $0$.
+We have $\alpha\colon K_\ZZ\otimes\CC\simeq\CC[0]\xrightarrow{\approx}\Omega_X^\bullet$ (the Poincaré lemma), and $(K_\ZZ,(K_\CC,F),\alpha)$ is a cohomological Hodge complex of weight $0$.
 :::
 
 ::: {.rmenv #env-iii-8.1.4 number="8.1.4" taxon="Remark"}
-If $K$ is a Hodge complex (resp. cohomological Hodge complex) of weight $n$, then $K[m]$ is a Hodge complex (resp. cohomological Hodge complex) of weight $n+m$.
+If $K$ is a Hodge complex (resp. cohomological Hodge complex) of weight $n$, then $K[m]$ is a Hodge complex (resp. cohomological Hodge complex) of weight $n+m$.
 :::
 
 :::: {.rmenv #env-iii-8.1.5 number="8.1.5"}
@@ -70,7 +70,7 @@ $$
   \Gr_n^W(K_{A\otimes\QQ})\otimes\CC
   \simeq \Gr_n^W(K_\CC),
 $$
-is a Hodge $(A\otimes\QQ)$-complex of weight $n$.
+is a Hodge $(A\otimes\QQ)$-complex of weight $n$.
 :::
 ::::
 
@@ -90,7 +90,7 @@ $$
   \Gr_n^W(K_{A\otimes\QQ})\otimes\CC
   \simeq \Gr_n^W(K_\CC),
 $$
-is a cohomological Hodge $(A\otimes\QQ)$-complex of weight $n$.
+is a cohomological Hodge $(A\otimes\QQ)$-complex of weight $n$.
 :::
 ::::
 
@@ -226,7 +226,7 @@ ii. We have
       = \sum_{\substack{\alpha=\gamma-\beta\\b=\alpha+\beta}} \HH^\alpha(\Gr_\beta^W K^{\bullet\gamma})
     \tag{8.1.15.1}
     $$
-    where the complex $({}_{\delta(W,L)}E_1^{\bullet b},d_1)$ is the simple complex associated to the double complex of Hodge $A\otimes\QQ$-structures of weight $b$ given by
+    where the complex $({}_{\delta(W,L)}E_1^{\bullet b},d_1)$ is the simple complex associated to the double complex of Hodge $A\otimes\QQ$-structures of weight $b$ given by
     $$
       \small
       \begin{CD}
@@ -380,8 +380,8 @@ b. The filtration $\delta(W,L)$ of $\Rd\Gamma\Rd j_*\QQ\simeq\Rd\Gamma(U_\bullet
     $$
 c. The bifiltration $(\delta(W,L),F)$ of $\Rd\Gamma\Rd j_*\CC\simeq\simp\Rd\Gamma^\bullet\Omega_X^\bullet(\log D)$.
 
-The filtration $F$ endows ${}_{\delta(W,L)}E_1^{-a,b}$ with a Hodge structure of weight $b$, and the differentials $d_1$ of ${}_{\delta(W,L)}E$ are the morphisms of the Hodge $\QQ$-structures.
-The complex ${}_{\delta(W,L)}E_q^{\bullet b}$ is the simple complex associated the double complex of Hodge structures of weight $b$ given by:
+The filtration $F$ endows ${}_{\delta(W,L)}E_1^{-a,b}$ with a Hodge structure of weight $b$, and the differentials $d_1$ of ${}_{\delta(W,L)}E$ are the morphisms of the Hodge $\QQ$-structures.
+The complex ${}_{\delta(W,L)}E_q^{\bullet b}$ is the simple complex associated the double complex of Hodge structures of weight $b$ given by:
 $$
   \small
   \begin{CD}
