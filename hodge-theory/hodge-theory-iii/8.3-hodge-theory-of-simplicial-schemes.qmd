@@ -23,7 +23,7 @@ a. The morphism $j$ is an open immersion with dense image; $\overline{Z}_\bullet
 b. The evident morphisms $Z_n\to(\cosq_{n-1}^{X_\bullet}\sq_{n-1}Z_\bullet)_n$ are proper and surjective.
 
 For reduced $\overline{Z}_\bullet$, we can consider $j$ as a simplicial object in the category $\mathscr{C}$ of pairs $(Y,\overline{Y})$ consisting of a proper reduced scheme $\overline{Y}$ and a dense (Zariski) open $Y$ of $\overline{Y}$.
-The category $\mathscr{C}$ satisfies \ref{hodge-theory-iii-6.2.4.1}, which allows us to apply the analogue of \ref{hodge-theory-iii-6.2.4}.
+The category $\mathscr{C}$ satisfies \ref{hodge-theory-iii-6.2.4.1}, which allows us to apply the analogue of [(6.2.4)](6.2-construction-of-hypercovers.qmd#iii-6.2.4).
 :::
 
 ::: {.itenv #env-iii-8.3.2 number="8.3.2" taxon="Proposition"}
@@ -62,15 +62,14 @@ ii. Let $F\colon {X_\bullet}_1\to{X_\bullet}_2$ be a morphism of separated simpl
 The proof, which is a more complicated analogue of [(6.2.5)](6.2-construction-of-hypercovers.qmd#iii-6.2.5), is left to the reader.
 :::
 
-\subtree[hodge-theory-iii-8.3.3]{
-\number{8.3.3}
-Consider a diagram of the form [(8.3.1.1)](#iii-8.3.1) as in (ii) of \ref{hodge-theory-iii-8.3.2}.
-By (V) of \ref{hodge-theory-iii-5.3.5}, the map $\HH^\bullet{(X_\bullet,\ZZ)\to\HH^\bullet(Z_\bullet,\ZZ)}$ is an isomorphism.
-In \ref{hodge-theory-iii-8.1.19} and \ref{hodge-theory-iii-8.1.20}, we endowed $\HH^\bullet(Z_\bullet,\ZZ)$ with a mixed Hodge structure, and obtained a mixed Hodge structure on $\HH^\bullet(X_\bullet,\ZZ)$.
+::: {.rmenv #env-iii-8.3.3 number="8.3.3"}
+Consider a diagram of the form [(8.3.1.1)](#iii-8.3.1) as in (ii) of [(8.3.2)](#iii-8.3.2).
+By (V) of [(5.3.5)](5.3-cohomological-descent.qmd#iii-5.3.5), the map $\HH^\bullet{(X_\bullet,\ZZ)\to\HH^\bullet(Z_\bullet,\ZZ)}$ is an isomorphism.
+In [(8.1.19)](8.1-hodge-complexes.qmd#iii-8.1.19) and [(8.1.20)](8.1-hodge-complexes.qmd#iii-8.1.20), we endowed $\HH^\bullet(Z_\bullet,\ZZ)$ with a mixed Hodge structure, and obtained a mixed Hodge structure on $\HH^\bullet(X_\bullet,\ZZ)$.
 \oldpage{42}
-This is independent of the choice of diagram of the form [(8.3.1.1)](#iii-8.3.1): by (ii) of \ref{hodge-theory-iii-8.3.2} for $f=\Id$. any two systems $({Z_\bullet}_i,{\overline{Z}_\bullet}_i,p_i)_{i=1,2}$ are always covered by a third $(Z_\bullet,\overline{Z}_\bullet,p)$, whence a commutative diagram of isomorphisms
-
-\tikzcd{
+This is independent of the choice of diagram of the form [(8.3.1.1)](#iii-8.3.1): by (ii) of [(8.3.2)](#iii-8.3.2) for $f=\Id$. any two systems $({Z_\bullet}_i,{\overline{Z}_\bullet}_i,p_i)_{i=1,2}$ are always covered by a third $(Z_\bullet,\overline{Z}_\bullet,p)$, whence a commutative diagram of isomorphisms
+```tikz
+\begin{tikzcd}
   & \HH^\bullet(X_\bullet,\ZZ)
     \ar[dl] \ar[d] \ar[dr]
 \\\HH^\bullet({Z_\bullet}_1,\ZZ)
@@ -78,25 +77,17 @@ This is independent of the choice of diagram of the form [(8.3.1.1)](#iii-8.3.1)
   & \HH^\bullet(Z_\bullet,\ZZ)
   & \HH^\bullet({Z_\bullet}_2,\ZZ)
     \ar[l]
-}
-}
-}
+\end{tikzcd}
+```
+:::
 
-\subtree[hodge-theory-iii-8.3.4]{
-\taxon{definition}
-\number{8.3.4}
-
+::: {.rmenv #env-iii-8.3.4 number="8.3.4" taxon="Definition"}
 The **mixed Hodge structure** of $\HH^\bullet(X_\bullet,\ZZ)$ is the one defined above.
-}
-}
 
-It follows from (ii) of \ref{hodge-theory-iii-8.3.2} that this mixed Hodge structure is functorial in $X_\bullet$.
-}
+It follows from (ii) of [(8.3.2)](#iii-8.3.2) that this mixed Hodge structure is functorial in $X_\bullet$.
+:::
 
-\subtree[hodge-theory-iii-8.3.5]{
-\taxon{proposition}
-\number{8.3.5}
-
+::: {.itenv #env-iii-8.3.5 number="8.3.5" taxon="Proposition"}
 Let $X_\bullet$ be a separated simplicial scheme.
 Then the spectral sequence
 $$
@@ -105,17 +96,12 @@ $$
   \To \HH^{p+q}(X_\bullet,\ZZ)
 $$
 is a spectral sequence of mixed Hodge structures.
-}
-}
+:::
 
 For a diagram as in [(8.3.1.1)](#iii-8.3.1), the maps $p_n\colon Z_n\to X_n$ are proper and surjective.
-We can thus apply \ref{hodge-theory-iii-6.2.4} to the category of simplicial objects in the category $\mathscr{C}$ (\ref{hodge-theory-iii-8.3.1}) to obtain, as in \ref{hodge-theory-iii-6.2.5}, the following lemma:
-}
+We can thus apply [(6.2.4)](6.2-construction-of-hypercovers.qmd#iii-6.2.4) to the category of simplicial objects in the category $\mathscr{C}$ [(8.3.1)](#iii-8.3.1) to obtain, as in [(6.2.5)](6.2-construction-of-hypercovers.qmd#iii-6.2.5), the following lemma:
 
-\subtree[hodge-theory-iii-8.3.6]{
-\taxon{lemma}
-\number{8.3.6}
-
+::: {.itenv #env-iii-8.3.6 number="8.3.6" taxon="Lemma"}
 Let $X_\bullet$ be a separated simplicial scheme.
 Then there exists a bisimplicial scheme $Z_{\bullet\bullet}$ augmented over $X_\bullet$
 $$
@@ -125,34 +111,29 @@ $$
 $$
 and $i\colon Z_{\bullet\bullet}\hookrightarrow\overline{Z}_{\bullet\bullet}$ such that:
 
-\olc{
-  \lic{(a)}{
-    $\overline{Z}_{\bullet\bullet}$ is a smooth and proper bisimplicial scheme, and $Z_{\bullet\bullet}$ is the complement of a normal crossing divisor in $\overline{Z}_{\bullet\bullet}$;
-  }
-  \lic{(b)}{
-    for all $n$, the augmented simplicial scheme $Z_{n\bullet}\to X_n$ is a proper hypercover of $X_n$.
-  }
-}
-}
-}
+a. $\overline{Z}_{\bullet\bullet}$ is a smooth and proper bisimplicial scheme, and $Z_{\bullet\bullet}$ is the complement of a normal crossing divisor in $\overline{Z}_{\bullet\bullet}$;
+b. for all $n$, the augmented simplicial scheme $Z_{n\bullet}\to X_n$ is a proper hypercover of $X_n$.
+:::
 
-In \ref{hodge-theory-iii-8.1.21}, we endowed $\HH^\bullet(Z_{\bullet\bullet},\ZZ)$ with a mixed Hodge structure.
+In [(8.1.12)](8.1-hodge-complexes.qmd#iii-8.1.12), we endowed $\HH^\bullet(Z_{\bullet\bullet},\ZZ)$ with a mixed Hodge structure.
 If $\delta\ZZ_{\bullet\bullet}$ is the diagonal simplicial scheme of $Z_{\bullet\bullet}$, then we have a commutative diagram of morphisms
-\tikzcd{
+```tikz
+\begin{tikzcd}
 \HH^\bullet(X_\bullet,\ZZ)
   \ar[r,"\gamma"]
   \ar[dr,swap,"\alpha"]
 & \HH^\bullet(Z_{\bullet\bullet},\ZZ)
   \ar[d,equal,"\beta"]
 \\& \HH^\bullet(\delta Z_{\bullet\bullet},\ZZ)
-}
-\oldpage{43}
+\end{tikzcd}
+```
 in which $\beta$ and $\gamma$ are isomorphisms, and $\alpha$ and $\beta$ are morphisms of mixed Hodge structures;
+\oldpage{43}
 $\gamma$ is thus an isomorphism of mixed Hodge structures.
-}
 
 We have a morphism of spectral sequences
-\tikzcd{
+```tikz
+\begin{tikzcd}
 \HH^q(X_p,\ZZ)
   \ar[r,Rightarrow]
   \ar[d]
@@ -163,41 +144,29 @@ We have a morphism of spectral sequences
   \ar[r,Rightarrow]
 & \HH^{p+q}(Z_{\bullet\bullet},\ZZ)
 && (8.1.23.1)
-}
-and this morphism is an isomorphism that is compatible with the mixed Hodge structures, so that \ref{hodge-theory-iii-8.3.5} follows from \ref{hodge-theory-iii-8.1.23}.
-}
+\end{tikzcd}
+```
+and this morphism is an isomorphism that is compatible with the mixed Hodge structures, so that [(8.3.5)](#iii-8.3.5) follows from [(8.1.23)](8.1-hodge-complexes.qmd#iii-8.1.23).
 
-\subtree[hodge-theory-iii-8.3.7]{
-\taxon{example}
-\number{8.3.7}
-
+::: {.rmenv #env-iii-8.3.7 number="8.3.7" taxon="Example"}
 Let $X_\bullet$ be a simplicial scheme, not necessarily separated.
 Then there exists a separated simplicial scheme $Y_\bullet$ and $u\colon Y_\bullet\to X_\bullet$ such that, for $n\geq0$, the map $u'_n\colon Y_n\to(\cosq_{n-1}^{X_\bullet}\sq_{n-1}Y_\bullet)_n$ is étale and surjective (for example, the sum of opens of an open cover).
-}
 
-The map $u^\bullet\colon\HH^\bullet(X_\bullet,\ZZ)\to\HH^\bullet(Y_\bullet,\ZZ)$ is an isomorphism ((V) and (III) of \ref{hodge-theory-iii-5.3.5}).
+The map $u^\bullet\colon\HH^\bullet(X_\bullet,\ZZ)\to\HH^\bullet(Y_\bullet,\ZZ)$ is an isomorphism ((V) and (III) of [(5.3.5)](5.3-cohomological-descent.qmd#iii-5.3.5)).
 By definition, the **mixed Hodge structure** of $\HH^\bullet(X_\bullet,\ZZ)$ is induced from that of $\HH^\bullet(Y_\bullet,\ZZ)$ *via $u^\bullet$*.
 It does not depend on the choice of $Y_\bullet$.
-}
 
 For $X$ a non-separated scheme, the **mixed Hodge structure** of $\HH^\bullet(X,\ZZ)$ is that of $\HH^\bullet(X_\bullet,\ZZ)$, where $X_\bullet$ is the constant simplicial scheme defined by $X$.
-It is plausible, but not proven, that (iv) of \ref{hodge-theory-iii-8.2.4} remains true for $X$ smooth and non-separated.
-}
-}
+It is plausible, but not proven, that (iv) of [(8.2.4)](8.2-separated-algebraic-spaces.qmd#iii-8.2.4) remains true for $X$ smooth and non-separated.
+:::
 
-\subtree[hodge-theory-iii-8.3.8]{
-\taxon{example}
-\number{8.3.8}
-
+::: {.rmenv #env-iii-8.3.8 number="8.3.8" taxon="Example"}
 Let $u\colon X_\bullet\to Y_\bullet$ be a morphism of simplicial schemes.
-The relative cohomology groups $\HH^n(Y_\bullet\mod X_\bullet,\ZZ)$ are, by definition (\ref{hodge-theory-iii-6.3.2}), the cohomology groups of the simplicial scheme $C(u)$.
+The relative cohomology groups $\HH^n(Y_\bullet\mod X_\bullet,\ZZ)$ are, by definition [(6.3.2)](6.3-relative-cohomology.qmd#iii-6.3.2), the cohomology groups of the simplicial scheme $C(u)$.
 They are thus endowed with a mixed Hodge structure.
-}
-}
+:::
 
-\subtree[hodge-theory-iii-8.3.9]{
-\number{8.3.9}
-
+::: {.rmenv #env-iii-8.3.9 number="8.3.9"}
 The long exact sequence of relative cohomology
 $$
   \HH^n(Y_\bullet,\ZZ)
@@ -206,112 +175,100 @@ $$
   \to \HH^{n+1}(Y_\bullet,\ZZ)
 $$
 is a long exact sequence of mixed Hodge structures.
-}
+:::
 
-\proof{
-  We can reduce to the case where $X_\bullet$ and $Y_\bullet$ are smooth, and where, furthermore, there exists a commutative diagram
-  \tikzcd{
-    X_\bullet \ar[r,"u"] \ar[d,hook]
-    & Y_\bullet \ar[d,hook]
-  \\\overline{X}_\bullet \ar[r,swap,"\overline{u}"]
-    & \overline{Y}_\bullet
-  }
-  with $\overline{X}_\bullet$ and $\overline{Y}_\bullet$ both smooth and proper, and $X_\bullet$ and $Y_\bullet$ both complements of normal crossing divisors $D_\bullet$ and $E_\bullet$ in $\overline{X}_\bullet$ and $\overline{Y}_\bullet$ (respectively).
-}
-  \oldpage{44}
-  There thus exist bifiltered resolutions (graded with acyclic components) $a\colon\Omega_{\overline{X}_\bullet}^\bullet(\log D_\bullet)\to K$ and $b\colon\Omega_{\overline{Y}_\bullet}^\bullet(\log E_\bullet)\to L$ that fit into a commutative diagram of bifiltered complexes
-  \tikzcd{
-    \Omega_{\overline{X}_\bullet}^\bullet(\log D_\bullet)
-      \ar[d,swap,"a"]
-    & \Omega_{\overline{Y}_\bullet}^\bullet(\log E_\bullet)
-      \ar[l,swap,"\overline{u}^*"]
-      \ar[d,"b"]
-  \\K
-    & L
-      \ar[l,"v"]
-  }
-  (where $\overline{u}^*$ and $v$ are $\overline{u}$-morphisms).
-  The long exact sequence in \ref{hodge-theory-iii-8.3.9} is then identified with the exact sequence given by the distinguished triangle
-  \thintikzcd{
-    & C(\Gamma v)
-      \ar[dl]
-  \\\Gamma L
-      \ar[rr]
-    && \Gamma K
-      \ar[ul]
-  }
-  The complex $C(v)$ over $C(\overline{u})$ is a bifiltered resolution of $C(u^*\colon\Omega_{\overline{Y}_\bullet}^\bullet(\log E_\bullet)\to\Omega_{\overline{X}_\bullet}^\bullet(\log D_\bullet))$.
-  From this it results that the Hodge and weight filtrations of $\HH^\bullet(Y_\bullet\mod X_\bullet,\CC)$ are induced by the filtrations of the cone $C(\Gamma v)$, and \ref{hodge-theory-iii-8.3.9} then follows formally.
-}
-}
-}
+::: {.proof}
+We can reduce to the case where $X_\bullet$ and $Y_\bullet$ are smooth, and where, furthermore, there exists a commutative diagram
+```tikz
+\begin{tikzcd}
+  X_\bullet \ar[r,"u"] \ar[d,hook]
+  & Y_\bullet \ar[d,hook]
+\\\overline{X}_\bullet \ar[r,swap,"\overline{u}"]
+  & \overline{Y}_\bullet
+\end{tikzcd}
+```
+with $\overline{X}_\bullet$ and $\overline{Y}_\bullet$ both smooth and proper, and $X_\bullet$ and $Y_\bullet$ both complements of normal crossing divisors $D_\bullet$ and $E_\bullet$ in $\overline{X}_\bullet$ and $\overline{Y}_\bullet$ (respectively).
 
-\subtree[hodge-theory-iii-8.3.10]{
-\title{Proof of (ii) of (8.2.4)}
-\number{8.3.10}
+\oldpage{44}
+There thus exist bifiltered resolutions (graded with acyclic components) $a\colon\Omega_{\overline{X}_\bullet}^\bullet(\log D_\bullet)\to K$ and $b\colon\Omega_{\overline{Y}_\bullet}^\bullet(\log E_\bullet)\to L$ that fit into a commutative diagram of bifiltered complexes
+```tikz
+\begin{tikzcd}
+  \Omega_{\overline{X}_\bullet}^\bullet(\log D_\bullet)
+    \ar[d,swap,"a"]
+  & \Omega_{\overline{Y}_\bullet}^\bullet(\log E_\bullet)
+    \ar[l,swap,"\overline{u}^*"]
+    \ar[d,"b"]
+\\K
+  & L
+    \ar[l,"v"]
+\end{tikzcd}
+```
+(where $\overline{u}^*$ and $v$ are $\overline{u}$-morphisms).
+The long exact sequence in [(8.3.9)](#iii-8.3.9) is then identified with the exact sequence given by the distinguished triangle
+```tikz
+\begin{tikzcd}
+  & C(\Gamma v)
+    \ar[dl]
+\\\Gamma L
+    \ar[rr]
+  && \Gamma K
+    \ar[ul]
+\end{tikzcd}
+```
+The complex $C(v)$ over $C(\overline{u})$ is a bifiltered resolution of $C(u^*\colon\Omega_{\overline{Y}_\bullet}^\bullet(\log E_\bullet)\to\Omega_{\overline{X}_\bullet}^\bullet(\log D_\bullet))$.
+From this it results that the Hodge and weight filtrations of $\HH^\bullet(Y_\bullet\mod X_\bullet,\CC)$ are induced by the filtrations of the cone $C(\Gamma v)$, and [(8.3.9)](#iii-8.3.9) then follows formally.
+:::
 
-\proof{
-  The proof proceeds by induction on $N=\dim(X)$.
-  We can assume $X$ to be reduced.
-  Let $U$ be a smooth dense Zariski open of $X$, and let $Y=X\setminus U$.
-  By the resolution of singularities, there exists a proper birational morphism $p\colon X'\to X$, with smooth source $X'$, that induces an isomorphism from $p^{-1}(U)$ to $U$.
-  Let $Y'=p^{-1}(Y)$.
-  Consider, for $n\geqslant N$, the diagram of mixed Hodge structures
-  \tikzcd{
-    & \HH^n(X\mod Y,\ZZ)
-      \ar[d,swap,"p^*"]
-      \ar[r]
-    & \HH^n(X,\ZZ)
-      \ar[d]
-      \ar[r]
-    & \HH^n(Y,\ZZ)
-      \ar[d]
-  \\\HH^{n-1}(Y',\ZZ)
-      \ar[r]
-    & \HH^n(X'\mod Y',\ZZ)
-      \ar[r]
-    & \HH^n(X',\ZZ)
-      \ar[r]
-    & \HH^n(Y',\ZZ)
-  }
-  Let $\Phi$ be the family of supports of $U$ consisting of those $A\subset U$ such that, in $X$ (or, equivalently, in $X'$), $\overline{A}\subset U$.
-  We have that
-  $$
-    \HH^n(X\mod Y,\ZZ)
-    = \HH_\Phi^n(U,\ZZ)
-    = \HH^n(X'\mod Y',\ZZ)
-  $$
-  and so the arrow denoted $p^*$ is an isomorphism.
-}
+:::: {.rmenv #env-iii-8.3.10 number="8.3.10"}
+*Proof of (ii) of (8.2.4).*
 
-  For $h^{pq}$ a non-zero Hodge number of one of the mixed Hodge structures in play, we have:
-  \oldpage{45}
-  \olc{
-    \lic{(a)}{
-      for $\HH^n(X',\ZZ)$, $(p,q)\in[n-N,N]\times[n-N,N]$
-    }
+::: {.proof}
+The proof proceeds by induction on $N=\dim(X)$.
+We can assume $X$ to be reduced.
+Let $U$ be a smooth dense Zariski open of $X$, and let $Y=X\setminus U$.
+By the resolution of singularities, there exists a proper birational morphism $p\colon X'\to X$, with smooth source $X'$, that induces an isomorphism from $p^{-1}(U)$ to $U$.
+Let $Y'=p^{-1}(Y)$.
+Consider, for $n\geqslant N$, the diagram of mixed Hodge structures
+```tikz
+\begin{tikzcd}
+  & \HH^n(X\mod Y,\ZZ)
+    \ar[d,swap,"p^*"]
+    \ar[r]
+  & \HH^n(X,\ZZ)
+    \ar[d]
+    \ar[r]
+  & \HH^n(Y,\ZZ)
+    \ar[d]
+\\\HH^{n-1}(Y',\ZZ)
+    \ar[r]
+  & \HH^n(X'\mod Y',\ZZ)
+    \ar[r]
+  & \HH^n(X',\ZZ)
+    \ar[r]
+  & \HH^n(Y',\ZZ)
+\end{tikzcd}
+```
+Let $\Phi$ be the family of supports of $U$ consisting of those $A\subset U$ such that, in $X$ (or, equivalently, in $X'$), $\overline{A}\subset U$.
+We have that
+$$
+  \HH^n(X\mod Y,\ZZ)
+  = \HH_\Phi^n(U,\ZZ)
+  = \HH^n(X'\mod Y',\ZZ)
+$$
+and so the arrow denoted $p^*$ is an isomorphism.
 
-    \lic{(b)}{
-      for $\HH^{n-1}(Y',\ZZ)$, $(p,q)\in[n-N,N-1]\times[n-N,N-1]$
-    }
+For $h^{pq}$ a non-zero Hodge number of one of the mixed Hodge structures in play, we have:
+\oldpage{45}
 
-    \lic{(c)}{
-      for $\HH^n(X'\mod Y',\ZZ)=\HH^n(X\mod Y,\ZZ)$, $(p,q)\in[n-N,N]\times[n-N,N]$
-    }
+a. for $\HH^n(X',\ZZ)$, $(p,q)\in[n-N,N]\times[n-N,N]$
+b. for $\HH^{n-1}(Y',\ZZ)$, $(p,q)\in[n-N,N-1]\times[n-N,N-1]$
+c. for $\HH^n(X'\mod Y',\ZZ)=\HH^n(X\mod Y,\ZZ)$, $(p,q)\in[n-N,N]\times[n-N,N]$
+d. for $\HH^n(Y,\ZZ)$, $(p,q)\in[n-N+1,N-1]\times[n-N+1,N-1]$
+e. for $\HH^n(X,\ZZ)$, $(p,q)\in[n-N,N]\times[n-N,N]$
 
-    \lic{(d)}{
-      for $\HH^n(Y,\ZZ)$, $(p,q)\in[n-N+1,N-1]\times[n-N+1,N-1]$
-    }
-
-    \lic{(e)}{
-      for $\HH^n(X,\ZZ)$, $(p,q)\in[n-N,N]\times[n-N,N]$
-    }
-  }
-
-  (a) follows from the fact that $X'$ is smooth, and from the fact that the claim is true for the ${}_WE_1$ pages of the spectral sequence \ref{hodge-theory-ii-3.2.4.1}.
-  (b) and (d) follow from the inductive hypothesis: we have that $\dim Y,\dim Y'\leqslant N-1$.
-  (c) follows from (a) and (b), and (e) follows from (c) and (d).
-  This finishes the proof.
-}
-}
-}
+(a) follows from the fact that $X'$ is smooth, and from the fact that the claim is true for the ${}_WE_1$ pages of the spectral sequence [(3.2.4.1)](../hodge-theory-ii/3.2-mixed-hodge-theory.qmd#ii-3.2.4).
+(b) and (d) follow from the inductive hypothesis: we have that $\dim Y,\dim Y'\leqslant N-1$.
+(c) follows from (a) and (b), and (e) follows from (c) and (d).
+This finishes the proof.
+:::
+::::
