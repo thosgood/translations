@@ -4,93 +4,71 @@ title: 8.3 Hodge theory of simplicial schemes
 
 {{< include ../macros.qmd >}}
 
-
-\subtree[hodge-theory-iii-8.3.1]{
-\number{8.3.1}
-
-\oldpage{41}
+::: {.rmenv #env-iii-8.3.1 number="8.3.1"}
 For a separated simplicial scheme (or separated simplicial algebraic space) $X^\bullet$, we will have to consider diagrams
-
-\subtree[hodge-theory-iii-8.3.1.1]{
-  \taxon{equation}
-  \number{8.3.1.1}
-  \tikzcd{
-    X_\bullet
-      \ar[r,hook,"j"]
-      \ar[d,swap,"p"]
-    & \overline{Z}_\bullet
-  \\X_\bullet
-    && (8.3.1.1)
-  }
-}
-
+\oldpage{41}
+```tikz
+\begin{tikzcd}
+  X_\bullet
+    \ar[r,hook,"j"]
+    \ar[d,swap,"p"]
+  & \overline{Z}_\bullet
+\\X_\bullet
+  && (8.3.1.1)
+\end{tikzcd}
+```
 of simplicial schemes satisfying:
-\olc{
-  \lic{(a)}{
-    The morphism $j$ is an open immersion with dense image; $\overline{Z}_\bullet$ is proper.
-  }
-  \lic{(b)}{
-    The evident morphisms $Z_n\to(\cosq_{n-1}^{X_\bullet}\sq_{n-1}Z_\bullet)_n$ are proper and surjective.
-  }
-}
-}
+
+a. The morphism $j$ is an open immersion with dense image; $\overline{Z}_\bullet$ is proper.
+b. The evident morphisms $Z_n\to(\cosq_{n-1}^{X_\bullet}\sq_{n-1}Z_\bullet)_n$ are proper and surjective.
 
 For reduced $\overline{Z}_\bullet$, we can consider $j$ as a simplicial object in the category $\mathscr{C}$ of pairs $(Y,\overline{Y})$ consisting of a proper reduced scheme $\overline{Y}$ and a dense (Zariski) open $Y$ of $\overline{Y}$.
 The category $\mathscr{C}$ satisfies \ref{hodge-theory-iii-6.2.4.1}, which allows us to apply the analogue of \ref{hodge-theory-iii-6.2.4}.
-}
-}
+:::
 
-\subtree[hodge-theory-iii-8.3.2]{
-\taxon{proposition}
-\number{8.3.2}
+::: {.itenv #env-iii-8.3.2 number="8.3.2" taxon="Proposition"}
+—
 
-\olc{
-\lic{(i)}{
-  For every separated simplicial scheme $X_\bullet$, there exists a diagram of the form \ref{hodge-theory-iii-8.3.1.1} that satisfies (a) and (b), and such that $\overline{Z}_\bullet$ is smooth and proper, and $Z_\bullet$ is the complement of a normal crossing divisor.
-}
+i. For every separated simplicial scheme $X_\bullet$, there exists a diagram of the form [(8.3.1.1)](#iii-8.3.1) that satisfies (a) and (b), and such that $\overline{Z}_\bullet$ is smooth and proper, and $Z_\bullet$ is the complement of a normal crossing divisor.
+ii. Let $F\colon {X_\bullet}_1\to{X_\bullet}_2$ be a morphism of separated simplicial schemes.
+    Let $({X_\bullet}_i,{Z_\bullet}_i,{\overline{Z}_\bullet}_i)_{i=1,2}$ be diagrams of the form [(8.3.1.1)](#iii-8.3.1) that satisfy (a) and (b).
+    Then there exists $({X_\bullet}_1,Z_\bullet,\overline{Z}_\bullet)$ as in (i), and a commutative diagram
 
-\lic{(ii)}{
-  Let $F\colon {X_\bullet}_1\to{X_\bullet}_2$ be a morphism of separated simplicial schemes.
-  Let $({X_\bullet}_i,{Z_\bullet}_i,{\overline{Z}_\bullet}_i)_{i=1,2}$ be diagrams of the form \ref{hodge-theory-iii-8.3.1.1} that satisfy (a) and (b).
-  Then there exists $({X_\bullet}_1,Z_\bullet,\overline{Z}_\bullet)$ as in (i), and a commutative diagram
+    ```tikz
+    \begin{tikzcd}
+      Z_\bullet
+        \ar[r,hook]
+        \ar[d]
+        \ar[drr]
+      & \overline{Z}_\bullet
+        \ar[d]
+        \ar[drr]
+    \\{Z_\bullet}_1
+        \ar[r,hook,swap,"j_1"]
+        \ar[d,swap,"p_1"]
+      & {\overline{Z}_\bullet}_1
+      & {Z_\bullet}_2
+        \ar[r,hook,swap,"j_2"]
+        \ar[d,swap,"p_2"]
+      & {\overline{Z}_\bullet}_2
+    \\{X_\bullet}_1
+        \ar[rr,"f"]
+      && {X_\bullet}_2
+    \end{tikzcd}
+    ```
+:::
 
-  \tikzcd{
-    Z_\bullet
-      \ar[r,hook]
-      \ar[d]
-      \ar[drr]
-    & \overline{Z}_\bullet
-      \ar[d]
-      \ar[drr]
-  \\{Z_\bullet}_1
-      \ar[r,hook,swap,"j_1"]
-      \ar[d,swap,"p_1"]
-    & {\overline{Z}_\bullet}_1
-    & {Z_\bullet}_2
-      \ar[r,hook,swap,"j_2"]
-      \ar[d,swap,"p_2"]
-    & {\overline{Z}_\bullet}_2
-  \\{X_\bullet}_1
-      \ar[rr,"f"]
-    && {X_\bullet}_2
-  }
-}
-}
-
-\proof{
-  The proof, which is a more complicated analogue of \ref{hodge-theory-iii-6.2.5}, is left to the reader.
-}
-}
-}
+::: {.proof}
+The proof, which is a more complicated analogue of [(6.2.5)](6.2-construction-of-hypercovers.qmd#iii-6.2.5), is left to the reader.
+:::
 
 \subtree[hodge-theory-iii-8.3.3]{
 \number{8.3.3}
-
-Consider a diagram of the form \ref{hodge-theory-iii-8.3.1.1} as in (ii) of \ref{hodge-theory-iii-8.3.2}.
+Consider a diagram of the form [(8.3.1.1)](#iii-8.3.1) as in (ii) of \ref{hodge-theory-iii-8.3.2}.
 By (V) of \ref{hodge-theory-iii-5.3.5}, the map $\HH^\bullet{(X_\bullet,\ZZ)\to\HH^\bullet(Z_\bullet,\ZZ)}$ is an isomorphism.
 In \ref{hodge-theory-iii-8.1.19} and \ref{hodge-theory-iii-8.1.20}, we endowed $\HH^\bullet(Z_\bullet,\ZZ)$ with a mixed Hodge structure, and obtained a mixed Hodge structure on $\HH^\bullet(X_\bullet,\ZZ)$.
 \oldpage{42}
-This is independent of the choice of diagram of the form \ref{hodge-theory-iii-8.3.1.1}: by (ii) of \ref{hodge-theory-iii-8.3.2} for $f=\Id$. any two systems $({Z_\bullet}_i,{\overline{Z}_\bullet}_i,p_i)_{i=1,2}$ are always covered by a third $(Z_\bullet,\overline{Z}_\bullet,p)$, whence a commutative diagram of isomorphisms
+This is independent of the choice of diagram of the form [(8.3.1.1)](#iii-8.3.1): by (ii) of \ref{hodge-theory-iii-8.3.2} for $f=\Id$. any two systems $({Z_\bullet}_i,{\overline{Z}_\bullet}_i,p_i)_{i=1,2}$ are always covered by a third $(Z_\bullet,\overline{Z}_\bullet,p)$, whence a commutative diagram of isomorphisms
 
 \tikzcd{
   & \HH^\bullet(X_\bullet,\ZZ)
@@ -130,7 +108,7 @@ is a spectral sequence of mixed Hodge structures.
 }
 }
 
-For a diagram as in \ref{hodge-theory-iii-8.3.1.1}, the maps $p_n\colon Z_n\to X_n$ are proper and surjective.
+For a diagram as in [(8.3.1.1)](#iii-8.3.1), the maps $p_n\colon Z_n\to X_n$ are proper and surjective.
 We can thus apply \ref{hodge-theory-iii-6.2.4} to the category of simplicial objects in the category $\mathscr{C}$ (\ref{hodge-theory-iii-8.3.1}) to obtain, as in \ref{hodge-theory-iii-6.2.5}, the following lemma:
 }
 
