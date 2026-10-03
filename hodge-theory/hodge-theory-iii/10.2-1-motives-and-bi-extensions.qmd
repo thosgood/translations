@@ -4,3 +4,923 @@ title: 10.2 1-motives and bi-extensions
 
 {{< include ../macros.qmd >}}
 
+
+\p{
+  \oldpage{60}
+  The results of this section will not be used elsewhere.
+  We will make use of the notion of biextensions [SGA 7, VII, (2.1)] and of the following generalisation.
+}
+
+\subtree[hodge-theory-iii-10.2.1]{
+  \number{10.2.1}
+
+  \p{
+    Let #{K_i\colon[A_i\to B_i]} (for #{i=1,2}) be complexes of sheaves, concentrated in degrees {0} and #{-1} (in an arbitrary topos).
+    A \em{biextension} of #{K_1} and #{K_2} by an abelian sheaf #{H} consists of the following:
+
+    \olc{
+      \lic{(a)}{
+        a biextension #{P} of #{B_1} and #{B_2} by #{H}, i.e. an #{H}-torsor #{P} over #{B_1\times B_2}, with #{P_{b_1b_2}} depending biadditively on #{b_1} and #{b_2};
+      }
+
+      \lic{(b)}{
+        a trivialisation (i.e. a biadditive section) of the biextension of #{B_1} and #{A_2} by #{H}, given by the inverse image of #{P};
+      }
+
+      \lic{(c)}{
+        a trivialisation of the biextension of #{A_1} and #{B_2} by #{H}, given by the inverse image of #{P};
+      }
+    }
+
+    where we demand that the trivialisations in (b) and (c) agree on #{A_1\times A_2}.
+  }
+
+  \p{
+    We denote by #{\bBiext(K_1,K_2;H)} the category of biextensions of #{K_1} and #{K_2} by #{H}.
+    This is a Picard category (the objects add).
+    The group #{\Biext^0(K_1,K_2;H)} of automorphisms of an arbitrary biextension of #{K_1} and #{K_2} by #{H} is
+    ##{
+      \Biext^0(K_1,K_2;H)
+      = \Hom(\HH^0(K_1)\otimes\HH^0(K_2),H).
+    }
+    We denote by #{\Biext^1(K_1,K_2;H)} the group of isomorphism classes of biextensions.
+    We can show, as in [SGA 7, VII, (3.6.5)], that
+    ##{
+      \Biext^i(K_1,K_2;H)
+      = \Ext^i(K_1\Lotimes K_2;H)
+      \qquad\text{for }i=0,1.
+    }
+    From this formula, or by elementary means, we can show that, if #{K'_i\to K_i} is a quasi-isomorphism (for #{i=1,2}), then giving a biextension of #{K_1} and #{K_2} by #{H} is equivalent to giving a biextension of #{K'_1} and #{K'_2} by #{H}.
+  }
+
+  \p{
+    This also applies to replacing "sheaves" by "algebraic groups" (resp. by "complex analytic groups"): we can interpret these as sheaves on a suitable site.
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.2]{
+  \number{10.2.2}
+
+  \p{
+    In this section, we identity a 1-motive #{M=(X,T,A,G,u)} with a complex concentrated in \em{degrees #{0} and #{-1}}
+    ##{
+      M\colon [X\to G].
+    }
+    Over #{\CC}, we denote by #{M^\an} the complex of complex analytic groups #{[X\to G^\an]}.
+    We have the following rigidity result:
+  }
+
+  \subtree[hodge-theory-iii-10.2.2.1]{
+    \taxon{lemma}
+    \number{10.2.2.1}
+
+    \p{
+      Let #{M_i=(X_i,A_i,T_i,G_i,u_i)} (for #{i=1,2}) be 1-motives.
+      Then
+      ##{
+        \Biext^0(M_1,M_2;\Gm)
+        = 0.
+      }
+      Over #{\CC}, we similarly have that #{\Biext^0(M_1^\an,M_2^\an;\Gm)=0}.
+    }
+
+    \proof{
+      \p{
+        Every biadditive morphism #{G_1\times G_2\to\Gm} is trivial.
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.3]{
+  \taxon{construction}
+  \number{10.2.3}
+
+  \p{
+    \oldpage{61}
+    Let #{M_i=(X_i,A_i,T_i,G_i,u_i)} (for #{i=1,2}) be 1-motives over #{\CC}.
+    We have that
+    ##{
+      \Biext^1(M_1,M_2;\Gm)
+      = \Hom(T(M_1)\otimes T(M_2),\ZZ(1)).
+    }
+  }
+
+  \proof{
+    \p{
+      We will first calculate #{\Biext^1(M_1^\an,M_2^\an;\Gm)}.
+    }
+
+    \p{
+      If #{V} and #{W} are vector spaces, then, \em{in the analytic category},
+
+      \subtree[hodge-theory-iii-10.2.3.1-an]{
+        \taxon{equation}
+        \number{10.2.3.1(an)}
+        ##{
+          \Biext^0(V,W;\Gm)
+          \underset{\exp}{\simfrom} \Hom(V\otimes W,\CC)
+        \startverb\tag{10.2.3.1(\text{an})}\stopverb
+        }
+      }
+
+      \subtree[hodge-theory-iii-10.2.3.2-an]{
+        \taxon{equation}
+        \number{10.2.3.2(an)}
+        ##{
+          \Biext^1(V,W;\Gm)
+          = 0.
+        \startverb\tag{10.2.3.2(\text{an})}\stopverb
+        }
+      }
+
+      From the fact that an extension of #{W} by #{\Gm}, over an arbitrary base, is always locally trivial, it follows, essentially formally, that
+      ##{
+        \begin{aligned}
+          \Biext^i(V,W;\Gm)
+          &= \Ext^i(V,\underline{\Hom}(W,\Gm))
+        \\&= \Ext^i(V,W^*)
+          \qquad\text{for }i=1,2.
+        \end{aligned}
+      }
+    }
+
+    \p{
+      Let #{V_\ZZ} and #{W_\ZZ} be free #{\ZZ}-modules of finite rank.
+      Since
+      ##{
+        [V_\ZZ\to V_\CC]
+        \to [0\to V_\CC{/}V_\ZZ]
+      }
+      is a quasi-isomorphism, the "inverse image" functor is an equivalence.
+
+      \subtree[hodge-theory-iii-10.2.3.3-an]{
+        \taxon{equation}
+        \number{10.2.3.3(an)}
+        ##{
+          \bBiext(V_\CC{/}V_\ZZ,W_\CC{/}W_\ZZ;\Gm)
+          \simeq \bBiext([V_\ZZ\to V_\CC],[W_\ZZ\to W_\CC];\Gm).
+        \startverb\tag{10.2.3.3(\text{an})}\stopverb
+        }
+      }
+
+      Every biadditive morphism from #{V_\CC{/}V_\ZZ\times W_\CC{/}W_\ZZ} to #{\Gm} is trivial, whence (a) in the following:
+    }
+
+    \subtree[hodge-theory-iii-10.2.3.4]{
+      \taxon{lemma}
+      \number{10.2.3.4}
+
+      \p{
+        \olc{
+          \lic{(a)}{#{\Biext^0(V_\CC{/}V_\ZZ,W_\CC{/}W_\ZZ;\Gm)=0}}
+          \lic{(b)}{#{\Biext^1(V_\CC{/}V_\ZZ,W_\CC{/}W_\ZZ;\Gm)=\Hom(V_\ZZ\otimes W_\ZZ,\ZZ(1))}.}
+        }
+      }
+
+      \proof{
+        \p{
+          Let #{\psi_i\colon V_\CC\otimes W_\CC\to\CC} be bilinear maps, with #{\psi=\psi_1-\psi_2} taking values in #{\ZZ(1)=2\pi i\ZZ} on #{V_\ZZ\otimes W_\ZZ}.
+          Let #{P(\psi_1,\psi_2)} be the following biextension of #{[V_\ZZ\to V_\CC]} and #{[W_\ZZ\to W_\CC]} by #{\Gm}: the trivial biextension of #{V_\CC} and #{W_\CC} by {\Gm}, endowed with the trivialisations #{\varphi_i=\exp\psi_i\colon V_\ZZ\otimes W_\CC\to\Gm} for #{i=1,2}.
+          By \ref{hodge-theory-iii-10.2.3.2-an}, every biextension is of this form;
+          by \ref{hodge-theory-iii-10.2.3.1-an}, #{P(\psi_1,\psi_2)\simeq P(\psi'_1,\psi'_2)} if and only if #{\psi'_1-\psi'_2=\psi_1-\psi_2}.
+          The #{P(\psi,0)} thus represent each biextension exactly once.
+        }
+      }
+    }
+
+    \subtree[hodge-theory-iii-10.2.3.5]{
+      \number{10.2.3.5}
+
+      \p{
+        Under the general hypotheses of \ref{hodge-theory-iii-10.2.1}, let #{K_i=[A_i+F_i\to B_i]} be complexes (for #{i=1,2}).
+        Let #{K'_i} be the subcomplex #{[A_i\to B_i]}.
+        We can show that giving a biextension of #{K_1} and #{K_2} by #{H} is equivalent to giving (both of) the following:
+
+        \olc{
+          \lic{(a)}{
+            a biextension #{P} of #{K'_1} and #{K'_2} by #{H}; and
+          }
+          \lic{(b)}{
+            trivialisations of the biextensions of #{[0\to F_1]} and #{K'_2} (resp. #{K'_1} and #{[0\to F_2]}) by #{H}, given by the inverse images of #{P}, that agree on #{F_1\times F_2}.
+          }
+        }
+      }
+
+      \p{
+        In the particular case where
+        ##{
+          \begin{aligned}
+            \Biext^i(F_1,K'_2;H)
+            &= 0
+          \\\Biext^i(K'_1,F_2;H)
+            &= 0
+          \end{aligned}
+        }
+        \oldpage{62}
+        for #{i=1,2}, there exists exactly one trivialisation #{\varphi_1}, a section of #{P} over #{F_1\times B_2} (resp. #{\varphi_2}, a section of #{P} over #{B_1\times F_2}) as in (b).
+        The category #{\bBiext(K_1,K_2;H)} can then be identified with the subcategory of #{\bBiext(K'_1,K'_2;H)} consisting of the #{P} for which #{\varphi_1=\varphi_2} on #{F_1\times F_2}.
+      }
+    }
+
+    \subtree[hodge-theory-iii-10.2.3.6]{
+      \number{10.2.3.6}
+
+      \p{
+        Let #{V_\ZZ} and #{W_\ZZ} be free #{\ZZ}-modules of finite type, and #{F} and #{G} vector subspaces of #{V_\CC} and #{W_\CC} (respectively).
+        We have that
+        ##{
+          \Biext^i(F,[W_\ZZ\to W_\CC];\Gm)
+          = 0.
+        }
+        For #{i=0}, this follows from \ref{hodge-theory-iii-10.2.3.1-an} and from the fact that a bilinear map
+        ##{
+          B\colon F\times W_\CC\to\CC
+          \quad\text{such that}\quad
+          B(F,W_\ZZ)\subset\ZZ(1)
+        }
+        is zero.
+        For #{i=1}, this implies that every biadditive morphism #{F\times W_\ZZ\to\Gm} comes from a biadditive morphism #{F\times W_\CC\to\Gm}.
+        In other words, we use the long exact sequence
+        ##{
+          \begin{aligned}
+            0
+            &\to \Biext^0(F,[W_\ZZ\to W_\CC];\Gm)
+            \to \Biext^0(F,W_\CC;\Gm)
+            \simto \Biext^0(F,W_\ZZ;\Gm)
+          \\&\to \Biext^1(F,[W_\ZZ\to W_\CC];\Gm)
+            \to \Biext^1(F,W_\CC;\Gm).
+          \end{aligned}
+        }
+      }
+
+      \p{
+        We can thus apply \ref{hodge-theory-iii-10.2.3.5} to the complexes #{K_1=[V_\ZZ\oplus F\to V_\CC]} and #{K_2=[W_2\oplus G\to W_\CC]}.
+        We find that the biextensions of #{K_1} and #{K_2} by #{\Gm} can be identified with certain biextensions of #{V_\CC{/}V_\ZZ} and #{W_\CC{/}W_\ZZ} (respectively) by #{\Gm}, i.e. with certain forms #{\psi\colon V_\ZZ\otimes W_\ZZ\to \ZZ(1)} (\ref{hodge-theory-iii-10.2.3.4}).
+        For #{P(\psi_1,\psi_2)} (\ref{hodge-theory-iii-10.2.3.4}) to come from a biextension of #{K_1} and #{K_2} by #{\Gm}, it is necessary and sufficient that #{\exp\psi_2\colon F\times W_\CC\to\Gm} and #{\exp\psi_1\colon V_\CC\times G\to\Gm} agree on #{F\times G}, i.e. that #{\psi(F,G)=0}.
+      }
+    }
+
+    \subtree[hodge-theory-iii-10.2.3.7]{
+      \taxon{lemma}
+      \number{10.2.3.7}
+
+      \p{
+        With the above notation, we have that #{\Biext^0(K_1,K_2;\Gm)=0}, and #{\Biext^1(K_1,K_2;\Gm)} can be identified with the set of forms #{\psi\colon V_\ZZ\otimes W_\ZZ\to\ZZ(1)} with complexifications satisfying #{\Psi(F,G)=0}.
+      }
+
+      \proof{
+        \p{
+          For #{\psi} as in \ref{hodge-theory-iii-10.2.3.7}, with #{\psi=\psi_1-\psi_2}, the biextension corresponding to #{\psi} is given by the following trivialisations of the trivial biextension of #{V_\CC} and #{W_\CC} by #{\Gm}:
+          \ul{
+            \li{
+              on #{(V_\ZZ\oplus F)\times W_\CC} : #{\exp\psi_1(v_\ZZ,w_\CC)\cdot\exp\psi_2(f,w_\CC)}
+            }
+            \li{
+              on #{V_\CC\times(W_\CC\oplus G)} : #{\exp\psi_2(v_\CC,w_\ZZ)\cdot\exp\psi_2(v_\CC,g)}.
+            }
+          }
+        }
+      }
+    }
+
+    \subtree[hodge-theory-iii-10.2.3.8]{
+      \number{10.2.3.8}
+
+      \p{
+        For the 1-motives #{M_i}, we have quasi-isomorphisms
+        ##{
+          \begin{CD}
+            T_\ZZ(M_i)\oplus F^0T_\CC(M_i) @>>> T_\ZZ(M_i) @>>> X_i
+          \\@VVV @VVV @VVV
+          \\T_\CC(M_i) @>>> \Lie(G_i) @>>> G_i
+          \end{CD}
+        }
+        \oldpage{63}
+        The group #{\Biext^1(M_1^\an,M_2^\an;\Gm)} can thus be identified with the group of maps
+        ##{
+          \psi\colon T_\ZZ(M_1)\otimes T_\ZZ(M_2)
+          \to \ZZ(1)
+        }
+        whose complexification is compatible with the Hodge filtration.
+      }
+    }
+
+    \subtree[hodge-theory-iii-10.2.3.9]{
+      \taxon{lemma}
+      \number{10.2.3.9}
+    
+      \p{
+        The map #{\Biext^1(M_1,M_2;\Gm)\to\Biext^1(M_1^\an,M_2^\an;\Gm)} is injective.
+        Its image consists of those biextensions #{P} whose restriction to #{G_1\times G_2} is the inverse image of a biextension of #{A_1} and #{A_2} by #{\Gm}.
+      }
+
+      \proof{
+        \p{
+          We have that
+          ##{
+            \begin{aligned}
+              \Biext^1(A_1,A_2;\Gm)
+              &\simto \Biext^1(G_1,G_2;\Gm)
+            \\\Biext^1(A_1,A_2;\Gm)
+              &\simto \Biext^1(A_1^\an,A_2^\an;\Gm)
+            \end{aligned}
+          }
+          where the former follows from [SGA 7, VIII, (3.5)] and the latter from GAGA.
+        }
+
+        \p{
+          Let #{P} be a biextension of #{M_1} and #{M_2} by #{\Gm}.
+          If #{P^\an} is trivial, then:
+
+          \olc{
+            \lic{(a)}{
+              The restriction of #{P} to #{G_1\times G_2} is the image of a biextension #{P_0} of #{A_1} and #{A_2} by #{\Gm};
+              the latter is trivial.
+              If this were not the case, then it would be analytically non-trivial, and would thus give rise to a non-zero bilinear form #{\psi_0}, and the form #{\psi} corresponding to #{P} would be \em{a fortiori} non-zero.
+              The restriction of #{P} to #{G_1\times G_2} is thus trivial (and uniquely trivialisable, even analytically).
+            }
+
+            \lic{(b)}{
+              #{P} is thus defined by biadditive maps #{X_1\times G_2\to\Gm} and #{G_1\times X_2\to\Gm}.
+              These are zero in the analytic category, and thus thus zero, and so #{P} is trivial.
+            }
+          }
+        }
+
+        \p{
+          Let #{P} be a biextension of #{M_1^\an} and #{M_2^\an} by #{\Gm} that satisfies the condition \ref{hodge-theory-iii-10.2.3.9}.
+          It remains to prove that #{P} is algebrisable.
+          By hypothesis, and GAGA, its restriction #{P_1} to #{G_1\times G_2} is algebrisable.
+          We can conclude by showing that a trivialisation of #{P_1} on #{X_1\times G_2} (resp. #{G_1\times X_2}) is automatically algebraic: #{P_1} can be thought of as an extension of #{X_1\otimes G_2} by #{\Gm}, which allows us to reduce to showing that
+          ##{
+            \Ext^i(G_1,\Gm)
+            \simto \Ext^i(G_1^\an,\Gm)
+            \qquad\text{for }i=1,2.
+          }
+          This follows from the same claim for an abelian variety (GAGA) and for #{\Gm}.
+        }
+
+        \p{
+          By \ref{hodge-theory-iii-10.2.3.9}, #{\Biext^1(M_1,M_2;\Gm)} can be identified with the set of
+          ##{
+            \psi\colon
+            T_\ZZ(M_1)\otimes T_\ZZ(M_2)
+            \to \ZZ(1)
+          }
+          such that
+
+          \olc{
+            \lic{(a)}{
+              #{\psi} is compatible with the Hodge filtration (\ref{hodge-theory-iii-10.2.3.8}); and
+            }
+            \lic{(b)}{
+              the restriction of #{\psi} to #{W_{-1}T_\ZZ(M_1)\otimes W_{-1}T_\ZZ(M_2)} comes from a form on
+              ##{
+                \Gr_{-1}^WT_\ZZ(M_1)\otimes\Gr_{-1}^WT_\ZZ(M_2).
+              }
+            }
+          }
+        }
+
+        \p{
+          Condition (b) implies that #{\psi} is compatible with #{W}, and this concludes \ref{hodge-theory-iii-10.2.3}.
+        }
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.4]{
+  \taxon{remark}
+  \number{10.2.4}
+
+  \p{
+    A biextension #{P} of #{M_1} and #{M_2} by #{\Gm} defines, in an evident way, a biextension #{P^0} of #{M_2} and #{M_1} by #{\Gm}.
+    \oldpage{64}
+    If #{\psi} (resp. #{\psi^0}) is the bilinear form defined by #{P} (resp. by #{P^0}), then #{\psi(x,y)=-\psi^0(y,x)}.
+    This is clear from the equations in \ref{hodge-theory-iii-10.2.3.7}.
+  }
+
+  \p{
+    \ref{hodge-theory-iii-10.2.3} has purely algebraic analogues in #{\ell}-adic or de Rham cohomology.
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.5]{
+  \taxon{construction}
+  \number{10.2.5}
+
+  \p{
+    Let #{M_i=(X_i,A_i,T_i,G_i,u_i)} (for #{i=1,2}) be 1-motives over an algebraically closed field #{k} of characteristic 0.
+    Let #{P} be a biextension of #{M_1} and #{M_2} by #{\Gm}.
+    We associate to #{P} a morphism
+    ##{
+      T_{\ZZ{/}n\ZZ}(M_1)\otimes T_{\ZZ{/}n\ZZ}(M_2)
+      \to \ZZ{/}n\ZZ(1).
+    }
+  }
+
+  \proof{
+    \p{
+      Let #{m_i\in T_{\ZZ{/}n\ZZ}(M_1)} be represented by #{(x_i,g_i)}, with #{u_i(x_i)=ng_i}.
+      We will construct isomorphisms #{a_1} and #{a_2} from #{P_{g_1,g_2}^{\otimes n}} to the trivial torsor #{\Gm}:
+      ##{
+        \begin{aligned}
+          a_1\colon P_{g_1,g_2}^{\otimes n}
+          \simto P_{ng_1,g_2}
+          &= P_{u(x_1),g_2}
+          \simto \Gm
+        \\a_2\colon P_{g_1,g_2}^{\otimes n}
+          \simto P_{g_1,ng_2}
+          &= P_{g_1,u(x_2)}
+          \simto \Gm.
+        \end{aligned}
+      }
+      We set #{a_2=\Phi(m_1,m_2)a_1}.
+      We can verify that #{\Phi(m_1,m_2)} does not depend on the choice of the #{(x_i,g_i)}, and is an #{n}-th root of unity.
+      This is the desired form.
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.6]{
+  \taxon{proposition}
+  \number{10.2.6}
+
+  \p{
+    On #{\CC}, the form in \ref{hodge-theory-iii-10.2.5} is induced by the form in \ref{hodge-theory-iii-10.2.3} by reduction modulo #{n}.
+  }
+
+  \proof{
+    \p{
+      This can be proven by using the formulas given in \ref{hodge-theory-iii-10.2.3.7}.
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.7]{
+  \taxon{construction}
+  \number{10.2.7}
+
+  \p{
+    Let #{M_i=(X_i,A_i,T_i,G_i,u_i)} (for #{i=1,2}) be 1-motives over an algebraically closed field #{k}.
+    Let #{P} be a biextension of #{M_1} and #{M_2} by #{\Gm}.
+    We associate to #{P} a morphism
+    ##{
+      T_\DR(M_1)\otimes_k T_\DR(M_2)
+      \to k.
+    }
+  }
+
+  \proof{
+    We first recall the definitions (due to Grothendieck) of #{\natural}-extensions and #{\natural}-biextensions.
+
+    \subtree[hodge-theory-iii-10.2.7.1]{
+      \number{10.2.7.1}
+    
+      \p{
+        A #{\natural}-extension of a smooth commutative group #{G} by a smooth commutative group #{H} consists of the following:
+
+        \olc{
+          \lic{(a)}{
+            an extension #{E} of #{G} by #{H};
+            if #{\mu\colon G\times G\to G} is the addition, then we consider #{E} as an #{H}-torsor over #{G} endowed with a morphism
+            ##{
+              \nu\colon \pr_1^*E + \pr_2^*E
+              \to \mu^*E
+            }
+            of #{H}-torsors over #{G\times G} (addition);
+          }
+          \lic{(b)}{
+            a connection on the #{H}-torsor #{E}, such that the map #{\nu} is horizontal.
+            This connection is automatically flat.
+          }
+        }
+      }
+
+      \p{
+        If #{G} is the extension of an abelian variety by a torus, then every extension of #{G} by #{\Gm} admits a #{\natural}-structure;
+        two #{\natural}-structures differ by an invariant form on #{G} (with values in the Lie algebra of #{\Gm}).
+        We define, in an evident way, the Baer sum of two #{\natural}-extensions.
+      }
+    }
+
+    \subtree[hodge-theory-iii-10.2.7.2]{
+      \number{10.2.7.2}
+
+      \p{
+        \oldpage{65}
+        Let #{P} be a biextension of #{G_1} and #{G_2} by #{H}.
+        Consider #{P} as an #{H}-torsor #{P} over #{G_1\times G_2}, endowed with morphisms
+        ##{
+          \begin{aligned}
+            \nu_1\colon
+            \pr_{13}^*P + \pr_{23}^*P
+            &\to (\mu_1\times\Id)^*P
+            \quad\text{on}
+            \quad G_1\times G_1\times G_2
+          \\\nu_2\colon
+            \pr_{12}^*P + \pr_{13}^*P
+            &\to (\Id\times\mu_2)^*P
+            \quad\text{on}
+            \quad G_1\times G_2\times G_2.
+          \end{aligned}
+        }
+        A \em{#{\natural}-1-structure} on #{P} is a connection on the #{H}-torsor #{P} with respect to #{G_1\times G_2\to G_2} (the covariant derivative is defined only for vector fields that are parallel to #{G_1}) such that #{\nu_1} and #{\nu_2} are horizontal.
+        We similarly define \em{#{\natural}-2-structures}.
+        A \em{#{\natural}-structure} is the data of a #{\natural}-1-structure and of a #{\natural}-2-structure.
+        This is also a connection on the #{H} torsor #{P} such that #{\nu_1} and #{\nu_2} are horizontal.
+      }
+
+      \p{
+        The \em{curvature} #{R} of a #{\natural}-biextension #{P} is the curvature of the connection of #{P}.
+        This is a 2-form on #{G_1\times G_2} that is invariant under translation, with values in #{\Lie(H)}, i.e. it is an alternating form on #{\Lie(G_1)\times\Lie(G_2)}, with values in #{\Lie(H)}.
+        Its restriction to #{\Lie(G_1)} and #{\Lie(G_2)} is zero, and so #{R} defines a pairing
+
+        \subtree[hodge-theory-iii-10.2.7.3]{
+          \taxon{equation}
+          \number{10.2.7.3}
+          ##{
+            \Phi\colon \Lie(G_1)\otimes\Lie(G_2)
+            \to \Lie(H)
+          \startverb\tag{10.2.7.3}\stopverb
+          }
+        }
+
+        (also called the \em{curvature} of #{P}), with
+        ##{
+          R(g_1+g_2, g'_1+g'_2)
+          = \Phi(g_1,g'_2) - \Phi(g'_1,g_2).
+        }
+      }
+
+      \p{
+        For complexes of smooth groups #{K_i\colon[A_i\to B_i]}, a \em{#{\natural}-biextension} (resp. a \em{#{\natural}-#{i}-extension}) of #{K_1} and #{K_2} by #{H} is a #{\natural}-biextension (resp. #{\natural}-#{i}-biextension) of #{B_1} and #{B_2} by #{H}, endowed with trivialisations (as #{\natural}-biextensions, resp. #{\natural}-#{i}-biextensions) as in \ref{hodge-theory-iii-10.2.1}.
+      }
+    }
+
+    \subtree[hodge-theory-iii-10.2.7.4]{
+      \number{10.2.7.4}
+      \taxon{proposition}
+    
+      \p{
+        Let #{P^\natural} be the biextension of #{M_1^\natural} and #{M_2^\natural} by #{\Gm} given by the inverse image of #{P}.
+        Then there exists exactly one #{\natural}-structure on #{P^\natural}.
+      }
+
+      \proof{
+        \p{
+          We first prove uniqueness: we have to show that, on the trivial biextension of #{M_1^\natural} and #{M_2^\natural} by #{\Gm}, every #{\natural}-structure is trivial.
+          A #{\natural}-structure is, first of all, a connection on the trivial #{\Gm}-torsor over #{G_1^\natural\times G_2^\natural}, i.e. a field of forms on #{G_1^\natural\times G_2^\natural}, say #{\Gamma_{g_1,g_2}(t_1+t_2)}.
+          The axiom of #{\natural}-structures implies that
+          ##{
+            \Gamma_{g_1,g_2}(t_1+t_2)
+            = \Phi_1(g_1,t_2) + \Phi_2(t_1,g_2)
+          }
+          where #{\Phi_1} and #{\Phi_2} are biadditive.
+          Now, #{G_i^\natural} is an extension of #{X_i\otimes k} by the universal extension #{G'_i} of #{G_i} by an additive group.
+          Every morphism #{G'_i\to\Ga} is trivial.
+          Furthermore, #{\Phi_1} factors through #{(X_1\otimes k)\otimes\Lie(G_2^\natural)}.
+          Finally, the restriction of #{\Gamma} to #{X_1\times G_2^\natural} must be trivial, and thus so too must be the restriction of #{\Phi_1} to #{X_1\times\Lie(G_2^\natural)}.
+          We thus have that #{\Phi_1=0}.
+          Similarly, #{\Phi_2=0}, and so #{\Gamma=0}.
+        }
+
+        \p{
+          To prove existence, it suffices to construct a #{\natural}-2-structure on the biextension of #{M_1^\natural} and #{M_2} by #{\Gm} given by the inverse image of #{P}: by the inverse image, we will obtain a #{\natural}-2-structure on #{P^\natural} and, symmetrically, a #{\natural}-1-structure.
+        }
+
+        \p{
+          For #{g\in G_1}, #{P_g} is an extension of #{G_2} by #{\Gm}.
+          Let #{C_g} be the set of #{\natural}-structures on #{P_g}.
+          This is a torsor under #{\Lie(G_2)^*}.
+          For #{g\in G_1}, the #{C_g} are the fibres of a torsor #{C} over #{G_1};
+          the Baer sum of #{\natural}-extensions further makes #{C} an extension of #{G_1} by #{\Lie(G_2)^*}
+          \oldpage{66}
+          We lift #{u_1\colon X\to G_1} to #{u'_1\colon X\to C} by sending #{x\in X} to the trivial connection on the trivial extension #{P_{u_1(x)}}.
+          We thus obtain a #{\natural}-2-structure on the biextension of #{[X\to C]} and #{M_2} by #{\Gm} given by the inverse image of #{P}.
+        }
+
+        \p{
+          By the universal property of #{M_1^\natural}, there exists a unique commutative diagram
+
+          \tikzcd{
+          & {\startverb[\stopverb X}
+            \ar[r]
+          & {G\startverb]\stopverb}
+          \\M_1^\natural
+            \ar[ur]
+            \ar[rrr,swap,"v"]
+          &&&{\startverb[\stopverb X}
+            \ar[ul]
+            \ar[r]
+          & {C\startverb]\stopverb}
+          }
+
+          by taking an inverse image under #{v}, we find the desired #{\natural}-2-structure.
+        }
+
+        \p{
+          By definition, the pairing in \ref{hodge-theory-iii-10.2.7} is the negative of the curvature of the #{\natural}-biextension \ref{hodge-theory-iii-10.2.7.4}.
+        }
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.8]{
+  \taxon{proposition}
+  \number{10.2.8}
+
+  \p{
+    Over #{\CC}, the pairing in \ref{hodge-theory-iii-10.2.7} is the complexification of the pairing in \ref{hodge-theory-iii-10.2.3}.
+  }
+
+  \proof{
+    The #{\natural}-biextension #{P^\natural} defines, in the analytic category, a #{\natural}-biextension of #{[T_\ZZ(M_1)\to T_\CC(M_1)]} and #{[T_\ZZ(M_2)\to T_\CC(M_2)]} by #{\Gm}.
+    The proposition then follows from the following lemma (\ref{hodge-theory-iii-10.2.9}).
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.9]{
+  \taxon{lemma}
+  \number{10.2.9}
+
+  \p{
+    Let #{V_\ZZ} and #{W_\ZZ} be two free #{\ZZ}-modules of finite rank, and #{P} a biextension of #{[V_\ZZ\to V_\CC]} and #{[W_\ZZ\to W_\CC]} by #{\Gm} with underlying biextension #{P}.
+    Then the curvature #{\psi\colon V_\cc\otimes W_\CC\to\CC} of #{P^\natural} agrees with the negative of the complexification of the form corresponding to #{P} under \ref{hodge-theory-iii-10.2.3.4}.
+  }
+
+  \proof{
+    Let #{P=P(\psi_1,\psi_2)} (\ref{hodge-theory-iii-10.2.3.4}).
+    A #{\natural}-structure on #{P} is, first of all, a connection on the trivial #{\Gm}-torsor over #{V_\CC\times W_\CC}, i.e. a field of forms #{\Gamma_{v,w}(v'+w')} on #{V_\CC\times W_\CC}.
+    This connection defines a #{\natural}-structure on this torsor if and only if
+    ##{
+      \Gamma_{v,w}(v'+w')
+      = \Phi_1(v,w') + \Phi_2(v',w)
+    }
+    with #{\Phi_1} and #{\Phi_2} bilinear.
+    The trivialisations #{\exp\psi_1(v_\ZZ,w_\CC)} and #{\exp\psi_2(v_\CC,w_\ZZ)} are horizontal if and only if #{\Phi_i=-\psi_i}.
+    The curvature of the connection is the field of 2-forms #{\dd\Gamma} :
+    ##{
+      R_{v,w}(v'+w',v''+w'')
+      = \Phi_1(v',w'') + \Phi_2(v'',w') - \Phi_1(v'',w') - \Phi_2(v',w'').
+    }
+    The curvature of #{P} is thus of the form
+    ##{
+      \Phi_1(v',w'') - \Phi_2(v',w'')
+      = -(\psi_1(v',w'') - \psi_2(v',w''))
+      = -\psi(v',w'').
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.10]{
+  \number{10.2.10}
+
+  \p{
+    Let #{M} be a 1-motive over #{\CC}.
+    Then #{M} has a corresponding mixed Hodge structure #{T(M)} of type #{\{(0,0),(0,-1),(-1,0),(-1,-1)\}}.
+    The mixed Hodge structure #{\Hom(T(M),\ZZ(1))} is again of this type, and thus defines a 1-motive #{M^*}.
+    The evident map #{T(M)\otimes T(M^*)\to\ZZ(1)} defines a biextension #{P} of #{M} and #{M^*} by #{\Gm}.
+    The 1-motive #{M^*}, endowed with the biextension #{P}, is the \em{Cartier dual} of #{M}.
+    We call #{P} the \em{Poincaré biextension}.
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.11]{
+  \number{10.2.11}
+
+  \p{
+    \oldpage{67}
+    The construction in \ref{hodge-theory-iii-10.2.10} can be made purely algebraic.
+    To a 1-motive #{M=(X,A,T,G,u)} over an algebraically closed field #{k}, we will associated a \em{Cartier dual} #{M^*=(X',A',T',G',u')}:
+
+    \olc{
+      \lic{(a)}{
+        #{X'} is the character group of #{T}, #{A'} is the dual abelian variety of #{A}, and #{T'} is the character group of #{X}.
+      }
+
+      \lic{(b)}{
+        We first consider the case where #{T=0}.
+        An extension of #{M} by #{\Gm} then consists of an extension #{E} of #{A} by #{\Gm}, along with a trivialisation #{\widetilde{u}} of the extension #{u^*E} of #{X} by #{\Gm}.
+
+        \tikzcd{
+        &&& X
+            \ar[dl,swap,"\widetilde{u}"]
+            \ar[d,"u"]
+        \\0 \ar[r]
+        & \Gm \ar[r]
+        & E \ar[r]
+        & A \ar[r]
+        & 0
+        }
+
+        We have an exact sequence
+        ##{
+          0
+          \to \Hom(X,\Gm)
+          \to \Ext^1(M,\Gm)
+          \to \Ext^1(A,\Gm)
+          \to 0.
+        }
+
+        The extensions of #{M} by #{\Gm} have no non-trivial automorphisms.
+        The functor of isomorphism classes of extensions is representable;
+        we define #{G'} as the algebraic group that represents this functor;
+        it is an extension of #{A'} by #{T'}.
+        We have a biextension #{P} of #{M} and #{G'} by #{\Gm}.
+      }
+
+      \lic{(c)}{
+        In the general case, we set #{G'=\Ext^1(M/W_{-2}M,\Gm)}.
+        The natural biextension #{P''} of #{M/W_{-2}M} and #{G'} by #{\Gm} induces a biextension #{P'} of #{M} and #{G'} by #{\Gm}.
+        For each #{\chi\in X'}, the extension #{M} of #{M/W_{-2}M} by #{T} defines an extension of #{M/W_{-2}M} by #{\Gm}, whence #{u'(\chi)\in G'}.
+
+        \tikzcd{
+          0
+            \ar[r]
+        & T
+            \ar[r]
+            \ar[d]
+        & M
+            \ar[r]
+            \ar[d,"v"]
+        & M/W_{-2}M
+            \ar[r]
+            \ar[d,equal]
+        & 0
+        \\0
+            \ar[r]
+        & \Gm
+            \ar[r]
+        & P''_{u(\chi)}
+            \ar[r]
+        & M/W_{-2}M
+            \ar[r]
+        & 0
+        }
+
+        The trivial map #{v} trivialises the extension #{P'_{u(\chi)}} of #{M} by #{\Gm}
+
+        \tikzcd{
+          0
+            \ar[r]
+        & \Gm
+            \ar[r]
+            \ar[d,equal]
+        & P_{u(\chi)}
+            \ar[r]
+            \ar[d]
+        & M
+            \ar[r]
+            \ar[d]
+            \ar[dl,swap,"v"]
+        & 0
+        \\{}
+        & \Gm
+            \ar[r]
+        & P'_{u(\chi)}
+            \ar[r]
+        & M/W_{-2}M
+        }
+
+        These trivialisations make #{P'} into a biextension of #{M} and #{M^*=[X'\xrightarrow{u'}G']} by #{\Gm}.
+        The 1-motive #{M^*}, endowed with #{P'}, is the desired Cartier dual.
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.12]{
+  \number{10.2.12}
+
+  \p{
+    \oldpage{68}
+    This construction allows us to give a more symmetric definition of 1-motives.
+  }
+
+  \p{
+    Let #{M=(X,A,T,G,u)} be a 1-motive, with Cartier dual #{M^*=(X',A',T',G',u')}, and let #{P_0} be the Poincaré biextension.
+    By passing to the quotient, the morphisms #{u} and #{u'} define morphisms
+
+    \subtree[hodge-theory-iii-10.2.12.1]{
+      \taxon{equation}
+      \number{10.2.12.1}
+      ##{
+        \overline{u}\colon X\to A
+        \quad\text{and}\quad
+        \overline{u}'\colon X'\to A'.
+      \startverb\tag{10.2.12.1}\stopverb
+      }
+    }
+  }
+
+  \p{
+    The biextension of #{G} and #{G'} by #{\Gm} induced by #{P_0} is the inverse image of the Poincaré biextension #{P} of #{A} and #{A'} by #{\Gm}.
+    By hypothesis, the trivialisations (of the inverse images) of #{P} on #{X\times G'} and #{G\times X'} agree on #{X\times X'}, whence
+
+    \subtree[hodge-theory-iii-10.2.12.2]{
+      \taxon{equation}
+      \number{10.2.12.2}
+      ##{
+        \text{a trivialisation }\psi\text{ of }(\overline{u}\times\overline{u}')^*P.
+      \startverb\tag{10.2.12.2}\stopverb
+      }
+    }
+  }
+
+  \p{
+    A morphism #{f\colon M_1\to M_2}, with transpose (in an evident sense) #{M_2^*\to M_1^*}, gives rise to commutative diagrams
+
+    \subtree[hodge-theory-iii-10.2.12.3]{
+      \taxon{equation}
+      \number{10.2.12.3}
+      ##{
+        \begin{CD}
+          X_1 @>>> A_1
+        \\@V{f_X}VV @VV{f_A}V
+        \\X_2 @>>> A_2
+        \end{CD}
+        \qquad\qquad
+        \begin{CD}
+          X'_1 @>>> A'_1
+        \\@A{f'_X}AA @AA{f'_A}A
+        \\X'_2 @>>> A'_2
+        \end{CD}
+      \startverb\tag{10.2.12.3}\stopverb
+      }
+    }
+
+    Furthermore, #{f_A} and #{f'_A} are transpose to one another, and, via the isomorphism #{(1,f'_A)^*P_1\simeq(f_A,1)^*P_2}, we have
+
+    \subtree[hodge-theory-iii-10.2.12.4]{
+      \taxon{equation}
+      \number{10.2.12.4}
+      ##{
+        \psi_1(x_1,f'_X(x'_2))
+        = \psi_2(f_X(x_1),x'_2)
+      \startverb\tag{10.2.12.4}\stopverb
+      }
+    }
+
+    \tikzcd{
+      X_1\times X'_1
+        \ar[r,"\psi_1"]
+    & (P_1\text{ on }A_1\times A'_1)
+    \\X_1\times X'_2
+        \ar[u]
+        \ar[r]
+        \ar[d]
+    & (1,f'_A)^*P_1 = (f_A,1)^*P_2\text{ on }A_1\times A'_2
+        \ar[u]
+        \ar[d]
+    \\X_2\times X'_2
+        \ar[r,swap,"\psi_2"]
+    & (P_2\text{ on }A_2\times A'_2)
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.13]{
+  \number{10.2.13}
+
+  \p{
+    We thus obtain a functor form the category of 1-motives to the following category.
+    Its objects consist of:
+
+    \olc{
+      \lic{(a)}{
+        two abelian varieties #{A} and #{A'}, dual to one another;
+      }
+      \lic{(b)}{
+        two free #{\ZZ}-modules #{X} and #{X'}, of finite rank;
+      }
+      \lic{(c)}{
+        two morphisms #{v\colon X\to A} and #{v'\colon X'\to A'};
+      }
+      \lic{(d)}{
+        a trivialisation #{\psi} of the inverse image under #{(v,v')} of the Poincaré biextension of #{A} and #{A'} by #{\Gm}.
+      }
+    }
+  }
+
+  \p{
+    \oldpage{69}
+    Its arrows consist of diagrams of the form \ref{hodge-theory-iii-10.2.12.3} that satisfy the conditions of \ref{hodge-theory-iii-10.2.12}
+  }
+}
+
+\subtree[hodge-theory-iii-10.2.14]{
+  \taxon{proposition}
+  \number{10.2.14}
+
+  \p{
+    The functor in \ref{hodge-theory-iii-10.2.13} is an equivalence of categories.
+  }
+
+  \proof{
+    The proof is left as an exercise to the reader.
+  }
+}

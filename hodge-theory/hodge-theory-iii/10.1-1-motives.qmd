@@ -4,3 +4,693 @@ title: 10.1 1-motives
 
 {{< include ../macros.qmd >}}
 
+
+\subtree[hodge-theory-iii-10.1.1]{
+  \taxon{definition}
+  \number{10.1.1}
+
+  \p{
+    \olc{
+      \lic{(i)}{
+        A mixed Hodge structure #{H} is \em{torsion free} if #{H_\ZZ} is torsion free.
+      }
+
+      \lic{(ii)}{
+        If #{H} is torsion free, then we again denote by #{W} the filtration of #{H_\ZZ\subset\HH_\QQ} induced by #{W}.
+        We denote by #{\Gr_n^W(H)} the torsion free #{\ZZ}-module #{\Gr_n^W(H_\ZZ)} endowed with its Hodge structure of weight #{n}.
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.1.2]{
+  \taxon{definition}
+  \number{10.1.2}
+
+  \p{
+    A \em{1-motive} over an algebraically closed field #{k} consists of the following:
+
+    \olc{
+      \lic{(a)}{
+        a free #{\ZZ}-module #{X} of finite type, an abelian variety #{A}, and a torus #{T};
+      }
+      \lic{(b)}{
+        an extension #{G} of #{A} by #{T};
+      }
+      \lic{(c)}{
+        a homomorphism #{u\colon X\to G(k)}.
+      }
+    }
+  }
+}
+
+\p{
+  It is often useful to consider a 1-motive #{M} as being a complex of group schemes, concentrated in degrees 0 and 1:
+  ##{
+    M = [X\xrightarrow{u}G].
+  }
+}
+
+\subtree[hodge-theory-iii-10.1.3]{
+  \taxon{construction}
+  \number{10.1.3}
+
+  \p{
+    We will construct an equivalence #{M\mapsto T(M)} from the category of 1-motives over #{\CC} to the category of torsion free mixed Hodge structures #{H} of type
+    ##{
+      \big\{ (0,0), (0,-1), (-1,0), (-1,-1) \big\}
+    }
+    \oldpage{54}
+    such that #{\Gr_{-1}^W(H)} is polarisable.
+    Furthermore, we will construct isomorphisms
+    ##{
+      \begin{aligned}
+        \HH_1(T,\ZZ)
+        &\simeq \Gr_{-2}^WT(M)_\ZZ
+      \\\HH_1(A,\ZZ)
+        &\simeq \Gr_{-1}^WT(M)
+        \qquad\text{(isomorphism of Hodge structures)}
+      \\X
+        &\simeq \Gr_0^WT(M)_\ZZ
+      \end{aligned}
+    }
+    that are natural in #{M=(X,A,T,G,u)}.
+  }
+
+  \p{
+    Let #{M} be a 1-motive.
+    The exponential map #{\exp\colon\Lie(G)\to G} has #{\HH_1(G)} as its kernel.
+    We define #{T_\ZZ(M)} as the fibre product of #{\Lie(G)} and #{X} over #{G}, whence
+
+    \subtree[hodge-theory-iii-10.1.3.1]{
+      \taxon{equation}
+      \number{10.1.3.1}
+      ##{
+        \begin{CD}
+          0 @>>> \HH_1(G) @>>> \Lie(G) @>{\exp}>> G @>>> 0
+        \\@. @| @A{\alpha}AA @AA{u}A @.
+        \\0 @>>> \HH_1(G) @>>> T_\ZZ(M) @>>{\beta}> X @>>> 0
+        \end{CD}
+      \startverb\tag{10.1.3.1}\stopverb
+      }
+    }
+  }
+
+  \p{
+    We set
+    ##{
+      \begin{aligned}
+        W_{-1}(T_\ZZ(M))
+        &= \Ker(\beta)
+        = \HH_1(G)
+      \\W_{-2}(T_\ZZ(M))
+        &= \HH_1(T)
+        = \Ker\big(\HH_1(G)\to\HH_1(A)\big).
+      \end{aligned}
+    }
+    This defines the \em{weight filtration}.
+    The morphism #{\alpha} extends to
+    ##{
+      \alpha_\CC\colon T_\ZZ(M)\otimes\CC
+      \to \Lie(G).
+    }
+    We set #{F^0(T_\ZZ(M)\otimes\CC)=\Ker(\alpha_\CC)}, and this defines the \em{Hodge filtration} on
+    ##{
+      T_\CC(M)
+      = T_\ZZ(M)\otimes\CC.
+    }
+  }
+
+  \subtree[hodge-theory-iii-10.1.3.2]{
+    \taxon{lemma}
+    \number{10.1.3.2}
+
+    \p{
+      The triple #{T(M)=(T_\ZZ(M),W,F)} is a torsion-free mixed Hodge structure of type #{\{(0,0),(0,-1),(-1,0),(-1,-1)\}}, and #{\Gr_{-1}^W(T(M))} is polarisable.
+    }
+
+    \talltikzcd{
+      &
+      &0
+        \ar[d]
+      &0
+        \ar[d]
+    \\&
+      & W_{-1}(T_\CC(M))\cap F^0
+        \ar[r,"\sim"]
+        \ar[r,swap,"(2)"]
+        \ar[d]
+      & \Ker(\alpha_{A,\CC})
+        \ar[d]
+    \\0
+        \ar[r]
+      & \HH_1(T,\ZZ)\otimes\CC
+        \ar[r]
+        \ar[d,"\sim"]
+        \ar[d,swap,"(1)"]
+      & \HH_1(G,\ZZ)\otimes\CC
+        \ar[r]
+        \ar[d,"\alpha_{G,\CC}"]
+      & \HH_1(A,\ZZ)\otimes\CC
+        \ar[r]
+        \ar[d,"\alpha_{A,\CC}"]
+      & 0
+    \\0
+        \ar[r]
+      & \Lie(T)
+        \ar[r]
+      & \Lie(G)
+        \ar[r]
+        \ar[d]
+      & \Lie(A)
+        \ar[r]
+        \ar[d]
+      & 0
+    \\&
+      & 0
+      & 0
+    }
+
+    \proof{
+      \p{
+        \oldpage{55}
+        \olc{
+          \lic{(a)}{
+            We have that #{W_{-2}(T_\CC(M))\cap F^0=0}, since #{(1)} is injective;
+            thus #{(W_{-2}(T_\CC(M)),F)} is a Hodge structure of type #{(-1,-1)}.
+          }
+
+          \lic{(b)}{
+            Since #{(2)} is surjective, #{F} induces on #{\Gr_{-1}^W(T_\ZZ(M))\otimes\CC\simeq\HH_1(A,\ZZ)\otimes\CC} the Hodge filtration of #{\HH_1(A,\ZZ)\otimes\CC};
+            this is a polarisable Hodge structure of type #{(-1,0)+(0,1)} (cf. \ref{hodge-theory-ii-4.4.3}).
+          }
+
+          \lic{(c)}{
+            Consider the diagram
+            \talltikzcd{
+              & 0
+                \ar[d]
+              & 0
+                \ar[d]
+            \\0
+                \ar[r]
+            & W_{-1}(T_\CC(M))\cap F^0
+                \ar[r]
+                \ar[d]
+            & F^0
+                \ar[r]
+                \ar[d]
+            & V
+                \ar[r]
+                \ar[d,"\sim"]
+            & 0
+            \\0
+                \ar[r]
+            & \HH_1(G,\ZZ)\otimes\CC
+                \ar[r]
+                \ar[d]
+            & T_\ZZ(M)\otimes\CC
+                \ar[r]
+                \ar[d]
+            & X\otimes\CC
+            & 0
+            \\
+            & \Lie(G)
+                \ar[r,equals]
+                \ar[d]
+            & \Lie(G)
+                \ar[d]
+            \\
+            & 0
+            & 0
+            }
+            Since #{F^0} is sent to #{\Gr_0^W(T_\CC(M))}, it is thus of type #{(0,0)}.
+          }
+        }
+      }
+
+      \p{
+        This finishes the construction of #{T(M)}.
+        It is clear that #{T(M)} is functorial in #{M}.
+      }
+    }
+  }
+
+  \p{
+    Suppose that #{\Gr_{-1}^W(H)} is polarisable;
+    the complex torus
+    ##{
+      A
+      = H_\ZZ \backslash \Gr_{-1}^W(H_\CC) / F^0\Gr_{-1}^W(H_\CC)
+    }
+    is then an abelian variety (cf. \ref{hodge-theory-ii-4.4.3}).
+    Let #{T} be the torus with character group the dual of #{\Gr_{-2}^W(H_\ZZ)}, i.e.
+    ##{
+      \HH_1(T)
+      = \Gr_{-2}^W(H_\ZZ).
+    }
+    The complex analytic group
+    ##{
+      G
+      = W_{-1}(H_\ZZ) \backslash W_{-1}(H_\CC) / F^0\cap W_{-1}(H_\CC)
+    }
+    is an extension of #{A} by #{T}.
+  }
+
+  \subtree[hodge-theory-iii-10.1.3.3]{
+    \taxon{lemma}
+    \number{10.1.3.3}
+
+    \p{
+      The functor #{E\mapsto E^\an} is an equivalence from the category of algebraic group extensions of #{A} by #{T} to the category of analytic group extensions of #{A} by #{T}.
+    }
+
+    \proof{
+      \oldpage{56}
+      \p{
+        We reduce to the case where #{T=\Gm}.
+        By GAGA, #{E\mapsto E^\an} is more general an equivalence from the category of #{\Gm}-torsors over #{A} to the category of #{\Gm}-torsors over #{A^\an}.
+      }
+
+      \p{
+        We thus have #{G}, an extension of #{A} by #{T}.
+        Let #{X=\Gr_0^W(H_\ZZ)}.
+        We similarly define #{u\colon X\to G} (cf. \ref{hodge-theory-ii-2.2.1}):
+        \tikzcd{
+          0
+            \ar[r]
+        & W_{-1}(H_\ZZ)
+            \ar[r]
+            \ar[dd,equals]
+        & W_{-1}(H_\CC)/(W_{-1}(H_\CC)\cap F^0)
+            \ar[r]
+            \ar[d,"\sim"]
+        & G
+            \ar[r]
+        & 0
+        \\
+        &
+        & H_\CC{/}F^0
+        &
+        &
+        \\0
+            \ar[r]
+        & W_{-1}(H_\ZZ)
+            \ar[r]
+        & H_\ZZ
+            \ar[r]
+            \ar[u]
+        & X
+            \ar[r]
+            \ar[uu]
+        & 0
+        }
+      }
+
+      \p{
+        It is clear that the above construction, which associates to #{H} a torsion-free 1-motive, is the inverse of #{T}, and that it is functorial.
+      }
+    }
+  }
+
+  \p{
+    If #{G_i} (for #{i=1,2}) is an extension of an abelian variety #{A_i} by a torus #{A_i}, then, for every morphism #{u\colon G_1\to G_2}, we have that #{u(T_1)\subset T_2} and #{\Ker(u\colon A_1\to A_2)^0=\Im(\Ker(u\colon G_1\to G_2)\to A_1)^0}.
+    This corresponds to the fact that a morphism of mixed Hodge #{\QQ}-structures is strictly compatible with the weight filtration.
+  }
+}
+
+\subtree[hodge-theory-iii-10.1.4]{
+  \number{10.1.4}
+
+  \p{
+    Let #{H} be a torsion-free mixed Hodge structure of type
+    ##{
+      \big\{(0,0),(0,-1),(-1,0),(-1,-1)\big\}.
+    }
+    The filtration #{W} of #{H_\ZZ} thus defines a filtration on #{H} by mixed Hodge substructures.
+    At the same time, if #{M=(X,A,T,G,u)} is a 1-motive, then we denote by #{W} the following increasing filtration on #{M}:
+    ##{
+      \begin{cases}
+        W_i(M) = 0
+        & \text{for }i< -2;
+      \\W_i(M) = M
+        & \text{for }i\geqslant0;
+      \\W_{-1}(M) = G
+        \quad\text{i.e. } = (\{0\},A,T,G,0);
+      \\W_{-2}(M) = T
+        \quad\text{i.e. } = (\{0\},0,T,T,0).
+      \end{cases}
+    }
+    In an evident way, the successive #{\Gr_i^W(M)} for #{i=0,-1,-2} are #{X}, #{A}, and #{T} (respectively).
+  }
+}
+
+\subtree[hodge-theory-iii-10.1.5]{
+  \number{10.1.5}
+
+  \p{
+    The construction in \ref{hodge-theory-iii-10.1.3} that associates to a 1-motive #{M} over #{\CC} the object #{T_\ZZ(M)} is transcendental.
+    We will show that
+    ##{
+      \widehat{T}(M)
+      = T_\ZZ(M)\otimes\widehat{\ZZ}
+      = \prod_\ell T_\ZZ(M)\otimes\ZZ_\ell
+    }
+    can be defined in a purely algebraic way.
+  }
+
+  \p{
+    Let #{M} be a 1-motive over an algebraically closed field #{k} of characteristic #{0}.
+    We identify #{M} with a complex #{[X\xrightarrow{u}G]} (concentrated in degrees #{0} and #{1}).
+    For every integer #{n>0}, consider the complex #{[\ZZ\xrightarrow{\cdot n}\ZZ]} (concentrated in degrees #{-1} and #{0}), and let #{T_{\ZZ{/}n\ZZ}(M)} be the #{\HH^0} of the complex #{[X\xrightarrow{u}G]\otimes[\ZZ\xrightarrow{\cdot n}\ZZ]}, i.e.
+    \oldpage{57}
+    \tikzcd{
+      X
+        \ar[r,"u"]
+    & G
+    \\X
+        \ar[u,"n"]
+        \ar[r,swap,"u"]
+    & G
+        \ar[u,swap,"-n"]
+    }
+    We have that
+    ##{
+      T_{\ZZ{/}n\ZZ}(M)
+      = \big\{ (x,g) \mid u(x)=ng \big\} / \big\{ (nx,u(x)) \mid x\in X \big\}.
+    }
+    In the derived category, we have that
+    ##{
+      T_{\ZZ{/}n\ZZ}(M)
+      = \HH^0(M\Lotimes\ZZ{/}n\ZZ).
+    }
+    For #{n=md}, we define transition morphisms
+    ##{
+      \begin{aligned}
+        \varphi_{m,n}\colon T_{\ZZ{/}n\ZZ}(M)
+        &\to T_{\ZZ{/}m\ZZ}(M)
+      \\(x,g)
+        &\mapsto (x,dg).
+      \end{aligned}
+    }
+    We set
+    ##{
+      \widehat{T}(M)
+      = \varprojlim T_{\ZZ{/}n\ZZ}(M).
+    }
+    The filtration #{W} of #{M} induces a filtration #{W} of the #{T_{\ZZ{/}n\ZZ}(M)} and of #{\widehat{T}(M)}.
+    We have that
+    ##{
+      \begin{aligned}
+        \Gr_0^W(\widehat{T}(M))
+        &= X\otimes\widehat{\ZZ}
+      \\\Gr_{-1}^W(\widehat{T}(M))
+        &= \varprojlim A_n
+        = \widehat{T}(A)
+      \\\Gr_{-2}^W(\widehat{T}(M))
+        &= \varprojlim T_n
+        = Y\otimes\widehat{\ZZ}(1),
+      \end{aligned}
+    }
+    where #{Y} is the dual of the character group of #{T=W_{-2}(M)}.
+  }
+}
+
+\subtree[hodge-theory-iii-10.1.6]{
+  \taxon{construction}
+  \number{10.1.6}
+
+  \p{
+    Let #{M=[X\xrightarrow{u}G]} be a 1-motive on #{\CC}.
+    We have that
+
+    \subtree[hodge-theory-iii-10.1.6.1]{
+      \taxon{equation}
+      \number{10.1.6.1}
+      ##{
+        \widehat{T}(M)
+        \simeq T_\ZZ(M)\otimes\widehat{\ZZ}.
+      \startverb\tag{10.1.6.1}\stopverb
+      }
+    }
+  }
+
+  \p{
+    The natural morphism #{[T_\ZZ(M)\to\Lie(G)]\to[X\to G]} is a quasi-isomorphism.
+    The quasi-isomorphisms
+    ##{
+      \left[
+        \,\,
+        \begin{CD}
+          X @>{u}>> G
+        \\@A{n}AA @AA{-n}A
+        \\X @>>{u}> G
+        \end{CD}
+        \,\,\,\,\,\,
+      \right]
+      \longleftarrow
+      \left[
+        \begin{CD}
+          T_\ZZ @>{u}>> \Lie(G)
+        \\@A{n}AA @A{\sim}A{-n}A
+        \\T_\ZZ @>>{u}> \Lie(G)
+        \end{CD}
+      \right]
+      \longrightarrow
+      \left[
+        \begin{CD}
+          T_\ZZ @>>> 0
+        \\@A{n}AA @AAA
+        \\T_\ZZ @>>{c}> 0
+        \end{CD}
+      \right]
+    }
+    give isomorphisms
+
+    \subtree[hodge-theory-iii-10.1.6.2]{
+      \taxon{equation}
+      \number{10.1.6.2}
+      ##{
+        T_{\ZZ{/}n\ZZ}(M)
+        \simeq T_\ZZ{/}nT_\ZZ.
+      \startverb\tag{10.1.6.2}\stopverb
+      }
+    }
+  }
+
+  \p{
+    Under this isomorphism, to #{t\in W_{-1}(T_\ZZ)} we associate #{\exp(t/n)\in G_n}.
+    By passing to the limit, we deduce \ref{hodge-theory-iii-10.1.6.1} from \ref{hodge-theory-iii-10.1.6.2}.
+  }
+}
+
+\p{
+  Techniques of Grothendieck allow us to transpose to de Rham cohomology what we have just done in #{\ell}-adic cohomology.
+  Let #{M} be a 1-motive over an algebraically closed field #{k}.
+}
+
+\subtree[hodge-theory-iii-10.1.7]{
+  \taxon{construction}
+  \number{10.1.7}
+
+  \p{
+    \oldpage{58}
+    We will construct a vector space #{T_\DR(M)} over #{k}, endowed with filtrations #{W} and #{F}.
+  }
+
+  \p{
+    Let #{M=(X,A,T,G,u)}, and consider #{M} as a complex concentrated in degrees #{-1} and #{0}.
+    An \em{extension} of #{M} by #{\Ga} is an extension of #{M} by the complex consisting of #{\Ga} concentrated in degree #{0}.
+    We have that #{\Hom(G,\Ga)=\Ext^1(X,\Ga)=0}.
+    Thus:
+
+    \olc{
+      \lic{(a)}{
+        extensions of #{M} by #{\Ga} have no automorphisms;
+      }
+      \lic{(b)}{
+        the sequence
+        ##{
+          0
+          \to \Hom(X,\Ga)
+          \to \Ext^1(M,\Ga)
+          \to \Ext^1(G,\Ga)
+          \to 0
+        }
+        is exact.
+      }
+    }
+
+    We have that #{\Hom(T,\Ga)=\Ext^1(T,\Ga)=0}, and so
+
+    \olc{
+      \lic{(c)}{
+        #{\Ext^1(A,\Ga)\simto\Ext^1(G,\Ga)}.
+      }
+    }
+  }
+
+  \p{
+    The vector space #{\Ext^1(M,\Ga)} is thus of finite dimension, and, by (a), there thus exists a universal extension of #{M} by a vector group;
+    we denote it by #{M^\natural\colon X\to G^\natural}.
+
+    \tikzcd{
+    & 0
+        \ar[r]
+        \ar[d]
+    & X
+        \ar[r,equals]
+        \ar[d]
+    & X
+        \ar[d]
+    \\0
+        \ar[r]
+    & \Ext^1(M,\Ga)^*
+        \ar[r]
+    & G^\natural
+        \ar[r]
+    & G
+        \ar[r]
+    & 0
+    }
+  }
+
+  \p{
+    We set
+    ##{
+      \begin{aligned}
+        T_\DR(M)
+        &= \Lie(G^\natural)
+      \\F^0T_\DR(M)
+        &= \Ker(\Lie G^\natural\to\Lie G)
+        \simeq (\Ext^1(M,\Ga))^*.
+      \end{aligned}
+    }
+    Then #{T_\DR} is functorial in #{M} (and thus also in #{M^\natural}), and we define the filtration #{W} of #{T_\DR(M)} as coming from the filtration #{W} of #{M}.
+  }
+}
+
+\subtree[hodge-theory-iii-10.1.8]{
+  \taxon{construction}
+  \number{10.1.8}
+
+  \p{
+    Let #{M} be a 1-motive over #{\CC}.
+    We have that
+    ##{
+      (T_\DR(M),F,W)
+      \simeq (T_\CC(M),F,W).
+    }
+  }
+
+  \proof{
+    \p{
+      The #{\Ext^i(X,\Ga)}, #{\Ext^i(A,\Ga)}, and #{\Ext^i(T,\Ga)} (for #{i=0,1}) are the same in the algebraic and analytic categories.
+      Consider the map
+      ##{
+        T_\CC(M)
+        = T_\ZZ(M)\otimes\CC
+        \to \Lie(G)
+        \to G.
+      }
+      The diagram
+      ##{
+        \begin{CD}
+          X @>>> T_\CC(M)/\HH_1(G)
+        \\@| @VVV
+        \\X @>>> G
+        \end{CD}
+      }
+      \oldpage{59}
+      defines an extension of #{M^\an} by the vector group #{F^0T_\CC M}, and thus an extension of #{M} by this group.
+      We have to prove that this is the universal extension.
+      For this, it suffices to verify that the category of extensions of #{[X\to T_\CC(M)/\HH_1(G)]} by #{\Ga} is trivial (i.e. that it has a single object, and no automorphisms).
+      This is also the category of extensions of #{T_\CC(M)/T_\ZZ(M)} by #{\Ga}, and, indeed,
+      ##{
+        \Ext^i(T_\CC(M)/T_\ZZ(M),\Ga)
+        = 0
+        \qquad\text{for }i=0,1.
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.1.9]{
+  \taxon{remark}
+  \number{10.1.9}
+
+  \p{
+    The universal extension #{M^\natural} is characterised by the commutative diagram
+    ##{
+      \begin{CD}
+        X @>>> G^\natural @>>> G
+      \\@AAA @AAA @AAA
+      \\T_\ZZ(M) @>>> \Lie(G^\natural) @>>> \Lie(G)
+      \end{CD}
+    }
+    whose exterior square is \ref{hodge-theory-iii-10.1.3.1}, and that induces an isomorphism #{T_\CC(M)\simto\Lie(G^\natural)}.
+  }
+}
+
+\subtree[hodge-theory-iii-10.1.10]{
+  \taxon{variant}
+  \number{10.1.10}
+
+  \p{
+    A \em{smooth 1-motive} #{M} over a scheme #{S} consists of the following:
+
+    \olc{
+      \lic{(a)}{
+        a group scheme #{X} over #{S} that is locally (for the étale topology) a constant group scheme defined by a free #{\ZZ}-module of finite type;
+        an abelian scheme #{A} over #{S}, and a torus #{T} over #{S};
+      }
+      \lic{(b)}{
+        an extension #{G} of #{A} by #{T};
+      }
+      \lic{(c)}{
+        a morphism #{u\colon X\to G}.
+      }
+    }
+  }
+
+  \p{
+    For every integer #{n}, a construction analogous to \ref{hodge-theory-iii-10.1.5} associates to a smooth 1-motive #{M} over #{S} a group scheme #{T_{\ZZ{/}n\ZZ}(M)} that is finite and flat over #{S}.
+    For #{\ell} invertible over #{S}, the projective system
+    ##{
+      T_\ell(M)
+      = \varprojlim T_{\ZZ{/}\ell^n\ZZ}(M)
+    }
+    is a #{\ZZ_\ell}-sheaf on #{S}.
+    In general, #{T_\ell(M)} corresponds to an #{\ell}-divisible group (i.e. a Barsotti–Tate group) over #{S}.
+  }
+
+  \p{
+    The filtration #{W} of #{M}, defined as in \ref{hodge-theory-iii-10.1.4}, defines a filtration #{W} on #{T_\ell(M)}.
+    We again have that
+    ##{
+      \begin{aligned}
+        \Gr_0^W(T_\ell(M))
+        &= X\otimes\widehat{\ZZ}
+      \\\Gr_{-1}^W(T_\ell(M))
+        &= T_\ell(A)
+      \\\Gr_{-2}^W(T_\ell(M))
+        &= Y\otimes\widehat{\ZZ}_\ell(1),
+      \end{aligned}
+    }
+    where #{Y=\underline{\Hom}(T,\Gm)^\vee}.
+  }
+
+  \p{
+    Similarly, a construction analogous to that of \ref{hodge-theory-iii-10.1.7} associates to #{M} a vector bundle #{T_\DR(M)}.
+  }
+}
+
+\subtree[hodge-theory-iii-10.1.11]{
+  \taxon{terminology}
+  \number{10.1.11}
+
+  \p{
+    Let #{M} be a 1-motive.
+    We call #{T(M)}, #{T_\ell(M)}, and #{T_\DR(M)} the \em{Hodge}, \em{#{\ell}-adic}, and \em{de Rham} \em{realisations} of #{M} (respectively).
+  }
+}

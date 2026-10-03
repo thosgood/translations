@@ -5,137 +5,99 @@ title: 9.3 Construction of complexes of first-order differential operators
 {{< include ../macros.qmd >}}
 
 
-This section depends only on \ref{hodge-theory-iii-5} and \ref{hodge-theory-iii-6}.
-We will prove the following theorem.
-}
+This section depends only on [Hodge Theory I, §5 and §6](../hodge-theory-i).
+We will prove the following proposition.
 
-\subtree[hodge-theory-iii-9.3.1]{
-\taxon{proposition}
-\number{9.3.1}
+::: {.itenv #env-iii-9.3.1 number="9.3.1" taxon="Proposition"}
+Let $X$ be a quasi-projective scheme (over $\CC$).
+Then there exists on $X$ a complex $K$ of sheaves that satisfies the following properties.
 
-Let #{X} be a quasi-projective scheme (over #{\CC}).
-Then there exists on #{X} a complex #{K} of sheaves that satisfies the following properties.
-
-\olc{
-  \lic{(a)}{
-    The #{K^n} are coherent algebraic sheaves, and #{K^n=0} for #{n<0}.
-  }
-  \lic{(b)}{
-    The differentials #{\dd\colon K^n\to K^{n+1}} are algebraic differential operators of order 1.
-  }
-  \lic{(c)}{
-    The complex #{K^\an} of coherent analytic sheaves on #{X^\an} is a resolution of the constant sheaf #{\underline{\CC}}.
-    More precisely, #{\sHH^i(K)=0} for #{i>0}, and there exists
-    ##{
+a. The $K^n$ are coherent algebraic sheaves, and $K^n=0$ for $n<0$.
+b. The differentials $\dd\colon K^n\to K^{n+1}$ are algebraic differential operators of order 1.
+c. The complex $K^\an$ of coherent analytic sheaves on $X^\an$ is a resolution of the constant sheaf $\underline{\CC}$.
+    More precisely, $\sHH^i(K)=0$ for $i>0$, and there exists
+    $$
       f\colon \Omega_X^\bullet
       \to K
-    }
-    with #{f^n} linear algebraic, such that the composite map #{\underline{\CC}\to\OO_X\xrightarrow{f^0}K^0} identifies #{\underline{\CC}} with #{\sHH^0(K)}.
-  }
-  \lic{(d)}{
-    The natural map
-    ##{
+    $$
+    with $f^n$ linear algebraic, such that the composite map $\underline{\CC}\to\OO_X\xrightarrow{f^0}K^0$ identifies $\underline{\CC}$ with $\sHH^0(K)$.
+d. The natural map
+    $$
       \bHH^i(X,K)
       \to \bHH^i(X^\an,K^\an)
       \xleftarrow[\text{(c)}]{\sim} \bHH^i(X^\an,\CC)
-    }
+    $$
     is an isomorphism.
-  }
-}
-}
-}
+:::
 
-As a corollary, we recover a particular case of a theorem of Bloom and Herrera [[BH1969](BH1969)].
-}
+As a corollary, we recover a particular case of a theorem of Bloom and Herrera [@BH1969].
 
 We will first prove the corollary.
-The proposition \ref{hodge-theory-iii-9.3.1} will be obtained by redoing the proof at the level of complexes.
-}
+The proposition [(9.3.1)](#iii-9.3.1) will be obtained by redoing the proof at the level of complexes.
 
-\subtree[hodge-theory-iii-9.3.2]{
-\taxon{corollary}
-\number{9.3.2}
-
+::: {.itenv #env-iii-9.3.2 number="9.3.2" taxon="Corollary"}
 The map
-##{
+$$
   \HH^\bullet(X^\an,\CC)
   \to \bHH^\bullet(X^\an,\Omega_{X^\an}^\bullet)
-}
-induced by #{\underline{\CC}\to\Omega_{X^\an}^\bullet} identifies #{\HH^\bullet(X^\an,\CC)} with a direct factor of #{\HH^\bullet(X^\an,\Omega_{X^\an}^\bullet)}.
-}
+$$
+induced by $\underline{\CC}\to\Omega_{X^\an}^\bullet$ identifies $\HH^\bullet(X^\an,\CC)$ with a direct factor of $\HH^\bullet(X^\an,\Omega_{X^\an}^\bullet)$.
+:::
 
-\proof{
+::: {.proof}
+Let $\varepsilon\colon X_\bullet\to X$ be an augmented simplicial scheme over $X$.
+Suppose that $\varepsilon$ is a proper hypercover, and that the $X_n$ are smooth.
+We have the commutative diagram
+```tikz
+\begin{tikzcd}
+  \HH^\bullet(X^\an,\CC)
+    \ar[r,"\sim"]
+    \ar[r,swap,"(1)"]
+    \ar[d]
+  & \HH^\bullet(X_\bullet^\an,\CC)
+    \ar[d,"\sim"]
+    \ar[d,swap,"(2)"]
+\\\bHH^\bullet(X^\an,\Omega_X^\bullet)
+    \ar[r]
+  & \bHH^\bullet(X_\bullet^\an,\Omega_{X_\bullet}^\bullet)
+  & (9.3.2.1)
+\end{tikzcd}
+```
 
-  Let #{\varepsilon\colon X_\bullet\to X} be an augmented simplicial scheme over #{X}.
-  Suppose that #{\varepsilon} is a proper hypercover, and that the #{X_n} are smooth.
-  We have the commutative diagram
+\oldpage{51}
+The arrow $(1)$ is bijective by (II) and (IV) of [(5.3.5)](5.3-cohomological-descent.qmd#iii-5.3.5).
+The arrow $(2)$ is bijective since $\Omega_{X_\bullet}^\bullet$ is a resolution of $\underline{\CC}$ (the Poincaré lemma on the $X_n$).
+The diagram [(9.3.2.1)](#iii-9.3.2) gives a retract, compatible with the cup product, of $\bHH^\bullet(X^\an,\Omega_X^\bullet)$ onto $\HH^\bullet(X^\an,\CC)$, and this proves [(9.3.2)](#iii-9.3.2).
+:::
 
-  \subtree[hodge-theory-iii-9.3.2.1]{
-    \taxon{equation}
-    \number{9.3.2.1}
-    \tikzcd{
-      \HH^\bullet(X^\an,\CC)
-        \ar[r,"\sim"]
-        \ar[r,swap,"(1)"]
-        \ar[d]
-      & \HH^\bullet(X_\bullet^\an,\CC)
-        \ar[d,"\sim"]
-        \ar[d,swap,"(2)"]
-    \\\bHH^\bullet(X^\an,\Omega_X^\bullet)
-        \ar[r]
-      & \bHH^\bullet(X_\bullet^\an,\Omega_{X_\bullet}^\bullet)
-      & (9.3.2.1)
-    }
-  }
-
-  \oldpage{51}
-  The arrow #{(1)} is bijective by (II) and (IV) of \ref{hodge-theory-iii-5.3.5}.
-  The arrow #{(2)} is bijective since #{\Omega_{X_\bullet}^\bullet} is a resolution of #{\underline{\CC}} (the Poincaré lemma on the #{X_n}).
-  The diagram \ref{hodge-theory-iii-9.3.2.1} gives a retract, compatible with the cup product, of #{\bHH^\bullet(X^\an,\Omega_X^\bullet)} onto #{\HH^\bullet(X^\an,\CC)}, and this proves \ref{hodge-theory-iii-9.3.2}.
-}
-}
-}
-
-\subtree[hodge-theory-iii-9.3.3]{
-\number{9.3.3}
-
-The complex #{K} that we wish to construct is, in the derived category, exactly #{\simp\Rd{\varepsilon_\bullet}_*\Omega_{X_\bullet}^\bullet}.
-We will only deal with the case where the augmented simplicial space #{X_\bullet} is #{s}-split, defined as in \ref{hodge-theory-iii-6.2.5} by proper and surjective maps, with smooth quasi-projective sources
-##{
+::: {.rmenv #env-iii-9.3.3 number="9.3.3"}
+The complex $K$ that we wish to construct is, in the derived category, exactly $\simp\Rd{\varepsilon_\bullet}_*\Omega_{X_\bullet}^\bullet$.
+We will only deal with the case where the augmented simplicial space $X_\bullet$ is $s$-split, defined as in [(6.2.5)](6.2-construction-of-hypercovers.qmd#iii-6.2.5) by proper and surjective maps, with smooth quasi-projective sources
+$$
   f'_k\colon
   N_k
   \to (\cosq\sq_{k-1}(X_\bullet))_k
-}
-for #{k\geqslant0}.
-}
+$$
+for $k\geqslant0$.
 
-We will construct a "compatible system" of affine open covers of the #{X_n}.
-It will be relevant, for this construction, to consider an open cover of a space #{Y} as a diagram
-##{
+We will construct a "compatible system" of affine open covers of the $X_n$.
+It will be relevant, for this construction, to consider an open cover of a space $Y$ as a diagram
+$$
   Y \xleftarrow{u} U \xrightarrow{\varphi} I
-}
-where #{I} is discrete, #{u} is surjective, and #{u_i\colon U_i\coloneqq\varphi^{-1}(i)\hookrightarrow Y} is an open embedding.
-Proceeding as in \ref{hodge-theory-iii-6.2.5}, we construct a diagram
-
-\subtree[hodge-theory-iii-9.3.3.1]{
-  \taxon{equation}
-  \number{9.3.3.1}
-  ##{
-    X_\bullet \xleftarrow{u} U_\bullet \xrightarrow{\varphi} I_\bullet
-  \startverb\tag{9.3.3.1}\stopverb
-  }
-}
-
+$$
+where $I$ is discrete, $u$ is surjective, and $u_i\colon U_i\coloneqq\varphi^{-1}(i)\hookrightarrow Y$ is an open embedding.
+Proceeding as in [(6.2.5)](6.2-construction-of-hypercovers.qmd#iii-6.2.5), we construct a diagram
+$$
+  X_\bullet \xleftarrow{u} U_\bullet \xrightarrow{\varphi} I_\bullet
+\tag{9.3.3.1}
+$$
 of the following type.
 
-\olc{
-  \lic{(a)}{
-    #{I_\bullet} is a discrete simplicial set. The #{I_n} are finite.
-  }
+a. $I_\bullet$ is a discrete simplicial set. The $I_n$ are finite.
+b. For all $k\geqslant 0$, [(9.3.3.1)](#iii-9.3.3) induces a diagram
 
-  \lic{(b)}{
-    For all #{k\geqslant 0}, \ref{hodge-theory-iii-9.3.3.1} induces a diagram
-    \tikzcd{
+    ```tikz
+    \begin{tikzcd}
       (\cosq\sq_{k-1}(X_\bullet))_k
       & (\cosq\sq_{k-1}(U_\bullet))_k
         \ar[l]
@@ -149,92 +111,71 @@ of the following type.
         \ar[r,swap,"\varphi"]
       & N_k(I_\bullet)
         \ar[u,swap,"a'_k"]
-    }
-  }
-
-  \lic{(c)}{
-    In the diagram in (b), for #{i\in\cosq\sq_{k-1}(I_\bullet)_k}, the #{\varphi^{-1}(j)} for #{a'_k(j)=i} form an affine open cover of
-    ##{
+    \end{tikzcd}
+    ```
+c. In the diagram in (b), for $i\in\cosq\sq_{k-1}(I_\bullet)_k$, the $\varphi^{-1}(j)$ for $a'_k(j)=i$ form an affine open cover of
+    $$
       N_k\times_{(\cosq\sq_{k-1}(X_\bullet))_k} \varphi^{-1}(i).
-    }
-  }
-
-  \lic{(d)}{
-    (Follows by induction on (c)).
+    $$
+d. (Follows by induction on (c)).
     The first (and thus the second) row of the diagram in (b) defines an open cover.
-    The #{X_k\from U_k\to I_k} thus also form open covers.
-  }
-
-  \lic{(e)}{
-    (Follows from a suitable choice of affine covers in (c)).
-    #{U_{n_i}=\varphi_n^{-1}(i)} is the complement of a subscheme #{D_{n,i}} of #{X_n}, given by the union of a divisor and some connected components of #{X_n}.
-    For every coherent sheaf #{\sh{F}} on #{X_n} and integers #{(a_i)_{i\in I_n}} (with #{(a_i\geqslant0)}), we set
-    ##{
+    The $X_k\from U_k\to I_k$ thus also form open covers.
+e. (Follows from a suitable choice of affine covers in (c)).
+    $U_{n_i}=\varphi_n^{-1}(i)$ is the complement of a subscheme $D_{n,i}$ of $X_n$, given by the union of a divisor and some connected components of $X_n$.
+    For every coherent sheaf $\sh{F}$ on $X_n$ and integers $(a_i)_{i\in I_n}$ (with $(a_i\geqslant0)$), we set
+    $$
       \sh{F}(\textstyle\sum_i a_i D_{n,i})
       =
       \begin{cases}
         0
         &\text{on the components of }X_n\text{ contained inside some }D_{n,i}\text{ with }a_i>0
       \\\sh{F}\otimes\OO(\sum_{a_i>0}a_i D_{n,i})
-        &\text{ on the others}.
+        &\text{on the others}.
       \end{cases}
-    }
-  }
-}
-}
+    $$
 
 \oldpage{52}
-In the inductive construction of \ref{hodge-theory-iii-9.3.3.1}, the open covers in (c) are chosen arbitrarily.
+In the inductive construction of [(9.3.3.1)](#iii-9.3.3), the open covers in (c) are chosen arbitrarily.
 This allows us to suppose the following.
 
-\olc{
-  \lic{(f)}{
-    For any #{a_i>0} (for #{i\in I_k}),
-    ##{
+f. For any $a_i>0$ (for $i\in I_k$),
+    $$
       \Rd^\ell{\varepsilon_k}_*
       \big( \Omega_{X_k}^m(\textstyle\sum_i a_i D_{k,i}) \big)
       = 0
-    }
-    for #{\ell>0}.
-  }
-
-  \lic{(g)}{
-    For any #{\alpha\colon\Delta_m\to\Delta_n} and #{i\in I_n}, we have that
-    ##{
+    $$
+    for $\ell>0$.
+g. For any $\alpha\colon\Delta_m\to\Delta_n$ and $i\in I_n$, we have that
+    $$
       X_\bullet(\alpha)^{-1}(D_{m,\alpha(i)})
       \subset D_{n,i}
-    }
+    $$
     (as schemes),
-  }
-}
-}
 
-For each #{k}, the complex of sheaves
-##{
+For each $k$, the complex of sheaves
+$$
   \Rd{\varepsilon_k}_*(\Omega_{X_k}^\bullet)
-}
-on #{X} can be calculated in a Čech manner.
-If, for #{P\subset I_k}, #{j_P} is the inclusion of #{U_P=\bigcap_{i\in P}U_{k_i}} in #{X_k}, then this is the simple complex associated to the double complex of the
-##{
+$$
+on $X$ can be calculated in a Čech manner.
+If, for $P\subset I_k$, $j_P$ is the inclusion of $U_P=\bigcap_{i\in P}U_{k_i}$ in $X_k$, then this is the simple complex associated to the double complex of the
+$$
   \check{K}^{k,p,q}
   = \sum_{\# P=p+1} {\varepsilon_k}_*\Omega_{X_k}^q\big( (q+1)\textstyle\sum_{i\in P} D_{k,i} \big).
-}
-}
+$$
 
-For fixed #{k} and fixed #{q}, it follows from (f) that the inclusion of #{K^{k,\bullet,q}} into #{\check{K}^{k,\bullet,q}} is a quasi-isomorphism.
-For fixed #{k}, the inclusion of #{K^{k,\bullet,\bullet}} into #{\check{K}^{k,\bullet,\bullet}} is also a quasi-isomorphism.
-Finally, for varying #{k}, the #{K^{k,\bullet,\bullet}} form, by (g), a simplicial double complex.
-The associated simple complex #{K} agrees with #{\Rd{\varepsilon_\bullet}_*\Omega_{X_\bullet}^\bullet} in the derived category.
-}
+For fixed $k$ and fixed $q$, it follows from (f) that the inclusion of $K^{k,\bullet,q}$ into $\check{K}^{k,\bullet,q}$ is a quasi-isomorphism.
+For fixed $k$, the inclusion of $K^{k,\bullet,\bullet}$ into $\check{K}^{k,\bullet,\bullet}$ is also a quasi-isomorphism.
+Finally, for varying $k$, the $K^{k,\bullet,\bullet}$ form, by (g), a simplicial double complex.
+The associated simple complex $K$ agrees with $\Rd{\varepsilon_\bullet}_*\Omega_{X_\bullet}^\bullet$ in the derived category.
 
-We now prove that #{K} satisfies \ref{hodge-theory-iii-9.3.1}.
-Properties (a) and (b) of #{K} are clear;
-we define #{f\colon\Omega_X^\bullet\to K} by the evident maps from the #{\Omega_X^q} to the #{K^{0,0,q}}.
-}
+We now prove that $K$ satisfies [(9.3.1)](#iii-9.3.1).
+Properties (a) and (b) of $K$ are clear;
+we define $f\colon\Omega_X^\bullet\to K$ by the evident maps from the $\Omega_X^q$ to the $K^{0,0,q}$.
 
-In the analytic category, the complex #{K^\an} of coherent analytic sheaves is given by the same formulas as for #{K}.
+In the analytic category, the complex $K^\an$ of coherent analytic sheaves is given by the same formulas as for $K$.
 We have a commutative diagram
-\tikzcd{
+```tikz
+\begin{tikzcd}
   \bHH^i(X,K)
     \ar[r,"\sim"]
     \ar[d]
@@ -243,9 +184,11 @@ We have a commutative diagram
 \\\bHH^i(X^\an,K^\an)
     \ar[r,"\sim"]
   & \bHH^i(X_\bullet^\an,\Omega_{X_\bullet^\an}^\bullet)
-}
-and #{(1)} is an abutment of a morphism of spectral sequences
-\tikzcd{
+\end{tikzcd}
+```
+and $(1)$ is an abutment of a morphism of spectral sequences
+```tikz
+\begin{tikzcd}
   \bHH^a(X_b,\Omega_{X_\bullet}^\bullet)
     \ar[r,Rightarrow]
     \ar[d]
@@ -254,13 +197,14 @@ and #{(1)} is an abutment of a morphism of spectral sequences
 \\\bHH^a(X_b^\an,\Omega_{X_\bullet^\an}^\bullet)
     \ar[r,Rightarrow]
   & \bHH^{a+b}(X_\bullet^\an,\Omega_{X_\bullet^\an}^\bullet).
-}
-This morphism is an isomorphism by [[G1966](G1966)], whence (d).
-}
+\end{tikzcd}
+```
+This morphism is an isomorphism by [@G1966], whence (d).
 
 \oldpage{53}
 To prove (c), we consider the commutative diagram
-\tikzcd{
+```tikz
+\begin{tikzcd}
   \underline{\CC}
     \ar[rr,"\sim"]
     \ar[rr,swap,"(1)"]
@@ -273,20 +217,16 @@ To prove (c), we consider the commutative diagram
   & K^\an
     \ar[r,"\sim"]
   & {\Rd{\varepsilon_\bullet}_*\Omega_{X_\bullet}^\bullet}^\an
-}
-}
+\end{tikzcd}
+```
 
-The fact that #{(1)} is a quasi-isomorphism follows from \ref{hodge-theory-iii-5.3.5}.
-The fact that #{(2)} is a quasi-isomorphism follows from the Poincaré lemma on the #{X_n}.
+The fact that $(1)$ is a quasi-isomorphism follows from [(5.3.5)](5.3-cohomological-descent.qmd#iii-5.3.5).
+The fact that $(2)$ is a quasi-isomorphism follows from the Poincaré lemma on the $X_n$.
 Claim (c) thus follows.
-}
-}
+:::
 
-\subtree[hodge-theory-iii-9.3.4]{
-\number{9.3.4}
-
-The same construction gives resolutions that satisfy (a) and (b) for sheaves #{\sh{F}} on #{X^\an} other than the constant sheaf #{\underline{\CC}} (we can probably take #{\sh{F}} to be any "algebraically constructible" sheaf).
+::: {.rmenv #env-iii-9.3.4 number="9.3.4"}
+The same construction gives resolutions that satisfy (a) and (b) for sheaves $\sh{F}$ on $X^\an$ other than the constant sheaf $\underline{\CC}$ (we can probably take $\sh{F}$ to be any "algebraically constructible" sheaf).
 Unfortunately, I can not prove that the resolutions thus obtained are essentially unique (in a suitable derived category).
-In the absence of such uniqueness, \ref{hodge-theory-iii-9.3.1} is not of great interest.
-}
-}
+In the absence of such uniqueness, [(9.3.1)](#iii-9.3.1) is not of great interest.
+:::

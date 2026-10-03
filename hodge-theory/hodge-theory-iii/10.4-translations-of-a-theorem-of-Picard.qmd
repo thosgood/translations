@@ -4,3 +4,184 @@ title: 10.4 Translation of a theorem of Picard
 
 {{< include ../macros.qmd >}}
 
+
+\subtree[hodge-theory-iii-10.4.1]{
+  \number{10.4.1}
+
+  \p{
+    \oldpage{75}
+    Let #{\sh{H}} be a mixed Hodge structure such that #{h^{pq}=0} for #{p<0} or #{q<0} (resp. for #{p>n} or #{q>n}).
+    I provisionally denote by #{\II(\sh{H})} (resp. by #{\IIII_n(\sh{H})}) the 1-motive defined by the largest mixed Hodge sub-structure of #{(\sh{H}_\ZZ{/}\mathrm{torsion})(1)} (resp. by the largest quotient of #{(\sh{H}_\ZZ{/}\mathrm{torsion})(n)}) that is of pure of type
+    #{
+      \big\{ (-1,-1), (-1,0), (0,-1), (0,0) \big\}.
+    }
+    If #{X} in a complex algebraic variety of dimension #{\leqslant N}, I conjecture that the 1-motives #{\II(\HH^n(X,\ZZ))}, #{\IIII_n(\HH^n(X,\ZZ))} (for #{n\leqslant N}), and #{\IIII_n(\HH^n(X,\ZZ))} (for #{n\geqslant N}) admit a purely algebraic definition.
+    The morphisms
+    ##{
+      \begin{aligned}
+        T_\ell(\II(\HH^n(X,\ZZ)))
+        & \to (\HH^n(X,\ZZ_\ell)/\mathrm{torsion})(1)
+      \\T_\ell(\IIII_n(\HH^n(X,\ZZ)))
+        & \from \HH^n(X,\ZZ_\ell)(n)
+          \quad\text{for }n\leqslant N
+      \\T_\ell(\IIII_N(\HH^n(X,\ZZ)))
+        & \from \HH^n(X,\ZZ_\ell)(N)
+          \quad\text{for }n\geqslant N
+      \end{aligned}
+    }
+    (and their analogues in de Rham cohomology) should also admit a purely algebraic definition.
+    This is what we have shown for #{\dim(X)=1}.
+    Here is another example.
+  }
+}
+
+\subtree[hodge-theory-iii-10.4.2]{
+  \number{10.4.2}
+
+  \p{
+    Let #{S} be a smooth projective surface, #{U} a dense Zariski open of #{S}, and #{C=S\setminus U}.
+    Set
+    ##{
+      \HH_2^{\log}(U,\ZZ)
+      = \Ker\big( \HH_2(U,\ZZ)\to\HH_2(S,\ZZ) \big).
+    }
+    By [[G1968](G1968), §9], this group does not depend on the chosen smooth compactification #{S} of #{U}.
+    Modulo finite groups, this is nothing more (\ref{hodge-theory-ii-3.2.17}) than #{W_{-3}\HH_2(U,\ZZ)} (#{\HH_2(U,\QQ)}, the dual of #{\HH^2(U,\QQ)}, is endowed with the dual mixed Hodge structure).
+    We can show that the 1-motive defined by #{(\HH_2^{\log}(U,\ZZ)/\mathrm{torsion})(-1)} admits the following description:
+
+    \olc{
+      \lic{(a)}{
+        By Poincaré duality, we have that #{\HH_2(U,\ZZ)=\HH_\cc^2(U,\ZZ)}.
+        The long exact sequence of cohomology of #{(S,C)} gives an exact sequence
+        ##{
+          \HH^1(S,\ZZ)
+          \to \HH^1(C,\ZZ)
+          \to \HH_2^{\log}(U,\ZZ)
+          \to 0.
+        }
+      }
+
+      \lic{(b)}{
+        Let #{\HH_\mm^1(C)} be the quotient of #{\Pic^0(C)} by its unipotent radical.
+        We know that #{\HH^1(C,\ZZ)=T_\ZZ(\HH_\mm^1(C))} and #{\HH^1(S,\ZZ)=T_\ZZ(\Pic^0(S))}.
+        We thus have a map
+        ##{
+          \HH_2^{\log}(U,\ZZ)
+          \to T_\ZZ(H_\mm^1(C)/\Pic^0(S))
+        }
+        which is an isomorphism modulo finite groups.
+      }
+
+      \lic{(c)}{
+        The map
+
+        \subtree[hodge-theory-iii-10.4.2.1]{
+          \taxon{equation}
+          \number{10.4.2.1}
+          ##{
+            (\HH_2^{\log}(U,\ZZ)/\mathrm{torsion})(-1)
+            \to T_\ZZ(\HH_\mm^1(C)/\Pic^0(S))
+          \startverb\tag{10.4.2.1}\stopverb
+          }
+        }
+
+        induced from (b) is a morphism of mixed Hodge structures (and an isomorphism modulo finite groups).
+      }
+    }
+  }
+
+  \p{
+    \oldpage{76}
+    We can define the isomorphisms (modulo finite groups) induced by \ref{hodge-theory-iii-10.4.2.1} between the analogues of #{\HH_2^{\log}(U,\ZZ)(-1)} in #{\ell}-adic or de Rham cohomology, as well as the #{\ell}-adic or de Rham realisations of #{\HH_\mm^1(C)/\Pic^0(S)}, in a purely algebraic way.
+  }
+}
+
+\subtree[hodge-theory-iii-10.4.3]{
+  \number{10.4.3}
+
+  \p{
+    We will not prove the above constructions and compatibilities.
+    The seed of the idea is in the following theorem of E. Picard ([[PS1895](PS1895), p. 62]).
+    Here #{P} and #{A} denote polynomials.
+  }
+
+  \subtree[hodge-theory-iii-10.4.3.1]{
+    \taxon{theorem}
+    \number{10.4.3.1}
+  
+    \p{
+      Every residue of the double integral
+      ##{
+        \iint\frac{P(x,y)\dd x\dd y}{A(x,y)}
+      }
+      can be thought of as a logarithmic or cyclic period of an abelian integral.
+    }
+  }
+
+  \p{
+    Recall that:
+
+    \olc{
+      \lic{(a)}{
+        A \em{#{k}-fold integral} on a non-singular projective variety #{V} of dimension #{d} is a closed rational #{k}-form on #{V}, i.e. it is an element #{\alpha\in\HH^0(U,\Omega^k)}, where #{U} is a dense open of #{V}, such that #{\dd\alpha=0}.
+        Here, #{k=2} and #{V=\PP^2}, and so #{k=\dim V} and the condition #{\dd\alpha=0} is trivial.
+      }
+
+      \lic{(b)}{
+        A #{k}-fold integral #{\alpha} defines an element, again denoted by #{\alpha}, of #{\HH^k(U,\CC)}.
+        The \em{periods} of #{\alpha} are the numbers #{\langle\alpha,c\rangle} for #{c\in\HH_k(U,\ZZ)}.
+        If #{c} is defined by a singular chain #{C}, then
+        ##{
+          \langle\alpha,c\rangle
+          = \int_C\alpha.
+        }
+      }
+
+      \lic{(c)}{
+        The \em{residues} of a #{k}-fold integral #{\alpha\in\HH^0(U,\Omega^k)} are the numbers #{\langle\alpha,c\rangle} for
+        ##{
+          c\in\Ker\big( \HH_k(U,\ZZ)\to\HH_k(V,\ZZ) \big).
+        }
+        In the case considered by Picard, the map #{\HH_2(U,\ZZ)\to\HH_2(\PP^3,\ZZ)} is zero, and there is no need to distinguish between periods and residues.
+        For the general case, see [[L1924](L1924), note I].
+      }
+
+      \lic{(d)}{
+        To Picard, "logarithmic or cyclic period of an abelian integral" simply means "period of a simple integral #{\beta} on a curve #{Y}".
+        It is implicit that #{\beta} and #{Y} are rationally determined by #{P} and #{A}.
+      }
+    }
+  }
+}
+
+\subtree[hodge-theory-iii-10.4.4]{
+  \number{10.4.4}
+
+  \p{
+    Let us translate this theorem.
+    Let #{S} and #{U} be as in \ref{hodge-theory-iii-10.4.2} (for example, #{S=\PP^2(\CC)}), and let #{\beta\in\HH^0(U,\Omega_U^2)} be a double integral and #{c\in\HH_2^{\log}(U,\ZZ)} a cycle.
+    By definition,
+    ##{
+      \langle\beta,c\rangle
+      = \int_c\beta
+    }
+    is a residue of #{\beta}.
+    Let #{A=\HH_\mm^1(C)(1)/\Pic^0(S)} (an extension of an abelian variety by a torus).
+    The 2-form #{\beta} defines a cohomology class #{\operatorname{cl}(\beta)\in\HH_\DR^2(U)} and induces a linear form #{\beta'} on #{\HH_{\DR,2}^{\log}(U)=T_\DR(A)}.
+    \oldpage{77}
+    The map #{\beta\mapsto\beta'} is rational.
+    The class #{c} defines #{c'\in T_\ZZ(A)\otimes\QQ}, and we have that
+
+    \subtree[hodge-theory-iii-10.4.4.1]{
+      \taxon{equation}
+      \number{10.4.4.1}
+      ##{
+        \langle\beta,c\rangle
+        = 2\pi i\langle\beta',c'\rangle.
+      \startverb\tag{10.4.4.1}\stopverb
+      }
+    }
+
+    We can represent #{c'} by a cycle on #{C}, and #{\beta'} as a simple integral on #{C}.
+  }
+}
