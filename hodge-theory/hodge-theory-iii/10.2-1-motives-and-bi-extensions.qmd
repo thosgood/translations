@@ -61,7 +61,7 @@ Every biadditive morphism $G_1\times G_2\to\Gm$ is trivial.
 :::
 ::::
 
-::: {.rmenv #env-iii-10.2.3 number="10.2.3" taxon="Construction"
+::: {.rmenv #env-iii-10.2.3 number="10.2.3" taxon="Construction"}
 Let $M_i=(X_i,A_i,T_i,G_i,u_i)$ (for $i=1,2$) be 1-motives over $\CC$.
 \oldpage{61}
 We have that
@@ -264,24 +264,16 @@ b. the restriction of $\psi$ to $W_{-1}T_\ZZ(M_1)\otimes W_{-1}T_\ZZ(M_2)$ comes
 Condition (b) implies that $\psi$ is compatible with $W$, and this concludes [(10.2.3)](#iii-10.2.3).
 :::
 
-\subtree[hodge-theory-iii-10.2.4]{
-\taxon{remark}
-\number{10.2.4}
-
+::: {.rmenv #env-iii-10.2.4 number="10.2.4" taxon="Remark"}
 A biextension $P$ of $M_1$ and $M_2$ by $\Gm$ defines, in an evident way, a biextension $P^0$ of $M_2$ and $M_1$ by $\Gm$.
 \oldpage{64}
 If $\psi$ (resp. $\psi^0$) is the bilinear form defined by $P$ (resp. by $P^0$), then $\psi(x,y)=-\psi^0(y,x)$.
-This is clear from the equations in \ref{hodge-theory-iii-10.2.3.7}.
-}
+This is clear from the equations in [(10.2.3.7)](#iii-10.2.3.7).
 
-\ref{hodge-theory-iii-10.2.3} has purely algebraic analogues in $\ell$-adic or de Rham cohomology.
-}
-}
+[(10.2.3)](#iii-10.2.3) has purely algebraic analogues in $\ell$-adic or de Rham cohomology.
+:::
 
-\subtree[hodge-theory-iii-10.2.5]{
-\taxon{construction}
-\number{10.2.5}
-
+::: {.rmenv #env-iii-10.2.5 number="10.2.5" taxon="Construction"}
 Let $M_i=(X_i,A_i,T_i,G_i,u_i)$ (for $i=1,2$) be 1-motives over an algebraically closed field $k$ of characteristic 0.
 Let $P$ be a biextension of $M_1$ and $M_2$ by $\Gm$.
 We associate to $P$ a morphism
@@ -289,47 +281,37 @@ $$
   T_{\ZZ{/}n\ZZ}(M_1)\otimes T_{\ZZ{/}n\ZZ}(M_2)
   \to \ZZ{/}n\ZZ(1).
 $$
-}
+:::
 
 ::: {.proof}
-  Let $m_i\in T_{\ZZ{/}n\ZZ}(M_1)$ be represented by $(x_i,g_i)$, with $u_i(x_i)=ng_i$.
-  We will construct isomorphisms $a_1$ and $a_2$ from $P_{g_1,g_2}^{\otimes n}$ to the trivial torsor $\Gm$:
-  $$
-    \begin{aligned}
-      a_1\colon P_{g_1,g_2}^{\otimes n}
-      \simto P_{ng_1,g_2}
-      &= P_{u(x_1),g_2}
-      \simto \Gm
-    \\a_2\colon P_{g_1,g_2}^{\otimes n}
-      \simto P_{g_1,ng_2}
-      &= P_{g_1,u(x_2)}
-      \simto \Gm.
-    \end{aligned}
-  $$
-  We set $a_2=\Phi(m_1,m_2)a_1$.
-  We can verify that $\Phi(m_1,m_2)$ does not depend on the choice of the $(x_i,g_i)$, and is an $n$-th root of unity.
-  This is the desired form.
-}
-}
-}
+Let $m_i\in T_{\ZZ{/}n\ZZ}(M_1)$ be represented by $(x_i,g_i)$, with $u_i(x_i)=ng_i$.
+We will construct isomorphisms $a_1$ and $a_2$ from $P_{g_1,g_2}^{\otimes n}$ to the trivial torsor $\Gm$:
+$$
+  \begin{aligned}
+    a_1\colon P_{g_1,g_2}^{\otimes n}
+    \simto P_{ng_1,g_2}
+    &= P_{u(x_1),g_2}
+    \simto \Gm
+  \\a_2\colon P_{g_1,g_2}^{\otimes n}
+    \simto P_{g_1,ng_2}
+    &= P_{g_1,u(x_2)}
+    \simto \Gm.
+  \end{aligned}
+$$
+We set $a_2=\Phi(m_1,m_2)a_1$.
+We can verify that $\Phi(m_1,m_2)$ does not depend on the choice of the $(x_i,g_i)$, and is an $n$-th root of unity.
+This is the desired form.
+:::
 
-\subtree[hodge-theory-iii-10.2.6]{
-\taxon{proposition}
-\number{10.2.6}
-
-On $\CC$, the form in \ref{hodge-theory-iii-10.2.5} is induced by the form in \ref{hodge-theory-iii-10.2.3} by reduction modulo $n$.
-}
+::: {.itenv #env-iii-10.2.6 number="10.2.6" taxon="Proposition"}
+On $\CC$, the form in [(10.2.5)](#iii-10.2.5) is induced by the form in [(10.2.3)](#iii-10.2.3) by reduction modulo $n$.
+:::
 
 ::: {.proof}
-  This can be proven by using the formulas given in \ref{hodge-theory-iii-10.2.3.7}.
-}
-}
-}
+This can be proven by using the formulas given in [(10.2.3.7)](#iii-10.2.3.7).
+:::
 
-\subtree[hodge-theory-iii-10.2.7]{
-\taxon{construction}
-\number{10.2.7}
-
+::: {.rmenv #env-iii-10.2.7 number="10.2.7" taxon="Construction"}
 Let $M_i=(X_i,A_i,T_i,G_i,u_i)$ (for $i=1,2$) be 1-motives over an algebraically closed field $k$.
 Let $P$ be a biextension of $M_1$ and $M_2$ by $\Gm$.
 We associate to $P$ a morphism
@@ -337,176 +319,138 @@ $$
   T_\DR(M_1)\otimes_k T_\DR(M_2)
   \to k.
 $$
-}
+:::
 
-::: {.proof}
+:::: {.proof}
 We first recall the definitions (due to Grothendieck) of $\natural$-extensions and $\natural$-biextensions.
 
-\subtree[hodge-theory-iii-10.2.7.1]{
-  \number{10.2.7.1}
+::: {.rmenv #env-iii-10.2.7.1 number="10.2.7.1"}
+A $\natural$-extension of a smooth commutative group $G$ by a smooth commutative group $H$ consists of the following:
 
-      A $\natural$-extension of a smooth commutative group $G$ by a smooth commutative group $H$ consists of the following:
-
-    \olc{
-      \lic{(a)}{
-        an extension $E$ of $G$ by $H$;
-        if $\mu\colon G\times G\to G$ is the addition, then we consider $E$ as an $H$-torsor over $G$ endowed with a morphism
-        $$
-          \nu\colon \pr_1^*E + \pr_2^*E
-          \to \mu^*E
-        $$
-        of $H$-torsors over $G\times G$ (addition);
-      }
-      \lic{(b)}{
-        a connection on the $H$-torsor $E$, such that the map $\nu$ is horizontal.
-        This connection is automatically flat.
-      }
-    }
-  }
-
-      If $G$ is the extension of an abelian variety by a torus, then every extension of $G$ by $\Gm$ admits a $\natural$-structure;
-    two $\natural$-structures differ by an invariant form on $G$ (with values in the Lie algebra of $\Gm$).
-    We define, in an evident way, the Baer sum of two $\natural$-extensions.
-  }
-}
-
-\subtree[hodge-theory-iii-10.2.7.2]{
-  \number{10.2.7.2}
-
-      \oldpage{65}
-    Let $P$ be a biextension of $G_1$ and $G_2$ by $H$.
-    Consider $P$ as an $H$-torsor $P$ over $G_1\times G_2$, endowed with morphisms
+a. an extension $E$ of $G$ by $H$;
+    if $\mu\colon G\times G\to G$ is the addition, then we consider $E$ as an $H$-torsor over $G$ endowed with a morphism
     $$
-      \begin{aligned}
-        \nu_1\colon
-        \pr_{13}^*P + \pr_{23}^*P
-        &\to (\mu_1\times\Id)^*P
-        \quad\text{on}
-        \quad G_1\times G_1\times G_2
-      \\\nu_2\colon
-        \pr_{12}^*P + \pr_{13}^*P
-        &\to (\Id\times\mu_2)^*P
-        \quad\text{on}
-        \quad G_1\times G_2\times G_2.
-      \end{aligned}
+      \nu\colon \pr_1^*E + \pr_2^*E
+      \to \mu^*E
     $$
-    A \em{$\natural$-1-structure} on $P$ is a connection on the $H$-torsor $P$ with respect to $G_1\times G_2\to G_2$ (the covariant derivative is defined only for vector fields that are parallel to $G_1$) such that $\nu_1$ and $\nu_2$ are horizontal.
-    We similarly define \em{$\natural$-2-structures}.
-    A \em{$\natural$-structure} is the data of a $\natural$-1-structure and of a $\natural$-2-structure.
-    This is also a connection on the $H$ torsor $P$ such that $\nu_1$ and $\nu_2$ are horizontal.
-  }
+    of $H$-torsors over $G\times G$ (addition);
+b. a connection on the $H$-torsor $E$, such that the map $\nu$ is horizontal.
+    This connection is automatically flat.
+:::
 
-      The \em{curvature} $R$ of a $\natural$-biextension $P$ is the curvature of the connection of $P$.
-    This is a 2-form on $G_1\times G_2$ that is invariant under translation, with values in $\Lie(H)$, i.e. it is an alternating form on $\Lie(G_1)\times\Lie(G_2)$, with values in $\Lie(H)$.
-    Its restriction to $\Lie(G_1)$ and $\Lie(G_2)$ is zero, and so $R$ defines a pairing
+If $G$ is the extension of an abelian variety by a torus, then every extension of $G$ by $\Gm$ admits a $\natural$-structure;
+two $\natural$-structures differ by an invariant form on $G$ (with values in the Lie algebra of $\Gm$).
+We define, in an evident way, the Baer sum of two $\natural$-extensions.
 
-    \subtree[hodge-theory-iii-10.2.7.3]{
-      \taxon{equation}
-      \number{10.2.7.3}
-      $$
-        \Phi\colon \Lie(G_1)\otimes\Lie(G_2)
-        \to \Lie(H)
-      \tag{10.2.7.3}
-      $$
-    }
+::: {.rmenv #env-iii-10.2.7.2 number="10.2.7.2"}
+Let $P$ be a biextension of $G_1$ and $G_2$ by $H$.
+\oldpage{65}
+Consider $P$ as an $H$-torsor $P$ over $G_1\times G_2$, endowed with morphisms
+$$
+  \begin{aligned}
+    \nu_1\colon
+    \pr_{13}^*P + \pr_{23}^*P
+    &\to (\mu_1\times\Id)^*P
+    \quad\text{on}
+    \quad G_1\times G_1\times G_2
+  \\\nu_2\colon
+    \pr_{12}^*P + \pr_{13}^*P
+    &\to (\Id\times\mu_2)^*P
+    \quad\text{on}
+    \quad G_1\times G_2\times G_2.
+  \end{aligned}
+$$
+A **$\natural$-1-structure** on $P$ is a connection on the $H$-torsor $P$ with respect to $G_1\times G_2\to G_2$ (the covariant derivative is defined only for vector fields that are parallel to $G_1$) such that $\nu_1$ and $\nu_2$ are horizontal.
+We similarly define **$\natural$-2-structures**.
+A **$\natural$-structure** is the data of a $\natural$-1-structure and a $\natural$-2-structure.
+This is equivalently a connection on the $H$ torsor $P$ such that $\nu_1$ and $\nu_2$ are horizontal.
 
-    (also called the \em{curvature} of $P$), with
-    $$
-      R(g_1+g_2, g'_1+g'_2)
-      = \Phi(g_1,g'_2) - \Phi(g'_1,g_2).
-    $$
-  }
+The **curvature** $R$ of a $\natural$-biextension $P$ is the curvature of the connection of $P$.
+This is a 2-form on $G_1\times G_2$ that is invariant under translation, with values in $\Lie(H)$, i.e. it is an alternating form on $\Lie(G_1)\times\Lie(G_2)$, with values in $\Lie(H)$.
+Its restriction to $\Lie(G_1)$ and $\Lie(G_2)$ is zero, and so $R$ defines a pairing
+$$
+  \Phi\colon \Lie(G_1)\otimes\Lie(G_2)
+  \to \Lie(H)
+\tag{10.2.7.3}
+$$
+(also called the **curvature** of $P$), with
+$$
+  R(g_1+g_2, g'_1+g'_2)
+  = \Phi(g_1,g'_2) - \Phi(g'_1,g_2).
+$$
 
-      For complexes of smooth groups $K_i\colon[A_i\to B_i]$, a \em{$\natural$-biextension} (resp. a \em{$\natural$-$i$-extension}) of $K_1$ and $K_2$ by $H$ is a $\natural$-biextension (resp. $\natural$-$i$-biextension) of $B_1$ and $B_2$ by $H$, endowed with trivialisations (as $\natural$-biextensions, resp. $\natural$-$i$-biextensions) as in \ref{hodge-theory-iii-10.2.1}.
-  }
-}
+For complexes of smooth groups $K_i\colon[A_i\to B_i]$, a **$\natural$-biextension** (resp. a **$\natural$-$i$-extension**) of $K_1$ and $K_2$ by $H$ is a $\natural$-biextension (resp. $\natural$-$i$-biextension) of $B_1$ and $B_2$ by $H$, endowed with trivialisations (as $\natural$-biextensions, resp. $\natural$-$i$-biextensions) as in [(10.2.1)](#iii-10.2.1).
+:::
 
-\subtree[hodge-theory-iii-10.2.7.4]{
-  \number{10.2.7.4}
-  \taxon{proposition}
+::: {.itenv #env-iii-10.2.7.4 number="10.2.7.4" taxon="Proposition"}
+Let $P^\natural$ be the biextension of $M_1^\natural$ and $M_2^\natural$ by $\Gm$ given by the inverse image of $P$.
+Then there exists exactly one $\natural$-structure on $P^\natural$.
+:::
 
-      Let $P^\natural$ be the biextension of $M_1^\natural$ and $M_2^\natural$ by $\Gm$ given by the inverse image of $P$.
-    Then there exists exactly one $\natural$-structure on $P^\natural$.
-  }
+::: {.proof}
+We first prove uniqueness: we have to show that, on the trivial biextension of $M_1^\natural$ and $M_2^\natural$ by $\Gm$, every $\natural$-structure is trivial.
+A $\natural$-structure is, first of all, a connection on the trivial $\Gm$-torsor over $G_1^\natural\times G_2^\natural$, i.e. a field of forms on $G_1^\natural\times G_2^\natural$, say $\Gamma_{g_1,g_2}(t_1+t_2)$.
+The axiom of $\natural$-structures implies that
+$$
+  \Gamma_{g_1,g_2}(t_1+t_2)
+  = \Phi_1(g_1,t_2) + \Phi_2(t_1,g_2)
+$$
+where $\Phi_1$ and $\Phi_2$ are biadditive.
+Now, $G_i^\natural$ is an extension of $X_i\otimes k$ by the universal extension $G'_i$ of $G_i$ by an additive group.
+Every morphism $G'_i\to\Ga$ is trivial.
+Furthermore, $\Phi_1$ factors through $(X_1\otimes k)\otimes\Lie(G_2^\natural)$.
+Finally, the restriction of $\Gamma$ to $X_1\times G_2^\natural$ must be trivial, and thus so too must be the restriction of $\Phi_1$ to $X_1\times\Lie(G_2^\natural)$.
+We thus have that $\Phi_1=0$.
+Similarly, $\Phi_2=0$, and so $\Gamma=0$.
 
-  ::: {.proof}
-          We first prove uniqueness: we have to show that, on the trivial biextension of $M_1^\natural$ and $M_2^\natural$ by $\Gm$, every $\natural$-structure is trivial.
-      A $\natural$-structure is, first of all, a connection on the trivial $\Gm$-torsor over $G_1^\natural\times G_2^\natural$, i.e. a field of forms on $G_1^\natural\times G_2^\natural$, say $\Gamma_{g_1,g_2}(t_1+t_2)$.
-      The axiom of $\natural$-structures implies that
-      $$
-        \Gamma_{g_1,g_2}(t_1+t_2)
-        = \Phi_1(g_1,t_2) + \Phi_2(t_1,g_2)
-      $$
-      where $\Phi_1$ and $\Phi_2$ are biadditive.
-      Now, $G_i^\natural$ is an extension of $X_i\otimes k$ by the universal extension $G'_i$ of $G_i$ by an additive group.
-      Every morphism $G'_i\to\Ga$ is trivial.
-      Furthermore, $\Phi_1$ factors through $(X_1\otimes k)\otimes\Lie(G_2^\natural)$.
-      Finally, the restriction of $\Gamma$ to $X_1\times G_2^\natural$ must be trivial, and thus so too must be the restriction of $\Phi_1$ to $X_1\times\Lie(G_2^\natural)$.
-      We thus have that $\Phi_1=0$.
-      Similarly, $\Phi_2=0$, and so $\Gamma=0$.
-    }
+To prove existence, it suffices to construct a $\natural$-2-structure on the biextension of $M_1^\natural$ and $M_2$ by $\Gm$ given by the inverse image of $P$: by the inverse image, we will obtain a $\natural$-2-structure on $P^\natural$ and, symmetrically, a $\natural$-1-structure.
 
-          To prove existence, it suffices to construct a $\natural$-2-structure on the biextension of $M_1^\natural$ and $M_2$ by $\Gm$ given by the inverse image of $P$: by the inverse image, we will obtain a $\natural$-2-structure on $P^\natural$ and, symmetrically, a $\natural$-1-structure.
-    }
+  For $g\in G_1$, $P_g$ is an extension of $G_2$ by $\Gm$.
+Let $C_g$ be the set of $\natural$-structures on $P_g$.
+This is a torsor under $\Lie(G_2)^*$.
+For $g\in G_1$, the $C_g$ are the fibres of a torsor $C$ over $G_1$;
+the Baer sum of $\natural$-extensions further makes $C$ an extension of $G_1$ by $\Lie(G_2)^*$
+\oldpage{66}
+We lift $u_1\colon X\to G_1$ to $u'_1\colon X\to C$ by sending $x\in X$ to the trivial connection on the trivial extension $P_{u_1(x)}$.
+We thus obtain a $\natural$-2-structure on the biextension of $[X\to C]$ and $M_2$ by $\Gm$ given by the inverse image of $P$.
 
-          For $g\in G_1$, $P_g$ is an extension of $G_2$ by $\Gm$.
-      Let $C_g$ be the set of $\natural$-structures on $P_g$.
-      This is a torsor under $\Lie(G_2)^*$.
-      For $g\in G_1$, the $C_g$ are the fibres of a torsor $C$ over $G_1$;
-      the Baer sum of $\natural$-extensions further makes $C$ an extension of $G_1$ by $\Lie(G_2)^*$
-      \oldpage{66}
-      We lift $u_1\colon X\to G_1$ to $u'_1\colon X\to C$ by sending $x\in X$ to the trivial connection on the trivial extension $P_{u_1(x)}$.
-      We thus obtain a $\natural$-2-structure on the biextension of $[X\to C]$ and $M_2$ by $\Gm$ given by the inverse image of $P$.
-    }
+By the universal property of $M_1^\natural$, there exists a unique commutative diagram
+```tikz
+\begin{tikzcd}
+& {[ X}
+  \ar[r]
+& {G]}
+\\M_1^\natural
+  \ar[ur]
+  \ar[rrr,swap,"v"]
+&&&{[ X}
+  \ar[ul]
+  \ar[r]
+& {C]}
+\end{tikzcd}
+```
+by taking an inverse image under $v$, we find the desired $\natural$-2-structure.
+:::
 
-          By the universal property of $M_1^\natural$, there exists a unique commutative diagram
+By definition, the pairing in [(10.2.7)](#iii-10.2.7) is the negative of the curvature of the $\natural$-biextension [(10.2.7.4)](#iii-10.2.7.4).
+::::
 
-      \tikzcd{
-      & {[ X}
-        \ar[r]
-      & {G]}
-      \\M_1^\natural
-        \ar[ur]
-        \ar[rrr,swap,"v"]
-      &&&{[ X}
-        \ar[ul]
-        \ar[r]
-      & {C]}
-      }
-
-      by taking an inverse image under $v$, we find the desired $\natural$-2-structure.
-    }
-
-          By definition, the pairing in \ref{hodge-theory-iii-10.2.7} is the negative of the curvature of the $\natural$-biextension \ref{hodge-theory-iii-10.2.7.4}.
-    }
-  }
-}
-}
-}
-
-\subtree[hodge-theory-iii-10.2.8]{
-\taxon{proposition}
-\number{10.2.8}
-
-Over $\CC$, the pairing in \ref{hodge-theory-iii-10.2.7} is the complexification of the pairing in \ref{hodge-theory-iii-10.2.3}.
-}
+::: {.itenv #env-iii-10.2.8 number="10.2.8" taxon="Proposition"}
+Over $\CC$, the pairing in [(10.2.7)](#iii-10.2.7) is the complexification of the pairing in [(10.2.3)](#iii-10.2.3).
+:::
 
 ::: {.proof}
 The $\natural$-biextension $P^\natural$ defines, in the analytic category, a $\natural$-biextension of $[T_\ZZ(M_1)\to T_\CC(M_1)]$ and $[T_\ZZ(M_2)\to T_\CC(M_2)]$ by $\Gm$.
-The proposition then follows from the following lemma (\ref{hodge-theory-iii-10.2.9}).
-}
-}
+The proposition then follows from the following lemma.
+:::
 
-\subtree[hodge-theory-iii-10.2.9]{
-\taxon{lemma}
-\number{10.2.9}
-
+::: {.itenv #env-iii-10.2.9 number="10.2.9" taxon="Lemma"}
 Let $V_\ZZ$ and $W_\ZZ$ be two free $\ZZ$-modules of finite rank, and $P$ a biextension of $[V_\ZZ\to V_\CC]$ and $[W_\ZZ\to W_\CC]$ by $\Gm$ with underlying biextension $P$.
-Then the curvature $\psi\colon V_\cc\otimes W_\CC\to\CC$ of $P^\natural$ agrees with the negative of the complexification of the form corresponding to $P$ under \ref{hodge-theory-iii-10.2.3.4}.
-}
+Then the curvature $\psi\colon V_\cc\otimes W_\CC\to\CC$ of $P^\natural$ agrees with the negative of the complexification of the form corresponding to $P$ under [(10.2.3.4)](#iii-10.2.3.4).
+:::
 
 ::: {.proof}
-Let $P=P(\psi_1,\psi_2)$ (\ref{hodge-theory-iii-10.2.3.4}).
+Let $P=P(\psi_1,\psi_2)$ [(10.2.3.4)](#iii-10.2.3.4).
 A $\natural$-structure on $P$ is, first of all, a connection on the trivial $\Gm$-torsor over $V_\CC\times W_\CC$, i.e. a field of forms $\Gamma_{v,w}(v'+w')$ on $V_\CC\times W_\CC$.
 This connection defines a $\natural$-structure on this torsor if and only if
 $$
@@ -526,20 +470,29 @@ $$
   = -(\psi_1(v',w'') - \psi_2(v',w''))
   = -\psi(v',w'').
 $$
-}
-}
+:::
 
-\subtree[hodge-theory-iii-10.2.10]{
-\number{10.2.10}
-
+::: {.rmenv #env-iii-10.2.10 number="10.2.10"}
 Let $M$ be a 1-motive over $\CC$.
 Then $M$ has a corresponding mixed Hodge structure $T(M)$ of type $\{(0,0),(0,-1),(-1,0),(-1,-1)\}$.
 The mixed Hodge structure $\Hom(T(M),\ZZ(1))$ is again of this type, and thus defines a 1-motive $M^*$.
 The evident map $T(M)\otimes T(M^*)\to\ZZ(1)$ defines a biextension $P$ of $M$ and $M^*$ by $\Gm$.
-The 1-motive $M^*$, endowed with the biextension $P$, is the \em{Cartier dual} of $M$.
-We call $P$ the \em{Poincaré biextension}.
-}
-}
+The 1-motive $M^*$, endowed with the biextension $P$, is the **Cartier dual** of $M$.
+We call $P$ the **Poincaré biextension**.
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subtree[hodge-theory-iii-10.2.11]{
 \number{10.2.11}
