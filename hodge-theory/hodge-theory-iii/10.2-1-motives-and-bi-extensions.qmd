@@ -481,36 +481,17 @@ The 1-motive $M^*$, endowed with the biextension $P$, is the **Cartier dual** of
 We call $P$ the **Poincaré biextension**.
 :::
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subtree[hodge-theory-iii-10.2.11]{
-\number{10.2.11}
-
+::: {.rmenv #env-iii-10.2.11 number="10.2.11"}
 \oldpage{67}
-The construction in \ref{hodge-theory-iii-10.2.10} can be made purely algebraic.
-To a 1-motive $M=(X,A,T,G,u)$ over an algebraically closed field $k$, we will associated a \em{Cartier dual} $M^*=(X',A',T',G',u')$:
+The construction in [(10.2.10)](#iii-10.2.10) can be made purely algebraic.
+To a 1-motive $M=(X,A,T,G,u)$ over an algebraically closed field $k$, we will associated a *Cartier dual* $M^*=(X',A',T',G',u')$:
 
-\olc{
-  \lic{(a)}{
-    $X'$ is the character group of $T$, $A'$ is the dual abelian variety of $A$, and $T'$ is the character group of $X$.
-  }
-
-  \lic{(b)}{
-    We first consider the case where $T=0$.
+a. $X'$ is the character group of $T$, $A'$ is the dual abelian variety of $A$, and $T'$ is the character group of $X$.
+b. We first consider the case where $T=0$.
     An extension of $M$ by $\Gm$ then consists of an extension $E$ of $A$ by $\Gm$, along with a trivialisation $\widetilde{u}$ of the extension $u^*E$ of $X$ by $\Gm$.
 
-    \tikzcd{
+    ```tikz
+    \begin{tikzcd}
     &&& X
         \ar[dl,swap,"\widetilde{u}"]
         \ar[d,"u"]
@@ -519,7 +500,8 @@ To a 1-motive $M=(X,A,T,G,u)$ over an algebraically closed field $k$, we will as
     & E \ar[r]
     & A \ar[r]
     & 0
-    }
+    \end{tikzcd}
+    ```
 
     We have an exact sequence
     $$
@@ -535,14 +517,12 @@ To a 1-motive $M=(X,A,T,G,u)$ over an algebraically closed field $k$, we will as
     we define $G'$ as the algebraic group that represents this functor;
     it is an extension of $A'$ by $T'$.
     We have a biextension $P$ of $M$ and $G'$ by $\Gm$.
-  }
-
-  \lic{(c)}{
-    In the general case, we set $G'=\Ext^1(M/W_{-2}M,\Gm)$.
+c. In the general case, we set $G'=\Ext^1(M/W_{-2}M,\Gm)$.
     The natural biextension $P''$ of $M/W_{-2}M$ and $G'$ by $\Gm$ induces a biextension $P'$ of $M$ and $G'$ by $\Gm$.
     For each $\chi\in X'$, the extension $M$ of $M/W_{-2}M$ by $T$ defines an extension of $M/W_{-2}M$ by $\Gm$, whence $u'(\chi)\in G'$.
 
-    \tikzcd{
+    ```tikz
+    \begin{tikzcd}
       0
         \ar[r]
     & T
@@ -564,11 +544,13 @@ To a 1-motive $M=(X,A,T,G,u)$ over an algebraically closed field $k$, we will as
     & M/W_{-2}M
         \ar[r]
     & 0
-    }
+    \end{tikzcd}
+    ```
 
     The trivial map $v$ trivialises the extension $P'_{u(\chi)}$ of $M$ by $\Gm$
 
-    \tikzcd{
+    ```tikz
+    \begin{tikzcd}
       0
         \ar[r]
     & \Gm
@@ -588,84 +570,56 @@ To a 1-motive $M=(X,A,T,G,u)$ over an algebraically closed field $k$, we will as
     & P'_{u(\chi)}
         \ar[r]
     & M/W_{-2}M
-    }
+    \end{tikzcd}
+    ```
 
     These trivialisations make $P'$ into a biextension of $M$ and $M^*=[X'\xrightarrow{u'}G']$ by $\Gm$.
     The 1-motive $M^*$, endowed with $P'$, is the desired Cartier dual.
-  }
-}
-}
-}
+:::
 
-\subtree[hodge-theory-iii-10.2.12]{
-\number{10.2.12}
-
+::: {.rmenv #env-iii-10.2.12 number="10.2.12"}
 \oldpage{68}
 This construction allows us to give a more symmetric definition of 1-motives.
-}
 
 Let $M=(X,A,T,G,u)$ be a 1-motive, with Cartier dual $M^*=(X',A',T',G',u')$, and let $P_0$ be the Poincaré biextension.
 By passing to the quotient, the morphisms $u$ and $u'$ define morphisms
-
-\subtree[hodge-theory-iii-10.2.12.1]{
-  \taxon{equation}
-  \number{10.2.12.1}
-  $$
-    \overline{u}\colon X\to A
-    \quad\text{and}\quad
-    \overline{u}'\colon X'\to A'.
-  \tag{10.2.12.1}
-  $$
-}
-}
-
+$$
+  \overline{u}\colon X\to A
+  \quad\text{and}\quad
+  \overline{u}'\colon X'\to A'.
+\tag{10.2.12.1}
+$$
 The biextension of $G$ and $G'$ by $\Gm$ induced by $P_0$ is the inverse image of the Poincaré biextension $P$ of $A$ and $A'$ by $\Gm$.
 By hypothesis, the trivialisations (of the inverse images) of $P$ on $X\times G'$ and $G\times X'$ agree on $X\times X'$, whence
-
-\subtree[hodge-theory-iii-10.2.12.2]{
-  \taxon{equation}
-  \number{10.2.12.2}
-  $$
-    \text{a trivialisation }\psi\text{ of }(\overline{u}\times\overline{u}')^*P.
-  \tag{10.2.12.2}
-  $$
-}
-}
+$$
+  \text{a trivialisation }\psi\text{ of }(\overline{u}\times\overline{u}')^*P.
+\tag{10.2.12.2}
+$$
 
 A morphism $f\colon M_1\to M_2$, with transpose (in an evident sense) $M_2^*\to M_1^*$, gives rise to commutative diagrams
-
-\subtree[hodge-theory-iii-10.2.12.3]{
-  \taxon{equation}
-  \number{10.2.12.3}
-  $$
-    \begin{CD}
-      X_1 @>>> A_1
-    \\@V{f_X}VV @VV{f_A}V
-    \\X_2 @>>> A_2
-    \end{CD}
-    \qquad\qquad
-    \begin{CD}
-      X'_1 @>>> A'_1
-    \\@A{f'_X}AA @AA{f'_A}A
-    \\X'_2 @>>> A'_2
-    \end{CD}
-  \tag{10.2.12.3}
-  $$
-}
-
+$$
+  \begin{CD}
+    X_1 @>>> A_1
+  \\@V{f_X}VV @VV{f_A}V
+  \\X_2 @>>> A_2
+  \end{CD}
+  \qquad\qquad
+  \begin{CD}
+    X'_1 @>>> A'_1
+  \\@A{f'_X}AA @AA{f'_A}A
+  \\X'_2 @>>> A'_2
+  \end{CD}
+\tag{10.2.12.3}
+$$
 Furthermore, $f_A$ and $f'_A$ are transpose to one another, and, via the isomorphism $(1,f'_A)^*P_1\simeq(f_A,1)^*P_2$, we have
+$$
+  \psi_1(x_1,f'_X(x'_2))
+  = \psi_2(f_X(x_1),x'_2)
+\tag{10.2.12.4}
+$$
 
-\subtree[hodge-theory-iii-10.2.12.4]{
-  \taxon{equation}
-  \number{10.2.12.4}
-  $$
-    \psi_1(x_1,f'_X(x'_2))
-    = \psi_2(f_X(x_1),x'_2)
-  \tag{10.2.12.4}
-  $$
-}
-
-\tikzcd{
+```tikz
+\begin{tikzcd}
   X_1\times X'_1
     \ar[r,"\psi_1"]
 & (P_1\text{ on }A_1\times A'_1)
@@ -679,45 +633,27 @@ Furthermore, $f_A$ and $f'_A$ are transpose to one another, and, via the isomorp
 \\X_2\times X'_2
     \ar[r,swap,"\psi_2"]
 & (P_2\text{ on }A_2\times A'_2)
-}
-}
-}
+\end{tikzcd}
+```
+:::
 
-\subtree[hodge-theory-iii-10.2.13]{
-\number{10.2.13}
-
+::: {.rmenv #env-iii-10.2.13 number="10.2.13"}
 We thus obtain a functor form the category of 1-motives to the following category.
 Its objects consist of:
 
-\olc{
-  \lic{(a)}{
-    two abelian varieties $A$ and $A'$, dual to one another;
-  }
-  \lic{(b)}{
-    two free $\ZZ$-modules $X$ and $X'$, of finite rank;
-  }
-  \lic{(c)}{
-    two morphisms $v\colon X\to A$ and $v'\colon X'\to A'$;
-  }
-  \lic{(d)}{
-    a trivialisation $\psi$ of the inverse image under $(v,v')$ of the Poincaré biextension of $A$ and $A'$ by $\Gm$.
-  }
-}
-}
+a. two abelian varieties $A$ and $A'$, dual to one another;
+b. two free $\ZZ$-modules $X$ and $X'$, of finite rank;
+c. two morphisms $v\colon X\to A$ and $v'\colon X'\to A'$;
+d. a trivialisation $\psi$ of the inverse image under $(v,v')$ of the Poincaré biextension of $A$ and $A'$ by $\Gm$
 
 \oldpage{69}
-Its arrows consist of diagrams of the form \ref{hodge-theory-iii-10.2.12.3} that satisfy the conditions of \ref{hodge-theory-iii-10.2.12}
-}
-}
+Its arrows consist of diagrams of the form [(10.2.12.3)](#iii-10.2.12) that satisfy the conditions of [(10.2.12)](#iii-10.2.12).
+:::
 
-\subtree[hodge-theory-iii-10.2.14]{
-\taxon{proposition}
-\number{10.2.14}
-
-The functor in \ref{hodge-theory-iii-10.2.13} is an equivalence of categories.
-}
+::: {.itenv #env-iii-10.2.14 number="10.2.14" taxon="Proposition"}
+The functor in [(10.2.13)](#iii-10.2.13) is an equivalence of categories.
+:::
 
 ::: {.proof}
 The proof is left as an exercise to the reader.
-}
-}
+:::
