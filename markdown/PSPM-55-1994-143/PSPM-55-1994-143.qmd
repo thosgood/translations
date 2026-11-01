@@ -116,11 +116,11 @@ The notion of a motive over $S$ (a family of motives parameterised by $S$) poses
 
 For a field $k$, we always want the category of motives over $k$ to be a $\QQ$-linear abelian category $\scr{M}(k)$ with finite-dimensional $\Hom$ groups.
 In the pure case, we want it to be semi-simple and graded (by weights).
-In the mixed case, every motive $M$ should admit a finite increasing filtration $W$, with $\Gr_n^W(M)$ pure of weight $n$.
+In the mixed case, every motive $M$ should admit a finite increasing filtration $W$, with $\Gr_n^W(M)$ pure of weight $n$.
 Some other essential structures are the following:
 
 a. Every algebraic variety $X$ on $k$ should have motivic cohomology groups $H_\mot^i(X)$, which are objects of $\scr{M}(k)$.
-    In the pure case, we restrict to non-singular projective varieties $X$, and $H_\mot^i(X)$ should then be a pure motive of weight $i$.
+    In the pure case, we restrict to non-singular projective varieties $X$, and $H_\mot^i(X)$ should then be a pure motive of weight $i$.
 b. For each of the usual cohomology theories $H$, we should have a "realisation" functor $\real$, and isomorphisms
     $$
       H^i(X) = \real H_\mot^i(X).
@@ -220,7 +220,7 @@ For $\ell$-adic cohomology, $\real_\ell(A)$ is the Tate module $V_\ell(A)=T_\ell
 \oldpage{148}
 For $k$ of characteristic $0$, and de Rham cohomology, $\real_{\mathrm{DR}}(A)$ is the Lie algebra given by the universal additive extension of $A$.
 
-We thus wish to be able to identify abelian varieties with certain motives of weight $-1$.
+We thus wish to be able to identify abelian varieties with certain motives of weight $-1$.
 For some applications (for example, the study of Shimura varieties), we would be content with even having a category of motives that contains abelian varieties and is stable under $\otimes$.
 In characteristic $0$, the theory of absolute Hodge cycles gives us such a theory (Deligne--Brylinksi [@11], Deligne--Milne [@12], or the talk by Panschishkin at this conference).
 If we do not restrict ourselves to pure motives, then another key example is that of smooth curves that are not necessarily complete.
@@ -340,7 +340,7 @@ d. The de Rham realisation defines a fibre functor $V\mapsto x(V)_{\mathrm{DR}}$
     Since $\FF$ contains $E(G,X)$, it makes sense to ask for the conjugation class corresponding to maps from $\GG_m$ to $G$ to coincide with that of $h\circ\mu$ (for $h\in X$).
     Condition (c) implies this.
     This explains the appearance of the dual field.
-e. For a representation $(V,\rho)$ of weight $0$: $\rho\circ w$ trivial and $V\otimes V\to\QQ$ a symmetric invariant bilinear form such that, on $V_\RR$, $B(v,h(i)w)$ is positive-definite and symmetric, we ask for $x(V)\otimes x(V)\to 1$ to be positive, for the desired polarisation (*loc. cit.* V, 2.4, p. 276) of the category of motives.
+e. For a representation $(V,\rho)$ of weight $0$: $\rho\circ w$ trivial and $V\otimes V\to\QQ$ a symmetric invariant bilinear form such that, on $V_\RR$, $B(v,h(i)w)$ is positive-definite and symmetric, we ask for $x(V)\otimes x(V)\to 1$ to be positive, for the desired polarisation (*loc. cit.* V, 2.4, p. 276) of the category of motives.
 
 
 ## 1.8 {.unnumbered #section-1.8}
@@ -366,7 +366,7 @@ The mixed motive $H_\mot^i(X)$ should thus have a class in the Grothendieck grou
 In characteristic $0$, the Hodge number $h^{pq}$ of the Hodge realisation of a pure motive defines a homomorphism from this Grothendieck group to $\ZZ$.
 The Hodge numbers $h^{pq}(H_\mot^i(X))$ should thus have some meaning.
 
-To go any further, we must convince ourselves that every motive has a weight filtration $W$, that is increasing, and with $\Gr_i^W(M)$ pure of weight $i$ (= a direct factor of $H_\mot^i(X)$ for non-singular projective $X$).
+To go any further, we must convince ourselves that every motive has a weight filtration $W$, that is increasing, and with $\Gr_i^W(M)$ pure of weight $i$ (= a direct factor of $H_\mot^i(X)$ for non-singular projective $X$).
 Is is for the $H^1$ of curves, i.e. for the $1$-motives, that I am convinced of this fact, and the first test that the definition of mixed Hodge structures had to pass was that they recover $1$-motives over $\CC$ as a particular case (Deligne [@9, Section 10]).
 
 \oldpage{152}
@@ -718,8 +718,8 @@ Applying (3.7.1), we thus deduce:
 ::: {.itenv #vanishings-3.8.1 title="Vanishings 3.8.1" latex="{Vanishings 3.8.1}"}
 —
 
-i. If $M$ is a pure motive of weight $w$, then $\Hom^i(1,M)=0$ for $i>-w$.
-ii. If $M$ is effective of weight $w$, and $b>0$, then $\Hom^i(1,M(w+b))=0$ for $i>w+b$.
+i. If $M$ is a pure motive of weight $w$, then $\Hom^i(1,M)=0$ for $i>-w$.
+ii. If $M$ is effective of weight $w$, and $b>0$, then $\Hom^i(1,M(w+b))=0$ for $i>w+b$.
 :::
 
 ::: {.proof}
