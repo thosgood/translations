@@ -1,8 +1,8 @@
----
-title: 10.2 1-motives and bi-extensions
----
+## 10.2 1-motives and bi-extensions
 
+::: {.content-hidden}
 {{< include ../macros.qmd >}}
+:::
 
 The results of this section will not be used elsewhere.
 We will make use of the notion of biextensions [SGA 7, VII, (2.1)] and of the following generalisation.
@@ -119,7 +119,7 @@ b. $\Biext^1(V_\CC{/}V_\ZZ,W_\CC{/}W_\ZZ;\Gm)=\Hom(V_\ZZ\otimes W_\ZZ,\ZZ(1))$.}
 
 ::: {.proof}
 Let $\psi_i\colon V_\CC\otimes W_\CC\to\CC$ be bilinear maps, with $\psi=\psi_1-\psi_2$ taking values in $\ZZ(1)=2\pi i\ZZ$ on $V_\ZZ\otimes W_\ZZ$.
-Let $P(\psi_1,\psi_2)$ be the following biextension of $[V_\ZZ\to V_\CC]$ and $[W_\ZZ\to W_\CC]$ by $\Gm$: the trivial biextension of $V_\CC$ and $W_\CC$ by {\Gm}, endowed with the trivialisations $\varphi_i=\exp\psi_i\colon V_\ZZ\otimes W_\CC\to\Gm$ for $i=1,2$.
+Let $P(\psi_1,\psi_2)$ be the following biextension of $[V_\ZZ\to V_\CC]$ and $[W_\ZZ\to W_\CC]$ by $\Gm$: the trivial biextension of $V_\CC$ and $W_\CC$ by $\Gm$, endowed with the trivialisations $\varphi_i=\exp\psi_i\colon V_\ZZ\otimes W_\CC\to\Gm$ for $i=1,2$.
 By [(10.2.3.2(an))](#iii-10.2.3), every biextension is of this form;
 by [(10.2.3.1(an))](#iii-10.2.3), $P(\psi_1,\psi_2)\simeq P(\psi'_1,\psi'_2)$ if and only if $\psi'_1-\psi'_2=\psi_1-\psi_2$.
 The $P(\psi,0)$ thus represent each biextension exactly once.

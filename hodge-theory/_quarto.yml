@@ -17,16 +17,15 @@ book:
   sidebar:
     style: docked
     collapse-level: 1
+  downloads: ["pdf"]
+  output-file: "hodge-theory"
   chapters:
     - text: "*About this translation*"
       href: index.qmd
-    - text: "---"
     - text: "**Hodge Theory I**"
       href: hodge-theory-i/index.qmd
-    - text: "---"
     - text: "**Hodge Theory II**"
       href: hodge-theory-ii/index.qmd
-    - hodge-theory-ii/introduction.qmd
     - part: "1. Filtrations"
       chapters:
         - hodge-theory-ii/1.1-filtered-objects.qmd
@@ -48,11 +47,8 @@ book:
         - hodge-theory-ii/4.2-the-semi-simplicity-theorem.qmd
         - hodge-theory-ii/4.3-supplement-to-D1968.qmd
         - hodge-theory-ii/4.4-homomorphisms-of-abelian-schemes.qmd
-    - text: "---"
     - text: "**Hodge Theory III**"
       href: hodge-theory-iii/index.qmd
-    - hodge-theory-iii/introduction.qmd
-    - hodge-theory-iii/terminology-and-notation.qmd
     - part: "5. Cohomological descent"
       chapters:
         - hodge-theory-iii/5.1-simplicial-topological-spaces.qmd
@@ -78,7 +74,8 @@ book:
         - hodge-theory-iii/9.1-cohomology-of-groups-and-of-classifying-spaces.qmd
         - hodge-theory-iii/9.2-hodge-theory-of-smooth-hypersurfaces-following-Griffiths.qmd
         - hodge-theory-iii/9.3-construction-of-complexes-of-first-order-differential-operators.qmd
-    - part: "10. Hodge theory in level ≤1"
+    - part: |
+        10. Hodge theory in level $\leq1$
       chapters:
         - hodge-theory-iii/10.1-1-motives.qmd
         - hodge-theory-iii/10.2-1-motives-and-bi-extensions.qmd
@@ -86,8 +83,6 @@ book:
         - hodge-theory-iii/10.4-translations-of-a-theorem-of-Picard.qmd
 
 format:
-  # latex:
-  #   documentclass: report
   html:
     lang: en-GB
     date-format: "YYYY"
@@ -111,13 +106,13 @@ format:
     link-citations: true
     reference-section-title: "Bibliography"
     bibliography: hodge-theory.bib
-  # pdf:
-  #   template: _quarto/template.tex
-  #   pdf-engine: latexmk
-  #   cite-method: biblatex
-  #   biblatexoptions: [backend=biber]
-  #   date-format: "YYYY"
-  #   keep-tex: true
+  pdf:
+    template: _quarto/template.tex
+    pdf-engine: latexmk
+    cite-method: biblatex
+    biblatexoptions: [backend=biber]
+    date-format: "YYYY"
+    keep-tex: true
 
 # Filters #
 filters:

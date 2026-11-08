@@ -1,9 +1,8 @@
----
-title: "Hodge Theory I"
-year: 1970
----
+# Hodge Theory I
 
+::: {.content-hidden}
 {{< include ../macros.qmd >}}
+:::
 
 ::: {.callout .original}
 Deligne, P. "Théorie de Hodge I".
@@ -112,7 +111,7 @@ We further have the dictionary:
 
 ### 4 {#i-section-4}
 
-Let $X$ be a complex algebraic variety (i.e. a scheme of finite type over $\CC} that we assume to be separated).
+Let $X$ be a complex algebraic variety (i.e. a scheme of finite type over $\CC$} that we assume to be separated).
 Then there exists a subfield $K$ of $\CC$, of finite type over $\QQ$, such that $X$ can be defined over $K$ (i.e. it comes from an extension of scalars of $K$ to $\CC$ applied to a $K$-scheme $X'$).
 Let $\overline{K}$ be the algebraic closure of $K$ in $\CC$.
 The Galois group $\Gal(\overline{K}/K)$ then acts on the $l$-adic cohomology groups $\HH^\bullet(X,\ZZ_l)$;

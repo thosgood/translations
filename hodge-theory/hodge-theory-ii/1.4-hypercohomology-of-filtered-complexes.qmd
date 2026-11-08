@@ -1,8 +1,8 @@
----
-title: 1.4 Hypercohomology of filtered complexes
----
+## 1.4 Hypercohomology of filtered complexes
 
+::: {.content-hidden}
 {{< include ../macros.qmd >}}
+:::
 
 In this section, we recall some standard constructions in hypercohomology.
 We do not use the language of derived categories, which would be more natural here.
@@ -181,7 +181,6 @@ b. An analogous spectral sequence for the filtration $F$;
     \oldpage{22}
 c. Exact squares
   ```tikz
-  \newcommand{\Gr}{\operatorname{Gr}}
   \begin{tikzcd}
     & 0 \dar
     & 0 \dar
@@ -246,8 +245,6 @@ $$
 \tag{1.4.9.1}
 $$
 ```tikz
-\newcommand{\HH}{\operatorname{H}}
-\newcommand{\Gr}{\operatorname{Gr}}
 \begin{tikzcd}
   & \HH^n\Gr_W^q K
     \ar[Rightarrow,dr,"{}_Wd_1"]

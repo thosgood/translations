@@ -1,9 +1,8 @@
----
-title: 1.2 Opposite filtrations
-page-layout: article
----
+##  1.2 Opposite filtrations
 
+::: {.content-hidden}
 {{< include ../macros.qmd >}}
+:::
 
 ::: {.rmenv #ii-1.2.1 number="1.2.1"}
 Let $A$ be an object of $\mathscr{A}$ endowed with filtrations $F$ and $G$.
@@ -88,7 +87,7 @@ ii. If $F$ and $\overline{F}$ are $n$-opposite, and if we set
 i. The condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q>n$ implies that $F^p\cap\overline{F}^q=(F^{p+1}\cap\overline{F}^q)+(F^p\cap\overline{F}^{q+1})$ for $p+q>n$.
     By hypothesis, $F^p\cap\overline{F}^q$ is zero for large enough $p+q$;
     by decreasing induction, we thus deduce that the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q>n$ is equivalent to the condition $F^p(A)\cap\overline{F}^q(A)=0$ for $p+q>n$.
-    Dually ([(1.1.6)](1.1-filtered-objects.qmd#ii-1.1.6), [(1.1.7)](1.1-filtered-objects.qmd#ii-1.1.7), [(1.1.10)](1.1-filtered-objects.qmd#ii-1.1.10)), the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q<n$ is equivalent to the condition $A=F^p(A)+\overline{F}^q(A)} for $(1-p)+(1-q)>-n$, i.e. for $p+q\leqslant n+1$, and the claim then follows.
+    Dually ([(1.1.6)](1.1-filtered-objects.qmd#ii-1.1.6), [(1.1.7)](1.1-filtered-objects.qmd#ii-1.1.7), [(1.1.10)](1.1-filtered-objects.qmd#ii-1.1.10)), the condition $\Gr_F^p\Gr_{\overline{F}}^q(A)=0$ for $p+q<n$ is equivalent to the condition $A=F^p(A)+\overline{F}^q(A)$ for $(1-p)+(1-q)>-n$, i.e. for $p+q\leqslant n+1$, and the claim then follows.
 
 ii. If $F$ and $\overline{F}$ are $n$-opposite, then we can prove by decreasing induction on $p$ that
     $$

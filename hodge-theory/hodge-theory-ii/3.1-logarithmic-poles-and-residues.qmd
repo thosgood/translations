@@ -1,8 +1,8 @@
----
-title: 3.1 Logarithmic poles and residues
----
+## 3.1 Logarithmic poles and residues
 
+::: {.content-hidden}
 {{< include ../macros.qmd >}}
+:::
 
 ::: {.rmenv #env-ii-3.1.1 number="3.1.1"}
 We recall several classical properties of "logarithmic poles" of holomorphic differential forms.
@@ -53,7 +53,7 @@ $$
 $$
 There is a way of seeing $\varepsilon^n$, endowed with $\varepsilon_\ZZ^n$, as a twisted version of $\ZZ(-n)$ over $\widetilde{Y}^n$.
 
-We denote by $\varepsilon_X^n$ (resp. by $(\varepsilon_X^n)$\ZZ}) the direct image of $\varepsilon^n$ (resp. of $\varepsilon_\ZZ^n$) under the mat from $\widetilde{Y}^n$ to $X$.
+We denote by $\varepsilon_X^n$ (resp. by $(\varepsilon_X^n)_\ZZ$) the direct image of $\varepsilon^n$ (resp. of $\varepsilon_\ZZ^n$) under the map from $\widetilde{Y}^n$ to $X$.
 We have
 $$
   \varepsilon_X^n
@@ -168,7 +168,7 @@ $$
 The isomorphisms [(3.1.4.1)](#ii-3.1.4) correspond, via [(3.1.8.1)](#ii-3.1.8), to the cup product.
 
 ::: {.itenv #env-ii-3.1.9 number="3.1.9" taxon="Proposition"}
-The canonical morphism from $\Rd^nj_*\ZZ$ to $\Rd^nj_*\CC$ identifies, via [(3.1.8.2)](#ii-3.1.8), the sheaf $\Rd^nj_*\ZZ$ with $(\varepsilon_X^n)$\ZZ} [(3.1.4)](#ii-3.1.4).
+The canonical morphism from $\Rd^nj_*\ZZ$ to $\Rd^nj_*\CC$ identifies, via [(3.1.8.2)](#ii-3.1.8), the sheaf $\Rd^nj_*\ZZ$ with $(\varepsilon_X^n)_\ZZ$ [(3.1.4)](#ii-3.1.4).
 :::
 
 ::: {.proof}
@@ -210,7 +210,7 @@ $$
   = \varinjlim\sh{F}'(nY).
 $$
 
-Locally on $X$, $Y$ is the sum of a finite family $(Y_i)${i\in I}} of smooth divisors, and we define the **pole-order filtration** $P$ on $j_*^\mm\OO_X^*$ by the equation
+Locally on $X$, $Y$ is the sum of a finite family $(Y_i)_{i\in I}$ of smooth divisors, and we define the **pole-order filtration** $P$ on $j_*^\mm\OO_X^*$ by the equation
 $$
   P^p(j_*^\mm\OO_{X^*})
   = \sum_{n\in A_p} \OO_X\left(\sum(n_i+1)Y_i\right)
